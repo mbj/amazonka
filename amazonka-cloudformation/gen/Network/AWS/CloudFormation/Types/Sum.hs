@@ -450,9 +450,17 @@ data ResourceStatus
   | DeleteFailed
   | DeleteInProgress
   | DeleteSkipped
+  | RollbackComplete
+  | RollbackFailed
+  | RollbackInProgress
   | UpdateComplete
+  | UpdateCompleteCleanupInProgress
   | UpdateFailed
   | UpdateInProgress
+  | UpdateRollbackComplete
+  | UpdateRollbackCompleteCleanupInProgress
+  | UpdateRollbackFailed
+  | UpdateRollbackInProgress
   deriving (Eq, Ord, Read, Show, Enum, Bounded, Data, Typeable, Generic)
 
 
@@ -465,11 +473,19 @@ instance FromText ResourceStatus where
         "delete_failed" -> pure DeleteFailed
         "delete_in_progress" -> pure DeleteInProgress
         "delete_skipped" -> pure DeleteSkipped
+        "rollback_complete" -> pure RollbackComplete
+        "rollback_failed" -> pure RollbackFailed
+        "rollback_in_progress" -> pure RollbackInProgress
         "update_complete" -> pure UpdateComplete
+        "update_complete_cleanup_in_progress" -> pure UpdateCompleteCleanupInProgress
         "update_failed" -> pure UpdateFailed
         "update_in_progress" -> pure UpdateInProgress
+        "update_rollback_complete" -> pure UpdateRollbackComplete
+        "update_rollback_complete_cleanup_in_progress" -> pure UpdateRollbackCompleteCleanupInProgress
+        "update_rollback_failed" -> pure UpdateRollbackFailed
+        "update_rollback_in_progress" -> pure UpdateRollbackInProgress
         e -> fromTextError $ "Failure parsing ResourceStatus from value: '" <> e
-           <> "'. Accepted values: create_complete, create_failed, create_in_progress, delete_complete, delete_failed, delete_in_progress, delete_skipped, update_complete, update_failed, update_in_progress"
+           <> "'. Accepted values: create_complete, create_failed, create_in_progress, delete_complete, delete_failed, delete_in_progress, delete_skipped, rollback_complete, rollback_failed, rollback_in_progress, update_complete, update_complete_cleanup_in_progress, update_failed, update_in_progress, update_rollback_complete, update_rollback_complete_cleanup_in_progress, update_rollback_failed, update_rollback_in_progress"
 
 instance ToText ResourceStatus where
     toText = \case
@@ -480,9 +496,17 @@ instance ToText ResourceStatus where
         DeleteFailed -> "DELETE_FAILED"
         DeleteInProgress -> "DELETE_IN_PROGRESS"
         DeleteSkipped -> "DELETE_SKIPPED"
+        RollbackComplete -> "ROLLBACK_COMPLETE"
+        RollbackFailed -> "ROLLBACK_FAILED"
+        RollbackInProgress -> "ROLLBACK_IN_PROGRESS"
         UpdateComplete -> "UPDATE_COMPLETE"
+        UpdateCompleteCleanupInProgress -> "UPDATE_COMPLETE_CLEANUP_IN_PROGRESS"
         UpdateFailed -> "UPDATE_FAILED"
         UpdateInProgress -> "UPDATE_IN_PROGRESS"
+        UpdateRollbackComplete -> "UPDATE_ROLLBACK_COMPLETE"
+        UpdateRollbackCompleteCleanupInProgress -> "UPDATE_ROLLBACK_COMPLETE_CLEANUP_IN_PROGRESS"
+        UpdateRollbackFailed -> "UPDATE_ROLLBACK_FAILED"
+        UpdateRollbackInProgress -> "UPDATE_ROLLBACK_IN_PROGRESS"
 
 instance Hashable     ResourceStatus
 instance NFData       ResourceStatus
