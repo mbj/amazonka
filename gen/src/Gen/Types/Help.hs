@@ -18,7 +18,7 @@ module Gen.Types.Help
     ) where
 
 import Data.Aeson
-import Data.Monoid ((<>))
+import Data.Semigroup ((<>))
 import Data.String
 import Data.Text   (Text)
 
@@ -33,7 +33,7 @@ import qualified Text.HTML.DOM        as DOM
 import qualified Text.XML             as XML
 
 newtype Help = Help Text
-    deriving (Eq, Monoid)
+    deriving (Eq, Monoid, Semigroup)
 
 -- | Empty Show instance to avoid verbose debugging output.
 instance Show Help where

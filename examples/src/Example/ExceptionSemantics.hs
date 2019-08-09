@@ -17,6 +17,7 @@ import           Control.Monad.IO.Class
 import           Control.Monad.Trans.AWS
 import           Data.Conduit
 import qualified Data.Conduit.List       as CL
+import           Data.Functor (void)
 import           Data.List.NonEmpty      (NonEmpty (..))
 import           Data.Monoid
 import           Data.Text               (Text)
@@ -43,7 +44,7 @@ exceptions r n = do
                  $$ CL.mapM_ (sayLn . mappend "Table: ")
 
             say "Throwing deliberate IOError ... "
-            Left _ <- trying _IOException $
+            void . trying _IOException $
                 throwM (userError "deliberate!")
             sayLn "OK!"
 
