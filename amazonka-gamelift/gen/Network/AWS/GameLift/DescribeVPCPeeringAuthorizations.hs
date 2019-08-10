@@ -113,10 +113,12 @@ instance ToQuery DescribeVPCPeeringAuthorizations
         toQuery = const mempty
 
 -- | /See:/ 'describeVPCPeeringAuthorizationsResponse' smart constructor.
-data DescribeVPCPeeringAuthorizationsResponse = DescribeVPCPeeringAuthorizationsResponse'
-  { _dvpcparsVPCPeeringAuthorizations :: !(Maybe [VPCPeeringAuthorization])
-  , _dvpcparsResponseStatus           :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeVPCPeeringAuthorizationsResponse =
+  DescribeVPCPeeringAuthorizationsResponse'
+    { _dvpcparsVPCPeeringAuthorizations :: !(Maybe [VPCPeeringAuthorization])
+    , _dvpcparsResponseStatus           :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeVPCPeeringAuthorizationsResponse' with the minimum fields required to make a request.

@@ -46,11 +46,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteRoomSkillParameter' smart constructor.
-data DeleteRoomSkillParameter = DeleteRoomSkillParameter'
-  { _drspRoomARN      :: !(Maybe Text)
-  , _drspSkillId      :: !Text
-  , _drspParameterKey :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteRoomSkillParameter =
+  DeleteRoomSkillParameter'
+    { _drspRoomARN      :: !(Maybe Text)
+    , _drspSkillId      :: !Text
+    , _drspParameterKey :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteRoomSkillParameter' with the minimum fields required to make a request.
@@ -125,9 +127,11 @@ instance ToQuery DeleteRoomSkillParameter where
         toQuery = const mempty
 
 -- | /See:/ 'deleteRoomSkillParameterResponse' smart constructor.
-newtype DeleteRoomSkillParameterResponse = DeleteRoomSkillParameterResponse'
-  { _drsprsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteRoomSkillParameterResponse =
+  DeleteRoomSkillParameterResponse'
+    { _drsprsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteRoomSkillParameterResponse' with the minimum fields required to make a request.

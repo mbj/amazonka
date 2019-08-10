@@ -48,10 +48,12 @@ import Network.AWS.SageMaker.Types
 import Network.AWS.SageMaker.Types.Product
 
 -- | /See:/ 'addTags' smart constructor.
-data AddTags = AddTags'
-  { _atResourceARN :: !Text
-  , _atTags        :: ![Tag]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddTags =
+  AddTags'
+    { _atResourceARN :: !Text
+    , _atTags        :: ![Tag]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddTags' with the minimum fields required to make a request.
@@ -112,10 +114,12 @@ instance ToQuery AddTags where
         toQuery = const mempty
 
 -- | /See:/ 'addTagsResponse' smart constructor.
-data AddTagsResponse = AddTagsResponse'
-  { _atrsTags           :: !(Maybe [Tag])
-  , _atrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddTagsResponse =
+  AddTagsResponse'
+    { _atrsTags           :: !(Maybe [Tag])
+    , _atrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddTagsResponse' with the minimum fields required to make a request.

@@ -49,12 +49,14 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'describeInstancePatches' smart constructor.
-data DescribeInstancePatches = DescribeInstancePatches'
-  { _dipFilters    :: !(Maybe [PatchOrchestratorFilter])
-  , _dipNextToken  :: !(Maybe Text)
-  , _dipMaxResults :: !(Maybe Nat)
-  , _dipInstanceId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeInstancePatches =
+  DescribeInstancePatches'
+    { _dipFilters    :: !(Maybe [PatchOrchestratorFilter])
+    , _dipNextToken  :: !(Maybe Text)
+    , _dipMaxResults :: !(Maybe Nat)
+    , _dipInstanceId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeInstancePatches' with the minimum fields required to make a request.
@@ -136,11 +138,13 @@ instance ToQuery DescribeInstancePatches where
         toQuery = const mempty
 
 -- | /See:/ 'describeInstancePatchesResponse' smart constructor.
-data DescribeInstancePatchesResponse = DescribeInstancePatchesResponse'
-  { _diprsPatches        :: !(Maybe [PatchComplianceData])
-  , _diprsNextToken      :: !(Maybe Text)
-  , _diprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeInstancePatchesResponse =
+  DescribeInstancePatchesResponse'
+    { _diprsPatches        :: !(Maybe [PatchComplianceData])
+    , _diprsNextToken      :: !(Maybe Text)
+    , _diprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeInstancePatchesResponse' with the minimum fields required to make a request.

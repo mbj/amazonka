@@ -46,9 +46,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'stopConfigurationRecorder' smart constructor.
-newtype StopConfigurationRecorder = StopConfigurationRecorder'
-  { _scrConfigurationRecorderName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StopConfigurationRecorder =
+  StopConfigurationRecorder'
+    { _scrConfigurationRecorderName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopConfigurationRecorder' with the minimum fields required to make a request.

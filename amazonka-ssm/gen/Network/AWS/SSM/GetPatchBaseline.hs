@@ -58,9 +58,11 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'getPatchBaseline' smart constructor.
-newtype GetPatchBaseline = GetPatchBaseline'
-  { _gpbBaselineId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetPatchBaseline =
+  GetPatchBaseline'
+    { _gpbBaselineId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetPatchBaseline' with the minimum fields required to make a request.
@@ -126,23 +128,25 @@ instance ToQuery GetPatchBaseline where
         toQuery = const mempty
 
 -- | /See:/ 'getPatchBaselineResponse' smart constructor.
-data GetPatchBaselineResponse = GetPatchBaselineResponse'
-  { _gpbrsApprovalRules                    :: !(Maybe PatchRuleGroup)
-  , _gpbrsOperatingSystem                  :: !(Maybe OperatingSystem)
-  , _gpbrsGlobalFilters                    :: !(Maybe PatchFilterGroup)
-  , _gpbrsApprovedPatchesComplianceLevel   :: !(Maybe PatchComplianceLevel)
-  , _gpbrsApprovedPatches                  :: !(Maybe [Text])
-  , _gpbrsApprovedPatchesEnableNonSecurity :: !(Maybe Bool)
-  , _gpbrsRejectedPatches                  :: !(Maybe [Text])
-  , _gpbrsSources                          :: !(Maybe [PatchSource])
-  , _gpbrsCreatedDate                      :: !(Maybe POSIX)
-  , _gpbrsName                             :: !(Maybe Text)
-  , _gpbrsPatchGroups                      :: !(Maybe [Text])
-  , _gpbrsModifiedDate                     :: !(Maybe POSIX)
-  , _gpbrsDescription                      :: !(Maybe Text)
-  , _gpbrsBaselineId                       :: !(Maybe Text)
-  , _gpbrsResponseStatus                   :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data GetPatchBaselineResponse =
+  GetPatchBaselineResponse'
+    { _gpbrsApprovalRules                    :: !(Maybe PatchRuleGroup)
+    , _gpbrsOperatingSystem                  :: !(Maybe OperatingSystem)
+    , _gpbrsGlobalFilters                    :: !(Maybe PatchFilterGroup)
+    , _gpbrsApprovedPatchesComplianceLevel   :: !(Maybe PatchComplianceLevel)
+    , _gpbrsApprovedPatches                  :: !(Maybe [Text])
+    , _gpbrsApprovedPatchesEnableNonSecurity :: !(Maybe Bool)
+    , _gpbrsRejectedPatches                  :: !(Maybe [Text])
+    , _gpbrsSources                          :: !(Maybe [PatchSource])
+    , _gpbrsCreatedDate                      :: !(Maybe POSIX)
+    , _gpbrsName                             :: !(Maybe Text)
+    , _gpbrsPatchGroups                      :: !(Maybe [Text])
+    , _gpbrsModifiedDate                     :: !(Maybe POSIX)
+    , _gpbrsDescription                      :: !(Maybe Text)
+    , _gpbrsBaselineId                       :: !(Maybe Text)
+    , _gpbrsResponseStatus                   :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetPatchBaselineResponse' with the minimum fields required to make a request.

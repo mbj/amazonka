@@ -52,12 +52,14 @@ import Network.AWS.ServiceCatalog.Types
 import Network.AWS.ServiceCatalog.Types.Product
 
 -- | /See:/ 'listResourcesForTagOption' smart constructor.
-data ListResourcesForTagOption = ListResourcesForTagOption'
-  { _lrftoResourceType :: !(Maybe Text)
-  , _lrftoPageToken    :: !(Maybe Text)
-  , _lrftoPageSize     :: !(Maybe Nat)
-  , _lrftoTagOptionId  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListResourcesForTagOption =
+  ListResourcesForTagOption'
+    { _lrftoResourceType :: !(Maybe Text)
+    , _lrftoPageToken    :: !(Maybe Text)
+    , _lrftoPageSize     :: !(Maybe Nat)
+    , _lrftoTagOptionId  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListResourcesForTagOption' with the minimum fields required to make a request.
@@ -148,11 +150,13 @@ instance ToQuery ListResourcesForTagOption where
         toQuery = const mempty
 
 -- | /See:/ 'listResourcesForTagOptionResponse' smart constructor.
-data ListResourcesForTagOptionResponse = ListResourcesForTagOptionResponse'
-  { _lrftorsResourceDetails :: !(Maybe [ResourceDetail])
-  , _lrftorsPageToken       :: !(Maybe Text)
-  , _lrftorsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListResourcesForTagOptionResponse =
+  ListResourcesForTagOptionResponse'
+    { _lrftorsResourceDetails :: !(Maybe [ResourceDetail])
+    , _lrftorsPageToken       :: !(Maybe Text)
+    , _lrftorsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListResourcesForTagOptionResponse' with the minimum fields required to make a request.

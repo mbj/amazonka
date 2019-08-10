@@ -62,16 +62,18 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createTable' smart constructor.
-data CreateTable = CreateTable'
-  { _ctSSESpecification       :: !(Maybe SSESpecification)
-  , _ctGlobalSecondaryIndexes :: !(Maybe [GlobalSecondaryIndex])
-  , _ctLocalSecondaryIndexes  :: !(Maybe [LocalSecondaryIndex])
-  , _ctStreamSpecification    :: !(Maybe StreamSpecification)
-  , _ctAttributeDefinitions   :: ![AttributeDefinition]
-  , _ctTableName              :: !Text
-  , _ctKeySchema              :: !(List1 KeySchemaElement)
-  , _ctProvisionedThroughput  :: !ProvisionedThroughput
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateTable =
+  CreateTable'
+    { _ctSSESpecification       :: !(Maybe SSESpecification)
+    , _ctGlobalSecondaryIndexes :: !(Maybe [GlobalSecondaryIndex])
+    , _ctLocalSecondaryIndexes  :: !(Maybe [LocalSecondaryIndex])
+    , _ctStreamSpecification    :: !(Maybe StreamSpecification)
+    , _ctAttributeDefinitions   :: ![AttributeDefinition]
+    , _ctTableName              :: !Text
+    , _ctKeySchema              :: !(List1 KeySchemaElement)
+    , _ctProvisionedThroughput  :: !ProvisionedThroughput
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateTable' with the minimum fields required to make a request.
@@ -195,10 +197,12 @@ instance ToQuery CreateTable where
 --
 --
 -- /See:/ 'createTableResponse' smart constructor.
-data CreateTableResponse = CreateTableResponse'
-  { _ctrsTableDescription :: !(Maybe TableDescription)
-  , _ctrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateTableResponse =
+  CreateTableResponse'
+    { _ctrsTableDescription :: !(Maybe TableDescription)
+    , _ctrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateTableResponse' with the minimum fields required to make a request.

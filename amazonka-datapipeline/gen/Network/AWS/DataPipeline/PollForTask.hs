@@ -53,11 +53,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'pollForTask' smart constructor.
-data PollForTask = PollForTask'
-  { _pftHostname         :: !(Maybe Text)
-  , _pftInstanceIdentity :: !(Maybe InstanceIdentity)
-  , _pftWorkerGroup      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PollForTask =
+  PollForTask'
+    { _pftHostname         :: !(Maybe Text)
+    , _pftInstanceIdentity :: !(Maybe InstanceIdentity)
+    , _pftWorkerGroup      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PollForTask' with the minimum fields required to make a request.
@@ -133,10 +135,12 @@ instance ToQuery PollForTask where
 --
 --
 -- /See:/ 'pollForTaskResponse' smart constructor.
-data PollForTaskResponse = PollForTaskResponse'
-  { _pftrsTaskObject     :: !(Maybe TaskObject)
-  , _pftrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PollForTaskResponse =
+  PollForTaskResponse'
+    { _pftrsTaskObject     :: !(Maybe TaskObject)
+    , _pftrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PollForTaskResponse' with the minimum fields required to make a request.

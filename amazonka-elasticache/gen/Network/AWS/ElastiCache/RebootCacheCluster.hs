@@ -58,10 +58,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'rebootCacheCluster' smart constructor.
-data RebootCacheCluster = RebootCacheCluster'
-  { _rccCacheClusterId       :: !Text
-  , _rccCacheNodeIdsToReboot :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RebootCacheCluster =
+  RebootCacheCluster'
+    { _rccCacheClusterId       :: !Text
+    , _rccCacheNodeIdsToReboot :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RebootCacheCluster' with the minimum fields required to make a request.
@@ -117,10 +119,12 @@ instance ToQuery RebootCacheCluster where
                  toQueryList "CacheNodeId" _rccCacheNodeIdsToReboot]
 
 -- | /See:/ 'rebootCacheClusterResponse' smart constructor.
-data RebootCacheClusterResponse = RebootCacheClusterResponse'
-  { _rccrsCacheCluster   :: !(Maybe CacheCluster)
-  , _rccrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RebootCacheClusterResponse =
+  RebootCacheClusterResponse'
+    { _rccrsCacheCluster   :: !(Maybe CacheCluster)
+    , _rccrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RebootCacheClusterResponse' with the minimum fields required to make a request.

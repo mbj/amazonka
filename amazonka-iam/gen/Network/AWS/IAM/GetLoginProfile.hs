@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getLoginProfile' smart constructor.
-newtype GetLoginProfile = GetLoginProfile'
-  { _glpUserName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetLoginProfile =
+  GetLoginProfile'
+    { _glpUserName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetLoginProfile' with the minimum fields required to make a request.
@@ -96,10 +98,12 @@ instance ToQuery GetLoginProfile where
 --
 --
 -- /See:/ 'getLoginProfileResponse' smart constructor.
-data GetLoginProfileResponse = GetLoginProfileResponse'
-  { _glprsResponseStatus :: !Int
-  , _glprsLoginProfile   :: !LoginProfile
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetLoginProfileResponse =
+  GetLoginProfileResponse'
+    { _glprsResponseStatus :: !Int
+    , _glprsLoginProfile   :: !LoginProfile
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetLoginProfileResponse' with the minimum fields required to make a request.

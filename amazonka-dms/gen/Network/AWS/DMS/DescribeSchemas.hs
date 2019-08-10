@@ -57,11 +57,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeSchemas' smart constructor.
-data DescribeSchemas = DescribeSchemas'
-  { _dsMarker      :: !(Maybe Text)
-  , _dsMaxRecords  :: !(Maybe Int)
-  , _dsEndpointARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeSchemas =
+  DescribeSchemas'
+    { _dsMarker      :: !(Maybe Text)
+    , _dsMaxRecords  :: !(Maybe Int)
+    , _dsEndpointARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeSchemas' with the minimum fields required to make a request.
@@ -145,11 +147,13 @@ instance ToQuery DescribeSchemas where
 --
 --
 -- /See:/ 'describeSchemasResponse' smart constructor.
-data DescribeSchemasResponse = DescribeSchemasResponse'
-  { _dsrsSchemas        :: !(Maybe [Text])
-  , _dsrsMarker         :: !(Maybe Text)
-  , _dsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeSchemasResponse =
+  DescribeSchemasResponse'
+    { _dsrsSchemas        :: !(Maybe [Text])
+    , _dsrsMarker         :: !(Maybe Text)
+    , _dsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeSchemasResponse' with the minimum fields required to make a request.

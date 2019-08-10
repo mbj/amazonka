@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'batchGetDeployments' smart constructor.
-newtype BatchGetDeployments = BatchGetDeployments'
-  { _bgdDeploymentIds :: [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype BatchGetDeployments =
+  BatchGetDeployments'
+    { _bgdDeploymentIds :: [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchGetDeployments' with the minimum fields required to make a request.
@@ -110,10 +112,12 @@ instance ToQuery BatchGetDeployments where
 --
 --
 -- /See:/ 'batchGetDeploymentsResponse' smart constructor.
-data BatchGetDeploymentsResponse = BatchGetDeploymentsResponse'
-  { _bgdrsDeploymentsInfo :: !(Maybe [DeploymentInfo])
-  , _bgdrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchGetDeploymentsResponse =
+  BatchGetDeploymentsResponse'
+    { _bgdrsDeploymentsInfo :: !(Maybe [DeploymentInfo])
+    , _bgdrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchGetDeploymentsResponse' with the minimum fields required to make a request.

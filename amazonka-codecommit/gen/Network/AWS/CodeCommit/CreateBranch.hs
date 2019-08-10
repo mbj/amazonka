@@ -48,11 +48,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createBranch' smart constructor.
-data CreateBranch = CreateBranch'
-  { _cbRepositoryName :: !Text
-  , _cbBranchName     :: !Text
-  , _cbCommitId       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateBranch =
+  CreateBranch'
+    { _cbRepositoryName :: !Text
+    , _cbBranchName     :: !Text
+    , _cbCommitId       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateBranch' with the minimum fields required to make a request.

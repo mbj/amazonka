@@ -52,10 +52,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createRouteTable' smart constructor.
-data CreateRouteTable = CreateRouteTable'
-  { _crtDryRun :: !(Maybe Bool)
-  , _crtVPCId  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateRouteTable =
+  CreateRouteTable'
+    { _crtDryRun :: !(Maybe Bool)
+    , _crtVPCId  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateRouteTable' with the minimum fields required to make a request.
@@ -111,10 +113,12 @@ instance ToQuery CreateRouteTable where
 --
 --
 -- /See:/ 'createRouteTableResponse' smart constructor.
-data CreateRouteTableResponse = CreateRouteTableResponse'
-  { _crtrsRouteTable     :: !(Maybe RouteTable)
-  , _crtrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateRouteTableResponse =
+  CreateRouteTableResponse'
+    { _crtrsRouteTable     :: !(Maybe RouteTable)
+    , _crtrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateRouteTableResponse' with the minimum fields required to make a request.

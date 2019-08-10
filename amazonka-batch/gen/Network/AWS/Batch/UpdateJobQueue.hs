@@ -49,12 +49,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateJobQueue' smart constructor.
-data UpdateJobQueue = UpdateJobQueue'
-  { _ujqState                   :: !(Maybe JQState)
-  , _ujqPriority                :: !(Maybe Int)
-  , _ujqComputeEnvironmentOrder :: !(Maybe [ComputeEnvironmentOrder])
-  , _ujqJobQueue                :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateJobQueue =
+  UpdateJobQueue'
+    { _ujqState                   :: !(Maybe JQState)
+    , _ujqPriority                :: !(Maybe Int)
+    , _ujqComputeEnvironmentOrder :: !(Maybe [ComputeEnvironmentOrder])
+    , _ujqJobQueue                :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateJobQueue' with the minimum fields required to make a request.
@@ -134,11 +136,13 @@ instance ToQuery UpdateJobQueue where
         toQuery = const mempty
 
 -- | /See:/ 'updateJobQueueResponse' smart constructor.
-data UpdateJobQueueResponse = UpdateJobQueueResponse'
-  { _ujqrsJobQueueARN    :: !(Maybe Text)
-  , _ujqrsJobQueueName   :: !(Maybe Text)
-  , _ujqrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateJobQueueResponse =
+  UpdateJobQueueResponse'
+    { _ujqrsJobQueueARN    :: !(Maybe Text)
+    , _ujqrsJobQueueName   :: !(Maybe Text)
+    , _ujqrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateJobQueueResponse' with the minimum fields required to make a request.

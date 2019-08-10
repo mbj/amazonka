@@ -62,10 +62,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'requestSpotFleet' smart constructor.
-data RequestSpotFleet = RequestSpotFleet'
-  { _rsfDryRun                 :: !(Maybe Bool)
-  , _rsfSpotFleetRequestConfig :: !SpotFleetRequestConfigData
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RequestSpotFleet =
+  RequestSpotFleet'
+    { _rsfDryRun                 :: !(Maybe Bool)
+    , _rsfSpotFleetRequestConfig :: !SpotFleetRequestConfigData
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RequestSpotFleet' with the minimum fields required to make a request.
@@ -126,10 +128,12 @@ instance ToQuery RequestSpotFleet where
 --
 --
 -- /See:/ 'requestSpotFleetResponse' smart constructor.
-data RequestSpotFleetResponse = RequestSpotFleetResponse'
-  { _rsfrsResponseStatus     :: !Int
-  , _rsfrsSpotFleetRequestId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RequestSpotFleetResponse =
+  RequestSpotFleetResponse'
+    { _rsfrsResponseStatus     :: !Int
+    , _rsfrsSpotFleetRequestId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RequestSpotFleetResponse' with the minimum fields required to make a request.

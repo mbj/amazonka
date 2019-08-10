@@ -55,11 +55,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'purchaseScheduledInstances' smart constructor.
-data PurchaseScheduledInstances = PurchaseScheduledInstances'
-  { _psiClientToken      :: !(Maybe Text)
-  , _psiDryRun           :: !(Maybe Bool)
-  , _psiPurchaseRequests :: !(List1 PurchaseRequest)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PurchaseScheduledInstances =
+  PurchaseScheduledInstances'
+    { _psiClientToken      :: !(Maybe Text)
+    , _psiDryRun           :: !(Maybe Bool)
+    , _psiPurchaseRequests :: !(List1 PurchaseRequest)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PurchaseScheduledInstances' with the minimum fields required to make a request.
@@ -131,10 +133,12 @@ instance ToQuery PurchaseScheduledInstances where
 --
 --
 -- /See:/ 'purchaseScheduledInstancesResponse' smart constructor.
-data PurchaseScheduledInstancesResponse = PurchaseScheduledInstancesResponse'
-  { _psirsScheduledInstanceSet :: !(Maybe [ScheduledInstance])
-  , _psirsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PurchaseScheduledInstancesResponse =
+  PurchaseScheduledInstancesResponse'
+    { _psirsScheduledInstanceSet :: !(Maybe [ScheduledInstance])
+    , _psirsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PurchaseScheduledInstancesResponse' with the minimum fields required to make a request.

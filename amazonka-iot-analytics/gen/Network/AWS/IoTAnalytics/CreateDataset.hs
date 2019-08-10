@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createDataset' smart constructor.
-data CreateDataset = CreateDataset'
-  { _cdTriggers    :: !(Maybe [DatasetTrigger])
-  , _cdDatasetName :: !Text
-  , _cdActions     :: !(List1 DatasetAction)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDataset =
+  CreateDataset'
+    { _cdTriggers    :: !(Maybe [DatasetTrigger])
+    , _cdDatasetName :: !Text
+    , _cdActions     :: !(List1 DatasetAction)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDataset' with the minimum fields required to make a request.
@@ -120,11 +122,13 @@ instance ToQuery CreateDataset where
         toQuery = const mempty
 
 -- | /See:/ 'createDatasetResponse' smart constructor.
-data CreateDatasetResponse = CreateDatasetResponse'
-  { _crsDatasetARN     :: !(Maybe Text)
-  , _crsDatasetName    :: !(Maybe Text)
-  , _crsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDatasetResponse =
+  CreateDatasetResponse'
+    { _crsDatasetARN     :: !(Maybe Text)
+    , _crsDatasetName    :: !(Maybe Text)
+    , _crsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDatasetResponse' with the minimum fields required to make a request.

@@ -52,13 +52,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateSubscriber' smart constructor.
-data UpdateSubscriber = UpdateSubscriber'
-  { _usAccountId     :: !Text
-  , _usBudgetName    :: !Text
-  , _usNotification  :: !Notification
-  , _usOldSubscriber :: !Subscriber
-  , _usNewSubscriber :: !Subscriber
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateSubscriber =
+  UpdateSubscriber'
+    { _usAccountId     :: !Text
+    , _usBudgetName    :: !Text
+    , _usNotification  :: !Notification
+    , _usOldSubscriber :: !Subscriber
+    , _usNewSubscriber :: !Subscriber
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateSubscriber' with the minimum fields required to make a request.
@@ -154,9 +156,11 @@ instance ToQuery UpdateSubscriber where
 --
 --
 -- /See:/ 'updateSubscriberResponse' smart constructor.
-newtype UpdateSubscriberResponse = UpdateSubscriberResponse'
-  { _usrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateSubscriberResponse =
+  UpdateSubscriberResponse'
+    { _usrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateSubscriberResponse' with the minimum fields required to make a request.

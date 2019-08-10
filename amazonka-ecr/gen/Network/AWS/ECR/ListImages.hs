@@ -55,13 +55,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listImages' smart constructor.
-data ListImages = ListImages'
-  { _liRegistryId     :: !(Maybe Text)
-  , _liNextToken      :: !(Maybe Text)
-  , _liFilter         :: !(Maybe ListImagesFilter)
-  , _liMaxResults     :: !(Maybe Nat)
-  , _liRepositoryName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListImages =
+  ListImages'
+    { _liRegistryId     :: !(Maybe Text)
+    , _liNextToken      :: !(Maybe Text)
+    , _liFilter         :: !(Maybe ListImagesFilter)
+    , _liMaxResults     :: !(Maybe Nat)
+    , _liRepositoryName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListImages' with the minimum fields required to make a request.
@@ -158,11 +160,13 @@ instance ToQuery ListImages where
         toQuery = const mempty
 
 -- | /See:/ 'listImagesResponse' smart constructor.
-data ListImagesResponse = ListImagesResponse'
-  { _lirsImageIds       :: !(Maybe [ImageIdentifier])
-  , _lirsNextToken      :: !(Maybe Text)
-  , _lirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListImagesResponse =
+  ListImagesResponse'
+    { _lirsImageIds       :: !(Maybe [ImageIdentifier])
+    , _lirsNextToken      :: !(Maybe Text)
+    , _lirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListImagesResponse' with the minimum fields required to make a request.

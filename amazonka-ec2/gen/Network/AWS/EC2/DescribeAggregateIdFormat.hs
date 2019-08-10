@@ -50,9 +50,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeAggregateIdFormat' smart constructor.
-newtype DescribeAggregateIdFormat = DescribeAggregateIdFormat'
-  { _daifDryRun :: Maybe Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeAggregateIdFormat =
+  DescribeAggregateIdFormat'
+    { _daifDryRun :: Maybe Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAggregateIdFormat' with the minimum fields required to make a request.
@@ -101,11 +103,13 @@ instance ToQuery DescribeAggregateIdFormat where
                "DryRun" =: _daifDryRun]
 
 -- | /See:/ 'describeAggregateIdFormatResponse' smart constructor.
-data DescribeAggregateIdFormatResponse = DescribeAggregateIdFormatResponse'
-  { _daifrsUseLongIdsAggregated :: !(Maybe Bool)
-  , _daifrsStatuses             :: !(Maybe [IdFormat])
-  , _daifrsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAggregateIdFormatResponse =
+  DescribeAggregateIdFormatResponse'
+    { _daifrsUseLongIdsAggregated :: !(Maybe Bool)
+    , _daifrsStatuses             :: !(Maybe [IdFormat])
+    , _daifrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAggregateIdFormatResponse' with the minimum fields required to make a request.

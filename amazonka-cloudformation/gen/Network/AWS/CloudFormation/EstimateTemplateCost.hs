@@ -51,11 +51,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'estimateTemplateCost' smart constructor.
-data EstimateTemplateCost = EstimateTemplateCost'
-  { _etcParameters   :: !(Maybe [Parameter])
-  , _etcTemplateBody :: !(Maybe Text)
-  , _etcTemplateURL  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EstimateTemplateCost =
+  EstimateTemplateCost'
+    { _etcParameters   :: !(Maybe [Parameter])
+    , _etcTemplateBody :: !(Maybe Text)
+    , _etcTemplateURL  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EstimateTemplateCost' with the minimum fields required to make a request.
@@ -124,10 +126,12 @@ instance ToQuery EstimateTemplateCost where
 --
 --
 -- /See:/ 'estimateTemplateCostResponse' smart constructor.
-data EstimateTemplateCostResponse = EstimateTemplateCostResponse'
-  { _etcrsURL            :: !(Maybe Text)
-  , _etcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EstimateTemplateCostResponse =
+  EstimateTemplateCostResponse'
+    { _etcrsURL            :: !(Maybe Text)
+    , _etcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EstimateTemplateCostResponse' with the minimum fields required to make a request.

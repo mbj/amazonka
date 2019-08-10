@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'tagProject' smart constructor.
-data TagProject = TagProject'
-  { _tpId   :: !Text
-  , _tpTags :: !(Map Text Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TagProject =
+  TagProject'
+    { _tpId   :: !Text
+    , _tpTags :: !(Map Text Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TagProject' with the minimum fields required to make a request.
@@ -108,10 +110,12 @@ instance ToQuery TagProject where
         toQuery = const mempty
 
 -- | /See:/ 'tagProjectResponse' smart constructor.
-data TagProjectResponse = TagProjectResponse'
-  { _tprsTags           :: !(Maybe (Map Text Text))
-  , _tprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TagProjectResponse =
+  TagProjectResponse'
+    { _tprsTags           :: !(Maybe (Map Text Text))
+    , _tprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TagProjectResponse' with the minimum fields required to make a request.

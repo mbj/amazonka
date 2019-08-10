@@ -50,11 +50,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listTagsForStream' smart constructor.
-data ListTagsForStream = ListTagsForStream'
-  { _ltfsStreamARN  :: !(Maybe Text)
-  , _ltfsNextToken  :: !(Maybe Text)
-  , _ltfsStreamName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTagsForStream =
+  ListTagsForStream'
+    { _ltfsStreamARN  :: !(Maybe Text)
+    , _ltfsNextToken  :: !(Maybe Text)
+    , _ltfsStreamName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTagsForStream' with the minimum fields required to make a request.
@@ -120,11 +122,13 @@ instance ToQuery ListTagsForStream where
         toQuery = const mempty
 
 -- | /See:/ 'listTagsForStreamResponse' smart constructor.
-data ListTagsForStreamResponse = ListTagsForStreamResponse'
-  { _ltfsrsNextToken      :: !(Maybe Text)
-  , _ltfsrsTags           :: !(Maybe (Map Text Text))
-  , _ltfsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTagsForStreamResponse =
+  ListTagsForStreamResponse'
+    { _ltfsrsNextToken      :: !(Maybe Text)
+    , _ltfsrsTags           :: !(Maybe (Map Text Text))
+    , _ltfsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTagsForStreamResponse' with the minimum fields required to make a request.

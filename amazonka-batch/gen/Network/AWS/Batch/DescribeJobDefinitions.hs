@@ -50,13 +50,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeJobDefinitions' smart constructor.
-data DescribeJobDefinitions = DescribeJobDefinitions'
-  { _djdStatus            :: !(Maybe Text)
-  , _djdJobDefinitionName :: !(Maybe Text)
-  , _djdJobDefinitions    :: !(Maybe [Text])
-  , _djdNextToken         :: !(Maybe Text)
-  , _djdMaxResults        :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeJobDefinitions =
+  DescribeJobDefinitions'
+    { _djdStatus            :: !(Maybe Text)
+    , _djdJobDefinitionName :: !(Maybe Text)
+    , _djdJobDefinitions    :: !(Maybe [Text])
+    , _djdNextToken         :: !(Maybe Text)
+    , _djdMaxResults        :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeJobDefinitions' with the minimum fields required to make a request.
@@ -144,11 +146,13 @@ instance ToQuery DescribeJobDefinitions where
         toQuery = const mempty
 
 -- | /See:/ 'describeJobDefinitionsResponse' smart constructor.
-data DescribeJobDefinitionsResponse = DescribeJobDefinitionsResponse'
-  { _djdrsJobDefinitions :: !(Maybe [JobDefinition])
-  , _djdrsNextToken      :: !(Maybe Text)
-  , _djdrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeJobDefinitionsResponse =
+  DescribeJobDefinitionsResponse'
+    { _djdrsJobDefinitions :: !(Maybe [JobDefinition])
+    , _djdrsNextToken      :: !(Maybe Text)
+    , _djdrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeJobDefinitionsResponse' with the minimum fields required to make a request.

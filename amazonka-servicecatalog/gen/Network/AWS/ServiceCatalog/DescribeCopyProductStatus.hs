@@ -48,10 +48,12 @@ import Network.AWS.ServiceCatalog.Types
 import Network.AWS.ServiceCatalog.Types.Product
 
 -- | /See:/ 'describeCopyProductStatus' smart constructor.
-data DescribeCopyProductStatus = DescribeCopyProductStatus'
-  { _dcpsAcceptLanguage   :: !(Maybe Text)
-  , _dcpsCopyProductToken :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeCopyProductStatus =
+  DescribeCopyProductStatus'
+    { _dcpsAcceptLanguage   :: !(Maybe Text)
+    , _dcpsCopyProductToken :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeCopyProductStatus' with the minimum fields required to make a request.
@@ -118,12 +120,14 @@ instance ToQuery DescribeCopyProductStatus where
         toQuery = const mempty
 
 -- | /See:/ 'describeCopyProductStatusResponse' smart constructor.
-data DescribeCopyProductStatusResponse = DescribeCopyProductStatusResponse'
-  { _dcpsrsTargetProductId   :: !(Maybe Text)
-  , _dcpsrsCopyProductStatus :: !(Maybe CopyProductStatus)
-  , _dcpsrsStatusDetail      :: !(Maybe Text)
-  , _dcpsrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeCopyProductStatusResponse =
+  DescribeCopyProductStatusResponse'
+    { _dcpsrsTargetProductId   :: !(Maybe Text)
+    , _dcpsrsCopyProductStatus :: !(Maybe CopyProductStatus)
+    , _dcpsrsStatusDetail      :: !(Maybe Text)
+    , _dcpsrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeCopyProductStatusResponse' with the minimum fields required to make a request.

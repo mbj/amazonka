@@ -52,10 +52,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createSAMLProvider' smart constructor.
-data CreateSAMLProvider = CreateSAMLProvider'
-  { _csamlpSAMLMetadataDocument :: !Text
-  , _csamlpName                 :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateSAMLProvider =
+  CreateSAMLProvider'
+    { _csamlpSAMLMetadataDocument :: !Text
+    , _csamlpName                 :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateSAMLProvider' with the minimum fields required to make a request.
@@ -116,10 +118,12 @@ instance ToQuery CreateSAMLProvider where
 --
 --
 -- /See:/ 'createSAMLProviderResponse' smart constructor.
-data CreateSAMLProviderResponse = CreateSAMLProviderResponse'
-  { _csamlprsSAMLProviderARN :: !(Maybe Text)
-  , _csamlprsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateSAMLProviderResponse =
+  CreateSAMLProviderResponse'
+    { _csamlprsSAMLProviderARN :: !(Maybe Text)
+    , _csamlprsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateSAMLProviderResponse' with the minimum fields required to make a request.

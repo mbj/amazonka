@@ -50,12 +50,14 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'deleteInventory' smart constructor.
-data DeleteInventory = DeleteInventory'
-  { _diClientToken        :: !(Maybe Text)
-  , _diSchemaDeleteOption :: !(Maybe InventorySchemaDeleteOption)
-  , _diDryRun             :: !(Maybe Bool)
-  , _diTypeName           :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteInventory =
+  DeleteInventory'
+    { _diClientToken        :: !(Maybe Text)
+    , _diSchemaDeleteOption :: !(Maybe InventorySchemaDeleteOption)
+    , _diDryRun             :: !(Maybe Bool)
+    , _diTypeName           :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteInventory' with the minimum fields required to make a request.
@@ -137,12 +139,14 @@ instance ToQuery DeleteInventory where
         toQuery = const mempty
 
 -- | /See:/ 'deleteInventoryResponse' smart constructor.
-data DeleteInventoryResponse = DeleteInventoryResponse'
-  { _dirsTypeName        :: !(Maybe Text)
-  , _dirsDeletionSummary :: !(Maybe InventoryDeletionSummary)
-  , _dirsDeletionId      :: !(Maybe Text)
-  , _dirsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteInventoryResponse =
+  DeleteInventoryResponse'
+    { _dirsTypeName        :: !(Maybe Text)
+    , _dirsDeletionSummary :: !(Maybe InventoryDeletionSummary)
+    , _dirsDeletionId      :: !(Maybe Text)
+    , _dirsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteInventoryResponse' with the minimum fields required to make a request.

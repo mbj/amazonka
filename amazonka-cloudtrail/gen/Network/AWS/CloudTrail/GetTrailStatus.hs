@@ -65,9 +65,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getTrailStatus' smart constructor.
-newtype GetTrailStatus = GetTrailStatus'
-  { _gtsName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetTrailStatus =
+  GetTrailStatus'
+    { _gtsName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetTrailStatus' with the minimum fields required to make a request.
@@ -140,26 +142,28 @@ instance ToQuery GetTrailStatus where
 --
 --
 -- /See:/ 'getTrailStatusResponse' smart constructor.
-data GetTrailStatusResponse = GetTrailStatusResponse'
-  { _gtsrsTimeLoggingStopped                 :: !(Maybe Text)
-  , _gtsrsLatestDeliveryError                :: !(Maybe Text)
-  , _gtsrsLatestDigestDeliveryTime           :: !(Maybe POSIX)
-  , _gtsrsLatestNotificationAttemptSucceeded :: !(Maybe Text)
-  , _gtsrsStartLoggingTime                   :: !(Maybe POSIX)
-  , _gtsrsLatestNotificationError            :: !(Maybe Text)
-  , _gtsrsLatestDeliveryAttemptSucceeded     :: !(Maybe Text)
-  , _gtsrsIsLogging                          :: !(Maybe Bool)
-  , _gtsrsTimeLoggingStarted                 :: !(Maybe Text)
-  , _gtsrsLatestDigestDeliveryError          :: !(Maybe Text)
-  , _gtsrsLatestDeliveryAttemptTime          :: !(Maybe Text)
-  , _gtsrsLatestDeliveryTime                 :: !(Maybe POSIX)
-  , _gtsrsLatestCloudWatchLogsDeliveryTime   :: !(Maybe POSIX)
-  , _gtsrsLatestCloudWatchLogsDeliveryError  :: !(Maybe Text)
-  , _gtsrsLatestNotificationTime             :: !(Maybe POSIX)
-  , _gtsrsLatestNotificationAttemptTime      :: !(Maybe Text)
-  , _gtsrsStopLoggingTime                    :: !(Maybe POSIX)
-  , _gtsrsResponseStatus                     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetTrailStatusResponse =
+  GetTrailStatusResponse'
+    { _gtsrsTimeLoggingStopped                 :: !(Maybe Text)
+    , _gtsrsLatestDeliveryError                :: !(Maybe Text)
+    , _gtsrsLatestDigestDeliveryTime           :: !(Maybe POSIX)
+    , _gtsrsLatestNotificationAttemptSucceeded :: !(Maybe Text)
+    , _gtsrsStartLoggingTime                   :: !(Maybe POSIX)
+    , _gtsrsLatestNotificationError            :: !(Maybe Text)
+    , _gtsrsLatestDeliveryAttemptSucceeded     :: !(Maybe Text)
+    , _gtsrsIsLogging                          :: !(Maybe Bool)
+    , _gtsrsTimeLoggingStarted                 :: !(Maybe Text)
+    , _gtsrsLatestDigestDeliveryError          :: !(Maybe Text)
+    , _gtsrsLatestDeliveryAttemptTime          :: !(Maybe Text)
+    , _gtsrsLatestDeliveryTime                 :: !(Maybe POSIX)
+    , _gtsrsLatestCloudWatchLogsDeliveryTime   :: !(Maybe POSIX)
+    , _gtsrsLatestCloudWatchLogsDeliveryError  :: !(Maybe Text)
+    , _gtsrsLatestNotificationTime             :: !(Maybe POSIX)
+    , _gtsrsLatestNotificationAttemptTime      :: !(Maybe Text)
+    , _gtsrsStopLoggingTime                    :: !(Maybe POSIX)
+    , _gtsrsResponseStatus                     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetTrailStatusResponse' with the minimum fields required to make a request.

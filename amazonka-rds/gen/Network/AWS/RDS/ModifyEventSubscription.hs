@@ -55,13 +55,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'modifyEventSubscription' smart constructor.
-data ModifyEventSubscription = ModifyEventSubscription'
-  { _mesSNSTopicARN      :: !(Maybe Text)
-  , _mesEnabled          :: !(Maybe Bool)
-  , _mesSourceType       :: !(Maybe Text)
-  , _mesEventCategories  :: !(Maybe [Text])
-  , _mesSubscriptionName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyEventSubscription =
+  ModifyEventSubscription'
+    { _mesSNSTopicARN      :: !(Maybe Text)
+    , _mesEnabled          :: !(Maybe Bool)
+    , _mesSourceType       :: !(Maybe Text)
+    , _mesEventCategories  :: !(Maybe [Text])
+    , _mesSubscriptionName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyEventSubscription' with the minimum fields required to make a request.
@@ -146,10 +148,12 @@ instance ToQuery ModifyEventSubscription where
                "SubscriptionName" =: _mesSubscriptionName]
 
 -- | /See:/ 'modifyEventSubscriptionResponse' smart constructor.
-data ModifyEventSubscriptionResponse = ModifyEventSubscriptionResponse'
-  { _mesrsEventSubscription :: !(Maybe EventSubscription)
-  , _mesrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyEventSubscriptionResponse =
+  ModifyEventSubscriptionResponse'
+    { _mesrsEventSubscription :: !(Maybe EventSubscription)
+    , _mesrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyEventSubscriptionResponse' with the minimum fields required to make a request.

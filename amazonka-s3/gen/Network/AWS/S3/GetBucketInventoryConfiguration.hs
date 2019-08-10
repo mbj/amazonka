@@ -44,10 +44,12 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'getBucketInventoryConfiguration' smart constructor.
-data GetBucketInventoryConfiguration = GetBucketInventoryConfiguration'
-  { _gbicBucket :: !BucketName
-  , _gbicId     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetBucketInventoryConfiguration =
+  GetBucketInventoryConfiguration'
+    { _gbicBucket :: !BucketName
+    , _gbicId     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBucketInventoryConfiguration' with the minimum fields required to make a request.
@@ -103,10 +105,12 @@ instance ToQuery GetBucketInventoryConfiguration
           = mconcat ["id" =: _gbicId, "inventory"]
 
 -- | /See:/ 'getBucketInventoryConfigurationResponse' smart constructor.
-data GetBucketInventoryConfigurationResponse = GetBucketInventoryConfigurationResponse'
-  { _gbicrsInventoryConfiguration :: !(Maybe InventoryConfiguration)
-  , _gbicrsResponseStatus         :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data GetBucketInventoryConfigurationResponse =
+  GetBucketInventoryConfigurationResponse'
+    { _gbicrsInventoryConfiguration :: !(Maybe InventoryConfiguration)
+    , _gbicrsResponseStatus         :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBucketInventoryConfigurationResponse' with the minimum fields required to make a request.

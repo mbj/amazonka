@@ -65,17 +65,19 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateQualificationType' smart constructor.
-data UpdateQualificationType = UpdateQualificationType'
-  { _uqtTestDurationInSeconds   :: !(Maybe Integer)
-  , _uqtQualificationTypeStatus :: !(Maybe QualificationTypeStatus)
-  , _uqtAnswerKey               :: !(Maybe Text)
-  , _uqtTest                    :: !(Maybe Text)
-  , _uqtAutoGranted             :: !(Maybe Bool)
-  , _uqtAutoGrantedValue        :: !(Maybe Int)
-  , _uqtDescription             :: !(Maybe Text)
-  , _uqtRetryDelayInSeconds     :: !(Maybe Integer)
-  , _uqtQualificationTypeId     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateQualificationType =
+  UpdateQualificationType'
+    { _uqtTestDurationInSeconds   :: !(Maybe Integer)
+    , _uqtQualificationTypeStatus :: !(Maybe QualificationTypeStatus)
+    , _uqtAnswerKey               :: !(Maybe Text)
+    , _uqtTest                    :: !(Maybe Text)
+    , _uqtAutoGranted             :: !(Maybe Bool)
+    , _uqtAutoGrantedValue        :: !(Maybe Int)
+    , _uqtDescription             :: !(Maybe Text)
+    , _uqtRetryDelayInSeconds     :: !(Maybe Integer)
+    , _uqtQualificationTypeId     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateQualificationType' with the minimum fields required to make a request.
@@ -201,10 +203,12 @@ instance ToQuery UpdateQualificationType where
         toQuery = const mempty
 
 -- | /See:/ 'updateQualificationTypeResponse' smart constructor.
-data UpdateQualificationTypeResponse = UpdateQualificationTypeResponse'
-  { _uqtrsQualificationType :: !(Maybe QualificationType)
-  , _uqtrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateQualificationTypeResponse =
+  UpdateQualificationTypeResponse'
+    { _uqtrsQualificationType :: !(Maybe QualificationType)
+    , _uqtrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateQualificationTypeResponse' with the minimum fields required to make a request.

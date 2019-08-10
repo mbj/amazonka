@@ -58,10 +58,12 @@ import Network.AWS.WAFRegional.Types
 import Network.AWS.WAFRegional.Types.Product
 
 -- | /See:/ 'deleteRuleGroup' smart constructor.
-data DeleteRuleGroup = DeleteRuleGroup'
-  { _drgRuleGroupId :: !Text
-  , _drgChangeToken :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteRuleGroup =
+  DeleteRuleGroup'
+    { _drgRuleGroupId :: !Text
+    , _drgChangeToken :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteRuleGroup' with the minimum fields required to make a request.
@@ -125,10 +127,12 @@ instance ToQuery DeleteRuleGroup where
         toQuery = const mempty
 
 -- | /See:/ 'deleteRuleGroupResponse' smart constructor.
-data DeleteRuleGroupResponse = DeleteRuleGroupResponse'
-  { _drgrsChangeToken    :: !(Maybe Text)
-  , _drgrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteRuleGroupResponse =
+  DeleteRuleGroupResponse'
+    { _drgrsChangeToken    :: !(Maybe Text)
+    , _drgrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteRuleGroupResponse' with the minimum fields required to make a request.

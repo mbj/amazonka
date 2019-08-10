@@ -51,10 +51,12 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'deleteConfigurationSetEventDestination' smart constructor.
-data DeleteConfigurationSetEventDestination = DeleteConfigurationSetEventDestination'
-  { _dcsedConfigurationSetName :: !Text
-  , _dcsedEventDestinationName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteConfigurationSetEventDestination =
+  DeleteConfigurationSetEventDestination'
+    { _dcsedConfigurationSetName :: !Text
+    , _dcsedEventDestinationName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteConfigurationSetEventDestination' with the minimum fields required to make a request.
@@ -131,9 +133,11 @@ instance ToQuery
 --
 --
 -- /See:/ 'deleteConfigurationSetEventDestinationResponse' smart constructor.
-newtype DeleteConfigurationSetEventDestinationResponse = DeleteConfigurationSetEventDestinationResponse'
-  { _dcsedrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteConfigurationSetEventDestinationResponse =
+  DeleteConfigurationSetEventDestinationResponse'
+    { _dcsedrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteConfigurationSetEventDestinationResponse' with the minimum fields required to make a request.

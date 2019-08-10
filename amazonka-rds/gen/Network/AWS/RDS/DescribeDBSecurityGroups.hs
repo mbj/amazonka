@@ -56,12 +56,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeDBSecurityGroups' smart constructor.
-data DescribeDBSecurityGroups = DescribeDBSecurityGroups'
-  { _ddbsgFilters             :: !(Maybe [Filter])
-  , _ddbsgMarker              :: !(Maybe Text)
-  , _ddbsgMaxRecords          :: !(Maybe Int)
-  , _ddbsgDBSecurityGroupName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDBSecurityGroups =
+  DescribeDBSecurityGroups'
+    { _ddbsgFilters             :: !(Maybe [Filter])
+    , _ddbsgMarker              :: !(Maybe Text)
+    , _ddbsgMaxRecords          :: !(Maybe Int)
+    , _ddbsgDBSecurityGroupName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDBSecurityGroups' with the minimum fields required to make a request.
@@ -149,11 +151,13 @@ instance ToQuery DescribeDBSecurityGroups where
 --
 --
 -- /See:/ 'describeDBSecurityGroupsResponse' smart constructor.
-data DescribeDBSecurityGroupsResponse = DescribeDBSecurityGroupsResponse'
-  { _ddbsgrsDBSecurityGroups :: !(Maybe [DBSecurityGroup])
-  , _ddbsgrsMarker           :: !(Maybe Text)
-  , _ddbsgrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDBSecurityGroupsResponse =
+  DescribeDBSecurityGroupsResponse'
+    { _ddbsgrsDBSecurityGroups :: !(Maybe [DBSecurityGroup])
+    , _ddbsgrsMarker           :: !(Maybe Text)
+    , _ddbsgrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDBSecurityGroupsResponse' with the minimum fields required to make a request.

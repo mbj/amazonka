@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteVPCEndpointConnectionNotifications' smart constructor.
-data DeleteVPCEndpointConnectionNotifications = DeleteVPCEndpointConnectionNotifications'
-  { _dvecnDryRun                    :: !(Maybe Bool)
-  , _dvecnConnectionNotificationIds :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteVPCEndpointConnectionNotifications =
+  DeleteVPCEndpointConnectionNotifications'
+    { _dvecnDryRun                    :: !(Maybe Bool)
+    , _dvecnConnectionNotificationIds :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteVPCEndpointConnectionNotifications' with the minimum fields required to make a request.
@@ -120,10 +122,12 @@ instance ToQuery
                  _dvecnConnectionNotificationIds]
 
 -- | /See:/ 'deleteVPCEndpointConnectionNotificationsResponse' smart constructor.
-data DeleteVPCEndpointConnectionNotificationsResponse = DeleteVPCEndpointConnectionNotificationsResponse'
-  { _dvecnrsUnsuccessful   :: !(Maybe [UnsuccessfulItem])
-  , _dvecnrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteVPCEndpointConnectionNotificationsResponse =
+  DeleteVPCEndpointConnectionNotificationsResponse'
+    { _dvecnrsUnsuccessful   :: !(Maybe [UnsuccessfulItem])
+    , _dvecnrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteVPCEndpointConnectionNotificationsResponse' with the minimum fields required to make a request.

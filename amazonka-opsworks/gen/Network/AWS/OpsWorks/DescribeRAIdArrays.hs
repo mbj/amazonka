@@ -49,11 +49,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeRAIdArrays' smart constructor.
-data DescribeRAIdArrays = DescribeRAIdArrays'
-  { _draiaInstanceId   :: !(Maybe Text)
-  , _draiaRAIdArrayIds :: !(Maybe [Text])
-  , _draiaStackId      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeRAIdArrays =
+  DescribeRAIdArrays'
+    { _draiaInstanceId   :: !(Maybe Text)
+    , _draiaRAIdArrayIds :: !(Maybe [Text])
+    , _draiaStackId      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeRAIdArrays' with the minimum fields required to make a request.
@@ -131,10 +133,12 @@ instance ToQuery DescribeRAIdArrays where
 --
 --
 -- /See:/ 'describeRAIdArraysResponse' smart constructor.
-data DescribeRAIdArraysResponse = DescribeRAIdArraysResponse'
-  { _draiarsRAIdArrays     :: !(Maybe [RAIdArray])
-  , _draiarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeRAIdArraysResponse =
+  DescribeRAIdArraysResponse'
+    { _draiarsRAIdArrays     :: !(Maybe [RAIdArray])
+    , _draiarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeRAIdArraysResponse' with the minimum fields required to make a request.

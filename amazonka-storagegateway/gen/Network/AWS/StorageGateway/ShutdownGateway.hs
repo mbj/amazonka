@@ -55,9 +55,11 @@ import Network.AWS.StorageGateway.Types.Product
 --
 --
 -- /See:/ 'shutdownGateway' smart constructor.
-newtype ShutdownGateway = ShutdownGateway'
-  { _sGatewayARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ShutdownGateway =
+  ShutdownGateway'
+    { _sGatewayARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ShutdownGateway' with the minimum fields required to make a request.
@@ -114,10 +116,12 @@ instance ToQuery ShutdownGateway where
 --
 --
 -- /See:/ 'shutdownGatewayResponse' smart constructor.
-data ShutdownGatewayResponse = ShutdownGatewayResponse'
-  { _srsGatewayARN     :: !(Maybe Text)
-  , _srsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ShutdownGatewayResponse =
+  ShutdownGatewayResponse'
+    { _srsGatewayARN     :: !(Maybe Text)
+    , _srsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ShutdownGatewayResponse' with the minimum fields required to make a request.

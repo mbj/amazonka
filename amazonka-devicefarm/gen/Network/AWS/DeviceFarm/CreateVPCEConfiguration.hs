@@ -48,12 +48,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createVPCEConfiguration' smart constructor.
-data CreateVPCEConfiguration = CreateVPCEConfiguration'
-  { _cvecVpceConfigurationDescription :: !(Maybe Text)
-  , _cvecVpceConfigurationName        :: !Text
-  , _cvecVpceServiceName              :: !Text
-  , _cvecServiceDNSName               :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateVPCEConfiguration =
+  CreateVPCEConfiguration'
+    { _cvecVpceConfigurationDescription :: !(Maybe Text)
+    , _cvecVpceConfigurationName        :: !Text
+    , _cvecVpceServiceName              :: !Text
+    , _cvecServiceDNSName               :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateVPCEConfiguration' with the minimum fields required to make a request.
@@ -140,10 +142,12 @@ instance ToQuery CreateVPCEConfiguration where
         toQuery = const mempty
 
 -- | /See:/ 'createVPCEConfigurationResponse' smart constructor.
-data CreateVPCEConfigurationResponse = CreateVPCEConfigurationResponse'
-  { _cvecrsVpceConfiguration :: !(Maybe VPCEConfiguration)
-  , _cvecrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateVPCEConfigurationResponse =
+  CreateVPCEConfigurationResponse'
+    { _cvecrsVpceConfiguration :: !(Maybe VPCEConfiguration)
+    , _cvecrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateVPCEConfigurationResponse' with the minimum fields required to make a request.

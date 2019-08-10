@@ -68,14 +68,16 @@ import Network.AWS.SWF.Types
 import Network.AWS.SWF.Types.Product
 
 -- | /See:/ 'listActivityTypes' smart constructor.
-data ListActivityTypes = ListActivityTypes'
-  { _latNextPageToken      :: !(Maybe Text)
-  , _latReverseOrder       :: !(Maybe Bool)
-  , _latName               :: !(Maybe Text)
-  , _latMaximumPageSize    :: !(Maybe Nat)
-  , _latDomain             :: !Text
-  , _latRegistrationStatus :: !RegistrationStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListActivityTypes =
+  ListActivityTypes'
+    { _latNextPageToken      :: !(Maybe Text)
+    , _latReverseOrder       :: !(Maybe Bool)
+    , _latName               :: !(Maybe Text)
+    , _latMaximumPageSize    :: !(Maybe Nat)
+    , _latDomain             :: !Text
+    , _latRegistrationStatus :: !RegistrationStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListActivityTypes' with the minimum fields required to make a request.
@@ -187,11 +189,13 @@ instance ToQuery ListActivityTypes where
 --
 --
 -- /See:/ 'listActivityTypesResponse' smart constructor.
-data ListActivityTypesResponse = ListActivityTypesResponse'
-  { _latrsNextPageToken  :: !(Maybe Text)
-  , _latrsResponseStatus :: !Int
-  , _latrsTypeInfos      :: ![ActivityTypeInfo]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListActivityTypesResponse =
+  ListActivityTypesResponse'
+    { _latrsNextPageToken  :: !(Maybe Text)
+    , _latrsResponseStatus :: !Int
+    , _latrsTypeInfos      :: ![ActivityTypeInfo]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListActivityTypesResponse' with the minimum fields required to make a request.

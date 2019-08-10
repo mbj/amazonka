@@ -54,10 +54,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeOrderableReplicationInstances' smart constructor.
-data DescribeOrderableReplicationInstances = DescribeOrderableReplicationInstances'
-  { _doriMarker     :: !(Maybe Text)
-  , _doriMaxRecords :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeOrderableReplicationInstances =
+  DescribeOrderableReplicationInstances'
+    { _doriMarker     :: !(Maybe Text)
+    , _doriMaxRecords :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeOrderableReplicationInstances' with the minimum fields required to make a request.
@@ -147,11 +149,13 @@ instance ToQuery
 --
 --
 -- /See:/ 'describeOrderableReplicationInstancesResponse' smart constructor.
-data DescribeOrderableReplicationInstancesResponse = DescribeOrderableReplicationInstancesResponse'
-  { _dorirsMarker :: !(Maybe Text)
-  , _dorirsOrderableReplicationInstances :: !(Maybe [OrderableReplicationInstance])
-  , _dorirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeOrderableReplicationInstancesResponse =
+  DescribeOrderableReplicationInstancesResponse'
+    { _dorirsMarker :: !(Maybe Text)
+    , _dorirsOrderableReplicationInstances :: !(Maybe [OrderableReplicationInstance])
+    , _dorirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeOrderableReplicationInstancesResponse' with the minimum fields required to make a request.

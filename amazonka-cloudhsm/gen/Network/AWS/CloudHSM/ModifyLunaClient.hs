@@ -52,10 +52,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'modifyLunaClient' smart constructor.
-data ModifyLunaClient = ModifyLunaClient'
-  { _mlcClientARN   :: !Text
-  , _mlcCertificate :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyLunaClient =
+  ModifyLunaClient'
+    { _mlcClientARN   :: !Text
+    , _mlcCertificate :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyLunaClient' with the minimum fields required to make a request.
@@ -119,10 +121,12 @@ instance ToQuery ModifyLunaClient where
         toQuery = const mempty
 
 -- | /See:/ 'modifyLunaClientResponse' smart constructor.
-data ModifyLunaClientResponse = ModifyLunaClientResponse'
-  { _mlcrsClientARN      :: !(Maybe Text)
-  , _mlcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyLunaClientResponse =
+  ModifyLunaClientResponse'
+    { _mlcrsClientARN      :: !(Maybe Text)
+    , _mlcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyLunaClientResponse' with the minimum fields required to make a request.

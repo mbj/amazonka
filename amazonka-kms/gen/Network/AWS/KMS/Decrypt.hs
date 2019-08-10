@@ -58,11 +58,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'decrypt' smart constructor.
-data Decrypt = Decrypt'
-  { _decEncryptionContext :: !(Maybe (Map Text Text))
-  , _decGrantTokens       :: !(Maybe [Text])
-  , _decCiphertextBlob    :: !Base64
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Decrypt =
+  Decrypt'
+    { _decEncryptionContext :: !(Maybe (Map Text Text))
+    , _decGrantTokens       :: !(Maybe [Text])
+    , _decCiphertextBlob    :: !Base64
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Decrypt' with the minimum fields required to make a request.
@@ -135,11 +137,13 @@ instance ToQuery Decrypt where
         toQuery = const mempty
 
 -- | /See:/ 'decryptResponse' smart constructor.
-data DecryptResponse = DecryptResponse'
-  { _drsKeyId          :: !(Maybe Text)
-  , _drsPlaintext      :: !(Maybe (Sensitive Base64))
-  , _drsResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data DecryptResponse =
+  DecryptResponse'
+    { _drsKeyId          :: !(Maybe Text)
+    , _drsPlaintext      :: !(Maybe (Sensitive Base64))
+    , _drsResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DecryptResponse' with the minimum fields required to make a request.

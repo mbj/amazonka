@@ -69,18 +69,20 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createTrail' smart constructor.
-data CreateTrail = CreateTrail'
-  { _ctS3KeyPrefix                :: !(Maybe Text)
-  , _ctSNSTopicName               :: !(Maybe Text)
-  , _ctEnableLogFileValidation    :: !(Maybe Bool)
-  , _ctCloudWatchLogsLogGroupARN  :: !(Maybe Text)
-  , _ctKMSKeyId                   :: !(Maybe Text)
-  , _ctIncludeGlobalServiceEvents :: !(Maybe Bool)
-  , _ctCloudWatchLogsRoleARN      :: !(Maybe Text)
-  , _ctIsMultiRegionTrail         :: !(Maybe Bool)
-  , _ctName                       :: !Text
-  , _ctS3BucketName               :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateTrail =
+  CreateTrail'
+    { _ctS3KeyPrefix                :: !(Maybe Text)
+    , _ctSNSTopicName               :: !(Maybe Text)
+    , _ctEnableLogFileValidation    :: !(Maybe Bool)
+    , _ctCloudWatchLogsLogGroupARN  :: !(Maybe Text)
+    , _ctKMSKeyId                   :: !(Maybe Text)
+    , _ctIncludeGlobalServiceEvents :: !(Maybe Bool)
+    , _ctCloudWatchLogsRoleARN      :: !(Maybe Text)
+    , _ctIsMultiRegionTrail         :: !(Maybe Bool)
+    , _ctName                       :: !Text
+    , _ctS3BucketName               :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateTrail' with the minimum fields required to make a request.
@@ -230,21 +232,23 @@ instance ToQuery CreateTrail where
 --
 --
 -- /See:/ 'createTrailResponse' smart constructor.
-data CreateTrailResponse = CreateTrailResponse'
-  { _ctrsLogFileValidationEnabled   :: !(Maybe Bool)
-  , _ctrsTrailARN                   :: !(Maybe Text)
-  , _ctrsS3KeyPrefix                :: !(Maybe Text)
-  , _ctrsSNSTopicARN                :: !(Maybe Text)
-  , _ctrsSNSTopicName               :: !(Maybe Text)
-  , _ctrsCloudWatchLogsLogGroupARN  :: !(Maybe Text)
-  , _ctrsKMSKeyId                   :: !(Maybe Text)
-  , _ctrsName                       :: !(Maybe Text)
-  , _ctrsIncludeGlobalServiceEvents :: !(Maybe Bool)
-  , _ctrsCloudWatchLogsRoleARN      :: !(Maybe Text)
-  , _ctrsS3BucketName               :: !(Maybe Text)
-  , _ctrsIsMultiRegionTrail         :: !(Maybe Bool)
-  , _ctrsResponseStatus             :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateTrailResponse =
+  CreateTrailResponse'
+    { _ctrsLogFileValidationEnabled   :: !(Maybe Bool)
+    , _ctrsTrailARN                   :: !(Maybe Text)
+    , _ctrsS3KeyPrefix                :: !(Maybe Text)
+    , _ctrsSNSTopicARN                :: !(Maybe Text)
+    , _ctrsSNSTopicName               :: !(Maybe Text)
+    , _ctrsCloudWatchLogsLogGroupARN  :: !(Maybe Text)
+    , _ctrsKMSKeyId                   :: !(Maybe Text)
+    , _ctrsName                       :: !(Maybe Text)
+    , _ctrsIncludeGlobalServiceEvents :: !(Maybe Bool)
+    , _ctrsCloudWatchLogsRoleARN      :: !(Maybe Text)
+    , _ctrsS3BucketName               :: !(Maybe Text)
+    , _ctrsIsMultiRegionTrail         :: !(Maybe Bool)
+    , _ctrsResponseStatus             :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateTrailResponse' with the minimum fields required to make a request.

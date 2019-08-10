@@ -52,12 +52,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'copyOptionGroup' smart constructor.
-data CopyOptionGroup = CopyOptionGroup'
-  { _cTags                         :: !(Maybe [Tag])
-  , _cSourceOptionGroupIdentifier  :: !Text
-  , _cTargetOptionGroupIdentifier  :: !Text
-  , _cTargetOptionGroupDescription :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CopyOptionGroup =
+  CopyOptionGroup'
+    { _cTags                         :: !(Maybe [Tag])
+    , _cSourceOptionGroupIdentifier  :: !Text
+    , _cTargetOptionGroupIdentifier  :: !Text
+    , _cTargetOptionGroupDescription :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CopyOptionGroup' with the minimum fields required to make a request.
@@ -134,10 +136,12 @@ instance ToQuery CopyOptionGroup where
                  _cTargetOptionGroupDescription]
 
 -- | /See:/ 'copyOptionGroupResponse' smart constructor.
-data CopyOptionGroupResponse = CopyOptionGroupResponse'
-  { _cogrsOptionGroup    :: !(Maybe OptionGroup)
-  , _cogrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CopyOptionGroupResponse =
+  CopyOptionGroupResponse'
+    { _cogrsOptionGroup    :: !(Maybe OptionGroup)
+    , _cogrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CopyOptionGroupResponse' with the minimum fields required to make a request.

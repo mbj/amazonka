@@ -49,13 +49,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'modifyVPCEndpointServiceConfiguration' smart constructor.
-data ModifyVPCEndpointServiceConfiguration = ModifyVPCEndpointServiceConfiguration'
-  { _mvescRemoveNetworkLoadBalancerARNs :: !(Maybe [Text])
-  , _mvescAcceptanceRequired            :: !(Maybe Bool)
-  , _mvescAddNetworkLoadBalancerARNs    :: !(Maybe [Text])
-  , _mvescDryRun                        :: !(Maybe Bool)
-  , _mvescServiceId                     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyVPCEndpointServiceConfiguration =
+  ModifyVPCEndpointServiceConfiguration'
+    { _mvescRemoveNetworkLoadBalancerARNs :: !(Maybe [Text])
+    , _mvescAcceptanceRequired            :: !(Maybe Bool)
+    , _mvescAddNetworkLoadBalancerARNs    :: !(Maybe [Text])
+    , _mvescDryRun                        :: !(Maybe Bool)
+    , _mvescServiceId                     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyVPCEndpointServiceConfiguration' with the minimum fields required to make a request.
@@ -152,10 +154,12 @@ instance ToQuery
                "ServiceId" =: _mvescServiceId]
 
 -- | /See:/ 'modifyVPCEndpointServiceConfigurationResponse' smart constructor.
-data ModifyVPCEndpointServiceConfigurationResponse = ModifyVPCEndpointServiceConfigurationResponse'
-  { _mvescrsReturn         :: !(Maybe Bool)
-  , _mvescrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyVPCEndpointServiceConfigurationResponse =
+  ModifyVPCEndpointServiceConfigurationResponse'
+    { _mvescrsReturn         :: !(Maybe Bool)
+    , _mvescrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyVPCEndpointServiceConfigurationResponse' with the minimum fields required to make a request.

@@ -46,10 +46,12 @@ import Network.AWS.Response
 -- | CreateMembers request body.
 --
 -- /See:/ 'createMembers' smart constructor.
-data CreateMembers = CreateMembers'
-  { _cmAccountDetails :: !(Maybe [AccountDetail])
-  , _cmDetectorId     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateMembers =
+  CreateMembers'
+    { _cmAccountDetails :: !(Maybe [AccountDetail])
+    , _cmDetectorId     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateMembers' with the minimum fields required to make a request.
@@ -110,10 +112,12 @@ instance ToQuery CreateMembers where
         toQuery = const mempty
 
 -- | /See:/ 'createMembersResponse' smart constructor.
-data CreateMembersResponse = CreateMembersResponse'
-  { _cmrsUnprocessedAccounts :: !(Maybe [UnprocessedAccount])
-  , _cmrsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateMembersResponse =
+  CreateMembersResponse'
+    { _cmrsUnprocessedAccounts :: !(Maybe [UnprocessedAccount])
+    , _cmrsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateMembersResponse' with the minimum fields required to make a request.

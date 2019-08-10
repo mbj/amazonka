@@ -50,10 +50,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getBlueprints' smart constructor.
-data GetBlueprints = GetBlueprints'
-  { _gbIncludeInactive :: !(Maybe Bool)
-  , _gbPageToken       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetBlueprints =
+  GetBlueprints'
+    { _gbIncludeInactive :: !(Maybe Bool)
+    , _gbPageToken       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBlueprints' with the minimum fields required to make a request.
@@ -122,11 +124,13 @@ instance ToQuery GetBlueprints where
         toQuery = const mempty
 
 -- | /See:/ 'getBlueprintsResponse' smart constructor.
-data GetBlueprintsResponse = GetBlueprintsResponse'
-  { _gbsrsBlueprints     :: !(Maybe [Blueprint])
-  , _gbsrsNextPageToken  :: !(Maybe Text)
-  , _gbsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetBlueprintsResponse =
+  GetBlueprintsResponse'
+    { _gbsrsBlueprints     :: !(Maybe [Blueprint])
+    , _gbsrsNextPageToken  :: !(Maybe Text)
+    , _gbsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBlueprintsResponse' with the minimum fields required to make a request.

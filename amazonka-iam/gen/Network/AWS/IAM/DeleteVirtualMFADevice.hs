@@ -42,9 +42,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteVirtualMFADevice' smart constructor.
-newtype DeleteVirtualMFADevice = DeleteVirtualMFADevice'
-  { _dvmdSerialNumber :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteVirtualMFADevice =
+  DeleteVirtualMFADevice'
+    { _dvmdSerialNumber :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteVirtualMFADevice' with the minimum fields required to make a request.

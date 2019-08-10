@@ -63,9 +63,11 @@ import Network.AWS.STS.Types
 import Network.AWS.STS.Types.Product
 
 -- | /See:/ 'decodeAuthorizationMessage' smart constructor.
-newtype DecodeAuthorizationMessage = DecodeAuthorizationMessage'
-  { _damEncodedMessage :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DecodeAuthorizationMessage =
+  DecodeAuthorizationMessage'
+    { _damEncodedMessage :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DecodeAuthorizationMessage' with the minimum fields required to make a request.
@@ -118,10 +120,12 @@ instance ToQuery DecodeAuthorizationMessage where
 --
 --
 -- /See:/ 'decodeAuthorizationMessageResponse' smart constructor.
-data DecodeAuthorizationMessageResponse = DecodeAuthorizationMessageResponse'
-  { _damrsDecodedMessage :: !(Maybe Text)
-  , _damrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DecodeAuthorizationMessageResponse =
+  DecodeAuthorizationMessageResponse'
+    { _damrsDecodedMessage :: !(Maybe Text)
+    , _damrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DecodeAuthorizationMessageResponse' with the minimum fields required to make a request.

@@ -42,9 +42,11 @@ import Network.AWS.ServerlessApplicationRepository.Types
 import Network.AWS.ServerlessApplicationRepository.Types.Product
 
 -- | /See:/ 'deleteApplication' smart constructor.
-newtype DeleteApplication = DeleteApplication'
-  { _daApplicationId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteApplication =
+  DeleteApplication'
+    { _daApplicationId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteApplication' with the minimum fields required to make a request.

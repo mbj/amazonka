@@ -42,9 +42,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteTags' smart constructor.
-newtype DeleteTags = DeleteTags'
-  { _dtTags :: [Tag]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteTags =
+  DeleteTags'
+    { _dtTags :: [Tag]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteTags' with the minimum fields required to make a request.

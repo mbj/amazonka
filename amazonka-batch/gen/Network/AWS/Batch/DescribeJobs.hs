@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeJobs' smart constructor.
-newtype DescribeJobs = DescribeJobs'
-  { _djJobs :: [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeJobs =
+  DescribeJobs'
+    { _djJobs :: [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeJobs' with the minimum fields required to make a request.
@@ -95,10 +97,12 @@ instance ToQuery DescribeJobs where
         toQuery = const mempty
 
 -- | /See:/ 'describeJobsResponse' smart constructor.
-data DescribeJobsResponse = DescribeJobsResponse'
-  { _djrsJobs           :: !(Maybe [JobDetail])
-  , _djrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeJobsResponse =
+  DescribeJobsResponse'
+    { _djrsJobs           :: !(Maybe [JobDetail])
+    , _djrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeJobsResponse' with the minimum fields required to make a request.

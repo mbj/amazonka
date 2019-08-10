@@ -54,9 +54,11 @@ import Network.AWS.StorageGateway.Types.Product
 --
 --
 -- /See:/ 'describeWorkingStorage' smart constructor.
-newtype DescribeWorkingStorage = DescribeWorkingStorage'
-  { _dwsGatewayARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeWorkingStorage =
+  DescribeWorkingStorage'
+    { _dwsGatewayARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeWorkingStorage' with the minimum fields required to make a request.
@@ -118,13 +120,15 @@ instance ToQuery DescribeWorkingStorage where
 --
 --
 -- /See:/ 'describeWorkingStorageResponse' smart constructor.
-data DescribeWorkingStorageResponse = DescribeWorkingStorageResponse'
-  { _dwsrsGatewayARN                     :: !(Maybe Text)
-  , _dwsrsDiskIds                        :: !(Maybe [Text])
-  , _dwsrsWorkingStorageAllocatedInBytes :: !(Maybe Integer)
-  , _dwsrsWorkingStorageUsedInBytes      :: !(Maybe Integer)
-  , _dwsrsResponseStatus                 :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeWorkingStorageResponse =
+  DescribeWorkingStorageResponse'
+    { _dwsrsGatewayARN                     :: !(Maybe Text)
+    , _dwsrsDiskIds                        :: !(Maybe [Text])
+    , _dwsrsWorkingStorageAllocatedInBytes :: !(Maybe Integer)
+    , _dwsrsWorkingStorageUsedInBytes      :: !(Maybe Integer)
+    , _dwsrsResponseStatus                 :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeWorkingStorageResponse' with the minimum fields required to make a request.

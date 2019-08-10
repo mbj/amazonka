@@ -49,10 +49,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'removeTagsFromResource' smart constructor.
-data RemoveTagsFromResource = RemoveTagsFromResource'
-  { _rtfrResourceName :: !Text
-  , _rtfrTagKeys      :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RemoveTagsFromResource =
+  RemoveTagsFromResource'
+    { _rtfrResourceName :: !Text
+    , _rtfrTagKeys      :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RemoveTagsFromResource' with the minimum fields required to make a request.

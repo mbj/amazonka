@@ -51,15 +51,17 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createEnvironmentEC' smart constructor.
-data CreateEnvironmentEC = CreateEnvironmentEC'
-  { _ceecAutomaticStopTimeMinutes :: !(Maybe Int)
-  , _ceecSubnetId                 :: !(Maybe Text)
-  , _ceecOwnerARN                 :: !(Maybe Text)
-  , _ceecClientRequestToken       :: !(Maybe Text)
-  , _ceecDescription              :: !(Maybe Text)
-  , _ceecName                     :: !Text
-  , _ceecInstanceType             :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateEnvironmentEC =
+  CreateEnvironmentEC'
+    { _ceecAutomaticStopTimeMinutes :: !(Maybe Int)
+    , _ceecSubnetId                 :: !(Maybe Text)
+    , _ceecOwnerARN                 :: !(Maybe Text)
+    , _ceecClientRequestToken       :: !(Maybe Text)
+    , _ceecDescription              :: !(Maybe Text)
+    , _ceecName                     :: !Text
+    , _ceecInstanceType             :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateEnvironmentEC' with the minimum fields required to make a request.
@@ -168,10 +170,12 @@ instance ToQuery CreateEnvironmentEC where
         toQuery = const mempty
 
 -- | /See:/ 'createEnvironmentECResponse' smart constructor.
-data CreateEnvironmentECResponse = CreateEnvironmentECResponse'
-  { _ceecrsEnvironmentId  :: !(Maybe Text)
-  , _ceecrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateEnvironmentECResponse =
+  CreateEnvironmentECResponse'
+    { _ceecrsEnvironmentId  :: !(Maybe Text)
+    , _ceecrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateEnvironmentECResponse' with the minimum fields required to make a request.

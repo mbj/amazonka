@@ -60,10 +60,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listStreams' smart constructor.
-data ListStreams = ListStreams'
-  { _lsLimit                    :: !(Maybe Nat)
-  , _lsExclusiveStartStreamName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListStreams =
+  ListStreams'
+    { _lsLimit                    :: !(Maybe Nat)
+    , _lsExclusiveStartStreamName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListStreams' with the minimum fields required to make a request.
@@ -139,11 +141,13 @@ instance ToQuery ListStreams where
 --
 --
 -- /See:/ 'listStreamsResponse' smart constructor.
-data ListStreamsResponse = ListStreamsResponse'
-  { _lsrsResponseStatus :: !Int
-  , _lsrsStreamNames    :: ![Text]
-  , _lsrsHasMoreStreams :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListStreamsResponse =
+  ListStreamsResponse'
+    { _lsrsResponseStatus :: !Int
+    , _lsrsStreamNames    :: ![Text]
+    , _lsrsHasMoreStreams :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListStreamsResponse' with the minimum fields required to make a request.

@@ -87,10 +87,12 @@ instance ToQuery IsVPCPeered where
         toQuery = const mempty
 
 -- | /See:/ 'isVPCPeeredResponse' smart constructor.
-data IsVPCPeeredResponse = IsVPCPeeredResponse'
-  { _ivprsIsPeered       :: !(Maybe Bool)
-  , _ivprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data IsVPCPeeredResponse =
+  IsVPCPeeredResponse'
+    { _ivprsIsPeered       :: !(Maybe Bool)
+    , _ivprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'IsVPCPeeredResponse' with the minimum fields required to make a request.

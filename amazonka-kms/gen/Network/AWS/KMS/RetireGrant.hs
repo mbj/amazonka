@@ -54,11 +54,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'retireGrant' smart constructor.
-data RetireGrant = RetireGrant'
-  { _rgKeyId      :: !(Maybe Text)
-  , _rgGrantId    :: !(Maybe Text)
-  , _rgGrantToken :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RetireGrant =
+  RetireGrant'
+    { _rgKeyId      :: !(Maybe Text)
+    , _rgGrantId    :: !(Maybe Text)
+    , _rgGrantToken :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RetireGrant' with the minimum fields required to make a request.

@@ -56,11 +56,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'releaseAddress' smart constructor.
-data ReleaseAddress = ReleaseAddress'
-  { _raAllocationId :: !(Maybe Text)
-  , _raPublicIP     :: !(Maybe Text)
-  , _raDryRun       :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReleaseAddress =
+  ReleaseAddress'
+    { _raAllocationId :: !(Maybe Text)
+    , _raPublicIP     :: !(Maybe Text)
+    , _raDryRun       :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReleaseAddress' with the minimum fields required to make a request.

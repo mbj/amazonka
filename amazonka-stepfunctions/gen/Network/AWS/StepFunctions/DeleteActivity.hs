@@ -44,9 +44,11 @@ import Network.AWS.StepFunctions.Types
 import Network.AWS.StepFunctions.Types.Product
 
 -- | /See:/ 'deleteActivity' smart constructor.
-newtype DeleteActivity = DeleteActivity'
-  { _daActivityARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteActivity =
+  DeleteActivity'
+    { _daActivityARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteActivity' with the minimum fields required to make a request.
@@ -97,9 +99,11 @@ instance ToQuery DeleteActivity where
         toQuery = const mempty
 
 -- | /See:/ 'deleteActivityResponse' smart constructor.
-newtype DeleteActivityResponse = DeleteActivityResponse'
-  { _darsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteActivityResponse =
+  DeleteActivityResponse'
+    { _darsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteActivityResponse' with the minimum fields required to make a request.

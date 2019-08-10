@@ -49,9 +49,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createOrganization' smart constructor.
-newtype CreateOrganization = CreateOrganization'
-  { _coFeatureSet :: Maybe OrganizationFeatureSet
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateOrganization =
+  CreateOrganization'
+    { _coFeatureSet :: Maybe OrganizationFeatureSet
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateOrganization' with the minimum fields required to make a request.
@@ -104,10 +106,12 @@ instance ToQuery CreateOrganization where
         toQuery = const mempty
 
 -- | /See:/ 'createOrganizationResponse' smart constructor.
-data CreateOrganizationResponse = CreateOrganizationResponse'
-  { _corsOrganization   :: !(Maybe Organization)
-  , _corsResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data CreateOrganizationResponse =
+  CreateOrganizationResponse'
+    { _corsOrganization   :: !(Maybe Organization)
+    , _corsResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateOrganizationResponse' with the minimum fields required to make a request.

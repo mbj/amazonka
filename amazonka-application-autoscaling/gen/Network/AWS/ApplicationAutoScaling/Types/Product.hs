@@ -26,10 +26,12 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'alarm' smart constructor.
-data Alarm = Alarm'
-  { _aAlarmName :: !Text
-  , _aAlarmARN  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Alarm =
+  Alarm'
+    { _aAlarmName :: !Text
+    , _aAlarmARN  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Alarm' with the minimum fields required to make a request.
@@ -70,13 +72,15 @@ instance NFData Alarm where
 --
 --
 -- /See:/ 'customizedMetricSpecification' smart constructor.
-data CustomizedMetricSpecification = CustomizedMetricSpecification'
-  { _cmsDimensions :: !(Maybe [MetricDimension])
-  , _cmsUnit       :: !(Maybe Text)
-  , _cmsMetricName :: !Text
-  , _cmsNamespace  :: !Text
-  , _cmsStatistic  :: !MetricStatistic
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CustomizedMetricSpecification =
+  CustomizedMetricSpecification'
+    { _cmsDimensions :: !(Maybe [MetricDimension])
+    , _cmsUnit       :: !(Maybe Text)
+    , _cmsMetricName :: !Text
+    , _cmsNamespace  :: !Text
+    , _cmsStatistic  :: !MetricStatistic
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CustomizedMetricSpecification' with the minimum fields required to make a request.
@@ -156,10 +160,12 @@ instance ToJSON CustomizedMetricSpecification where
 --
 --
 -- /See:/ 'metricDimension' smart constructor.
-data MetricDimension = MetricDimension'
-  { _mdName  :: !Text
-  , _mdValue :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MetricDimension =
+  MetricDimension'
+    { _mdName  :: !Text
+    , _mdValue :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MetricDimension' with the minimum fields required to make a request.
@@ -208,10 +214,12 @@ instance ToJSON MetricDimension where
 --
 --
 -- /See:/ 'predefinedMetricSpecification' smart constructor.
-data PredefinedMetricSpecification = PredefinedMetricSpecification'
-  { _pmsResourceLabel        :: !(Maybe Text)
-  , _pmsPredefinedMetricType :: !MetricType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PredefinedMetricSpecification =
+  PredefinedMetricSpecification'
+    { _pmsResourceLabel        :: !(Maybe Text)
+    , _pmsPredefinedMetricType :: !MetricType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PredefinedMetricSpecification' with the minimum fields required to make a request.
@@ -265,15 +273,17 @@ instance ToJSON PredefinedMetricSpecification where
 --
 --
 -- /See:/ 'scalableTarget' smart constructor.
-data ScalableTarget = ScalableTarget'
-  { _stServiceNamespace  :: !ServiceNamespace
-  , _stResourceId        :: !Text
-  , _stScalableDimension :: !ScalableDimension
-  , _stMinCapacity       :: !Int
-  , _stMaxCapacity       :: !Int
-  , _stRoleARN           :: !Text
-  , _stCreationTime      :: !POSIX
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ScalableTarget =
+  ScalableTarget'
+    { _stServiceNamespace  :: !ServiceNamespace
+    , _stResourceId        :: !Text
+    , _stScalableDimension :: !ScalableDimension
+    , _stMinCapacity       :: !Int
+    , _stMaxCapacity       :: !Int
+    , _stRoleARN           :: !Text
+    , _stCreationTime      :: !POSIX
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ScalableTarget' with the minimum fields required to make a request.
@@ -363,10 +373,12 @@ instance NFData ScalableTarget where
 --
 --
 -- /See:/ 'scalableTargetAction' smart constructor.
-data ScalableTargetAction = ScalableTargetAction'
-  { _staMaxCapacity :: !(Maybe Int)
-  , _staMinCapacity :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ScalableTargetAction =
+  ScalableTargetAction'
+    { _staMaxCapacity :: !(Maybe Int)
+    , _staMinCapacity :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ScalableTargetAction' with the minimum fields required to make a request.
@@ -413,19 +425,21 @@ instance ToJSON ScalableTargetAction where
 --
 --
 -- /See:/ 'scalingActivity' smart constructor.
-data ScalingActivity = ScalingActivity'
-  { _sStatusMessage     :: !(Maybe Text)
-  , _sEndTime           :: !(Maybe POSIX)
-  , _sDetails           :: !(Maybe Text)
-  , _sActivityId        :: !Text
-  , _sServiceNamespace  :: !ServiceNamespace
-  , _sResourceId        :: !Text
-  , _sScalableDimension :: !ScalableDimension
-  , _sDescription       :: !Text
-  , _sCause             :: !Text
-  , _sStartTime         :: !POSIX
-  , _sStatusCode        :: !ScalingActivityStatusCode
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ScalingActivity =
+  ScalingActivity'
+    { _sStatusMessage     :: !(Maybe Text)
+    , _sEndTime           :: !(Maybe POSIX)
+    , _sDetails           :: !(Maybe Text)
+    , _sActivityId        :: !Text
+    , _sServiceNamespace  :: !ServiceNamespace
+    , _sResourceId        :: !Text
+    , _sScalableDimension :: !ScalableDimension
+    , _sDescription       :: !Text
+    , _sCause             :: !Text
+    , _sStartTime         :: !POSIX
+    , _sStatusCode        :: !ScalingActivityStatusCode
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ScalingActivity' with the minimum fields required to make a request.
@@ -548,18 +562,20 @@ instance NFData ScalingActivity where
 --
 --
 -- /See:/ 'scalingPolicy' smart constructor.
-data ScalingPolicy = ScalingPolicy'
-  { _spTargetTrackingScalingPolicyConfiguration :: !(Maybe TargetTrackingScalingPolicyConfiguration)
-  , _spStepScalingPolicyConfiguration :: !(Maybe StepScalingPolicyConfiguration)
-  , _spAlarms :: !(Maybe [Alarm])
-  , _spPolicyARN :: !Text
-  , _spPolicyName :: !Text
-  , _spServiceNamespace :: !ServiceNamespace
-  , _spResourceId :: !Text
-  , _spScalableDimension :: !ScalableDimension
-  , _spPolicyType :: !PolicyType
-  , _spCreationTime :: !POSIX
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ScalingPolicy =
+  ScalingPolicy'
+    { _spTargetTrackingScalingPolicyConfiguration :: !(Maybe TargetTrackingScalingPolicyConfiguration)
+    , _spStepScalingPolicyConfiguration :: !(Maybe StepScalingPolicyConfiguration)
+    , _spAlarms :: !(Maybe [Alarm])
+    , _spPolicyARN :: !Text
+    , _spPolicyName :: !Text
+    , _spServiceNamespace :: !ServiceNamespace
+    , _spResourceId :: !Text
+    , _spScalableDimension :: !ScalableDimension
+    , _spPolicyType :: !PolicyType
+    , _spCreationTime :: !POSIX
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ScalingPolicy' with the minimum fields required to make a request.
@@ -674,18 +690,20 @@ instance NFData ScalingPolicy where
 --
 --
 -- /See:/ 'scheduledAction' smart constructor.
-data ScheduledAction = ScheduledAction'
-  { _saScalableDimension    :: !(Maybe ScalableDimension)
-  , _saStartTime            :: !(Maybe POSIX)
-  , _saEndTime              :: !(Maybe POSIX)
-  , _saScalableTargetAction :: !(Maybe ScalableTargetAction)
-  , _saScheduledActionName  :: !Text
-  , _saScheduledActionARN   :: !Text
-  , _saServiceNamespace     :: !ServiceNamespace
-  , _saSchedule             :: !Text
-  , _saResourceId           :: !Text
-  , _saCreationTime         :: !POSIX
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ScheduledAction =
+  ScheduledAction'
+    { _saScalableDimension    :: !(Maybe ScalableDimension)
+    , _saStartTime            :: !(Maybe POSIX)
+    , _saEndTime              :: !(Maybe POSIX)
+    , _saScalableTargetAction :: !(Maybe ScalableTargetAction)
+    , _saScheduledActionName  :: !Text
+    , _saScheduledActionARN   :: !Text
+    , _saServiceNamespace     :: !ServiceNamespace
+    , _saSchedule             :: !Text
+    , _saResourceId           :: !Text
+    , _saCreationTime         :: !POSIX
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ScheduledAction' with the minimum fields required to make a request.
@@ -818,11 +836,13 @@ instance NFData ScheduledAction where
 --
 --
 -- /See:/ 'stepAdjustment' smart constructor.
-data StepAdjustment = StepAdjustment'
-  { _saMetricIntervalLowerBound :: !(Maybe Double)
-  , _saMetricIntervalUpperBound :: !(Maybe Double)
-  , _saScalingAdjustment        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StepAdjustment =
+  StepAdjustment'
+    { _saMetricIntervalLowerBound :: !(Maybe Double)
+    , _saMetricIntervalUpperBound :: !(Maybe Double)
+    , _saScalingAdjustment        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StepAdjustment' with the minimum fields required to make a request.
@@ -885,13 +905,15 @@ instance ToJSON StepAdjustment where
 --
 --
 -- /See:/ 'stepScalingPolicyConfiguration' smart constructor.
-data StepScalingPolicyConfiguration = StepScalingPolicyConfiguration'
-  { _sspcStepAdjustments        :: !(Maybe [StepAdjustment])
-  , _sspcAdjustmentType         :: !(Maybe AdjustmentType)
-  , _sspcCooldown               :: !(Maybe Int)
-  , _sspcMetricAggregationType  :: !(Maybe MetricAggregationType)
-  , _sspcMinAdjustmentMagnitude :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StepScalingPolicyConfiguration =
+  StepScalingPolicyConfiguration'
+    { _sspcStepAdjustments        :: !(Maybe [StepAdjustment])
+    , _sspcAdjustmentType         :: !(Maybe AdjustmentType)
+    , _sspcCooldown               :: !(Maybe Int)
+    , _sspcMetricAggregationType  :: !(Maybe MetricAggregationType)
+    , _sspcMinAdjustmentMagnitude :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StepScalingPolicyConfiguration' with the minimum fields required to make a request.
@@ -973,14 +995,16 @@ instance ToJSON StepScalingPolicyConfiguration where
 --
 --
 -- /See:/ 'targetTrackingScalingPolicyConfiguration' smart constructor.
-data TargetTrackingScalingPolicyConfiguration = TargetTrackingScalingPolicyConfiguration'
-  { _ttspcPredefinedMetricSpecification :: !(Maybe PredefinedMetricSpecification)
-  , _ttspcScaleInCooldown :: !(Maybe Int)
-  , _ttspcCustomizedMetricSpecification :: !(Maybe CustomizedMetricSpecification)
-  , _ttspcDisableScaleIn :: !(Maybe Bool)
-  , _ttspcScaleOutCooldown :: !(Maybe Int)
-  , _ttspcTargetValue :: !Double
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TargetTrackingScalingPolicyConfiguration =
+  TargetTrackingScalingPolicyConfiguration'
+    { _ttspcPredefinedMetricSpecification :: !(Maybe PredefinedMetricSpecification)
+    , _ttspcScaleInCooldown :: !(Maybe Int)
+    , _ttspcCustomizedMetricSpecification :: !(Maybe CustomizedMetricSpecification)
+    , _ttspcDisableScaleIn :: !(Maybe Bool)
+    , _ttspcScaleOutCooldown :: !(Maybe Int)
+    , _ttspcTargetValue :: !Double
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TargetTrackingScalingPolicyConfiguration' with the minimum fields required to make a request.

@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listProjects' smart constructor.
-data ListProjects = ListProjects'
-  { _lpNextToken  :: !(Maybe Text)
-  , _lpMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListProjects =
+  ListProjects'
+    { _lpNextToken  :: !(Maybe Text)
+    , _lpMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListProjects' with the minimum fields required to make a request.
@@ -110,11 +112,13 @@ instance ToQuery ListProjects where
         toQuery = const mempty
 
 -- | /See:/ 'listProjectsResponse' smart constructor.
-data ListProjectsResponse = ListProjectsResponse'
-  { _lprsNextToken      :: !(Maybe Text)
-  , _lprsResponseStatus :: !Int
-  , _lprsProjects       :: ![ProjectSummary]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListProjectsResponse =
+  ListProjectsResponse'
+    { _lprsNextToken      :: !(Maybe Text)
+    , _lprsResponseStatus :: !Int
+    , _lprsProjects       :: ![ProjectSummary]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListProjectsResponse' with the minimum fields required to make a request.

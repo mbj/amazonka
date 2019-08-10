@@ -55,17 +55,19 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putFile' smart constructor.
-data PutFile = PutFile'
-  { _pfEmail          :: !(Maybe Text)
-  , _pfFileMode       :: !(Maybe FileModeTypeEnum)
-  , _pfParentCommitId :: !(Maybe Text)
-  , _pfName           :: !(Maybe Text)
-  , _pfCommitMessage  :: !(Maybe Text)
-  , _pfRepositoryName :: !Text
-  , _pfBranchName     :: !Text
-  , _pfFileContent    :: !Base64
-  , _pfFilePath       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutFile =
+  PutFile'
+    { _pfEmail          :: !(Maybe Text)
+    , _pfFileMode       :: !(Maybe FileModeTypeEnum)
+    , _pfParentCommitId :: !(Maybe Text)
+    , _pfName           :: !(Maybe Text)
+    , _pfCommitMessage  :: !(Maybe Text)
+    , _pfRepositoryName :: !Text
+    , _pfBranchName     :: !Text
+    , _pfFileContent    :: !Base64
+    , _pfFilePath       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutFile' with the minimum fields required to make a request.
@@ -190,12 +192,14 @@ instance ToQuery PutFile where
         toQuery = const mempty
 
 -- | /See:/ 'putFileResponse' smart constructor.
-data PutFileResponse = PutFileResponse'
-  { _pfrsResponseStatus :: !Int
-  , _pfrsCommitId       :: !Text
-  , _pfrsBlobId         :: !Text
-  , _pfrsTreeId         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutFileResponse =
+  PutFileResponse'
+    { _pfrsResponseStatus :: !Int
+    , _pfrsCommitId       :: !Text
+    , _pfrsBlobId         :: !Text
+    , _pfrsTreeId         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutFileResponse' with the minimum fields required to make a request.

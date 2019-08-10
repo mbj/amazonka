@@ -26,22 +26,24 @@ import Network.AWS.Snowball.Types.Sum
 --
 --
 -- /See:/ 'address' smart constructor.
-data Address = Address'
-  { _aIsRestricted         :: !(Maybe Bool)
-  , _aStreet3              :: !(Maybe Text)
-  , _aLandmark             :: !(Maybe Text)
-  , _aPostalCode           :: !(Maybe Text)
-  , _aCountry              :: !(Maybe Text)
-  , _aStateOrProvince      :: !(Maybe Text)
-  , _aStreet2              :: !(Maybe Text)
-  , _aAddressId            :: !(Maybe Text)
-  , _aCity                 :: !(Maybe Text)
-  , _aPhoneNumber          :: !(Maybe Text)
-  , _aCompany              :: !(Maybe Text)
-  , _aName                 :: !(Maybe Text)
-  , _aPrefectureOrDistrict :: !(Maybe Text)
-  , _aStreet1              :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Address =
+  Address'
+    { _aIsRestricted         :: !(Maybe Bool)
+    , _aStreet3              :: !(Maybe Text)
+    , _aLandmark             :: !(Maybe Text)
+    , _aPostalCode           :: !(Maybe Text)
+    , _aCountry              :: !(Maybe Text)
+    , _aStateOrProvince      :: !(Maybe Text)
+    , _aStreet2              :: !(Maybe Text)
+    , _aAddressId            :: !(Maybe Text)
+    , _aCity                 :: !(Maybe Text)
+    , _aPhoneNumber          :: !(Maybe Text)
+    , _aCompany              :: !(Maybe Text)
+    , _aName                 :: !(Maybe Text)
+    , _aPrefectureOrDistrict :: !(Maybe Text)
+    , _aStreet1              :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Address' with the minimum fields required to make a request.
@@ -199,12 +201,14 @@ instance ToJSON Address where
 --
 --
 -- /See:/ 'clusterListEntry' smart constructor.
-data ClusterListEntry = ClusterListEntry'
-  { _cleClusterState :: !(Maybe ClusterState)
-  , _cleClusterId    :: !(Maybe Text)
-  , _cleCreationDate :: !(Maybe POSIX)
-  , _cleDescription  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ClusterListEntry =
+  ClusterListEntry'
+    { _cleClusterState :: !(Maybe ClusterState)
+    , _cleClusterId    :: !(Maybe Text)
+    , _cleCreationDate :: !(Maybe POSIX)
+    , _cleDescription  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ClusterListEntry' with the minimum fields required to make a request.
@@ -263,21 +267,23 @@ instance NFData ClusterListEntry where
 --
 --
 -- /See:/ 'clusterMetadata' smart constructor.
-data ClusterMetadata = ClusterMetadata'
-  { _cmJobType             :: !(Maybe JobType)
-  , _cmKMSKeyARN           :: !(Maybe Text)
-  , _cmClusterState        :: !(Maybe ClusterState)
-  , _cmNotification        :: !(Maybe Notification)
-  , _cmForwardingAddressId :: !(Maybe Text)
-  , _cmAddressId           :: !(Maybe Text)
-  , _cmSnowballType        :: !(Maybe SnowballType)
-  , _cmShippingOption      :: !(Maybe ShippingOption)
-  , _cmResources           :: !(Maybe JobResource)
-  , _cmClusterId           :: !(Maybe Text)
-  , _cmCreationDate        :: !(Maybe POSIX)
-  , _cmDescription         :: !(Maybe Text)
-  , _cmRoleARN             :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ClusterMetadata =
+  ClusterMetadata'
+    { _cmJobType             :: !(Maybe JobType)
+    , _cmKMSKeyARN           :: !(Maybe Text)
+    , _cmClusterState        :: !(Maybe ClusterState)
+    , _cmNotification        :: !(Maybe Notification)
+    , _cmForwardingAddressId :: !(Maybe Text)
+    , _cmAddressId           :: !(Maybe Text)
+    , _cmSnowballType        :: !(Maybe SnowballType)
+    , _cmShippingOption      :: !(Maybe ShippingOption)
+    , _cmResources           :: !(Maybe JobResource)
+    , _cmClusterId           :: !(Maybe Text)
+    , _cmCreationDate        :: !(Maybe POSIX)
+    , _cmDescription         :: !(Maybe Text)
+    , _cmRoleARN             :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ClusterMetadata' with the minimum fields required to make a request.
@@ -408,12 +414,14 @@ instance NFData ClusterMetadata where
 --
 --
 -- /See:/ 'dataTransfer' smart constructor.
-data DataTransfer = DataTransfer'
-  { _dtTotalObjects       :: !(Maybe Integer)
-  , _dtTotalBytes         :: !(Maybe Integer)
-  , _dtObjectsTransferred :: !(Maybe Integer)
-  , _dtBytesTransferred   :: !(Maybe Integer)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DataTransfer =
+  DataTransfer'
+    { _dtTotalObjects       :: !(Maybe Integer)
+    , _dtTotalBytes         :: !(Maybe Integer)
+    , _dtObjectsTransferred :: !(Maybe Integer)
+    , _dtBytesTransferred   :: !(Maybe Integer)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DataTransfer' with the minimum fields required to make a request.
@@ -472,9 +480,11 @@ instance NFData DataTransfer where
 --
 --
 -- /See:/ 'eventTriggerDefinition' smart constructor.
-newtype EventTriggerDefinition = EventTriggerDefinition'
-  { _etdEventResourceARN :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype EventTriggerDefinition =
+  EventTriggerDefinition'
+    { _etdEventResourceARN :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EventTriggerDefinition' with the minimum fields required to make a request.
@@ -514,15 +524,17 @@ instance ToJSON EventTriggerDefinition where
 --
 --
 -- /See:/ 'jobListEntry' smart constructor.
-data JobListEntry = JobListEntry'
-  { _jleJobType      :: !(Maybe JobType)
-  , _jleJobId        :: !(Maybe Text)
-  , _jleJobState     :: !(Maybe JobState)
-  , _jleSnowballType :: !(Maybe SnowballType)
-  , _jleCreationDate :: !(Maybe POSIX)
-  , _jleDescription  :: !(Maybe Text)
-  , _jleIsMaster     :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data JobListEntry =
+  JobListEntry'
+    { _jleJobType      :: !(Maybe JobType)
+    , _jleJobId        :: !(Maybe Text)
+    , _jleJobState     :: !(Maybe JobState)
+    , _jleSnowballType :: !(Maybe SnowballType)
+    , _jleCreationDate :: !(Maybe POSIX)
+    , _jleDescription  :: !(Maybe Text)
+    , _jleIsMaster     :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'JobListEntry' with the minimum fields required to make a request.
@@ -611,11 +623,13 @@ instance NFData JobListEntry where
 --
 --
 -- /See:/ 'jobLogs' smart constructor.
-data JobLogs = JobLogs'
-  { _jlJobFailureLogURI       :: !(Maybe Text)
-  , _jlJobCompletionReportURI :: !(Maybe Text)
-  , _jlJobSuccessLogURI       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data JobLogs =
+  JobLogs'
+    { _jlJobFailureLogURI       :: !(Maybe Text)
+    , _jlJobCompletionReportURI :: !(Maybe Text)
+    , _jlJobSuccessLogURI       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'JobLogs' with the minimum fields required to make a request.
@@ -667,25 +681,27 @@ instance NFData JobLogs where
 --
 --
 -- /See:/ 'jobMetadata' smart constructor.
-data JobMetadata = JobMetadata'
-  { _jmJobType                    :: !(Maybe JobType)
-  , _jmKMSKeyARN                  :: !(Maybe Text)
-  , _jmJobId                      :: !(Maybe Text)
-  , _jmJobLogInfo                 :: !(Maybe JobLogs)
-  , _jmNotification               :: !(Maybe Notification)
-  , _jmJobState                   :: !(Maybe JobState)
-  , _jmForwardingAddressId        :: !(Maybe Text)
-  , _jmShippingDetails            :: !(Maybe ShippingDetails)
-  , _jmAddressId                  :: !(Maybe Text)
-  , _jmSnowballType               :: !(Maybe SnowballType)
-  , _jmDataTransferProgress       :: !(Maybe DataTransfer)
-  , _jmResources                  :: !(Maybe JobResource)
-  , _jmClusterId                  :: !(Maybe Text)
-  , _jmCreationDate               :: !(Maybe POSIX)
-  , _jmDescription                :: !(Maybe Text)
-  , _jmRoleARN                    :: !(Maybe Text)
-  , _jmSnowballCapacityPreference :: !(Maybe SnowballCapacity)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data JobMetadata =
+  JobMetadata'
+    { _jmJobType                    :: !(Maybe JobType)
+    , _jmKMSKeyARN                  :: !(Maybe Text)
+    , _jmJobId                      :: !(Maybe Text)
+    , _jmJobLogInfo                 :: !(Maybe JobLogs)
+    , _jmNotification               :: !(Maybe Notification)
+    , _jmJobState                   :: !(Maybe JobState)
+    , _jmForwardingAddressId        :: !(Maybe Text)
+    , _jmShippingDetails            :: !(Maybe ShippingDetails)
+    , _jmAddressId                  :: !(Maybe Text)
+    , _jmSnowballType               :: !(Maybe SnowballType)
+    , _jmDataTransferProgress       :: !(Maybe DataTransfer)
+    , _jmResources                  :: !(Maybe JobResource)
+    , _jmClusterId                  :: !(Maybe Text)
+    , _jmCreationDate               :: !(Maybe POSIX)
+    , _jmDescription                :: !(Maybe Text)
+    , _jmRoleARN                    :: !(Maybe Text)
+    , _jmSnowballCapacityPreference :: !(Maybe SnowballCapacity)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'JobMetadata' with the minimum fields required to make a request.
@@ -848,10 +864,12 @@ instance NFData JobMetadata where
 --
 --
 -- /See:/ 'jobResource' smart constructor.
-data JobResource = JobResource'
-  { _jrLambdaResources :: !(Maybe [LambdaResource])
-  , _jrS3Resources     :: !(Maybe [S3Resource])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data JobResource =
+  JobResource'
+    { _jrLambdaResources :: !(Maybe [LambdaResource])
+    , _jrS3Resources     :: !(Maybe [S3Resource])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'JobResource' with the minimum fields required to make a request.
@@ -899,10 +917,12 @@ instance ToJSON JobResource where
 --
 --
 -- /See:/ 'keyRange' smart constructor.
-data KeyRange = KeyRange'
-  { _krEndMarker   :: !(Maybe Text)
-  , _krBeginMarker :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data KeyRange =
+  KeyRange'
+    { _krEndMarker   :: !(Maybe Text)
+    , _krBeginMarker :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'KeyRange' with the minimum fields required to make a request.
@@ -948,10 +968,12 @@ instance ToJSON KeyRange where
 --
 --
 -- /See:/ 'lambdaResource' smart constructor.
-data LambdaResource = LambdaResource'
-  { _lrEventTriggers :: !(Maybe [EventTriggerDefinition])
-  , _lrLambdaARN     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LambdaResource =
+  LambdaResource'
+    { _lrEventTriggers :: !(Maybe [EventTriggerDefinition])
+    , _lrLambdaARN     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LambdaResource' with the minimum fields required to make a request.
@@ -1001,11 +1023,13 @@ instance ToJSON LambdaResource where
 --
 --
 -- /See:/ 'notification' smart constructor.
-data Notification = Notification'
-  { _nNotifyAll         :: !(Maybe Bool)
-  , _nSNSTopicARN       :: !(Maybe Text)
-  , _nJobStatesToNotify :: !(Maybe [JobState])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Notification =
+  Notification'
+    { _nNotifyAll         :: !(Maybe Bool)
+    , _nSNSTopicARN       :: !(Maybe Text)
+    , _nJobStatesToNotify :: !(Maybe [JobState])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Notification' with the minimum fields required to make a request.
@@ -1064,10 +1088,12 @@ instance ToJSON Notification where
 --
 --
 -- /See:/ 's3Resource' smart constructor.
-data S3Resource = S3Resource'
-  { _srKeyRange  :: !(Maybe KeyRange)
-  , _srBucketARN :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data S3Resource =
+  S3Resource'
+    { _srKeyRange  :: !(Maybe KeyRange)
+    , _srBucketARN :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'S3Resource' with the minimum fields required to make a request.
@@ -1113,10 +1139,12 @@ instance ToJSON S3Resource where
 --
 --
 -- /See:/ 'shipment' smart constructor.
-data Shipment = Shipment'
-  { _sStatus         :: !(Maybe Text)
-  , _sTrackingNumber :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Shipment =
+  Shipment'
+    { _sStatus         :: !(Maybe Text)
+    , _sTrackingNumber :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Shipment' with the minimum fields required to make a request.
@@ -1155,11 +1183,13 @@ instance NFData Shipment where
 --
 --
 -- /See:/ 'shippingDetails' smart constructor.
-data ShippingDetails = ShippingDetails'
-  { _sdShippingOption   :: !(Maybe ShippingOption)
-  , _sdOutboundShipment :: !(Maybe Shipment)
-  , _sdInboundShipment  :: !(Maybe Shipment)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ShippingDetails =
+  ShippingDetails'
+    { _sdShippingOption   :: !(Maybe ShippingOption)
+    , _sdOutboundShipment :: !(Maybe Shipment)
+    , _sdInboundShipment  :: !(Maybe Shipment)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ShippingDetails' with the minimum fields required to make a request.

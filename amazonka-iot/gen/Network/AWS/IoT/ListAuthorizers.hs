@@ -49,12 +49,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listAuthorizers' smart constructor.
-data ListAuthorizers = ListAuthorizers'
-  { _laStatus         :: !(Maybe AuthorizerStatus)
-  , _laMarker         :: !(Maybe Text)
-  , _laAscendingOrder :: !(Maybe Bool)
-  , _laPageSize       :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAuthorizers =
+  ListAuthorizers'
+    { _laStatus         :: !(Maybe AuthorizerStatus)
+    , _laMarker         :: !(Maybe Text)
+    , _laAscendingOrder :: !(Maybe Bool)
+    , _laPageSize       :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAuthorizers' with the minimum fields required to make a request.
@@ -124,11 +126,13 @@ instance ToQuery ListAuthorizers where
                "pageSize" =: _laPageSize]
 
 -- | /See:/ 'listAuthorizersResponse' smart constructor.
-data ListAuthorizersResponse = ListAuthorizersResponse'
-  { _larsAuthorizers    :: !(Maybe [AuthorizerSummary])
-  , _larsNextMarker     :: !(Maybe Text)
-  , _larsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAuthorizersResponse =
+  ListAuthorizersResponse'
+    { _larsAuthorizers    :: !(Maybe [AuthorizerSummary])
+    , _larsNextMarker     :: !(Maybe Text)
+    , _larsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAuthorizersResponse' with the minimum fields required to make a request.

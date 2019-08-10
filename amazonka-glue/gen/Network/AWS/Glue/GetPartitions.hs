@@ -55,15 +55,17 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getPartitions' smart constructor.
-data GetPartitions = GetPartitions'
-  { _gpsCatalogId    :: !(Maybe Text)
-  , _gpsNextToken    :: !(Maybe Text)
-  , _gpsExpression   :: !(Maybe Text)
-  , _gpsSegment      :: !(Maybe Segment)
-  , _gpsMaxResults   :: !(Maybe Nat)
-  , _gpsDatabaseName :: !Text
-  , _gpsTableName    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetPartitions =
+  GetPartitions'
+    { _gpsCatalogId    :: !(Maybe Text)
+    , _gpsNextToken    :: !(Maybe Text)
+    , _gpsExpression   :: !(Maybe Text)
+    , _gpsSegment      :: !(Maybe Segment)
+    , _gpsMaxResults   :: !(Maybe Nat)
+    , _gpsDatabaseName :: !Text
+    , _gpsTableName    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetPartitions' with the minimum fields required to make a request.
@@ -177,11 +179,13 @@ instance ToQuery GetPartitions where
         toQuery = const mempty
 
 -- | /See:/ 'getPartitionsResponse' smart constructor.
-data GetPartitionsResponse = GetPartitionsResponse'
-  { _gpsrsPartitions     :: !(Maybe [Partition])
-  , _gpsrsNextToken      :: !(Maybe Text)
-  , _gpsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetPartitionsResponse =
+  GetPartitionsResponse'
+    { _gpsrsPartitions     :: !(Maybe [Partition])
+    , _gpsrsNextToken      :: !(Maybe Text)
+    , _gpsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetPartitionsResponse' with the minimum fields required to make a request.

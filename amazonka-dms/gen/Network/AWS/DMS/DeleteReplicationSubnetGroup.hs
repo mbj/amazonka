@@ -48,9 +48,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteReplicationSubnetGroup' smart constructor.
-newtype DeleteReplicationSubnetGroup = DeleteReplicationSubnetGroup'
-  { _drsgReplicationSubnetGroupIdentifier :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteReplicationSubnetGroup =
+  DeleteReplicationSubnetGroup'
+    { _drsgReplicationSubnetGroupIdentifier :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteReplicationSubnetGroup' with the minimum fields required to make a request.
@@ -114,9 +116,11 @@ instance ToQuery DeleteReplicationSubnetGroup where
 --
 --
 -- /See:/ 'deleteReplicationSubnetGroupResponse' smart constructor.
-newtype DeleteReplicationSubnetGroupResponse = DeleteReplicationSubnetGroupResponse'
-  { _drsgrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteReplicationSubnetGroupResponse =
+  DeleteReplicationSubnetGroupResponse'
+    { _drsgrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteReplicationSubnetGroupResponse' with the minimum fields required to make a request.

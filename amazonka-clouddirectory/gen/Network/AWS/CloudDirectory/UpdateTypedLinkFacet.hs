@@ -47,12 +47,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateTypedLinkFacet' smart constructor.
-data UpdateTypedLinkFacet = UpdateTypedLinkFacet'
-  { _utlfSchemaARN              :: !Text
-  , _utlfName                   :: !Text
-  , _utlfAttributeUpdates       :: ![TypedLinkFacetAttributeUpdate]
-  , _utlfIdentityAttributeOrder :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateTypedLinkFacet =
+  UpdateTypedLinkFacet'
+    { _utlfSchemaARN              :: !Text
+    , _utlfName                   :: !Text
+    , _utlfAttributeUpdates       :: ![TypedLinkFacetAttributeUpdate]
+    , _utlfIdentityAttributeOrder :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateTypedLinkFacet' with the minimum fields required to make a request.
@@ -132,9 +134,11 @@ instance ToQuery UpdateTypedLinkFacet where
         toQuery = const mempty
 
 -- | /See:/ 'updateTypedLinkFacetResponse' smart constructor.
-newtype UpdateTypedLinkFacetResponse = UpdateTypedLinkFacetResponse'
-  { _utlfrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateTypedLinkFacetResponse =
+  UpdateTypedLinkFacetResponse'
+    { _utlfrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateTypedLinkFacetResponse' with the minimum fields required to make a request.

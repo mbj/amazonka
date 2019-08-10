@@ -48,9 +48,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'terminateJobFlows' smart constructor.
-newtype TerminateJobFlows = TerminateJobFlows'
-  { _tjfJobFlowIds :: [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype TerminateJobFlows =
+  TerminateJobFlows'
+    { _tjfJobFlowIds :: [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TerminateJobFlows' with the minimum fields required to make a request.

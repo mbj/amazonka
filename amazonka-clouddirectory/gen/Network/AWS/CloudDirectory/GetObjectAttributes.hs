@@ -49,13 +49,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getObjectAttributes' smart constructor.
-data GetObjectAttributes = GetObjectAttributes'
-  { _goaConsistencyLevel :: !(Maybe ConsistencyLevel)
-  , _goaDirectoryARN     :: !Text
-  , _goaObjectReference  :: !ObjectReference
-  , _goaSchemaFacet      :: !SchemaFacet
-  , _goaAttributeNames   :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetObjectAttributes =
+  GetObjectAttributes'
+    { _goaConsistencyLevel :: !(Maybe ConsistencyLevel)
+    , _goaDirectoryARN     :: !Text
+    , _goaObjectReference  :: !ObjectReference
+    , _goaSchemaFacet      :: !SchemaFacet
+    , _goaAttributeNames   :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetObjectAttributes' with the minimum fields required to make a request.
@@ -144,10 +146,12 @@ instance ToQuery GetObjectAttributes where
         toQuery = const mempty
 
 -- | /See:/ 'getObjectAttributesResponse' smart constructor.
-data GetObjectAttributesResponse = GetObjectAttributesResponse'
-  { _goarsAttributes     :: !(Maybe [AttributeKeyAndValue])
-  , _goarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetObjectAttributesResponse =
+  GetObjectAttributesResponse'
+    { _goarsAttributes     :: !(Maybe [AttributeKeyAndValue])
+    , _goarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetObjectAttributesResponse' with the minimum fields required to make a request.

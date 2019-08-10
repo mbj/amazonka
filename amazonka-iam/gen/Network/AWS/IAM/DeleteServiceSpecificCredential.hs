@@ -43,10 +43,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteServiceSpecificCredential' smart constructor.
-data DeleteServiceSpecificCredential = DeleteServiceSpecificCredential'
-  { _dsscUserName                    :: !(Maybe Text)
-  , _dsscServiceSpecificCredentialId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteServiceSpecificCredential =
+  DeleteServiceSpecificCredential'
+    { _dsscUserName                    :: !(Maybe Text)
+    , _dsscServiceSpecificCredentialId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteServiceSpecificCredential' with the minimum fields required to make a request.

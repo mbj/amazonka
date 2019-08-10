@@ -51,10 +51,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listKeys' smart constructor.
-data ListKeys = ListKeys'
-  { _lkMarker :: !(Maybe Text)
-  , _lkLimit  :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListKeys =
+  ListKeys'
+    { _lkMarker :: !(Maybe Text)
+    , _lkLimit  :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListKeys' with the minimum fields required to make a request.
@@ -122,12 +124,14 @@ instance ToQuery ListKeys where
         toQuery = const mempty
 
 -- | /See:/ 'listKeysResponse' smart constructor.
-data ListKeysResponse = ListKeysResponse'
-  { _lkrsTruncated      :: !(Maybe Bool)
-  , _lkrsKeys           :: !(Maybe [KeyListEntry])
-  , _lkrsNextMarker     :: !(Maybe Text)
-  , _lkrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListKeysResponse =
+  ListKeysResponse'
+    { _lkrsTruncated      :: !(Maybe Bool)
+    , _lkrsKeys           :: !(Maybe [KeyListEntry])
+    , _lkrsNextMarker     :: !(Maybe Text)
+    , _lkrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListKeysResponse' with the minimum fields required to make a request.

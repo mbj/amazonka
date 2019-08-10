@@ -42,9 +42,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putLoggingOptions' smart constructor.
-newtype PutLoggingOptions = PutLoggingOptions'
-  { _ploLoggingOptions :: LoggingOptions
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype PutLoggingOptions =
+  PutLoggingOptions'
+    { _ploLoggingOptions :: LoggingOptions
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutLoggingOptions' with the minimum fields required to make a request.

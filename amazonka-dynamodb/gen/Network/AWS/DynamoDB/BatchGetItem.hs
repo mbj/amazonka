@@ -72,10 +72,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'batchGetItem' smart constructor.
-data BatchGetItem = BatchGetItem'
-  { _bgiReturnConsumedCapacity :: !(Maybe ReturnConsumedCapacity)
-  , _bgiRequestItems           :: !(Map Text KeysAndAttributes)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchGetItem =
+  BatchGetItem'
+    { _bgiReturnConsumedCapacity :: !(Maybe ReturnConsumedCapacity)
+    , _bgiRequestItems           :: !(Map Text KeysAndAttributes)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchGetItem' with the minimum fields required to make a request.
@@ -144,12 +146,14 @@ instance ToQuery BatchGetItem where
 --
 --
 -- /See:/ 'batchGetItemResponse' smart constructor.
-data BatchGetItemResponse = BatchGetItemResponse'
-  { _bgirsUnprocessedKeys  :: !(Maybe (Map Text KeysAndAttributes))
-  , _bgirsResponses        :: !(Maybe (Map Text [Map Text AttributeValue]))
-  , _bgirsConsumedCapacity :: !(Maybe [ConsumedCapacity])
-  , _bgirsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchGetItemResponse =
+  BatchGetItemResponse'
+    { _bgirsUnprocessedKeys  :: !(Maybe (Map Text KeysAndAttributes))
+    , _bgirsResponses        :: !(Maybe (Map Text [Map Text AttributeValue]))
+    , _bgirsConsumedCapacity :: !(Maybe [ConsumedCapacity])
+    , _bgirsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchGetItemResponse' with the minimum fields required to make a request.

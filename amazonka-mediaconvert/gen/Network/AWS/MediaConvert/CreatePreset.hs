@@ -46,12 +46,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createPreset' smart constructor.
-data CreatePreset = CreatePreset'
-  { _cpSettings    :: !(Maybe PresetSettings)
-  , _cpCategory    :: !(Maybe Text)
-  , _cpName        :: !(Maybe Text)
-  , _cpDescription :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreatePreset =
+  CreatePreset'
+    { _cpSettings    :: !(Maybe PresetSettings)
+    , _cpCategory    :: !(Maybe Text)
+    , _cpName        :: !(Maybe Text)
+    , _cpDescription :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreatePreset' with the minimum fields required to make a request.
@@ -128,10 +130,12 @@ instance ToQuery CreatePreset where
         toQuery = const mempty
 
 -- | /See:/ 'createPresetResponse' smart constructor.
-data CreatePresetResponse = CreatePresetResponse'
-  { _cprsPreset         :: !(Maybe Preset)
-  , _cprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreatePresetResponse =
+  CreatePresetResponse'
+    { _cprsPreset         :: !(Maybe Preset)
+    , _cprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreatePresetResponse' with the minimum fields required to make a request.

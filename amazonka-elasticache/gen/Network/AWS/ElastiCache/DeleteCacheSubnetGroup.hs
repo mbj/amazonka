@@ -46,9 +46,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteCacheSubnetGroup' smart constructor.
-newtype DeleteCacheSubnetGroup = DeleteCacheSubnetGroup'
-  { _dCacheSubnetGroupName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteCacheSubnetGroup =
+  DeleteCacheSubnetGroup'
+    { _dCacheSubnetGroupName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteCacheSubnetGroup' with the minimum fields required to make a request.

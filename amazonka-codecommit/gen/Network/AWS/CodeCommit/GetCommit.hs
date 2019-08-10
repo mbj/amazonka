@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getCommit' smart constructor.
-data GetCommit = GetCommit'
-  { _gcRepositoryName :: !Text
-  , _gcCommitId       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetCommit =
+  GetCommit'
+    { _gcRepositoryName :: !Text
+    , _gcCommitId       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetCommit' with the minimum fields required to make a request.
@@ -119,10 +121,12 @@ instance ToQuery GetCommit where
 --
 --
 -- /See:/ 'getCommitResponse' smart constructor.
-data GetCommitResponse = GetCommitResponse'
-  { _gcrsResponseStatus :: !Int
-  , _gcrsCommit         :: !Commit
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetCommitResponse =
+  GetCommitResponse'
+    { _gcrsResponseStatus :: !Int
+    , _gcrsCommit         :: !Commit
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetCommitResponse' with the minimum fields required to make a request.

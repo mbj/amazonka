@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putNotificationConfiguration' smart constructor.
-data PutNotificationConfiguration = PutNotificationConfiguration'
-  { _pncAutoScalingGroupName :: !Text
-  , _pncTopicARN             :: !Text
-  , _pncNotificationTypes    :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutNotificationConfiguration =
+  PutNotificationConfiguration'
+    { _pncAutoScalingGroupName :: !Text
+    , _pncTopicARN             :: !Text
+    , _pncNotificationTypes    :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutNotificationConfiguration' with the minimum fields required to make a request.

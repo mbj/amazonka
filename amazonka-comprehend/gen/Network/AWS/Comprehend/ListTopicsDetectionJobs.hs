@@ -51,11 +51,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listTopicsDetectionJobs' smart constructor.
-data ListTopicsDetectionJobs = ListTopicsDetectionJobs'
-  { _ltdjNextToken  :: !(Maybe Text)
-  , _ltdjFilter     :: !(Maybe TopicsDetectionJobFilter)
-  , _ltdjMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTopicsDetectionJobs =
+  ListTopicsDetectionJobs'
+    { _ltdjNextToken  :: !(Maybe Text)
+    , _ltdjFilter     :: !(Maybe TopicsDetectionJobFilter)
+    , _ltdjMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTopicsDetectionJobs' with the minimum fields required to make a request.
@@ -135,11 +137,13 @@ instance ToQuery ListTopicsDetectionJobs where
         toQuery = const mempty
 
 -- | /See:/ 'listTopicsDetectionJobsResponse' smart constructor.
-data ListTopicsDetectionJobsResponse = ListTopicsDetectionJobsResponse'
-  { _ltdjrsNextToken :: !(Maybe Text)
-  , _ltdjrsTopicsDetectionJobPropertiesList :: !(Maybe [TopicsDetectionJobProperties])
-  , _ltdjrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTopicsDetectionJobsResponse =
+  ListTopicsDetectionJobsResponse'
+    { _ltdjrsNextToken :: !(Maybe Text)
+    , _ltdjrsTopicsDetectionJobPropertiesList :: !(Maybe [TopicsDetectionJobProperties])
+    , _ltdjrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTopicsDetectionJobsResponse' with the minimum fields required to make a request.

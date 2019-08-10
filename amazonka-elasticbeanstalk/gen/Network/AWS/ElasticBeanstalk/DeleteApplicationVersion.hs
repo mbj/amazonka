@@ -48,11 +48,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteApplicationVersion' smart constructor.
-data DeleteApplicationVersion = DeleteApplicationVersion'
-  { _davDeleteSourceBundle :: !(Maybe Bool)
-  , _davApplicationName    :: !Text
-  , _davVersionLabel       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteApplicationVersion =
+  DeleteApplicationVersion'
+    { _davDeleteSourceBundle :: !(Maybe Bool)
+    , _davApplicationName    :: !Text
+    , _davVersionLabel       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteApplicationVersion' with the minimum fields required to make a request.

@@ -47,10 +47,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteVPC' smart constructor.
-data DeleteVPC = DeleteVPC'
-  { _delDryRun :: !(Maybe Bool)
-  , _delVPCId  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteVPC =
+  DeleteVPC'
+    { _delDryRun :: !(Maybe Bool)
+    , _delVPCId  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteVPC' with the minimum fields required to make a request.

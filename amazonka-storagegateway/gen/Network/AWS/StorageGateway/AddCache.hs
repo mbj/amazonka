@@ -48,10 +48,12 @@ import Network.AWS.StorageGateway.Types
 import Network.AWS.StorageGateway.Types.Product
 
 -- | /See:/ 'addCache' smart constructor.
-data AddCache = AddCache'
-  { _acGatewayARN :: !Text
-  , _acDiskIds    :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddCache =
+  AddCache'
+    { _acGatewayARN :: !Text
+    , _acDiskIds    :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddCache' with the minimum fields required to make a request.
@@ -112,10 +114,12 @@ instance ToQuery AddCache where
         toQuery = const mempty
 
 -- | /See:/ 'addCacheResponse' smart constructor.
-data AddCacheResponse = AddCacheResponse'
-  { _acrsGatewayARN     :: !(Maybe Text)
-  , _acrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddCacheResponse =
+  AddCacheResponse'
+    { _acrsGatewayARN     :: !(Maybe Text)
+    , _acrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddCacheResponse' with the minimum fields required to make a request.

@@ -48,13 +48,15 @@ import Network.AWS.Response
 -- | Creates a new ActiveMQ user.
 --
 -- /See:/ 'createUser' smart constructor.
-data CreateUser = CreateUser'
-  { _cuGroups        :: !(Maybe [Text])
-  , _cuConsoleAccess :: !(Maybe Bool)
-  , _cuPassword      :: !(Maybe Text)
-  , _cuUsername      :: !Text
-  , _cuBrokerId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateUser =
+  CreateUser'
+    { _cuGroups        :: !(Maybe [Text])
+    , _cuConsoleAccess :: !(Maybe Bool)
+    , _cuPassword      :: !(Maybe Text)
+    , _cuUsername      :: !Text
+    , _cuBrokerId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateUser' with the minimum fields required to make a request.
@@ -141,9 +143,11 @@ instance ToQuery CreateUser where
         toQuery = const mempty
 
 -- | /See:/ 'createUserResponse' smart constructor.
-newtype CreateUserResponse = CreateUserResponse'
-  { _cursResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateUserResponse =
+  CreateUserResponse'
+    { _cursResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateUserResponse' with the minimum fields required to make a request.

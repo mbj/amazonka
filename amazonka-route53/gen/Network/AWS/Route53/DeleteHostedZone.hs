@@ -63,9 +63,11 @@ import Network.AWS.Route53.Types.Product
 --
 --
 -- /See:/ 'deleteHostedZone' smart constructor.
-newtype DeleteHostedZone = DeleteHostedZone'
-  { _dhzId :: ResourceId
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteHostedZone =
+  DeleteHostedZone'
+    { _dhzId :: ResourceId
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteHostedZone' with the minimum fields required to make a request.
@@ -111,10 +113,12 @@ instance ToQuery DeleteHostedZone where
 --
 --
 -- /See:/ 'deleteHostedZoneResponse' smart constructor.
-data DeleteHostedZoneResponse = DeleteHostedZoneResponse'
-  { _dhzrsResponseStatus :: !Int
-  , _dhzrsChangeInfo     :: !ChangeInfo
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteHostedZoneResponse =
+  DeleteHostedZoneResponse'
+    { _dhzrsResponseStatus :: !Int
+    , _dhzrsChangeInfo     :: !ChangeInfo
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteHostedZoneResponse' with the minimum fields required to make a request.

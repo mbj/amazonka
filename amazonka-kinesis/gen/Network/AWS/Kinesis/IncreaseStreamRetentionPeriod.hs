@@ -49,10 +49,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'increaseStreamRetentionPeriod' smart constructor.
-data IncreaseStreamRetentionPeriod = IncreaseStreamRetentionPeriod'
-  { _isrpStreamName           :: !Text
-  , _isrpRetentionPeriodHours :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data IncreaseStreamRetentionPeriod =
+  IncreaseStreamRetentionPeriod'
+    { _isrpStreamName           :: !Text
+    , _isrpRetentionPeriodHours :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'IncreaseStreamRetentionPeriod' with the minimum fields required to make a request.

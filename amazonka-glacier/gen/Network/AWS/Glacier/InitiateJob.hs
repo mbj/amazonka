@@ -53,11 +53,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'initiateJob' smart constructor.
-data InitiateJob = InitiateJob'
-  { _ijJobParameters :: !(Maybe JobParameters)
-  , _ijAccountId     :: !Text
-  , _ijVaultName     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InitiateJob =
+  InitiateJob'
+    { _ijJobParameters :: !(Maybe JobParameters)
+    , _ijAccountId     :: !Text
+    , _ijVaultName     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InitiateJob' with the minimum fields required to make a request.
@@ -132,12 +134,14 @@ instance ToQuery InitiateJob where
 --
 --
 -- /See:/ 'initiateJobResponse' smart constructor.
-data InitiateJobResponse = InitiateJobResponse'
-  { _ijrsJobId          :: !(Maybe Text)
-  , _ijrsJobOutputPath  :: !(Maybe Text)
-  , _ijrsLocation       :: !(Maybe Text)
-  , _ijrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InitiateJobResponse =
+  InitiateJobResponse'
+    { _ijrsJobId          :: !(Maybe Text)
+    , _ijrsJobOutputPath  :: !(Maybe Text)
+    , _ijrsLocation       :: !(Maybe Text)
+    , _ijrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InitiateJobResponse' with the minimum fields required to make a request.

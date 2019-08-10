@@ -58,14 +58,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeScalingPolicies' smart constructor.
-data DescribeScalingPolicies = DescribeScalingPolicies'
-  { _dPolicyNames       :: !(Maybe [Text])
-  , _dScalableDimension :: !(Maybe ScalableDimension)
-  , _dResourceId        :: !(Maybe Text)
-  , _dNextToken         :: !(Maybe Text)
-  , _dMaxResults        :: !(Maybe Int)
-  , _dServiceNamespace  :: !ServiceNamespace
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeScalingPolicies =
+  DescribeScalingPolicies'
+    { _dPolicyNames       :: !(Maybe [Text])
+    , _dScalableDimension :: !(Maybe ScalableDimension)
+    , _dResourceId        :: !(Maybe Text)
+    , _dNextToken         :: !(Maybe Text)
+    , _dMaxResults        :: !(Maybe Int)
+    , _dServiceNamespace  :: !ServiceNamespace
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeScalingPolicies' with the minimum fields required to make a request.
@@ -172,11 +174,13 @@ instance ToQuery DescribeScalingPolicies where
         toQuery = const mempty
 
 -- | /See:/ 'describeScalingPoliciesResponse' smart constructor.
-data DescribeScalingPoliciesResponse = DescribeScalingPoliciesResponse'
-  { _drsNextToken       :: !(Maybe Text)
-  , _drsScalingPolicies :: !(Maybe [ScalingPolicy])
-  , _drsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeScalingPoliciesResponse =
+  DescribeScalingPoliciesResponse'
+    { _drsNextToken       :: !(Maybe Text)
+    , _drsScalingPolicies :: !(Maybe [ScalingPolicy])
+    , _drsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeScalingPoliciesResponse' with the minimum fields required to make a request.

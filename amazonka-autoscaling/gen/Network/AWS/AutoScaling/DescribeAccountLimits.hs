@@ -92,13 +92,15 @@ instance ToQuery DescribeAccountLimits where
                   "Version" =: ("2011-01-01" :: ByteString)])
 
 -- | /See:/ 'describeAccountLimitsResponse' smart constructor.
-data DescribeAccountLimitsResponse = DescribeAccountLimitsResponse'
-  { _dalrsNumberOfLaunchConfigurations    :: !(Maybe Int)
-  , _dalrsNumberOfAutoScalingGroups       :: !(Maybe Int)
-  , _dalrsMaxNumberOfAutoScalingGroups    :: !(Maybe Int)
-  , _dalrsMaxNumberOfLaunchConfigurations :: !(Maybe Int)
-  , _dalrsResponseStatus                  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAccountLimitsResponse =
+  DescribeAccountLimitsResponse'
+    { _dalrsNumberOfLaunchConfigurations    :: !(Maybe Int)
+    , _dalrsNumberOfAutoScalingGroups       :: !(Maybe Int)
+    , _dalrsMaxNumberOfAutoScalingGroups    :: !(Maybe Int)
+    , _dalrsMaxNumberOfLaunchConfigurations :: !(Maybe Int)
+    , _dalrsResponseStatus                  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAccountLimitsResponse' with the minimum fields required to make a request.

@@ -21,7 +21,7 @@
 -- Gets the maximum number of hosted zones that you can associate with the specified reusable delegation set.
 --
 --
--- For the default limit, see <http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DNSLimitations.html Limits> in the /Amazon Route 53 Developer Guide/ . To request a higher limit, <https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&amp;limitType=service-code-route53 open a case> .
+-- For the default limit, see <http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DNSLimitations.html Limits> in the /Amazon Route 53 Developer Guide/ . To request a higher limit, <https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-route53 open a case> .
 --
 module Network.AWS.Route53.GetReusableDelegationSetLimit
     (
@@ -53,10 +53,12 @@ import Network.AWS.Route53.Types.Product
 --
 --
 -- /See:/ 'getReusableDelegationSetLimit' smart constructor.
-data GetReusableDelegationSetLimit = GetReusableDelegationSetLimit'
-  { _grdslType            :: !ReusableDelegationSetLimitType
-  , _grdslDelegationSetId :: !ResourceId
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetReusableDelegationSetLimit =
+  GetReusableDelegationSetLimit'
+    { _grdslType            :: !ReusableDelegationSetLimitType
+    , _grdslDelegationSetId :: !ResourceId
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetReusableDelegationSetLimit' with the minimum fields required to make a request.
@@ -117,11 +119,13 @@ instance ToQuery GetReusableDelegationSetLimit where
 --
 --
 -- /See:/ 'getReusableDelegationSetLimitResponse' smart constructor.
-data GetReusableDelegationSetLimitResponse = GetReusableDelegationSetLimitResponse'
-  { _grdslrsResponseStatus :: !Int
-  , _grdslrsLimit          :: !ReusableDelegationSetLimit
-  , _grdslrsCount          :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetReusableDelegationSetLimitResponse =
+  GetReusableDelegationSetLimitResponse'
+    { _grdslrsResponseStatus :: !Int
+    , _grdslrsLimit          :: !ReusableDelegationSetLimit
+    , _grdslrsCount          :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetReusableDelegationSetLimitResponse' with the minimum fields required to make a request.

@@ -46,9 +46,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'disassociateSubnetCidrBlock' smart constructor.
-newtype DisassociateSubnetCidrBlock = DisassociateSubnetCidrBlock'
-  { _dscbAssociationId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DisassociateSubnetCidrBlock =
+  DisassociateSubnetCidrBlock'
+    { _dscbAssociationId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisassociateSubnetCidrBlock' with the minimum fields required to make a request.
@@ -98,11 +100,13 @@ instance ToQuery DisassociateSubnetCidrBlock where
                "AssociationId" =: _dscbAssociationId]
 
 -- | /See:/ 'disassociateSubnetCidrBlockResponse' smart constructor.
-data DisassociateSubnetCidrBlockResponse = DisassociateSubnetCidrBlockResponse'
-  { _dscbrsSubnetId                 :: !(Maybe Text)
-  , _dscbrsIPv6CidrBlockAssociation :: !(Maybe SubnetIPv6CidrBlockAssociation)
-  , _dscbrsResponseStatus           :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DisassociateSubnetCidrBlockResponse =
+  DisassociateSubnetCidrBlockResponse'
+    { _dscbrsSubnetId                 :: !(Maybe Text)
+    , _dscbrsIPv6CidrBlockAssociation :: !(Maybe SubnetIPv6CidrBlockAssociation)
+    , _dscbrsResponseStatus           :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisassociateSubnetCidrBlockResponse' with the minimum fields required to make a request.

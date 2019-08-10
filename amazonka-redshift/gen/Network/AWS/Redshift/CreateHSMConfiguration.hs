@@ -57,15 +57,17 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createHSMConfiguration' smart constructor.
-data CreateHSMConfiguration = CreateHSMConfiguration'
-  { _chcTags                       :: !(Maybe [Tag])
-  , _chcHSMConfigurationIdentifier :: !Text
-  , _chcDescription                :: !Text
-  , _chcHSMIPAddress               :: !Text
-  , _chcHSMPartitionName           :: !Text
-  , _chcHSMPartitionPassword       :: !Text
-  , _chcHSMServerPublicCertificate :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateHSMConfiguration =
+  CreateHSMConfiguration'
+    { _chcTags                       :: !(Maybe [Tag])
+    , _chcHSMConfigurationIdentifier :: !Text
+    , _chcDescription                :: !Text
+    , _chcHSMIPAddress               :: !Text
+    , _chcHSMPartitionName           :: !Text
+    , _chcHSMPartitionPassword       :: !Text
+    , _chcHSMServerPublicCertificate :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateHSMConfiguration' with the minimum fields required to make a request.
@@ -170,10 +172,12 @@ instance ToQuery CreateHSMConfiguration where
                  _chcHSMServerPublicCertificate]
 
 -- | /See:/ 'createHSMConfigurationResponse' smart constructor.
-data CreateHSMConfigurationResponse = CreateHSMConfigurationResponse'
-  { _chcrsHSMConfiguration :: !(Maybe HSMConfiguration)
-  , _chcrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateHSMConfigurationResponse =
+  CreateHSMConfigurationResponse'
+    { _chcrsHSMConfiguration :: !(Maybe HSMConfiguration)
+    , _chcrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateHSMConfigurationResponse' with the minimum fields required to make a request.

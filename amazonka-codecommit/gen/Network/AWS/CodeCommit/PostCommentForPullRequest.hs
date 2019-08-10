@@ -58,15 +58,17 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'postCommentForPullRequest' smart constructor.
-data PostCommentForPullRequest = PostCommentForPullRequest'
-  { _pcfprLocation           :: !(Maybe Location)
-  , _pcfprClientRequestToken :: !(Maybe Text)
-  , _pcfprPullRequestId      :: !Text
-  , _pcfprRepositoryName     :: !Text
-  , _pcfprBeforeCommitId     :: !Text
-  , _pcfprAfterCommitId      :: !Text
-  , _pcfprContent            :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PostCommentForPullRequest =
+  PostCommentForPullRequest'
+    { _pcfprLocation           :: !(Maybe Location)
+    , _pcfprClientRequestToken :: !(Maybe Text)
+    , _pcfprPullRequestId      :: !Text
+    , _pcfprRepositoryName     :: !Text
+    , _pcfprBeforeCommitId     :: !Text
+    , _pcfprAfterCommitId      :: !Text
+    , _pcfprContent            :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PostCommentForPullRequest' with the minimum fields required to make a request.
@@ -184,17 +186,19 @@ instance ToQuery PostCommentForPullRequest where
         toQuery = const mempty
 
 -- | /See:/ 'postCommentForPullRequestResponse' smart constructor.
-data PostCommentForPullRequestResponse = PostCommentForPullRequestResponse'
-  { _pcfprrsBeforeBlobId   :: !(Maybe Text)
-  , _pcfprrsLocation       :: !(Maybe Location)
-  , _pcfprrsAfterCommitId  :: !(Maybe Text)
-  , _pcfprrsPullRequestId  :: !(Maybe Text)
-  , _pcfprrsAfterBlobId    :: !(Maybe Text)
-  , _pcfprrsBeforeCommitId :: !(Maybe Text)
-  , _pcfprrsRepositoryName :: !(Maybe Text)
-  , _pcfprrsComment        :: !(Maybe Comment)
-  , _pcfprrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PostCommentForPullRequestResponse =
+  PostCommentForPullRequestResponse'
+    { _pcfprrsBeforeBlobId   :: !(Maybe Text)
+    , _pcfprrsLocation       :: !(Maybe Location)
+    , _pcfprrsAfterCommitId  :: !(Maybe Text)
+    , _pcfprrsPullRequestId  :: !(Maybe Text)
+    , _pcfprrsAfterBlobId    :: !(Maybe Text)
+    , _pcfprrsBeforeCommitId :: !(Maybe Text)
+    , _pcfprrsRepositoryName :: !(Maybe Text)
+    , _pcfprrsComment        :: !(Maybe Comment)
+    , _pcfprrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PostCommentForPullRequestResponse' with the minimum fields required to make a request.

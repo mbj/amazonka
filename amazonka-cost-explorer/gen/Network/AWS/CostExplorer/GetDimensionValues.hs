@@ -52,13 +52,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getDimensionValues' smart constructor.
-data GetDimensionValues = GetDimensionValues'
-  { _gdvNextPageToken :: !(Maybe Text)
-  , _gdvContext       :: !(Maybe Context)
-  , _gdvSearchString  :: !(Maybe Text)
-  , _gdvTimePeriod    :: !DateInterval
-  , _gdvDimension     :: !Dimension
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDimensionValues =
+  GetDimensionValues'
+    { _gdvNextPageToken :: !(Maybe Text)
+    , _gdvContext       :: !(Maybe Context)
+    , _gdvSearchString  :: !(Maybe Text)
+    , _gdvTimePeriod    :: !DateInterval
+    , _gdvDimension     :: !Dimension
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDimensionValues' with the minimum fields required to make a request.
@@ -152,13 +154,15 @@ instance ToQuery GetDimensionValues where
         toQuery = const mempty
 
 -- | /See:/ 'getDimensionValuesResponse' smart constructor.
-data GetDimensionValuesResponse = GetDimensionValuesResponse'
-  { _gdvrsNextPageToken   :: !(Maybe Text)
-  , _gdvrsResponseStatus  :: !Int
-  , _gdvrsDimensionValues :: ![DimensionValuesWithAttributes]
-  , _gdvrsReturnSize      :: !Int
-  , _gdvrsTotalSize       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDimensionValuesResponse =
+  GetDimensionValuesResponse'
+    { _gdvrsNextPageToken   :: !(Maybe Text)
+    , _gdvrsResponseStatus  :: !Int
+    , _gdvrsDimensionValues :: ![DimensionValuesWithAttributes]
+    , _gdvrsReturnSize      :: !Int
+    , _gdvrsTotalSize       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDimensionValuesResponse' with the minimum fields required to make a request.

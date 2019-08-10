@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putUserPolicy' smart constructor.
-data PutUserPolicy = PutUserPolicy'
-  { _pupUserName       :: !Text
-  , _pupPolicyName     :: !Text
-  , _pupPolicyDocument :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutUserPolicy =
+  PutUserPolicy'
+    { _pupUserName       :: !Text
+    , _pupPolicyName     :: !Text
+    , _pupPolicyDocument :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutUserPolicy' with the minimum fields required to make a request.

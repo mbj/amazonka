@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deregisterVolume' smart constructor.
-newtype DeregisterVolume = DeregisterVolume'
-  { _dvVolumeId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeregisterVolume =
+  DeregisterVolume'
+    { _dvVolumeId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeregisterVolume' with the minimum fields required to make a request.

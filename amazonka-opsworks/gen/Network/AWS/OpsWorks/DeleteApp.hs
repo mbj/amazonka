@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteApp' smart constructor.
-newtype DeleteApp = DeleteApp'
-  { _daAppId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteApp =
+  DeleteApp'
+    { _daAppId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteApp' with the minimum fields required to make a request.

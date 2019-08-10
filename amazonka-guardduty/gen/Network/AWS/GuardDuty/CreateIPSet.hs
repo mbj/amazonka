@@ -49,13 +49,15 @@ import Network.AWS.Response
 -- | CreateIPSet request body.
 --
 -- /See:/ 'createIPSet' smart constructor.
-data CreateIPSet = CreateIPSet'
-  { _cisLocation   :: !(Maybe Text)
-  , _cisFormat     :: !(Maybe IPSetFormat)
-  , _cisActivate   :: !(Maybe Bool)
-  , _cisName       :: !(Maybe Text)
-  , _cisDetectorId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateIPSet =
+  CreateIPSet'
+    { _cisLocation   :: !(Maybe Text)
+    , _cisFormat     :: !(Maybe IPSetFormat)
+    , _cisActivate   :: !(Maybe Bool)
+    , _cisName       :: !(Maybe Text)
+    , _cisDetectorId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateIPSet' with the minimum fields required to make a request.
@@ -142,10 +144,12 @@ instance ToQuery CreateIPSet where
         toQuery = const mempty
 
 -- | /See:/ 'createIPSetResponse' smart constructor.
-data CreateIPSetResponse = CreateIPSetResponse'
-  { _cisrsIPSetId        :: !(Maybe Text)
-  , _cisrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateIPSetResponse =
+  CreateIPSetResponse'
+    { _cisrsIPSetId        :: !(Maybe Text)
+    , _cisrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateIPSetResponse' with the minimum fields required to make a request.

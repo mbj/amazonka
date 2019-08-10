@@ -52,10 +52,12 @@ import Network.AWS.StepFunctions.Types
 import Network.AWS.StepFunctions.Types.Product
 
 -- | /See:/ 'listActivities' smart constructor.
-data ListActivities = ListActivities'
-  { _laNextToken  :: !(Maybe Text)
-  , _laMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListActivities =
+  ListActivities'
+    { _laNextToken  :: !(Maybe Text)
+    , _laMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListActivities' with the minimum fields required to make a request.
@@ -123,11 +125,13 @@ instance ToQuery ListActivities where
         toQuery = const mempty
 
 -- | /See:/ 'listActivitiesResponse' smart constructor.
-data ListActivitiesResponse = ListActivitiesResponse'
-  { _larsNextToken      :: !(Maybe Text)
-  , _larsResponseStatus :: !Int
-  , _larsActivities     :: ![ActivityListItem]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListActivitiesResponse =
+  ListActivitiesResponse'
+    { _larsNextToken      :: !(Maybe Text)
+    , _larsResponseStatus :: !Int
+    , _larsActivities     :: ![ActivityListItem]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListActivitiesResponse' with the minimum fields required to make a request.

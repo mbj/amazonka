@@ -43,9 +43,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteAPNSSandboxChannel' smart constructor.
-newtype DeleteAPNSSandboxChannel = DeleteAPNSSandboxChannel'
-  { _dascApplicationId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteAPNSSandboxChannel =
+  DeleteAPNSSandboxChannel'
+    { _dascApplicationId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteAPNSSandboxChannel' with the minimum fields required to make a request.
@@ -95,10 +97,12 @@ instance ToQuery DeleteAPNSSandboxChannel where
         toQuery = const mempty
 
 -- | /See:/ 'deleteAPNSSandboxChannelResponse' smart constructor.
-data DeleteAPNSSandboxChannelResponse = DeleteAPNSSandboxChannelResponse'
-  { _dascrsResponseStatus             :: !Int
-  , _dascrsAPNSSandboxChannelResponse :: !APNSSandboxChannelResponse
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteAPNSSandboxChannelResponse =
+  DeleteAPNSSandboxChannelResponse'
+    { _dascrsResponseStatus             :: !Int
+    , _dascrsAPNSSandboxChannelResponse :: !APNSSandboxChannelResponse
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteAPNSSandboxChannelResponse' with the minimum fields required to make a request.

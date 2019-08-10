@@ -50,11 +50,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'resetInstanceAttribute' smart constructor.
-data ResetInstanceAttribute = ResetInstanceAttribute'
-  { _riaDryRun     :: !(Maybe Bool)
-  , _riaAttribute  :: !InstanceAttributeName
-  , _riaInstanceId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResetInstanceAttribute =
+  ResetInstanceAttribute'
+    { _riaDryRun     :: !(Maybe Bool)
+    , _riaAttribute  :: !InstanceAttributeName
+    , _riaInstanceId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResetInstanceAttribute' with the minimum fields required to make a request.

@@ -26,11 +26,13 @@ import Network.AWS.ResourceGroups.Types.Sum
 --
 --
 -- /See:/ 'group'' smart constructor.
-data Group = Group'
-  { _gDescription :: !(Maybe Text)
-  , _gGroupARN    :: !Text
-  , _gName        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Group =
+  Group'
+    { _gDescription :: !(Maybe Text)
+    , _gGroupARN    :: !Text
+    , _gName        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Group' with the minimum fields required to make a request.
@@ -79,10 +81,12 @@ instance NFData Group where
 --
 --
 -- /See:/ 'groupQuery' smart constructor.
-data GroupQuery = GroupQuery'
-  { _gqGroupName     :: !Text
-  , _gqResourceQuery :: !ResourceQuery
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GroupQuery =
+  GroupQuery'
+    { _gqGroupName     :: !Text
+    , _gqResourceQuery :: !ResourceQuery
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GroupQuery' with the minimum fields required to make a request.
@@ -124,10 +128,12 @@ instance NFData GroupQuery where
 --
 --
 -- /See:/ 'resourceIdentifier' smart constructor.
-data ResourceIdentifier = ResourceIdentifier'
-  { _riResourceType :: !(Maybe Text)
-  , _riResourceARN  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResourceIdentifier =
+  ResourceIdentifier'
+    { _riResourceType :: !(Maybe Text)
+    , _riResourceARN  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResourceIdentifier' with the minimum fields required to make a request.
@@ -167,10 +173,12 @@ instance NFData ResourceIdentifier where
 --
 --
 -- /See:/ 'resourceQuery' smart constructor.
-data ResourceQuery = ResourceQuery'
-  { _rqType        :: !QueryType
-  , _rqSearchQuery :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResourceQuery =
+  ResourceQuery'
+    { _rqType        :: !QueryType
+    , _rqSearchQuery :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResourceQuery' with the minimum fields required to make a request.

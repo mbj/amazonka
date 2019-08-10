@@ -56,14 +56,16 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createDirectory' smart constructor.
-data CreateDirectory = CreateDirectory'
-  { _cShortName   :: !(Maybe Text)
-  , _cVPCSettings :: !(Maybe DirectoryVPCSettings)
-  , _cDescription :: !(Maybe Text)
-  , _cName        :: !Text
-  , _cPassword    :: !(Sensitive Text)
-  , _cSize        :: !DirectorySize
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data CreateDirectory =
+  CreateDirectory'
+    { _cShortName   :: !(Maybe Text)
+    , _cVPCSettings :: !(Maybe DirectoryVPCSettings)
+    , _cDescription :: !(Maybe Text)
+    , _cName        :: !Text
+    , _cPassword    :: !(Sensitive Text)
+    , _cSize        :: !DirectorySize
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDirectory' with the minimum fields required to make a request.
@@ -166,10 +168,12 @@ instance ToQuery CreateDirectory where
 --
 --
 -- /See:/ 'createDirectoryResponse' smart constructor.
-data CreateDirectoryResponse = CreateDirectoryResponse'
-  { _crsDirectoryId    :: !(Maybe Text)
-  , _crsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDirectoryResponse =
+  CreateDirectoryResponse'
+    { _crsDirectoryId    :: !(Maybe Text)
+    , _crsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDirectoryResponse' with the minimum fields required to make a request.

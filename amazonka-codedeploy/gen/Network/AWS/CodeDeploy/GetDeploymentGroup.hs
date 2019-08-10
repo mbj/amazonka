@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getDeploymentGroup' smart constructor.
-data GetDeploymentGroup = GetDeploymentGroup'
-  { _gdgApplicationName     :: !Text
-  , _gdgDeploymentGroupName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDeploymentGroup =
+  GetDeploymentGroup'
+    { _gdgApplicationName     :: !Text
+    , _gdgDeploymentGroupName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDeploymentGroup' with the minimum fields required to make a request.
@@ -126,10 +128,12 @@ instance ToQuery GetDeploymentGroup where
 --
 --
 -- /See:/ 'getDeploymentGroupResponse' smart constructor.
-data GetDeploymentGroupResponse = GetDeploymentGroupResponse'
-  { _gdgrsDeploymentGroupInfo :: !(Maybe DeploymentGroupInfo)
-  , _gdgrsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDeploymentGroupResponse =
+  GetDeploymentGroupResponse'
+    { _gdgrsDeploymentGroupInfo :: !(Maybe DeploymentGroupInfo)
+    , _gdgrsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDeploymentGroupResponse' with the minimum fields required to make a request.

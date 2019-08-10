@@ -56,12 +56,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'searchFaces' smart constructor.
-data SearchFaces = SearchFaces'
-  { _sfFaceMatchThreshold :: !(Maybe Double)
-  , _sfMaxFaces           :: !(Maybe Nat)
-  , _sfCollectionId       :: !Text
-  , _sfFaceId             :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SearchFaces =
+  SearchFaces'
+    { _sfFaceMatchThreshold :: !(Maybe Double)
+    , _sfMaxFaces           :: !(Maybe Nat)
+    , _sfCollectionId       :: !Text
+    , _sfFaceId             :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SearchFaces' with the minimum fields required to make a request.
@@ -145,12 +147,14 @@ instance ToQuery SearchFaces where
         toQuery = const mempty
 
 -- | /See:/ 'searchFacesResponse' smart constructor.
-data SearchFacesResponse = SearchFacesResponse'
-  { _sfrsFaceMatches      :: !(Maybe [FaceMatch])
-  , _sfrsFaceModelVersion :: !(Maybe Text)
-  , _sfrsSearchedFaceId   :: !(Maybe Text)
-  , _sfrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SearchFacesResponse =
+  SearchFacesResponse'
+    { _sfrsFaceMatches      :: !(Maybe [FaceMatch])
+    , _sfrsFaceModelVersion :: !(Maybe Text)
+    , _sfrsSearchedFaceId   :: !(Maybe Text)
+    , _sfrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SearchFacesResponse' with the minimum fields required to make a request.

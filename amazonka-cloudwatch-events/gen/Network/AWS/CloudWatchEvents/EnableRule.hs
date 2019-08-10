@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'enableRule' smart constructor.
-newtype EnableRule = EnableRule'
-  { _erName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype EnableRule =
+  EnableRule'
+    { _erName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EnableRule' with the minimum fields required to make a request.

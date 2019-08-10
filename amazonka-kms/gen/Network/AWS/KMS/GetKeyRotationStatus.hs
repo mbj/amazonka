@@ -47,9 +47,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getKeyRotationStatus' smart constructor.
-newtype GetKeyRotationStatus = GetKeyRotationStatus'
-  { _gkrsKeyId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetKeyRotationStatus =
+  GetKeyRotationStatus'
+    { _gkrsKeyId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetKeyRotationStatus' with the minimum fields required to make a request.
@@ -101,10 +103,12 @@ instance ToQuery GetKeyRotationStatus where
         toQuery = const mempty
 
 -- | /See:/ 'getKeyRotationStatusResponse' smart constructor.
-data GetKeyRotationStatusResponse = GetKeyRotationStatusResponse'
-  { _gkrsrsKeyRotationEnabled :: !(Maybe Bool)
-  , _gkrsrsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetKeyRotationStatusResponse =
+  GetKeyRotationStatusResponse'
+    { _gkrsrsKeyRotationEnabled :: !(Maybe Bool)
+    , _gkrsrsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetKeyRotationStatusResponse' with the minimum fields required to make a request.

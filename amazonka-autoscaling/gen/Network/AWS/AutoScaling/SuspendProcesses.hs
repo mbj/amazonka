@@ -49,10 +49,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'suspendProcesses' smart constructor.
-data SuspendProcesses = SuspendProcesses'
-  { _spScalingProcesses     :: !(Maybe [Text])
-  , _spAutoScalingGroupName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SuspendProcesses =
+  SuspendProcesses'
+    { _spScalingProcesses     :: !(Maybe [Text])
+    , _spAutoScalingGroupName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SuspendProcesses' with the minimum fields required to make a request.

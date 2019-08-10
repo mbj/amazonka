@@ -41,10 +41,12 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'deleteBucketInventoryConfiguration' smart constructor.
-data DeleteBucketInventoryConfiguration = DeleteBucketInventoryConfiguration'
-  { _dbicBucket :: !BucketName
-  , _dbicId     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteBucketInventoryConfiguration =
+  DeleteBucketInventoryConfiguration'
+    { _dbicBucket :: !BucketName
+    , _dbicId     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteBucketInventoryConfiguration' with the minimum fields required to make a request.

@@ -51,11 +51,13 @@ import Network.AWS.WorkMail.Types
 import Network.AWS.WorkMail.Types.Product
 
 -- | /See:/ 'listUsers' smart constructor.
-data ListUsers = ListUsers'
-  { _luNextToken      :: !(Maybe Text)
-  , _luMaxResults     :: !(Maybe Nat)
-  , _luOrganizationId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListUsers =
+  ListUsers'
+    { _luNextToken      :: !(Maybe Text)
+    , _luMaxResults     :: !(Maybe Nat)
+    , _luOrganizationId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListUsers' with the minimum fields required to make a request.
@@ -135,11 +137,13 @@ instance ToQuery ListUsers where
         toQuery = const mempty
 
 -- | /See:/ 'listUsersResponse' smart constructor.
-data ListUsersResponse = ListUsersResponse'
-  { _lursUsers          :: !(Maybe [User])
-  , _lursNextToken      :: !(Maybe Text)
-  , _lursResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListUsersResponse =
+  ListUsersResponse'
+    { _lursUsers          :: !(Maybe [User])
+    , _lursNextToken      :: !(Maybe Text)
+    , _lursResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListUsersResponse' with the minimum fields required to make a request.

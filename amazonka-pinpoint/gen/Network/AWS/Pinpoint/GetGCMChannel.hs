@@ -43,9 +43,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getGCMChannel' smart constructor.
-newtype GetGCMChannel = GetGCMChannel'
-  { _ggcApplicationId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetGCMChannel =
+  GetGCMChannel'
+    { _ggcApplicationId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetGCMChannel' with the minimum fields required to make a request.
@@ -94,10 +96,12 @@ instance ToQuery GetGCMChannel where
         toQuery = const mempty
 
 -- | /See:/ 'getGCMChannelResponse' smart constructor.
-data GetGCMChannelResponse = GetGCMChannelResponse'
-  { _ggcrsResponseStatus     :: !Int
-  , _ggcrsGCMChannelResponse :: !GCMChannelResponse
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetGCMChannelResponse =
+  GetGCMChannelResponse'
+    { _ggcrsResponseStatus     :: !Int
+    , _ggcrsGCMChannelResponse :: !GCMChannelResponse
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetGCMChannelResponse' with the minimum fields required to make a request.

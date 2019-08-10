@@ -51,10 +51,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'adminEnableUser' smart constructor.
-data AdminEnableUser = AdminEnableUser'
-  { _aeuUserPoolId :: !Text
-  , _aeuUsername   :: !(Sensitive Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data AdminEnableUser =
+  AdminEnableUser'
+    { _aeuUserPoolId :: !Text
+    , _aeuUsername   :: !(Sensitive Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AdminEnableUser' with the minimum fields required to make a request.
@@ -121,9 +123,11 @@ instance ToQuery AdminEnableUser where
 --
 --
 -- /See:/ 'adminEnableUserResponse' smart constructor.
-newtype AdminEnableUserResponse = AdminEnableUserResponse'
-  { _aeursResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AdminEnableUserResponse =
+  AdminEnableUserResponse'
+    { _aeursResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AdminEnableUserResponse' with the minimum fields required to make a request.

@@ -43,9 +43,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getAPNSVoipSandboxChannel' smart constructor.
-newtype GetAPNSVoipSandboxChannel = GetAPNSVoipSandboxChannel'
-  { _gavscApplicationId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetAPNSVoipSandboxChannel =
+  GetAPNSVoipSandboxChannel'
+    { _gavscApplicationId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetAPNSVoipSandboxChannel' with the minimum fields required to make a request.
@@ -95,10 +97,12 @@ instance ToQuery GetAPNSVoipSandboxChannel where
         toQuery = const mempty
 
 -- | /See:/ 'getAPNSVoipSandboxChannelResponse' smart constructor.
-data GetAPNSVoipSandboxChannelResponse = GetAPNSVoipSandboxChannelResponse'
-  { _gavscrsResponseStatus                 :: !Int
-  , _gavscrsAPNSVoipSandboxChannelResponse :: !APNSVoipSandboxChannelResponse
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetAPNSVoipSandboxChannelResponse =
+  GetAPNSVoipSandboxChannelResponse'
+    { _gavscrsResponseStatus                 :: !Int
+    , _gavscrsAPNSVoipSandboxChannelResponse :: !APNSVoipSandboxChannelResponse
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetAPNSVoipSandboxChannelResponse' with the minimum fields required to make a request.

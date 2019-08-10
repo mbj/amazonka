@@ -47,10 +47,12 @@ import Network.AWS.SNS.Types.Product
 --
 --
 -- /See:/ 'setPlatformApplicationAttributes' smart constructor.
-data SetPlatformApplicationAttributes = SetPlatformApplicationAttributes'
-  { _spaaPlatformApplicationARN :: !Text
-  , _spaaAttributes             :: !(Map Text Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SetPlatformApplicationAttributes =
+  SetPlatformApplicationAttributes'
+    { _spaaPlatformApplicationARN :: !Text
+    , _spaaAttributes             :: !(Map Text Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetPlatformApplicationAttributes' with the minimum fields required to make a request.

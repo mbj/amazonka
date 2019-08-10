@@ -48,12 +48,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'modifyVPCEndpointServicePermissions' smart constructor.
-data ModifyVPCEndpointServicePermissions = ModifyVPCEndpointServicePermissions'
-  { _mvespRemoveAllowedPrincipals :: !(Maybe [Text])
-  , _mvespAddAllowedPrincipals    :: !(Maybe [Text])
-  , _mvespDryRun                  :: !(Maybe Bool)
-  , _mvespServiceId               :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyVPCEndpointServicePermissions =
+  ModifyVPCEndpointServicePermissions'
+    { _mvespRemoveAllowedPrincipals :: !(Maybe [Text])
+    , _mvespAddAllowedPrincipals    :: !(Maybe [Text])
+    , _mvespDryRun                  :: !(Maybe Bool)
+    , _mvespServiceId               :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyVPCEndpointServicePermissions' with the minimum fields required to make a request.
@@ -140,10 +142,12 @@ instance ToQuery ModifyVPCEndpointServicePermissions
                "ServiceId" =: _mvespServiceId]
 
 -- | /See:/ 'modifyVPCEndpointServicePermissionsResponse' smart constructor.
-data ModifyVPCEndpointServicePermissionsResponse = ModifyVPCEndpointServicePermissionsResponse'
-  { _mvesprsReturnValue    :: !(Maybe Bool)
-  , _mvesprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyVPCEndpointServicePermissionsResponse =
+  ModifyVPCEndpointServicePermissionsResponse'
+    { _mvesprsReturnValue    :: !(Maybe Bool)
+    , _mvesprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyVPCEndpointServicePermissionsResponse' with the minimum fields required to make a request.

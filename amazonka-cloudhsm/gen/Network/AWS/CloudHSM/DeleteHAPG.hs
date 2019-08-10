@@ -53,9 +53,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteHAPG' smart constructor.
-newtype DeleteHAPG = DeleteHAPG'
-  { _dhHAPGARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteHAPG =
+  DeleteHAPG'
+    { _dhHAPGARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteHAPG' with the minimum fields required to make a request.
@@ -110,10 +112,12 @@ instance ToQuery DeleteHAPG where
 --
 --
 -- /See:/ 'deleteHAPGResponse' smart constructor.
-data DeleteHAPGResponse = DeleteHAPGResponse'
-  { _dhrsResponseStatus :: !Int
-  , _dhrsStatus         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteHAPGResponse =
+  DeleteHAPGResponse'
+    { _dhrsResponseStatus :: !Int
+    , _dhrsStatus         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteHAPGResponse' with the minimum fields required to make a request.

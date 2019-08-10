@@ -27,17 +27,19 @@ import Network.AWS.Prelude
 -- <http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-api-keys.html Use API Keys>
 --
 -- /See:/ 'apiKey' smart constructor.
-data APIKey = APIKey'
-  { _akEnabled         :: !(Maybe Bool)
-  , _akValue           :: !(Maybe Text)
-  , _akCustomerId      :: !(Maybe Text)
-  , _akCreatedDate     :: !(Maybe POSIX)
-  , _akName            :: !(Maybe Text)
-  , _akId              :: !(Maybe Text)
-  , _akStageKeys       :: !(Maybe [Text])
-  , _akLastUpdatedDate :: !(Maybe POSIX)
-  , _akDescription     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data APIKey =
+  APIKey'
+    { _akEnabled         :: !(Maybe Bool)
+    , _akValue           :: !(Maybe Text)
+    , _akCustomerId      :: !(Maybe Text)
+    , _akCreatedDate     :: !(Maybe POSIX)
+    , _akName            :: !(Maybe Text)
+    , _akId              :: !(Maybe Text)
+    , _akStageKeys       :: !(Maybe [Text])
+    , _akLastUpdatedDate :: !(Maybe POSIX)
+    , _akDescription     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'APIKey' with the minimum fields required to make a request.
@@ -136,10 +138,12 @@ instance NFData APIKey where
 --
 --
 -- /See:/ 'apiStage' smart constructor.
-data APIStage = APIStage'
-  { _asStage :: !(Maybe Text)
-  , _asApiId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data APIStage =
+  APIStage'
+    { _asStage :: !(Maybe Text)
+    , _asApiId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'APIStage' with the minimum fields required to make a request.
@@ -184,10 +188,12 @@ instance ToJSON APIStage where
 --
 --
 -- /See:/ 'accessLogSettings' smart constructor.
-data AccessLogSettings = AccessLogSettings'
-  { _alsFormat         :: !(Maybe Text)
-  , _alsDestinationARN :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AccessLogSettings =
+  AccessLogSettings'
+    { _alsFormat         :: !(Maybe Text)
+    , _alsDestinationARN :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AccessLogSettings' with the minimum fields required to make a request.
@@ -244,12 +250,14 @@ instance NFData AccessLogSettings where
 -- <http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-limits.html API Gateway Limits> <http://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html Developer Guide> , <http://docs.aws.amazon.com/cli/latest/reference/apigateway/get-account.html AWS CLI>
 --
 -- /See:/ 'account' smart constructor.
-data Account = Account'
-  { _aApiKeyVersion     :: !(Maybe Text)
-  , _aCloudwatchRoleARN :: !(Maybe Text)
-  , _aFeatures          :: !(Maybe [Text])
-  , _aThrottleSettings  :: !(Maybe ThrottleSettings)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Account =
+  Account'
+    { _aApiKeyVersion     :: !(Maybe Text)
+    , _aCloudwatchRoleARN :: !(Maybe Text)
+    , _aFeatures          :: !(Maybe [Text])
+    , _aThrottleSettings  :: !(Maybe ThrottleSettings)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Account' with the minimum fields required to make a request.
@@ -310,18 +318,20 @@ instance NFData Account where
 -- <http://docs.aws.amazon.com/apigateway/latest/developerguide/use-custom-authorizer.html Enable custom authorization>
 --
 -- /See:/ 'authorizer' smart constructor.
-data Authorizer = Authorizer'
-  { _aAuthorizerURI                :: !(Maybe Text)
-  , _aIdentityValidationExpression :: !(Maybe Text)
-  , _aProviderARNs                 :: !(Maybe [Text])
-  , _aName                         :: !(Maybe Text)
-  , _aId                           :: !(Maybe Text)
-  , _aAuthorizerResultTtlInSeconds :: !(Maybe Int)
-  , _aAuthType                     :: !(Maybe Text)
-  , _aType                         :: !(Maybe AuthorizerType)
-  , _aIdentitySource               :: !(Maybe Text)
-  , _aAuthorizerCredentials        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Authorizer =
+  Authorizer'
+    { _aAuthorizerURI                :: !(Maybe Text)
+    , _aIdentityValidationExpression :: !(Maybe Text)
+    , _aProviderARNs                 :: !(Maybe [Text])
+    , _aName                         :: !(Maybe Text)
+    , _aId                           :: !(Maybe Text)
+    , _aAuthorizerResultTtlInSeconds :: !(Maybe Int)
+    , _aAuthType                     :: !(Maybe Text)
+    , _aType                         :: !(Maybe AuthorizerType)
+    , _aIdentitySource               :: !(Maybe Text)
+    , _aAuthorizerCredentials        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Authorizer' with the minimum fields required to make a request.
@@ -430,11 +440,13 @@ instance NFData Authorizer where
 -- A custom domain name plus a @BasePathMapping@ specification identifies a deployed 'RestApi' in a given stage of the owner 'Account' .<http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html Use Custom Domain Names>
 --
 -- /See:/ 'basePathMapping' smart constructor.
-data BasePathMapping = BasePathMapping'
-  { _bpmStage     :: !(Maybe Text)
-  , _bpmBasePath  :: !(Maybe Text)
-  , _bpmRestAPIId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BasePathMapping =
+  BasePathMapping'
+    { _bpmStage     :: !(Maybe Text)
+    , _bpmBasePath  :: !(Maybe Text)
+    , _bpmRestAPIId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BasePathMapping' with the minimum fields required to make a request.
@@ -482,12 +494,14 @@ instance NFData BasePathMapping where
 --
 --
 -- /See:/ 'canarySettings' smart constructor.
-data CanarySettings = CanarySettings'
-  { _csDeploymentId           :: !(Maybe Text)
-  , _csStageVariableOverrides :: !(Maybe (Map Text Text))
-  , _csUseStageCache          :: !(Maybe Bool)
-  , _csPercentTraffic         :: !(Maybe Double)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CanarySettings =
+  CanarySettings'
+    { _csDeploymentId           :: !(Maybe Text)
+    , _csStageVariableOverrides :: !(Maybe (Map Text Text))
+    , _csUseStageCache          :: !(Maybe Bool)
+    , _csPercentTraffic         :: !(Maybe Double)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CanarySettings' with the minimum fields required to make a request.
@@ -558,13 +572,15 @@ instance ToJSON CanarySettings where
 -- Client certificates are used to authenticate an API by the backend server. To authenticate an API client (or user), use IAM roles and policies, a custom 'Authorizer' or an Amazon Cognito user pool.<http://docs.aws.amazon.com/apigateway/latest/developerguide/getting-started-client-side-ssl-authentication.html Use Client-Side Certificate>
 --
 -- /See:/ 'clientCertificate' smart constructor.
-data ClientCertificate = ClientCertificate'
-  { _ccPemEncodedCertificate :: !(Maybe Text)
-  , _ccClientCertificateId   :: !(Maybe Text)
-  , _ccCreatedDate           :: !(Maybe POSIX)
-  , _ccExpirationDate        :: !(Maybe POSIX)
-  , _ccDescription           :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ClientCertificate =
+  ClientCertificate'
+    { _ccPemEncodedCertificate :: !(Maybe Text)
+    , _ccClientCertificateId   :: !(Maybe Text)
+    , _ccCreatedDate           :: !(Maybe POSIX)
+    , _ccExpirationDate        :: !(Maybe POSIX)
+    , _ccDescription           :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ClientCertificate' with the minimum fields required to make a request.
@@ -633,12 +649,14 @@ instance NFData ClientCertificate where
 -- To create a deployment, call @POST@ on the 'Deployments' resource of a 'RestApi' . To view, update, or delete a deployment, call @GET@ , @PATCH@ , or @DELETE@ on the specified deployment resource (@/restapis/{restapi_id}/deployments/{deployment_id}@ ).'RestApi' , 'Deployments' , 'Stage' , <http://docs.aws.amazon.com/cli/latest/reference/apigateway/get-deployment.html AWS CLI> , <https://aws.amazon.com/tools/ AWS SDKs>
 --
 -- /See:/ 'deployment' smart constructor.
-data Deployment = Deployment'
-  { _dApiSummary  :: !(Maybe (Map Text (Map Text MethodSnapshot)))
-  , _dCreatedDate :: !(Maybe POSIX)
-  , _dId          :: !(Maybe Text)
-  , _dDescription :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Deployment =
+  Deployment'
+    { _dApiSummary  :: !(Maybe (Map Text (Map Text MethodSnapshot)))
+    , _dCreatedDate :: !(Maybe POSIX)
+    , _dId          :: !(Maybe Text)
+    , _dDescription :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Deployment' with the minimum fields required to make a request.
@@ -698,11 +716,13 @@ instance NFData Deployment where
 --
 --
 -- /See:/ 'deploymentCanarySettings' smart constructor.
-data DeploymentCanarySettings = DeploymentCanarySettings'
-  { _dcsStageVariableOverrides :: !(Maybe (Map Text Text))
-  , _dcsUseStageCache          :: !(Maybe Bool)
-  , _dcsPercentTraffic         :: !(Maybe Double)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeploymentCanarySettings =
+  DeploymentCanarySettings'
+    { _dcsStageVariableOverrides :: !(Maybe (Map Text Text))
+    , _dcsUseStageCache          :: !(Maybe Bool)
+    , _dcsPercentTraffic         :: !(Maybe Double)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeploymentCanarySettings' with the minimum fields required to make a request.
@@ -759,11 +779,13 @@ instance ToJSON DeploymentCanarySettings where
 -- <http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-documenting-api.html Documenting an API> , 'DocumentationParts'
 --
 -- /See:/ 'documentationPart' smart constructor.
-data DocumentationPart = DocumentationPart'
-  { _dpLocation   :: !(Maybe DocumentationPartLocation)
-  , _dpId         :: !(Maybe Text)
-  , _dpProperties :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DocumentationPart =
+  DocumentationPart'
+    { _dpLocation   :: !(Maybe DocumentationPartLocation)
+    , _dpId         :: !(Maybe Text)
+    , _dpProperties :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DocumentationPart' with the minimum fields required to make a request.
@@ -811,13 +833,15 @@ instance NFData DocumentationPart where
 --
 --
 -- /See:/ 'documentationPartLocation' smart constructor.
-data DocumentationPartLocation = DocumentationPartLocation'
-  { _dplPath       :: !(Maybe Text)
-  , _dplName       :: !(Maybe Text)
-  , _dplMethod     :: !(Maybe Text)
-  , _dplStatusCode :: !(Maybe Text)
-  , _dplType       :: !DocumentationPartType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DocumentationPartLocation =
+  DocumentationPartLocation'
+    { _dplPath       :: !(Maybe Text)
+    , _dplName       :: !(Maybe Text)
+    , _dplMethod     :: !(Maybe Text)
+    , _dplStatusCode :: !(Maybe Text)
+    , _dplType       :: !DocumentationPartType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DocumentationPartLocation' with the minimum fields required to make a request.
@@ -897,11 +921,13 @@ instance ToJSON DocumentationPartLocation where
 -- <http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-documenting-api.html Documenting an API> , 'DocumentationPart' , 'DocumentationVersions'
 --
 -- /See:/ 'documentationVersion' smart constructor.
-data DocumentationVersion = DocumentationVersion'
-  { _dvCreatedDate :: !(Maybe POSIX)
-  , _dvVersion     :: !(Maybe Text)
-  , _dvDescription :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DocumentationVersion =
+  DocumentationVersion'
+    { _dvCreatedDate :: !(Maybe POSIX)
+    , _dvVersion     :: !(Maybe Text)
+    , _dvDescription :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DocumentationVersion' with the minimum fields required to make a request.
@@ -952,19 +978,21 @@ instance NFData DocumentationVersion where
 -- <http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html Set a Custom Host Name for an API>
 --
 -- /See:/ 'domainName' smart constructor.
-data DomainName = DomainName'
-  { _dnRegionalHostedZoneId     :: !(Maybe Text)
-  , _dnCertificateName          :: !(Maybe Text)
-  , _dnRegionalCertificateARN   :: !(Maybe Text)
-  , _dnCertificateARN           :: !(Maybe Text)
-  , _dnDistributionHostedZoneId :: !(Maybe Text)
-  , _dnDomainName               :: !(Maybe Text)
-  , _dnRegionalCertificateName  :: !(Maybe Text)
-  , _dnRegionalDomainName       :: !(Maybe Text)
-  , _dnCertificateUploadDate    :: !(Maybe POSIX)
-  , _dnDistributionDomainName   :: !(Maybe Text)
-  , _dnEndpointConfiguration    :: !(Maybe EndpointConfiguration)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DomainName =
+  DomainName'
+    { _dnRegionalHostedZoneId     :: !(Maybe Text)
+    , _dnCertificateName          :: !(Maybe Text)
+    , _dnRegionalCertificateARN   :: !(Maybe Text)
+    , _dnCertificateARN           :: !(Maybe Text)
+    , _dnDistributionHostedZoneId :: !(Maybe Text)
+    , _dnDomainName               :: !(Maybe Text)
+    , _dnRegionalCertificateName  :: !(Maybe Text)
+    , _dnRegionalDomainName       :: !(Maybe Text)
+    , _dnCertificateUploadDate    :: !(Maybe POSIX)
+    , _dnDistributionDomainName   :: !(Maybe Text)
+    , _dnEndpointConfiguration    :: !(Maybe EndpointConfiguration)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DomainName' with the minimum fields required to make a request.
@@ -1080,9 +1108,11 @@ instance NFData DomainName where
 --
 --
 -- /See:/ 'endpointConfiguration' smart constructor.
-newtype EndpointConfiguration = EndpointConfiguration'
-  { _ecTypes :: Maybe [EndpointType]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype EndpointConfiguration =
+  EndpointConfiguration'
+    { _ecTypes :: Maybe [EndpointType]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EndpointConfiguration' with the minimum fields required to make a request.
@@ -1131,13 +1161,15 @@ instance ToJSON EndpointConfiguration where
 -- <http://docs.aws.amazon.com/apigateway/latest/developerguide/customize-gateway-responses.html Customize Gateway Responses>
 --
 -- /See:/ 'gatewayResponse' smart constructor.
-data GatewayResponse = GatewayResponse'
-  { _gDefaultResponse    :: !(Maybe Bool)
-  , _gResponseTemplates  :: !(Maybe (Map Text Text))
-  , _gResponseType       :: !(Maybe GatewayResponseType)
-  , _gStatusCode         :: !(Maybe Text)
-  , _gResponseParameters :: !(Maybe (Map Text Text))
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GatewayResponse =
+  GatewayResponse'
+    { _gDefaultResponse    :: !(Maybe Bool)
+    , _gResponseTemplates  :: !(Maybe (Map Text Text))
+    , _gResponseType       :: !(Maybe GatewayResponseType)
+    , _gStatusCode         :: !(Maybe Text)
+    , _gResponseParameters :: !(Maybe (Map Text Text))
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GatewayResponse' with the minimum fields required to make a request.
@@ -1206,22 +1238,24 @@ instance NFData GatewayResponse where
 -- In the API Gateway console, the built-in Lambda integration is an AWS integration.<http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-create-api.html Creating an API>
 --
 -- /See:/ 'integration' smart constructor.
-data Integration = Integration'
-  { _iHttpMethod           :: !(Maybe Text)
-  , _iRequestTemplates     :: !(Maybe (Map Text Text))
-  , _iCredentials          :: !(Maybe Text)
-  , _iConnectionId         :: !(Maybe Text)
-  , _iRequestParameters    :: !(Maybe (Map Text Text))
-  , _iContentHandling      :: !(Maybe ContentHandlingStrategy)
-  , _iPassthroughBehavior  :: !(Maybe Text)
-  , _iUri                  :: !(Maybe Text)
-  , _iIntegrationResponses :: !(Maybe (Map Text IntegrationResponse))
-  , _iCacheNamespace       :: !(Maybe Text)
-  , _iTimeoutInMillis      :: !(Maybe Int)
-  , _iType                 :: !(Maybe IntegrationType)
-  , _iConnectionType       :: !(Maybe ConnectionType)
-  , _iCacheKeyParameters   :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Integration =
+  Integration'
+    { _iHttpMethod           :: !(Maybe Text)
+    , _iRequestTemplates     :: !(Maybe (Map Text Text))
+    , _iCredentials          :: !(Maybe Text)
+    , _iConnectionId         :: !(Maybe Text)
+    , _iRequestParameters    :: !(Maybe (Map Text Text))
+    , _iContentHandling      :: !(Maybe ContentHandlingStrategy)
+    , _iPassthroughBehavior  :: !(Maybe Text)
+    , _iUri                  :: !(Maybe Text)
+    , _iIntegrationResponses :: !(Maybe (Map Text IntegrationResponse))
+    , _iCacheNamespace       :: !(Maybe Text)
+    , _iTimeoutInMillis      :: !(Maybe Int)
+    , _iType                 :: !(Maybe IntegrationType)
+    , _iConnectionType       :: !(Maybe ConnectionType)
+    , _iCacheKeyParameters   :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Integration' with the minimum fields required to make a request.
@@ -1362,13 +1396,15 @@ instance NFData Integration where
 -- <http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-create-api.html Creating an API>
 --
 -- /See:/ 'integrationResponse' smart constructor.
-data IntegrationResponse = IntegrationResponse'
-  { _intContentHandling    :: !(Maybe ContentHandlingStrategy)
-  , _intResponseTemplates  :: !(Maybe (Map Text Text))
-  , _intSelectionPattern   :: !(Maybe Text)
-  , _intStatusCode         :: !(Maybe Text)
-  , _intResponseParameters :: !(Maybe (Map Text Text))
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data IntegrationResponse =
+  IntegrationResponse'
+    { _intContentHandling    :: !(Maybe ContentHandlingStrategy)
+    , _intResponseTemplates  :: !(Maybe (Map Text Text))
+    , _intSelectionPattern   :: !(Maybe Text)
+    , _intStatusCode         :: !(Maybe Text)
+    , _intResponseParameters :: !(Maybe (Map Text Text))
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'IntegrationResponse' with the minimum fields required to make a request.
@@ -1448,19 +1484,21 @@ instance NFData IntegrationResponse where
 -- 'MethodResponse' , 'Integration' , 'IntegrationResponse' , 'Resource' , <http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-method-settings.html Set up an API's method>
 --
 -- /See:/ 'method' smart constructor.
-data Method = Method'
-  { _mMethodResponses     :: !(Maybe (Map Text MethodResponse))
-  , _mHttpMethod          :: !(Maybe Text)
-  , _mAuthorizationScopes :: !(Maybe [Text])
-  , _mRequestValidatorId  :: !(Maybe Text)
-  , _mRequestModels       :: !(Maybe (Map Text Text))
-  , _mRequestParameters   :: !(Maybe (Map Text Bool))
-  , _mAuthorizerId        :: !(Maybe Text)
-  , _mOperationName       :: !(Maybe Text)
-  , _mAuthorizationType   :: !(Maybe Text)
-  , _mApiKeyRequired      :: !(Maybe Bool)
-  , _mMethodIntegration   :: !(Maybe Integration)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Method =
+  Method'
+    { _mMethodResponses     :: !(Maybe (Map Text MethodResponse))
+    , _mHttpMethod          :: !(Maybe Text)
+    , _mAuthorizationScopes :: !(Maybe [Text])
+    , _mRequestValidatorId  :: !(Maybe Text)
+    , _mRequestModels       :: !(Maybe (Map Text Text))
+    , _mRequestParameters   :: !(Maybe (Map Text Bool))
+    , _mAuthorizerId        :: !(Maybe Text)
+    , _mOperationName       :: !(Maybe Text)
+    , _mAuthorizationType   :: !(Maybe Text)
+    , _mApiKeyRequired      :: !(Maybe Bool)
+    , _mMethodIntegration   :: !(Maybe Integration)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Method' with the minimum fields required to make a request.
@@ -1588,11 +1626,13 @@ instance NFData Method where
 -- 'Method' , 'IntegrationResponse' , 'Integration' <http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-create-api.html Creating an API>
 --
 -- /See:/ 'methodResponse' smart constructor.
-data MethodResponse = MethodResponse'
-  { _mResponseModels     :: !(Maybe (Map Text Text))
-  , _mStatusCode         :: !(Maybe Text)
-  , _mResponseParameters :: !(Maybe (Map Text Bool))
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MethodResponse =
+  MethodResponse'
+    { _mResponseModels     :: !(Maybe (Map Text Text))
+    , _mStatusCode         :: !(Maybe Text)
+    , _mResponseParameters :: !(Maybe (Map Text Bool))
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MethodResponse' with the minimum fields required to make a request.
@@ -1644,18 +1684,20 @@ instance NFData MethodResponse where
 --
 --
 -- /See:/ 'methodSetting' smart constructor.
-data MethodSetting = MethodSetting'
-  { _msCacheTtlInSeconds :: !(Maybe Int)
-  , _msDataTraceEnabled :: !(Maybe Bool)
-  , _msThrottlingBurstLimit :: !(Maybe Int)
-  , _msCacheDataEncrypted :: !(Maybe Bool)
-  , _msLoggingLevel :: !(Maybe Text)
-  , _msRequireAuthorizationForCacheControl :: !(Maybe Bool)
-  , _msCachingEnabled :: !(Maybe Bool)
-  , _msMetricsEnabled :: !(Maybe Bool)
-  , _msThrottlingRateLimit :: !(Maybe Double)
-  , _msUnauthorizedCacheControlHeaderStrategy :: !(Maybe UnauthorizedCacheControlHeaderStrategy)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MethodSetting =
+  MethodSetting'
+    { _msCacheTtlInSeconds :: !(Maybe Int)
+    , _msDataTraceEnabled :: !(Maybe Bool)
+    , _msThrottlingBurstLimit :: !(Maybe Int)
+    , _msCacheDataEncrypted :: !(Maybe Bool)
+    , _msLoggingLevel :: !(Maybe Text)
+    , _msRequireAuthorizationForCacheControl :: !(Maybe Bool)
+    , _msCachingEnabled :: !(Maybe Bool)
+    , _msMetricsEnabled :: !(Maybe Bool)
+    , _msThrottlingRateLimit :: !(Maybe Double)
+    , _msUnauthorizedCacheControlHeaderStrategy :: !(Maybe UnauthorizedCacheControlHeaderStrategy)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MethodSetting' with the minimum fields required to make a request.
@@ -1763,10 +1805,12 @@ instance NFData MethodSetting where
 --
 --
 -- /See:/ 'methodSnapshot' smart constructor.
-data MethodSnapshot = MethodSnapshot'
-  { _msAuthorizationType :: !(Maybe Text)
-  , _msApiKeyRequired    :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MethodSnapshot =
+  MethodSnapshot'
+    { _msAuthorizationType :: !(Maybe Text)
+    , _msApiKeyRequired    :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MethodSnapshot' with the minimum fields required to make a request.
@@ -1812,13 +1856,15 @@ instance NFData MethodSnapshot where
 -- 'Method' , 'MethodResponse' , <http://docs.aws.amazon.com/apigateway/latest/developerguide/models-mappings.html Models and Mappings>
 --
 -- /See:/ 'model' smart constructor.
-data Model = Model'
-  { _mSchema      :: !(Maybe Text)
-  , _mName        :: !(Maybe Text)
-  , _mId          :: !(Maybe Text)
-  , _mDescription :: !(Maybe Text)
-  , _mContentType :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Model =
+  Model'
+    { _mSchema      :: !(Maybe Text)
+    , _mName        :: !(Maybe Text)
+    , _mId          :: !(Maybe Text)
+    , _mDescription :: !(Maybe Text)
+    , _mContentType :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Model' with the minimum fields required to make a request.
@@ -1882,12 +1928,14 @@ instance NFData Model where
 -- | A single patch operation to apply to the specified resource. Please refer to http://tools.ietf.org/html/rfc6902#section-4 for an explanation of how each operation is used.
 --
 -- /See:/ 'patchOperation' smart constructor.
-data PatchOperation = PatchOperation'
-  { _poOp    :: !(Maybe Op)
-  , _poPath  :: !(Maybe Text)
-  , _poValue :: !(Maybe Text)
-  , _poFrom  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PatchOperation =
+  PatchOperation'
+    { _poOp    :: !(Maybe Op)
+    , _poPath  :: !(Maybe Text)
+    , _poValue :: !(Maybe Text)
+    , _poFrom  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PatchOperation' with the minimum fields required to make a request.
@@ -1940,11 +1988,13 @@ instance ToJSON PatchOperation where
 --
 --
 -- /See:/ 'quotaSettings' smart constructor.
-data QuotaSettings = QuotaSettings'
-  { _qsOffset :: !(Maybe Int)
-  , _qsPeriod :: !(Maybe QuotaPeriodType)
-  , _qsLimit  :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data QuotaSettings =
+  QuotaSettings'
+    { _qsOffset :: !(Maybe Int)
+    , _qsPeriod :: !(Maybe QuotaPeriodType)
+    , _qsLimit  :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'QuotaSettings' with the minimum fields required to make a request.
@@ -2002,12 +2052,14 @@ instance ToJSON QuotaSettings where
 -- <http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-method-request-validation.html Enable Basic Request Validation in API Gateway>
 --
 -- /See:/ 'requestValidator' smart constructor.
-data RequestValidator = RequestValidator'
-  { _rvValidateRequestParameters :: !(Maybe Bool)
-  , _rvName                      :: !(Maybe Text)
-  , _rvValidateRequestBody       :: !(Maybe Bool)
-  , _rvId                        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RequestValidator =
+  RequestValidator'
+    { _rvValidateRequestParameters :: !(Maybe Bool)
+    , _rvName                      :: !(Maybe Text)
+    , _rvValidateRequestBody       :: !(Maybe Bool)
+    , _rvId                        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RequestValidator' with the minimum fields required to make a request.
@@ -2068,13 +2120,15 @@ instance NFData RequestValidator where
 -- <http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-create-api.html Create an API>
 --
 -- /See:/ 'resource' smart constructor.
-data Resource = Resource'
-  { _rPathPart        :: !(Maybe Text)
-  , _rPath            :: !(Maybe Text)
-  , _rId              :: !(Maybe Text)
-  , _rResourceMethods :: !(Maybe (Map Text Method))
-  , _rParentId        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Resource =
+  Resource'
+    { _rPathPart        :: !(Maybe Text)
+    , _rPath            :: !(Maybe Text)
+    , _rId              :: !(Maybe Text)
+    , _rResourceMethods :: !(Maybe (Map Text Method))
+    , _rParentId        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Resource' with the minimum fields required to make a request.
@@ -2142,19 +2196,21 @@ instance NFData Resource where
 -- <http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-create-api.html Create an API>
 --
 -- /See:/ 'restAPI' smart constructor.
-data RestAPI = RestAPI'
-  { _raMinimumCompressionSize :: !(Maybe Int)
-  , _raBinaryMediaTypes       :: !(Maybe [Text])
-  , _raWarnings               :: !(Maybe [Text])
-  , _raCreatedDate            :: !(Maybe POSIX)
-  , _raName                   :: !(Maybe Text)
-  , _raVersion                :: !(Maybe Text)
-  , _raApiKeySource           :: !(Maybe APIKeySourceType)
-  , _raId                     :: !(Maybe Text)
-  , _raPolicy                 :: !(Maybe Text)
-  , _raEndpointConfiguration  :: !(Maybe EndpointConfiguration)
-  , _raDescription            :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RestAPI =
+  RestAPI'
+    { _raMinimumCompressionSize :: !(Maybe Int)
+    , _raBinaryMediaTypes       :: !(Maybe [Text])
+    , _raWarnings               :: !(Maybe [Text])
+    , _raCreatedDate            :: !(Maybe POSIX)
+    , _raName                   :: !(Maybe Text)
+    , _raVersion                :: !(Maybe Text)
+    , _raApiKeySource           :: !(Maybe APIKeySourceType)
+    , _raId                     :: !(Maybe Text)
+    , _raPolicy                 :: !(Maybe Text)
+    , _raEndpointConfiguration  :: !(Maybe EndpointConfiguration)
+    , _raDescription            :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RestAPI' with the minimum fields required to make a request.
@@ -2270,13 +2326,15 @@ instance NFData RestAPI where
 --
 --
 -- /See:/ 'sdkConfigurationProperty' smart constructor.
-data SDKConfigurationProperty = SDKConfigurationProperty'
-  { _scpFriendlyName :: !(Maybe Text)
-  , _scpRequired     :: !(Maybe Bool)
-  , _scpName         :: !(Maybe Text)
-  , _scpDefaultValue :: !(Maybe Text)
-  , _scpDescription  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SDKConfigurationProperty =
+  SDKConfigurationProperty'
+    { _scpFriendlyName :: !(Maybe Text)
+    , _scpRequired     :: !(Maybe Bool)
+    , _scpName         :: !(Maybe Text)
+    , _scpDefaultValue :: !(Maybe Text)
+    , _scpDescription  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SDKConfigurationProperty' with the minimum fields required to make a request.
@@ -2343,12 +2401,14 @@ instance NFData SDKConfigurationProperty where
 --
 --
 -- /See:/ 'sdkType' smart constructor.
-data SDKType = SDKType'
-  { _stFriendlyName            :: !(Maybe Text)
-  , _stConfigurationProperties :: !(Maybe [SDKConfigurationProperty])
-  , _stId                      :: !(Maybe Text)
-  , _stDescription             :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SDKType =
+  SDKType'
+    { _stFriendlyName            :: !(Maybe Text)
+    , _stConfigurationProperties :: !(Maybe [SDKConfigurationProperty])
+    , _stId                      :: !(Maybe Text)
+    , _stDescription             :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SDKType' with the minimum fields required to make a request.
@@ -2409,23 +2469,25 @@ instance NFData SDKType where
 -- <http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-deploy-api.html Deploy an API>
 --
 -- /See:/ 'stage' smart constructor.
-data Stage = Stage'
-  { _sDeploymentId         :: !(Maybe Text)
-  , _sVariables            :: !(Maybe (Map Text Text))
-  , _sAccessLogSettings    :: !(Maybe AccessLogSettings)
-  , _sDocumentationVersion :: !(Maybe Text)
-  , _sClientCertificateId  :: !(Maybe Text)
-  , _sCreatedDate          :: !(Maybe POSIX)
-  , _sCacheClusterStatus   :: !(Maybe CacheClusterStatus)
-  , _sMethodSettings       :: !(Maybe (Map Text MethodSetting))
-  , _sLastUpdatedDate      :: !(Maybe POSIX)
-  , _sCacheClusterSize     :: !(Maybe CacheClusterSize)
-  , _sCanarySettings       :: !(Maybe CanarySettings)
-  , _sCacheClusterEnabled  :: !(Maybe Bool)
-  , _sStageName            :: !(Maybe Text)
-  , _sDescription          :: !(Maybe Text)
-  , _sTags                 :: !(Maybe (Map Text Text))
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Stage =
+  Stage'
+    { _sDeploymentId         :: !(Maybe Text)
+    , _sVariables            :: !(Maybe (Map Text Text))
+    , _sAccessLogSettings    :: !(Maybe AccessLogSettings)
+    , _sDocumentationVersion :: !(Maybe Text)
+    , _sClientCertificateId  :: !(Maybe Text)
+    , _sCreatedDate          :: !(Maybe POSIX)
+    , _sCacheClusterStatus   :: !(Maybe CacheClusterStatus)
+    , _sMethodSettings       :: !(Maybe (Map Text MethodSetting))
+    , _sLastUpdatedDate      :: !(Maybe POSIX)
+    , _sCacheClusterSize     :: !(Maybe CacheClusterSize)
+    , _sCanarySettings       :: !(Maybe CanarySettings)
+    , _sCacheClusterEnabled  :: !(Maybe Bool)
+    , _sStageName            :: !(Maybe Text)
+    , _sDescription          :: !(Maybe Text)
+    , _sTags                 :: !(Maybe (Map Text Text))
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Stage' with the minimum fields required to make a request.
@@ -2573,10 +2635,12 @@ instance NFData Stage where
 --
 --
 -- /See:/ 'stageKey' smart constructor.
-data StageKey = StageKey'
-  { _skRestAPIId :: !(Maybe Text)
-  , _skStageName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StageKey =
+  StageKey'
+    { _skRestAPIId :: !(Maybe Text)
+    , _skStageName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StageKey' with the minimum fields required to make a request.
@@ -2615,10 +2679,12 @@ instance ToJSON StageKey where
 --
 --
 -- /See:/ 'throttleSettings' smart constructor.
-data ThrottleSettings = ThrottleSettings'
-  { _tsBurstLimit :: !(Maybe Int)
-  , _tsRateLimit  :: !(Maybe Double)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ThrottleSettings =
+  ThrottleSettings'
+    { _tsBurstLimit :: !(Maybe Int)
+    , _tsRateLimit  :: !(Maybe Double)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ThrottleSettings' with the minimum fields required to make a request.
@@ -2666,13 +2732,15 @@ instance ToJSON ThrottleSettings where
 -- <http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-api-usage-plans.html Create and Use Usage Plans> , <http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-create-usage-plans-with-console.html#api-gateway-usage-plan-manage-usage Manage Usage in a Usage Plan>
 --
 -- /See:/ 'usage' smart constructor.
-data Usage = Usage'
-  { _uUsagePlanId :: !(Maybe Text)
-  , _uEndDate     :: !(Maybe Text)
-  , _uItems       :: !(Maybe (Map Text [[Integer]]))
-  , _uStartDate   :: !(Maybe Text)
-  , _uPosition    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Usage =
+  Usage'
+    { _uUsagePlanId :: !(Maybe Text)
+    , _uEndDate     :: !(Maybe Text)
+    , _uItems       :: !(Maybe (Map Text [[Integer]]))
+    , _uStartDate   :: !(Maybe Text)
+    , _uPosition    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Usage' with the minimum fields required to make a request.
@@ -2742,15 +2810,17 @@ instance NFData Usage where
 -- <http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-api-usage-plans.html Create and Use Usage Plans>
 --
 -- /See:/ 'usagePlan' smart constructor.
-data UsagePlan = UsagePlan'
-  { _upApiStages   :: !(Maybe [APIStage])
-  , _upName        :: !(Maybe Text)
-  , _upId          :: !(Maybe Text)
-  , _upThrottle    :: !(Maybe ThrottleSettings)
-  , _upQuota       :: !(Maybe QuotaSettings)
-  , _upDescription :: !(Maybe Text)
-  , _upProductCode :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UsagePlan =
+  UsagePlan'
+    { _upApiStages   :: !(Maybe [APIStage])
+    , _upName        :: !(Maybe Text)
+    , _upId          :: !(Maybe Text)
+    , _upThrottle    :: !(Maybe ThrottleSettings)
+    , _upQuota       :: !(Maybe QuotaSettings)
+    , _upDescription :: !(Maybe Text)
+    , _upProductCode :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UsagePlan' with the minimum fields required to make a request.
@@ -2836,12 +2906,14 @@ instance NFData UsagePlan where
 -- " <http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-api-usage-plans.html Create and Use Usage Plans>
 --
 -- /See:/ 'usagePlanKey' smart constructor.
-data UsagePlanKey = UsagePlanKey'
-  { _upkValue :: !(Maybe Text)
-  , _upkName  :: !(Maybe Text)
-  , _upkId    :: !(Maybe Text)
-  , _upkType  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UsagePlanKey =
+  UsagePlanKey'
+    { _upkValue :: !(Maybe Text)
+    , _upkName  :: !(Maybe Text)
+    , _upkId    :: !(Maybe Text)
+    , _upkType  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UsagePlanKey' with the minimum fields required to make a request.
@@ -2903,14 +2975,16 @@ instance NFData UsagePlanKey where
 --
 --
 -- /See:/ 'vpcLink' smart constructor.
-data VPCLink = VPCLink'
-  { _vlStatus        :: !(Maybe VPCLinkStatus)
-  , _vlTargetARNs    :: !(Maybe [Text])
-  , _vlName          :: !(Maybe Text)
-  , _vlStatusMessage :: !(Maybe Text)
-  , _vlId            :: !(Maybe Text)
-  , _vlDescription   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VPCLink =
+  VPCLink'
+    { _vlStatus        :: !(Maybe VPCLinkStatus)
+    , _vlTargetARNs    :: !(Maybe [Text])
+    , _vlName          :: !(Maybe Text)
+    , _vlStatusMessage :: !(Maybe Text)
+    , _vlId            :: !(Maybe Text)
+    , _vlDescription   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VPCLink' with the minimum fields required to make a request.

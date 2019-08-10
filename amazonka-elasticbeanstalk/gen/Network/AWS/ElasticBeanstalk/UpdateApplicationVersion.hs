@@ -50,11 +50,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateApplicationVersion' smart constructor.
-data UpdateApplicationVersion = UpdateApplicationVersion'
-  { _uavDescription     :: !(Maybe Text)
-  , _uavApplicationName :: !Text
-  , _uavVersionLabel    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateApplicationVersion =
+  UpdateApplicationVersion'
+    { _uavDescription     :: !(Maybe Text)
+    , _uavApplicationName :: !Text
+    , _uavVersionLabel    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateApplicationVersion' with the minimum fields required to make a request.

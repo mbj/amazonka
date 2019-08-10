@@ -52,12 +52,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'purchaseReservedDBInstancesOffering' smart constructor.
-data PurchaseReservedDBInstancesOffering = PurchaseReservedDBInstancesOffering'
-  { _prdioDBInstanceCount               :: !(Maybe Int)
-  , _prdioReservedDBInstanceId          :: !(Maybe Text)
-  , _prdioTags                          :: !(Maybe [Tag])
-  , _prdioReservedDBInstancesOfferingId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PurchaseReservedDBInstancesOffering =
+  PurchaseReservedDBInstancesOffering'
+    { _prdioDBInstanceCount               :: !(Maybe Int)
+    , _prdioReservedDBInstanceId          :: !(Maybe Text)
+    , _prdioTags                          :: !(Maybe [Tag])
+    , _prdioReservedDBInstancesOfferingId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PurchaseReservedDBInstancesOffering' with the minimum fields required to make a request.
@@ -142,10 +144,12 @@ instance ToQuery PurchaseReservedDBInstancesOffering
                  _prdioReservedDBInstancesOfferingId]
 
 -- | /See:/ 'purchaseReservedDBInstancesOfferingResponse' smart constructor.
-data PurchaseReservedDBInstancesOfferingResponse = PurchaseReservedDBInstancesOfferingResponse'
-  { _prdiorsReservedDBInstance :: !(Maybe ReservedDBInstance)
-  , _prdiorsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PurchaseReservedDBInstancesOfferingResponse =
+  PurchaseReservedDBInstancesOfferingResponse'
+    { _prdiorsReservedDBInstance :: !(Maybe ReservedDBInstance)
+    , _prdiorsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PurchaseReservedDBInstancesOfferingResponse' with the minimum fields required to make a request.

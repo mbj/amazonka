@@ -101,14 +101,16 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'searchGameSessions' smart constructor.
-data SearchGameSessions = SearchGameSessions'
-  { _sgsFilterExpression :: !(Maybe Text)
-  , _sgsSortExpression   :: !(Maybe Text)
-  , _sgsAliasId          :: !(Maybe Text)
-  , _sgsNextToken        :: !(Maybe Text)
-  , _sgsLimit            :: !(Maybe Nat)
-  , _sgsFleetId          :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SearchGameSessions =
+  SearchGameSessions'
+    { _sgsFilterExpression :: !(Maybe Text)
+    , _sgsSortExpression   :: !(Maybe Text)
+    , _sgsAliasId          :: !(Maybe Text)
+    , _sgsNextToken        :: !(Maybe Text)
+    , _sgsLimit            :: !(Maybe Nat)
+    , _sgsFleetId          :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SearchGameSessions' with the minimum fields required to make a request.
@@ -210,11 +212,13 @@ instance ToQuery SearchGameSessions where
 --
 --
 -- /See:/ 'searchGameSessionsResponse' smart constructor.
-data SearchGameSessionsResponse = SearchGameSessionsResponse'
-  { _sgsrsGameSessions   :: !(Maybe [GameSession])
-  , _sgsrsNextToken      :: !(Maybe Text)
-  , _sgsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SearchGameSessionsResponse =
+  SearchGameSessionsResponse'
+    { _sgsrsGameSessions   :: !(Maybe [GameSession])
+    , _sgsrsNextToken      :: !(Maybe Text)
+    , _sgsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SearchGameSessionsResponse' with the minimum fields required to make a request.

@@ -54,10 +54,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getBotAlias' smart constructor.
-data GetBotAlias = GetBotAlias'
-  { _gbasName    :: !Text
-  , _gbasBotName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetBotAlias =
+  GetBotAlias'
+    { _gbasName    :: !Text
+    , _gbasBotName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBotAlias' with the minimum fields required to make a request.
@@ -119,16 +121,18 @@ instance ToQuery GetBotAlias where
         toQuery = const mempty
 
 -- | /See:/ 'getBotAliasResponse' smart constructor.
-data GetBotAliasResponse = GetBotAliasResponse'
-  { _gbasrsChecksum        :: !(Maybe Text)
-  , _gbasrsBotVersion      :: !(Maybe Text)
-  , _gbasrsBotName         :: !(Maybe Text)
-  , _gbasrsCreatedDate     :: !(Maybe POSIX)
-  , _gbasrsName            :: !(Maybe Text)
-  , _gbasrsLastUpdatedDate :: !(Maybe POSIX)
-  , _gbasrsDescription     :: !(Maybe Text)
-  , _gbasrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetBotAliasResponse =
+  GetBotAliasResponse'
+    { _gbasrsChecksum        :: !(Maybe Text)
+    , _gbasrsBotVersion      :: !(Maybe Text)
+    , _gbasrsBotName         :: !(Maybe Text)
+    , _gbasrsCreatedDate     :: !(Maybe POSIX)
+    , _gbasrsName            :: !(Maybe Text)
+    , _gbasrsLastUpdatedDate :: !(Maybe POSIX)
+    , _gbasrsDescription     :: !(Maybe Text)
+    , _gbasrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBotAliasResponse' with the minimum fields required to make a request.

@@ -50,11 +50,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateApplication' smart constructor.
-data UpdateApplication = UpdateApplication'
-  { _uaApplicationName             :: !Text
-  , _uaCurrentApplicationVersionId :: !Nat
-  , _uaApplicationUpdate           :: !ApplicationUpdate
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateApplication =
+  UpdateApplication'
+    { _uaApplicationName             :: !Text
+    , _uaCurrentApplicationVersionId :: !Nat
+    , _uaApplicationUpdate           :: !ApplicationUpdate
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateApplication' with the minimum fields required to make a request.
@@ -130,9 +132,11 @@ instance ToQuery UpdateApplication where
         toQuery = const mempty
 
 -- | /See:/ 'updateApplicationResponse' smart constructor.
-newtype UpdateApplicationResponse = UpdateApplicationResponse'
-  { _uarsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateApplicationResponse =
+  UpdateApplicationResponse'
+    { _uarsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateApplicationResponse' with the minimum fields required to make a request.

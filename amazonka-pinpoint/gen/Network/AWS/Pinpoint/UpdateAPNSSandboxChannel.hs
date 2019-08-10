@@ -44,10 +44,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateAPNSSandboxChannel' smart constructor.
-data UpdateAPNSSandboxChannel = UpdateAPNSSandboxChannel'
-  { _uascApplicationId             :: !Text
-  , _uascAPNSSandboxChannelRequest :: !APNSSandboxChannelRequest
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateAPNSSandboxChannel =
+  UpdateAPNSSandboxChannel'
+    { _uascApplicationId             :: !Text
+    , _uascAPNSSandboxChannelRequest :: !APNSSandboxChannelRequest
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateAPNSSandboxChannel' with the minimum fields required to make a request.
@@ -115,10 +117,12 @@ instance ToQuery UpdateAPNSSandboxChannel where
         toQuery = const mempty
 
 -- | /See:/ 'updateAPNSSandboxChannelResponse' smart constructor.
-data UpdateAPNSSandboxChannelResponse = UpdateAPNSSandboxChannelResponse'
-  { _uascrsResponseStatus             :: !Int
-  , _uascrsAPNSSandboxChannelResponse :: !APNSSandboxChannelResponse
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateAPNSSandboxChannelResponse =
+  UpdateAPNSSandboxChannelResponse'
+    { _uascrsResponseStatus             :: !Int
+    , _uascrsAPNSSandboxChannelResponse :: !APNSSandboxChannelResponse
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateAPNSSandboxChannelResponse' with the minimum fields required to make a request.

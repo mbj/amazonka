@@ -53,14 +53,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createVPCEndpointConnectionNotification' smart constructor.
-data CreateVPCEndpointConnectionNotification = CreateVPCEndpointConnectionNotification'
-  { _cvecnClientToken               :: !(Maybe Text)
-  , _cvecnServiceId                 :: !(Maybe Text)
-  , _cvecnVPCEndpointId             :: !(Maybe Text)
-  , _cvecnDryRun                    :: !(Maybe Bool)
-  , _cvecnConnectionNotificationARN :: !Text
-  , _cvecnConnectionEvents          :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateVPCEndpointConnectionNotification =
+  CreateVPCEndpointConnectionNotification'
+    { _cvecnClientToken               :: !(Maybe Text)
+    , _cvecnServiceId                 :: !(Maybe Text)
+    , _cvecnVPCEndpointId             :: !(Maybe Text)
+    , _cvecnDryRun                    :: !(Maybe Bool)
+    , _cvecnConnectionNotificationARN :: !Text
+    , _cvecnConnectionEvents          :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateVPCEndpointConnectionNotification' with the minimum fields required to make a request.
@@ -167,11 +169,13 @@ instance ToQuery
                  _cvecnConnectionEvents]
 
 -- | /See:/ 'createVPCEndpointConnectionNotificationResponse' smart constructor.
-data CreateVPCEndpointConnectionNotificationResponse = CreateVPCEndpointConnectionNotificationResponse'
-  { _cvecnrsClientToken            :: !(Maybe Text)
-  , _cvecnrsConnectionNotification :: !(Maybe ConnectionNotification)
-  , _cvecnrsResponseStatus         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateVPCEndpointConnectionNotificationResponse =
+  CreateVPCEndpointConnectionNotificationResponse'
+    { _cvecnrsClientToken            :: !(Maybe Text)
+    , _cvecnrsConnectionNotification :: !(Maybe ConnectionNotification)
+    , _cvecnrsResponseStatus         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateVPCEndpointConnectionNotificationResponse' with the minimum fields required to make a request.

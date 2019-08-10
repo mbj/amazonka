@@ -91,10 +91,12 @@ instance ToQuery ListOpenIdConnectProviders where
 --
 --
 -- /See:/ 'listOpenIdConnectProvidersResponse' smart constructor.
-data ListOpenIdConnectProvidersResponse = ListOpenIdConnectProvidersResponse'
-  { _loicprsOpenIdConnectProviderList :: !(Maybe [OpenIdConnectProviderListEntry])
-  , _loicprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListOpenIdConnectProvidersResponse =
+  ListOpenIdConnectProvidersResponse'
+    { _loicprsOpenIdConnectProviderList :: !(Maybe [OpenIdConnectProviderListEntry])
+    , _loicprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListOpenIdConnectProvidersResponse' with the minimum fields required to make a request.

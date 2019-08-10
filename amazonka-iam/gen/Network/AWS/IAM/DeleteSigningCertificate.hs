@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteSigningCertificate' smart constructor.
-data DeleteSigningCertificate = DeleteSigningCertificate'
-  { _dscUserName      :: !(Maybe Text)
-  , _dscCertificateId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteSigningCertificate =
+  DeleteSigningCertificate'
+    { _dscUserName      :: !(Maybe Text)
+    , _dscCertificateId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteSigningCertificate' with the minimum fields required to make a request.

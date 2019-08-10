@@ -46,9 +46,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteUser' smart constructor.
-newtype DeleteUser = DeleteUser'
-  { _duAccessToken :: Sensitive Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+newtype DeleteUser =
+  DeleteUser'
+    { _duAccessToken :: Sensitive Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteUser' with the minimum fields required to make a request.

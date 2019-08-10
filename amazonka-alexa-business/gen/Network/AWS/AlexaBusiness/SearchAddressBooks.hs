@@ -50,12 +50,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'searchAddressBooks' smart constructor.
-data SearchAddressBooks = SearchAddressBooks'
-  { _sabFilters      :: !(Maybe [Filter])
-  , _sabSortCriteria :: !(Maybe [Sort])
-  , _sabNextToken    :: !(Maybe Text)
-  , _sabMaxResults   :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SearchAddressBooks =
+  SearchAddressBooks'
+    { _sabFilters      :: !(Maybe [Filter])
+    , _sabSortCriteria :: !(Maybe [Sort])
+    , _sabNextToken    :: !(Maybe Text)
+    , _sabMaxResults   :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SearchAddressBooks' with the minimum fields required to make a request.
@@ -139,12 +141,14 @@ instance ToQuery SearchAddressBooks where
         toQuery = const mempty
 
 -- | /See:/ 'searchAddressBooksResponse' smart constructor.
-data SearchAddressBooksResponse = SearchAddressBooksResponse'
-  { _sabrsNextToken      :: !(Maybe Text)
-  , _sabrsAddressBooks   :: !(Maybe [AddressBookData])
-  , _sabrsTotalCount     :: !(Maybe Int)
-  , _sabrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SearchAddressBooksResponse =
+  SearchAddressBooksResponse'
+    { _sabrsNextToken      :: !(Maybe Text)
+    , _sabrsAddressBooks   :: !(Maybe [AddressBookData])
+    , _sabrsTotalCount     :: !(Maybe Int)
+    , _sabrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SearchAddressBooksResponse' with the minimum fields required to make a request.

@@ -51,15 +51,17 @@ import Network.AWS.Response
 -- | A request to update a channel.
 --
 -- /See:/ 'updateChannel' smart constructor.
-data UpdateChannel = UpdateChannel'
-  { _ucInputSpecification :: !(Maybe InputSpecification)
-  , _ucInputAttachments   :: !(Maybe [InputAttachment])
-  , _ucDestinations       :: !(Maybe [OutputDestination])
-  , _ucName               :: !(Maybe Text)
-  , _ucEncoderSettings    :: !(Maybe EncoderSettings)
-  , _ucRoleARN            :: !(Maybe Text)
-  , _ucChannelId          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateChannel =
+  UpdateChannel'
+    { _ucInputSpecification :: !(Maybe InputSpecification)
+    , _ucInputAttachments   :: !(Maybe [InputAttachment])
+    , _ucDestinations       :: !(Maybe [OutputDestination])
+    , _ucName               :: !(Maybe Text)
+    , _ucEncoderSettings    :: !(Maybe EncoderSettings)
+    , _ucRoleARN            :: !(Maybe Text)
+    , _ucChannelId          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateChannel' with the minimum fields required to make a request.
@@ -163,10 +165,12 @@ instance ToQuery UpdateChannel where
 -- | Placeholder documentation for UpdateChannelResponse
 --
 -- /See:/ 'updateChannelResponse' smart constructor.
-data UpdateChannelResponse = UpdateChannelResponse'
-  { _ucrsChannel        :: !(Maybe Channel)
-  , _ucrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateChannelResponse =
+  UpdateChannelResponse'
+    { _ucrsChannel        :: !(Maybe Channel)
+    , _ucrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateChannelResponse' with the minimum fields required to make a request.

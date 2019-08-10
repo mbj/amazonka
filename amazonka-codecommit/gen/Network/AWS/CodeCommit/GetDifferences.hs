@@ -55,15 +55,17 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getDifferences' smart constructor.
-data GetDifferences = GetDifferences'
-  { _gdAfterPath             :: !(Maybe Text)
-  , _gdNextToken             :: !(Maybe Text)
-  , _gdBeforeCommitSpecifier :: !(Maybe Text)
-  , _gdBeforePath            :: !(Maybe Text)
-  , _gdMaxResults            :: !(Maybe Int)
-  , _gdRepositoryName        :: !Text
-  , _gdAfterCommitSpecifier  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDifferences =
+  GetDifferences'
+    { _gdAfterPath             :: !(Maybe Text)
+    , _gdNextToken             :: !(Maybe Text)
+    , _gdBeforeCommitSpecifier :: !(Maybe Text)
+    , _gdBeforePath            :: !(Maybe Text)
+    , _gdMaxResults            :: !(Maybe Int)
+    , _gdRepositoryName        :: !Text
+    , _gdAfterCommitSpecifier  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDifferences' with the minimum fields required to make a request.
@@ -179,11 +181,13 @@ instance ToQuery GetDifferences where
         toQuery = const mempty
 
 -- | /See:/ 'getDifferencesResponse' smart constructor.
-data GetDifferencesResponse = GetDifferencesResponse'
-  { _gdrsNextToken      :: !(Maybe Text)
-  , _gdrsDifferences    :: !(Maybe [Difference])
-  , _gdrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDifferencesResponse =
+  GetDifferencesResponse'
+    { _gdrsNextToken      :: !(Maybe Text)
+    , _gdrsDifferences    :: !(Maybe [Difference])
+    , _gdrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDifferencesResponse' with the minimum fields required to make a request.

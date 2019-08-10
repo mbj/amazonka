@@ -60,10 +60,12 @@ import Network.AWS.SWF.Types
 import Network.AWS.SWF.Types.Product
 
 -- | /See:/ 'countPendingDecisionTasks' smart constructor.
-data CountPendingDecisionTasks = CountPendingDecisionTasks'
-  { _cpdtDomain   :: !Text
-  , _cpdtTaskList :: !TaskList
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CountPendingDecisionTasks =
+  CountPendingDecisionTasks'
+    { _cpdtDomain   :: !Text
+    , _cpdtTaskList :: !TaskList
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CountPendingDecisionTasks' with the minimum fields required to make a request.

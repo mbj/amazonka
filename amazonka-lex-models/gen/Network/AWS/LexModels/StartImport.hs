@@ -52,11 +52,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'startImport' smart constructor.
-data StartImport = StartImport'
-  { _siPayload       :: !Base64
-  , _siResourceType  :: !ResourceType
-  , _siMergeStrategy :: !MergeStrategy
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartImport =
+  StartImport'
+    { _siPayload       :: !Base64
+    , _siResourceType  :: !ResourceType
+    , _siMergeStrategy :: !MergeStrategy
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartImport' with the minimum fields required to make a request.
@@ -133,15 +135,17 @@ instance ToQuery StartImport where
         toQuery = const mempty
 
 -- | /See:/ 'startImportResponse' smart constructor.
-data StartImportResponse = StartImportResponse'
-  { _sirsResourceType   :: !(Maybe ResourceType)
-  , _sirsImportId       :: !(Maybe Text)
-  , _sirsCreatedDate    :: !(Maybe POSIX)
-  , _sirsName           :: !(Maybe Text)
-  , _sirsMergeStrategy  :: !(Maybe MergeStrategy)
-  , _sirsImportStatus   :: !(Maybe ImportStatus)
-  , _sirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartImportResponse =
+  StartImportResponse'
+    { _sirsResourceType   :: !(Maybe ResourceType)
+    , _sirsImportId       :: !(Maybe Text)
+    , _sirsCreatedDate    :: !(Maybe POSIX)
+    , _sirsName           :: !(Maybe Text)
+    , _sirsMergeStrategy  :: !(Maybe MergeStrategy)
+    , _sirsImportStatus   :: !(Maybe ImportStatus)
+    , _sirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartImportResponse' with the minimum fields required to make a request.

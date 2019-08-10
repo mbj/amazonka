@@ -44,9 +44,11 @@ import Network.AWS.Route53Domains.Types
 import Network.AWS.Route53Domains.Types.Product
 
 -- | /See:/ 'disableDomainAutoRenew' smart constructor.
-newtype DisableDomainAutoRenew = DisableDomainAutoRenew'
-  { _ddarDomainName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DisableDomainAutoRenew =
+  DisableDomainAutoRenew'
+    { _ddarDomainName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisableDomainAutoRenew' with the minimum fields required to make a request.
@@ -101,9 +103,11 @@ instance ToQuery DisableDomainAutoRenew where
         toQuery = const mempty
 
 -- | /See:/ 'disableDomainAutoRenewResponse' smart constructor.
-newtype DisableDomainAutoRenewResponse = DisableDomainAutoRenewResponse'
-  { _ddarrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DisableDomainAutoRenewResponse =
+  DisableDomainAutoRenewResponse'
+    { _ddarrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisableDomainAutoRenewResponse' with the minimum fields required to make a request.

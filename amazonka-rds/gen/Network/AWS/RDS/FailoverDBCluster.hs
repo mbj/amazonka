@@ -56,10 +56,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'failoverDBCluster' smart constructor.
-data FailoverDBCluster = FailoverDBCluster'
-  { _fdcDBClusterIdentifier        :: !(Maybe Text)
-  , _fdcTargetDBInstanceIdentifier :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FailoverDBCluster =
+  FailoverDBCluster'
+    { _fdcDBClusterIdentifier        :: !(Maybe Text)
+    , _fdcTargetDBInstanceIdentifier :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FailoverDBCluster' with the minimum fields required to make a request.
@@ -115,10 +117,12 @@ instance ToQuery FailoverDBCluster where
                  _fdcTargetDBInstanceIdentifier]
 
 -- | /See:/ 'failoverDBClusterResponse' smart constructor.
-data FailoverDBClusterResponse = FailoverDBClusterResponse'
-  { _fdcrsDBCluster      :: !(Maybe DBCluster)
-  , _fdcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FailoverDBClusterResponse =
+  FailoverDBClusterResponse'
+    { _fdcrsDBCluster      :: !(Maybe DBCluster)
+    , _fdcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FailoverDBClusterResponse' with the minimum fields required to make a request.

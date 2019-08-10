@@ -59,19 +59,21 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createReplicationTask' smart constructor.
-data CreateReplicationTask = CreateReplicationTask'
-  { _crtReplicationTaskSettings   :: !(Maybe Text)
-  , _crtCdcStartPosition          :: !(Maybe Text)
-  , _crtCdcStopPosition           :: !(Maybe Text)
-  , _crtTags                      :: !(Maybe [Tag])
-  , _crtCdcStartTime              :: !(Maybe POSIX)
-  , _crtReplicationTaskIdentifier :: !Text
-  , _crtSourceEndpointARN         :: !Text
-  , _crtTargetEndpointARN         :: !Text
-  , _crtReplicationInstanceARN    :: !Text
-  , _crtMigrationType             :: !MigrationTypeValue
-  , _crtTableMappings             :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateReplicationTask =
+  CreateReplicationTask'
+    { _crtReplicationTaskSettings   :: !(Maybe Text)
+    , _crtCdcStartPosition          :: !(Maybe Text)
+    , _crtCdcStopPosition           :: !(Maybe Text)
+    , _crtTags                      :: !(Maybe [Tag])
+    , _crtCdcStartTime              :: !(Maybe POSIX)
+    , _crtReplicationTaskIdentifier :: !Text
+    , _crtSourceEndpointARN         :: !Text
+    , _crtTargetEndpointARN         :: !Text
+    , _crtReplicationInstanceARN    :: !Text
+    , _crtMigrationType             :: !MigrationTypeValue
+    , _crtTableMappings             :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateReplicationTask' with the minimum fields required to make a request.
@@ -223,10 +225,12 @@ instance ToQuery CreateReplicationTask where
 --
 --
 -- /See:/ 'createReplicationTaskResponse' smart constructor.
-data CreateReplicationTaskResponse = CreateReplicationTaskResponse'
-  { _crtrsReplicationTask :: !(Maybe ReplicationTask)
-  , _crtrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateReplicationTaskResponse =
+  CreateReplicationTaskResponse'
+    { _crtrsReplicationTask :: !(Maybe ReplicationTask)
+    , _crtrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateReplicationTaskResponse' with the minimum fields required to make a request.

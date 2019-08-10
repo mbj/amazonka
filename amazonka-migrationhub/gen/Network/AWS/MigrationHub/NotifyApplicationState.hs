@@ -46,11 +46,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'notifyApplicationState' smart constructor.
-data NotifyApplicationState = NotifyApplicationState'
-  { _nasDryRun        :: !(Maybe Bool)
-  , _nasApplicationId :: !Text
-  , _nasStatus        :: !ApplicationStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NotifyApplicationState =
+  NotifyApplicationState'
+    { _nasDryRun        :: !(Maybe Bool)
+    , _nasApplicationId :: !Text
+    , _nasStatus        :: !ApplicationStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NotifyApplicationState' with the minimum fields required to make a request.
@@ -125,9 +127,11 @@ instance ToQuery NotifyApplicationState where
         toQuery = const mempty
 
 -- | /See:/ 'notifyApplicationStateResponse' smart constructor.
-newtype NotifyApplicationStateResponse = NotifyApplicationStateResponse'
-  { _nasrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype NotifyApplicationStateResponse =
+  NotifyApplicationStateResponse'
+    { _nasrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NotifyApplicationStateResponse' with the minimum fields required to make a request.

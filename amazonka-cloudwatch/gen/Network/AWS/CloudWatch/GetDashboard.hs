@@ -49,9 +49,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getDashboard' smart constructor.
-newtype GetDashboard = GetDashboard'
-  { _gdDashboardName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetDashboard =
+  GetDashboard'
+    { _gdDashboardName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDashboard' with the minimum fields required to make a request.
@@ -99,12 +101,14 @@ instance ToQuery GetDashboard where
                "DashboardName" =: _gdDashboardName]
 
 -- | /See:/ 'getDashboardResponse' smart constructor.
-data GetDashboardResponse = GetDashboardResponse'
-  { _gdrsDashboardName  :: !(Maybe Text)
-  , _gdrsDashboardBody  :: !(Maybe Text)
-  , _gdrsDashboardARN   :: !(Maybe Text)
-  , _gdrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDashboardResponse =
+  GetDashboardResponse'
+    { _gdrsDashboardName  :: !(Maybe Text)
+    , _gdrsDashboardBody  :: !(Maybe Text)
+    , _gdrsDashboardARN   :: !(Maybe Text)
+    , _gdrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDashboardResponse' with the minimum fields required to make a request.

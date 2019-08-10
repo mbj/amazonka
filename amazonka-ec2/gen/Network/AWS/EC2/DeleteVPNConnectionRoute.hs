@@ -47,10 +47,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteVPNConnectionRoute' smart constructor.
-data DeleteVPNConnectionRoute = DeleteVPNConnectionRoute'
-  { _dvcrDestinationCidrBlock :: !Text
-  , _dvcrVPNConnectionId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteVPNConnectionRoute =
+  DeleteVPNConnectionRoute'
+    { _dvcrDestinationCidrBlock :: !Text
+    , _dvcrVPNConnectionId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteVPNConnectionRoute' with the minimum fields required to make a request.

@@ -46,9 +46,11 @@ import Network.AWS.SDB.Types
 import Network.AWS.SDB.Types.Product
 
 -- | /See:/ 'createDomain' smart constructor.
-newtype CreateDomain = CreateDomain'
-  { _cdDomainName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateDomain =
+  CreateDomain'
+    { _cdDomainName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDomain' with the minimum fields required to make a request.

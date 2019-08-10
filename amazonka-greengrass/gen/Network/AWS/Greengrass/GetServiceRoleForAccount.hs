@@ -83,11 +83,13 @@ instance ToQuery GetServiceRoleForAccount where
         toQuery = const mempty
 
 -- | /See:/ 'getServiceRoleForAccountResponse' smart constructor.
-data GetServiceRoleForAccountResponse = GetServiceRoleForAccountResponse'
-  { _gsrfarsAssociatedAt   :: !(Maybe Text)
-  , _gsrfarsRoleARN        :: !(Maybe Text)
-  , _gsrfarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetServiceRoleForAccountResponse =
+  GetServiceRoleForAccountResponse'
+    { _gsrfarsAssociatedAt   :: !(Maybe Text)
+    , _gsrfarsRoleARN        :: !(Maybe Text)
+    , _gsrfarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetServiceRoleForAccountResponse' with the minimum fields required to make a request.

@@ -71,17 +71,19 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'sendEmail' smart constructor.
-data SendEmail = SendEmail'
-  { _seReturnPath           :: !(Maybe Text)
-  , _seConfigurationSetName :: !(Maybe Text)
-  , _seSourceARN            :: !(Maybe Text)
-  , _seReturnPathARN        :: !(Maybe Text)
-  , _seTags                 :: !(Maybe [MessageTag])
-  , _seReplyToAddresses     :: !(Maybe [Text])
-  , _seSource               :: !Text
-  , _seDestination          :: !Destination
-  , _seMessage              :: !Message
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SendEmail =
+  SendEmail'
+    { _seReturnPath           :: !(Maybe Text)
+    , _seConfigurationSetName :: !(Maybe Text)
+    , _seSourceARN            :: !(Maybe Text)
+    , _seReturnPathARN        :: !(Maybe Text)
+    , _seTags                 :: !(Maybe [MessageTag])
+    , _seReplyToAddresses     :: !(Maybe [Text])
+    , _seSource               :: !Text
+    , _seDestination          :: !Destination
+    , _seMessage              :: !Message
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SendEmail' with the minimum fields required to make a request.
@@ -201,10 +203,12 @@ instance ToQuery SendEmail where
 --
 --
 -- /See:/ 'sendEmailResponse' smart constructor.
-data SendEmailResponse = SendEmailResponse'
-  { _sersResponseStatus :: !Int
-  , _sersMessageId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SendEmailResponse =
+  SendEmailResponse'
+    { _sersResponseStatus :: !Int
+    , _sersMessageId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SendEmailResponse' with the minimum fields required to make a request.

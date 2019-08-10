@@ -59,9 +59,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteLag' smart constructor.
-newtype DeleteLag = DeleteLag'
-  { _dLagId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteLag =
+  DeleteLag'
+    { _dLagId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteLag' with the minimum fields required to make a request.

@@ -52,16 +52,18 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createDataSource' smart constructor.
-data CreateDataSource = CreateDataSource'
-  { _cdsServiceRoleARN      :: !(Maybe Text)
-  , _cdsDynamodbConfig      :: !(Maybe DynamodbDataSourceConfig)
-  , _cdsLambdaConfig        :: !(Maybe LambdaDataSourceConfig)
-  , _cdsDescription         :: !(Maybe Text)
-  , _cdsElasticsearchConfig :: !(Maybe ElasticsearchDataSourceConfig)
-  , _cdsApiId               :: !Text
-  , _cdsName                :: !Text
-  , _cdsType                :: !DataSourceType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDataSource =
+  CreateDataSource'
+    { _cdsServiceRoleARN      :: !(Maybe Text)
+    , _cdsDynamodbConfig      :: !(Maybe DynamodbDataSourceConfig)
+    , _cdsLambdaConfig        :: !(Maybe LambdaDataSourceConfig)
+    , _cdsDescription         :: !(Maybe Text)
+    , _cdsElasticsearchConfig :: !(Maybe ElasticsearchDataSourceConfig)
+    , _cdsApiId               :: !Text
+    , _cdsName                :: !Text
+    , _cdsType                :: !DataSourceType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDataSource' with the minimum fields required to make a request.
@@ -175,10 +177,12 @@ instance ToQuery CreateDataSource where
         toQuery = const mempty
 
 -- | /See:/ 'createDataSourceResponse' smart constructor.
-data CreateDataSourceResponse = CreateDataSourceResponse'
-  { _cdsrsDataSource     :: !(Maybe DataSource)
-  , _cdsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDataSourceResponse =
+  CreateDataSourceResponse'
+    { _cdsrsDataSource     :: !(Maybe DataSource)
+    , _cdsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDataSourceResponse' with the minimum fields required to make a request.

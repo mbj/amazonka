@@ -57,17 +57,19 @@ import Network.AWS.ServiceCatalog.Types
 import Network.AWS.ServiceCatalog.Types.Product
 
 -- | /See:/ 'provisionProduct' smart constructor.
-data ProvisionProduct = ProvisionProduct'
-  { _ppNotificationARNs       :: !(Maybe [Text])
-  , _ppAcceptLanguage         :: !(Maybe Text)
-  , _ppPathId                 :: !(Maybe Text)
-  , _ppProvisioningParameters :: !(Maybe [ProvisioningParameter])
-  , _ppTags                   :: !(Maybe [Tag])
-  , _ppProductId              :: !Text
-  , _ppProvisioningArtifactId :: !Text
-  , _ppProvisionedProductName :: !Text
-  , _ppProvisionToken         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ProvisionProduct =
+  ProvisionProduct'
+    { _ppNotificationARNs       :: !(Maybe [Text])
+    , _ppAcceptLanguage         :: !(Maybe Text)
+    , _ppPathId                 :: !(Maybe Text)
+    , _ppProvisioningParameters :: !(Maybe [ProvisioningParameter])
+    , _ppTags                   :: !(Maybe [Tag])
+    , _ppProductId              :: !Text
+    , _ppProvisioningArtifactId :: !Text
+    , _ppProvisionedProductName :: !Text
+    , _ppProvisionToken         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ProvisionProduct' with the minimum fields required to make a request.
@@ -196,10 +198,12 @@ instance ToQuery ProvisionProduct where
         toQuery = const mempty
 
 -- | /See:/ 'provisionProductResponse' smart constructor.
-data ProvisionProductResponse = ProvisionProductResponse'
-  { _pprsRecordDetail   :: !(Maybe RecordDetail)
-  , _pprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ProvisionProductResponse =
+  ProvisionProductResponse'
+    { _pprsRecordDetail   :: !(Maybe RecordDetail)
+    , _pprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ProvisionProductResponse' with the minimum fields required to make a request.

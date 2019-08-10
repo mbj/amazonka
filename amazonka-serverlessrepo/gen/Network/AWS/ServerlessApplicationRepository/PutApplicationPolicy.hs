@@ -46,10 +46,12 @@ import Network.AWS.ServerlessApplicationRepository.Types
 import Network.AWS.ServerlessApplicationRepository.Types.Product
 
 -- | /See:/ 'putApplicationPolicy' smart constructor.
-data PutApplicationPolicy = PutApplicationPolicy'
-  { _papStatements    :: !(Maybe [ApplicationPolicyStatement])
-  , _papApplicationId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutApplicationPolicy =
+  PutApplicationPolicy'
+    { _papStatements    :: !(Maybe [ApplicationPolicyStatement])
+    , _papApplicationId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutApplicationPolicy' with the minimum fields required to make a request.
@@ -111,10 +113,12 @@ instance ToQuery PutApplicationPolicy where
         toQuery = const mempty
 
 -- | /See:/ 'putApplicationPolicyResponse' smart constructor.
-data PutApplicationPolicyResponse = PutApplicationPolicyResponse'
-  { _paprsStatements     :: !(Maybe [ApplicationPolicyStatement])
-  , _paprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutApplicationPolicyResponse =
+  PutApplicationPolicyResponse'
+    { _paprsStatements     :: !(Maybe [ApplicationPolicyStatement])
+    , _paprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutApplicationPolicyResponse' with the minimum fields required to make a request.

@@ -71,10 +71,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getFunctionConfiguration' smart constructor.
-data GetFunctionConfiguration = GetFunctionConfiguration'
-  { _gfcQualifier    :: !(Maybe Text)
-  , _gfcFunctionName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetFunctionConfiguration =
+  GetFunctionConfiguration'
+    { _gfcQualifier    :: !(Maybe Text)
+    , _gfcFunctionName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetFunctionConfiguration' with the minimum fields required to make a request.

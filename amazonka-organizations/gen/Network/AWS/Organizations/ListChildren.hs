@@ -54,12 +54,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listChildren' smart constructor.
-data ListChildren = ListChildren'
-  { _lcNextToken  :: !(Maybe Text)
-  , _lcMaxResults :: !(Maybe Nat)
-  , _lcParentId   :: !Text
-  , _lcChildType  :: !ChildType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListChildren =
+  ListChildren'
+    { _lcNextToken  :: !(Maybe Text)
+    , _lcMaxResults :: !(Maybe Nat)
+    , _lcParentId   :: !Text
+    , _lcChildType  :: !ChildType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListChildren' with the minimum fields required to make a request.
@@ -149,11 +151,13 @@ instance ToQuery ListChildren where
         toQuery = const mempty
 
 -- | /See:/ 'listChildrenResponse' smart constructor.
-data ListChildrenResponse = ListChildrenResponse'
-  { _lcrsChildren       :: !(Maybe [Child])
-  , _lcrsNextToken      :: !(Maybe Text)
-  , _lcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListChildrenResponse =
+  ListChildrenResponse'
+    { _lcrsChildren       :: !(Maybe [Child])
+    , _lcrsNextToken      :: !(Maybe Text)
+    , _lcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListChildrenResponse' with the minimum fields required to make a request.

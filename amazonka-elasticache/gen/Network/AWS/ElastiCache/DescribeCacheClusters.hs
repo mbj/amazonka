@@ -67,13 +67,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeCacheClusters' smart constructor.
-data DescribeCacheClusters = DescribeCacheClusters'
-  { _dShowCacheClustersNotInReplicationGroups :: !(Maybe Bool)
-  , _dCacheClusterId                          :: !(Maybe Text)
-  , _dMarker                                  :: !(Maybe Text)
-  , _dMaxRecords                              :: !(Maybe Int)
-  , _dShowCacheNodeInfo                       :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeCacheClusters =
+  DescribeCacheClusters'
+    { _dShowCacheClustersNotInReplicationGroups :: !(Maybe Bool)
+    , _dCacheClusterId                          :: !(Maybe Text)
+    , _dMarker                                  :: !(Maybe Text)
+    , _dMaxRecords                              :: !(Maybe Int)
+    , _dShowCacheNodeInfo                       :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeCacheClusters' with the minimum fields required to make a request.
@@ -166,11 +168,13 @@ instance ToQuery DescribeCacheClusters where
 --
 --
 -- /See:/ 'describeCacheClustersResponse' smart constructor.
-data DescribeCacheClustersResponse = DescribeCacheClustersResponse'
-  { _drsCacheClusters  :: !(Maybe [CacheCluster])
-  , _drsMarker         :: !(Maybe Text)
-  , _drsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeCacheClustersResponse =
+  DescribeCacheClustersResponse'
+    { _drsCacheClusters  :: !(Maybe [CacheCluster])
+    , _drsMarker         :: !(Maybe Text)
+    , _drsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeCacheClustersResponse' with the minimum fields required to make a request.

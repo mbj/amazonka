@@ -51,14 +51,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'registerScalableTarget' smart constructor.
-data RegisterScalableTarget = RegisterScalableTarget'
-  { _rstMaxCapacity       :: !(Maybe Int)
-  , _rstMinCapacity       :: !(Maybe Int)
-  , _rstRoleARN           :: !(Maybe Text)
-  , _rstServiceNamespace  :: !ServiceNamespace
-  , _rstResourceId        :: !Text
-  , _rstScalableDimension :: !ScalableDimension
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RegisterScalableTarget =
+  RegisterScalableTarget'
+    { _rstMaxCapacity       :: !(Maybe Int)
+    , _rstMinCapacity       :: !(Maybe Int)
+    , _rstRoleARN           :: !(Maybe Text)
+    , _rstServiceNamespace  :: !ServiceNamespace
+    , _rstResourceId        :: !Text
+    , _rstScalableDimension :: !ScalableDimension
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterScalableTarget' with the minimum fields required to make a request.
@@ -158,9 +160,11 @@ instance ToQuery RegisterScalableTarget where
         toQuery = const mempty
 
 -- | /See:/ 'registerScalableTargetResponse' smart constructor.
-newtype RegisterScalableTargetResponse = RegisterScalableTargetResponse'
-  { _rstrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RegisterScalableTargetResponse =
+  RegisterScalableTargetResponse'
+    { _rstrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterScalableTargetResponse' with the minimum fields required to make a request.

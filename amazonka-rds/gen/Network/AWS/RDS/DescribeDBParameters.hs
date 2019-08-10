@@ -53,13 +53,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeDBParameters' smart constructor.
-data DescribeDBParameters = DescribeDBParameters'
-  { _ddpFilters              :: !(Maybe [Filter])
-  , _ddpMarker               :: !(Maybe Text)
-  , _ddpMaxRecords           :: !(Maybe Int)
-  , _ddpSource               :: !(Maybe Text)
-  , _ddpDBParameterGroupName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDBParameters =
+  DescribeDBParameters'
+    { _ddpFilters              :: !(Maybe [Filter])
+    , _ddpMarker               :: !(Maybe Text)
+    , _ddpMaxRecords           :: !(Maybe Int)
+    , _ddpSource               :: !(Maybe Text)
+    , _ddpDBParameterGroupName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDBParameters' with the minimum fields required to make a request.
@@ -155,11 +157,13 @@ instance ToQuery DescribeDBParameters where
 --
 --
 -- /See:/ 'describeDBParametersResponse' smart constructor.
-data DescribeDBParametersResponse = DescribeDBParametersResponse'
-  { _ddprsMarker         :: !(Maybe Text)
-  , _ddprsParameters     :: !(Maybe [Parameter])
-  , _ddprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDBParametersResponse =
+  DescribeDBParametersResponse'
+    { _ddprsMarker         :: !(Maybe Text)
+    , _ddprsParameters     :: !(Maybe [Parameter])
+    , _ddprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDBParametersResponse' with the minimum fields required to make a request.

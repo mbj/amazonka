@@ -47,11 +47,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'notifyWorkers' smart constructor.
-data NotifyWorkers = NotifyWorkers'
-  { _nwSubject     :: !Text
-  , _nwMessageText :: !Text
-  , _nwWorkerIds   :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NotifyWorkers =
+  NotifyWorkers'
+    { _nwSubject     :: !Text
+    , _nwMessageText :: !Text
+    , _nwWorkerIds   :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NotifyWorkers' with the minimum fields required to make a request.
@@ -126,10 +128,12 @@ instance ToQuery NotifyWorkers where
         toQuery = const mempty
 
 -- | /See:/ 'notifyWorkersResponse' smart constructor.
-data NotifyWorkersResponse = NotifyWorkersResponse'
-  { _nwrsNotifyWorkersFailureStatuses :: !(Maybe [NotifyWorkersFailureStatus])
-  , _nwrsResponseStatus               :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NotifyWorkersResponse =
+  NotifyWorkersResponse'
+    { _nwrsNotifyWorkersFailureStatuses :: !(Maybe [NotifyWorkersFailureStatus])
+    , _nwrsResponseStatus               :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NotifyWorkersResponse' with the minimum fields required to make a request.

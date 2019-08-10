@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'importKeyPair' smart constructor.
-data ImportKeyPair = ImportKeyPair'
-  { _ikpKeyPairName     :: !Text
-  , _ikpPublicKeyBase64 :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ImportKeyPair =
+  ImportKeyPair'
+    { _ikpKeyPairName     :: !Text
+    , _ikpPublicKeyBase64 :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ImportKeyPair' with the minimum fields required to make a request.
@@ -112,10 +114,12 @@ instance ToQuery ImportKeyPair where
         toQuery = const mempty
 
 -- | /See:/ 'importKeyPairResponse' smart constructor.
-data ImportKeyPairResponse = ImportKeyPairResponse'
-  { _ikprsOperation      :: !(Maybe Operation)
-  , _ikprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ImportKeyPairResponse =
+  ImportKeyPairResponse'
+    { _ikprsOperation      :: !(Maybe Operation)
+    , _ikprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ImportKeyPairResponse' with the minimum fields required to make a request.

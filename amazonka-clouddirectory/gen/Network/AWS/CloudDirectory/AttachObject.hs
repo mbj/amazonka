@@ -54,12 +54,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'attachObject' smart constructor.
-data AttachObject = AttachObject'
-  { _aoDirectoryARN    :: !Text
-  , _aoParentReference :: !ObjectReference
-  , _aoChildReference  :: !ObjectReference
-  , _aoLinkName        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AttachObject =
+  AttachObject'
+    { _aoDirectoryARN    :: !Text
+    , _aoParentReference :: !ObjectReference
+    , _aoChildReference  :: !ObjectReference
+    , _aoLinkName        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttachObject' with the minimum fields required to make a request.
@@ -139,10 +141,12 @@ instance ToQuery AttachObject where
         toQuery = const mempty
 
 -- | /See:/ 'attachObjectResponse' smart constructor.
-data AttachObjectResponse = AttachObjectResponse'
-  { _aorsAttachedObjectIdentifier :: !(Maybe Text)
-  , _aorsResponseStatus           :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AttachObjectResponse =
+  AttachObjectResponse'
+    { _aorsAttachedObjectIdentifier :: !(Maybe Text)
+    , _aorsResponseStatus           :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttachObjectResponse' with the minimum fields required to make a request.

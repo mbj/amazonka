@@ -61,12 +61,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listAssignmentsForHIT' smart constructor.
-data ListAssignmentsForHIT = ListAssignmentsForHIT'
-  { _lafhitAssignmentStatuses :: !(Maybe [AssignmentStatus])
-  , _lafhitNextToken          :: !(Maybe Text)
-  , _lafhitMaxResults         :: !(Maybe Nat)
-  , _lafhitHITId              :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAssignmentsForHIT =
+  ListAssignmentsForHIT'
+    { _lafhitAssignmentStatuses :: !(Maybe [AssignmentStatus])
+    , _lafhitNextToken          :: !(Maybe Text)
+    , _lafhitMaxResults         :: !(Maybe Nat)
+    , _lafhitHITId              :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAssignmentsForHIT' with the minimum fields required to make a request.
@@ -159,12 +161,14 @@ instance ToQuery ListAssignmentsForHIT where
         toQuery = const mempty
 
 -- | /See:/ 'listAssignmentsForHITResponse' smart constructor.
-data ListAssignmentsForHITResponse = ListAssignmentsForHITResponse'
-  { _lafhitrsNextToken      :: !(Maybe Text)
-  , _lafhitrsNumResults     :: !(Maybe Int)
-  , _lafhitrsAssignments    :: !(Maybe [Assignment])
-  , _lafhitrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAssignmentsForHITResponse =
+  ListAssignmentsForHITResponse'
+    { _lafhitrsNextToken      :: !(Maybe Text)
+    , _lafhitrsNumResults     :: !(Maybe Int)
+    , _lafhitrsAssignments    :: !(Maybe [Assignment])
+    , _lafhitrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAssignmentsForHITResponse' with the minimum fields required to make a request.

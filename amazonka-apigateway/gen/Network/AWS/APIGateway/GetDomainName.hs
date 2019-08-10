@@ -58,9 +58,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getDomainName' smart constructor.
-newtype GetDomainName = GetDomainName'
-  { _gdnDomainName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetDomainName =
+  GetDomainName'
+    { _gdnDomainName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDomainName' with the minimum fields required to make a request.

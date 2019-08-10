@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'startImageBuilder' smart constructor.
-data StartImageBuilder = StartImageBuilder'
-  { _sibAppstreamAgentVersion :: !(Maybe Text)
-  , _sibName                  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartImageBuilder =
+  StartImageBuilder'
+    { _sibAppstreamAgentVersion :: !(Maybe Text)
+    , _sibName                  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartImageBuilder' with the minimum fields required to make a request.
@@ -112,10 +114,12 @@ instance ToQuery StartImageBuilder where
         toQuery = const mempty
 
 -- | /See:/ 'startImageBuilderResponse' smart constructor.
-data StartImageBuilderResponse = StartImageBuilderResponse'
-  { _srsImageBuilder   :: !(Maybe ImageBuilder)
-  , _srsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartImageBuilderResponse =
+  StartImageBuilderResponse'
+    { _srsImageBuilder   :: !(Maybe ImageBuilder)
+    , _srsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartImageBuilderResponse' with the minimum fields required to make a request.

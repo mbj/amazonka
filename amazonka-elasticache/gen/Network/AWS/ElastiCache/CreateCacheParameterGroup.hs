@@ -59,11 +59,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createCacheParameterGroup' smart constructor.
-data CreateCacheParameterGroup = CreateCacheParameterGroup'
-  { _ccpgCacheParameterGroupName   :: !Text
-  , _ccpgCacheParameterGroupFamily :: !Text
-  , _ccpgDescription               :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateCacheParameterGroup =
+  CreateCacheParameterGroup'
+    { _ccpgCacheParameterGroupName   :: !Text
+    , _ccpgCacheParameterGroupFamily :: !Text
+    , _ccpgDescription               :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateCacheParameterGroup' with the minimum fields required to make a request.
@@ -134,10 +136,12 @@ instance ToQuery CreateCacheParameterGroup where
                "Description" =: _ccpgDescription]
 
 -- | /See:/ 'createCacheParameterGroupResponse' smart constructor.
-data CreateCacheParameterGroupResponse = CreateCacheParameterGroupResponse'
-  { _ccpgrsCacheParameterGroup :: !(Maybe CacheParameterGroup)
-  , _ccpgrsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateCacheParameterGroupResponse =
+  CreateCacheParameterGroupResponse'
+    { _ccpgrsCacheParameterGroup :: !(Maybe CacheParameterGroup)
+    , _ccpgrsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateCacheParameterGroupResponse' with the minimum fields required to make a request.

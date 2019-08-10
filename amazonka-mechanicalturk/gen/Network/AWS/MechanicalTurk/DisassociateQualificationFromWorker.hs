@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'disassociateQualificationFromWorker' smart constructor.
-data DisassociateQualificationFromWorker = DisassociateQualificationFromWorker'
-  { _dqfwReason              :: !(Maybe Text)
-  , _dqfwWorkerId            :: !Text
-  , _dqfwQualificationTypeId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DisassociateQualificationFromWorker =
+  DisassociateQualificationFromWorker'
+    { _dqfwReason              :: !(Maybe Text)
+    , _dqfwWorkerId            :: !Text
+    , _dqfwQualificationTypeId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisassociateQualificationFromWorker' with the minimum fields required to make a request.
@@ -137,9 +139,11 @@ instance ToQuery DisassociateQualificationFromWorker
         toQuery = const mempty
 
 -- | /See:/ 'disassociateQualificationFromWorkerResponse' smart constructor.
-newtype DisassociateQualificationFromWorkerResponse = DisassociateQualificationFromWorkerResponse'
-  { _dqfwrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DisassociateQualificationFromWorkerResponse =
+  DisassociateQualificationFromWorkerResponse'
+    { _dqfwrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisassociateQualificationFromWorkerResponse' with the minimum fields required to make a request.

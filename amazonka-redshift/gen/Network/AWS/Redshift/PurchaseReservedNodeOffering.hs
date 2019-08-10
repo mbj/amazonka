@@ -52,10 +52,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'purchaseReservedNodeOffering' smart constructor.
-data PurchaseReservedNodeOffering = PurchaseReservedNodeOffering'
-  { _prnoNodeCount              :: !(Maybe Int)
-  , _prnoReservedNodeOfferingId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PurchaseReservedNodeOffering =
+  PurchaseReservedNodeOffering'
+    { _prnoNodeCount              :: !(Maybe Int)
+    , _prnoReservedNodeOfferingId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PurchaseReservedNodeOffering' with the minimum fields required to make a request.
@@ -116,10 +118,12 @@ instance ToQuery PurchaseReservedNodeOffering where
                  _prnoReservedNodeOfferingId]
 
 -- | /See:/ 'purchaseReservedNodeOfferingResponse' smart constructor.
-data PurchaseReservedNodeOfferingResponse = PurchaseReservedNodeOfferingResponse'
-  { _prnorsReservedNode   :: !(Maybe ReservedNode)
-  , _prnorsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PurchaseReservedNodeOfferingResponse =
+  PurchaseReservedNodeOfferingResponse'
+    { _prnorsReservedNode   :: !(Maybe ReservedNode)
+    , _prnorsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PurchaseReservedNodeOfferingResponse' with the minimum fields required to make a request.

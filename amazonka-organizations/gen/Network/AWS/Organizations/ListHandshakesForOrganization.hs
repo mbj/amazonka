@@ -55,11 +55,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listHandshakesForOrganization' smart constructor.
-data ListHandshakesForOrganization = ListHandshakesForOrganization'
-  { _lhfoNextToken  :: !(Maybe Text)
-  , _lhfoFilter     :: !(Maybe HandshakeFilter)
-  , _lhfoMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListHandshakesForOrganization =
+  ListHandshakesForOrganization'
+    { _lhfoNextToken  :: !(Maybe Text)
+    , _lhfoFilter     :: !(Maybe HandshakeFilter)
+    , _lhfoMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListHandshakesForOrganization' with the minimum fields required to make a request.
@@ -140,11 +142,13 @@ instance ToQuery ListHandshakesForOrganization where
         toQuery = const mempty
 
 -- | /See:/ 'listHandshakesForOrganizationResponse' smart constructor.
-data ListHandshakesForOrganizationResponse = ListHandshakesForOrganizationResponse'
-  { _lhforsHandshakes     :: !(Maybe [Handshake])
-  , _lhforsNextToken      :: !(Maybe Text)
-  , _lhforsResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data ListHandshakesForOrganizationResponse =
+  ListHandshakesForOrganizationResponse'
+    { _lhforsHandshakes     :: !(Maybe [Handshake])
+    , _lhforsNextToken      :: !(Maybe Text)
+    , _lhforsResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListHandshakesForOrganizationResponse' with the minimum fields required to make a request.

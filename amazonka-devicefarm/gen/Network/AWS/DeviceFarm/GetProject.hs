@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getProject' smart constructor.
-newtype GetProject = GetProject'
-  { _gpArn :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetProject =
+  GetProject'
+    { _gpArn :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetProject' with the minimum fields required to make a request.
@@ -106,10 +108,12 @@ instance ToQuery GetProject where
 --
 --
 -- /See:/ 'getProjectResponse' smart constructor.
-data GetProjectResponse = GetProjectResponse'
-  { _gprsProject        :: !(Maybe Project)
-  , _gprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetProjectResponse =
+  GetProjectResponse'
+    { _gprsProject        :: !(Maybe Project)
+    , _gprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetProjectResponse' with the minimum fields required to make a request.

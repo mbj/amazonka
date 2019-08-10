@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'detectKeyPhrases' smart constructor.
-data DetectKeyPhrases = DetectKeyPhrases'
-  { _dkpText         :: !Text
-  , _dkpLanguageCode :: !LanguageCode
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DetectKeyPhrases =
+  DetectKeyPhrases'
+    { _dkpText         :: !Text
+    , _dkpLanguageCode :: !LanguageCode
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DetectKeyPhrases' with the minimum fields required to make a request.
@@ -113,10 +115,12 @@ instance ToQuery DetectKeyPhrases where
         toQuery = const mempty
 
 -- | /See:/ 'detectKeyPhrasesResponse' smart constructor.
-data DetectKeyPhrasesResponse = DetectKeyPhrasesResponse'
-  { _dkprsKeyPhrases     :: !(Maybe [KeyPhrase])
-  , _dkprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DetectKeyPhrasesResponse =
+  DetectKeyPhrasesResponse'
+    { _dkprsKeyPhrases     :: !(Maybe [KeyPhrase])
+    , _dkprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DetectKeyPhrasesResponse' with the minimum fields required to make a request.

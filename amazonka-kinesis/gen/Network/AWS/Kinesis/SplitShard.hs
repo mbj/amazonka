@@ -66,11 +66,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'splitShard' smart constructor.
-data SplitShard = SplitShard'
-  { _ssStreamName         :: !Text
-  , _ssShardToSplit       :: !Text
-  , _ssNewStartingHashKey :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SplitShard =
+  SplitShard'
+    { _ssStreamName         :: !Text
+    , _ssShardToSplit       :: !Text
+    , _ssNewStartingHashKey :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SplitShard' with the minimum fields required to make a request.

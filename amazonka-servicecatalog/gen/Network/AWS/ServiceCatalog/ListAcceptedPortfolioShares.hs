@@ -51,11 +51,13 @@ import Network.AWS.ServiceCatalog.Types
 import Network.AWS.ServiceCatalog.Types.Product
 
 -- | /See:/ 'listAcceptedPortfolioShares' smart constructor.
-data ListAcceptedPortfolioShares = ListAcceptedPortfolioShares'
-  { _lapsAcceptLanguage :: !(Maybe Text)
-  , _lapsPageToken      :: !(Maybe Text)
-  , _lapsPageSize       :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAcceptedPortfolioShares =
+  ListAcceptedPortfolioShares'
+    { _lapsAcceptLanguage :: !(Maybe Text)
+    , _lapsPageToken      :: !(Maybe Text)
+    , _lapsPageSize       :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAcceptedPortfolioShares' with the minimum fields required to make a request.
@@ -138,11 +140,13 @@ instance ToQuery ListAcceptedPortfolioShares where
         toQuery = const mempty
 
 -- | /See:/ 'listAcceptedPortfolioSharesResponse' smart constructor.
-data ListAcceptedPortfolioSharesResponse = ListAcceptedPortfolioSharesResponse'
-  { _lapsrsNextPageToken    :: !(Maybe Text)
-  , _lapsrsPortfolioDetails :: !(Maybe [PortfolioDetail])
-  , _lapsrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAcceptedPortfolioSharesResponse =
+  ListAcceptedPortfolioSharesResponse'
+    { _lapsrsNextPageToken    :: !(Maybe Text)
+    , _lapsrsPortfolioDetails :: !(Maybe [PortfolioDetail])
+    , _lapsrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAcceptedPortfolioSharesResponse' with the minimum fields required to make a request.

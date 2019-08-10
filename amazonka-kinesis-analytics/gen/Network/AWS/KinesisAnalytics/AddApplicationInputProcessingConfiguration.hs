@@ -47,12 +47,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'addApplicationInputProcessingConfiguration' smart constructor.
-data AddApplicationInputProcessingConfiguration = AddApplicationInputProcessingConfiguration'
-  { _aaipcApplicationName              :: !Text
-  , _aaipcCurrentApplicationVersionId  :: !Nat
-  , _aaipcInputId                      :: !Text
-  , _aaipcInputProcessingConfiguration :: !InputProcessingConfiguration
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddApplicationInputProcessingConfiguration =
+  AddApplicationInputProcessingConfiguration'
+    { _aaipcApplicationName              :: !Text
+    , _aaipcCurrentApplicationVersionId  :: !Nat
+    , _aaipcInputId                      :: !Text
+    , _aaipcInputProcessingConfiguration :: !InputProcessingConfiguration
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddApplicationInputProcessingConfiguration' with the minimum fields required to make a request.
@@ -156,9 +158,11 @@ instance ToQuery
         toQuery = const mempty
 
 -- | /See:/ 'addApplicationInputProcessingConfigurationResponse' smart constructor.
-newtype AddApplicationInputProcessingConfigurationResponse = AddApplicationInputProcessingConfigurationResponse'
-  { _aaipcrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AddApplicationInputProcessingConfigurationResponse =
+  AddApplicationInputProcessingConfigurationResponse'
+    { _aaipcrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddApplicationInputProcessingConfigurationResponse' with the minimum fields required to make a request.

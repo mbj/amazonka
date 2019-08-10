@@ -43,10 +43,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putDestinationPolicy' smart constructor.
-data PutDestinationPolicy = PutDestinationPolicy'
-  { _pdpDestinationName :: !Text
-  , _pdpAccessPolicy    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutDestinationPolicy =
+  PutDestinationPolicy'
+    { _pdpDestinationName :: !Text
+    , _pdpAccessPolicy    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutDestinationPolicy' with the minimum fields required to make a request.

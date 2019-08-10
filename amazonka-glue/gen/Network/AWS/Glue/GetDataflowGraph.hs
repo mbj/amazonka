@@ -46,9 +46,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getDataflowGraph' smart constructor.
-newtype GetDataflowGraph = GetDataflowGraph'
-  { _gdgPythonScript :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetDataflowGraph =
+  GetDataflowGraph'
+    { _gdgPythonScript :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDataflowGraph' with the minimum fields required to make a request.
@@ -102,11 +104,13 @@ instance ToQuery GetDataflowGraph where
         toQuery = const mempty
 
 -- | /See:/ 'getDataflowGraphResponse' smart constructor.
-data GetDataflowGraphResponse = GetDataflowGraphResponse'
-  { _gdgrsDagEdges       :: !(Maybe [CodeGenEdge])
-  , _gdgrsDagNodes       :: !(Maybe [CodeGenNode])
-  , _gdgrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDataflowGraphResponse =
+  GetDataflowGraphResponse'
+    { _gdgrsDagEdges       :: !(Maybe [CodeGenEdge])
+    , _gdgrsDagNodes       :: !(Maybe [CodeGenNode])
+    , _gdgrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDataflowGraphResponse' with the minimum fields required to make a request.

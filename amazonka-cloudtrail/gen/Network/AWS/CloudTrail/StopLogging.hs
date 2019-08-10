@@ -48,9 +48,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'stopLogging' smart constructor.
-newtype StopLogging = StopLogging'
-  { _slName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StopLogging =
+  StopLogging'
+    { _slName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopLogging' with the minimum fields required to make a request.
@@ -105,9 +107,11 @@ instance ToQuery StopLogging where
 --
 --
 -- /See:/ 'stopLoggingResponse' smart constructor.
-newtype StopLoggingResponse = StopLoggingResponse'
-  { _slrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StopLoggingResponse =
+  StopLoggingResponse'
+    { _slrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopLoggingResponse' with the minimum fields required to make a request.

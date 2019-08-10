@@ -40,9 +40,11 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'headBucket' smart constructor.
-newtype HeadBucket = HeadBucket'
-  { _hbBucket :: BucketName
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype HeadBucket =
+  HeadBucket'
+    { _hbBucket :: BucketName
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'HeadBucket' with the minimum fields required to make a request.

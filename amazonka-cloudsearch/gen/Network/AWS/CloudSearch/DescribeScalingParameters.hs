@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeScalingParameters' smart constructor.
-newtype DescribeScalingParameters = DescribeScalingParameters'
-  { _dspDomainName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeScalingParameters =
+  DescribeScalingParameters'
+    { _dspDomainName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeScalingParameters' with the minimum fields required to make a request.
@@ -103,10 +105,12 @@ instance ToQuery DescribeScalingParameters where
 --
 --
 -- /See:/ 'describeScalingParametersResponse' smart constructor.
-data DescribeScalingParametersResponse = DescribeScalingParametersResponse'
-  { _dsprsResponseStatus    :: !Int
-  , _dsprsScalingParameters :: !ScalingParametersStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeScalingParametersResponse =
+  DescribeScalingParametersResponse'
+    { _dsprsResponseStatus    :: !Int
+    , _dsprsScalingParameters :: !ScalingParametersStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeScalingParametersResponse' with the minimum fields required to make a request.

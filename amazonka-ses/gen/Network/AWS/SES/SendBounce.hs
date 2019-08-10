@@ -58,14 +58,16 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'sendBounce' smart constructor.
-data SendBounce = SendBounce'
-  { _sbMessageDsn               :: !(Maybe MessageDsn)
-  , _sbExplanation              :: !(Maybe Text)
-  , _sbBounceSenderARN          :: !(Maybe Text)
-  , _sbOriginalMessageId        :: !Text
-  , _sbBounceSender             :: !Text
-  , _sbBouncedRecipientInfoList :: ![BouncedRecipientInfo]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SendBounce =
+  SendBounce'
+    { _sbMessageDsn               :: !(Maybe MessageDsn)
+    , _sbExplanation              :: !(Maybe Text)
+    , _sbBounceSenderARN          :: !(Maybe Text)
+    , _sbOriginalMessageId        :: !Text
+    , _sbBounceSender             :: !Text
+    , _sbBouncedRecipientInfoList :: ![BouncedRecipientInfo]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SendBounce' with the minimum fields required to make a request.
@@ -159,10 +161,12 @@ instance ToQuery SendBounce where
 --
 --
 -- /See:/ 'sendBounceResponse' smart constructor.
-data SendBounceResponse = SendBounceResponse'
-  { _sbrsMessageId      :: !(Maybe Text)
-  , _sbrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SendBounceResponse =
+  SendBounceResponse'
+    { _sbrsMessageId      :: !(Maybe Text)
+    , _sbrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SendBounceResponse' with the minimum fields required to make a request.

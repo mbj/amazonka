@@ -53,12 +53,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateUserProfile' smart constructor.
-data UpdateUserProfile = UpdateUserProfile'
-  { _uupSshPublicKey :: !(Maybe Text)
-  , _uupEmailAddress :: !(Maybe (Sensitive Text))
-  , _uupDisplayName  :: !(Maybe Text)
-  , _uupUserARN      :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data UpdateUserProfile =
+  UpdateUserProfile'
+    { _uupSshPublicKey :: !(Maybe Text)
+    , _uupEmailAddress :: !(Maybe (Sensitive Text))
+    , _uupDisplayName  :: !(Maybe Text)
+    , _uupUserARN      :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateUserProfile' with the minimum fields required to make a request.
@@ -145,15 +147,17 @@ instance ToQuery UpdateUserProfile where
         toQuery = const mempty
 
 -- | /See:/ 'updateUserProfileResponse' smart constructor.
-data UpdateUserProfileResponse = UpdateUserProfileResponse'
-  { _uuprsLastModifiedTimestamp :: !(Maybe POSIX)
-  , _uuprsSshPublicKey          :: !(Maybe Text)
-  , _uuprsEmailAddress          :: !(Maybe (Sensitive Text))
-  , _uuprsDisplayName           :: !(Maybe Text)
-  , _uuprsCreatedTimestamp      :: !(Maybe POSIX)
-  , _uuprsResponseStatus        :: !Int
-  , _uuprsUserARN               :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data UpdateUserProfileResponse =
+  UpdateUserProfileResponse'
+    { _uuprsLastModifiedTimestamp :: !(Maybe POSIX)
+    , _uuprsSshPublicKey          :: !(Maybe Text)
+    , _uuprsEmailAddress          :: !(Maybe (Sensitive Text))
+    , _uuprsDisplayName           :: !(Maybe Text)
+    , _uuprsCreatedTimestamp      :: !(Maybe POSIX)
+    , _uuprsResponseStatus        :: !Int
+    , _uuprsUserARN               :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateUserProfileResponse' with the minimum fields required to make a request.

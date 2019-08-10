@@ -51,13 +51,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeElasticGpus' smart constructor.
-data DescribeElasticGpus = DescribeElasticGpus'
-  { _degFilters       :: !(Maybe [Filter])
-  , _degNextToken     :: !(Maybe Text)
-  , _degDryRun        :: !(Maybe Bool)
-  , _degMaxResults    :: !(Maybe Int)
-  , _degElasticGpuIds :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeElasticGpus =
+  DescribeElasticGpus'
+    { _degFilters       :: !(Maybe [Filter])
+    , _degNextToken     :: !(Maybe Text)
+    , _degDryRun        :: !(Maybe Bool)
+    , _degMaxResults    :: !(Maybe Int)
+    , _degElasticGpuIds :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeElasticGpus' with the minimum fields required to make a request.
@@ -141,12 +143,14 @@ instance ToQuery DescribeElasticGpus where
                  (toQueryList "ElasticGpuId" <$> _degElasticGpuIds)]
 
 -- | /See:/ 'describeElasticGpusResponse' smart constructor.
-data DescribeElasticGpusResponse = DescribeElasticGpusResponse'
-  { _degrsElasticGpuSet  :: !(Maybe [ElasticGpus])
-  , _degrsNextToken      :: !(Maybe Text)
-  , _degrsMaxResults     :: !(Maybe Int)
-  , _degrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeElasticGpusResponse =
+  DescribeElasticGpusResponse'
+    { _degrsElasticGpuSet  :: !(Maybe [ElasticGpus])
+    , _degrsNextToken      :: !(Maybe Text)
+    , _degrsMaxResults     :: !(Maybe Int)
+    , _degrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeElasticGpusResponse' with the minimum fields required to make a request.

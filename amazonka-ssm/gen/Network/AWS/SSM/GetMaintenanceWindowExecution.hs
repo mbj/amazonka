@@ -50,9 +50,11 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'getMaintenanceWindowExecution' smart constructor.
-newtype GetMaintenanceWindowExecution = GetMaintenanceWindowExecution'
-  { _gmweWindowExecutionId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetMaintenanceWindowExecution =
+  GetMaintenanceWindowExecution'
+    { _gmweWindowExecutionId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetMaintenanceWindowExecution' with the minimum fields required to make a request.
@@ -116,15 +118,17 @@ instance ToQuery GetMaintenanceWindowExecution where
         toQuery = const mempty
 
 -- | /See:/ 'getMaintenanceWindowExecutionResponse' smart constructor.
-data GetMaintenanceWindowExecutionResponse = GetMaintenanceWindowExecutionResponse'
-  { _gmwersStatus            :: !(Maybe MaintenanceWindowExecutionStatus)
-  , _gmwersStartTime         :: !(Maybe POSIX)
-  , _gmwersWindowExecutionId :: !(Maybe Text)
-  , _gmwersStatusDetails     :: !(Maybe Text)
-  , _gmwersEndTime           :: !(Maybe POSIX)
-  , _gmwersTaskIds           :: !(Maybe [Text])
-  , _gmwersResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetMaintenanceWindowExecutionResponse =
+  GetMaintenanceWindowExecutionResponse'
+    { _gmwersStatus            :: !(Maybe MaintenanceWindowExecutionStatus)
+    , _gmwersStartTime         :: !(Maybe POSIX)
+    , _gmwersWindowExecutionId :: !(Maybe Text)
+    , _gmwersStatusDetails     :: !(Maybe Text)
+    , _gmwersEndTime           :: !(Maybe POSIX)
+    , _gmwersTaskIds           :: !(Maybe [Text])
+    , _gmwersResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetMaintenanceWindowExecutionResponse' with the minimum fields required to make a request.

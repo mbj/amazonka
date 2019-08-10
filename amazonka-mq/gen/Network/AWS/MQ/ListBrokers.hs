@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listBrokers' smart constructor.
-data ListBrokers = ListBrokers'
-  { _lbNextToken  :: !(Maybe Text)
-  , _lbMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListBrokers =
+  ListBrokers'
+    { _lbNextToken  :: !(Maybe Text)
+    , _lbMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListBrokers' with the minimum fields required to make a request.
@@ -103,11 +105,13 @@ instance ToQuery ListBrokers where
                "maxResults" =: _lbMaxResults]
 
 -- | /See:/ 'listBrokersResponse' smart constructor.
-data ListBrokersResponse = ListBrokersResponse'
-  { _lbrsNextToken       :: !(Maybe Text)
-  , _lbrsBrokerSummaries :: !(Maybe [BrokerSummary])
-  , _lbrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListBrokersResponse =
+  ListBrokersResponse'
+    { _lbrsNextToken       :: !(Maybe Text)
+    , _lbrsBrokerSummaries :: !(Maybe [BrokerSummary])
+    , _lbrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListBrokersResponse' with the minimum fields required to make a request.

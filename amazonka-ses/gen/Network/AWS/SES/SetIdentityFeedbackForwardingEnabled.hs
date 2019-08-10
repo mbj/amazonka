@@ -53,10 +53,12 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'setIdentityFeedbackForwardingEnabled' smart constructor.
-data SetIdentityFeedbackForwardingEnabled = SetIdentityFeedbackForwardingEnabled'
-  { _siffeIdentity          :: !Text
-  , _siffeForwardingEnabled :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SetIdentityFeedbackForwardingEnabled =
+  SetIdentityFeedbackForwardingEnabled'
+    { _siffeIdentity          :: !Text
+    , _siffeForwardingEnabled :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetIdentityFeedbackForwardingEnabled' with the minimum fields required to make a request.
@@ -128,9 +130,11 @@ instance ToQuery SetIdentityFeedbackForwardingEnabled
 --
 --
 -- /See:/ 'setIdentityFeedbackForwardingEnabledResponse' smart constructor.
-newtype SetIdentityFeedbackForwardingEnabledResponse = SetIdentityFeedbackForwardingEnabledResponse'
-  { _siffersResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype SetIdentityFeedbackForwardingEnabledResponse =
+  SetIdentityFeedbackForwardingEnabledResponse'
+    { _siffersResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetIdentityFeedbackForwardingEnabledResponse' with the minimum fields required to make a request.

@@ -54,12 +54,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'validateConfigurationSettings' smart constructor.
-data ValidateConfigurationSettings = ValidateConfigurationSettings'
-  { _vcsTemplateName    :: !(Maybe Text)
-  , _vcsEnvironmentName :: !(Maybe Text)
-  , _vcsApplicationName :: !Text
-  , _vcsOptionSettings  :: ![ConfigurationOptionSetting]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ValidateConfigurationSettings =
+  ValidateConfigurationSettings'
+    { _vcsTemplateName    :: !(Maybe Text)
+    , _vcsEnvironmentName :: !(Maybe Text)
+    , _vcsApplicationName :: !Text
+    , _vcsOptionSettings  :: ![ConfigurationOptionSetting]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ValidateConfigurationSettings' with the minimum fields required to make a request.
@@ -143,10 +145,12 @@ instance ToQuery ValidateConfigurationSettings where
 --
 --
 -- /See:/ 'validateConfigurationSettingsResponse' smart constructor.
-data ValidateConfigurationSettingsResponse = ValidateConfigurationSettingsResponse'
-  { _vcsrsMessages       :: !(Maybe [ValidationMessage])
-  , _vcsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ValidateConfigurationSettingsResponse =
+  ValidateConfigurationSettingsResponse'
+    { _vcsrsMessages       :: !(Maybe [ValidationMessage])
+    , _vcsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ValidateConfigurationSettingsResponse' with the minimum fields required to make a request.

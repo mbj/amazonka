@@ -70,11 +70,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeMatchmakingRuleSets' smart constructor.
-data DescribeMatchmakingRuleSets = DescribeMatchmakingRuleSets'
-  { _dmrsNextToken :: !(Maybe Text)
-  , _dmrsNames     :: !(Maybe (List1 Text))
-  , _dmrsLimit     :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeMatchmakingRuleSets =
+  DescribeMatchmakingRuleSets'
+    { _dmrsNextToken :: !(Maybe Text)
+    , _dmrsNames     :: !(Maybe (List1 Text))
+    , _dmrsLimit     :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeMatchmakingRuleSets' with the minimum fields required to make a request.
@@ -149,11 +151,13 @@ instance ToQuery DescribeMatchmakingRuleSets where
 --
 --
 -- /See:/ 'describeMatchmakingRuleSetsResponse' smart constructor.
-data DescribeMatchmakingRuleSetsResponse = DescribeMatchmakingRuleSetsResponse'
-  { _dmrsrsNextToken      :: !(Maybe Text)
-  , _dmrsrsResponseStatus :: !Int
-  , _dmrsrsRuleSets       :: ![MatchmakingRuleSet]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeMatchmakingRuleSetsResponse =
+  DescribeMatchmakingRuleSetsResponse'
+    { _dmrsrsNextToken      :: !(Maybe Text)
+    , _dmrsrsResponseStatus :: !Int
+    , _dmrsrsRuleSets       :: ![MatchmakingRuleSet]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeMatchmakingRuleSetsResponse' with the minimum fields required to make a request.

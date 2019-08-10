@@ -57,13 +57,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeScalableTargets' smart constructor.
-data DescribeScalableTargets = DescribeScalableTargets'
-  { _dstResourceIds       :: !(Maybe [Text])
-  , _dstScalableDimension :: !(Maybe ScalableDimension)
-  , _dstNextToken         :: !(Maybe Text)
-  , _dstMaxResults        :: !(Maybe Int)
-  , _dstServiceNamespace  :: !ServiceNamespace
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeScalableTargets =
+  DescribeScalableTargets'
+    { _dstResourceIds       :: !(Maybe [Text])
+    , _dstScalableDimension :: !(Maybe ScalableDimension)
+    , _dstNextToken         :: !(Maybe Text)
+    , _dstMaxResults        :: !(Maybe Int)
+    , _dstServiceNamespace  :: !ServiceNamespace
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeScalableTargets' with the minimum fields required to make a request.
@@ -162,11 +164,13 @@ instance ToQuery DescribeScalableTargets where
         toQuery = const mempty
 
 -- | /See:/ 'describeScalableTargetsResponse' smart constructor.
-data DescribeScalableTargetsResponse = DescribeScalableTargetsResponse'
-  { _dstsrsNextToken       :: !(Maybe Text)
-  , _dstsrsScalableTargets :: !(Maybe [ScalableTarget])
-  , _dstsrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeScalableTargetsResponse =
+  DescribeScalableTargetsResponse'
+    { _dstsrsNextToken       :: !(Maybe Text)
+    , _dstsrsScalableTargets :: !(Maybe [ScalableTarget])
+    , _dstsrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeScalableTargetsResponse' with the minimum fields required to make a request.

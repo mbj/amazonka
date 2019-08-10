@@ -49,10 +49,12 @@ import Network.AWS.ServiceCatalog.Types
 import Network.AWS.ServiceCatalog.Types.Product
 
 -- | /See:/ 'describeProductAsAdmin' smart constructor.
-data DescribeProductAsAdmin = DescribeProductAsAdmin'
-  { _dpaaAcceptLanguage :: !(Maybe Text)
-  , _dpaaId             :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeProductAsAdmin =
+  DescribeProductAsAdmin'
+    { _dpaaAcceptLanguage :: !(Maybe Text)
+    , _dpaaId             :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeProductAsAdmin' with the minimum fields required to make a request.
@@ -120,13 +122,15 @@ instance ToQuery DescribeProductAsAdmin where
         toQuery = const mempty
 
 -- | /See:/ 'describeProductAsAdminResponse' smart constructor.
-data DescribeProductAsAdminResponse = DescribeProductAsAdminResponse'
-  { _dpaarsProductViewDetail :: !(Maybe ProductViewDetail)
-  , _dpaarsTagOptions :: !(Maybe [TagOptionDetail])
-  , _dpaarsProvisioningArtifactSummaries :: !(Maybe [ProvisioningArtifactSummary])
-  , _dpaarsTags :: !(Maybe [Tag])
-  , _dpaarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeProductAsAdminResponse =
+  DescribeProductAsAdminResponse'
+    { _dpaarsProductViewDetail :: !(Maybe ProductViewDetail)
+    , _dpaarsTagOptions :: !(Maybe [TagOptionDetail])
+    , _dpaarsProvisioningArtifactSummaries :: !(Maybe [ProvisioningArtifactSummary])
+    , _dpaarsTags :: !(Maybe [Tag])
+    , _dpaarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeProductAsAdminResponse' with the minimum fields required to make a request.

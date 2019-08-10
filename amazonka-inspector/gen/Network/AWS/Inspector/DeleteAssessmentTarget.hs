@@ -42,9 +42,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteAssessmentTarget' smart constructor.
-newtype DeleteAssessmentTarget = DeleteAssessmentTarget'
-  { _datAssessmentTargetARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteAssessmentTarget =
+  DeleteAssessmentTarget'
+    { _datAssessmentTargetARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteAssessmentTarget' with the minimum fields required to make a request.

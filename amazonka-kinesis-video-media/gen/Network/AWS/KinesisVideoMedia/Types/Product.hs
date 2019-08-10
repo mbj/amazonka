@@ -34,12 +34,14 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'startSelector' smart constructor.
-data StartSelector = StartSelector'
-  { _ssContinuationToken   :: !(Maybe Text)
-  , _ssAfterFragmentNumber :: !(Maybe Text)
-  , _ssStartTimestamp      :: !(Maybe POSIX)
-  , _ssStartSelectorType   :: !StartSelectorType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartSelector =
+  StartSelector'
+    { _ssContinuationToken   :: !(Maybe Text)
+    , _ssAfterFragmentNumber :: !(Maybe Text)
+    , _ssStartTimestamp      :: !(Maybe POSIX)
+    , _ssStartSelectorType   :: !StartSelectorType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartSelector' with the minimum fields required to make a request.

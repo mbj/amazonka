@@ -52,14 +52,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'modifyListener' smart constructor.
-data ModifyListener = ModifyListener'
-  { _mlSSLPolicy      :: !(Maybe Text)
-  , _mlProtocol       :: !(Maybe ProtocolEnum)
-  , _mlDefaultActions :: !(Maybe [Action])
-  , _mlCertificates   :: !(Maybe [Certificate])
-  , _mlPort           :: !(Maybe Nat)
-  , _mlListenerARN    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyListener =
+  ModifyListener'
+    { _mlSSLPolicy      :: !(Maybe Text)
+    , _mlProtocol       :: !(Maybe ProtocolEnum)
+    , _mlDefaultActions :: !(Maybe [Action])
+    , _mlCertificates   :: !(Maybe [Certificate])
+    , _mlPort           :: !(Maybe Nat)
+    , _mlListenerARN    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyListener' with the minimum fields required to make a request.
@@ -150,10 +152,12 @@ instance ToQuery ModifyListener where
                "Port" =: _mlPort, "ListenerArn" =: _mlListenerARN]
 
 -- | /See:/ 'modifyListenerResponse' smart constructor.
-data ModifyListenerResponse = ModifyListenerResponse'
-  { _mlrsListeners      :: !(Maybe [Listener])
-  , _mlrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyListenerResponse =
+  ModifyListenerResponse'
+    { _mlrsListeners      :: !(Maybe [Listener])
+    , _mlrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyListenerResponse' with the minimum fields required to make a request.

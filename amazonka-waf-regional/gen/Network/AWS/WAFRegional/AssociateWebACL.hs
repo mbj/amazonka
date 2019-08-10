@@ -45,10 +45,12 @@ import Network.AWS.WAFRegional.Types
 import Network.AWS.WAFRegional.Types.Product
 
 -- | /See:/ 'associateWebACL' smart constructor.
-data AssociateWebACL = AssociateWebACL'
-  { _awaWebACLId    :: !Text
-  , _awaResourceARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssociateWebACL =
+  AssociateWebACL'
+    { _awaWebACLId    :: !Text
+    , _awaResourceARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateWebACL' with the minimum fields required to make a request.
@@ -110,9 +112,11 @@ instance ToQuery AssociateWebACL where
         toQuery = const mempty
 
 -- | /See:/ 'associateWebACLResponse' smart constructor.
-newtype AssociateWebACLResponse = AssociateWebACLResponse'
-  { _awarsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AssociateWebACLResponse =
+  AssociateWebACLResponse'
+    { _awarsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateWebACLResponse' with the minimum fields required to make a request.

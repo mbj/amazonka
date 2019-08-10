@@ -43,10 +43,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateCertificateOptions' smart constructor.
-data UpdateCertificateOptions = UpdateCertificateOptions'
-  { _ucoCertificateARN :: !Text
-  , _ucoOptions        :: !CertificateOptions
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateCertificateOptions =
+  UpdateCertificateOptions'
+    { _ucoCertificateARN :: !Text
+    , _ucoOptions        :: !CertificateOptions
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateCertificateOptions' with the minimum fields required to make a request.

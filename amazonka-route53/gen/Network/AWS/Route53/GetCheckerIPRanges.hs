@@ -81,10 +81,12 @@ instance ToQuery GetCheckerIPRanges where
         toQuery = const mempty
 
 -- | /See:/ 'getCheckerIPRangesResponse' smart constructor.
-data GetCheckerIPRangesResponse = GetCheckerIPRangesResponse'
-  { _gcirrsResponseStatus  :: !Int
-  , _gcirrsCheckerIPRanges :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetCheckerIPRangesResponse =
+  GetCheckerIPRangesResponse'
+    { _gcirrsResponseStatus  :: !Int
+    , _gcirrsCheckerIPRanges :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetCheckerIPRangesResponse' with the minimum fields required to make a request.

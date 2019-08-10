@@ -49,12 +49,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeEgressOnlyInternetGateways' smart constructor.
-data DescribeEgressOnlyInternetGateways = DescribeEgressOnlyInternetGateways'
-  { _deoigEgressOnlyInternetGatewayIds :: !(Maybe [Text])
-  , _deoigNextToken                    :: !(Maybe Text)
-  , _deoigDryRun                       :: !(Maybe Bool)
-  , _deoigMaxResults                   :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeEgressOnlyInternetGateways =
+  DescribeEgressOnlyInternetGateways'
+    { _deoigEgressOnlyInternetGatewayIds :: !(Maybe [Text])
+    , _deoigNextToken                    :: !(Maybe Text)
+    , _deoigDryRun                       :: !(Maybe Bool)
+    , _deoigMaxResults                   :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEgressOnlyInternetGateways' with the minimum fields required to make a request.
@@ -139,11 +141,13 @@ instance ToQuery DescribeEgressOnlyInternetGateways
                "MaxResults" =: _deoigMaxResults]
 
 -- | /See:/ 'describeEgressOnlyInternetGatewaysResponse' smart constructor.
-data DescribeEgressOnlyInternetGatewaysResponse = DescribeEgressOnlyInternetGatewaysResponse'
-  { _deoigrsEgressOnlyInternetGateways :: !(Maybe [EgressOnlyInternetGateway])
-  , _deoigrsNextToken                  :: !(Maybe Text)
-  , _deoigrsResponseStatus             :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeEgressOnlyInternetGatewaysResponse =
+  DescribeEgressOnlyInternetGatewaysResponse'
+    { _deoigrsEgressOnlyInternetGateways :: !(Maybe [EgressOnlyInternetGateway])
+    , _deoigrsNextToken                  :: !(Maybe Text)
+    , _deoigrsResponseStatus             :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEgressOnlyInternetGatewaysResponse' with the minimum fields required to make a request.

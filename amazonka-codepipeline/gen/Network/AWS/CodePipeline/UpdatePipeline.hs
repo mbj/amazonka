@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updatePipeline' smart constructor.
-newtype UpdatePipeline = UpdatePipeline'
-  { _upPipeline :: PipelineDeclaration
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdatePipeline =
+  UpdatePipeline'
+    { _upPipeline :: PipelineDeclaration
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdatePipeline' with the minimum fields required to make a request.
@@ -108,10 +110,12 @@ instance ToQuery UpdatePipeline where
 --
 --
 -- /See:/ 'updatePipelineResponse' smart constructor.
-data UpdatePipelineResponse = UpdatePipelineResponse'
-  { _uprsPipeline       :: !(Maybe PipelineDeclaration)
-  , _uprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdatePipelineResponse =
+  UpdatePipelineResponse'
+    { _uprsPipeline       :: !(Maybe PipelineDeclaration)
+    , _uprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdatePipelineResponse' with the minimum fields required to make a request.

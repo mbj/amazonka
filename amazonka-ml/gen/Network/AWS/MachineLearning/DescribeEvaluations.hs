@@ -59,19 +59,21 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeEvaluations' smart constructor.
-data DescribeEvaluations = DescribeEvaluations'
-  { _deEQ             :: !(Maybe Text)
-  , _deGE             :: !(Maybe Text)
-  , _dePrefix         :: !(Maybe Text)
-  , _deGT             :: !(Maybe Text)
-  , _deNE             :: !(Maybe Text)
-  , _deNextToken      :: !(Maybe Text)
-  , _deSortOrder      :: !(Maybe SortOrder)
-  , _deLimit          :: !(Maybe Nat)
-  , _deLT             :: !(Maybe Text)
-  , _deFilterVariable :: !(Maybe EvaluationFilterVariable)
-  , _deLE             :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeEvaluations =
+  DescribeEvaluations'
+    { _deEQ             :: !(Maybe Text)
+    , _deGE             :: !(Maybe Text)
+    , _dePrefix         :: !(Maybe Text)
+    , _deGT             :: !(Maybe Text)
+    , _deNE             :: !(Maybe Text)
+    , _deNextToken      :: !(Maybe Text)
+    , _deSortOrder      :: !(Maybe SortOrder)
+    , _deLimit          :: !(Maybe Nat)
+    , _deLT             :: !(Maybe Text)
+    , _deFilterVariable :: !(Maybe EvaluationFilterVariable)
+    , _deLE             :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEvaluations' with the minimum fields required to make a request.
@@ -217,11 +219,13 @@ instance ToQuery DescribeEvaluations where
 --
 --
 -- /See:/ 'describeEvaluationsResponse' smart constructor.
-data DescribeEvaluationsResponse = DescribeEvaluationsResponse'
-  { _desrsResults        :: !(Maybe [Evaluation])
-  , _desrsNextToken      :: !(Maybe Text)
-  , _desrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeEvaluationsResponse =
+  DescribeEvaluationsResponse'
+    { _desrsResults        :: !(Maybe [Evaluation])
+    , _desrsNextToken      :: !(Maybe Text)
+    , _desrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEvaluationsResponse' with the minimum fields required to make a request.

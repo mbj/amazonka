@@ -50,10 +50,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getBundles' smart constructor.
-data GetBundles = GetBundles'
-  { _gbsIncludeInactive :: !(Maybe Bool)
-  , _gbsPageToken       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetBundles =
+  GetBundles'
+    { _gbsIncludeInactive :: !(Maybe Bool)
+    , _gbsPageToken       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBundles' with the minimum fields required to make a request.
@@ -122,11 +124,13 @@ instance ToQuery GetBundles where
         toQuery = const mempty
 
 -- | /See:/ 'getBundlesResponse' smart constructor.
-data GetBundlesResponse = GetBundlesResponse'
-  { _gbrsNextPageToken  :: !(Maybe Text)
-  , _gbrsBundles        :: !(Maybe [Bundle])
-  , _gbrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetBundlesResponse =
+  GetBundlesResponse'
+    { _gbrsNextPageToken  :: !(Maybe Text)
+    , _gbrsBundles        :: !(Maybe [Bundle])
+    , _gbrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBundlesResponse' with the minimum fields required to make a request.

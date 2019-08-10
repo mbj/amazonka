@@ -66,9 +66,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'startConfigRulesEvaluation' smart constructor.
-newtype StartConfigRulesEvaluation = StartConfigRulesEvaluation'
-  { _screConfigRuleNames :: Maybe (List1 Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StartConfigRulesEvaluation =
+  StartConfigRulesEvaluation'
+    { _screConfigRuleNames :: Maybe (List1 Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartConfigRulesEvaluation' with the minimum fields required to make a request.
@@ -127,9 +129,11 @@ instance ToQuery StartConfigRulesEvaluation where
 --
 --
 -- /See:/ 'startConfigRulesEvaluationResponse' smart constructor.
-newtype StartConfigRulesEvaluationResponse = StartConfigRulesEvaluationResponse'
-  { _scrersResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StartConfigRulesEvaluationResponse =
+  StartConfigRulesEvaluationResponse'
+    { _scrersResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartConfigRulesEvaluationResponse' with the minimum fields required to make a request.

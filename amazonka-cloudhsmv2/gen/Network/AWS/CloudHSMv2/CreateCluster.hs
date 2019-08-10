@@ -47,11 +47,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createCluster' smart constructor.
-data CreateCluster = CreateCluster'
-  { _ccSourceBackupId :: !(Maybe Text)
-  , _ccSubnetIds      :: !(List1 Text)
-  , _ccHSMType        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateCluster =
+  CreateCluster'
+    { _ccSourceBackupId :: !(Maybe Text)
+    , _ccSubnetIds      :: !(List1 Text)
+    , _ccHSMType        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateCluster' with the minimum fields required to make a request.
@@ -124,10 +126,12 @@ instance ToQuery CreateCluster where
         toQuery = const mempty
 
 -- | /See:/ 'createClusterResponse' smart constructor.
-data CreateClusterResponse = CreateClusterResponse'
-  { _ccrsCluster        :: !(Maybe Cluster)
-  , _ccrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateClusterResponse =
+  CreateClusterResponse'
+    { _ccrsCluster        :: !(Maybe Cluster)
+    , _ccrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateClusterResponse' with the minimum fields required to make a request.

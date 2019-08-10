@@ -52,12 +52,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getShardIterator' smart constructor.
-data GetShardIterator = GetShardIterator'
-  { _gsiSequenceNumber    :: !(Maybe Text)
-  , _gsiStreamARN         :: !Text
-  , _gsiShardId           :: !Text
-  , _gsiShardIteratorType :: !ShardIteratorType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetShardIterator =
+  GetShardIterator'
+    { _gsiSequenceNumber    :: !(Maybe Text)
+    , _gsiStreamARN         :: !Text
+    , _gsiShardId           :: !Text
+    , _gsiShardIteratorType :: !ShardIteratorType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetShardIterator' with the minimum fields required to make a request.
@@ -144,10 +146,12 @@ instance ToQuery GetShardIterator where
 --
 --
 -- /See:/ 'getShardIteratorResponse' smart constructor.
-data GetShardIteratorResponse = GetShardIteratorResponse'
-  { _gsirsShardIterator  :: !(Maybe Text)
-  , _gsirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetShardIteratorResponse =
+  GetShardIteratorResponse'
+    { _gsirsShardIterator  :: !(Maybe Text)
+    , _gsirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetShardIteratorResponse' with the minimum fields required to make a request.

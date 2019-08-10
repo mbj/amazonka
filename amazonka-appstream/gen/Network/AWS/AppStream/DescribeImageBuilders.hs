@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeImageBuilders' smart constructor.
-data DescribeImageBuilders = DescribeImageBuilders'
-  { _dibNextToken  :: !(Maybe Text)
-  , _dibNames      :: !(Maybe [Text])
-  , _dibMaxResults :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeImageBuilders =
+  DescribeImageBuilders'
+    { _dibNextToken  :: !(Maybe Text)
+    , _dibNames      :: !(Maybe [Text])
+    , _dibMaxResults :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeImageBuilders' with the minimum fields required to make a request.
@@ -124,11 +126,13 @@ instance ToQuery DescribeImageBuilders where
         toQuery = const mempty
 
 -- | /See:/ 'describeImageBuildersResponse' smart constructor.
-data DescribeImageBuildersResponse = DescribeImageBuildersResponse'
-  { _dibsrsImageBuilders  :: !(Maybe [ImageBuilder])
-  , _dibsrsNextToken      :: !(Maybe Text)
-  , _dibsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeImageBuildersResponse =
+  DescribeImageBuildersResponse'
+    { _dibsrsImageBuilders  :: !(Maybe [ImageBuilder])
+    , _dibsrsNextToken      :: !(Maybe Text)
+    , _dibsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeImageBuildersResponse' with the minimum fields required to make a request.

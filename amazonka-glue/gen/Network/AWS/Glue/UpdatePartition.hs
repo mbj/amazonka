@@ -48,13 +48,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updatePartition' smart constructor.
-data UpdatePartition = UpdatePartition'
-  { _upCatalogId          :: !(Maybe Text)
-  , _upDatabaseName       :: !Text
-  , _upTableName          :: !Text
-  , _upPartitionValueList :: ![Text]
-  , _upPartitionInput     :: !PartitionInput
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdatePartition =
+  UpdatePartition'
+    { _upCatalogId          :: !(Maybe Text)
+    , _upDatabaseName       :: !Text
+    , _upTableName          :: !Text
+    , _upPartitionValueList :: ![Text]
+    , _upPartitionInput     :: !PartitionInput
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdatePartition' with the minimum fields required to make a request.
@@ -143,9 +145,11 @@ instance ToQuery UpdatePartition where
         toQuery = const mempty
 
 -- | /See:/ 'updatePartitionResponse' smart constructor.
-newtype UpdatePartitionResponse = UpdatePartitionResponse'
-  { _uprsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdatePartitionResponse =
+  UpdatePartitionResponse'
+    { _uprsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdatePartitionResponse' with the minimum fields required to make a request.

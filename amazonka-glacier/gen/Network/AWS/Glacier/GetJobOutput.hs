@@ -71,12 +71,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getJobOutput' smart constructor.
-data GetJobOutput = GetJobOutput'
-  { _gjoRange     :: !(Maybe Text)
-  , _gjoAccountId :: !Text
-  , _gjoVaultName :: !Text
-  , _gjoJobId     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetJobOutput =
+  GetJobOutput'
+    { _gjoRange     :: !(Maybe Text)
+    , _gjoAccountId :: !Text
+    , _gjoVaultName :: !Text
+    , _gjoJobId     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetJobOutput' with the minimum fields required to make a request.
@@ -158,15 +160,17 @@ instance ToQuery GetJobOutput where
 --
 --
 -- /See:/ 'getJobOutputResponse' smart constructor.
-data GetJobOutputResponse = GetJobOutputResponse'
-  { _gjorsChecksum           :: !(Maybe Text)
-  , _gjorsAcceptRanges       :: !(Maybe Text)
-  , _gjorsArchiveDescription :: !(Maybe Text)
-  , _gjorsContentRange       :: !(Maybe Text)
-  , _gjorsContentType        :: !(Maybe Text)
-  , _gjorsStatus             :: !Int
-  , _gjorsBody               :: !RsBody
-  } deriving (Show, Generic)
+data GetJobOutputResponse =
+  GetJobOutputResponse'
+    { _gjorsChecksum           :: !(Maybe Text)
+    , _gjorsAcceptRanges       :: !(Maybe Text)
+    , _gjorsArchiveDescription :: !(Maybe Text)
+    , _gjorsContentRange       :: !(Maybe Text)
+    , _gjorsContentType        :: !(Maybe Text)
+    , _gjorsStatus             :: !Int
+    , _gjorsBody               :: !RsBody
+    }
+  deriving (Show, Generic)
 
 
 -- | Creates a value of 'GetJobOutputResponse' with the minimum fields required to make a request.

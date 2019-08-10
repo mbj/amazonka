@@ -57,10 +57,12 @@ import Network.AWS.StorageGateway.Types.Product
 --
 --
 -- /See:/ 'deleteChapCredentials' smart constructor.
-data DeleteChapCredentials = DeleteChapCredentials'
-  { _dTargetARN     :: !Text
-  , _dInitiatorName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteChapCredentials =
+  DeleteChapCredentials'
+    { _dTargetARN     :: !Text
+    , _dInitiatorName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteChapCredentials' with the minimum fields required to make a request.
@@ -130,11 +132,13 @@ instance ToQuery DeleteChapCredentials where
 --
 --
 -- /See:/ 'deleteChapCredentialsResponse' smart constructor.
-data DeleteChapCredentialsResponse = DeleteChapCredentialsResponse'
-  { _drsTargetARN      :: !(Maybe Text)
-  , _drsInitiatorName  :: !(Maybe Text)
-  , _drsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteChapCredentialsResponse =
+  DeleteChapCredentialsResponse'
+    { _drsTargetARN      :: !(Maybe Text)
+    , _drsInitiatorName  :: !(Maybe Text)
+    , _drsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteChapCredentialsResponse' with the minimum fields required to make a request.

@@ -46,9 +46,11 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'getBucketWebsite' smart constructor.
-newtype GetBucketWebsite = GetBucketWebsite'
-  { _gbwBucket :: BucketName
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetBucketWebsite =
+  GetBucketWebsite'
+    { _gbwBucket :: BucketName
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBucketWebsite' with the minimum fields required to make a request.
@@ -96,13 +98,15 @@ instance ToQuery GetBucketWebsite where
         toQuery = const (mconcat ["website"])
 
 -- | /See:/ 'getBucketWebsiteResponse' smart constructor.
-data GetBucketWebsiteResponse = GetBucketWebsiteResponse'
-  { _gbwrsRedirectAllRequestsTo :: !(Maybe RedirectAllRequestsTo)
-  , _gbwrsErrorDocument         :: !(Maybe ErrorDocument)
-  , _gbwrsIndexDocument         :: !(Maybe IndexDocument)
-  , _gbwrsRoutingRules          :: !(Maybe [RoutingRule])
-  , _gbwrsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetBucketWebsiteResponse =
+  GetBucketWebsiteResponse'
+    { _gbwrsRedirectAllRequestsTo :: !(Maybe RedirectAllRequestsTo)
+    , _gbwrsErrorDocument         :: !(Maybe ErrorDocument)
+    , _gbwrsIndexDocument         :: !(Maybe IndexDocument)
+    , _gbwrsRoutingRules          :: !(Maybe [RoutingRule])
+    , _gbwrsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBucketWebsiteResponse' with the minimum fields required to make a request.

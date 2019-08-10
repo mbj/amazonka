@@ -51,11 +51,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'modifyReplicationSubnetGroup' smart constructor.
-data ModifyReplicationSubnetGroup = ModifyReplicationSubnetGroup'
-  { _mrsgReplicationSubnetGroupDescription :: !(Maybe Text)
-  , _mrsgReplicationSubnetGroupIdentifier  :: !Text
-  , _mrsgSubnetIds                         :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyReplicationSubnetGroup =
+  ModifyReplicationSubnetGroup'
+    { _mrsgReplicationSubnetGroupDescription :: !(Maybe Text)
+    , _mrsgReplicationSubnetGroupIdentifier  :: !Text
+    , _mrsgSubnetIds                         :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyReplicationSubnetGroup' with the minimum fields required to make a request.
@@ -138,10 +140,12 @@ instance ToQuery ModifyReplicationSubnetGroup where
 --
 --
 -- /See:/ 'modifyReplicationSubnetGroupResponse' smart constructor.
-data ModifyReplicationSubnetGroupResponse = ModifyReplicationSubnetGroupResponse'
-  { _mrsgrsReplicationSubnetGroup :: !(Maybe ReplicationSubnetGroup)
-  , _mrsgrsResponseStatus         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyReplicationSubnetGroupResponse =
+  ModifyReplicationSubnetGroupResponse'
+    { _mrsgrsReplicationSubnetGroup :: !(Maybe ReplicationSubnetGroup)
+    , _mrsgrsResponseStatus         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyReplicationSubnetGroupResponse' with the minimum fields required to make a request.

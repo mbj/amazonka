@@ -42,9 +42,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'continueDeployment' smart constructor.
-newtype ContinueDeployment = ContinueDeployment'
-  { _cdDeploymentId :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ContinueDeployment =
+  ContinueDeployment'
+    { _cdDeploymentId :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ContinueDeployment' with the minimum fields required to make a request.

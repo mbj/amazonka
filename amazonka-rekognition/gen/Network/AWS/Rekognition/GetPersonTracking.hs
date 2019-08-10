@@ -62,12 +62,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getPersonTracking' smart constructor.
-data GetPersonTracking = GetPersonTracking'
-  { _gptNextToken  :: !(Maybe Text)
-  , _gptMaxResults :: !(Maybe Nat)
-  , _gptSortBy     :: !(Maybe PersonTrackingSortBy)
-  , _gptJobId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetPersonTracking =
+  GetPersonTracking'
+    { _gptNextToken  :: !(Maybe Text)
+    , _gptMaxResults :: !(Maybe Nat)
+    , _gptSortBy     :: !(Maybe PersonTrackingSortBy)
+    , _gptJobId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetPersonTracking' with the minimum fields required to make a request.
@@ -152,14 +154,16 @@ instance ToQuery GetPersonTracking where
         toQuery = const mempty
 
 -- | /See:/ 'getPersonTrackingResponse' smart constructor.
-data GetPersonTrackingResponse = GetPersonTrackingResponse'
-  { _gptrsNextToken      :: !(Maybe Text)
-  , _gptrsVideoMetadata  :: !(Maybe VideoMetadata)
-  , _gptrsStatusMessage  :: !(Maybe Text)
-  , _gptrsJobStatus      :: !(Maybe VideoJobStatus)
-  , _gptrsPersons        :: !(Maybe [PersonDetection])
-  , _gptrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetPersonTrackingResponse =
+  GetPersonTrackingResponse'
+    { _gptrsNextToken      :: !(Maybe Text)
+    , _gptrsVideoMetadata  :: !(Maybe VideoMetadata)
+    , _gptrsStatusMessage  :: !(Maybe Text)
+    , _gptrsJobStatus      :: !(Maybe VideoJobStatus)
+    , _gptrsPersons        :: !(Maybe [PersonDetection])
+    , _gptrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetPersonTrackingResponse' with the minimum fields required to make a request.

@@ -52,10 +52,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'batchGetApplicationRevisions' smart constructor.
-data BatchGetApplicationRevisions = BatchGetApplicationRevisions'
-  { _bgarApplicationName :: !Text
-  , _bgarRevisions       :: ![RevisionLocation]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchGetApplicationRevisions =
+  BatchGetApplicationRevisions'
+    { _bgarApplicationName :: !Text
+    , _bgarRevisions       :: ![RevisionLocation]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchGetApplicationRevisions' with the minimum fields required to make a request.
@@ -127,12 +129,14 @@ instance ToQuery BatchGetApplicationRevisions where
 --
 --
 -- /See:/ 'batchGetApplicationRevisionsResponse' smart constructor.
-data BatchGetApplicationRevisionsResponse = BatchGetApplicationRevisionsResponse'
-  { _bgarrsApplicationName :: !(Maybe Text)
-  , _bgarrsRevisions       :: !(Maybe [RevisionInfo])
-  , _bgarrsErrorMessage    :: !(Maybe Text)
-  , _bgarrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchGetApplicationRevisionsResponse =
+  BatchGetApplicationRevisionsResponse'
+    { _bgarrsApplicationName :: !(Maybe Text)
+    , _bgarrsRevisions       :: !(Maybe [RevisionInfo])
+    , _bgarrsErrorMessage    :: !(Maybe Text)
+    , _bgarrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchGetApplicationRevisionsResponse' with the minimum fields required to make a request.

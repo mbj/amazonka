@@ -26,9 +26,11 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'availabilityZone' smart constructor.
-newtype AvailabilityZone = AvailabilityZone'
-  { _azName :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AvailabilityZone =
+  AvailabilityZone'
+    { _azName :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AvailabilityZone' with the minimum fields required to make a request.
@@ -57,33 +59,35 @@ instance NFData AvailabilityZone where
 --
 --
 -- /See:/ 'cacheCluster' smart constructor.
-data CacheCluster = CacheCluster'
-  { _ccEngineVersion              :: !(Maybe Text)
-  , _ccCacheNodeType              :: !(Maybe Text)
-  , _ccCacheNodes                 :: !(Maybe [CacheNode])
-  , _ccCacheClusterCreateTime     :: !(Maybe ISO8601)
-  , _ccAtRestEncryptionEnabled    :: !(Maybe Bool)
-  , _ccAutoMinorVersionUpgrade    :: !(Maybe Bool)
-  , _ccSecurityGroups             :: !(Maybe [SecurityGroupMembership])
-  , _ccNotificationConfiguration  :: !(Maybe NotificationConfiguration)
-  , _ccTransitEncryptionEnabled   :: !(Maybe Bool)
-  , _ccSnapshotWindow             :: !(Maybe Text)
-  , _ccCacheClusterId             :: !(Maybe Text)
-  , _ccConfigurationEndpoint      :: !(Maybe Endpoint)
-  , _ccEngine                     :: !(Maybe Text)
-  , _ccCacheSecurityGroups        :: !(Maybe [CacheSecurityGroupMembership])
-  , _ccAuthTokenEnabled           :: !(Maybe Bool)
-  , _ccClientDownloadLandingPage  :: !(Maybe Text)
-  , _ccPreferredMaintenanceWindow :: !(Maybe Text)
-  , _ccCacheSubnetGroupName       :: !(Maybe Text)
-  , _ccPreferredAvailabilityZone  :: !(Maybe Text)
-  , _ccCacheParameterGroup        :: !(Maybe CacheParameterGroupStatus)
-  , _ccCacheClusterStatus         :: !(Maybe Text)
-  , _ccSnapshotRetentionLimit     :: !(Maybe Int)
-  , _ccReplicationGroupId         :: !(Maybe Text)
-  , _ccPendingModifiedValues      :: !(Maybe PendingModifiedValues)
-  , _ccNumCacheNodes              :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CacheCluster =
+  CacheCluster'
+    { _ccEngineVersion              :: !(Maybe Text)
+    , _ccCacheNodeType              :: !(Maybe Text)
+    , _ccCacheNodes                 :: !(Maybe [CacheNode])
+    , _ccCacheClusterCreateTime     :: !(Maybe ISO8601)
+    , _ccAtRestEncryptionEnabled    :: !(Maybe Bool)
+    , _ccAutoMinorVersionUpgrade    :: !(Maybe Bool)
+    , _ccSecurityGroups             :: !(Maybe [SecurityGroupMembership])
+    , _ccNotificationConfiguration  :: !(Maybe NotificationConfiguration)
+    , _ccTransitEncryptionEnabled   :: !(Maybe Bool)
+    , _ccSnapshotWindow             :: !(Maybe Text)
+    , _ccCacheClusterId             :: !(Maybe Text)
+    , _ccConfigurationEndpoint      :: !(Maybe Endpoint)
+    , _ccEngine                     :: !(Maybe Text)
+    , _ccCacheSecurityGroups        :: !(Maybe [CacheSecurityGroupMembership])
+    , _ccAuthTokenEnabled           :: !(Maybe Bool)
+    , _ccClientDownloadLandingPage  :: !(Maybe Text)
+    , _ccPreferredMaintenanceWindow :: !(Maybe Text)
+    , _ccCacheSubnetGroupName       :: !(Maybe Text)
+    , _ccPreferredAvailabilityZone  :: !(Maybe Text)
+    , _ccCacheParameterGroup        :: !(Maybe CacheParameterGroupStatus)
+    , _ccCacheClusterStatus         :: !(Maybe Text)
+    , _ccSnapshotRetentionLimit     :: !(Maybe Int)
+    , _ccReplicationGroupId         :: !(Maybe Text)
+    , _ccPendingModifiedValues      :: !(Maybe PendingModifiedValues)
+    , _ccNumCacheNodes              :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CacheCluster' with the minimum fields required to make a request.
@@ -314,13 +318,15 @@ instance NFData CacheCluster where
 --
 --
 -- /See:/ 'cacheEngineVersion' smart constructor.
-data CacheEngineVersion = CacheEngineVersion'
-  { _cevEngineVersion                 :: !(Maybe Text)
-  , _cevCacheParameterGroupFamily     :: !(Maybe Text)
-  , _cevCacheEngineDescription        :: !(Maybe Text)
-  , _cevEngine                        :: !(Maybe Text)
-  , _cevCacheEngineVersionDescription :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CacheEngineVersion =
+  CacheEngineVersion'
+    { _cevEngineVersion                 :: !(Maybe Text)
+    , _cevCacheParameterGroupFamily     :: !(Maybe Text)
+    , _cevCacheEngineDescription        :: !(Maybe Text)
+    , _cevEngine                        :: !(Maybe Text)
+    , _cevCacheEngineVersionDescription :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CacheEngineVersion' with the minimum fields required to make a request.
@@ -442,15 +448,17 @@ instance NFData CacheEngineVersion where
 --
 --
 -- /See:/ 'cacheNode' smart constructor.
-data CacheNode = CacheNode'
-  { _cnSourceCacheNodeId        :: !(Maybe Text)
-  , _cnParameterGroupStatus     :: !(Maybe Text)
-  , _cnCacheNodeCreateTime      :: !(Maybe ISO8601)
-  , _cnCustomerAvailabilityZone :: !(Maybe Text)
-  , _cnCacheNodeId              :: !(Maybe Text)
-  , _cnCacheNodeStatus          :: !(Maybe Text)
-  , _cnEndpoint                 :: !(Maybe Endpoint)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CacheNode =
+  CacheNode'
+    { _cnSourceCacheNodeId        :: !(Maybe Text)
+    , _cnParameterGroupStatus     :: !(Maybe Text)
+    , _cnCacheNodeCreateTime      :: !(Maybe ISO8601)
+    , _cnCustomerAvailabilityZone :: !(Maybe Text)
+    , _cnCacheNodeId              :: !(Maybe Text)
+    , _cnCacheNodeStatus          :: !(Maybe Text)
+    , _cnEndpoint                 :: !(Maybe Endpoint)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CacheNode' with the minimum fields required to make a request.
@@ -532,17 +540,19 @@ instance NFData CacheNode where
 --
 --
 -- /See:/ 'cacheNodeTypeSpecificParameter' smart constructor.
-data CacheNodeTypeSpecificParameter = CacheNodeTypeSpecificParameter'
-  { _cntspCacheNodeTypeSpecificValues :: !(Maybe [CacheNodeTypeSpecificValue])
-  , _cntspMinimumEngineVersion        :: !(Maybe Text)
-  , _cntspSource                      :: !(Maybe Text)
-  , _cntspIsModifiable                :: !(Maybe Bool)
-  , _cntspDataType                    :: !(Maybe Text)
-  , _cntspAllowedValues               :: !(Maybe Text)
-  , _cntspParameterName               :: !(Maybe Text)
-  , _cntspDescription                 :: !(Maybe Text)
-  , _cntspChangeType                  :: !(Maybe ChangeType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CacheNodeTypeSpecificParameter =
+  CacheNodeTypeSpecificParameter'
+    { _cntspCacheNodeTypeSpecificValues :: !(Maybe [CacheNodeTypeSpecificValue])
+    , _cntspMinimumEngineVersion        :: !(Maybe Text)
+    , _cntspSource                      :: !(Maybe Text)
+    , _cntspIsModifiable                :: !(Maybe Bool)
+    , _cntspDataType                    :: !(Maybe Text)
+    , _cntspAllowedValues               :: !(Maybe Text)
+    , _cntspParameterName               :: !(Maybe Text)
+    , _cntspDescription                 :: !(Maybe Text)
+    , _cntspChangeType                  :: !(Maybe ChangeType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CacheNodeTypeSpecificParameter' with the minimum fields required to make a request.
@@ -642,10 +652,12 @@ instance NFData CacheNodeTypeSpecificParameter where
 --
 --
 -- /See:/ 'cacheNodeTypeSpecificValue' smart constructor.
-data CacheNodeTypeSpecificValue = CacheNodeTypeSpecificValue'
-  { _cntsvCacheNodeType :: !(Maybe Text)
-  , _cntsvValue         :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CacheNodeTypeSpecificValue =
+  CacheNodeTypeSpecificValue'
+    { _cntsvCacheNodeType :: !(Maybe Text)
+    , _cntsvValue         :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CacheNodeTypeSpecificValue' with the minimum fields required to make a request.
@@ -684,11 +696,13 @@ instance NFData CacheNodeTypeSpecificValue where
 --
 --
 -- /See:/ 'cacheParameterGroup' smart constructor.
-data CacheParameterGroup = CacheParameterGroup'
-  { _cpgCacheParameterGroupFamily :: !(Maybe Text)
-  , _cpgCacheParameterGroupName   :: !(Maybe Text)
-  , _cpgDescription               :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CacheParameterGroup =
+  CacheParameterGroup'
+    { _cpgCacheParameterGroupFamily :: !(Maybe Text)
+    , _cpgCacheParameterGroupName   :: !(Maybe Text)
+    , _cpgDescription               :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CacheParameterGroup' with the minimum fields required to make a request.
@@ -744,9 +758,11 @@ instance NFData CacheParameterGroup where
 --
 --
 -- /See:/ 'cacheParameterGroupNameMessage' smart constructor.
-newtype CacheParameterGroupNameMessage = CacheParameterGroupNameMessage'
-  { _cpgnmCacheParameterGroupName :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CacheParameterGroupNameMessage =
+  CacheParameterGroupNameMessage'
+    { _cpgnmCacheParameterGroupName :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CacheParameterGroupNameMessage' with the minimum fields required to make a request.
@@ -779,11 +795,13 @@ instance NFData CacheParameterGroupNameMessage where
 --
 --
 -- /See:/ 'cacheParameterGroupStatus' smart constructor.
-data CacheParameterGroupStatus = CacheParameterGroupStatus'
-  { _cpgsCacheParameterGroupName :: !(Maybe Text)
-  , _cpgsCacheNodeIdsToReboot    :: !(Maybe [Text])
-  , _cpgsParameterApplyStatus    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CacheParameterGroupStatus =
+  CacheParameterGroupStatus'
+    { _cpgsCacheParameterGroupName :: !(Maybe Text)
+    , _cpgsCacheNodeIdsToReboot    :: !(Maybe [Text])
+    , _cpgsParameterApplyStatus    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CacheParameterGroupStatus' with the minimum fields required to make a request.
@@ -842,12 +860,14 @@ instance NFData CacheParameterGroupStatus where
 --
 --
 -- /See:/ 'cacheSecurityGroup' smart constructor.
-data CacheSecurityGroup = CacheSecurityGroup'
-  { _csgCacheSecurityGroupName :: !(Maybe Text)
-  , _csgOwnerId                :: !(Maybe Text)
-  , _csgEC2SecurityGroups      :: !(Maybe [EC2SecurityGroup])
-  , _csgDescription            :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CacheSecurityGroup =
+  CacheSecurityGroup'
+    { _csgCacheSecurityGroupName :: !(Maybe Text)
+    , _csgOwnerId                :: !(Maybe Text)
+    , _csgEC2SecurityGroups      :: !(Maybe [EC2SecurityGroup])
+    , _csgDescription            :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CacheSecurityGroup' with the minimum fields required to make a request.
@@ -907,10 +927,12 @@ instance NFData CacheSecurityGroup where
 --
 --
 -- /See:/ 'cacheSecurityGroupMembership' smart constructor.
-data CacheSecurityGroupMembership = CacheSecurityGroupMembership'
-  { _csgmStatus                 :: !(Maybe Text)
-  , _csgmCacheSecurityGroupName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CacheSecurityGroupMembership =
+  CacheSecurityGroupMembership'
+    { _csgmStatus                 :: !(Maybe Text)
+    , _csgmCacheSecurityGroupName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CacheSecurityGroupMembership' with the minimum fields required to make a request.
@@ -955,12 +977,14 @@ instance NFData CacheSecurityGroupMembership where
 --
 --
 -- /See:/ 'cacheSubnetGroup' smart constructor.
-data CacheSubnetGroup = CacheSubnetGroup'
-  { _csgVPCId                       :: !(Maybe Text)
-  , _csgSubnets                     :: !(Maybe [Subnet])
-  , _csgCacheSubnetGroupName        :: !(Maybe Text)
-  , _csgCacheSubnetGroupDescription :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CacheSubnetGroup =
+  CacheSubnetGroup'
+    { _csgVPCId                       :: !(Maybe Text)
+    , _csgSubnets                     :: !(Maybe [Subnet])
+    , _csgCacheSubnetGroupName        :: !(Maybe Text)
+    , _csgCacheSubnetGroupDescription :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CacheSubnetGroup' with the minimum fields required to make a request.
@@ -1019,11 +1043,13 @@ instance NFData CacheSubnetGroup where
 --
 --
 -- /See:/ 'ec2SecurityGroup' smart constructor.
-data EC2SecurityGroup = EC2SecurityGroup'
-  { _esgStatus                  :: !(Maybe Text)
-  , _esgEC2SecurityGroupOwnerId :: !(Maybe Text)
-  , _esgEC2SecurityGroupName    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EC2SecurityGroup =
+  EC2SecurityGroup'
+    { _esgStatus                  :: !(Maybe Text)
+    , _esgEC2SecurityGroupOwnerId :: !(Maybe Text)
+    , _esgEC2SecurityGroupName    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EC2SecurityGroup' with the minimum fields required to make a request.
@@ -1073,10 +1099,12 @@ instance NFData EC2SecurityGroup where
 --
 --
 -- /See:/ 'endpoint' smart constructor.
-data Endpoint = Endpoint'
-  { _eAddress :: !(Maybe Text)
-  , _ePort    :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Endpoint =
+  Endpoint'
+    { _eAddress :: !(Maybe Text)
+    , _ePort    :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Endpoint' with the minimum fields required to make a request.
@@ -1112,12 +1140,14 @@ instance NFData Endpoint where
 --
 --
 -- /See:/ 'engineDefaults' smart constructor.
-data EngineDefaults = EngineDefaults'
-  { _edCacheParameterGroupFamily :: !(Maybe Text)
-  , _edCacheNodeTypeSpecificParameters :: !(Maybe [CacheNodeTypeSpecificParameter])
-  , _edMarker :: !(Maybe Text)
-  , _edParameters :: !(Maybe [Parameter])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EngineDefaults =
+  EngineDefaults'
+    { _edCacheParameterGroupFamily :: !(Maybe Text)
+    , _edCacheNodeTypeSpecificParameters :: !(Maybe [CacheNodeTypeSpecificParameter])
+    , _edMarker :: !(Maybe Text)
+    , _edParameters :: !(Maybe [Parameter])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EngineDefaults' with the minimum fields required to make a request.
@@ -1179,12 +1209,14 @@ instance NFData EngineDefaults where
 --
 --
 -- /See:/ 'event' smart constructor.
-data Event = Event'
-  { _eSourceType       :: !(Maybe SourceType)
-  , _eSourceIdentifier :: !(Maybe Text)
-  , _eDate             :: !(Maybe ISO8601)
-  , _eMessage          :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Event =
+  Event'
+    { _eSourceType       :: !(Maybe SourceType)
+    , _eSourceIdentifier :: !(Maybe Text)
+    , _eDate             :: !(Maybe ISO8601)
+    , _eMessage          :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Event' with the minimum fields required to make a request.
@@ -1241,13 +1273,15 @@ instance NFData Event where
 --
 --
 -- /See:/ 'nodeGroup' smart constructor.
-data NodeGroup = NodeGroup'
-  { _ngStatus           :: !(Maybe Text)
-  , _ngPrimaryEndpoint  :: !(Maybe Endpoint)
-  , _ngSlots            :: !(Maybe Text)
-  , _ngNodeGroupMembers :: !(Maybe [NodeGroupMember])
-  , _ngNodeGroupId      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NodeGroup =
+  NodeGroup'
+    { _ngStatus           :: !(Maybe Text)
+    , _ngPrimaryEndpoint  :: !(Maybe Endpoint)
+    , _ngSlots            :: !(Maybe Text)
+    , _ngNodeGroupMembers :: !(Maybe [NodeGroupMember])
+    , _ngNodeGroupId      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NodeGroup' with the minimum fields required to make a request.
@@ -1314,12 +1348,14 @@ instance NFData NodeGroup where
 --
 --
 -- /See:/ 'nodeGroupConfiguration' smart constructor.
-data NodeGroupConfiguration = NodeGroupConfiguration'
-  { _ngcSlots                    :: !(Maybe Text)
-  , _ngcReplicaCount             :: !(Maybe Int)
-  , _ngcPrimaryAvailabilityZone  :: !(Maybe Text)
-  , _ngcReplicaAvailabilityZones :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NodeGroupConfiguration =
+  NodeGroupConfiguration'
+    { _ngcSlots                    :: !(Maybe Text)
+    , _ngcReplicaCount             :: !(Maybe Int)
+    , _ngcPrimaryAvailabilityZone  :: !(Maybe Text)
+    , _ngcReplicaAvailabilityZones :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NodeGroupConfiguration' with the minimum fields required to make a request.
@@ -1390,13 +1426,15 @@ instance ToQuery NodeGroupConfiguration where
 --
 --
 -- /See:/ 'nodeGroupMember' smart constructor.
-data NodeGroupMember = NodeGroupMember'
-  { _ngmCacheClusterId            :: !(Maybe Text)
-  , _ngmCacheNodeId               :: !(Maybe Text)
-  , _ngmPreferredAvailabilityZone :: !(Maybe Text)
-  , _ngmCurrentRole               :: !(Maybe Text)
-  , _ngmReadEndpoint              :: !(Maybe Endpoint)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NodeGroupMember =
+  NodeGroupMember'
+    { _ngmCacheClusterId            :: !(Maybe Text)
+    , _ngmCacheNodeId               :: !(Maybe Text)
+    , _ngmPreferredAvailabilityZone :: !(Maybe Text)
+    , _ngmCurrentRole               :: !(Maybe Text)
+    , _ngmReadEndpoint              :: !(Maybe Endpoint)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NodeGroupMember' with the minimum fields required to make a request.
@@ -1461,15 +1499,17 @@ instance NFData NodeGroupMember where
 --
 --
 -- /See:/ 'nodeSnapshot' smart constructor.
-data NodeSnapshot = NodeSnapshot'
-  { _nsNodeGroupConfiguration :: !(Maybe NodeGroupConfiguration)
-  , _nsCacheNodeCreateTime    :: !(Maybe ISO8601)
-  , _nsCacheClusterId         :: !(Maybe Text)
-  , _nsCacheNodeId            :: !(Maybe Text)
-  , _nsNodeGroupId            :: !(Maybe Text)
-  , _nsSnapshotCreateTime     :: !(Maybe ISO8601)
-  , _nsCacheSize              :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NodeSnapshot =
+  NodeSnapshot'
+    { _nsNodeGroupConfiguration :: !(Maybe NodeGroupConfiguration)
+    , _nsCacheNodeCreateTime    :: !(Maybe ISO8601)
+    , _nsCacheClusterId         :: !(Maybe Text)
+    , _nsCacheNodeId            :: !(Maybe Text)
+    , _nsNodeGroupId            :: !(Maybe Text)
+    , _nsSnapshotCreateTime     :: !(Maybe ISO8601)
+    , _nsCacheSize              :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NodeSnapshot' with the minimum fields required to make a request.
@@ -1551,10 +1591,12 @@ instance NFData NodeSnapshot where
 --
 --
 -- /See:/ 'notificationConfiguration' smart constructor.
-data NotificationConfiguration = NotificationConfiguration'
-  { _ncTopicStatus :: !(Maybe Text)
-  , _ncTopicARN    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NotificationConfiguration =
+  NotificationConfiguration'
+    { _ncTopicStatus :: !(Maybe Text)
+    , _ncTopicARN    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NotificationConfiguration' with the minimum fields required to make a request.
@@ -1592,17 +1634,19 @@ instance NFData NotificationConfiguration where
 --
 --
 -- /See:/ 'parameter' smart constructor.
-data Parameter = Parameter'
-  { _pParameterValue       :: !(Maybe Text)
-  , _pMinimumEngineVersion :: !(Maybe Text)
-  , _pSource               :: !(Maybe Text)
-  , _pIsModifiable         :: !(Maybe Bool)
-  , _pDataType             :: !(Maybe Text)
-  , _pAllowedValues        :: !(Maybe Text)
-  , _pParameterName        :: !(Maybe Text)
-  , _pDescription          :: !(Maybe Text)
-  , _pChangeType           :: !(Maybe ChangeType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Parameter =
+  Parameter'
+    { _pParameterValue       :: !(Maybe Text)
+    , _pMinimumEngineVersion :: !(Maybe Text)
+    , _pSource               :: !(Maybe Text)
+    , _pIsModifiable         :: !(Maybe Bool)
+    , _pDataType             :: !(Maybe Text)
+    , _pAllowedValues        :: !(Maybe Text)
+    , _pParameterName        :: !(Maybe Text)
+    , _pDescription          :: !(Maybe Text)
+    , _pChangeType           :: !(Maybe ChangeType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Parameter' with the minimum fields required to make a request.
@@ -1700,10 +1744,12 @@ instance NFData Parameter where
 --
 --
 -- /See:/ 'parameterNameValue' smart constructor.
-data ParameterNameValue = ParameterNameValue'
-  { _pnvParameterValue :: !(Maybe Text)
-  , _pnvParameterName  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ParameterNameValue =
+  ParameterNameValue'
+    { _pnvParameterValue :: !(Maybe Text)
+    , _pnvParameterName  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ParameterNameValue' with the minimum fields required to make a request.
@@ -1743,12 +1789,14 @@ instance ToQuery ParameterNameValue where
 --
 --
 -- /See:/ 'pendingModifiedValues' smart constructor.
-data PendingModifiedValues = PendingModifiedValues'
-  { _pmvEngineVersion        :: !(Maybe Text)
-  , _pmvCacheNodeType        :: !(Maybe Text)
-  , _pmvCacheNodeIdsToRemove :: !(Maybe [Text])
-  , _pmvNumCacheNodes        :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PendingModifiedValues =
+  PendingModifiedValues'
+    { _pmvEngineVersion        :: !(Maybe Text)
+    , _pmvCacheNodeType        :: !(Maybe Text)
+    , _pmvCacheNodeIdsToRemove :: !(Maybe [Text])
+    , _pmvNumCacheNodes        :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PendingModifiedValues' with the minimum fields required to make a request.
@@ -1807,10 +1855,12 @@ instance NFData PendingModifiedValues where
 --
 --
 -- /See:/ 'recurringCharge' smart constructor.
-data RecurringCharge = RecurringCharge'
-  { _rcRecurringChargeFrequency :: !(Maybe Text)
-  , _rcRecurringChargeAmount    :: !(Maybe Double)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RecurringCharge =
+  RecurringCharge'
+    { _rcRecurringChargeFrequency :: !(Maybe Text)
+    , _rcRecurringChargeAmount    :: !(Maybe Double)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RecurringCharge' with the minimum fields required to make a request.
@@ -1850,24 +1900,26 @@ instance NFData RecurringCharge where
 --
 --
 -- /See:/ 'replicationGroup' smart constructor.
-data ReplicationGroup = ReplicationGroup'
-  { _rgStatus :: !(Maybe Text)
-  , _rgCacheNodeType :: !(Maybe Text)
-  , _rgNodeGroups :: !(Maybe [NodeGroup])
-  , _rgSnapshottingClusterId :: !(Maybe Text)
-  , _rgClusterEnabled :: !(Maybe Bool)
-  , _rgAtRestEncryptionEnabled :: !(Maybe Bool)
-  , _rgTransitEncryptionEnabled :: !(Maybe Bool)
-  , _rgSnapshotWindow :: !(Maybe Text)
-  , _rgConfigurationEndpoint :: !(Maybe Endpoint)
-  , _rgAuthTokenEnabled :: !(Maybe Bool)
-  , _rgMemberClusters :: !(Maybe [Text])
-  , _rgSnapshotRetentionLimit :: !(Maybe Int)
-  , _rgDescription :: !(Maybe Text)
-  , _rgReplicationGroupId :: !(Maybe Text)
-  , _rgPendingModifiedValues :: !(Maybe ReplicationGroupPendingModifiedValues)
-  , _rgAutomaticFailover :: !(Maybe AutomaticFailoverStatus)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReplicationGroup =
+  ReplicationGroup'
+    { _rgStatus :: !(Maybe Text)
+    , _rgCacheNodeType :: !(Maybe Text)
+    , _rgNodeGroups :: !(Maybe [NodeGroup])
+    , _rgSnapshottingClusterId :: !(Maybe Text)
+    , _rgClusterEnabled :: !(Maybe Bool)
+    , _rgAtRestEncryptionEnabled :: !(Maybe Bool)
+    , _rgTransitEncryptionEnabled :: !(Maybe Bool)
+    , _rgSnapshotWindow :: !(Maybe Text)
+    , _rgConfigurationEndpoint :: !(Maybe Endpoint)
+    , _rgAuthTokenEnabled :: !(Maybe Bool)
+    , _rgMemberClusters :: !(Maybe [Text])
+    , _rgSnapshotRetentionLimit :: !(Maybe Int)
+    , _rgDescription :: !(Maybe Text)
+    , _rgReplicationGroupId :: !(Maybe Text)
+    , _rgPendingModifiedValues :: !(Maybe ReplicationGroupPendingModifiedValues)
+    , _rgAutomaticFailover :: !(Maybe AutomaticFailoverStatus)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReplicationGroup' with the minimum fields required to make a request.
@@ -2023,11 +2075,13 @@ instance NFData ReplicationGroup where
 --
 --
 -- /See:/ 'replicationGroupPendingModifiedValues' smart constructor.
-data ReplicationGroupPendingModifiedValues = ReplicationGroupPendingModifiedValues'
-  { _rgpmvResharding              :: !(Maybe ReshardingStatus)
-  , _rgpmvPrimaryClusterId        :: !(Maybe Text)
-  , _rgpmvAutomaticFailoverStatus :: !(Maybe PendingAutomaticFailoverStatus)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReplicationGroupPendingModifiedValues =
+  ReplicationGroupPendingModifiedValues'
+    { _rgpmvResharding              :: !(Maybe ReshardingStatus)
+    , _rgpmvPrimaryClusterId        :: !(Maybe Text)
+    , _rgpmvAutomaticFailoverStatus :: !(Maybe PendingAutomaticFailoverStatus)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReplicationGroupPendingModifiedValues' with the minimum fields required to make a request.
@@ -2081,20 +2135,22 @@ instance NFData ReplicationGroupPendingModifiedValues
 --
 --
 -- /See:/ 'reservedCacheNode' smart constructor.
-data ReservedCacheNode = ReservedCacheNode'
-  { _rcnCacheNodeType                :: !(Maybe Text)
-  , _rcnState                        :: !(Maybe Text)
-  , _rcnStartTime                    :: !(Maybe ISO8601)
-  , _rcnProductDescription           :: !(Maybe Text)
-  , _rcnCacheNodeCount               :: !(Maybe Int)
-  , _rcnReservedCacheNodeId          :: !(Maybe Text)
-  , _rcnRecurringCharges             :: !(Maybe [RecurringCharge])
-  , _rcnOfferingType                 :: !(Maybe Text)
-  , _rcnUsagePrice                   :: !(Maybe Double)
-  , _rcnFixedPrice                   :: !(Maybe Double)
-  , _rcnDuration                     :: !(Maybe Int)
-  , _rcnReservedCacheNodesOfferingId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReservedCacheNode =
+  ReservedCacheNode'
+    { _rcnCacheNodeType                :: !(Maybe Text)
+    , _rcnState                        :: !(Maybe Text)
+    , _rcnStartTime                    :: !(Maybe ISO8601)
+    , _rcnProductDescription           :: !(Maybe Text)
+    , _rcnCacheNodeCount               :: !(Maybe Int)
+    , _rcnReservedCacheNodeId          :: !(Maybe Text)
+    , _rcnRecurringCharges             :: !(Maybe [RecurringCharge])
+    , _rcnOfferingType                 :: !(Maybe Text)
+    , _rcnUsagePrice                   :: !(Maybe Double)
+    , _rcnFixedPrice                   :: !(Maybe Double)
+    , _rcnDuration                     :: !(Maybe Int)
+    , _rcnReservedCacheNodesOfferingId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReservedCacheNode' with the minimum fields required to make a request.
@@ -2217,16 +2273,18 @@ instance NFData ReservedCacheNode where
 --
 --
 -- /See:/ 'reservedCacheNodesOffering' smart constructor.
-data ReservedCacheNodesOffering = ReservedCacheNodesOffering'
-  { _rcnoCacheNodeType                :: !(Maybe Text)
-  , _rcnoProductDescription           :: !(Maybe Text)
-  , _rcnoRecurringCharges             :: !(Maybe [RecurringCharge])
-  , _rcnoOfferingType                 :: !(Maybe Text)
-  , _rcnoUsagePrice                   :: !(Maybe Double)
-  , _rcnoFixedPrice                   :: !(Maybe Double)
-  , _rcnoDuration                     :: !(Maybe Int)
-  , _rcnoReservedCacheNodesOfferingId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReservedCacheNodesOffering =
+  ReservedCacheNodesOffering'
+    { _rcnoCacheNodeType                :: !(Maybe Text)
+    , _rcnoProductDescription           :: !(Maybe Text)
+    , _rcnoRecurringCharges             :: !(Maybe [RecurringCharge])
+    , _rcnoOfferingType                 :: !(Maybe Text)
+    , _rcnoUsagePrice                   :: !(Maybe Double)
+    , _rcnoFixedPrice                   :: !(Maybe Double)
+    , _rcnoDuration                     :: !(Maybe Int)
+    , _rcnoReservedCacheNodesOfferingId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReservedCacheNodesOffering' with the minimum fields required to make a request.
@@ -2318,9 +2376,11 @@ instance NFData ReservedCacheNodesOffering where
 --
 --
 -- /See:/ 'reshardingConfiguration' smart constructor.
-newtype ReshardingConfiguration = ReshardingConfiguration'
-  { _rcPreferredAvailabilityZones :: Maybe [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ReshardingConfiguration =
+  ReshardingConfiguration'
+    { _rcPreferredAvailabilityZones :: Maybe [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReshardingConfiguration' with the minimum fields required to make a request.
@@ -2355,9 +2415,11 @@ instance ToQuery ReshardingConfiguration where
 --
 --
 -- /See:/ 'reshardingStatus' smart constructor.
-newtype ReshardingStatus = ReshardingStatus'
-  { _rsSlotMigration :: Maybe SlotMigration
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ReshardingStatus =
+  ReshardingStatus'
+    { _rsSlotMigration :: Maybe SlotMigration
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReshardingStatus' with the minimum fields required to make a request.
@@ -2387,10 +2449,12 @@ instance NFData ReshardingStatus where
 --
 --
 -- /See:/ 'securityGroupMembership' smart constructor.
-data SecurityGroupMembership = SecurityGroupMembership'
-  { _sgmStatus          :: !(Maybe Text)
-  , _sgmSecurityGroupId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SecurityGroupMembership =
+  SecurityGroupMembership'
+    { _sgmStatus          :: !(Maybe Text)
+    , _sgmSecurityGroupId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SecurityGroupMembership' with the minimum fields required to make a request.
@@ -2428,9 +2492,11 @@ instance NFData SecurityGroupMembership where
 --
 --
 -- /See:/ 'slotMigration' smart constructor.
-newtype SlotMigration = SlotMigration'
-  { _smProgressPercentage :: Maybe Double
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype SlotMigration =
+  SlotMigration'
+    { _smProgressPercentage :: Maybe Double
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SlotMigration' with the minimum fields required to make a request.
@@ -2460,32 +2526,34 @@ instance NFData SlotMigration where
 --
 --
 -- /See:/ 'snapshot' smart constructor.
-data Snapshot = Snapshot'
-  { _sEngineVersion               :: !(Maybe Text)
-  , _sCacheNodeType               :: !(Maybe Text)
-  , _sCacheClusterCreateTime      :: !(Maybe ISO8601)
-  , _sAutoMinorVersionUpgrade     :: !(Maybe Bool)
-  , _sCacheParameterGroupName     :: !(Maybe Text)
-  , _sReplicationGroupDescription :: !(Maybe Text)
-  , _sVPCId                       :: !(Maybe Text)
-  , _sSnapshotStatus              :: !(Maybe Text)
-  , _sSnapshotWindow              :: !(Maybe Text)
-  , _sCacheClusterId              :: !(Maybe Text)
-  , _sEngine                      :: !(Maybe Text)
-  , _sPreferredMaintenanceWindow  :: !(Maybe Text)
-  , _sTopicARN                    :: !(Maybe Text)
-  , _sNodeSnapshots               :: !(Maybe [NodeSnapshot])
-  , _sCacheSubnetGroupName        :: !(Maybe Text)
-  , _sPreferredAvailabilityZone   :: !(Maybe Text)
-  , _sNumNodeGroups               :: !(Maybe Int)
-  , _sSnapshotRetentionLimit      :: !(Maybe Int)
-  , _sSnapshotName                :: !(Maybe Text)
-  , _sReplicationGroupId          :: !(Maybe Text)
-  , _sNumCacheNodes               :: !(Maybe Int)
-  , _sPort                        :: !(Maybe Int)
-  , _sAutomaticFailover           :: !(Maybe AutomaticFailoverStatus)
-  , _sSnapshotSource              :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Snapshot =
+  Snapshot'
+    { _sEngineVersion               :: !(Maybe Text)
+    , _sCacheNodeType               :: !(Maybe Text)
+    , _sCacheClusterCreateTime      :: !(Maybe ISO8601)
+    , _sAutoMinorVersionUpgrade     :: !(Maybe Bool)
+    , _sCacheParameterGroupName     :: !(Maybe Text)
+    , _sReplicationGroupDescription :: !(Maybe Text)
+    , _sVPCId                       :: !(Maybe Text)
+    , _sSnapshotStatus              :: !(Maybe Text)
+    , _sSnapshotWindow              :: !(Maybe Text)
+    , _sCacheClusterId              :: !(Maybe Text)
+    , _sEngine                      :: !(Maybe Text)
+    , _sPreferredMaintenanceWindow  :: !(Maybe Text)
+    , _sTopicARN                    :: !(Maybe Text)
+    , _sNodeSnapshots               :: !(Maybe [NodeSnapshot])
+    , _sCacheSubnetGroupName        :: !(Maybe Text)
+    , _sPreferredAvailabilityZone   :: !(Maybe Text)
+    , _sNumNodeGroups               :: !(Maybe Int)
+    , _sSnapshotRetentionLimit      :: !(Maybe Int)
+    , _sSnapshotName                :: !(Maybe Text)
+    , _sReplicationGroupId          :: !(Maybe Text)
+    , _sNumCacheNodes               :: !(Maybe Int)
+    , _sPort                        :: !(Maybe Int)
+    , _sAutomaticFailover           :: !(Maybe AutomaticFailoverStatus)
+    , _sSnapshotSource              :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Snapshot' with the minimum fields required to make a request.
@@ -2704,10 +2772,12 @@ instance NFData Snapshot where
 --
 --
 -- /See:/ 'subnet' smart constructor.
-data Subnet = Subnet'
-  { _sSubnetIdentifier       :: !(Maybe Text)
-  , _sSubnetAvailabilityZone :: !(Maybe AvailabilityZone)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Subnet =
+  Subnet'
+    { _sSubnetIdentifier       :: !(Maybe Text)
+    , _sSubnetAvailabilityZone :: !(Maybe AvailabilityZone)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Subnet' with the minimum fields required to make a request.
@@ -2746,10 +2816,12 @@ instance NFData Subnet where
 --
 --
 -- /See:/ 'tag' smart constructor.
-data Tag = Tag'
-  { _tagValue :: !(Maybe Text)
-  , _tagKey   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Tag =
+  Tag'
+    { _tagValue :: !(Maybe Text)
+    , _tagKey   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Tag' with the minimum fields required to make a request.
@@ -2789,9 +2861,11 @@ instance ToQuery Tag where
 --
 --
 -- /See:/ 'tagListMessage' smart constructor.
-newtype TagListMessage = TagListMessage'
-  { _tlmTagList :: Maybe [Tag]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype TagListMessage =
+  TagListMessage'
+    { _tlmTagList :: Maybe [Tag]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TagListMessage' with the minimum fields required to make a request.

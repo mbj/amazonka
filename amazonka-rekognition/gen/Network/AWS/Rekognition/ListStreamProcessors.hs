@@ -50,10 +50,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listStreamProcessors' smart constructor.
-data ListStreamProcessors = ListStreamProcessors'
-  { _lspNextToken  :: !(Maybe Text)
-  , _lspMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListStreamProcessors =
+  ListStreamProcessors'
+    { _lspNextToken  :: !(Maybe Text)
+    , _lspMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListStreamProcessors' with the minimum fields required to make a request.
@@ -124,11 +126,13 @@ instance ToQuery ListStreamProcessors where
         toQuery = const mempty
 
 -- | /See:/ 'listStreamProcessorsResponse' smart constructor.
-data ListStreamProcessorsResponse = ListStreamProcessorsResponse'
-  { _lsprsStreamProcessors :: !(Maybe [StreamProcessor])
-  , _lsprsNextToken        :: !(Maybe Text)
-  , _lsprsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListStreamProcessorsResponse =
+  ListStreamProcessorsResponse'
+    { _lsprsStreamProcessors :: !(Maybe [StreamProcessor])
+    , _lsprsNextToken        :: !(Maybe Text)
+    , _lsprsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListStreamProcessorsResponse' with the minimum fields required to make a request.

@@ -95,16 +95,18 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'postContent' smart constructor.
-data PostContent = PostContent'
-  { _pcAccept            :: !(Maybe Text)
-  , _pcRequestAttributes :: !(Maybe (Sensitive Text))
-  , _pcSessionAttributes :: !(Maybe (Sensitive Text))
-  , _pcBotName           :: !Text
-  , _pcBotAlias          :: !Text
-  , _pcUserId            :: !Text
-  , _pcContentType       :: !Text
-  , _pcInputStream       :: !HashedBody
-  } deriving (Show, Generic)
+data PostContent =
+  PostContent'
+    { _pcAccept            :: !(Maybe Text)
+    , _pcRequestAttributes :: !(Maybe (Sensitive Text))
+    , _pcSessionAttributes :: !(Maybe (Sensitive Text))
+    , _pcBotName           :: !Text
+    , _pcBotAlias          :: !Text
+    , _pcUserId            :: !Text
+    , _pcContentType       :: !Text
+    , _pcInputStream       :: !HashedBody
+    }
+  deriving (Show, Generic)
 
 
 -- | Creates a value of 'PostContent' with the minimum fields required to make a request.
@@ -221,19 +223,21 @@ instance ToQuery PostContent where
         toQuery = const mempty
 
 -- | /See:/ 'postContentResponse' smart constructor.
-data PostContentResponse = PostContentResponse'
-  { _pcrsSlots             :: !(Maybe Text)
-  , _pcrsIntentName        :: !(Maybe Text)
-  , _pcrsDialogState       :: !(Maybe DialogState)
-  , _pcrsInputTranscript   :: !(Maybe Text)
-  , _pcrsMessageFormat     :: !(Maybe MessageFormatType)
-  , _pcrsMessage           :: !(Maybe (Sensitive Text))
-  , _pcrsSlotToElicit      :: !(Maybe Text)
-  , _pcrsContentType       :: !(Maybe Text)
-  , _pcrsSessionAttributes :: !(Maybe Text)
-  , _pcrsResponseStatus    :: !Int
-  , _pcrsAudioStream       :: !RsBody
-  } deriving (Show, Generic)
+data PostContentResponse =
+  PostContentResponse'
+    { _pcrsSlots             :: !(Maybe Text)
+    , _pcrsIntentName        :: !(Maybe Text)
+    , _pcrsDialogState       :: !(Maybe DialogState)
+    , _pcrsInputTranscript   :: !(Maybe Text)
+    , _pcrsMessageFormat     :: !(Maybe MessageFormatType)
+    , _pcrsMessage           :: !(Maybe (Sensitive Text))
+    , _pcrsSlotToElicit      :: !(Maybe Text)
+    , _pcrsContentType       :: !(Maybe Text)
+    , _pcrsSessionAttributes :: !(Maybe Text)
+    , _pcrsResponseStatus    :: !Int
+    , _pcrsAudioStream       :: !RsBody
+    }
+  deriving (Show, Generic)
 
 
 -- | Creates a value of 'PostContentResponse' with the minimum fields required to make a request.

@@ -46,9 +46,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getAssignment' smart constructor.
-newtype GetAssignment = GetAssignment'
-  { _gaAssignmentId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetAssignment =
+  GetAssignment'
+    { _gaAssignmentId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetAssignment' with the minimum fields required to make a request.
@@ -103,11 +105,13 @@ instance ToQuery GetAssignment where
         toQuery = const mempty
 
 -- | /See:/ 'getAssignmentResponse' smart constructor.
-data GetAssignmentResponse = GetAssignmentResponse'
-  { _garsHIT            :: !(Maybe HIT)
-  , _garsAssignment     :: !(Maybe Assignment)
-  , _garsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetAssignmentResponse =
+  GetAssignmentResponse'
+    { _garsHIT            :: !(Maybe HIT)
+    , _garsAssignment     :: !(Maybe Assignment)
+    , _garsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetAssignmentResponse' with the minimum fields required to make a request.

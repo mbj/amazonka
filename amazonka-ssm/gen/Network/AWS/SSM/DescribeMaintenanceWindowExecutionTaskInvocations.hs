@@ -50,13 +50,15 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'describeMaintenanceWindowExecutionTaskInvocations' smart constructor.
-data DescribeMaintenanceWindowExecutionTaskInvocations = DescribeMaintenanceWindowExecutionTaskInvocations'
-  { _dmwetiFilters           :: !(Maybe [MaintenanceWindowFilter])
-  , _dmwetiNextToken         :: !(Maybe Text)
-  , _dmwetiMaxResults        :: !(Maybe Nat)
-  , _dmwetiWindowExecutionId :: !Text
-  , _dmwetiTaskId            :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeMaintenanceWindowExecutionTaskInvocations =
+  DescribeMaintenanceWindowExecutionTaskInvocations'
+    { _dmwetiFilters           :: !(Maybe [MaintenanceWindowFilter])
+    , _dmwetiNextToken         :: !(Maybe Text)
+    , _dmwetiMaxResults        :: !(Maybe Nat)
+    , _dmwetiWindowExecutionId :: !Text
+    , _dmwetiTaskId            :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeMaintenanceWindowExecutionTaskInvocations' with the minimum fields required to make a request.
@@ -169,11 +171,13 @@ instance ToQuery
         toQuery = const mempty
 
 -- | /See:/ 'describeMaintenanceWindowExecutionTaskInvocationsResponse' smart constructor.
-data DescribeMaintenanceWindowExecutionTaskInvocationsResponse = DescribeMaintenanceWindowExecutionTaskInvocationsResponse'
-  { _dmwetirsWindowExecutionTaskInvocationIdentities :: !(Maybe [MaintenanceWindowExecutionTaskInvocationIdentity])
-  , _dmwetirsNextToken :: !(Maybe Text)
-  , _dmwetirsResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data DescribeMaintenanceWindowExecutionTaskInvocationsResponse =
+  DescribeMaintenanceWindowExecutionTaskInvocationsResponse'
+    { _dmwetirsWindowExecutionTaskInvocationIdentities :: !(Maybe [MaintenanceWindowExecutionTaskInvocationIdentity])
+    , _dmwetirsNextToken :: !(Maybe Text)
+    , _dmwetirsResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeMaintenanceWindowExecutionTaskInvocationsResponse' with the minimum fields required to make a request.

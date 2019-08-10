@@ -53,11 +53,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getAuthorizers' smart constructor.
-data GetAuthorizers = GetAuthorizers'
-  { _gaLimit     :: !(Maybe Int)
-  , _gaPosition  :: !(Maybe Text)
-  , _gaRestAPIId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetAuthorizers =
+  GetAuthorizers'
+    { _gaLimit     :: !(Maybe Int)
+    , _gaPosition  :: !(Maybe Text)
+    , _gaRestAPIId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetAuthorizers' with the minimum fields required to make a request.
@@ -125,11 +127,13 @@ instance ToQuery GetAuthorizers where
 -- <http://docs.aws.amazon.com/apigateway/latest/developerguide/use-custom-authorizer.html Enable custom authorization>
 --
 -- /See:/ 'getAuthorizersResponse' smart constructor.
-data GetAuthorizersResponse = GetAuthorizersResponse'
-  { _garsItems          :: !(Maybe [Authorizer])
-  , _garsPosition       :: !(Maybe Text)
-  , _garsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetAuthorizersResponse =
+  GetAuthorizersResponse'
+    { _garsItems          :: !(Maybe [Authorizer])
+    , _garsPosition       :: !(Maybe Text)
+    , _garsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetAuthorizersResponse' with the minimum fields required to make a request.

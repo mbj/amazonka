@@ -49,13 +49,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'attachTypedLink' smart constructor.
-data AttachTypedLink = AttachTypedLink'
-  { _atlDirectoryARN          :: !Text
-  , _atlSourceObjectReference :: !ObjectReference
-  , _atlTargetObjectReference :: !ObjectReference
-  , _atlTypedLinkFacet        :: !TypedLinkSchemaAndFacetName
-  , _atlAttributes            :: ![AttributeNameAndValue]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AttachTypedLink =
+  AttachTypedLink'
+    { _atlDirectoryARN          :: !Text
+    , _atlSourceObjectReference :: !ObjectReference
+    , _atlTargetObjectReference :: !ObjectReference
+    , _atlTypedLinkFacet        :: !TypedLinkSchemaAndFacetName
+    , _atlAttributes            :: ![AttributeNameAndValue]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttachTypedLink' with the minimum fields required to make a request.
@@ -147,10 +149,12 @@ instance ToQuery AttachTypedLink where
         toQuery = const mempty
 
 -- | /See:/ 'attachTypedLinkResponse' smart constructor.
-data AttachTypedLinkResponse = AttachTypedLinkResponse'
-  { _atlrsTypedLinkSpecifier :: !(Maybe TypedLinkSpecifier)
-  , _atlrsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AttachTypedLinkResponse =
+  AttachTypedLinkResponse'
+    { _atlrsTypedLinkSpecifier :: !(Maybe TypedLinkSpecifier)
+    , _atlrsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttachTypedLinkResponse' with the minimum fields required to make a request.

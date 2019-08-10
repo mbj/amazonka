@@ -50,11 +50,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateDocumentationVersion' smart constructor.
-data UpdateDocumentationVersion = UpdateDocumentationVersion'
-  { _udvPatchOperations      :: !(Maybe [PatchOperation])
-  , _udvRestAPIId            :: !Text
-  , _udvDocumentationVersion :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateDocumentationVersion =
+  UpdateDocumentationVersion'
+    { _udvPatchOperations      :: !(Maybe [PatchOperation])
+    , _udvRestAPIId            :: !Text
+    , _udvDocumentationVersion :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateDocumentationVersion' with the minimum fields required to make a request.

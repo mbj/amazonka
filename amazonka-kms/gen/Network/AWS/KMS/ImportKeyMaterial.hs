@@ -66,13 +66,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'importKeyMaterial' smart constructor.
-data ImportKeyMaterial = ImportKeyMaterial'
-  { _ikmExpirationModel      :: !(Maybe ExpirationModelType)
-  , _ikmValidTo              :: !(Maybe POSIX)
-  , _ikmKeyId                :: !Text
-  , _ikmImportToken          :: !Base64
-  , _ikmEncryptedKeyMaterial :: !Base64
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ImportKeyMaterial =
+  ImportKeyMaterial'
+    { _ikmExpirationModel      :: !(Maybe ExpirationModelType)
+    , _ikmValidTo              :: !(Maybe POSIX)
+    , _ikmKeyId                :: !Text
+    , _ikmImportToken          :: !Base64
+    , _ikmEncryptedKeyMaterial :: !Base64
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ImportKeyMaterial' with the minimum fields required to make a request.
@@ -163,9 +165,11 @@ instance ToQuery ImportKeyMaterial where
         toQuery = const mempty
 
 -- | /See:/ 'importKeyMaterialResponse' smart constructor.
-newtype ImportKeyMaterialResponse = ImportKeyMaterialResponse'
-  { _ikmrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ImportKeyMaterialResponse =
+  ImportKeyMaterialResponse'
+    { _ikmrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ImportKeyMaterialResponse' with the minimum fields required to make a request.

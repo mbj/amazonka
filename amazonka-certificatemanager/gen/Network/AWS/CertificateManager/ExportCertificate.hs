@@ -50,10 +50,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'exportCertificate' smart constructor.
-data ExportCertificate = ExportCertificate'
-  { _ecCertificateARN :: !Text
-  , _ecPassphrase     :: !(Sensitive Base64)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data ExportCertificate =
+  ExportCertificate'
+    { _ecCertificateARN :: !Text
+    , _ecPassphrase     :: !(Sensitive Base64)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ExportCertificate' with the minimum fields required to make a request.
@@ -121,12 +123,14 @@ instance ToQuery ExportCertificate where
         toQuery = const mempty
 
 -- | /See:/ 'exportCertificateResponse' smart constructor.
-data ExportCertificateResponse = ExportCertificateResponse'
-  { _ecrsPrivateKey       :: !(Maybe (Sensitive Text))
-  , _ecrsCertificate      :: !(Maybe Text)
-  , _ecrsCertificateChain :: !(Maybe Text)
-  , _ecrsResponseStatus   :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data ExportCertificateResponse =
+  ExportCertificateResponse'
+    { _ecrsPrivateKey       :: !(Maybe (Sensitive Text))
+    , _ecrsCertificate      :: !(Maybe Text)
+    , _ecrsCertificateChain :: !(Maybe Text)
+    , _ecrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ExportCertificateResponse' with the minimum fields required to make a request.

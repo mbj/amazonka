@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putGroupPolicy' smart constructor.
-data PutGroupPolicy = PutGroupPolicy'
-  { _pgpGroupName      :: !Text
-  , _pgpPolicyName     :: !Text
-  , _pgpPolicyDocument :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutGroupPolicy =
+  PutGroupPolicy'
+    { _pgpGroupName      :: !Text
+    , _pgpPolicyName     :: !Text
+    , _pgpPolicyDocument :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutGroupPolicy' with the minimum fields required to make a request.

@@ -46,9 +46,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'setLoggingOptions' smart constructor.
-newtype SetLoggingOptions = SetLoggingOptions'
-  { _sloLoggingOptionsPayload :: LoggingOptionsPayload
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype SetLoggingOptions =
+  SetLoggingOptions'
+    { _sloLoggingOptionsPayload :: LoggingOptionsPayload
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetLoggingOptions' with the minimum fields required to make a request.

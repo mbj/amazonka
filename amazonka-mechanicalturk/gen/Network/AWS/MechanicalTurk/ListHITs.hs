@@ -51,10 +51,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listHITs' smart constructor.
-data ListHITs = ListHITs'
-  { _lhitNextToken  :: !(Maybe Text)
-  , _lhitMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListHITs =
+  ListHITs'
+    { _lhitNextToken  :: !(Maybe Text)
+    , _lhitMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListHITs' with the minimum fields required to make a request.
@@ -123,12 +125,14 @@ instance ToQuery ListHITs where
         toQuery = const mempty
 
 -- | /See:/ 'listHITsResponse' smart constructor.
-data ListHITsResponse = ListHITsResponse'
-  { _lhitrsNextToken      :: !(Maybe Text)
-  , _lhitrsNumResults     :: !(Maybe Int)
-  , _lhitrsHITs           :: !(Maybe [HIT])
-  , _lhitrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListHITsResponse =
+  ListHITsResponse'
+    { _lhitrsNextToken      :: !(Maybe Text)
+    , _lhitrsNumResults     :: !(Maybe Int)
+    , _lhitrsHITs           :: !(Maybe [HIT])
+    , _lhitrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListHITsResponse' with the minimum fields required to make a request.

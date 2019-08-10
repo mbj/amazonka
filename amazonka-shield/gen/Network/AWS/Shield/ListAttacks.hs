@@ -50,13 +50,15 @@ import Network.AWS.Shield.Types
 import Network.AWS.Shield.Types.Product
 
 -- | /See:/ 'listAttacks' smart constructor.
-data ListAttacks = ListAttacks'
-  { _laStartTime    :: !(Maybe TimeRange)
-  , _laResourceARNs :: !(Maybe [Text])
-  , _laNextToken    :: !(Maybe Text)
-  , _laEndTime      :: !(Maybe TimeRange)
-  , _laMaxResults   :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAttacks =
+  ListAttacks'
+    { _laStartTime    :: !(Maybe TimeRange)
+    , _laResourceARNs :: !(Maybe [Text])
+    , _laNextToken    :: !(Maybe Text)
+    , _laEndTime      :: !(Maybe TimeRange)
+    , _laMaxResults   :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAttacks' with the minimum fields required to make a request.
@@ -145,11 +147,13 @@ instance ToQuery ListAttacks where
         toQuery = const mempty
 
 -- | /See:/ 'listAttacksResponse' smart constructor.
-data ListAttacksResponse = ListAttacksResponse'
-  { _larsAttackSummaries :: !(Maybe [AttackSummary])
-  , _larsNextToken       :: !(Maybe Text)
-  , _larsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAttacksResponse =
+  ListAttacksResponse'
+    { _larsAttackSummaries :: !(Maybe [AttackSummary])
+    , _larsNextToken       :: !(Maybe Text)
+    , _larsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAttacksResponse' with the minimum fields required to make a request.

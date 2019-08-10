@@ -53,15 +53,17 @@ import Network.AWS.ServiceCatalog.Types
 import Network.AWS.ServiceCatalog.Types.Product
 
 -- | /See:/ 'searchProvisionedProducts' smart constructor.
-data SearchProvisionedProducts = SearchProvisionedProducts'
-  { _sppFilters :: !(Maybe (Map ProvisionedProductViewFilterBy [Text]))
-  , _sppSortOrder :: !(Maybe SortOrder)
-  , _sppAcceptLanguage :: !(Maybe Text)
-  , _sppAccessLevelFilter :: !(Maybe AccessLevelFilter)
-  , _sppPageToken :: !(Maybe Text)
-  , _sppPageSize :: !(Maybe Nat)
-  , _sppSortBy :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SearchProvisionedProducts =
+  SearchProvisionedProducts'
+    { _sppFilters :: !(Maybe (Map ProvisionedProductViewFilterBy [Text]))
+    , _sppSortOrder :: !(Maybe SortOrder)
+    , _sppAcceptLanguage :: !(Maybe Text)
+    , _sppAccessLevelFilter :: !(Maybe AccessLevelFilter)
+    , _sppPageToken :: !(Maybe Text)
+    , _sppPageSize :: !(Maybe Nat)
+    , _sppSortBy :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SearchProvisionedProducts' with the minimum fields required to make a request.
@@ -169,12 +171,14 @@ instance ToQuery SearchProvisionedProducts where
         toQuery = const mempty
 
 -- | /See:/ 'searchProvisionedProductsResponse' smart constructor.
-data SearchProvisionedProductsResponse = SearchProvisionedProductsResponse'
-  { _srsNextPageToken       :: !(Maybe Text)
-  , _srsProvisionedProducts :: !(Maybe [ProvisionedProductAttribute])
-  , _srsTotalResultsCount   :: !(Maybe Int)
-  , _srsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SearchProvisionedProductsResponse =
+  SearchProvisionedProductsResponse'
+    { _srsNextPageToken       :: !(Maybe Text)
+    , _srsProvisionedProducts :: !(Maybe [ProvisionedProductAttribute])
+    , _srsTotalResultsCount   :: !(Maybe Int)
+    , _srsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SearchProvisionedProductsResponse' with the minimum fields required to make a request.

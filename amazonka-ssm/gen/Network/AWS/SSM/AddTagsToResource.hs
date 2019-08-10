@@ -52,11 +52,13 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'addTagsToResource' smart constructor.
-data AddTagsToResource = AddTagsToResource'
-  { _attrResourceType :: !ResourceTypeForTagging
-  , _attrResourceId   :: !Text
-  , _attrTags         :: ![Tag]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddTagsToResource =
+  AddTagsToResource'
+    { _attrResourceType :: !ResourceTypeForTagging
+    , _attrResourceId   :: !Text
+    , _attrTags         :: ![Tag]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddTagsToResource' with the minimum fields required to make a request.
@@ -128,9 +130,11 @@ instance ToQuery AddTagsToResource where
         toQuery = const mempty
 
 -- | /See:/ 'addTagsToResourceResponse' smart constructor.
-newtype AddTagsToResourceResponse = AddTagsToResourceResponse'
-  { _attrrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AddTagsToResourceResponse =
+  AddTagsToResourceResponse'
+    { _attrrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddTagsToResourceResponse' with the minimum fields required to make a request.

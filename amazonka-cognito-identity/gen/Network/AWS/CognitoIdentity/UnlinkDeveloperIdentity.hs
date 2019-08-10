@@ -51,12 +51,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'unlinkDeveloperIdentity' smart constructor.
-data UnlinkDeveloperIdentity = UnlinkDeveloperIdentity'
-  { _udiIdentityId              :: !Text
-  , _udiIdentityPoolId          :: !Text
-  , _udiDeveloperProviderName   :: !Text
-  , _udiDeveloperUserIdentifier :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UnlinkDeveloperIdentity =
+  UnlinkDeveloperIdentity'
+    { _udiIdentityId              :: !Text
+    , _udiIdentityPoolId          :: !Text
+    , _udiDeveloperProviderName   :: !Text
+    , _udiDeveloperUserIdentifier :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UnlinkDeveloperIdentity' with the minimum fields required to make a request.

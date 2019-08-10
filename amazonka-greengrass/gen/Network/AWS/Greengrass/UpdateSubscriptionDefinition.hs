@@ -43,10 +43,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateSubscriptionDefinition' smart constructor.
-data UpdateSubscriptionDefinition = UpdateSubscriptionDefinition'
-  { _usdName                     :: !(Maybe Text)
-  , _usdSubscriptionDefinitionId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateSubscriptionDefinition =
+  UpdateSubscriptionDefinition'
+    { _usdName                     :: !(Maybe Text)
+    , _usdSubscriptionDefinitionId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateSubscriptionDefinition' with the minimum fields required to make a request.
@@ -110,9 +112,11 @@ instance ToQuery UpdateSubscriptionDefinition where
         toQuery = const mempty
 
 -- | /See:/ 'updateSubscriptionDefinitionResponse' smart constructor.
-newtype UpdateSubscriptionDefinitionResponse = UpdateSubscriptionDefinitionResponse'
-  { _usdrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateSubscriptionDefinitionResponse =
+  UpdateSubscriptionDefinitionResponse'
+    { _usdrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateSubscriptionDefinitionResponse' with the minimum fields required to make a request.

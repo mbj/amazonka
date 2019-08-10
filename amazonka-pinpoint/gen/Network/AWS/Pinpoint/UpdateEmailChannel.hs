@@ -44,10 +44,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateEmailChannel' smart constructor.
-data UpdateEmailChannel = UpdateEmailChannel'
-  { _uecApplicationId       :: !Text
-  , _uecEmailChannelRequest :: !EmailChannelRequest
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateEmailChannel =
+  UpdateEmailChannel'
+    { _uecApplicationId       :: !Text
+    , _uecEmailChannelRequest :: !EmailChannelRequest
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateEmailChannel' with the minimum fields required to make a request.
@@ -114,10 +116,12 @@ instance ToQuery UpdateEmailChannel where
         toQuery = const mempty
 
 -- | /See:/ 'updateEmailChannelResponse' smart constructor.
-data UpdateEmailChannelResponse = UpdateEmailChannelResponse'
-  { _uecrsResponseStatus       :: !Int
-  , _uecrsEmailChannelResponse :: !EmailChannelResponse
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateEmailChannelResponse =
+  UpdateEmailChannelResponse'
+    { _uecrsResponseStatus       :: !Int
+    , _uecrsEmailChannelResponse :: !EmailChannelResponse
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateEmailChannelResponse' with the minimum fields required to make a request.

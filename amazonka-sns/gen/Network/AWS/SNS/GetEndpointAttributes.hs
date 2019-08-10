@@ -49,9 +49,11 @@ import Network.AWS.SNS.Types.Product
 --
 --
 -- /See:/ 'getEndpointAttributes' smart constructor.
-newtype GetEndpointAttributes = GetEndpointAttributes'
-  { _geaEndpointARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetEndpointAttributes =
+  GetEndpointAttributes'
+    { _geaEndpointARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetEndpointAttributes' with the minimum fields required to make a request.
@@ -104,10 +106,12 @@ instance ToQuery GetEndpointAttributes where
 --
 --
 -- /See:/ 'getEndpointAttributesResponse' smart constructor.
-data GetEndpointAttributesResponse = GetEndpointAttributesResponse'
-  { _gearsAttributes     :: !(Maybe (Map Text Text))
-  , _gearsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetEndpointAttributesResponse =
+  GetEndpointAttributesResponse'
+    { _gearsAttributes     :: !(Maybe (Map Text Text))
+    , _gearsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetEndpointAttributesResponse' with the minimum fields required to make a request.

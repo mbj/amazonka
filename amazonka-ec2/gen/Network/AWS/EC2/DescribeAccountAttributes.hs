@@ -64,10 +64,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeAccountAttributes' smart constructor.
-data DescribeAccountAttributes = DescribeAccountAttributes'
-  { _daaAttributeNames :: !(Maybe [AccountAttributeName])
-  , _daaDryRun         :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAccountAttributes =
+  DescribeAccountAttributes'
+    { _daaAttributeNames :: !(Maybe [AccountAttributeName])
+    , _daaDryRun         :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAccountAttributes' with the minimum fields required to make a request.
@@ -129,10 +131,12 @@ instance ToQuery DescribeAccountAttributes where
 --
 --
 -- /See:/ 'describeAccountAttributesResponse' smart constructor.
-data DescribeAccountAttributesResponse = DescribeAccountAttributesResponse'
-  { _daarsAccountAttributes :: !(Maybe [AccountAttribute])
-  , _daarsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAccountAttributesResponse =
+  DescribeAccountAttributesResponse'
+    { _daarsAccountAttributes :: !(Maybe [AccountAttribute])
+    , _daarsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAccountAttributesResponse' with the minimum fields required to make a request.

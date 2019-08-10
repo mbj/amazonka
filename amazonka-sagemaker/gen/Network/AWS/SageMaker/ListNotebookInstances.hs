@@ -59,19 +59,21 @@ import Network.AWS.SageMaker.Types
 import Network.AWS.SageMaker.Types.Product
 
 -- | /See:/ 'listNotebookInstances' smart constructor.
-data ListNotebookInstances = ListNotebookInstances'
-  { _lniNameContains :: !(Maybe Text)
-  , _lniLastModifiedTimeBefore :: !(Maybe POSIX)
-  , _lniNotebookInstanceLifecycleConfigNameContains :: !(Maybe Text)
-  , _lniCreationTimeAfter :: !(Maybe POSIX)
-  , _lniNextToken :: !(Maybe Text)
-  , _lniSortOrder :: !(Maybe NotebookInstanceSortOrder)
-  , _lniLastModifiedTimeAfter :: !(Maybe POSIX)
-  , _lniCreationTimeBefore :: !(Maybe POSIX)
-  , _lniStatusEquals :: !(Maybe NotebookInstanceStatus)
-  , _lniMaxResults :: !(Maybe Nat)
-  , _lniSortBy :: !(Maybe NotebookInstanceSortKey)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListNotebookInstances =
+  ListNotebookInstances'
+    { _lniNameContains :: !(Maybe Text)
+    , _lniLastModifiedTimeBefore :: !(Maybe POSIX)
+    , _lniNotebookInstanceLifecycleConfigNameContains :: !(Maybe Text)
+    , _lniCreationTimeAfter :: !(Maybe POSIX)
+    , _lniNextToken :: !(Maybe Text)
+    , _lniSortOrder :: !(Maybe NotebookInstanceSortOrder)
+    , _lniLastModifiedTimeAfter :: !(Maybe POSIX)
+    , _lniCreationTimeBefore :: !(Maybe POSIX)
+    , _lniStatusEquals :: !(Maybe NotebookInstanceStatus)
+    , _lniMaxResults :: !(Maybe Nat)
+    , _lniSortBy :: !(Maybe NotebookInstanceSortKey)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListNotebookInstances' with the minimum fields required to make a request.
@@ -219,11 +221,13 @@ instance ToQuery ListNotebookInstances where
         toQuery = const mempty
 
 -- | /See:/ 'listNotebookInstancesResponse' smart constructor.
-data ListNotebookInstancesResponse = ListNotebookInstancesResponse'
-  { _lnirsNotebookInstances :: !(Maybe [NotebookInstanceSummary])
-  , _lnirsNextToken         :: !(Maybe Text)
-  , _lnirsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListNotebookInstancesResponse =
+  ListNotebookInstancesResponse'
+    { _lnirsNotebookInstances :: !(Maybe [NotebookInstanceSummary])
+    , _lnirsNextToken         :: !(Maybe Text)
+    , _lnirsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListNotebookInstancesResponse' with the minimum fields required to make a request.

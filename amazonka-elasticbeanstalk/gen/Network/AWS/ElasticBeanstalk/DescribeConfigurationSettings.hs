@@ -59,11 +59,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeConfigurationSettings' smart constructor.
-data DescribeConfigurationSettings = DescribeConfigurationSettings'
-  { _dcsTemplateName    :: !(Maybe Text)
-  , _dcsEnvironmentName :: !(Maybe Text)
-  , _dcsApplicationName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeConfigurationSettings =
+  DescribeConfigurationSettings'
+    { _dcsTemplateName    :: !(Maybe Text)
+    , _dcsEnvironmentName :: !(Maybe Text)
+    , _dcsApplicationName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeConfigurationSettings' with the minimum fields required to make a request.
@@ -138,10 +140,12 @@ instance ToQuery DescribeConfigurationSettings where
 --
 --
 -- /See:/ 'describeConfigurationSettingsResponse' smart constructor.
-data DescribeConfigurationSettingsResponse = DescribeConfigurationSettingsResponse'
-  { _dcsrsConfigurationSettings :: !(Maybe [ConfigurationSettingsDescription])
-  , _dcsrsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeConfigurationSettingsResponse =
+  DescribeConfigurationSettingsResponse'
+    { _dcsrsConfigurationSettings :: !(Maybe [ConfigurationSettingsDescription])
+    , _dcsrsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeConfigurationSettingsResponse' with the minimum fields required to make a request.

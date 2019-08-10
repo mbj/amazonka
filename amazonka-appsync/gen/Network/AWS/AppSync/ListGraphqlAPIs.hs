@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listGraphqlAPIs' smart constructor.
-data ListGraphqlAPIs = ListGraphqlAPIs'
-  { _lgaNextToken  :: !(Maybe Text)
-  , _lgaMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListGraphqlAPIs =
+  ListGraphqlAPIs'
+    { _lgaNextToken  :: !(Maybe Text)
+    , _lgaMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListGraphqlAPIs' with the minimum fields required to make a request.
@@ -106,11 +108,13 @@ instance ToQuery ListGraphqlAPIs where
                "maxResults" =: _lgaMaxResults]
 
 -- | /See:/ 'listGraphqlAPIsResponse' smart constructor.
-data ListGraphqlAPIsResponse = ListGraphqlAPIsResponse'
-  { _lgarsNextToken      :: !(Maybe Text)
-  , _lgarsGraphqlAPIs    :: !(Maybe [GraphqlAPI])
-  , _lgarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListGraphqlAPIsResponse =
+  ListGraphqlAPIsResponse'
+    { _lgarsNextToken      :: !(Maybe Text)
+    , _lgarsGraphqlAPIs    :: !(Maybe [GraphqlAPI])
+    , _lgarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListGraphqlAPIsResponse' with the minimum fields required to make a request.

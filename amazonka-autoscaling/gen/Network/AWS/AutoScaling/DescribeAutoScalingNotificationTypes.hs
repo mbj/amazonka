@@ -97,10 +97,12 @@ instance ToQuery DescribeAutoScalingNotificationTypes
                   "Version" =: ("2011-01-01" :: ByteString)])
 
 -- | /See:/ 'describeAutoScalingNotificationTypesResponse' smart constructor.
-data DescribeAutoScalingNotificationTypesResponse = DescribeAutoScalingNotificationTypesResponse'
-  { _dasntrsAutoScalingNotificationTypes :: !(Maybe [Text])
-  , _dasntrsResponseStatus               :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAutoScalingNotificationTypesResponse =
+  DescribeAutoScalingNotificationTypesResponse'
+    { _dasntrsAutoScalingNotificationTypes :: !(Maybe [Text])
+    , _dasntrsResponseStatus               :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAutoScalingNotificationTypesResponse' with the minimum fields required to make a request.

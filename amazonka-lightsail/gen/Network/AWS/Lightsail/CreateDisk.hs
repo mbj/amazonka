@@ -47,11 +47,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createDisk' smart constructor.
-data CreateDisk = CreateDisk'
-  { _cdDiskName         :: !Text
-  , _cdAvailabilityZone :: !Text
-  , _cdSizeInGb         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDisk =
+  CreateDisk'
+    { _cdDiskName         :: !Text
+    , _cdAvailabilityZone :: !Text
+    , _cdSizeInGb         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDisk' with the minimum fields required to make a request.
@@ -126,10 +128,12 @@ instance ToQuery CreateDisk where
         toQuery = const mempty
 
 -- | /See:/ 'createDiskResponse' smart constructor.
-data CreateDiskResponse = CreateDiskResponse'
-  { _crsOperations     :: !(Maybe [Operation])
-  , _crsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDiskResponse =
+  CreateDiskResponse'
+    { _crsOperations     :: !(Maybe [Operation])
+    , _crsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDiskResponse' with the minimum fields required to make a request.

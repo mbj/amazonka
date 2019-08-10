@@ -55,15 +55,17 @@ import Network.AWS.ServiceCatalog.Types
 import Network.AWS.ServiceCatalog.Types.Product
 
 -- | /See:/ 'copyProduct' smart constructor.
-data CopyProduct = CopyProduct'
-  { _cTargetProductId :: !(Maybe Text)
-  , _cSourceProvisioningArtifactIdentifiers :: !(Maybe [Map ProvisioningArtifactPropertyName Text])
-  , _cTargetProductName :: !(Maybe Text)
-  , _cCopyOptions :: !(Maybe [CopyOption])
-  , _cAcceptLanguage :: !(Maybe Text)
-  , _cSourceProductARN :: !Text
-  , _cIdempotencyToken :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CopyProduct =
+  CopyProduct'
+    { _cTargetProductId :: !(Maybe Text)
+    , _cSourceProvisioningArtifactIdentifiers :: !(Maybe [Map ProvisioningArtifactPropertyName Text])
+    , _cTargetProductName :: !(Maybe Text)
+    , _cCopyOptions :: !(Maybe [CopyOption])
+    , _cAcceptLanguage :: !(Maybe Text)
+    , _cSourceProductARN :: !Text
+    , _cIdempotencyToken :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CopyProduct' with the minimum fields required to make a request.
@@ -170,10 +172,12 @@ instance ToQuery CopyProduct where
         toQuery = const mempty
 
 -- | /See:/ 'copyProductResponse' smart constructor.
-data CopyProductResponse = CopyProductResponse'
-  { _coprsCopyProductToken :: !(Maybe Text)
-  , _coprsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CopyProductResponse =
+  CopyProductResponse'
+    { _coprsCopyProductToken :: !(Maybe Text)
+    , _coprsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CopyProductResponse' with the minimum fields required to make a request.

@@ -46,9 +46,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'batchGetBuilds' smart constructor.
-newtype BatchGetBuilds = BatchGetBuilds'
-  { _bgbIds :: List1 Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype BatchGetBuilds =
+  BatchGetBuilds'
+    { _bgbIds :: List1 Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchGetBuilds' with the minimum fields required to make a request.
@@ -101,11 +103,13 @@ instance ToQuery BatchGetBuilds where
         toQuery = const mempty
 
 -- | /See:/ 'batchGetBuildsResponse' smart constructor.
-data BatchGetBuildsResponse = BatchGetBuildsResponse'
-  { _bgbrsBuilds         :: !(Maybe [Build])
-  , _bgbrsBuildsNotFound :: !(Maybe (List1 Text))
-  , _bgbrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchGetBuildsResponse =
+  BatchGetBuildsResponse'
+    { _bgbrsBuilds         :: !(Maybe [Build])
+    , _bgbrsBuildsNotFound :: !(Maybe (List1 Text))
+    , _bgbrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchGetBuildsResponse' with the minimum fields required to make a request.

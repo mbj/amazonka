@@ -66,9 +66,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteMatchmakingConfiguration' smart constructor.
-newtype DeleteMatchmakingConfiguration = DeleteMatchmakingConfiguration'
-  { _dmcName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteMatchmakingConfiguration =
+  DeleteMatchmakingConfiguration'
+    { _dmcName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteMatchmakingConfiguration' with the minimum fields required to make a request.
@@ -125,9 +127,11 @@ instance ToQuery DeleteMatchmakingConfiguration where
         toQuery = const mempty
 
 -- | /See:/ 'deleteMatchmakingConfigurationResponse' smart constructor.
-newtype DeleteMatchmakingConfigurationResponse = DeleteMatchmakingConfigurationResponse'
-  { _dmcrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteMatchmakingConfigurationResponse =
+  DeleteMatchmakingConfigurationResponse'
+    { _dmcrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteMatchmakingConfigurationResponse' with the minimum fields required to make a request.

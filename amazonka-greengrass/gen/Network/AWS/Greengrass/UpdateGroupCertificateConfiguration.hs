@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateGroupCertificateConfiguration' smart constructor.
-data UpdateGroupCertificateConfiguration = UpdateGroupCertificateConfiguration'
-  { _ugccCertificateExpiryInMilliseconds :: !(Maybe Text)
-  , _ugccGroupId                         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateGroupCertificateConfiguration =
+  UpdateGroupCertificateConfiguration'
+    { _ugccCertificateExpiryInMilliseconds :: !(Maybe Text)
+    , _ugccGroupId                         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateGroupCertificateConfiguration' with the minimum fields required to make a request.
@@ -125,12 +127,14 @@ instance ToQuery UpdateGroupCertificateConfiguration
         toQuery = const mempty
 
 -- | /See:/ 'updateGroupCertificateConfigurationResponse' smart constructor.
-data UpdateGroupCertificateConfigurationResponse = UpdateGroupCertificateConfigurationResponse'
-  { _ugccrsCertificateAuthorityExpiryInMilliseconds :: !(Maybe Text)
-  , _ugccrsGroupId                                  :: !(Maybe Text)
-  , _ugccrsCertificateExpiryInMilliseconds          :: !(Maybe Text)
-  , _ugccrsResponseStatus                           :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateGroupCertificateConfigurationResponse =
+  UpdateGroupCertificateConfigurationResponse'
+    { _ugccrsCertificateAuthorityExpiryInMilliseconds :: !(Maybe Text)
+    , _ugccrsGroupId                                  :: !(Maybe Text)
+    , _ugccrsCertificateExpiryInMilliseconds          :: !(Maybe Text)
+    , _ugccrsResponseStatus                           :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateGroupCertificateConfigurationResponse' with the minimum fields required to make a request.

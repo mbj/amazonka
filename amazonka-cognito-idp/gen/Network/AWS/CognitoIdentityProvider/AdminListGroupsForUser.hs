@@ -51,12 +51,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'adminListGroupsForUser' smart constructor.
-data AdminListGroupsForUser = AdminListGroupsForUser'
-  { _algfuNextToken  :: !(Maybe Text)
-  , _algfuLimit      :: !(Maybe Nat)
-  , _algfuUsername   :: !(Sensitive Text)
-  , _algfuUserPoolId :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data AdminListGroupsForUser =
+  AdminListGroupsForUser'
+    { _algfuNextToken  :: !(Maybe Text)
+    , _algfuLimit      :: !(Maybe Nat)
+    , _algfuUsername   :: !(Sensitive Text)
+    , _algfuUserPoolId :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AdminListGroupsForUser' with the minimum fields required to make a request.
@@ -140,11 +142,13 @@ instance ToQuery AdminListGroupsForUser where
         toQuery = const mempty
 
 -- | /See:/ 'adminListGroupsForUserResponse' smart constructor.
-data AdminListGroupsForUserResponse = AdminListGroupsForUserResponse'
-  { _algfursGroups         :: !(Maybe [GroupType])
-  , _algfursNextToken      :: !(Maybe Text)
-  , _algfursResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AdminListGroupsForUserResponse =
+  AdminListGroupsForUserResponse'
+    { _algfursGroups         :: !(Maybe [GroupType])
+    , _algfursNextToken      :: !(Maybe Text)
+    , _algfursResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AdminListGroupsForUserResponse' with the minimum fields required to make a request.

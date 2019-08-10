@@ -50,11 +50,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putPermission' smart constructor.
-data PutPermission = PutPermission'
-  { _ppAction      :: !Text
-  , _ppPrincipal   :: !Text
-  , _ppStatementId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutPermission =
+  PutPermission'
+    { _ppAction      :: !Text
+    , _ppPrincipal   :: !Text
+    , _ppStatementId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutPermission' with the minimum fields required to make a request.

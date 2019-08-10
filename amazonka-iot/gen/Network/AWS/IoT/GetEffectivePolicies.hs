@@ -47,11 +47,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getEffectivePolicies' smart constructor.
-data GetEffectivePolicies = GetEffectivePolicies'
-  { _gepPrincipal             :: !(Maybe Text)
-  , _gepCognitoIdentityPoolId :: !(Maybe Text)
-  , _gepThingName             :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetEffectivePolicies =
+  GetEffectivePolicies'
+    { _gepPrincipal             :: !(Maybe Text)
+    , _gepCognitoIdentityPoolId :: !(Maybe Text)
+    , _gepThingName             :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetEffectivePolicies' with the minimum fields required to make a request.
@@ -119,10 +121,12 @@ instance ToQuery GetEffectivePolicies where
           = mconcat ["thingName" =: _gepThingName]
 
 -- | /See:/ 'getEffectivePoliciesResponse' smart constructor.
-data GetEffectivePoliciesResponse = GetEffectivePoliciesResponse'
-  { _geprsEffectivePolicies :: !(Maybe [EffectivePolicy])
-  , _geprsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetEffectivePoliciesResponse =
+  GetEffectivePoliciesResponse'
+    { _geprsEffectivePolicies :: !(Maybe [EffectivePolicy])
+    , _geprsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetEffectivePoliciesResponse' with the minimum fields required to make a request.

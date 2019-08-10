@@ -79,18 +79,20 @@ import Network.AWS.SWF.Types
 import Network.AWS.SWF.Types.Product
 
 -- | /See:/ 'listClosedWorkflowExecutions' smart constructor.
-data ListClosedWorkflowExecutions = ListClosedWorkflowExecutions'
-  { _lcweNextPageToken     :: !(Maybe Text)
-  , _lcweExecutionFilter   :: !(Maybe WorkflowExecutionFilter)
-  , _lcweCloseStatusFilter :: !(Maybe CloseStatusFilter)
-  , _lcweTypeFilter        :: !(Maybe WorkflowTypeFilter)
-  , _lcweCloseTimeFilter   :: !(Maybe ExecutionTimeFilter)
-  , _lcweReverseOrder      :: !(Maybe Bool)
-  , _lcweTagFilter         :: !(Maybe TagFilter)
-  , _lcweStartTimeFilter   :: !(Maybe ExecutionTimeFilter)
-  , _lcweMaximumPageSize   :: !(Maybe Nat)
-  , _lcweDomain            :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListClosedWorkflowExecutions =
+  ListClosedWorkflowExecutions'
+    { _lcweNextPageToken     :: !(Maybe Text)
+    , _lcweExecutionFilter   :: !(Maybe WorkflowExecutionFilter)
+    , _lcweCloseStatusFilter :: !(Maybe CloseStatusFilter)
+    , _lcweTypeFilter        :: !(Maybe WorkflowTypeFilter)
+    , _lcweCloseTimeFilter   :: !(Maybe ExecutionTimeFilter)
+    , _lcweReverseOrder      :: !(Maybe Bool)
+    , _lcweTagFilter         :: !(Maybe TagFilter)
+    , _lcweStartTimeFilter   :: !(Maybe ExecutionTimeFilter)
+    , _lcweMaximumPageSize   :: !(Maybe Nat)
+    , _lcweDomain            :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListClosedWorkflowExecutions' with the minimum fields required to make a request.

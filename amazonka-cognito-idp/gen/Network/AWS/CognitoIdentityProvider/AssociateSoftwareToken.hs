@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'associateSoftwareToken' smart constructor.
-data AssociateSoftwareToken = AssociateSoftwareToken'
-  { _astAccessToken :: !(Maybe (Sensitive Text))
-  , _astSession     :: !(Maybe Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data AssociateSoftwareToken =
+  AssociateSoftwareToken'
+    { _astAccessToken :: !(Maybe (Sensitive Text))
+    , _astSession     :: !(Maybe Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateSoftwareToken' with the minimum fields required to make a request.
@@ -113,11 +115,13 @@ instance ToQuery AssociateSoftwareToken where
         toQuery = const mempty
 
 -- | /See:/ 'associateSoftwareTokenResponse' smart constructor.
-data AssociateSoftwareTokenResponse = AssociateSoftwareTokenResponse'
-  { _astrsSecretCode     :: !(Maybe (Sensitive Text))
-  , _astrsSession        :: !(Maybe Text)
-  , _astrsResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data AssociateSoftwareTokenResponse =
+  AssociateSoftwareTokenResponse'
+    { _astrsSecretCode     :: !(Maybe (Sensitive Text))
+    , _astrsSession        :: !(Maybe Text)
+    , _astrsResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateSoftwareTokenResponse' with the minimum fields required to make a request.

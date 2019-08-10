@@ -56,12 +56,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'purchaseReservedInstancesOffering' smart constructor.
-data PurchaseReservedInstancesOffering = PurchaseReservedInstancesOffering'
-  { _prioLimitPrice                  :: !(Maybe ReservedInstanceLimitPrice)
-  , _prioDryRun                      :: !(Maybe Bool)
-  , _prioInstanceCount               :: !Int
-  , _prioReservedInstancesOfferingId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PurchaseReservedInstancesOffering =
+  PurchaseReservedInstancesOffering'
+    { _prioLimitPrice                  :: !(Maybe ReservedInstanceLimitPrice)
+    , _prioDryRun                      :: !(Maybe Bool)
+    , _prioInstanceCount               :: !Int
+    , _prioReservedInstancesOfferingId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PurchaseReservedInstancesOffering' with the minimum fields required to make a request.
@@ -148,10 +150,12 @@ instance ToQuery PurchaseReservedInstancesOffering
 --
 --
 -- /See:/ 'purchaseReservedInstancesOfferingResponse' smart constructor.
-data PurchaseReservedInstancesOfferingResponse = PurchaseReservedInstancesOfferingResponse'
-  { _priorsReservedInstancesId :: !(Maybe Text)
-  , _priorsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PurchaseReservedInstancesOfferingResponse =
+  PurchaseReservedInstancesOfferingResponse'
+    { _priorsReservedInstancesId :: !(Maybe Text)
+    , _priorsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PurchaseReservedInstancesOfferingResponse' with the minimum fields required to make a request.

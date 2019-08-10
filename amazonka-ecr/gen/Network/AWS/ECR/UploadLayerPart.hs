@@ -53,14 +53,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'uploadLayerPart' smart constructor.
-data UploadLayerPart = UploadLayerPart'
-  { _ulpRegistryId     :: !(Maybe Text)
-  , _ulpRepositoryName :: !Text
-  , _ulpUploadId       :: !Text
-  , _ulpPartFirstByte  :: !Nat
-  , _ulpPartLastByte   :: !Nat
-  , _ulpLayerPartBlob  :: !Base64
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UploadLayerPart =
+  UploadLayerPart'
+    { _ulpRegistryId     :: !(Maybe Text)
+    , _ulpRepositoryName :: !Text
+    , _ulpUploadId       :: !Text
+    , _ulpPartFirstByte  :: !Nat
+    , _ulpPartLastByte   :: !Nat
+    , _ulpLayerPartBlob  :: !Base64
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UploadLayerPart' with the minimum fields required to make a request.
@@ -164,13 +166,15 @@ instance ToQuery UploadLayerPart where
         toQuery = const mempty
 
 -- | /See:/ 'uploadLayerPartResponse' smart constructor.
-data UploadLayerPartResponse = UploadLayerPartResponse'
-  { _ulprsRegistryId       :: !(Maybe Text)
-  , _ulprsLastByteReceived :: !(Maybe Nat)
-  , _ulprsRepositoryName   :: !(Maybe Text)
-  , _ulprsUploadId         :: !(Maybe Text)
-  , _ulprsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UploadLayerPartResponse =
+  UploadLayerPartResponse'
+    { _ulprsRegistryId       :: !(Maybe Text)
+    , _ulprsLastByteReceived :: !(Maybe Nat)
+    , _ulprsRepositoryName   :: !(Maybe Text)
+    , _ulprsUploadId         :: !(Maybe Text)
+    , _ulprsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UploadLayerPartResponse' with the minimum fields required to make a request.

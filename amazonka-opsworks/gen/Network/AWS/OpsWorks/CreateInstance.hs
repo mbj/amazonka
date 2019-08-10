@@ -64,26 +64,28 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createInstance' smart constructor.
-data CreateInstance = CreateInstance'
-  { _ciInstallUpdatesOnBoot :: !(Maybe Bool)
-  , _ciVirtualizationType   :: !(Maybe Text)
-  , _ciHostname             :: !(Maybe Text)
-  , _ciSSHKeyName           :: !(Maybe Text)
-  , _ciAgentVersion         :: !(Maybe Text)
-  , _ciSubnetId             :: !(Maybe Text)
-  , _ciEBSOptimized         :: !(Maybe Bool)
-  , _ciOS                   :: !(Maybe Text)
-  , _ciAvailabilityZone     :: !(Maybe Text)
-  , _ciTenancy              :: !(Maybe Text)
-  , _ciAutoScalingType      :: !(Maybe AutoScalingType)
-  , _ciArchitecture         :: !(Maybe Architecture)
-  , _ciAMIId                :: !(Maybe Text)
-  , _ciRootDeviceType       :: !(Maybe RootDeviceType)
-  , _ciBlockDeviceMappings  :: !(Maybe [BlockDeviceMapping])
-  , _ciStackId              :: !Text
-  , _ciLayerIds             :: ![Text]
-  , _ciInstanceType         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateInstance =
+  CreateInstance'
+    { _ciInstallUpdatesOnBoot :: !(Maybe Bool)
+    , _ciVirtualizationType   :: !(Maybe Text)
+    , _ciHostname             :: !(Maybe Text)
+    , _ciSSHKeyName           :: !(Maybe Text)
+    , _ciAgentVersion         :: !(Maybe Text)
+    , _ciSubnetId             :: !(Maybe Text)
+    , _ciEBSOptimized         :: !(Maybe Bool)
+    , _ciOS                   :: !(Maybe Text)
+    , _ciAvailabilityZone     :: !(Maybe Text)
+    , _ciTenancy              :: !(Maybe Text)
+    , _ciAutoScalingType      :: !(Maybe AutoScalingType)
+    , _ciArchitecture         :: !(Maybe Architecture)
+    , _ciAMIId                :: !(Maybe Text)
+    , _ciRootDeviceType       :: !(Maybe RootDeviceType)
+    , _ciBlockDeviceMappings  :: !(Maybe [BlockDeviceMapping])
+    , _ciStackId              :: !Text
+    , _ciLayerIds             :: ![Text]
+    , _ciInstanceType         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateInstance' with the minimum fields required to make a request.
@@ -282,10 +284,12 @@ instance ToQuery CreateInstance where
 --
 --
 -- /See:/ 'createInstanceResponse' smart constructor.
-data CreateInstanceResponse = CreateInstanceResponse'
-  { _cirsInstanceId     :: !(Maybe Text)
-  , _cirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateInstanceResponse =
+  CreateInstanceResponse'
+    { _cirsInstanceId     :: !(Maybe Text)
+    , _cirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateInstanceResponse' with the minimum fields required to make a request.

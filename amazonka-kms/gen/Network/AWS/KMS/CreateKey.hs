@@ -60,14 +60,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createKey' smart constructor.
-data CreateKey = CreateKey'
-  { _ckOrigin                         :: !(Maybe OriginType)
-  , _ckKeyUsage                       :: !(Maybe KeyUsageType)
-  , _ckBypassPolicyLockoutSafetyCheck :: !(Maybe Bool)
-  , _ckPolicy                         :: !(Maybe Text)
-  , _ckDescription                    :: !(Maybe Text)
-  , _ckTags                           :: !(Maybe [Tag])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateKey =
+  CreateKey'
+    { _ckOrigin                         :: !(Maybe OriginType)
+    , _ckKeyUsage                       :: !(Maybe KeyUsageType)
+    , _ckBypassPolicyLockoutSafetyCheck :: !(Maybe Bool)
+    , _ckPolicy                         :: !(Maybe Text)
+    , _ckDescription                    :: !(Maybe Text)
+    , _ckTags                           :: !(Maybe [Tag])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateKey' with the minimum fields required to make a request.
@@ -163,10 +165,12 @@ instance ToQuery CreateKey where
         toQuery = const mempty
 
 -- | /See:/ 'createKeyResponse' smart constructor.
-data CreateKeyResponse = CreateKeyResponse'
-  { _ckrsKeyMetadata    :: !(Maybe KeyMetadata)
-  , _ckrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateKeyResponse =
+  CreateKeyResponse'
+    { _ckrsKeyMetadata    :: !(Maybe KeyMetadata)
+    , _ckrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateKeyResponse' with the minimum fields required to make a request.

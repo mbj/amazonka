@@ -54,12 +54,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'registerDevice' smart constructor.
-data RegisterDevice = RegisterDevice'
-  { _rdIdentityPoolId :: !Text
-  , _rdIdentityId     :: !Text
-  , _rdPlatform       :: !Platform
-  , _rdToken          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RegisterDevice =
+  RegisterDevice'
+    { _rdIdentityPoolId :: !Text
+    , _rdIdentityId     :: !Text
+    , _rdPlatform       :: !Platform
+    , _rdToken          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterDevice' with the minimum fields required to make a request.
@@ -145,10 +147,12 @@ instance ToQuery RegisterDevice where
 --
 --
 -- /See:/ 'registerDeviceResponse' smart constructor.
-data RegisterDeviceResponse = RegisterDeviceResponse'
-  { _rdrsDeviceId       :: !(Maybe Text)
-  , _rdrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RegisterDeviceResponse =
+  RegisterDeviceResponse'
+    { _rdrsDeviceId       :: !(Maybe Text)
+    , _rdrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterDeviceResponse' with the minimum fields required to make a request.

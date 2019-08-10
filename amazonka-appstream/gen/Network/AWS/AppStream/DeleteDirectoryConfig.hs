@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteDirectoryConfig' smart constructor.
-newtype DeleteDirectoryConfig = DeleteDirectoryConfig'
-  { _ddcDirectoryName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteDirectoryConfig =
+  DeleteDirectoryConfig'
+    { _ddcDirectoryName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteDirectoryConfig' with the minimum fields required to make a request.
@@ -102,9 +104,11 @@ instance ToQuery DeleteDirectoryConfig where
         toQuery = const mempty
 
 -- | /See:/ 'deleteDirectoryConfigResponse' smart constructor.
-newtype DeleteDirectoryConfigResponse = DeleteDirectoryConfigResponse'
-  { _delrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteDirectoryConfigResponse =
+  DeleteDirectoryConfigResponse'
+    { _delrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteDirectoryConfigResponse' with the minimum fields required to make a request.

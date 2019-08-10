@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteFleet' smart constructor.
-newtype DeleteFleet = DeleteFleet'
-  { _dfName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteFleet =
+  DeleteFleet'
+    { _dfName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteFleet' with the minimum fields required to make a request.
@@ -97,9 +99,11 @@ instance ToQuery DeleteFleet where
         toQuery = const mempty
 
 -- | /See:/ 'deleteFleetResponse' smart constructor.
-newtype DeleteFleetResponse = DeleteFleetResponse'
-  { _dfrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteFleetResponse =
+  DeleteFleetResponse'
+    { _dfrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteFleetResponse' with the minimum fields required to make a request.

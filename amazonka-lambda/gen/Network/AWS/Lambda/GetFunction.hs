@@ -57,10 +57,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getFunction' smart constructor.
-data GetFunction = GetFunction'
-  { _gfQualifier    :: !(Maybe Text)
-  , _gfFunctionName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetFunction =
+  GetFunction'
+    { _gfQualifier    :: !(Maybe Text)
+    , _gfFunctionName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetFunction' with the minimum fields required to make a request.
@@ -118,13 +120,15 @@ instance ToQuery GetFunction where
 --
 --
 -- /See:/ 'getFunctionResponse' smart constructor.
-data GetFunctionResponse = GetFunctionResponse'
-  { _gfrsConcurrency    :: !(Maybe Concurrency)
-  , _gfrsCode           :: !(Maybe FunctionCodeLocation)
-  , _gfrsConfiguration  :: !(Maybe FunctionConfiguration)
-  , _gfrsTags           :: !(Maybe (Map Text Text))
-  , _gfrsResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data GetFunctionResponse =
+  GetFunctionResponse'
+    { _gfrsConcurrency    :: !(Maybe Concurrency)
+    , _gfrsCode           :: !(Maybe FunctionCodeLocation)
+    , _gfrsConfiguration  :: !(Maybe FunctionConfiguration)
+    , _gfrsTags           :: !(Maybe (Map Text Text))
+    , _gfrsResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetFunctionResponse' with the minimum fields required to make a request.

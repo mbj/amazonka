@@ -55,15 +55,17 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'startOutboundVoiceContact' smart constructor.
-data StartOutboundVoiceContact = StartOutboundVoiceContact'
-  { _sovcClientToken            :: !(Maybe Text)
-  , _sovcQueueId                :: !(Maybe Text)
-  , _sovcAttributes             :: !(Maybe (Map Text Text))
-  , _sovcSourcePhoneNumber      :: !(Maybe Text)
-  , _sovcDestinationPhoneNumber :: !Text
-  , _sovcContactFlowId          :: !Text
-  , _sovcInstanceId             :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartOutboundVoiceContact =
+  StartOutboundVoiceContact'
+    { _sovcClientToken            :: !(Maybe Text)
+    , _sovcQueueId                :: !(Maybe Text)
+    , _sovcAttributes             :: !(Maybe (Map Text Text))
+    , _sovcSourcePhoneNumber      :: !(Maybe Text)
+    , _sovcDestinationPhoneNumber :: !Text
+    , _sovcContactFlowId          :: !Text
+    , _sovcInstanceId             :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartOutboundVoiceContact' with the minimum fields required to make a request.
@@ -170,10 +172,12 @@ instance ToQuery StartOutboundVoiceContact where
         toQuery = const mempty
 
 -- | /See:/ 'startOutboundVoiceContactResponse' smart constructor.
-data StartOutboundVoiceContactResponse = StartOutboundVoiceContactResponse'
-  { _sovcrsContactId      :: !(Maybe Text)
-  , _sovcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartOutboundVoiceContactResponse =
+  StartOutboundVoiceContactResponse'
+    { _sovcrsContactId      :: !(Maybe Text)
+    , _sovcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartOutboundVoiceContactResponse' with the minimum fields required to make a request.

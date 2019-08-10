@@ -51,10 +51,12 @@ import Network.AWS.XRay.Types
 import Network.AWS.XRay.Types.Product
 
 -- | /See:/ 'batchGetTraces' smart constructor.
-data BatchGetTraces = BatchGetTraces'
-  { _bgtNextToken :: !(Maybe Text)
-  , _bgtTraceIds  :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchGetTraces =
+  BatchGetTraces'
+    { _bgtNextToken :: !(Maybe Text)
+    , _bgtTraceIds  :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchGetTraces' with the minimum fields required to make a request.
@@ -117,12 +119,14 @@ instance ToQuery BatchGetTraces where
         toQuery = const mempty
 
 -- | /See:/ 'batchGetTracesResponse' smart constructor.
-data BatchGetTracesResponse = BatchGetTracesResponse'
-  { _bgtrsNextToken           :: !(Maybe Text)
-  , _bgtrsTraces              :: !(Maybe [Trace])
-  , _bgtrsUnprocessedTraceIds :: !(Maybe [Text])
-  , _bgtrsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchGetTracesResponse =
+  BatchGetTracesResponse'
+    { _bgtrsNextToken           :: !(Maybe Text)
+    , _bgtrsTraces              :: !(Maybe [Trace])
+    , _bgtrsUnprocessedTraceIds :: !(Maybe [Text])
+    , _bgtrsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchGetTracesResponse' with the minimum fields required to make a request.

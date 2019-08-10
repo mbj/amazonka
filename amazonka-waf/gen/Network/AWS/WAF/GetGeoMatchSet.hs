@@ -45,9 +45,11 @@ import Network.AWS.WAF.Types
 import Network.AWS.WAF.Types.Product
 
 -- | /See:/ 'getGeoMatchSet' smart constructor.
-newtype GetGeoMatchSet = GetGeoMatchSet'
-  { _ggmsGeoMatchSetId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetGeoMatchSet =
+  GetGeoMatchSet'
+    { _ggmsGeoMatchSetId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetGeoMatchSet' with the minimum fields required to make a request.
@@ -101,10 +103,12 @@ instance ToQuery GetGeoMatchSet where
         toQuery = const mempty
 
 -- | /See:/ 'getGeoMatchSetResponse' smart constructor.
-data GetGeoMatchSetResponse = GetGeoMatchSetResponse'
-  { _ggmsrsGeoMatchSet    :: !(Maybe GeoMatchSet)
-  , _ggmsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetGeoMatchSetResponse =
+  GetGeoMatchSetResponse'
+    { _ggmsrsGeoMatchSet    :: !(Maybe GeoMatchSet)
+    , _ggmsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetGeoMatchSetResponse' with the minimum fields required to make a request.

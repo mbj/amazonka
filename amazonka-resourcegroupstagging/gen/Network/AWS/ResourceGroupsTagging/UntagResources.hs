@@ -52,10 +52,12 @@ import Network.AWS.ResourceGroupsTagging.Types.Product
 import Network.AWS.Response
 
 -- | /See:/ 'untagResources' smart constructor.
-data UntagResources = UntagResources'
-  { _urResourceARNList :: !(List1 Text)
-  , _urTagKeys         :: !(List1 Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UntagResources =
+  UntagResources'
+    { _urResourceARNList :: !(List1 Text)
+    , _urTagKeys         :: !(List1 Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UntagResources' with the minimum fields required to make a request.
@@ -122,10 +124,12 @@ instance ToQuery UntagResources where
         toQuery = const mempty
 
 -- | /See:/ 'untagResourcesResponse' smart constructor.
-data UntagResourcesResponse = UntagResourcesResponse'
-  { _urrsFailedResourcesMap :: !(Maybe (Map Text FailureInfo))
-  , _urrsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UntagResourcesResponse =
+  UntagResourcesResponse'
+    { _urrsFailedResourcesMap :: !(Maybe (Map Text FailureInfo))
+    , _urrsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UntagResourcesResponse' with the minimum fields required to make a request.

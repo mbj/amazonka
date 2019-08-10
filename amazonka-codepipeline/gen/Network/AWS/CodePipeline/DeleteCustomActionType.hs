@@ -50,11 +50,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteCustomActionType' smart constructor.
-data DeleteCustomActionType = DeleteCustomActionType'
-  { _dcatCategory :: !ActionCategory
-  , _dcatProvider :: !Text
-  , _dcatVersion  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteCustomActionType =
+  DeleteCustomActionType'
+    { _dcatCategory :: !ActionCategory
+    , _dcatProvider :: !Text
+    , _dcatVersion  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteCustomActionType' with the minimum fields required to make a request.

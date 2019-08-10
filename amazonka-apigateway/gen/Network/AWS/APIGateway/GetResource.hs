@@ -54,11 +54,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getResource' smart constructor.
-data GetResource = GetResource'
-  { _grEmbed      :: !(Maybe [Text])
-  , _grRestAPIId  :: !Text
-  , _grResourceId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetResource =
+  GetResource'
+    { _grEmbed      :: !(Maybe [Text])
+    , _grRestAPIId  :: !Text
+    , _grResourceId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetResource' with the minimum fields required to make a request.

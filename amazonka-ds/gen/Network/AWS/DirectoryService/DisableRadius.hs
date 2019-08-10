@@ -48,9 +48,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'disableRadius' smart constructor.
-newtype DisableRadius = DisableRadius'
-  { _drDirectoryId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DisableRadius =
+  DisableRadius'
+    { _drDirectoryId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisableRadius' with the minimum fields required to make a request.
@@ -106,9 +108,11 @@ instance ToQuery DisableRadius where
 --
 --
 -- /See:/ 'disableRadiusResponse' smart constructor.
-newtype DisableRadiusResponse = DisableRadiusResponse'
-  { _drrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DisableRadiusResponse =
+  DisableRadiusResponse'
+    { _drrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisableRadiusResponse' with the minimum fields required to make a request.

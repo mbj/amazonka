@@ -55,10 +55,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listApplications' smart constructor.
-data ListApplications = ListApplications'
-  { _laLimit                         :: !(Maybe Nat)
-  , _laExclusiveStartApplicationName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListApplications =
+  ListApplications'
+    { _laLimit                         :: !(Maybe Nat)
+    , _laExclusiveStartApplicationName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListApplications' with the minimum fields required to make a request.
@@ -127,11 +129,13 @@ instance ToQuery ListApplications where
 --
 --
 -- /See:/ 'listApplicationsResponse' smart constructor.
-data ListApplicationsResponse = ListApplicationsResponse'
-  { _larsResponseStatus       :: !Int
-  , _larsApplicationSummaries :: ![ApplicationSummary]
-  , _larsHasMoreApplications  :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListApplicationsResponse =
+  ListApplicationsResponse'
+    { _larsResponseStatus       :: !Int
+    , _larsApplicationSummaries :: ![ApplicationSummary]
+    , _larsHasMoreApplications  :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListApplicationsResponse' with the minimum fields required to make a request.

@@ -47,10 +47,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateDefaultBranch' smart constructor.
-data UpdateDefaultBranch = UpdateDefaultBranch'
-  { _udbRepositoryName    :: !Text
-  , _udbDefaultBranchName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateDefaultBranch =
+  UpdateDefaultBranch'
+    { _udbRepositoryName    :: !Text
+    , _udbDefaultBranchName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateDefaultBranch' with the minimum fields required to make a request.

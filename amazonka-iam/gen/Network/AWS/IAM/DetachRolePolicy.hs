@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'detachRolePolicy' smart constructor.
-data DetachRolePolicy = DetachRolePolicy'
-  { _drpRoleName  :: !Text
-  , _drpPolicyARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DetachRolePolicy =
+  DetachRolePolicy'
+    { _drpRoleName  :: !Text
+    , _drpPolicyARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DetachRolePolicy' with the minimum fields required to make a request.

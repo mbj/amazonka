@@ -93,11 +93,13 @@ instance ToQuery DescribeLimits where
         toQuery = const mempty
 
 -- | /See:/ 'describeLimitsResponse' smart constructor.
-data DescribeLimitsResponse = DescribeLimitsResponse'
-  { _dlrsResponseStatus :: !Int
-  , _dlrsShardLimit     :: !Nat
-  , _dlrsOpenShardCount :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeLimitsResponse =
+  DescribeLimitsResponse'
+    { _dlrsResponseStatus :: !Int
+    , _dlrsShardLimit     :: !Nat
+    , _dlrsOpenShardCount :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeLimitsResponse' with the minimum fields required to make a request.

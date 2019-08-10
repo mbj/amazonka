@@ -75,20 +75,22 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putBot' smart constructor.
-data PutBot = PutBot'
-  { _pbAbortStatement          :: !(Maybe Statement)
-  , _pbIntents                 :: !(Maybe [Intent])
-  , _pbChecksum                :: !(Maybe Text)
-  , _pbProcessBehavior         :: !(Maybe ProcessBehavior)
-  , _pbIdleSessionTTLInSeconds :: !(Maybe Nat)
-  , _pbClarificationPrompt     :: !(Maybe Prompt)
-  , _pbVoiceId                 :: !(Maybe Text)
-  , _pbCreateVersion           :: !(Maybe Bool)
-  , _pbDescription             :: !(Maybe Text)
-  , _pbName                    :: !Text
-  , _pbLocale                  :: !Locale
-  , _pbChildDirected           :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutBot =
+  PutBot'
+    { _pbAbortStatement          :: !(Maybe Statement)
+    , _pbIntents                 :: !(Maybe [Intent])
+    , _pbChecksum                :: !(Maybe Text)
+    , _pbProcessBehavior         :: !(Maybe ProcessBehavior)
+    , _pbIdleSessionTTLInSeconds :: !(Maybe Nat)
+    , _pbClarificationPrompt     :: !(Maybe Prompt)
+    , _pbVoiceId                 :: !(Maybe Text)
+    , _pbCreateVersion           :: !(Maybe Bool)
+    , _pbDescription             :: !(Maybe Text)
+    , _pbName                    :: !Text
+    , _pbLocale                  :: !Locale
+    , _pbChildDirected           :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutBot' with the minimum fields required to make a request.
@@ -250,25 +252,27 @@ instance ToQuery PutBot where
         toQuery = const mempty
 
 -- | /See:/ 'putBotResponse' smart constructor.
-data PutBotResponse = PutBotResponse'
-  { _pbrsFailureReason           :: !(Maybe Text)
-  , _pbrsStatus                  :: !(Maybe LexStatus)
-  , _pbrsAbortStatement          :: !(Maybe Statement)
-  , _pbrsIntents                 :: !(Maybe [Intent])
-  , _pbrsChecksum                :: !(Maybe Text)
-  , _pbrsLocale                  :: !(Maybe Locale)
-  , _pbrsCreatedDate             :: !(Maybe POSIX)
-  , _pbrsName                    :: !(Maybe Text)
-  , _pbrsVersion                 :: !(Maybe Text)
-  , _pbrsIdleSessionTTLInSeconds :: !(Maybe Nat)
-  , _pbrsClarificationPrompt     :: !(Maybe Prompt)
-  , _pbrsVoiceId                 :: !(Maybe Text)
-  , _pbrsLastUpdatedDate         :: !(Maybe POSIX)
-  , _pbrsCreateVersion           :: !(Maybe Bool)
-  , _pbrsChildDirected           :: !(Maybe Bool)
-  , _pbrsDescription             :: !(Maybe Text)
-  , _pbrsResponseStatus          :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutBotResponse =
+  PutBotResponse'
+    { _pbrsFailureReason           :: !(Maybe Text)
+    , _pbrsStatus                  :: !(Maybe LexStatus)
+    , _pbrsAbortStatement          :: !(Maybe Statement)
+    , _pbrsIntents                 :: !(Maybe [Intent])
+    , _pbrsChecksum                :: !(Maybe Text)
+    , _pbrsLocale                  :: !(Maybe Locale)
+    , _pbrsCreatedDate             :: !(Maybe POSIX)
+    , _pbrsName                    :: !(Maybe Text)
+    , _pbrsVersion                 :: !(Maybe Text)
+    , _pbrsIdleSessionTTLInSeconds :: !(Maybe Nat)
+    , _pbrsClarificationPrompt     :: !(Maybe Prompt)
+    , _pbrsVoiceId                 :: !(Maybe Text)
+    , _pbrsLastUpdatedDate         :: !(Maybe POSIX)
+    , _pbrsCreateVersion           :: !(Maybe Bool)
+    , _pbrsChildDirected           :: !(Maybe Bool)
+    , _pbrsDescription             :: !(Maybe Text)
+    , _pbrsResponseStatus          :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutBotResponse' with the minimum fields required to make a request.

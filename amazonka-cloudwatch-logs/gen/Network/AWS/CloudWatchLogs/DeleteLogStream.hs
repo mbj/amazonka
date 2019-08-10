@@ -43,10 +43,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteLogStream' smart constructor.
-data DeleteLogStream = DeleteLogStream'
-  { _dlsLogGroupName  :: !Text
-  , _dlsLogStreamName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteLogStream =
+  DeleteLogStream'
+    { _dlsLogGroupName  :: !Text
+    , _dlsLogStreamName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteLogStream' with the minimum fields required to make a request.

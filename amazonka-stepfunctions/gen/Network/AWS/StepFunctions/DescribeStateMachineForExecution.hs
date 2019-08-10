@@ -49,9 +49,11 @@ import Network.AWS.StepFunctions.Types
 import Network.AWS.StepFunctions.Types.Product
 
 -- | /See:/ 'describeStateMachineForExecution' smart constructor.
-newtype DescribeStateMachineForExecution = DescribeStateMachineForExecution'
-  { _dsmfeExecutionARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeStateMachineForExecution =
+  DescribeStateMachineForExecution'
+    { _dsmfeExecutionARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeStateMachineForExecution' with the minimum fields required to make a request.
@@ -118,14 +120,16 @@ instance ToQuery DescribeStateMachineForExecution
         toQuery = const mempty
 
 -- | /See:/ 'describeStateMachineForExecutionResponse' smart constructor.
-data DescribeStateMachineForExecutionResponse = DescribeStateMachineForExecutionResponse'
-  { _dsmfersResponseStatus  :: !Int
-  , _dsmfersStateMachineARN :: !Text
-  , _dsmfersName            :: !Text
-  , _dsmfersDefinition      :: !Text
-  , _dsmfersRoleARN         :: !Text
-  , _dsmfersUpdateDate      :: !POSIX
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeStateMachineForExecutionResponse =
+  DescribeStateMachineForExecutionResponse'
+    { _dsmfersResponseStatus  :: !Int
+    , _dsmfersStateMachineARN :: !Text
+    , _dsmfersName            :: !Text
+    , _dsmfersDefinition      :: !Text
+    , _dsmfersRoleARN         :: !Text
+    , _dsmfersUpdateDate      :: !POSIX
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeStateMachineForExecutionResponse' with the minimum fields required to make a request.

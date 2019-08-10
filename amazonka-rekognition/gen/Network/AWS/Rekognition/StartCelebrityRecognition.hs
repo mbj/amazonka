@@ -50,12 +50,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'startCelebrityRecognition' smart constructor.
-data StartCelebrityRecognition = StartCelebrityRecognition'
-  { _scrJobTag              :: !(Maybe Text)
-  , _scrNotificationChannel :: !(Maybe NotificationChannel)
-  , _scrClientRequestToken  :: !(Maybe Text)
-  , _scrVideo               :: !Video
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartCelebrityRecognition =
+  StartCelebrityRecognition'
+    { _scrJobTag              :: !(Maybe Text)
+    , _scrNotificationChannel :: !(Maybe NotificationChannel)
+    , _scrClientRequestToken  :: !(Maybe Text)
+    , _scrVideo               :: !Video
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartCelebrityRecognition' with the minimum fields required to make a request.
@@ -138,10 +140,12 @@ instance ToQuery StartCelebrityRecognition where
         toQuery = const mempty
 
 -- | /See:/ 'startCelebrityRecognitionResponse' smart constructor.
-data StartCelebrityRecognitionResponse = StartCelebrityRecognitionResponse'
-  { _scrrsJobId          :: !(Maybe Text)
-  , _scrrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartCelebrityRecognitionResponse =
+  StartCelebrityRecognitionResponse'
+    { _scrrsJobId          :: !(Maybe Text)
+    , _scrrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartCelebrityRecognitionResponse' with the minimum fields required to make a request.

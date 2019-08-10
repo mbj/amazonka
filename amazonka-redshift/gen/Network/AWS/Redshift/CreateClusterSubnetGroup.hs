@@ -54,12 +54,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createClusterSubnetGroup' smart constructor.
-data CreateClusterSubnetGroup = CreateClusterSubnetGroup'
-  { _ccsgTags                   :: !(Maybe [Tag])
-  , _ccsgClusterSubnetGroupName :: !Text
-  , _ccsgDescription            :: !Text
-  , _ccsgSubnetIds              :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateClusterSubnetGroup =
+  CreateClusterSubnetGroup'
+    { _ccsgTags                   :: !(Maybe [Tag])
+    , _ccsgClusterSubnetGroupName :: !Text
+    , _ccsgDescription            :: !Text
+    , _ccsgSubnetIds              :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateClusterSubnetGroup' with the minimum fields required to make a request.
@@ -136,10 +138,12 @@ instance ToQuery CreateClusterSubnetGroup where
                  toQueryList "SubnetIdentifier" _ccsgSubnetIds]
 
 -- | /See:/ 'createClusterSubnetGroupResponse' smart constructor.
-data CreateClusterSubnetGroupResponse = CreateClusterSubnetGroupResponse'
-  { _ccsgrsClusterSubnetGroup :: !(Maybe ClusterSubnetGroup)
-  , _ccsgrsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateClusterSubnetGroupResponse =
+  CreateClusterSubnetGroupResponse'
+    { _ccsgrsClusterSubnetGroup :: !(Maybe ClusterSubnetGroup)
+    , _ccsgrsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateClusterSubnetGroupResponse' with the minimum fields required to make a request.

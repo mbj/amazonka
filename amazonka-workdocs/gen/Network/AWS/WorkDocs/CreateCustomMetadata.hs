@@ -47,12 +47,14 @@ import Network.AWS.WorkDocs.Types
 import Network.AWS.WorkDocs.Types.Product
 
 -- | /See:/ 'createCustomMetadata' smart constructor.
-data CreateCustomMetadata = CreateCustomMetadata'
-  { _ccmVersionId           :: !(Maybe Text)
-  , _ccmAuthenticationToken :: !(Maybe (Sensitive Text))
-  , _ccmResourceId          :: !Text
-  , _ccmCustomMetadata      :: !(Map Text Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data CreateCustomMetadata =
+  CreateCustomMetadata'
+    { _ccmVersionId           :: !(Maybe Text)
+    , _ccmAuthenticationToken :: !(Maybe (Sensitive Text))
+    , _ccmResourceId          :: !Text
+    , _ccmCustomMetadata      :: !(Map Text Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateCustomMetadata' with the minimum fields required to make a request.
@@ -132,9 +134,11 @@ instance ToQuery CreateCustomMetadata where
           = mconcat ["versionid" =: _ccmVersionId]
 
 -- | /See:/ 'createCustomMetadataResponse' smart constructor.
-newtype CreateCustomMetadataResponse = CreateCustomMetadataResponse'
-  { _ccmrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateCustomMetadataResponse =
+  CreateCustomMetadataResponse'
+    { _ccmrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateCustomMetadataResponse' with the minimum fields required to make a request.

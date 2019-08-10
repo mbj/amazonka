@@ -46,11 +46,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateDatabase' smart constructor.
-data UpdateDatabase = UpdateDatabase'
-  { _udCatalogId     :: !(Maybe Text)
-  , _udName          :: !Text
-  , _udDatabaseInput :: !DatabaseInput
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateDatabase =
+  UpdateDatabase'
+    { _udCatalogId     :: !(Maybe Text)
+    , _udName          :: !Text
+    , _udDatabaseInput :: !DatabaseInput
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateDatabase' with the minimum fields required to make a request.
@@ -122,9 +124,11 @@ instance ToQuery UpdateDatabase where
         toQuery = const mempty
 
 -- | /See:/ 'updateDatabaseResponse' smart constructor.
-newtype UpdateDatabaseResponse = UpdateDatabaseResponse'
-  { _udrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateDatabaseResponse =
+  UpdateDatabaseResponse'
+    { _udrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateDatabaseResponse' with the minimum fields required to make a request.

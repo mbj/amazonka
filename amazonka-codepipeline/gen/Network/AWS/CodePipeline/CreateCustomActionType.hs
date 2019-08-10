@@ -55,15 +55,17 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createCustomActionType' smart constructor.
-data CreateCustomActionType = CreateCustomActionType'
-  { _ccatSettings                :: !(Maybe ActionTypeSettings)
-  , _ccatConfigurationProperties :: !(Maybe [ActionConfigurationProperty])
-  , _ccatCategory                :: !ActionCategory
-  , _ccatProvider                :: !Text
-  , _ccatVersion                 :: !Text
-  , _ccatInputArtifactDetails    :: !ArtifactDetails
-  , _ccatOutputArtifactDetails   :: !ArtifactDetails
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateCustomActionType =
+  CreateCustomActionType'
+    { _ccatSettings                :: !(Maybe ActionTypeSettings)
+    , _ccatConfigurationProperties :: !(Maybe [ActionConfigurationProperty])
+    , _ccatCategory                :: !ActionCategory
+    , _ccatProvider                :: !Text
+    , _ccatVersion                 :: !Text
+    , _ccatInputArtifactDetails    :: !ArtifactDetails
+    , _ccatOutputArtifactDetails   :: !ArtifactDetails
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateCustomActionType' with the minimum fields required to make a request.
@@ -182,10 +184,12 @@ instance ToQuery CreateCustomActionType where
 --
 --
 -- /See:/ 'createCustomActionTypeResponse' smart constructor.
-data CreateCustomActionTypeResponse = CreateCustomActionTypeResponse'
-  { _ccatrsResponseStatus :: !Int
-  , _ccatrsActionType     :: !ActionType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateCustomActionTypeResponse =
+  CreateCustomActionTypeResponse'
+    { _ccatrsResponseStatus :: !Int
+    , _ccatrsActionType     :: !ActionType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateCustomActionTypeResponse' with the minimum fields required to make a request.

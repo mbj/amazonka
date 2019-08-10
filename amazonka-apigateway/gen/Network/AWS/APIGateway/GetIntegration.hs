@@ -63,11 +63,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getIntegration' smart constructor.
-data GetIntegration = GetIntegration'
-  { _giRestAPIId  :: !Text
-  , _giResourceId :: !Text
-  , _giHttpMethod :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetIntegration =
+  GetIntegration'
+    { _giRestAPIId  :: !Text
+    , _giResourceId :: !Text
+    , _giHttpMethod :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetIntegration' with the minimum fields required to make a request.

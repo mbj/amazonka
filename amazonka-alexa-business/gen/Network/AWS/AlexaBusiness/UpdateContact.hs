@@ -48,13 +48,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateContact' smart constructor.
-data UpdateContact = UpdateContact'
-  { _ucLastName    :: !(Maybe Text)
-  , _ucPhoneNumber :: !(Maybe Text)
-  , _ucFirstName   :: !(Maybe Text)
-  , _ucDisplayName :: !(Maybe Text)
-  , _ucContactARN  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateContact =
+  UpdateContact'
+    { _ucLastName    :: !(Maybe Text)
+    , _ucPhoneNumber :: !(Maybe Text)
+    , _ucFirstName   :: !(Maybe Text)
+    , _ucDisplayName :: !(Maybe Text)
+    , _ucContactARN  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateContact' with the minimum fields required to make a request.
@@ -141,9 +143,11 @@ instance ToQuery UpdateContact where
         toQuery = const mempty
 
 -- | /See:/ 'updateContactResponse' smart constructor.
-newtype UpdateContactResponse = UpdateContactResponse'
-  { _ucrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateContactResponse =
+  UpdateContactResponse'
+    { _ucrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateContactResponse' with the minimum fields required to make a request.

@@ -26,9 +26,11 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'enhancedMetrics' smart constructor.
-newtype EnhancedMetrics = EnhancedMetrics'
-  { _emShardLevelMetrics :: Maybe [MetricsName]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype EnhancedMetrics =
+  EnhancedMetrics'
+    { _emShardLevelMetrics :: Maybe [MetricsName]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EnhancedMetrics' with the minimum fields required to make a request.
@@ -61,11 +63,13 @@ instance NFData EnhancedMetrics where
 --
 --
 -- /See:/ 'enhancedMonitoringOutput' smart constructor.
-data EnhancedMonitoringOutput = EnhancedMonitoringOutput'
-  { _emoDesiredShardLevelMetrics :: !(Maybe [MetricsName])
-  , _emoCurrentShardLevelMetrics :: !(Maybe [MetricsName])
-  , _emoStreamName               :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EnhancedMonitoringOutput =
+  EnhancedMonitoringOutput'
+    { _emoDesiredShardLevelMetrics :: !(Maybe [MetricsName])
+    , _emoCurrentShardLevelMetrics :: !(Maybe [MetricsName])
+    , _emoStreamName               :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EnhancedMonitoringOutput' with the minimum fields required to make a request.
@@ -117,10 +121,12 @@ instance NFData EnhancedMonitoringOutput where
 --
 --
 -- /See:/ 'hashKeyRange' smart constructor.
-data HashKeyRange = HashKeyRange'
-  { _hkrStartingHashKey :: !Text
-  , _hkrEndingHashKey   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data HashKeyRange =
+  HashKeyRange'
+    { _hkrStartingHashKey :: !Text
+    , _hkrEndingHashKey   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'HashKeyRange' with the minimum fields required to make a request.
@@ -165,11 +171,13 @@ instance NFData HashKeyRange where
 --
 --
 -- /See:/ 'putRecordsRequestEntry' smart constructor.
-data PutRecordsRequestEntry = PutRecordsRequestEntry'
-  { _prreExplicitHashKey :: !(Maybe Text)
-  , _prreData            :: !Base64
-  , _prrePartitionKey    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutRecordsRequestEntry =
+  PutRecordsRequestEntry'
+    { _prreExplicitHashKey :: !(Maybe Text)
+    , _prreData            :: !Base64
+    , _prrePartitionKey    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutRecordsRequestEntry' with the minimum fields required to make a request.
@@ -222,12 +230,14 @@ instance ToJSON PutRecordsRequestEntry where
 --
 --
 -- /See:/ 'putRecordsResultEntry' smart constructor.
-data PutRecordsResultEntry = PutRecordsResultEntry'
-  { _prreSequenceNumber :: !(Maybe Text)
-  , _prreErrorCode      :: !(Maybe Text)
-  , _prreErrorMessage   :: !(Maybe Text)
-  , _prreShardId        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutRecordsResultEntry =
+  PutRecordsResultEntry'
+    { _prreSequenceNumber :: !(Maybe Text)
+    , _prreErrorCode      :: !(Maybe Text)
+    , _prreErrorMessage   :: !(Maybe Text)
+    , _prreShardId        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutRecordsResultEntry' with the minimum fields required to make a request.
@@ -286,13 +296,15 @@ instance NFData PutRecordsResultEntry where
 --
 --
 -- /See:/ 'record' smart constructor.
-data Record = Record'
-  { _rEncryptionType              :: !(Maybe EncryptionType)
-  , _rApproximateArrivalTimestamp :: !(Maybe POSIX)
-  , _rSequenceNumber              :: !Text
-  , _rData                        :: !Base64
-  , _rPartitionKey                :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Record =
+  Record'
+    { _rEncryptionType              :: !(Maybe EncryptionType)
+    , _rApproximateArrivalTimestamp :: !(Maybe POSIX)
+    , _rSequenceNumber              :: !Text
+    , _rData                        :: !Base64
+    , _rPartitionKey                :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Record' with the minimum fields required to make a request.
@@ -363,10 +375,12 @@ instance NFData Record where
 --
 --
 -- /See:/ 'sequenceNumberRange' smart constructor.
-data SequenceNumberRange = SequenceNumberRange'
-  { _snrEndingSequenceNumber   :: !(Maybe Text)
-  , _snrStartingSequenceNumber :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SequenceNumberRange =
+  SequenceNumberRange'
+    { _snrEndingSequenceNumber   :: !(Maybe Text)
+    , _snrStartingSequenceNumber :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SequenceNumberRange' with the minimum fields required to make a request.
@@ -411,13 +425,15 @@ instance NFData SequenceNumberRange where
 --
 --
 -- /See:/ 'shard' smart constructor.
-data Shard = Shard'
-  { _sAdjacentParentShardId :: !(Maybe Text)
-  , _sParentShardId         :: !(Maybe Text)
-  , _sShardId               :: !Text
-  , _sHashKeyRange          :: !HashKeyRange
-  , _sSequenceNumberRange   :: !SequenceNumberRange
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Shard =
+  Shard'
+    { _sAdjacentParentShardId :: !(Maybe Text)
+    , _sParentShardId         :: !(Maybe Text)
+    , _sShardId               :: !Text
+    , _sHashKeyRange          :: !HashKeyRange
+    , _sSequenceNumberRange   :: !SequenceNumberRange
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Shard' with the minimum fields required to make a request.
@@ -488,18 +504,20 @@ instance NFData Shard where
 --
 --
 -- /See:/ 'streamDescription' smart constructor.
-data StreamDescription = StreamDescription'
-  { _sdEncryptionType          :: !(Maybe EncryptionType)
-  , _sdKeyId                   :: !(Maybe Text)
-  , _sdStreamName              :: !Text
-  , _sdStreamARN               :: !Text
-  , _sdStreamStatus            :: !StreamStatus
-  , _sdShards                  :: ![Shard]
-  , _sdHasMoreShards           :: !Bool
-  , _sdRetentionPeriodHours    :: !Nat
-  , _sdStreamCreationTimestamp :: !POSIX
-  , _sdEnhancedMonitoring      :: ![EnhancedMetrics]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StreamDescription =
+  StreamDescription'
+    { _sdEncryptionType          :: !(Maybe EncryptionType)
+    , _sdKeyId                   :: !(Maybe Text)
+    , _sdStreamName              :: !Text
+    , _sdStreamARN               :: !Text
+    , _sdStreamStatus            :: !StreamStatus
+    , _sdShards                  :: ![Shard]
+    , _sdHasMoreShards           :: !Bool
+    , _sdRetentionPeriodHours    :: !Nat
+    , _sdStreamCreationTimestamp :: !POSIX
+    , _sdEnhancedMonitoring      :: ![EnhancedMetrics]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StreamDescription' with the minimum fields required to make a request.
@@ -612,17 +630,19 @@ instance NFData StreamDescription where
 --
 --
 -- /See:/ 'streamDescriptionSummary' smart constructor.
-data StreamDescriptionSummary = StreamDescriptionSummary'
-  { _sdsEncryptionType          :: !(Maybe EncryptionType)
-  , _sdsKeyId                   :: !(Maybe Text)
-  , _sdsStreamName              :: !Text
-  , _sdsStreamARN               :: !Text
-  , _sdsStreamStatus            :: !StreamStatus
-  , _sdsRetentionPeriodHours    :: !Nat
-  , _sdsStreamCreationTimestamp :: !POSIX
-  , _sdsEnhancedMonitoring      :: ![EnhancedMetrics]
-  , _sdsOpenShardCount          :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StreamDescriptionSummary =
+  StreamDescriptionSummary'
+    { _sdsEncryptionType          :: !(Maybe EncryptionType)
+    , _sdsKeyId                   :: !(Maybe Text)
+    , _sdsStreamName              :: !Text
+    , _sdsStreamARN               :: !Text
+    , _sdsStreamStatus            :: !StreamStatus
+    , _sdsRetentionPeriodHours    :: !Nat
+    , _sdsStreamCreationTimestamp :: !POSIX
+    , _sdsEnhancedMonitoring      :: ![EnhancedMetrics]
+    , _sdsOpenShardCount          :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StreamDescriptionSummary' with the minimum fields required to make a request.
@@ -727,10 +747,12 @@ instance NFData StreamDescriptionSummary where
 --
 --
 -- /See:/ 'tag' smart constructor.
-data Tag = Tag'
-  { _tagValue :: !(Maybe Text)
-  , _tagKey   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Tag =
+  Tag'
+    { _tagValue :: !(Maybe Text)
+    , _tagKey   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Tag' with the minimum fields required to make a request.

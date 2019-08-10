@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'attachRolePolicy' smart constructor.
-data AttachRolePolicy = AttachRolePolicy'
-  { _arpRoleName  :: !Text
-  , _arpPolicyARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AttachRolePolicy =
+  AttachRolePolicy'
+    { _arpRoleName  :: !Text
+    , _arpPolicyARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttachRolePolicy' with the minimum fields required to make a request.

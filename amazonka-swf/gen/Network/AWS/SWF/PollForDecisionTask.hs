@@ -79,14 +79,16 @@ import Network.AWS.SWF.Types
 import Network.AWS.SWF.Types.Product
 
 -- | /See:/ 'pollForDecisionTask' smart constructor.
-data PollForDecisionTask = PollForDecisionTask'
-  { _pfdtNextPageToken   :: !(Maybe Text)
-  , _pfdtReverseOrder    :: !(Maybe Bool)
-  , _pfdtMaximumPageSize :: !(Maybe Nat)
-  , _pfdtIdentity        :: !(Maybe Text)
-  , _pfdtDomain          :: !Text
-  , _pfdtTaskList        :: !TaskList
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PollForDecisionTask =
+  PollForDecisionTask'
+    { _pfdtNextPageToken   :: !(Maybe Text)
+    , _pfdtReverseOrder    :: !(Maybe Bool)
+    , _pfdtMaximumPageSize :: !(Maybe Nat)
+    , _pfdtIdentity        :: !(Maybe Text)
+    , _pfdtDomain          :: !Text
+    , _pfdtTaskList        :: !TaskList
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PollForDecisionTask' with the minimum fields required to make a request.
@@ -203,16 +205,18 @@ instance ToQuery PollForDecisionTask where
 --
 --
 -- /See:/ 'pollForDecisionTaskResponse' smart constructor.
-data PollForDecisionTaskResponse = PollForDecisionTaskResponse'
-  { _pfdtrsNextPageToken          :: !(Maybe Text)
-  , _pfdtrsWorkflowType           :: !(Maybe WorkflowType)
-  , _pfdtrsPreviousStartedEventId :: !(Maybe Integer)
-  , _pfdtrsEvents                 :: !(Maybe [HistoryEvent])
-  , _pfdtrsTaskToken              :: !(Maybe Text)
-  , _pfdtrsWorkflowExecution      :: !(Maybe WorkflowExecution)
-  , _pfdtrsResponseStatus         :: !Int
-  , _pfdtrsStartedEventId         :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PollForDecisionTaskResponse =
+  PollForDecisionTaskResponse'
+    { _pfdtrsNextPageToken          :: !(Maybe Text)
+    , _pfdtrsWorkflowType           :: !(Maybe WorkflowType)
+    , _pfdtrsPreviousStartedEventId :: !(Maybe Integer)
+    , _pfdtrsEvents                 :: !(Maybe [HistoryEvent])
+    , _pfdtrsTaskToken              :: !(Maybe Text)
+    , _pfdtrsWorkflowExecution      :: !(Maybe WorkflowExecution)
+    , _pfdtrsResponseStatus         :: !Int
+    , _pfdtrsStartedEventId         :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PollForDecisionTaskResponse' with the minimum fields required to make a request.

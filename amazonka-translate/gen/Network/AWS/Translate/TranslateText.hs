@@ -65,11 +65,13 @@ import Network.AWS.Translate.Types
 import Network.AWS.Translate.Types.Product
 
 -- | /See:/ 'translateText' smart constructor.
-data TranslateText = TranslateText'
-  { _ttText               :: !Text
-  , _ttSourceLanguageCode :: !Text
-  , _ttTargetLanguageCode :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TranslateText =
+  TranslateText'
+    { _ttText               :: !Text
+    , _ttSourceLanguageCode :: !Text
+    , _ttTargetLanguageCode :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TranslateText' with the minimum fields required to make a request.
@@ -147,12 +149,14 @@ instance ToQuery TranslateText where
         toQuery = const mempty
 
 -- | /See:/ 'translateTextResponse' smart constructor.
-data TranslateTextResponse = TranslateTextResponse'
-  { _ttrsResponseStatus     :: !Int
-  , _ttrsTranslatedText     :: !Text
-  , _ttrsSourceLanguageCode :: !Text
-  , _ttrsTargetLanguageCode :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TranslateTextResponse =
+  TranslateTextResponse'
+    { _ttrsResponseStatus     :: !Int
+    , _ttrsTranslatedText     :: !Text
+    , _ttrsSourceLanguageCode :: !Text
+    , _ttrsTargetLanguageCode :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TranslateTextResponse' with the minimum fields required to make a request.

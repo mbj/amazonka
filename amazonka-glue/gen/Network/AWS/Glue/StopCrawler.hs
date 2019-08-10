@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'stopCrawler' smart constructor.
-newtype StopCrawler = StopCrawler'
-  { _sName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StopCrawler =
+  StopCrawler'
+    { _sName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopCrawler' with the minimum fields required to make a request.
@@ -96,9 +98,11 @@ instance ToQuery StopCrawler where
         toQuery = const mempty
 
 -- | /See:/ 'stopCrawlerResponse' smart constructor.
-newtype StopCrawlerResponse = StopCrawlerResponse'
-  { _srsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StopCrawlerResponse =
+  StopCrawlerResponse'
+    { _srsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopCrawlerResponse' with the minimum fields required to make a request.

@@ -52,12 +52,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'copyDBParameterGroup' smart constructor.
-data CopyDBParameterGroup = CopyDBParameterGroup'
-  { _cdpgTags                              :: !(Maybe [Tag])
-  , _cdpgSourceDBParameterGroupIdentifier  :: !Text
-  , _cdpgTargetDBParameterGroupIdentifier  :: !Text
-  , _cdpgTargetDBParameterGroupDescription :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CopyDBParameterGroup =
+  CopyDBParameterGroup'
+    { _cdpgTags                              :: !(Maybe [Tag])
+    , _cdpgSourceDBParameterGroupIdentifier  :: !Text
+    , _cdpgTargetDBParameterGroupIdentifier  :: !Text
+    , _cdpgTargetDBParameterGroupDescription :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CopyDBParameterGroup' with the minimum fields required to make a request.
@@ -136,10 +138,12 @@ instance ToQuery CopyDBParameterGroup where
                  _cdpgTargetDBParameterGroupDescription]
 
 -- | /See:/ 'copyDBParameterGroupResponse' smart constructor.
-data CopyDBParameterGroupResponse = CopyDBParameterGroupResponse'
-  { _cdbpgrsDBParameterGroup :: !(Maybe DBParameterGroup)
-  , _cdbpgrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CopyDBParameterGroupResponse =
+  CopyDBParameterGroupResponse'
+    { _cdbpgrsDBParameterGroup :: !(Maybe DBParameterGroup)
+    , _cdbpgrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CopyDBParameterGroupResponse' with the minimum fields required to make a request.

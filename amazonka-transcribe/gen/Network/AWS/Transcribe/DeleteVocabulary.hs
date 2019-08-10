@@ -42,9 +42,11 @@ import Network.AWS.Transcribe.Types
 import Network.AWS.Transcribe.Types.Product
 
 -- | /See:/ 'deleteVocabulary' smart constructor.
-newtype DeleteVocabulary = DeleteVocabulary'
-  { _dvVocabularyName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteVocabulary =
+  DeleteVocabulary'
+    { _dvVocabularyName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteVocabulary' with the minimum fields required to make a request.

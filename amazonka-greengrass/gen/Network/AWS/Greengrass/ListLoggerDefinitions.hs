@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listLoggerDefinitions' smart constructor.
-data ListLoggerDefinitions = ListLoggerDefinitions'
-  { _lldNextToken  :: !(Maybe Text)
-  , _lldMaxResults :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListLoggerDefinitions =
+  ListLoggerDefinitions'
+    { _lldNextToken  :: !(Maybe Text)
+    , _lldMaxResults :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListLoggerDefinitions' with the minimum fields required to make a request.
@@ -105,11 +107,13 @@ instance ToQuery ListLoggerDefinitions where
                "MaxResults" =: _lldMaxResults]
 
 -- | /See:/ 'listLoggerDefinitionsResponse' smart constructor.
-data ListLoggerDefinitionsResponse = ListLoggerDefinitionsResponse'
-  { _lldrsNextToken      :: !(Maybe Text)
-  , _lldrsDefinitions    :: !(Maybe [DefinitionInformation])
-  , _lldrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListLoggerDefinitionsResponse =
+  ListLoggerDefinitionsResponse'
+    { _lldrsNextToken      :: !(Maybe Text)
+    , _lldrsDefinitions    :: !(Maybe [DefinitionInformation])
+    , _lldrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListLoggerDefinitionsResponse' with the minimum fields required to make a request.

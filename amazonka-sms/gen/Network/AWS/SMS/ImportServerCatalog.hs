@@ -85,9 +85,11 @@ instance ToQuery ImportServerCatalog where
         toQuery = const mempty
 
 -- | /See:/ 'importServerCatalogResponse' smart constructor.
-newtype ImportServerCatalogResponse = ImportServerCatalogResponse'
-  { _iscrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ImportServerCatalogResponse =
+  ImportServerCatalogResponse'
+    { _iscrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ImportServerCatalogResponse' with the minimum fields required to make a request.

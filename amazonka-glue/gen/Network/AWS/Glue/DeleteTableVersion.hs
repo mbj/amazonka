@@ -47,12 +47,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteTableVersion' smart constructor.
-data DeleteTableVersion = DeleteTableVersion'
-  { _dtvCatalogId    :: !(Maybe Text)
-  , _dtvDatabaseName :: !Text
-  , _dtvTableName    :: !Text
-  , _dtvVersionId    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteTableVersion =
+  DeleteTableVersion'
+    { _dtvCatalogId    :: !(Maybe Text)
+    , _dtvDatabaseName :: !Text
+    , _dtvTableName    :: !Text
+    , _dtvVersionId    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteTableVersion' with the minimum fields required to make a request.
@@ -134,9 +136,11 @@ instance ToQuery DeleteTableVersion where
         toQuery = const mempty
 
 -- | /See:/ 'deleteTableVersionResponse' smart constructor.
-newtype DeleteTableVersionResponse = DeleteTableVersionResponse'
-  { _dtvrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteTableVersionResponse =
+  DeleteTableVersionResponse'
+    { _dtvrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteTableVersionResponse' with the minimum fields required to make a request.

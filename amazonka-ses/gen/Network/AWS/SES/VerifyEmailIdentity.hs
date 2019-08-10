@@ -50,9 +50,11 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'verifyEmailIdentity' smart constructor.
-newtype VerifyEmailIdentity = VerifyEmailIdentity'
-  { _veiEmailAddress :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype VerifyEmailIdentity =
+  VerifyEmailIdentity'
+    { _veiEmailAddress :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VerifyEmailIdentity' with the minimum fields required to make a request.
@@ -102,9 +104,11 @@ instance ToQuery VerifyEmailIdentity where
 --
 --
 -- /See:/ 'verifyEmailIdentityResponse' smart constructor.
-newtype VerifyEmailIdentityResponse = VerifyEmailIdentityResponse'
-  { _veirsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype VerifyEmailIdentityResponse =
+  VerifyEmailIdentityResponse'
+    { _veirsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VerifyEmailIdentityResponse' with the minimum fields required to make a request.

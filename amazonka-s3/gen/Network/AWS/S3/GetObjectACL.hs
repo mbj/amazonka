@@ -48,12 +48,14 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'getObjectACL' smart constructor.
-data GetObjectACL = GetObjectACL'
-  { _goaVersionId    :: !(Maybe ObjectVersionId)
-  , _goaRequestPayer :: !(Maybe RequestPayer)
-  , _goaBucket       :: !BucketName
-  , _goaKey          :: !ObjectKey
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetObjectACL =
+  GetObjectACL'
+    { _goaVersionId    :: !(Maybe ObjectVersionId)
+    , _goaRequestPayer :: !(Maybe RequestPayer)
+    , _goaBucket       :: !BucketName
+    , _goaKey          :: !ObjectKey
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetObjectACL' with the minimum fields required to make a request.
@@ -126,12 +128,14 @@ instance ToQuery GetObjectACL where
           = mconcat ["versionId" =: _goaVersionId, "acl"]
 
 -- | /See:/ 'getObjectACLResponse' smart constructor.
-data GetObjectACLResponse = GetObjectACLResponse'
-  { _goarsRequestCharged :: !(Maybe RequestCharged)
-  , _goarsGrants         :: !(Maybe [Grant])
-  , _goarsOwner          :: !(Maybe Owner)
-  , _goarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetObjectACLResponse =
+  GetObjectACLResponse'
+    { _goarsRequestCharged :: !(Maybe RequestCharged)
+    , _goarsGrants         :: !(Maybe [Grant])
+    , _goarsOwner          :: !(Maybe Owner)
+    , _goarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetObjectACLResponse' with the minimum fields required to make a request.

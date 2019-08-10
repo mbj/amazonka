@@ -46,10 +46,12 @@ import Network.AWS.SageMaker.Types
 import Network.AWS.SageMaker.Types.Product
 
 -- | /See:/ 'updateEndpointWeightsAndCapacities' smart constructor.
-data UpdateEndpointWeightsAndCapacities = UpdateEndpointWeightsAndCapacities'
-  { _uewacEndpointName                :: !Text
-  , _uewacDesiredWeightsAndCapacities :: !(List1 DesiredWeightAndCapacity)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateEndpointWeightsAndCapacities =
+  UpdateEndpointWeightsAndCapacities'
+    { _uewacEndpointName                :: !Text
+    , _uewacDesiredWeightsAndCapacities :: !(List1 DesiredWeightAndCapacity)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateEndpointWeightsAndCapacities' with the minimum fields required to make a request.
@@ -126,10 +128,12 @@ instance ToQuery UpdateEndpointWeightsAndCapacities
         toQuery = const mempty
 
 -- | /See:/ 'updateEndpointWeightsAndCapacitiesResponse' smart constructor.
-data UpdateEndpointWeightsAndCapacitiesResponse = UpdateEndpointWeightsAndCapacitiesResponse'
-  { _uewacrsResponseStatus :: !Int
-  , _uewacrsEndpointARN    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateEndpointWeightsAndCapacitiesResponse =
+  UpdateEndpointWeightsAndCapacitiesResponse'
+    { _uewacrsResponseStatus :: !Int
+    , _uewacrsEndpointARN    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateEndpointWeightsAndCapacitiesResponse' with the minimum fields required to make a request.

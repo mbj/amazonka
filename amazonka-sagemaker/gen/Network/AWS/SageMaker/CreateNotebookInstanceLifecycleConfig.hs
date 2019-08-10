@@ -57,11 +57,13 @@ import Network.AWS.SageMaker.Types
 import Network.AWS.SageMaker.Types.Product
 
 -- | /See:/ 'createNotebookInstanceLifecycleConfig' smart constructor.
-data CreateNotebookInstanceLifecycleConfig = CreateNotebookInstanceLifecycleConfig'
-  { _cnilcOnCreate :: !(Maybe [NotebookInstanceLifecycleHook])
-  , _cnilcOnStart :: !(Maybe [NotebookInstanceLifecycleHook])
-  , _cnilcNotebookInstanceLifecycleConfigName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateNotebookInstanceLifecycleConfig =
+  CreateNotebookInstanceLifecycleConfig'
+    { _cnilcOnCreate :: !(Maybe [NotebookInstanceLifecycleHook])
+    , _cnilcOnStart :: !(Maybe [NotebookInstanceLifecycleHook])
+    , _cnilcNotebookInstanceLifecycleConfigName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateNotebookInstanceLifecycleConfig' with the minimum fields required to make a request.
@@ -150,10 +152,12 @@ instance ToQuery
         toQuery = const mempty
 
 -- | /See:/ 'createNotebookInstanceLifecycleConfigResponse' smart constructor.
-data CreateNotebookInstanceLifecycleConfigResponse = CreateNotebookInstanceLifecycleConfigResponse'
-  { _cnilcrsNotebookInstanceLifecycleConfigARN :: !(Maybe Text)
-  , _cnilcrsResponseStatus                     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateNotebookInstanceLifecycleConfigResponse =
+  CreateNotebookInstanceLifecycleConfigResponse'
+    { _cnilcrsNotebookInstanceLifecycleConfigARN :: !(Maybe Text)
+    , _cnilcrsResponseStatus                     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateNotebookInstanceLifecycleConfigResponse' with the minimum fields required to make a request.

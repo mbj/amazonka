@@ -50,11 +50,13 @@ import Network.AWS.Response
 -- | Creates a new configuration for the specified configuration name. Amazon MQ uses the default configuration (the engine type and version). Note: If the configuration name already exists, Amazon MQ doesn't create a configuration.
 --
 -- /See:/ 'createConfiguration' smart constructor.
-data CreateConfiguration = CreateConfiguration'
-  { _ccEngineVersion :: !(Maybe Text)
-  , _ccName          :: !(Maybe Text)
-  , _ccEngineType    :: !(Maybe EngineType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateConfiguration =
+  CreateConfiguration'
+    { _ccEngineVersion :: !(Maybe Text)
+    , _ccName          :: !(Maybe Text)
+    , _ccEngineType    :: !(Maybe EngineType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateConfiguration' with the minimum fields required to make a request.
@@ -124,13 +126,15 @@ instance ToQuery CreateConfiguration where
         toQuery = const mempty
 
 -- | /See:/ 'createConfigurationResponse' smart constructor.
-data CreateConfigurationResponse = CreateConfigurationResponse'
-  { _ccrsARN            :: !(Maybe Text)
-  , _ccrsLatestRevision :: !(Maybe ConfigurationRevision)
-  , _ccrsName           :: !(Maybe Text)
-  , _ccrsId             :: !(Maybe Text)
-  , _ccrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateConfigurationResponse =
+  CreateConfigurationResponse'
+    { _ccrsARN            :: !(Maybe Text)
+    , _ccrsLatestRevision :: !(Maybe ConfigurationRevision)
+    , _ccrsName           :: !(Maybe Text)
+    , _ccrsId             :: !(Maybe Text)
+    , _ccrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateConfigurationResponse' with the minimum fields required to make a request.

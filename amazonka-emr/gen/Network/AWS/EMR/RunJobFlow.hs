@@ -79,31 +79,33 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'runJobFlow' smart constructor.
-data RunJobFlow = RunJobFlow'
-  { _rjfAMIVersion            :: !(Maybe Text)
-  , _rjfEBSRootVolumeSize     :: !(Maybe Int)
-  , _rjfAdditionalInfo        :: !(Maybe Text)
-  , _rjfConfigurations        :: !(Maybe [Configuration])
-  , _rjfCustomAMIId           :: !(Maybe Text)
-  , _rjfAutoScalingRole       :: !(Maybe Text)
-  , _rjfSecurityConfiguration :: !(Maybe Text)
-  , _rjfScaleDownBehavior     :: !(Maybe ScaleDownBehavior)
-  , _rjfSteps                 :: !(Maybe [StepConfig])
-  , _rjfJobFlowRole           :: !(Maybe Text)
-  , _rjfBootstrapActions      :: !(Maybe [BootstrapActionConfig])
-  , _rjfReleaseLabel          :: !(Maybe Text)
-  , _rjfRepoUpgradeOnBoot     :: !(Maybe RepoUpgradeOnBoot)
-  , _rjfLogURI                :: !(Maybe Text)
-  , _rjfKerberosAttributes    :: !(Maybe KerberosAttributes)
-  , _rjfNewSupportedProducts  :: !(Maybe [SupportedProductConfig])
-  , _rjfVisibleToAllUsers     :: !(Maybe Bool)
-  , _rjfSupportedProducts     :: !(Maybe [Text])
-  , _rjfApplications          :: !(Maybe [Application])
-  , _rjfTags                  :: !(Maybe [Tag])
-  , _rjfServiceRole           :: !(Maybe Text)
-  , _rjfName                  :: !Text
-  , _rjfInstances             :: !JobFlowInstancesConfig
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RunJobFlow =
+  RunJobFlow'
+    { _rjfAMIVersion            :: !(Maybe Text)
+    , _rjfEBSRootVolumeSize     :: !(Maybe Int)
+    , _rjfAdditionalInfo        :: !(Maybe Text)
+    , _rjfConfigurations        :: !(Maybe [Configuration])
+    , _rjfCustomAMIId           :: !(Maybe Text)
+    , _rjfAutoScalingRole       :: !(Maybe Text)
+    , _rjfSecurityConfiguration :: !(Maybe Text)
+    , _rjfScaleDownBehavior     :: !(Maybe ScaleDownBehavior)
+    , _rjfSteps                 :: !(Maybe [StepConfig])
+    , _rjfJobFlowRole           :: !(Maybe Text)
+    , _rjfBootstrapActions      :: !(Maybe [BootstrapActionConfig])
+    , _rjfReleaseLabel          :: !(Maybe Text)
+    , _rjfRepoUpgradeOnBoot     :: !(Maybe RepoUpgradeOnBoot)
+    , _rjfLogURI                :: !(Maybe Text)
+    , _rjfKerberosAttributes    :: !(Maybe KerberosAttributes)
+    , _rjfNewSupportedProducts  :: !(Maybe [SupportedProductConfig])
+    , _rjfVisibleToAllUsers     :: !(Maybe Bool)
+    , _rjfSupportedProducts     :: !(Maybe [Text])
+    , _rjfApplications          :: !(Maybe [Application])
+    , _rjfTags                  :: !(Maybe [Tag])
+    , _rjfServiceRole           :: !(Maybe Text)
+    , _rjfName                  :: !Text
+    , _rjfInstances             :: !JobFlowInstancesConfig
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RunJobFlow' with the minimum fields required to make a request.
@@ -342,10 +344,12 @@ instance ToQuery RunJobFlow where
 --
 --
 -- /See:/ 'runJobFlowResponse' smart constructor.
-data RunJobFlowResponse = RunJobFlowResponse'
-  { _rjfrsJobFlowId      :: !(Maybe Text)
-  , _rjfrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RunJobFlowResponse =
+  RunJobFlowResponse'
+    { _rjfrsJobFlowId      :: !(Maybe Text)
+    , _rjfrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RunJobFlowResponse' with the minimum fields required to make a request.

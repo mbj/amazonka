@@ -51,10 +51,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'enableEnhancedMonitoring' smart constructor.
-data EnableEnhancedMonitoring = EnableEnhancedMonitoring'
-  { _eemStreamName        :: !Text
-  , _eemShardLevelMetrics :: ![MetricsName]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EnableEnhancedMonitoring =
+  EnableEnhancedMonitoring'
+    { _eemStreamName        :: !Text
+    , _eemShardLevelMetrics :: ![MetricsName]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EnableEnhancedMonitoring' with the minimum fields required to make a request.

@@ -53,13 +53,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listPolicyAttachments' smart constructor.
-data ListPolicyAttachments = ListPolicyAttachments'
-  { _lpaConsistencyLevel :: !(Maybe ConsistencyLevel)
-  , _lpaNextToken        :: !(Maybe Text)
-  , _lpaMaxResults       :: !(Maybe Nat)
-  , _lpaDirectoryARN     :: !Text
-  , _lpaPolicyReference  :: !ObjectReference
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListPolicyAttachments =
+  ListPolicyAttachments'
+    { _lpaConsistencyLevel :: !(Maybe ConsistencyLevel)
+    , _lpaNextToken        :: !(Maybe Text)
+    , _lpaMaxResults       :: !(Maybe Nat)
+    , _lpaDirectoryARN     :: !Text
+    , _lpaPolicyReference  :: !ObjectReference
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListPolicyAttachments' with the minimum fields required to make a request.
@@ -155,11 +157,13 @@ instance ToQuery ListPolicyAttachments where
         toQuery = const mempty
 
 -- | /See:/ 'listPolicyAttachmentsResponse' smart constructor.
-data ListPolicyAttachmentsResponse = ListPolicyAttachmentsResponse'
-  { _lparsObjectIdentifiers :: !(Maybe [Text])
-  , _lparsNextToken         :: !(Maybe Text)
-  , _lparsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListPolicyAttachmentsResponse =
+  ListPolicyAttachmentsResponse'
+    { _lparsObjectIdentifiers :: !(Maybe [Text])
+    , _lparsNextToken         :: !(Maybe Text)
+    , _lparsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListPolicyAttachmentsResponse' with the minimum fields required to make a request.

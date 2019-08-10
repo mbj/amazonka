@@ -26,11 +26,13 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'agentConfigurationStatus' smart constructor.
-data AgentConfigurationStatus = AgentConfigurationStatus'
-  { _acsAgentId            :: !(Maybe Text)
-  , _acsOperationSucceeded :: !(Maybe Bool)
-  , _acsDescription        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AgentConfigurationStatus =
+  AgentConfigurationStatus'
+    { _acsAgentId            :: !(Maybe Text)
+    , _acsOperationSucceeded :: !(Maybe Bool)
+    , _acsDescription        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AgentConfigurationStatus' with the minimum fields required to make a request.
@@ -81,18 +83,20 @@ instance NFData AgentConfigurationStatus where
 --
 --
 -- /See:/ 'agentInfo' smart constructor.
-data AgentInfo = AgentInfo'
-  { _aiHostName             :: !(Maybe Text)
-  , _aiLastHealthPingTime   :: !(Maybe Text)
-  , _aiAgentNetworkInfoList :: !(Maybe [AgentNetworkInfo])
-  , _aiConnectorId          :: !(Maybe Text)
-  , _aiHealth               :: !(Maybe AgentStatus)
-  , _aiAgentId              :: !(Maybe Text)
-  , _aiVersion              :: !(Maybe Text)
-  , _aiCollectionStatus     :: !(Maybe Text)
-  , _aiRegisteredTime       :: !(Maybe Text)
-  , _aiAgentType            :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AgentInfo =
+  AgentInfo'
+    { _aiHostName             :: !(Maybe Text)
+    , _aiLastHealthPingTime   :: !(Maybe Text)
+    , _aiAgentNetworkInfoList :: !(Maybe [AgentNetworkInfo])
+    , _aiConnectorId          :: !(Maybe Text)
+    , _aiHealth               :: !(Maybe AgentStatus)
+    , _aiAgentId              :: !(Maybe Text)
+    , _aiVersion              :: !(Maybe Text)
+    , _aiCollectionStatus     :: !(Maybe Text)
+    , _aiRegisteredTime       :: !(Maybe Text)
+    , _aiAgentType            :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AgentInfo' with the minimum fields required to make a request.
@@ -199,10 +203,12 @@ instance NFData AgentInfo where
 --
 --
 -- /See:/ 'agentNetworkInfo' smart constructor.
-data AgentNetworkInfo = AgentNetworkInfo'
-  { _aniIpAddress  :: !(Maybe Text)
-  , _aniMacAddress :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AgentNetworkInfo =
+  AgentNetworkInfo'
+    { _aniIpAddress  :: !(Maybe Text)
+    , _aniMacAddress :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AgentNetworkInfo' with the minimum fields required to make a request.
@@ -242,13 +248,15 @@ instance NFData AgentNetworkInfo where
 --
 --
 -- /See:/ 'configurationTag' smart constructor.
-data ConfigurationTag = ConfigurationTag'
-  { _ctTimeOfCreation    :: !(Maybe POSIX)
-  , _ctConfigurationId   :: !(Maybe Text)
-  , _ctConfigurationType :: !(Maybe ConfigurationItemType)
-  , _ctValue             :: !(Maybe Text)
-  , _ctKey               :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ConfigurationTag =
+  ConfigurationTag'
+    { _ctTimeOfCreation    :: !(Maybe POSIX)
+    , _ctConfigurationId   :: !(Maybe Text)
+    , _ctConfigurationType :: !(Maybe ConfigurationItemType)
+    , _ctValue             :: !(Maybe Text)
+    , _ctKey               :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ConfigurationTag' with the minimum fields required to make a request.
@@ -316,15 +324,17 @@ instance NFData ConfigurationTag where
 --
 --
 -- /See:/ 'customerAgentInfo' smart constructor.
-data CustomerAgentInfo = CustomerAgentInfo'
-  { _caiActiveAgents      :: !Int
-  , _caiHealthyAgents     :: !Int
-  , _caiBlackListedAgents :: !Int
-  , _caiShutdownAgents    :: !Int
-  , _caiUnhealthyAgents   :: !Int
-  , _caiTotalAgents       :: !Int
-  , _caiUnknownAgents     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CustomerAgentInfo =
+  CustomerAgentInfo'
+    { _caiActiveAgents      :: !Int
+    , _caiHealthyAgents     :: !Int
+    , _caiBlackListedAgents :: !Int
+    , _caiShutdownAgents    :: !Int
+    , _caiUnhealthyAgents   :: !Int
+    , _caiTotalAgents       :: !Int
+    , _caiUnknownAgents     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CustomerAgentInfo' with the minimum fields required to make a request.
@@ -414,15 +424,17 @@ instance NFData CustomerAgentInfo where
 --
 --
 -- /See:/ 'customerConnectorInfo' smart constructor.
-data CustomerConnectorInfo = CustomerConnectorInfo'
-  { _cciActiveConnectors      :: !Int
-  , _cciHealthyConnectors     :: !Int
-  , _cciBlackListedConnectors :: !Int
-  , _cciShutdownConnectors    :: !Int
-  , _cciUnhealthyConnectors   :: !Int
-  , _cciTotalConnectors       :: !Int
-  , _cciUnknownConnectors     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CustomerConnectorInfo =
+  CustomerConnectorInfo'
+    { _cciActiveConnectors      :: !Int
+    , _cciHealthyConnectors     :: !Int
+    , _cciBlackListedConnectors :: !Int
+    , _cciShutdownConnectors    :: !Int
+    , _cciUnhealthyConnectors   :: !Int
+    , _cciTotalConnectors       :: !Int
+    , _cciUnknownConnectors     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CustomerConnectorInfo' with the minimum fields required to make a request.
@@ -513,11 +525,13 @@ instance NFData CustomerConnectorInfo where
 --
 --
 -- /See:/ 'exportFilter' smart constructor.
-data ExportFilter = ExportFilter'
-  { _efName      :: !Text
-  , _efValues    :: ![Text]
-  , _efCondition :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ExportFilter =
+  ExportFilter'
+    { _efName      :: !Text
+    , _efValues    :: ![Text]
+    , _efCondition :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ExportFilter' with the minimum fields required to make a request.
@@ -567,16 +581,18 @@ instance ToJSON ExportFilter where
 --
 --
 -- /See:/ 'exportInfo' smart constructor.
-data ExportInfo = ExportInfo'
-  { _eiConfigurationsDownloadURL :: !(Maybe Text)
-  , _eiRequestedStartTime        :: !(Maybe POSIX)
-  , _eiRequestedEndTime          :: !(Maybe POSIX)
-  , _eiIsTruncated               :: !(Maybe Bool)
-  , _eiExportId                  :: !Text
-  , _eiExportStatus              :: !ExportStatus
-  , _eiStatusMessage             :: !Text
-  , _eiExportRequestTime         :: !POSIX
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ExportInfo =
+  ExportInfo'
+    { _eiConfigurationsDownloadURL :: !(Maybe Text)
+    , _eiRequestedStartTime        :: !(Maybe POSIX)
+    , _eiRequestedEndTime          :: !(Maybe POSIX)
+    , _eiIsTruncated               :: !(Maybe Bool)
+    , _eiExportId                  :: !Text
+    , _eiExportStatus              :: !ExportStatus
+    , _eiStatusMessage             :: !Text
+    , _eiExportRequestTime         :: !POSIX
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ExportInfo' with the minimum fields required to make a request.
@@ -674,11 +690,13 @@ instance NFData ExportInfo where
 --
 --
 -- /See:/ 'filter'' smart constructor.
-data Filter = Filter'
-  { _fName      :: !Text
-  , _fValues    :: ![Text]
-  , _fCondition :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Filter =
+  Filter'
+    { _fName      :: !Text
+    , _fValues    :: ![Text]
+    , _fCondition :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Filter' with the minimum fields required to make a request.
@@ -727,13 +745,15 @@ instance ToJSON Filter where
 --
 --
 -- /See:/ 'neighborConnectionDetail' smart constructor.
-data NeighborConnectionDetail = NeighborConnectionDetail'
-  { _ncdTransportProtocol   :: !(Maybe Text)
-  , _ncdDestinationPort     :: !(Maybe Int)
-  , _ncdSourceServerId      :: !Text
-  , _ncdDestinationServerId :: !Text
-  , _ncdConnectionsCount    :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NeighborConnectionDetail =
+  NeighborConnectionDetail'
+    { _ncdTransportProtocol   :: !(Maybe Text)
+    , _ncdDestinationPort     :: !(Maybe Int)
+    , _ncdSourceServerId      :: !Text
+    , _ncdDestinationServerId :: !Text
+    , _ncdConnectionsCount    :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NeighborConnectionDetail' with the minimum fields required to make a request.
@@ -804,10 +824,12 @@ instance NFData NeighborConnectionDetail where
 --
 --
 -- /See:/ 'orderByElement' smart constructor.
-data OrderByElement = OrderByElement'
-  { _obeSortOrder :: !(Maybe OrderString)
-  , _obeFieldName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data OrderByElement =
+  OrderByElement'
+    { _obeSortOrder :: !(Maybe OrderString)
+    , _obeFieldName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OrderByElement' with the minimum fields required to make a request.
@@ -848,10 +870,12 @@ instance ToJSON OrderByElement where
 --
 --
 -- /See:/ 'tag' smart constructor.
-data Tag = Tag'
-  { _tagKey   :: !Text
-  , _tagValue :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Tag =
+  Tag'
+    { _tagKey   :: !Text
+    , _tagValue :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Tag' with the minimum fields required to make a request.
@@ -892,10 +916,12 @@ instance ToJSON Tag where
 --
 --
 -- /See:/ 'tagFilter' smart constructor.
-data TagFilter = TagFilter'
-  { _tfName   :: !Text
-  , _tfValues :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TagFilter =
+  TagFilter'
+    { _tfName   :: !Text
+    , _tfValues :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TagFilter' with the minimum fields required to make a request.

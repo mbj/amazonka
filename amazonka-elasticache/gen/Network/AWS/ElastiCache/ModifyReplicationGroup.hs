@@ -68,26 +68,28 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'modifyReplicationGroup' smart constructor.
-data ModifyReplicationGroup = ModifyReplicationGroup'
-  { _mrgAutomaticFailoverEnabled    :: !(Maybe Bool)
-  , _mrgEngineVersion               :: !(Maybe Text)
-  , _mrgCacheNodeType               :: !(Maybe Text)
-  , _mrgSnapshottingClusterId       :: !(Maybe Text)
-  , _mrgSecurityGroupIds            :: !(Maybe [Text])
-  , _mrgAutoMinorVersionUpgrade     :: !(Maybe Bool)
-  , _mrgCacheParameterGroupName     :: !(Maybe Text)
-  , _mrgReplicationGroupDescription :: !(Maybe Text)
-  , _mrgSnapshotWindow              :: !(Maybe Text)
-  , _mrgPrimaryClusterId            :: !(Maybe Text)
-  , _mrgPreferredMaintenanceWindow  :: !(Maybe Text)
-  , _mrgNodeGroupId                 :: !(Maybe Text)
-  , _mrgSnapshotRetentionLimit      :: !(Maybe Int)
-  , _mrgNotificationTopicStatus     :: !(Maybe Text)
-  , _mrgApplyImmediately            :: !(Maybe Bool)
-  , _mrgNotificationTopicARN        :: !(Maybe Text)
-  , _mrgCacheSecurityGroupNames     :: !(Maybe [Text])
-  , _mrgReplicationGroupId          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyReplicationGroup =
+  ModifyReplicationGroup'
+    { _mrgAutomaticFailoverEnabled    :: !(Maybe Bool)
+    , _mrgEngineVersion               :: !(Maybe Text)
+    , _mrgCacheNodeType               :: !(Maybe Text)
+    , _mrgSnapshottingClusterId       :: !(Maybe Text)
+    , _mrgSecurityGroupIds            :: !(Maybe [Text])
+    , _mrgAutoMinorVersionUpgrade     :: !(Maybe Bool)
+    , _mrgCacheParameterGroupName     :: !(Maybe Text)
+    , _mrgReplicationGroupDescription :: !(Maybe Text)
+    , _mrgSnapshotWindow              :: !(Maybe Text)
+    , _mrgPrimaryClusterId            :: !(Maybe Text)
+    , _mrgPreferredMaintenanceWindow  :: !(Maybe Text)
+    , _mrgNodeGroupId                 :: !(Maybe Text)
+    , _mrgSnapshotRetentionLimit      :: !(Maybe Int)
+    , _mrgNotificationTopicStatus     :: !(Maybe Text)
+    , _mrgApplyImmediately            :: !(Maybe Bool)
+    , _mrgNotificationTopicARN        :: !(Maybe Text)
+    , _mrgCacheSecurityGroupNames     :: !(Maybe [Text])
+    , _mrgReplicationGroupId          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyReplicationGroup' with the minimum fields required to make a request.
@@ -286,10 +288,12 @@ instance ToQuery ModifyReplicationGroup where
                "ReplicationGroupId" =: _mrgReplicationGroupId]
 
 -- | /See:/ 'modifyReplicationGroupResponse' smart constructor.
-data ModifyReplicationGroupResponse = ModifyReplicationGroupResponse'
-  { _mrgrsReplicationGroup :: !(Maybe ReplicationGroup)
-  , _mrgrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyReplicationGroupResponse =
+  ModifyReplicationGroupResponse'
+    { _mrgrsReplicationGroup :: !(Maybe ReplicationGroup)
+    , _mrgrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyReplicationGroupResponse' with the minimum fields required to make a request.

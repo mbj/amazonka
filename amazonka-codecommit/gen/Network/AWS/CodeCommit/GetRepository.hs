@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getRepository' smart constructor.
-newtype GetRepository = GetRepository'
-  { _grRepositoryName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetRepository =
+  GetRepository'
+    { _grRepositoryName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetRepository' with the minimum fields required to make a request.
@@ -109,10 +111,12 @@ instance ToQuery GetRepository where
 --
 --
 -- /See:/ 'getRepositoryResponse' smart constructor.
-data GetRepositoryResponse = GetRepositoryResponse'
-  { _grrsRepositoryMetadata :: !(Maybe RepositoryMetadata)
-  , _grrsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetRepositoryResponse =
+  GetRepositoryResponse'
+    { _grrsRepositoryMetadata :: !(Maybe RepositoryMetadata)
+    , _grrsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetRepositoryResponse' with the minimum fields required to make a request.

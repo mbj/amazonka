@@ -81,23 +81,25 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createService' smart constructor.
-data CreateService = CreateService'
-  { _cCluster                       :: !(Maybe Text)
-  , _cClientToken                   :: !(Maybe Text)
-  , _cPlatformVersion               :: !(Maybe Text)
-  , _cLoadBalancers                 :: !(Maybe [LoadBalancer])
-  , _cRole                          :: !(Maybe Text)
-  , _cPlacementConstraints          :: !(Maybe [PlacementConstraint])
-  , _cPlacementStrategy             :: !(Maybe [PlacementStrategy])
-  , _cLaunchType                    :: !(Maybe LaunchType)
-  , _cHealthCheckGracePeriodSeconds :: !(Maybe Int)
-  , _cNetworkConfiguration          :: !(Maybe NetworkConfiguration)
-  , _cServiceRegistries             :: !(Maybe [ServiceRegistry])
-  , _cDeploymentConfiguration       :: !(Maybe DeploymentConfiguration)
-  , _cServiceName                   :: !Text
-  , _cTaskDefinition                :: !Text
-  , _cDesiredCount                  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateService =
+  CreateService'
+    { _cCluster                       :: !(Maybe Text)
+    , _cClientToken                   :: !(Maybe Text)
+    , _cPlatformVersion               :: !(Maybe Text)
+    , _cLoadBalancers                 :: !(Maybe [LoadBalancer])
+    , _cRole                          :: !(Maybe Text)
+    , _cPlacementConstraints          :: !(Maybe [PlacementConstraint])
+    , _cPlacementStrategy             :: !(Maybe [PlacementStrategy])
+    , _cLaunchType                    :: !(Maybe LaunchType)
+    , _cHealthCheckGracePeriodSeconds :: !(Maybe Int)
+    , _cNetworkConfiguration          :: !(Maybe NetworkConfiguration)
+    , _cServiceRegistries             :: !(Maybe [ServiceRegistry])
+    , _cDeploymentConfiguration       :: !(Maybe DeploymentConfiguration)
+    , _cServiceName                   :: !Text
+    , _cTaskDefinition                :: !Text
+    , _cDesiredCount                  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateService' with the minimum fields required to make a request.
@@ -272,10 +274,12 @@ instance ToQuery CreateService where
         toQuery = const mempty
 
 -- | /See:/ 'createServiceResponse' smart constructor.
-data CreateServiceResponse = CreateServiceResponse'
-  { _csrsService        :: !(Maybe ContainerService)
-  , _csrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateServiceResponse =
+  CreateServiceResponse'
+    { _csrsService        :: !(Maybe ContainerService)
+    , _csrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateServiceResponse' with the minimum fields required to make a request.

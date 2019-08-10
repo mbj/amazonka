@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateRoleAlias' smart constructor.
-data UpdateRoleAlias = UpdateRoleAlias'
-  { _uraCredentialDurationSeconds :: !(Maybe Nat)
-  , _uraRoleARN                   :: !(Maybe Text)
-  , _uraRoleAlias                 :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateRoleAlias =
+  UpdateRoleAlias'
+    { _uraCredentialDurationSeconds :: !(Maybe Nat)
+    , _uraRoleARN                   :: !(Maybe Text)
+    , _uraRoleAlias                 :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateRoleAlias' with the minimum fields required to make a request.
@@ -120,11 +122,13 @@ instance ToQuery UpdateRoleAlias where
         toQuery = const mempty
 
 -- | /See:/ 'updateRoleAliasResponse' smart constructor.
-data UpdateRoleAliasResponse = UpdateRoleAliasResponse'
-  { _urarsRoleAliasARN   :: !(Maybe Text)
-  , _urarsRoleAlias      :: !(Maybe Text)
-  , _urarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateRoleAliasResponse =
+  UpdateRoleAliasResponse'
+    { _urarsRoleAliasARN   :: !(Maybe Text)
+    , _urarsRoleAlias      :: !(Maybe Text)
+    , _urarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateRoleAliasResponse' with the minimum fields required to make a request.

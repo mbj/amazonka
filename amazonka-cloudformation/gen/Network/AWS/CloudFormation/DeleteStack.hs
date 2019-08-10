@@ -49,12 +49,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteStack' smart constructor.
-data DeleteStack = DeleteStack'
-  { _dsRetainResources    :: !(Maybe [Text])
-  , _dsClientRequestToken :: !(Maybe Text)
-  , _dsRoleARN            :: !(Maybe Text)
-  , _dsStackName          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteStack =
+  DeleteStack'
+    { _dsRetainResources    :: !(Maybe [Text])
+    , _dsClientRequestToken :: !(Maybe Text)
+    , _dsRoleARN            :: !(Maybe Text)
+    , _dsStackName          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteStack' with the minimum fields required to make a request.

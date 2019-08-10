@@ -53,9 +53,11 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'getIdentityNotificationAttributes' smart constructor.
-newtype GetIdentityNotificationAttributes = GetIdentityNotificationAttributes'
-  { _ginaIdentities :: [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetIdentityNotificationAttributes =
+  GetIdentityNotificationAttributes'
+    { _ginaIdentities :: [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetIdentityNotificationAttributes' with the minimum fields required to make a request.
@@ -115,10 +117,12 @@ instance ToQuery GetIdentityNotificationAttributes
 --
 --
 -- /See:/ 'getIdentityNotificationAttributesResponse' smart constructor.
-data GetIdentityNotificationAttributesResponse = GetIdentityNotificationAttributesResponse'
-  { _ginarsResponseStatus         :: !Int
-  , _ginarsNotificationAttributes :: !(Map Text IdentityNotificationAttributes)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetIdentityNotificationAttributesResponse =
+  GetIdentityNotificationAttributesResponse'
+    { _ginarsResponseStatus :: !Int
+    , _ginarsNotificationAttributes :: !(Map Text IdentityNotificationAttributes)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetIdentityNotificationAttributesResponse' with the minimum fields required to make a request.

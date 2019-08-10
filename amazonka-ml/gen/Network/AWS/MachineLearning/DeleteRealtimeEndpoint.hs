@@ -46,9 +46,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteRealtimeEndpoint' smart constructor.
-newtype DeleteRealtimeEndpoint = DeleteRealtimeEndpoint'
-  { _dreMLModelId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteRealtimeEndpoint =
+  DeleteRealtimeEndpoint'
+    { _dreMLModelId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteRealtimeEndpoint' with the minimum fields required to make a request.
@@ -111,11 +113,13 @@ instance ToQuery DeleteRealtimeEndpoint where
 --
 --
 -- /See:/ 'deleteRealtimeEndpointResponse' smart constructor.
-data DeleteRealtimeEndpointResponse = DeleteRealtimeEndpointResponse'
-  { _drersRealtimeEndpointInfo :: !(Maybe RealtimeEndpointInfo)
-  , _drersMLModelId            :: !(Maybe Text)
-  , _drersResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteRealtimeEndpointResponse =
+  DeleteRealtimeEndpointResponse'
+    { _drersRealtimeEndpointInfo :: !(Maybe RealtimeEndpointInfo)
+    , _drersMLModelId            :: !(Maybe Text)
+    , _drersResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteRealtimeEndpointResponse' with the minimum fields required to make a request.

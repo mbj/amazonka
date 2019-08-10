@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'batchGetOnPremisesInstances' smart constructor.
-newtype BatchGetOnPremisesInstances = BatchGetOnPremisesInstances'
-  { _bgopiInstanceNames :: [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype BatchGetOnPremisesInstances =
+  BatchGetOnPremisesInstances'
+    { _bgopiInstanceNames :: [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchGetOnPremisesInstances' with the minimum fields required to make a request.
@@ -111,10 +113,12 @@ instance ToQuery BatchGetOnPremisesInstances where
 --
 --
 -- /See:/ 'batchGetOnPremisesInstancesResponse' smart constructor.
-data BatchGetOnPremisesInstancesResponse = BatchGetOnPremisesInstancesResponse'
-  { _bgopirsInstanceInfos  :: !(Maybe [InstanceInfo])
-  , _bgopirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchGetOnPremisesInstancesResponse =
+  BatchGetOnPremisesInstancesResponse'
+    { _bgopirsInstanceInfos  :: !(Maybe [InstanceInfo])
+    , _bgopirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchGetOnPremisesInstancesResponse' with the minimum fields required to make a request.

@@ -49,11 +49,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeElasticIPs' smart constructor.
-data DescribeElasticIPs = DescribeElasticIPs'
-  { _deiInstanceId :: !(Maybe Text)
-  , _deiIPs        :: !(Maybe [Text])
-  , _deiStackId    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeElasticIPs =
+  DescribeElasticIPs'
+    { _deiInstanceId :: !(Maybe Text)
+    , _deiIPs        :: !(Maybe [Text])
+    , _deiStackId    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeElasticIPs' with the minimum fields required to make a request.
@@ -128,10 +130,12 @@ instance ToQuery DescribeElasticIPs where
 --
 --
 -- /See:/ 'describeElasticIPsResponse' smart constructor.
-data DescribeElasticIPsResponse = DescribeElasticIPsResponse'
-  { _deirsElasticIPs     :: !(Maybe [ElasticIP])
-  , _deirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeElasticIPsResponse =
+  DescribeElasticIPsResponse'
+    { _deirsElasticIPs     :: !(Maybe [ElasticIP])
+    , _deirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeElasticIPsResponse' with the minimum fields required to make a request.

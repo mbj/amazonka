@@ -42,9 +42,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteAccountAlias' smart constructor.
-newtype DeleteAccountAlias = DeleteAccountAlias'
-  { _daaAccountAlias :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteAccountAlias =
+  DeleteAccountAlias'
+    { _daaAccountAlias :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteAccountAlias' with the minimum fields required to make a request.

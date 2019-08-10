@@ -43,10 +43,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateAssumeRolePolicy' smart constructor.
-data UpdateAssumeRolePolicy = UpdateAssumeRolePolicy'
-  { _uarpRoleName       :: !Text
-  , _uarpPolicyDocument :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateAssumeRolePolicy =
+  UpdateAssumeRolePolicy'
+    { _uarpRoleName       :: !Text
+    , _uarpPolicyDocument :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateAssumeRolePolicy' with the minimum fields required to make a request.

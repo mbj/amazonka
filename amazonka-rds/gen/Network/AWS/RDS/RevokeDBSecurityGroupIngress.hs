@@ -53,13 +53,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'revokeDBSecurityGroupIngress' smart constructor.
-data RevokeDBSecurityGroupIngress = RevokeDBSecurityGroupIngress'
-  { _rdsgiEC2SecurityGroupOwnerId :: !(Maybe Text)
-  , _rdsgiEC2SecurityGroupName    :: !(Maybe Text)
-  , _rdsgiCIdRIP                  :: !(Maybe Text)
-  , _rdsgiEC2SecurityGroupId      :: !(Maybe Text)
-  , _rdsgiDBSecurityGroupName     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RevokeDBSecurityGroupIngress =
+  RevokeDBSecurityGroupIngress'
+    { _rdsgiEC2SecurityGroupOwnerId :: !(Maybe Text)
+    , _rdsgiEC2SecurityGroupName    :: !(Maybe Text)
+    , _rdsgiCIdRIP                  :: !(Maybe Text)
+    , _rdsgiEC2SecurityGroupId      :: !(Maybe Text)
+    , _rdsgiDBSecurityGroupName     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RevokeDBSecurityGroupIngress' with the minimum fields required to make a request.
@@ -144,10 +146,12 @@ instance ToQuery RevokeDBSecurityGroupIngress where
                "DBSecurityGroupName" =: _rdsgiDBSecurityGroupName]
 
 -- | /See:/ 'revokeDBSecurityGroupIngressResponse' smart constructor.
-data RevokeDBSecurityGroupIngressResponse = RevokeDBSecurityGroupIngressResponse'
-  { _rdsgirsDBSecurityGroup :: !(Maybe DBSecurityGroup)
-  , _rdsgirsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RevokeDBSecurityGroupIngressResponse =
+  RevokeDBSecurityGroupIngressResponse'
+    { _rdsgirsDBSecurityGroup :: !(Maybe DBSecurityGroup)
+    , _rdsgirsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RevokeDBSecurityGroupIngressResponse' with the minimum fields required to make a request.

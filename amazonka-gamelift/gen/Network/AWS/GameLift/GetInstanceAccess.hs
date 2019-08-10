@@ -54,10 +54,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getInstanceAccess' smart constructor.
-data GetInstanceAccess = GetInstanceAccess'
-  { _giaFleetId    :: !Text
-  , _giaInstanceId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetInstanceAccess =
+  GetInstanceAccess'
+    { _giaFleetId    :: !Text
+    , _giaInstanceId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetInstanceAccess' with the minimum fields required to make a request.
@@ -123,10 +125,12 @@ instance ToQuery GetInstanceAccess where
 --
 --
 -- /See:/ 'getInstanceAccessResponse' smart constructor.
-data GetInstanceAccessResponse = GetInstanceAccessResponse'
-  { _giarsInstanceAccess :: !(Maybe InstanceAccess)
-  , _giarsResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data GetInstanceAccessResponse =
+  GetInstanceAccessResponse'
+    { _giarsInstanceAccess :: !(Maybe InstanceAccess)
+    , _giarsResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetInstanceAccessResponse' with the minimum fields required to make a request.

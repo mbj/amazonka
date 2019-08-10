@@ -44,10 +44,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteCampaign' smart constructor.
-data DeleteCampaign = DeleteCampaign'
-  { _dcCampaignId    :: !Text
-  , _dcApplicationId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteCampaign =
+  DeleteCampaign'
+    { _dcCampaignId    :: !Text
+    , _dcApplicationId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteCampaign' with the minimum fields required to make a request.
@@ -104,10 +106,12 @@ instance ToQuery DeleteCampaign where
         toQuery = const mempty
 
 -- | /See:/ 'deleteCampaignResponse' smart constructor.
-data DeleteCampaignResponse = DeleteCampaignResponse'
-  { _dcrsResponseStatus   :: !Int
-  , _dcrsCampaignResponse :: !CampaignResponse
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteCampaignResponse =
+  DeleteCampaignResponse'
+    { _dcrsResponseStatus   :: !Int
+    , _dcrsCampaignResponse :: !CampaignResponse
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteCampaignResponse' with the minimum fields required to make a request.

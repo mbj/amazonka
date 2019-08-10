@@ -63,15 +63,17 @@ import Network.AWS.Response
 -- | A request for a list of records.
 --
 -- /See:/ 'listRecords' smart constructor.
-data ListRecords = ListRecords'
-  { _lrLastSyncCount    :: !(Maybe Integer)
-  , _lrNextToken        :: !(Maybe Text)
-  , _lrSyncSessionToken :: !(Maybe Text)
-  , _lrMaxResults       :: !(Maybe Int)
-  , _lrIdentityPoolId   :: !Text
-  , _lrIdentityId       :: !Text
-  , _lrDatasetName      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListRecords =
+  ListRecords'
+    { _lrLastSyncCount    :: !(Maybe Integer)
+    , _lrNextToken        :: !(Maybe Text)
+    , _lrSyncSessionToken :: !(Maybe Text)
+    , _lrMaxResults       :: !(Maybe Int)
+    , _lrIdentityPoolId   :: !Text
+    , _lrIdentityId       :: !Text
+    , _lrDatasetName      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListRecords' with the minimum fields required to make a request.
@@ -183,18 +185,20 @@ instance ToQuery ListRecords where
 -- | Returned for a successful ListRecordsRequest.
 --
 -- /See:/ 'listRecordsResponse' smart constructor.
-data ListRecordsResponse = ListRecordsResponse'
-  { _lrrsDatasetDeletedAfterRequestedSyncCount :: !(Maybe Bool)
-  , _lrrsDatasetExists                         :: !(Maybe Bool)
-  , _lrrsCount                                 :: !(Maybe Int)
-  , _lrrsRecords                               :: !(Maybe [Record])
-  , _lrrsNextToken                             :: !(Maybe Text)
-  , _lrrsMergedDatasetNames                    :: !(Maybe [Text])
-  , _lrrsSyncSessionToken                      :: !(Maybe Text)
-  , _lrrsLastModifiedBy                        :: !(Maybe Text)
-  , _lrrsDatasetSyncCount                      :: !(Maybe Integer)
-  , _lrrsResponseStatus                        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListRecordsResponse =
+  ListRecordsResponse'
+    { _lrrsDatasetDeletedAfterRequestedSyncCount :: !(Maybe Bool)
+    , _lrrsDatasetExists                         :: !(Maybe Bool)
+    , _lrrsCount                                 :: !(Maybe Int)
+    , _lrrsRecords                               :: !(Maybe [Record])
+    , _lrrsNextToken                             :: !(Maybe Text)
+    , _lrrsMergedDatasetNames                    :: !(Maybe [Text])
+    , _lrrsSyncSessionToken                      :: !(Maybe Text)
+    , _lrrsLastModifiedBy                        :: !(Maybe Text)
+    , _lrrsDatasetSyncCount                      :: !(Maybe Integer)
+    , _lrrsResponseStatus                        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListRecordsResponse' with the minimum fields required to make a request.

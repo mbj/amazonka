@@ -46,11 +46,13 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'getObjectTagging' smart constructor.
-data GetObjectTagging = GetObjectTagging'
-  { _gotoVersionId :: !(Maybe ObjectVersionId)
-  , _gotoBucket    :: !BucketName
-  , _gotoKey       :: !ObjectKey
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetObjectTagging =
+  GetObjectTagging'
+    { _gotoVersionId :: !(Maybe ObjectVersionId)
+    , _gotoBucket    :: !BucketName
+    , _gotoKey       :: !ObjectKey
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetObjectTagging' with the minimum fields required to make a request.
@@ -110,11 +112,13 @@ instance ToQuery GetObjectTagging where
           = mconcat ["versionId" =: _gotoVersionId, "tagging"]
 
 -- | /See:/ 'getObjectTaggingResponse' smart constructor.
-data GetObjectTaggingResponse = GetObjectTaggingResponse'
-  { _gotrsVersionId      :: !(Maybe ObjectVersionId)
-  , _gotrsResponseStatus :: !Int
-  , _gotrsTagSet         :: ![Tag]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetObjectTaggingResponse =
+  GetObjectTaggingResponse'
+    { _gotrsVersionId      :: !(Maybe ObjectVersionId)
+    , _gotrsResponseStatus :: !Int
+    , _gotrsTagSet         :: ![Tag]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetObjectTaggingResponse' with the minimum fields required to make a request.

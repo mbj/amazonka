@@ -49,12 +49,14 @@ import Network.AWS.Route53AutoNaming.Types
 import Network.AWS.Route53AutoNaming.Types.Product
 
 -- | /See:/ 'getInstancesHealthStatus' smart constructor.
-data GetInstancesHealthStatus = GetInstancesHealthStatus'
-  { _gihsNextToken  :: !(Maybe Text)
-  , _gihsInstances  :: !(Maybe (List1 Text))
-  , _gihsMaxResults :: !(Maybe Nat)
-  , _gihsServiceId  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetInstancesHealthStatus =
+  GetInstancesHealthStatus'
+    { _gihsNextToken  :: !(Maybe Text)
+    , _gihsInstances  :: !(Maybe (List1 Text))
+    , _gihsMaxResults :: !(Maybe Nat)
+    , _gihsServiceId  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetInstancesHealthStatus' with the minimum fields required to make a request.
@@ -137,11 +139,13 @@ instance ToQuery GetInstancesHealthStatus where
         toQuery = const mempty
 
 -- | /See:/ 'getInstancesHealthStatusResponse' smart constructor.
-data GetInstancesHealthStatusResponse = GetInstancesHealthStatusResponse'
-  { _gihsrsStatus         :: !(Maybe (Map Text HealthStatus))
-  , _gihsrsNextToken      :: !(Maybe Text)
-  , _gihsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetInstancesHealthStatusResponse =
+  GetInstancesHealthStatusResponse'
+    { _gihsrsStatus         :: !(Maybe (Map Text HealthStatus))
+    , _gihsrsNextToken      :: !(Maybe Text)
+    , _gihsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetInstancesHealthStatusResponse' with the minimum fields required to make a request.

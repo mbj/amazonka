@@ -57,11 +57,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getBotVersions' smart constructor.
-data GetBotVersions = GetBotVersions'
-  { _gbvNextToken  :: !(Maybe Text)
-  , _gbvMaxResults :: !(Maybe Nat)
-  , _gbvName       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetBotVersions =
+  GetBotVersions'
+    { _gbvNextToken  :: !(Maybe Text)
+    , _gbvMaxResults :: !(Maybe Nat)
+    , _gbvName       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBotVersions' with the minimum fields required to make a request.
@@ -132,11 +134,13 @@ instance ToQuery GetBotVersions where
                "maxResults" =: _gbvMaxResults]
 
 -- | /See:/ 'getBotVersionsResponse' smart constructor.
-data GetBotVersionsResponse = GetBotVersionsResponse'
-  { _gbvrsBots           :: !(Maybe [BotMetadata])
-  , _gbvrsNextToken      :: !(Maybe Text)
-  , _gbvrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetBotVersionsResponse =
+  GetBotVersionsResponse'
+    { _gbvrsBots           :: !(Maybe [BotMetadata])
+    , _gbvrsNextToken      :: !(Maybe Text)
+    , _gbvrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBotVersionsResponse' with the minimum fields required to make a request.

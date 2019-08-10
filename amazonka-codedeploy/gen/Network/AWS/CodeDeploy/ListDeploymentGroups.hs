@@ -55,10 +55,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listDeploymentGroups' smart constructor.
-data ListDeploymentGroups = ListDeploymentGroups'
-  { _ldgNextToken       :: !(Maybe Text)
-  , _ldgApplicationName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListDeploymentGroups =
+  ListDeploymentGroups'
+    { _ldgNextToken       :: !(Maybe Text)
+    , _ldgApplicationName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDeploymentGroups' with the minimum fields required to make a request.
@@ -135,12 +137,14 @@ instance ToQuery ListDeploymentGroups where
 --
 --
 -- /See:/ 'listDeploymentGroupsResponse' smart constructor.
-data ListDeploymentGroupsResponse = ListDeploymentGroupsResponse'
-  { _ldgrsNextToken        :: !(Maybe Text)
-  , _ldgrsApplicationName  :: !(Maybe Text)
-  , _ldgrsDeploymentGroups :: !(Maybe [Text])
-  , _ldgrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListDeploymentGroupsResponse =
+  ListDeploymentGroupsResponse'
+    { _ldgrsNextToken        :: !(Maybe Text)
+    , _ldgrsApplicationName  :: !(Maybe Text)
+    , _ldgrsDeploymentGroups :: !(Maybe [Text])
+    , _ldgrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDeploymentGroupsResponse' with the minimum fields required to make a request.

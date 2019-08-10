@@ -59,11 +59,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getSlotTypes' smart constructor.
-data GetSlotTypes = GetSlotTypes'
-  { _gstNameContains :: !(Maybe Text)
-  , _gstNextToken    :: !(Maybe Text)
-  , _gstMaxResults   :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetSlotTypes =
+  GetSlotTypes'
+    { _gstNameContains :: !(Maybe Text)
+    , _gstNextToken    :: !(Maybe Text)
+    , _gstMaxResults   :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetSlotTypes' with the minimum fields required to make a request.
@@ -137,11 +139,13 @@ instance ToQuery GetSlotTypes where
                "maxResults" =: _gstMaxResults]
 
 -- | /See:/ 'getSlotTypesResponse' smart constructor.
-data GetSlotTypesResponse = GetSlotTypesResponse'
-  { _gstrsNextToken      :: !(Maybe Text)
-  , _gstrsSlotTypes      :: !(Maybe [SlotTypeMetadata])
-  , _gstrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetSlotTypesResponse =
+  GetSlotTypesResponse'
+    { _gstrsNextToken      :: !(Maybe Text)
+    , _gstrsSlotTypes      :: !(Maybe [SlotTypeMetadata])
+    , _gstrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetSlotTypesResponse' with the minimum fields required to make a request.

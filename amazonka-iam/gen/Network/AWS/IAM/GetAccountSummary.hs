@@ -90,10 +90,12 @@ instance ToQuery GetAccountSummary where
 --
 --
 -- /See:/ 'getAccountSummaryResponse' smart constructor.
-data GetAccountSummaryResponse = GetAccountSummaryResponse'
-  { _gasrsSummaryMap     :: !(Maybe (Map SummaryKeyType Int))
-  , _gasrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetAccountSummaryResponse =
+  GetAccountSummaryResponse'
+    { _gasrsSummaryMap     :: !(Maybe (Map SummaryKeyType Int))
+    , _gasrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetAccountSummaryResponse' with the minimum fields required to make a request.

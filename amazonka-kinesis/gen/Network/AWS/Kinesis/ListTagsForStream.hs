@@ -52,11 +52,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listTagsForStream' smart constructor.
-data ListTagsForStream = ListTagsForStream'
-  { _ltfsLimit                :: !(Maybe Nat)
-  , _ltfsExclusiveStartTagKey :: !(Maybe Text)
-  , _ltfsStreamName           :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTagsForStream =
+  ListTagsForStream'
+    { _ltfsLimit                :: !(Maybe Nat)
+    , _ltfsExclusiveStartTagKey :: !(Maybe Text)
+    , _ltfsStreamName           :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTagsForStream' with the minimum fields required to make a request.
@@ -134,11 +136,13 @@ instance ToQuery ListTagsForStream where
 --
 --
 -- /See:/ 'listTagsForStreamResponse' smart constructor.
-data ListTagsForStreamResponse = ListTagsForStreamResponse'
-  { _ltfsrsResponseStatus :: !Int
-  , _ltfsrsTags           :: ![Tag]
-  , _ltfsrsHasMoreTags    :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTagsForStreamResponse =
+  ListTagsForStreamResponse'
+    { _ltfsrsResponseStatus :: !Int
+    , _ltfsrsTags           :: ![Tag]
+    , _ltfsrsHasMoreTags    :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTagsForStreamResponse' with the minimum fields required to make a request.

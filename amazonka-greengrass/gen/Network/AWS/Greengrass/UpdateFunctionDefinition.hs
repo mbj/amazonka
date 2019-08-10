@@ -43,10 +43,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateFunctionDefinition' smart constructor.
-data UpdateFunctionDefinition = UpdateFunctionDefinition'
-  { _ufdName                 :: !(Maybe Text)
-  , _ufdFunctionDefinitionId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateFunctionDefinition =
+  UpdateFunctionDefinition'
+    { _ufdName                 :: !(Maybe Text)
+    , _ufdFunctionDefinitionId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateFunctionDefinition' with the minimum fields required to make a request.
@@ -107,9 +109,11 @@ instance ToQuery UpdateFunctionDefinition where
         toQuery = const mempty
 
 -- | /See:/ 'updateFunctionDefinitionResponse' smart constructor.
-newtype UpdateFunctionDefinitionResponse = UpdateFunctionDefinitionResponse'
-  { _ufdrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateFunctionDefinitionResponse =
+  UpdateFunctionDefinitionResponse'
+    { _ufdrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateFunctionDefinitionResponse' with the minimum fields required to make a request.

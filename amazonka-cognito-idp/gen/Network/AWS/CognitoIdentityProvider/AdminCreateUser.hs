@@ -64,16 +64,18 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'adminCreateUser' smart constructor.
-data AdminCreateUser = AdminCreateUser'
-  { _acuTemporaryPassword      :: !(Maybe (Sensitive Text))
-  , _acuForceAliasCreation     :: !(Maybe Bool)
-  , _acuDesiredDeliveryMediums :: !(Maybe [DeliveryMediumType])
-  , _acuMessageAction          :: !(Maybe MessageActionType)
-  , _acuUserAttributes         :: !(Maybe [AttributeType])
-  , _acuValidationData         :: !(Maybe [AttributeType])
-  , _acuUserPoolId             :: !Text
-  , _acuUsername               :: !(Sensitive Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data AdminCreateUser =
+  AdminCreateUser'
+    { _acuTemporaryPassword      :: !(Maybe (Sensitive Text))
+    , _acuForceAliasCreation     :: !(Maybe Bool)
+    , _acuDesiredDeliveryMediums :: !(Maybe [DeliveryMediumType])
+    , _acuMessageAction          :: !(Maybe MessageActionType)
+    , _acuUserAttributes         :: !(Maybe [AttributeType])
+    , _acuValidationData         :: !(Maybe [AttributeType])
+    , _acuUserPoolId             :: !Text
+    , _acuUsername               :: !(Sensitive Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AdminCreateUser' with the minimum fields required to make a request.
@@ -192,10 +194,12 @@ instance ToQuery AdminCreateUser where
 --
 --
 -- /See:/ 'adminCreateUserResponse' smart constructor.
-data AdminCreateUserResponse = AdminCreateUserResponse'
-  { _acursUser           :: !(Maybe UserType)
-  , _acursResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data AdminCreateUserResponse =
+  AdminCreateUserResponse'
+    { _acursUser           :: !(Maybe UserType)
+    , _acursResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AdminCreateUserResponse' with the minimum fields required to make a request.

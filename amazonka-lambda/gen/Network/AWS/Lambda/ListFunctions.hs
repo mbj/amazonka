@@ -60,12 +60,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listFunctions' smart constructor.
-data ListFunctions = ListFunctions'
-  { _lfMasterRegion    :: !(Maybe Text)
-  , _lfMarker          :: !(Maybe Text)
-  , _lfMaxItems        :: !(Maybe Nat)
-  , _lfFunctionVersion :: !(Maybe FunctionVersion)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListFunctions =
+  ListFunctions'
+    { _lfMasterRegion    :: !(Maybe Text)
+    , _lfMarker          :: !(Maybe Text)
+    , _lfMaxItems        :: !(Maybe Nat)
+    , _lfFunctionVersion :: !(Maybe FunctionVersion)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListFunctions' with the minimum fields required to make a request.
@@ -146,11 +148,13 @@ instance ToQuery ListFunctions where
 --
 --
 -- /See:/ 'listFunctionsResponse' smart constructor.
-data ListFunctionsResponse = ListFunctionsResponse'
-  { _lfrsNextMarker     :: !(Maybe Text)
-  , _lfrsFunctions      :: !(Maybe [FunctionConfiguration])
-  , _lfrsResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data ListFunctionsResponse =
+  ListFunctionsResponse'
+    { _lfrsNextMarker     :: !(Maybe Text)
+    , _lfrsFunctions      :: !(Maybe [FunctionConfiguration])
+    , _lfrsResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListFunctionsResponse' with the minimum fields required to make a request.

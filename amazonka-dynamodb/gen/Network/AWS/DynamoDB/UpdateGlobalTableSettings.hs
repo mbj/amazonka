@@ -49,12 +49,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateGlobalTableSettings' smart constructor.
-data UpdateGlobalTableSettings = UpdateGlobalTableSettings'
-  { _ugtsGlobalTableProvisionedWriteCapacityUnits :: !(Maybe Nat)
-  , _ugtsReplicaSettingsUpdate :: !(Maybe (List1 ReplicaSettingsUpdate))
-  , _ugtsGlobalTableGlobalSecondaryIndexSettingsUpdate :: !(Maybe (List1 GlobalTableGlobalSecondaryIndexSettingsUpdate))
-  , _ugtsGlobalTableName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateGlobalTableSettings =
+  UpdateGlobalTableSettings'
+    { _ugtsGlobalTableProvisionedWriteCapacityUnits :: !(Maybe Nat)
+    , _ugtsReplicaSettingsUpdate :: !(Maybe (List1 ReplicaSettingsUpdate))
+    , _ugtsGlobalTableGlobalSecondaryIndexSettingsUpdate :: !(Maybe (List1 GlobalTableGlobalSecondaryIndexSettingsUpdate))
+    , _ugtsGlobalTableName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateGlobalTableSettings' with the minimum fields required to make a request.
@@ -142,11 +144,13 @@ instance ToQuery UpdateGlobalTableSettings where
         toQuery = const mempty
 
 -- | /See:/ 'updateGlobalTableSettingsResponse' smart constructor.
-data UpdateGlobalTableSettingsResponse = UpdateGlobalTableSettingsResponse'
-  { _ugtsrsReplicaSettings :: !(Maybe [ReplicaSettingsDescription])
-  , _ugtsrsGlobalTableName :: !(Maybe Text)
-  , _ugtsrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateGlobalTableSettingsResponse =
+  UpdateGlobalTableSettingsResponse'
+    { _ugtsrsReplicaSettings :: !(Maybe [ReplicaSettingsDescription])
+    , _ugtsrsGlobalTableName :: !(Maybe Text)
+    , _ugtsrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateGlobalTableSettingsResponse' with the minimum fields required to make a request.

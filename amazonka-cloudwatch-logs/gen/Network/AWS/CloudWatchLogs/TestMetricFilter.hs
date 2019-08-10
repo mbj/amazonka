@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'testMetricFilter' smart constructor.
-data TestMetricFilter = TestMetricFilter'
-  { _tmfFilterPattern    :: !Text
-  , _tmfLogEventMessages :: !(List1 Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TestMetricFilter =
+  TestMetricFilter'
+    { _tmfFilterPattern    :: !Text
+    , _tmfLogEventMessages :: !(List1 Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TestMetricFilter' with the minimum fields required to make a request.
@@ -114,10 +116,12 @@ instance ToQuery TestMetricFilter where
         toQuery = const mempty
 
 -- | /See:/ 'testMetricFilterResponse' smart constructor.
-data TestMetricFilterResponse = TestMetricFilterResponse'
-  { _tmfrsMatches        :: !(Maybe [MetricFilterMatchRecord])
-  , _tmfrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TestMetricFilterResponse =
+  TestMetricFilterResponse'
+    { _tmfrsMatches        :: !(Maybe [MetricFilterMatchRecord])
+    , _tmfrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TestMetricFilterResponse' with the minimum fields required to make a request.

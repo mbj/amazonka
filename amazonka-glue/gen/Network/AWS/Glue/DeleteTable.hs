@@ -46,11 +46,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteTable' smart constructor.
-data DeleteTable = DeleteTable'
-  { _dtCatalogId    :: !(Maybe Text)
-  , _dtDatabaseName :: !Text
-  , _dtName         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteTable =
+  DeleteTable'
+    { _dtCatalogId    :: !(Maybe Text)
+    , _dtDatabaseName :: !Text
+    , _dtName         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteTable' with the minimum fields required to make a request.
@@ -119,9 +121,11 @@ instance ToQuery DeleteTable where
         toQuery = const mempty
 
 -- | /See:/ 'deleteTableResponse' smart constructor.
-newtype DeleteTableResponse = DeleteTableResponse'
-  { _dtrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteTableResponse =
+  DeleteTableResponse'
+    { _dtrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteTableResponse' with the minimum fields required to make a request.

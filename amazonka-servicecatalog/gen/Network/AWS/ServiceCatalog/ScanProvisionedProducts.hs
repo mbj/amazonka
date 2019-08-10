@@ -51,12 +51,14 @@ import Network.AWS.ServiceCatalog.Types
 import Network.AWS.ServiceCatalog.Types.Product
 
 -- | /See:/ 'scanProvisionedProducts' smart constructor.
-data ScanProvisionedProducts = ScanProvisionedProducts'
-  { _sAcceptLanguage    :: !(Maybe Text)
-  , _sAccessLevelFilter :: !(Maybe AccessLevelFilter)
-  , _sPageToken         :: !(Maybe Text)
-  , _sPageSize          :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ScanProvisionedProducts =
+  ScanProvisionedProducts'
+    { _sAcceptLanguage    :: !(Maybe Text)
+    , _sAccessLevelFilter :: !(Maybe AccessLevelFilter)
+    , _sPageToken         :: !(Maybe Text)
+    , _sPageSize          :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ScanProvisionedProducts' with the minimum fields required to make a request.
@@ -139,11 +141,13 @@ instance ToQuery ScanProvisionedProducts where
         toQuery = const mempty
 
 -- | /See:/ 'scanProvisionedProductsResponse' smart constructor.
-data ScanProvisionedProductsResponse = ScanProvisionedProductsResponse'
-  { _spprsNextPageToken       :: !(Maybe Text)
-  , _spprsProvisionedProducts :: !(Maybe [ProvisionedProductDetail])
-  , _spprsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ScanProvisionedProductsResponse =
+  ScanProvisionedProductsResponse'
+    { _spprsNextPageToken       :: !(Maybe Text)
+    , _spprsProvisionedProducts :: !(Maybe [ProvisionedProductDetail])
+    , _spprsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ScanProvisionedProductsResponse' with the minimum fields required to make a request.

@@ -50,12 +50,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'setRepositoryPolicy' smart constructor.
-data SetRepositoryPolicy = SetRepositoryPolicy'
-  { _srpForce          :: !(Maybe Bool)
-  , _srpRegistryId     :: !(Maybe Text)
-  , _srpRepositoryName :: !Text
-  , _srpPolicyText     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SetRepositoryPolicy =
+  SetRepositoryPolicy'
+    { _srpForce          :: !(Maybe Bool)
+    , _srpRegistryId     :: !(Maybe Text)
+    , _srpRepositoryName :: !Text
+    , _srpPolicyText     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetRepositoryPolicy' with the minimum fields required to make a request.
@@ -140,12 +142,14 @@ instance ToQuery SetRepositoryPolicy where
         toQuery = const mempty
 
 -- | /See:/ 'setRepositoryPolicyResponse' smart constructor.
-data SetRepositoryPolicyResponse = SetRepositoryPolicyResponse'
-  { _srprsRegistryId     :: !(Maybe Text)
-  , _srprsRepositoryName :: !(Maybe Text)
-  , _srprsPolicyText     :: !(Maybe Text)
-  , _srprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SetRepositoryPolicyResponse =
+  SetRepositoryPolicyResponse'
+    { _srprsRegistryId     :: !(Maybe Text)
+    , _srprsRepositoryName :: !(Maybe Text)
+    , _srprsPolicyText     :: !(Maybe Text)
+    , _srprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetRepositoryPolicyResponse' with the minimum fields required to make a request.

@@ -45,10 +45,12 @@ import Network.AWS.StepFunctions.Types
 import Network.AWS.StepFunctions.Types.Product
 
 -- | /See:/ 'sendTaskSuccess' smart constructor.
-data SendTaskSuccess = SendTaskSuccess'
-  { _stsTaskToken :: !Text
-  , _stsOutput    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SendTaskSuccess =
+  SendTaskSuccess'
+    { _stsTaskToken :: !Text
+    , _stsOutput    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SendTaskSuccess' with the minimum fields required to make a request.
@@ -109,9 +111,11 @@ instance ToQuery SendTaskSuccess where
         toQuery = const mempty
 
 -- | /See:/ 'sendTaskSuccessResponse' smart constructor.
-newtype SendTaskSuccessResponse = SendTaskSuccessResponse'
-  { _stsrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype SendTaskSuccessResponse =
+  SendTaskSuccessResponse'
+    { _stsrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SendTaskSuccessResponse' with the minimum fields required to make a request.

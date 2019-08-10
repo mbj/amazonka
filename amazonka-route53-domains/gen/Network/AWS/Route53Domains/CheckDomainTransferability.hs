@@ -50,10 +50,12 @@ import Network.AWS.Route53Domains.Types.Product
 --
 --
 -- /See:/ 'checkDomainTransferability' smart constructor.
-data CheckDomainTransferability = CheckDomainTransferability'
-  { _cdtAuthCode   :: !(Maybe (Sensitive Text))
-  , _cdtDomainName :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data CheckDomainTransferability =
+  CheckDomainTransferability'
+    { _cdtAuthCode   :: !(Maybe (Sensitive Text))
+    , _cdtDomainName :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CheckDomainTransferability' with the minimum fields required to make a request.
@@ -121,10 +123,12 @@ instance ToQuery CheckDomainTransferability where
 --
 --
 -- /See:/ 'checkDomainTransferabilityResponse' smart constructor.
-data CheckDomainTransferabilityResponse = CheckDomainTransferabilityResponse'
-  { _cdtrsResponseStatus  :: !Int
-  , _cdtrsTransferability :: !DomainTransferability
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CheckDomainTransferabilityResponse =
+  CheckDomainTransferabilityResponse'
+    { _cdtrsResponseStatus  :: !Int
+    , _cdtrsTransferability :: !DomainTransferability
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CheckDomainTransferabilityResponse' with the minimum fields required to make a request.

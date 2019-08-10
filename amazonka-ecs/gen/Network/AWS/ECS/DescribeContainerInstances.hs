@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeContainerInstances' smart constructor.
-data DescribeContainerInstances = DescribeContainerInstances'
-  { _dciCluster            :: !(Maybe Text)
-  , _dciContainerInstances :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeContainerInstances =
+  DescribeContainerInstances'
+    { _dciCluster            :: !(Maybe Text)
+    , _dciContainerInstances :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeContainerInstances' with the minimum fields required to make a request.
@@ -116,11 +118,13 @@ instance ToQuery DescribeContainerInstances where
         toQuery = const mempty
 
 -- | /See:/ 'describeContainerInstancesResponse' smart constructor.
-data DescribeContainerInstancesResponse = DescribeContainerInstancesResponse'
-  { _dcisrsFailures           :: !(Maybe [Failure])
-  , _dcisrsContainerInstances :: !(Maybe [ContainerInstance])
-  , _dcisrsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeContainerInstancesResponse =
+  DescribeContainerInstancesResponse'
+    { _dcisrsFailures           :: !(Maybe [Failure])
+    , _dcisrsContainerInstances :: !(Maybe [ContainerInstance])
+    , _dcisrsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeContainerInstancesResponse' with the minimum fields required to make a request.

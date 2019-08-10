@@ -53,11 +53,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getConfig' smart constructor.
-data GetConfig = GetConfig'
-  { _gcClientARN     :: !Text
-  , _gcClientVersion :: !ClientVersion
-  , _gcHAPGList      :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetConfig =
+  GetConfig'
+    { _gcClientARN     :: !Text
+    , _gcClientVersion :: !ClientVersion
+    , _gcHAPGList      :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetConfig' with the minimum fields required to make a request.
@@ -132,12 +134,14 @@ instance ToQuery GetConfig where
         toQuery = const mempty
 
 -- | /See:/ 'getConfigResponse' smart constructor.
-data GetConfigResponse = GetConfigResponse'
-  { _gcrsConfigFile     :: !(Maybe Text)
-  , _gcrsConfigCred     :: !(Maybe Text)
-  , _gcrsConfigType     :: !(Maybe Text)
-  , _gcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetConfigResponse =
+  GetConfigResponse'
+    { _gcrsConfigFile     :: !(Maybe Text)
+    , _gcrsConfigCred     :: !(Maybe Text)
+    , _gcrsConfigType     :: !(Maybe Text)
+    , _gcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetConfigResponse' with the minimum fields required to make a request.

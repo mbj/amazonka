@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'resetJobBookmark' smart constructor.
-newtype ResetJobBookmark = ResetJobBookmark'
-  { _rjbJobName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ResetJobBookmark =
+  ResetJobBookmark'
+    { _rjbJobName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResetJobBookmark' with the minimum fields required to make a request.
@@ -99,10 +101,12 @@ instance ToQuery ResetJobBookmark where
         toQuery = const mempty
 
 -- | /See:/ 'resetJobBookmarkResponse' smart constructor.
-data ResetJobBookmarkResponse = ResetJobBookmarkResponse'
-  { _rjbrsJobBookmarkEntry :: !(Maybe JobBookmarkEntry)
-  , _rjbrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResetJobBookmarkResponse =
+  ResetJobBookmarkResponse'
+    { _rjbrsJobBookmarkEntry :: !(Maybe JobBookmarkEntry)
+    , _rjbrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResetJobBookmarkResponse' with the minimum fields required to make a request.

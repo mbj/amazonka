@@ -50,10 +50,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createOrganizationalUnit' smart constructor.
-data CreateOrganizationalUnit = CreateOrganizationalUnit'
-  { _couParentId :: !Text
-  , _couName     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateOrganizationalUnit =
+  CreateOrganizationalUnit'
+    { _couParentId :: !Text
+    , _couName     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateOrganizationalUnit' with the minimum fields required to make a request.
@@ -117,10 +119,12 @@ instance ToQuery CreateOrganizationalUnit where
         toQuery = const mempty
 
 -- | /See:/ 'createOrganizationalUnitResponse' smart constructor.
-data CreateOrganizationalUnitResponse = CreateOrganizationalUnitResponse'
-  { _coursOrganizationalUnit :: !(Maybe OrganizationalUnit)
-  , _coursResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateOrganizationalUnitResponse =
+  CreateOrganizationalUnitResponse'
+    { _coursOrganizationalUnit :: !(Maybe OrganizationalUnit)
+    , _coursResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateOrganizationalUnitResponse' with the minimum fields required to make a request.

@@ -43,10 +43,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteResourceServer' smart constructor.
-data DeleteResourceServer = DeleteResourceServer'
-  { _drsUserPoolId :: !Text
-  , _drsIdentifier :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteResourceServer =
+  DeleteResourceServer'
+    { _drsUserPoolId :: !Text
+    , _drsIdentifier :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteResourceServer' with the minimum fields required to make a request.

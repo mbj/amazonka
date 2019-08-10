@@ -66,26 +66,28 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createEndpoint' smart constructor.
-data CreateEndpoint = CreateEndpoint'
-  { _ceServerName                :: !(Maybe Text)
-  , _ceCertificateARN            :: !(Maybe Text)
-  , _ceServiceAccessRoleARN      :: !(Maybe Text)
-  , _ceExtraConnectionAttributes :: !(Maybe Text)
-  , _ceUsername                  :: !(Maybe Text)
-  , _ceExternalTableDefinition   :: !(Maybe Text)
-  , _ceKMSKeyId                  :: !(Maybe Text)
-  , _ceMongoDBSettings           :: !(Maybe MongoDBSettings)
-  , _ceSSLMode                   :: !(Maybe DmsSSLModeValue)
-  , _cePassword                  :: !(Maybe (Sensitive Text))
-  , _ceDatabaseName              :: !(Maybe Text)
-  , _ceS3Settings                :: !(Maybe S3Settings)
-  , _ceDynamoDBSettings          :: !(Maybe DynamoDBSettings)
-  , _ceTags                      :: !(Maybe [Tag])
-  , _cePort                      :: !(Maybe Int)
-  , _ceEndpointIdentifier        :: !Text
-  , _ceEndpointType              :: !ReplicationEndpointTypeValue
-  , _ceEngineName                :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data CreateEndpoint =
+  CreateEndpoint'
+    { _ceServerName                :: !(Maybe Text)
+    , _ceCertificateARN            :: !(Maybe Text)
+    , _ceServiceAccessRoleARN      :: !(Maybe Text)
+    , _ceExtraConnectionAttributes :: !(Maybe Text)
+    , _ceUsername                  :: !(Maybe Text)
+    , _ceExternalTableDefinition   :: !(Maybe Text)
+    , _ceKMSKeyId                  :: !(Maybe Text)
+    , _ceMongoDBSettings           :: !(Maybe MongoDBSettings)
+    , _ceSSLMode                   :: !(Maybe DmsSSLModeValue)
+    , _cePassword                  :: !(Maybe (Sensitive Text))
+    , _ceDatabaseName              :: !(Maybe Text)
+    , _ceS3Settings                :: !(Maybe S3Settings)
+    , _ceDynamoDBSettings          :: !(Maybe DynamoDBSettings)
+    , _ceTags                      :: !(Maybe [Tag])
+    , _cePort                      :: !(Maybe Int)
+    , _ceEndpointIdentifier        :: !Text
+    , _ceEndpointType              :: !ReplicationEndpointTypeValue
+    , _ceEngineName                :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateEndpoint' with the minimum fields required to make a request.
@@ -285,10 +287,12 @@ instance ToQuery CreateEndpoint where
 --
 --
 -- /See:/ 'createEndpointResponse' smart constructor.
-data CreateEndpointResponse = CreateEndpointResponse'
-  { _cersEndpoint       :: !(Maybe Endpoint)
-  , _cersResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data CreateEndpointResponse =
+  CreateEndpointResponse'
+    { _cersEndpoint       :: !(Maybe Endpoint)
+    , _cersResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateEndpointResponse' with the minimum fields required to make a request.

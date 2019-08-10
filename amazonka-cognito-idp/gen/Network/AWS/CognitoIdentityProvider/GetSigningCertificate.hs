@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getSigningCertificate' smart constructor.
-newtype GetSigningCertificate = GetSigningCertificate'
-  { _gscUserPoolId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetSigningCertificate =
+  GetSigningCertificate'
+    { _gscUserPoolId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetSigningCertificate' with the minimum fields required to make a request.
@@ -110,10 +112,12 @@ instance ToQuery GetSigningCertificate where
 --
 --
 -- /See:/ 'getSigningCertificateResponse' smart constructor.
-data GetSigningCertificateResponse = GetSigningCertificateResponse'
-  { _gscrsCertificate    :: !(Maybe Text)
-  , _gscrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetSigningCertificateResponse =
+  GetSigningCertificateResponse'
+    { _gscrsCertificate    :: !(Maybe Text)
+    , _gscrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetSigningCertificateResponse' with the minimum fields required to make a request.

@@ -77,16 +77,18 @@ import Network.AWS.SWF.Types
 import Network.AWS.SWF.Types.Product
 
 -- | /See:/ 'listOpenWorkflowExecutions' smart constructor.
-data ListOpenWorkflowExecutions = ListOpenWorkflowExecutions'
-  { _loweNextPageToken   :: !(Maybe Text)
-  , _loweExecutionFilter :: !(Maybe WorkflowExecutionFilter)
-  , _loweTypeFilter      :: !(Maybe WorkflowTypeFilter)
-  , _loweReverseOrder    :: !(Maybe Bool)
-  , _loweTagFilter       :: !(Maybe TagFilter)
-  , _loweMaximumPageSize :: !(Maybe Nat)
-  , _loweDomain          :: !Text
-  , _loweStartTimeFilter :: !ExecutionTimeFilter
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListOpenWorkflowExecutions =
+  ListOpenWorkflowExecutions'
+    { _loweNextPageToken   :: !(Maybe Text)
+    , _loweExecutionFilter :: !(Maybe WorkflowExecutionFilter)
+    , _loweTypeFilter      :: !(Maybe WorkflowTypeFilter)
+    , _loweReverseOrder    :: !(Maybe Bool)
+    , _loweTagFilter       :: !(Maybe TagFilter)
+    , _loweMaximumPageSize :: !(Maybe Nat)
+    , _loweDomain          :: !Text
+    , _loweStartTimeFilter :: !ExecutionTimeFilter
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListOpenWorkflowExecutions' with the minimum fields required to make a request.

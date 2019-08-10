@@ -53,9 +53,11 @@ import Network.AWS.StorageGateway.Types.Product
 --
 --
 -- /See:/ 'describeBandwidthRateLimit' smart constructor.
-newtype DescribeBandwidthRateLimit = DescribeBandwidthRateLimit'
-  { _dbrlGatewayARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeBandwidthRateLimit =
+  DescribeBandwidthRateLimit'
+    { _dbrlGatewayARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeBandwidthRateLimit' with the minimum fields required to make a request.
@@ -117,12 +119,14 @@ instance ToQuery DescribeBandwidthRateLimit where
 --
 --
 -- /See:/ 'describeBandwidthRateLimitResponse' smart constructor.
-data DescribeBandwidthRateLimitResponse = DescribeBandwidthRateLimitResponse'
-  { _dbrlrsGatewayARN                           :: !(Maybe Text)
-  , _dbrlrsAverageUploadRateLimitInBitsPerSec   :: !(Maybe Nat)
-  , _dbrlrsAverageDownloadRateLimitInBitsPerSec :: !(Maybe Nat)
-  , _dbrlrsResponseStatus                       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeBandwidthRateLimitResponse =
+  DescribeBandwidthRateLimitResponse'
+    { _dbrlrsGatewayARN                           :: !(Maybe Text)
+    , _dbrlrsAverageUploadRateLimitInBitsPerSec   :: !(Maybe Nat)
+    , _dbrlrsAverageDownloadRateLimitInBitsPerSec :: !(Maybe Nat)
+    , _dbrlrsResponseStatus                       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeBandwidthRateLimitResponse' with the minimum fields required to make a request.

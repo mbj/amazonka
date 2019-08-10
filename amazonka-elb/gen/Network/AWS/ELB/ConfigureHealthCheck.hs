@@ -52,10 +52,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'configureHealthCheck' smart constructor.
-data ConfigureHealthCheck = ConfigureHealthCheck'
-  { _chcLoadBalancerName :: !Text
-  , _chcHealthCheck      :: !HealthCheck
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ConfigureHealthCheck =
+  ConfigureHealthCheck'
+    { _chcLoadBalancerName :: !Text
+    , _chcHealthCheck      :: !HealthCheck
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ConfigureHealthCheck' with the minimum fields required to make a request.
@@ -115,10 +117,12 @@ instance ToQuery ConfigureHealthCheck where
 --
 --
 -- /See:/ 'configureHealthCheckResponse' smart constructor.
-data ConfigureHealthCheckResponse = ConfigureHealthCheckResponse'
-  { _chcrsHealthCheck    :: !(Maybe HealthCheck)
-  , _chcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ConfigureHealthCheckResponse =
+  ConfigureHealthCheckResponse'
+    { _chcrsHealthCheck    :: !(Maybe HealthCheck)
+    , _chcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ConfigureHealthCheckResponse' with the minimum fields required to make a request.

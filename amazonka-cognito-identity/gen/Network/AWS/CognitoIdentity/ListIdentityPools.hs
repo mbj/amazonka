@@ -53,10 +53,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listIdentityPools' smart constructor.
-data ListIdentityPools = ListIdentityPools'
-  { _lipNextToken  :: !(Maybe Text)
-  , _lipMaxResults :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListIdentityPools =
+  ListIdentityPools'
+    { _lipNextToken  :: !(Maybe Text)
+    , _lipMaxResults :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListIdentityPools' with the minimum fields required to make a request.
@@ -125,11 +127,13 @@ instance ToQuery ListIdentityPools where
 --
 --
 -- /See:/ 'listIdentityPoolsResponse' smart constructor.
-data ListIdentityPoolsResponse = ListIdentityPoolsResponse'
-  { _liprsIdentityPools  :: !(Maybe [IdentityPoolShortDescription])
-  , _liprsNextToken      :: !(Maybe Text)
-  , _liprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListIdentityPoolsResponse =
+  ListIdentityPoolsResponse'
+    { _liprsIdentityPools  :: !(Maybe [IdentityPoolShortDescription])
+    , _liprsNextToken      :: !(Maybe Text)
+    , _liprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListIdentityPoolsResponse' with the minimum fields required to make a request.

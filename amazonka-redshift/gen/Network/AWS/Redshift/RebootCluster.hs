@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'rebootCluster' smart constructor.
-newtype RebootCluster = RebootCluster'
-  { _rcClusterIdentifier :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RebootCluster =
+  RebootCluster'
+    { _rcClusterIdentifier :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RebootCluster' with the minimum fields required to make a request.
@@ -97,10 +99,12 @@ instance ToQuery RebootCluster where
                "ClusterIdentifier" =: _rcClusterIdentifier]
 
 -- | /See:/ 'rebootClusterResponse' smart constructor.
-data RebootClusterResponse = RebootClusterResponse'
-  { _rcrsCluster        :: !(Maybe Cluster)
-  , _rcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RebootClusterResponse =
+  RebootClusterResponse'
+    { _rcrsCluster        :: !(Maybe Cluster)
+    , _rcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RebootClusterResponse' with the minimum fields required to make a request.

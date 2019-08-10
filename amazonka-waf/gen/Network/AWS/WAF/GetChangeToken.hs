@@ -91,10 +91,12 @@ instance ToQuery GetChangeToken where
         toQuery = const mempty
 
 -- | /See:/ 'getChangeTokenResponse' smart constructor.
-data GetChangeTokenResponse = GetChangeTokenResponse'
-  { _gctrsChangeToken    :: !(Maybe Text)
-  , _gctrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetChangeTokenResponse =
+  GetChangeTokenResponse'
+    { _gctrsChangeToken    :: !(Maybe Text)
+    , _gctrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetChangeTokenResponse' with the minimum fields required to make a request.

@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listUserProfiles' smart constructor.
-data ListUserProfiles = ListUserProfiles'
-  { _lupNextToken  :: !(Maybe Text)
-  , _lupMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListUserProfiles =
+  ListUserProfiles'
+    { _lupNextToken  :: !(Maybe Text)
+    , _lupMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListUserProfiles' with the minimum fields required to make a request.
@@ -111,11 +113,13 @@ instance ToQuery ListUserProfiles where
         toQuery = const mempty
 
 -- | /See:/ 'listUserProfilesResponse' smart constructor.
-data ListUserProfilesResponse = ListUserProfilesResponse'
-  { _luprsNextToken      :: !(Maybe Text)
-  , _luprsResponseStatus :: !Int
-  , _luprsUserProfiles   :: ![UserProfileSummary]
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data ListUserProfilesResponse =
+  ListUserProfilesResponse'
+    { _luprsNextToken      :: !(Maybe Text)
+    , _luprsResponseStatus :: !Int
+    , _luprsUserProfiles   :: ![UserProfileSummary]
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListUserProfilesResponse' with the minimum fields required to make a request.

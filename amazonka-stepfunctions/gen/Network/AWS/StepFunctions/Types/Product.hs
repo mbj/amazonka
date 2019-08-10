@@ -26,10 +26,12 @@ import Network.AWS.StepFunctions.Types.Sum
 --
 --
 -- /See:/ 'activityFailedEventDetails' smart constructor.
-data ActivityFailedEventDetails = ActivityFailedEventDetails'
-  { _afedError :: !(Maybe Text)
-  , _afedCause :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ActivityFailedEventDetails =
+  ActivityFailedEventDetails'
+    { _afedError :: !(Maybe Text)
+    , _afedCause :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ActivityFailedEventDetails' with the minimum fields required to make a request.
@@ -69,11 +71,13 @@ instance NFData ActivityFailedEventDetails where
 --
 --
 -- /See:/ 'activityListItem' smart constructor.
-data ActivityListItem = ActivityListItem'
-  { _aliActivityARN  :: !Text
-  , _aliName         :: !Text
-  , _aliCreationDate :: !POSIX
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ActivityListItem =
+  ActivityListItem'
+    { _aliActivityARN  :: !Text
+    , _aliName         :: !Text
+    , _aliCreationDate :: !POSIX
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ActivityListItem' with the minimum fields required to make a request.
@@ -127,10 +131,12 @@ instance NFData ActivityListItem where
 --
 --
 -- /See:/ 'activityScheduleFailedEventDetails' smart constructor.
-data ActivityScheduleFailedEventDetails = ActivityScheduleFailedEventDetails'
-  { _asfedError :: !(Maybe Text)
-  , _asfedCause :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ActivityScheduleFailedEventDetails =
+  ActivityScheduleFailedEventDetails'
+    { _asfedError :: !(Maybe Text)
+    , _asfedCause :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ActivityScheduleFailedEventDetails' with the minimum fields required to make a request.
@@ -174,12 +180,14 @@ instance NFData ActivityScheduleFailedEventDetails
 --
 --
 -- /See:/ 'activityScheduledEventDetails' smart constructor.
-data ActivityScheduledEventDetails = ActivityScheduledEventDetails'
-  { _asedHeartbeatInSeconds :: !(Maybe Integer)
-  , _asedInput              :: !(Maybe Text)
-  , _asedTimeoutInSeconds   :: !(Maybe Integer)
-  , _asedResource           :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ActivityScheduledEventDetails =
+  ActivityScheduledEventDetails'
+    { _asedHeartbeatInSeconds :: !(Maybe Integer)
+    , _asedInput              :: !(Maybe Text)
+    , _asedTimeoutInSeconds   :: !(Maybe Integer)
+    , _asedResource           :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ActivityScheduledEventDetails' with the minimum fields required to make a request.
@@ -239,9 +247,11 @@ instance NFData ActivityScheduledEventDetails where
 --
 --
 -- /See:/ 'activityStartedEventDetails' smart constructor.
-newtype ActivityStartedEventDetails = ActivityStartedEventDetails'
-  { _asedWorkerName :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ActivityStartedEventDetails =
+  ActivityStartedEventDetails'
+    { _asedWorkerName :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ActivityStartedEventDetails' with the minimum fields required to make a request.
@@ -275,9 +285,11 @@ instance NFData ActivityStartedEventDetails where
 --
 --
 -- /See:/ 'activitySucceededEventDetails' smart constructor.
-newtype ActivitySucceededEventDetails = ActivitySucceededEventDetails'
-  { _asedOutput :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ActivitySucceededEventDetails =
+  ActivitySucceededEventDetails'
+    { _asedOutput :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ActivitySucceededEventDetails' with the minimum fields required to make a request.
@@ -310,10 +322,12 @@ instance NFData ActivitySucceededEventDetails where
 --
 --
 -- /See:/ 'activityTimedOutEventDetails' smart constructor.
-data ActivityTimedOutEventDetails = ActivityTimedOutEventDetails'
-  { _atoedError :: !(Maybe Text)
-  , _atoedCause :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ActivityTimedOutEventDetails =
+  ActivityTimedOutEventDetails'
+    { _atoedError :: !(Maybe Text)
+    , _atoedCause :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ActivityTimedOutEventDetails' with the minimum fields required to make a request.
@@ -353,10 +367,12 @@ instance NFData ActivityTimedOutEventDetails where
 --
 --
 -- /See:/ 'executionAbortedEventDetails' smart constructor.
-data ExecutionAbortedEventDetails = ExecutionAbortedEventDetails'
-  { _eaedError :: !(Maybe Text)
-  , _eaedCause :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ExecutionAbortedEventDetails =
+  ExecutionAbortedEventDetails'
+    { _eaedError :: !(Maybe Text)
+    , _eaedCause :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ExecutionAbortedEventDetails' with the minimum fields required to make a request.
@@ -396,10 +412,12 @@ instance NFData ExecutionAbortedEventDetails where
 --
 --
 -- /See:/ 'executionFailedEventDetails' smart constructor.
-data ExecutionFailedEventDetails = ExecutionFailedEventDetails'
-  { _efedError :: !(Maybe Text)
-  , _efedCause :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ExecutionFailedEventDetails =
+  ExecutionFailedEventDetails'
+    { _efedError :: !(Maybe Text)
+    , _efedCause :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ExecutionFailedEventDetails' with the minimum fields required to make a request.
@@ -439,14 +457,16 @@ instance NFData ExecutionFailedEventDetails where
 --
 --
 -- /See:/ 'executionListItem' smart constructor.
-data ExecutionListItem = ExecutionListItem'
-  { _eliStopDate        :: !(Maybe POSIX)
-  , _eliExecutionARN    :: !Text
-  , _eliStateMachineARN :: !Text
-  , _eliName            :: !Text
-  , _eliStatus          :: !ExecutionStatus
-  , _eliStartDate       :: !POSIX
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ExecutionListItem =
+  ExecutionListItem'
+    { _eliStopDate        :: !(Maybe POSIX)
+    , _eliExecutionARN    :: !Text
+    , _eliStateMachineARN :: !Text
+    , _eliName            :: !Text
+    , _eliStatus          :: !ExecutionStatus
+    , _eliStartDate       :: !POSIX
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ExecutionListItem' with the minimum fields required to make a request.
@@ -526,10 +546,12 @@ instance NFData ExecutionListItem where
 --
 --
 -- /See:/ 'executionStartedEventDetails' smart constructor.
-data ExecutionStartedEventDetails = ExecutionStartedEventDetails'
-  { _esedInput   :: !(Maybe Text)
-  , _esedRoleARN :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ExecutionStartedEventDetails =
+  ExecutionStartedEventDetails'
+    { _esedInput   :: !(Maybe Text)
+    , _esedRoleARN :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ExecutionStartedEventDetails' with the minimum fields required to make a request.
@@ -569,9 +591,11 @@ instance NFData ExecutionStartedEventDetails where
 --
 --
 -- /See:/ 'executionSucceededEventDetails' smart constructor.
-newtype ExecutionSucceededEventDetails = ExecutionSucceededEventDetails'
-  { _esedOutput :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ExecutionSucceededEventDetails =
+  ExecutionSucceededEventDetails'
+    { _esedOutput :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ExecutionSucceededEventDetails' with the minimum fields required to make a request.
@@ -606,10 +630,12 @@ instance NFData ExecutionSucceededEventDetails where
 --
 --
 -- /See:/ 'executionTimedOutEventDetails' smart constructor.
-data ExecutionTimedOutEventDetails = ExecutionTimedOutEventDetails'
-  { _etoedError :: !(Maybe Text)
-  , _etoedCause :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ExecutionTimedOutEventDetails =
+  ExecutionTimedOutEventDetails'
+    { _etoedError :: !(Maybe Text)
+    , _etoedCause :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ExecutionTimedOutEventDetails' with the minimum fields required to make a request.
@@ -649,31 +675,33 @@ instance NFData ExecutionTimedOutEventDetails where
 --
 --
 -- /See:/ 'historyEvent' smart constructor.
-data HistoryEvent = HistoryEvent'
-  { _heActivityStartedEventDetails :: !(Maybe ActivityStartedEventDetails)
-  , _heLambdaFunctionStartFailedEventDetails :: !(Maybe LambdaFunctionStartFailedEventDetails)
-  , _heStateExitedEventDetails :: !(Maybe StateExitedEventDetails)
-  , _heLambdaFunctionSucceededEventDetails :: !(Maybe LambdaFunctionSucceededEventDetails)
-  , _heActivitySucceededEventDetails :: !(Maybe ActivitySucceededEventDetails)
-  , _heLambdaFunctionTimedOutEventDetails :: !(Maybe LambdaFunctionTimedOutEventDetails)
-  , _heActivityTimedOutEventDetails :: !(Maybe ActivityTimedOutEventDetails)
-  , _heExecutionFailedEventDetails :: !(Maybe ExecutionFailedEventDetails)
-  , _heExecutionAbortedEventDetails :: !(Maybe ExecutionAbortedEventDetails)
-  , _heExecutionSucceededEventDetails :: !(Maybe ExecutionSucceededEventDetails)
-  , _heLambdaFunctionScheduledEventDetails :: !(Maybe LambdaFunctionScheduledEventDetails)
-  , _heActivityScheduledEventDetails :: !(Maybe ActivityScheduledEventDetails)
-  , _heExecutionStartedEventDetails :: !(Maybe ExecutionStartedEventDetails)
-  , _heActivityScheduleFailedEventDetails :: !(Maybe ActivityScheduleFailedEventDetails)
-  , _heLambdaFunctionScheduleFailedEventDetails :: !(Maybe LambdaFunctionScheduleFailedEventDetails)
-  , _heStateEnteredEventDetails :: !(Maybe StateEnteredEventDetails)
-  , _hePreviousEventId :: !(Maybe Integer)
-  , _heActivityFailedEventDetails :: !(Maybe ActivityFailedEventDetails)
-  , _heLambdaFunctionFailedEventDetails :: !(Maybe LambdaFunctionFailedEventDetails)
-  , _heExecutionTimedOutEventDetails :: !(Maybe ExecutionTimedOutEventDetails)
-  , _heTimestamp :: !POSIX
-  , _heType :: !HistoryEventType
-  , _heId :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data HistoryEvent =
+  HistoryEvent'
+    { _heActivityStartedEventDetails :: !(Maybe ActivityStartedEventDetails)
+    , _heLambdaFunctionStartFailedEventDetails :: !(Maybe LambdaFunctionStartFailedEventDetails)
+    , _heStateExitedEventDetails :: !(Maybe StateExitedEventDetails)
+    , _heLambdaFunctionSucceededEventDetails :: !(Maybe LambdaFunctionSucceededEventDetails)
+    , _heActivitySucceededEventDetails :: !(Maybe ActivitySucceededEventDetails)
+    , _heLambdaFunctionTimedOutEventDetails :: !(Maybe LambdaFunctionTimedOutEventDetails)
+    , _heActivityTimedOutEventDetails :: !(Maybe ActivityTimedOutEventDetails)
+    , _heExecutionFailedEventDetails :: !(Maybe ExecutionFailedEventDetails)
+    , _heExecutionAbortedEventDetails :: !(Maybe ExecutionAbortedEventDetails)
+    , _heExecutionSucceededEventDetails :: !(Maybe ExecutionSucceededEventDetails)
+    , _heLambdaFunctionScheduledEventDetails :: !(Maybe LambdaFunctionScheduledEventDetails)
+    , _heActivityScheduledEventDetails :: !(Maybe ActivityScheduledEventDetails)
+    , _heExecutionStartedEventDetails :: !(Maybe ExecutionStartedEventDetails)
+    , _heActivityScheduleFailedEventDetails :: !(Maybe ActivityScheduleFailedEventDetails)
+    , _heLambdaFunctionScheduleFailedEventDetails :: !(Maybe LambdaFunctionScheduleFailedEventDetails)
+    , _heStateEnteredEventDetails :: !(Maybe StateEnteredEventDetails)
+    , _hePreviousEventId :: !(Maybe Integer)
+    , _heActivityFailedEventDetails :: !(Maybe ActivityFailedEventDetails)
+    , _heLambdaFunctionFailedEventDetails :: !(Maybe LambdaFunctionFailedEventDetails)
+    , _heExecutionTimedOutEventDetails :: !(Maybe ExecutionTimedOutEventDetails)
+    , _heTimestamp :: !POSIX
+    , _heType :: !HistoryEventType
+    , _heId :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'HistoryEvent' with the minimum fields required to make a request.
@@ -889,10 +917,12 @@ instance NFData HistoryEvent where
 --
 --
 -- /See:/ 'lambdaFunctionFailedEventDetails' smart constructor.
-data LambdaFunctionFailedEventDetails = LambdaFunctionFailedEventDetails'
-  { _lffedError :: !(Maybe Text)
-  , _lffedCause :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LambdaFunctionFailedEventDetails =
+  LambdaFunctionFailedEventDetails'
+    { _lffedError :: !(Maybe Text)
+    , _lffedCause :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LambdaFunctionFailedEventDetails' with the minimum fields required to make a request.
@@ -936,10 +966,12 @@ instance NFData LambdaFunctionFailedEventDetails
 --
 --
 -- /See:/ 'lambdaFunctionScheduleFailedEventDetails' smart constructor.
-data LambdaFunctionScheduleFailedEventDetails = LambdaFunctionScheduleFailedEventDetails'
-  { _lError :: !(Maybe Text)
-  , _lCause :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LambdaFunctionScheduleFailedEventDetails =
+  LambdaFunctionScheduleFailedEventDetails'
+    { _lError :: !(Maybe Text)
+    , _lCause :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LambdaFunctionScheduleFailedEventDetails' with the minimum fields required to make a request.
@@ -987,11 +1019,13 @@ instance NFData
 --
 --
 -- /See:/ 'lambdaFunctionScheduledEventDetails' smart constructor.
-data LambdaFunctionScheduledEventDetails = LambdaFunctionScheduledEventDetails'
-  { _lfsedInput            :: !(Maybe Text)
-  , _lfsedTimeoutInSeconds :: !(Maybe Integer)
-  , _lfsedResource         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LambdaFunctionScheduledEventDetails =
+  LambdaFunctionScheduledEventDetails'
+    { _lfsedInput            :: !(Maybe Text)
+    , _lfsedTimeoutInSeconds :: !(Maybe Integer)
+    , _lfsedResource         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LambdaFunctionScheduledEventDetails' with the minimum fields required to make a request.
@@ -1046,10 +1080,12 @@ instance NFData LambdaFunctionScheduledEventDetails
 --
 --
 -- /See:/ 'lambdaFunctionStartFailedEventDetails' smart constructor.
-data LambdaFunctionStartFailedEventDetails = LambdaFunctionStartFailedEventDetails'
-  { _lfsfedError :: !(Maybe Text)
-  , _lfsfedCause :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LambdaFunctionStartFailedEventDetails =
+  LambdaFunctionStartFailedEventDetails'
+    { _lfsfedError :: !(Maybe Text)
+    , _lfsfedCause :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LambdaFunctionStartFailedEventDetails' with the minimum fields required to make a request.
@@ -1095,9 +1131,11 @@ instance NFData LambdaFunctionStartFailedEventDetails
 --
 --
 -- /See:/ 'lambdaFunctionSucceededEventDetails' smart constructor.
-newtype LambdaFunctionSucceededEventDetails = LambdaFunctionSucceededEventDetails'
-  { _lfsedOutput :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype LambdaFunctionSucceededEventDetails =
+  LambdaFunctionSucceededEventDetails'
+    { _lfsedOutput :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LambdaFunctionSucceededEventDetails' with the minimum fields required to make a request.
@@ -1134,10 +1172,12 @@ instance NFData LambdaFunctionSucceededEventDetails
 --
 --
 -- /See:/ 'lambdaFunctionTimedOutEventDetails' smart constructor.
-data LambdaFunctionTimedOutEventDetails = LambdaFunctionTimedOutEventDetails'
-  { _lftoedError :: !(Maybe Text)
-  , _lftoedCause :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LambdaFunctionTimedOutEventDetails =
+  LambdaFunctionTimedOutEventDetails'
+    { _lftoedError :: !(Maybe Text)
+    , _lftoedCause :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LambdaFunctionTimedOutEventDetails' with the minimum fields required to make a request.
@@ -1181,10 +1221,12 @@ instance NFData LambdaFunctionTimedOutEventDetails
 --
 --
 -- /See:/ 'stateEnteredEventDetails' smart constructor.
-data StateEnteredEventDetails = StateEnteredEventDetails'
-  { _sInput :: !(Maybe Text)
-  , _sName  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StateEnteredEventDetails =
+  StateEnteredEventDetails'
+    { _sInput :: !(Maybe Text)
+    , _sName  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StateEnteredEventDetails' with the minimum fields required to make a request.
@@ -1225,10 +1267,12 @@ instance NFData StateEnteredEventDetails where
 --
 --
 -- /See:/ 'stateExitedEventDetails' smart constructor.
-data StateExitedEventDetails = StateExitedEventDetails'
-  { _seedOutput :: !(Maybe Text)
-  , _seedName   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StateExitedEventDetails =
+  StateExitedEventDetails'
+    { _seedOutput :: !(Maybe Text)
+    , _seedName   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StateExitedEventDetails' with the minimum fields required to make a request.
@@ -1269,11 +1313,13 @@ instance NFData StateExitedEventDetails where
 --
 --
 -- /See:/ 'stateMachineListItem' smart constructor.
-data StateMachineListItem = StateMachineListItem'
-  { _smliStateMachineARN :: !Text
-  , _smliName            :: !Text
-  , _smliCreationDate    :: !POSIX
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StateMachineListItem =
+  StateMachineListItem'
+    { _smliStateMachineARN :: !Text
+    , _smliName            :: !Text
+    , _smliCreationDate    :: !POSIX
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StateMachineListItem' with the minimum fields required to make a request.

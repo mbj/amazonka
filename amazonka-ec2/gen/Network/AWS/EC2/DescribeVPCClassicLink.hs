@@ -51,11 +51,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeVPCClassicLink' smart constructor.
-data DescribeVPCClassicLink = DescribeVPCClassicLink'
-  { _dvclFilters :: !(Maybe [Filter])
-  , _dvclVPCIds  :: !(Maybe [Text])
-  , _dvclDryRun  :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeVPCClassicLink =
+  DescribeVPCClassicLink'
+    { _dvclFilters :: !(Maybe [Filter])
+    , _dvclVPCIds  :: !(Maybe [Text])
+    , _dvclDryRun  :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeVPCClassicLink' with the minimum fields required to make a request.
@@ -123,10 +125,12 @@ instance ToQuery DescribeVPCClassicLink where
 --
 --
 -- /See:/ 'describeVPCClassicLinkResponse' smart constructor.
-data DescribeVPCClassicLinkResponse = DescribeVPCClassicLinkResponse'
-  { _dvclrsVPCs           :: !(Maybe [VPCClassicLink])
-  , _dvclrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeVPCClassicLinkResponse =
+  DescribeVPCClassicLinkResponse'
+    { _dvclrsVPCs           :: !(Maybe [VPCClassicLink])
+    , _dvclrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeVPCClassicLinkResponse' with the minimum fields required to make a request.

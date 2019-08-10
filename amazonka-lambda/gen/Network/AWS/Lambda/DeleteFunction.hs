@@ -49,10 +49,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteFunction' smart constructor.
-data DeleteFunction = DeleteFunction'
-  { _dfQualifier    :: !(Maybe Text)
-  , _dfFunctionName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteFunction =
+  DeleteFunction'
+    { _dfQualifier    :: !(Maybe Text)
+    , _dfFunctionName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteFunction' with the minimum fields required to make a request.

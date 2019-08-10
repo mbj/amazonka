@@ -51,11 +51,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'exportBundle' smart constructor.
-data ExportBundle = ExportBundle'
-  { _ebPlatform  :: !(Maybe Platform)
-  , _ebProjectId :: !(Maybe Text)
-  , _ebBundleId  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ExportBundle =
+  ExportBundle'
+    { _ebPlatform  :: !(Maybe Platform)
+    , _ebProjectId :: !(Maybe Text)
+    , _ebBundleId  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ExportBundle' with the minimum fields required to make a request.
@@ -125,10 +127,12 @@ instance ToQuery ExportBundle where
 --
 --
 -- /See:/ 'exportBundleResponse' smart constructor.
-data ExportBundleResponse = ExportBundleResponse'
-  { _ebrsDownloadURL    :: !(Maybe Text)
-  , _ebrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ExportBundleResponse =
+  ExportBundleResponse'
+    { _ebrsDownloadURL    :: !(Maybe Text)
+    , _ebrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ExportBundleResponse' with the minimum fields required to make a request.

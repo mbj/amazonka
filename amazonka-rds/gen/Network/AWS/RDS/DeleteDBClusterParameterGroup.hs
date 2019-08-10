@@ -48,9 +48,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteDBClusterParameterGroup' smart constructor.
-newtype DeleteDBClusterParameterGroup = DeleteDBClusterParameterGroup'
-  { _ddbcpgDBClusterParameterGroupName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteDBClusterParameterGroup =
+  DeleteDBClusterParameterGroup'
+    { _ddbcpgDBClusterParameterGroupName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteDBClusterParameterGroup' with the minimum fields required to make a request.

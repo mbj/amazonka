@@ -45,12 +45,14 @@ import Network.AWS.SNS.Types
 import Network.AWS.SNS.Types.Product
 
 -- | /See:/ 'addPermission' smart constructor.
-data AddPermission = AddPermission'
-  { _apTopicARN     :: !Text
-  , _apLabel        :: !Text
-  , _apAWSAccountId :: ![Text]
-  , _apActionName   :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddPermission =
+  AddPermission'
+    { _apTopicARN     :: !Text
+    , _apLabel        :: !Text
+    , _apAWSAccountId :: ![Text]
+    , _apActionName   :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddPermission' with the minimum fields required to make a request.

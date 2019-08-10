@@ -60,12 +60,14 @@ import Network.AWS.StorageGateway.Types.Product
 --
 --
 -- /See:/ 'updateMaintenanceStartTime' smart constructor.
-data UpdateMaintenanceStartTime = UpdateMaintenanceStartTime'
-  { _umstGatewayARN   :: !Text
-  , _umstHourOfDay    :: !Nat
-  , _umstMinuteOfHour :: !Nat
-  , _umstDayOfWeek    :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateMaintenanceStartTime =
+  UpdateMaintenanceStartTime'
+    { _umstGatewayARN   :: !Text
+    , _umstHourOfDay    :: !Nat
+    , _umstMinuteOfHour :: !Nat
+    , _umstDayOfWeek    :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateMaintenanceStartTime' with the minimum fields required to make a request.
@@ -154,10 +156,12 @@ instance ToQuery UpdateMaintenanceStartTime where
 --
 --
 -- /See:/ 'updateMaintenanceStartTimeResponse' smart constructor.
-data UpdateMaintenanceStartTimeResponse = UpdateMaintenanceStartTimeResponse'
-  { _umstrsGatewayARN     :: !(Maybe Text)
-  , _umstrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateMaintenanceStartTimeResponse =
+  UpdateMaintenanceStartTimeResponse'
+    { _umstrsGatewayARN     :: !(Maybe Text)
+    , _umstrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateMaintenanceStartTimeResponse' with the minimum fields required to make a request.

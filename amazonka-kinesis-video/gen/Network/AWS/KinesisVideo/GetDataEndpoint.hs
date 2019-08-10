@@ -49,11 +49,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getDataEndpoint' smart constructor.
-data GetDataEndpoint = GetDataEndpoint'
-  { _gdeStreamARN  :: !(Maybe Text)
-  , _gdeStreamName :: !(Maybe Text)
-  , _gdeAPIName    :: !APIName
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDataEndpoint =
+  GetDataEndpoint'
+    { _gdeStreamARN  :: !(Maybe Text)
+    , _gdeStreamName :: !(Maybe Text)
+    , _gdeAPIName    :: !APIName
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDataEndpoint' with the minimum fields required to make a request.
@@ -116,10 +118,12 @@ instance ToQuery GetDataEndpoint where
         toQuery = const mempty
 
 -- | /See:/ 'getDataEndpointResponse' smart constructor.
-data GetDataEndpointResponse = GetDataEndpointResponse'
-  { _gdersDataEndpoint   :: !(Maybe Text)
-  , _gdersResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDataEndpointResponse =
+  GetDataEndpointResponse'
+    { _gdersDataEndpoint   :: !(Maybe Text)
+    , _gdersResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDataEndpointResponse' with the minimum fields required to make a request.

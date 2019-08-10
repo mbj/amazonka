@@ -56,12 +56,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'modifyDBClusterSnapshotAttribute' smart constructor.
-data ModifyDBClusterSnapshotAttribute = ModifyDBClusterSnapshotAttribute'
-  { _mdcsaValuesToAdd                 :: !(Maybe [Text])
-  , _mdcsaValuesToRemove              :: !(Maybe [Text])
-  , _mdcsaDBClusterSnapshotIdentifier :: !Text
-  , _mdcsaAttributeName               :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyDBClusterSnapshotAttribute =
+  ModifyDBClusterSnapshotAttribute'
+    { _mdcsaValuesToAdd                 :: !(Maybe [Text])
+    , _mdcsaValuesToRemove              :: !(Maybe [Text])
+    , _mdcsaDBClusterSnapshotIdentifier :: !Text
+    , _mdcsaAttributeName               :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyDBClusterSnapshotAttribute' with the minimum fields required to make a request.
@@ -150,10 +152,12 @@ instance ToQuery ModifyDBClusterSnapshotAttribute
                "AttributeName" =: _mdcsaAttributeName]
 
 -- | /See:/ 'modifyDBClusterSnapshotAttributeResponse' smart constructor.
-data ModifyDBClusterSnapshotAttributeResponse = ModifyDBClusterSnapshotAttributeResponse'
-  { _mdcsarsDBClusterSnapshotAttributesResult :: !(Maybe DBClusterSnapshotAttributesResult)
-  , _mdcsarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyDBClusterSnapshotAttributeResponse =
+  ModifyDBClusterSnapshotAttributeResponse'
+    { _mdcsarsDBClusterSnapshotAttributesResult :: !(Maybe DBClusterSnapshotAttributesResult)
+    , _mdcsarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyDBClusterSnapshotAttributeResponse' with the minimum fields required to make a request.

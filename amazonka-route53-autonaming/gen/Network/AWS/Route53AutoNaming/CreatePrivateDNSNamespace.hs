@@ -48,12 +48,14 @@ import Network.AWS.Route53AutoNaming.Types
 import Network.AWS.Route53AutoNaming.Types.Product
 
 -- | /See:/ 'createPrivateDNSNamespace' smart constructor.
-data CreatePrivateDNSNamespace = CreatePrivateDNSNamespace'
-  { _cpdnsnCreatorRequestId :: !(Maybe Text)
-  , _cpdnsnDescription      :: !(Maybe Text)
-  , _cpdnsnName             :: !Text
-  , _cpdnsnVPC              :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreatePrivateDNSNamespace =
+  CreatePrivateDNSNamespace'
+    { _cpdnsnCreatorRequestId :: !(Maybe Text)
+    , _cpdnsnDescription      :: !(Maybe Text)
+    , _cpdnsnName             :: !Text
+    , _cpdnsnVPC              :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreatePrivateDNSNamespace' with the minimum fields required to make a request.
@@ -136,10 +138,12 @@ instance ToQuery CreatePrivateDNSNamespace where
         toQuery = const mempty
 
 -- | /See:/ 'createPrivateDNSNamespaceResponse' smart constructor.
-data CreatePrivateDNSNamespaceResponse = CreatePrivateDNSNamespaceResponse'
-  { _cpdnsnrsOperationId    :: !(Maybe Text)
-  , _cpdnsnrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreatePrivateDNSNamespaceResponse =
+  CreatePrivateDNSNamespaceResponse'
+    { _cpdnsnrsOperationId    :: !(Maybe Text)
+    , _cpdnsnrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreatePrivateDNSNamespaceResponse' with the minimum fields required to make a request.

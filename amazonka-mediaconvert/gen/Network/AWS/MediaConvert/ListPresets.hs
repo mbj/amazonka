@@ -48,13 +48,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listPresets' smart constructor.
-data ListPresets = ListPresets'
-  { _lpCategory   :: !(Maybe Text)
-  , _lpListBy     :: !(Maybe PresetListBy)
-  , _lpNextToken  :: !(Maybe Text)
-  , _lpOrder      :: !(Maybe Order)
-  , _lpMaxResults :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListPresets =
+  ListPresets'
+    { _lpCategory   :: !(Maybe Text)
+    , _lpListBy     :: !(Maybe PresetListBy)
+    , _lpNextToken  :: !(Maybe Text)
+    , _lpOrder      :: !(Maybe Order)
+    , _lpMaxResults :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListPresets' with the minimum fields required to make a request.
@@ -134,11 +136,13 @@ instance ToQuery ListPresets where
                "maxResults" =: _lpMaxResults]
 
 -- | /See:/ 'listPresetsResponse' smart constructor.
-data ListPresetsResponse = ListPresetsResponse'
-  { _lprsPresets        :: !(Maybe [Preset])
-  , _lprsNextToken      :: !(Maybe Text)
-  , _lprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListPresetsResponse =
+  ListPresetsResponse'
+    { _lprsPresets        :: !(Maybe [Preset])
+    , _lprsNextToken      :: !(Maybe Text)
+    , _lprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListPresetsResponse' with the minimum fields required to make a request.

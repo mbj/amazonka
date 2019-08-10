@@ -53,11 +53,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listOrganizationalUnitsForParent' smart constructor.
-data ListOrganizationalUnitsForParent = ListOrganizationalUnitsForParent'
-  { _loufpNextToken  :: !(Maybe Text)
-  , _loufpMaxResults :: !(Maybe Nat)
-  , _loufpParentId   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListOrganizationalUnitsForParent =
+  ListOrganizationalUnitsForParent'
+    { _loufpNextToken  :: !(Maybe Text)
+    , _loufpMaxResults :: !(Maybe Nat)
+    , _loufpParentId   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListOrganizationalUnitsForParent' with the minimum fields required to make a request.
@@ -148,11 +150,13 @@ instance ToQuery ListOrganizationalUnitsForParent
         toQuery = const mempty
 
 -- | /See:/ 'listOrganizationalUnitsForParentResponse' smart constructor.
-data ListOrganizationalUnitsForParentResponse = ListOrganizationalUnitsForParentResponse'
-  { _loufprsNextToken           :: !(Maybe Text)
-  , _loufprsOrganizationalUnits :: !(Maybe [OrganizationalUnit])
-  , _loufprsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListOrganizationalUnitsForParentResponse =
+  ListOrganizationalUnitsForParentResponse'
+    { _loufprsNextToken           :: !(Maybe Text)
+    , _loufprsOrganizationalUnits :: !(Maybe [OrganizationalUnit])
+    , _loufprsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListOrganizationalUnitsForParentResponse' with the minimum fields required to make a request.

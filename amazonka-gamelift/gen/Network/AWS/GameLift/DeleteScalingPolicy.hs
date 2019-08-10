@@ -77,10 +77,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteScalingPolicy' smart constructor.
-data DeleteScalingPolicy = DeleteScalingPolicy'
-  { _dspName    :: !Text
-  , _dspFleetId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteScalingPolicy =
+  DeleteScalingPolicy'
+    { _dspName    :: !Text
+    , _dspFleetId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteScalingPolicy' with the minimum fields required to make a request.

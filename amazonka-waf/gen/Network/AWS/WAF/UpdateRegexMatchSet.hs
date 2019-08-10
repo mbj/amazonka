@@ -71,11 +71,13 @@ import Network.AWS.WAF.Types
 import Network.AWS.WAF.Types.Product
 
 -- | /See:/ 'updateRegexMatchSet' smart constructor.
-data UpdateRegexMatchSet = UpdateRegexMatchSet'
-  { _urmsRegexMatchSetId :: !Text
-  , _urmsUpdates         :: !(List1 RegexMatchSetUpdate)
-  , _urmsChangeToken     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateRegexMatchSet =
+  UpdateRegexMatchSet'
+    { _urmsRegexMatchSetId :: !Text
+    , _urmsUpdates         :: !(List1 RegexMatchSetUpdate)
+    , _urmsChangeToken     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateRegexMatchSet' with the minimum fields required to make a request.
@@ -151,10 +153,12 @@ instance ToQuery UpdateRegexMatchSet where
         toQuery = const mempty
 
 -- | /See:/ 'updateRegexMatchSetResponse' smart constructor.
-data UpdateRegexMatchSetResponse = UpdateRegexMatchSetResponse'
-  { _urmsrsChangeToken    :: !(Maybe Text)
-  , _urmsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateRegexMatchSetResponse =
+  UpdateRegexMatchSetResponse'
+    { _urmsrsChangeToken    :: !(Maybe Text)
+    , _urmsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateRegexMatchSetResponse' with the minimum fields required to make a request.

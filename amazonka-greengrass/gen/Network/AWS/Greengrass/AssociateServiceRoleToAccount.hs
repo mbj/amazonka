@@ -43,9 +43,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'associateServiceRoleToAccount' smart constructor.
-newtype AssociateServiceRoleToAccount = AssociateServiceRoleToAccount'
-  { _asrtaRoleARN :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AssociateServiceRoleToAccount =
+  AssociateServiceRoleToAccount'
+    { _asrtaRoleARN :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateServiceRoleToAccount' with the minimum fields required to make a request.
@@ -98,10 +100,12 @@ instance ToQuery AssociateServiceRoleToAccount where
         toQuery = const mempty
 
 -- | /See:/ 'associateServiceRoleToAccountResponse' smart constructor.
-data AssociateServiceRoleToAccountResponse = AssociateServiceRoleToAccountResponse'
-  { _asrtarsAssociatedAt   :: !(Maybe Text)
-  , _asrtarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssociateServiceRoleToAccountResponse =
+  AssociateServiceRoleToAccountResponse'
+    { _asrtarsAssociatedAt   :: !(Maybe Text)
+    , _asrtarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateServiceRoleToAccountResponse' with the minimum fields required to make a request.

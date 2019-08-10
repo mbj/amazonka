@@ -77,16 +77,18 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateFunctionCode' smart constructor.
-data UpdateFunctionCode = UpdateFunctionCode'
-  { _uS3ObjectVersion :: !(Maybe Text)
-  , _uS3Key           :: !(Maybe Text)
-  , _uZipFile         :: !(Maybe (Sensitive Base64))
-  , _uS3Bucket        :: !(Maybe Text)
-  , _uDryRun          :: !(Maybe Bool)
-  , _uRevisionId      :: !(Maybe Text)
-  , _uPublish         :: !(Maybe Bool)
-  , _uFunctionName    :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data UpdateFunctionCode =
+  UpdateFunctionCode'
+    { _uS3ObjectVersion :: !(Maybe Text)
+    , _uS3Key           :: !(Maybe Text)
+    , _uZipFile         :: !(Maybe (Sensitive Base64))
+    , _uS3Bucket        :: !(Maybe Text)
+    , _uDryRun          :: !(Maybe Bool)
+    , _uRevisionId      :: !(Maybe Text)
+    , _uPublish         :: !(Maybe Bool)
+    , _uFunctionName    :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateFunctionCode' with the minimum fields required to make a request.

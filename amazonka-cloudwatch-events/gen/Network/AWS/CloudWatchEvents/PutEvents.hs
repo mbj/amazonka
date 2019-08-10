@@ -46,9 +46,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putEvents' smart constructor.
-newtype PutEvents = PutEvents'
-  { _peEntries :: List1 PutEventsRequestEntry
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype PutEvents =
+  PutEvents'
+    { _peEntries :: List1 PutEventsRequestEntry
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutEvents' with the minimum fields required to make a request.
@@ -101,11 +103,13 @@ instance ToQuery PutEvents where
         toQuery = const mempty
 
 -- | /See:/ 'putEventsResponse' smart constructor.
-data PutEventsResponse = PutEventsResponse'
-  { _persFailedEntryCount :: !(Maybe Int)
-  , _persEntries          :: !(Maybe [PutEventsResultEntry])
-  , _persResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutEventsResponse =
+  PutEventsResponse'
+    { _persFailedEntryCount :: !(Maybe Int)
+    , _persEntries          :: !(Maybe [PutEventsResultEntry])
+    , _persResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutEventsResponse' with the minimum fields required to make a request.

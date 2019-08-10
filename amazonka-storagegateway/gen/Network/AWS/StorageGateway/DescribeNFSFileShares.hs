@@ -49,9 +49,11 @@ import Network.AWS.StorageGateway.Types.Product
 --
 --
 -- /See:/ 'describeNFSFileShares' smart constructor.
-newtype DescribeNFSFileShares = DescribeNFSFileShares'
-  { _dnfsfsFileShareARNList :: List1 Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeNFSFileShares =
+  DescribeNFSFileShares'
+    { _dnfsfsFileShareARNList :: List1 Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeNFSFileShares' with the minimum fields required to make a request.
@@ -113,10 +115,12 @@ instance ToQuery DescribeNFSFileShares where
 --
 --
 -- /See:/ 'describeNFSFileSharesResponse' smart constructor.
-data DescribeNFSFileSharesResponse = DescribeNFSFileSharesResponse'
-  { _dnfsfsrsNFSFileShareInfoList :: !(Maybe [NFSFileShareInfo])
-  , _dnfsfsrsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeNFSFileSharesResponse =
+  DescribeNFSFileSharesResponse'
+    { _dnfsfsrsNFSFileShareInfoList :: !(Maybe [NFSFileShareInfo])
+    , _dnfsfsrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeNFSFileSharesResponse' with the minimum fields required to make a request.

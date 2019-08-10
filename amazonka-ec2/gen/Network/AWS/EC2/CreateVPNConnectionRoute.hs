@@ -49,10 +49,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createVPNConnectionRoute' smart constructor.
-data CreateVPNConnectionRoute = CreateVPNConnectionRoute'
-  { _cvcrDestinationCidrBlock :: !Text
-  , _cvcrVPNConnectionId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateVPNConnectionRoute =
+  CreateVPNConnectionRoute'
+    { _cvcrDestinationCidrBlock :: !Text
+    , _cvcrVPNConnectionId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateVPNConnectionRoute' with the minimum fields required to make a request.

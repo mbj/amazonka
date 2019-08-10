@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'untagLogGroup' smart constructor.
-data UntagLogGroup = UntagLogGroup'
-  { _ulgLogGroupName :: !Text
-  , _ulgTags         :: !(List1 Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UntagLogGroup =
+  UntagLogGroup'
+    { _ulgLogGroupName :: !Text
+    , _ulgTags         :: !(List1 Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UntagLogGroup' with the minimum fields required to make a request.

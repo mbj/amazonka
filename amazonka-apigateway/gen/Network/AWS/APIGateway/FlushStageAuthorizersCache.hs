@@ -47,10 +47,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'flushStageAuthorizersCache' smart constructor.
-data FlushStageAuthorizersCache = FlushStageAuthorizersCache'
-  { _fsacRestAPIId :: !Text
-  , _fsacStageName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FlushStageAuthorizersCache =
+  FlushStageAuthorizersCache'
+    { _fsacRestAPIId :: !Text
+    , _fsacStageName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FlushStageAuthorizersCache' with the minimum fields required to make a request.

@@ -55,13 +55,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'authorizeDBSecurityGroupIngress' smart constructor.
-data AuthorizeDBSecurityGroupIngress = AuthorizeDBSecurityGroupIngress'
-  { _adsgiEC2SecurityGroupOwnerId :: !(Maybe Text)
-  , _adsgiEC2SecurityGroupName    :: !(Maybe Text)
-  , _adsgiCIdRIP                  :: !(Maybe Text)
-  , _adsgiEC2SecurityGroupId      :: !(Maybe Text)
-  , _adsgiDBSecurityGroupName     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AuthorizeDBSecurityGroupIngress =
+  AuthorizeDBSecurityGroupIngress'
+    { _adsgiEC2SecurityGroupOwnerId :: !(Maybe Text)
+    , _adsgiEC2SecurityGroupName    :: !(Maybe Text)
+    , _adsgiCIdRIP                  :: !(Maybe Text)
+    , _adsgiEC2SecurityGroupId      :: !(Maybe Text)
+    , _adsgiDBSecurityGroupName     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AuthorizeDBSecurityGroupIngress' with the minimum fields required to make a request.
@@ -149,10 +151,12 @@ instance ToQuery AuthorizeDBSecurityGroupIngress
                "DBSecurityGroupName" =: _adsgiDBSecurityGroupName]
 
 -- | /See:/ 'authorizeDBSecurityGroupIngressResponse' smart constructor.
-data AuthorizeDBSecurityGroupIngressResponse = AuthorizeDBSecurityGroupIngressResponse'
-  { _adsgirsDBSecurityGroup :: !(Maybe DBSecurityGroup)
-  , _adsgirsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AuthorizeDBSecurityGroupIngressResponse =
+  AuthorizeDBSecurityGroupIngressResponse'
+    { _adsgirsDBSecurityGroup :: !(Maybe DBSecurityGroup)
+    , _adsgirsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AuthorizeDBSecurityGroupIngressResponse' with the minimum fields required to make a request.

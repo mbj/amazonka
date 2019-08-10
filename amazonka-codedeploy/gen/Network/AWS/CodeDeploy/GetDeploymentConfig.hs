@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getDeploymentConfig' smart constructor.
-newtype GetDeploymentConfig = GetDeploymentConfig'
-  { _gdcDeploymentConfigName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetDeploymentConfig =
+  GetDeploymentConfig'
+    { _gdcDeploymentConfigName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDeploymentConfig' with the minimum fields required to make a request.
@@ -114,10 +116,12 @@ instance ToQuery GetDeploymentConfig where
 --
 --
 -- /See:/ 'getDeploymentConfigResponse' smart constructor.
-data GetDeploymentConfigResponse = GetDeploymentConfigResponse'
-  { _gdcrsDeploymentConfigInfo :: !(Maybe DeploymentConfigInfo)
-  , _gdcrsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDeploymentConfigResponse =
+  GetDeploymentConfigResponse'
+    { _gdcrsDeploymentConfigInfo :: !(Maybe DeploymentConfigInfo)
+    , _gdcrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDeploymentConfigResponse' with the minimum fields required to make a request.

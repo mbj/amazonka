@@ -53,9 +53,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getIdentityPoolRoles' smart constructor.
-newtype GetIdentityPoolRoles = GetIdentityPoolRoles'
-  { _giprIdentityPoolId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetIdentityPoolRoles =
+  GetIdentityPoolRoles'
+    { _giprIdentityPoolId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetIdentityPoolRoles' with the minimum fields required to make a request.
@@ -118,12 +120,14 @@ instance ToQuery GetIdentityPoolRoles where
 --
 --
 -- /See:/ 'getIdentityPoolRolesResponse' smart constructor.
-data GetIdentityPoolRolesResponse = GetIdentityPoolRolesResponse'
-  { _giprrsRoles          :: !(Maybe (Map Text Text))
-  , _giprrsIdentityPoolId :: !(Maybe Text)
-  , _giprrsRoleMappings   :: !(Maybe (Map Text RoleMapping))
-  , _giprrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetIdentityPoolRolesResponse =
+  GetIdentityPoolRolesResponse'
+    { _giprrsRoles          :: !(Maybe (Map Text Text))
+    , _giprrsIdentityPoolId :: !(Maybe Text)
+    , _giprrsRoleMappings   :: !(Maybe (Map Text RoleMapping))
+    , _giprrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetIdentityPoolRolesResponse' with the minimum fields required to make a request.

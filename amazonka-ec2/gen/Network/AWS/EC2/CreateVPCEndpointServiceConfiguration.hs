@@ -51,12 +51,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createVPCEndpointServiceConfiguration' smart constructor.
-data CreateVPCEndpointServiceConfiguration = CreateVPCEndpointServiceConfiguration'
-  { _cvescClientToken             :: !(Maybe Text)
-  , _cvescAcceptanceRequired      :: !(Maybe Bool)
-  , _cvescDryRun                  :: !(Maybe Bool)
-  , _cvescNetworkLoadBalancerARNs :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateVPCEndpointServiceConfiguration =
+  CreateVPCEndpointServiceConfiguration'
+    { _cvescClientToken             :: !(Maybe Text)
+    , _cvescAcceptanceRequired      :: !(Maybe Bool)
+    , _cvescDryRun                  :: !(Maybe Bool)
+    , _cvescNetworkLoadBalancerARNs :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateVPCEndpointServiceConfiguration' with the minimum fields required to make a request.
@@ -143,11 +145,13 @@ instance ToQuery
                  _cvescNetworkLoadBalancerARNs]
 
 -- | /See:/ 'createVPCEndpointServiceConfigurationResponse' smart constructor.
-data CreateVPCEndpointServiceConfigurationResponse = CreateVPCEndpointServiceConfigurationResponse'
-  { _cvescrsClientToken          :: !(Maybe Text)
-  , _cvescrsServiceConfiguration :: !(Maybe ServiceConfiguration)
-  , _cvescrsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateVPCEndpointServiceConfigurationResponse =
+  CreateVPCEndpointServiceConfigurationResponse'
+    { _cvescrsClientToken          :: !(Maybe Text)
+    , _cvescrsServiceConfiguration :: !(Maybe ServiceConfiguration)
+    , _cvescrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateVPCEndpointServiceConfigurationResponse' with the minimum fields required to make a request.

@@ -26,10 +26,12 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'bufferingHints' smart constructor.
-data BufferingHints = BufferingHints'
-  { _bhSizeInMBs         :: !(Maybe Nat)
-  , _bhIntervalInSeconds :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BufferingHints =
+  BufferingHints'
+    { _bhSizeInMBs         :: !(Maybe Nat)
+    , _bhIntervalInSeconds :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BufferingHints' with the minimum fields required to make a request.
@@ -76,11 +78,13 @@ instance ToJSON BufferingHints where
 --
 --
 -- /See:/ 'cloudWatchLoggingOptions' smart constructor.
-data CloudWatchLoggingOptions = CloudWatchLoggingOptions'
-  { _cwloEnabled       :: !(Maybe Bool)
-  , _cwloLogGroupName  :: !(Maybe Text)
-  , _cwloLogStreamName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CloudWatchLoggingOptions =
+  CloudWatchLoggingOptions'
+    { _cwloEnabled       :: !(Maybe Bool)
+    , _cwloLogGroupName  :: !(Maybe Text)
+    , _cwloLogStreamName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CloudWatchLoggingOptions' with the minimum fields required to make a request.
@@ -139,11 +143,13 @@ instance ToJSON CloudWatchLoggingOptions where
 --
 --
 -- /See:/ 'copyCommand' smart constructor.
-data CopyCommand = CopyCommand'
-  { _ccCopyOptions      :: !(Maybe Text)
-  , _ccDataTableColumns :: !(Maybe Text)
-  , _ccDataTableName    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CopyCommand =
+  CopyCommand'
+    { _ccCopyOptions      :: !(Maybe Text)
+    , _ccDataTableColumns :: !(Maybe Text)
+    , _ccDataTableName    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CopyCommand' with the minimum fields required to make a request.
@@ -203,12 +209,14 @@ instance ToJSON CopyCommand where
 --
 --
 -- /See:/ 'dataFormatConversionConfiguration' smart constructor.
-data DataFormatConversionConfiguration = DataFormatConversionConfiguration'
-  { _dfccOutputFormatConfiguration :: !(Maybe OutputFormatConfiguration)
-  , _dfccEnabled                   :: !(Maybe Bool)
-  , _dfccSchemaConfiguration       :: !(Maybe SchemaConfiguration)
-  , _dfccInputFormatConfiguration  :: !(Maybe InputFormatConfiguration)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DataFormatConversionConfiguration =
+  DataFormatConversionConfiguration'
+    { _dfccOutputFormatConfiguration :: !(Maybe OutputFormatConfiguration)
+    , _dfccEnabled                   :: !(Maybe Bool)
+    , _dfccSchemaConfiguration       :: !(Maybe SchemaConfiguration)
+    , _dfccInputFormatConfiguration  :: !(Maybe InputFormatConfiguration)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DataFormatConversionConfiguration' with the minimum fields required to make a request.
@@ -284,18 +292,20 @@ instance ToJSON DataFormatConversionConfiguration
 --
 --
 -- /See:/ 'deliveryStreamDescription' smart constructor.
-data DeliveryStreamDescription = DeliveryStreamDescription'
-  { _dsdCreateTimestamp      :: !(Maybe POSIX)
-  , _dsdSource               :: !(Maybe SourceDescription)
-  , _dsdLastUpdateTimestamp  :: !(Maybe POSIX)
-  , _dsdDeliveryStreamName   :: !Text
-  , _dsdDeliveryStreamARN    :: !Text
-  , _dsdDeliveryStreamStatus :: !DeliveryStreamStatus
-  , _dsdDeliveryStreamType   :: !DeliveryStreamType
-  , _dsdVersionId            :: !Text
-  , _dsdDestinations         :: ![DestinationDescription]
-  , _dsdHasMoreDestinations  :: !Bool
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data DeliveryStreamDescription =
+  DeliveryStreamDescription'
+    { _dsdCreateTimestamp      :: !(Maybe POSIX)
+    , _dsdSource               :: !(Maybe SourceDescription)
+    , _dsdLastUpdateTimestamp  :: !(Maybe POSIX)
+    , _dsdDeliveryStreamName   :: !Text
+    , _dsdDeliveryStreamARN    :: !Text
+    , _dsdDeliveryStreamStatus :: !DeliveryStreamStatus
+    , _dsdDeliveryStreamType   :: !DeliveryStreamType
+    , _dsdVersionId            :: !Text
+    , _dsdDestinations         :: ![DestinationDescription]
+    , _dsdHasMoreDestinations  :: !Bool
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeliveryStreamDescription' with the minimum fields required to make a request.
@@ -408,10 +418,12 @@ instance NFData DeliveryStreamDescription where
 --
 --
 -- /See:/ 'deserializer' smart constructor.
-data Deserializer = Deserializer'
-  { _dOpenXJSONSerDe :: !(Maybe OpenXJSONSerDe)
-  , _dHiveJSONSerDe  :: !(Maybe HiveJSONSerDe)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Deserializer =
+  Deserializer'
+    { _dOpenXJSONSerDe :: !(Maybe OpenXJSONSerDe)
+    , _dHiveJSONSerDe  :: !(Maybe HiveJSONSerDe)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Deserializer' with the minimum fields required to make a request.
@@ -458,14 +470,16 @@ instance ToJSON Deserializer where
 --
 --
 -- /See:/ 'destinationDescription' smart constructor.
-data DestinationDescription = DestinationDescription'
-  { _ddSplunkDestinationDescription :: !(Maybe SplunkDestinationDescription)
-  , _ddS3DestinationDescription :: !(Maybe S3DestinationDescription)
-  , _ddExtendedS3DestinationDescription :: !(Maybe ExtendedS3DestinationDescription)
-  , _ddElasticsearchDestinationDescription :: !(Maybe ElasticsearchDestinationDescription)
-  , _ddRedshiftDestinationDescription :: !(Maybe RedshiftDestinationDescription)
-  , _ddDestinationId :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data DestinationDescription =
+  DestinationDescription'
+    { _ddSplunkDestinationDescription :: !(Maybe SplunkDestinationDescription)
+    , _ddS3DestinationDescription :: !(Maybe S3DestinationDescription)
+    , _ddExtendedS3DestinationDescription :: !(Maybe ExtendedS3DestinationDescription)
+    , _ddElasticsearchDestinationDescription :: !(Maybe ElasticsearchDestinationDescription)
+    , _ddRedshiftDestinationDescription :: !(Maybe RedshiftDestinationDescription)
+    , _ddDestinationId :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DestinationDescription' with the minimum fields required to make a request.
@@ -542,10 +556,12 @@ instance NFData DestinationDescription where
 --
 --
 -- /See:/ 'elasticsearchBufferingHints' smart constructor.
-data ElasticsearchBufferingHints = ElasticsearchBufferingHints'
-  { _ebhSizeInMBs         :: !(Maybe Nat)
-  , _ebhIntervalInSeconds :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ElasticsearchBufferingHints =
+  ElasticsearchBufferingHints'
+    { _ebhSizeInMBs         :: !(Maybe Nat)
+    , _ebhIntervalInSeconds :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ElasticsearchBufferingHints' with the minimum fields required to make a request.
@@ -593,19 +609,21 @@ instance ToJSON ElasticsearchBufferingHints where
 --
 --
 -- /See:/ 'elasticsearchDestinationConfiguration' smart constructor.
-data ElasticsearchDestinationConfiguration = ElasticsearchDestinationConfiguration'
-  { _edcIndexRotationPeriod      :: !(Maybe ElasticsearchIndexRotationPeriod)
-  , _edcS3BackupMode             :: !(Maybe ElasticsearchS3BackupMode)
-  , _edcCloudWatchLoggingOptions :: !(Maybe CloudWatchLoggingOptions)
-  , _edcBufferingHints           :: !(Maybe ElasticsearchBufferingHints)
-  , _edcRetryOptions             :: !(Maybe ElasticsearchRetryOptions)
-  , _edcProcessingConfiguration  :: !(Maybe ProcessingConfiguration)
-  , _edcRoleARN                  :: !Text
-  , _edcDomainARN                :: !Text
-  , _edcIndexName                :: !Text
-  , _edcTypeName                 :: !Text
-  , _edcS3Configuration          :: !S3DestinationConfiguration
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ElasticsearchDestinationConfiguration =
+  ElasticsearchDestinationConfiguration'
+    { _edcIndexRotationPeriod      :: !(Maybe ElasticsearchIndexRotationPeriod)
+    , _edcS3BackupMode             :: !(Maybe ElasticsearchS3BackupMode)
+    , _edcCloudWatchLoggingOptions :: !(Maybe CloudWatchLoggingOptions)
+    , _edcBufferingHints           :: !(Maybe ElasticsearchBufferingHints)
+    , _edcRetryOptions             :: !(Maybe ElasticsearchRetryOptions)
+    , _edcProcessingConfiguration  :: !(Maybe ProcessingConfiguration)
+    , _edcRoleARN                  :: !Text
+    , _edcDomainARN                :: !Text
+    , _edcIndexName                :: !Text
+    , _edcTypeName                 :: !Text
+    , _edcS3Configuration          :: !S3DestinationConfiguration
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ElasticsearchDestinationConfiguration' with the minimum fields required to make a request.
@@ -732,19 +750,21 @@ instance ToJSON ElasticsearchDestinationConfiguration
 --
 --
 -- /See:/ 'elasticsearchDestinationDescription' smart constructor.
-data ElasticsearchDestinationDescription = ElasticsearchDestinationDescription'
-  { _eddIndexRotationPeriod      :: !(Maybe ElasticsearchIndexRotationPeriod)
-  , _eddTypeName                 :: !(Maybe Text)
-  , _eddS3BackupMode             :: !(Maybe ElasticsearchS3BackupMode)
-  , _eddDomainARN                :: !(Maybe Text)
-  , _eddCloudWatchLoggingOptions :: !(Maybe CloudWatchLoggingOptions)
-  , _eddS3DestinationDescription :: !(Maybe S3DestinationDescription)
-  , _eddBufferingHints           :: !(Maybe ElasticsearchBufferingHints)
-  , _eddRetryOptions             :: !(Maybe ElasticsearchRetryOptions)
-  , _eddProcessingConfiguration  :: !(Maybe ProcessingConfiguration)
-  , _eddRoleARN                  :: !(Maybe Text)
-  , _eddIndexName                :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ElasticsearchDestinationDescription =
+  ElasticsearchDestinationDescription'
+    { _eddIndexRotationPeriod      :: !(Maybe ElasticsearchIndexRotationPeriod)
+    , _eddTypeName                 :: !(Maybe Text)
+    , _eddS3BackupMode             :: !(Maybe ElasticsearchS3BackupMode)
+    , _eddDomainARN                :: !(Maybe Text)
+    , _eddCloudWatchLoggingOptions :: !(Maybe CloudWatchLoggingOptions)
+    , _eddS3DestinationDescription :: !(Maybe S3DestinationDescription)
+    , _eddBufferingHints           :: !(Maybe ElasticsearchBufferingHints)
+    , _eddRetryOptions             :: !(Maybe ElasticsearchRetryOptions)
+    , _eddProcessingConfiguration  :: !(Maybe ProcessingConfiguration)
+    , _eddRoleARN                  :: !(Maybe Text)
+    , _eddIndexName                :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ElasticsearchDestinationDescription' with the minimum fields required to make a request.
@@ -862,18 +882,20 @@ instance NFData ElasticsearchDestinationDescription
 --
 --
 -- /See:/ 'elasticsearchDestinationUpdate' smart constructor.
-data ElasticsearchDestinationUpdate = ElasticsearchDestinationUpdate'
-  { _eduIndexRotationPeriod      :: !(Maybe ElasticsearchIndexRotationPeriod)
-  , _eduTypeName                 :: !(Maybe Text)
-  , _eduDomainARN                :: !(Maybe Text)
-  , _eduCloudWatchLoggingOptions :: !(Maybe CloudWatchLoggingOptions)
-  , _eduS3Update                 :: !(Maybe S3DestinationUpdate)
-  , _eduBufferingHints           :: !(Maybe ElasticsearchBufferingHints)
-  , _eduRetryOptions             :: !(Maybe ElasticsearchRetryOptions)
-  , _eduProcessingConfiguration  :: !(Maybe ProcessingConfiguration)
-  , _eduRoleARN                  :: !(Maybe Text)
-  , _eduIndexName                :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ElasticsearchDestinationUpdate =
+  ElasticsearchDestinationUpdate'
+    { _eduIndexRotationPeriod      :: !(Maybe ElasticsearchIndexRotationPeriod)
+    , _eduTypeName                 :: !(Maybe Text)
+    , _eduDomainARN                :: !(Maybe Text)
+    , _eduCloudWatchLoggingOptions :: !(Maybe CloudWatchLoggingOptions)
+    , _eduS3Update                 :: !(Maybe S3DestinationUpdate)
+    , _eduBufferingHints           :: !(Maybe ElasticsearchBufferingHints)
+    , _eduRetryOptions             :: !(Maybe ElasticsearchRetryOptions)
+    , _eduProcessingConfiguration  :: !(Maybe ProcessingConfiguration)
+    , _eduRoleARN                  :: !(Maybe Text)
+    , _eduIndexName                :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ElasticsearchDestinationUpdate' with the minimum fields required to make a request.
@@ -984,9 +1006,11 @@ instance ToJSON ElasticsearchDestinationUpdate where
 --
 --
 -- /See:/ 'elasticsearchRetryOptions' smart constructor.
-newtype ElasticsearchRetryOptions = ElasticsearchRetryOptions'
-  { _eroDurationInSeconds :: Maybe Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ElasticsearchRetryOptions =
+  ElasticsearchRetryOptions'
+    { _eroDurationInSeconds :: Maybe Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ElasticsearchRetryOptions' with the minimum fields required to make a request.
@@ -1026,10 +1050,12 @@ instance ToJSON ElasticsearchRetryOptions where
 --
 --
 -- /See:/ 'encryptionConfiguration' smart constructor.
-data EncryptionConfiguration = EncryptionConfiguration'
-  { _ecNoEncryptionConfig  :: !(Maybe NoEncryptionConfig)
-  , _ecKMSEncryptionConfig :: !(Maybe KMSEncryptionConfig)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EncryptionConfiguration =
+  EncryptionConfiguration'
+    { _ecNoEncryptionConfig  :: !(Maybe NoEncryptionConfig)
+    , _ecKMSEncryptionConfig :: !(Maybe KMSEncryptionConfig)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EncryptionConfiguration' with the minimum fields required to make a request.
@@ -1079,19 +1105,21 @@ instance ToJSON EncryptionConfiguration where
 --
 --
 -- /See:/ 'extendedS3DestinationConfiguration' smart constructor.
-data ExtendedS3DestinationConfiguration = ExtendedS3DestinationConfiguration'
-  { _esdcS3BackupMode :: !(Maybe S3BackupMode)
-  , _esdcPrefix :: !(Maybe Text)
-  , _esdcCloudWatchLoggingOptions :: !(Maybe CloudWatchLoggingOptions)
-  , _esdcS3BackupConfiguration :: !(Maybe S3DestinationConfiguration)
-  , _esdcEncryptionConfiguration :: !(Maybe EncryptionConfiguration)
-  , _esdcCompressionFormat :: !(Maybe CompressionFormat)
-  , _esdcBufferingHints :: !(Maybe BufferingHints)
-  , _esdcDataFormatConversionConfiguration :: !(Maybe DataFormatConversionConfiguration)
-  , _esdcProcessingConfiguration :: !(Maybe ProcessingConfiguration)
-  , _esdcRoleARN :: !Text
-  , _esdcBucketARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ExtendedS3DestinationConfiguration =
+  ExtendedS3DestinationConfiguration'
+    { _esdcS3BackupMode :: !(Maybe S3BackupMode)
+    , _esdcPrefix :: !(Maybe Text)
+    , _esdcCloudWatchLoggingOptions :: !(Maybe CloudWatchLoggingOptions)
+    , _esdcS3BackupConfiguration :: !(Maybe S3DestinationConfiguration)
+    , _esdcEncryptionConfiguration :: !(Maybe EncryptionConfiguration)
+    , _esdcCompressionFormat :: !(Maybe CompressionFormat)
+    , _esdcBufferingHints :: !(Maybe BufferingHints)
+    , _esdcDataFormatConversionConfiguration :: !(Maybe DataFormatConversionConfiguration)
+    , _esdcProcessingConfiguration :: !(Maybe ProcessingConfiguration)
+    , _esdcRoleARN :: !Text
+    , _esdcBucketARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ExtendedS3DestinationConfiguration' with the minimum fields required to make a request.
@@ -1216,19 +1244,21 @@ instance ToJSON ExtendedS3DestinationConfiguration
 --
 --
 -- /See:/ 'extendedS3DestinationDescription' smart constructor.
-data ExtendedS3DestinationDescription = ExtendedS3DestinationDescription'
-  { _esddS3BackupMode :: !(Maybe S3BackupMode)
-  , _esddS3BackupDescription :: !(Maybe S3DestinationDescription)
-  , _esddPrefix :: !(Maybe Text)
-  , _esddCloudWatchLoggingOptions :: !(Maybe CloudWatchLoggingOptions)
-  , _esddDataFormatConversionConfiguration :: !(Maybe DataFormatConversionConfiguration)
-  , _esddProcessingConfiguration :: !(Maybe ProcessingConfiguration)
-  , _esddRoleARN :: !Text
-  , _esddBucketARN :: !Text
-  , _esddBufferingHints :: !BufferingHints
-  , _esddCompressionFormat :: !CompressionFormat
-  , _esddEncryptionConfiguration :: !EncryptionConfiguration
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ExtendedS3DestinationDescription =
+  ExtendedS3DestinationDescription'
+    { _esddS3BackupMode :: !(Maybe S3BackupMode)
+    , _esddS3BackupDescription :: !(Maybe S3DestinationDescription)
+    , _esddPrefix :: !(Maybe Text)
+    , _esddCloudWatchLoggingOptions :: !(Maybe CloudWatchLoggingOptions)
+    , _esddDataFormatConversionConfiguration :: !(Maybe DataFormatConversionConfiguration)
+    , _esddProcessingConfiguration :: !(Maybe ProcessingConfiguration)
+    , _esddRoleARN :: !Text
+    , _esddBucketARN :: !Text
+    , _esddBufferingHints :: !BufferingHints
+    , _esddCompressionFormat :: !CompressionFormat
+    , _esddEncryptionConfiguration :: !EncryptionConfiguration
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ExtendedS3DestinationDescription' with the minimum fields required to make a request.
@@ -1352,19 +1382,21 @@ instance NFData ExtendedS3DestinationDescription
 --
 --
 -- /See:/ 'extendedS3DestinationUpdate' smart constructor.
-data ExtendedS3DestinationUpdate = ExtendedS3DestinationUpdate'
-  { _esduS3BackupMode :: !(Maybe S3BackupMode)
-  , _esduPrefix :: !(Maybe Text)
-  , _esduCloudWatchLoggingOptions :: !(Maybe CloudWatchLoggingOptions)
-  , _esduS3BackupUpdate :: !(Maybe S3DestinationUpdate)
-  , _esduEncryptionConfiguration :: !(Maybe EncryptionConfiguration)
-  , _esduCompressionFormat :: !(Maybe CompressionFormat)
-  , _esduBufferingHints :: !(Maybe BufferingHints)
-  , _esduDataFormatConversionConfiguration :: !(Maybe DataFormatConversionConfiguration)
-  , _esduBucketARN :: !(Maybe Text)
-  , _esduProcessingConfiguration :: !(Maybe ProcessingConfiguration)
-  , _esduRoleARN :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ExtendedS3DestinationUpdate =
+  ExtendedS3DestinationUpdate'
+    { _esduS3BackupMode :: !(Maybe S3BackupMode)
+    , _esduPrefix :: !(Maybe Text)
+    , _esduCloudWatchLoggingOptions :: !(Maybe CloudWatchLoggingOptions)
+    , _esduS3BackupUpdate :: !(Maybe S3DestinationUpdate)
+    , _esduEncryptionConfiguration :: !(Maybe EncryptionConfiguration)
+    , _esduCompressionFormat :: !(Maybe CompressionFormat)
+    , _esduBufferingHints :: !(Maybe BufferingHints)
+    , _esduDataFormatConversionConfiguration :: !(Maybe DataFormatConversionConfiguration)
+    , _esduBucketARN :: !(Maybe Text)
+    , _esduProcessingConfiguration :: !(Maybe ProcessingConfiguration)
+    , _esduRoleARN :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ExtendedS3DestinationUpdate' with the minimum fields required to make a request.
@@ -1483,9 +1515,11 @@ instance ToJSON ExtendedS3DestinationUpdate where
 --
 --
 -- /See:/ 'hiveJSONSerDe' smart constructor.
-newtype HiveJSONSerDe = HiveJSONSerDe'
-  { _hjsdTimestampFormats :: Maybe [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype HiveJSONSerDe =
+  HiveJSONSerDe'
+    { _hjsdTimestampFormats :: Maybe [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'HiveJSONSerDe' with the minimum fields required to make a request.
@@ -1524,9 +1558,11 @@ instance ToJSON HiveJSONSerDe where
 --
 --
 -- /See:/ 'inputFormatConfiguration' smart constructor.
-newtype InputFormatConfiguration = InputFormatConfiguration'
-  { _ifcDeserializer :: Maybe Deserializer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype InputFormatConfiguration =
+  InputFormatConfiguration'
+    { _ifcDeserializer :: Maybe Deserializer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InputFormatConfiguration' with the minimum fields required to make a request.
@@ -1565,9 +1601,11 @@ instance ToJSON InputFormatConfiguration where
 --
 --
 -- /See:/ 'kmsEncryptionConfig' smart constructor.
-newtype KMSEncryptionConfig = KMSEncryptionConfig'
-  { _kecAWSKMSKeyARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype KMSEncryptionConfig =
+  KMSEncryptionConfig'
+    { _kecAWSKMSKeyARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'KMSEncryptionConfig' with the minimum fields required to make a request.
@@ -1607,10 +1645,12 @@ instance ToJSON KMSEncryptionConfig where
 --
 --
 -- /See:/ 'kinesisStreamSourceConfiguration' smart constructor.
-data KinesisStreamSourceConfiguration = KinesisStreamSourceConfiguration'
-  { _ksscKinesisStreamARN :: !Text
-  , _ksscRoleARN          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data KinesisStreamSourceConfiguration =
+  KinesisStreamSourceConfiguration'
+    { _ksscKinesisStreamARN :: !Text
+    , _ksscRoleARN          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'KinesisStreamSourceConfiguration' with the minimum fields required to make a request.
@@ -1656,11 +1696,13 @@ instance ToJSON KinesisStreamSourceConfiguration
 --
 --
 -- /See:/ 'kinesisStreamSourceDescription' smart constructor.
-data KinesisStreamSourceDescription = KinesisStreamSourceDescription'
-  { _kssdDeliveryStartTimestamp :: !(Maybe POSIX)
-  , _kssdKinesisStreamARN       :: !(Maybe Text)
-  , _kssdRoleARN                :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data KinesisStreamSourceDescription =
+  KinesisStreamSourceDescription'
+    { _kssdDeliveryStartTimestamp :: !(Maybe POSIX)
+    , _kssdKinesisStreamARN       :: !(Maybe Text)
+    , _kssdRoleARN                :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'KinesisStreamSourceDescription' with the minimum fields required to make a request.
@@ -1714,11 +1756,13 @@ instance NFData KinesisStreamSourceDescription where
 --
 --
 -- /See:/ 'openXJSONSerDe' smart constructor.
-data OpenXJSONSerDe = OpenXJSONSerDe'
-  { _oxjsdColumnToJSONKeyMappings            :: !(Maybe (Map Text Text))
-  , _oxjsdCaseInsensitive                    :: !(Maybe Bool)
-  , _oxjsdConvertDotsInJSONKeysToUnderscores :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data OpenXJSONSerDe =
+  OpenXJSONSerDe'
+    { _oxjsdColumnToJSONKeyMappings            :: !(Maybe (Map Text Text))
+    , _oxjsdCaseInsensitive                    :: !(Maybe Bool)
+    , _oxjsdConvertDotsInJSONKeysToUnderscores :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OpenXJSONSerDe' with the minimum fields required to make a request.
@@ -1780,18 +1824,20 @@ instance ToJSON OpenXJSONSerDe where
 --
 --
 -- /See:/ 'orcSerDe' smart constructor.
-data OrcSerDe = OrcSerDe'
-  { _osdBloomFilterFalsePositiveProbability :: !(Maybe Double)
-  , _osdDictionaryKeyThreshold              :: !(Maybe Double)
-  , _osdEnablePadding                       :: !(Maybe Bool)
-  , _osdCompression                         :: !(Maybe OrcCompression)
-  , _osdBloomFilterColumns                  :: !(Maybe [Text])
-  , _osdRowIndexStride                      :: !(Maybe Nat)
-  , _osdFormatVersion                       :: !(Maybe OrcFormatVersion)
-  , _osdBlockSizeBytes                      :: !(Maybe Nat)
-  , _osdStripeSizeBytes                     :: !(Maybe Nat)
-  , _osdPaddingTolerance                    :: !(Maybe Double)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data OrcSerDe =
+  OrcSerDe'
+    { _osdBloomFilterFalsePositiveProbability :: !(Maybe Double)
+    , _osdDictionaryKeyThreshold              :: !(Maybe Double)
+    , _osdEnablePadding                       :: !(Maybe Bool)
+    , _osdCompression                         :: !(Maybe OrcCompression)
+    , _osdBloomFilterColumns                  :: !(Maybe [Text])
+    , _osdRowIndexStride                      :: !(Maybe Nat)
+    , _osdFormatVersion                       :: !(Maybe OrcFormatVersion)
+    , _osdBlockSizeBytes                      :: !(Maybe Nat)
+    , _osdStripeSizeBytes                     :: !(Maybe Nat)
+    , _osdPaddingTolerance                    :: !(Maybe Double)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OrcSerDe' with the minimum fields required to make a request.
@@ -1916,9 +1962,11 @@ instance ToJSON OrcSerDe where
 --
 --
 -- /See:/ 'outputFormatConfiguration' smart constructor.
-newtype OutputFormatConfiguration = OutputFormatConfiguration'
-  { _ofcSerializer :: Maybe Serializer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype OutputFormatConfiguration =
+  OutputFormatConfiguration'
+    { _ofcSerializer :: Maybe Serializer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OutputFormatConfiguration' with the minimum fields required to make a request.
@@ -1956,14 +2004,16 @@ instance ToJSON OutputFormatConfiguration where
 --
 --
 -- /See:/ 'parquetSerDe' smart constructor.
-data ParquetSerDe = ParquetSerDe'
-  { _psdWriterVersion               :: !(Maybe ParquetWriterVersion)
-  , _psdCompression                 :: !(Maybe ParquetCompression)
-  , _psdMaxPaddingBytes             :: !(Maybe Nat)
-  , _psdEnableDictionaryCompression :: !(Maybe Bool)
-  , _psdPageSizeBytes               :: !(Maybe Nat)
-  , _psdBlockSizeBytes              :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ParquetSerDe =
+  ParquetSerDe'
+    { _psdWriterVersion               :: !(Maybe ParquetWriterVersion)
+    , _psdCompression                 :: !(Maybe ParquetCompression)
+    , _psdMaxPaddingBytes             :: !(Maybe Nat)
+    , _psdEnableDictionaryCompression :: !(Maybe Bool)
+    , _psdPageSizeBytes               :: !(Maybe Nat)
+    , _psdBlockSizeBytes              :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ParquetSerDe' with the minimum fields required to make a request.
@@ -2050,10 +2100,12 @@ instance ToJSON ParquetSerDe where
 --
 --
 -- /See:/ 'processingConfiguration' smart constructor.
-data ProcessingConfiguration = ProcessingConfiguration'
-  { _pcEnabled    :: !(Maybe Bool)
-  , _pcProcessors :: !(Maybe [Processor])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ProcessingConfiguration =
+  ProcessingConfiguration'
+    { _pcEnabled    :: !(Maybe Bool)
+    , _pcProcessors :: !(Maybe [Processor])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ProcessingConfiguration' with the minimum fields required to make a request.
@@ -2101,10 +2153,12 @@ instance ToJSON ProcessingConfiguration where
 --
 --
 -- /See:/ 'processor' smart constructor.
-data Processor = Processor'
-  { _pParameters :: !(Maybe [ProcessorParameter])
-  , _pType       :: !ProcessorType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Processor =
+  Processor'
+    { _pParameters :: !(Maybe [ProcessorParameter])
+    , _pType       :: !ProcessorType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Processor' with the minimum fields required to make a request.
@@ -2151,10 +2205,12 @@ instance ToJSON Processor where
 --
 --
 -- /See:/ 'processorParameter' smart constructor.
-data ProcessorParameter = ProcessorParameter'
-  { _ppParameterName  :: !ProcessorParameterName
-  , _ppParameterValue :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ProcessorParameter =
+  ProcessorParameter'
+    { _ppParameterName  :: !ProcessorParameterName
+    , _ppParameterValue :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ProcessorParameter' with the minimum fields required to make a request.
@@ -2204,11 +2260,13 @@ instance ToJSON ProcessorParameter where
 --
 --
 -- /See:/ 'putRecordBatchResponseEntry' smart constructor.
-data PutRecordBatchResponseEntry = PutRecordBatchResponseEntry'
-  { _prbreRecordId     :: !(Maybe Text)
-  , _prbreErrorCode    :: !(Maybe Text)
-  , _prbreErrorMessage :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutRecordBatchResponseEntry =
+  PutRecordBatchResponseEntry'
+    { _prbreRecordId     :: !(Maybe Text)
+    , _prbreErrorCode    :: !(Maybe Text)
+    , _prbreErrorMessage :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutRecordBatchResponseEntry' with the minimum fields required to make a request.
@@ -2259,9 +2317,11 @@ instance NFData PutRecordBatchResponseEntry where
 --
 --
 -- /See:/ 'record' smart constructor.
-newtype Record = Record'
-  { _rData :: Base64
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype Record =
+  Record'
+    { _rData :: Base64
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Record' with the minimum fields required to make a request.
@@ -2292,19 +2352,21 @@ instance ToJSON Record where
 --
 --
 -- /See:/ 'redshiftDestinationConfiguration' smart constructor.
-data RedshiftDestinationConfiguration = RedshiftDestinationConfiguration'
-  { _rdcS3BackupMode             :: !(Maybe RedshiftS3BackupMode)
-  , _rdcCloudWatchLoggingOptions :: !(Maybe CloudWatchLoggingOptions)
-  , _rdcS3BackupConfiguration    :: !(Maybe S3DestinationConfiguration)
-  , _rdcRetryOptions             :: !(Maybe RedshiftRetryOptions)
-  , _rdcProcessingConfiguration  :: !(Maybe ProcessingConfiguration)
-  , _rdcRoleARN                  :: !Text
-  , _rdcClusterJDBCURL           :: !Text
-  , _rdcCopyCommand              :: !CopyCommand
-  , _rdcUsername                 :: !(Sensitive Text)
-  , _rdcPassword                 :: !(Sensitive Text)
-  , _rdcS3Configuration          :: !S3DestinationConfiguration
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data RedshiftDestinationConfiguration =
+  RedshiftDestinationConfiguration'
+    { _rdcS3BackupMode             :: !(Maybe RedshiftS3BackupMode)
+    , _rdcCloudWatchLoggingOptions :: !(Maybe CloudWatchLoggingOptions)
+    , _rdcS3BackupConfiguration    :: !(Maybe S3DestinationConfiguration)
+    , _rdcRetryOptions             :: !(Maybe RedshiftRetryOptions)
+    , _rdcProcessingConfiguration  :: !(Maybe ProcessingConfiguration)
+    , _rdcRoleARN                  :: !Text
+    , _rdcClusterJDBCURL           :: !Text
+    , _rdcCopyCommand              :: !CopyCommand
+    , _rdcUsername                 :: !(Sensitive Text)
+    , _rdcPassword                 :: !(Sensitive Text)
+    , _rdcS3Configuration          :: !S3DestinationConfiguration
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RedshiftDestinationConfiguration' with the minimum fields required to make a request.
@@ -2431,18 +2493,20 @@ instance ToJSON RedshiftDestinationConfiguration
 --
 --
 -- /See:/ 'redshiftDestinationDescription' smart constructor.
-data RedshiftDestinationDescription = RedshiftDestinationDescription'
-  { _rddS3BackupMode             :: !(Maybe RedshiftS3BackupMode)
-  , _rddS3BackupDescription      :: !(Maybe S3DestinationDescription)
-  , _rddCloudWatchLoggingOptions :: !(Maybe CloudWatchLoggingOptions)
-  , _rddRetryOptions             :: !(Maybe RedshiftRetryOptions)
-  , _rddProcessingConfiguration  :: !(Maybe ProcessingConfiguration)
-  , _rddRoleARN                  :: !Text
-  , _rddClusterJDBCURL           :: !Text
-  , _rddCopyCommand              :: !CopyCommand
-  , _rddUsername                 :: !(Sensitive Text)
-  , _rddS3DestinationDescription :: !S3DestinationDescription
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data RedshiftDestinationDescription =
+  RedshiftDestinationDescription'
+    { _rddS3BackupMode             :: !(Maybe RedshiftS3BackupMode)
+    , _rddS3BackupDescription      :: !(Maybe S3DestinationDescription)
+    , _rddCloudWatchLoggingOptions :: !(Maybe CloudWatchLoggingOptions)
+    , _rddRetryOptions             :: !(Maybe RedshiftRetryOptions)
+    , _rddProcessingConfiguration  :: !(Maybe ProcessingConfiguration)
+    , _rddRoleARN                  :: !Text
+    , _rddClusterJDBCURL           :: !Text
+    , _rddCopyCommand              :: !CopyCommand
+    , _rddUsername                 :: !(Sensitive Text)
+    , _rddS3DestinationDescription :: !S3DestinationDescription
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RedshiftDestinationDescription' with the minimum fields required to make a request.
@@ -2557,19 +2621,21 @@ instance NFData RedshiftDestinationDescription where
 --
 --
 -- /See:/ 'redshiftDestinationUpdate' smart constructor.
-data RedshiftDestinationUpdate = RedshiftDestinationUpdate'
-  { _rduS3BackupMode             :: !(Maybe RedshiftS3BackupMode)
-  , _rduCloudWatchLoggingOptions :: !(Maybe CloudWatchLoggingOptions)
-  , _rduUsername                 :: !(Maybe (Sensitive Text))
-  , _rduS3Update                 :: !(Maybe S3DestinationUpdate)
-  , _rduPassword                 :: !(Maybe (Sensitive Text))
-  , _rduS3BackupUpdate           :: !(Maybe S3DestinationUpdate)
-  , _rduCopyCommand              :: !(Maybe CopyCommand)
-  , _rduRetryOptions             :: !(Maybe RedshiftRetryOptions)
-  , _rduProcessingConfiguration  :: !(Maybe ProcessingConfiguration)
-  , _rduClusterJDBCURL           :: !(Maybe Text)
-  , _rduRoleARN                  :: !(Maybe Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data RedshiftDestinationUpdate =
+  RedshiftDestinationUpdate'
+    { _rduS3BackupMode             :: !(Maybe RedshiftS3BackupMode)
+    , _rduCloudWatchLoggingOptions :: !(Maybe CloudWatchLoggingOptions)
+    , _rduUsername                 :: !(Maybe (Sensitive Text))
+    , _rduS3Update                 :: !(Maybe S3DestinationUpdate)
+    , _rduPassword                 :: !(Maybe (Sensitive Text))
+    , _rduS3BackupUpdate           :: !(Maybe S3DestinationUpdate)
+    , _rduCopyCommand              :: !(Maybe CopyCommand)
+    , _rduRetryOptions             :: !(Maybe RedshiftRetryOptions)
+    , _rduProcessingConfiguration  :: !(Maybe ProcessingConfiguration)
+    , _rduClusterJDBCURL           :: !(Maybe Text)
+    , _rduRoleARN                  :: !(Maybe Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RedshiftDestinationUpdate' with the minimum fields required to make a request.
@@ -2686,9 +2752,11 @@ instance ToJSON RedshiftDestinationUpdate where
 --
 --
 -- /See:/ 'redshiftRetryOptions' smart constructor.
-newtype RedshiftRetryOptions = RedshiftRetryOptions'
-  { _rroDurationInSeconds :: Maybe Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RedshiftRetryOptions =
+  RedshiftRetryOptions'
+    { _rroDurationInSeconds :: Maybe Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RedshiftRetryOptions' with the minimum fields required to make a request.
@@ -2727,15 +2795,17 @@ instance ToJSON RedshiftRetryOptions where
 --
 --
 -- /See:/ 's3DestinationConfiguration' smart constructor.
-data S3DestinationConfiguration = S3DestinationConfiguration'
-  { _sdcPrefix                   :: !(Maybe Text)
-  , _sdcCloudWatchLoggingOptions :: !(Maybe CloudWatchLoggingOptions)
-  , _sdcEncryptionConfiguration  :: !(Maybe EncryptionConfiguration)
-  , _sdcCompressionFormat        :: !(Maybe CompressionFormat)
-  , _sdcBufferingHints           :: !(Maybe BufferingHints)
-  , _sdcRoleARN                  :: !Text
-  , _sdcBucketARN                :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data S3DestinationConfiguration =
+  S3DestinationConfiguration'
+    { _sdcPrefix                   :: !(Maybe Text)
+    , _sdcCloudWatchLoggingOptions :: !(Maybe CloudWatchLoggingOptions)
+    , _sdcEncryptionConfiguration  :: !(Maybe EncryptionConfiguration)
+    , _sdcCompressionFormat        :: !(Maybe CompressionFormat)
+    , _sdcBufferingHints           :: !(Maybe BufferingHints)
+    , _sdcRoleARN                  :: !Text
+    , _sdcBucketARN                :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'S3DestinationConfiguration' with the minimum fields required to make a request.
@@ -2822,15 +2892,17 @@ instance ToJSON S3DestinationConfiguration where
 --
 --
 -- /See:/ 's3DestinationDescription' smart constructor.
-data S3DestinationDescription = S3DestinationDescription'
-  { _s3Prefix                   :: !(Maybe Text)
-  , _s3CloudWatchLoggingOptions :: !(Maybe CloudWatchLoggingOptions)
-  , _s3RoleARN                  :: !Text
-  , _s3BucketARN                :: !Text
-  , _s3BufferingHints           :: !BufferingHints
-  , _s3CompressionFormat        :: !CompressionFormat
-  , _s3EncryptionConfiguration  :: !EncryptionConfiguration
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data S3DestinationDescription =
+  S3DestinationDescription'
+    { _s3Prefix                   :: !(Maybe Text)
+    , _s3CloudWatchLoggingOptions :: !(Maybe CloudWatchLoggingOptions)
+    , _s3RoleARN                  :: !Text
+    , _s3BucketARN                :: !Text
+    , _s3BufferingHints           :: !BufferingHints
+    , _s3CompressionFormat        :: !CompressionFormat
+    , _s3EncryptionConfiguration  :: !EncryptionConfiguration
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'S3DestinationDescription' with the minimum fields required to make a request.
@@ -2919,15 +2991,17 @@ instance NFData S3DestinationDescription where
 --
 --
 -- /See:/ 's3DestinationUpdate' smart constructor.
-data S3DestinationUpdate = S3DestinationUpdate'
-  { _sPrefix                   :: !(Maybe Text)
-  , _sCloudWatchLoggingOptions :: !(Maybe CloudWatchLoggingOptions)
-  , _sEncryptionConfiguration  :: !(Maybe EncryptionConfiguration)
-  , _sCompressionFormat        :: !(Maybe CompressionFormat)
-  , _sBufferingHints           :: !(Maybe BufferingHints)
-  , _sBucketARN                :: !(Maybe Text)
-  , _sRoleARN                  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data S3DestinationUpdate =
+  S3DestinationUpdate'
+    { _sPrefix                   :: !(Maybe Text)
+    , _sCloudWatchLoggingOptions :: !(Maybe CloudWatchLoggingOptions)
+    , _sEncryptionConfiguration  :: !(Maybe EncryptionConfiguration)
+    , _sCompressionFormat        :: !(Maybe CompressionFormat)
+    , _sBufferingHints           :: !(Maybe BufferingHints)
+    , _sBucketARN                :: !(Maybe Text)
+    , _sRoleARN                  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'S3DestinationUpdate' with the minimum fields required to make a request.
@@ -3012,14 +3086,16 @@ instance ToJSON S3DestinationUpdate where
 --
 --
 -- /See:/ 'schemaConfiguration' smart constructor.
-data SchemaConfiguration = SchemaConfiguration'
-  { _scVersionId    :: !(Maybe Text)
-  , _scCatalogId    :: !(Maybe Text)
-  , _scDatabaseName :: !(Maybe Text)
-  , _scRegion       :: !(Maybe Text)
-  , _scTableName    :: !(Maybe Text)
-  , _scRoleARN      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SchemaConfiguration =
+  SchemaConfiguration'
+    { _scVersionId    :: !(Maybe Text)
+    , _scCatalogId    :: !(Maybe Text)
+    , _scDatabaseName :: !(Maybe Text)
+    , _scRegion       :: !(Maybe Text)
+    , _scTableName    :: !(Maybe Text)
+    , _scRoleARN      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SchemaConfiguration' with the minimum fields required to make a request.
@@ -3105,10 +3181,12 @@ instance ToJSON SchemaConfiguration where
 --
 --
 -- /See:/ 'serializer' smart constructor.
-data Serializer = Serializer'
-  { _sOrcSerDe     :: !(Maybe OrcSerDe)
-  , _sParquetSerDe :: !(Maybe ParquetSerDe)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Serializer =
+  Serializer'
+    { _sOrcSerDe     :: !(Maybe OrcSerDe)
+    , _sParquetSerDe :: !(Maybe ParquetSerDe)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Serializer' with the minimum fields required to make a request.
@@ -3154,9 +3232,11 @@ instance ToJSON Serializer where
 --
 --
 -- /See:/ 'sourceDescription' smart constructor.
-newtype SourceDescription = SourceDescription'
-  { _sdKinesisStreamSourceDescription :: Maybe KinesisStreamSourceDescription
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype SourceDescription =
+  SourceDescription'
+    { _sdKinesisStreamSourceDescription :: Maybe KinesisStreamSourceDescription
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SourceDescription' with the minimum fields required to make a request.
@@ -3190,17 +3270,19 @@ instance NFData SourceDescription where
 --
 --
 -- /See:/ 'splunkDestinationConfiguration' smart constructor.
-data SplunkDestinationConfiguration = SplunkDestinationConfiguration'
-  { _splS3BackupMode                      :: !(Maybe SplunkS3BackupMode)
-  , _splCloudWatchLoggingOptions          :: !(Maybe CloudWatchLoggingOptions)
-  , _splHECAcknowledgmentTimeoutInSeconds :: !(Maybe Nat)
-  , _splRetryOptions                      :: !(Maybe SplunkRetryOptions)
-  , _splProcessingConfiguration           :: !(Maybe ProcessingConfiguration)
-  , _splHECEndpoint                       :: !Text
-  , _splHECEndpointType                   :: !HECEndpointType
-  , _splHECToken                          :: !Text
-  , _splS3Configuration                   :: !S3DestinationConfiguration
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SplunkDestinationConfiguration =
+  SplunkDestinationConfiguration'
+    { _splS3BackupMode                      :: !(Maybe SplunkS3BackupMode)
+    , _splCloudWatchLoggingOptions          :: !(Maybe CloudWatchLoggingOptions)
+    , _splHECAcknowledgmentTimeoutInSeconds :: !(Maybe Nat)
+    , _splRetryOptions                      :: !(Maybe SplunkRetryOptions)
+    , _splProcessingConfiguration           :: !(Maybe ProcessingConfiguration)
+    , _splHECEndpoint                       :: !Text
+    , _splHECEndpointType                   :: !HECEndpointType
+    , _splHECToken                          :: !Text
+    , _splS3Configuration                   :: !S3DestinationConfiguration
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SplunkDestinationConfiguration' with the minimum fields required to make a request.
@@ -3307,17 +3389,19 @@ instance ToJSON SplunkDestinationConfiguration where
 --
 --
 -- /See:/ 'splunkDestinationDescription' smart constructor.
-data SplunkDestinationDescription = SplunkDestinationDescription'
-  { _sddS3BackupMode                      :: !(Maybe SplunkS3BackupMode)
-  , _sddHECToken                          :: !(Maybe Text)
-  , _sddHECEndpointType                   :: !(Maybe HECEndpointType)
-  , _sddCloudWatchLoggingOptions          :: !(Maybe CloudWatchLoggingOptions)
-  , _sddHECAcknowledgmentTimeoutInSeconds :: !(Maybe Nat)
-  , _sddS3DestinationDescription          :: !(Maybe S3DestinationDescription)
-  , _sddHECEndpoint                       :: !(Maybe Text)
-  , _sddRetryOptions                      :: !(Maybe SplunkRetryOptions)
-  , _sddProcessingConfiguration           :: !(Maybe ProcessingConfiguration)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SplunkDestinationDescription =
+  SplunkDestinationDescription'
+    { _sddS3BackupMode                      :: !(Maybe SplunkS3BackupMode)
+    , _sddHECToken                          :: !(Maybe Text)
+    , _sddHECEndpointType                   :: !(Maybe HECEndpointType)
+    , _sddCloudWatchLoggingOptions          :: !(Maybe CloudWatchLoggingOptions)
+    , _sddHECAcknowledgmentTimeoutInSeconds :: !(Maybe Nat)
+    , _sddS3DestinationDescription          :: !(Maybe S3DestinationDescription)
+    , _sddHECEndpoint                       :: !(Maybe Text)
+    , _sddRetryOptions                      :: !(Maybe SplunkRetryOptions)
+    , _sddProcessingConfiguration           :: !(Maybe ProcessingConfiguration)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SplunkDestinationDescription' with the minimum fields required to make a request.
@@ -3416,17 +3500,19 @@ instance NFData SplunkDestinationDescription where
 --
 --
 -- /See:/ 'splunkDestinationUpdate' smart constructor.
-data SplunkDestinationUpdate = SplunkDestinationUpdate'
-  { _sduS3BackupMode                      :: !(Maybe SplunkS3BackupMode)
-  , _sduHECToken                          :: !(Maybe Text)
-  , _sduHECEndpointType                   :: !(Maybe HECEndpointType)
-  , _sduCloudWatchLoggingOptions          :: !(Maybe CloudWatchLoggingOptions)
-  , _sduHECAcknowledgmentTimeoutInSeconds :: !(Maybe Nat)
-  , _sduS3Update                          :: !(Maybe S3DestinationUpdate)
-  , _sduHECEndpoint                       :: !(Maybe Text)
-  , _sduRetryOptions                      :: !(Maybe SplunkRetryOptions)
-  , _sduProcessingConfiguration           :: !(Maybe ProcessingConfiguration)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SplunkDestinationUpdate =
+  SplunkDestinationUpdate'
+    { _sduS3BackupMode                      :: !(Maybe SplunkS3BackupMode)
+    , _sduHECToken                          :: !(Maybe Text)
+    , _sduHECEndpointType                   :: !(Maybe HECEndpointType)
+    , _sduCloudWatchLoggingOptions          :: !(Maybe CloudWatchLoggingOptions)
+    , _sduHECAcknowledgmentTimeoutInSeconds :: !(Maybe Nat)
+    , _sduS3Update                          :: !(Maybe S3DestinationUpdate)
+    , _sduHECEndpoint                       :: !(Maybe Text)
+    , _sduRetryOptions                      :: !(Maybe SplunkRetryOptions)
+    , _sduProcessingConfiguration           :: !(Maybe ProcessingConfiguration)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SplunkDestinationUpdate' with the minimum fields required to make a request.
@@ -3528,9 +3614,11 @@ instance ToJSON SplunkDestinationUpdate where
 --
 --
 -- /See:/ 'splunkRetryOptions' smart constructor.
-newtype SplunkRetryOptions = SplunkRetryOptions'
-  { _sroDurationInSeconds :: Maybe Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype SplunkRetryOptions =
+  SplunkRetryOptions'
+    { _sroDurationInSeconds :: Maybe Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SplunkRetryOptions' with the minimum fields required to make a request.
@@ -3568,10 +3656,12 @@ instance ToJSON SplunkRetryOptions where
 --
 --
 -- /See:/ 'tag' smart constructor.
-data Tag = Tag'
-  { _tagValue :: !(Maybe Text)
-  , _tagKey   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Tag =
+  Tag'
+    { _tagValue :: !(Maybe Text)
+    , _tagKey   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Tag' with the minimum fields required to make a request.

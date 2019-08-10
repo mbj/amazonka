@@ -46,11 +46,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'removeFacetFromObject' smart constructor.
-data RemoveFacetFromObject = RemoveFacetFromObject'
-  { _rffoDirectoryARN    :: !Text
-  , _rffoSchemaFacet     :: !SchemaFacet
-  , _rffoObjectReference :: !ObjectReference
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RemoveFacetFromObject =
+  RemoveFacetFromObject'
+    { _rffoDirectoryARN    :: !Text
+    , _rffoSchemaFacet     :: !SchemaFacet
+    , _rffoObjectReference :: !ObjectReference
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RemoveFacetFromObject' with the minimum fields required to make a request.
@@ -122,9 +124,11 @@ instance ToQuery RemoveFacetFromObject where
         toQuery = const mempty
 
 -- | /See:/ 'removeFacetFromObjectResponse' smart constructor.
-newtype RemoveFacetFromObjectResponse = RemoveFacetFromObjectResponse'
-  { _rfforsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RemoveFacetFromObjectResponse =
+  RemoveFacetFromObjectResponse'
+    { _rfforsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RemoveFacetFromObjectResponse' with the minimum fields required to make a request.

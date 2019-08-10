@@ -51,9 +51,11 @@ import Network.AWS.SDB.Types
 import Network.AWS.SDB.Types.Product
 
 -- | /See:/ 'domainMetadata' smart constructor.
-newtype DomainMetadata = DomainMetadata'
-  { _dmDomainName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DomainMetadata =
+  DomainMetadata'
+    { _dmDomainName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DomainMetadata' with the minimum fields required to make a request.
@@ -105,16 +107,18 @@ instance ToQuery DomainMetadata where
                "DomainName" =: _dmDomainName]
 
 -- | /See:/ 'domainMetadataResponse' smart constructor.
-data DomainMetadataResponse = DomainMetadataResponse'
-  { _dmrsItemNamesSizeBytes       :: !(Maybe Integer)
-  , _dmrsAttributeValuesSizeBytes :: !(Maybe Integer)
-  , _dmrsAttributeNameCount       :: !(Maybe Int)
-  , _dmrsAttributeNamesSizeBytes  :: !(Maybe Integer)
-  , _dmrsAttributeValueCount      :: !(Maybe Int)
-  , _dmrsItemCount                :: !(Maybe Int)
-  , _dmrsTimestamp                :: !(Maybe Int)
-  , _dmrsResponseStatus           :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DomainMetadataResponse =
+  DomainMetadataResponse'
+    { _dmrsItemNamesSizeBytes       :: !(Maybe Integer)
+    , _dmrsAttributeValuesSizeBytes :: !(Maybe Integer)
+    , _dmrsAttributeNameCount       :: !(Maybe Int)
+    , _dmrsAttributeNamesSizeBytes  :: !(Maybe Integer)
+    , _dmrsAttributeValueCount      :: !(Maybe Int)
+    , _dmrsItemCount                :: !(Maybe Int)
+    , _dmrsTimestamp                :: !(Maybe Int)
+    , _dmrsResponseStatus           :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DomainMetadataResponse' with the minimum fields required to make a request.

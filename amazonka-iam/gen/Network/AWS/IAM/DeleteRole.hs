@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteRole' smart constructor.
-newtype DeleteRole = DeleteRole'
-  { _drRoleName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteRole =
+  DeleteRole'
+    { _drRoleName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteRole' with the minimum fields required to make a request.

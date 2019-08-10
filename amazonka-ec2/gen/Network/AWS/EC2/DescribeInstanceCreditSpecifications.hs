@@ -58,13 +58,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeInstanceCreditSpecifications' smart constructor.
-data DescribeInstanceCreditSpecifications = DescribeInstanceCreditSpecifications'
-  { _dicsFilters     :: !(Maybe [Filter])
-  , _dicsNextToken   :: !(Maybe Text)
-  , _dicsInstanceIds :: !(Maybe [Text])
-  , _dicsDryRun      :: !(Maybe Bool)
-  , _dicsMaxResults  :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeInstanceCreditSpecifications =
+  DescribeInstanceCreditSpecifications'
+    { _dicsFilters     :: !(Maybe [Filter])
+    , _dicsNextToken   :: !(Maybe Text)
+    , _dicsInstanceIds :: !(Maybe [Text])
+    , _dicsDryRun      :: !(Maybe Bool)
+    , _dicsMaxResults  :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeInstanceCreditSpecifications' with the minimum fields required to make a request.
@@ -159,11 +161,13 @@ instance ToQuery DescribeInstanceCreditSpecifications
                "MaxResults" =: _dicsMaxResults]
 
 -- | /See:/ 'describeInstanceCreditSpecificationsResponse' smart constructor.
-data DescribeInstanceCreditSpecificationsResponse = DescribeInstanceCreditSpecificationsResponse'
-  { _dicsrsNextToken :: !(Maybe Text)
-  , _dicsrsInstanceCreditSpecifications :: !(Maybe [InstanceCreditSpecification])
-  , _dicsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeInstanceCreditSpecificationsResponse =
+  DescribeInstanceCreditSpecificationsResponse'
+    { _dicsrsNextToken :: !(Maybe Text)
+    , _dicsrsInstanceCreditSpecifications :: !(Maybe [InstanceCreditSpecification])
+    , _dicsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeInstanceCreditSpecificationsResponse' with the minimum fields required to make a request.

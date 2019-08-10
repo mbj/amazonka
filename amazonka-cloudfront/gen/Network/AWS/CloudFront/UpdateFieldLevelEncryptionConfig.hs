@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateFieldLevelEncryptionConfig' smart constructor.
-data UpdateFieldLevelEncryptionConfig = UpdateFieldLevelEncryptionConfig'
-  { _uflecIfMatch                    :: !(Maybe Text)
-  , _uflecFieldLevelEncryptionConfig :: !FieldLevelEncryptionConfig
-  , _uflecId                         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateFieldLevelEncryptionConfig =
+  UpdateFieldLevelEncryptionConfig'
+    { _uflecIfMatch                    :: !(Maybe Text)
+    , _uflecFieldLevelEncryptionConfig :: !FieldLevelEncryptionConfig
+    , _uflecId                         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateFieldLevelEncryptionConfig' with the minimum fields required to make a request.
@@ -131,11 +133,13 @@ instance ToQuery UpdateFieldLevelEncryptionConfig
         toQuery = const mempty
 
 -- | /See:/ 'updateFieldLevelEncryptionConfigResponse' smart constructor.
-data UpdateFieldLevelEncryptionConfigResponse = UpdateFieldLevelEncryptionConfigResponse'
-  { _uflecrsETag                 :: !(Maybe Text)
-  , _uflecrsFieldLevelEncryption :: !(Maybe FieldLevelEncryption)
-  , _uflecrsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateFieldLevelEncryptionConfigResponse =
+  UpdateFieldLevelEncryptionConfigResponse'
+    { _uflecrsETag                 :: !(Maybe Text)
+    , _uflecrsFieldLevelEncryption :: !(Maybe FieldLevelEncryption)
+    , _uflecrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateFieldLevelEncryptionConfigResponse' with the minimum fields required to make a request.

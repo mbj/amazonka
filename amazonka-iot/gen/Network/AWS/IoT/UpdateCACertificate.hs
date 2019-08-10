@@ -50,13 +50,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateCACertificate' smart constructor.
-data UpdateCACertificate = UpdateCACertificate'
-  { _ucacRemoveAutoRegistration    :: !(Maybe Bool)
-  , _ucacNewStatus                 :: !(Maybe CACertificateStatus)
-  , _ucacRegistrationConfig        :: !(Maybe RegistrationConfig)
-  , _ucacNewAutoRegistrationStatus :: !(Maybe AutoRegistrationStatus)
-  , _ucacCertificateId             :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateCACertificate =
+  UpdateCACertificate'
+    { _ucacRemoveAutoRegistration    :: !(Maybe Bool)
+    , _ucacNewStatus                 :: !(Maybe CACertificateStatus)
+    , _ucacRegistrationConfig        :: !(Maybe RegistrationConfig)
+    , _ucacNewAutoRegistrationStatus :: !(Maybe AutoRegistrationStatus)
+    , _ucacCertificateId             :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateCACertificate' with the minimum fields required to make a request.

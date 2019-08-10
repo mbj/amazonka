@@ -46,12 +46,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getSegmentImportJobs' smart constructor.
-data GetSegmentImportJobs = GetSegmentImportJobs'
-  { _gsijToken         :: !(Maybe Text)
-  , _gsijPageSize      :: !(Maybe Text)
-  , _gsijSegmentId     :: !Text
-  , _gsijApplicationId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetSegmentImportJobs =
+  GetSegmentImportJobs'
+    { _gsijToken         :: !(Maybe Text)
+    , _gsijPageSize      :: !(Maybe Text)
+    , _gsijSegmentId     :: !Text
+    , _gsijApplicationId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetSegmentImportJobs' with the minimum fields required to make a request.
@@ -127,10 +129,12 @@ instance ToQuery GetSegmentImportJobs where
               ["token" =: _gsijToken, "page-size" =: _gsijPageSize]
 
 -- | /See:/ 'getSegmentImportJobsResponse' smart constructor.
-data GetSegmentImportJobsResponse = GetSegmentImportJobsResponse'
-  { _gsijrsResponseStatus     :: !Int
-  , _gsijrsImportJobsResponse :: !ImportJobsResponse
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetSegmentImportJobsResponse =
+  GetSegmentImportJobsResponse'
+    { _gsijrsResponseStatus     :: !Int
+    , _gsijrsImportJobsResponse :: !ImportJobsResponse
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetSegmentImportJobsResponse' with the minimum fields required to make a request.

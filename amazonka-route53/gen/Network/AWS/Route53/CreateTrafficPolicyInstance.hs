@@ -54,13 +54,15 @@ import Network.AWS.Route53.Types.Product
 --
 --
 -- /See:/ 'createTrafficPolicyInstance' smart constructor.
-data CreateTrafficPolicyInstance = CreateTrafficPolicyInstance'
-  { _ctpiHostedZoneId         :: !ResourceId
-  , _ctpiName                 :: !Text
-  , _ctpiTTL                  :: !Nat
-  , _ctpiTrafficPolicyId      :: !Text
-  , _ctpiTrafficPolicyVersion :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateTrafficPolicyInstance =
+  CreateTrafficPolicyInstance'
+    { _ctpiHostedZoneId         :: !ResourceId
+    , _ctpiName                 :: !Text
+    , _ctpiTTL                  :: !Nat
+    , _ctpiTrafficPolicyId      :: !Text
+    , _ctpiTrafficPolicyVersion :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateTrafficPolicyInstance' with the minimum fields required to make a request.
@@ -156,11 +158,13 @@ instance ToXML CreateTrafficPolicyInstance where
 --
 --
 -- /See:/ 'createTrafficPolicyInstanceResponse' smart constructor.
-data CreateTrafficPolicyInstanceResponse = CreateTrafficPolicyInstanceResponse'
-  { _ctpirsResponseStatus        :: !Int
-  , _ctpirsTrafficPolicyInstance :: !TrafficPolicyInstance
-  , _ctpirsLocation              :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateTrafficPolicyInstanceResponse =
+  CreateTrafficPolicyInstanceResponse'
+    { _ctpirsResponseStatus        :: !Int
+    , _ctpirsTrafficPolicyInstance :: !TrafficPolicyInstance
+    , _ctpirsLocation              :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateTrafficPolicyInstanceResponse' with the minimum fields required to make a request.

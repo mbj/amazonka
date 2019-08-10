@@ -75,11 +75,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createPlayerSession' smart constructor.
-data CreatePlayerSession = CreatePlayerSession'
-  { _cPlayerData    :: !(Maybe Text)
-  , _cGameSessionId :: !Text
-  , _cPlayerId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreatePlayerSession =
+  CreatePlayerSession'
+    { _cPlayerData    :: !(Maybe Text)
+    , _cGameSessionId :: !Text
+    , _cPlayerId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreatePlayerSession' with the minimum fields required to make a request.
@@ -157,10 +159,12 @@ instance ToQuery CreatePlayerSession where
 --
 --
 -- /See:/ 'createPlayerSessionResponse' smart constructor.
-data CreatePlayerSessionResponse = CreatePlayerSessionResponse'
-  { _cpsrsPlayerSession  :: !(Maybe PlayerSession)
-  , _cpsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreatePlayerSessionResponse =
+  CreatePlayerSessionResponse'
+    { _cpsrsPlayerSession  :: !(Maybe PlayerSession)
+    , _cpsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreatePlayerSessionResponse' with the minimum fields required to make a request.

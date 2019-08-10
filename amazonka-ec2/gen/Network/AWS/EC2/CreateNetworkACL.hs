@@ -52,10 +52,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createNetworkACL' smart constructor.
-data CreateNetworkACL = CreateNetworkACL'
-  { _cnaDryRun :: !(Maybe Bool)
-  , _cnaVPCId  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateNetworkACL =
+  CreateNetworkACL'
+    { _cnaDryRun :: !(Maybe Bool)
+    , _cnaVPCId  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateNetworkACL' with the minimum fields required to make a request.
@@ -111,10 +113,12 @@ instance ToQuery CreateNetworkACL where
 --
 --
 -- /See:/ 'createNetworkACLResponse' smart constructor.
-data CreateNetworkACLResponse = CreateNetworkACLResponse'
-  { _cnarsNetworkACL     :: !(Maybe NetworkACL)
-  , _cnarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateNetworkACLResponse =
+  CreateNetworkACLResponse'
+    { _cnarsNetworkACL     :: !(Maybe NetworkACL)
+    , _cnarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateNetworkACLResponse' with the minimum fields required to make a request.

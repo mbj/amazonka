@@ -52,10 +52,12 @@ import Network.AWS.Support.Types.Product
 --
 --
 -- /See:/ 'describeServices' smart constructor.
-data DescribeServices = DescribeServices'
-  { _dsServiceCodeList :: !(Maybe [Text])
-  , _dsLanguage        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeServices =
+  DescribeServices'
+    { _dsServiceCodeList :: !(Maybe [Text])
+    , _dsLanguage        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeServices' with the minimum fields required to make a request.
@@ -121,10 +123,12 @@ instance ToQuery DescribeServices where
 --
 --
 -- /See:/ 'describeServicesResponse' smart constructor.
-data DescribeServicesResponse = DescribeServicesResponse'
-  { _dsrsServices       :: !(Maybe [SupportService])
-  , _dsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeServicesResponse =
+  DescribeServicesResponse'
+    { _dsrsServices       :: !(Maybe [SupportService])
+    , _dsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeServicesResponse' with the minimum fields required to make a request.

@@ -56,16 +56,18 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'createAssociation' smart constructor.
-data CreateAssociation = CreateAssociation'
-  { _caInstanceId         :: !(Maybe Text)
-  , _caScheduleExpression :: !(Maybe Text)
-  , _caOutputLocation     :: !(Maybe InstanceAssociationOutputLocation)
-  , _caTargets            :: !(Maybe [Target])
-  , _caParameters         :: !(Maybe (Map Text [Text]))
-  , _caDocumentVersion    :: !(Maybe Text)
-  , _caAssociationName    :: !(Maybe Text)
-  , _caName               :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateAssociation =
+  CreateAssociation'
+    { _caInstanceId         :: !(Maybe Text)
+    , _caScheduleExpression :: !(Maybe Text)
+    , _caOutputLocation     :: !(Maybe InstanceAssociationOutputLocation)
+    , _caTargets            :: !(Maybe [Target])
+    , _caParameters         :: !(Maybe (Map Text [Text]))
+    , _caDocumentVersion    :: !(Maybe Text)
+    , _caAssociationName    :: !(Maybe Text)
+    , _caName               :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateAssociation' with the minimum fields required to make a request.
@@ -178,10 +180,12 @@ instance ToQuery CreateAssociation where
         toQuery = const mempty
 
 -- | /See:/ 'createAssociationResponse' smart constructor.
-data CreateAssociationResponse = CreateAssociationResponse'
-  { _crsAssociationDescription :: !(Maybe AssociationDescription)
-  , _crsResponseStatus         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateAssociationResponse =
+  CreateAssociationResponse'
+    { _crsAssociationDescription :: !(Maybe AssociationDescription)
+    , _crsResponseStatus         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateAssociationResponse' with the minimum fields required to make a request.

@@ -53,9 +53,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listDeploymentConfigs' smart constructor.
-newtype ListDeploymentConfigs = ListDeploymentConfigs'
-  { _ldcNextToken :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ListDeploymentConfigs =
+  ListDeploymentConfigs'
+    { _ldcNextToken :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDeploymentConfigs' with the minimum fields required to make a request.
@@ -121,11 +123,13 @@ instance ToQuery ListDeploymentConfigs where
 --
 --
 -- /See:/ 'listDeploymentConfigsResponse' smart constructor.
-data ListDeploymentConfigsResponse = ListDeploymentConfigsResponse'
-  { _ldcrsNextToken             :: !(Maybe Text)
-  , _ldcrsDeploymentConfigsList :: !(Maybe [Text])
-  , _ldcrsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListDeploymentConfigsResponse =
+  ListDeploymentConfigsResponse'
+    { _ldcrsNextToken             :: !(Maybe Text)
+    , _ldcrsDeploymentConfigsList :: !(Maybe [Text])
+    , _ldcrsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDeploymentConfigsResponse' with the minimum fields required to make a request.

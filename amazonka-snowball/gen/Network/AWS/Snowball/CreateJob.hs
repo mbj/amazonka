@@ -56,20 +56,22 @@ import Network.AWS.Snowball.Types
 import Network.AWS.Snowball.Types.Product
 
 -- | /See:/ 'createJob' smart constructor.
-data CreateJob = CreateJob'
-  { _cjJobType                    :: !(Maybe JobType)
-  , _cjKMSKeyARN                  :: !(Maybe Text)
-  , _cjNotification               :: !(Maybe Notification)
-  , _cjForwardingAddressId        :: !(Maybe Text)
-  , _cjAddressId                  :: !(Maybe Text)
-  , _cjSnowballType               :: !(Maybe SnowballType)
-  , _cjShippingOption             :: !(Maybe ShippingOption)
-  , _cjResources                  :: !(Maybe JobResource)
-  , _cjClusterId                  :: !(Maybe Text)
-  , _cjDescription                :: !(Maybe Text)
-  , _cjRoleARN                    :: !(Maybe Text)
-  , _cjSnowballCapacityPreference :: !(Maybe SnowballCapacity)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateJob =
+  CreateJob'
+    { _cjJobType                    :: !(Maybe JobType)
+    , _cjKMSKeyARN                  :: !(Maybe Text)
+    , _cjNotification               :: !(Maybe Notification)
+    , _cjForwardingAddressId        :: !(Maybe Text)
+    , _cjAddressId                  :: !(Maybe Text)
+    , _cjSnowballType               :: !(Maybe SnowballType)
+    , _cjShippingOption             :: !(Maybe ShippingOption)
+    , _cjResources                  :: !(Maybe JobResource)
+    , _cjClusterId                  :: !(Maybe Text)
+    , _cjDescription                :: !(Maybe Text)
+    , _cjRoleARN                    :: !(Maybe Text)
+    , _cjSnowballCapacityPreference :: !(Maybe SnowballCapacity)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateJob' with the minimum fields required to make a request.
@@ -215,10 +217,12 @@ instance ToQuery CreateJob where
         toQuery = const mempty
 
 -- | /See:/ 'createJobResponse' smart constructor.
-data CreateJobResponse = CreateJobResponse'
-  { _cjrsJobId          :: !(Maybe Text)
-  , _cjrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateJobResponse =
+  CreateJobResponse'
+    { _cjrsJobId          :: !(Maybe Text)
+    , _cjrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateJobResponse' with the minimum fields required to make a request.

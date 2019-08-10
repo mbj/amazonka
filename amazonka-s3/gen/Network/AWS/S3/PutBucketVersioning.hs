@@ -43,12 +43,14 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'putBucketVersioning' smart constructor.
-data PutBucketVersioning = PutBucketVersioning'
-  { _pbvMFA                     :: !(Maybe Text)
-  , _pbvContentMD5              :: !(Maybe Text)
-  , _pbvBucket                  :: !BucketName
-  , _pbvVersioningConfiguration :: !VersioningConfiguration
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutBucketVersioning =
+  PutBucketVersioning'
+    { _pbvMFA                     :: !(Maybe Text)
+    , _pbvContentMD5              :: !(Maybe Text)
+    , _pbvBucket                  :: !BucketName
+    , _pbvVersioningConfiguration :: !VersioningConfiguration
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutBucketVersioning' with the minimum fields required to make a request.

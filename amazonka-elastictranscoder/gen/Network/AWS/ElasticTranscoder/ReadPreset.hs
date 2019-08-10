@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'readPreset' smart constructor.
-newtype ReadPreset = ReadPreset'
-  { _rpId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ReadPreset =
+  ReadPreset'
+    { _rpId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReadPreset' with the minimum fields required to make a request.
@@ -97,10 +99,12 @@ instance ToQuery ReadPreset where
 --
 --
 -- /See:/ 'readPresetResponse' smart constructor.
-data ReadPresetResponse = ReadPresetResponse'
-  { _rprsPreset         :: !(Maybe Preset)
-  , _rprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReadPresetResponse =
+  ReadPresetResponse'
+    { _rprsPreset         :: !(Maybe Preset)
+    , _rprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReadPresetResponse' with the minimum fields required to make a request.

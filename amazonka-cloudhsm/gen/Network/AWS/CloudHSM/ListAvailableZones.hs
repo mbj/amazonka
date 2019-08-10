@@ -97,10 +97,12 @@ instance ToQuery ListAvailableZones where
         toQuery = const mempty
 
 -- | /See:/ 'listAvailableZonesResponse' smart constructor.
-data ListAvailableZonesResponse = ListAvailableZonesResponse'
-  { _lazrsAZList         :: !(Maybe [Text])
-  , _lazrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAvailableZonesResponse =
+  ListAvailableZonesResponse'
+    { _lazrsAZList         :: !(Maybe [Text])
+    , _lazrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAvailableZonesResponse' with the minimum fields required to make a request.

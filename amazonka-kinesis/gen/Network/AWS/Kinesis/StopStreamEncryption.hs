@@ -50,11 +50,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'stopStreamEncryption' smart constructor.
-data StopStreamEncryption = StopStreamEncryption'
-  { _sseStreamName     :: !Text
-  , _sseEncryptionType :: !EncryptionType
-  , _sseKeyId          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StopStreamEncryption =
+  StopStreamEncryption'
+    { _sseStreamName     :: !Text
+    , _sseEncryptionType :: !EncryptionType
+    , _sseKeyId          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopStreamEncryption' with the minimum fields required to make a request.

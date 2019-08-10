@@ -52,9 +52,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'removeAccountFromOrganization' smart constructor.
-newtype RemoveAccountFromOrganization = RemoveAccountFromOrganization'
-  { _rafoAccountId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RemoveAccountFromOrganization =
+  RemoveAccountFromOrganization'
+    { _rafoAccountId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RemoveAccountFromOrganization' with the minimum fields required to make a request.

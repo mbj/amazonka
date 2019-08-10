@@ -50,11 +50,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'resetDBParameterGroup' smart constructor.
-data ResetDBParameterGroup = ResetDBParameterGroup'
-  { _rdpgResetAllParameters   :: !(Maybe Bool)
-  , _rdpgParameters           :: !(Maybe [Parameter])
-  , _rdpgDBParameterGroupName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResetDBParameterGroup =
+  ResetDBParameterGroup'
+    { _rdpgResetAllParameters   :: !(Maybe Bool)
+    , _rdpgParameters           :: !(Maybe [Parameter])
+    , _rdpgDBParameterGroupName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResetDBParameterGroup' with the minimum fields required to make a request.

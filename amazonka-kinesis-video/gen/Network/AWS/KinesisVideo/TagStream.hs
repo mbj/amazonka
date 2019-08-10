@@ -52,11 +52,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'tagStream' smart constructor.
-data TagStream = TagStream'
-  { _tsStreamARN  :: !(Maybe Text)
-  , _tsStreamName :: !(Maybe Text)
-  , _tsTags       :: !(Map Text Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TagStream =
+  TagStream'
+    { _tsStreamARN  :: !(Maybe Text)
+    , _tsStreamName :: !(Maybe Text)
+    , _tsTags       :: !(Map Text Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TagStream' with the minimum fields required to make a request.
@@ -116,9 +118,11 @@ instance ToQuery TagStream where
         toQuery = const mempty
 
 -- | /See:/ 'tagStreamResponse' smart constructor.
-newtype TagStreamResponse = TagStreamResponse'
-  { _tsrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype TagStreamResponse =
+  TagStreamResponse'
+    { _tsrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TagStreamResponse' with the minimum fields required to make a request.

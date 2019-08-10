@@ -90,10 +90,12 @@ instance ToQuery DescribeTerminationPolicyTypes where
                   "Version" =: ("2011-01-01" :: ByteString)])
 
 -- | /See:/ 'describeTerminationPolicyTypesResponse' smart constructor.
-data DescribeTerminationPolicyTypesResponse = DescribeTerminationPolicyTypesResponse'
-  { _dtptrsTerminationPolicyTypes :: !(Maybe [Text])
-  , _dtptrsResponseStatus         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeTerminationPolicyTypesResponse =
+  DescribeTerminationPolicyTypesResponse'
+    { _dtptrsTerminationPolicyTypes :: !(Maybe [Text])
+    , _dtptrsResponseStatus         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeTerminationPolicyTypesResponse' with the minimum fields required to make a request.

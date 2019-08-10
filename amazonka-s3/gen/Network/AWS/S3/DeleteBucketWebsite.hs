@@ -40,9 +40,11 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'deleteBucketWebsite' smart constructor.
-newtype DeleteBucketWebsite = DeleteBucketWebsite'
-  { _dbwBucket :: BucketName
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteBucketWebsite =
+  DeleteBucketWebsite'
+    { _dbwBucket :: BucketName
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteBucketWebsite' with the minimum fields required to make a request.

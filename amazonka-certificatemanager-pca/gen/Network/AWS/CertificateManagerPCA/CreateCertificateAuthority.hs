@@ -48,12 +48,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createCertificateAuthority' smart constructor.
-data CreateCertificateAuthority = CreateCertificateAuthority'
-  { _ccaIdempotencyToken                  :: !(Maybe Text)
-  , _ccaRevocationConfiguration           :: !(Maybe RevocationConfiguration)
-  , _ccaCertificateAuthorityConfiguration :: !CertificateAuthorityConfiguration
-  , _ccaCertificateAuthorityType          :: !CertificateAuthorityType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateCertificateAuthority =
+  CreateCertificateAuthority'
+    { _ccaIdempotencyToken :: !(Maybe Text)
+    , _ccaRevocationConfiguration :: !(Maybe RevocationConfiguration)
+    , _ccaCertificateAuthorityConfiguration :: !CertificateAuthorityConfiguration
+    , _ccaCertificateAuthorityType :: !CertificateAuthorityType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateCertificateAuthority' with the minimum fields required to make a request.
@@ -143,10 +145,12 @@ instance ToQuery CreateCertificateAuthority where
         toQuery = const mempty
 
 -- | /See:/ 'createCertificateAuthorityResponse' smart constructor.
-data CreateCertificateAuthorityResponse = CreateCertificateAuthorityResponse'
-  { _ccarsCertificateAuthorityARN :: !(Maybe Text)
-  , _ccarsResponseStatus          :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateCertificateAuthorityResponse =
+  CreateCertificateAuthorityResponse'
+    { _ccarsCertificateAuthorityARN :: !(Maybe Text)
+    , _ccarsResponseStatus          :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateCertificateAuthorityResponse' with the minimum fields required to make a request.

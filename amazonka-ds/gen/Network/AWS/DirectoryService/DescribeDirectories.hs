@@ -58,11 +58,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeDirectories' smart constructor.
-data DescribeDirectories = DescribeDirectories'
-  { _ddNextToken    :: !(Maybe Text)
-  , _ddDirectoryIds :: !(Maybe [Text])
-  , _ddLimit        :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDirectories =
+  DescribeDirectories'
+    { _ddNextToken    :: !(Maybe Text)
+    , _ddDirectoryIds :: !(Maybe [Text])
+    , _ddLimit        :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDirectories' with the minimum fields required to make a request.
@@ -138,11 +140,13 @@ instance ToQuery DescribeDirectories where
 --
 --
 -- /See:/ 'describeDirectoriesResponse' smart constructor.
-data DescribeDirectoriesResponse = DescribeDirectoriesResponse'
-  { _ddrsDirectoryDescriptions :: !(Maybe [DirectoryDescription])
-  , _ddrsNextToken             :: !(Maybe Text)
-  , _ddrsResponseStatus        :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data DescribeDirectoriesResponse =
+  DescribeDirectoriesResponse'
+    { _ddrsDirectoryDescriptions :: !(Maybe [DirectoryDescription])
+    , _ddrsNextToken             :: !(Maybe Text)
+    , _ddrsResponseStatus        :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDirectoriesResponse' with the minimum fields required to make a request.

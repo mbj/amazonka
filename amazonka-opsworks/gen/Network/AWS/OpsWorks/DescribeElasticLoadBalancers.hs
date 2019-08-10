@@ -48,10 +48,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeElasticLoadBalancers' smart constructor.
-data DescribeElasticLoadBalancers = DescribeElasticLoadBalancers'
-  { _delbLayerIds :: !(Maybe [Text])
-  , _delbStackId  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeElasticLoadBalancers =
+  DescribeElasticLoadBalancers'
+    { _delbLayerIds :: !(Maybe [Text])
+    , _delbStackId  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeElasticLoadBalancers' with the minimum fields required to make a request.
@@ -120,10 +122,12 @@ instance ToQuery DescribeElasticLoadBalancers where
 --
 --
 -- /See:/ 'describeElasticLoadBalancersResponse' smart constructor.
-data DescribeElasticLoadBalancersResponse = DescribeElasticLoadBalancersResponse'
-  { _delbrsElasticLoadBalancers :: !(Maybe [ElasticLoadBalancer])
-  , _delbrsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeElasticLoadBalancersResponse =
+  DescribeElasticLoadBalancersResponse'
+    { _delbrsElasticLoadBalancers :: !(Maybe [ElasticLoadBalancer])
+    , _delbrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeElasticLoadBalancersResponse' with the minimum fields required to make a request.

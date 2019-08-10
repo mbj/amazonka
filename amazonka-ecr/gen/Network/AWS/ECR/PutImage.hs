@@ -48,12 +48,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putImage' smart constructor.
-data PutImage = PutImage'
-  { _piRegistryId     :: !(Maybe Text)
-  , _piImageTag       :: !(Maybe Text)
-  , _piRepositoryName :: !Text
-  , _piImageManifest  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutImage =
+  PutImage'
+    { _piRegistryId     :: !(Maybe Text)
+    , _piImageTag       :: !(Maybe Text)
+    , _piRepositoryName :: !Text
+    , _piImageManifest  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutImage' with the minimum fields required to make a request.
@@ -135,10 +137,12 @@ instance ToQuery PutImage where
         toQuery = const mempty
 
 -- | /See:/ 'putImageResponse' smart constructor.
-data PutImageResponse = PutImageResponse'
-  { _pirsImage          :: !(Maybe Image)
-  , _pirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutImageResponse =
+  PutImageResponse'
+    { _pirsImage          :: !(Maybe Image)
+    , _pirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutImageResponse' with the minimum fields required to make a request.

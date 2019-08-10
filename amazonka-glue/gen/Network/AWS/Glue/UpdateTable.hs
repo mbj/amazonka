@@ -47,12 +47,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateTable' smart constructor.
-data UpdateTable = UpdateTable'
-  { _utSkipArchive  :: !(Maybe Bool)
-  , _utCatalogId    :: !(Maybe Text)
-  , _utDatabaseName :: !Text
-  , _utTableInput   :: !TableInput
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateTable =
+  UpdateTable'
+    { _utSkipArchive  :: !(Maybe Bool)
+    , _utCatalogId    :: !(Maybe Text)
+    , _utDatabaseName :: !Text
+    , _utTableInput   :: !TableInput
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateTable' with the minimum fields required to make a request.
@@ -132,9 +134,11 @@ instance ToQuery UpdateTable where
         toQuery = const mempty
 
 -- | /See:/ 'updateTableResponse' smart constructor.
-newtype UpdateTableResponse = UpdateTableResponse'
-  { _utrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateTableResponse =
+  UpdateTableResponse'
+    { _utrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateTableResponse' with the minimum fields required to make a request.

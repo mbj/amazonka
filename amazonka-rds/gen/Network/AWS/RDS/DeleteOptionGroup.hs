@@ -46,9 +46,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteOptionGroup' smart constructor.
-newtype DeleteOptionGroup = DeleteOptionGroup'
-  { _dOptionGroupName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteOptionGroup =
+  DeleteOptionGroup'
+    { _dOptionGroupName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteOptionGroup' with the minimum fields required to make a request.

@@ -52,10 +52,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeConversionTasks' smart constructor.
-data DescribeConversionTasks = DescribeConversionTasks'
-  { _dctConversionTaskIds :: !(Maybe [Text])
-  , _dctDryRun            :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeConversionTasks =
+  DescribeConversionTasks'
+    { _dctConversionTaskIds :: !(Maybe [Text])
+    , _dctDryRun            :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeConversionTasks' with the minimum fields required to make a request.
@@ -118,10 +120,12 @@ instance ToQuery DescribeConversionTasks where
 --
 --
 -- /See:/ 'describeConversionTasksResponse' smart constructor.
-data DescribeConversionTasksResponse = DescribeConversionTasksResponse'
-  { _dctrsConversionTasks :: !(Maybe [ConversionTask])
-  , _dctrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeConversionTasksResponse =
+  DescribeConversionTasksResponse'
+    { _dctrsConversionTasks :: !(Maybe [ConversionTask])
+    , _dctrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeConversionTasksResponse' with the minimum fields required to make a request.

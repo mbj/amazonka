@@ -46,11 +46,13 @@ import Network.AWS.WorkMail.Types
 import Network.AWS.WorkMail.Types.Product
 
 -- | /See:/ 'registerToWorkMail' smart constructor.
-data RegisterToWorkMail = RegisterToWorkMail'
-  { _rtwmOrganizationId :: !Text
-  , _rtwmEntityId       :: !Text
-  , _rtwmEmail          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RegisterToWorkMail =
+  RegisterToWorkMail'
+    { _rtwmOrganizationId :: !Text
+    , _rtwmEntityId       :: !Text
+    , _rtwmEmail          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterToWorkMail' with the minimum fields required to make a request.
@@ -124,9 +126,11 @@ instance ToQuery RegisterToWorkMail where
         toQuery = const mempty
 
 -- | /See:/ 'registerToWorkMailResponse' smart constructor.
-newtype RegisterToWorkMailResponse = RegisterToWorkMailResponse'
-  { _rtwmrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RegisterToWorkMailResponse =
+  RegisterToWorkMailResponse'
+    { _rtwmrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterToWorkMailResponse' with the minimum fields required to make a request.

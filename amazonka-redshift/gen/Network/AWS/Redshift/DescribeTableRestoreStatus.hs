@@ -53,12 +53,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeTableRestoreStatus' smart constructor.
-data DescribeTableRestoreStatus = DescribeTableRestoreStatus'
-  { _dtrssTableRestoreRequestId :: !(Maybe Text)
-  , _dtrssClusterIdentifier     :: !(Maybe Text)
-  , _dtrssMarker                :: !(Maybe Text)
-  , _dtrssMaxRecords            :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeTableRestoreStatus =
+  DescribeTableRestoreStatus'
+    { _dtrssTableRestoreRequestId :: !(Maybe Text)
+    , _dtrssClusterIdentifier     :: !(Maybe Text)
+    , _dtrssMarker                :: !(Maybe Text)
+    , _dtrssMaxRecords            :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeTableRestoreStatus' with the minimum fields required to make a request.
@@ -140,11 +142,13 @@ instance ToQuery DescribeTableRestoreStatus where
 --
 --
 -- /See:/ 'describeTableRestoreStatusResponse' smart constructor.
-data DescribeTableRestoreStatusResponse = DescribeTableRestoreStatusResponse'
-  { _dtrsrsMarker                    :: !(Maybe Text)
-  , _dtrsrsTableRestoreStatusDetails :: !(Maybe [TableRestoreStatus])
-  , _dtrsrsResponseStatus            :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeTableRestoreStatusResponse =
+  DescribeTableRestoreStatusResponse'
+    { _dtrsrsMarker                    :: !(Maybe Text)
+    , _dtrsrsTableRestoreStatusDetails :: !(Maybe [TableRestoreStatus])
+    , _dtrsrsResponseStatus            :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeTableRestoreStatusResponse' with the minimum fields required to make a request.

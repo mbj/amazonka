@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeLoadBalancerAttributes' smart constructor.
-newtype DescribeLoadBalancerAttributes = DescribeLoadBalancerAttributes'
-  { _dlbaLoadBalancerName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeLoadBalancerAttributes =
+  DescribeLoadBalancerAttributes'
+    { _dlbaLoadBalancerName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeLoadBalancerAttributes' with the minimum fields required to make a request.
@@ -108,10 +110,12 @@ instance ToQuery DescribeLoadBalancerAttributes where
 --
 --
 -- /See:/ 'describeLoadBalancerAttributesResponse' smart constructor.
-data DescribeLoadBalancerAttributesResponse = DescribeLoadBalancerAttributesResponse'
-  { _dlbarsLoadBalancerAttributes :: !(Maybe LoadBalancerAttributes)
-  , _dlbarsResponseStatus         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeLoadBalancerAttributesResponse =
+  DescribeLoadBalancerAttributesResponse'
+    { _dlbarsLoadBalancerAttributes :: !(Maybe LoadBalancerAttributes)
+    , _dlbarsResponseStatus         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeLoadBalancerAttributesResponse' with the minimum fields required to make a request.

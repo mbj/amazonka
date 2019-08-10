@@ -59,12 +59,14 @@ import Network.AWS.Route53.Types.Product
 --
 --
 -- /See:/ 'listGeoLocations' smart constructor.
-data ListGeoLocations = ListGeoLocations'
-  { _lglStartSubdivisionCode :: !(Maybe Text)
-  , _lglMaxItems             :: !(Maybe Text)
-  , _lglStartCountryCode     :: !(Maybe Text)
-  , _lglStartContinentCode   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListGeoLocations =
+  ListGeoLocations'
+    { _lglStartSubdivisionCode :: !(Maybe Text)
+    , _lglMaxItems             :: !(Maybe Text)
+    , _lglStartCountryCode     :: !(Maybe Text)
+    , _lglStartContinentCode   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListGeoLocations' with the minimum fields required to make a request.
@@ -145,15 +147,17 @@ instance ToQuery ListGeoLocations where
 --
 --
 -- /See:/ 'listGeoLocationsResponse' smart constructor.
-data ListGeoLocationsResponse = ListGeoLocationsResponse'
-  { _lglrsNextContinentCode      :: !(Maybe Text)
-  , _lglrsNextCountryCode        :: !(Maybe Text)
-  , _lglrsNextSubdivisionCode    :: !(Maybe Text)
-  , _lglrsResponseStatus         :: !Int
-  , _lglrsGeoLocationDetailsList :: ![GeoLocationDetails]
-  , _lglrsIsTruncated            :: !Bool
-  , _lglrsMaxItems               :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListGeoLocationsResponse =
+  ListGeoLocationsResponse'
+    { _lglrsNextContinentCode      :: !(Maybe Text)
+    , _lglrsNextCountryCode        :: !(Maybe Text)
+    , _lglrsNextSubdivisionCode    :: !(Maybe Text)
+    , _lglrsResponseStatus         :: !Int
+    , _lglrsGeoLocationDetailsList :: ![GeoLocationDetails]
+    , _lglrsIsTruncated            :: !Bool
+    , _lglrsMaxItems               :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListGeoLocationsResponse' with the minimum fields required to make a request.

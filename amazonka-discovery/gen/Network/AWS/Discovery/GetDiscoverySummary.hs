@@ -99,15 +99,17 @@ instance ToQuery GetDiscoverySummary where
         toQuery = const mempty
 
 -- | /See:/ 'getDiscoverySummaryResponse' smart constructor.
-data GetDiscoverySummaryResponse = GetDiscoverySummaryResponse'
-  { _gdsrsServers                     :: !(Maybe Integer)
-  , _gdsrsServersMappedtoTags         :: !(Maybe Integer)
-  , _gdsrsServersMappedToApplications :: !(Maybe Integer)
-  , _gdsrsConnectorSummary            :: !(Maybe CustomerConnectorInfo)
-  , _gdsrsAgentSummary                :: !(Maybe CustomerAgentInfo)
-  , _gdsrsApplications                :: !(Maybe Integer)
-  , _gdsrsResponseStatus              :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDiscoverySummaryResponse =
+  GetDiscoverySummaryResponse'
+    { _gdsrsServers                     :: !(Maybe Integer)
+    , _gdsrsServersMappedtoTags         :: !(Maybe Integer)
+    , _gdsrsServersMappedToApplications :: !(Maybe Integer)
+    , _gdsrsConnectorSummary            :: !(Maybe CustomerConnectorInfo)
+    , _gdsrsAgentSummary                :: !(Maybe CustomerAgentInfo)
+    , _gdsrsApplications                :: !(Maybe Integer)
+    , _gdsrsResponseStatus              :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDiscoverySummaryResponse' with the minimum fields required to make a request.

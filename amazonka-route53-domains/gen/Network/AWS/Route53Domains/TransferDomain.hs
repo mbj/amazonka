@@ -68,20 +68,22 @@ import Network.AWS.Route53Domains.Types.Product
 --
 --
 -- /See:/ 'transferDomain' smart constructor.
-data TransferDomain = TransferDomain'
-  { _tdPrivacyProtectTechContact       :: !(Maybe Bool)
-  , _tdPrivacyProtectRegistrantContact :: !(Maybe Bool)
-  , _tdAutoRenew                       :: !(Maybe Bool)
-  , _tdPrivacyProtectAdminContact      :: !(Maybe Bool)
-  , _tdIdNLangCode                     :: !(Maybe Text)
-  , _tdAuthCode                        :: !(Maybe (Sensitive Text))
-  , _tdNameservers                     :: !(Maybe [Nameserver])
-  , _tdDomainName                      :: !Text
-  , _tdDurationInYears                 :: !Nat
-  , _tdAdminContact                    :: !(Sensitive ContactDetail)
-  , _tdRegistrantContact               :: !(Sensitive ContactDetail)
-  , _tdTechContact                     :: !(Sensitive ContactDetail)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data TransferDomain =
+  TransferDomain'
+    { _tdPrivacyProtectTechContact       :: !(Maybe Bool)
+    , _tdPrivacyProtectRegistrantContact :: !(Maybe Bool)
+    , _tdAutoRenew                       :: !(Maybe Bool)
+    , _tdPrivacyProtectAdminContact      :: !(Maybe Bool)
+    , _tdIdNLangCode                     :: !(Maybe Text)
+    , _tdAuthCode                        :: !(Maybe (Sensitive Text))
+    , _tdNameservers                     :: !(Maybe [Nameserver])
+    , _tdDomainName                      :: !Text
+    , _tdDurationInYears                 :: !Nat
+    , _tdAdminContact                    :: !(Sensitive ContactDetail)
+    , _tdRegistrantContact               :: !(Sensitive ContactDetail)
+    , _tdTechContact                     :: !(Sensitive ContactDetail)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TransferDomain' with the minimum fields required to make a request.
@@ -237,10 +239,12 @@ instance ToQuery TransferDomain where
 --
 --
 -- /See:/ 'transferDomainResponse' smart constructor.
-data TransferDomainResponse = TransferDomainResponse'
-  { _tdrsResponseStatus :: !Int
-  , _tdrsOperationId    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TransferDomainResponse =
+  TransferDomainResponse'
+    { _tdrsResponseStatus :: !Int
+    , _tdrsOperationId    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TransferDomainResponse' with the minimum fields required to make a request.

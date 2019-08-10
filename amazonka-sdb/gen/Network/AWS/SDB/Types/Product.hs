@@ -26,12 +26,14 @@ import Network.AWS.SDB.Types.Sum
 --
 --
 -- /See:/ 'attribute' smart constructor.
-data Attribute = Attribute'
-  { _aAlternateValueEncoding :: !(Maybe Text)
-  , _aAlternateNameEncoding  :: !(Maybe Text)
-  , _aName                   :: !Text
-  , _aValue                  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Attribute =
+  Attribute'
+    { _aAlternateValueEncoding :: !(Maybe Text)
+    , _aAlternateNameEncoding  :: !(Maybe Text)
+    , _aName                   :: !Text
+    , _aValue                  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Attribute' with the minimum fields required to make a request.
@@ -95,10 +97,12 @@ instance ToQuery Attribute where
                "Name" =: _aName, "Value" =: _aValue]
 
 -- | /See:/ 'deletableItem' smart constructor.
-data DeletableItem = DeletableItem'
-  { _diAttributes :: !(Maybe [Attribute])
-  , _diName       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeletableItem =
+  DeletableItem'
+    { _diAttributes :: !(Maybe [Attribute])
+    , _diName       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeletableItem' with the minimum fields required to make a request.
@@ -138,11 +142,13 @@ instance ToQuery DeletableItem where
 --
 --
 -- /See:/ 'item' smart constructor.
-data Item = Item'
-  { _iAlternateNameEncoding :: !(Maybe Text)
-  , _iName                  :: !Text
-  , _iAttributes            :: ![Attribute]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Item =
+  Item'
+    { _iAlternateNameEncoding :: !(Maybe Text)
+    , _iName                  :: !Text
+    , _iAttributes            :: ![Attribute]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Item' with the minimum fields required to make a request.
@@ -189,11 +195,13 @@ instance NFData Item where
 --
 --
 -- /See:/ 'replaceableAttribute' smart constructor.
-data ReplaceableAttribute = ReplaceableAttribute'
-  { _raReplace :: !(Maybe Bool)
-  , _raName    :: !Text
-  , _raValue   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReplaceableAttribute =
+  ReplaceableAttribute'
+    { _raReplace :: !(Maybe Bool)
+    , _raName    :: !Text
+    , _raValue   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReplaceableAttribute' with the minimum fields required to make a request.
@@ -241,10 +249,12 @@ instance ToQuery ReplaceableAttribute where
 --
 --
 -- /See:/ 'replaceableItem' smart constructor.
-data ReplaceableItem = ReplaceableItem'
-  { _riName       :: !Text
-  , _riAttributes :: ![ReplaceableAttribute]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReplaceableItem =
+  ReplaceableItem'
+    { _riName       :: !Text
+    , _riAttributes :: ![ReplaceableAttribute]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReplaceableItem' with the minimum fields required to make a request.
@@ -284,11 +294,13 @@ instance ToQuery ReplaceableItem where
 --
 --
 -- /See:/ 'updateCondition' smart constructor.
-data UpdateCondition = UpdateCondition'
-  { _ucExists :: !(Maybe Bool)
-  , _ucValue  :: !(Maybe Text)
-  , _ucName   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateCondition =
+  UpdateCondition'
+    { _ucExists :: !(Maybe Bool)
+    , _ucValue  :: !(Maybe Text)
+    , _ucName   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateCondition' with the minimum fields required to make a request.

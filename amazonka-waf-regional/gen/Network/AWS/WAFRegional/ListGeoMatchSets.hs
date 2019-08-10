@@ -47,10 +47,12 @@ import Network.AWS.WAFRegional.Types
 import Network.AWS.WAFRegional.Types.Product
 
 -- | /See:/ 'listGeoMatchSets' smart constructor.
-data ListGeoMatchSets = ListGeoMatchSets'
-  { _lgmsNextMarker :: !(Maybe Text)
-  , _lgmsLimit      :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListGeoMatchSets =
+  ListGeoMatchSets'
+    { _lgmsNextMarker :: !(Maybe Text)
+    , _lgmsLimit      :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListGeoMatchSets' with the minimum fields required to make a request.
@@ -113,11 +115,13 @@ instance ToQuery ListGeoMatchSets where
         toQuery = const mempty
 
 -- | /See:/ 'listGeoMatchSetsResponse' smart constructor.
-data ListGeoMatchSetsResponse = ListGeoMatchSetsResponse'
-  { _lgmsrsGeoMatchSets   :: !(Maybe [GeoMatchSetSummary])
-  , _lgmsrsNextMarker     :: !(Maybe Text)
-  , _lgmsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListGeoMatchSetsResponse =
+  ListGeoMatchSetsResponse'
+    { _lgmsrsGeoMatchSets   :: !(Maybe [GeoMatchSetSummary])
+    , _lgmsrsNextMarker     :: !(Maybe Text)
+    , _lgmsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListGeoMatchSetsResponse' with the minimum fields required to make a request.

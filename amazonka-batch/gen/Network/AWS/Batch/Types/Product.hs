@@ -26,9 +26,11 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'arrayProperties' smart constructor.
-newtype ArrayProperties = ArrayProperties'
-  { _apSize :: Maybe Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ArrayProperties =
+  ArrayProperties'
+    { _apSize :: Maybe Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ArrayProperties' with the minimum fields required to make a request.
@@ -58,11 +60,13 @@ instance ToJSON ArrayProperties where
 --
 --
 -- /See:/ 'arrayPropertiesDetail' smart constructor.
-data ArrayPropertiesDetail = ArrayPropertiesDetail'
-  { _apdSize          :: !(Maybe Int)
-  , _apdStatusSummary :: !(Maybe (Map Text Int))
-  , _apdIndex         :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ArrayPropertiesDetail =
+  ArrayPropertiesDetail'
+    { _apdSize          :: !(Maybe Int)
+    , _apdStatusSummary :: !(Maybe (Map Text Int))
+    , _apdIndex         :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ArrayPropertiesDetail' with the minimum fields required to make a request.
@@ -110,10 +114,12 @@ instance NFData ArrayPropertiesDetail where
 --
 --
 -- /See:/ 'arrayPropertiesSummary' smart constructor.
-data ArrayPropertiesSummary = ArrayPropertiesSummary'
-  { _apsSize  :: !(Maybe Int)
-  , _apsIndex :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ArrayPropertiesSummary =
+  ArrayPropertiesSummary'
+    { _apsSize  :: !(Maybe Int)
+    , _apsIndex :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ArrayPropertiesSummary' with the minimum fields required to make a request.
@@ -153,13 +159,15 @@ instance NFData ArrayPropertiesSummary where
 --
 --
 -- /See:/ 'attemptContainerDetail' smart constructor.
-data AttemptContainerDetail = AttemptContainerDetail'
-  { _acdTaskARN              :: !(Maybe Text)
-  , _acdContainerInstanceARN :: !(Maybe Text)
-  , _acdReason               :: !(Maybe Text)
-  , _acdLogStreamName        :: !(Maybe Text)
-  , _acdExitCode             :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AttemptContainerDetail =
+  AttemptContainerDetail'
+    { _acdTaskARN              :: !(Maybe Text)
+    , _acdContainerInstanceARN :: !(Maybe Text)
+    , _acdReason               :: !(Maybe Text)
+    , _acdLogStreamName        :: !(Maybe Text)
+    , _acdExitCode             :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttemptContainerDetail' with the minimum fields required to make a request.
@@ -226,12 +234,14 @@ instance NFData AttemptContainerDetail where
 --
 --
 -- /See:/ 'attemptDetail' smart constructor.
-data AttemptDetail = AttemptDetail'
-  { _adStoppedAt    :: !(Maybe Integer)
-  , _adStartedAt    :: !(Maybe Integer)
-  , _adContainer    :: !(Maybe AttemptContainerDetail)
-  , _adStatusReason :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AttemptDetail =
+  AttemptDetail'
+    { _adStoppedAt    :: !(Maybe Integer)
+    , _adStartedAt    :: !(Maybe Integer)
+    , _adContainer    :: !(Maybe AttemptContainerDetail)
+    , _adStatusReason :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttemptDetail' with the minimum fields required to make a request.
@@ -290,17 +300,19 @@ instance NFData AttemptDetail where
 --
 --
 -- /See:/ 'computeEnvironmentDetail' smart constructor.
-data ComputeEnvironmentDetail = ComputeEnvironmentDetail'
-  { _cedStatus                 :: !(Maybe CEStatus)
-  , _cedState                  :: !(Maybe CEState)
-  , _cedComputeResources       :: !(Maybe ComputeResource)
-  , _cedStatusReason           :: !(Maybe Text)
-  , _cedType                   :: !(Maybe CEType)
-  , _cedServiceRole            :: !(Maybe Text)
-  , _cedComputeEnvironmentName :: !Text
-  , _cedComputeEnvironmentARN  :: !Text
-  , _cedEcsClusterARN          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ComputeEnvironmentDetail =
+  ComputeEnvironmentDetail'
+    { _cedStatus                 :: !(Maybe CEStatus)
+    , _cedState                  :: !(Maybe CEState)
+    , _cedComputeResources       :: !(Maybe ComputeResource)
+    , _cedStatusReason           :: !(Maybe Text)
+    , _cedType                   :: !(Maybe CEType)
+    , _cedServiceRole            :: !(Maybe Text)
+    , _cedComputeEnvironmentName :: !Text
+    , _cedComputeEnvironmentARN  :: !Text
+    , _cedEcsClusterARN          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ComputeEnvironmentDetail' with the minimum fields required to make a request.
@@ -402,10 +414,12 @@ instance NFData ComputeEnvironmentDetail where
 --
 --
 -- /See:/ 'computeEnvironmentOrder' smart constructor.
-data ComputeEnvironmentOrder = ComputeEnvironmentOrder'
-  { _ceoOrder              :: !Int
-  , _ceoComputeEnvironment :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ComputeEnvironmentOrder =
+  ComputeEnvironmentOrder'
+    { _ceoOrder              :: !Int
+    , _ceoComputeEnvironment :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ComputeEnvironmentOrder' with the minimum fields required to make a request.
@@ -456,21 +470,23 @@ instance ToJSON ComputeEnvironmentOrder where
 --
 --
 -- /See:/ 'computeResource' smart constructor.
-data ComputeResource = ComputeResource'
-  { _crEc2KeyPair       :: !(Maybe Text)
-  , _crBidPercentage    :: !(Maybe Int)
-  , _crSpotIAMFleetRole :: !(Maybe Text)
-  , _crImageId          :: !(Maybe Text)
-  , _crDesiredvCPUs     :: !(Maybe Int)
-  , _crTags             :: !(Maybe (Map Text Text))
-  , _crType             :: !CRType
-  , _crMinvCPUs         :: !Int
-  , _crMaxvCPUs         :: !Int
-  , _crInstanceTypes    :: ![Text]
-  , _crSubnets          :: ![Text]
-  , _crSecurityGroupIds :: ![Text]
-  , _crInstanceRole     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ComputeResource =
+  ComputeResource'
+    { _crEc2KeyPair       :: !(Maybe Text)
+    , _crBidPercentage    :: !(Maybe Int)
+    , _crSpotIAMFleetRole :: !(Maybe Text)
+    , _crImageId          :: !(Maybe Text)
+    , _crDesiredvCPUs     :: !(Maybe Int)
+    , _crTags             :: !(Maybe (Map Text Text))
+    , _crType             :: !CRType
+    , _crMinvCPUs         :: !Int
+    , _crMaxvCPUs         :: !Int
+    , _crInstanceTypes    :: ![Text]
+    , _crSubnets          :: ![Text]
+    , _crSecurityGroupIds :: ![Text]
+    , _crInstanceRole     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ComputeResource' with the minimum fields required to make a request.
@@ -622,11 +638,13 @@ instance ToJSON ComputeResource where
 --
 --
 -- /See:/ 'computeResourceUpdate' smart constructor.
-data ComputeResourceUpdate = ComputeResourceUpdate'
-  { _cruMinvCPUs     :: !(Maybe Int)
-  , _cruMaxvCPUs     :: !(Maybe Int)
-  , _cruDesiredvCPUs :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ComputeResourceUpdate =
+  ComputeResourceUpdate'
+    { _cruMinvCPUs     :: !(Maybe Int)
+    , _cruMaxvCPUs     :: !(Maybe Int)
+    , _cruDesiredvCPUs :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ComputeResourceUpdate' with the minimum fields required to make a request.
@@ -674,25 +692,27 @@ instance ToJSON ComputeResourceUpdate where
 --
 --
 -- /See:/ 'containerDetail' smart constructor.
-data ContainerDetail = ContainerDetail'
-  { _cdImage                  :: !(Maybe Text)
-  , _cdCommand                :: !(Maybe [Text])
-  , _cdEnvironment            :: !(Maybe [KeyValuePair])
-  , _cdTaskARN                :: !(Maybe Text)
-  , _cdUlimits                :: !(Maybe [Ulimit])
-  , _cdContainerInstanceARN   :: !(Maybe Text)
-  , _cdPrivileged             :: !(Maybe Bool)
-  , _cdJobRoleARN             :: !(Maybe Text)
-  , _cdMemory                 :: !(Maybe Int)
-  , _cdUser                   :: !(Maybe Text)
-  , _cdReason                 :: !(Maybe Text)
-  , _cdLogStreamName          :: !(Maybe Text)
-  , _cdMountPoints            :: !(Maybe [MountPoint])
-  , _cdExitCode               :: !(Maybe Int)
-  , _cdVcpus                  :: !(Maybe Int)
-  , _cdReadonlyRootFilesystem :: !(Maybe Bool)
-  , _cdVolumes                :: !(Maybe [Volume])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ContainerDetail =
+  ContainerDetail'
+    { _cdImage                  :: !(Maybe Text)
+    , _cdCommand                :: !(Maybe [Text])
+    , _cdEnvironment            :: !(Maybe [KeyValuePair])
+    , _cdTaskARN                :: !(Maybe Text)
+    , _cdUlimits                :: !(Maybe [Ulimit])
+    , _cdContainerInstanceARN   :: !(Maybe Text)
+    , _cdPrivileged             :: !(Maybe Bool)
+    , _cdJobRoleARN             :: !(Maybe Text)
+    , _cdMemory                 :: !(Maybe Int)
+    , _cdUser                   :: !(Maybe Text)
+    , _cdReason                 :: !(Maybe Text)
+    , _cdLogStreamName          :: !(Maybe Text)
+    , _cdMountPoints            :: !(Maybe [MountPoint])
+    , _cdExitCode               :: !(Maybe Int)
+    , _cdVcpus                  :: !(Maybe Int)
+    , _cdReadonlyRootFilesystem :: !(Maybe Bool)
+    , _cdVolumes                :: !(Maybe [Volume])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ContainerDetail' with the minimum fields required to make a request.
@@ -855,12 +875,14 @@ instance NFData ContainerDetail where
 --
 --
 -- /See:/ 'containerOverrides' smart constructor.
-data ContainerOverrides = ContainerOverrides'
-  { _coCommand     :: !(Maybe [Text])
-  , _coEnvironment :: !(Maybe [KeyValuePair])
-  , _coMemory      :: !(Maybe Int)
-  , _coVcpus       :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ContainerOverrides =
+  ContainerOverrides'
+    { _coCommand     :: !(Maybe [Text])
+    , _coEnvironment :: !(Maybe [KeyValuePair])
+    , _coMemory      :: !(Maybe Int)
+    , _coVcpus       :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ContainerOverrides' with the minimum fields required to make a request.
@@ -919,20 +941,22 @@ instance ToJSON ContainerOverrides where
 --
 --
 -- /See:/ 'containerProperties' smart constructor.
-data ContainerProperties = ContainerProperties'
-  { _cpCommand                :: !(Maybe [Text])
-  , _cpEnvironment            :: !(Maybe [KeyValuePair])
-  , _cpUlimits                :: !(Maybe [Ulimit])
-  , _cpPrivileged             :: !(Maybe Bool)
-  , _cpJobRoleARN             :: !(Maybe Text)
-  , _cpUser                   :: !(Maybe Text)
-  , _cpMountPoints            :: !(Maybe [MountPoint])
-  , _cpReadonlyRootFilesystem :: !(Maybe Bool)
-  , _cpVolumes                :: !(Maybe [Volume])
-  , _cpImage                  :: !Text
-  , _cpVcpus                  :: !Int
-  , _cpMemory                 :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ContainerProperties =
+  ContainerProperties'
+    { _cpCommand                :: !(Maybe [Text])
+    , _cpEnvironment            :: !(Maybe [KeyValuePair])
+    , _cpUlimits                :: !(Maybe [Ulimit])
+    , _cpPrivileged             :: !(Maybe Bool)
+    , _cpJobRoleARN             :: !(Maybe Text)
+    , _cpUser                   :: !(Maybe Text)
+    , _cpMountPoints            :: !(Maybe [MountPoint])
+    , _cpReadonlyRootFilesystem :: !(Maybe Bool)
+    , _cpVolumes                :: !(Maybe [Volume])
+    , _cpImage                  :: !Text
+    , _cpVcpus                  :: !Int
+    , _cpMemory                 :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ContainerProperties' with the minimum fields required to make a request.
@@ -1077,10 +1101,12 @@ instance ToJSON ContainerProperties where
 --
 --
 -- /See:/ 'containerSummary' smart constructor.
-data ContainerSummary = ContainerSummary'
-  { _csReason   :: !(Maybe Text)
-  , _csExitCode :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ContainerSummary =
+  ContainerSummary'
+    { _csReason   :: !(Maybe Text)
+    , _csExitCode :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ContainerSummary' with the minimum fields required to make a request.
@@ -1120,9 +1146,11 @@ instance NFData ContainerSummary where
 --
 --
 -- /See:/ 'host' smart constructor.
-newtype Host = Host'
-  { _hSourcePath :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype Host =
+  Host'
+    { _hSourcePath :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Host' with the minimum fields required to make a request.
@@ -1158,17 +1186,19 @@ instance ToJSON Host where
 --
 --
 -- /See:/ 'jobDefinition' smart constructor.
-data JobDefinition = JobDefinition'
-  { _jddStatus              :: !(Maybe Text)
-  , _jddRetryStrategy       :: !(Maybe RetryStrategy)
-  , _jddParameters          :: !(Maybe (Map Text Text))
-  , _jddTimeout             :: !(Maybe JobTimeout)
-  , _jddContainerProperties :: !(Maybe ContainerProperties)
-  , _jddJobDefinitionName   :: !Text
-  , _jddJobDefinitionARN    :: !Text
-  , _jddRevision            :: !Int
-  , _jddType                :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data JobDefinition =
+  JobDefinition'
+    { _jddStatus              :: !(Maybe Text)
+    , _jddRetryStrategy       :: !(Maybe RetryStrategy)
+    , _jddParameters          :: !(Maybe (Map Text Text))
+    , _jddTimeout             :: !(Maybe JobTimeout)
+    , _jddContainerProperties :: !(Maybe ContainerProperties)
+    , _jddJobDefinitionName   :: !Text
+    , _jddJobDefinitionARN    :: !Text
+    , _jddRevision            :: !Int
+    , _jddType                :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'JobDefinition' with the minimum fields required to make a request.
@@ -1271,10 +1301,12 @@ instance NFData JobDefinition where
 --
 --
 -- /See:/ 'jobDependency' smart constructor.
-data JobDependency = JobDependency'
-  { _jJobId :: !(Maybe Text)
-  , _jType  :: !(Maybe ArrayJobDependency)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data JobDependency =
+  JobDependency'
+    { _jJobId :: !(Maybe Text)
+    , _jType  :: !(Maybe ArrayJobDependency)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'JobDependency' with the minimum fields required to make a request.
@@ -1319,24 +1351,26 @@ instance ToJSON JobDependency where
 --
 --
 -- /See:/ 'jobDetail' smart constructor.
-data JobDetail = JobDetail'
-  { _jdStoppedAt       :: !(Maybe Integer)
-  , _jdCreatedAt       :: !(Maybe Integer)
-  , _jdRetryStrategy   :: !(Maybe RetryStrategy)
-  , _jdAttempts        :: !(Maybe [AttemptDetail])
-  , _jdDependsOn       :: !(Maybe [JobDependency])
-  , _jdContainer       :: !(Maybe ContainerDetail)
-  , _jdParameters      :: !(Maybe (Map Text Text))
-  , _jdStatusReason    :: !(Maybe Text)
-  , _jdArrayProperties :: !(Maybe ArrayPropertiesDetail)
-  , _jdTimeout         :: !(Maybe JobTimeout)
-  , _jdJobName         :: !Text
-  , _jdJobId           :: !Text
-  , _jdJobQueue        :: !Text
-  , _jdStatus          :: !JobStatus
-  , _jdStartedAt       :: !Integer
-  , _jdJobDefinition   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data JobDetail =
+  JobDetail'
+    { _jdStoppedAt       :: !(Maybe Integer)
+    , _jdCreatedAt       :: !(Maybe Integer)
+    , _jdRetryStrategy   :: !(Maybe RetryStrategy)
+    , _jdAttempts        :: !(Maybe [AttemptDetail])
+    , _jdDependsOn       :: !(Maybe [JobDependency])
+    , _jdContainer       :: !(Maybe ContainerDetail)
+    , _jdParameters      :: !(Maybe (Map Text Text))
+    , _jdStatusReason    :: !(Maybe Text)
+    , _jdArrayProperties :: !(Maybe ArrayPropertiesDetail)
+    , _jdTimeout         :: !(Maybe JobTimeout)
+    , _jdJobName         :: !Text
+    , _jdJobId           :: !Text
+    , _jdJobQueue        :: !Text
+    , _jdStatus          :: !JobStatus
+    , _jdStartedAt       :: !Integer
+    , _jdJobDefinition   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'JobDetail' with the minimum fields required to make a request.
@@ -1497,15 +1531,17 @@ instance NFData JobDetail where
 --
 --
 -- /See:/ 'jobQueueDetail' smart constructor.
-data JobQueueDetail = JobQueueDetail'
-  { _jqdStatus                  :: !(Maybe JQStatus)
-  , _jqdStatusReason            :: !(Maybe Text)
-  , _jqdJobQueueName            :: !Text
-  , _jqdJobQueueARN             :: !Text
-  , _jqdState                   :: !JQState
-  , _jqdPriority                :: !Int
-  , _jqdComputeEnvironmentOrder :: ![ComputeEnvironmentOrder]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data JobQueueDetail =
+  JobQueueDetail'
+    { _jqdStatus                  :: !(Maybe JQStatus)
+    , _jqdStatusReason            :: !(Maybe Text)
+    , _jqdJobQueueName            :: !Text
+    , _jqdJobQueueARN             :: !Text
+    , _jqdState                   :: !JQState
+    , _jqdPriority                :: !Int
+    , _jqdComputeEnvironmentOrder :: ![ComputeEnvironmentOrder]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'JobQueueDetail' with the minimum fields required to make a request.
@@ -1592,17 +1628,19 @@ instance NFData JobQueueDetail where
 --
 --
 -- /See:/ 'jobSummary' smart constructor.
-data JobSummary = JobSummary'
-  { _jsStoppedAt       :: !(Maybe Integer)
-  , _jsStatus          :: !(Maybe JobStatus)
-  , _jsCreatedAt       :: !(Maybe Integer)
-  , _jsStartedAt       :: !(Maybe Integer)
-  , _jsContainer       :: !(Maybe ContainerSummary)
-  , _jsStatusReason    :: !(Maybe Text)
-  , _jsArrayProperties :: !(Maybe ArrayPropertiesSummary)
-  , _jsJobId           :: !Text
-  , _jsJobName         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data JobSummary =
+  JobSummary'
+    { _jsStoppedAt       :: !(Maybe Integer)
+    , _jsStatus          :: !(Maybe JobStatus)
+    , _jsCreatedAt       :: !(Maybe Integer)
+    , _jsStartedAt       :: !(Maybe Integer)
+    , _jsContainer       :: !(Maybe ContainerSummary)
+    , _jsStatusReason    :: !(Maybe Text)
+    , _jsArrayProperties :: !(Maybe ArrayPropertiesSummary)
+    , _jsJobId           :: !Text
+    , _jsJobName         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'JobSummary' with the minimum fields required to make a request.
@@ -1703,9 +1741,11 @@ instance NFData JobSummary where
 --
 --
 -- /See:/ 'jobTimeout' smart constructor.
-newtype JobTimeout = JobTimeout'
-  { _jtAttemptDurationSeconds :: Maybe Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype JobTimeout =
+  JobTimeout'
+    { _jtAttemptDurationSeconds :: Maybe Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'JobTimeout' with the minimum fields required to make a request.
@@ -1744,10 +1784,12 @@ instance ToJSON JobTimeout where
 --
 --
 -- /See:/ 'keyValuePair' smart constructor.
-data KeyValuePair = KeyValuePair'
-  { _kvpValue :: !(Maybe Text)
-  , _kvpName  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data KeyValuePair =
+  KeyValuePair'
+    { _kvpValue :: !(Maybe Text)
+    , _kvpName  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'KeyValuePair' with the minimum fields required to make a request.
@@ -1792,11 +1834,13 @@ instance ToJSON KeyValuePair where
 --
 --
 -- /See:/ 'mountPoint' smart constructor.
-data MountPoint = MountPoint'
-  { _mpContainerPath :: !(Maybe Text)
-  , _mpSourceVolume  :: !(Maybe Text)
-  , _mpReadOnly      :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MountPoint =
+  MountPoint'
+    { _mpContainerPath :: !(Maybe Text)
+    , _mpSourceVolume  :: !(Maybe Text)
+    , _mpReadOnly      :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MountPoint' with the minimum fields required to make a request.
@@ -1855,9 +1899,11 @@ instance ToJSON MountPoint where
 --
 --
 -- /See:/ 'retryStrategy' smart constructor.
-newtype RetryStrategy = RetryStrategy'
-  { _rsAttempts :: Maybe Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RetryStrategy =
+  RetryStrategy'
+    { _rsAttempts :: Maybe Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RetryStrategy' with the minimum fields required to make a request.
@@ -1893,11 +1939,13 @@ instance ToJSON RetryStrategy where
 --
 --
 -- /See:/ 'ulimit' smart constructor.
-data Ulimit = Ulimit'
-  { _uHardLimit :: !Int
-  , _uName      :: !Text
-  , _uSoftLimit :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Ulimit =
+  Ulimit'
+    { _uHardLimit :: !Int
+    , _uName      :: !Text
+    , _uSoftLimit :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Ulimit' with the minimum fields required to make a request.
@@ -1956,10 +2004,12 @@ instance ToJSON Ulimit where
 --
 --
 -- /See:/ 'volume' smart constructor.
-data Volume = Volume'
-  { _vName :: !(Maybe Text)
-  , _vHost :: !(Maybe Host)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Volume =
+  Volume'
+    { _vName :: !(Maybe Text)
+    , _vHost :: !(Maybe Host)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Volume' with the minimum fields required to make a request.

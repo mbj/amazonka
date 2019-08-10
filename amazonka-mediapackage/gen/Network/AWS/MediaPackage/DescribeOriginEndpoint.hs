@@ -55,9 +55,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeOriginEndpoint' smart constructor.
-newtype DescribeOriginEndpoint = DescribeOriginEndpoint'
-  { _doeId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeOriginEndpoint =
+  DescribeOriginEndpoint'
+    { _doeId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeOriginEndpoint' with the minimum fields required to make a request.
@@ -117,22 +119,24 @@ instance ToQuery DescribeOriginEndpoint where
         toQuery = const mempty
 
 -- | /See:/ 'describeOriginEndpointResponse' smart constructor.
-data DescribeOriginEndpointResponse = DescribeOriginEndpointResponse'
-  { _desrsWhitelist              :: !(Maybe [Text])
-  , _desrsHlsPackage             :: !(Maybe HlsPackage)
-  , _desrsARN                    :: !(Maybe Text)
-  , _desrsManifestName           :: !(Maybe Text)
-  , _desrsURL                    :: !(Maybe Text)
-  , _desrsChannelId              :: !(Maybe Text)
-  , _desrsStartoverWindowSeconds :: !(Maybe Int)
-  , _desrsDashPackage            :: !(Maybe DashPackage)
-  , _desrsMssPackage             :: !(Maybe MssPackage)
-  , _desrsId                     :: !(Maybe Text)
-  , _desrsTimeDelaySeconds       :: !(Maybe Int)
-  , _desrsCmafPackage            :: !(Maybe CmafPackage)
-  , _desrsDescription            :: !(Maybe Text)
-  , _desrsResponseStatus         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeOriginEndpointResponse =
+  DescribeOriginEndpointResponse'
+    { _desrsWhitelist              :: !(Maybe [Text])
+    , _desrsHlsPackage             :: !(Maybe HlsPackage)
+    , _desrsARN                    :: !(Maybe Text)
+    , _desrsManifestName           :: !(Maybe Text)
+    , _desrsURL                    :: !(Maybe Text)
+    , _desrsChannelId              :: !(Maybe Text)
+    , _desrsStartoverWindowSeconds :: !(Maybe Int)
+    , _desrsDashPackage            :: !(Maybe DashPackage)
+    , _desrsMssPackage             :: !(Maybe MssPackage)
+    , _desrsId                     :: !(Maybe Text)
+    , _desrsTimeDelaySeconds       :: !(Maybe Int)
+    , _desrsCmafPackage            :: !(Maybe CmafPackage)
+    , _desrsDescription            :: !(Maybe Text)
+    , _desrsResponseStatus         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeOriginEndpointResponse' with the minimum fields required to make a request.

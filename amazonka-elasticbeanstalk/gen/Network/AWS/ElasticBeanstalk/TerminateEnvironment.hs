@@ -70,12 +70,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'terminateEnvironment' smart constructor.
-data TerminateEnvironment = TerminateEnvironment'
-  { _teForceTerminate     :: !(Maybe Bool)
-  , _teTerminateResources :: !(Maybe Bool)
-  , _teEnvironmentName    :: !(Maybe Text)
-  , _teEnvironmentId      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TerminateEnvironment =
+  TerminateEnvironment'
+    { _teForceTerminate     :: !(Maybe Bool)
+    , _teTerminateResources :: !(Maybe Bool)
+    , _teEnvironmentName    :: !(Maybe Text)
+    , _teEnvironmentId      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TerminateEnvironment' with the minimum fields required to make a request.

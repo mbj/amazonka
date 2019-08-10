@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createConnection' smart constructor.
-data CreateConnection = CreateConnection'
-  { _ccCatalogId       :: !(Maybe Text)
-  , _ccConnectionInput :: !ConnectionInput
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateConnection =
+  CreateConnection'
+    { _ccCatalogId       :: !(Maybe Text)
+    , _ccConnectionInput :: !ConnectionInput
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateConnection' with the minimum fields required to make a request.
@@ -109,9 +111,11 @@ instance ToQuery CreateConnection where
         toQuery = const mempty
 
 -- | /See:/ 'createConnectionResponse' smart constructor.
-newtype CreateConnectionResponse = CreateConnectionResponse'
-  { _crsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateConnectionResponse =
+  CreateConnectionResponse'
+    { _crsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateConnectionResponse' with the minimum fields required to make a request.

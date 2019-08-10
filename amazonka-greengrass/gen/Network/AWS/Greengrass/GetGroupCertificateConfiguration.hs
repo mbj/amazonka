@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getGroupCertificateConfiguration' smart constructor.
-newtype GetGroupCertificateConfiguration = GetGroupCertificateConfiguration'
-  { _ggccGroupId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetGroupCertificateConfiguration =
+  GetGroupCertificateConfiguration'
+    { _ggccGroupId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetGroupCertificateConfiguration' with the minimum fields required to make a request.
@@ -106,12 +108,14 @@ instance ToQuery GetGroupCertificateConfiguration
         toQuery = const mempty
 
 -- | /See:/ 'getGroupCertificateConfigurationResponse' smart constructor.
-data GetGroupCertificateConfigurationResponse = GetGroupCertificateConfigurationResponse'
-  { _ggccrsCertificateAuthorityExpiryInMilliseconds :: !(Maybe Text)
-  , _ggccrsGroupId                                  :: !(Maybe Text)
-  , _ggccrsCertificateExpiryInMilliseconds          :: !(Maybe Text)
-  , _ggccrsResponseStatus                           :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetGroupCertificateConfigurationResponse =
+  GetGroupCertificateConfigurationResponse'
+    { _ggccrsCertificateAuthorityExpiryInMilliseconds :: !(Maybe Text)
+    , _ggccrsGroupId                                  :: !(Maybe Text)
+    , _ggccrsCertificateExpiryInMilliseconds          :: !(Maybe Text)
+    , _ggccrsResponseStatus                           :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetGroupCertificateConfigurationResponse' with the minimum fields required to make a request.

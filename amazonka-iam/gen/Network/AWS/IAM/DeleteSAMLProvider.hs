@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteSAMLProvider' smart constructor.
-newtype DeleteSAMLProvider = DeleteSAMLProvider'
-  { _dsamlpSAMLProviderARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteSAMLProvider =
+  DeleteSAMLProvider'
+    { _dsamlpSAMLProviderARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteSAMLProvider' with the minimum fields required to make a request.

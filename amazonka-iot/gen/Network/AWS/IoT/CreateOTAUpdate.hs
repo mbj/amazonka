@@ -55,15 +55,17 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createOTAUpdate' smart constructor.
-data CreateOTAUpdate = CreateOTAUpdate'
-  { _cotauAdditionalParameters :: !(Maybe (Map Text Text))
-  , _cotauDescription          :: !(Maybe Text)
-  , _cotauTargetSelection      :: !(Maybe TargetSelection)
-  , _cotauOtaUpdateId          :: !Text
-  , _cotauTargets              :: !(List1 Text)
-  , _cotauFiles                :: !(List1 OTAUpdateFile)
-  , _cotauRoleARN              :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateOTAUpdate =
+  CreateOTAUpdate'
+    { _cotauAdditionalParameters :: !(Maybe (Map Text Text))
+    , _cotauDescription          :: !(Maybe Text)
+    , _cotauTargetSelection      :: !(Maybe TargetSelection)
+    , _cotauOtaUpdateId          :: !Text
+    , _cotauTargets              :: !(List1 Text)
+    , _cotauFiles                :: !(List1 OTAUpdateFile)
+    , _cotauRoleARN              :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateOTAUpdate' with the minimum fields required to make a request.
@@ -169,14 +171,16 @@ instance ToQuery CreateOTAUpdate where
         toQuery = const mempty
 
 -- | /See:/ 'createOTAUpdateResponse' smart constructor.
-data CreateOTAUpdateResponse = CreateOTAUpdateResponse'
-  { _cotaursAwsIotJobId     :: !(Maybe Text)
-  , _cotaursOtaUpdateStatus :: !(Maybe OTAUpdateStatus)
-  , _cotaursAwsIotJobARN    :: !(Maybe Text)
-  , _cotaursOtaUpdateId     :: !(Maybe Text)
-  , _cotaursOtaUpdateARN    :: !(Maybe Text)
-  , _cotaursResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateOTAUpdateResponse =
+  CreateOTAUpdateResponse'
+    { _cotaursAwsIotJobId     :: !(Maybe Text)
+    , _cotaursOtaUpdateStatus :: !(Maybe OTAUpdateStatus)
+    , _cotaursAwsIotJobARN    :: !(Maybe Text)
+    , _cotaursOtaUpdateId     :: !(Maybe Text)
+    , _cotaursOtaUpdateARN    :: !(Maybe Text)
+    , _cotaursResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateOTAUpdateResponse' with the minimum fields required to make a request.

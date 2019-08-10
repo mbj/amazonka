@@ -51,13 +51,15 @@ import Network.AWS.Response
 -- | Input structure for the UpateJob operation.
 --
 -- /See:/ 'updateJob' smart constructor.
-data UpdateJob = UpdateJob'
-  { _ujAPIVersion   :: !(Maybe Text)
-  , _ujJobId        :: !Text
-  , _ujManifest     :: !Text
-  , _ujJobType      :: !JobType
-  , _ujValidateOnly :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateJob =
+  UpdateJob'
+    { _ujAPIVersion   :: !(Maybe Text)
+    , _ujJobId        :: !Text
+    , _ujManifest     :: !Text
+    , _ujJobType      :: !JobType
+    , _ujValidateOnly :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateJob' with the minimum fields required to make a request.
@@ -144,12 +146,14 @@ instance ToQuery UpdateJob where
 -- | Output structure for the UpateJob operation.
 --
 -- /See:/ 'updateJobResponse' smart constructor.
-data UpdateJobResponse = UpdateJobResponse'
-  { _ujrsSuccess        :: !(Maybe Bool)
-  , _ujrsWarningMessage :: !(Maybe Text)
-  , _ujrsArtifactList   :: !(Maybe [Artifact])
-  , _ujrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateJobResponse =
+  UpdateJobResponse'
+    { _ujrsSuccess        :: !(Maybe Bool)
+    , _ujrsWarningMessage :: !(Maybe Text)
+    , _ujrsArtifactList   :: !(Maybe [Artifact])
+    , _ujrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateJobResponse' with the minimum fields required to make a request.

@@ -50,10 +50,12 @@ import Network.AWS.SDB.Types
 import Network.AWS.SDB.Types.Product
 
 -- | /See:/ 'listDomains' smart constructor.
-data ListDomains = ListDomains'
-  { _ldMaxNumberOfDomains :: !(Maybe Int)
-  , _ldNextToken          :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListDomains =
+  ListDomains'
+    { _ldMaxNumberOfDomains :: !(Maybe Int)
+    , _ldNextToken          :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDomains' with the minimum fields required to make a request.
@@ -114,11 +116,13 @@ instance ToQuery ListDomains where
                "NextToken" =: _ldNextToken]
 
 -- | /See:/ 'listDomainsResponse' smart constructor.
-data ListDomainsResponse = ListDomainsResponse'
-  { _ldrsDomainNames    :: !(Maybe [Text])
-  , _ldrsNextToken      :: !(Maybe Text)
-  , _ldrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListDomainsResponse =
+  ListDomainsResponse'
+    { _ldrsDomainNames    :: !(Maybe [Text])
+    , _ldrsNextToken      :: !(Maybe Text)
+    , _ldrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDomainsResponse' with the minimum fields required to make a request.

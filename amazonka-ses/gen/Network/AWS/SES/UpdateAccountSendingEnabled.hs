@@ -48,9 +48,11 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'updateAccountSendingEnabled' smart constructor.
-newtype UpdateAccountSendingEnabled = UpdateAccountSendingEnabled'
-  { _uaseEnabled :: Maybe Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateAccountSendingEnabled =
+  UpdateAccountSendingEnabled'
+    { _uaseEnabled :: Maybe Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateAccountSendingEnabled' with the minimum fields required to make a request.

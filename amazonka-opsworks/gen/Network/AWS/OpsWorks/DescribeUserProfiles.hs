@@ -47,9 +47,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeUserProfiles' smart constructor.
-newtype DescribeUserProfiles = DescribeUserProfiles'
-  { _dupIAMUserARNs :: Maybe [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeUserProfiles =
+  DescribeUserProfiles'
+    { _dupIAMUserARNs :: Maybe [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeUserProfiles' with the minimum fields required to make a request.
@@ -107,10 +109,12 @@ instance ToQuery DescribeUserProfiles where
 --
 --
 -- /See:/ 'describeUserProfilesResponse' smart constructor.
-data DescribeUserProfilesResponse = DescribeUserProfilesResponse'
-  { _duprsUserProfiles   :: !(Maybe [UserProfile])
-  , _duprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeUserProfilesResponse =
+  DescribeUserProfilesResponse'
+    { _duprsUserProfiles   :: !(Maybe [UserProfile])
+    , _duprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeUserProfilesResponse' with the minimum fields required to make a request.

@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'resetServiceSpecificCredential' smart constructor.
-data ResetServiceSpecificCredential = ResetServiceSpecificCredential'
-  { _rsscUserName                    :: !(Maybe Text)
-  , _rsscServiceSpecificCredentialId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResetServiceSpecificCredential =
+  ResetServiceSpecificCredential'
+    { _rsscUserName                    :: !(Maybe Text)
+    , _rsscServiceSpecificCredentialId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResetServiceSpecificCredential' with the minimum fields required to make a request.
@@ -113,10 +115,12 @@ instance ToQuery ResetServiceSpecificCredential where
                  _rsscServiceSpecificCredentialId]
 
 -- | /See:/ 'resetServiceSpecificCredentialResponse' smart constructor.
-data ResetServiceSpecificCredentialResponse = ResetServiceSpecificCredentialResponse'
-  { _rsscrsServiceSpecificCredential :: !(Maybe ServiceSpecificCredential)
-  , _rsscrsResponseStatus            :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data ResetServiceSpecificCredentialResponse =
+  ResetServiceSpecificCredentialResponse'
+    { _rsscrsServiceSpecificCredential :: !(Maybe ServiceSpecificCredential)
+    , _rsscrsResponseStatus            :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResetServiceSpecificCredentialResponse' with the minimum fields required to make a request.

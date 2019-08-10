@@ -50,14 +50,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteStackInstances' smart constructor.
-data DeleteStackInstances = DeleteStackInstances'
-  { _dsiOperationPreferences :: !(Maybe StackSetOperationPreferences)
-  , _dsiOperationId          :: !(Maybe Text)
-  , _dsiStackSetName         :: !Text
-  , _dsiAccounts             :: ![Text]
-  , _dsiRegions              :: ![Text]
-  , _dsiRetainStacks         :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteStackInstances =
+  DeleteStackInstances'
+    { _dsiOperationPreferences :: !(Maybe StackSetOperationPreferences)
+    , _dsiOperationId          :: !(Maybe Text)
+    , _dsiStackSetName         :: !Text
+    , _dsiAccounts             :: ![Text]
+    , _dsiRegions              :: ![Text]
+    , _dsiRetainStacks         :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteStackInstances' with the minimum fields required to make a request.
@@ -147,10 +149,12 @@ instance ToQuery DeleteStackInstances where
                "RetainStacks" =: _dsiRetainStacks]
 
 -- | /See:/ 'deleteStackInstancesResponse' smart constructor.
-data DeleteStackInstancesResponse = DeleteStackInstancesResponse'
-  { _dsirsOperationId    :: !(Maybe Text)
-  , _dsirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteStackInstancesResponse =
+  DeleteStackInstancesResponse'
+    { _dsirsOperationId    :: !(Maybe Text)
+    , _dsirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteStackInstancesResponse' with the minimum fields required to make a request.

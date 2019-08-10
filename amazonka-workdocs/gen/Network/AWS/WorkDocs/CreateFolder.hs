@@ -47,11 +47,13 @@ import Network.AWS.WorkDocs.Types
 import Network.AWS.WorkDocs.Types.Product
 
 -- | /See:/ 'createFolder' smart constructor.
-data CreateFolder = CreateFolder'
-  { _cfAuthenticationToken :: !(Maybe (Sensitive Text))
-  , _cfName                :: !(Maybe Text)
-  , _cfParentFolderId      :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data CreateFolder =
+  CreateFolder'
+    { _cfAuthenticationToken :: !(Maybe (Sensitive Text))
+    , _cfName                :: !(Maybe Text)
+    , _cfParentFolderId      :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateFolder' with the minimum fields required to make a request.
@@ -120,10 +122,12 @@ instance ToQuery CreateFolder where
         toQuery = const mempty
 
 -- | /See:/ 'createFolderResponse' smart constructor.
-data CreateFolderResponse = CreateFolderResponse'
-  { _cfrsMetadata       :: !(Maybe FolderMetadata)
-  , _cfrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateFolderResponse =
+  CreateFolderResponse'
+    { _cfrsMetadata       :: !(Maybe FolderMetadata)
+    , _cfrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateFolderResponse' with the minimum fields required to make a request.

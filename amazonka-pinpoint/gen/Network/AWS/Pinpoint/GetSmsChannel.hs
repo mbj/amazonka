@@ -43,9 +43,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getSmsChannel' smart constructor.
-newtype GetSmsChannel = GetSmsChannel'
-  { _gscApplicationId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetSmsChannel =
+  GetSmsChannel'
+    { _gscApplicationId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetSmsChannel' with the minimum fields required to make a request.
@@ -94,10 +96,12 @@ instance ToQuery GetSmsChannel where
         toQuery = const mempty
 
 -- | /See:/ 'getSmsChannelResponse' smart constructor.
-data GetSmsChannelResponse = GetSmsChannelResponse'
-  { _gscrsResponseStatus     :: !Int
-  , _gscrsSMSChannelResponse :: !SMSChannelResponse
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetSmsChannelResponse =
+  GetSmsChannelResponse'
+    { _gscrsResponseStatus     :: !Int
+    , _gscrsSMSChannelResponse :: !SMSChannelResponse
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetSmsChannelResponse' with the minimum fields required to make a request.

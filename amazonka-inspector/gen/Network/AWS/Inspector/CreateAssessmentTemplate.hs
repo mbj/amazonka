@@ -49,13 +49,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createAssessmentTemplate' smart constructor.
-data CreateAssessmentTemplate = CreateAssessmentTemplate'
-  { _catUserAttributesForFindings :: !(Maybe [Attribute])
-  , _catAssessmentTargetARN       :: !Text
-  , _catAssessmentTemplateName    :: !Text
-  , _catDurationInSeconds         :: !Nat
-  , _catRulesPackageARNs          :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateAssessmentTemplate =
+  CreateAssessmentTemplate'
+    { _catUserAttributesForFindings :: !(Maybe [Attribute])
+    , _catAssessmentTargetARN       :: !Text
+    , _catAssessmentTemplateName    :: !Text
+    , _catDurationInSeconds         :: !Nat
+    , _catRulesPackageARNs          :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateAssessmentTemplate' with the minimum fields required to make a request.
@@ -152,10 +154,12 @@ instance ToQuery CreateAssessmentTemplate where
         toQuery = const mempty
 
 -- | /See:/ 'createAssessmentTemplateResponse' smart constructor.
-data CreateAssessmentTemplateResponse = CreateAssessmentTemplateResponse'
-  { _crsResponseStatus        :: !Int
-  , _crsAssessmentTemplateARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateAssessmentTemplateResponse =
+  CreateAssessmentTemplateResponse'
+    { _crsResponseStatus        :: !Int
+    , _crsAssessmentTemplateARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateAssessmentTemplateResponse' with the minimum fields required to make a request.

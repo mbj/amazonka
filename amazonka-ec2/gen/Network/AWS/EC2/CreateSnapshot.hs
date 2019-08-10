@@ -76,12 +76,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createSnapshot' smart constructor.
-data CreateSnapshot = CreateSnapshot'
-  { _ccTagSpecifications :: !(Maybe [TagSpecification])
-  , _ccDescription       :: !(Maybe Text)
-  , _ccDryRun            :: !(Maybe Bool)
-  , _ccVolumeId          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateSnapshot =
+  CreateSnapshot'
+    { _ccTagSpecifications :: !(Maybe [TagSpecification])
+    , _ccDescription       :: !(Maybe Text)
+    , _ccDryRun            :: !(Maybe Bool)
+    , _ccVolumeId          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateSnapshot' with the minimum fields required to make a request.

@@ -48,10 +48,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createUser' smart constructor.
-data CreateUser = CreateUser'
-  { _cuPath     :: !(Maybe Text)
-  , _cuUserName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateUser =
+  CreateUser'
+    { _cuPath     :: !(Maybe Text)
+    , _cuUserName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateUser' with the minimum fields required to make a request.
@@ -107,10 +109,12 @@ instance ToQuery CreateUser where
 --
 --
 -- /See:/ 'createUserResponse' smart constructor.
-data CreateUserResponse = CreateUserResponse'
-  { _cursUser           :: !(Maybe User)
-  , _cursResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateUserResponse =
+  CreateUserResponse'
+    { _cursUser           :: !(Maybe User)
+    , _cursResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateUserResponse' with the minimum fields required to make a request.

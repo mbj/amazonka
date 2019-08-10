@@ -52,12 +52,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateDevicePool' smart constructor.
-data UpdateDevicePool = UpdateDevicePool'
-  { _udpRules       :: !(Maybe [Rule])
-  , _udpName        :: !(Maybe Text)
-  , _udpDescription :: !(Maybe Text)
-  , _udpArn         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateDevicePool =
+  UpdateDevicePool'
+    { _udpRules       :: !(Maybe [Rule])
+    , _udpName        :: !(Maybe Text)
+    , _udpDescription :: !(Maybe Text)
+    , _udpArn         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateDevicePool' with the minimum fields required to make a request.
@@ -142,10 +144,12 @@ instance ToQuery UpdateDevicePool where
 --
 --
 -- /See:/ 'updateDevicePoolResponse' smart constructor.
-data UpdateDevicePoolResponse = UpdateDevicePoolResponse'
-  { _udprsDevicePool     :: !(Maybe DevicePool)
-  , _udprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateDevicePoolResponse =
+  UpdateDevicePoolResponse'
+    { _udprsDevicePool     :: !(Maybe DevicePool)
+    , _udprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateDevicePoolResponse' with the minimum fields required to make a request.

@@ -54,10 +54,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getRolePolicy' smart constructor.
-data GetRolePolicy = GetRolePolicy'
-  { _grpRoleName   :: !Text
-  , _grpPolicyName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetRolePolicy =
+  GetRolePolicy'
+    { _grpRoleName   :: !Text
+    , _grpPolicyName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetRolePolicy' with the minimum fields required to make a request.
@@ -117,12 +119,14 @@ instance ToQuery GetRolePolicy where
 --
 --
 -- /See:/ 'getRolePolicyResponse' smart constructor.
-data GetRolePolicyResponse = GetRolePolicyResponse'
-  { _grprsResponseStatus :: !Int
-  , _grprsRoleName       :: !Text
-  , _grprsPolicyName     :: !Text
-  , _grprsPolicyDocument :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetRolePolicyResponse =
+  GetRolePolicyResponse'
+    { _grprsResponseStatus :: !Int
+    , _grprsRoleName       :: !Text
+    , _grprsPolicyName     :: !Text
+    , _grprsPolicyDocument :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetRolePolicyResponse' with the minimum fields required to make a request.

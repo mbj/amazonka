@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getJob' smart constructor.
-newtype GetJob = GetJob'
-  { _gjArn :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetJob =
+  GetJob'
+    { _gjArn :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetJob' with the minimum fields required to make a request.
@@ -106,10 +108,12 @@ instance ToQuery GetJob where
 --
 --
 -- /See:/ 'getJobResponse' smart constructor.
-data GetJobResponse = GetJobResponse'
-  { _gjrsJob            :: !(Maybe Job)
-  , _gjrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetJobResponse =
+  GetJobResponse'
+    { _gjrsJob            :: !(Maybe Job)
+    , _gjrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetJobResponse' with the minimum fields required to make a request.

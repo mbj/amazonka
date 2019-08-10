@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeResourcePolicies' smart constructor.
-data DescribeResourcePolicies = DescribeResourcePolicies'
-  { _drpNextToken :: !(Maybe Text)
-  , _drpLimit     :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeResourcePolicies =
+  DescribeResourcePolicies'
+    { _drpNextToken :: !(Maybe Text)
+    , _drpLimit     :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeResourcePolicies' with the minimum fields required to make a request.
@@ -114,11 +116,13 @@ instance ToQuery DescribeResourcePolicies where
         toQuery = const mempty
 
 -- | /See:/ 'describeResourcePoliciesResponse' smart constructor.
-data DescribeResourcePoliciesResponse = DescribeResourcePoliciesResponse'
-  { _drprsResourcePolicies :: !(Maybe [ResourcePolicy])
-  , _drprsNextToken        :: !(Maybe Text)
-  , _drprsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeResourcePoliciesResponse =
+  DescribeResourcePoliciesResponse'
+    { _drprsResourcePolicies :: !(Maybe [ResourcePolicy])
+    , _drprsNextToken        :: !(Maybe Text)
+    , _drprsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeResourcePoliciesResponse' with the minimum fields required to make a request.

@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createDefaultSubnet' smart constructor.
-data CreateDefaultSubnet = CreateDefaultSubnet'
-  { _cdsDryRun           :: !(Maybe Bool)
-  , _cdsAvailabilityZone :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDefaultSubnet =
+  CreateDefaultSubnet'
+    { _cdsDryRun           :: !(Maybe Bool)
+    , _cdsAvailabilityZone :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDefaultSubnet' with the minimum fields required to make a request.
@@ -104,10 +106,12 @@ instance ToQuery CreateDefaultSubnet where
                "AvailabilityZone" =: _cdsAvailabilityZone]
 
 -- | /See:/ 'createDefaultSubnetResponse' smart constructor.
-data CreateDefaultSubnetResponse = CreateDefaultSubnetResponse'
-  { _cdsrsSubnet         :: !(Maybe Subnet)
-  , _cdsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDefaultSubnetResponse =
+  CreateDefaultSubnetResponse'
+    { _cdsrsSubnet         :: !(Maybe Subnet)
+    , _cdsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDefaultSubnetResponse' with the minimum fields required to make a request.

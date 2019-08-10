@@ -65,11 +65,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteDBInstance' smart constructor.
-data DeleteDBInstance = DeleteDBInstance'
-  { _ddiFinalDBSnapshotIdentifier :: !(Maybe Text)
-  , _ddiSkipFinalSnapshot         :: !(Maybe Bool)
-  , _ddiDBInstanceIdentifier      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteDBInstance =
+  DeleteDBInstance'
+    { _ddiFinalDBSnapshotIdentifier :: !(Maybe Text)
+    , _ddiSkipFinalSnapshot         :: !(Maybe Bool)
+    , _ddiDBInstanceIdentifier      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteDBInstance' with the minimum fields required to make a request.
@@ -134,10 +136,12 @@ instance ToQuery DeleteDBInstance where
                "DBInstanceIdentifier" =: _ddiDBInstanceIdentifier]
 
 -- | /See:/ 'deleteDBInstanceResponse' smart constructor.
-data DeleteDBInstanceResponse = DeleteDBInstanceResponse'
-  { _ddirsDBInstance     :: !(Maybe DBInstance)
-  , _ddirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteDBInstanceResponse =
+  DeleteDBInstanceResponse'
+    { _ddirsDBInstance     :: !(Maybe DBInstance)
+    , _ddirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteDBInstanceResponse' with the minimum fields required to make a request.

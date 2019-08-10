@@ -48,11 +48,13 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'deregisterTargetFromMaintenanceWindow' smart constructor.
-data DeregisterTargetFromMaintenanceWindow = DeregisterTargetFromMaintenanceWindow'
-  { _dtfmwSafe           :: !(Maybe Bool)
-  , _dtfmwWindowId       :: !Text
-  , _dtfmwWindowTargetId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeregisterTargetFromMaintenanceWindow =
+  DeregisterTargetFromMaintenanceWindow'
+    { _dtfmwSafe           :: !(Maybe Bool)
+    , _dtfmwWindowId       :: !Text
+    , _dtfmwWindowTargetId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeregisterTargetFromMaintenanceWindow' with the minimum fields required to make a request.
@@ -139,11 +141,13 @@ instance ToQuery
         toQuery = const mempty
 
 -- | /See:/ 'deregisterTargetFromMaintenanceWindowResponse' smart constructor.
-data DeregisterTargetFromMaintenanceWindowResponse = DeregisterTargetFromMaintenanceWindowResponse'
-  { _dtfmwrsWindowTargetId :: !(Maybe Text)
-  , _dtfmwrsWindowId       :: !(Maybe Text)
-  , _dtfmwrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeregisterTargetFromMaintenanceWindowResponse =
+  DeregisterTargetFromMaintenanceWindowResponse'
+    { _dtfmwrsWindowTargetId :: !(Maybe Text)
+    , _dtfmwrsWindowId       :: !(Maybe Text)
+    , _dtfmwrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeregisterTargetFromMaintenanceWindowResponse' with the minimum fields required to make a request.

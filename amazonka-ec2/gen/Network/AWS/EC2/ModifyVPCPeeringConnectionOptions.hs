@@ -59,12 +59,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'modifyVPCPeeringConnectionOptions' smart constructor.
-data ModifyVPCPeeringConnectionOptions = ModifyVPCPeeringConnectionOptions'
-  { _mvpcoRequesterPeeringConnectionOptions :: !(Maybe PeeringConnectionOptionsRequest)
-  , _mvpcoAccepterPeeringConnectionOptions :: !(Maybe PeeringConnectionOptionsRequest)
-  , _mvpcoDryRun :: !(Maybe Bool)
-  , _mvpcoVPCPeeringConnectionId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyVPCPeeringConnectionOptions =
+  ModifyVPCPeeringConnectionOptions'
+    { _mvpcoRequesterPeeringConnectionOptions :: !(Maybe PeeringConnectionOptionsRequest)
+    , _mvpcoAccepterPeeringConnectionOptions :: !(Maybe PeeringConnectionOptionsRequest)
+    , _mvpcoDryRun :: !(Maybe Bool)
+    , _mvpcoVPCPeeringConnectionId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyVPCPeeringConnectionOptions' with the minimum fields required to make a request.
@@ -149,11 +151,13 @@ instance ToQuery ModifyVPCPeeringConnectionOptions
                  _mvpcoVPCPeeringConnectionId]
 
 -- | /See:/ 'modifyVPCPeeringConnectionOptionsResponse' smart constructor.
-data ModifyVPCPeeringConnectionOptionsResponse = ModifyVPCPeeringConnectionOptionsResponse'
-  { _mvpcorsRequesterPeeringConnectionOptions :: !(Maybe PeeringConnectionOptions)
-  , _mvpcorsAccepterPeeringConnectionOptions :: !(Maybe PeeringConnectionOptions)
-  , _mvpcorsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyVPCPeeringConnectionOptionsResponse =
+  ModifyVPCPeeringConnectionOptionsResponse'
+    { _mvpcorsRequesterPeeringConnectionOptions :: !(Maybe PeeringConnectionOptions)
+    , _mvpcorsAccepterPeeringConnectionOptions :: !(Maybe PeeringConnectionOptions)
+    , _mvpcorsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyVPCPeeringConnectionOptionsResponse' with the minimum fields required to make a request.

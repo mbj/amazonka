@@ -47,10 +47,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteCloudFrontOriginAccessIdentity' smart constructor.
-data DeleteCloudFrontOriginAccessIdentity = DeleteCloudFrontOriginAccessIdentity'
-  { _dcfoaiIfMatch :: !(Maybe Text)
-  , _dcfoaiId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteCloudFrontOriginAccessIdentity =
+  DeleteCloudFrontOriginAccessIdentity'
+    { _dcfoaiIfMatch :: !(Maybe Text)
+    , _dcfoaiId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteCloudFrontOriginAccessIdentity' with the minimum fields required to make a request.

@@ -65,13 +65,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createSubnet' smart constructor.
-data CreateSubnet = CreateSubnet'
-  { _cssIPv6CidrBlock    :: !(Maybe Text)
-  , _cssAvailabilityZone :: !(Maybe Text)
-  , _cssDryRun           :: !(Maybe Bool)
-  , _cssCidrBlock        :: !Text
-  , _cssVPCId            :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateSubnet =
+  CreateSubnet'
+    { _cssIPv6CidrBlock    :: !(Maybe Text)
+    , _cssAvailabilityZone :: !(Maybe Text)
+    , _cssDryRun           :: !(Maybe Bool)
+    , _cssCidrBlock        :: !Text
+    , _cssVPCId            :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateSubnet' with the minimum fields required to make a request.
@@ -155,10 +157,12 @@ instance ToQuery CreateSubnet where
 --
 --
 -- /See:/ 'createSubnetResponse' smart constructor.
-data CreateSubnetResponse = CreateSubnetResponse'
-  { _crersSubnet         :: !(Maybe Subnet)
-  , _crersResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateSubnetResponse =
+  CreateSubnetResponse'
+    { _crersSubnet         :: !(Maybe Subnet)
+    , _crersResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateSubnetResponse' with the minimum fields required to make a request.

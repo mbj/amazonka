@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'stopContact' smart constructor.
-data StopContact = StopContact'
-  { _scContactId  :: !Text
-  , _scInstanceId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StopContact =
+  StopContact'
+    { _scContactId  :: !Text
+    , _scInstanceId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopContact' with the minimum fields required to make a request.
@@ -109,9 +111,11 @@ instance ToQuery StopContact where
         toQuery = const mempty
 
 -- | /See:/ 'stopContactResponse' smart constructor.
-newtype StopContactResponse = StopContactResponse'
-  { _scrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StopContactResponse =
+  StopContactResponse'
+    { _scrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopContactResponse' with the minimum fields required to make a request.

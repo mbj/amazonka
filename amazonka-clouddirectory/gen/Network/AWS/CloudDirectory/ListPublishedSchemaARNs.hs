@@ -51,11 +51,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listPublishedSchemaARNs' smart constructor.
-data ListPublishedSchemaARNs = ListPublishedSchemaARNs'
-  { _lpsaNextToken  :: !(Maybe Text)
-  , _lpsaSchemaARN  :: !(Maybe Text)
-  , _lpsaMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListPublishedSchemaARNs =
+  ListPublishedSchemaARNs'
+    { _lpsaNextToken  :: !(Maybe Text)
+    , _lpsaSchemaARN  :: !(Maybe Text)
+    , _lpsaMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListPublishedSchemaARNs' with the minimum fields required to make a request.
@@ -132,11 +134,13 @@ instance ToQuery ListPublishedSchemaARNs where
         toQuery = const mempty
 
 -- | /See:/ 'listPublishedSchemaARNsResponse' smart constructor.
-data ListPublishedSchemaARNsResponse = ListPublishedSchemaARNsResponse'
-  { _lpsarsSchemaARNs     :: !(Maybe [Text])
-  , _lpsarsNextToken      :: !(Maybe Text)
-  , _lpsarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListPublishedSchemaARNsResponse =
+  ListPublishedSchemaARNsResponse'
+    { _lpsarsSchemaARNs     :: !(Maybe [Text])
+    , _lpsarsNextToken      :: !(Maybe Text)
+    , _lpsarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListPublishedSchemaARNsResponse' with the minimum fields required to make a request.

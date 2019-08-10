@@ -47,10 +47,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteKeyPair' smart constructor.
-data DeleteKeyPair = DeleteKeyPair'
-  { _dkpDryRun  :: !(Maybe Bool)
-  , _dkpKeyName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteKeyPair =
+  DeleteKeyPair'
+    { _dkpDryRun  :: !(Maybe Bool)
+    , _dkpKeyName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteKeyPair' with the minimum fields required to make a request.

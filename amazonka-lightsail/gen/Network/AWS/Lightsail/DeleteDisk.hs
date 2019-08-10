@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteDisk' smart constructor.
-newtype DeleteDisk = DeleteDisk'
-  { _dDiskName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteDisk =
+  DeleteDisk'
+    { _dDiskName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteDisk' with the minimum fields required to make a request.
@@ -100,10 +102,12 @@ instance ToQuery DeleteDisk where
         toQuery = const mempty
 
 -- | /See:/ 'deleteDiskResponse' smart constructor.
-data DeleteDiskResponse = DeleteDiskResponse'
-  { _drsOperations     :: !(Maybe [Operation])
-  , _drsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteDiskResponse =
+  DeleteDiskResponse'
+    { _drsOperations     :: !(Maybe [Operation])
+    , _drsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteDiskResponse' with the minimum fields required to make a request.

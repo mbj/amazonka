@@ -50,9 +50,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeUserProfile' smart constructor.
-newtype DescribeUserProfile = DescribeUserProfile'
-  { _dupUserARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeUserProfile =
+  DescribeUserProfile'
+    { _dupUserARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeUserProfile' with the minimum fields required to make a request.
@@ -111,15 +113,17 @@ instance ToQuery DescribeUserProfile where
         toQuery = const mempty
 
 -- | /See:/ 'describeUserProfileResponse' smart constructor.
-data DescribeUserProfileResponse = DescribeUserProfileResponse'
-  { _duprsSshPublicKey          :: !(Maybe Text)
-  , _duprsEmailAddress          :: !(Maybe (Sensitive Text))
-  , _duprsDisplayName           :: !(Maybe Text)
-  , _duprsResponseStatus        :: !Int
-  , _duprsUserARN               :: !Text
-  , _duprsCreatedTimestamp      :: !POSIX
-  , _duprsLastModifiedTimestamp :: !POSIX
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data DescribeUserProfileResponse =
+  DescribeUserProfileResponse'
+    { _duprsSshPublicKey          :: !(Maybe Text)
+    , _duprsEmailAddress          :: !(Maybe (Sensitive Text))
+    , _duprsDisplayName           :: !(Maybe Text)
+    , _duprsResponseStatus        :: !Int
+    , _duprsUserARN               :: !Text
+    , _duprsCreatedTimestamp      :: !POSIX
+    , _duprsLastModifiedTimestamp :: !POSIX
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeUserProfileResponse' with the minimum fields required to make a request.

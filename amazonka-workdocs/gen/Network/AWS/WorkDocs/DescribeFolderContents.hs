@@ -59,16 +59,18 @@ import Network.AWS.WorkDocs.Types
 import Network.AWS.WorkDocs.Types.Product
 
 -- | /See:/ 'describeFolderContents' smart constructor.
-data DescribeFolderContents = DescribeFolderContents'
-  { _dfcsInclude             :: !(Maybe Text)
-  , _dfcsAuthenticationToken :: !(Maybe (Sensitive Text))
-  , _dfcsSort                :: !(Maybe ResourceSortType)
-  , _dfcsMarker              :: !(Maybe Text)
-  , _dfcsLimit               :: !(Maybe Nat)
-  , _dfcsType                :: !(Maybe FolderContentType)
-  , _dfcsOrder               :: !(Maybe OrderType)
-  , _dfcsFolderId            :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data DescribeFolderContents =
+  DescribeFolderContents'
+    { _dfcsInclude             :: !(Maybe Text)
+    , _dfcsAuthenticationToken :: !(Maybe (Sensitive Text))
+    , _dfcsSort                :: !(Maybe ResourceSortType)
+    , _dfcsMarker              :: !(Maybe Text)
+    , _dfcsLimit               :: !(Maybe Nat)
+    , _dfcsType                :: !(Maybe FolderContentType)
+    , _dfcsOrder               :: !(Maybe OrderType)
+    , _dfcsFolderId            :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeFolderContents' with the minimum fields required to make a request.
@@ -183,12 +185,14 @@ instance ToQuery DescribeFolderContents where
                "type" =: _dfcsType, "order" =: _dfcsOrder]
 
 -- | /See:/ 'describeFolderContentsResponse' smart constructor.
-data DescribeFolderContentsResponse = DescribeFolderContentsResponse'
-  { _dfcrsFolders        :: !(Maybe [FolderMetadata])
-  , _dfcrsDocuments      :: !(Maybe [DocumentMetadata])
-  , _dfcrsMarker         :: !(Maybe Text)
-  , _dfcrsResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data DescribeFolderContentsResponse =
+  DescribeFolderContentsResponse'
+    { _dfcrsFolders        :: !(Maybe [FolderMetadata])
+    , _dfcrsDocuments      :: !(Maybe [DocumentMetadata])
+    , _dfcrsMarker         :: !(Maybe Text)
+    , _dfcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeFolderContentsResponse' with the minimum fields required to make a request.

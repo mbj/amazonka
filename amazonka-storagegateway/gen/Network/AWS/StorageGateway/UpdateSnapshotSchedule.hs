@@ -66,12 +66,14 @@ import Network.AWS.StorageGateway.Types.Product
 --
 --
 -- /See:/ 'updateSnapshotSchedule' smart constructor.
-data UpdateSnapshotSchedule = UpdateSnapshotSchedule'
-  { _ussDescription       :: !(Maybe Text)
-  , _ussVolumeARN         :: !Text
-  , _ussStartAt           :: !Nat
-  , _ussRecurrenceInHours :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateSnapshotSchedule =
+  UpdateSnapshotSchedule'
+    { _ussDescription       :: !(Maybe Text)
+    , _ussVolumeARN         :: !Text
+    , _ussStartAt           :: !Nat
+    , _ussRecurrenceInHours :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateSnapshotSchedule' with the minimum fields required to make a request.
@@ -159,10 +161,12 @@ instance ToQuery UpdateSnapshotSchedule where
 --
 --
 -- /See:/ 'updateSnapshotScheduleResponse' smart constructor.
-data UpdateSnapshotScheduleResponse = UpdateSnapshotScheduleResponse'
-  { _ussrsVolumeARN      :: !(Maybe Text)
-  , _ussrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateSnapshotScheduleResponse =
+  UpdateSnapshotScheduleResponse'
+    { _ussrsVolumeARN      :: !(Maybe Text)
+    , _ussrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateSnapshotScheduleResponse' with the minimum fields required to make a request.

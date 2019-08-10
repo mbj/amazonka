@@ -61,11 +61,13 @@ import Network.AWS.STS.Types
 import Network.AWS.STS.Types.Product
 
 -- | /See:/ 'getSessionToken' smart constructor.
-data GetSessionToken = GetSessionToken'
-  { _gstTokenCode       :: !(Maybe Text)
-  , _gstDurationSeconds :: !(Maybe Nat)
-  , _gstSerialNumber    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetSessionToken =
+  GetSessionToken'
+    { _gstTokenCode       :: !(Maybe Text)
+    , _gstDurationSeconds :: !(Maybe Nat)
+    , _gstSerialNumber    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetSessionToken' with the minimum fields required to make a request.
@@ -132,10 +134,12 @@ instance ToQuery GetSessionToken where
 --
 --
 -- /See:/ 'getSessionTokenResponse' smart constructor.
-data GetSessionTokenResponse = GetSessionTokenResponse'
-  { _gstrsCredentials    :: !(Maybe AuthEnv)
-  , _gstrsResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data GetSessionTokenResponse =
+  GetSessionTokenResponse'
+    { _gstrsCredentials    :: !(Maybe AuthEnv)
+    , _gstrsResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetSessionTokenResponse' with the minimum fields required to make a request.

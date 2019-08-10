@@ -68,23 +68,25 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createChangeSet' smart constructor.
-data CreateChangeSet = CreateChangeSet'
-  { _ccsChangeSetType         :: !(Maybe ChangeSetType)
-  , _ccsUsePreviousTemplate   :: !(Maybe Bool)
-  , _ccsClientToken           :: !(Maybe Text)
-  , _ccsNotificationARNs      :: !(Maybe [Text])
-  , _ccsParameters            :: !(Maybe [Parameter])
-  , _ccsTemplateBody          :: !(Maybe Text)
-  , _ccsTemplateURL           :: !(Maybe Text)
-  , _ccsDescription           :: !(Maybe Text)
-  , _ccsCapabilities          :: !(Maybe [Capability])
-  , _ccsRollbackConfiguration :: !(Maybe RollbackConfiguration)
-  , _ccsResourceTypes         :: !(Maybe [Text])
-  , _ccsTags                  :: !(Maybe [Tag])
-  , _ccsRoleARN               :: !(Maybe Text)
-  , _ccsStackName             :: !Text
-  , _ccsChangeSetName         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateChangeSet =
+  CreateChangeSet'
+    { _ccsChangeSetType         :: !(Maybe ChangeSetType)
+    , _ccsUsePreviousTemplate   :: !(Maybe Bool)
+    , _ccsClientToken           :: !(Maybe Text)
+    , _ccsNotificationARNs      :: !(Maybe [Text])
+    , _ccsParameters            :: !(Maybe [Parameter])
+    , _ccsTemplateBody          :: !(Maybe Text)
+    , _ccsTemplateURL           :: !(Maybe Text)
+    , _ccsDescription           :: !(Maybe Text)
+    , _ccsCapabilities          :: !(Maybe [Capability])
+    , _ccsRollbackConfiguration :: !(Maybe RollbackConfiguration)
+    , _ccsResourceTypes         :: !(Maybe [Text])
+    , _ccsTags                  :: !(Maybe [Tag])
+    , _ccsRoleARN               :: !(Maybe Text)
+    , _ccsStackName             :: !Text
+    , _ccsChangeSetName         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateChangeSet' with the minimum fields required to make a request.
@@ -256,11 +258,13 @@ instance ToQuery CreateChangeSet where
 --
 --
 -- /See:/ 'createChangeSetResponse' smart constructor.
-data CreateChangeSetResponse = CreateChangeSetResponse'
-  { _ccsrsId             :: !(Maybe Text)
-  , _ccsrsStackId        :: !(Maybe Text)
-  , _ccsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateChangeSetResponse =
+  CreateChangeSetResponse'
+    { _ccsrsId             :: !(Maybe Text)
+    , _ccsrsStackId        :: !(Maybe Text)
+    , _ccsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateChangeSetResponse' with the minimum fields required to make a request.

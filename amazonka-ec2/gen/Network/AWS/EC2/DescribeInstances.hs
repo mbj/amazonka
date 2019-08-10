@@ -63,13 +63,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeInstances' smart constructor.
-data DescribeInstances = DescribeInstances'
-  { _diiFilters     :: !(Maybe [Filter])
-  , _diiNextToken   :: !(Maybe Text)
-  , _diiInstanceIds :: !(Maybe [Text])
-  , _diiDryRun      :: !(Maybe Bool)
-  , _diiMaxResults  :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeInstances =
+  DescribeInstances'
+    { _diiFilters     :: !(Maybe [Filter])
+    , _diiNextToken   :: !(Maybe Text)
+    , _diiInstanceIds :: !(Maybe [Text])
+    , _diiDryRun      :: !(Maybe Bool)
+    , _diiMaxResults  :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeInstances' with the minimum fields required to make a request.
@@ -163,11 +165,13 @@ instance ToQuery DescribeInstances where
 --
 --
 -- /See:/ 'describeInstancesResponse' smart constructor.
-data DescribeInstancesResponse = DescribeInstancesResponse'
-  { _dirsNextToken      :: !(Maybe Text)
-  , _dirsReservations   :: !(Maybe [Reservation])
-  , _dirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeInstancesResponse =
+  DescribeInstancesResponse'
+    { _dirsNextToken      :: !(Maybe Text)
+    , _dirsReservations   :: !(Maybe [Reservation])
+    , _dirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeInstancesResponse' with the minimum fields required to make a request.

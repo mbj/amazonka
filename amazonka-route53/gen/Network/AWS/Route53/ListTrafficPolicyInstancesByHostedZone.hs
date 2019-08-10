@@ -58,12 +58,14 @@ import Network.AWS.Route53.Types.Product
 --
 --
 -- /See:/ 'listTrafficPolicyInstancesByHostedZone' smart constructor.
-data ListTrafficPolicyInstancesByHostedZone = ListTrafficPolicyInstancesByHostedZone'
-  { _ltpibhzTrafficPolicyInstanceTypeMarker :: !(Maybe RecordType)
-  , _ltpibhzMaxItems                        :: !(Maybe Text)
-  , _ltpibhzTrafficPolicyInstanceNameMarker :: !(Maybe Text)
-  , _ltpibhzHostedZoneId                    :: !ResourceId
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTrafficPolicyInstancesByHostedZone =
+  ListTrafficPolicyInstancesByHostedZone'
+    { _ltpibhzTrafficPolicyInstanceTypeMarker :: !(Maybe RecordType)
+    , _ltpibhzMaxItems                        :: !(Maybe Text)
+    , _ltpibhzTrafficPolicyInstanceNameMarker :: !(Maybe Text)
+    , _ltpibhzHostedZoneId                    :: !ResourceId
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTrafficPolicyInstancesByHostedZone' with the minimum fields required to make a request.
@@ -161,14 +163,16 @@ instance ToQuery
 --
 --
 -- /See:/ 'listTrafficPolicyInstancesByHostedZoneResponse' smart constructor.
-data ListTrafficPolicyInstancesByHostedZoneResponse = ListTrafficPolicyInstancesByHostedZoneResponse'
-  { _ltpibhzrsTrafficPolicyInstanceTypeMarker :: !(Maybe RecordType)
-  , _ltpibhzrsTrafficPolicyInstanceNameMarker :: !(Maybe Text)
-  , _ltpibhzrsResponseStatus                  :: !Int
-  , _ltpibhzrsTrafficPolicyInstances          :: ![TrafficPolicyInstance]
-  , _ltpibhzrsIsTruncated                     :: !Bool
-  , _ltpibhzrsMaxItems                        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTrafficPolicyInstancesByHostedZoneResponse =
+  ListTrafficPolicyInstancesByHostedZoneResponse'
+    { _ltpibhzrsTrafficPolicyInstanceTypeMarker :: !(Maybe RecordType)
+    , _ltpibhzrsTrafficPolicyInstanceNameMarker :: !(Maybe Text)
+    , _ltpibhzrsResponseStatus                  :: !Int
+    , _ltpibhzrsTrafficPolicyInstances          :: ![TrafficPolicyInstance]
+    , _ltpibhzrsIsTruncated                     :: !Bool
+    , _ltpibhzrsMaxItems                        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTrafficPolicyInstancesByHostedZoneResponse' with the minimum fields required to make a request.

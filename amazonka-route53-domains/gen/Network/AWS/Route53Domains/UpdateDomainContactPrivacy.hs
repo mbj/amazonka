@@ -54,12 +54,14 @@ import Network.AWS.Route53Domains.Types.Product
 --
 --
 -- /See:/ 'updateDomainContactPrivacy' smart constructor.
-data UpdateDomainContactPrivacy = UpdateDomainContactPrivacy'
-  { _udcpTechPrivacy       :: !(Maybe Bool)
-  , _udcpRegistrantPrivacy :: !(Maybe Bool)
-  , _udcpAdminPrivacy      :: !(Maybe Bool)
-  , _udcpDomainName        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateDomainContactPrivacy =
+  UpdateDomainContactPrivacy'
+    { _udcpTechPrivacy       :: !(Maybe Bool)
+    , _udcpRegistrantPrivacy :: !(Maybe Bool)
+    , _udcpAdminPrivacy      :: !(Maybe Bool)
+    , _udcpDomainName        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateDomainContactPrivacy' with the minimum fields required to make a request.
@@ -145,10 +147,12 @@ instance ToQuery UpdateDomainContactPrivacy where
 --
 --
 -- /See:/ 'updateDomainContactPrivacyResponse' smart constructor.
-data UpdateDomainContactPrivacyResponse = UpdateDomainContactPrivacyResponse'
-  { _udcprsResponseStatus :: !Int
-  , _udcprsOperationId    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateDomainContactPrivacyResponse =
+  UpdateDomainContactPrivacyResponse'
+    { _udcprsResponseStatus :: !Int
+    , _udcprsOperationId    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateDomainContactPrivacyResponse' with the minimum fields required to make a request.

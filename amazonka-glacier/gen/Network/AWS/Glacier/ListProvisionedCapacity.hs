@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listProvisionedCapacity' smart constructor.
-newtype ListProvisionedCapacity = ListProvisionedCapacity'
-  { _lpcAccountId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ListProvisionedCapacity =
+  ListProvisionedCapacity'
+    { _lpcAccountId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListProvisionedCapacity' with the minimum fields required to make a request.
@@ -93,10 +95,12 @@ instance ToQuery ListProvisionedCapacity where
         toQuery = const mempty
 
 -- | /See:/ 'listProvisionedCapacityResponse' smart constructor.
-data ListProvisionedCapacityResponse = ListProvisionedCapacityResponse'
-  { _lpcrsProvisionedCapacityList :: !(Maybe [ProvisionedCapacityDescription])
-  , _lpcrsResponseStatus          :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListProvisionedCapacityResponse =
+  ListProvisionedCapacityResponse'
+    { _lpcrsProvisionedCapacityList :: !(Maybe [ProvisionedCapacityDescription])
+    , _lpcrsResponseStatus          :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListProvisionedCapacityResponse' with the minimum fields required to make a request.

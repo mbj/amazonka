@@ -26,10 +26,12 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'applicationSource' smart constructor.
-data ApplicationSource = ApplicationSource'
-  { _asTagFilters             :: !(Maybe [TagFilter])
-  , _asCloudFormationStackARN :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ApplicationSource =
+  ApplicationSource'
+    { _asTagFilters             :: !(Maybe [TagFilter])
+    , _asCloudFormationStackARN :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ApplicationSource' with the minimum fields required to make a request.
@@ -79,13 +81,15 @@ instance ToJSON ApplicationSource where
 --
 --
 -- /See:/ 'customizedScalingMetricSpecification' smart constructor.
-data CustomizedScalingMetricSpecification = CustomizedScalingMetricSpecification'
-  { _csmsDimensions :: !(Maybe [MetricDimension])
-  , _csmsUnit       :: !(Maybe Text)
-  , _csmsMetricName :: !Text
-  , _csmsNamespace  :: !Text
-  , _csmsStatistic  :: !MetricStatistic
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CustomizedScalingMetricSpecification =
+  CustomizedScalingMetricSpecification'
+    { _csmsDimensions :: !(Maybe [MetricDimension])
+    , _csmsUnit       :: !(Maybe Text)
+    , _csmsMetricName :: !Text
+    , _csmsNamespace  :: !Text
+    , _csmsStatistic  :: !MetricStatistic
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CustomizedScalingMetricSpecification' with the minimum fields required to make a request.
@@ -171,10 +175,12 @@ instance ToJSON CustomizedScalingMetricSpecification
 --
 --
 -- /See:/ 'metricDimension' smart constructor.
-data MetricDimension = MetricDimension'
-  { _mdName  :: !Text
-  , _mdValue :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MetricDimension =
+  MetricDimension'
+    { _mdName  :: !Text
+    , _mdValue :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MetricDimension' with the minimum fields required to make a request.
@@ -223,10 +229,12 @@ instance ToJSON MetricDimension where
 --
 --
 -- /See:/ 'predefinedScalingMetricSpecification' smart constructor.
-data PredefinedScalingMetricSpecification = PredefinedScalingMetricSpecification'
-  { _psmsResourceLabel               :: !(Maybe Text)
-  , _psmsPredefinedScalingMetricType :: !ScalingMetricType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PredefinedScalingMetricSpecification =
+  PredefinedScalingMetricSpecification'
+    { _psmsResourceLabel               :: !(Maybe Text)
+    , _psmsPredefinedScalingMetricType :: !ScalingMetricType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PredefinedScalingMetricSpecification' with the minimum fields required to make a request.
@@ -286,14 +294,16 @@ instance ToJSON PredefinedScalingMetricSpecification
 --
 --
 -- /See:/ 'scalingInstruction' smart constructor.
-data ScalingInstruction = ScalingInstruction'
-  { _siServiceNamespace             :: !ServiceNamespace
-  , _siResourceId                   :: !Text
-  , _siScalableDimension            :: !ScalableDimension
-  , _siMinCapacity                  :: !Int
-  , _siMaxCapacity                  :: !Int
-  , _siTargetTrackingConfigurations :: ![TargetTrackingConfiguration]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ScalingInstruction =
+  ScalingInstruction'
+    { _siServiceNamespace             :: !ServiceNamespace
+    , _siResourceId                   :: !Text
+    , _siScalableDimension            :: !ScalableDimension
+    , _siMinCapacity                  :: !Int
+    , _siMaxCapacity                  :: !Int
+    , _siTargetTrackingConfigurations :: ![TargetTrackingConfiguration]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ScalingInstruction' with the minimum fields required to make a request.
@@ -387,16 +397,18 @@ instance ToJSON ScalingInstruction where
 --
 --
 -- /See:/ 'scalingPlan' smart constructor.
-data ScalingPlan = ScalingPlan'
-  { _spCreationTime        :: !(Maybe POSIX)
-  , _spStatusStartTime     :: !(Maybe POSIX)
-  , _spStatusMessage       :: !(Maybe Text)
-  , _spScalingPlanName     :: !Text
-  , _spScalingPlanVersion  :: !Integer
-  , _spApplicationSource   :: !ApplicationSource
-  , _spScalingInstructions :: ![ScalingInstruction]
-  , _spStatusCode          :: !ScalingPlanStatusCode
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ScalingPlan =
+  ScalingPlan'
+    { _spCreationTime        :: !(Maybe POSIX)
+    , _spStatusStartTime     :: !(Maybe POSIX)
+    , _spStatusMessage       :: !(Maybe Text)
+    , _spScalingPlanName     :: !Text
+    , _spScalingPlanVersion  :: !Integer
+    , _spApplicationSource   :: !ApplicationSource
+    , _spScalingInstructions :: ![ScalingInstruction]
+    , _spStatusCode          :: !ScalingPlanStatusCode
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ScalingPlan' with the minimum fields required to make a request.
@@ -491,16 +503,18 @@ instance NFData ScalingPlan where
 --
 --
 -- /See:/ 'scalingPlanResource' smart constructor.
-data ScalingPlanResource = ScalingPlanResource'
-  { _sprScalingStatusMessage :: !(Maybe Text)
-  , _sprScalingPolicies      :: !(Maybe [ScalingPolicy])
-  , _sprScalingPlanName      :: !Text
-  , _sprScalingPlanVersion   :: !Integer
-  , _sprServiceNamespace     :: !ServiceNamespace
-  , _sprResourceId           :: !Text
-  , _sprScalableDimension    :: !ScalableDimension
-  , _sprScalingStatusCode    :: !ScalingStatusCode
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ScalingPlanResource =
+  ScalingPlanResource'
+    { _sprScalingStatusMessage :: !(Maybe Text)
+    , _sprScalingPolicies      :: !(Maybe [ScalingPolicy])
+    , _sprScalingPlanName      :: !Text
+    , _sprScalingPlanVersion   :: !Integer
+    , _sprServiceNamespace     :: !ServiceNamespace
+    , _sprResourceId           :: !Text
+    , _sprScalableDimension    :: !ScalableDimension
+    , _sprScalingStatusCode    :: !ScalingStatusCode
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ScalingPlanResource' with the minimum fields required to make a request.
@@ -598,11 +612,13 @@ instance NFData ScalingPlanResource where
 --
 --
 -- /See:/ 'scalingPolicy' smart constructor.
-data ScalingPolicy = ScalingPolicy'
-  { _spTargetTrackingConfiguration :: !(Maybe TargetTrackingConfiguration)
-  , _spPolicyName                  :: !Text
-  , _spPolicyType                  :: !PolicyType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ScalingPolicy =
+  ScalingPolicy'
+    { _spTargetTrackingConfiguration :: !(Maybe TargetTrackingConfiguration)
+    , _spPolicyName                  :: !Text
+    , _spPolicyType                  :: !PolicyType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ScalingPolicy' with the minimum fields required to make a request.
@@ -656,10 +672,12 @@ instance NFData ScalingPolicy where
 --
 --
 -- /See:/ 'tagFilter' smart constructor.
-data TagFilter = TagFilter'
-  { _tfValues :: !(Maybe [Text])
-  , _tfKey    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TagFilter =
+  TagFilter'
+    { _tfValues :: !(Maybe [Text])
+    , _tfKey    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TagFilter' with the minimum fields required to make a request.
@@ -704,15 +722,17 @@ instance ToJSON TagFilter where
 --
 --
 -- /See:/ 'targetTrackingConfiguration' smart constructor.
-data TargetTrackingConfiguration = TargetTrackingConfiguration'
-  { _ttcEstimatedInstanceWarmup :: !(Maybe Int)
-  , _ttcPredefinedScalingMetricSpecification :: !(Maybe PredefinedScalingMetricSpecification)
-  , _ttcScaleInCooldown :: !(Maybe Int)
-  , _ttcDisableScaleIn :: !(Maybe Bool)
-  , _ttcCustomizedScalingMetricSpecification :: !(Maybe CustomizedScalingMetricSpecification)
-  , _ttcScaleOutCooldown :: !(Maybe Int)
-  , _ttcTargetValue :: !Double
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TargetTrackingConfiguration =
+  TargetTrackingConfiguration'
+    { _ttcEstimatedInstanceWarmup :: !(Maybe Int)
+    , _ttcPredefinedScalingMetricSpecification :: !(Maybe PredefinedScalingMetricSpecification)
+    , _ttcScaleInCooldown :: !(Maybe Int)
+    , _ttcDisableScaleIn :: !(Maybe Bool)
+    , _ttcCustomizedScalingMetricSpecification :: !(Maybe CustomizedScalingMetricSpecification)
+    , _ttcScaleOutCooldown :: !(Maybe Int)
+    , _ttcTargetValue :: !Double
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TargetTrackingConfiguration' with the minimum fields required to make a request.

@@ -55,11 +55,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getDeployments' smart constructor.
-data GetDeployments = GetDeployments'
-  { _gdLimit     :: !(Maybe Int)
-  , _gdPosition  :: !(Maybe Text)
-  , _gdRestAPIId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDeployments =
+  GetDeployments'
+    { _gdLimit     :: !(Maybe Int)
+    , _gdPosition  :: !(Maybe Text)
+    , _gdRestAPIId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDeployments' with the minimum fields required to make a request.
@@ -134,11 +136,13 @@ instance ToQuery GetDeployments where
 -- To create a new deployment of a 'RestApi' , make a @POST@ request against this resource. To view, update, or delete an existing deployment, make a @GET@ , @PATCH@ , or @DELETE@ request, respectively, on a specified 'Deployment' resource.<http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-deploy-api.html Deploying an API> , <http://docs.aws.amazon.com/cli/latest/reference/apigateway/get-deployment.html AWS CLI> , <https://aws.amazon.com/tools/ AWS SDKs>
 --
 -- /See:/ 'getDeploymentsResponse' smart constructor.
-data GetDeploymentsResponse = GetDeploymentsResponse'
-  { _gdrsItems          :: !(Maybe [Deployment])
-  , _gdrsPosition       :: !(Maybe Text)
-  , _gdrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDeploymentsResponse =
+  GetDeploymentsResponse'
+    { _gdrsItems          :: !(Maybe [Deployment])
+    , _gdrsPosition       :: !(Maybe Text)
+    , _gdrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDeploymentsResponse' with the minimum fields required to make a request.

@@ -50,9 +50,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteServer' smart constructor.
-newtype DeleteServer = DeleteServer'
-  { _dsServerName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteServer =
+  DeleteServer'
+    { _dsServerName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteServer' with the minimum fields required to make a request.
@@ -104,9 +106,11 @@ instance ToQuery DeleteServer where
         toQuery = const mempty
 
 -- | /See:/ 'deleteServerResponse' smart constructor.
-newtype DeleteServerResponse = DeleteServerResponse'
-  { _dsrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteServerResponse =
+  DeleteServerResponse'
+    { _dsrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteServerResponse' with the minimum fields required to make a request.

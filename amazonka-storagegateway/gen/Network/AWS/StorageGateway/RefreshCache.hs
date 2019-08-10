@@ -45,9 +45,11 @@ import Network.AWS.StorageGateway.Types
 import Network.AWS.StorageGateway.Types.Product
 
 -- | /See:/ 'refreshCache' smart constructor.
-newtype RefreshCache = RefreshCache'
-  { _rcFileShareARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RefreshCache =
+  RefreshCache'
+    { _rcFileShareARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RefreshCache' with the minimum fields required to make a request.
@@ -101,10 +103,12 @@ instance ToQuery RefreshCache where
         toQuery = const mempty
 
 -- | /See:/ 'refreshCacheResponse' smart constructor.
-data RefreshCacheResponse = RefreshCacheResponse'
-  { _rcrsFileShareARN   :: !(Maybe Text)
-  , _rcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RefreshCacheResponse =
+  RefreshCacheResponse'
+    { _rcrsFileShareARN   :: !(Maybe Text)
+    , _rcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RefreshCacheResponse' with the minimum fields required to make a request.

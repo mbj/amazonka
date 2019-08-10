@@ -90,10 +90,12 @@ instance ToQuery GetAccountSendingEnabled where
 --
 --
 -- /See:/ 'getAccountSendingEnabledResponse' smart constructor.
-data GetAccountSendingEnabledResponse = GetAccountSendingEnabledResponse'
-  { _gasersEnabled        :: !(Maybe Bool)
-  , _gasersResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetAccountSendingEnabledResponse =
+  GetAccountSendingEnabledResponse'
+    { _gasersEnabled        :: !(Maybe Bool)
+    , _gasersResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetAccountSendingEnabledResponse' with the minimum fields required to make a request.

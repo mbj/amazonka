@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listIndices' smart constructor.
-data ListIndices = ListIndices'
-  { _liNextToken  :: !(Maybe Text)
-  , _liMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListIndices =
+  ListIndices'
+    { _liNextToken  :: !(Maybe Text)
+    , _liMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListIndices' with the minimum fields required to make a request.
@@ -101,11 +103,13 @@ instance ToQuery ListIndices where
                "maxResults" =: _liMaxResults]
 
 -- | /See:/ 'listIndicesResponse' smart constructor.
-data ListIndicesResponse = ListIndicesResponse'
-  { _lirsNextToken      :: !(Maybe Text)
-  , _lirsIndexNames     :: !(Maybe [Text])
-  , _lirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListIndicesResponse =
+  ListIndicesResponse'
+    { _lirsNextToken      :: !(Maybe Text)
+    , _lirsIndexNames     :: !(Maybe [Text])
+    , _lirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListIndicesResponse' with the minimum fields required to make a request.

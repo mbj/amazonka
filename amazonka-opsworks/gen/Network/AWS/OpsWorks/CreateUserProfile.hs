@@ -50,12 +50,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createUserProfile' smart constructor.
-data CreateUserProfile = CreateUserProfile'
-  { _cupAllowSelfManagement :: !(Maybe Bool)
-  , _cupSSHPublicKey        :: !(Maybe Text)
-  , _cupSSHUsername         :: !(Maybe Text)
-  , _cupIAMUserARN          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateUserProfile =
+  CreateUserProfile'
+    { _cupAllowSelfManagement :: !(Maybe Bool)
+    , _cupSSHPublicKey        :: !(Maybe Text)
+    , _cupSSHUsername         :: !(Maybe Text)
+    , _cupIAMUserARN          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateUserProfile' with the minimum fields required to make a request.
@@ -141,10 +143,12 @@ instance ToQuery CreateUserProfile where
 --
 --
 -- /See:/ 'createUserProfileResponse' smart constructor.
-data CreateUserProfileResponse = CreateUserProfileResponse'
-  { _cuprsIAMUserARN     :: !(Maybe Text)
-  , _cuprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateUserProfileResponse =
+  CreateUserProfileResponse'
+    { _cuprsIAMUserARN     :: !(Maybe Text)
+    , _cuprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateUserProfileResponse' with the minimum fields required to make a request.

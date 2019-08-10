@@ -45,10 +45,12 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'updateManagedInstanceRole' smart constructor.
-data UpdateManagedInstanceRole = UpdateManagedInstanceRole'
-  { _umirInstanceId :: !Text
-  , _umirIAMRole    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateManagedInstanceRole =
+  UpdateManagedInstanceRole'
+    { _umirInstanceId :: !Text
+    , _umirIAMRole    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateManagedInstanceRole' with the minimum fields required to make a request.
@@ -113,9 +115,11 @@ instance ToQuery UpdateManagedInstanceRole where
         toQuery = const mempty
 
 -- | /See:/ 'updateManagedInstanceRoleResponse' smart constructor.
-newtype UpdateManagedInstanceRoleResponse = UpdateManagedInstanceRoleResponse'
-  { _umirrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateManagedInstanceRoleResponse =
+  UpdateManagedInstanceRoleResponse'
+    { _umirrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateManagedInstanceRoleResponse' with the minimum fields required to make a request.

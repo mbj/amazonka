@@ -49,9 +49,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteDataSource' smart constructor.
-newtype DeleteDataSource = DeleteDataSource'
-  { _ddsDataSourceId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteDataSource =
+  DeleteDataSource'
+    { _ddsDataSourceId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteDataSource' with the minimum fields required to make a request.
@@ -109,10 +111,12 @@ instance ToQuery DeleteDataSource where
 --
 --
 -- /See:/ 'deleteDataSourceResponse' smart constructor.
-data DeleteDataSourceResponse = DeleteDataSourceResponse'
-  { _ddsrsDataSourceId   :: !(Maybe Text)
-  , _ddsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteDataSourceResponse =
+  DeleteDataSourceResponse'
+    { _ddsrsDataSourceId   :: !(Maybe Text)
+    , _ddsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteDataSourceResponse' with the minimum fields required to make a request.

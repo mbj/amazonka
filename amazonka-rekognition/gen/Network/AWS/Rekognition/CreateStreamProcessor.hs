@@ -55,13 +55,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createStreamProcessor' smart constructor.
-data CreateStreamProcessor = CreateStreamProcessor'
-  { _cspInput    :: !StreamProcessorInput
-  , _cspOutput   :: !StreamProcessorOutput
-  , _cspName     :: !Text
-  , _cspSettings :: !StreamProcessorSettings
-  , _cspRoleARN  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateStreamProcessor =
+  CreateStreamProcessor'
+    { _cspInput    :: !StreamProcessorInput
+    , _cspOutput   :: !StreamProcessorOutput
+    , _cspName     :: !Text
+    , _cspSettings :: !StreamProcessorSettings
+    , _cspRoleARN  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateStreamProcessor' with the minimum fields required to make a request.
@@ -155,10 +157,12 @@ instance ToQuery CreateStreamProcessor where
         toQuery = const mempty
 
 -- | /See:/ 'createStreamProcessorResponse' smart constructor.
-data CreateStreamProcessorResponse = CreateStreamProcessorResponse'
-  { _csprsStreamProcessorARN :: !(Maybe Text)
-  , _csprsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateStreamProcessorResponse =
+  CreateStreamProcessorResponse'
+    { _csprsStreamProcessorARN :: !(Maybe Text)
+    , _csprsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateStreamProcessorResponse' with the minimum fields required to make a request.

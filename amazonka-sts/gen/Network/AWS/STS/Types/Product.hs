@@ -26,10 +26,12 @@ import Network.AWS.STS.Types.Sum
 --
 --
 -- /See:/ 'assumedRoleUser' smart constructor.
-data AssumedRoleUser = AssumedRoleUser'
-  { _aruAssumedRoleId :: !Text
-  , _aruARN           :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssumedRoleUser =
+  AssumedRoleUser'
+    { _aruAssumedRoleId :: !Text
+    , _aruARN           :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssumedRoleUser' with the minimum fields required to make a request.
@@ -69,10 +71,12 @@ instance NFData AssumedRoleUser where
 --
 --
 -- /See:/ 'federatedUser' smart constructor.
-data FederatedUser = FederatedUser'
-  { _fuFederatedUserId :: !Text
-  , _fuARN             :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FederatedUser =
+  FederatedUser'
+    { _fuFederatedUserId :: !Text
+    , _fuARN             :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FederatedUser' with the minimum fields required to make a request.

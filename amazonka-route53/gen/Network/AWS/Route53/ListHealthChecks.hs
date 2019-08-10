@@ -57,10 +57,12 @@ import Network.AWS.Route53.Types.Product
 --
 --
 -- /See:/ 'listHealthChecks' smart constructor.
-data ListHealthChecks = ListHealthChecks'
-  { _lhcMarker   :: !(Maybe Text)
-  , _lhcMaxItems :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListHealthChecks =
+  ListHealthChecks'
+    { _lhcMarker   :: !(Maybe Text)
+    , _lhcMaxItems :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListHealthChecks' with the minimum fields required to make a request.
@@ -125,14 +127,16 @@ instance ToQuery ListHealthChecks where
 --
 --
 -- /See:/ 'listHealthChecksResponse' smart constructor.
-data ListHealthChecksResponse = ListHealthChecksResponse'
-  { _lhcrsNextMarker     :: !(Maybe Text)
-  , _lhcrsResponseStatus :: !Int
-  , _lhcrsHealthChecks   :: ![HealthCheck]
-  , _lhcrsMarker         :: !Text
-  , _lhcrsIsTruncated    :: !Bool
-  , _lhcrsMaxItems       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListHealthChecksResponse =
+  ListHealthChecksResponse'
+    { _lhcrsNextMarker     :: !(Maybe Text)
+    , _lhcrsResponseStatus :: !Int
+    , _lhcrsHealthChecks   :: ![HealthCheck]
+    , _lhcrsMarker         :: !Text
+    , _lhcrsIsTruncated    :: !Bool
+    , _lhcrsMaxItems       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListHealthChecksResponse' with the minimum fields required to make a request.

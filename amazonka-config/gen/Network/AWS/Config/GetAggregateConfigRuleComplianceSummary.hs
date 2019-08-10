@@ -51,13 +51,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getAggregateConfigRuleComplianceSummary' smart constructor.
-data GetAggregateConfigRuleComplianceSummary = GetAggregateConfigRuleComplianceSummary'
-  { _gacrcsFilters :: !(Maybe ConfigRuleComplianceSummaryFilters)
-  , _gacrcsNextToken :: !(Maybe Text)
-  , _gacrcsLimit :: !(Maybe Nat)
-  , _gacrcsGroupByKey :: !(Maybe ConfigRuleComplianceSummaryGroupKey)
-  , _gacrcsConfigurationAggregatorName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetAggregateConfigRuleComplianceSummary =
+  GetAggregateConfigRuleComplianceSummary'
+    { _gacrcsFilters :: !(Maybe ConfigRuleComplianceSummaryFilters)
+    , _gacrcsNextToken :: !(Maybe Text)
+    , _gacrcsLimit :: !(Maybe Nat)
+    , _gacrcsGroupByKey :: !(Maybe ConfigRuleComplianceSummaryGroupKey)
+    , _gacrcsConfigurationAggregatorName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetAggregateConfigRuleComplianceSummary' with the minimum fields required to make a request.
@@ -166,12 +168,14 @@ instance ToQuery
         toQuery = const mempty
 
 -- | /See:/ 'getAggregateConfigRuleComplianceSummaryResponse' smart constructor.
-data GetAggregateConfigRuleComplianceSummaryResponse = GetAggregateConfigRuleComplianceSummaryResponse'
-  { _gacrcsrsAggregateComplianceCounts :: !(Maybe [AggregateComplianceCount])
-  , _gacrcsrsNextToken                 :: !(Maybe Text)
-  , _gacrcsrsGroupByKey                :: !(Maybe Text)
-  , _gacrcsrsResponseStatus            :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetAggregateConfigRuleComplianceSummaryResponse =
+  GetAggregateConfigRuleComplianceSummaryResponse'
+    { _gacrcsrsAggregateComplianceCounts :: !(Maybe [AggregateComplianceCount])
+    , _gacrcsrsNextToken                 :: !(Maybe Text)
+    , _gacrcsrsGroupByKey                :: !(Maybe Text)
+    , _gacrcsrsResponseStatus            :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetAggregateConfigRuleComplianceSummaryResponse' with the minimum fields required to make a request.

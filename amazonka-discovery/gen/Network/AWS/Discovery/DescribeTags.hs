@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeTags' smart constructor.
-data DescribeTags = DescribeTags'
-  { _dtFilters    :: !(Maybe [TagFilter])
-  , _dtNextToken  :: !(Maybe Text)
-  , _dtMaxResults :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeTags =
+  DescribeTags'
+    { _dtFilters    :: !(Maybe [TagFilter])
+    , _dtNextToken  :: !(Maybe Text)
+    , _dtMaxResults :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeTags' with the minimum fields required to make a request.
@@ -122,11 +124,13 @@ instance ToQuery DescribeTags where
         toQuery = const mempty
 
 -- | /See:/ 'describeTagsResponse' smart constructor.
-data DescribeTagsResponse = DescribeTagsResponse'
-  { _dtrsNextToken      :: !(Maybe Text)
-  , _dtrsTags           :: !(Maybe [ConfigurationTag])
-  , _dtrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeTagsResponse =
+  DescribeTagsResponse'
+    { _dtrsNextToken      :: !(Maybe Text)
+    , _dtrsTags           :: !(Maybe [ConfigurationTag])
+    , _dtrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeTagsResponse' with the minimum fields required to make a request.

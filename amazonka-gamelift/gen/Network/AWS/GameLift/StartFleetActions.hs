@@ -75,10 +75,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'startFleetActions' smart constructor.
-data StartFleetActions = StartFleetActions'
-  { _sfaFleetId :: !Text
-  , _sfaActions :: !(List1 FleetAction)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartFleetActions =
+  StartFleetActions'
+    { _sfaFleetId :: !Text
+    , _sfaActions :: !(List1 FleetAction)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartFleetActions' with the minimum fields required to make a request.
@@ -139,9 +141,11 @@ instance ToQuery StartFleetActions where
         toQuery = const mempty
 
 -- | /See:/ 'startFleetActionsResponse' smart constructor.
-newtype StartFleetActionsResponse = StartFleetActionsResponse'
-  { _sfarsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StartFleetActionsResponse =
+  StartFleetActionsResponse'
+    { _sfarsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartFleetActionsResponse' with the minimum fields required to make a request.

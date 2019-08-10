@@ -45,12 +45,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'enableMFADevice' smart constructor.
-data EnableMFADevice = EnableMFADevice'
-  { _emdUserName            :: !Text
-  , _emdSerialNumber        :: !Text
-  , _emdAuthenticationCode1 :: !Text
-  , _emdAuthenticationCode2 :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EnableMFADevice =
+  EnableMFADevice'
+    { _emdUserName            :: !Text
+    , _emdSerialNumber        :: !Text
+    , _emdAuthenticationCode1 :: !Text
+    , _emdAuthenticationCode2 :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EnableMFADevice' with the minimum fields required to make a request.

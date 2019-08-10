@@ -47,11 +47,13 @@ import Network.AWS.WorkMail.Types
 import Network.AWS.WorkMail.Types.Product
 
 -- | /See:/ 'createResource' smart constructor.
-data CreateResource = CreateResource'
-  { _crOrganizationId :: !Text
-  , _crName           :: !Text
-  , _crType           :: !ResourceType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateResource =
+  CreateResource'
+    { _crOrganizationId :: !Text
+    , _crName           :: !Text
+    , _crType           :: !ResourceType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateResource' with the minimum fields required to make a request.
@@ -121,10 +123,12 @@ instance ToQuery CreateResource where
         toQuery = const mempty
 
 -- | /See:/ 'createResourceResponse' smart constructor.
-data CreateResourceResponse = CreateResourceResponse'
-  { _crrsResourceId     :: !(Maybe Text)
-  , _crrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateResourceResponse =
+  CreateResourceResponse'
+    { _crrsResourceId     :: !(Maybe Text)
+    , _crrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateResourceResponse' with the minimum fields required to make a request.

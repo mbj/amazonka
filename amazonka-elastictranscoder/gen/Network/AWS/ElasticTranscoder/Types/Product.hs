@@ -30,15 +30,17 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'artwork' smart constructor.
-data Artwork = Artwork'
-  { _aSizingPolicy   :: !(Maybe Text)
-  , _aAlbumArtFormat :: !(Maybe Text)
-  , _aMaxHeight      :: !(Maybe Text)
-  , _aInputKey       :: !(Maybe Text)
-  , _aPaddingPolicy  :: !(Maybe Text)
-  , _aEncryption     :: !(Maybe Encryption)
-  , _aMaxWidth       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Artwork =
+  Artwork'
+    { _aSizingPolicy   :: !(Maybe Text)
+    , _aAlbumArtFormat :: !(Maybe Text)
+    , _aMaxHeight      :: !(Maybe Text)
+    , _aInputKey       :: !(Maybe Text)
+    , _aPaddingPolicy  :: !(Maybe Text)
+    , _aEncryption     :: !(Maybe Encryption)
+    , _aMaxWidth       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Artwork' with the minimum fields required to make a request.
@@ -133,12 +135,14 @@ instance ToJSON Artwork where
 --
 --
 -- /See:/ 'audioCodecOptions' smart constructor.
-data AudioCodecOptions = AudioCodecOptions'
-  { _acoSigned   :: !(Maybe Text)
-  , _acoBitDepth :: !(Maybe Text)
-  , _acoProfile  :: !(Maybe Text)
-  , _acoBitOrder :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AudioCodecOptions =
+  AudioCodecOptions'
+    { _acoSigned   :: !(Maybe Text)
+    , _acoBitDepth :: !(Maybe Text)
+    , _acoProfile  :: !(Maybe Text)
+    , _acoBitOrder :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AudioCodecOptions' with the minimum fields required to make a request.
@@ -206,14 +210,16 @@ instance ToJSON AudioCodecOptions where
 --
 --
 -- /See:/ 'audioParameters' smart constructor.
-data AudioParameters = AudioParameters'
-  { _apChannels         :: !(Maybe Text)
-  , _apCodec            :: !(Maybe Text)
-  , _apAudioPackingMode :: !(Maybe Text)
-  , _apSampleRate       :: !(Maybe Text)
-  , _apBitRate          :: !(Maybe Text)
-  , _apCodecOptions     :: !(Maybe AudioCodecOptions)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AudioParameters =
+  AudioParameters'
+    { _apChannels         :: !(Maybe Text)
+    , _apCodec            :: !(Maybe Text)
+    , _apAudioPackingMode :: !(Maybe Text)
+    , _apSampleRate       :: !(Maybe Text)
+    , _apBitRate          :: !(Maybe Text)
+    , _apCodecOptions     :: !(Maybe AudioCodecOptions)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AudioParameters' with the minimum fields required to make a request.
@@ -299,11 +305,13 @@ instance ToJSON AudioParameters where
 --
 --
 -- /See:/ 'captionFormat' smart constructor.
-data CaptionFormat = CaptionFormat'
-  { _cfPattern    :: !(Maybe Text)
-  , _cfFormat     :: !(Maybe Text)
-  , _cfEncryption :: !(Maybe Encryption)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CaptionFormat =
+  CaptionFormat'
+    { _cfPattern    :: !(Maybe Text)
+    , _cfFormat     :: !(Maybe Text)
+    , _cfEncryption :: !(Maybe Encryption)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CaptionFormat' with the minimum fields required to make a request.
@@ -359,13 +367,15 @@ instance ToJSON CaptionFormat where
 --
 --
 -- /See:/ 'captionSource' smart constructor.
-data CaptionSource = CaptionSource'
-  { _csTimeOffset :: !(Maybe Text)
-  , _csEncryption :: !(Maybe Encryption)
-  , _csKey        :: !(Maybe Text)
-  , _csLanguage   :: !(Maybe Text)
-  , _csLabel      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CaptionSource =
+  CaptionSource'
+    { _csTimeOffset :: !(Maybe Text)
+    , _csEncryption :: !(Maybe Encryption)
+    , _csKey        :: !(Maybe Text)
+    , _csLanguage   :: !(Maybe Text)
+    , _csLabel      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CaptionSource' with the minimum fields required to make a request.
@@ -442,11 +452,13 @@ instance ToJSON CaptionSource where
 --
 --
 -- /See:/ 'captions' smart constructor.
-data Captions = Captions'
-  { _cMergePolicy    :: !(Maybe Text)
-  , _cCaptionSources :: !(Maybe [CaptionSource])
-  , _cCaptionFormats :: !(Maybe [CaptionFormat])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Captions =
+  Captions'
+    { _cMergePolicy    :: !(Maybe Text)
+    , _cCaptionSources :: !(Maybe [CaptionSource])
+    , _cCaptionFormats :: !(Maybe [CaptionFormat])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Captions' with the minimum fields required to make a request.
@@ -506,9 +518,11 @@ instance ToJSON Captions where
 --
 --
 -- /See:/ 'clip' smart constructor.
-newtype Clip = Clip'
-  { _cTimeSpan :: Maybe TimeSpan
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype Clip =
+  Clip'
+    { _cTimeSpan :: Maybe TimeSpan
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Clip' with the minimum fields required to make a request.
@@ -543,19 +557,21 @@ instance ToJSON Clip where
 --
 --
 -- /See:/ 'createJobOutput' smart constructor.
-data CreateJobOutput = CreateJobOutput'
-  { _cjoThumbnailPattern    :: !(Maybe Text)
-  , _cjoCaptions            :: !(Maybe Captions)
-  , _cjoPresetId            :: !(Maybe Text)
-  , _cjoComposition         :: !(Maybe [Clip])
-  , _cjoAlbumArt            :: !(Maybe JobAlbumArt)
-  , _cjoWatermarks          :: !(Maybe [JobWatermark])
-  , _cjoEncryption          :: !(Maybe Encryption)
-  , _cjoKey                 :: !(Maybe Text)
-  , _cjoSegmentDuration     :: !(Maybe Text)
-  , _cjoThumbnailEncryption :: !(Maybe Encryption)
-  , _cjoRotate              :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateJobOutput =
+  CreateJobOutput'
+    { _cjoThumbnailPattern    :: !(Maybe Text)
+    , _cjoCaptions            :: !(Maybe Captions)
+    , _cjoPresetId            :: !(Maybe Text)
+    , _cjoComposition         :: !(Maybe [Clip])
+    , _cjoAlbumArt            :: !(Maybe JobAlbumArt)
+    , _cjoWatermarks          :: !(Maybe [JobWatermark])
+    , _cjoEncryption          :: !(Maybe Encryption)
+    , _cjoKey                 :: !(Maybe Text)
+    , _cjoSegmentDuration     :: !(Maybe Text)
+    , _cjoThumbnailEncryption :: !(Maybe Encryption)
+    , _cjoRotate              :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateJobOutput' with the minimum fields required to make a request.
@@ -671,13 +687,15 @@ instance ToJSON CreateJobOutput where
 --
 --
 -- /See:/ 'createJobPlaylist' smart constructor.
-data CreateJobPlaylist = CreateJobPlaylist'
-  { _cjpPlayReadyDrm         :: !(Maybe PlayReadyDrm)
-  , _cjpFormat               :: !(Maybe Text)
-  , _cjpOutputKeys           :: !(Maybe [Text])
-  , _cjpName                 :: !(Maybe Text)
-  , _cjpHlsContentProtection :: !(Maybe HlsContentProtection)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateJobPlaylist =
+  CreateJobPlaylist'
+    { _cjpPlayReadyDrm         :: !(Maybe PlayReadyDrm)
+    , _cjpFormat               :: !(Maybe Text)
+    , _cjpOutputKeys           :: !(Maybe [Text])
+    , _cjpName                 :: !(Maybe Text)
+    , _cjpHlsContentProtection :: !(Maybe HlsContentProtection)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateJobPlaylist' with the minimum fields required to make a request.
@@ -745,13 +763,15 @@ instance ToJSON CreateJobPlaylist where
 --
 --
 -- /See:/ 'detectedProperties' smart constructor.
-data DetectedProperties = DetectedProperties'
-  { _dpHeight         :: !(Maybe Int)
-  , _dpFrameRate      :: !(Maybe Text)
-  , _dpFileSize       :: !(Maybe Integer)
-  , _dpWidth          :: !(Maybe Int)
-  , _dpDurationMillis :: !(Maybe Integer)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DetectedProperties =
+  DetectedProperties'
+    { _dpHeight         :: !(Maybe Int)
+    , _dpFrameRate      :: !(Maybe Text)
+    , _dpFileSize       :: !(Maybe Integer)
+    , _dpWidth          :: !(Maybe Int)
+    , _dpDurationMillis :: !(Maybe Integer)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DetectedProperties' with the minimum fields required to make a request.
@@ -828,12 +848,14 @@ instance ToJSON DetectedProperties where
 --
 --
 -- /See:/ 'encryption' smart constructor.
-data Encryption = Encryption'
-  { _eMode                 :: !(Maybe Text)
-  , _eKeyMD5               :: !(Maybe Text)
-  , _eKey                  :: !(Maybe Text)
-  , _eInitializationVector :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Encryption =
+  Encryption'
+    { _eMode                 :: !(Maybe Text)
+    , _eKeyMD5               :: !(Maybe Text)
+    , _eKey                  :: !(Maybe Text)
+    , _eInitializationVector :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Encryption' with the minimum fields required to make a request.
@@ -900,14 +922,16 @@ instance ToJSON Encryption where
 --
 --
 -- /See:/ 'hlsContentProtection' smart constructor.
-data HlsContentProtection = HlsContentProtection'
-  { _hcpKeyMD5                :: !(Maybe Text)
-  , _hcpKeyStoragePolicy      :: !(Maybe Text)
-  , _hcpKey                   :: !(Maybe Text)
-  , _hcpMethod                :: !(Maybe Text)
-  , _hcpInitializationVector  :: !(Maybe Text)
-  , _hcpLicenseAcquisitionURL :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data HlsContentProtection =
+  HlsContentProtection'
+    { _hcpKeyMD5                :: !(Maybe Text)
+    , _hcpKeyStoragePolicy      :: !(Maybe Text)
+    , _hcpKey                   :: !(Maybe Text)
+    , _hcpMethod                :: !(Maybe Text)
+    , _hcpInitializationVector  :: !(Maybe Text)
+    , _hcpLicenseAcquisitionURL :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'HlsContentProtection' with the minimum fields required to make a request.
@@ -994,10 +1018,12 @@ instance ToJSON HlsContentProtection where
 --
 --
 -- /See:/ 'inputCaptions' smart constructor.
-data InputCaptions = InputCaptions'
-  { _icMergePolicy    :: !(Maybe Text)
-  , _icCaptionSources :: !(Maybe [CaptionSource])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InputCaptions =
+  InputCaptions'
+    { _icMergePolicy    :: !(Maybe Text)
+    , _icCaptionSources :: !(Maybe [CaptionSource])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InputCaptions' with the minimum fields required to make a request.
@@ -1045,20 +1071,22 @@ instance ToJSON InputCaptions where
 --
 --
 -- /See:/ 'job'' smart constructor.
-data Job' = Job''
-  { _jStatus          :: !(Maybe Text)
-  , _jPipelineId      :: !(Maybe Text)
-  , _jARN             :: !(Maybe Text)
-  , _jInputs          :: !(Maybe [JobInput])
-  , _jInput           :: !(Maybe JobInput)
-  , _jUserMetadata    :: !(Maybe (Map Text Text))
-  , _jOutputs         :: !(Maybe [JobOutput])
-  , _jOutput          :: !(Maybe JobOutput)
-  , _jId              :: !(Maybe Text)
-  , _jPlaylists       :: !(Maybe [Playlist])
-  , _jOutputKeyPrefix :: !(Maybe Text)
-  , _jTiming          :: !(Maybe Timing)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Job' =
+  Job''
+    { _jStatus          :: !(Maybe Text)
+    , _jPipelineId      :: !(Maybe Text)
+    , _jARN             :: !(Maybe Text)
+    , _jInputs          :: !(Maybe [JobInput])
+    , _jInput           :: !(Maybe JobInput)
+    , _jUserMetadata    :: !(Maybe (Map Text Text))
+    , _jOutputs         :: !(Maybe [JobOutput])
+    , _jOutput          :: !(Maybe JobOutput)
+    , _jId              :: !(Maybe Text)
+    , _jPlaylists       :: !(Maybe [Playlist])
+    , _jOutputKeyPrefix :: !(Maybe Text)
+    , _jTiming          :: !(Maybe Timing)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Job'' with the minimum fields required to make a request.
@@ -1181,10 +1209,12 @@ instance NFData Job' where
 --
 --
 -- /See:/ 'jobAlbumArt' smart constructor.
-data JobAlbumArt = JobAlbumArt'
-  { _jaaMergePolicy :: !(Maybe Text)
-  , _jaaArtwork     :: !(Maybe [Artwork])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data JobAlbumArt =
+  JobAlbumArt'
+    { _jaaMergePolicy :: !(Maybe Text)
+    , _jaaArtwork     :: !(Maybe [Artwork])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'JobAlbumArt' with the minimum fields required to make a request.
@@ -1231,18 +1261,20 @@ instance ToJSON JobAlbumArt where
 --
 --
 -- /See:/ 'jobInput' smart constructor.
-data JobInput = JobInput'
-  { _jiFrameRate          :: !(Maybe Text)
-  , _jiResolution         :: !(Maybe Text)
-  , _jiAspectRatio        :: !(Maybe Text)
-  , _jiTimeSpan           :: !(Maybe TimeSpan)
-  , _jiEncryption         :: !(Maybe Encryption)
-  , _jiKey                :: !(Maybe Text)
-  , _jiDetectedProperties :: !(Maybe DetectedProperties)
-  , _jiContainer          :: !(Maybe Text)
-  , _jiInterlaced         :: !(Maybe Text)
-  , _jiInputCaptions      :: !(Maybe InputCaptions)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data JobInput =
+  JobInput'
+    { _jiFrameRate          :: !(Maybe Text)
+    , _jiResolution         :: !(Maybe Text)
+    , _jiAspectRatio        :: !(Maybe Text)
+    , _jiTimeSpan           :: !(Maybe TimeSpan)
+    , _jiEncryption         :: !(Maybe Encryption)
+    , _jiKey                :: !(Maybe Text)
+    , _jiDetectedProperties :: !(Maybe DetectedProperties)
+    , _jiContainer          :: !(Maybe Text)
+    , _jiInterlaced         :: !(Maybe Text)
+    , _jiInputCaptions      :: !(Maybe InputCaptions)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'JobInput' with the minimum fields required to make a request.
@@ -1366,29 +1398,31 @@ instance ToJSON JobInput where
 --
 --
 -- /See:/ 'jobOutput' smart constructor.
-data JobOutput = JobOutput'
-  { _joAppliedColorSpaceConversion :: !(Maybe Text)
-  , _joThumbnailPattern            :: !(Maybe Text)
-  , _joStatus                      :: !(Maybe Text)
-  , _joHeight                      :: !(Maybe Int)
-  , _joFrameRate                   :: !(Maybe Text)
-  , _joCaptions                    :: !(Maybe Captions)
-  , _joPresetId                    :: !(Maybe Text)
-  , _joComposition                 :: !(Maybe [Clip])
-  , _joAlbumArt                    :: !(Maybe JobAlbumArt)
-  , _joFileSize                    :: !(Maybe Integer)
-  , _joWatermarks                  :: !(Maybe [JobWatermark])
-  , _joWidth                       :: !(Maybe Int)
-  , _joEncryption                  :: !(Maybe Encryption)
-  , _joKey                         :: !(Maybe Text)
-  , _joStatusDetail                :: !(Maybe Text)
-  , _joId                          :: !(Maybe Text)
-  , _joSegmentDuration             :: !(Maybe Text)
-  , _joDurationMillis              :: !(Maybe Integer)
-  , _joThumbnailEncryption         :: !(Maybe Encryption)
-  , _joDuration                    :: !(Maybe Integer)
-  , _joRotate                      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data JobOutput =
+  JobOutput'
+    { _joAppliedColorSpaceConversion :: !(Maybe Text)
+    , _joThumbnailPattern            :: !(Maybe Text)
+    , _joStatus                      :: !(Maybe Text)
+    , _joHeight                      :: !(Maybe Int)
+    , _joFrameRate                   :: !(Maybe Text)
+    , _joCaptions                    :: !(Maybe Captions)
+    , _joPresetId                    :: !(Maybe Text)
+    , _joComposition                 :: !(Maybe [Clip])
+    , _joAlbumArt                    :: !(Maybe JobAlbumArt)
+    , _joFileSize                    :: !(Maybe Integer)
+    , _joWatermarks                  :: !(Maybe [JobWatermark])
+    , _joWidth                       :: !(Maybe Int)
+    , _joEncryption                  :: !(Maybe Encryption)
+    , _joKey                         :: !(Maybe Text)
+    , _joStatusDetail                :: !(Maybe Text)
+    , _joId                          :: !(Maybe Text)
+    , _joSegmentDuration             :: !(Maybe Text)
+    , _joDurationMillis              :: !(Maybe Integer)
+    , _joThumbnailEncryption         :: !(Maybe Encryption)
+    , _joDuration                    :: !(Maybe Integer)
+    , _joRotate                      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'JobOutput' with the minimum fields required to make a request.
@@ -1584,11 +1618,13 @@ instance NFData JobOutput where
 --
 --
 -- /See:/ 'jobWatermark' smart constructor.
-data JobWatermark = JobWatermark'
-  { _jwPresetWatermarkId :: !(Maybe Text)
-  , _jwInputKey          :: !(Maybe Text)
-  , _jwEncryption        :: !(Maybe Encryption)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data JobWatermark =
+  JobWatermark'
+    { _jwPresetWatermarkId :: !(Maybe Text)
+    , _jwInputKey          :: !(Maybe Text)
+    , _jwEncryption        :: !(Maybe Encryption)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'JobWatermark' with the minimum fields required to make a request.
@@ -1649,12 +1685,14 @@ instance ToJSON JobWatermark where
 --
 --
 -- /See:/ 'notifications' smart constructor.
-data Notifications = Notifications'
-  { _nError       :: !(Maybe Text)
-  , _nWarning     :: !(Maybe Text)
-  , _nProgressing :: !(Maybe Text)
-  , _nCompleted   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Notifications =
+  Notifications'
+    { _nError       :: !(Maybe Text)
+    , _nWarning     :: !(Maybe Text)
+    , _nProgressing :: !(Maybe Text)
+    , _nCompleted   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Notifications' with the minimum fields required to make a request.
@@ -1722,11 +1760,13 @@ instance ToJSON Notifications where
 --
 --
 -- /See:/ 'permission' smart constructor.
-data Permission = Permission'
-  { _pAccess      :: !(Maybe [Text])
-  , _pGranteeType :: !(Maybe Text)
-  , _pGrantee     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Permission =
+  Permission'
+    { _pAccess      :: !(Maybe [Text])
+    , _pGranteeType :: !(Maybe Text)
+    , _pGrantee     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Permission' with the minimum fields required to make a request.
@@ -1781,19 +1821,21 @@ instance ToJSON Permission where
 --
 --
 -- /See:/ 'pipeline' smart constructor.
-data Pipeline = Pipeline'
-  { _pipStatus          :: !(Maybe Text)
-  , _pipARN             :: !(Maybe Text)
-  , _pipInputBucket     :: !(Maybe Text)
-  , _pipContentConfig   :: !(Maybe PipelineOutputConfig)
-  , _pipOutputBucket    :: !(Maybe Text)
-  , _pipRole            :: !(Maybe Text)
-  , _pipName            :: !(Maybe Text)
-  , _pipAWSKMSKeyARN    :: !(Maybe Text)
-  , _pipId              :: !(Maybe Text)
-  , _pipNotifications   :: !(Maybe Notifications)
-  , _pipThumbnailConfig :: !(Maybe PipelineOutputConfig)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Pipeline =
+  Pipeline'
+    { _pipStatus          :: !(Maybe Text)
+    , _pipARN             :: !(Maybe Text)
+    , _pipInputBucket     :: !(Maybe Text)
+    , _pipContentConfig   :: !(Maybe PipelineOutputConfig)
+    , _pipOutputBucket    :: !(Maybe Text)
+    , _pipRole            :: !(Maybe Text)
+    , _pipName            :: !(Maybe Text)
+    , _pipAWSKMSKeyARN    :: !(Maybe Text)
+    , _pipId              :: !(Maybe Text)
+    , _pipNotifications   :: !(Maybe Notifications)
+    , _pipThumbnailConfig :: !(Maybe PipelineOutputConfig)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Pipeline' with the minimum fields required to make a request.
@@ -1908,11 +1950,13 @@ instance NFData Pipeline where
 --
 --
 -- /See:/ 'pipelineOutputConfig' smart constructor.
-data PipelineOutputConfig = PipelineOutputConfig'
-  { _pocBucket       :: !(Maybe Text)
-  , _pocStorageClass :: !(Maybe Text)
-  , _pocPermissions  :: !(Maybe [Permission])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PipelineOutputConfig =
+  PipelineOutputConfig'
+    { _pocBucket       :: !(Maybe Text)
+    , _pocStorageClass :: !(Maybe Text)
+    , _pocPermissions  :: !(Maybe [Permission])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PipelineOutputConfig' with the minimum fields required to make a request.
@@ -1975,14 +2019,16 @@ instance ToJSON PipelineOutputConfig where
 --
 --
 -- /See:/ 'playReadyDrm' smart constructor.
-data PlayReadyDrm = PlayReadyDrm'
-  { _prdKeyId                 :: !(Maybe Text)
-  , _prdFormat                :: !(Maybe Text)
-  , _prdKeyMD5                :: !(Maybe Text)
-  , _prdKey                   :: !(Maybe Text)
-  , _prdInitializationVector  :: !(Maybe Text)
-  , _prdLicenseAcquisitionURL :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PlayReadyDrm =
+  PlayReadyDrm'
+    { _prdKeyId                 :: !(Maybe Text)
+    , _prdFormat                :: !(Maybe Text)
+    , _prdKeyMD5                :: !(Maybe Text)
+    , _prdKey                   :: !(Maybe Text)
+    , _prdInitializationVector  :: !(Maybe Text)
+    , _prdLicenseAcquisitionURL :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PlayReadyDrm' with the minimum fields required to make a request.
@@ -2069,15 +2115,17 @@ instance ToJSON PlayReadyDrm where
 --
 --
 -- /See:/ 'playlist' smart constructor.
-data Playlist = Playlist'
-  { _pStatus               :: !(Maybe Text)
-  , _pPlayReadyDrm         :: !(Maybe PlayReadyDrm)
-  , _pFormat               :: !(Maybe Text)
-  , _pOutputKeys           :: !(Maybe [Text])
-  , _pName                 :: !(Maybe Text)
-  , _pStatusDetail         :: !(Maybe Text)
-  , _pHlsContentProtection :: !(Maybe HlsContentProtection)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Playlist =
+  Playlist'
+    { _pStatus               :: !(Maybe Text)
+    , _pPlayReadyDrm         :: !(Maybe PlayReadyDrm)
+    , _pFormat               :: !(Maybe Text)
+    , _pOutputKeys           :: !(Maybe [Text])
+    , _pName                 :: !(Maybe Text)
+    , _pStatusDetail         :: !(Maybe Text)
+    , _pHlsContentProtection :: !(Maybe HlsContentProtection)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Playlist' with the minimum fields required to make a request.
@@ -2160,17 +2208,19 @@ instance NFData Playlist where
 --
 --
 -- /See:/ 'preset' smart constructor.
-data Preset = Preset'
-  { _preARN         :: !(Maybe Text)
-  , _preVideo       :: !(Maybe VideoParameters)
-  , _preThumbnails  :: !(Maybe Thumbnails)
-  , _preName        :: !(Maybe Text)
-  , _preContainer   :: !(Maybe Text)
-  , _preId          :: !(Maybe Text)
-  , _preType        :: !(Maybe Text)
-  , _preDescription :: !(Maybe Text)
-  , _preAudio       :: !(Maybe AudioParameters)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Preset =
+  Preset'
+    { _preARN         :: !(Maybe Text)
+    , _preVideo       :: !(Maybe VideoParameters)
+    , _preThumbnails  :: !(Maybe Thumbnails)
+    , _preName        :: !(Maybe Text)
+    , _preContainer   :: !(Maybe Text)
+    , _preId          :: !(Maybe Text)
+    , _preType        :: !(Maybe Text)
+    , _preDescription :: !(Maybe Text)
+    , _preAudio       :: !(Maybe AudioParameters)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Preset' with the minimum fields required to make a request.
@@ -2273,18 +2323,20 @@ instance NFData Preset where
 --
 --
 -- /See:/ 'presetWatermark' smart constructor.
-data PresetWatermark = PresetWatermark'
-  { _pwVerticalAlign    :: !(Maybe Text)
-  , _pwSizingPolicy     :: !(Maybe Text)
-  , _pwHorizontalOffset :: !(Maybe Text)
-  , _pwMaxHeight        :: !(Maybe Text)
-  , _pwOpacity          :: !(Maybe Text)
-  , _pwVerticalOffset   :: !(Maybe Text)
-  , _pwMaxWidth         :: !(Maybe Text)
-  , _pwId               :: !(Maybe Text)
-  , _pwHorizontalAlign  :: !(Maybe Text)
-  , _pwTarget           :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PresetWatermark =
+  PresetWatermark'
+    { _pwVerticalAlign    :: !(Maybe Text)
+    , _pwSizingPolicy     :: !(Maybe Text)
+    , _pwHorizontalOffset :: !(Maybe Text)
+    , _pwMaxHeight        :: !(Maybe Text)
+    , _pwOpacity          :: !(Maybe Text)
+    , _pwVerticalOffset   :: !(Maybe Text)
+    , _pwMaxWidth         :: !(Maybe Text)
+    , _pwId               :: !(Maybe Text)
+    , _pwHorizontalAlign  :: !(Maybe Text)
+    , _pwTarget           :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PresetWatermark' with the minimum fields required to make a request.
@@ -2405,16 +2457,18 @@ instance ToJSON PresetWatermark where
 --
 --
 -- /See:/ 'thumbnails' smart constructor.
-data Thumbnails = Thumbnails'
-  { _tSizingPolicy  :: !(Maybe Text)
-  , _tFormat        :: !(Maybe Text)
-  , _tMaxHeight     :: !(Maybe Text)
-  , _tResolution    :: !(Maybe Text)
-  , _tAspectRatio   :: !(Maybe Text)
-  , _tPaddingPolicy :: !(Maybe Text)
-  , _tInterval      :: !(Maybe Text)
-  , _tMaxWidth      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Thumbnails =
+  Thumbnails'
+    { _tSizingPolicy  :: !(Maybe Text)
+    , _tFormat        :: !(Maybe Text)
+    , _tMaxHeight     :: !(Maybe Text)
+    , _tResolution    :: !(Maybe Text)
+    , _tAspectRatio   :: !(Maybe Text)
+    , _tPaddingPolicy :: !(Maybe Text)
+    , _tInterval      :: !(Maybe Text)
+    , _tMaxWidth      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Thumbnails' with the minimum fields required to make a request.
@@ -2518,10 +2572,12 @@ instance ToJSON Thumbnails where
 --
 --
 -- /See:/ 'timeSpan' smart constructor.
-data TimeSpan = TimeSpan'
-  { _tsStartTime :: !(Maybe Text)
-  , _tsDuration  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TimeSpan =
+  TimeSpan'
+    { _tsStartTime :: !(Maybe Text)
+    , _tsDuration  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TimeSpan' with the minimum fields required to make a request.
@@ -2567,11 +2623,13 @@ instance ToJSON TimeSpan where
 --
 --
 -- /See:/ 'timing' smart constructor.
-data Timing = Timing'
-  { _tSubmitTimeMillis :: !(Maybe Integer)
-  , _tFinishTimeMillis :: !(Maybe Integer)
-  , _tStartTimeMillis  :: !(Maybe Integer)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Timing =
+  Timing'
+    { _tSubmitTimeMillis :: !(Maybe Integer)
+    , _tFinishTimeMillis :: !(Maybe Integer)
+    , _tStartTimeMillis  :: !(Maybe Integer)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Timing' with the minimum fields required to make a request.
@@ -2623,23 +2681,25 @@ instance NFData Timing where
 --
 --
 -- /See:/ 'videoParameters' smart constructor.
-data VideoParameters = VideoParameters'
-  { _vpKeyframesMaxDist   :: !(Maybe Text)
-  , _vpFrameRate          :: !(Maybe Text)
-  , _vpSizingPolicy       :: !(Maybe Text)
-  , _vpMaxFrameRate       :: !(Maybe Text)
-  , _vpMaxHeight          :: !(Maybe Text)
-  , _vpWatermarks         :: !(Maybe [PresetWatermark])
-  , _vpDisplayAspectRatio :: !(Maybe Text)
-  , _vpResolution         :: !(Maybe Text)
-  , _vpCodec              :: !(Maybe Text)
-  , _vpAspectRatio        :: !(Maybe Text)
-  , _vpPaddingPolicy      :: !(Maybe Text)
-  , _vpMaxWidth           :: !(Maybe Text)
-  , _vpBitRate            :: !(Maybe Text)
-  , _vpFixedGOP           :: !(Maybe Text)
-  , _vpCodecOptions       :: !(Maybe (Map Text Text))
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VideoParameters =
+  VideoParameters'
+    { _vpKeyframesMaxDist   :: !(Maybe Text)
+    , _vpFrameRate          :: !(Maybe Text)
+    , _vpSizingPolicy       :: !(Maybe Text)
+    , _vpMaxFrameRate       :: !(Maybe Text)
+    , _vpMaxHeight          :: !(Maybe Text)
+    , _vpWatermarks         :: !(Maybe [PresetWatermark])
+    , _vpDisplayAspectRatio :: !(Maybe Text)
+    , _vpResolution         :: !(Maybe Text)
+    , _vpCodec              :: !(Maybe Text)
+    , _vpAspectRatio        :: !(Maybe Text)
+    , _vpPaddingPolicy      :: !(Maybe Text)
+    , _vpMaxWidth           :: !(Maybe Text)
+    , _vpBitRate            :: !(Maybe Text)
+    , _vpFixedGOP           :: !(Maybe Text)
+    , _vpCodecOptions       :: !(Maybe (Map Text Text))
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VideoParameters' with the minimum fields required to make a request.
@@ -2808,10 +2868,12 @@ instance ToJSON VideoParameters where
 --
 --
 -- /See:/ 'warning' smart constructor.
-data Warning = Warning'
-  { _wCode    :: !(Maybe Text)
-  , _wMessage :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Warning =
+  Warning'
+    { _wCode    :: !(Maybe Text)
+    , _wMessage :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Warning' with the minimum fields required to make a request.

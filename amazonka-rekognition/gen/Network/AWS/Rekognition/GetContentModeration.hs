@@ -62,12 +62,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getContentModeration' smart constructor.
-data GetContentModeration = GetContentModeration'
-  { _gcmNextToken  :: !(Maybe Text)
-  , _gcmMaxResults :: !(Maybe Nat)
-  , _gcmSortBy     :: !(Maybe ContentModerationSortBy)
-  , _gcmJobId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetContentModeration =
+  GetContentModeration'
+    { _gcmNextToken  :: !(Maybe Text)
+    , _gcmMaxResults :: !(Maybe Nat)
+    , _gcmSortBy     :: !(Maybe ContentModerationSortBy)
+    , _gcmJobId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetContentModeration' with the minimum fields required to make a request.
@@ -153,14 +155,16 @@ instance ToQuery GetContentModeration where
         toQuery = const mempty
 
 -- | /See:/ 'getContentModerationResponse' smart constructor.
-data GetContentModerationResponse = GetContentModerationResponse'
-  { _gcmrsNextToken        :: !(Maybe Text)
-  , _gcmrsVideoMetadata    :: !(Maybe VideoMetadata)
-  , _gcmrsStatusMessage    :: !(Maybe Text)
-  , _gcmrsJobStatus        :: !(Maybe VideoJobStatus)
-  , _gcmrsModerationLabels :: !(Maybe [ContentModerationDetection])
-  , _gcmrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetContentModerationResponse =
+  GetContentModerationResponse'
+    { _gcmrsNextToken        :: !(Maybe Text)
+    , _gcmrsVideoMetadata    :: !(Maybe VideoMetadata)
+    , _gcmrsStatusMessage    :: !(Maybe Text)
+    , _gcmrsJobStatus        :: !(Maybe VideoJobStatus)
+    , _gcmrsModerationLabels :: !(Maybe [ContentModerationDetection])
+    , _gcmrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetContentModerationResponse' with the minimum fields required to make a request.

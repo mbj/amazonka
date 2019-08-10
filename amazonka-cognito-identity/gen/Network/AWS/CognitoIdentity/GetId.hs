@@ -53,11 +53,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getId' smart constructor.
-data GetId = GetId'
-  { _giAccountId      :: !(Maybe Text)
-  , _giLogins         :: !(Maybe (Map Text Text))
-  , _giIdentityPoolId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetId =
+  GetId'
+    { _giAccountId      :: !(Maybe Text)
+    , _giLogins         :: !(Maybe (Map Text Text))
+    , _giIdentityPoolId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetId' with the minimum fields required to make a request.
@@ -133,10 +135,12 @@ instance ToQuery GetId where
 --
 --
 -- /See:/ 'getIdResponse' smart constructor.
-data GetIdResponse = GetIdResponse'
-  { _girsIdentityId     :: !(Maybe Text)
-  , _girsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetIdResponse =
+  GetIdResponse'
+    { _girsIdentityId     :: !(Maybe Text)
+    , _girsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetIdResponse' with the minimum fields required to make a request.

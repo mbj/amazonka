@@ -46,9 +46,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteLexicon' smart constructor.
-newtype DeleteLexicon = DeleteLexicon'
-  { _dlName :: Sensitive Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+newtype DeleteLexicon =
+  DeleteLexicon'
+    { _dlName :: Sensitive Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteLexicon' with the minimum fields required to make a request.
@@ -89,9 +91,11 @@ instance ToQuery DeleteLexicon where
         toQuery = const mempty
 
 -- | /See:/ 'deleteLexiconResponse' smart constructor.
-newtype DeleteLexiconResponse = DeleteLexiconResponse'
-  { _dlrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteLexiconResponse =
+  DeleteLexiconResponse'
+    { _dlrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteLexiconResponse' with the minimum fields required to make a request.

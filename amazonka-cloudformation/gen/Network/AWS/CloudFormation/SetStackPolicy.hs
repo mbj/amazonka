@@ -48,11 +48,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'setStackPolicy' smart constructor.
-data SetStackPolicy = SetStackPolicy'
-  { _sspStackPolicyBody :: !(Maybe Text)
-  , _sspStackPolicyURL  :: !(Maybe Text)
-  , _sspStackName       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SetStackPolicy =
+  SetStackPolicy'
+    { _sspStackPolicyBody :: !(Maybe Text)
+    , _sspStackPolicyURL  :: !(Maybe Text)
+    , _sspStackName       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetStackPolicy' with the minimum fields required to make a request.

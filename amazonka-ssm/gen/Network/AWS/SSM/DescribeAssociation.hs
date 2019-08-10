@@ -48,12 +48,14 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'describeAssociation' smart constructor.
-data DescribeAssociation = DescribeAssociation'
-  { _daAssociationId      :: !(Maybe Text)
-  , _daInstanceId         :: !(Maybe Text)
-  , _daName               :: !(Maybe Text)
-  , _daAssociationVersion :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAssociation =
+  DescribeAssociation'
+    { _daAssociationId      :: !(Maybe Text)
+    , _daInstanceId         :: !(Maybe Text)
+    , _daName               :: !(Maybe Text)
+    , _daAssociationVersion :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAssociation' with the minimum fields required to make a request.
@@ -134,10 +136,12 @@ instance ToQuery DescribeAssociation where
         toQuery = const mempty
 
 -- | /See:/ 'describeAssociationResponse' smart constructor.
-data DescribeAssociationResponse = DescribeAssociationResponse'
-  { _daarsAssociationDescription :: !(Maybe AssociationDescription)
-  , _daarsResponseStatus         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAssociationResponse =
+  DescribeAssociationResponse'
+    { _daarsAssociationDescription :: !(Maybe AssociationDescription)
+    , _daarsResponseStatus         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAssociationResponse' with the minimum fields required to make a request.

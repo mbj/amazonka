@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listSubscriptionDefinitions' smart constructor.
-data ListSubscriptionDefinitions = ListSubscriptionDefinitions'
-  { _lsdNextToken  :: !(Maybe Text)
-  , _lsdMaxResults :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListSubscriptionDefinitions =
+  ListSubscriptionDefinitions'
+    { _lsdNextToken  :: !(Maybe Text)
+    , _lsdMaxResults :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListSubscriptionDefinitions' with the minimum fields required to make a request.
@@ -106,11 +108,13 @@ instance ToQuery ListSubscriptionDefinitions where
                "MaxResults" =: _lsdMaxResults]
 
 -- | /See:/ 'listSubscriptionDefinitionsResponse' smart constructor.
-data ListSubscriptionDefinitionsResponse = ListSubscriptionDefinitionsResponse'
-  { _lsdrsNextToken      :: !(Maybe Text)
-  , _lsdrsDefinitions    :: !(Maybe [DefinitionInformation])
-  , _lsdrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListSubscriptionDefinitionsResponse =
+  ListSubscriptionDefinitionsResponse'
+    { _lsdrsNextToken      :: !(Maybe Text)
+    , _lsdrsDefinitions    :: !(Maybe [DefinitionInformation])
+    , _lsdrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListSubscriptionDefinitionsResponse' with the minimum fields required to make a request.

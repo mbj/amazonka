@@ -52,12 +52,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'lookupPolicy' smart constructor.
-data LookupPolicy = LookupPolicy'
-  { _lpNextToken       :: !(Maybe Text)
-  , _lpMaxResults      :: !(Maybe Nat)
-  , _lpDirectoryARN    :: !Text
-  , _lpObjectReference :: !ObjectReference
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LookupPolicy =
+  LookupPolicy'
+    { _lpNextToken       :: !(Maybe Text)
+    , _lpMaxResults      :: !(Maybe Nat)
+    , _lpDirectoryARN    :: !Text
+    , _lpObjectReference :: !ObjectReference
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LookupPolicy' with the minimum fields required to make a request.
@@ -143,11 +145,13 @@ instance ToQuery LookupPolicy where
         toQuery = const mempty
 
 -- | /See:/ 'lookupPolicyResponse' smart constructor.
-data LookupPolicyResponse = LookupPolicyResponse'
-  { _lprsNextToken        :: !(Maybe Text)
-  , _lprsPolicyToPathList :: !(Maybe [PolicyToPath])
-  , _lprsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LookupPolicyResponse =
+  LookupPolicyResponse'
+    { _lprsNextToken        :: !(Maybe Text)
+    , _lprsPolicyToPathList :: !(Maybe [PolicyToPath])
+    , _lprsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LookupPolicyResponse' with the minimum fields required to make a request.

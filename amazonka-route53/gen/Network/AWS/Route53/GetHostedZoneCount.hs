@@ -87,10 +87,12 @@ instance ToQuery GetHostedZoneCount where
 --
 --
 -- /See:/ 'getHostedZoneCountResponse' smart constructor.
-data GetHostedZoneCountResponse = GetHostedZoneCountResponse'
-  { _ghzcrsResponseStatus  :: !Int
-  , _ghzcrsHostedZoneCount :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetHostedZoneCountResponse =
+  GetHostedZoneCountResponse'
+    { _ghzcrsResponseStatus  :: !Int
+    , _ghzcrsHostedZoneCount :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetHostedZoneCountResponse' with the minimum fields required to make a request.

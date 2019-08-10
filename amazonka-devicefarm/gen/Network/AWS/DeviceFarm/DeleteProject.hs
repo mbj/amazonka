@@ -50,9 +50,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteProject' smart constructor.
-newtype DeleteProject = DeleteProject'
-  { _dpArn :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteProject =
+  DeleteProject'
+    { _dpArn :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteProject' with the minimum fields required to make a request.
@@ -106,9 +108,11 @@ instance ToQuery DeleteProject where
 --
 --
 -- /See:/ 'deleteProjectResponse' smart constructor.
-newtype DeleteProjectResponse = DeleteProjectResponse'
-  { _dprsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteProjectResponse =
+  DeleteProjectResponse'
+    { _dprsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteProjectResponse' with the minimum fields required to make a request.

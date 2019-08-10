@@ -50,10 +50,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listDashboards' smart constructor.
-data ListDashboards = ListDashboards'
-  { _ldDashboardNamePrefix :: !(Maybe Text)
-  , _ldNextToken           :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListDashboards =
+  ListDashboards'
+    { _ldDashboardNamePrefix :: !(Maybe Text)
+    , _ldNextToken           :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDashboards' with the minimum fields required to make a request.
@@ -115,11 +117,13 @@ instance ToQuery ListDashboards where
                "NextToken" =: _ldNextToken]
 
 -- | /See:/ 'listDashboardsResponse' smart constructor.
-data ListDashboardsResponse = ListDashboardsResponse'
-  { _ldrsDashboardEntries :: !(Maybe [DashboardEntry])
-  , _ldrsNextToken        :: !(Maybe Text)
-  , _ldrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListDashboardsResponse =
+  ListDashboardsResponse'
+    { _ldrsDashboardEntries :: !(Maybe [DashboardEntry])
+    , _ldrsNextToken        :: !(Maybe Text)
+    , _ldrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDashboardsResponse' with the minimum fields required to make a request.

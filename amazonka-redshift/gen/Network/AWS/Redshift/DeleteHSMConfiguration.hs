@@ -46,9 +46,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteHSMConfiguration' smart constructor.
-newtype DeleteHSMConfiguration = DeleteHSMConfiguration'
-  { _dhcHSMConfigurationIdentifier :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteHSMConfiguration =
+  DeleteHSMConfiguration'
+    { _dhcHSMConfigurationIdentifier :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteHSMConfiguration' with the minimum fields required to make a request.

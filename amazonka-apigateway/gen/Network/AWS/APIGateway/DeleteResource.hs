@@ -47,10 +47,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteResource' smart constructor.
-data DeleteResource = DeleteResource'
-  { _drRestAPIId  :: !Text
-  , _drResourceId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteResource =
+  DeleteResource'
+    { _drRestAPIId  :: !Text
+    , _drResourceId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteResource' with the minimum fields required to make a request.

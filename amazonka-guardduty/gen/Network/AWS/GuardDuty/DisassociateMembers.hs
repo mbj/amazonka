@@ -46,10 +46,12 @@ import Network.AWS.Response
 -- | DisassociateMembers request body.
 --
 -- /See:/ 'disassociateMembers' smart constructor.
-data DisassociateMembers = DisassociateMembers'
-  { _dmsAccountIds :: !(Maybe [Text])
-  , _dmsDetectorId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DisassociateMembers =
+  DisassociateMembers'
+    { _dmsAccountIds :: !(Maybe [Text])
+    , _dmsDetectorId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisassociateMembers' with the minimum fields required to make a request.
@@ -111,10 +113,12 @@ instance ToQuery DisassociateMembers where
         toQuery = const mempty
 
 -- | /See:/ 'disassociateMembersResponse' smart constructor.
-data DisassociateMembersResponse = DisassociateMembersResponse'
-  { _dmrsUnprocessedAccounts :: !(Maybe [UnprocessedAccount])
-  , _dmrsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DisassociateMembersResponse =
+  DisassociateMembersResponse'
+    { _dmrsUnprocessedAccounts :: !(Maybe [UnprocessedAccount])
+    , _dmrsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisassociateMembersResponse' with the minimum fields required to make a request.

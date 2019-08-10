@@ -56,12 +56,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listSteps' smart constructor.
-data ListSteps = ListSteps'
-  { _lsStepIds    :: !(Maybe [Text])
-  , _lsStepStates :: !(Maybe [StepState])
-  , _lsMarker     :: !(Maybe Text)
-  , _lsClusterId  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListSteps =
+  ListSteps'
+    { _lsStepIds    :: !(Maybe [Text])
+    , _lsStepStates :: !(Maybe [StepState])
+    , _lsMarker     :: !(Maybe Text)
+    , _lsClusterId  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListSteps' with the minimum fields required to make a request.
@@ -153,11 +155,13 @@ instance ToQuery ListSteps where
 --
 --
 -- /See:/ 'listStepsResponse' smart constructor.
-data ListStepsResponse = ListStepsResponse'
-  { _lsrsSteps          :: !(Maybe [StepSummary])
-  , _lsrsMarker         :: !(Maybe Text)
-  , _lsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListStepsResponse =
+  ListStepsResponse'
+    { _lsrsSteps          :: !(Maybe [StepSummary])
+    , _lsrsMarker         :: !(Maybe Text)
+    , _lsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListStepsResponse' with the minimum fields required to make a request.

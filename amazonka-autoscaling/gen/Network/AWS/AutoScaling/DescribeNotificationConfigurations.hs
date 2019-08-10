@@ -51,11 +51,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeNotificationConfigurations' smart constructor.
-data DescribeNotificationConfigurations = DescribeNotificationConfigurations'
-  { _dncAutoScalingGroupNames :: !(Maybe [Text])
-  , _dncNextToken             :: !(Maybe Text)
-  , _dncMaxRecords            :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeNotificationConfigurations =
+  DescribeNotificationConfigurations'
+    { _dncAutoScalingGroupNames :: !(Maybe [Text])
+    , _dncNextToken             :: !(Maybe Text)
+    , _dncMaxRecords            :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeNotificationConfigurations' with the minimum fields required to make a request.
@@ -141,11 +143,13 @@ instance ToQuery DescribeNotificationConfigurations
                "MaxRecords" =: _dncMaxRecords]
 
 -- | /See:/ 'describeNotificationConfigurationsResponse' smart constructor.
-data DescribeNotificationConfigurationsResponse = DescribeNotificationConfigurationsResponse'
-  { _dncrsNextToken                  :: !(Maybe Text)
-  , _dncrsResponseStatus             :: !Int
-  , _dncrsNotificationConfigurations :: ![NotificationConfiguration]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeNotificationConfigurationsResponse =
+  DescribeNotificationConfigurationsResponse'
+    { _dncrsNextToken                  :: !(Maybe Text)
+    , _dncrsResponseStatus             :: !Int
+    , _dncrsNotificationConfigurations :: ![NotificationConfiguration]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeNotificationConfigurationsResponse' with the minimum fields required to make a request.

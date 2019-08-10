@@ -50,9 +50,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getTopicRule' smart constructor.
-newtype GetTopicRule = GetTopicRule'
-  { _gtrRuleName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetTopicRule =
+  GetTopicRule'
+    { _gtrRuleName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetTopicRule' with the minimum fields required to make a request.
@@ -99,11 +101,13 @@ instance ToQuery GetTopicRule where
 --
 --
 -- /See:/ 'getTopicRuleResponse' smart constructor.
-data GetTopicRuleResponse = GetTopicRuleResponse'
-  { _gtrrsRule           :: !(Maybe TopicRule)
-  , _gtrrsRuleARN        :: !(Maybe Text)
-  , _gtrrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetTopicRuleResponse =
+  GetTopicRuleResponse'
+    { _gtrrsRule           :: !(Maybe TopicRule)
+    , _gtrrsRuleARN        :: !(Maybe Text)
+    , _gtrrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetTopicRuleResponse' with the minimum fields required to make a request.

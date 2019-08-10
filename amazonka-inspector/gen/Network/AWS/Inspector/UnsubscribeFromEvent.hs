@@ -44,11 +44,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'unsubscribeFromEvent' smart constructor.
-data UnsubscribeFromEvent = UnsubscribeFromEvent'
-  { _ufeResourceARN :: !Text
-  , _ufeEvent       :: !InspectorEvent
-  , _ufeTopicARN    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UnsubscribeFromEvent =
+  UnsubscribeFromEvent'
+    { _ufeResourceARN :: !Text
+    , _ufeEvent       :: !InspectorEvent
+    , _ufeTopicARN    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UnsubscribeFromEvent' with the minimum fields required to make a request.

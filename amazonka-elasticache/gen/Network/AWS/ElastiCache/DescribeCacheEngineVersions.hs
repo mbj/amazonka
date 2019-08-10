@@ -58,14 +58,16 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeCacheEngineVersions' smart constructor.
-data DescribeCacheEngineVersions = DescribeCacheEngineVersions'
-  { _dcevEngineVersion             :: !(Maybe Text)
-  , _dcevCacheParameterGroupFamily :: !(Maybe Text)
-  , _dcevDefaultOnly               :: !(Maybe Bool)
-  , _dcevEngine                    :: !(Maybe Text)
-  , _dcevMarker                    :: !(Maybe Text)
-  , _dcevMaxRecords                :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeCacheEngineVersions =
+  DescribeCacheEngineVersions'
+    { _dcevEngineVersion             :: !(Maybe Text)
+    , _dcevCacheParameterGroupFamily :: !(Maybe Text)
+    , _dcevDefaultOnly               :: !(Maybe Bool)
+    , _dcevEngine                    :: !(Maybe Text)
+    , _dcevMarker                    :: !(Maybe Text)
+    , _dcevMaxRecords                :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeCacheEngineVersions' with the minimum fields required to make a request.
@@ -169,11 +171,13 @@ instance ToQuery DescribeCacheEngineVersions where
 --
 --
 -- /See:/ 'describeCacheEngineVersionsResponse' smart constructor.
-data DescribeCacheEngineVersionsResponse = DescribeCacheEngineVersionsResponse'
-  { _dcevrsCacheEngineVersions :: !(Maybe [CacheEngineVersion])
-  , _dcevrsMarker              :: !(Maybe Text)
-  , _dcevrsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeCacheEngineVersionsResponse =
+  DescribeCacheEngineVersionsResponse'
+    { _dcevrsCacheEngineVersions :: !(Maybe [CacheEngineVersion])
+    , _dcevrsMarker              :: !(Maybe Text)
+    , _dcevrsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeCacheEngineVersionsResponse' with the minimum fields required to make a request.

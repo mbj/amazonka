@@ -53,9 +53,11 @@ import Network.AWS.SNS.Types.Product
 --
 --
 -- /See:/ 'listSubscriptions' smart constructor.
-newtype ListSubscriptions = ListSubscriptions'
-  { _lsNextToken :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ListSubscriptions =
+  ListSubscriptions'
+    { _lsNextToken :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListSubscriptions' with the minimum fields required to make a request.
@@ -113,11 +115,13 @@ instance ToQuery ListSubscriptions where
 --
 --
 -- /See:/ 'listSubscriptionsResponse' smart constructor.
-data ListSubscriptionsResponse = ListSubscriptionsResponse'
-  { _lsrsNextToken      :: !(Maybe Text)
-  , _lsrsSubscriptions  :: !(Maybe [Subscription])
-  , _lsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListSubscriptionsResponse =
+  ListSubscriptionsResponse'
+    { _lsrsNextToken      :: !(Maybe Text)
+    , _lsrsSubscriptions  :: !(Maybe [Subscription])
+    , _lsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListSubscriptionsResponse' with the minimum fields required to make a request.

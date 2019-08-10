@@ -46,11 +46,13 @@ import Network.AWS.WorkMail.Types
 import Network.AWS.WorkMail.Types.Product
 
 -- | /See:/ 'updatePrimaryEmailAddress' smart constructor.
-data UpdatePrimaryEmailAddress = UpdatePrimaryEmailAddress'
-  { _upeaOrganizationId :: !Text
-  , _upeaEntityId       :: !Text
-  , _upeaEmail          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdatePrimaryEmailAddress =
+  UpdatePrimaryEmailAddress'
+    { _upeaOrganizationId :: !Text
+    , _upeaEntityId       :: !Text
+    , _upeaEmail          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdatePrimaryEmailAddress' with the minimum fields required to make a request.
@@ -126,9 +128,11 @@ instance ToQuery UpdatePrimaryEmailAddress where
         toQuery = const mempty
 
 -- | /See:/ 'updatePrimaryEmailAddressResponse' smart constructor.
-newtype UpdatePrimaryEmailAddressResponse = UpdatePrimaryEmailAddressResponse'
-  { _upearsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdatePrimaryEmailAddressResponse =
+  UpdatePrimaryEmailAddressResponse'
+    { _upearsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdatePrimaryEmailAddressResponse' with the minimum fields required to make a request.

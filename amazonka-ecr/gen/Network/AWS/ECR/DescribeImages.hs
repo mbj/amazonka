@@ -54,14 +54,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeImages' smart constructor.
-data DescribeImages = DescribeImages'
-  { _diRegistryId     :: !(Maybe Text)
-  , _diImageIds       :: !(Maybe [ImageIdentifier])
-  , _diNextToken      :: !(Maybe Text)
-  , _diFilter         :: !(Maybe DescribeImagesFilter)
-  , _diMaxResults     :: !(Maybe Nat)
-  , _diRepositoryName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeImages =
+  DescribeImages'
+    { _diRegistryId     :: !(Maybe Text)
+    , _diImageIds       :: !(Maybe [ImageIdentifier])
+    , _diNextToken      :: !(Maybe Text)
+    , _diFilter         :: !(Maybe DescribeImagesFilter)
+    , _diMaxResults     :: !(Maybe Nat)
+    , _diRepositoryName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeImages' with the minimum fields required to make a request.
@@ -167,11 +169,13 @@ instance ToQuery DescribeImages where
         toQuery = const mempty
 
 -- | /See:/ 'describeImagesResponse' smart constructor.
-data DescribeImagesResponse = DescribeImagesResponse'
-  { _dirsImageDetails   :: !(Maybe [ImageDetail])
-  , _dirsNextToken      :: !(Maybe Text)
-  , _dirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeImagesResponse =
+  DescribeImagesResponse'
+    { _dirsImageDetails   :: !(Maybe [ImageDetail])
+    , _dirsNextToken      :: !(Maybe Text)
+    , _dirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeImagesResponse' with the minimum fields required to make a request.

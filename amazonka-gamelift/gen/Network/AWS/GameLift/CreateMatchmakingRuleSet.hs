@@ -72,10 +72,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createMatchmakingRuleSet' smart constructor.
-data CreateMatchmakingRuleSet = CreateMatchmakingRuleSet'
-  { _cmrsName        :: !Text
-  , _cmrsRuleSetBody :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateMatchmakingRuleSet =
+  CreateMatchmakingRuleSet'
+    { _cmrsName        :: !Text
+    , _cmrsRuleSetBody :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateMatchmakingRuleSet' with the minimum fields required to make a request.
@@ -143,10 +145,12 @@ instance ToQuery CreateMatchmakingRuleSet where
 --
 --
 -- /See:/ 'createMatchmakingRuleSetResponse' smart constructor.
-data CreateMatchmakingRuleSetResponse = CreateMatchmakingRuleSetResponse'
-  { _cmrsrsResponseStatus :: !Int
-  , _cmrsrsRuleSet        :: !MatchmakingRuleSet
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateMatchmakingRuleSetResponse =
+  CreateMatchmakingRuleSetResponse'
+    { _cmrsrsResponseStatus :: !Int
+    , _cmrsrsRuleSet        :: !MatchmakingRuleSet
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateMatchmakingRuleSetResponse' with the minimum fields required to make a request.

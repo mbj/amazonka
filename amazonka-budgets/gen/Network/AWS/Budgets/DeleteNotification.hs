@@ -52,11 +52,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteNotification' smart constructor.
-data DeleteNotification = DeleteNotification'
-  { _dnAccountId    :: !Text
-  , _dnBudgetName   :: !Text
-  , _dnNotification :: !Notification
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteNotification =
+  DeleteNotification'
+    { _dnAccountId    :: !Text
+    , _dnBudgetName   :: !Text
+    , _dnNotification :: !Notification
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteNotification' with the minimum fields required to make a request.
@@ -135,9 +137,11 @@ instance ToQuery DeleteNotification where
 --
 --
 -- /See:/ 'deleteNotificationResponse' smart constructor.
-newtype DeleteNotificationResponse = DeleteNotificationResponse'
-  { _dnrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteNotificationResponse =
+  DeleteNotificationResponse'
+    { _dnrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteNotificationResponse' with the minimum fields required to make a request.

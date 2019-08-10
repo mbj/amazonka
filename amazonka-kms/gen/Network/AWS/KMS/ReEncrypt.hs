@@ -55,13 +55,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'reEncrypt' smart constructor.
-data ReEncrypt = ReEncrypt'
-  { _reDestinationEncryptionContext :: !(Maybe (Map Text Text))
-  , _reSourceEncryptionContext      :: !(Maybe (Map Text Text))
-  , _reGrantTokens                  :: !(Maybe [Text])
-  , _reCiphertextBlob               :: !Base64
-  , _reDestinationKeyId             :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReEncrypt =
+  ReEncrypt'
+    { _reDestinationEncryptionContext :: !(Maybe (Map Text Text))
+    , _reSourceEncryptionContext      :: !(Maybe (Map Text Text))
+    , _reGrantTokens                  :: !(Maybe [Text])
+    , _reCiphertextBlob               :: !Base64
+    , _reDestinationKeyId             :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReEncrypt' with the minimum fields required to make a request.
@@ -154,12 +156,14 @@ instance ToQuery ReEncrypt where
         toQuery = const mempty
 
 -- | /See:/ 'reEncryptResponse' smart constructor.
-data ReEncryptResponse = ReEncryptResponse'
-  { _rersSourceKeyId    :: !(Maybe Text)
-  , _rersKeyId          :: !(Maybe Text)
-  , _rersCiphertextBlob :: !(Maybe Base64)
-  , _rersResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReEncryptResponse =
+  ReEncryptResponse'
+    { _rersSourceKeyId    :: !(Maybe Text)
+    , _rersKeyId          :: !(Maybe Text)
+    , _rersCiphertextBlob :: !(Maybe Base64)
+    , _rersResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReEncryptResponse' with the minimum fields required to make a request.

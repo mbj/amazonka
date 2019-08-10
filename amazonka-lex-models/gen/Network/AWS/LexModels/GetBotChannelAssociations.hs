@@ -55,13 +55,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getBotChannelAssociations' smart constructor.
-data GetBotChannelAssociations = GetBotChannelAssociations'
-  { _gbcaNameContains :: !(Maybe Text)
-  , _gbcaNextToken    :: !(Maybe Text)
-  , _gbcaMaxResults   :: !(Maybe Nat)
-  , _gbcaBotName      :: !Text
-  , _gbcaBotAlias     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetBotChannelAssociations =
+  GetBotChannelAssociations'
+    { _gbcaNameContains :: !(Maybe Text)
+    , _gbcaNextToken    :: !(Maybe Text)
+    , _gbcaMaxResults   :: !(Maybe Nat)
+    , _gbcaBotName      :: !Text
+    , _gbcaBotAlias     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBotChannelAssociations' with the minimum fields required to make a request.
@@ -156,11 +158,13 @@ instance ToQuery GetBotChannelAssociations where
                "maxResults" =: _gbcaMaxResults]
 
 -- | /See:/ 'getBotChannelAssociationsResponse' smart constructor.
-data GetBotChannelAssociationsResponse = GetBotChannelAssociationsResponse'
-  { _gbcasrsBotChannelAssociations :: !(Maybe [BotChannelAssociation])
-  , _gbcasrsNextToken              :: !(Maybe Text)
-  , _gbcasrsResponseStatus         :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data GetBotChannelAssociationsResponse =
+  GetBotChannelAssociationsResponse'
+    { _gbcasrsBotChannelAssociations :: !(Maybe [BotChannelAssociation])
+    , _gbcasrsNextToken              :: !(Maybe Text)
+    , _gbcasrsResponseStatus         :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBotChannelAssociationsResponse' with the minimum fields required to make a request.

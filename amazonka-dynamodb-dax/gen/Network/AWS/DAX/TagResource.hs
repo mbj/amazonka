@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'tagResource' smart constructor.
-data TagResource = TagResource'
-  { _trResourceName :: !Text
-  , _trTags         :: ![Tag]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TagResource =
+  TagResource'
+    { _trResourceName :: !Text
+    , _trTags         :: ![Tag]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TagResource' with the minimum fields required to make a request.
@@ -110,10 +112,12 @@ instance ToQuery TagResource where
         toQuery = const mempty
 
 -- | /See:/ 'tagResourceResponse' smart constructor.
-data TagResourceResponse = TagResourceResponse'
-  { _trrsTags           :: !(Maybe [Tag])
-  , _trrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TagResourceResponse =
+  TagResourceResponse'
+    { _trrsTags           :: !(Maybe [Tag])
+    , _trrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TagResourceResponse' with the minimum fields required to make a request.

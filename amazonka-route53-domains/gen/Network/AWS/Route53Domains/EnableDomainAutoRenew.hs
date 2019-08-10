@@ -46,9 +46,11 @@ import Network.AWS.Route53Domains.Types
 import Network.AWS.Route53Domains.Types.Product
 
 -- | /See:/ 'enableDomainAutoRenew' smart constructor.
-newtype EnableDomainAutoRenew = EnableDomainAutoRenew'
-  { _edarDomainName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype EnableDomainAutoRenew =
+  EnableDomainAutoRenew'
+    { _edarDomainName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EnableDomainAutoRenew' with the minimum fields required to make a request.
@@ -103,9 +105,11 @@ instance ToQuery EnableDomainAutoRenew where
         toQuery = const mempty
 
 -- | /See:/ 'enableDomainAutoRenewResponse' smart constructor.
-newtype EnableDomainAutoRenewResponse = EnableDomainAutoRenewResponse'
-  { _edarrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype EnableDomainAutoRenewResponse =
+  EnableDomainAutoRenewResponse'
+    { _edarrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EnableDomainAutoRenewResponse' with the minimum fields required to make a request.

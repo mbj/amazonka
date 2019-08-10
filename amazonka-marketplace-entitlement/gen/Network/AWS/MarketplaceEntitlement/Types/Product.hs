@@ -26,13 +26,15 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'entitlement' smart constructor.
-data Entitlement = Entitlement'
-  { _eDimension          :: !(Maybe Text)
-  , _eValue              :: !(Maybe EntitlementValue)
-  , _eExpirationDate     :: !(Maybe POSIX)
-  , _eCustomerIdentifier :: !(Maybe Text)
-  , _eProductCode        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Entitlement =
+  Entitlement'
+    { _eDimension          :: !(Maybe Text)
+    , _eValue              :: !(Maybe EntitlementValue)
+    , _eExpirationDate     :: !(Maybe POSIX)
+    , _eCustomerIdentifier :: !(Maybe Text)
+    , _eProductCode        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Entitlement' with the minimum fields required to make a request.
@@ -99,12 +101,14 @@ instance NFData Entitlement where
 --
 --
 -- /See:/ 'entitlementValue' smart constructor.
-data EntitlementValue = EntitlementValue'
-  { _evIntegerValue :: !(Maybe Int)
-  , _evDoubleValue  :: !(Maybe Double)
-  , _evStringValue  :: !(Maybe Text)
-  , _evBooleanValue :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EntitlementValue =
+  EntitlementValue'
+    { _evIntegerValue :: !(Maybe Int)
+    , _evDoubleValue  :: !(Maybe Double)
+    , _evStringValue  :: !(Maybe Text)
+    , _evBooleanValue :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EntitlementValue' with the minimum fields required to make a request.

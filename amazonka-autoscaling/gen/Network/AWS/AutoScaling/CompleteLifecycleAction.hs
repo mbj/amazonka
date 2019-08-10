@@ -64,13 +64,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'completeLifecycleAction' smart constructor.
-data CompleteLifecycleAction = CompleteLifecycleAction'
-  { _claInstanceId            :: !(Maybe Text)
-  , _claLifecycleActionToken  :: !(Maybe Text)
-  , _claLifecycleHookName     :: !Text
-  , _claAutoScalingGroupName  :: !Text
-  , _claLifecycleActionResult :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CompleteLifecycleAction =
+  CompleteLifecycleAction'
+    { _claInstanceId            :: !(Maybe Text)
+    , _claLifecycleActionToken  :: !(Maybe Text)
+    , _claLifecycleHookName     :: !Text
+    , _claAutoScalingGroupName  :: !Text
+    , _claLifecycleActionResult :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CompleteLifecycleAction' with the minimum fields required to make a request.
@@ -154,9 +156,11 @@ instance ToQuery CompleteLifecycleAction where
                "LifecycleActionResult" =: _claLifecycleActionResult]
 
 -- | /See:/ 'completeLifecycleActionResponse' smart constructor.
-newtype CompleteLifecycleActionResponse = CompleteLifecycleActionResponse'
-  { _clarsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CompleteLifecycleActionResponse =
+  CompleteLifecycleActionResponse'
+    { _clarsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CompleteLifecycleActionResponse' with the minimum fields required to make a request.

@@ -70,34 +70,36 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'restoreDBClusterFromS3' smart constructor.
-data RestoreDBClusterFromS3 = RestoreDBClusterFromS3'
-  { _rdcfsEngineVersion                   :: !(Maybe Text)
-  , _rdcfsStorageEncrypted                :: !(Maybe Bool)
-  , _rdcfsDBSubnetGroupName               :: !(Maybe Text)
-  , _rdcfsBacktrackWindow                 :: !(Maybe Integer)
-  , _rdcfsPreferredMaintenanceWindow      :: !(Maybe Text)
-  , _rdcfsAvailabilityZones               :: !(Maybe [Text])
-  , _rdcfsCharacterSetName                :: !(Maybe Text)
-  , _rdcfsKMSKeyId                        :: !(Maybe Text)
-  , _rdcfsPreferredBackupWindow           :: !(Maybe Text)
-  , _rdcfsBackupRetentionPeriod           :: !(Maybe Int)
-  , _rdcfsVPCSecurityGroupIds             :: !(Maybe [Text])
-  , _rdcfsDatabaseName                    :: !(Maybe Text)
-  , _rdcfsDBClusterParameterGroupName     :: !(Maybe Text)
-  , _rdcfsS3Prefix                        :: !(Maybe Text)
-  , _rdcfsOptionGroupName                 :: !(Maybe Text)
-  , _rdcfsTags                            :: !(Maybe [Tag])
-  , _rdcfsPort                            :: !(Maybe Int)
-  , _rdcfsEnableIAMDatabaseAuthentication :: !(Maybe Bool)
-  , _rdcfsDBClusterIdentifier             :: !Text
-  , _rdcfsEngine                          :: !Text
-  , _rdcfsMasterUsername                  :: !Text
-  , _rdcfsMasterUserPassword              :: !Text
-  , _rdcfsSourceEngine                    :: !Text
-  , _rdcfsSourceEngineVersion             :: !Text
-  , _rdcfsS3BucketName                    :: !Text
-  , _rdcfsS3IngestionRoleARN              :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RestoreDBClusterFromS3 =
+  RestoreDBClusterFromS3'
+    { _rdcfsEngineVersion                   :: !(Maybe Text)
+    , _rdcfsStorageEncrypted                :: !(Maybe Bool)
+    , _rdcfsDBSubnetGroupName               :: !(Maybe Text)
+    , _rdcfsBacktrackWindow                 :: !(Maybe Integer)
+    , _rdcfsPreferredMaintenanceWindow      :: !(Maybe Text)
+    , _rdcfsAvailabilityZones               :: !(Maybe [Text])
+    , _rdcfsCharacterSetName                :: !(Maybe Text)
+    , _rdcfsKMSKeyId                        :: !(Maybe Text)
+    , _rdcfsPreferredBackupWindow           :: !(Maybe Text)
+    , _rdcfsBackupRetentionPeriod           :: !(Maybe Int)
+    , _rdcfsVPCSecurityGroupIds             :: !(Maybe [Text])
+    , _rdcfsDatabaseName                    :: !(Maybe Text)
+    , _rdcfsDBClusterParameterGroupName     :: !(Maybe Text)
+    , _rdcfsS3Prefix                        :: !(Maybe Text)
+    , _rdcfsOptionGroupName                 :: !(Maybe Text)
+    , _rdcfsTags                            :: !(Maybe [Tag])
+    , _rdcfsPort                            :: !(Maybe Int)
+    , _rdcfsEnableIAMDatabaseAuthentication :: !(Maybe Bool)
+    , _rdcfsDBClusterIdentifier             :: !Text
+    , _rdcfsEngine                          :: !Text
+    , _rdcfsMasterUsername                  :: !Text
+    , _rdcfsMasterUserPassword              :: !Text
+    , _rdcfsSourceEngine                    :: !Text
+    , _rdcfsSourceEngineVersion             :: !Text
+    , _rdcfsS3BucketName                    :: !Text
+    , _rdcfsS3IngestionRoleARN              :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RestoreDBClusterFromS3' with the minimum fields required to make a request.
@@ -365,10 +367,12 @@ instance ToQuery RestoreDBClusterFromS3 where
                "S3IngestionRoleArn" =: _rdcfsS3IngestionRoleARN]
 
 -- | /See:/ 'restoreDBClusterFromS3Response' smart constructor.
-data RestoreDBClusterFromS3Response = RestoreDBClusterFromS3Response'
-  { _rdcfsrsDBCluster      :: !(Maybe DBCluster)
-  , _rdcfsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RestoreDBClusterFromS3Response =
+  RestoreDBClusterFromS3Response'
+    { _rdcfsrsDBCluster      :: !(Maybe DBCluster)
+    , _rdcfsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RestoreDBClusterFromS3Response' with the minimum fields required to make a request.

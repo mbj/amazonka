@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeEntityAggregates' smart constructor.
-newtype DescribeEntityAggregates = DescribeEntityAggregates'
-  { _deaEventARNs :: Maybe (List1 Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeEntityAggregates =
+  DescribeEntityAggregates'
+    { _deaEventARNs :: Maybe (List1 Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEntityAggregates' with the minimum fields required to make a request.
@@ -101,10 +103,12 @@ instance ToQuery DescribeEntityAggregates where
         toQuery = const mempty
 
 -- | /See:/ 'describeEntityAggregatesResponse' smart constructor.
-data DescribeEntityAggregatesResponse = DescribeEntityAggregatesResponse'
-  { _dearsEntityAggregates :: !(Maybe [EntityAggregate])
-  , _dearsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeEntityAggregatesResponse =
+  DescribeEntityAggregatesResponse'
+    { _dearsEntityAggregates :: !(Maybe [EntityAggregate])
+    , _dearsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEntityAggregatesResponse' with the minimum fields required to make a request.

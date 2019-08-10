@@ -61,21 +61,23 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createReplicationInstance' smart constructor.
-data CreateReplicationInstance = CreateReplicationInstance'
-  { _criEngineVersion                    :: !(Maybe Text)
-  , _criPubliclyAccessible               :: !(Maybe Bool)
-  , _criAutoMinorVersionUpgrade          :: !(Maybe Bool)
-  , _criReplicationSubnetGroupIdentifier :: !(Maybe Text)
-  , _criPreferredMaintenanceWindow       :: !(Maybe Text)
-  , _criKMSKeyId                         :: !(Maybe Text)
-  , _criAvailabilityZone                 :: !(Maybe Text)
-  , _criVPCSecurityGroupIds              :: !(Maybe [Text])
-  , _criMultiAZ                          :: !(Maybe Bool)
-  , _criAllocatedStorage                 :: !(Maybe Int)
-  , _criTags                             :: !(Maybe [Tag])
-  , _criReplicationInstanceIdentifier    :: !Text
-  , _criReplicationInstanceClass         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateReplicationInstance =
+  CreateReplicationInstance'
+    { _criEngineVersion                    :: !(Maybe Text)
+    , _criPubliclyAccessible               :: !(Maybe Bool)
+    , _criAutoMinorVersionUpgrade          :: !(Maybe Bool)
+    , _criReplicationSubnetGroupIdentifier :: !(Maybe Text)
+    , _criPreferredMaintenanceWindow       :: !(Maybe Text)
+    , _criKMSKeyId                         :: !(Maybe Text)
+    , _criAvailabilityZone                 :: !(Maybe Text)
+    , _criVPCSecurityGroupIds              :: !(Maybe [Text])
+    , _criMultiAZ                          :: !(Maybe Bool)
+    , _criAllocatedStorage                 :: !(Maybe Int)
+    , _criTags                             :: !(Maybe [Tag])
+    , _criReplicationInstanceIdentifier    :: !Text
+    , _criReplicationInstanceClass         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateReplicationInstance' with the minimum fields required to make a request.
@@ -243,10 +245,12 @@ instance ToQuery CreateReplicationInstance where
 --
 --
 -- /See:/ 'createReplicationInstanceResponse' smart constructor.
-data CreateReplicationInstanceResponse = CreateReplicationInstanceResponse'
-  { _crirsReplicationInstance :: !(Maybe ReplicationInstance)
-  , _crirsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateReplicationInstanceResponse =
+  CreateReplicationInstanceResponse'
+    { _crirsReplicationInstance :: !(Maybe ReplicationInstance)
+    , _crirsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateReplicationInstanceResponse' with the minimum fields required to make a request.

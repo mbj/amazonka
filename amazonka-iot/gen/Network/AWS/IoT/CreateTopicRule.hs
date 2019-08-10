@@ -47,10 +47,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createTopicRule' smart constructor.
-data CreateTopicRule = CreateTopicRule'
-  { _ctrRuleName         :: !Text
-  , _ctrTopicRulePayload :: !TopicRulePayload
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateTopicRule =
+  CreateTopicRule'
+    { _ctrRuleName         :: !Text
+    , _ctrTopicRulePayload :: !TopicRulePayload
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateTopicRule' with the minimum fields required to make a request.

@@ -26,11 +26,13 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'cognitoIdentityProvider' smart constructor.
-data CognitoIdentityProvider = CognitoIdentityProvider'
-  { _cipClientId             :: !(Maybe Text)
-  , _cipServerSideTokenCheck :: !(Maybe Bool)
-  , _cipProviderName         :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CognitoIdentityProvider =
+  CognitoIdentityProvider'
+    { _cipClientId             :: !(Maybe Text)
+    , _cipServerSideTokenCheck :: !(Maybe Bool)
+    , _cipProviderName         :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CognitoIdentityProvider' with the minimum fields required to make a request.
@@ -90,12 +92,14 @@ instance ToJSON CognitoIdentityProvider where
 --
 --
 -- /See:/ 'credentials' smart constructor.
-data Credentials = Credentials'
-  { _cSessionToken :: !(Maybe Text)
-  , _cExpiration   :: !(Maybe POSIX)
-  , _cSecretKey    :: !(Maybe Text)
-  , _cAccessKeyId  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Credentials =
+  Credentials'
+    { _cSessionToken :: !(Maybe Text)
+    , _cExpiration   :: !(Maybe POSIX)
+    , _cSecretKey    :: !(Maybe Text)
+    , _cAccessKeyId  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Credentials' with the minimum fields required to make a request.
@@ -154,12 +158,14 @@ instance NFData Credentials where
 --
 --
 -- /See:/ 'identityDescription' smart constructor.
-data IdentityDescription = IdentityDescription'
-  { _idLastModifiedDate :: !(Maybe POSIX)
-  , _idCreationDate     :: !(Maybe POSIX)
-  , _idLogins           :: !(Maybe [Text])
-  , _idIdentityId       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data IdentityDescription =
+  IdentityDescription'
+    { _idLastModifiedDate :: !(Maybe POSIX)
+    , _idCreationDate     :: !(Maybe POSIX)
+    , _idLogins           :: !(Maybe [Text])
+    , _idIdentityId       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'IdentityDescription' with the minimum fields required to make a request.
@@ -218,16 +224,18 @@ instance NFData IdentityDescription where
 --
 --
 -- /See:/ 'identityPool' smart constructor.
-data IdentityPool = IdentityPool'
-  { _ipSamlProviderARNs               :: !(Maybe [Text])
-  , _ipSupportedLoginProviders        :: !(Maybe (Map Text Text))
-  , _ipDeveloperProviderName          :: !(Maybe Text)
-  , _ipOpenIdConnectProviderARNs      :: !(Maybe [Text])
-  , _ipCognitoIdentityProviders       :: !(Maybe [CognitoIdentityProvider])
-  , _ipIdentityPoolId                 :: !Text
-  , _ipIdentityPoolName               :: !Text
-  , _ipAllowUnauthenticatedIdentities :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data IdentityPool =
+  IdentityPool'
+    { _ipSamlProviderARNs               :: !(Maybe [Text])
+    , _ipSupportedLoginProviders        :: !(Maybe (Map Text Text))
+    , _ipDeveloperProviderName          :: !(Maybe Text)
+    , _ipOpenIdConnectProviderARNs      :: !(Maybe [Text])
+    , _ipCognitoIdentityProviders       :: !(Maybe [CognitoIdentityProvider])
+    , _ipIdentityPoolId                 :: !Text
+    , _ipIdentityPoolName               :: !Text
+    , _ipAllowUnauthenticatedIdentities :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'IdentityPool' with the minimum fields required to make a request.
@@ -341,10 +349,12 @@ instance ToJSON IdentityPool where
 --
 --
 -- /See:/ 'identityPoolShortDescription' smart constructor.
-data IdentityPoolShortDescription = IdentityPoolShortDescription'
-  { _ipsdIdentityPoolId   :: !(Maybe Text)
-  , _ipsdIdentityPoolName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data IdentityPoolShortDescription =
+  IdentityPoolShortDescription'
+    { _ipsdIdentityPoolId   :: !(Maybe Text)
+    , _ipsdIdentityPoolName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'IdentityPoolShortDescription' with the minimum fields required to make a request.
@@ -386,12 +396,14 @@ instance NFData IdentityPoolShortDescription where
 --
 --
 -- /See:/ 'mappingRule' smart constructor.
-data MappingRule = MappingRule'
-  { _mrClaim     :: !Text
-  , _mrMatchType :: !MappingRuleMatchType
-  , _mrValue     :: !Text
-  , _mrRoleARN   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MappingRule =
+  MappingRule'
+    { _mrClaim     :: !Text
+    , _mrMatchType :: !MappingRuleMatchType
+    , _mrValue     :: !Text
+    , _mrRoleARN   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MappingRule' with the minimum fields required to make a request.
@@ -463,11 +475,13 @@ instance ToJSON MappingRule where
 --
 --
 -- /See:/ 'roleMapping' smart constructor.
-data RoleMapping = RoleMapping'
-  { _rmRulesConfiguration      :: !(Maybe RulesConfigurationType)
-  , _rmAmbiguousRoleResolution :: !(Maybe AmbiguousRoleResolutionType)
-  , _rmType                    :: !RoleMappingType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RoleMapping =
+  RoleMapping'
+    { _rmRulesConfiguration      :: !(Maybe RulesConfigurationType)
+    , _rmAmbiguousRoleResolution :: !(Maybe AmbiguousRoleResolutionType)
+    , _rmType                    :: !RoleMappingType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RoleMapping' with the minimum fields required to make a request.
@@ -529,9 +543,11 @@ instance ToJSON RoleMapping where
 --
 --
 -- /See:/ 'rulesConfigurationType' smart constructor.
-newtype RulesConfigurationType = RulesConfigurationType'
-  { _rctRules :: List1 MappingRule
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RulesConfigurationType =
+  RulesConfigurationType'
+    { _rctRules :: List1 MappingRule
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RulesConfigurationType' with the minimum fields required to make a request.
@@ -568,10 +584,12 @@ instance ToJSON RulesConfigurationType where
 --
 --
 -- /See:/ 'unprocessedIdentityId' smart constructor.
-data UnprocessedIdentityId = UnprocessedIdentityId'
-  { _uiiErrorCode  :: !(Maybe CognitoErrorCode)
-  , _uiiIdentityId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UnprocessedIdentityId =
+  UnprocessedIdentityId'
+    { _uiiErrorCode  :: !(Maybe CognitoErrorCode)
+    , _uiiIdentityId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UnprocessedIdentityId' with the minimum fields required to make a request.

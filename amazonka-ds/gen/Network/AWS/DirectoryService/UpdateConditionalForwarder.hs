@@ -50,11 +50,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateConditionalForwarder' smart constructor.
-data UpdateConditionalForwarder = UpdateConditionalForwarder'
-  { _ucfDirectoryId      :: !Text
-  , _ucfRemoteDomainName :: !Text
-  , _ucfDNSIPAddrs       :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateConditionalForwarder =
+  UpdateConditionalForwarder'
+    { _ucfDirectoryId      :: !Text
+    , _ucfRemoteDomainName :: !Text
+    , _ucfDNSIPAddrs       :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateConditionalForwarder' with the minimum fields required to make a request.
@@ -133,9 +135,11 @@ instance ToQuery UpdateConditionalForwarder where
 --
 --
 -- /See:/ 'updateConditionalForwarderResponse' smart constructor.
-newtype UpdateConditionalForwarderResponse = UpdateConditionalForwarderResponse'
-  { _ucfrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateConditionalForwarderResponse =
+  UpdateConditionalForwarderResponse'
+    { _ucfrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateConditionalForwarderResponse' with the minimum fields required to make a request.

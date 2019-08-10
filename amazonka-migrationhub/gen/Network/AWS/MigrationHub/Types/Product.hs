@@ -26,10 +26,12 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'createdArtifact' smart constructor.
-data CreatedArtifact = CreatedArtifact'
-  { _caDescription :: !(Maybe Text)
-  , _caName        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreatedArtifact =
+  CreatedArtifact'
+    { _caDescription :: !(Maybe Text)
+    , _caName        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreatedArtifact' with the minimum fields required to make a request.
@@ -77,10 +79,12 @@ instance ToJSON CreatedArtifact where
 --
 --
 -- /See:/ 'discoveredResource' smart constructor.
-data DiscoveredResource = DiscoveredResource'
-  { _drDescription     :: !(Maybe Text)
-  , _drConfigurationId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DiscoveredResource =
+  DiscoveredResource'
+    { _drDescription     :: !(Maybe Text)
+    , _drConfigurationId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DiscoveredResource' with the minimum fields required to make a request.
@@ -129,13 +133,15 @@ instance ToJSON DiscoveredResource where
 --
 --
 -- /See:/ 'migrationTask' smart constructor.
-data MigrationTask = MigrationTask'
-  { _mtUpdateDateTime        :: !(Maybe POSIX)
-  , _mtResourceAttributeList :: !(Maybe [ResourceAttribute])
-  , _mtTask                  :: !(Maybe Task)
-  , _mtProgressUpdateStream  :: !(Maybe Text)
-  , _mtMigrationTaskName     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MigrationTask =
+  MigrationTask'
+    { _mtUpdateDateTime        :: !(Maybe POSIX)
+    , _mtResourceAttributeList :: !(Maybe [ResourceAttribute])
+    , _mtTask                  :: !(Maybe Task)
+    , _mtProgressUpdateStream  :: !(Maybe Text)
+    , _mtMigrationTaskName     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MigrationTask' with the minimum fields required to make a request.
@@ -203,14 +209,16 @@ instance NFData MigrationTask where
 --
 --
 -- /See:/ 'migrationTaskSummary' smart constructor.
-data MigrationTaskSummary = MigrationTaskSummary'
-  { _mtsStatus               :: !(Maybe MigrationStatus)
-  , _mtsUpdateDateTime       :: !(Maybe POSIX)
-  , _mtsProgressPercent      :: !(Maybe Nat)
-  , _mtsStatusDetail         :: !(Maybe Text)
-  , _mtsProgressUpdateStream :: !(Maybe Text)
-  , _mtsMigrationTaskName    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MigrationTaskSummary =
+  MigrationTaskSummary'
+    { _mtsStatus               :: !(Maybe MigrationStatus)
+    , _mtsUpdateDateTime       :: !(Maybe POSIX)
+    , _mtsProgressPercent      :: !(Maybe Nat)
+    , _mtsStatusDetail         :: !(Maybe Text)
+    , _mtsProgressUpdateStream :: !(Maybe Text)
+    , _mtsMigrationTaskName    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MigrationTaskSummary' with the minimum fields required to make a request.
@@ -285,9 +293,11 @@ instance NFData MigrationTaskSummary where
 --
 --
 -- /See:/ 'progressUpdateStreamSummary' smart constructor.
-newtype ProgressUpdateStreamSummary = ProgressUpdateStreamSummary'
-  { _pussProgressUpdateStreamName :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ProgressUpdateStreamSummary =
+  ProgressUpdateStreamSummary'
+    { _pussProgressUpdateStreamName :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ProgressUpdateStreamSummary' with the minimum fields required to make a request.
@@ -337,10 +347,12 @@ instance NFData ProgressUpdateStreamSummary where
 --
 --
 -- /See:/ 'resourceAttribute' smart constructor.
-data ResourceAttribute = ResourceAttribute'
-  { _raType  :: !ResourceAttributeType
-  , _raValue :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResourceAttribute =
+  ResourceAttribute'
+    { _raType  :: !ResourceAttributeType
+    , _raValue :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResourceAttribute' with the minimum fields required to make a request.
@@ -389,11 +401,13 @@ instance ToJSON ResourceAttribute where
 --
 --
 -- /See:/ 'task' smart constructor.
-data Task = Task'
-  { _tProgressPercent :: !(Maybe Nat)
-  , _tStatusDetail    :: !(Maybe Text)
-  , _tStatus          :: !MigrationStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Task =
+  Task'
+    { _tProgressPercent :: !(Maybe Nat)
+    , _tStatusDetail    :: !(Maybe Text)
+    , _tStatus          :: !MigrationStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Task' with the minimum fields required to make a request.

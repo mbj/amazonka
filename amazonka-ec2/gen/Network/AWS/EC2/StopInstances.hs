@@ -61,11 +61,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'stopInstances' smart constructor.
-data StopInstances = StopInstances'
-  { _siForce       :: !(Maybe Bool)
-  , _siDryRun      :: !(Maybe Bool)
-  , _siInstanceIds :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StopInstances =
+  StopInstances'
+    { _siForce       :: !(Maybe Bool)
+    , _siDryRun      :: !(Maybe Bool)
+    , _siInstanceIds :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopInstances' with the minimum fields required to make a request.
@@ -130,10 +132,12 @@ instance ToQuery StopInstances where
 --
 --
 -- /See:/ 'stopInstancesResponse' smart constructor.
-data StopInstancesResponse = StopInstancesResponse'
-  { _sirsStoppingInstances :: !(Maybe [InstanceStateChange])
-  , _sirsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StopInstancesResponse =
+  StopInstancesResponse'
+    { _sirsStoppingInstances :: !(Maybe [InstanceStateChange])
+    , _sirsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopInstancesResponse' with the minimum fields required to make a request.

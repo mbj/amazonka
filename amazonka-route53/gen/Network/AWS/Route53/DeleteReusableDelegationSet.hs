@@ -52,9 +52,11 @@ import Network.AWS.Route53.Types.Product
 --
 --
 -- /See:/ 'deleteReusableDelegationSet' smart constructor.
-newtype DeleteReusableDelegationSet = DeleteReusableDelegationSet'
-  { _drdsId :: ResourceId
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteReusableDelegationSet =
+  DeleteReusableDelegationSet'
+    { _drdsId :: ResourceId
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteReusableDelegationSet' with the minimum fields required to make a request.
@@ -102,9 +104,11 @@ instance ToQuery DeleteReusableDelegationSet where
 --
 --
 -- /See:/ 'deleteReusableDelegationSetResponse' smart constructor.
-newtype DeleteReusableDelegationSetResponse = DeleteReusableDelegationSetResponse'
-  { _drdsrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteReusableDelegationSetResponse =
+  DeleteReusableDelegationSetResponse'
+    { _drdsrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteReusableDelegationSetResponse' with the minimum fields required to make a request.

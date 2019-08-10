@@ -48,9 +48,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'startLogging' smart constructor.
-newtype StartLogging = StartLogging'
-  { _sName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StartLogging =
+  StartLogging'
+    { _sName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartLogging' with the minimum fields required to make a request.
@@ -105,9 +107,11 @@ instance ToQuery StartLogging where
 --
 --
 -- /See:/ 'startLoggingResponse' smart constructor.
-newtype StartLoggingResponse = StartLoggingResponse'
-  { _srsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StartLoggingResponse =
+  StartLoggingResponse'
+    { _srsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartLoggingResponse' with the minimum fields required to make a request.

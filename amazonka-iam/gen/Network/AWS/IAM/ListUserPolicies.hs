@@ -56,11 +56,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listUserPolicies' smart constructor.
-data ListUserPolicies = ListUserPolicies'
-  { _lupMarker   :: !(Maybe Text)
-  , _lupMaxItems :: !(Maybe Nat)
-  , _lupUserName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListUserPolicies =
+  ListUserPolicies'
+    { _lupMarker   :: !(Maybe Text)
+    , _lupMaxItems :: !(Maybe Nat)
+    , _lupUserName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListUserPolicies' with the minimum fields required to make a request.
@@ -135,12 +137,14 @@ instance ToQuery ListUserPolicies where
 --
 --
 -- /See:/ 'listUserPoliciesResponse' smart constructor.
-data ListUserPoliciesResponse = ListUserPoliciesResponse'
-  { _luprsMarker         :: !(Maybe Text)
-  , _luprsIsTruncated    :: !(Maybe Bool)
-  , _luprsResponseStatus :: !Int
-  , _luprsPolicyNames    :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListUserPoliciesResponse =
+  ListUserPoliciesResponse'
+    { _luprsMarker         :: !(Maybe Text)
+    , _luprsIsTruncated    :: !(Maybe Bool)
+    , _luprsResponseStatus :: !Int
+    , _luprsPolicyNames    :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListUserPoliciesResponse' with the minimum fields required to make a request.

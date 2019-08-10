@@ -50,12 +50,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'setUICustomization' smart constructor.
-data SetUICustomization = SetUICustomization'
-  { _suicClientId   :: !(Maybe (Sensitive Text))
-  , _suicCSS        :: !(Maybe Text)
-  , _suicImageFile  :: !(Maybe Base64)
-  , _suicUserPoolId :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data SetUICustomization =
+  SetUICustomization'
+    { _suicClientId   :: !(Maybe (Sensitive Text))
+    , _suicCSS        :: !(Maybe Text)
+    , _suicImageFile  :: !(Maybe Base64)
+    , _suicUserPoolId :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetUICustomization' with the minimum fields required to make a request.
@@ -137,10 +139,12 @@ instance ToQuery SetUICustomization where
         toQuery = const mempty
 
 -- | /See:/ 'setUICustomizationResponse' smart constructor.
-data SetUICustomizationResponse = SetUICustomizationResponse'
-  { _suicrsResponseStatus  :: !Int
-  , _suicrsUICustomization :: !UICustomizationType
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data SetUICustomizationResponse =
+  SetUICustomizationResponse'
+    { _suicrsResponseStatus  :: !Int
+    , _suicrsUICustomization :: !UICustomizationType
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetUICustomizationResponse' with the minimum fields required to make a request.

@@ -51,10 +51,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'moveAddressToVPC' smart constructor.
-data MoveAddressToVPC = MoveAddressToVPC'
-  { _matvDryRun   :: !(Maybe Bool)
-  , _matvPublicIP :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MoveAddressToVPC =
+  MoveAddressToVPC'
+    { _matvDryRun   :: !(Maybe Bool)
+    , _matvPublicIP :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MoveAddressToVPC' with the minimum fields required to make a request.
@@ -111,11 +113,13 @@ instance ToQuery MoveAddressToVPC where
 --
 --
 -- /See:/ 'moveAddressToVPCResponse' smart constructor.
-data MoveAddressToVPCResponse = MoveAddressToVPCResponse'
-  { _matvrsStatus         :: !(Maybe AddressStatus)
-  , _matvrsAllocationId   :: !(Maybe Text)
-  , _matvrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MoveAddressToVPCResponse =
+  MoveAddressToVPCResponse'
+    { _matvrsStatus         :: !(Maybe AddressStatus)
+    , _matvrsAllocationId   :: !(Maybe Text)
+    , _matvrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MoveAddressToVPCResponse' with the minimum fields required to make a request.

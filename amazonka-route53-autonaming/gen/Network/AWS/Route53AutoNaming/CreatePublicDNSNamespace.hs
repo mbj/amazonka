@@ -47,11 +47,13 @@ import Network.AWS.Route53AutoNaming.Types
 import Network.AWS.Route53AutoNaming.Types.Product
 
 -- | /See:/ 'createPublicDNSNamespace' smart constructor.
-data CreatePublicDNSNamespace = CreatePublicDNSNamespace'
-  { _cpdnCreatorRequestId :: !(Maybe Text)
-  , _cpdnDescription      :: !(Maybe Text)
-  , _cpdnName             :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreatePublicDNSNamespace =
+  CreatePublicDNSNamespace'
+    { _cpdnCreatorRequestId :: !(Maybe Text)
+    , _cpdnDescription      :: !(Maybe Text)
+    , _cpdnName             :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreatePublicDNSNamespace' with the minimum fields required to make a request.
@@ -125,10 +127,12 @@ instance ToQuery CreatePublicDNSNamespace where
         toQuery = const mempty
 
 -- | /See:/ 'createPublicDNSNamespaceResponse' smart constructor.
-data CreatePublicDNSNamespaceResponse = CreatePublicDNSNamespaceResponse'
-  { _cpdnrsOperationId    :: !(Maybe Text)
-  , _cpdnrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreatePublicDNSNamespaceResponse =
+  CreatePublicDNSNamespaceResponse'
+    { _cpdnrsOperationId    :: !(Maybe Text)
+    , _cpdnrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreatePublicDNSNamespaceResponse' with the minimum fields required to make a request.

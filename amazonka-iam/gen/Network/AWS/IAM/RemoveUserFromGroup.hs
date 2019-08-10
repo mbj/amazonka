@@ -43,10 +43,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'removeUserFromGroup' smart constructor.
-data RemoveUserFromGroup = RemoveUserFromGroup'
-  { _rufgGroupName :: !Text
-  , _rufgUserName  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RemoveUserFromGroup =
+  RemoveUserFromGroup'
+    { _rufgGroupName :: !Text
+    , _rufgUserName  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RemoveUserFromGroup' with the minimum fields required to make a request.

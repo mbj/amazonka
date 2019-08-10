@@ -46,9 +46,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'stopQueryExecution' smart constructor.
-newtype StopQueryExecution = StopQueryExecution'
-  { _sqeQueryExecutionId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StopQueryExecution =
+  StopQueryExecution'
+    { _sqeQueryExecutionId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopQueryExecution' with the minimum fields required to make a request.
@@ -102,9 +104,11 @@ instance ToQuery StopQueryExecution where
         toQuery = const mempty
 
 -- | /See:/ 'stopQueryExecutionResponse' smart constructor.
-newtype StopQueryExecutionResponse = StopQueryExecutionResponse'
-  { _srsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StopQueryExecutionResponse =
+  StopQueryExecutionResponse'
+    { _srsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopQueryExecutionResponse' with the minimum fields required to make a request.

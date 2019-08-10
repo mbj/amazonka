@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'setInstanceProtection' smart constructor.
-data SetInstanceProtection = SetInstanceProtection'
-  { _sipInstanceIds          :: ![Text]
-  , _sipAutoScalingGroupName :: !Text
-  , _sipProtectedFromScaleIn :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SetInstanceProtection =
+  SetInstanceProtection'
+    { _sipInstanceIds          :: ![Text]
+    , _sipAutoScalingGroupName :: !Text
+    , _sipProtectedFromScaleIn :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetInstanceProtection' with the minimum fields required to make a request.
@@ -119,9 +121,11 @@ instance ToQuery SetInstanceProtection where
                "ProtectedFromScaleIn" =: _sipProtectedFromScaleIn]
 
 -- | /See:/ 'setInstanceProtectionResponse' smart constructor.
-newtype SetInstanceProtectionResponse = SetInstanceProtectionResponse'
-  { _siprsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype SetInstanceProtectionResponse =
+  SetInstanceProtectionResponse'
+    { _siprsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetInstanceProtectionResponse' with the minimum fields required to make a request.

@@ -47,11 +47,13 @@ import Network.AWS.ServiceCatalog.Types
 import Network.AWS.ServiceCatalog.Types.Product
 
 -- | /See:/ 'executeProvisionedProductPlan' smart constructor.
-data ExecuteProvisionedProductPlan = ExecuteProvisionedProductPlan'
-  { _epppAcceptLanguage   :: !(Maybe Text)
-  , _epppPlanId           :: !Text
-  , _epppIdempotencyToken :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ExecuteProvisionedProductPlan =
+  ExecuteProvisionedProductPlan'
+    { _epppAcceptLanguage   :: !(Maybe Text)
+    , _epppPlanId           :: !Text
+    , _epppIdempotencyToken :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ExecuteProvisionedProductPlan' with the minimum fields required to make a request.
@@ -128,10 +130,12 @@ instance ToQuery ExecuteProvisionedProductPlan where
         toQuery = const mempty
 
 -- | /See:/ 'executeProvisionedProductPlanResponse' smart constructor.
-data ExecuteProvisionedProductPlanResponse = ExecuteProvisionedProductPlanResponse'
-  { _eppprsRecordDetail   :: !(Maybe RecordDetail)
-  , _eppprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ExecuteProvisionedProductPlanResponse =
+  ExecuteProvisionedProductPlanResponse'
+    { _eppprsRecordDetail   :: !(Maybe RecordDetail)
+    , _eppprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ExecuteProvisionedProductPlanResponse' with the minimum fields required to make a request.

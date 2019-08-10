@@ -45,12 +45,14 @@ import Network.AWS.WorkDocs.Types
 import Network.AWS.WorkDocs.Types.Product
 
 -- | /See:/ 'deleteComment' smart constructor.
-data DeleteComment = DeleteComment'
-  { _delAuthenticationToken :: !(Maybe (Sensitive Text))
-  , _delDocumentId          :: !Text
-  , _delVersionId           :: !Text
-  , _delCommentId           :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data DeleteComment =
+  DeleteComment'
+    { _delAuthenticationToken :: !(Maybe (Sensitive Text))
+    , _delDocumentId          :: !Text
+    , _delVersionId           :: !Text
+    , _delCommentId           :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteComment' with the minimum fields required to make a request.

@@ -50,13 +50,15 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'listComplianceItems' smart constructor.
-data ListComplianceItems = ListComplianceItems'
-  { _lResourceIds   :: !(Maybe (List1 Text))
-  , _lFilters       :: !(Maybe [ComplianceStringFilter])
-  , _lNextToken     :: !(Maybe Text)
-  , _lMaxResults    :: !(Maybe Nat)
-  , _lResourceTypes :: !(Maybe (List1 Text))
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListComplianceItems =
+  ListComplianceItems'
+    { _lResourceIds   :: !(Maybe (List1 Text))
+    , _lFilters       :: !(Maybe [ComplianceStringFilter])
+    , _lNextToken     :: !(Maybe Text)
+    , _lMaxResults    :: !(Maybe Nat)
+    , _lResourceTypes :: !(Maybe (List1 Text))
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListComplianceItems' with the minimum fields required to make a request.
@@ -146,11 +148,13 @@ instance ToQuery ListComplianceItems where
         toQuery = const mempty
 
 -- | /See:/ 'listComplianceItemsResponse' smart constructor.
-data ListComplianceItemsResponse = ListComplianceItemsResponse'
-  { _lcirsComplianceItems :: !(Maybe [ComplianceItem])
-  , _lcirsNextToken       :: !(Maybe Text)
-  , _lcirsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListComplianceItemsResponse =
+  ListComplianceItemsResponse'
+    { _lcirsComplianceItems :: !(Maybe [ComplianceItem])
+    , _lcirsNextToken       :: !(Maybe Text)
+    , _lcirsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListComplianceItemsResponse' with the minimum fields required to make a request.

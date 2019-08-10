@@ -45,10 +45,12 @@ import Network.AWS.Response
 -- | UnarchiveFindings request body.
 --
 -- /See:/ 'unarchiveFindings' smart constructor.
-data UnarchiveFindings = UnarchiveFindings'
-  { _uFindingIds :: !(Maybe [Text])
-  , _uDetectorId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UnarchiveFindings =
+  UnarchiveFindings'
+    { _uFindingIds :: !(Maybe [Text])
+    , _uDetectorId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UnarchiveFindings' with the minimum fields required to make a request.
@@ -107,9 +109,11 @@ instance ToQuery UnarchiveFindings where
         toQuery = const mempty
 
 -- | /See:/ 'unarchiveFindingsResponse' smart constructor.
-newtype UnarchiveFindingsResponse = UnarchiveFindingsResponse'
-  { _ursResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UnarchiveFindingsResponse =
+  UnarchiveFindingsResponse'
+    { _ursResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UnarchiveFindingsResponse' with the minimum fields required to make a request.

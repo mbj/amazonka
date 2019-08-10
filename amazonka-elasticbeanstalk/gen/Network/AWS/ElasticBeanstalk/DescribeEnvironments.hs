@@ -56,16 +56,18 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeEnvironments' smart constructor.
-data DescribeEnvironments = DescribeEnvironments'
-  { _desEnvironmentIds        :: !(Maybe [Text])
-  , _desEnvironmentNames      :: !(Maybe [Text])
-  , _desNextToken             :: !(Maybe Text)
-  , _desVersionLabel          :: !(Maybe Text)
-  , _desMaxRecords            :: !(Maybe Nat)
-  , _desApplicationName       :: !(Maybe Text)
-  , _desIncludedDeletedBackTo :: !(Maybe ISO8601)
-  , _desIncludeDeleted        :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeEnvironments =
+  DescribeEnvironments'
+    { _desEnvironmentIds        :: !(Maybe [Text])
+    , _desEnvironmentNames      :: !(Maybe [Text])
+    , _desNextToken             :: !(Maybe Text)
+    , _desVersionLabel          :: !(Maybe Text)
+    , _desMaxRecords            :: !(Maybe Nat)
+    , _desApplicationName       :: !(Maybe Text)
+    , _desIncludedDeletedBackTo :: !(Maybe ISO8601)
+    , _desIncludeDeleted        :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEnvironments' with the minimum fields required to make a request.

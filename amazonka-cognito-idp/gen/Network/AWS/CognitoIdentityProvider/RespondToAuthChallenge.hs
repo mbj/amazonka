@@ -57,14 +57,16 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'respondToAuthChallenge' smart constructor.
-data RespondToAuthChallenge = RespondToAuthChallenge'
-  { _rtacAnalyticsMetadata  :: !(Maybe AnalyticsMetadataType)
-  , _rtacChallengeResponses :: !(Maybe (Map Text Text))
-  , _rtacUserContextData    :: !(Maybe UserContextDataType)
-  , _rtacSession            :: !(Maybe Text)
-  , _rtacClientId           :: !(Sensitive Text)
-  , _rtacChallengeName      :: !ChallengeNameType
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data RespondToAuthChallenge =
+  RespondToAuthChallenge'
+    { _rtacAnalyticsMetadata  :: !(Maybe AnalyticsMetadataType)
+    , _rtacChallengeResponses :: !(Maybe (Map Text Text))
+    , _rtacUserContextData    :: !(Maybe UserContextDataType)
+    , _rtacSession            :: !(Maybe Text)
+    , _rtacClientId           :: !(Sensitive Text)
+    , _rtacChallengeName      :: !ChallengeNameType
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RespondToAuthChallenge' with the minimum fields required to make a request.
@@ -172,13 +174,15 @@ instance ToQuery RespondToAuthChallenge where
 --
 --
 -- /See:/ 'respondToAuthChallengeResponse' smart constructor.
-data RespondToAuthChallengeResponse = RespondToAuthChallengeResponse'
-  { _rtacrsChallengeName        :: !(Maybe ChallengeNameType)
-  , _rtacrsChallengeParameters  :: !(Maybe (Map Text Text))
-  , _rtacrsAuthenticationResult :: !(Maybe AuthenticationResultType)
-  , _rtacrsSession              :: !(Maybe Text)
-  , _rtacrsResponseStatus       :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data RespondToAuthChallengeResponse =
+  RespondToAuthChallengeResponse'
+    { _rtacrsChallengeName        :: !(Maybe ChallengeNameType)
+    , _rtacrsChallengeParameters  :: !(Maybe (Map Text Text))
+    , _rtacrsAuthenticationResult :: !(Maybe AuthenticationResultType)
+    , _rtacrsSession              :: !(Maybe Text)
+    , _rtacrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RespondToAuthChallengeResponse' with the minimum fields required to make a request.

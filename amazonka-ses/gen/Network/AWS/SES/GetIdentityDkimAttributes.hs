@@ -63,9 +63,11 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'getIdentityDkimAttributes' smart constructor.
-newtype GetIdentityDkimAttributes = GetIdentityDkimAttributes'
-  { _gidaIdentities :: [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetIdentityDkimAttributes =
+  GetIdentityDkimAttributes'
+    { _gidaIdentities :: [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetIdentityDkimAttributes' with the minimum fields required to make a request.
@@ -118,10 +120,12 @@ instance ToQuery GetIdentityDkimAttributes where
 --
 --
 -- /See:/ 'getIdentityDkimAttributesResponse' smart constructor.
-data GetIdentityDkimAttributesResponse = GetIdentityDkimAttributesResponse'
-  { _gidarsResponseStatus :: !Int
-  , _gidarsDkimAttributes :: !(Map Text IdentityDkimAttributes)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetIdentityDkimAttributesResponse =
+  GetIdentityDkimAttributesResponse'
+    { _gidarsResponseStatus :: !Int
+    , _gidarsDkimAttributes :: !(Map Text IdentityDkimAttributes)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetIdentityDkimAttributesResponse' with the minimum fields required to make a request.

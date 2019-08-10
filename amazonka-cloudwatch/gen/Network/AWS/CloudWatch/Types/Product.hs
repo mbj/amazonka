@@ -26,13 +26,15 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'alarmHistoryItem' smart constructor.
-data AlarmHistoryItem = AlarmHistoryItem'
-  { _ahiAlarmName       :: !(Maybe Text)
-  , _ahiHistoryItemType :: !(Maybe HistoryItemType)
-  , _ahiHistoryData     :: !(Maybe Text)
-  , _ahiHistorySummary  :: !(Maybe Text)
-  , _ahiTimestamp       :: !(Maybe ISO8601)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AlarmHistoryItem =
+  AlarmHistoryItem'
+    { _ahiAlarmName       :: !(Maybe Text)
+    , _ahiHistoryItemType :: !(Maybe HistoryItemType)
+    , _ahiHistoryData     :: !(Maybe Text)
+    , _ahiHistorySummary  :: !(Maybe Text)
+    , _ahiTimestamp       :: !(Maybe ISO8601)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AlarmHistoryItem' with the minimum fields required to make a request.
@@ -97,12 +99,14 @@ instance NFData AlarmHistoryItem where
 --
 --
 -- /See:/ 'dashboardEntry' smart constructor.
-data DashboardEntry = DashboardEntry'
-  { _deSize          :: !(Maybe Integer)
-  , _deDashboardName :: !(Maybe Text)
-  , _deLastModified  :: !(Maybe ISO8601)
-  , _deDashboardARN  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DashboardEntry =
+  DashboardEntry'
+    { _deSize          :: !(Maybe Integer)
+    , _deDashboardName :: !(Maybe Text)
+    , _deLastModified  :: !(Maybe ISO8601)
+    , _deDashboardARN  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DashboardEntry' with the minimum fields required to make a request.
@@ -159,10 +163,12 @@ instance NFData DashboardEntry where
 --
 --
 -- /See:/ 'dashboardValidationMessage' smart constructor.
-data DashboardValidationMessage = DashboardValidationMessage'
-  { _dvmDataPath :: !(Maybe Text)
-  , _dvmMessage  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DashboardValidationMessage =
+  DashboardValidationMessage'
+    { _dvmDataPath :: !(Maybe Text)
+    , _dvmMessage  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DashboardValidationMessage' with the minimum fields required to make a request.
@@ -200,16 +206,18 @@ instance NFData DashboardValidationMessage where
 --
 --
 -- /See:/ 'datapoint' smart constructor.
-data Datapoint = Datapoint'
-  { _dSampleCount        :: !(Maybe Double)
-  , _dMaximum            :: !(Maybe Double)
-  , _dAverage            :: !(Maybe Double)
-  , _dMinimum            :: !(Maybe Double)
-  , _dExtendedStatistics :: !(Maybe (Map Text Double))
-  , _dSum                :: !(Maybe Double)
-  , _dUnit               :: !(Maybe StandardUnit)
-  , _dTimestamp          :: !(Maybe ISO8601)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Datapoint =
+  Datapoint'
+    { _dSampleCount        :: !(Maybe Double)
+    , _dMaximum            :: !(Maybe Double)
+    , _dAverage            :: !(Maybe Double)
+    , _dMinimum            :: !(Maybe Double)
+    , _dExtendedStatistics :: !(Maybe (Map Text Double))
+    , _dSum                :: !(Maybe Double)
+    , _dUnit               :: !(Maybe StandardUnit)
+    , _dTimestamp          :: !(Maybe ISO8601)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Datapoint' with the minimum fields required to make a request.
@@ -300,10 +308,12 @@ instance NFData Datapoint where
 --
 --
 -- /See:/ 'dimension' smart constructor.
-data Dimension = Dimension'
-  { _dName  :: !Text
-  , _dValue :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Dimension =
+  Dimension'
+    { _dName  :: !Text
+    , _dValue :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Dimension' with the minimum fields required to make a request.
@@ -345,10 +355,12 @@ instance ToQuery Dimension where
 --
 --
 -- /See:/ 'dimensionFilter' smart constructor.
-data DimensionFilter = DimensionFilter'
-  { _dfValue :: !(Maybe Text)
-  , _dfName  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DimensionFilter =
+  DimensionFilter'
+    { _dfValue :: !(Maybe Text)
+    , _dfName  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DimensionFilter' with the minimum fields required to make a request.
@@ -385,10 +397,12 @@ instance ToQuery DimensionFilter where
 --
 --
 -- /See:/ 'messageData' smart constructor.
-data MessageData = MessageData'
-  { _mValue :: !(Maybe Text)
-  , _mCode  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MessageData =
+  MessageData'
+    { _mValue :: !(Maybe Text)
+    , _mCode  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MessageData' with the minimum fields required to make a request.
@@ -424,11 +438,13 @@ instance NFData MessageData where
 --
 --
 -- /See:/ 'metric' smart constructor.
-data Metric = Metric'
-  { _mMetricName :: !(Maybe Text)
-  , _mNamespace  :: !(Maybe Text)
-  , _mDimensions :: !(Maybe [Dimension])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Metric =
+  Metric'
+    { _mMetricName :: !(Maybe Text)
+    , _mNamespace  :: !(Maybe Text)
+    , _mDimensions :: !(Maybe [Dimension])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Metric' with the minimum fields required to make a request.
@@ -483,33 +499,35 @@ instance ToQuery Metric where
 --
 --
 -- /See:/ 'metricAlarm' smart constructor.
-data MetricAlarm = MetricAlarm'
-  { _maAlarmName                          :: !(Maybe Text)
-  , _maStateUpdatedTimestamp              :: !(Maybe ISO8601)
-  , _maTreatMissingData                   :: !(Maybe Text)
-  , _maPeriod                             :: !(Maybe Nat)
-  , _maAlarmDescription                   :: !(Maybe Text)
-  , _maEvaluationPeriods                  :: !(Maybe Nat)
-  , _maMetricName                         :: !(Maybe Text)
-  , _maNamespace                          :: !(Maybe Text)
-  , _maComparisonOperator                 :: !(Maybe ComparisonOperator)
-  , _maOKActions                          :: !(Maybe [Text])
-  , _maEvaluateLowSampleCountPercentile   :: !(Maybe Text)
-  , _maStateValue                         :: !(Maybe StateValue)
-  , _maDatapointsToAlarm                  :: !(Maybe Nat)
-  , _maThreshold                          :: !(Maybe Double)
-  , _maAlarmConfigurationUpdatedTimestamp :: !(Maybe ISO8601)
-  , _maActionsEnabled                     :: !(Maybe Bool)
-  , _maInsufficientDataActions            :: !(Maybe [Text])
-  , _maStateReason                        :: !(Maybe Text)
-  , _maStateReasonData                    :: !(Maybe Text)
-  , _maDimensions                         :: !(Maybe [Dimension])
-  , _maAlarmARN                           :: !(Maybe Text)
-  , _maAlarmActions                       :: !(Maybe [Text])
-  , _maUnit                               :: !(Maybe StandardUnit)
-  , _maStatistic                          :: !(Maybe Statistic)
-  , _maExtendedStatistic                  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MetricAlarm =
+  MetricAlarm'
+    { _maAlarmName                          :: !(Maybe Text)
+    , _maStateUpdatedTimestamp              :: !(Maybe ISO8601)
+    , _maTreatMissingData                   :: !(Maybe Text)
+    , _maPeriod                             :: !(Maybe Nat)
+    , _maAlarmDescription                   :: !(Maybe Text)
+    , _maEvaluationPeriods                  :: !(Maybe Nat)
+    , _maMetricName                         :: !(Maybe Text)
+    , _maNamespace                          :: !(Maybe Text)
+    , _maComparisonOperator                 :: !(Maybe ComparisonOperator)
+    , _maOKActions                          :: !(Maybe [Text])
+    , _maEvaluateLowSampleCountPercentile   :: !(Maybe Text)
+    , _maStateValue                         :: !(Maybe StateValue)
+    , _maDatapointsToAlarm                  :: !(Maybe Nat)
+    , _maThreshold                          :: !(Maybe Double)
+    , _maAlarmConfigurationUpdatedTimestamp :: !(Maybe ISO8601)
+    , _maActionsEnabled                     :: !(Maybe Bool)
+    , _maInsufficientDataActions            :: !(Maybe [Text])
+    , _maStateReason                        :: !(Maybe Text)
+    , _maStateReasonData                    :: !(Maybe Text)
+    , _maDimensions                         :: !(Maybe [Dimension])
+    , _maAlarmARN                           :: !(Maybe Text)
+    , _maAlarmActions                       :: !(Maybe [Text])
+    , _maUnit                               :: !(Maybe StandardUnit)
+    , _maStatistic                          :: !(Maybe Statistic)
+    , _maExtendedStatistic                  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MetricAlarm' with the minimum fields required to make a request.
@@ -743,13 +761,15 @@ instance NFData MetricAlarm where
 --
 --
 -- /See:/ 'metricDataQuery' smart constructor.
-data MetricDataQuery = MetricDataQuery'
-  { _mdqReturnData :: !(Maybe Bool)
-  , _mdqExpression :: !(Maybe Text)
-  , _mdqLabel      :: !(Maybe Text)
-  , _mdqMetricStat :: !(Maybe MetricStat)
-  , _mdqId         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MetricDataQuery =
+  MetricDataQuery'
+    { _mdqReturnData :: !(Maybe Bool)
+    , _mdqExpression :: !(Maybe Text)
+    , _mdqLabel      :: !(Maybe Text)
+    , _mdqMetricStat :: !(Maybe MetricStat)
+    , _mdqId         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MetricDataQuery' with the minimum fields required to make a request.
@@ -814,14 +834,16 @@ instance ToQuery MetricDataQuery where
 --
 --
 -- /See:/ 'metricDataResult' smart constructor.
-data MetricDataResult = MetricDataResult'
-  { _mdrValues     :: !(Maybe [Double])
-  , _mdrId         :: !(Maybe Text)
-  , _mdrTimestamps :: !(Maybe [ISO8601])
-  , _mdrMessages   :: !(Maybe [MessageData])
-  , _mdrLabel      :: !(Maybe Text)
-  , _mdrStatusCode :: !(Maybe StatusCode)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MetricDataResult =
+  MetricDataResult'
+    { _mdrValues     :: !(Maybe [Double])
+    , _mdrId         :: !(Maybe Text)
+    , _mdrTimestamps :: !(Maybe [ISO8601])
+    , _mdrMessages   :: !(Maybe [MessageData])
+    , _mdrLabel      :: !(Maybe Text)
+    , _mdrStatusCode :: !(Maybe StatusCode)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MetricDataResult' with the minimum fields required to make a request.
@@ -900,15 +922,17 @@ instance NFData MetricDataResult where
 --
 --
 -- /See:/ 'metricDatum' smart constructor.
-data MetricDatum = MetricDatum'
-  { _mdValue             :: !(Maybe Double)
-  , _mdStorageResolution :: !(Maybe Nat)
-  , _mdDimensions        :: !(Maybe [Dimension])
-  , _mdUnit              :: !(Maybe StandardUnit)
-  , _mdTimestamp         :: !(Maybe ISO8601)
-  , _mdStatisticValues   :: !(Maybe StatisticSet)
-  , _mdMetricName        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MetricDatum =
+  MetricDatum'
+    { _mdValue             :: !(Maybe Double)
+    , _mdStorageResolution :: !(Maybe Nat)
+    , _mdDimensions        :: !(Maybe [Dimension])
+    , _mdUnit              :: !(Maybe StandardUnit)
+    , _mdTimestamp         :: !(Maybe ISO8601)
+    , _mdStatisticValues   :: !(Maybe StatisticSet)
+    , _mdMetricName        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MetricDatum' with the minimum fields required to make a request.
@@ -991,12 +1015,14 @@ instance ToQuery MetricDatum where
 --
 --
 -- /See:/ 'metricStat' smart constructor.
-data MetricStat = MetricStat'
-  { _msUnit   :: !(Maybe StandardUnit)
-  , _msMetric :: !Metric
-  , _msPeriod :: !Nat
-  , _msStat   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MetricStat =
+  MetricStat'
+    { _msUnit   :: !(Maybe StandardUnit)
+    , _msMetric :: !Metric
+    , _msPeriod :: !Nat
+    , _msStat   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MetricStat' with the minimum fields required to make a request.
@@ -1055,12 +1081,14 @@ instance ToQuery MetricStat where
 --
 --
 -- /See:/ 'statisticSet' smart constructor.
-data StatisticSet = StatisticSet'
-  { _ssSampleCount :: !Double
-  , _ssSum         :: !Double
-  , _ssMinimum     :: !Double
-  , _ssMaximum     :: !Double
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StatisticSet =
+  StatisticSet'
+    { _ssSampleCount :: !Double
+    , _ssSum         :: !Double
+    , _ssMinimum     :: !Double
+    , _ssMaximum     :: !Double
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StatisticSet' with the minimum fields required to make a request.

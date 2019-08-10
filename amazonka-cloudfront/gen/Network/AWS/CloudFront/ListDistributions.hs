@@ -53,10 +53,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listDistributions' smart constructor.
-data ListDistributions = ListDistributions'
-  { _ldMarker   :: !(Maybe Text)
-  , _ldMaxItems :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListDistributions =
+  ListDistributions'
+    { _ldMarker   :: !(Maybe Text)
+    , _ldMaxItems :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDistributions' with the minimum fields required to make a request.
@@ -121,10 +123,12 @@ instance ToQuery ListDistributions where
 --
 --
 -- /See:/ 'listDistributionsResponse' smart constructor.
-data ListDistributionsResponse = ListDistributionsResponse'
-  { _ldrsResponseStatus   :: !Int
-  , _ldrsDistributionList :: !DistributionList
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListDistributionsResponse =
+  ListDistributionsResponse'
+    { _ldrsResponseStatus   :: !Int
+    , _ldrsDistributionList :: !DistributionList
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDistributionsResponse' with the minimum fields required to make a request.

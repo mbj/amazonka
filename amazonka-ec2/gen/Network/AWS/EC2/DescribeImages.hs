@@ -53,13 +53,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeImages' smart constructor.
-data DescribeImages = DescribeImages'
-  { _deseOwners          :: !(Maybe [Text])
-  , _deseExecutableUsers :: !(Maybe [Text])
-  , _deseFilters         :: !(Maybe [Filter])
-  , _deseImageIds        :: !(Maybe [Text])
-  , _deseDryRun          :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeImages =
+  DescribeImages'
+    { _deseOwners          :: !(Maybe [Text])
+    , _deseExecutableUsers :: !(Maybe [Text])
+    , _deseFilters         :: !(Maybe [Filter])
+    , _deseImageIds        :: !(Maybe [Text])
+    , _deseDryRun          :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeImages' with the minimum fields required to make a request.
@@ -146,10 +148,12 @@ instance ToQuery DescribeImages where
 --
 --
 -- /See:/ 'describeImagesResponse' smart constructor.
-data DescribeImagesResponse = DescribeImagesResponse'
-  { _diirsImages         :: !(Maybe [Image])
-  , _diirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeImagesResponse =
+  DescribeImagesResponse'
+    { _diirsImages         :: !(Maybe [Image])
+    , _diirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeImagesResponse' with the minimum fields required to make a request.

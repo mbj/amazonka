@@ -56,11 +56,13 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'apiKey' smart constructor.
-data APIKey = APIKey'
-  { _akExpires     :: !(Maybe Integer)
-  , _akId          :: !(Maybe Text)
-  , _akDescription :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data APIKey =
+  APIKey'
+    { _akExpires     :: !(Maybe Integer)
+    , _akId          :: !(Maybe Text)
+    , _akDescription :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'APIKey' with the minimum fields required to make a request.
@@ -107,16 +109,18 @@ instance NFData APIKey where
 --
 --
 -- /See:/ 'dataSource' smart constructor.
-data DataSource = DataSource'
-  { _dsServiceRoleARN      :: !(Maybe Text)
-  , _dsDataSourceARN       :: !(Maybe Text)
-  , _dsDynamodbConfig      :: !(Maybe DynamodbDataSourceConfig)
-  , _dsName                :: !(Maybe Text)
-  , _dsLambdaConfig        :: !(Maybe LambdaDataSourceConfig)
-  , _dsType                :: !(Maybe DataSourceType)
-  , _dsDescription         :: !(Maybe Text)
-  , _dsElasticsearchConfig :: !(Maybe ElasticsearchDataSourceConfig)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DataSource =
+  DataSource'
+    { _dsServiceRoleARN      :: !(Maybe Text)
+    , _dsDataSourceARN       :: !(Maybe Text)
+    , _dsDynamodbConfig      :: !(Maybe DynamodbDataSourceConfig)
+    , _dsName                :: !(Maybe Text)
+    , _dsLambdaConfig        :: !(Maybe LambdaDataSourceConfig)
+    , _dsType                :: !(Maybe DataSourceType)
+    , _dsDescription         :: !(Maybe Text)
+    , _dsElasticsearchConfig :: !(Maybe ElasticsearchDataSourceConfig)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DataSource' with the minimum fields required to make a request.
@@ -207,11 +211,13 @@ instance NFData DataSource where
 --
 --
 -- /See:/ 'dynamodbDataSourceConfig' smart constructor.
-data DynamodbDataSourceConfig = DynamodbDataSourceConfig'
-  { _ddscUseCallerCredentials :: !(Maybe Bool)
-  , _ddscTableName            :: !Text
-  , _ddscAwsRegion            :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DynamodbDataSourceConfig =
+  DynamodbDataSourceConfig'
+    { _ddscUseCallerCredentials :: !(Maybe Bool)
+    , _ddscTableName            :: !Text
+    , _ddscAwsRegion            :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DynamodbDataSourceConfig' with the minimum fields required to make a request.
@@ -273,10 +279,12 @@ instance ToJSON DynamodbDataSourceConfig where
 --
 --
 -- /See:/ 'elasticsearchDataSourceConfig' smart constructor.
-data ElasticsearchDataSourceConfig = ElasticsearchDataSourceConfig'
-  { _edscEndpoint  :: !Text
-  , _edscAwsRegion :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ElasticsearchDataSourceConfig =
+  ElasticsearchDataSourceConfig'
+    { _edscEndpoint  :: !Text
+    , _edscAwsRegion :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ElasticsearchDataSourceConfig' with the minimum fields required to make a request.
@@ -326,16 +334,18 @@ instance ToJSON ElasticsearchDataSourceConfig where
 --
 --
 -- /See:/ 'graphqlAPI' smart constructor.
-data GraphqlAPI = GraphqlAPI'
-  { _gaArn                 :: !(Maybe Text)
-  , _gaApiId               :: !(Maybe Text)
-  , _gaUris                :: !(Maybe (Map Text Text))
-  , _gaOpenIdConnectConfig :: !(Maybe OpenIdConnectConfig)
-  , _gaName                :: !(Maybe Text)
-  , _gaUserPoolConfig      :: !(Maybe UserPoolConfig)
-  , _gaAuthenticationType  :: !(Maybe AuthenticationType)
-  , _gaLogConfig           :: !(Maybe LogConfig)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GraphqlAPI =
+  GraphqlAPI'
+    { _gaArn                 :: !(Maybe Text)
+    , _gaApiId               :: !(Maybe Text)
+    , _gaUris                :: !(Maybe (Map Text Text))
+    , _gaOpenIdConnectConfig :: !(Maybe OpenIdConnectConfig)
+    , _gaName                :: !(Maybe Text)
+    , _gaUserPoolConfig      :: !(Maybe UserPoolConfig)
+    , _gaAuthenticationType  :: !(Maybe AuthenticationType)
+    , _gaLogConfig           :: !(Maybe LogConfig)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GraphqlAPI' with the minimum fields required to make a request.
@@ -426,9 +436,11 @@ instance NFData GraphqlAPI where
 --
 --
 -- /See:/ 'lambdaDataSourceConfig' smart constructor.
-newtype LambdaDataSourceConfig = LambdaDataSourceConfig'
-  { _ldscLambdaFunctionARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype LambdaDataSourceConfig =
+  LambdaDataSourceConfig'
+    { _ldscLambdaFunctionARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LambdaDataSourceConfig' with the minimum fields required to make a request.
@@ -470,10 +482,12 @@ instance ToJSON LambdaDataSourceConfig where
 --
 --
 -- /See:/ 'logConfig' smart constructor.
-data LogConfig = LogConfig'
-  { _lcFieldLogLevel         :: !FieldLogLevel
-  , _lcCloudWatchLogsRoleARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LogConfig =
+  LogConfig'
+    { _lcFieldLogLevel         :: !FieldLogLevel
+    , _lcCloudWatchLogsRoleARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LogConfig' with the minimum fields required to make a request.
@@ -528,12 +542,14 @@ instance ToJSON LogConfig where
 --
 --
 -- /See:/ 'openIdConnectConfig' smart constructor.
-data OpenIdConnectConfig = OpenIdConnectConfig'
-  { _oiccAuthTTL  :: !(Maybe Integer)
-  , _oiccClientId :: !(Maybe Text)
-  , _oiccIatTTL   :: !(Maybe Integer)
-  , _oiccIssuer   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data OpenIdConnectConfig =
+  OpenIdConnectConfig'
+    { _oiccAuthTTL  :: !(Maybe Integer)
+    , _oiccClientId :: !(Maybe Text)
+    , _oiccIatTTL   :: !(Maybe Integer)
+    , _oiccIssuer   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OpenIdConnectConfig' with the minimum fields required to make a request.
@@ -602,14 +618,16 @@ instance ToJSON OpenIdConnectConfig where
 --
 --
 -- /See:/ 'resolver' smart constructor.
-data Resolver = Resolver'
-  { _rTypeName                :: !(Maybe Text)
-  , _rDataSourceName          :: !(Maybe Text)
-  , _rRequestMappingTemplate  :: !(Maybe Text)
-  , _rResolverARN             :: !(Maybe Text)
-  , _rResponseMappingTemplate :: !(Maybe Text)
-  , _rFieldName               :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Resolver =
+  Resolver'
+    { _rTypeName                :: !(Maybe Text)
+    , _rDataSourceName          :: !(Maybe Text)
+    , _rRequestMappingTemplate  :: !(Maybe Text)
+    , _rResolverARN             :: !(Maybe Text)
+    , _rResponseMappingTemplate :: !(Maybe Text)
+    , _rFieldName               :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Resolver' with the minimum fields required to make a request.
@@ -684,13 +702,15 @@ instance NFData Resolver where
 --
 --
 -- /See:/ 'type'' smart constructor.
-data Type = Type'
-  { _tArn         :: !(Maybe Text)
-  , _tDefinition  :: !(Maybe Text)
-  , _tFormat      :: !(Maybe TypeDefinitionFormat)
-  , _tName        :: !(Maybe Text)
-  , _tDescription :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Type =
+  Type'
+    { _tArn         :: !(Maybe Text)
+    , _tDefinition  :: !(Maybe Text)
+    , _tFormat      :: !(Maybe TypeDefinitionFormat)
+    , _tName        :: !(Maybe Text)
+    , _tDescription :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Type' with the minimum fields required to make a request.
@@ -757,12 +777,14 @@ instance NFData Type where
 --
 --
 -- /See:/ 'userPoolConfig' smart constructor.
-data UserPoolConfig = UserPoolConfig'
-  { _upcAppIdClientRegex :: !(Maybe Text)
-  , _upcUserPoolId       :: !Text
-  , _upcAwsRegion        :: !Text
-  , _upcDefaultAction    :: !DefaultAction
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UserPoolConfig =
+  UserPoolConfig'
+    { _upcAppIdClientRegex :: !(Maybe Text)
+    , _upcUserPoolId       :: !Text
+    , _upcAwsRegion        :: !Text
+    , _upcDefaultAction    :: !DefaultAction
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UserPoolConfig' with the minimum fields required to make a request.

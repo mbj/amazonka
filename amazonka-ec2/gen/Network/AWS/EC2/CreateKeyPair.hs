@@ -58,10 +58,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createKeyPair' smart constructor.
-data CreateKeyPair = CreateKeyPair'
-  { _ckpDryRun  :: !(Maybe Bool)
-  , _ckpKeyName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateKeyPair =
+  CreateKeyPair'
+    { _ckpDryRun  :: !(Maybe Bool)
+    , _ckpKeyName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateKeyPair' with the minimum fields required to make a request.
@@ -119,12 +121,14 @@ instance ToQuery CreateKeyPair where
 --
 --
 -- /See:/ 'createKeyPairResponse' smart constructor.
-data CreateKeyPairResponse = CreateKeyPairResponse'
-  { _ckprsResponseStatus :: !Int
-  , _ckprsKeyName        :: !Text
-  , _ckprsKeyFingerprint :: !Text
-  , _ckprsKeyMaterial    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateKeyPairResponse =
+  CreateKeyPairResponse'
+    { _ckprsResponseStatus :: !Int
+    , _ckprsKeyName        :: !Text
+    , _ckprsKeyFingerprint :: !Text
+    , _ckprsKeyMaterial    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateKeyPairResponse' with the minimum fields required to make a request.

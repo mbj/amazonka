@@ -47,10 +47,12 @@ import Network.AWS.ServiceCatalog.Types
 import Network.AWS.ServiceCatalog.Types.Product
 
 -- | /See:/ 'deleteProduct' smart constructor.
-data DeleteProduct = DeleteProduct'
-  { _dppAcceptLanguage :: !(Maybe Text)
-  , _dppId             :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteProduct =
+  DeleteProduct'
+    { _dppAcceptLanguage :: !(Maybe Text)
+    , _dppId             :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteProduct' with the minimum fields required to make a request.
@@ -111,9 +113,11 @@ instance ToQuery DeleteProduct where
         toQuery = const mempty
 
 -- | /See:/ 'deleteProductResponse' smart constructor.
-newtype DeleteProductResponse = DeleteProductResponse'
-  { _delersResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteProductResponse =
+  DeleteProductResponse'
+    { _delersResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteProductResponse' with the minimum fields required to make a request.

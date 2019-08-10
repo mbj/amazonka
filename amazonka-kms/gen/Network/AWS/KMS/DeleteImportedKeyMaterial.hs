@@ -46,9 +46,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteImportedKeyMaterial' smart constructor.
-newtype DeleteImportedKeyMaterial = DeleteImportedKeyMaterial'
-  { _dikmKeyId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteImportedKeyMaterial =
+  DeleteImportedKeyMaterial'
+    { _dikmKeyId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteImportedKeyMaterial' with the minimum fields required to make a request.

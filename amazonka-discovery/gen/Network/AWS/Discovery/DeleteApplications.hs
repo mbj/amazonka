@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteApplications' smart constructor.
-newtype DeleteApplications = DeleteApplications'
-  { _daConfigurationIds :: [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteApplications =
+  DeleteApplications'
+    { _daConfigurationIds :: [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteApplications' with the minimum fields required to make a request.
@@ -99,9 +101,11 @@ instance ToQuery DeleteApplications where
         toQuery = const mempty
 
 -- | /See:/ 'deleteApplicationsResponse' smart constructor.
-newtype DeleteApplicationsResponse = DeleteApplicationsResponse'
-  { _darsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteApplicationsResponse =
+  DeleteApplicationsResponse'
+    { _darsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteApplicationsResponse' with the minimum fields required to make a request.

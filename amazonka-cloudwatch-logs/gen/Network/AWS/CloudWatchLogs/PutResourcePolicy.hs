@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putResourcePolicy' smart constructor.
-data PutResourcePolicy = PutResourcePolicy'
-  { _prpPolicyName     :: !(Maybe Text)
-  , _prpPolicyDocument :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutResourcePolicy =
+  PutResourcePolicy'
+    { _prpPolicyName     :: !(Maybe Text)
+    , _prpPolicyDocument :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutResourcePolicy' with the minimum fields required to make a request.
@@ -109,10 +111,12 @@ instance ToQuery PutResourcePolicy where
         toQuery = const mempty
 
 -- | /See:/ 'putResourcePolicyResponse' smart constructor.
-data PutResourcePolicyResponse = PutResourcePolicyResponse'
-  { _prprsResourcePolicy :: !(Maybe ResourcePolicy)
-  , _prprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutResourcePolicyResponse =
+  PutResourcePolicyResponse'
+    { _prprsResourcePolicy :: !(Maybe ResourcePolicy)
+    , _prprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutResourcePolicyResponse' with the minimum fields required to make a request.

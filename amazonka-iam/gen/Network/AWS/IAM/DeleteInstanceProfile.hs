@@ -46,9 +46,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteInstanceProfile' smart constructor.
-newtype DeleteInstanceProfile = DeleteInstanceProfile'
-  { _dipInstanceProfileName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteInstanceProfile =
+  DeleteInstanceProfile'
+    { _dipInstanceProfileName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteInstanceProfile' with the minimum fields required to make a request.

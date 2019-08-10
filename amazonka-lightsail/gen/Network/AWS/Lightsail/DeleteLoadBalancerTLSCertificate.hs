@@ -47,11 +47,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteLoadBalancerTLSCertificate' smart constructor.
-data DeleteLoadBalancerTLSCertificate = DeleteLoadBalancerTLSCertificate'
-  { _dlbtcForce            :: !(Maybe Bool)
-  , _dlbtcLoadBalancerName :: !Text
-  , _dlbtcCertificateName  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteLoadBalancerTLSCertificate =
+  DeleteLoadBalancerTLSCertificate'
+    { _dlbtcForce            :: !(Maybe Bool)
+    , _dlbtcLoadBalancerName :: !Text
+    , _dlbtcCertificateName  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteLoadBalancerTLSCertificate' with the minimum fields required to make a request.
@@ -134,10 +136,12 @@ instance ToQuery DeleteLoadBalancerTLSCertificate
         toQuery = const mempty
 
 -- | /See:/ 'deleteLoadBalancerTLSCertificateResponse' smart constructor.
-data DeleteLoadBalancerTLSCertificateResponse = DeleteLoadBalancerTLSCertificateResponse'
-  { _dlbtcrsOperations     :: !(Maybe [Operation])
-  , _dlbtcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteLoadBalancerTLSCertificateResponse =
+  DeleteLoadBalancerTLSCertificateResponse'
+    { _dlbtcrsOperations     :: !(Maybe [Operation])
+    , _dlbtcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteLoadBalancerTLSCertificateResponse' with the minimum fields required to make a request.

@@ -50,13 +50,15 @@ import Network.AWS.WorkDocs.Types
 import Network.AWS.WorkDocs.Types.Product
 
 -- | /See:/ 'describeGroups' smart constructor.
-data DescribeGroups = DescribeGroups'
-  { _dgAuthenticationToken :: !(Maybe (Sensitive Text))
-  , _dgMarker              :: !(Maybe Text)
-  , _dgLimit               :: !(Maybe Nat)
-  , _dgOrganizationId      :: !(Maybe Text)
-  , _dgSearchQuery         :: !(Sensitive Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data DescribeGroups =
+  DescribeGroups'
+    { _dgAuthenticationToken :: !(Maybe (Sensitive Text))
+    , _dgMarker              :: !(Maybe Text)
+    , _dgLimit               :: !(Maybe Nat)
+    , _dgOrganizationId      :: !(Maybe Text)
+    , _dgSearchQuery         :: !(Sensitive Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeGroups' with the minimum fields required to make a request.
@@ -137,11 +139,13 @@ instance ToQuery DescribeGroups where
                "searchQuery" =: _dgSearchQuery]
 
 -- | /See:/ 'describeGroupsResponse' smart constructor.
-data DescribeGroupsResponse = DescribeGroupsResponse'
-  { _dgrsGroups         :: !(Maybe [GroupMetadata])
-  , _dgrsMarker         :: !(Maybe Text)
-  , _dgrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeGroupsResponse =
+  DescribeGroupsResponse'
+    { _dgrsGroups         :: !(Maybe [GroupMetadata])
+    , _dgrsMarker         :: !(Maybe Text)
+    , _dgrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeGroupsResponse' with the minimum fields required to make a request.

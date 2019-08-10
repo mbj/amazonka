@@ -53,11 +53,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'associateRouteTable' smart constructor.
-data AssociateRouteTable = AssociateRouteTable'
-  { _artDryRun       :: !(Maybe Bool)
-  , _artRouteTableId :: !Text
-  , _artSubnetId     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssociateRouteTable =
+  AssociateRouteTable'
+    { _artDryRun       :: !(Maybe Bool)
+    , _artRouteTableId :: !Text
+    , _artSubnetId     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateRouteTable' with the minimum fields required to make a request.
@@ -127,10 +129,12 @@ instance ToQuery AssociateRouteTable where
 --
 --
 -- /See:/ 'associateRouteTableResponse' smart constructor.
-data AssociateRouteTableResponse = AssociateRouteTableResponse'
-  { _artrsAssociationId  :: !(Maybe Text)
-  , _artrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssociateRouteTableResponse =
+  AssociateRouteTableResponse'
+    { _artrsAssociationId  :: !(Maybe Text)
+    , _artrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateRouteTableResponse' with the minimum fields required to make a request.

@@ -54,10 +54,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateVPCLink' smart constructor.
-data UpdateVPCLink = UpdateVPCLink'
-  { _uvlPatchOperations :: !(Maybe [PatchOperation])
-  , _uvlVpcLinkId       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateVPCLink =
+  UpdateVPCLink'
+    { _uvlPatchOperations :: !(Maybe [PatchOperation])
+    , _uvlVpcLinkId       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateVPCLink' with the minimum fields required to make a request.

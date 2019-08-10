@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'startStack' smart constructor.
-newtype StartStack = StartStack'
-  { _staStackId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StartStack =
+  StartStack'
+    { _staStackId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartStack' with the minimum fields required to make a request.

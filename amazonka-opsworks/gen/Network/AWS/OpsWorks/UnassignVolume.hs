@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'unassignVolume' smart constructor.
-newtype UnassignVolume = UnassignVolume'
-  { _uvVolumeId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UnassignVolume =
+  UnassignVolume'
+    { _uvVolumeId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UnassignVolume' with the minimum fields required to make a request.

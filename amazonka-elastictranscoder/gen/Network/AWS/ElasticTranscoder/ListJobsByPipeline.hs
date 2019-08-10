@@ -57,11 +57,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listJobsByPipeline' smart constructor.
-data ListJobsByPipeline = ListJobsByPipeline'
-  { _ljbpAscending  :: !(Maybe Text)
-  , _ljbpPageToken  :: !(Maybe Text)
-  , _ljbpPipelineId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListJobsByPipeline =
+  ListJobsByPipeline'
+    { _ljbpAscending  :: !(Maybe Text)
+    , _ljbpPageToken  :: !(Maybe Text)
+    , _ljbpPipelineId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListJobsByPipeline' with the minimum fields required to make a request.
@@ -138,11 +140,13 @@ instance ToQuery ListJobsByPipeline where
 --
 --
 -- /See:/ 'listJobsByPipelineResponse' smart constructor.
-data ListJobsByPipelineResponse = ListJobsByPipelineResponse'
-  { _ljbprsNextPageToken  :: !(Maybe Text)
-  , _ljbprsJobs           :: !(Maybe [Job'])
-  , _ljbprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListJobsByPipelineResponse =
+  ListJobsByPipelineResponse'
+    { _ljbprsNextPageToken  :: !(Maybe Text)
+    , _ljbprsJobs           :: !(Maybe [Job'])
+    , _ljbprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListJobsByPipelineResponse' with the minimum fields required to make a request.

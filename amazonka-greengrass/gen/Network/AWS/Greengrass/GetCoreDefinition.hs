@@ -49,9 +49,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getCoreDefinition' smart constructor.
-newtype GetCoreDefinition = GetCoreDefinition'
-  { _gcdCoreDefinitionId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetCoreDefinition =
+  GetCoreDefinition'
+    { _gcdCoreDefinitionId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetCoreDefinition' with the minimum fields required to make a request.
@@ -106,16 +108,18 @@ instance ToQuery GetCoreDefinition where
         toQuery = const mempty
 
 -- | /See:/ 'getCoreDefinitionResponse' smart constructor.
-data GetCoreDefinitionResponse = GetCoreDefinitionResponse'
-  { _gcdrsLatestVersionARN     :: !(Maybe Text)
-  , _gcdrsARN                  :: !(Maybe Text)
-  , _gcdrsName                 :: !(Maybe Text)
-  , _gcdrsCreationTimestamp    :: !(Maybe Text)
-  , _gcdrsId                   :: !(Maybe Text)
-  , _gcdrsLatestVersion        :: !(Maybe Text)
-  , _gcdrsLastUpdatedTimestamp :: !(Maybe Text)
-  , _gcdrsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetCoreDefinitionResponse =
+  GetCoreDefinitionResponse'
+    { _gcdrsLatestVersionARN     :: !(Maybe Text)
+    , _gcdrsARN                  :: !(Maybe Text)
+    , _gcdrsName                 :: !(Maybe Text)
+    , _gcdrsCreationTimestamp    :: !(Maybe Text)
+    , _gcdrsId                   :: !(Maybe Text)
+    , _gcdrsLatestVersion        :: !(Maybe Text)
+    , _gcdrsLastUpdatedTimestamp :: !(Maybe Text)
+    , _gcdrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetCoreDefinitionResponse' with the minimum fields required to make a request.

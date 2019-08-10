@@ -55,19 +55,21 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createJob' smart constructor.
-data CreateJob = CreateJob'
-  { _cjConnections       :: !(Maybe ConnectionsList)
-  , _cjLogURI            :: !(Maybe Text)
-  , _cjMaxRetries        :: !(Maybe Int)
-  , _cjExecutionProperty :: !(Maybe ExecutionProperty)
-  , _cjAllocatedCapacity :: !(Maybe Int)
-  , _cjTimeout           :: !(Maybe Nat)
-  , _cjDefaultArguments  :: !(Maybe (Map Text Text))
-  , _cjDescription       :: !(Maybe Text)
-  , _cjName              :: !Text
-  , _cjRole              :: !Text
-  , _cjCommand           :: !JobCommand
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateJob =
+  CreateJob'
+    { _cjConnections       :: !(Maybe ConnectionsList)
+    , _cjLogURI            :: !(Maybe Text)
+    , _cjMaxRetries        :: !(Maybe Int)
+    , _cjExecutionProperty :: !(Maybe ExecutionProperty)
+    , _cjAllocatedCapacity :: !(Maybe Int)
+    , _cjTimeout           :: !(Maybe Nat)
+    , _cjDefaultArguments  :: !(Maybe (Map Text Text))
+    , _cjDescription       :: !(Maybe Text)
+    , _cjName              :: !Text
+    , _cjRole              :: !Text
+    , _cjCommand           :: !JobCommand
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateJob' with the minimum fields required to make a request.
@@ -204,10 +206,12 @@ instance ToQuery CreateJob where
         toQuery = const mempty
 
 -- | /See:/ 'createJobResponse' smart constructor.
-data CreateJobResponse = CreateJobResponse'
-  { _cjrsName           :: !(Maybe Text)
-  , _cjrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateJobResponse =
+  CreateJobResponse'
+    { _cjrsName           :: !(Maybe Text)
+    , _cjrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateJobResponse' with the minimum fields required to make a request.

@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getSkillGroup' smart constructor.
-newtype GetSkillGroup = GetSkillGroup'
-  { _gsgSkillGroupARN :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetSkillGroup =
+  GetSkillGroup'
+    { _gsgSkillGroupARN :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetSkillGroup' with the minimum fields required to make a request.
@@ -99,10 +101,12 @@ instance ToQuery GetSkillGroup where
         toQuery = const mempty
 
 -- | /See:/ 'getSkillGroupResponse' smart constructor.
-data GetSkillGroupResponse = GetSkillGroupResponse'
-  { _gsgrsSkillGroup     :: !(Maybe SkillGroup)
-  , _gsgrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetSkillGroupResponse =
+  GetSkillGroupResponse'
+    { _gsgrsSkillGroup     :: !(Maybe SkillGroup)
+    , _gsgrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetSkillGroupResponse' with the minimum fields required to make a request.

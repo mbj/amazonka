@@ -47,9 +47,11 @@ import Network.AWS.Route53Domains.Types
 import Network.AWS.Route53Domains.Types.Product
 
 -- | /See:/ 'resendContactReachabilityEmail' smart constructor.
-newtype ResendContactReachabilityEmail = ResendContactReachabilityEmail'
-  { _rcreDomainName :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ResendContactReachabilityEmail =
+  ResendContactReachabilityEmail'
+    { _rcreDomainName :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResendContactReachabilityEmail' with the minimum fields required to make a request.
@@ -108,12 +110,14 @@ instance ToQuery ResendContactReachabilityEmail where
         toQuery = const mempty
 
 -- | /See:/ 'resendContactReachabilityEmailResponse' smart constructor.
-data ResendContactReachabilityEmailResponse = ResendContactReachabilityEmailResponse'
-  { _rcrersDomainName        :: !(Maybe Text)
-  , _rcrersEmailAddress      :: !(Maybe Text)
-  , _rcrersIsAlreadyVerified :: !(Maybe Bool)
-  , _rcrersResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResendContactReachabilityEmailResponse =
+  ResendContactReachabilityEmailResponse'
+    { _rcrersDomainName        :: !(Maybe Text)
+    , _rcrersEmailAddress      :: !(Maybe Text)
+    , _rcrersIsAlreadyVerified :: !(Maybe Bool)
+    , _rcrersResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResendContactReachabilityEmailResponse' with the minimum fields required to make a request.

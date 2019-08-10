@@ -54,12 +54,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeAddresses' smart constructor.
-data DescribeAddresses = DescribeAddresses'
-  { _daFilters       :: !(Maybe [Filter])
-  , _daPublicIPs     :: !(Maybe [Text])
-  , _daAllocationIds :: !(Maybe [Text])
-  , _daDryRun        :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAddresses =
+  DescribeAddresses'
+    { _daFilters       :: !(Maybe [Filter])
+    , _daPublicIPs     :: !(Maybe [Text])
+    , _daAllocationIds :: !(Maybe [Text])
+    , _daDryRun        :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAddresses' with the minimum fields required to make a request.
@@ -137,10 +139,12 @@ instance ToQuery DescribeAddresses where
 --
 --
 -- /See:/ 'describeAddressesResponse' smart constructor.
-data DescribeAddressesResponse = DescribeAddressesResponse'
-  { _darsAddresses      :: !(Maybe [Address])
-  , _darsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAddressesResponse =
+  DescribeAddressesResponse'
+    { _darsAddresses      :: !(Maybe [Address])
+    , _darsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAddressesResponse' with the minimum fields required to make a request.

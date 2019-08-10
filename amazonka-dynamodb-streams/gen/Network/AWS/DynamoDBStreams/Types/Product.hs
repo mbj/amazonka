@@ -28,18 +28,20 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'attributeValue' smart constructor.
-data AttributeValue = AttributeValue'
-  { _avL    :: !(Maybe [AttributeValue])
-  , _avNS   :: !(Maybe [Text])
-  , _avM    :: !(Maybe (Map Text AttributeValue))
-  , _avNULL :: !(Maybe Bool)
-  , _avN    :: !(Maybe Text)
-  , _avBS   :: !(Maybe [Base64])
-  , _avB    :: !(Maybe Base64)
-  , _avSS   :: !(Maybe [Text])
-  , _avS    :: !(Maybe Text)
-  , _avBOOL :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AttributeValue =
+  AttributeValue'
+    { _avL    :: !(Maybe [AttributeValue])
+    , _avNS   :: !(Maybe [Text])
+    , _avM    :: !(Maybe (Map Text AttributeValue))
+    , _avNULL :: !(Maybe Bool)
+    , _avN    :: !(Maybe Text)
+    , _avBS   :: !(Maybe [Base64])
+    , _avB    :: !(Maybe Base64)
+    , _avSS   :: !(Maybe [Text])
+    , _avS    :: !(Maybe Text)
+    , _avBOOL :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttributeValue' with the minimum fields required to make a request.
@@ -146,10 +148,12 @@ instance NFData AttributeValue where
 --
 --
 -- /See:/ 'identity' smart constructor.
-data Identity = Identity'
-  { _iPrincipalId :: !(Maybe Text)
-  , _iType        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Identity =
+  Identity'
+    { _iPrincipalId :: !(Maybe Text)
+    , _iType        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Identity' with the minimum fields required to make a request.
@@ -190,10 +194,12 @@ instance NFData Identity where
 --
 --
 -- /See:/ 'keySchemaElement' smart constructor.
-data KeySchemaElement = KeySchemaElement'
-  { _kseAttributeName :: !Text
-  , _kseKeyType       :: !KeyType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data KeySchemaElement =
+  KeySchemaElement'
+    { _kseAttributeName :: !Text
+    , _kseKeyType       :: !KeyType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'KeySchemaElement' with the minimum fields required to make a request.
@@ -236,15 +242,17 @@ instance NFData KeySchemaElement where
 --
 --
 -- /See:/ 'record' smart constructor.
-data Record = Record'
-  { _rUserIdentity :: !(Maybe Identity)
-  , _rEventVersion :: !(Maybe Text)
-  , _rDynamodb     :: !(Maybe StreamRecord)
-  , _rAwsRegion    :: !(Maybe Text)
-  , _rEventName    :: !(Maybe OperationType)
-  , _rEventSource  :: !(Maybe Text)
-  , _rEventId      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Record =
+  Record'
+    { _rUserIdentity :: !(Maybe Identity)
+    , _rEventVersion :: !(Maybe Text)
+    , _rDynamodb     :: !(Maybe StreamRecord)
+    , _rAwsRegion    :: !(Maybe Text)
+    , _rEventName    :: !(Maybe OperationType)
+    , _rEventSource  :: !(Maybe Text)
+    , _rEventId      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Record' with the minimum fields required to make a request.
@@ -327,10 +335,12 @@ instance NFData Record where
 --
 --
 -- /See:/ 'sequenceNumberRange' smart constructor.
-data SequenceNumberRange = SequenceNumberRange'
-  { _snrStartingSequenceNumber :: !(Maybe Text)
-  , _snrEndingSequenceNumber   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SequenceNumberRange =
+  SequenceNumberRange'
+    { _snrStartingSequenceNumber :: !(Maybe Text)
+    , _snrEndingSequenceNumber   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SequenceNumberRange' with the minimum fields required to make a request.
@@ -372,11 +382,13 @@ instance NFData SequenceNumberRange where
 --
 --
 -- /See:/ 'shard' smart constructor.
-data Shard = Shard'
-  { _sParentShardId       :: !(Maybe Text)
-  , _sSequenceNumberRange :: !(Maybe SequenceNumberRange)
-  , _sShardId             :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Shard =
+  Shard'
+    { _sParentShardId       :: !(Maybe Text)
+    , _sSequenceNumberRange :: !(Maybe SequenceNumberRange)
+    , _sShardId             :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Shard' with the minimum fields required to make a request.
@@ -428,11 +440,13 @@ instance NFData Shard where
 --
 --
 -- /See:/ 'stream' smart constructor.
-data Stream = Stream'
-  { _sStreamLabel :: !(Maybe Text)
-  , _sStreamARN   :: !(Maybe Text)
-  , _sTableName   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Stream =
+  Stream'
+    { _sStreamLabel :: !(Maybe Text)
+    , _sStreamARN   :: !(Maybe Text)
+    , _sTableName   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Stream' with the minimum fields required to make a request.
@@ -480,17 +494,19 @@ instance NFData Stream where
 --
 --
 -- /See:/ 'streamDescription' smart constructor.
-data StreamDescription = StreamDescription'
-  { _sdLastEvaluatedShardId    :: !(Maybe Text)
-  , _sdStreamLabel             :: !(Maybe Text)
-  , _sdStreamStatus            :: !(Maybe StreamStatus)
-  , _sdKeySchema               :: !(Maybe (List1 KeySchemaElement))
-  , _sdStreamViewType          :: !(Maybe StreamViewType)
-  , _sdStreamARN               :: !(Maybe Text)
-  , _sdShards                  :: !(Maybe [Shard])
-  , _sdTableName               :: !(Maybe Text)
-  , _sdCreationRequestDateTime :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StreamDescription =
+  StreamDescription'
+    { _sdLastEvaluatedShardId    :: !(Maybe Text)
+    , _sdStreamLabel             :: !(Maybe Text)
+    , _sdStreamStatus            :: !(Maybe StreamStatus)
+    , _sdKeySchema               :: !(Maybe (List1 KeySchemaElement))
+    , _sdStreamViewType          :: !(Maybe StreamViewType)
+    , _sdStreamARN               :: !(Maybe Text)
+    , _sdShards                  :: !(Maybe [Shard])
+    , _sdTableName               :: !(Maybe Text)
+    , _sdCreationRequestDateTime :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StreamDescription' with the minimum fields required to make a request.
@@ -590,15 +606,17 @@ instance NFData StreamDescription where
 --
 --
 -- /See:/ 'streamRecord' smart constructor.
-data StreamRecord = StreamRecord'
-  { _srSizeBytes                   :: !(Maybe Nat)
-  , _srSequenceNumber              :: !(Maybe Text)
-  , _srApproximateCreationDateTime :: !(Maybe POSIX)
-  , _srStreamViewType              :: !(Maybe StreamViewType)
-  , _srKeys                        :: !(Maybe (Map Text AttributeValue))
-  , _srOldImage                    :: !(Maybe (Map Text AttributeValue))
-  , _srNewImage                    :: !(Maybe (Map Text AttributeValue))
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StreamRecord =
+  StreamRecord'
+    { _srSizeBytes                   :: !(Maybe Nat)
+    , _srSequenceNumber              :: !(Maybe Text)
+    , _srApproximateCreationDateTime :: !(Maybe POSIX)
+    , _srStreamViewType              :: !(Maybe StreamViewType)
+    , _srKeys                        :: !(Maybe (Map Text AttributeValue))
+    , _srOldImage                    :: !(Maybe (Map Text AttributeValue))
+    , _srNewImage                    :: !(Maybe (Map Text AttributeValue))
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StreamRecord' with the minimum fields required to make a request.

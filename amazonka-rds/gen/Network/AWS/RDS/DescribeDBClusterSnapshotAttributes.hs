@@ -53,9 +53,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeDBClusterSnapshotAttributes' smart constructor.
-newtype DescribeDBClusterSnapshotAttributes = DescribeDBClusterSnapshotAttributes'
-  { _ddcsaDBClusterSnapshotIdentifier :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeDBClusterSnapshotAttributes =
+  DescribeDBClusterSnapshotAttributes'
+    { _ddcsaDBClusterSnapshotIdentifier :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDBClusterSnapshotAttributes' with the minimum fields required to make a request.
@@ -116,10 +118,12 @@ instance ToQuery DescribeDBClusterSnapshotAttributes
                  _ddcsaDBClusterSnapshotIdentifier]
 
 -- | /See:/ 'describeDBClusterSnapshotAttributesResponse' smart constructor.
-data DescribeDBClusterSnapshotAttributesResponse = DescribeDBClusterSnapshotAttributesResponse'
-  { _ddcsarsDBClusterSnapshotAttributesResult :: !(Maybe DBClusterSnapshotAttributesResult)
-  , _ddcsarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDBClusterSnapshotAttributesResponse =
+  DescribeDBClusterSnapshotAttributesResponse'
+    { _ddcsarsDBClusterSnapshotAttributesResult :: !(Maybe DBClusterSnapshotAttributesResult)
+    , _ddcsarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDBClusterSnapshotAttributesResponse' with the minimum fields required to make a request.

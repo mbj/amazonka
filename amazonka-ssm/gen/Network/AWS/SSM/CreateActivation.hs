@@ -50,13 +50,15 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'createActivation' smart constructor.
-data CreateActivation = CreateActivation'
-  { _caDefaultInstanceName :: !(Maybe Text)
-  , _caRegistrationLimit   :: !(Maybe Nat)
-  , _caExpirationDate      :: !(Maybe POSIX)
-  , _caDescription         :: !(Maybe Text)
-  , _caIAMRole             :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateActivation =
+  CreateActivation'
+    { _caDefaultInstanceName :: !(Maybe Text)
+    , _caRegistrationLimit   :: !(Maybe Nat)
+    , _caExpirationDate      :: !(Maybe POSIX)
+    , _caDescription         :: !(Maybe Text)
+    , _caIAMRole             :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateActivation' with the minimum fields required to make a request.
@@ -146,11 +148,13 @@ instance ToQuery CreateActivation where
         toQuery = const mempty
 
 -- | /See:/ 'createActivationResponse' smart constructor.
-data CreateActivationResponse = CreateActivationResponse'
-  { _carsActivationId   :: !(Maybe Text)
-  , _carsActivationCode :: !(Maybe Text)
-  , _carsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateActivationResponse =
+  CreateActivationResponse'
+    { _carsActivationId   :: !(Maybe Text)
+    , _carsActivationCode :: !(Maybe Text)
+    , _carsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateActivationResponse' with the minimum fields required to make a request.

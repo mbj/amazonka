@@ -57,13 +57,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createStream' smart constructor.
-data CreateStream = CreateStream'
-  { _csMediaType            :: !(Maybe Text)
-  , _csDataRetentionInHours :: !(Maybe Nat)
-  , _csKMSKeyId             :: !(Maybe Text)
-  , _csDeviceName           :: !(Maybe Text)
-  , _csStreamName           :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateStream =
+  CreateStream'
+    { _csMediaType            :: !(Maybe Text)
+    , _csDataRetentionInHours :: !(Maybe Nat)
+    , _csKMSKeyId             :: !(Maybe Text)
+    , _csDeviceName           :: !(Maybe Text)
+    , _csStreamName           :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateStream' with the minimum fields required to make a request.
@@ -146,10 +148,12 @@ instance ToQuery CreateStream where
         toQuery = const mempty
 
 -- | /See:/ 'createStreamResponse' smart constructor.
-data CreateStreamResponse = CreateStreamResponse'
-  { _csrsStreamARN      :: !(Maybe Text)
-  , _csrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateStreamResponse =
+  CreateStreamResponse'
+    { _csrsStreamARN      :: !(Maybe Text)
+    , _csrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateStreamResponse' with the minimum fields required to make a request.

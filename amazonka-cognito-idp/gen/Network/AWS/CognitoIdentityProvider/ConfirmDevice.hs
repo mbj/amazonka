@@ -52,12 +52,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'confirmDevice' smart constructor.
-data ConfirmDevice = ConfirmDevice'
-  { _cdDeviceSecretVerifierConfig :: !(Maybe DeviceSecretVerifierConfigType)
-  , _cdDeviceName                 :: !(Maybe Text)
-  , _cdAccessToken                :: !(Sensitive Text)
-  , _cdDeviceKey                  :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data ConfirmDevice =
+  ConfirmDevice'
+    { _cdDeviceSecretVerifierConfig :: !(Maybe DeviceSecretVerifierConfigType)
+    , _cdDeviceName                 :: !(Maybe Text)
+    , _cdAccessToken                :: !(Sensitive Text)
+    , _cdDeviceKey                  :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ConfirmDevice' with the minimum fields required to make a request.
@@ -145,10 +147,12 @@ instance ToQuery ConfirmDevice where
 --
 --
 -- /See:/ 'confirmDeviceResponse' smart constructor.
-data ConfirmDeviceResponse = ConfirmDeviceResponse'
-  { _cdrsUserConfirmationNecessary :: !(Maybe Bool)
-  , _cdrsResponseStatus            :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ConfirmDeviceResponse =
+  ConfirmDeviceResponse'
+    { _cdrsUserConfirmationNecessary :: !(Maybe Bool)
+    , _cdrsResponseStatus            :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ConfirmDeviceResponse' with the minimum fields required to make a request.

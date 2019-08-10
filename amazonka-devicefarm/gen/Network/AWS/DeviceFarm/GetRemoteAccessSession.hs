@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getRemoteAccessSession' smart constructor.
-newtype GetRemoteAccessSession = GetRemoteAccessSession'
-  { _grasArn :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetRemoteAccessSession =
+  GetRemoteAccessSession'
+    { _grasArn :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetRemoteAccessSession' with the minimum fields required to make a request.
@@ -109,10 +111,12 @@ instance ToQuery GetRemoteAccessSession where
 --
 --
 -- /See:/ 'getRemoteAccessSessionResponse' smart constructor.
-data GetRemoteAccessSessionResponse = GetRemoteAccessSessionResponse'
-  { _grasrsRemoteAccessSession :: !(Maybe RemoteAccessSession)
-  , _grasrsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetRemoteAccessSessionResponse =
+  GetRemoteAccessSessionResponse'
+    { _grasrsRemoteAccessSession :: !(Maybe RemoteAccessSession)
+    , _grasrsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetRemoteAccessSessionResponse' with the minimum fields required to make a request.

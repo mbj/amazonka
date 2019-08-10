@@ -58,16 +58,18 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'copyImage' smart constructor.
-data CopyImage = CopyImage'
-  { _ciClientToken   :: !(Maybe Text)
-  , _ciEncrypted     :: !(Maybe Bool)
-  , _ciKMSKeyId      :: !(Maybe Text)
-  , _ciDescription   :: !(Maybe Text)
-  , _ciDryRun        :: !(Maybe Bool)
-  , _ciName          :: !Text
-  , _ciSourceImageId :: !Text
-  , _ciSourceRegion  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CopyImage =
+  CopyImage'
+    { _ciClientToken   :: !(Maybe Text)
+    , _ciEncrypted     :: !(Maybe Bool)
+    , _ciKMSKeyId      :: !(Maybe Text)
+    , _ciDescription   :: !(Maybe Text)
+    , _ciDryRun        :: !(Maybe Bool)
+    , _ciName          :: !Text
+    , _ciSourceImageId :: !Text
+    , _ciSourceRegion  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CopyImage' with the minimum fields required to make a request.
@@ -176,10 +178,12 @@ instance ToQuery CopyImage where
 --
 --
 -- /See:/ 'copyImageResponse' smart constructor.
-data CopyImageResponse = CopyImageResponse'
-  { _coprsImageId        :: !(Maybe Text)
-  , _coprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CopyImageResponse =
+  CopyImageResponse'
+    { _coprsImageId        :: !(Maybe Text)
+    , _coprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CopyImageResponse' with the minimum fields required to make a request.

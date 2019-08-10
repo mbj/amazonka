@@ -52,12 +52,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'retryStageExecution' smart constructor.
-data RetryStageExecution = RetryStageExecution'
-  { _rsePipelineName        :: !Text
-  , _rseStageName           :: !Text
-  , _rsePipelineExecutionId :: !Text
-  , _rseRetryMode           :: !StageRetryMode
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RetryStageExecution =
+  RetryStageExecution'
+    { _rsePipelineName        :: !Text
+    , _rseStageName           :: !Text
+    , _rsePipelineExecutionId :: !Text
+    , _rseRetryMode           :: !StageRetryMode
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RetryStageExecution' with the minimum fields required to make a request.
@@ -148,10 +150,12 @@ instance ToQuery RetryStageExecution where
 --
 --
 -- /See:/ 'retryStageExecutionResponse' smart constructor.
-data RetryStageExecutionResponse = RetryStageExecutionResponse'
-  { _rsersPipelineExecutionId :: !(Maybe Text)
-  , _rsersResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RetryStageExecutionResponse =
+  RetryStageExecutionResponse'
+    { _rsersPipelineExecutionId :: !(Maybe Text)
+    , _rsersResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RetryStageExecutionResponse' with the minimum fields required to make a request.

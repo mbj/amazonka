@@ -54,11 +54,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listGroups' smart constructor.
-data ListGroups = ListGroups'
-  { _lgPathPrefix :: !(Maybe Text)
-  , _lgMarker     :: !(Maybe Text)
-  , _lgMaxItems   :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListGroups =
+  ListGroups'
+    { _lgPathPrefix :: !(Maybe Text)
+    , _lgMarker     :: !(Maybe Text)
+    , _lgMaxItems   :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListGroups' with the minimum fields required to make a request.
@@ -132,12 +134,14 @@ instance ToQuery ListGroups where
 --
 --
 -- /See:/ 'listGroupsResponse' smart constructor.
-data ListGroupsResponse = ListGroupsResponse'
-  { _lgrsMarker         :: !(Maybe Text)
-  , _lgrsIsTruncated    :: !(Maybe Bool)
-  , _lgrsResponseStatus :: !Int
-  , _lgrsGroups         :: ![Group]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListGroupsResponse =
+  ListGroupsResponse'
+    { _lgrsMarker         :: !(Maybe Text)
+    , _lgrsIsTruncated    :: !(Maybe Bool)
+    , _lgrsResponseStatus :: !Int
+    , _lgrsGroups         :: ![Group]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListGroupsResponse' with the minimum fields required to make a request.

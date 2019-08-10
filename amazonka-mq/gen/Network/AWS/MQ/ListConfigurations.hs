@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listConfigurations' smart constructor.
-data ListConfigurations = ListConfigurations'
-  { _lcNextToken  :: !(Maybe Text)
-  , _lcMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListConfigurations =
+  ListConfigurations'
+    { _lcNextToken  :: !(Maybe Text)
+    , _lcMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListConfigurations' with the minimum fields required to make a request.
@@ -107,12 +109,14 @@ instance ToQuery ListConfigurations where
                "maxResults" =: _lcMaxResults]
 
 -- | /See:/ 'listConfigurationsResponse' smart constructor.
-data ListConfigurationsResponse = ListConfigurationsResponse'
-  { _lcrsConfigurations :: !(Maybe [Configuration])
-  , _lcrsNextToken      :: !(Maybe Text)
-  , _lcrsMaxResults     :: !(Maybe Int)
-  , _lcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListConfigurationsResponse =
+  ListConfigurationsResponse'
+    { _lcrsConfigurations :: !(Maybe [Configuration])
+    , _lcrsNextToken      :: !(Maybe Text)
+    , _lcrsMaxResults     :: !(Maybe Int)
+    , _lcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListConfigurationsResponse' with the minimum fields required to make a request.

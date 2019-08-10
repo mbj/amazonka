@@ -51,11 +51,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createDBSnapshot' smart constructor.
-data CreateDBSnapshot = CreateDBSnapshot'
-  { _cdbsTags                 :: !(Maybe [Tag])
-  , _cdbsDBSnapshotIdentifier :: !Text
-  , _cdbsDBInstanceIdentifier :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDBSnapshot =
+  CreateDBSnapshot'
+    { _cdbsTags                 :: !(Maybe [Tag])
+    , _cdbsDBSnapshotIdentifier :: !Text
+    , _cdbsDBInstanceIdentifier :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDBSnapshot' with the minimum fields required to make a request.
@@ -120,10 +122,12 @@ instance ToQuery CreateDBSnapshot where
                "DBInstanceIdentifier" =: _cdbsDBInstanceIdentifier]
 
 -- | /See:/ 'createDBSnapshotResponse' smart constructor.
-data CreateDBSnapshotResponse = CreateDBSnapshotResponse'
-  { _cdbsrsDBSnapshot     :: !(Maybe DBSnapshot)
-  , _cdbsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDBSnapshotResponse =
+  CreateDBSnapshotResponse'
+    { _cdbsrsDBSnapshot     :: !(Maybe DBSnapshot)
+    , _cdbsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDBSnapshotResponse' with the minimum fields required to make a request.

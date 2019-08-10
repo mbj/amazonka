@@ -43,10 +43,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'tagCertificateAuthority' smart constructor.
-data TagCertificateAuthority = TagCertificateAuthority'
-  { _tcaCertificateAuthorityARN :: !Text
-  , _tcaTags                    :: !(List1 Tag)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TagCertificateAuthority =
+  TagCertificateAuthority'
+    { _tcaCertificateAuthorityARN :: !Text
+    , _tcaTags                    :: !(List1 Tag)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TagCertificateAuthority' with the minimum fields required to make a request.

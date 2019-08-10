@@ -48,10 +48,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'registerVolume' smart constructor.
-data RegisterVolume = RegisterVolume'
-  { _rvEC2VolumeId :: !(Maybe Text)
-  , _rvStackId     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RegisterVolume =
+  RegisterVolume'
+    { _rvEC2VolumeId :: !(Maybe Text)
+    , _rvStackId     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterVolume' with the minimum fields required to make a request.
@@ -116,10 +118,12 @@ instance ToQuery RegisterVolume where
 --
 --
 -- /See:/ 'registerVolumeResponse' smart constructor.
-data RegisterVolumeResponse = RegisterVolumeResponse'
-  { _rvrsVolumeId       :: !(Maybe Text)
-  , _rvrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RegisterVolumeResponse =
+  RegisterVolumeResponse'
+    { _rvrsVolumeId       :: !(Maybe Text)
+    , _rvrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterVolumeResponse' with the minimum fields required to make a request.

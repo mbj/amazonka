@@ -49,9 +49,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'declineHandshake' smart constructor.
-newtype DeclineHandshake = DeclineHandshake'
-  { _dHandshakeId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeclineHandshake =
+  DeclineHandshake'
+    { _dHandshakeId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeclineHandshake' with the minimum fields required to make a request.
@@ -105,10 +107,12 @@ instance ToQuery DeclineHandshake where
         toQuery = const mempty
 
 -- | /See:/ 'declineHandshakeResponse' smart constructor.
-data DeclineHandshakeResponse = DeclineHandshakeResponse'
-  { _drsHandshake      :: !(Maybe Handshake)
-  , _drsResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data DeclineHandshakeResponse =
+  DeclineHandshakeResponse'
+    { _drsHandshake      :: !(Maybe Handshake)
+    , _drsResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeclineHandshakeResponse' with the minimum fields required to make a request.

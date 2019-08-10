@@ -65,11 +65,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeInstanceAttribute' smart constructor.
-data DescribeInstanceAttribute = DescribeInstanceAttribute'
-  { _diaDryRun     :: !(Maybe Bool)
-  , _diaAttribute  :: !InstanceAttributeName
-  , _diaInstanceId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeInstanceAttribute =
+  DescribeInstanceAttribute'
+    { _diaDryRun     :: !(Maybe Bool)
+    , _diaAttribute  :: !InstanceAttributeName
+    , _diaInstanceId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeInstanceAttribute' with the minimum fields required to make a request.
@@ -159,24 +161,26 @@ instance ToQuery DescribeInstanceAttribute where
 --
 --
 -- /See:/ 'describeInstanceAttributeResponse' smart constructor.
-data DescribeInstanceAttributeResponse = DescribeInstanceAttributeResponse'
-  { _desrsInstanceId :: !(Maybe Text)
-  , _desrsGroups :: !(Maybe [GroupIdentifier])
-  , _desrsEnaSupport :: !(Maybe AttributeBooleanValue)
-  , _desrsSourceDestCheck :: !(Maybe AttributeBooleanValue)
-  , _desrsDisableAPITermination :: !(Maybe AttributeBooleanValue)
-  , _desrsRAMDiskId :: !(Maybe AttributeValue)
-  , _desrsKernelId :: !(Maybe AttributeValue)
-  , _desrsRootDeviceName :: !(Maybe AttributeValue)
-  , _desrsInstanceType :: !(Maybe AttributeValue)
-  , _desrsSRIOVNetSupport :: !(Maybe AttributeValue)
-  , _desrsEBSOptimized :: !(Maybe AttributeBooleanValue)
-  , _desrsUserData :: !(Maybe AttributeValue)
-  , _desrsInstanceInitiatedShutdownBehavior :: !(Maybe AttributeValue)
-  , _desrsProductCodes :: !(Maybe [ProductCode])
-  , _desrsBlockDeviceMappings :: !(Maybe [InstanceBlockDeviceMapping])
-  , _desrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeInstanceAttributeResponse =
+  DescribeInstanceAttributeResponse'
+    { _desrsInstanceId :: !(Maybe Text)
+    , _desrsGroups :: !(Maybe [GroupIdentifier])
+    , _desrsEnaSupport :: !(Maybe AttributeBooleanValue)
+    , _desrsSourceDestCheck :: !(Maybe AttributeBooleanValue)
+    , _desrsDisableAPITermination :: !(Maybe AttributeBooleanValue)
+    , _desrsRAMDiskId :: !(Maybe AttributeValue)
+    , _desrsKernelId :: !(Maybe AttributeValue)
+    , _desrsRootDeviceName :: !(Maybe AttributeValue)
+    , _desrsInstanceType :: !(Maybe AttributeValue)
+    , _desrsSRIOVNetSupport :: !(Maybe AttributeValue)
+    , _desrsEBSOptimized :: !(Maybe AttributeBooleanValue)
+    , _desrsUserData :: !(Maybe AttributeValue)
+    , _desrsInstanceInitiatedShutdownBehavior :: !(Maybe AttributeValue)
+    , _desrsProductCodes :: !(Maybe [ProductCode])
+    , _desrsBlockDeviceMappings :: !(Maybe [InstanceBlockDeviceMapping])
+    , _desrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeInstanceAttributeResponse' with the minimum fields required to make a request.

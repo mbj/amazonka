@@ -43,10 +43,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putRetentionPolicy' smart constructor.
-data PutRetentionPolicy = PutRetentionPolicy'
-  { _prpLogGroupName    :: !Text
-  , _prpRetentionInDays :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutRetentionPolicy =
+  PutRetentionPolicy'
+    { _prpLogGroupName    :: !Text
+    , _prpRetentionInDays :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutRetentionPolicy' with the minimum fields required to make a request.

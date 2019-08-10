@@ -43,9 +43,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteAPNSChannel' smart constructor.
-newtype DeleteAPNSChannel = DeleteAPNSChannel'
-  { _dacApplicationId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteAPNSChannel =
+  DeleteAPNSChannel'
+    { _dacApplicationId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteAPNSChannel' with the minimum fields required to make a request.
@@ -94,10 +96,12 @@ instance ToQuery DeleteAPNSChannel where
         toQuery = const mempty
 
 -- | /See:/ 'deleteAPNSChannelResponse' smart constructor.
-data DeleteAPNSChannelResponse = DeleteAPNSChannelResponse'
-  { _dacrsResponseStatus      :: !Int
-  , _dacrsAPNSChannelResponse :: !APNSChannelResponse
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteAPNSChannelResponse =
+  DeleteAPNSChannelResponse'
+    { _dacrsResponseStatus      :: !Int
+    , _dacrsAPNSChannelResponse :: !APNSChannelResponse
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteAPNSChannelResponse' with the minimum fields required to make a request.

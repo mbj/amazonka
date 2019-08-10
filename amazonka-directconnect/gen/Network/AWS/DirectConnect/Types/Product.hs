@@ -26,15 +26,17 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'bgpPeer' smart constructor.
-data BGPPeer = BGPPeer'
-  { _bpCustomerAddress :: !(Maybe Text)
-  , _bpAmazonAddress   :: !(Maybe Text)
-  , _bpAddressFamily   :: !(Maybe AddressFamily)
-  , _bpBgpStatus       :: !(Maybe BGPStatus)
-  , _bpAsn             :: !(Maybe Int)
-  , _bpAuthKey         :: !(Maybe Text)
-  , _bpBgpPeerState    :: !(Maybe BGPPeerState)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BGPPeer =
+  BGPPeer'
+    { _bpCustomerAddress :: !(Maybe Text)
+    , _bpAmazonAddress   :: !(Maybe Text)
+    , _bpAddressFamily   :: !(Maybe AddressFamily)
+    , _bpBgpStatus       :: !(Maybe BGPStatus)
+    , _bpAsn             :: !(Maybe Int)
+    , _bpAuthKey         :: !(Maybe Text)
+    , _bpBgpPeerState    :: !(Maybe BGPPeerState)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BGPPeer' with the minimum fields required to make a request.
@@ -117,20 +119,22 @@ instance NFData BGPPeer where
 --
 --
 -- /See:/ 'connection' smart constructor.
-data Connection = Connection'
-  { _cLagId           :: !(Maybe Text)
-  , _cVlan            :: !(Maybe Int)
-  , _cLocation        :: !(Maybe Text)
-  , _cAwsDevice       :: !(Maybe Text)
-  , _cConnectionId    :: !(Maybe Text)
-  , _cLoaIssueTime    :: !(Maybe POSIX)
-  , _cPartnerName     :: !(Maybe Text)
-  , _cConnectionName  :: !(Maybe Text)
-  , _cBandwidth       :: !(Maybe Text)
-  , _cOwnerAccount    :: !(Maybe Text)
-  , _cRegion          :: !(Maybe Text)
-  , _cConnectionState :: !(Maybe ConnectionState)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Connection =
+  Connection'
+    { _cLagId           :: !(Maybe Text)
+    , _cVlan            :: !(Maybe Int)
+    , _cLocation        :: !(Maybe Text)
+    , _cAwsDevice       :: !(Maybe Text)
+    , _cConnectionId    :: !(Maybe Text)
+    , _cLoaIssueTime    :: !(Maybe POSIX)
+    , _cPartnerName     :: !(Maybe Text)
+    , _cConnectionName  :: !(Maybe Text)
+    , _cBandwidth       :: !(Maybe Text)
+    , _cOwnerAccount    :: !(Maybe Text)
+    , _cRegion          :: !(Maybe Text)
+    , _cConnectionState :: !(Maybe ConnectionState)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Connection' with the minimum fields required to make a request.
@@ -253,9 +257,11 @@ instance NFData Connection where
 --
 --
 -- /See:/ 'connections' smart constructor.
-newtype Connections = Connections'
-  { _cConnections :: Maybe [Connection]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype Connections =
+  Connections'
+    { _cConnections :: Maybe [Connection]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Connections' with the minimum fields required to make a request.
@@ -287,14 +293,16 @@ instance NFData Connections where
 --
 --
 -- /See:/ 'directConnectGateway' smart constructor.
-data DirectConnectGateway = DirectConnectGateway'
-  { _dcgDirectConnectGatewayId    :: !(Maybe Text)
-  , _dcgStateChangeError          :: !(Maybe Text)
-  , _dcgAmazonSideASN             :: !(Maybe Integer)
-  , _dcgDirectConnectGatewayName  :: !(Maybe Text)
-  , _dcgDirectConnectGatewayState :: !(Maybe DirectConnectGatewayState)
-  , _dcgOwnerAccount              :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DirectConnectGateway =
+  DirectConnectGateway'
+    { _dcgDirectConnectGatewayId    :: !(Maybe Text)
+    , _dcgStateChangeError          :: !(Maybe Text)
+    , _dcgAmazonSideASN             :: !(Maybe Integer)
+    , _dcgDirectConnectGatewayName  :: !(Maybe Text)
+    , _dcgDirectConnectGatewayState :: !(Maybe DirectConnectGatewayState)
+    , _dcgOwnerAccount              :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DirectConnectGateway' with the minimum fields required to make a request.
@@ -370,14 +378,16 @@ instance NFData DirectConnectGateway where
 --
 --
 -- /See:/ 'directConnectGatewayAssociation' smart constructor.
-data DirectConnectGatewayAssociation = DirectConnectGatewayAssociation'
-  { _dcgaVirtualGatewayId :: !(Maybe Text)
-  , _dcgaDirectConnectGatewayId :: !(Maybe Text)
-  , _dcgaVirtualGatewayOwnerAccount :: !(Maybe Text)
-  , _dcgaStateChangeError :: !(Maybe Text)
-  , _dcgaVirtualGatewayRegion :: !(Maybe Text)
-  , _dcgaAssociationState :: !(Maybe DirectConnectGatewayAssociationState)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DirectConnectGatewayAssociation =
+  DirectConnectGatewayAssociation'
+    { _dcgaVirtualGatewayId :: !(Maybe Text)
+    , _dcgaDirectConnectGatewayId :: !(Maybe Text)
+    , _dcgaVirtualGatewayOwnerAccount :: !(Maybe Text)
+    , _dcgaStateChangeError :: !(Maybe Text)
+    , _dcgaVirtualGatewayRegion :: !(Maybe Text)
+    , _dcgaAssociationState :: !(Maybe DirectConnectGatewayAssociationState)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DirectConnectGatewayAssociation' with the minimum fields required to make a request.
@@ -455,14 +465,16 @@ instance NFData DirectConnectGatewayAssociation where
 --
 --
 -- /See:/ 'directConnectGatewayAttachment' smart constructor.
-data DirectConnectGatewayAttachment = DirectConnectGatewayAttachment'
-  { _dDirectConnectGatewayId :: !(Maybe Text)
-  , _dAttachmentState :: !(Maybe DirectConnectGatewayAttachmentState)
-  , _dStateChangeError :: !(Maybe Text)
-  , _dVirtualInterfaceRegion :: !(Maybe Text)
-  , _dVirtualInterfaceOwnerAccount :: !(Maybe Text)
-  , _dVirtualInterfaceId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DirectConnectGatewayAttachment =
+  DirectConnectGatewayAttachment'
+    { _dDirectConnectGatewayId :: !(Maybe Text)
+    , _dAttachmentState :: !(Maybe DirectConnectGatewayAttachmentState)
+    , _dStateChangeError :: !(Maybe Text)
+    , _dVirtualInterfaceRegion :: !(Maybe Text)
+    , _dVirtualInterfaceOwnerAccount :: !(Maybe Text)
+    , _dVirtualInterfaceId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DirectConnectGatewayAttachment' with the minimum fields required to make a request.
@@ -544,17 +556,19 @@ instance NFData DirectConnectGatewayAttachment where
 --
 --
 -- /See:/ 'interconnect' smart constructor.
-data Interconnect = Interconnect'
-  { _iLagId             :: !(Maybe Text)
-  , _iInterconnectId    :: !(Maybe Text)
-  , _iLocation          :: !(Maybe Text)
-  , _iInterconnectName  :: !(Maybe Text)
-  , _iAwsDevice         :: !(Maybe Text)
-  , _iLoaIssueTime      :: !(Maybe POSIX)
-  , _iBandwidth         :: !(Maybe Text)
-  , _iInterconnectState :: !(Maybe InterconnectState)
-  , _iRegion            :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Interconnect =
+  Interconnect'
+    { _iLagId             :: !(Maybe Text)
+    , _iInterconnectId    :: !(Maybe Text)
+    , _iLocation          :: !(Maybe Text)
+    , _iInterconnectName  :: !(Maybe Text)
+    , _iAwsDevice         :: !(Maybe Text)
+    , _iLoaIssueTime      :: !(Maybe POSIX)
+    , _iBandwidth         :: !(Maybe Text)
+    , _iInterconnectState :: !(Maybe InterconnectState)
+    , _iRegion            :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Interconnect' with the minimum fields required to make a request.
@@ -653,20 +667,22 @@ instance NFData Interconnect where
 --
 --
 -- /See:/ 'lag' smart constructor.
-data Lag = Lag'
-  { _lagLagId                   :: !(Maybe Text)
-  , _lagConnectionsBandwidth    :: !(Maybe Text)
-  , _lagMinimumLinks            :: !(Maybe Int)
-  , _lagLagName                 :: !(Maybe Text)
-  , _lagLocation                :: !(Maybe Text)
-  , _lagConnections             :: !(Maybe [Connection])
-  , _lagAwsDevice               :: !(Maybe Text)
-  , _lagAllowsHostedConnections :: !(Maybe Bool)
-  , _lagNumberOfConnections     :: !(Maybe Int)
-  , _lagLagState                :: !(Maybe LagState)
-  , _lagOwnerAccount            :: !(Maybe Text)
-  , _lagRegion                  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Lag =
+  Lag'
+    { _lagLagId                   :: !(Maybe Text)
+    , _lagConnectionsBandwidth    :: !(Maybe Text)
+    , _lagMinimumLinks            :: !(Maybe Int)
+    , _lagLagName                 :: !(Maybe Text)
+    , _lagLocation                :: !(Maybe Text)
+    , _lagConnections             :: !(Maybe [Connection])
+    , _lagAwsDevice               :: !(Maybe Text)
+    , _lagAllowsHostedConnections :: !(Maybe Bool)
+    , _lagNumberOfConnections     :: !(Maybe Int)
+    , _lagLagState                :: !(Maybe LagState)
+    , _lagOwnerAccount            :: !(Maybe Text)
+    , _lagRegion                  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Lag' with the minimum fields required to make a request.
@@ -789,10 +805,12 @@ instance NFData Lag where
 --
 --
 -- /See:/ 'location' smart constructor.
-data Location = Location'
-  { _lLocationName :: !(Maybe Text)
-  , _lLocationCode :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Location =
+  Location'
+    { _lLocationName :: !(Maybe Text)
+    , _lLocationCode :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Location' with the minimum fields required to make a request.
@@ -831,13 +849,15 @@ instance NFData Location where
 --
 --
 -- /See:/ 'newBGPPeer' smart constructor.
-data NewBGPPeer = NewBGPPeer'
-  { _nbpCustomerAddress :: !(Maybe Text)
-  , _nbpAmazonAddress   :: !(Maybe Text)
-  , _nbpAddressFamily   :: !(Maybe AddressFamily)
-  , _nbpAsn             :: !(Maybe Int)
-  , _nbpAuthKey         :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NewBGPPeer =
+  NewBGPPeer'
+    { _nbpCustomerAddress :: !(Maybe Text)
+    , _nbpAmazonAddress   :: !(Maybe Text)
+    , _nbpAddressFamily   :: !(Maybe AddressFamily)
+    , _nbpAsn             :: !(Maybe Int)
+    , _nbpAuthKey         :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NewBGPPeer' with the minimum fields required to make a request.
@@ -904,17 +924,19 @@ instance ToJSON NewBGPPeer where
 --
 --
 -- /See:/ 'newPrivateVirtualInterface' smart constructor.
-data NewPrivateVirtualInterface = NewPrivateVirtualInterface'
-  { _nVirtualGatewayId       :: !(Maybe Text)
-  , _nCustomerAddress        :: !(Maybe Text)
-  , _nAmazonAddress          :: !(Maybe Text)
-  , _nAddressFamily          :: !(Maybe AddressFamily)
-  , _nDirectConnectGatewayId :: !(Maybe Text)
-  , _nAuthKey                :: !(Maybe Text)
-  , _nVirtualInterfaceName   :: !Text
-  , _nVlan                   :: !Int
-  , _nAsn                    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NewPrivateVirtualInterface =
+  NewPrivateVirtualInterface'
+    { _nVirtualGatewayId       :: !(Maybe Text)
+    , _nCustomerAddress        :: !(Maybe Text)
+    , _nAmazonAddress          :: !(Maybe Text)
+    , _nAddressFamily          :: !(Maybe AddressFamily)
+    , _nDirectConnectGatewayId :: !(Maybe Text)
+    , _nAuthKey                :: !(Maybe Text)
+    , _nVirtualInterfaceName   :: !Text
+    , _nVlan                   :: !Int
+    , _nAsn                    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NewPrivateVirtualInterface' with the minimum fields required to make a request.
@@ -1017,15 +1039,17 @@ instance ToJSON NewPrivateVirtualInterface where
 --
 --
 -- /See:/ 'newPrivateVirtualInterfaceAllocation' smart constructor.
-data NewPrivateVirtualInterfaceAllocation = NewPrivateVirtualInterfaceAllocation'
-  { _npviaCustomerAddress      :: !(Maybe Text)
-  , _npviaAmazonAddress        :: !(Maybe Text)
-  , _npviaAddressFamily        :: !(Maybe AddressFamily)
-  , _npviaAuthKey              :: !(Maybe Text)
-  , _npviaVirtualInterfaceName :: !Text
-  , _npviaVlan                 :: !Int
-  , _npviaAsn                  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NewPrivateVirtualInterfaceAllocation =
+  NewPrivateVirtualInterfaceAllocation'
+    { _npviaCustomerAddress      :: !(Maybe Text)
+    , _npviaAmazonAddress        :: !(Maybe Text)
+    , _npviaAddressFamily        :: !(Maybe AddressFamily)
+    , _npviaAuthKey              :: !(Maybe Text)
+    , _npviaVirtualInterfaceName :: !Text
+    , _npviaVlan                 :: !Int
+    , _npviaAsn                  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NewPrivateVirtualInterfaceAllocation' with the minimum fields required to make a request.
@@ -1117,16 +1141,18 @@ instance ToJSON NewPrivateVirtualInterfaceAllocation
 --
 --
 -- /See:/ 'newPublicVirtualInterface' smart constructor.
-data NewPublicVirtualInterface = NewPublicVirtualInterface'
-  { _npviRouteFilterPrefixes  :: !(Maybe [RouteFilterPrefix])
-  , _npviCustomerAddress      :: !(Maybe Text)
-  , _npviAmazonAddress        :: !(Maybe Text)
-  , _npviAddressFamily        :: !(Maybe AddressFamily)
-  , _npviAuthKey              :: !(Maybe Text)
-  , _npviVirtualInterfaceName :: !Text
-  , _npviVlan                 :: !Int
-  , _npviAsn                  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NewPublicVirtualInterface =
+  NewPublicVirtualInterface'
+    { _npviRouteFilterPrefixes  :: !(Maybe [RouteFilterPrefix])
+    , _npviCustomerAddress      :: !(Maybe Text)
+    , _npviAmazonAddress        :: !(Maybe Text)
+    , _npviAddressFamily        :: !(Maybe AddressFamily)
+    , _npviAuthKey              :: !(Maybe Text)
+    , _npviVirtualInterfaceName :: !Text
+    , _npviVlan                 :: !Int
+    , _npviAsn                  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NewPublicVirtualInterface' with the minimum fields required to make a request.
@@ -1223,16 +1249,18 @@ instance ToJSON NewPublicVirtualInterface where
 --
 --
 -- /See:/ 'newPublicVirtualInterfaceAllocation' smart constructor.
-data NewPublicVirtualInterfaceAllocation = NewPublicVirtualInterfaceAllocation'
-  { _newRouteFilterPrefixes  :: !(Maybe [RouteFilterPrefix])
-  , _newCustomerAddress      :: !(Maybe Text)
-  , _newAmazonAddress        :: !(Maybe Text)
-  , _newAddressFamily        :: !(Maybe AddressFamily)
-  , _newAuthKey              :: !(Maybe Text)
-  , _newVirtualInterfaceName :: !Text
-  , _newVlan                 :: !Int
-  , _newAsn                  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NewPublicVirtualInterfaceAllocation =
+  NewPublicVirtualInterfaceAllocation'
+    { _newRouteFilterPrefixes  :: !(Maybe [RouteFilterPrefix])
+    , _newCustomerAddress      :: !(Maybe Text)
+    , _newAmazonAddress        :: !(Maybe Text)
+    , _newAddressFamily        :: !(Maybe AddressFamily)
+    , _newAuthKey              :: !(Maybe Text)
+    , _newVirtualInterfaceName :: !Text
+    , _newVlan                 :: !Int
+    , _newAsn                  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NewPublicVirtualInterfaceAllocation' with the minimum fields required to make a request.
@@ -1330,10 +1358,12 @@ instance ToJSON NewPublicVirtualInterfaceAllocation
 --
 --
 -- /See:/ 'resourceTag' smart constructor.
-data ResourceTag = ResourceTag'
-  { _rtResourceARN :: !(Maybe Text)
-  , _rtTags        :: !(Maybe (List1 Tag))
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResourceTag =
+  ResourceTag'
+    { _rtResourceARN :: !(Maybe Text)
+    , _rtTags        :: !(Maybe (List1 Tag))
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResourceTag' with the minimum fields required to make a request.
@@ -1372,9 +1402,11 @@ instance NFData ResourceTag where
 --
 --
 -- /See:/ 'routeFilterPrefix' smart constructor.
-newtype RouteFilterPrefix = RouteFilterPrefix'
-  { _rfpCidr :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RouteFilterPrefix =
+  RouteFilterPrefix'
+    { _rfpCidr :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RouteFilterPrefix' with the minimum fields required to make a request.
@@ -1409,10 +1441,12 @@ instance ToJSON RouteFilterPrefix where
 --
 --
 -- /See:/ 'tag' smart constructor.
-data Tag = Tag'
-  { _tagValue :: !(Maybe Text)
-  , _tagKey   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Tag =
+  Tag'
+    { _tagValue :: !(Maybe Text)
+    , _tagKey   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Tag' with the minimum fields required to make a request.
@@ -1459,10 +1493,12 @@ instance ToJSON Tag where
 --
 --
 -- /See:/ 'virtualGateway' smart constructor.
-data VirtualGateway = VirtualGateway'
-  { _vgVirtualGatewayId    :: !(Maybe Text)
-  , _vgVirtualGatewayState :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VirtualGateway =
+  VirtualGateway'
+    { _vgVirtualGatewayId    :: !(Maybe Text)
+    , _vgVirtualGatewayState :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VirtualGateway' with the minimum fields required to make a request.
@@ -1504,27 +1540,29 @@ instance NFData VirtualGateway where
 --
 --
 -- /See:/ 'virtualInterface' smart constructor.
-data VirtualInterface = VirtualInterface'
-  { _viBgpPeers               :: !(Maybe [BGPPeer])
-  , _viVirtualGatewayId       :: !(Maybe Text)
-  , _viRouteFilterPrefixes    :: !(Maybe [RouteFilterPrefix])
-  , _viCustomerAddress        :: !(Maybe Text)
-  , _viVlan                   :: !(Maybe Int)
-  , _viLocation               :: !(Maybe Text)
-  , _viAmazonAddress          :: !(Maybe Text)
-  , _viAddressFamily          :: !(Maybe AddressFamily)
-  , _viVirtualInterfaceState  :: !(Maybe VirtualInterfaceState)
-  , _viConnectionId           :: !(Maybe Text)
-  , _viDirectConnectGatewayId :: !(Maybe Text)
-  , _viAmazonSideASN          :: !(Maybe Integer)
-  , _viVirtualInterfaceType   :: !(Maybe Text)
-  , _viAsn                    :: !(Maybe Int)
-  , _viAuthKey                :: !(Maybe Text)
-  , _viCustomerRouterConfig   :: !(Maybe Text)
-  , _viOwnerAccount           :: !(Maybe Text)
-  , _viVirtualInterfaceName   :: !(Maybe Text)
-  , _viVirtualInterfaceId     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VirtualInterface =
+  VirtualInterface'
+    { _viBgpPeers               :: !(Maybe [BGPPeer])
+    , _viVirtualGatewayId       :: !(Maybe Text)
+    , _viRouteFilterPrefixes    :: !(Maybe [RouteFilterPrefix])
+    , _viCustomerAddress        :: !(Maybe Text)
+    , _viVlan                   :: !(Maybe Int)
+    , _viLocation               :: !(Maybe Text)
+    , _viAmazonAddress          :: !(Maybe Text)
+    , _viAddressFamily          :: !(Maybe AddressFamily)
+    , _viVirtualInterfaceState  :: !(Maybe VirtualInterfaceState)
+    , _viConnectionId           :: !(Maybe Text)
+    , _viDirectConnectGatewayId :: !(Maybe Text)
+    , _viAmazonSideASN          :: !(Maybe Integer)
+    , _viVirtualInterfaceType   :: !(Maybe Text)
+    , _viAsn                    :: !(Maybe Int)
+    , _viAuthKey                :: !(Maybe Text)
+    , _viCustomerRouterConfig   :: !(Maybe Text)
+    , _viOwnerAccount           :: !(Maybe Text)
+    , _viVirtualInterfaceName   :: !(Maybe Text)
+    , _viVirtualInterfaceId     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VirtualInterface' with the minimum fields required to make a request.

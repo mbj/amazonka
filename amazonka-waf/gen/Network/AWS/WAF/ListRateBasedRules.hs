@@ -47,10 +47,12 @@ import Network.AWS.WAF.Types
 import Network.AWS.WAF.Types.Product
 
 -- | /See:/ 'listRateBasedRules' smart constructor.
-data ListRateBasedRules = ListRateBasedRules'
-  { _lrbrNextMarker :: !(Maybe Text)
-  , _lrbrLimit      :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListRateBasedRules =
+  ListRateBasedRules'
+    { _lrbrNextMarker :: !(Maybe Text)
+    , _lrbrLimit      :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListRateBasedRules' with the minimum fields required to make a request.
@@ -112,11 +114,13 @@ instance ToQuery ListRateBasedRules where
         toQuery = const mempty
 
 -- | /See:/ 'listRateBasedRulesResponse' smart constructor.
-data ListRateBasedRulesResponse = ListRateBasedRulesResponse'
-  { _lrbrrsRules          :: !(Maybe [RuleSummary])
-  , _lrbrrsNextMarker     :: !(Maybe Text)
-  , _lrbrrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListRateBasedRulesResponse =
+  ListRateBasedRulesResponse'
+    { _lrbrrsRules          :: !(Maybe [RuleSummary])
+    , _lrbrrsNextMarker     :: !(Maybe Text)
+    , _lrbrrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListRateBasedRulesResponse' with the minimum fields required to make a request.

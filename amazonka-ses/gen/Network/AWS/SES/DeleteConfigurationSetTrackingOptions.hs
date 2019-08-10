@@ -50,9 +50,11 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'deleteConfigurationSetTrackingOptions' smart constructor.
-newtype DeleteConfigurationSetTrackingOptions = DeleteConfigurationSetTrackingOptions'
-  { _dcstoConfigurationSetName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteConfigurationSetTrackingOptions =
+  DeleteConfigurationSetTrackingOptions'
+    { _dcstoConfigurationSetName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteConfigurationSetTrackingOptions' with the minimum fields required to make a request.
@@ -117,9 +119,11 @@ instance ToQuery
 --
 --
 -- /See:/ 'deleteConfigurationSetTrackingOptionsResponse' smart constructor.
-newtype DeleteConfigurationSetTrackingOptionsResponse = DeleteConfigurationSetTrackingOptionsResponse'
-  { _dcstorsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteConfigurationSetTrackingOptionsResponse =
+  DeleteConfigurationSetTrackingOptionsResponse'
+    { _dcstorsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteConfigurationSetTrackingOptionsResponse' with the minimum fields required to make a request.

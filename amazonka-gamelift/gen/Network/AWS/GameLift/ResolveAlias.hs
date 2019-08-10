@@ -65,9 +65,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'resolveAlias' smart constructor.
-newtype ResolveAlias = ResolveAlias'
-  { _raAliasId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ResolveAlias =
+  ResolveAlias'
+    { _raAliasId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResolveAlias' with the minimum fields required to make a request.
@@ -122,10 +124,12 @@ instance ToQuery ResolveAlias where
 --
 --
 -- /See:/ 'resolveAliasResponse' smart constructor.
-data ResolveAliasResponse = ResolveAliasResponse'
-  { _rarsFleetId        :: !(Maybe Text)
-  , _rarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResolveAliasResponse =
+  ResolveAliasResponse'
+    { _rarsFleetId        :: !(Maybe Text)
+    , _rarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResolveAliasResponse' with the minimum fields required to make a request.

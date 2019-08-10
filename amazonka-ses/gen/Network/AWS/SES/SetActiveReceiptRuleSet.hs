@@ -52,9 +52,11 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'setActiveReceiptRuleSet' smart constructor.
-newtype SetActiveReceiptRuleSet = SetActiveReceiptRuleSet'
-  { _sarrsRuleSetName :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype SetActiveReceiptRuleSet =
+  SetActiveReceiptRuleSet'
+    { _sarrsRuleSetName :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetActiveReceiptRuleSet' with the minimum fields required to make a request.
@@ -104,9 +106,11 @@ instance ToQuery SetActiveReceiptRuleSet where
 --
 --
 -- /See:/ 'setActiveReceiptRuleSetResponse' smart constructor.
-newtype SetActiveReceiptRuleSetResponse = SetActiveReceiptRuleSetResponse'
-  { _sarrsrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype SetActiveReceiptRuleSetResponse =
+  SetActiveReceiptRuleSetResponse'
+    { _sarrsrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetActiveReceiptRuleSetResponse' with the minimum fields required to make a request.

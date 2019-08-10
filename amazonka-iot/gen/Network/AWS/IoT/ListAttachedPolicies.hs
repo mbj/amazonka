@@ -49,12 +49,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listAttachedPolicies' smart constructor.
-data ListAttachedPolicies = ListAttachedPolicies'
-  { _lapMarker    :: !(Maybe Text)
-  , _lapRecursive :: !(Maybe Bool)
-  , _lapPageSize  :: !(Maybe Nat)
-  , _lapTarget    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAttachedPolicies =
+  ListAttachedPolicies'
+    { _lapMarker    :: !(Maybe Text)
+    , _lapRecursive :: !(Maybe Bool)
+    , _lapPageSize  :: !(Maybe Nat)
+    , _lapTarget    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAttachedPolicies' with the minimum fields required to make a request.
@@ -130,11 +132,13 @@ instance ToQuery ListAttachedPolicies where
                "pageSize" =: _lapPageSize]
 
 -- | /See:/ 'listAttachedPoliciesResponse' smart constructor.
-data ListAttachedPoliciesResponse = ListAttachedPoliciesResponse'
-  { _laprsNextMarker     :: !(Maybe Text)
-  , _laprsPolicies       :: !(Maybe [Policy])
-  , _laprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAttachedPoliciesResponse =
+  ListAttachedPoliciesResponse'
+    { _laprsNextMarker     :: !(Maybe Text)
+    , _laprsPolicies       :: !(Maybe [Policy])
+    , _laprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAttachedPoliciesResponse' with the minimum fields required to make a request.

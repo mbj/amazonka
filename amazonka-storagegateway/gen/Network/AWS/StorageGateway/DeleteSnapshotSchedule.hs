@@ -47,9 +47,11 @@ import Network.AWS.StorageGateway.Types
 import Network.AWS.StorageGateway.Types.Product
 
 -- | /See:/ 'deleteSnapshotSchedule' smart constructor.
-newtype DeleteSnapshotSchedule = DeleteSnapshotSchedule'
-  { _dVolumeARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteSnapshotSchedule =
+  DeleteSnapshotSchedule'
+    { _dVolumeARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteSnapshotSchedule' with the minimum fields required to make a request.
@@ -104,10 +106,12 @@ instance ToQuery DeleteSnapshotSchedule where
         toQuery = const mempty
 
 -- | /See:/ 'deleteSnapshotScheduleResponse' smart constructor.
-data DeleteSnapshotScheduleResponse = DeleteSnapshotScheduleResponse'
-  { _dsssrsVolumeARN      :: !(Maybe Text)
-  , _dsssrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteSnapshotScheduleResponse =
+  DeleteSnapshotScheduleResponse'
+    { _dsssrsVolumeARN      :: !(Maybe Text)
+    , _dsssrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteSnapshotScheduleResponse' with the minimum fields required to make a request.

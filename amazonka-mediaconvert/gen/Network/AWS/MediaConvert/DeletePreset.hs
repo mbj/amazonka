@@ -42,9 +42,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deletePreset' smart constructor.
-newtype DeletePreset = DeletePreset'
-  { _dpName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeletePreset =
+  DeletePreset'
+    { _dpName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeletePreset' with the minimum fields required to make a request.
@@ -89,9 +91,11 @@ instance ToQuery DeletePreset where
         toQuery = const mempty
 
 -- | /See:/ 'deletePresetResponse' smart constructor.
-newtype DeletePresetResponse = DeletePresetResponse'
-  { _dprsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeletePresetResponse =
+  DeletePresetResponse'
+    { _dprsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeletePresetResponse' with the minimum fields required to make a request.

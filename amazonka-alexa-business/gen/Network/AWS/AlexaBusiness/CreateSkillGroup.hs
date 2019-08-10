@@ -47,11 +47,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createSkillGroup' smart constructor.
-data CreateSkillGroup = CreateSkillGroup'
-  { _csgClientRequestToken :: !(Maybe Text)
-  , _csgDescription        :: !(Maybe Text)
-  , _csgSkillGroupName     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateSkillGroup =
+  CreateSkillGroup'
+    { _csgClientRequestToken :: !(Maybe Text)
+    , _csgDescription        :: !(Maybe Text)
+    , _csgSkillGroupName     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateSkillGroup' with the minimum fields required to make a request.
@@ -124,10 +126,12 @@ instance ToQuery CreateSkillGroup where
         toQuery = const mempty
 
 -- | /See:/ 'createSkillGroupResponse' smart constructor.
-data CreateSkillGroupResponse = CreateSkillGroupResponse'
-  { _csgrsSkillGroupARN  :: !(Maybe Text)
-  , _csgrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateSkillGroupResponse =
+  CreateSkillGroupResponse'
+    { _csgrsSkillGroupARN  :: !(Maybe Text)
+    , _csgrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateSkillGroupResponse' with the minimum fields required to make a request.

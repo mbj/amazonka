@@ -52,11 +52,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateCloudFrontOriginAccessIdentity' smart constructor.
-data UpdateCloudFrontOriginAccessIdentity = UpdateCloudFrontOriginAccessIdentity'
-  { _ucfoaiIfMatch :: !(Maybe Text)
-  , _ucfoaiCloudFrontOriginAccessIdentityConfig :: !CloudFrontOriginAccessIdentityConfig
-  , _ucfoaiId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateCloudFrontOriginAccessIdentity =
+  UpdateCloudFrontOriginAccessIdentity'
+    { _ucfoaiIfMatch :: !(Maybe Text)
+    , _ucfoaiCloudFrontOriginAccessIdentityConfig :: !CloudFrontOriginAccessIdentityConfig
+    , _ucfoaiId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateCloudFrontOriginAccessIdentity' with the minimum fields required to make a request.
@@ -144,11 +146,13 @@ instance ToQuery UpdateCloudFrontOriginAccessIdentity
 --
 --
 -- /See:/ 'updateCloudFrontOriginAccessIdentityResponse' smart constructor.
-data UpdateCloudFrontOriginAccessIdentityResponse = UpdateCloudFrontOriginAccessIdentityResponse'
-  { _ucfoairsETag :: !(Maybe Text)
-  , _ucfoairsCloudFrontOriginAccessIdentity :: !(Maybe CloudFrontOriginAccessIdentity)
-  , _ucfoairsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateCloudFrontOriginAccessIdentityResponse =
+  UpdateCloudFrontOriginAccessIdentityResponse'
+    { _ucfoairsETag :: !(Maybe Text)
+    , _ucfoairsCloudFrontOriginAccessIdentity :: !(Maybe CloudFrontOriginAccessIdentity)
+    , _ucfoairsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateCloudFrontOriginAccessIdentityResponse' with the minimum fields required to make a request.

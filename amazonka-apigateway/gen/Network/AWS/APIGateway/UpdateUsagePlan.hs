@@ -55,10 +55,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateUsagePlan' smart constructor.
-data UpdateUsagePlan = UpdateUsagePlan'
-  { _uupPatchOperations :: !(Maybe [PatchOperation])
-  , _uupUsagePlanId     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateUsagePlan =
+  UpdateUsagePlan'
+    { _uupPatchOperations :: !(Maybe [PatchOperation])
+    , _uupUsagePlanId     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateUsagePlan' with the minimum fields required to make a request.

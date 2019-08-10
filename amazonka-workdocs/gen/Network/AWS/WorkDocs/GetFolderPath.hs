@@ -51,13 +51,15 @@ import Network.AWS.WorkDocs.Types
 import Network.AWS.WorkDocs.Types.Product
 
 -- | /See:/ 'getFolderPath' smart constructor.
-data GetFolderPath = GetFolderPath'
-  { _gfpAuthenticationToken :: !(Maybe (Sensitive Text))
-  , _gfpMarker              :: !(Maybe Text)
-  , _gfpLimit               :: !(Maybe Nat)
-  , _gfpFields              :: !(Maybe Text)
-  , _gfpFolderId            :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data GetFolderPath =
+  GetFolderPath'
+    { _gfpAuthenticationToken :: !(Maybe (Sensitive Text))
+    , _gfpMarker              :: !(Maybe Text)
+    , _gfpLimit               :: !(Maybe Nat)
+    , _gfpFields              :: !(Maybe Text)
+    , _gfpFolderId            :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetFolderPath' with the minimum fields required to make a request.
@@ -138,10 +140,12 @@ instance ToQuery GetFolderPath where
                "fields" =: _gfpFields]
 
 -- | /See:/ 'getFolderPathResponse' smart constructor.
-data GetFolderPathResponse = GetFolderPathResponse'
-  { _gfprsPath           :: !(Maybe ResourcePath)
-  , _gfprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetFolderPathResponse =
+  GetFolderPathResponse'
+    { _gfprsPath           :: !(Maybe ResourcePath)
+    , _gfprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetFolderPathResponse' with the minimum fields required to make a request.

@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'promoteReadReplicaDBCluster' smart constructor.
-newtype PromoteReadReplicaDBCluster = PromoteReadReplicaDBCluster'
-  { _prrdcDBClusterIdentifier :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype PromoteReadReplicaDBCluster =
+  PromoteReadReplicaDBCluster'
+    { _prrdcDBClusterIdentifier :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PromoteReadReplicaDBCluster' with the minimum fields required to make a request.
@@ -101,10 +103,12 @@ instance ToQuery PromoteReadReplicaDBCluster where
                "DBClusterIdentifier" =: _prrdcDBClusterIdentifier]
 
 -- | /See:/ 'promoteReadReplicaDBClusterResponse' smart constructor.
-data PromoteReadReplicaDBClusterResponse = PromoteReadReplicaDBClusterResponse'
-  { _prrdcrsDBCluster      :: !(Maybe DBCluster)
-  , _prrdcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PromoteReadReplicaDBClusterResponse =
+  PromoteReadReplicaDBClusterResponse'
+    { _prrdcrsDBCluster      :: !(Maybe DBCluster)
+    , _prrdcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PromoteReadReplicaDBClusterResponse' with the minimum fields required to make a request.

@@ -52,12 +52,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeDomainControllers' smart constructor.
-data DescribeDomainControllers = DescribeDomainControllers'
-  { _ddcNextToken           :: !(Maybe Text)
-  , _ddcDomainControllerIds :: !(Maybe [Text])
-  , _ddcLimit               :: !(Maybe Nat)
-  , _ddcDirectoryId         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDomainControllers =
+  DescribeDomainControllers'
+    { _ddcNextToken           :: !(Maybe Text)
+    , _ddcDomainControllerIds :: !(Maybe [Text])
+    , _ddcLimit               :: !(Maybe Nat)
+    , _ddcDirectoryId         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDomainControllers' with the minimum fields required to make a request.
@@ -149,11 +151,13 @@ instance ToQuery DescribeDomainControllers where
         toQuery = const mempty
 
 -- | /See:/ 'describeDomainControllersResponse' smart constructor.
-data DescribeDomainControllersResponse = DescribeDomainControllersResponse'
-  { _ddcrsNextToken         :: !(Maybe Text)
-  , _ddcrsDomainControllers :: !(Maybe [DomainController])
-  , _ddcrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDomainControllersResponse =
+  DescribeDomainControllersResponse'
+    { _ddcrsNextToken         :: !(Maybe Text)
+    , _ddcrsDomainControllers :: !(Maybe [DomainController])
+    , _ddcrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDomainControllersResponse' with the minimum fields required to make a request.

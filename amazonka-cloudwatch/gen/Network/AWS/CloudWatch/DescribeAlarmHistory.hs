@@ -56,14 +56,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeAlarmHistory' smart constructor.
-data DescribeAlarmHistory = DescribeAlarmHistory'
-  { _dahAlarmName       :: !(Maybe Text)
-  , _dahHistoryItemType :: !(Maybe HistoryItemType)
-  , _dahEndDate         :: !(Maybe ISO8601)
-  , _dahStartDate       :: !(Maybe ISO8601)
-  , _dahNextToken       :: !(Maybe Text)
-  , _dahMaxRecords      :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAlarmHistory =
+  DescribeAlarmHistory'
+    { _dahAlarmName       :: !(Maybe Text)
+    , _dahHistoryItemType :: !(Maybe HistoryItemType)
+    , _dahEndDate         :: !(Maybe ISO8601)
+    , _dahStartDate       :: !(Maybe ISO8601)
+    , _dahNextToken       :: !(Maybe Text)
+    , _dahMaxRecords      :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAlarmHistory' with the minimum fields required to make a request.
@@ -161,11 +163,13 @@ instance ToQuery DescribeAlarmHistory where
                "MaxRecords" =: _dahMaxRecords]
 
 -- | /See:/ 'describeAlarmHistoryResponse' smart constructor.
-data DescribeAlarmHistoryResponse = DescribeAlarmHistoryResponse'
-  { _dahrsAlarmHistoryItems :: !(Maybe [AlarmHistoryItem])
-  , _dahrsNextToken         :: !(Maybe Text)
-  , _dahrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAlarmHistoryResponse =
+  DescribeAlarmHistoryResponse'
+    { _dahrsAlarmHistoryItems :: !(Maybe [AlarmHistoryItem])
+    , _dahrsNextToken         :: !(Maybe Text)
+    , _dahrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAlarmHistoryResponse' with the minimum fields required to make a request.

@@ -91,11 +91,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'copySnapshot' smart constructor.
-data CopySnapshot = CopySnapshot'
-  { _csTargetBucket       :: !(Maybe Text)
-  , _csSourceSnapshotName :: !Text
-  , _csTargetSnapshotName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CopySnapshot =
+  CopySnapshot'
+    { _csTargetBucket       :: !(Maybe Text)
+    , _csSourceSnapshotName :: !Text
+    , _csTargetSnapshotName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CopySnapshot' with the minimum fields required to make a request.
@@ -160,10 +162,12 @@ instance ToQuery CopySnapshot where
                "TargetSnapshotName" =: _csTargetSnapshotName]
 
 -- | /See:/ 'copySnapshotResponse' smart constructor.
-data CopySnapshotResponse = CopySnapshotResponse'
-  { _csrsSnapshot       :: !(Maybe Snapshot)
-  , _csrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CopySnapshotResponse =
+  CopySnapshotResponse'
+    { _csrsSnapshot       :: !(Maybe Snapshot)
+    , _csrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CopySnapshotResponse' with the minimum fields required to make a request.

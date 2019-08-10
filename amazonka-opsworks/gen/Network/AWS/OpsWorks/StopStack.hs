@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'stopStack' smart constructor.
-newtype StopStack = StopStack'
-  { _stoStackId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StopStack =
+  StopStack'
+    { _stoStackId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopStack' with the minimum fields required to make a request.

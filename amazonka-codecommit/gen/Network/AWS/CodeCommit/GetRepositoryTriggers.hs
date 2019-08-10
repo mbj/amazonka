@@ -50,9 +50,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getRepositoryTriggers' smart constructor.
-newtype GetRepositoryTriggers = GetRepositoryTriggers'
-  { _grtRepositoryName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetRepositoryTriggers =
+  GetRepositoryTriggers'
+    { _grtRepositoryName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetRepositoryTriggers' with the minimum fields required to make a request.
@@ -114,11 +116,13 @@ instance ToQuery GetRepositoryTriggers where
 --
 --
 -- /See:/ 'getRepositoryTriggersResponse' smart constructor.
-data GetRepositoryTriggersResponse = GetRepositoryTriggersResponse'
-  { _grtrsConfigurationId :: !(Maybe Text)
-  , _grtrsTriggers        :: !(Maybe [RepositoryTrigger])
-  , _grtrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetRepositoryTriggersResponse =
+  GetRepositoryTriggersResponse'
+    { _grtrsConfigurationId :: !(Maybe Text)
+    , _grtrsTriggers        :: !(Maybe [RepositoryTrigger])
+    , _grtrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetRepositoryTriggersResponse' with the minimum fields required to make a request.

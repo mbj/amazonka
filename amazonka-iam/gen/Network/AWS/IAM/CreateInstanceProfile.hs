@@ -48,10 +48,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createInstanceProfile' smart constructor.
-data CreateInstanceProfile = CreateInstanceProfile'
-  { _cipPath                :: !(Maybe Text)
-  , _cipInstanceProfileName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateInstanceProfile =
+  CreateInstanceProfile'
+    { _cipPath                :: !(Maybe Text)
+    , _cipInstanceProfileName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateInstanceProfile' with the minimum fields required to make a request.
@@ -110,10 +112,12 @@ instance ToQuery CreateInstanceProfile where
 --
 --
 -- /See:/ 'createInstanceProfileResponse' smart constructor.
-data CreateInstanceProfileResponse = CreateInstanceProfileResponse'
-  { _ciprsResponseStatus  :: !Int
-  , _ciprsInstanceProfile :: !InstanceProfile
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateInstanceProfileResponse =
+  CreateInstanceProfileResponse'
+    { _ciprsResponseStatus  :: !Int
+    , _ciprsInstanceProfile :: !InstanceProfile
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateInstanceProfileResponse' with the minimum fields required to make a request.

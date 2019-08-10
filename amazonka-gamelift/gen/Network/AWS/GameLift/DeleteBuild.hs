@@ -62,9 +62,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteBuild' smart constructor.
-newtype DeleteBuild = DeleteBuild'
-  { _dbBuildId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteBuild =
+  DeleteBuild'
+    { _dbBuildId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteBuild' with the minimum fields required to make a request.

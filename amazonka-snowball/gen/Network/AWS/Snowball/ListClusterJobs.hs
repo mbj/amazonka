@@ -48,11 +48,13 @@ import Network.AWS.Snowball.Types
 import Network.AWS.Snowball.Types.Product
 
 -- | /See:/ 'listClusterJobs' smart constructor.
-data ListClusterJobs = ListClusterJobs'
-  { _lcjNextToken  :: !(Maybe Text)
-  , _lcjMaxResults :: !(Maybe Nat)
-  , _lcjClusterId  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListClusterJobs =
+  ListClusterJobs'
+    { _lcjNextToken  :: !(Maybe Text)
+    , _lcjMaxResults :: !(Maybe Nat)
+    , _lcjClusterId  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListClusterJobs' with the minimum fields required to make a request.
@@ -127,11 +129,13 @@ instance ToQuery ListClusterJobs where
         toQuery = const mempty
 
 -- | /See:/ 'listClusterJobsResponse' smart constructor.
-data ListClusterJobsResponse = ListClusterJobsResponse'
-  { _lcjrsJobListEntries :: !(Maybe [JobListEntry])
-  , _lcjrsNextToken      :: !(Maybe Text)
-  , _lcjrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListClusterJobsResponse =
+  ListClusterJobsResponse'
+    { _lcjrsJobListEntries :: !(Maybe [JobListEntry])
+    , _lcjrsNextToken      :: !(Maybe Text)
+    , _lcjrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListClusterJobsResponse' with the minimum fields required to make a request.

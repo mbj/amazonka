@@ -26,17 +26,19 @@ import Network.AWS.SSM.Types.Sum
 --
 --
 -- /See:/ 'activation' smart constructor.
-data Activation = Activation'
-  { _aExpired             :: !(Maybe Bool)
-  , _aDefaultInstanceName :: !(Maybe Text)
-  , _aActivationId        :: !(Maybe Text)
-  , _aCreatedDate         :: !(Maybe POSIX)
-  , _aRegistrationLimit   :: !(Maybe Nat)
-  , _aExpirationDate      :: !(Maybe POSIX)
-  , _aDescription         :: !(Maybe Text)
-  , _aRegistrationsCount  :: !(Maybe Nat)
-  , _aIAMRole             :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Activation =
+  Activation'
+    { _aExpired             :: !(Maybe Bool)
+    , _aDefaultInstanceName :: !(Maybe Text)
+    , _aActivationId        :: !(Maybe Text)
+    , _aCreatedDate         :: !(Maybe POSIX)
+    , _aRegistrationLimit   :: !(Maybe Nat)
+    , _aExpirationDate      :: !(Maybe POSIX)
+    , _aDescription         :: !(Maybe Text)
+    , _aRegistrationsCount  :: !(Maybe Nat)
+    , _aIAMRole             :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Activation' with the minimum fields required to make a request.
@@ -135,18 +137,20 @@ instance NFData Activation where
 --
 --
 -- /See:/ 'association' smart constructor.
-data Association = Association'
-  { _aAssociationId      :: !(Maybe Text)
-  , _aInstanceId         :: !(Maybe Text)
-  , _aOverview           :: !(Maybe AssociationOverview)
-  , _aLastExecutionDate  :: !(Maybe POSIX)
-  , _aScheduleExpression :: !(Maybe Text)
-  , _aName               :: !(Maybe Text)
-  , _aTargets            :: !(Maybe [Target])
-  , _aDocumentVersion    :: !(Maybe Text)
-  , _aAssociationVersion :: !(Maybe Text)
-  , _aAssociationName    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Association =
+  Association'
+    { _aAssociationId      :: !(Maybe Text)
+    , _aInstanceId         :: !(Maybe Text)
+    , _aOverview           :: !(Maybe AssociationOverview)
+    , _aLastExecutionDate  :: !(Maybe POSIX)
+    , _aScheduleExpression :: !(Maybe Text)
+    , _aName               :: !(Maybe Text)
+    , _aTargets            :: !(Maybe [Target])
+    , _aDocumentVersion    :: !(Maybe Text)
+    , _aAssociationVersion :: !(Maybe Text)
+    , _aAssociationName    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Association' with the minimum fields required to make a request.
@@ -253,24 +257,26 @@ instance NFData Association where
 --
 --
 -- /See:/ 'associationDescription' smart constructor.
-data AssociationDescription = AssociationDescription'
-  { _adAssociationId               :: !(Maybe Text)
-  , _adInstanceId                  :: !(Maybe Text)
-  , _adStatus                      :: !(Maybe AssociationStatus)
-  , _adLastSuccessfulExecutionDate :: !(Maybe POSIX)
-  , _adOverview                    :: !(Maybe AssociationOverview)
-  , _adLastUpdateAssociationDate   :: !(Maybe POSIX)
-  , _adDate                        :: !(Maybe POSIX)
-  , _adLastExecutionDate           :: !(Maybe POSIX)
-  , _adScheduleExpression          :: !(Maybe Text)
-  , _adName                        :: !(Maybe Text)
-  , _adOutputLocation              :: !(Maybe InstanceAssociationOutputLocation)
-  , _adTargets                     :: !(Maybe [Target])
-  , _adParameters                  :: !(Maybe (Map Text [Text]))
-  , _adDocumentVersion             :: !(Maybe Text)
-  , _adAssociationVersion          :: !(Maybe Text)
-  , _adAssociationName             :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssociationDescription =
+  AssociationDescription'
+    { _adAssociationId :: !(Maybe Text)
+    , _adInstanceId :: !(Maybe Text)
+    , _adStatus :: !(Maybe AssociationStatus)
+    , _adLastSuccessfulExecutionDate :: !(Maybe POSIX)
+    , _adOverview :: !(Maybe AssociationOverview)
+    , _adLastUpdateAssociationDate :: !(Maybe POSIX)
+    , _adDate :: !(Maybe POSIX)
+    , _adLastExecutionDate :: !(Maybe POSIX)
+    , _adScheduleExpression :: !(Maybe Text)
+    , _adName :: !(Maybe Text)
+    , _adOutputLocation :: !(Maybe InstanceAssociationOutputLocation)
+    , _adTargets :: !(Maybe [Target])
+    , _adParameters :: !(Maybe (Map Text [Text]))
+    , _adDocumentVersion :: !(Maybe Text)
+    , _adAssociationVersion :: !(Maybe Text)
+    , _adAssociationName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociationDescription' with the minimum fields required to make a request.
@@ -425,10 +431,12 @@ instance NFData AssociationDescription where
 --
 --
 -- /See:/ 'associationFilter' smart constructor.
-data AssociationFilter = AssociationFilter'
-  { _afKey   :: !AssociationFilterKey
-  , _afValue :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssociationFilter =
+  AssociationFilter'
+    { _afKey   :: !AssociationFilterKey
+    , _afValue :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociationFilter' with the minimum fields required to make a request.
@@ -469,11 +477,13 @@ instance ToJSON AssociationFilter where
 --
 --
 -- /See:/ 'associationOverview' smart constructor.
-data AssociationOverview = AssociationOverview'
-  { _aoDetailedStatus                   :: !(Maybe Text)
-  , _aoStatus                           :: !(Maybe Text)
-  , _aoAssociationStatusAggregatedCount :: !(Maybe (Map Text Int))
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssociationOverview =
+  AssociationOverview'
+    { _aoDetailedStatus                   :: !(Maybe Text)
+    , _aoStatus                           :: !(Maybe Text)
+    , _aoAssociationStatusAggregatedCount :: !(Maybe (Map Text Int))
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociationOverview' with the minimum fields required to make a request.
@@ -525,12 +535,14 @@ instance NFData AssociationOverview where
 --
 --
 -- /See:/ 'associationStatus' smart constructor.
-data AssociationStatus = AssociationStatus'
-  { _asAdditionalInfo :: !(Maybe Text)
-  , _asDate           :: !POSIX
-  , _asName           :: !AssociationStatusName
-  , _asMessage        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssociationStatus =
+  AssociationStatus'
+    { _asAdditionalInfo :: !(Maybe Text)
+    , _asDate           :: !POSIX
+    , _asName           :: !AssociationStatusName
+    , _asMessage        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociationStatus' with the minimum fields required to make a request.
@@ -600,18 +612,20 @@ instance ToJSON AssociationStatus where
 --
 --
 -- /See:/ 'associationVersionInfo' smart constructor.
-data AssociationVersionInfo = AssociationVersionInfo'
-  { _aviAssociationId      :: !(Maybe Text)
-  , _aviCreatedDate        :: !(Maybe POSIX)
-  , _aviScheduleExpression :: !(Maybe Text)
-  , _aviName               :: !(Maybe Text)
-  , _aviOutputLocation     :: !(Maybe InstanceAssociationOutputLocation)
-  , _aviTargets            :: !(Maybe [Target])
-  , _aviParameters         :: !(Maybe (Map Text [Text]))
-  , _aviDocumentVersion    :: !(Maybe Text)
-  , _aviAssociationVersion :: !(Maybe Text)
-  , _aviAssociationName    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssociationVersionInfo =
+  AssociationVersionInfo'
+    { _aviAssociationId      :: !(Maybe Text)
+    , _aviCreatedDate        :: !(Maybe POSIX)
+    , _aviScheduleExpression :: !(Maybe Text)
+    , _aviName               :: !(Maybe Text)
+    , _aviOutputLocation     :: !(Maybe InstanceAssociationOutputLocation)
+    , _aviTargets            :: !(Maybe [Target])
+    , _aviParameters         :: !(Maybe (Map Text [Text]))
+    , _aviDocumentVersion    :: !(Maybe Text)
+    , _aviAssociationVersion :: !(Maybe Text)
+    , _aviAssociationName    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociationVersionInfo' with the minimum fields required to make a request.
@@ -718,30 +732,32 @@ instance NFData AssociationVersionInfo where
 --
 --
 -- /See:/ 'automationExecution' smart constructor.
-data AutomationExecution = AutomationExecution'
-  { _aeCurrentStepName             :: !(Maybe Text)
-  , _aeTargetParameterName         :: !(Maybe Text)
-  , _aeExecutedBy                  :: !(Maybe Text)
-  , _aeDocumentName                :: !(Maybe Text)
-  , _aeExecutionEndTime            :: !(Maybe POSIX)
-  , _aeFailureMessage              :: !(Maybe Text)
-  , _aeMode                        :: !(Maybe ExecutionMode)
-  , _aeStepExecutionsTruncated     :: !(Maybe Bool)
-  , _aeAutomationExecutionStatus   :: !(Maybe AutomationExecutionStatus)
-  , _aeParentAutomationExecutionId :: !(Maybe Text)
-  , _aeOutputs                     :: !(Maybe (Map Text [Text]))
-  , _aeMaxErrors                   :: !(Maybe Text)
-  , _aeExecutionStartTime          :: !(Maybe POSIX)
-  , _aeCurrentAction               :: !(Maybe Text)
-  , _aeTargets                     :: !(Maybe [Target])
-  , _aeResolvedTargets             :: !(Maybe ResolvedTargets)
-  , _aeParameters                  :: !(Maybe (Map Text [Text]))
-  , _aeDocumentVersion             :: !(Maybe Text)
-  , _aeAutomationExecutionId       :: !(Maybe Text)
-  , _aeStepExecutions              :: !(Maybe [StepExecution])
-  , _aeMaxConcurrency              :: !(Maybe Text)
-  , _aeTarget                      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AutomationExecution =
+  AutomationExecution'
+    { _aeCurrentStepName             :: !(Maybe Text)
+    , _aeTargetParameterName         :: !(Maybe Text)
+    , _aeExecutedBy                  :: !(Maybe Text)
+    , _aeDocumentName                :: !(Maybe Text)
+    , _aeExecutionEndTime            :: !(Maybe POSIX)
+    , _aeFailureMessage              :: !(Maybe Text)
+    , _aeMode                        :: !(Maybe ExecutionMode)
+    , _aeStepExecutionsTruncated     :: !(Maybe Bool)
+    , _aeAutomationExecutionStatus   :: !(Maybe AutomationExecutionStatus)
+    , _aeParentAutomationExecutionId :: !(Maybe Text)
+    , _aeOutputs                     :: !(Maybe (Map Text [Text]))
+    , _aeMaxErrors                   :: !(Maybe Text)
+    , _aeExecutionStartTime          :: !(Maybe POSIX)
+    , _aeCurrentAction               :: !(Maybe Text)
+    , _aeTargets                     :: !(Maybe [Target])
+    , _aeResolvedTargets             :: !(Maybe ResolvedTargets)
+    , _aeParameters                  :: !(Maybe (Map Text [Text]))
+    , _aeDocumentVersion             :: !(Maybe Text)
+    , _aeAutomationExecutionId       :: !(Maybe Text)
+    , _aeStepExecutions              :: !(Maybe [StepExecution])
+    , _aeMaxConcurrency              :: !(Maybe Text)
+    , _aeTarget                      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AutomationExecution' with the minimum fields required to make a request.
@@ -945,10 +961,12 @@ instance NFData AutomationExecution where
 --
 --
 -- /See:/ 'automationExecutionFilter' smart constructor.
-data AutomationExecutionFilter = AutomationExecutionFilter'
-  { _aefKey    :: !AutomationExecutionFilterKey
-  , _aefValues :: !(List1 Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AutomationExecutionFilter =
+  AutomationExecutionFilter'
+    { _aefKey    :: !AutomationExecutionFilterKey
+    , _aefValues :: !(List1 Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AutomationExecutionFilter' with the minimum fields required to make a request.
@@ -990,28 +1008,30 @@ instance ToJSON AutomationExecutionFilter where
 --
 --
 -- /See:/ 'automationExecutionMetadata' smart constructor.
-data AutomationExecutionMetadata = AutomationExecutionMetadata'
-  { _aemCurrentStepName             :: !(Maybe Text)
-  , _aemTargetParameterName         :: !(Maybe Text)
-  , _aemLogFile                     :: !(Maybe Text)
-  , _aemExecutedBy                  :: !(Maybe Text)
-  , _aemDocumentName                :: !(Maybe Text)
-  , _aemExecutionEndTime            :: !(Maybe POSIX)
-  , _aemFailureMessage              :: !(Maybe Text)
-  , _aemMode                        :: !(Maybe ExecutionMode)
-  , _aemAutomationExecutionStatus   :: !(Maybe AutomationExecutionStatus)
-  , _aemParentAutomationExecutionId :: !(Maybe Text)
-  , _aemOutputs                     :: !(Maybe (Map Text [Text]))
-  , _aemMaxErrors                   :: !(Maybe Text)
-  , _aemExecutionStartTime          :: !(Maybe POSIX)
-  , _aemCurrentAction               :: !(Maybe Text)
-  , _aemTargets                     :: !(Maybe [Target])
-  , _aemResolvedTargets             :: !(Maybe ResolvedTargets)
-  , _aemDocumentVersion             :: !(Maybe Text)
-  , _aemAutomationExecutionId       :: !(Maybe Text)
-  , _aemMaxConcurrency              :: !(Maybe Text)
-  , _aemTarget                      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AutomationExecutionMetadata =
+  AutomationExecutionMetadata'
+    { _aemCurrentStepName             :: !(Maybe Text)
+    , _aemTargetParameterName         :: !(Maybe Text)
+    , _aemLogFile                     :: !(Maybe Text)
+    , _aemExecutedBy                  :: !(Maybe Text)
+    , _aemDocumentName                :: !(Maybe Text)
+    , _aemExecutionEndTime            :: !(Maybe POSIX)
+    , _aemFailureMessage              :: !(Maybe Text)
+    , _aemMode                        :: !(Maybe ExecutionMode)
+    , _aemAutomationExecutionStatus   :: !(Maybe AutomationExecutionStatus)
+    , _aemParentAutomationExecutionId :: !(Maybe Text)
+    , _aemOutputs                     :: !(Maybe (Map Text [Text]))
+    , _aemMaxErrors                   :: !(Maybe Text)
+    , _aemExecutionStartTime          :: !(Maybe POSIX)
+    , _aemCurrentAction               :: !(Maybe Text)
+    , _aemTargets                     :: !(Maybe [Target])
+    , _aemResolvedTargets             :: !(Maybe ResolvedTargets)
+    , _aemDocumentVersion             :: !(Maybe Text)
+    , _aemAutomationExecutionId       :: !(Maybe Text)
+    , _aemMaxConcurrency              :: !(Maybe Text)
+    , _aemTarget                      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AutomationExecutionMetadata' with the minimum fields required to make a request.
@@ -1199,29 +1219,31 @@ instance NFData AutomationExecutionMetadata where
 --
 --
 -- /See:/ 'command' smart constructor.
-data Command = Command'
-  { _cStatus             :: !(Maybe CommandStatus)
-  , _cExpiresAfter       :: !(Maybe POSIX)
-  , _cNotificationConfig :: !(Maybe NotificationConfig)
-  , _cTargetCount        :: !(Maybe Int)
-  , _cOutputS3KeyPrefix  :: !(Maybe Text)
-  , _cDocumentName       :: !(Maybe Text)
-  , _cErrorCount         :: !(Maybe Int)
-  , _cStatusDetails      :: !(Maybe Text)
-  , _cMaxErrors          :: !(Maybe Text)
-  , _cInstanceIds        :: !(Maybe [Text])
-  , _cOutputS3Region     :: !(Maybe Text)
-  , _cTargets            :: !(Maybe [Target])
-  , _cCommandId          :: !(Maybe Text)
-  , _cParameters         :: !(Maybe (Map Text [Text]))
-  , _cDocumentVersion    :: !(Maybe Text)
-  , _cComment            :: !(Maybe Text)
-  , _cCompletedCount     :: !(Maybe Int)
-  , _cOutputS3BucketName :: !(Maybe Text)
-  , _cMaxConcurrency     :: !(Maybe Text)
-  , _cRequestedDateTime  :: !(Maybe POSIX)
-  , _cServiceRole        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Command =
+  Command'
+    { _cStatus             :: !(Maybe CommandStatus)
+    , _cExpiresAfter       :: !(Maybe POSIX)
+    , _cNotificationConfig :: !(Maybe NotificationConfig)
+    , _cTargetCount        :: !(Maybe Int)
+    , _cOutputS3KeyPrefix  :: !(Maybe Text)
+    , _cDocumentName       :: !(Maybe Text)
+    , _cErrorCount         :: !(Maybe Int)
+    , _cStatusDetails      :: !(Maybe Text)
+    , _cMaxErrors          :: !(Maybe Text)
+    , _cInstanceIds        :: !(Maybe [Text])
+    , _cOutputS3Region     :: !(Maybe Text)
+    , _cTargets            :: !(Maybe [Target])
+    , _cCommandId          :: !(Maybe Text)
+    , _cParameters         :: !(Maybe (Map Text [Text]))
+    , _cDocumentVersion    :: !(Maybe Text)
+    , _cComment            :: !(Maybe Text)
+    , _cCompletedCount     :: !(Maybe Int)
+    , _cOutputS3BucketName :: !(Maybe Text)
+    , _cMaxConcurrency     :: !(Maybe Text)
+    , _cRequestedDateTime  :: !(Maybe POSIX)
+    , _cServiceRole        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Command' with the minimum fields required to make a request.
@@ -1416,10 +1438,12 @@ instance NFData Command where
 --
 --
 -- /See:/ 'commandFilter' smart constructor.
-data CommandFilter = CommandFilter'
-  { _cfKey   :: !CommandFilterKey
-  , _cfValue :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CommandFilter =
+  CommandFilter'
+    { _cfKey   :: !CommandFilterKey
+    , _cfValue :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CommandFilter' with the minimum fields required to make a request.
@@ -1460,23 +1484,25 @@ instance ToJSON CommandFilter where
 --
 --
 -- /See:/ 'commandInvocation' smart constructor.
-data CommandInvocation = CommandInvocation'
-  { _comInstanceId         :: !(Maybe Text)
-  , _comStatus             :: !(Maybe CommandInvocationStatus)
-  , _comNotificationConfig :: !(Maybe NotificationConfig)
-  , _comCommandPlugins     :: !(Maybe [CommandPlugin])
-  , _comDocumentName       :: !(Maybe Text)
-  , _comStandardErrorURL   :: !(Maybe Text)
-  , _comStatusDetails      :: !(Maybe Text)
-  , _comStandardOutputURL  :: !(Maybe Text)
-  , _comCommandId          :: !(Maybe Text)
-  , _comDocumentVersion    :: !(Maybe Text)
-  , _comComment            :: !(Maybe Text)
-  , _comTraceOutput        :: !(Maybe Text)
-  , _comInstanceName       :: !(Maybe Text)
-  , _comRequestedDateTime  :: !(Maybe POSIX)
-  , _comServiceRole        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CommandInvocation =
+  CommandInvocation'
+    { _comInstanceId         :: !(Maybe Text)
+    , _comStatus             :: !(Maybe CommandInvocationStatus)
+    , _comNotificationConfig :: !(Maybe NotificationConfig)
+    , _comCommandPlugins     :: !(Maybe [CommandPlugin])
+    , _comDocumentName       :: !(Maybe Text)
+    , _comStandardErrorURL   :: !(Maybe Text)
+    , _comStatusDetails      :: !(Maybe Text)
+    , _comStandardOutputURL  :: !(Maybe Text)
+    , _comCommandId          :: !(Maybe Text)
+    , _comDocumentVersion    :: !(Maybe Text)
+    , _comComment            :: !(Maybe Text)
+    , _comTraceOutput        :: !(Maybe Text)
+    , _comInstanceName       :: !(Maybe Text)
+    , _comRequestedDateTime  :: !(Maybe POSIX)
+    , _comServiceRole        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CommandInvocation' with the minimum fields required to make a request.
@@ -1623,20 +1649,22 @@ instance NFData CommandInvocation where
 --
 --
 -- /See:/ 'commandPlugin' smart constructor.
-data CommandPlugin = CommandPlugin'
-  { _cpStatus                 :: !(Maybe CommandPluginStatus)
-  , _cpResponseStartDateTime  :: !(Maybe POSIX)
-  , _cpOutputS3KeyPrefix      :: !(Maybe Text)
-  , _cpStandardErrorURL       :: !(Maybe Text)
-  , _cpResponseCode           :: !(Maybe Int)
-  , _cpStatusDetails          :: !(Maybe Text)
-  , _cpOutput                 :: !(Maybe Text)
-  , _cpStandardOutputURL      :: !(Maybe Text)
-  , _cpName                   :: !(Maybe Text)
-  , _cpOutputS3Region         :: !(Maybe Text)
-  , _cpOutputS3BucketName     :: !(Maybe Text)
-  , _cpResponseFinishDateTime :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CommandPlugin =
+  CommandPlugin'
+    { _cpStatus                 :: !(Maybe CommandPluginStatus)
+    , _cpResponseStartDateTime  :: !(Maybe POSIX)
+    , _cpOutputS3KeyPrefix      :: !(Maybe Text)
+    , _cpStandardErrorURL       :: !(Maybe Text)
+    , _cpResponseCode           :: !(Maybe Int)
+    , _cpStatusDetails          :: !(Maybe Text)
+    , _cpOutput                 :: !(Maybe Text)
+    , _cpStandardOutputURL      :: !(Maybe Text)
+    , _cpName                   :: !(Maybe Text)
+    , _cpOutputS3Region         :: !(Maybe Text)
+    , _cpOutputS3BucketName     :: !(Maybe Text)
+    , _cpResponseFinishDateTime :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CommandPlugin' with the minimum fields required to make a request.
@@ -1759,11 +1787,13 @@ instance NFData CommandPlugin where
 --
 --
 -- /See:/ 'complianceExecutionSummary' smart constructor.
-data ComplianceExecutionSummary = ComplianceExecutionSummary'
-  { _cesExecutionId   :: !(Maybe Text)
-  , _cesExecutionType :: !(Maybe Text)
-  , _cesExecutionTime :: !POSIX
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ComplianceExecutionSummary =
+  ComplianceExecutionSummary'
+    { _cesExecutionId   :: !(Maybe Text)
+    , _cesExecutionType :: !(Maybe Text)
+    , _cesExecutionTime :: !POSIX
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ComplianceExecutionSummary' with the minimum fields required to make a request.
@@ -1823,17 +1853,19 @@ instance ToJSON ComplianceExecutionSummary where
 --
 --
 -- /See:/ 'complianceItem' smart constructor.
-data ComplianceItem = ComplianceItem'
-  { _ciStatus           :: !(Maybe ComplianceStatus)
-  , _ciResourceId       :: !(Maybe Text)
-  , _ciResourceType     :: !(Maybe Text)
-  , _ciSeverity         :: !(Maybe ComplianceSeverity)
-  , _ciExecutionSummary :: !(Maybe ComplianceExecutionSummary)
-  , _ciDetails          :: !(Maybe (Map Text Text))
-  , _ciId               :: !(Maybe Text)
-  , _ciComplianceType   :: !(Maybe Text)
-  , _ciTitle            :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ComplianceItem =
+  ComplianceItem'
+    { _ciStatus           :: !(Maybe ComplianceStatus)
+    , _ciResourceId       :: !(Maybe Text)
+    , _ciResourceType     :: !(Maybe Text)
+    , _ciSeverity         :: !(Maybe ComplianceSeverity)
+    , _ciExecutionSummary :: !(Maybe ComplianceExecutionSummary)
+    , _ciDetails          :: !(Maybe (Map Text Text))
+    , _ciId               :: !(Maybe Text)
+    , _ciComplianceType   :: !(Maybe Text)
+    , _ciTitle            :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ComplianceItem' with the minimum fields required to make a request.
@@ -1932,13 +1964,15 @@ instance NFData ComplianceItem where
 --
 --
 -- /See:/ 'complianceItemEntry' smart constructor.
-data ComplianceItemEntry = ComplianceItemEntry'
-  { _cieDetails  :: !(Maybe (Map Text Text))
-  , _cieId       :: !(Maybe Text)
-  , _cieTitle    :: !(Maybe Text)
-  , _cieSeverity :: !ComplianceSeverity
-  , _cieStatus   :: !ComplianceStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ComplianceItemEntry =
+  ComplianceItemEntry'
+    { _cieDetails  :: !(Maybe (Map Text Text))
+    , _cieId       :: !(Maybe Text)
+    , _cieTitle    :: !(Maybe Text)
+    , _cieSeverity :: !ComplianceSeverity
+    , _cieStatus   :: !ComplianceStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ComplianceItemEntry' with the minimum fields required to make a request.
@@ -2006,11 +2040,13 @@ instance ToJSON ComplianceItemEntry where
 --
 --
 -- /See:/ 'complianceStringFilter' smart constructor.
-data ComplianceStringFilter = ComplianceStringFilter'
-  { _csfValues :: !(Maybe (List1 Text))
-  , _csfKey    :: !(Maybe Text)
-  , _csfType   :: !(Maybe ComplianceQueryOperatorType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ComplianceStringFilter =
+  ComplianceStringFilter'
+    { _csfValues :: !(Maybe (List1 Text))
+    , _csfKey    :: !(Maybe Text)
+    , _csfType   :: !(Maybe ComplianceQueryOperatorType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ComplianceStringFilter' with the minimum fields required to make a request.
@@ -2057,11 +2093,13 @@ instance ToJSON ComplianceStringFilter where
 --
 --
 -- /See:/ 'complianceSummaryItem' smart constructor.
-data ComplianceSummaryItem = ComplianceSummaryItem'
-  { _csiNonCompliantSummary :: !(Maybe NonCompliantSummary)
-  , _csiCompliantSummary    :: !(Maybe CompliantSummary)
-  , _csiComplianceType      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ComplianceSummaryItem =
+  ComplianceSummaryItem'
+    { _csiNonCompliantSummary :: !(Maybe NonCompliantSummary)
+    , _csiCompliantSummary    :: !(Maybe CompliantSummary)
+    , _csiComplianceType      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ComplianceSummaryItem' with the minimum fields required to make a request.
@@ -2113,10 +2151,12 @@ instance NFData ComplianceSummaryItem where
 --
 --
 -- /See:/ 'compliantSummary' smart constructor.
-data CompliantSummary = CompliantSummary'
-  { _csCompliantCount  :: !(Maybe Int)
-  , _csSeveritySummary :: !(Maybe SeveritySummary)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CompliantSummary =
+  CompliantSummary'
+    { _csCompliantCount  :: !(Maybe Int)
+    , _csSeveritySummary :: !(Maybe SeveritySummary)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CompliantSummary' with the minimum fields required to make a request.
@@ -2157,16 +2197,18 @@ instance NFData CompliantSummary where
 --
 --
 -- /See:/ 'createAssociationBatchRequestEntry' smart constructor.
-data CreateAssociationBatchRequestEntry = CreateAssociationBatchRequestEntry'
-  { _cabreInstanceId         :: !(Maybe Text)
-  , _cabreScheduleExpression :: !(Maybe Text)
-  , _cabreOutputLocation     :: !(Maybe InstanceAssociationOutputLocation)
-  , _cabreTargets            :: !(Maybe [Target])
-  , _cabreParameters         :: !(Maybe (Map Text [Text]))
-  , _cabreDocumentVersion    :: !(Maybe Text)
-  , _cabreAssociationName    :: !(Maybe Text)
-  , _cabreName               :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateAssociationBatchRequestEntry =
+  CreateAssociationBatchRequestEntry'
+    { _cabreInstanceId         :: !(Maybe Text)
+    , _cabreScheduleExpression :: !(Maybe Text)
+    , _cabreOutputLocation     :: !(Maybe InstanceAssociationOutputLocation)
+    , _cabreTargets            :: !(Maybe [Target])
+    , _cabreParameters         :: !(Maybe (Map Text [Text]))
+    , _cabreDocumentVersion    :: !(Maybe Text)
+    , _cabreAssociationName    :: !(Maybe Text)
+    , _cabreName               :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateAssociationBatchRequestEntry' with the minimum fields required to make a request.
@@ -2276,10 +2318,12 @@ instance ToJSON CreateAssociationBatchRequestEntry
 --
 --
 -- /See:/ 'describeActivationsFilter' smart constructor.
-data DescribeActivationsFilter = DescribeActivationsFilter'
-  { _dafFilterKey    :: !(Maybe DescribeActivationsFilterKeys)
-  , _dafFilterValues :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeActivationsFilter =
+  DescribeActivationsFilter'
+    { _dafFilterKey    :: !(Maybe DescribeActivationsFilterKeys)
+    , _dafFilterValues :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeActivationsFilter' with the minimum fields required to make a request.
@@ -2320,10 +2364,12 @@ instance ToJSON DescribeActivationsFilter where
 --
 --
 -- /See:/ 'documentDefaultVersionDescription' smart constructor.
-data DocumentDefaultVersionDescription = DocumentDefaultVersionDescription'
-  { _ddvdDefaultVersion :: !(Maybe Text)
-  , _ddvdName           :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DocumentDefaultVersionDescription =
+  DocumentDefaultVersionDescription'
+    { _ddvdDefaultVersion :: !(Maybe Text)
+    , _ddvdName           :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DocumentDefaultVersionDescription' with the minimum fields required to make a request.
@@ -2367,26 +2413,28 @@ instance NFData DocumentDefaultVersionDescription
 --
 --
 -- /See:/ 'documentDescription' smart constructor.
-data DocumentDescription = DocumentDescription'
-  { _dStatus          :: !(Maybe DocumentStatus)
-  , _dDocumentType    :: !(Maybe DocumentType)
-  , _dHash            :: !(Maybe Text)
-  , _dSchemaVersion   :: !(Maybe Text)
-  , _dSha1            :: !(Maybe Text)
-  , _dDefaultVersion  :: !(Maybe Text)
-  , _dTargetType      :: !(Maybe Text)
-  , _dOwner           :: !(Maybe Text)
-  , _dPlatformTypes   :: !(Maybe [PlatformType])
-  , _dCreatedDate     :: !(Maybe POSIX)
-  , _dDocumentFormat  :: !(Maybe DocumentFormat)
-  , _dName            :: !(Maybe Text)
-  , _dHashType        :: !(Maybe DocumentHashType)
-  , _dParameters      :: !(Maybe [DocumentParameter])
-  , _dDocumentVersion :: !(Maybe Text)
-  , _dDescription     :: !(Maybe Text)
-  , _dTags            :: !(Maybe [Tag])
-  , _dLatestVersion   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DocumentDescription =
+  DocumentDescription'
+    { _dStatus          :: !(Maybe DocumentStatus)
+    , _dDocumentType    :: !(Maybe DocumentType)
+    , _dHash            :: !(Maybe Text)
+    , _dSchemaVersion   :: !(Maybe Text)
+    , _dSha1            :: !(Maybe Text)
+    , _dDefaultVersion  :: !(Maybe Text)
+    , _dTargetType      :: !(Maybe Text)
+    , _dOwner           :: !(Maybe Text)
+    , _dPlatformTypes   :: !(Maybe [PlatformType])
+    , _dCreatedDate     :: !(Maybe POSIX)
+    , _dDocumentFormat  :: !(Maybe DocumentFormat)
+    , _dName            :: !(Maybe Text)
+    , _dHashType        :: !(Maybe DocumentHashType)
+    , _dParameters      :: !(Maybe [DocumentParameter])
+    , _dDocumentVersion :: !(Maybe Text)
+    , _dDescription     :: !(Maybe Text)
+    , _dTags            :: !(Maybe [Tag])
+    , _dLatestVersion   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DocumentDescription' with the minimum fields required to make a request.
@@ -2557,10 +2605,12 @@ instance NFData DocumentDescription where
 --
 --
 -- /See:/ 'documentFilter' smart constructor.
-data DocumentFilter = DocumentFilter'
-  { _dfKey   :: !DocumentFilterKey
-  , _dfValue :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DocumentFilter =
+  DocumentFilter'
+    { _dfKey   :: !DocumentFilterKey
+    , _dfValue :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DocumentFilter' with the minimum fields required to make a request.
@@ -2601,17 +2651,19 @@ instance ToJSON DocumentFilter where
 --
 --
 -- /See:/ 'documentIdentifier' smart constructor.
-data DocumentIdentifier = DocumentIdentifier'
-  { _diDocumentType    :: !(Maybe DocumentType)
-  , _diSchemaVersion   :: !(Maybe Text)
-  , _diTargetType      :: !(Maybe Text)
-  , _diOwner           :: !(Maybe Text)
-  , _diPlatformTypes   :: !(Maybe [PlatformType])
-  , _diDocumentFormat  :: !(Maybe DocumentFormat)
-  , _diName            :: !(Maybe Text)
-  , _diDocumentVersion :: !(Maybe Text)
-  , _diTags            :: !(Maybe [Tag])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DocumentIdentifier =
+  DocumentIdentifier'
+    { _diDocumentType    :: !(Maybe DocumentType)
+    , _diSchemaVersion   :: !(Maybe Text)
+    , _diTargetType      :: !(Maybe Text)
+    , _diOwner           :: !(Maybe Text)
+    , _diPlatformTypes   :: !(Maybe [PlatformType])
+    , _diDocumentFormat  :: !(Maybe DocumentFormat)
+    , _diName            :: !(Maybe Text)
+    , _diDocumentVersion :: !(Maybe Text)
+    , _diTags            :: !(Maybe [Tag])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DocumentIdentifier' with the minimum fields required to make a request.
@@ -2728,10 +2780,12 @@ instance NFData DocumentIdentifier where
 --
 --
 -- /See:/ 'documentKeyValuesFilter' smart constructor.
-data DocumentKeyValuesFilter = DocumentKeyValuesFilter'
-  { _dkvfValues :: !(Maybe [Text])
-  , _dkvfKey    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DocumentKeyValuesFilter =
+  DocumentKeyValuesFilter'
+    { _dkvfValues :: !(Maybe [Text])
+    , _dkvfKey    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DocumentKeyValuesFilter' with the minimum fields required to make a request.
@@ -2771,12 +2825,14 @@ instance ToJSON DocumentKeyValuesFilter where
 --
 --
 -- /See:/ 'documentParameter' smart constructor.
-data DocumentParameter = DocumentParameter'
-  { _dpName         :: !(Maybe Text)
-  , _dpDefaultValue :: !(Maybe Text)
-  , _dpType         :: !(Maybe DocumentParameterType)
-  , _dpDescription  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DocumentParameter =
+  DocumentParameter'
+    { _dpName         :: !(Maybe Text)
+    , _dpDefaultValue :: !(Maybe Text)
+    , _dpType         :: !(Maybe DocumentParameterType)
+    , _dpDescription  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DocumentParameter' with the minimum fields required to make a request.
@@ -2835,13 +2891,15 @@ instance NFData DocumentParameter where
 --
 --
 -- /See:/ 'documentVersionInfo' smart constructor.
-data DocumentVersionInfo = DocumentVersionInfo'
-  { _dviCreatedDate      :: !(Maybe POSIX)
-  , _dviDocumentFormat   :: !(Maybe DocumentFormat)
-  , _dviName             :: !(Maybe Text)
-  , _dviDocumentVersion  :: !(Maybe Text)
-  , _dviIsDefaultVersion :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DocumentVersionInfo =
+  DocumentVersionInfo'
+    { _dviCreatedDate      :: !(Maybe POSIX)
+    , _dviDocumentFormat   :: !(Maybe DocumentFormat)
+    , _dviName             :: !(Maybe Text)
+    , _dviDocumentVersion  :: !(Maybe Text)
+    , _dviIsDefaultVersion :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DocumentVersionInfo' with the minimum fields required to make a request.
@@ -2908,10 +2966,12 @@ instance NFData DocumentVersionInfo where
 --
 --
 -- /See:/ 'effectivePatch' smart constructor.
-data EffectivePatch = EffectivePatch'
-  { _epPatch       :: !(Maybe Patch)
-  , _epPatchStatus :: !(Maybe PatchStatus)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EffectivePatch =
+  EffectivePatch'
+    { _epPatch       :: !(Maybe Patch)
+    , _epPatchStatus :: !(Maybe PatchStatus)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EffectivePatch' with the minimum fields required to make a request.
@@ -2950,11 +3010,13 @@ instance NFData EffectivePatch where
 --
 --
 -- /See:/ 'failedCreateAssociation' smart constructor.
-data FailedCreateAssociation = FailedCreateAssociation'
-  { _fcaEntry   :: !(Maybe CreateAssociationBatchRequestEntry)
-  , _fcaFault   :: !(Maybe Fault)
-  , _fcaMessage :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FailedCreateAssociation =
+  FailedCreateAssociation'
+    { _fcaEntry   :: !(Maybe CreateAssociationBatchRequestEntry)
+    , _fcaFault   :: !(Maybe Fault)
+    , _fcaMessage :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FailedCreateAssociation' with the minimum fields required to make a request.
@@ -3002,11 +3064,13 @@ instance NFData FailedCreateAssociation where
 --
 --
 -- /See:/ 'failureDetails' smart constructor.
-data FailureDetails = FailureDetails'
-  { _fdFailureType  :: !(Maybe Text)
-  , _fdFailureStage :: !(Maybe Text)
-  , _fdDetails      :: !(Maybe (Map Text [Text]))
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FailureDetails =
+  FailureDetails'
+    { _fdFailureType  :: !(Maybe Text)
+    , _fdFailureStage :: !(Maybe Text)
+    , _fdDetails      :: !(Maybe (Map Text [Text]))
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FailureDetails' with the minimum fields required to make a request.
@@ -3054,10 +3118,12 @@ instance NFData FailureDetails where
 --
 --
 -- /See:/ 'instanceAggregatedAssociationOverview' smart constructor.
-data InstanceAggregatedAssociationOverview = InstanceAggregatedAssociationOverview'
-  { _iaaoDetailedStatus                           :: !(Maybe Text)
-  , _iaaoInstanceAssociationStatusAggregatedCount :: !(Maybe (Map Text Int))
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceAggregatedAssociationOverview =
+  InstanceAggregatedAssociationOverview'
+    { _iaaoDetailedStatus                           :: !(Maybe Text)
+    , _iaaoInstanceAssociationStatusAggregatedCount :: !(Maybe (Map Text Int))
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceAggregatedAssociationOverview' with the minimum fields required to make a request.
@@ -3107,12 +3173,14 @@ instance NFData InstanceAggregatedAssociationOverview
 --
 --
 -- /See:/ 'instanceAssociation' smart constructor.
-data InstanceAssociation = InstanceAssociation'
-  { _iaAssociationId      :: !(Maybe Text)
-  , _iaInstanceId         :: !(Maybe Text)
-  , _iaContent            :: !(Maybe Text)
-  , _iaAssociationVersion :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceAssociation =
+  InstanceAssociation'
+    { _iaAssociationId      :: !(Maybe Text)
+    , _iaInstanceId         :: !(Maybe Text)
+    , _iaContent            :: !(Maybe Text)
+    , _iaAssociationVersion :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceAssociation' with the minimum fields required to make a request.
@@ -3171,9 +3239,11 @@ instance NFData InstanceAssociation where
 --
 --
 -- /See:/ 'instanceAssociationOutputLocation' smart constructor.
-newtype InstanceAssociationOutputLocation = InstanceAssociationOutputLocation'
-  { _iaolS3Location :: Maybe S3OutputLocation
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype InstanceAssociationOutputLocation =
+  InstanceAssociationOutputLocation'
+    { _iaolS3Location :: Maybe S3OutputLocation
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceAssociationOutputLocation' with the minimum fields required to make a request.
@@ -3216,9 +3286,11 @@ instance ToJSON InstanceAssociationOutputLocation
 --
 --
 -- /See:/ 'instanceAssociationOutputURL' smart constructor.
-newtype InstanceAssociationOutputURL = InstanceAssociationOutputURL'
-  { _iaouS3OutputURL :: Maybe S3OutputURL
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype InstanceAssociationOutputURL =
+  InstanceAssociationOutputURL'
+    { _iaouS3OutputURL :: Maybe S3OutputURL
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceAssociationOutputURL' with the minimum fields required to make a request.
@@ -3252,20 +3324,22 @@ instance NFData InstanceAssociationOutputURL where
 --
 --
 -- /See:/ 'instanceAssociationStatusInfo' smart constructor.
-data InstanceAssociationStatusInfo = InstanceAssociationStatusInfo'
-  { _iasiAssociationId      :: !(Maybe Text)
-  , _iasiInstanceId         :: !(Maybe Text)
-  , _iasiDetailedStatus     :: !(Maybe Text)
-  , _iasiStatus             :: !(Maybe Text)
-  , _iasiOutputURL          :: !(Maybe InstanceAssociationOutputURL)
-  , _iasiExecutionSummary   :: !(Maybe Text)
-  , _iasiName               :: !(Maybe Text)
-  , _iasiErrorCode          :: !(Maybe Text)
-  , _iasiDocumentVersion    :: !(Maybe Text)
-  , _iasiAssociationVersion :: !(Maybe Text)
-  , _iasiExecutionDate      :: !(Maybe POSIX)
-  , _iasiAssociationName    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceAssociationStatusInfo =
+  InstanceAssociationStatusInfo'
+    { _iasiAssociationId      :: !(Maybe Text)
+    , _iasiInstanceId         :: !(Maybe Text)
+    , _iasiDetailedStatus     :: !(Maybe Text)
+    , _iasiStatus             :: !(Maybe Text)
+    , _iasiOutputURL          :: !(Maybe InstanceAssociationOutputURL)
+    , _iasiExecutionSummary   :: !(Maybe Text)
+    , _iasiName               :: !(Maybe Text)
+    , _iasiErrorCode          :: !(Maybe Text)
+    , _iasiDocumentVersion    :: !(Maybe Text)
+    , _iasiAssociationVersion :: !(Maybe Text)
+    , _iasiExecutionDate      :: !(Maybe POSIX)
+    , _iasiAssociationName    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceAssociationStatusInfo' with the minimum fields required to make a request.
@@ -3388,27 +3462,29 @@ instance NFData InstanceAssociationStatusInfo where
 --
 --
 -- /See:/ 'instanceInformation' smart constructor.
-data InstanceInformation = InstanceInformation'
-  { _iiInstanceId :: !(Maybe Text)
-  , _iiPingStatus :: !(Maybe PingStatus)
-  , _iiIPAddress :: !(Maybe Text)
-  , _iiResourceType :: !(Maybe ResourceType)
-  , _iiRegistrationDate :: !(Maybe POSIX)
-  , _iiPlatformVersion :: !(Maybe Text)
-  , _iiIsLatestVersion :: !(Maybe Bool)
-  , _iiAgentVersion :: !(Maybe Text)
-  , _iiLastPingDateTime :: !(Maybe POSIX)
-  , _iiLastSuccessfulAssociationExecutionDate :: !(Maybe POSIX)
-  , _iiActivationId :: !(Maybe Text)
-  , _iiName :: !(Maybe Text)
-  , _iiPlatformType :: !(Maybe PlatformType)
-  , _iiAssociationOverview :: !(Maybe InstanceAggregatedAssociationOverview)
-  , _iiAssociationStatus :: !(Maybe Text)
-  , _iiLastAssociationExecutionDate :: !(Maybe POSIX)
-  , _iiPlatformName :: !(Maybe Text)
-  , _iiComputerName :: !(Maybe Text)
-  , _iiIAMRole :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceInformation =
+  InstanceInformation'
+    { _iiInstanceId :: !(Maybe Text)
+    , _iiPingStatus :: !(Maybe PingStatus)
+    , _iiIPAddress :: !(Maybe Text)
+    , _iiResourceType :: !(Maybe ResourceType)
+    , _iiRegistrationDate :: !(Maybe POSIX)
+    , _iiPlatformVersion :: !(Maybe Text)
+    , _iiIsLatestVersion :: !(Maybe Bool)
+    , _iiAgentVersion :: !(Maybe Text)
+    , _iiLastPingDateTime :: !(Maybe POSIX)
+    , _iiLastSuccessfulAssociationExecutionDate :: !(Maybe POSIX)
+    , _iiActivationId :: !(Maybe Text)
+    , _iiName :: !(Maybe Text)
+    , _iiPlatformType :: !(Maybe PlatformType)
+    , _iiAssociationOverview :: !(Maybe InstanceAggregatedAssociationOverview)
+    , _iiAssociationStatus :: !(Maybe Text)
+    , _iiLastAssociationExecutionDate :: !(Maybe POSIX)
+    , _iiPlatformName :: !(Maybe Text)
+    , _iiComputerName :: !(Maybe Text)
+    , _iiIAMRole :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceInformation' with the minimum fields required to make a request.
@@ -3587,10 +3663,12 @@ instance NFData InstanceInformation where
 --
 --
 -- /See:/ 'instanceInformationFilter' smart constructor.
-data InstanceInformationFilter = InstanceInformationFilter'
-  { _iifKey      :: !InstanceInformationFilterKey
-  , _iifValueSet :: !(List1 Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceInformationFilter =
+  InstanceInformationFilter'
+    { _iifKey      :: !InstanceInformationFilterKey
+    , _iifValueSet :: !(List1 Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceInformationFilter' with the minimum fields required to make a request.
@@ -3633,10 +3711,12 @@ instance ToJSON InstanceInformationFilter where
 --
 --
 -- /See:/ 'instanceInformationStringFilter' smart constructor.
-data InstanceInformationStringFilter = InstanceInformationStringFilter'
-  { _iisfKey    :: !Text
-  , _iisfValues :: !(List1 Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceInformationStringFilter =
+  InstanceInformationStringFilter'
+    { _iisfKey    :: !Text
+    , _iisfValues :: !(List1 Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceInformationStringFilter' with the minimum fields required to make a request.
@@ -3680,21 +3760,23 @@ instance ToJSON InstanceInformationStringFilter where
 --
 --
 -- /See:/ 'instancePatchState' smart constructor.
-data InstancePatchState = InstancePatchState'
-  { _ipsOwnerInformation    :: !(Maybe (Sensitive Text))
-  , _ipsFailedCount         :: !(Maybe Int)
-  , _ipsInstalledOtherCount :: !(Maybe Int)
-  , _ipsMissingCount        :: !(Maybe Int)
-  , _ipsNotApplicableCount  :: !(Maybe Int)
-  , _ipsInstalledCount      :: !(Maybe Int)
-  , _ipsSnapshotId          :: !(Maybe Text)
-  , _ipsInstanceId          :: !Text
-  , _ipsPatchGroup          :: !Text
-  , _ipsBaselineId          :: !Text
-  , _ipsOperationStartTime  :: !POSIX
-  , _ipsOperationEndTime    :: !POSIX
-  , _ipsOperation           :: !PatchOperationType
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data InstancePatchState =
+  InstancePatchState'
+    { _ipsOwnerInformation    :: !(Maybe (Sensitive Text))
+    , _ipsFailedCount         :: !(Maybe Int)
+    , _ipsInstalledOtherCount :: !(Maybe Int)
+    , _ipsMissingCount        :: !(Maybe Int)
+    , _ipsNotApplicableCount  :: !(Maybe Int)
+    , _ipsInstalledCount      :: !(Maybe Int)
+    , _ipsSnapshotId          :: !(Maybe Text)
+    , _ipsInstanceId          :: !Text
+    , _ipsPatchGroup          :: !Text
+    , _ipsBaselineId          :: !Text
+    , _ipsOperationStartTime  :: !POSIX
+    , _ipsOperationEndTime    :: !POSIX
+    , _ipsOperation           :: !PatchOperationType
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstancePatchState' with the minimum fields required to make a request.
@@ -3831,11 +3913,13 @@ instance NFData InstancePatchState where
 --
 --
 -- /See:/ 'instancePatchStateFilter' smart constructor.
-data InstancePatchStateFilter = InstancePatchStateFilter'
-  { _ipsfKey    :: !Text
-  , _ipsfValues :: !(List1 Text)
-  , _ipsfType   :: !InstancePatchStateOperatorType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstancePatchStateFilter =
+  InstancePatchStateFilter'
+    { _ipsfKey    :: !Text
+    , _ipsfValues :: !(List1 Text)
+    , _ipsfType   :: !InstancePatchStateOperatorType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstancePatchStateFilter' with the minimum fields required to make a request.
@@ -3886,10 +3970,12 @@ instance ToJSON InstancePatchStateFilter where
 --
 --
 -- /See:/ 'inventoryAggregator' smart constructor.
-data InventoryAggregator = InventoryAggregator'
-  { _iaAggregators :: !(Maybe (List1 InventoryAggregator))
-  , _iaExpression  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InventoryAggregator =
+  InventoryAggregator'
+    { _iaAggregators :: !(Maybe (List1 InventoryAggregator))
+    , _iaExpression  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InventoryAggregator' with the minimum fields required to make a request.
@@ -3929,15 +4015,17 @@ instance ToJSON InventoryAggregator where
 --
 --
 -- /See:/ 'inventoryDeletionStatusItem' smart constructor.
-data InventoryDeletionStatusItem = InventoryDeletionStatusItem'
-  { _idsiTypeName             :: !(Maybe Text)
-  , _idsiLastStatusUpdateTime :: !(Maybe POSIX)
-  , _idsiLastStatusMessage    :: !(Maybe Text)
-  , _idsiDeletionSummary      :: !(Maybe InventoryDeletionSummary)
-  , _idsiLastStatus           :: !(Maybe InventoryDeletionStatus)
-  , _idsiDeletionStartTime    :: !(Maybe POSIX)
-  , _idsiDeletionId           :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InventoryDeletionStatusItem =
+  InventoryDeletionStatusItem'
+    { _idsiTypeName             :: !(Maybe Text)
+    , _idsiLastStatusUpdateTime :: !(Maybe POSIX)
+    , _idsiLastStatusMessage    :: !(Maybe Text)
+    , _idsiDeletionSummary      :: !(Maybe InventoryDeletionSummary)
+    , _idsiLastStatus           :: !(Maybe InventoryDeletionStatus)
+    , _idsiDeletionStartTime    :: !(Maybe POSIX)
+    , _idsiDeletionId           :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InventoryDeletionStatusItem' with the minimum fields required to make a request.
@@ -4020,11 +4108,13 @@ instance NFData InventoryDeletionStatusItem where
 --
 --
 -- /See:/ 'inventoryDeletionSummary' smart constructor.
-data InventoryDeletionSummary = InventoryDeletionSummary'
-  { _idsRemainingCount :: !(Maybe Int)
-  , _idsSummaryItems   :: !(Maybe [InventoryDeletionSummaryItem])
-  , _idsTotalCount     :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InventoryDeletionSummary =
+  InventoryDeletionSummary'
+    { _idsRemainingCount :: !(Maybe Int)
+    , _idsSummaryItems   :: !(Maybe [InventoryDeletionSummaryItem])
+    , _idsTotalCount     :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InventoryDeletionSummary' with the minimum fields required to make a request.
@@ -4076,11 +4166,13 @@ instance NFData InventoryDeletionSummary where
 --
 --
 -- /See:/ 'inventoryDeletionSummaryItem' smart constructor.
-data InventoryDeletionSummaryItem = InventoryDeletionSummaryItem'
-  { _idsiRemainingCount :: !(Maybe Int)
-  , _idsiCount          :: !(Maybe Int)
-  , _idsiVersion        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InventoryDeletionSummaryItem =
+  InventoryDeletionSummaryItem'
+    { _idsiRemainingCount :: !(Maybe Int)
+    , _idsiCount          :: !(Maybe Int)
+    , _idsiVersion        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InventoryDeletionSummaryItem' with the minimum fields required to make a request.
@@ -4131,11 +4223,13 @@ instance NFData InventoryDeletionSummaryItem where
 --
 --
 -- /See:/ 'inventoryFilter' smart constructor.
-data InventoryFilter = InventoryFilter'
-  { _ifType   :: !(Maybe InventoryQueryOperatorType)
-  , _ifKey    :: !Text
-  , _ifValues :: !(List1 Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InventoryFilter =
+  InventoryFilter'
+    { _ifType   :: !(Maybe InventoryQueryOperatorType)
+    , _ifKey    :: !Text
+    , _ifValues :: !(List1 Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InventoryFilter' with the minimum fields required to make a request.
@@ -4184,14 +4278,16 @@ instance ToJSON InventoryFilter where
 --
 --
 -- /See:/ 'inventoryItem' smart constructor.
-data InventoryItem = InventoryItem'
-  { _iiContext       :: !(Maybe (Map Text Text))
-  , _iiContentHash   :: !(Maybe Text)
-  , _iiContent       :: !(Maybe [Map Text Text])
-  , _iiTypeName      :: !Text
-  , _iiSchemaVersion :: !Text
-  , _iiCaptureTime   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InventoryItem =
+  InventoryItem'
+    { _iiContext       :: !(Maybe (Map Text Text))
+    , _iiContentHash   :: !(Maybe Text)
+    , _iiContent       :: !(Maybe [Map Text Text])
+    , _iiTypeName      :: !Text
+    , _iiSchemaVersion :: !Text
+    , _iiCaptureTime   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InventoryItem' with the minimum fields required to make a request.
@@ -4269,10 +4365,12 @@ instance ToJSON InventoryItem where
 --
 --
 -- /See:/ 'inventoryItemAttribute' smart constructor.
-data InventoryItemAttribute = InventoryItemAttribute'
-  { _iiaName     :: !Text
-  , _iiaDataType :: !InventoryAttributeDataType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InventoryItemAttribute =
+  InventoryItemAttribute'
+    { _iiaName     :: !Text
+    , _iiaDataType :: !InventoryAttributeDataType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InventoryItemAttribute' with the minimum fields required to make a request.
@@ -4314,12 +4412,14 @@ instance NFData InventoryItemAttribute where
 --
 --
 -- /See:/ 'inventoryItemSchema' smart constructor.
-data InventoryItemSchema = InventoryItemSchema'
-  { _iisVersion     :: !(Maybe Text)
-  , _iisDisplayName :: !(Maybe Text)
-  , _iisTypeName    :: !Text
-  , _iisAttributes  :: !(List1 InventoryItemAttribute)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InventoryItemSchema =
+  InventoryItemSchema'
+    { _iisVersion     :: !(Maybe Text)
+    , _iisDisplayName :: !(Maybe Text)
+    , _iisTypeName    :: !Text
+    , _iisAttributes  :: !(List1 InventoryItemAttribute)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InventoryItemSchema' with the minimum fields required to make a request.
@@ -4380,10 +4480,12 @@ instance NFData InventoryItemSchema where
 --
 --
 -- /See:/ 'inventoryResultEntity' smart constructor.
-data InventoryResultEntity = InventoryResultEntity'
-  { _ireData :: !(Maybe (Map Text InventoryResultItem))
-  , _ireId   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InventoryResultEntity =
+  InventoryResultEntity'
+    { _ireData :: !(Maybe (Map Text InventoryResultItem))
+    , _ireId   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InventoryResultEntity' with the minimum fields required to make a request.
@@ -4423,13 +4525,15 @@ instance NFData InventoryResultEntity where
 --
 --
 -- /See:/ 'inventoryResultItem' smart constructor.
-data InventoryResultItem = InventoryResultItem'
-  { _iriContentHash   :: !(Maybe Text)
-  , _iriCaptureTime   :: !(Maybe Text)
-  , _iriTypeName      :: !Text
-  , _iriSchemaVersion :: !Text
-  , _iriContent       :: ![Map Text Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InventoryResultItem =
+  InventoryResultItem'
+    { _iriContentHash   :: !(Maybe Text)
+    , _iriCaptureTime   :: !(Maybe Text)
+    , _iriTypeName      :: !Text
+    , _iriSchemaVersion :: !Text
+    , _iriContent       :: ![Map Text Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InventoryResultItem' with the minimum fields required to make a request.
@@ -4498,11 +4602,13 @@ instance NFData InventoryResultItem where
 --
 --
 -- /See:/ 'loggingInfo' smart constructor.
-data LoggingInfo = LoggingInfo'
-  { _liS3KeyPrefix  :: !(Maybe Text)
-  , _liS3BucketName :: !Text
-  , _liS3Region     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LoggingInfo =
+  LoggingInfo'
+    { _liS3KeyPrefix  :: !(Maybe Text)
+    , _liS3BucketName :: !Text
+    , _liS3Region     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LoggingInfo' with the minimum fields required to make a request.
@@ -4563,10 +4669,12 @@ instance ToJSON LoggingInfo where
 --
 --
 -- /See:/ 'maintenanceWindowAutomationParameters' smart constructor.
-data MaintenanceWindowAutomationParameters = MaintenanceWindowAutomationParameters'
-  { _mwapParameters      :: !(Maybe (Map Text [Text]))
-  , _mwapDocumentVersion :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MaintenanceWindowAutomationParameters =
+  MaintenanceWindowAutomationParameters'
+    { _mwapParameters      :: !(Maybe (Map Text [Text]))
+    , _mwapDocumentVersion :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MaintenanceWindowAutomationParameters' with the minimum fields required to make a request.
@@ -4621,14 +4729,16 @@ instance ToJSON MaintenanceWindowAutomationParameters
 --
 --
 -- /See:/ 'maintenanceWindowExecution' smart constructor.
-data MaintenanceWindowExecution = MaintenanceWindowExecution'
-  { _mweStatus            :: !(Maybe MaintenanceWindowExecutionStatus)
-  , _mweStartTime         :: !(Maybe POSIX)
-  , _mweWindowExecutionId :: !(Maybe Text)
-  , _mweStatusDetails     :: !(Maybe Text)
-  , _mweEndTime           :: !(Maybe POSIX)
-  , _mweWindowId          :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MaintenanceWindowExecution =
+  MaintenanceWindowExecution'
+    { _mweStatus            :: !(Maybe MaintenanceWindowExecutionStatus)
+    , _mweStartTime         :: !(Maybe POSIX)
+    , _mweWindowExecutionId :: !(Maybe Text)
+    , _mweStatusDetails     :: !(Maybe Text)
+    , _mweEndTime           :: !(Maybe POSIX)
+    , _mweWindowId          :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MaintenanceWindowExecution' with the minimum fields required to make a request.
@@ -4703,16 +4813,18 @@ instance NFData MaintenanceWindowExecution where
 --
 --
 -- /See:/ 'maintenanceWindowExecutionTaskIdentity' smart constructor.
-data MaintenanceWindowExecutionTaskIdentity = MaintenanceWindowExecutionTaskIdentity'
-  { _mwetiStatus            :: !(Maybe MaintenanceWindowExecutionStatus)
-  , _mwetiTaskExecutionId   :: !(Maybe Text)
-  , _mwetiStartTime         :: !(Maybe POSIX)
-  , _mwetiTaskType          :: !(Maybe MaintenanceWindowTaskType)
-  , _mwetiTaskARN           :: !(Maybe Text)
-  , _mwetiWindowExecutionId :: !(Maybe Text)
-  , _mwetiStatusDetails     :: !(Maybe Text)
-  , _mwetiEndTime           :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MaintenanceWindowExecutionTaskIdentity =
+  MaintenanceWindowExecutionTaskIdentity'
+    { _mwetiStatus            :: !(Maybe MaintenanceWindowExecutionStatus)
+    , _mwetiTaskExecutionId   :: !(Maybe Text)
+    , _mwetiStartTime         :: !(Maybe POSIX)
+    , _mwetiTaskType          :: !(Maybe MaintenanceWindowTaskType)
+    , _mwetiTaskARN           :: !(Maybe Text)
+    , _mwetiWindowExecutionId :: !(Maybe Text)
+    , _mwetiStatusDetails     :: !(Maybe Text)
+    , _mwetiEndTime           :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MaintenanceWindowExecutionTaskIdentity' with the minimum fields required to make a request.
@@ -4809,20 +4921,22 @@ instance NFData
 --
 --
 -- /See:/ 'maintenanceWindowExecutionTaskInvocationIdentity' smart constructor.
-data MaintenanceWindowExecutionTaskInvocationIdentity = MaintenanceWindowExecutionTaskInvocationIdentity'
-  { _mwetiiStatus            :: !(Maybe MaintenanceWindowExecutionStatus)
-  , _mwetiiExecutionId       :: !(Maybe Text)
-  , _mwetiiTaskExecutionId   :: !(Maybe Text)
-  , _mwetiiStartTime         :: !(Maybe POSIX)
-  , _mwetiiInvocationId      :: !(Maybe Text)
-  , _mwetiiOwnerInformation  :: !(Maybe (Sensitive Text))
-  , _mwetiiTaskType          :: !(Maybe MaintenanceWindowTaskType)
-  , _mwetiiWindowTargetId    :: !(Maybe Text)
-  , _mwetiiWindowExecutionId :: !(Maybe Text)
-  , _mwetiiStatusDetails     :: !(Maybe Text)
-  , _mwetiiEndTime           :: !(Maybe POSIX)
-  , _mwetiiParameters        :: !(Maybe (Sensitive Text))
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data MaintenanceWindowExecutionTaskInvocationIdentity =
+  MaintenanceWindowExecutionTaskInvocationIdentity'
+    { _mwetiiStatus            :: !(Maybe MaintenanceWindowExecutionStatus)
+    , _mwetiiExecutionId       :: !(Maybe Text)
+    , _mwetiiTaskExecutionId   :: !(Maybe Text)
+    , _mwetiiStartTime         :: !(Maybe POSIX)
+    , _mwetiiInvocationId      :: !(Maybe Text)
+    , _mwetiiOwnerInformation  :: !(Maybe (Sensitive Text))
+    , _mwetiiTaskType          :: !(Maybe MaintenanceWindowTaskType)
+    , _mwetiiWindowTargetId    :: !(Maybe Text)
+    , _mwetiiWindowExecutionId :: !(Maybe Text)
+    , _mwetiiStatusDetails     :: !(Maybe Text)
+    , _mwetiiEndTime           :: !(Maybe POSIX)
+    , _mwetiiParameters        :: !(Maybe (Sensitive Text))
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MaintenanceWindowExecutionTaskInvocationIdentity' with the minimum fields required to make a request.
@@ -4952,10 +5066,12 @@ instance NFData
 --
 --
 -- /See:/ 'maintenanceWindowFilter' smart constructor.
-data MaintenanceWindowFilter = MaintenanceWindowFilter'
-  { _mwfValues :: !(Maybe [Text])
-  , _mwfKey    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MaintenanceWindowFilter =
+  MaintenanceWindowFilter'
+    { _mwfValues :: !(Maybe [Text])
+    , _mwfKey    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MaintenanceWindowFilter' with the minimum fields required to make a request.
@@ -4995,14 +5111,16 @@ instance ToJSON MaintenanceWindowFilter where
 --
 --
 -- /See:/ 'maintenanceWindowIdentity' smart constructor.
-data MaintenanceWindowIdentity = MaintenanceWindowIdentity'
-  { _mwiEnabled     :: !(Maybe Bool)
-  , _mwiName        :: !(Maybe Text)
-  , _mwiCutoff      :: !(Maybe Nat)
-  , _mwiDescription :: !(Maybe (Sensitive Text))
-  , _mwiDuration    :: !(Maybe Nat)
-  , _mwiWindowId    :: !(Maybe Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data MaintenanceWindowIdentity =
+  MaintenanceWindowIdentity'
+    { _mwiEnabled     :: !(Maybe Bool)
+    , _mwiName        :: !(Maybe Text)
+    , _mwiCutoff      :: !(Maybe Nat)
+    , _mwiDescription :: !(Maybe (Sensitive Text))
+    , _mwiDuration    :: !(Maybe Nat)
+    , _mwiWindowId    :: !(Maybe Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MaintenanceWindowIdentity' with the minimum fields required to make a request.
@@ -5079,11 +5197,13 @@ instance NFData MaintenanceWindowIdentity where
 --
 --
 -- /See:/ 'maintenanceWindowLambdaParameters' smart constructor.
-data MaintenanceWindowLambdaParameters = MaintenanceWindowLambdaParameters'
-  { _mwlpPayload       :: !(Maybe (Sensitive Base64))
-  , _mwlpQualifier     :: !(Maybe Text)
-  , _mwlpClientContext :: !(Maybe Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data MaintenanceWindowLambdaParameters =
+  MaintenanceWindowLambdaParameters'
+    { _mwlpPayload       :: !(Maybe (Sensitive Base64))
+    , _mwlpQualifier     :: !(Maybe Text)
+    , _mwlpClientContext :: !(Maybe Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MaintenanceWindowLambdaParameters' with the minimum fields required to make a request.
@@ -5148,17 +5268,19 @@ instance ToJSON MaintenanceWindowLambdaParameters
 --
 --
 -- /See:/ 'maintenanceWindowRunCommandParameters' smart constructor.
-data MaintenanceWindowRunCommandParameters = MaintenanceWindowRunCommandParameters'
-  { _mwrcpServiceRoleARN     :: !(Maybe Text)
-  , _mwrcpNotificationConfig :: !(Maybe NotificationConfig)
-  , _mwrcpDocumentHashType   :: !(Maybe DocumentHashType)
-  , _mwrcpOutputS3KeyPrefix  :: !(Maybe Text)
-  , _mwrcpParameters         :: !(Maybe (Map Text [Text]))
-  , _mwrcpDocumentHash       :: !(Maybe Text)
-  , _mwrcpTimeoutSeconds     :: !(Maybe Nat)
-  , _mwrcpComment            :: !(Maybe Text)
-  , _mwrcpOutputS3BucketName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MaintenanceWindowRunCommandParameters =
+  MaintenanceWindowRunCommandParameters'
+    { _mwrcpServiceRoleARN     :: !(Maybe Text)
+    , _mwrcpNotificationConfig :: !(Maybe NotificationConfig)
+    , _mwrcpDocumentHashType   :: !(Maybe DocumentHashType)
+    , _mwrcpOutputS3KeyPrefix  :: !(Maybe Text)
+    , _mwrcpParameters         :: !(Maybe (Map Text [Text]))
+    , _mwrcpDocumentHash       :: !(Maybe Text)
+    , _mwrcpTimeoutSeconds     :: !(Maybe Nat)
+    , _mwrcpComment            :: !(Maybe Text)
+    , _mwrcpOutputS3BucketName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MaintenanceWindowRunCommandParameters' with the minimum fields required to make a request.
@@ -5282,10 +5404,12 @@ instance ToJSON MaintenanceWindowRunCommandParameters
 --
 --
 -- /See:/ 'maintenanceWindowStepFunctionsParameters' smart constructor.
-data MaintenanceWindowStepFunctionsParameters = MaintenanceWindowStepFunctionsParameters'
-  { _mwsfpInput :: !(Maybe (Sensitive Text))
-  , _mwsfpName  :: !(Maybe Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data MaintenanceWindowStepFunctionsParameters =
+  MaintenanceWindowStepFunctionsParameters'
+    { _mwsfpInput :: !(Maybe (Sensitive Text))
+    , _mwsfpName  :: !(Maybe Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MaintenanceWindowStepFunctionsParameters' with the minimum fields required to make a request.
@@ -5342,15 +5466,17 @@ instance ToJSON
 --
 --
 -- /See:/ 'maintenanceWindowTarget' smart constructor.
-data MaintenanceWindowTarget = MaintenanceWindowTarget'
-  { _mResourceType     :: !(Maybe MaintenanceWindowResourceType)
-  , _mOwnerInformation :: !(Maybe (Sensitive Text))
-  , _mWindowTargetId   :: !(Maybe Text)
-  , _mName             :: !(Maybe Text)
-  , _mTargets          :: !(Maybe [Target])
-  , _mDescription      :: !(Maybe (Sensitive Text))
-  , _mWindowId         :: !(Maybe Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data MaintenanceWindowTarget =
+  MaintenanceWindowTarget'
+    { _mResourceType     :: !(Maybe MaintenanceWindowResourceType)
+    , _mOwnerInformation :: !(Maybe (Sensitive Text))
+    , _mWindowTargetId   :: !(Maybe Text)
+    , _mName             :: !(Maybe Text)
+    , _mTargets          :: !(Maybe [Target])
+    , _mDescription      :: !(Maybe (Sensitive Text))
+    , _mWindowId         :: !(Maybe Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MaintenanceWindowTarget' with the minimum fields required to make a request.
@@ -5433,21 +5559,23 @@ instance NFData MaintenanceWindowTarget where
 --
 --
 -- /See:/ 'maintenanceWindowTask' smart constructor.
-data MaintenanceWindowTask = MaintenanceWindowTask'
-  { _mwtServiceRoleARN :: !(Maybe Text)
-  , _mwtWindowTaskId :: !(Maybe Text)
-  , _mwtTaskParameters :: !(Maybe (Sensitive (Map Text (Sensitive MaintenanceWindowTaskParameterValueExpression))))
-  , _mwtPriority :: !(Maybe Nat)
-  , _mwtTaskARN :: !(Maybe Text)
-  , _mwtMaxErrors :: !(Maybe Text)
-  , _mwtName :: !(Maybe Text)
-  , _mwtTargets :: !(Maybe [Target])
-  , _mwtLoggingInfo :: !(Maybe LoggingInfo)
-  , _mwtType :: !(Maybe MaintenanceWindowTaskType)
-  , _mwtDescription :: !(Maybe (Sensitive Text))
-  , _mwtMaxConcurrency :: !(Maybe Text)
-  , _mwtWindowId :: !(Maybe Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data MaintenanceWindowTask =
+  MaintenanceWindowTask'
+    { _mwtServiceRoleARN :: !(Maybe Text)
+    , _mwtWindowTaskId :: !(Maybe Text)
+    , _mwtTaskParameters :: !(Maybe (Sensitive (Map Text (Sensitive MaintenanceWindowTaskParameterValueExpression))))
+    , _mwtPriority :: !(Maybe Nat)
+    , _mwtTaskARN :: !(Maybe Text)
+    , _mwtMaxErrors :: !(Maybe Text)
+    , _mwtName :: !(Maybe Text)
+    , _mwtTargets :: !(Maybe [Target])
+    , _mwtLoggingInfo :: !(Maybe LoggingInfo)
+    , _mwtType :: !(Maybe MaintenanceWindowTaskType)
+    , _mwtDescription :: !(Maybe (Sensitive Text))
+    , _mwtMaxConcurrency :: !(Maybe Text)
+    , _mwtWindowId :: !(Maybe Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MaintenanceWindowTask' with the minimum fields required to make a request.
@@ -5578,12 +5706,14 @@ instance NFData MaintenanceWindowTask where
 --
 --
 -- /See:/ 'maintenanceWindowTaskInvocationParameters' smart constructor.
-data MaintenanceWindowTaskInvocationParameters = MaintenanceWindowTaskInvocationParameters'
-  { _mwtipAutomation    :: !(Maybe MaintenanceWindowAutomationParameters)
-  , _mwtipStepFunctions :: !(Maybe MaintenanceWindowStepFunctionsParameters)
-  , _mwtipRunCommand    :: !(Maybe MaintenanceWindowRunCommandParameters)
-  , _mwtipLambda        :: !(Maybe MaintenanceWindowLambdaParameters)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data MaintenanceWindowTaskInvocationParameters =
+  MaintenanceWindowTaskInvocationParameters'
+    { _mwtipAutomation    :: !(Maybe MaintenanceWindowAutomationParameters)
+    , _mwtipStepFunctions :: !(Maybe MaintenanceWindowStepFunctionsParameters)
+    , _mwtipRunCommand    :: !(Maybe MaintenanceWindowRunCommandParameters)
+    , _mwtipLambda        :: !(Maybe MaintenanceWindowLambdaParameters)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MaintenanceWindowTaskInvocationParameters' with the minimum fields required to make a request.
@@ -5660,9 +5790,11 @@ instance ToJSON
 --
 --
 -- /See:/ 'maintenanceWindowTaskParameterValueExpression' smart constructor.
-newtype MaintenanceWindowTaskParameterValueExpression = MaintenanceWindowTaskParameterValueExpression'
-  { _mwtpveValues :: Maybe (Sensitive [Sensitive Text])
-  } deriving (Eq, Show, Data, Typeable, Generic)
+newtype MaintenanceWindowTaskParameterValueExpression =
+  MaintenanceWindowTaskParameterValueExpression'
+    { _mwtpveValues :: Maybe (Sensitive [Sensitive Text])
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MaintenanceWindowTaskParameterValueExpression' with the minimum fields required to make a request.
@@ -5711,10 +5843,12 @@ instance ToJSON
 --
 --
 -- /See:/ 'nonCompliantSummary' smart constructor.
-data NonCompliantSummary = NonCompliantSummary'
-  { _ncsNonCompliantCount :: !(Maybe Int)
-  , _ncsSeveritySummary   :: !(Maybe SeveritySummary)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NonCompliantSummary =
+  NonCompliantSummary'
+    { _ncsNonCompliantCount :: !(Maybe Int)
+    , _ncsSeveritySummary   :: !(Maybe SeveritySummary)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NonCompliantSummary' with the minimum fields required to make a request.
@@ -5756,11 +5890,13 @@ instance NFData NonCompliantSummary where
 --
 --
 -- /See:/ 'notificationConfig' smart constructor.
-data NotificationConfig = NotificationConfig'
-  { _ncNotificationEvents :: !(Maybe [NotificationEvent])
-  , _ncNotificationType   :: !(Maybe NotificationType)
-  , _ncNotificationARN    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NotificationConfig =
+  NotificationConfig'
+    { _ncNotificationEvents :: !(Maybe [NotificationEvent])
+    , _ncNotificationType   :: !(Maybe NotificationType)
+    , _ncNotificationARN    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NotificationConfig' with the minimum fields required to make a request.
@@ -5820,12 +5956,14 @@ instance ToJSON NotificationConfig where
 --
 --
 -- /See:/ 'parameter' smart constructor.
-data Parameter = Parameter'
-  { _pValue   :: !(Maybe Text)
-  , _pName    :: !(Maybe Text)
-  , _pVersion :: !(Maybe Integer)
-  , _pType    :: !(Maybe ParameterType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Parameter =
+  Parameter'
+    { _pValue   :: !(Maybe Text)
+    , _pName    :: !(Maybe Text)
+    , _pVersion :: !(Maybe Integer)
+    , _pType    :: !(Maybe ParameterType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Parameter' with the minimum fields required to make a request.
@@ -5880,17 +6018,19 @@ instance NFData Parameter where
 --
 --
 -- /See:/ 'parameterHistory' smart constructor.
-data ParameterHistory = ParameterHistory'
-  { _phLastModifiedDate :: !(Maybe POSIX)
-  , _phKeyId            :: !(Maybe Text)
-  , _phValue            :: !(Maybe Text)
-  , _phName             :: !(Maybe Text)
-  , _phVersion          :: !(Maybe Integer)
-  , _phLastModifiedUser :: !(Maybe Text)
-  , _phAllowedPattern   :: !(Maybe Text)
-  , _phType             :: !(Maybe ParameterType)
-  , _phDescription      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ParameterHistory =
+  ParameterHistory'
+    { _phLastModifiedDate :: !(Maybe POSIX)
+    , _phKeyId            :: !(Maybe Text)
+    , _phValue            :: !(Maybe Text)
+    , _phName             :: !(Maybe Text)
+    , _phVersion          :: !(Maybe Integer)
+    , _phLastModifiedUser :: !(Maybe Text)
+    , _phAllowedPattern   :: !(Maybe Text)
+    , _phType             :: !(Maybe ParameterType)
+    , _phDescription      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ParameterHistory' with the minimum fields required to make a request.
@@ -5989,16 +6129,18 @@ instance NFData ParameterHistory where
 --
 --
 -- /See:/ 'parameterMetadata' smart constructor.
-data ParameterMetadata = ParameterMetadata'
-  { _pmLastModifiedDate :: !(Maybe POSIX)
-  , _pmKeyId            :: !(Maybe Text)
-  , _pmName             :: !(Maybe Text)
-  , _pmVersion          :: !(Maybe Integer)
-  , _pmLastModifiedUser :: !(Maybe Text)
-  , _pmAllowedPattern   :: !(Maybe Text)
-  , _pmType             :: !(Maybe ParameterType)
-  , _pmDescription      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ParameterMetadata =
+  ParameterMetadata'
+    { _pmLastModifiedDate :: !(Maybe POSIX)
+    , _pmKeyId            :: !(Maybe Text)
+    , _pmName             :: !(Maybe Text)
+    , _pmVersion          :: !(Maybe Integer)
+    , _pmLastModifiedUser :: !(Maybe Text)
+    , _pmAllowedPattern   :: !(Maybe Text)
+    , _pmType             :: !(Maybe ParameterType)
+    , _pmDescription      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ParameterMetadata' with the minimum fields required to make a request.
@@ -6089,11 +6231,13 @@ instance NFData ParameterMetadata where
 --
 --
 -- /See:/ 'parameterStringFilter' smart constructor.
-data ParameterStringFilter = ParameterStringFilter'
-  { _psfValues :: !(Maybe (List1 Text))
-  , _psfOption :: !(Maybe Text)
-  , _psfKey    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ParameterStringFilter =
+  ParameterStringFilter'
+    { _psfValues :: !(Maybe (List1 Text))
+    , _psfOption :: !(Maybe Text)
+    , _psfKey    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ParameterStringFilter' with the minimum fields required to make a request.
@@ -6142,10 +6286,12 @@ instance ToJSON ParameterStringFilter where
 --
 --
 -- /See:/ 'parametersFilter' smart constructor.
-data ParametersFilter = ParametersFilter'
-  { _pKey    :: !ParametersFilterKey
-  , _pValues :: !(List1 Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ParametersFilter =
+  ParametersFilter'
+    { _pKey    :: !ParametersFilterKey
+    , _pValues :: !(List1 Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ParametersFilter' with the minimum fields required to make a request.
@@ -6186,21 +6332,23 @@ instance ToJSON ParametersFilter where
 --
 --
 -- /See:/ 'patch' smart constructor.
-data Patch = Patch'
-  { _pVendor         :: !(Maybe Text)
-  , _pMsrcSeverity   :: !(Maybe Text)
-  , _pProductFamily  :: !(Maybe Text)
-  , _pClassification :: !(Maybe Text)
-  , _pMsrcNumber     :: !(Maybe Text)
-  , _pLanguage       :: !(Maybe Text)
-  , _pKbNumber       :: !(Maybe Text)
-  , _pContentURL     :: !(Maybe Text)
-  , _pId             :: !(Maybe Text)
-  , _pReleaseDate    :: !(Maybe POSIX)
-  , _pTitle          :: !(Maybe Text)
-  , _pProduct        :: !(Maybe Text)
-  , _pDescription    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Patch =
+  Patch'
+    { _pVendor         :: !(Maybe Text)
+    , _pMsrcSeverity   :: !(Maybe Text)
+    , _pProductFamily  :: !(Maybe Text)
+    , _pClassification :: !(Maybe Text)
+    , _pMsrcNumber     :: !(Maybe Text)
+    , _pLanguage       :: !(Maybe Text)
+    , _pKbNumber       :: !(Maybe Text)
+    , _pContentURL     :: !(Maybe Text)
+    , _pId             :: !(Maybe Text)
+    , _pReleaseDate    :: !(Maybe POSIX)
+    , _pTitle          :: !(Maybe Text)
+    , _pProduct        :: !(Maybe Text)
+    , _pDescription    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Patch' with the minimum fields required to make a request.
@@ -6331,13 +6479,15 @@ instance NFData Patch where
 --
 --
 -- /See:/ 'patchBaselineIdentity' smart constructor.
-data PatchBaselineIdentity = PatchBaselineIdentity'
-  { _pbiBaselineName        :: !(Maybe Text)
-  , _pbiBaselineDescription :: !(Maybe Text)
-  , _pbiOperatingSystem     :: !(Maybe OperatingSystem)
-  , _pbiDefaultBaseline     :: !(Maybe Bool)
-  , _pbiBaselineId          :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PatchBaselineIdentity =
+  PatchBaselineIdentity'
+    { _pbiBaselineName        :: !(Maybe Text)
+    , _pbiBaselineDescription :: !(Maybe Text)
+    , _pbiOperatingSystem     :: !(Maybe OperatingSystem)
+    , _pbiDefaultBaseline     :: !(Maybe Bool)
+    , _pbiBaselineId          :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PatchBaselineIdentity' with the minimum fields required to make a request.
@@ -6405,14 +6555,16 @@ instance NFData PatchBaselineIdentity where
 --
 --
 -- /See:/ 'patchComplianceData' smart constructor.
-data PatchComplianceData = PatchComplianceData'
-  { _pcdTitle          :: !Text
-  , _pcdKBId           :: !Text
-  , _pcdClassification :: !Text
-  , _pcdSeverity       :: !Text
-  , _pcdState          :: !PatchComplianceDataState
-  , _pcdInstalledTime  :: !POSIX
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PatchComplianceData =
+  PatchComplianceData'
+    { _pcdTitle          :: !Text
+    , _pcdKBId           :: !Text
+    , _pcdClassification :: !Text
+    , _pcdSeverity       :: !Text
+    , _pcdState          :: !PatchComplianceDataState
+    , _pcdInstalledTime  :: !POSIX
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PatchComplianceData' with the minimum fields required to make a request.
@@ -6851,10 +7003,12 @@ instance NFData PatchComplianceData where
 --
 --
 -- /See:/ 'patchFilter' smart constructor.
-data PatchFilter = PatchFilter'
-  { _pfKey    :: !PatchFilterKey
-  , _pfValues :: !(List1 Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PatchFilter =
+  PatchFilter'
+    { _pfKey    :: !PatchFilterKey
+    , _pfValues :: !(List1 Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PatchFilter' with the minimum fields required to make a request.
@@ -6902,9 +7056,11 @@ instance ToJSON PatchFilter where
 --
 --
 -- /See:/ 'patchFilterGroup' smart constructor.
-newtype PatchFilterGroup = PatchFilterGroup'
-  { _pfgPatchFilters :: [PatchFilter]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype PatchFilterGroup =
+  PatchFilterGroup'
+    { _pfgPatchFilters :: [PatchFilter]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PatchFilterGroup' with the minimum fields required to make a request.
@@ -6943,10 +7099,12 @@ instance ToJSON PatchFilterGroup where
 --
 --
 -- /See:/ 'patchGroupPatchBaselineMapping' smart constructor.
-data PatchGroupPatchBaselineMapping = PatchGroupPatchBaselineMapping'
-  { _pgpbmBaselineIdentity :: !(Maybe PatchBaselineIdentity)
-  , _pgpbmPatchGroup       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PatchGroupPatchBaselineMapping =
+  PatchGroupPatchBaselineMapping'
+    { _pgpbmBaselineIdentity :: !(Maybe PatchBaselineIdentity)
+    , _pgpbmPatchGroup       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PatchGroupPatchBaselineMapping' with the minimum fields required to make a request.
@@ -6989,10 +7147,12 @@ instance NFData PatchGroupPatchBaselineMapping where
 --
 --
 -- /See:/ 'patchOrchestratorFilter' smart constructor.
-data PatchOrchestratorFilter = PatchOrchestratorFilter'
-  { _pofValues :: !(Maybe [Text])
-  , _pofKey    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PatchOrchestratorFilter =
+  PatchOrchestratorFilter'
+    { _pofValues :: !(Maybe [Text])
+    , _pofKey    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PatchOrchestratorFilter' with the minimum fields required to make a request.
@@ -7032,12 +7192,14 @@ instance ToJSON PatchOrchestratorFilter where
 --
 --
 -- /See:/ 'patchRule' smart constructor.
-data PatchRule = PatchRule'
-  { _prEnableNonSecurity :: !(Maybe Bool)
-  , _prComplianceLevel   :: !(Maybe PatchComplianceLevel)
-  , _prPatchFilterGroup  :: !PatchFilterGroup
-  , _prApproveAfterDays  :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PatchRule =
+  PatchRule'
+    { _prEnableNonSecurity :: !(Maybe Bool)
+    , _prComplianceLevel   :: !(Maybe PatchComplianceLevel)
+    , _prPatchFilterGroup  :: !PatchFilterGroup
+    , _prApproveAfterDays  :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PatchRule' with the minimum fields required to make a request.
@@ -7108,9 +7270,11 @@ instance ToJSON PatchRule where
 --
 --
 -- /See:/ 'patchRuleGroup' smart constructor.
-newtype PatchRuleGroup = PatchRuleGroup'
-  { _prgPatchRules :: [PatchRule]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype PatchRuleGroup =
+  PatchRuleGroup'
+    { _prgPatchRules :: [PatchRule]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PatchRuleGroup' with the minimum fields required to make a request.
@@ -7147,11 +7311,13 @@ instance ToJSON PatchRuleGroup where
 --
 --
 -- /See:/ 'patchSource' smart constructor.
-data PatchSource = PatchSource'
-  { _psName          :: !Text
-  , _psProducts      :: !(List1 Text)
-  , _psConfiguration :: !(Sensitive Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data PatchSource =
+  PatchSource'
+    { _psName          :: !Text
+    , _psProducts      :: !(List1 Text)
+    , _psConfiguration :: !(Sensitive Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PatchSource' with the minimum fields required to make a request.
@@ -7213,11 +7379,13 @@ instance ToJSON PatchSource where
 --
 --
 -- /See:/ 'patchStatus' smart constructor.
-data PatchStatus = PatchStatus'
-  { _psApprovalDate     :: !(Maybe POSIX)
-  , _psDeploymentStatus :: !(Maybe PatchDeploymentStatus)
-  , _psComplianceLevel  :: !(Maybe PatchComplianceLevel)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PatchStatus =
+  PatchStatus'
+    { _psApprovalDate     :: !(Maybe POSIX)
+    , _psDeploymentStatus :: !(Maybe PatchDeploymentStatus)
+    , _psComplianceLevel  :: !(Maybe PatchComplianceLevel)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PatchStatus' with the minimum fields required to make a request.
@@ -7268,10 +7436,12 @@ instance NFData PatchStatus where
 --
 --
 -- /See:/ 'resolvedTargets' smart constructor.
-data ResolvedTargets = ResolvedTargets'
-  { _rtTruncated       :: !(Maybe Bool)
-  , _rtParameterValues :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResolvedTargets =
+  ResolvedTargets'
+    { _rtTruncated       :: !(Maybe Bool)
+    , _rtParameterValues :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResolvedTargets' with the minimum fields required to make a request.
@@ -7312,16 +7482,18 @@ instance NFData ResolvedTargets where
 --
 --
 -- /See:/ 'resourceComplianceSummaryItem' smart constructor.
-data ResourceComplianceSummaryItem = ResourceComplianceSummaryItem'
-  { _rcsiNonCompliantSummary :: !(Maybe NonCompliantSummary)
-  , _rcsiStatus              :: !(Maybe ComplianceStatus)
-  , _rcsiResourceId          :: !(Maybe Text)
-  , _rcsiResourceType        :: !(Maybe Text)
-  , _rcsiCompliantSummary    :: !(Maybe CompliantSummary)
-  , _rcsiExecutionSummary    :: !(Maybe ComplianceExecutionSummary)
-  , _rcsiOverallSeverity     :: !(Maybe ComplianceSeverity)
-  , _rcsiComplianceType      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResourceComplianceSummaryItem =
+  ResourceComplianceSummaryItem'
+    { _rcsiNonCompliantSummary :: !(Maybe NonCompliantSummary)
+    , _rcsiStatus              :: !(Maybe ComplianceStatus)
+    , _rcsiResourceId          :: !(Maybe Text)
+    , _rcsiResourceType        :: !(Maybe Text)
+    , _rcsiCompliantSummary    :: !(Maybe CompliantSummary)
+    , _rcsiExecutionSummary    :: !(Maybe ComplianceExecutionSummary)
+    , _rcsiOverallSeverity     :: !(Maybe ComplianceSeverity)
+    , _rcsiComplianceType      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResourceComplianceSummaryItem' with the minimum fields required to make a request.
@@ -7412,15 +7584,17 @@ instance NFData ResourceComplianceSummaryItem where
 --
 --
 -- /See:/ 'resourceDataSyncItem' smart constructor.
-data ResourceDataSyncItem = ResourceDataSyncItem'
-  { _rdsiLastSyncStatusMessage  :: !(Maybe Text)
-  , _rdsiSyncCreatedTime        :: !(Maybe POSIX)
-  , _rdsiLastSyncTime           :: !(Maybe POSIX)
-  , _rdsiSyncName               :: !(Maybe Text)
-  , _rdsiLastStatus             :: !(Maybe LastResourceDataSyncStatus)
-  , _rdsiS3Destination          :: !(Maybe ResourceDataSyncS3Destination)
-  , _rdsiLastSuccessfulSyncTime :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResourceDataSyncItem =
+  ResourceDataSyncItem'
+    { _rdsiLastSyncStatusMessage  :: !(Maybe Text)
+    , _rdsiSyncCreatedTime        :: !(Maybe POSIX)
+    , _rdsiLastSyncTime           :: !(Maybe POSIX)
+    , _rdsiSyncName               :: !(Maybe Text)
+    , _rdsiLastStatus             :: !(Maybe LastResourceDataSyncStatus)
+    , _rdsiS3Destination          :: !(Maybe ResourceDataSyncS3Destination)
+    , _rdsiLastSuccessfulSyncTime :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResourceDataSyncItem' with the minimum fields required to make a request.
@@ -7504,13 +7678,15 @@ instance NFData ResourceDataSyncItem where
 --
 --
 -- /See:/ 'resourceDataSyncS3Destination' smart constructor.
-data ResourceDataSyncS3Destination = ResourceDataSyncS3Destination'
-  { _rdssdPrefix       :: !(Maybe Text)
-  , _rdssdAWSKMSKeyARN :: !(Maybe Text)
-  , _rdssdBucketName   :: !Text
-  , _rdssdSyncFormat   :: !ResourceDataSyncS3Format
-  , _rdssdRegion       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResourceDataSyncS3Destination =
+  ResourceDataSyncS3Destination'
+    { _rdssdPrefix       :: !(Maybe Text)
+    , _rdssdAWSKMSKeyARN :: !(Maybe Text)
+    , _rdssdBucketName   :: !Text
+    , _rdssdSyncFormat   :: !ResourceDataSyncS3Format
+    , _rdssdRegion       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResourceDataSyncS3Destination' with the minimum fields required to make a request.
@@ -7590,9 +7766,11 @@ instance ToJSON ResourceDataSyncS3Destination where
 --
 --
 -- /See:/ 'resultAttribute' smart constructor.
-newtype ResultAttribute = ResultAttribute'
-  { _raTypeName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ResultAttribute =
+  ResultAttribute'
+    { _raTypeName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResultAttribute' with the minimum fields required to make a request.
@@ -7624,11 +7802,13 @@ instance ToJSON ResultAttribute where
 --
 --
 -- /See:/ 's3OutputLocation' smart constructor.
-data S3OutputLocation = S3OutputLocation'
-  { _solOutputS3KeyPrefix  :: !(Maybe Text)
-  , _solOutputS3Region     :: !(Maybe Text)
-  , _solOutputS3BucketName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data S3OutputLocation =
+  S3OutputLocation'
+    { _solOutputS3KeyPrefix  :: !(Maybe Text)
+    , _solOutputS3Region     :: !(Maybe Text)
+    , _solOutputS3BucketName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'S3OutputLocation' with the minimum fields required to make a request.
@@ -7689,9 +7869,11 @@ instance ToJSON S3OutputLocation where
 --
 --
 -- /See:/ 's3OutputURL' smart constructor.
-newtype S3OutputURL = S3OutputURL'
-  { _souOutputURL :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype S3OutputURL =
+  S3OutputURL'
+    { _souOutputURL :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'S3OutputURL' with the minimum fields required to make a request.
@@ -7722,14 +7904,16 @@ instance NFData S3OutputURL where
 --
 --
 -- /See:/ 'severitySummary' smart constructor.
-data SeveritySummary = SeveritySummary'
-  { _ssLowCount           :: !(Maybe Int)
-  , _ssUnspecifiedCount   :: !(Maybe Int)
-  , _ssHighCount          :: !(Maybe Int)
-  , _ssMediumCount        :: !(Maybe Int)
-  , _ssInformationalCount :: !(Maybe Int)
-  , _ssCriticalCount      :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SeveritySummary =
+  SeveritySummary'
+    { _ssLowCount           :: !(Maybe Int)
+    , _ssUnspecifiedCount   :: !(Maybe Int)
+    , _ssHighCount          :: !(Maybe Int)
+    , _ssMediumCount        :: !(Maybe Int)
+    , _ssInformationalCount :: !(Maybe Int)
+    , _ssCriticalCount      :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SeveritySummary' with the minimum fields required to make a request.
@@ -7804,24 +7988,26 @@ instance NFData SeveritySummary where
 --
 --
 -- /See:/ 'stepExecution' smart constructor.
-data StepExecution = StepExecution'
-  { _seFailureDetails       :: !(Maybe FailureDetails)
-  , _seInputs               :: !(Maybe (Map Text Text))
-  , _seStepName             :: !(Maybe Text)
-  , _seExecutionEndTime     :: !(Maybe POSIX)
-  , _seFailureMessage       :: !(Maybe Text)
-  , _seResponse             :: !(Maybe Text)
-  , _seAction               :: !(Maybe Text)
-  , _seResponseCode         :: !(Maybe Text)
-  , _seStepStatus           :: !(Maybe AutomationExecutionStatus)
-  , _seOverriddenParameters :: !(Maybe (Map Text [Text]))
-  , _seOutputs              :: !(Maybe (Map Text [Text]))
-  , _seExecutionStartTime   :: !(Maybe POSIX)
-  , _seMaxAttempts          :: !(Maybe Int)
-  , _seStepExecutionId      :: !(Maybe Text)
-  , _seTimeoutSeconds       :: !(Maybe Integer)
-  , _seOnFailure            :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StepExecution =
+  StepExecution'
+    { _seFailureDetails       :: !(Maybe FailureDetails)
+    , _seInputs               :: !(Maybe (Map Text Text))
+    , _seStepName             :: !(Maybe Text)
+    , _seExecutionEndTime     :: !(Maybe POSIX)
+    , _seFailureMessage       :: !(Maybe Text)
+    , _seResponse             :: !(Maybe Text)
+    , _seAction               :: !(Maybe Text)
+    , _seResponseCode         :: !(Maybe Text)
+    , _seStepStatus           :: !(Maybe AutomationExecutionStatus)
+    , _seOverriddenParameters :: !(Maybe (Map Text [Text]))
+    , _seOutputs              :: !(Maybe (Map Text [Text]))
+    , _seExecutionStartTime   :: !(Maybe POSIX)
+    , _seMaxAttempts          :: !(Maybe Int)
+    , _seStepExecutionId      :: !(Maybe Text)
+    , _seTimeoutSeconds       :: !(Maybe Integer)
+    , _seOnFailure            :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StepExecution' with the minimum fields required to make a request.
@@ -7977,10 +8163,12 @@ instance NFData StepExecution where
 --
 --
 -- /See:/ 'stepExecutionFilter' smart constructor.
-data StepExecutionFilter = StepExecutionFilter'
-  { _sefKey    :: !StepExecutionFilterKey
-  , _sefValues :: !(List1 Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StepExecutionFilter =
+  StepExecutionFilter'
+    { _sefKey    :: !StepExecutionFilterKey
+    , _sefValues :: !(List1 Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StepExecutionFilter' with the minimum fields required to make a request.
@@ -8022,10 +8210,12 @@ instance ToJSON StepExecutionFilter where
 --
 --
 -- /See:/ 'tag' smart constructor.
-data Tag = Tag'
-  { _tagKey   :: !Text
-  , _tagValue :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Tag =
+  Tag'
+    { _tagKey   :: !Text
+    , _tagValue :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Tag' with the minimum fields required to make a request.
@@ -8073,10 +8263,12 @@ instance ToJSON Tag where
 --
 --
 -- /See:/ 'target' smart constructor.
-data Target = Target'
-  { _tValues :: !(Maybe [Text])
-  , _tKey    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Target =
+  Target'
+    { _tValues :: !(Maybe [Text])
+    , _tKey    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Target' with the minimum fields required to make a request.

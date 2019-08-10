@@ -79,10 +79,12 @@ instance ToQuery DescribeLoggingOptions where
         toQuery = const mempty
 
 -- | /See:/ 'describeLoggingOptionsResponse' smart constructor.
-data DescribeLoggingOptionsResponse = DescribeLoggingOptionsResponse'
-  { _dlorsLoggingOptions :: !(Maybe LoggingOptions)
-  , _dlorsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeLoggingOptionsResponse =
+  DescribeLoggingOptionsResponse'
+    { _dlorsLoggingOptions :: !(Maybe LoggingOptions)
+    , _dlorsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeLoggingOptionsResponse' with the minimum fields required to make a request.

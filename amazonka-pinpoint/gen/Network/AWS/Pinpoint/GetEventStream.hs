@@ -45,9 +45,11 @@ import Network.AWS.Response
 -- | GetEventStreamRequest
 --
 -- /See:/ 'getEventStream' smart constructor.
-newtype GetEventStream = GetEventStream'
-  { _gesApplicationId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetEventStream =
+  GetEventStream'
+    { _gesApplicationId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetEventStream' with the minimum fields required to make a request.
@@ -95,10 +97,12 @@ instance ToQuery GetEventStream where
         toQuery = const mempty
 
 -- | /See:/ 'getEventStreamResponse' smart constructor.
-data GetEventStreamResponse = GetEventStreamResponse'
-  { _gesrsResponseStatus :: !Int
-  , _gesrsEventStream    :: !EventStream
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetEventStreamResponse =
+  GetEventStreamResponse'
+    { _gesrsResponseStatus :: !Int
+    , _gesrsEventStream    :: !EventStream
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetEventStreamResponse' with the minimum fields required to make a request.

@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeTasks' smart constructor.
-data DescribeTasks = DescribeTasks'
-  { _dtCluster :: !(Maybe Text)
-  , _dtTasks   :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeTasks =
+  DescribeTasks'
+    { _dtCluster :: !(Maybe Text)
+    , _dtTasks   :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeTasks' with the minimum fields required to make a request.
@@ -112,11 +114,13 @@ instance ToQuery DescribeTasks where
         toQuery = const mempty
 
 -- | /See:/ 'describeTasksResponse' smart constructor.
-data DescribeTasksResponse = DescribeTasksResponse'
-  { _dtrsFailures       :: !(Maybe [Failure])
-  , _dtrsTasks          :: !(Maybe [Task])
-  , _dtrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeTasksResponse =
+  DescribeTasksResponse'
+    { _dtrsFailures       :: !(Maybe [Failure])
+    , _dtrsTasks          :: !(Maybe [Task])
+    , _dtrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeTasksResponse' with the minimum fields required to make a request.

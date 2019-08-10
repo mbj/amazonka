@@ -58,12 +58,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createCustomerGateway' smart constructor.
-data CreateCustomerGateway = CreateCustomerGateway'
-  { _ccgDryRun   :: !(Maybe Bool)
-  , _ccgBGPASN   :: !Int
-  , _ccgPublicIP :: !Text
-  , _ccgType     :: !GatewayType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateCustomerGateway =
+  CreateCustomerGateway'
+    { _ccgDryRun   :: !(Maybe Bool)
+    , _ccgBGPASN   :: !Int
+    , _ccgPublicIP :: !Text
+    , _ccgType     :: !GatewayType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateCustomerGateway' with the minimum fields required to make a request.
@@ -140,10 +142,12 @@ instance ToQuery CreateCustomerGateway where
 --
 --
 -- /See:/ 'createCustomerGatewayResponse' smart constructor.
-data CreateCustomerGatewayResponse = CreateCustomerGatewayResponse'
-  { _ccgrsCustomerGateway :: !(Maybe CustomerGateway)
-  , _ccgrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateCustomerGatewayResponse =
+  CreateCustomerGatewayResponse'
+    { _ccgrsCustomerGateway :: !(Maybe CustomerGateway)
+    , _ccgrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateCustomerGatewayResponse' with the minimum fields required to make a request.

@@ -48,10 +48,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'disablePolicyType' smart constructor.
-data DisablePolicyType = DisablePolicyType'
-  { _dptRootId     :: !Text
-  , _dptPolicyType :: !PolicyType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DisablePolicyType =
+  DisablePolicyType'
+    { _dptRootId     :: !Text
+    , _dptPolicyType :: !PolicyType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisablePolicyType' with the minimum fields required to make a request.
@@ -114,10 +116,12 @@ instance ToQuery DisablePolicyType where
         toQuery = const mempty
 
 -- | /See:/ 'disablePolicyTypeResponse' smart constructor.
-data DisablePolicyTypeResponse = DisablePolicyTypeResponse'
-  { _dptrsRoot           :: !(Maybe Root)
-  , _dptrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DisablePolicyTypeResponse =
+  DisablePolicyTypeResponse'
+    { _dptrsRoot           :: !(Maybe Root)
+    , _dptrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisablePolicyTypeResponse' with the minimum fields required to make a request.

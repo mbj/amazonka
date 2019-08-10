@@ -53,11 +53,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'revokeSnapshotAccess' smart constructor.
-data RevokeSnapshotAccess = RevokeSnapshotAccess'
-  { _rsaSnapshotClusterIdentifier :: !(Maybe Text)
-  , _rsaSnapshotIdentifier        :: !Text
-  , _rsaAccountWithRestoreAccess  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RevokeSnapshotAccess =
+  RevokeSnapshotAccess'
+    { _rsaSnapshotClusterIdentifier :: !(Maybe Text)
+    , _rsaSnapshotIdentifier        :: !Text
+    , _rsaAccountWithRestoreAccess  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RevokeSnapshotAccess' with the minimum fields required to make a request.
@@ -125,10 +127,12 @@ instance ToQuery RevokeSnapshotAccess where
                  _rsaAccountWithRestoreAccess]
 
 -- | /See:/ 'revokeSnapshotAccessResponse' smart constructor.
-data RevokeSnapshotAccessResponse = RevokeSnapshotAccessResponse'
-  { _rsarsSnapshot       :: !(Maybe Snapshot)
-  , _rsarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RevokeSnapshotAccessResponse =
+  RevokeSnapshotAccessResponse'
+    { _rsarsSnapshot       :: !(Maybe Snapshot)
+    , _rsarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RevokeSnapshotAccessResponse' with the minimum fields required to make a request.

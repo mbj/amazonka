@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteEnvironment' smart constructor.
-newtype DeleteEnvironment = DeleteEnvironment'
-  { _deEnvironmentId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteEnvironment =
+  DeleteEnvironment'
+    { _deEnvironmentId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteEnvironment' with the minimum fields required to make a request.
@@ -100,9 +102,11 @@ instance ToQuery DeleteEnvironment where
         toQuery = const mempty
 
 -- | /See:/ 'deleteEnvironmentResponse' smart constructor.
-newtype DeleteEnvironmentResponse = DeleteEnvironmentResponse'
-  { _dersResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteEnvironmentResponse =
+  DeleteEnvironmentResponse'
+    { _dersResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteEnvironmentResponse' with the minimum fields required to make a request.

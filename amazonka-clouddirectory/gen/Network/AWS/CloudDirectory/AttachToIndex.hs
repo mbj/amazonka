@@ -47,11 +47,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'attachToIndex' smart constructor.
-data AttachToIndex = AttachToIndex'
-  { _atiDirectoryARN    :: !Text
-  , _atiIndexReference  :: !ObjectReference
-  , _atiTargetReference :: !ObjectReference
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AttachToIndex =
+  AttachToIndex'
+    { _atiDirectoryARN    :: !Text
+    , _atiIndexReference  :: !ObjectReference
+    , _atiTargetReference :: !ObjectReference
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttachToIndex' with the minimum fields required to make a request.
@@ -123,10 +125,12 @@ instance ToQuery AttachToIndex where
         toQuery = const mempty
 
 -- | /See:/ 'attachToIndexResponse' smart constructor.
-data AttachToIndexResponse = AttachToIndexResponse'
-  { _atirsAttachedObjectIdentifier :: !(Maybe Text)
-  , _atirsResponseStatus           :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AttachToIndexResponse =
+  AttachToIndexResponse'
+    { _atirsAttachedObjectIdentifier :: !(Maybe Text)
+    , _atirsResponseStatus           :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttachToIndexResponse' with the minimum fields required to make a request.

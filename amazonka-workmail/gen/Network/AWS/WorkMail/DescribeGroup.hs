@@ -51,10 +51,12 @@ import Network.AWS.WorkMail.Types
 import Network.AWS.WorkMail.Types.Product
 
 -- | /See:/ 'describeGroup' smart constructor.
-data DescribeGroup = DescribeGroup'
-  { _dgOrganizationId :: !Text
-  , _dgGroupId        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeGroup =
+  DescribeGroup'
+    { _dgOrganizationId :: !Text
+    , _dgGroupId        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeGroup' with the minimum fields required to make a request.
@@ -121,15 +123,17 @@ instance ToQuery DescribeGroup where
         toQuery = const mempty
 
 -- | /See:/ 'describeGroupResponse' smart constructor.
-data DescribeGroupResponse = DescribeGroupResponse'
-  { _desrsEmail          :: !(Maybe Text)
-  , _desrsState          :: !(Maybe EntityState)
-  , _desrsDisabledDate   :: !(Maybe POSIX)
-  , _desrsName           :: !(Maybe Text)
-  , _desrsGroupId        :: !(Maybe Text)
-  , _desrsEnabledDate    :: !(Maybe POSIX)
-  , _desrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeGroupResponse =
+  DescribeGroupResponse'
+    { _desrsEmail          :: !(Maybe Text)
+    , _desrsState          :: !(Maybe EntityState)
+    , _desrsDisabledDate   :: !(Maybe POSIX)
+    , _desrsName           :: !(Maybe Text)
+    , _desrsGroupId        :: !(Maybe Text)
+    , _desrsEnabledDate    :: !(Maybe POSIX)
+    , _desrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeGroupResponse' with the minimum fields required to make a request.

@@ -63,21 +63,23 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'restoreDBClusterToPointInTime' smart constructor.
-data RestoreDBClusterToPointInTime = RestoreDBClusterToPointInTime'
-  { _rdctpitUseLatestRestorableTime         :: !(Maybe Bool)
-  , _rdctpitDBSubnetGroupName               :: !(Maybe Text)
-  , _rdctpitBacktrackWindow                 :: !(Maybe Integer)
-  , _rdctpitKMSKeyId                        :: !(Maybe Text)
-  , _rdctpitVPCSecurityGroupIds             :: !(Maybe [Text])
-  , _rdctpitRestoreType                     :: !(Maybe Text)
-  , _rdctpitOptionGroupName                 :: !(Maybe Text)
-  , _rdctpitRestoreToTime                   :: !(Maybe ISO8601)
-  , _rdctpitTags                            :: !(Maybe [Tag])
-  , _rdctpitPort                            :: !(Maybe Int)
-  , _rdctpitEnableIAMDatabaseAuthentication :: !(Maybe Bool)
-  , _rdctpitDBClusterIdentifier             :: !Text
-  , _rdctpitSourceDBClusterIdentifier       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RestoreDBClusterToPointInTime =
+  RestoreDBClusterToPointInTime'
+    { _rdctpitUseLatestRestorableTime         :: !(Maybe Bool)
+    , _rdctpitDBSubnetGroupName               :: !(Maybe Text)
+    , _rdctpitBacktrackWindow                 :: !(Maybe Integer)
+    , _rdctpitKMSKeyId                        :: !(Maybe Text)
+    , _rdctpitVPCSecurityGroupIds             :: !(Maybe [Text])
+    , _rdctpitRestoreType                     :: !(Maybe Text)
+    , _rdctpitOptionGroupName                 :: !(Maybe Text)
+    , _rdctpitRestoreToTime                   :: !(Maybe ISO8601)
+    , _rdctpitTags                            :: !(Maybe [Tag])
+    , _rdctpitPort                            :: !(Maybe Int)
+    , _rdctpitEnableIAMDatabaseAuthentication :: !(Maybe Bool)
+    , _rdctpitDBClusterIdentifier             :: !Text
+    , _rdctpitSourceDBClusterIdentifier       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RestoreDBClusterToPointInTime' with the minimum fields required to make a request.
@@ -234,10 +236,12 @@ instance ToQuery RestoreDBClusterToPointInTime where
                  _rdctpitSourceDBClusterIdentifier]
 
 -- | /See:/ 'restoreDBClusterToPointInTimeResponse' smart constructor.
-data RestoreDBClusterToPointInTimeResponse = RestoreDBClusterToPointInTimeResponse'
-  { _rdctpitrsDBCluster      :: !(Maybe DBCluster)
-  , _rdctpitrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RestoreDBClusterToPointInTimeResponse =
+  RestoreDBClusterToPointInTimeResponse'
+    { _rdctpitrsDBCluster      :: !(Maybe DBCluster)
+    , _rdctpitrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RestoreDBClusterToPointInTimeResponse' with the minimum fields required to make a request.

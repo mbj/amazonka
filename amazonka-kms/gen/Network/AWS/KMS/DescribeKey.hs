@@ -48,10 +48,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeKey' smart constructor.
-data DescribeKey = DescribeKey'
-  { _dGrantTokens :: !(Maybe [Text])
-  , _dKeyId       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeKey =
+  DescribeKey'
+    { _dGrantTokens :: !(Maybe [Text])
+    , _dKeyId       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeKey' with the minimum fields required to make a request.
@@ -111,10 +113,12 @@ instance ToQuery DescribeKey where
         toQuery = const mempty
 
 -- | /See:/ 'describeKeyResponse' smart constructor.
-data DescribeKeyResponse = DescribeKeyResponse'
-  { _dkrsKeyMetadata    :: !(Maybe KeyMetadata)
-  , _dkrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeKeyResponse =
+  DescribeKeyResponse'
+    { _dkrsKeyMetadata    :: !(Maybe KeyMetadata)
+    , _dkrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeKeyResponse' with the minimum fields required to make a request.

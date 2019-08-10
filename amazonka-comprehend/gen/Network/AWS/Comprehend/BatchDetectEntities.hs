@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'batchDetectEntities' smart constructor.
-data BatchDetectEntities = BatchDetectEntities'
-  { _bdeTextList     :: ![Text]
-  , _bdeLanguageCode :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchDetectEntities =
+  BatchDetectEntities'
+    { _bdeTextList     :: ![Text]
+    , _bdeLanguageCode :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchDetectEntities' with the minimum fields required to make a request.
@@ -116,11 +118,13 @@ instance ToQuery BatchDetectEntities where
         toQuery = const mempty
 
 -- | /See:/ 'batchDetectEntitiesResponse' smart constructor.
-data BatchDetectEntitiesResponse = BatchDetectEntitiesResponse'
-  { _bdersResponseStatus :: !Int
-  , _bdersResultList     :: ![BatchDetectEntitiesItemResult]
-  , _bdersErrorList      :: ![BatchItemError]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchDetectEntitiesResponse =
+  BatchDetectEntitiesResponse'
+    { _bdersResponseStatus :: !Int
+    , _bdersResultList     :: ![BatchDetectEntitiesItemResult]
+    , _bdersErrorList      :: ![BatchItemError]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchDetectEntitiesResponse' with the minimum fields required to make a request.

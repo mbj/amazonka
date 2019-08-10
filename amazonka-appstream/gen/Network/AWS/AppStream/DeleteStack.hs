@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteStack' smart constructor.
-newtype DeleteStack = DeleteStack'
-  { _dsName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteStack =
+  DeleteStack'
+    { _dsName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteStack' with the minimum fields required to make a request.
@@ -97,9 +99,11 @@ instance ToQuery DeleteStack where
         toQuery = const mempty
 
 -- | /See:/ 'deleteStackResponse' smart constructor.
-newtype DeleteStackResponse = DeleteStackResponse'
-  { _dsrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteStackResponse =
+  DeleteStackResponse'
+    { _dsrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteStackResponse' with the minimum fields required to make a request.

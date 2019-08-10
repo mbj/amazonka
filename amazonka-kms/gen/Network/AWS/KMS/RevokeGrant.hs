@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'revokeGrant' smart constructor.
-data RevokeGrant = RevokeGrant'
-  { _rKeyId   :: !Text
-  , _rGrantId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RevokeGrant =
+  RevokeGrant'
+    { _rKeyId   :: !Text
+    , _rGrantId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RevokeGrant' with the minimum fields required to make a request.

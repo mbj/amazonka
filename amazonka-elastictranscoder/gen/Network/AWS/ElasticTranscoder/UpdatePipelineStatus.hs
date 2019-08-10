@@ -52,10 +52,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updatePipelineStatus' smart constructor.
-data UpdatePipelineStatus = UpdatePipelineStatus'
-  { _upsId     :: !Text
-  , _upsStatus :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdatePipelineStatus =
+  UpdatePipelineStatus'
+    { _upsId     :: !Text
+    , _upsStatus :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdatePipelineStatus' with the minimum fields required to make a request.
@@ -115,10 +117,12 @@ instance ToQuery UpdatePipelineStatus where
 --
 --
 -- /See:/ 'updatePipelineStatusResponse' smart constructor.
-data UpdatePipelineStatusResponse = UpdatePipelineStatusResponse'
-  { _upsrsPipeline       :: !(Maybe Pipeline)
-  , _upsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdatePipelineStatusResponse =
+  UpdatePipelineStatusResponse'
+    { _upsrsPipeline       :: !(Maybe Pipeline)
+    , _upsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdatePipelineStatusResponse' with the minimum fields required to make a request.

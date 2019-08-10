@@ -45,9 +45,11 @@ import Network.AWS.Response
 -- | Request of DeleteReportDefinition
 --
 -- /See:/ 'deleteReportDefinition' smart constructor.
-newtype DeleteReportDefinition = DeleteReportDefinition'
-  { _drdReportName :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteReportDefinition =
+  DeleteReportDefinition'
+    { _drdReportName :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteReportDefinition' with the minimum fields required to make a request.
@@ -102,10 +104,12 @@ instance ToQuery DeleteReportDefinition where
 -- | Response of DeleteReportDefinition
 --
 -- /See:/ 'deleteReportDefinitionResponse' smart constructor.
-data DeleteReportDefinitionResponse = DeleteReportDefinitionResponse'
-  { _drsResponseMessage :: !(Maybe Text)
-  , _drsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteReportDefinitionResponse =
+  DeleteReportDefinitionResponse'
+    { _drsResponseMessage :: !(Maybe Text)
+    , _drsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteReportDefinitionResponse' with the minimum fields required to make a request.

@@ -51,10 +51,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getHostReservationPurchasePreview' smart constructor.
-data GetHostReservationPurchasePreview = GetHostReservationPurchasePreview'
-  { _ghrppHostIdSet  :: ![Text]
-  , _ghrppOfferingId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetHostReservationPurchasePreview =
+  GetHostReservationPurchasePreview'
+    { _ghrppHostIdSet  :: ![Text]
+    , _ghrppOfferingId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetHostReservationPurchasePreview' with the minimum fields required to make a request.
@@ -121,13 +123,15 @@ instance ToQuery GetHostReservationPurchasePreview
                "OfferingId" =: _ghrppOfferingId]
 
 -- | /See:/ 'getHostReservationPurchasePreviewResponse' smart constructor.
-data GetHostReservationPurchasePreviewResponse = GetHostReservationPurchasePreviewResponse'
-  { _ghrpprsCurrencyCode      :: !(Maybe CurrencyCodeValues)
-  , _ghrpprsTotalHourlyPrice  :: !(Maybe Text)
-  , _ghrpprsTotalUpfrontPrice :: !(Maybe Text)
-  , _ghrpprsPurchase          :: !(Maybe [Purchase])
-  , _ghrpprsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetHostReservationPurchasePreviewResponse =
+  GetHostReservationPurchasePreviewResponse'
+    { _ghrpprsCurrencyCode      :: !(Maybe CurrencyCodeValues)
+    , _ghrpprsTotalHourlyPrice  :: !(Maybe Text)
+    , _ghrpprsTotalUpfrontPrice :: !(Maybe Text)
+    , _ghrpprsPurchase          :: !(Maybe [Purchase])
+    , _ghrpprsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetHostReservationPurchasePreviewResponse' with the minimum fields required to make a request.

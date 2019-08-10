@@ -53,16 +53,18 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateJobExecution' smart constructor.
-data UpdateJobExecution = UpdateJobExecution'
-  { _ujeIncludeJobDocument       :: !(Maybe Bool)
-  , _ujeStatusDetails            :: !(Maybe (Map Text Text))
-  , _ujeExecutionNumber          :: !(Maybe Integer)
-  , _ujeExpectedVersion          :: !(Maybe Integer)
-  , _ujeIncludeJobExecutionState :: !(Maybe Bool)
-  , _ujeJobId                    :: !Text
-  , _ujeThingName                :: !Text
-  , _ujeStatus                   :: !JobExecutionStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateJobExecution =
+  UpdateJobExecution'
+    { _ujeIncludeJobDocument       :: !(Maybe Bool)
+    , _ujeStatusDetails            :: !(Maybe (Map Text Text))
+    , _ujeExecutionNumber          :: !(Maybe Integer)
+    , _ujeExpectedVersion          :: !(Maybe Integer)
+    , _ujeIncludeJobExecutionState :: !(Maybe Bool)
+    , _ujeJobId                    :: !Text
+    , _ujeThingName                :: !Text
+    , _ujeStatus                   :: !JobExecutionStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateJobExecution' with the minimum fields required to make a request.
@@ -175,11 +177,13 @@ instance ToQuery UpdateJobExecution where
         toQuery = const mempty
 
 -- | /See:/ 'updateJobExecutionResponse' smart constructor.
-data UpdateJobExecutionResponse = UpdateJobExecutionResponse'
-  { _ujersJobDocument    :: !(Maybe Text)
-  , _ujersExecutionState :: !(Maybe JobExecutionState)
-  , _ujersResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateJobExecutionResponse =
+  UpdateJobExecutionResponse'
+    { _ujersJobDocument    :: !(Maybe Text)
+    , _ujersExecutionState :: !(Maybe JobExecutionState)
+    , _ujersResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateJobExecutionResponse' with the minimum fields required to make a request.

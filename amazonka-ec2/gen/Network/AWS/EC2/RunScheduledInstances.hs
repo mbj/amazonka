@@ -57,13 +57,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'runScheduledInstances' smart constructor.
-data RunScheduledInstances = RunScheduledInstances'
-  { _rsiClientToken         :: !(Maybe Text)
-  , _rsiInstanceCount       :: !(Maybe Int)
-  , _rsiDryRun              :: !(Maybe Bool)
-  , _rsiLaunchSpecification :: !ScheduledInstancesLaunchSpecification
-  , _rsiScheduledInstanceId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RunScheduledInstances =
+  RunScheduledInstances'
+    { _rsiClientToken         :: !(Maybe Text)
+    , _rsiInstanceCount       :: !(Maybe Int)
+    , _rsiDryRun              :: !(Maybe Bool)
+    , _rsiLaunchSpecification :: !ScheduledInstancesLaunchSpecification
+    , _rsiScheduledInstanceId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RunScheduledInstances' with the minimum fields required to make a request.
@@ -151,10 +153,12 @@ instance ToQuery RunScheduledInstances where
 --
 --
 -- /See:/ 'runScheduledInstancesResponse' smart constructor.
-data RunScheduledInstancesResponse = RunScheduledInstancesResponse'
-  { _rrsInstanceIdSet  :: !(Maybe [Text])
-  , _rrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RunScheduledInstancesResponse =
+  RunScheduledInstancesResponse'
+    { _rrsInstanceIdSet  :: !(Maybe [Text])
+    , _rrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RunScheduledInstancesResponse' with the minimum fields required to make a request.

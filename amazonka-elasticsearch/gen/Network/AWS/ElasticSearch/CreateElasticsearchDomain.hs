@@ -55,19 +55,21 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createElasticsearchDomain' smart constructor.
-data CreateElasticsearchDomain = CreateElasticsearchDomain'
-  { _cedEBSOptions                 :: !(Maybe EBSOptions)
-  , _cedAccessPolicies             :: !(Maybe Text)
-  , _cedLogPublishingOptions       :: !(Maybe (Map LogType LogPublishingOption))
-  , _cedElasticsearchClusterConfig :: !(Maybe ElasticsearchClusterConfig)
-  , _cedSnapshotOptions            :: !(Maybe SnapshotOptions)
-  , _cedCognitoOptions             :: !(Maybe CognitoOptions)
-  , _cedEncryptionAtRestOptions    :: !(Maybe EncryptionAtRestOptions)
-  , _cedVPCOptions                 :: !(Maybe VPCOptions)
-  , _cedAdvancedOptions            :: !(Maybe (Map Text Text))
-  , _cedElasticsearchVersion       :: !(Maybe Text)
-  , _cedDomainName                 :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateElasticsearchDomain =
+  CreateElasticsearchDomain'
+    { _cedEBSOptions :: !(Maybe EBSOptions)
+    , _cedAccessPolicies :: !(Maybe Text)
+    , _cedLogPublishingOptions :: !(Maybe (Map LogType LogPublishingOption))
+    , _cedElasticsearchClusterConfig :: !(Maybe ElasticsearchClusterConfig)
+    , _cedSnapshotOptions :: !(Maybe SnapshotOptions)
+    , _cedCognitoOptions :: !(Maybe CognitoOptions)
+    , _cedEncryptionAtRestOptions :: !(Maybe EncryptionAtRestOptions)
+    , _cedVPCOptions :: !(Maybe VPCOptions)
+    , _cedAdvancedOptions :: !(Maybe (Map Text Text))
+    , _cedElasticsearchVersion :: !(Maybe Text)
+    , _cedDomainName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateElasticsearchDomain' with the minimum fields required to make a request.
@@ -206,10 +208,12 @@ instance ToQuery CreateElasticsearchDomain where
 --
 --
 -- /See:/ 'createElasticsearchDomainResponse' smart constructor.
-data CreateElasticsearchDomainResponse = CreateElasticsearchDomainResponse'
-  { _cedrsDomainStatus   :: !(Maybe ElasticsearchDomainStatus)
-  , _cedrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateElasticsearchDomainResponse =
+  CreateElasticsearchDomainResponse'
+    { _cedrsDomainStatus   :: !(Maybe ElasticsearchDomainStatus)
+    , _cedrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateElasticsearchDomainResponse' with the minimum fields required to make a request.

@@ -47,12 +47,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateUserProfile' smart constructor.
-data UpdateUserProfile = UpdateUserProfile'
-  { _uupAllowSelfManagement :: !(Maybe Bool)
-  , _uupSSHPublicKey        :: !(Maybe Text)
-  , _uupSSHUsername         :: !(Maybe Text)
-  , _uupIAMUserARN          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateUserProfile =
+  UpdateUserProfile'
+    { _uupAllowSelfManagement :: !(Maybe Bool)
+    , _uupSSHPublicKey        :: !(Maybe Text)
+    , _uupSSHUsername         :: !(Maybe Text)
+    , _uupIAMUserARN          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateUserProfile' with the minimum fields required to make a request.

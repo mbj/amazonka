@@ -46,10 +46,12 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'updateDocumentDefaultVersion' smart constructor.
-data UpdateDocumentDefaultVersion = UpdateDocumentDefaultVersion'
-  { _uddvName            :: !Text
-  , _uddvDocumentVersion :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateDocumentDefaultVersion =
+  UpdateDocumentDefaultVersion'
+    { _uddvName            :: !Text
+    , _uddvDocumentVersion :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateDocumentDefaultVersion' with the minimum fields required to make a request.
@@ -115,10 +117,12 @@ instance ToQuery UpdateDocumentDefaultVersion where
         toQuery = const mempty
 
 -- | /See:/ 'updateDocumentDefaultVersionResponse' smart constructor.
-data UpdateDocumentDefaultVersionResponse = UpdateDocumentDefaultVersionResponse'
-  { _uddvrsDescription    :: !(Maybe DocumentDefaultVersionDescription)
-  , _uddvrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateDocumentDefaultVersionResponse =
+  UpdateDocumentDefaultVersionResponse'
+    { _uddvrsDescription    :: !(Maybe DocumentDefaultVersionDescription)
+    , _uddvrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateDocumentDefaultVersionResponse' with the minimum fields required to make a request.

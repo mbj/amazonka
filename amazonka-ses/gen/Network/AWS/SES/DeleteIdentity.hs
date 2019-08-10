@@ -50,9 +50,11 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'deleteIdentity' smart constructor.
-newtype DeleteIdentity = DeleteIdentity'
-  { _diIdentity :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteIdentity =
+  DeleteIdentity'
+    { _diIdentity :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteIdentity' with the minimum fields required to make a request.
@@ -100,9 +102,11 @@ instance ToQuery DeleteIdentity where
 --
 --
 -- /See:/ 'deleteIdentityResponse' smart constructor.
-newtype DeleteIdentityResponse = DeleteIdentityResponse'
-  { _dirsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteIdentityResponse =
+  DeleteIdentityResponse'
+    { _dirsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteIdentityResponse' with the minimum fields required to make a request.

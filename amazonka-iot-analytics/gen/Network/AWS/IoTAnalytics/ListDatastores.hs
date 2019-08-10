@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listDatastores' smart constructor.
-data ListDatastores = ListDatastores'
-  { _ldNextToken  :: !(Maybe Text)
-  , _ldMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListDatastores =
+  ListDatastores'
+    { _ldNextToken  :: !(Maybe Text)
+    , _ldMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDatastores' with the minimum fields required to make a request.
@@ -102,11 +104,13 @@ instance ToQuery ListDatastores where
                "maxResults" =: _ldMaxResults]
 
 -- | /See:/ 'listDatastoresResponse' smart constructor.
-data ListDatastoresResponse = ListDatastoresResponse'
-  { _ldrsNextToken          :: !(Maybe Text)
-  , _ldrsDatastoreSummaries :: !(Maybe [DatastoreSummary])
-  , _ldrsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListDatastoresResponse =
+  ListDatastoresResponse'
+    { _ldrsNextToken          :: !(Maybe Text)
+    , _ldrsDatastoreSummaries :: !(Maybe [DatastoreSummary])
+    , _ldrsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDatastoresResponse' with the minimum fields required to make a request.

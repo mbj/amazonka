@@ -24,11 +24,13 @@ import Network.AWS.Prelude
 -- | Amazon Device Messaging channel definition.
 --
 -- /See:/ 'aDMChannelRequest' smart constructor.
-data ADMChannelRequest = ADMChannelRequest'
-  { _admcrClientId     :: !(Maybe Text)
-  , _admcrClientSecret :: !(Maybe Text)
-  , _admcrEnabled      :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ADMChannelRequest =
+  ADMChannelRequest'
+    { _admcrClientId     :: !(Maybe Text)
+    , _admcrClientSecret :: !(Maybe Text)
+    , _admcrEnabled      :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ADMChannelRequest' with the minimum fields required to make a request.
@@ -77,18 +79,20 @@ instance ToJSON ADMChannelRequest where
 -- | Amazon Device Messaging channel definition.
 --
 -- /See:/ 'aDMChannelResponse' smart constructor.
-data ADMChannelResponse = ADMChannelResponse'
-  { _admcPlatform         :: !(Maybe Text)
-  , _admcLastModifiedDate :: !(Maybe Text)
-  , _admcEnabled          :: !(Maybe Bool)
-  , _admcIsArchived       :: !(Maybe Bool)
-  , _admcApplicationId    :: !(Maybe Text)
-  , _admcVersion          :: !(Maybe Int)
-  , _admcId               :: !(Maybe Text)
-  , _admcCreationDate     :: !(Maybe Text)
-  , _admcLastModifiedBy   :: !(Maybe Text)
-  , _admcHasCredential    :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ADMChannelResponse =
+  ADMChannelResponse'
+    { _admcPlatform         :: !(Maybe Text)
+    , _admcLastModifiedDate :: !(Maybe Text)
+    , _admcEnabled          :: !(Maybe Bool)
+    , _admcIsArchived       :: !(Maybe Bool)
+    , _admcApplicationId    :: !(Maybe Text)
+    , _admcVersion          :: !(Maybe Int)
+    , _admcId               :: !(Maybe Text)
+    , _admcCreationDate     :: !(Maybe Text)
+    , _admcLastModifiedBy   :: !(Maybe Text)
+    , _admcHasCredential    :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ADMChannelResponse' with the minimum fields required to make a request.
@@ -193,24 +197,26 @@ instance NFData ADMChannelResponse where
 -- | ADM Message.
 --
 -- /See:/ 'aDMMessage' smart constructor.
-data ADMMessage = ADMMessage'
-  { _admmSubstitutions     :: !(Maybe (Map Text [Text]))
-  , _admmExpiresAfter      :: !(Maybe Text)
-  , _admmMD5               :: !(Maybe Text)
-  , _admmSilentPush        :: !(Maybe Bool)
-  , _admmImageIconURL      :: !(Maybe Text)
-  , _admmRawContent        :: !(Maybe Text)
-  , _admmData              :: !(Maybe (Map Text Text))
-  , _admmSmallImageIconURL :: !(Maybe Text)
-  , _admmBody              :: !(Maybe Text)
-  , _admmURL               :: !(Maybe Text)
-  , _admmSound             :: !(Maybe Text)
-  , _admmAction            :: !(Maybe Action)
-  , _admmImageURL          :: !(Maybe Text)
-  , _admmConsolidationKey  :: !(Maybe Text)
-  , _admmTitle             :: !(Maybe Text)
-  , _admmIconReference     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ADMMessage =
+  ADMMessage'
+    { _admmSubstitutions     :: !(Maybe (Map Text [Text]))
+    , _admmExpiresAfter      :: !(Maybe Text)
+    , _admmMD5               :: !(Maybe Text)
+    , _admmSilentPush        :: !(Maybe Bool)
+    , _admmImageIconURL      :: !(Maybe Text)
+    , _admmRawContent        :: !(Maybe Text)
+    , _admmData              :: !(Maybe (Map Text Text))
+    , _admmSmallImageIconURL :: !(Maybe Text)
+    , _admmBody              :: !(Maybe Text)
+    , _admmURL               :: !(Maybe Text)
+    , _admmSound             :: !(Maybe Text)
+    , _admmAction            :: !(Maybe Action)
+    , _admmImageURL          :: !(Maybe Text)
+    , _admmConsolidationKey  :: !(Maybe Text)
+    , _admmTitle             :: !(Maybe Text)
+    , _admmIconReference     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ADMMessage' with the minimum fields required to make a request.
@@ -362,16 +368,18 @@ instance ToJSON ADMMessage where
 -- | Apple Push Notification Service channel definition.
 --
 -- /See:/ 'apnsChannelRequest' smart constructor.
-data APNSChannelRequest = APNSChannelRequest'
-  { _acrTokenKey                    :: !(Maybe Text)
-  , _acrPrivateKey                  :: !(Maybe Text)
-  , _acrEnabled                     :: !(Maybe Bool)
-  , _acrTeamId                      :: !(Maybe Text)
-  , _acrBundleId                    :: !(Maybe Text)
-  , _acrDefaultAuthenticationMethod :: !(Maybe Text)
-  , _acrCertificate                 :: !(Maybe Text)
-  , _acrTokenKeyId                  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data APNSChannelRequest =
+  APNSChannelRequest'
+    { _acrTokenKey                    :: !(Maybe Text)
+    , _acrPrivateKey                  :: !(Maybe Text)
+    , _acrEnabled                     :: !(Maybe Bool)
+    , _acrTeamId                      :: !(Maybe Text)
+    , _acrBundleId                    :: !(Maybe Text)
+    , _acrDefaultAuthenticationMethod :: !(Maybe Text)
+    , _acrCertificate                 :: !(Maybe Text)
+    , _acrTokenKeyId                  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'APNSChannelRequest' with the minimum fields required to make a request.
@@ -461,20 +469,22 @@ instance ToJSON APNSChannelRequest where
 -- | Apple Distribution Push Notification Service channel definition.
 --
 -- /See:/ 'apnsChannelResponse' smart constructor.
-data APNSChannelResponse = APNSChannelResponse'
-  { _acPlatform                    :: !(Maybe Text)
-  , _acLastModifiedDate            :: !(Maybe Text)
-  , _acEnabled                     :: !(Maybe Bool)
-  , _acHasTokenKey                 :: !(Maybe Bool)
-  , _acDefaultAuthenticationMethod :: !(Maybe Text)
-  , _acIsArchived                  :: !(Maybe Bool)
-  , _acApplicationId               :: !(Maybe Text)
-  , _acVersion                     :: !(Maybe Int)
-  , _acId                          :: !(Maybe Text)
-  , _acCreationDate                :: !(Maybe Text)
-  , _acLastModifiedBy              :: !(Maybe Text)
-  , _acHasCredential               :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data APNSChannelResponse =
+  APNSChannelResponse'
+    { _acPlatform                    :: !(Maybe Text)
+    , _acLastModifiedDate            :: !(Maybe Text)
+    , _acEnabled                     :: !(Maybe Bool)
+    , _acHasTokenKey                 :: !(Maybe Bool)
+    , _acDefaultAuthenticationMethod :: !(Maybe Text)
+    , _acIsArchived                  :: !(Maybe Bool)
+    , _acApplicationId               :: !(Maybe Text)
+    , _acVersion                     :: !(Maybe Int)
+    , _acId                          :: !(Maybe Text)
+    , _acCreationDate                :: !(Maybe Text)
+    , _acLastModifiedBy              :: !(Maybe Text)
+    , _acHasCredential               :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'APNSChannelResponse' with the minimum fields required to make a request.
@@ -595,25 +605,27 @@ instance NFData APNSChannelResponse where
 -- | APNS Message.
 --
 -- /See:/ 'apnsMessage' smart constructor.
-data APNSMessage = APNSMessage'
-  { _amSubstitutions                 :: !(Maybe (Map Text [Text]))
-  , _amSilentPush                    :: !(Maybe Bool)
-  , _amPriority                      :: !(Maybe Text)
-  , _amRawContent                    :: !(Maybe Text)
-  , _amData                          :: !(Maybe (Map Text Text))
-  , _amBody                          :: !(Maybe Text)
-  , _amCategory                      :: !(Maybe Text)
-  , _amTimeToLive                    :: !(Maybe Int)
-  , _amURL                           :: !(Maybe Text)
-  , _amSound                         :: !(Maybe Text)
-  , _amAction                        :: !(Maybe Action)
-  , _amMediaURL                      :: !(Maybe Text)
-  , _amPreferredAuthenticationMethod :: !(Maybe Text)
-  , _amBadge                         :: !(Maybe Int)
-  , _amTitle                         :: !(Maybe Text)
-  , _amThreadId                      :: !(Maybe Text)
-  , _amCollapseId                    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data APNSMessage =
+  APNSMessage'
+    { _amSubstitutions                 :: !(Maybe (Map Text [Text]))
+    , _amSilentPush                    :: !(Maybe Bool)
+    , _amPriority                      :: !(Maybe Text)
+    , _amRawContent                    :: !(Maybe Text)
+    , _amData                          :: !(Maybe (Map Text Text))
+    , _amBody                          :: !(Maybe Text)
+    , _amCategory                      :: !(Maybe Text)
+    , _amTimeToLive                    :: !(Maybe Int)
+    , _amURL                           :: !(Maybe Text)
+    , _amSound                         :: !(Maybe Text)
+    , _amAction                        :: !(Maybe Action)
+    , _amMediaURL                      :: !(Maybe Text)
+    , _amPreferredAuthenticationMethod :: !(Maybe Text)
+    , _amBadge                         :: !(Maybe Int)
+    , _amTitle                         :: !(Maybe Text)
+    , _amThreadId                      :: !(Maybe Text)
+    , _amCollapseId                    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'APNSMessage' with the minimum fields required to make a request.
@@ -772,16 +784,18 @@ instance ToJSON APNSMessage where
 -- | Apple Development Push Notification Service channel definition.
 --
 -- /See:/ 'apnsSandboxChannelRequest' smart constructor.
-data APNSSandboxChannelRequest = APNSSandboxChannelRequest'
-  { _ascrTokenKey                    :: !(Maybe Text)
-  , _ascrPrivateKey                  :: !(Maybe Text)
-  , _ascrEnabled                     :: !(Maybe Bool)
-  , _ascrTeamId                      :: !(Maybe Text)
-  , _ascrBundleId                    :: !(Maybe Text)
-  , _ascrDefaultAuthenticationMethod :: !(Maybe Text)
-  , _ascrCertificate                 :: !(Maybe Text)
-  , _ascrTokenKeyId                  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data APNSSandboxChannelRequest =
+  APNSSandboxChannelRequest'
+    { _ascrTokenKey                    :: !(Maybe Text)
+    , _ascrPrivateKey                  :: !(Maybe Text)
+    , _ascrEnabled                     :: !(Maybe Bool)
+    , _ascrTeamId                      :: !(Maybe Text)
+    , _ascrBundleId                    :: !(Maybe Text)
+    , _ascrDefaultAuthenticationMethod :: !(Maybe Text)
+    , _ascrCertificate                 :: !(Maybe Text)
+    , _ascrTokenKeyId                  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'APNSSandboxChannelRequest' with the minimum fields required to make a request.
@@ -871,20 +885,22 @@ instance ToJSON APNSSandboxChannelRequest where
 -- | Apple Development Push Notification Service channel definition.
 --
 -- /See:/ 'apnsSandboxChannelResponse' smart constructor.
-data APNSSandboxChannelResponse = APNSSandboxChannelResponse'
-  { _ascPlatform                    :: !(Maybe Text)
-  , _ascLastModifiedDate            :: !(Maybe Text)
-  , _ascEnabled                     :: !(Maybe Bool)
-  , _ascHasTokenKey                 :: !(Maybe Bool)
-  , _ascDefaultAuthenticationMethod :: !(Maybe Text)
-  , _ascIsArchived                  :: !(Maybe Bool)
-  , _ascApplicationId               :: !(Maybe Text)
-  , _ascVersion                     :: !(Maybe Int)
-  , _ascId                          :: !(Maybe Text)
-  , _ascCreationDate                :: !(Maybe Text)
-  , _ascLastModifiedBy              :: !(Maybe Text)
-  , _ascHasCredential               :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data APNSSandboxChannelResponse =
+  APNSSandboxChannelResponse'
+    { _ascPlatform                    :: !(Maybe Text)
+    , _ascLastModifiedDate            :: !(Maybe Text)
+    , _ascEnabled                     :: !(Maybe Bool)
+    , _ascHasTokenKey                 :: !(Maybe Bool)
+    , _ascDefaultAuthenticationMethod :: !(Maybe Text)
+    , _ascIsArchived                  :: !(Maybe Bool)
+    , _ascApplicationId               :: !(Maybe Text)
+    , _ascVersion                     :: !(Maybe Int)
+    , _ascId                          :: !(Maybe Text)
+    , _ascCreationDate                :: !(Maybe Text)
+    , _ascLastModifiedBy              :: !(Maybe Text)
+    , _ascHasCredential               :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'APNSSandboxChannelResponse' with the minimum fields required to make a request.
@@ -1005,16 +1021,18 @@ instance NFData APNSSandboxChannelResponse where
 -- | Apple VoIP Push Notification Service channel definition.
 --
 -- /See:/ 'apnsVoipChannelRequest' smart constructor.
-data APNSVoipChannelRequest = APNSVoipChannelRequest'
-  { _avcrTokenKey                    :: !(Maybe Text)
-  , _avcrPrivateKey                  :: !(Maybe Text)
-  , _avcrEnabled                     :: !(Maybe Bool)
-  , _avcrTeamId                      :: !(Maybe Text)
-  , _avcrBundleId                    :: !(Maybe Text)
-  , _avcrDefaultAuthenticationMethod :: !(Maybe Text)
-  , _avcrCertificate                 :: !(Maybe Text)
-  , _avcrTokenKeyId                  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data APNSVoipChannelRequest =
+  APNSVoipChannelRequest'
+    { _avcrTokenKey                    :: !(Maybe Text)
+    , _avcrPrivateKey                  :: !(Maybe Text)
+    , _avcrEnabled                     :: !(Maybe Bool)
+    , _avcrTeamId                      :: !(Maybe Text)
+    , _avcrBundleId                    :: !(Maybe Text)
+    , _avcrDefaultAuthenticationMethod :: !(Maybe Text)
+    , _avcrCertificate                 :: !(Maybe Text)
+    , _avcrTokenKeyId                  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'APNSVoipChannelRequest' with the minimum fields required to make a request.
@@ -1104,20 +1122,22 @@ instance ToJSON APNSVoipChannelRequest where
 -- | Apple VoIP Push Notification Service channel definition.
 --
 -- /See:/ 'apnsVoipChannelResponse' smart constructor.
-data APNSVoipChannelResponse = APNSVoipChannelResponse'
-  { _avcPlatform                    :: !(Maybe Text)
-  , _avcLastModifiedDate            :: !(Maybe Text)
-  , _avcEnabled                     :: !(Maybe Bool)
-  , _avcHasTokenKey                 :: !(Maybe Bool)
-  , _avcDefaultAuthenticationMethod :: !(Maybe Text)
-  , _avcIsArchived                  :: !(Maybe Bool)
-  , _avcApplicationId               :: !(Maybe Text)
-  , _avcVersion                     :: !(Maybe Int)
-  , _avcId                          :: !(Maybe Text)
-  , _avcCreationDate                :: !(Maybe Text)
-  , _avcLastModifiedBy              :: !(Maybe Text)
-  , _avcHasCredential               :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data APNSVoipChannelResponse =
+  APNSVoipChannelResponse'
+    { _avcPlatform                    :: !(Maybe Text)
+    , _avcLastModifiedDate            :: !(Maybe Text)
+    , _avcEnabled                     :: !(Maybe Bool)
+    , _avcHasTokenKey                 :: !(Maybe Bool)
+    , _avcDefaultAuthenticationMethod :: !(Maybe Text)
+    , _avcIsArchived                  :: !(Maybe Bool)
+    , _avcApplicationId               :: !(Maybe Text)
+    , _avcVersion                     :: !(Maybe Int)
+    , _avcId                          :: !(Maybe Text)
+    , _avcCreationDate                :: !(Maybe Text)
+    , _avcLastModifiedBy              :: !(Maybe Text)
+    , _avcHasCredential               :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'APNSVoipChannelResponse' with the minimum fields required to make a request.
@@ -1238,16 +1258,18 @@ instance NFData APNSVoipChannelResponse where
 -- | Apple VoIP Developer Push Notification Service channel definition.
 --
 -- /See:/ 'apnsVoipSandboxChannelRequest' smart constructor.
-data APNSVoipSandboxChannelRequest = APNSVoipSandboxChannelRequest'
-  { _avscrTokenKey                    :: !(Maybe Text)
-  , _avscrPrivateKey                  :: !(Maybe Text)
-  , _avscrEnabled                     :: !(Maybe Bool)
-  , _avscrTeamId                      :: !(Maybe Text)
-  , _avscrBundleId                    :: !(Maybe Text)
-  , _avscrDefaultAuthenticationMethod :: !(Maybe Text)
-  , _avscrCertificate                 :: !(Maybe Text)
-  , _avscrTokenKeyId                  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data APNSVoipSandboxChannelRequest =
+  APNSVoipSandboxChannelRequest'
+    { _avscrTokenKey                    :: !(Maybe Text)
+    , _avscrPrivateKey                  :: !(Maybe Text)
+    , _avscrEnabled                     :: !(Maybe Bool)
+    , _avscrTeamId                      :: !(Maybe Text)
+    , _avscrBundleId                    :: !(Maybe Text)
+    , _avscrDefaultAuthenticationMethod :: !(Maybe Text)
+    , _avscrCertificate                 :: !(Maybe Text)
+    , _avscrTokenKeyId                  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'APNSVoipSandboxChannelRequest' with the minimum fields required to make a request.
@@ -1337,20 +1359,22 @@ instance ToJSON APNSVoipSandboxChannelRequest where
 -- | Apple VoIP Developer Push Notification Service channel definition.
 --
 -- /See:/ 'apnsVoipSandboxChannelResponse' smart constructor.
-data APNSVoipSandboxChannelResponse = APNSVoipSandboxChannelResponse'
-  { _avscPlatform                    :: !(Maybe Text)
-  , _avscLastModifiedDate            :: !(Maybe Text)
-  , _avscEnabled                     :: !(Maybe Bool)
-  , _avscHasTokenKey                 :: !(Maybe Bool)
-  , _avscDefaultAuthenticationMethod :: !(Maybe Text)
-  , _avscIsArchived                  :: !(Maybe Bool)
-  , _avscApplicationId               :: !(Maybe Text)
-  , _avscVersion                     :: !(Maybe Int)
-  , _avscId                          :: !(Maybe Text)
-  , _avscCreationDate                :: !(Maybe Text)
-  , _avscLastModifiedBy              :: !(Maybe Text)
-  , _avscHasCredential               :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data APNSVoipSandboxChannelResponse =
+  APNSVoipSandboxChannelResponse'
+    { _avscPlatform                    :: !(Maybe Text)
+    , _avscLastModifiedDate            :: !(Maybe Text)
+    , _avscEnabled                     :: !(Maybe Bool)
+    , _avscHasTokenKey                 :: !(Maybe Bool)
+    , _avscDefaultAuthenticationMethod :: !(Maybe Text)
+    , _avscIsArchived                  :: !(Maybe Bool)
+    , _avscApplicationId               :: !(Maybe Text)
+    , _avscVersion                     :: !(Maybe Int)
+    , _avscId                          :: !(Maybe Text)
+    , _avscCreationDate                :: !(Maybe Text)
+    , _avscLastModifiedBy              :: !(Maybe Text)
+    , _avscHasCredential               :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'APNSVoipSandboxChannelResponse' with the minimum fields required to make a request.
@@ -1473,9 +1497,11 @@ instance NFData APNSVoipSandboxChannelResponse where
 -- | Activities for campaign.
 --
 -- /See:/ 'activitiesResponse' smart constructor.
-newtype ActivitiesResponse = ActivitiesResponse'
-  { _aItem :: Maybe [ActivityResponse]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ActivitiesResponse =
+  ActivitiesResponse'
+    { _aItem :: Maybe [ActivityResponse]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ActivitiesResponse' with the minimum fields required to make a request.
@@ -1505,21 +1531,23 @@ instance NFData ActivitiesResponse where
 -- | Activity definition
 --
 -- /See:/ 'activityResponse' smart constructor.
-data ActivityResponse = ActivityResponse'
-  { _aState                   :: !(Maybe Text)
-  , _aStart                   :: !(Maybe Text)
-  , _aCampaignId              :: !(Maybe Text)
-  , _aTimezonesCompletedCount :: !(Maybe Int)
-  , _aTimezonesTotalCount     :: !(Maybe Int)
-  , _aResult                  :: !(Maybe Text)
-  , _aTreatmentId             :: !(Maybe Text)
-  , _aSuccessfulEndpointCount :: !(Maybe Int)
-  , _aEnd                     :: !(Maybe Text)
-  , _aApplicationId           :: !(Maybe Text)
-  , _aTotalEndpointCount      :: !(Maybe Int)
-  , _aId                      :: !(Maybe Text)
-  , _aScheduledStart          :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ActivityResponse =
+  ActivityResponse'
+    { _aState                   :: !(Maybe Text)
+    , _aStart                   :: !(Maybe Text)
+    , _aCampaignId              :: !(Maybe Text)
+    , _aTimezonesCompletedCount :: !(Maybe Int)
+    , _aTimezonesTotalCount     :: !(Maybe Int)
+    , _aResult                  :: !(Maybe Text)
+    , _aTreatmentId             :: !(Maybe Text)
+    , _aSuccessfulEndpointCount :: !(Maybe Int)
+    , _aEnd                     :: !(Maybe Text)
+    , _aApplicationId           :: !(Maybe Text)
+    , _aTotalEndpointCount      :: !(Maybe Int)
+    , _aId                      :: !(Maybe Text)
+    , _aScheduledStart          :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ActivityResponse' with the minimum fields required to make a request.
@@ -1648,14 +1676,16 @@ instance NFData ActivityResponse where
 -- | Address configuration.
 --
 -- /See:/ 'addressConfiguration' smart constructor.
-data AddressConfiguration = AddressConfiguration'
-  { _acSubstitutions :: !(Maybe (Map Text [Text]))
-  , _acTitleOverride :: !(Maybe Text)
-  , _acContext       :: !(Maybe (Map Text Text))
-  , _acRawContent    :: !(Maybe Text)
-  , _acBodyOverride  :: !(Maybe Text)
-  , _acChannelType   :: !(Maybe ChannelType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddressConfiguration =
+  AddressConfiguration'
+    { _acSubstitutions :: !(Maybe (Map Text [Text]))
+    , _acTitleOverride :: !(Maybe Text)
+    , _acContext       :: !(Maybe (Map Text Text))
+    , _acRawContent    :: !(Maybe Text)
+    , _acBodyOverride  :: !(Maybe Text)
+    , _acChannelType   :: !(Maybe ChannelType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddressConfiguration' with the minimum fields required to make a request.
@@ -1728,10 +1758,12 @@ instance ToJSON AddressConfiguration where
 -- | Application Response.
 --
 -- /See:/ 'applicationResponse' smart constructor.
-data ApplicationResponse = ApplicationResponse'
-  { _appName :: !(Maybe Text)
-  , _appId   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ApplicationResponse =
+  ApplicationResponse'
+    { _appName :: !(Maybe Text)
+    , _appId   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ApplicationResponse' with the minimum fields required to make a request.
@@ -1769,13 +1801,15 @@ instance NFData ApplicationResponse where
 -- | Application settings.
 --
 -- /See:/ 'applicationSettingsResource' smart constructor.
-data ApplicationSettingsResource = ApplicationSettingsResource'
-  { _asrLastModifiedDate :: !(Maybe Text)
-  , _asrLimits           :: !(Maybe CampaignLimits)
-  , _asrQuietTime        :: !(Maybe QuietTime)
-  , _asrApplicationId    :: !(Maybe Text)
-  , _asrCampaignHook     :: !(Maybe CampaignHook)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ApplicationSettingsResource =
+  ApplicationSettingsResource'
+    { _asrLastModifiedDate :: !(Maybe Text)
+    , _asrLimits           :: !(Maybe CampaignLimits)
+    , _asrQuietTime        :: !(Maybe QuietTime)
+    , _asrApplicationId    :: !(Maybe Text)
+    , _asrCampaignHook     :: !(Maybe CampaignHook)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ApplicationSettingsResource' with the minimum fields required to make a request.
@@ -1840,10 +1874,12 @@ instance NFData ApplicationSettingsResource where
 -- | Get Applications Result.
 --
 -- /See:/ 'applicationsResponse' smart constructor.
-data ApplicationsResponse = ApplicationsResponse'
-  { _appNextToken :: !(Maybe Text)
-  , _appItem      :: !(Maybe [ApplicationResponse])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ApplicationsResponse =
+  ApplicationsResponse'
+    { _appNextToken :: !(Maybe Text)
+    , _appItem      :: !(Maybe [ApplicationResponse])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ApplicationsResponse' with the minimum fields required to make a request.
@@ -1881,10 +1917,12 @@ instance NFData ApplicationsResponse where
 -- | Custom attibute dimension
 --
 -- /See:/ 'attributeDimension' smart constructor.
-data AttributeDimension = AttributeDimension'
-  { _adValues        :: !(Maybe [Text])
-  , _adAttributeType :: !(Maybe AttributeType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AttributeDimension =
+  AttributeDimension'
+    { _adValues        :: !(Maybe [Text])
+    , _adAttributeType :: !(Maybe AttributeType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttributeDimension' with the minimum fields required to make a request.
@@ -1930,11 +1968,13 @@ instance ToJSON AttributeDimension where
 -- | Baidu Cloud Push credentials
 --
 -- /See:/ 'baiduChannelRequest' smart constructor.
-data BaiduChannelRequest = BaiduChannelRequest'
-  { _bcrAPIKey    :: !(Maybe Text)
-  , _bcrEnabled   :: !(Maybe Bool)
-  , _bcrSecretKey :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BaiduChannelRequest =
+  BaiduChannelRequest'
+    { _bcrAPIKey    :: !(Maybe Text)
+    , _bcrEnabled   :: !(Maybe Bool)
+    , _bcrSecretKey :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BaiduChannelRequest' with the minimum fields required to make a request.
@@ -1980,19 +2020,21 @@ instance ToJSON BaiduChannelRequest where
 -- | Baidu Cloud Messaging channel definition
 --
 -- /See:/ 'baiduChannelResponse' smart constructor.
-data BaiduChannelResponse = BaiduChannelResponse'
-  { _bcPlatform         :: !(Maybe Text)
-  , _bcLastModifiedDate :: !(Maybe Text)
-  , _bcEnabled          :: !(Maybe Bool)
-  , _bcCredential       :: !(Maybe Text)
-  , _bcIsArchived       :: !(Maybe Bool)
-  , _bcApplicationId    :: !(Maybe Text)
-  , _bcVersion          :: !(Maybe Int)
-  , _bcId               :: !(Maybe Text)
-  , _bcCreationDate     :: !(Maybe Text)
-  , _bcLastModifiedBy   :: !(Maybe Text)
-  , _bcHasCredential    :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BaiduChannelResponse =
+  BaiduChannelResponse'
+    { _bcPlatform         :: !(Maybe Text)
+    , _bcLastModifiedDate :: !(Maybe Text)
+    , _bcEnabled          :: !(Maybe Bool)
+    , _bcCredential       :: !(Maybe Text)
+    , _bcIsArchived       :: !(Maybe Bool)
+    , _bcApplicationId    :: !(Maybe Text)
+    , _bcVersion          :: !(Maybe Int)
+    , _bcId               :: !(Maybe Text)
+    , _bcCreationDate     :: !(Maybe Text)
+    , _bcLastModifiedBy   :: !(Maybe Text)
+    , _bcHasCredential    :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BaiduChannelResponse' with the minimum fields required to make a request.
@@ -2105,21 +2147,23 @@ instance NFData BaiduChannelResponse where
 -- | Baidu Message.
 --
 -- /See:/ 'baiduMessage' smart constructor.
-data BaiduMessage = BaiduMessage'
-  { _bmSubstitutions     :: !(Maybe (Map Text [Text]))
-  , _bmSilentPush        :: !(Maybe Bool)
-  , _bmImageIconURL      :: !(Maybe Text)
-  , _bmRawContent        :: !(Maybe Text)
-  , _bmData              :: !(Maybe (Map Text Text))
-  , _bmSmallImageIconURL :: !(Maybe Text)
-  , _bmBody              :: !(Maybe Text)
-  , _bmURL               :: !(Maybe Text)
-  , _bmSound             :: !(Maybe Text)
-  , _bmAction            :: !(Maybe Action)
-  , _bmImageURL          :: !(Maybe Text)
-  , _bmTitle             :: !(Maybe Text)
-  , _bmIconReference     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BaiduMessage =
+  BaiduMessage'
+    { _bmSubstitutions     :: !(Maybe (Map Text [Text]))
+    , _bmSilentPush        :: !(Maybe Bool)
+    , _bmImageIconURL      :: !(Maybe Text)
+    , _bmRawContent        :: !(Maybe Text)
+    , _bmData              :: !(Maybe (Map Text Text))
+    , _bmSmallImageIconURL :: !(Maybe Text)
+    , _bmBody              :: !(Maybe Text)
+    , _bmURL               :: !(Maybe Text)
+    , _bmSound             :: !(Maybe Text)
+    , _bmAction            :: !(Maybe Action)
+    , _bmImageURL          :: !(Maybe Text)
+    , _bmTitle             :: !(Maybe Text)
+    , _bmIconReference     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BaiduMessage' with the minimum fields required to make a request.
@@ -2247,12 +2291,14 @@ instance ToJSON BaiduMessage where
 -- | The email message configuration.
 --
 -- /See:/ 'campaignEmailMessage' smart constructor.
-data CampaignEmailMessage = CampaignEmailMessage'
-  { _cemBody        :: !(Maybe Text)
-  , _cemFromAddress :: !(Maybe Text)
-  , _cemHTMLBody    :: !(Maybe Text)
-  , _cemTitle       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CampaignEmailMessage =
+  CampaignEmailMessage'
+    { _cemBody        :: !(Maybe Text)
+    , _cemFromAddress :: !(Maybe Text)
+    , _cemHTMLBody    :: !(Maybe Text)
+    , _cemTitle       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CampaignEmailMessage' with the minimum fields required to make a request.
@@ -2316,11 +2362,13 @@ instance ToJSON CampaignEmailMessage where
                   ("Title" .=) <$> _cemTitle])
 
 -- | /See:/ 'campaignHook' smart constructor.
-data CampaignHook = CampaignHook'
-  { _chLambdaFunctionName :: !(Maybe Text)
-  , _chMode               :: !(Maybe Mode)
-  , _chWebURL             :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CampaignHook =
+  CampaignHook'
+    { _chLambdaFunctionName :: !(Maybe Text)
+    , _chMode               :: !(Maybe Mode)
+    , _chWebURL             :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CampaignHook' with the minimum fields required to make a request.
@@ -2374,12 +2422,14 @@ instance ToJSON CampaignHook where
 -- | Campaign Limits are used to limit the number of messages that can be sent to a user.
 --
 -- /See:/ 'campaignLimits' smart constructor.
-data CampaignLimits = CampaignLimits'
-  { _clMessagesPerSecond :: !(Maybe Int)
-  , _clDaily             :: !(Maybe Int)
-  , _clTotal             :: !(Maybe Int)
-  , _clMaximumDuration   :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CampaignLimits =
+  CampaignLimits'
+    { _clMessagesPerSecond :: !(Maybe Int)
+    , _clDaily             :: !(Maybe Int)
+    , _clTotal             :: !(Maybe Int)
+    , _clMaximumDuration   :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CampaignLimits' with the minimum fields required to make a request.
@@ -2444,28 +2494,30 @@ instance ToJSON CampaignLimits where
 -- | Campaign definition
 --
 -- /See:/ 'campaignResponse' smart constructor.
-data CampaignResponse = CampaignResponse'
-  { _cState                :: !(Maybe CampaignState)
-  , _cLastModifiedDate     :: !(Maybe Text)
-  , _cSchedule             :: !(Maybe Schedule)
-  , _cHook                 :: !(Maybe CampaignHook)
-  , _cTreatmentName        :: !(Maybe Text)
-  , _cLimits               :: !(Maybe CampaignLimits)
-  , _cIsPaused             :: !(Maybe Bool)
-  , _cDefaultState         :: !(Maybe CampaignState)
-  , _cApplicationId        :: !(Maybe Text)
-  , _cName                 :: !(Maybe Text)
-  , _cVersion              :: !(Maybe Int)
-  , _cHoldoutPercent       :: !(Maybe Int)
-  , _cTreatmentDescription :: !(Maybe Text)
-  , _cId                   :: !(Maybe Text)
-  , _cCreationDate         :: !(Maybe Text)
-  , _cMessageConfiguration :: !(Maybe MessageConfiguration)
-  , _cDescription          :: !(Maybe Text)
-  , _cSegmentId            :: !(Maybe Text)
-  , _cAdditionalTreatments :: !(Maybe [TreatmentResource])
-  , _cSegmentVersion       :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CampaignResponse =
+  CampaignResponse'
+    { _cState                :: !(Maybe CampaignState)
+    , _cLastModifiedDate     :: !(Maybe Text)
+    , _cSchedule             :: !(Maybe Schedule)
+    , _cHook                 :: !(Maybe CampaignHook)
+    , _cTreatmentName        :: !(Maybe Text)
+    , _cLimits               :: !(Maybe CampaignLimits)
+    , _cIsPaused             :: !(Maybe Bool)
+    , _cDefaultState         :: !(Maybe CampaignState)
+    , _cApplicationId        :: !(Maybe Text)
+    , _cName                 :: !(Maybe Text)
+    , _cVersion              :: !(Maybe Int)
+    , _cHoldoutPercent       :: !(Maybe Int)
+    , _cTreatmentDescription :: !(Maybe Text)
+    , _cId                   :: !(Maybe Text)
+    , _cCreationDate         :: !(Maybe Text)
+    , _cMessageConfiguration :: !(Maybe MessageConfiguration)
+    , _cDescription          :: !(Maybe Text)
+    , _cSegmentId            :: !(Maybe Text)
+    , _cAdditionalTreatments :: !(Maybe [TreatmentResource])
+    , _cSegmentVersion       :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CampaignResponse' with the minimum fields required to make a request.
@@ -2650,11 +2702,13 @@ instance NFData CampaignResponse where
 -- | SMS message configuration.
 --
 -- /See:/ 'campaignSmsMessage' smart constructor.
-data CampaignSmsMessage = CampaignSmsMessage'
-  { _csmBody        :: !(Maybe Text)
-  , _csmMessageType :: !(Maybe MessageType)
-  , _csmSenderId    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CampaignSmsMessage =
+  CampaignSmsMessage'
+    { _csmBody        :: !(Maybe Text)
+    , _csmMessageType :: !(Maybe MessageType)
+    , _csmSenderId    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CampaignSmsMessage' with the minimum fields required to make a request.
@@ -2708,9 +2762,11 @@ instance ToJSON CampaignSmsMessage where
 -- | State of the Campaign
 --
 -- /See:/ 'campaignState' smart constructor.
-newtype CampaignState = CampaignState'
-  { _csCampaignStatus :: Maybe CampaignStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CampaignState =
+  CampaignState'
+    { _csCampaignStatus :: Maybe CampaignStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CampaignState' with the minimum fields required to make a request.
@@ -2739,10 +2795,12 @@ instance NFData CampaignState where
 -- | List of available campaigns.
 --
 -- /See:/ 'campaignsResponse' smart constructor.
-data CampaignsResponse = CampaignsResponse'
-  { _cNextToken :: !(Maybe Text)
-  , _cItem      :: !(Maybe [CampaignResponse])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CampaignsResponse =
+  CampaignsResponse'
+    { _cNextToken :: !(Maybe Text)
+    , _cItem      :: !(Maybe [CampaignResponse])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CampaignsResponse' with the minimum fields required to make a request.
@@ -2779,9 +2837,11 @@ instance NFData CampaignsResponse where
 -- | Application Request.
 --
 -- /See:/ 'createApplicationRequest' smart constructor.
-newtype CreateApplicationRequest = CreateApplicationRequest'
-  { _carName :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateApplicationRequest =
+  CreateApplicationRequest'
+    { _carName :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateApplicationRequest' with the minimum fields required to make a request.
@@ -2809,10 +2869,12 @@ instance ToJSON CreateApplicationRequest where
 -- | Default Message across push notification, email, and sms.
 --
 -- /See:/ 'defaultMessage' smart constructor.
-data DefaultMessage = DefaultMessage'
-  { _dmSubstitutions :: !(Maybe (Map Text [Text]))
-  , _dmBody          :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DefaultMessage =
+  DefaultMessage'
+    { _dmSubstitutions :: !(Maybe (Map Text [Text]))
+    , _dmBody          :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DefaultMessage' with the minimum fields required to make a request.
@@ -2849,15 +2911,17 @@ instance ToJSON DefaultMessage where
 -- | Default Push Notification Message.
 --
 -- /See:/ 'defaultPushNotificationMessage' smart constructor.
-data DefaultPushNotificationMessage = DefaultPushNotificationMessage'
-  { _dpnmSubstitutions :: !(Maybe (Map Text [Text]))
-  , _dpnmSilentPush    :: !(Maybe Bool)
-  , _dpnmData          :: !(Maybe (Map Text Text))
-  , _dpnmBody          :: !(Maybe Text)
-  , _dpnmURL           :: !(Maybe Text)
-  , _dpnmAction        :: !(Maybe Action)
-  , _dpnmTitle         :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DefaultPushNotificationMessage =
+  DefaultPushNotificationMessage'
+    { _dpnmSubstitutions :: !(Maybe (Map Text [Text]))
+    , _dpnmSilentPush    :: !(Maybe Bool)
+    , _dpnmData          :: !(Maybe (Map Text Text))
+    , _dpnmBody          :: !(Maybe Text)
+    , _dpnmURL           :: !(Maybe Text)
+    , _dpnmAction        :: !(Maybe Action)
+    , _dpnmTitle         :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DefaultPushNotificationMessage' with the minimum fields required to make a request.
@@ -2938,15 +3002,17 @@ instance ToJSON DefaultPushNotificationMessage where
 -- | The message configuration.
 --
 -- /See:/ 'directMessageConfiguration' smart constructor.
-data DirectMessageConfiguration = DirectMessageConfiguration'
-  { _dmcAPNSMessage :: !(Maybe APNSMessage)
-  , _dmcGCMMessage :: !(Maybe GCMMessage)
-  , _dmcDefaultMessage :: !(Maybe DefaultMessage)
-  , _dmcADMMessage :: !(Maybe ADMMessage)
-  , _dmcSMSMessage :: !(Maybe SMSMessage)
-  , _dmcBaiduMessage :: !(Maybe BaiduMessage)
-  , _dmcDefaultPushNotificationMessage :: !(Maybe DefaultPushNotificationMessage)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DirectMessageConfiguration =
+  DirectMessageConfiguration'
+    { _dmcAPNSMessage :: !(Maybe APNSMessage)
+    , _dmcGCMMessage :: !(Maybe GCMMessage)
+    , _dmcDefaultMessage :: !(Maybe DefaultMessage)
+    , _dmcADMMessage :: !(Maybe ADMMessage)
+    , _dmcSMSMessage :: !(Maybe SMSMessage)
+    , _dmcBaiduMessage :: !(Maybe BaiduMessage)
+    , _dmcDefaultPushNotificationMessage :: !(Maybe DefaultPushNotificationMessage)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DirectMessageConfiguration' with the minimum fields required to make a request.
@@ -3028,12 +3094,14 @@ instance ToJSON DirectMessageConfiguration where
 -- | Email Channel Request
 --
 -- /See:/ 'emailChannelRequest' smart constructor.
-data EmailChannelRequest = EmailChannelRequest'
-  { _ecrEnabled     :: !(Maybe Bool)
-  , _ecrFromAddress :: !(Maybe Text)
-  , _ecrIdentity    :: !(Maybe Text)
-  , _ecrRoleARN     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EmailChannelRequest =
+  EmailChannelRequest'
+    { _ecrEnabled     :: !(Maybe Bool)
+    , _ecrFromAddress :: !(Maybe Text)
+    , _ecrIdentity    :: !(Maybe Text)
+    , _ecrRoleARN     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EmailChannelRequest' with the minimum fields required to make a request.
@@ -3090,21 +3158,23 @@ instance ToJSON EmailChannelRequest where
 -- | Email Channel Response.
 --
 -- /See:/ 'emailChannelResponse' smart constructor.
-data EmailChannelResponse = EmailChannelResponse'
-  { _ecPlatform         :: !(Maybe Text)
-  , _ecLastModifiedDate :: !(Maybe Text)
-  , _ecEnabled          :: !(Maybe Bool)
-  , _ecFromAddress      :: !(Maybe Text)
-  , _ecIsArchived       :: !(Maybe Bool)
-  , _ecApplicationId    :: !(Maybe Text)
-  , _ecVersion          :: !(Maybe Int)
-  , _ecId               :: !(Maybe Text)
-  , _ecCreationDate     :: !(Maybe Text)
-  , _ecLastModifiedBy   :: !(Maybe Text)
-  , _ecIdentity         :: !(Maybe Text)
-  , _ecHasCredential    :: !(Maybe Bool)
-  , _ecRoleARN          :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EmailChannelResponse =
+  EmailChannelResponse'
+    { _ecPlatform         :: !(Maybe Text)
+    , _ecLastModifiedDate :: !(Maybe Text)
+    , _ecEnabled          :: !(Maybe Bool)
+    , _ecFromAddress      :: !(Maybe Text)
+    , _ecIsArchived       :: !(Maybe Bool)
+    , _ecApplicationId    :: !(Maybe Text)
+    , _ecVersion          :: !(Maybe Int)
+    , _ecId               :: !(Maybe Text)
+    , _ecCreationDate     :: !(Maybe Text)
+    , _ecLastModifiedBy   :: !(Maybe Text)
+    , _ecIdentity         :: !(Maybe Text)
+    , _ecHasCredential    :: !(Maybe Bool)
+    , _ecRoleARN          :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EmailChannelResponse' with the minimum fields required to make a request.
@@ -3233,20 +3303,22 @@ instance NFData EmailChannelResponse where
 -- | Endpoint update request
 --
 -- /See:/ 'endpointBatchItem' smart constructor.
-data EndpointBatchItem = EndpointBatchItem'
-  { _ebiRequestId      :: !(Maybe Text)
-  , _ebiMetrics        :: !(Maybe (Map Text Double))
-  , _ebiLocation       :: !(Maybe EndpointLocation)
-  , _ebiDemographic    :: !(Maybe EndpointDemographic)
-  , _ebiAddress        :: !(Maybe Text)
-  , _ebiEffectiveDate  :: !(Maybe Text)
-  , _ebiUser           :: !(Maybe EndpointUser)
-  , _ebiAttributes     :: !(Maybe (Map Text [Text]))
-  , _ebiEndpointStatus :: !(Maybe Text)
-  , _ebiOptOut         :: !(Maybe Text)
-  , _ebiId             :: !(Maybe Text)
-  , _ebiChannelType    :: !(Maybe ChannelType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EndpointBatchItem =
+  EndpointBatchItem'
+    { _ebiRequestId      :: !(Maybe Text)
+    , _ebiMetrics        :: !(Maybe (Map Text Double))
+    , _ebiLocation       :: !(Maybe EndpointLocation)
+    , _ebiDemographic    :: !(Maybe EndpointDemographic)
+    , _ebiAddress        :: !(Maybe Text)
+    , _ebiEffectiveDate  :: !(Maybe Text)
+    , _ebiUser           :: !(Maybe EndpointUser)
+    , _ebiAttributes     :: !(Maybe (Map Text [Text]))
+    , _ebiEndpointStatus :: !(Maybe Text)
+    , _ebiOptOut         :: !(Maybe Text)
+    , _ebiId             :: !(Maybe Text)
+    , _ebiChannelType    :: !(Maybe ChannelType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EndpointBatchItem' with the minimum fields required to make a request.
@@ -3366,9 +3438,11 @@ instance ToJSON EndpointBatchItem where
 -- | Endpoint batch update request.
 --
 -- /See:/ 'endpointBatchRequest' smart constructor.
-newtype EndpointBatchRequest = EndpointBatchRequest'
-  { _ebrItem :: Maybe [EndpointBatchItem]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype EndpointBatchRequest =
+  EndpointBatchRequest'
+    { _ebrItem :: Maybe [EndpointBatchItem]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EndpointBatchRequest' with the minimum fields required to make a request.
@@ -3396,16 +3470,18 @@ instance ToJSON EndpointBatchRequest where
 -- | Endpoint demographic data
 --
 -- /See:/ 'endpointDemographic' smart constructor.
-data EndpointDemographic = EndpointDemographic'
-  { _edPlatform        :: !(Maybe Text)
-  , _edPlatformVersion :: !(Maybe Text)
-  , _edLocale          :: !(Maybe Text)
-  , _edAppVersion      :: !(Maybe Text)
-  , _edModel           :: !(Maybe Text)
-  , _edMake            :: !(Maybe Text)
-  , _edModelVersion    :: !(Maybe Text)
-  , _edTimezone        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EndpointDemographic =
+  EndpointDemographic'
+    { _edPlatform        :: !(Maybe Text)
+    , _edPlatformVersion :: !(Maybe Text)
+    , _edLocale          :: !(Maybe Text)
+    , _edAppVersion      :: !(Maybe Text)
+    , _edModel           :: !(Maybe Text)
+    , _edMake            :: !(Maybe Text)
+    , _edModelVersion    :: !(Maybe Text)
+    , _edTimezone        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EndpointDemographic' with the minimum fields required to make a request.
@@ -3506,14 +3582,16 @@ instance ToJSON EndpointDemographic where
 -- | Endpoint location data
 --
 -- /See:/ 'endpointLocation' smart constructor.
-data EndpointLocation = EndpointLocation'
-  { _elPostalCode :: !(Maybe Text)
-  , _elLatitude   :: !(Maybe Double)
-  , _elCountry    :: !(Maybe Text)
-  , _elCity       :: !(Maybe Text)
-  , _elRegion     :: !(Maybe Text)
-  , _elLongitude  :: !(Maybe Double)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EndpointLocation =
+  EndpointLocation'
+    { _elPostalCode :: !(Maybe Text)
+    , _elLatitude   :: !(Maybe Double)
+    , _elCountry    :: !(Maybe Text)
+    , _elCity       :: !(Maybe Text)
+    , _elRegion     :: !(Maybe Text)
+    , _elLongitude  :: !(Maybe Double)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EndpointLocation' with the minimum fields required to make a request.
@@ -3596,13 +3674,15 @@ instance ToJSON EndpointLocation where
 -- | The result from sending a message to an endpoint.
 --
 -- /See:/ 'endpointMessageResult' smart constructor.
-data EndpointMessageResult = EndpointMessageResult'
-  { _emrDeliveryStatus :: !(Maybe DeliveryStatus)
-  , _emrAddress        :: !(Maybe Text)
-  , _emrStatusMessage  :: !(Maybe Text)
-  , _emrUpdatedToken   :: !(Maybe Text)
-  , _emrStatusCode     :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EndpointMessageResult =
+  EndpointMessageResult'
+    { _emrDeliveryStatus :: !(Maybe DeliveryStatus)
+    , _emrAddress        :: !(Maybe Text)
+    , _emrStatusMessage  :: !(Maybe Text)
+    , _emrUpdatedToken   :: !(Maybe Text)
+    , _emrStatusCode     :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EndpointMessageResult' with the minimum fields required to make a request.
@@ -3667,19 +3747,21 @@ instance NFData EndpointMessageResult where
 -- | Endpoint update request
 --
 -- /See:/ 'endpointRequest' smart constructor.
-data EndpointRequest = EndpointRequest'
-  { _erRequestId      :: !(Maybe Text)
-  , _erMetrics        :: !(Maybe (Map Text Double))
-  , _erLocation       :: !(Maybe EndpointLocation)
-  , _erDemographic    :: !(Maybe EndpointDemographic)
-  , _erAddress        :: !(Maybe Text)
-  , _erEffectiveDate  :: !(Maybe Text)
-  , _erUser           :: !(Maybe EndpointUser)
-  , _erAttributes     :: !(Maybe (Map Text [Text]))
-  , _erEndpointStatus :: !(Maybe Text)
-  , _erOptOut         :: !(Maybe Text)
-  , _erChannelType    :: !(Maybe ChannelType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EndpointRequest =
+  EndpointRequest'
+    { _erRequestId      :: !(Maybe Text)
+    , _erMetrics        :: !(Maybe (Map Text Double))
+    , _erLocation       :: !(Maybe EndpointLocation)
+    , _erDemographic    :: !(Maybe EndpointDemographic)
+    , _erAddress        :: !(Maybe Text)
+    , _erEffectiveDate  :: !(Maybe Text)
+    , _erUser           :: !(Maybe EndpointUser)
+    , _erAttributes     :: !(Maybe (Map Text [Text]))
+    , _erEndpointStatus :: !(Maybe Text)
+    , _erOptOut         :: !(Maybe Text)
+    , _erChannelType    :: !(Maybe ChannelType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EndpointRequest' with the minimum fields required to make a request.
@@ -3792,23 +3874,25 @@ instance ToJSON EndpointRequest where
 -- | Endpoint response
 --
 -- /See:/ 'endpointResponse' smart constructor.
-data EndpointResponse = EndpointResponse'
-  { _eRequestId      :: !(Maybe Text)
-  , _eMetrics        :: !(Maybe (Map Text Double))
-  , _eLocation       :: !(Maybe EndpointLocation)
-  , _eDemographic    :: !(Maybe EndpointDemographic)
-  , _eCohortId       :: !(Maybe Text)
-  , _eAddress        :: !(Maybe Text)
-  , _eEffectiveDate  :: !(Maybe Text)
-  , _eUser           :: !(Maybe EndpointUser)
-  , _eApplicationId  :: !(Maybe Text)
-  , _eAttributes     :: !(Maybe (Map Text [Text]))
-  , _eEndpointStatus :: !(Maybe Text)
-  , _eOptOut         :: !(Maybe Text)
-  , _eId             :: !(Maybe Text)
-  , _eCreationDate   :: !(Maybe Text)
-  , _eChannelType    :: !(Maybe ChannelType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EndpointResponse =
+  EndpointResponse'
+    { _eRequestId      :: !(Maybe Text)
+    , _eMetrics        :: !(Maybe (Map Text Double))
+    , _eLocation       :: !(Maybe EndpointLocation)
+    , _eDemographic    :: !(Maybe EndpointDemographic)
+    , _eCohortId       :: !(Maybe Text)
+    , _eAddress        :: !(Maybe Text)
+    , _eEffectiveDate  :: !(Maybe Text)
+    , _eUser           :: !(Maybe EndpointUser)
+    , _eApplicationId  :: !(Maybe Text)
+    , _eAttributes     :: !(Maybe (Map Text [Text]))
+    , _eEndpointStatus :: !(Maybe Text)
+    , _eOptOut         :: !(Maybe Text)
+    , _eId             :: !(Maybe Text)
+    , _eCreationDate   :: !(Maybe Text)
+    , _eChannelType    :: !(Maybe ChannelType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EndpointResponse' with the minimum fields required to make a request.
@@ -3953,13 +4037,15 @@ instance NFData EndpointResponse where
 -- | Endpoint send configuration.
 --
 -- /See:/ 'endpointSendConfiguration' smart constructor.
-data EndpointSendConfiguration = EndpointSendConfiguration'
-  { _escSubstitutions :: !(Maybe (Map Text [Text]))
-  , _escTitleOverride :: !(Maybe Text)
-  , _escContext       :: !(Maybe (Map Text Text))
-  , _escRawContent    :: !(Maybe Text)
-  , _escBodyOverride  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EndpointSendConfiguration =
+  EndpointSendConfiguration'
+    { _escSubstitutions :: !(Maybe (Map Text [Text]))
+    , _escTitleOverride :: !(Maybe Text)
+    , _escContext       :: !(Maybe (Map Text Text))
+    , _escRawContent    :: !(Maybe Text)
+    , _escBodyOverride  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EndpointSendConfiguration' with the minimum fields required to make a request.
@@ -4024,10 +4110,12 @@ instance ToJSON EndpointSendConfiguration where
 -- | Endpoint user specific custom userAttributes
 --
 -- /See:/ 'endpointUser' smart constructor.
-data EndpointUser = EndpointUser'
-  { _euUserAttributes :: !(Maybe (Map Text [Text]))
-  , _euUserId         :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EndpointUser =
+  EndpointUser'
+    { _euUserAttributes :: !(Maybe (Map Text [Text]))
+    , _euUserId         :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EndpointUser' with the minimum fields required to make a request.
@@ -4072,14 +4160,16 @@ instance ToJSON EndpointUser where
 -- | Model for an event publishing subscription export.
 --
 -- /See:/ 'eventStream' smart constructor.
-data EventStream = EventStream'
-  { _esLastUpdatedBy        :: !(Maybe Text)
-  , _esLastModifiedDate     :: !(Maybe Text)
-  , _esDestinationStreamARN :: !(Maybe Text)
-  , _esApplicationId        :: !(Maybe Text)
-  , _esExternalId           :: !(Maybe Text)
-  , _esRoleARN              :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EventStream =
+  EventStream'
+    { _esLastUpdatedBy        :: !(Maybe Text)
+    , _esLastModifiedDate     :: !(Maybe Text)
+    , _esDestinationStreamARN :: !(Maybe Text)
+    , _esApplicationId        :: !(Maybe Text)
+    , _esExternalId           :: !(Maybe Text)
+    , _esRoleARN              :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EventStream' with the minimum fields required to make a request.
@@ -4151,11 +4241,13 @@ instance Hashable EventStream where
 instance NFData EventStream where
 
 -- | /See:/ 'exportJobRequest' smart constructor.
-data ExportJobRequest = ExportJobRequest'
-  { _eS3URLPrefix :: !(Maybe Text)
-  , _eSegmentId   :: !(Maybe Text)
-  , _eRoleARN     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ExportJobRequest =
+  ExportJobRequest'
+    { _eS3URLPrefix :: !(Maybe Text)
+    , _eSegmentId   :: !(Maybe Text)
+    , _eRoleARN     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ExportJobRequest' with the minimum fields required to make a request.
@@ -4199,11 +4291,13 @@ instance ToJSON ExportJobRequest where
                   ("RoleArn" .=) <$> _eRoleARN])
 
 -- | /See:/ 'exportJobResource' smart constructor.
-data ExportJobResource = ExportJobResource'
-  { _ejrS3URLPrefix :: !(Maybe Text)
-  , _ejrSegmentId   :: !(Maybe Text)
-  , _ejrRoleARN     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ExportJobResource =
+  ExportJobResource'
+    { _ejrS3URLPrefix :: !(Maybe Text)
+    , _ejrSegmentId   :: !(Maybe Text)
+    , _ejrRoleARN     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ExportJobResource' with the minimum fields required to make a request.
@@ -4247,21 +4341,23 @@ instance Hashable ExportJobResource where
 instance NFData ExportJobResource where
 
 -- | /See:/ 'exportJobResponse' smart constructor.
-data ExportJobResponse = ExportJobResponse'
-  { _ejCompletedPieces :: !(Maybe Int)
-  , _ejFailedPieces    :: !(Maybe Int)
-  , _ejDefinition      :: !(Maybe ExportJobResource)
-  , _ejTotalProcessed  :: !(Maybe Int)
-  , _ejFailures        :: !(Maybe [Text])
-  , _ejTotalPieces     :: !(Maybe Int)
-  , _ejApplicationId   :: !(Maybe Text)
-  , _ejId              :: !(Maybe Text)
-  , _ejCreationDate    :: !(Maybe Text)
-  , _ejType            :: !(Maybe Text)
-  , _ejCompletionDate  :: !(Maybe Text)
-  , _ejJobStatus       :: !(Maybe JobStatus)
-  , _ejTotalFailures   :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ExportJobResponse =
+  ExportJobResponse'
+    { _ejCompletedPieces :: !(Maybe Int)
+    , _ejFailedPieces    :: !(Maybe Int)
+    , _ejDefinition      :: !(Maybe ExportJobResource)
+    , _ejTotalProcessed  :: !(Maybe Int)
+    , _ejFailures        :: !(Maybe [Text])
+    , _ejTotalPieces     :: !(Maybe Int)
+    , _ejApplicationId   :: !(Maybe Text)
+    , _ejId              :: !(Maybe Text)
+    , _ejCreationDate    :: !(Maybe Text)
+    , _ejType            :: !(Maybe Text)
+    , _ejCompletionDate  :: !(Maybe Text)
+    , _ejJobStatus       :: !(Maybe JobStatus)
+    , _ejTotalFailures   :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ExportJobResponse' with the minimum fields required to make a request.
@@ -4390,10 +4486,12 @@ instance NFData ExportJobResponse where
 -- | Export job list.
 --
 -- /See:/ 'exportJobsResponse' smart constructor.
-data ExportJobsResponse = ExportJobsResponse'
-  { _ejNextToken :: !(Maybe Text)
-  , _ejItem      :: !(Maybe [ExportJobResponse])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ExportJobsResponse =
+  ExportJobsResponse'
+    { _ejNextToken :: !(Maybe Text)
+    , _ejItem      :: !(Maybe [ExportJobResponse])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ExportJobsResponse' with the minimum fields required to make a request.
@@ -4431,10 +4529,12 @@ instance NFData ExportJobsResponse where
 -- | Google Cloud Messaging credentials
 --
 -- /See:/ 'gcmChannelRequest' smart constructor.
-data GCMChannelRequest = GCMChannelRequest'
-  { _gcrAPIKey  :: !(Maybe Text)
-  , _gcrEnabled :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GCMChannelRequest =
+  GCMChannelRequest'
+    { _gcrAPIKey  :: !(Maybe Text)
+    , _gcrEnabled :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GCMChannelRequest' with the minimum fields required to make a request.
@@ -4472,19 +4572,21 @@ instance ToJSON GCMChannelRequest where
 -- | Google Cloud Messaging channel definition
 --
 -- /See:/ 'gcmChannelResponse' smart constructor.
-data GCMChannelResponse = GCMChannelResponse'
-  { _gcPlatform         :: !(Maybe Text)
-  , _gcLastModifiedDate :: !(Maybe Text)
-  , _gcEnabled          :: !(Maybe Bool)
-  , _gcCredential       :: !(Maybe Text)
-  , _gcIsArchived       :: !(Maybe Bool)
-  , _gcApplicationId    :: !(Maybe Text)
-  , _gcVersion          :: !(Maybe Int)
-  , _gcId               :: !(Maybe Text)
-  , _gcCreationDate     :: !(Maybe Text)
-  , _gcLastModifiedBy   :: !(Maybe Text)
-  , _gcHasCredential    :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GCMChannelResponse =
+  GCMChannelResponse'
+    { _gcPlatform         :: !(Maybe Text)
+    , _gcLastModifiedDate :: !(Maybe Text)
+    , _gcEnabled          :: !(Maybe Bool)
+    , _gcCredential       :: !(Maybe Text)
+    , _gcIsArchived       :: !(Maybe Bool)
+    , _gcApplicationId    :: !(Maybe Text)
+    , _gcVersion          :: !(Maybe Int)
+    , _gcId               :: !(Maybe Text)
+    , _gcCreationDate     :: !(Maybe Text)
+    , _gcLastModifiedBy   :: !(Maybe Text)
+    , _gcHasCredential    :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GCMChannelResponse' with the minimum fields required to make a request.
@@ -4597,25 +4699,27 @@ instance NFData GCMChannelResponse where
 -- | GCM Message.
 --
 -- /See:/ 'gcmMessage' smart constructor.
-data GCMMessage = GCMMessage'
-  { _gmSubstitutions         :: !(Maybe (Map Text [Text]))
-  , _gmSilentPush            :: !(Maybe Bool)
-  , _gmImageIconURL          :: !(Maybe Text)
-  , _gmPriority              :: !(Maybe Text)
-  , _gmRawContent            :: !(Maybe Text)
-  , _gmData                  :: !(Maybe (Map Text Text))
-  , _gmRestrictedPackageName :: !(Maybe Text)
-  , _gmSmallImageIconURL     :: !(Maybe Text)
-  , _gmBody                  :: !(Maybe Text)
-  , _gmTimeToLive            :: !(Maybe Int)
-  , _gmURL                   :: !(Maybe Text)
-  , _gmSound                 :: !(Maybe Text)
-  , _gmAction                :: !(Maybe Action)
-  , _gmCollapseKey           :: !(Maybe Text)
-  , _gmImageURL              :: !(Maybe Text)
-  , _gmTitle                 :: !(Maybe Text)
-  , _gmIconReference         :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GCMMessage =
+  GCMMessage'
+    { _gmSubstitutions         :: !(Maybe (Map Text [Text]))
+    , _gmSilentPush            :: !(Maybe Bool)
+    , _gmImageIconURL          :: !(Maybe Text)
+    , _gmPriority              :: !(Maybe Text)
+    , _gmRawContent            :: !(Maybe Text)
+    , _gmData                  :: !(Maybe (Map Text Text))
+    , _gmRestrictedPackageName :: !(Maybe Text)
+    , _gmSmallImageIconURL     :: !(Maybe Text)
+    , _gmBody                  :: !(Maybe Text)
+    , _gmTimeToLive            :: !(Maybe Int)
+    , _gmURL                   :: !(Maybe Text)
+    , _gmSound                 :: !(Maybe Text)
+    , _gmAction                :: !(Maybe Action)
+    , _gmCollapseKey           :: !(Maybe Text)
+    , _gmImageURL              :: !(Maybe Text)
+    , _gmTitle                 :: !(Maybe Text)
+    , _gmIconReference         :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GCMMessage' with the minimum fields required to make a request.
@@ -4774,16 +4878,18 @@ instance ToJSON GCMMessage where
                   ("IconReference" .=) <$> _gmIconReference])
 
 -- | /See:/ 'importJobRequest' smart constructor.
-data ImportJobRequest = ImportJobRequest'
-  { _iSegmentName       :: !(Maybe Text)
-  , _iFormat            :: !(Maybe DefinitionFormat)
-  , _iDefineSegment     :: !(Maybe Bool)
-  , _iRegisterEndpoints :: !(Maybe Bool)
-  , _iExternalId        :: !(Maybe Text)
-  , _iS3URL             :: !(Maybe Text)
-  , _iSegmentId         :: !(Maybe Text)
-  , _iRoleARN           :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ImportJobRequest =
+  ImportJobRequest'
+    { _iSegmentName       :: !(Maybe Text)
+    , _iFormat            :: !(Maybe DefinitionFormat)
+    , _iDefineSegment     :: !(Maybe Bool)
+    , _iRegisterEndpoints :: !(Maybe Bool)
+    , _iExternalId        :: !(Maybe Text)
+    , _iS3URL             :: !(Maybe Text)
+    , _iSegmentId         :: !(Maybe Text)
+    , _iRoleARN           :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ImportJobRequest' with the minimum fields required to make a request.
@@ -4870,16 +4976,18 @@ instance ToJSON ImportJobRequest where
                   ("RoleArn" .=) <$> _iRoleARN])
 
 -- | /See:/ 'importJobResource' smart constructor.
-data ImportJobResource = ImportJobResource'
-  { _ijrSegmentName       :: !(Maybe Text)
-  , _ijrFormat            :: !(Maybe DefinitionFormat)
-  , _ijrDefineSegment     :: !(Maybe Bool)
-  , _ijrRegisterEndpoints :: !(Maybe Bool)
-  , _ijrExternalId        :: !(Maybe Text)
-  , _ijrS3URL             :: !(Maybe Text)
-  , _ijrSegmentId         :: !(Maybe Text)
-  , _ijrRoleARN           :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ImportJobResource =
+  ImportJobResource'
+    { _ijrSegmentName       :: !(Maybe Text)
+    , _ijrFormat            :: !(Maybe DefinitionFormat)
+    , _ijrDefineSegment     :: !(Maybe Bool)
+    , _ijrRegisterEndpoints :: !(Maybe Bool)
+    , _ijrExternalId        :: !(Maybe Text)
+    , _ijrS3URL             :: !(Maybe Text)
+    , _ijrSegmentId         :: !(Maybe Text)
+    , _ijrRoleARN           :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ImportJobResource' with the minimum fields required to make a request.
@@ -4966,21 +5074,23 @@ instance Hashable ImportJobResource where
 instance NFData ImportJobResource where
 
 -- | /See:/ 'importJobResponse' smart constructor.
-data ImportJobResponse = ImportJobResponse'
-  { _ijCompletedPieces :: !(Maybe Int)
-  , _ijFailedPieces    :: !(Maybe Int)
-  , _ijDefinition      :: !(Maybe ImportJobResource)
-  , _ijTotalProcessed  :: !(Maybe Int)
-  , _ijFailures        :: !(Maybe [Text])
-  , _ijTotalPieces     :: !(Maybe Int)
-  , _ijApplicationId   :: !(Maybe Text)
-  , _ijId              :: !(Maybe Text)
-  , _ijCreationDate    :: !(Maybe Text)
-  , _ijType            :: !(Maybe Text)
-  , _ijCompletionDate  :: !(Maybe Text)
-  , _ijJobStatus       :: !(Maybe JobStatus)
-  , _ijTotalFailures   :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ImportJobResponse =
+  ImportJobResponse'
+    { _ijCompletedPieces :: !(Maybe Int)
+    , _ijFailedPieces    :: !(Maybe Int)
+    , _ijDefinition      :: !(Maybe ImportJobResource)
+    , _ijTotalProcessed  :: !(Maybe Int)
+    , _ijFailures        :: !(Maybe [Text])
+    , _ijTotalPieces     :: !(Maybe Int)
+    , _ijApplicationId   :: !(Maybe Text)
+    , _ijId              :: !(Maybe Text)
+    , _ijCreationDate    :: !(Maybe Text)
+    , _ijType            :: !(Maybe Text)
+    , _ijCompletionDate  :: !(Maybe Text)
+    , _ijJobStatus       :: !(Maybe JobStatus)
+    , _ijTotalFailures   :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ImportJobResponse' with the minimum fields required to make a request.
@@ -5109,10 +5219,12 @@ instance NFData ImportJobResponse where
 -- | Import job list.
 --
 -- /See:/ 'importJobsResponse' smart constructor.
-data ImportJobsResponse = ImportJobsResponse'
-  { _ijNextToken :: !(Maybe Text)
-  , _ijItem      :: !(Maybe [ImportJobResponse])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ImportJobsResponse =
+  ImportJobsResponse'
+    { _ijNextToken :: !(Maybe Text)
+    , _ijItem      :: !(Maybe [ImportJobResponse])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ImportJobsResponse' with the minimum fields required to make a request.
@@ -5148,19 +5260,21 @@ instance Hashable ImportJobsResponse where
 instance NFData ImportJobsResponse where
 
 -- | /See:/ 'message' smart constructor.
-data Message = Message'
-  { _mSilentPush        :: !(Maybe Bool)
-  , _mImageIconURL      :: !(Maybe Text)
-  , _mRawContent        :: !(Maybe Text)
-  , _mBody              :: !(Maybe Text)
-  , _mImageSmallIconURL :: !(Maybe Text)
-  , _mJSONBody          :: !(Maybe Text)
-  , _mURL               :: !(Maybe Text)
-  , _mAction            :: !(Maybe Action)
-  , _mImageURL          :: !(Maybe Text)
-  , _mMediaURL          :: !(Maybe Text)
-  , _mTitle             :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Message =
+  Message'
+    { _mSilentPush        :: !(Maybe Bool)
+    , _mImageIconURL      :: !(Maybe Text)
+    , _mRawContent        :: !(Maybe Text)
+    , _mBody              :: !(Maybe Text)
+    , _mImageSmallIconURL :: !(Maybe Text)
+    , _mJSONBody          :: !(Maybe Text)
+    , _mURL               :: !(Maybe Text)
+    , _mAction            :: !(Maybe Action)
+    , _mImageURL          :: !(Maybe Text)
+    , _mMediaURL          :: !(Maybe Text)
+    , _mTitle             :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Message' with the minimum fields required to make a request.
@@ -5288,10 +5402,12 @@ instance ToJSON Message where
 -- | Simple message object.
 --
 -- /See:/ 'messageBody' smart constructor.
-data MessageBody = MessageBody'
-  { _mbRequestId :: !(Maybe Text)
-  , _mbMessage   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MessageBody =
+  MessageBody'
+    { _mbRequestId :: !(Maybe Text)
+    , _mbMessage   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MessageBody' with the minimum fields required to make a request.
@@ -5328,15 +5444,17 @@ instance NFData MessageBody where
 -- | Message configuration for a campaign.
 --
 -- /See:/ 'messageConfiguration' smart constructor.
-data MessageConfiguration = MessageConfiguration'
-  { _mcAPNSMessage    :: !(Maybe Message)
-  , _mcGCMMessage     :: !(Maybe Message)
-  , _mcDefaultMessage :: !(Maybe Message)
-  , _mcADMMessage     :: !(Maybe Message)
-  , _mcSMSMessage     :: !(Maybe CampaignSmsMessage)
-  , _mcEmailMessage   :: !(Maybe CampaignEmailMessage)
-  , _mcBaiduMessage   :: !(Maybe Message)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MessageConfiguration =
+  MessageConfiguration'
+    { _mcAPNSMessage    :: !(Maybe Message)
+    , _mcGCMMessage     :: !(Maybe Message)
+    , _mcDefaultMessage :: !(Maybe Message)
+    , _mcADMMessage     :: !(Maybe Message)
+    , _mcSMSMessage     :: !(Maybe CampaignSmsMessage)
+    , _mcEmailMessage   :: !(Maybe CampaignEmailMessage)
+    , _mcBaiduMessage   :: !(Maybe Message)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MessageConfiguration' with the minimum fields required to make a request.
@@ -5429,12 +5547,14 @@ instance ToJSON MessageConfiguration where
 -- | Send message request.
 --
 -- /See:/ 'messageRequest' smart constructor.
-data MessageRequest = MessageRequest'
-  { _mrContext              :: !(Maybe (Map Text Text))
-  , _mrAddresses            :: !(Maybe (Map Text AddressConfiguration))
-  , _mrEndpoints            :: !(Maybe (Map Text EndpointSendConfiguration))
-  , _mrMessageConfiguration :: !(Maybe DirectMessageConfiguration)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MessageRequest =
+  MessageRequest'
+    { _mrContext              :: !(Maybe (Map Text Text))
+    , _mrAddresses            :: !(Maybe (Map Text AddressConfiguration))
+    , _mrEndpoints            :: !(Maybe (Map Text EndpointSendConfiguration))
+    , _mrMessageConfiguration :: !(Maybe DirectMessageConfiguration)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MessageRequest' with the minimum fields required to make a request.
@@ -5492,12 +5612,14 @@ instance ToJSON MessageRequest where
 -- | Send message response.
 --
 -- /See:/ 'messageResponse' smart constructor.
-data MessageResponse = MessageResponse'
-  { _mRequestId      :: !(Maybe Text)
-  , _mResult         :: !(Maybe (Map Text MessageResult))
-  , _mApplicationId  :: !(Maybe Text)
-  , _mEndpointResult :: !(Maybe (Map Text EndpointMessageResult))
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MessageResponse =
+  MessageResponse'
+    { _mRequestId      :: !(Maybe Text)
+    , _mResult         :: !(Maybe (Map Text MessageResult))
+    , _mApplicationId  :: !(Maybe Text)
+    , _mEndpointResult :: !(Maybe (Map Text EndpointMessageResult))
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MessageResponse' with the minimum fields required to make a request.
@@ -5554,12 +5676,14 @@ instance NFData MessageResponse where
 -- | The result from sending a message to an address.
 --
 -- /See:/ 'messageResult' smart constructor.
-data MessageResult = MessageResult'
-  { _mrDeliveryStatus :: !(Maybe DeliveryStatus)
-  , _mrStatusMessage  :: !(Maybe Text)
-  , _mrUpdatedToken   :: !(Maybe Text)
-  , _mrStatusCode     :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MessageResult =
+  MessageResult'
+    { _mrDeliveryStatus :: !(Maybe DeliveryStatus)
+    , _mrStatusMessage  :: !(Maybe Text)
+    , _mrUpdatedToken   :: !(Maybe Text)
+    , _mrStatusCode     :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MessageResult' with the minimum fields required to make a request.
@@ -5616,10 +5740,12 @@ instance NFData MessageResult where
 -- | Quiet Time
 --
 -- /See:/ 'quietTime' smart constructor.
-data QuietTime = QuietTime'
-  { _qtStart :: !(Maybe Text)
-  , _qtEnd   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data QuietTime =
+  QuietTime'
+    { _qtStart :: !(Maybe Text)
+    , _qtEnd   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'QuietTime' with the minimum fields required to make a request.
@@ -5661,10 +5787,12 @@ instance ToJSON QuietTime where
 -- | Define how a segment based on recency of use.
 --
 -- /See:/ 'recencyDimension' smart constructor.
-data RecencyDimension = RecencyDimension'
-  { _rdRecencyType :: !(Maybe RecencyType)
-  , _rdDuration    :: !(Maybe Duration)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RecencyDimension =
+  RecencyDimension'
+    { _rdRecencyType :: !(Maybe RecencyType)
+    , _rdDuration    :: !(Maybe Duration)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RecencyDimension' with the minimum fields required to make a request.
@@ -5709,11 +5837,13 @@ instance ToJSON RecencyDimension where
 -- | SMS Channel Request
 --
 -- /See:/ 'sMSChannelRequest' smart constructor.
-data SMSChannelRequest = SMSChannelRequest'
-  { _smscrShortCode :: !(Maybe Text)
-  , _smscrEnabled   :: !(Maybe Bool)
-  , _smscrSenderId  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SMSChannelRequest =
+  SMSChannelRequest'
+    { _smscrShortCode :: !(Maybe Text)
+    , _smscrEnabled   :: !(Maybe Bool)
+    , _smscrSenderId  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SMSChannelRequest' with the minimum fields required to make a request.
@@ -5762,20 +5892,22 @@ instance ToJSON SMSChannelRequest where
 -- | SMS Channel Response.
 --
 -- /See:/ 'sMSChannelResponse' smart constructor.
-data SMSChannelResponse = SMSChannelResponse'
-  { _smscPlatform         :: !(Maybe Text)
-  , _smscShortCode        :: !(Maybe Text)
-  , _smscLastModifiedDate :: !(Maybe Text)
-  , _smscEnabled          :: !(Maybe Bool)
-  , _smscSenderId         :: !(Maybe Text)
-  , _smscIsArchived       :: !(Maybe Bool)
-  , _smscApplicationId    :: !(Maybe Text)
-  , _smscVersion          :: !(Maybe Int)
-  , _smscId               :: !(Maybe Text)
-  , _smscCreationDate     :: !(Maybe Text)
-  , _smscLastModifiedBy   :: !(Maybe Text)
-  , _smscHasCredential    :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SMSChannelResponse =
+  SMSChannelResponse'
+    { _smscPlatform         :: !(Maybe Text)
+    , _smscShortCode        :: !(Maybe Text)
+    , _smscLastModifiedDate :: !(Maybe Text)
+    , _smscEnabled          :: !(Maybe Bool)
+    , _smscSenderId         :: !(Maybe Text)
+    , _smscIsArchived       :: !(Maybe Bool)
+    , _smscApplicationId    :: !(Maybe Text)
+    , _smscVersion          :: !(Maybe Int)
+    , _smscId               :: !(Maybe Text)
+    , _smscCreationDate     :: !(Maybe Text)
+    , _smscLastModifiedBy   :: !(Maybe Text)
+    , _smscHasCredential    :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SMSChannelResponse' with the minimum fields required to make a request.
@@ -5896,13 +6028,15 @@ instance NFData SMSChannelResponse where
 -- | SMS Message.
 --
 -- /See:/ 'sMSMessage' smart constructor.
-data SMSMessage = SMSMessage'
-  { _smsmSubstitutions     :: !(Maybe (Map Text [Text]))
-  , _smsmOriginationNumber :: !(Maybe Text)
-  , _smsmBody              :: !(Maybe Text)
-  , _smsmMessageType       :: !(Maybe MessageType)
-  , _smsmSenderId          :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SMSMessage =
+  SMSMessage'
+    { _smsmSubstitutions     :: !(Maybe (Map Text [Text]))
+    , _smsmOriginationNumber :: !(Maybe Text)
+    , _smsmBody              :: !(Maybe Text)
+    , _smsmMessageType       :: !(Maybe MessageType)
+    , _smsmSenderId          :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SMSMessage' with the minimum fields required to make a request.
@@ -5967,14 +6101,16 @@ instance ToJSON SMSMessage where
 -- | Shcedule that defines when a campaign is run.
 --
 -- /See:/ 'schedule' smart constructor.
-data Schedule = Schedule'
-  { _sFrequency   :: !(Maybe Frequency)
-  , _sStartTime   :: !(Maybe Text)
-  , _sQuietTime   :: !(Maybe QuietTime)
-  , _sIsLocalTime :: !(Maybe Bool)
-  , _sEndTime     :: !(Maybe Text)
-  , _sTimezone    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Schedule =
+  Schedule'
+    { _sFrequency   :: !(Maybe Frequency)
+    , _sStartTime   :: !(Maybe Text)
+    , _sQuietTime   :: !(Maybe QuietTime)
+    , _sIsLocalTime :: !(Maybe Bool)
+    , _sEndTime     :: !(Maybe Text)
+    , _sTimezone    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Schedule' with the minimum fields required to make a request.
@@ -6058,9 +6194,11 @@ instance ToJSON Schedule where
 -- | Segment behavior dimensions
 --
 -- /See:/ 'segmentBehaviors' smart constructor.
-newtype SegmentBehaviors = SegmentBehaviors'
-  { _sbRecency :: Maybe RecencyDimension
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype SegmentBehaviors =
+  SegmentBehaviors'
+    { _sbRecency :: Maybe RecencyDimension
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SegmentBehaviors' with the minimum fields required to make a request.
@@ -6093,14 +6231,16 @@ instance ToJSON SegmentBehaviors where
 -- | Segment demographic dimensions
 --
 -- /See:/ 'segmentDemographics' smart constructor.
-data SegmentDemographics = SegmentDemographics'
-  { _sdPlatform   :: !(Maybe SetDimension)
-  , _sdAppVersion :: !(Maybe SetDimension)
-  , _sdChannel    :: !(Maybe SetDimension)
-  , _sdModel      :: !(Maybe SetDimension)
-  , _sdMake       :: !(Maybe SetDimension)
-  , _sdDeviceType :: !(Maybe SetDimension)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SegmentDemographics =
+  SegmentDemographics'
+    { _sdPlatform   :: !(Maybe SetDimension)
+    , _sdAppVersion :: !(Maybe SetDimension)
+    , _sdChannel    :: !(Maybe SetDimension)
+    , _sdModel      :: !(Maybe SetDimension)
+    , _sdMake       :: !(Maybe SetDimension)
+    , _sdDeviceType :: !(Maybe SetDimension)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SegmentDemographics' with the minimum fields required to make a request.
@@ -6183,13 +6323,15 @@ instance ToJSON SegmentDemographics where
 -- | Segment dimensions
 --
 -- /See:/ 'segmentDimensions' smart constructor.
-data SegmentDimensions = SegmentDimensions'
-  { _sdLocation       :: !(Maybe SegmentLocation)
-  , _sdDemographic    :: !(Maybe SegmentDemographics)
-  , _sdUserAttributes :: !(Maybe (Map Text AttributeDimension))
-  , _sdBehavior       :: !(Maybe SegmentBehaviors)
-  , _sdAttributes     :: !(Maybe (Map Text AttributeDimension))
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SegmentDimensions =
+  SegmentDimensions'
+    { _sdLocation       :: !(Maybe SegmentLocation)
+    , _sdDemographic    :: !(Maybe SegmentDemographics)
+    , _sdUserAttributes :: !(Maybe (Map Text AttributeDimension))
+    , _sdBehavior       :: !(Maybe SegmentBehaviors)
+    , _sdAttributes     :: !(Maybe (Map Text AttributeDimension))
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SegmentDimensions' with the minimum fields required to make a request.
@@ -6264,14 +6406,16 @@ instance ToJSON SegmentDimensions where
 -- | Segment import definition.
 --
 -- /See:/ 'segmentImportResource' smart constructor.
-data SegmentImportResource = SegmentImportResource'
-  { _sirSize          :: !(Maybe Int)
-  , _sirFormat        :: !(Maybe DefinitionFormat)
-  , _sirChannelCounts :: !(Maybe (Map Text Int))
-  , _sirExternalId    :: !(Maybe Text)
-  , _sirS3URL         :: !(Maybe Text)
-  , _sirRoleARN       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SegmentImportResource =
+  SegmentImportResource'
+    { _sirSize          :: !(Maybe Int)
+    , _sirFormat        :: !(Maybe DefinitionFormat)
+    , _sirChannelCounts :: !(Maybe (Map Text Int))
+    , _sirExternalId    :: !(Maybe Text)
+    , _sirS3URL         :: !(Maybe Text)
+    , _sirRoleARN       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SegmentImportResource' with the minimum fields required to make a request.
@@ -6344,9 +6488,11 @@ instance NFData SegmentImportResource where
 -- | Segment location dimensions
 --
 -- /See:/ 'segmentLocation' smart constructor.
-newtype SegmentLocation = SegmentLocation'
-  { _slCountry :: Maybe SetDimension
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype SegmentLocation =
+  SegmentLocation'
+    { _slCountry :: Maybe SetDimension
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SegmentLocation' with the minimum fields required to make a request.
@@ -6379,17 +6525,19 @@ instance ToJSON SegmentLocation where
 -- | Segment definition.
 --
 -- /See:/ 'segmentResponse' smart constructor.
-data SegmentResponse = SegmentResponse'
-  { _sLastModifiedDate :: !(Maybe Text)
-  , _sSegmentType      :: !(Maybe SegmentType)
-  , _sApplicationId    :: !(Maybe Text)
-  , _sName             :: !(Maybe Text)
-  , _sVersion          :: !(Maybe Int)
-  , _sId               :: !(Maybe Text)
-  , _sCreationDate     :: !(Maybe Text)
-  , _sImportDefinition :: !(Maybe SegmentImportResource)
-  , _sDimensions       :: !(Maybe SegmentDimensions)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SegmentResponse =
+  SegmentResponse'
+    { _sLastModifiedDate :: !(Maybe Text)
+    , _sSegmentType      :: !(Maybe SegmentType)
+    , _sApplicationId    :: !(Maybe Text)
+    , _sName             :: !(Maybe Text)
+    , _sVersion          :: !(Maybe Int)
+    , _sId               :: !(Maybe Text)
+    , _sCreationDate     :: !(Maybe Text)
+    , _sImportDefinition :: !(Maybe SegmentImportResource)
+    , _sDimensions       :: !(Maybe SegmentDimensions)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SegmentResponse' with the minimum fields required to make a request.
@@ -6486,10 +6634,12 @@ instance NFData SegmentResponse where
 -- | Segments in your account.
 --
 -- /See:/ 'segmentsResponse' smart constructor.
-data SegmentsResponse = SegmentsResponse'
-  { _sNextToken :: !(Maybe Text)
-  , _sItem      :: !(Maybe [SegmentResponse])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SegmentsResponse =
+  SegmentsResponse'
+    { _sNextToken :: !(Maybe Text)
+    , _sItem      :: !(Maybe [SegmentResponse])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SegmentsResponse' with the minimum fields required to make a request.
@@ -6526,11 +6676,13 @@ instance NFData SegmentsResponse where
 -- | Send message request.
 --
 -- /See:/ 'sendUsersMessageRequest' smart constructor.
-data SendUsersMessageRequest = SendUsersMessageRequest'
-  { _sumrContext              :: !(Maybe (Map Text Text))
-  , _sumrUsers                :: !(Maybe (Map Text EndpointSendConfiguration))
-  , _sumrMessageConfiguration :: !(Maybe DirectMessageConfiguration)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SendUsersMessageRequest =
+  SendUsersMessageRequest'
+    { _sumrContext              :: !(Maybe (Map Text Text))
+    , _sumrUsers                :: !(Maybe (Map Text EndpointSendConfiguration))
+    , _sumrMessageConfiguration :: !(Maybe DirectMessageConfiguration)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SendUsersMessageRequest' with the minimum fields required to make a request.
@@ -6580,11 +6732,13 @@ instance ToJSON SendUsersMessageRequest where
 -- | User send message response.
 --
 -- /See:/ 'sendUsersMessageResponse' smart constructor.
-data SendUsersMessageResponse = SendUsersMessageResponse'
-  { _sumRequestId     :: !(Maybe Text)
-  , _sumResult        :: !(Maybe (Map Text (Map Text EndpointMessageResult)))
-  , _sumApplicationId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SendUsersMessageResponse =
+  SendUsersMessageResponse'
+    { _sumRequestId     :: !(Maybe Text)
+    , _sumResult        :: !(Maybe (Map Text (Map Text EndpointMessageResult)))
+    , _sumApplicationId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SendUsersMessageResponse' with the minimum fields required to make a request.
@@ -6630,10 +6784,12 @@ instance NFData SendUsersMessageResponse where
 -- | Dimension specification of a segment.
 --
 -- /See:/ 'setDimension' smart constructor.
-data SetDimension = SetDimension'
-  { _sdValues        :: !(Maybe [Text])
-  , _sdDimensionType :: !(Maybe DimensionType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SetDimension =
+  SetDimension'
+    { _sdValues        :: !(Maybe [Text])
+    , _sdDimensionType :: !(Maybe DimensionType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetDimension' with the minimum fields required to make a request.
@@ -6678,15 +6834,17 @@ instance ToJSON SetDimension where
 -- | Treatment resource
 --
 -- /See:/ 'treatmentResource' smart constructor.
-data TreatmentResource = TreatmentResource'
-  { _trState                :: !(Maybe CampaignState)
-  , _trSchedule             :: !(Maybe Schedule)
-  , _trTreatmentName        :: !(Maybe Text)
-  , _trSizePercent          :: !(Maybe Int)
-  , _trTreatmentDescription :: !(Maybe Text)
-  , _trId                   :: !(Maybe Text)
-  , _trMessageConfiguration :: !(Maybe MessageConfiguration)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TreatmentResource =
+  TreatmentResource'
+    { _trState                :: !(Maybe CampaignState)
+    , _trSchedule             :: !(Maybe Schedule)
+    , _trTreatmentName        :: !(Maybe Text)
+    , _trSizePercent          :: !(Maybe Int)
+    , _trTreatmentDescription :: !(Maybe Text)
+    , _trId                   :: !(Maybe Text)
+    , _trMessageConfiguration :: !(Maybe MessageConfiguration)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TreatmentResource' with the minimum fields required to make a request.
@@ -6767,11 +6925,13 @@ instance NFData TreatmentResource where
 -- | Creating application setting request
 --
 -- /See:/ 'writeApplicationSettingsRequest' smart constructor.
-data WriteApplicationSettingsRequest = WriteApplicationSettingsRequest'
-  { _wasrLimits       :: !(Maybe CampaignLimits)
-  , _wasrQuietTime    :: !(Maybe QuietTime)
-  , _wasrCampaignHook :: !(Maybe CampaignHook)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data WriteApplicationSettingsRequest =
+  WriteApplicationSettingsRequest'
+    { _wasrLimits       :: !(Maybe CampaignLimits)
+    , _wasrQuietTime    :: !(Maybe QuietTime)
+    , _wasrCampaignHook :: !(Maybe CampaignHook)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'WriteApplicationSettingsRequest' with the minimum fields required to make a request.
@@ -6821,21 +6981,23 @@ instance ToJSON WriteApplicationSettingsRequest where
 -- | Used to create a campaign.
 --
 -- /See:/ 'writeCampaignRequest' smart constructor.
-data WriteCampaignRequest = WriteCampaignRequest'
-  { _wcrSchedule             :: !(Maybe Schedule)
-  , _wcrHook                 :: !(Maybe CampaignHook)
-  , _wcrTreatmentName        :: !(Maybe Text)
-  , _wcrLimits               :: !(Maybe CampaignLimits)
-  , _wcrIsPaused             :: !(Maybe Bool)
-  , _wcrName                 :: !(Maybe Text)
-  , _wcrHoldoutPercent       :: !(Maybe Int)
-  , _wcrTreatmentDescription :: !(Maybe Text)
-  , _wcrMessageConfiguration :: !(Maybe MessageConfiguration)
-  , _wcrDescription          :: !(Maybe Text)
-  , _wcrSegmentId            :: !(Maybe Text)
-  , _wcrAdditionalTreatments :: !(Maybe [WriteTreatmentResource])
-  , _wcrSegmentVersion       :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data WriteCampaignRequest =
+  WriteCampaignRequest'
+    { _wcrSchedule             :: !(Maybe Schedule)
+    , _wcrHook                 :: !(Maybe CampaignHook)
+    , _wcrTreatmentName        :: !(Maybe Text)
+    , _wcrLimits               :: !(Maybe CampaignLimits)
+    , _wcrIsPaused             :: !(Maybe Bool)
+    , _wcrName                 :: !(Maybe Text)
+    , _wcrHoldoutPercent       :: !(Maybe Int)
+    , _wcrTreatmentDescription :: !(Maybe Text)
+    , _wcrMessageConfiguration :: !(Maybe MessageConfiguration)
+    , _wcrDescription          :: !(Maybe Text)
+    , _wcrSegmentId            :: !(Maybe Text)
+    , _wcrAdditionalTreatments :: !(Maybe [WriteTreatmentResource])
+    , _wcrSegmentVersion       :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'WriteCampaignRequest' with the minimum fields required to make a request.
@@ -6967,10 +7129,12 @@ instance ToJSON WriteCampaignRequest where
 -- | Request to save an EventStream.
 --
 -- /See:/ 'writeEventStream' smart constructor.
-data WriteEventStream = WriteEventStream'
-  { _wesDestinationStreamARN :: !(Maybe Text)
-  , _wesRoleARN              :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data WriteEventStream =
+  WriteEventStream'
+    { _wesDestinationStreamARN :: !(Maybe Text)
+    , _wesRoleARN              :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'WriteEventStream' with the minimum fields required to make a request.
@@ -7009,10 +7173,12 @@ instance ToJSON WriteEventStream where
 -- | Segment definition.
 --
 -- /See:/ 'writeSegmentRequest' smart constructor.
-data WriteSegmentRequest = WriteSegmentRequest'
-  { _wsrName       :: !(Maybe Text)
-  , _wsrDimensions :: !(Maybe SegmentDimensions)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data WriteSegmentRequest =
+  WriteSegmentRequest'
+    { _wsrName       :: !(Maybe Text)
+    , _wsrDimensions :: !(Maybe SegmentDimensions)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'WriteSegmentRequest' with the minimum fields required to make a request.
@@ -7050,13 +7216,15 @@ instance ToJSON WriteSegmentRequest where
 -- | Used to create a campaign treatment.
 --
 -- /See:/ 'writeTreatmentResource' smart constructor.
-data WriteTreatmentResource = WriteTreatmentResource'
-  { _wtrSchedule             :: !(Maybe Schedule)
-  , _wtrTreatmentName        :: !(Maybe Text)
-  , _wtrSizePercent          :: !(Maybe Int)
-  , _wtrTreatmentDescription :: !(Maybe Text)
-  , _wtrMessageConfiguration :: !(Maybe MessageConfiguration)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data WriteTreatmentResource =
+  WriteTreatmentResource'
+    { _wtrSchedule             :: !(Maybe Schedule)
+    , _wtrTreatmentName        :: !(Maybe Text)
+    , _wtrSizePercent          :: !(Maybe Int)
+    , _wtrTreatmentDescription :: !(Maybe Text)
+    , _wtrMessageConfiguration :: !(Maybe MessageConfiguration)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'WriteTreatmentResource' with the minimum fields required to make a request.

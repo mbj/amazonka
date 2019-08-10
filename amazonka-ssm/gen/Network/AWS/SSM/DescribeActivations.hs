@@ -51,11 +51,13 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'describeActivations' smart constructor.
-data DescribeActivations = DescribeActivations'
-  { _daFilters    :: !(Maybe [DescribeActivationsFilter])
-  , _daNextToken  :: !(Maybe Text)
-  , _daMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeActivations =
+  DescribeActivations'
+    { _daFilters    :: !(Maybe [DescribeActivationsFilter])
+    , _daNextToken  :: !(Maybe Text)
+    , _daMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeActivations' with the minimum fields required to make a request.
@@ -133,11 +135,13 @@ instance ToQuery DescribeActivations where
         toQuery = const mempty
 
 -- | /See:/ 'describeActivationsResponse' smart constructor.
-data DescribeActivationsResponse = DescribeActivationsResponse'
-  { _darsActivationList :: !(Maybe [Activation])
-  , _darsNextToken      :: !(Maybe Text)
-  , _darsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeActivationsResponse =
+  DescribeActivationsResponse'
+    { _darsActivationList :: !(Maybe [Activation])
+    , _darsNextToken      :: !(Maybe Text)
+    , _darsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeActivationsResponse' with the minimum fields required to make a request.

@@ -48,12 +48,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'upgradePublishedSchema' smart constructor.
-data UpgradePublishedSchema = UpgradePublishedSchema'
-  { _upsDryRun               :: !(Maybe Bool)
-  , _upsDevelopmentSchemaARN :: !Text
-  , _upsPublishedSchemaARN   :: !Text
-  , _upsMinorVersion         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpgradePublishedSchema =
+  UpgradePublishedSchema'
+    { _upsDryRun               :: !(Maybe Bool)
+    , _upsDevelopmentSchemaARN :: !Text
+    , _upsPublishedSchemaARN   :: !Text
+    , _upsMinorVersion         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpgradePublishedSchema' with the minimum fields required to make a request.
@@ -134,10 +136,12 @@ instance ToQuery UpgradePublishedSchema where
         toQuery = const mempty
 
 -- | /See:/ 'upgradePublishedSchemaResponse' smart constructor.
-data UpgradePublishedSchemaResponse = UpgradePublishedSchemaResponse'
-  { _upsrsUpgradedSchemaARN :: !(Maybe Text)
-  , _upsrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpgradePublishedSchemaResponse =
+  UpgradePublishedSchemaResponse'
+    { _upsrsUpgradedSchemaARN :: !(Maybe Text)
+    , _upsrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpgradePublishedSchemaResponse' with the minimum fields required to make a request.

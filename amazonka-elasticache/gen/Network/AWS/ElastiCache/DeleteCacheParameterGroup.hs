@@ -46,9 +46,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteCacheParameterGroup' smart constructor.
-newtype DeleteCacheParameterGroup = DeleteCacheParameterGroup'
-  { _dCacheParameterGroupName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteCacheParameterGroup =
+  DeleteCacheParameterGroup'
+    { _dCacheParameterGroupName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteCacheParameterGroup' with the minimum fields required to make a request.

@@ -67,9 +67,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'validateMatchmakingRuleSet' smart constructor.
-newtype ValidateMatchmakingRuleSet = ValidateMatchmakingRuleSet'
-  { _vmrsRuleSetBody :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ValidateMatchmakingRuleSet =
+  ValidateMatchmakingRuleSet'
+    { _vmrsRuleSetBody :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ValidateMatchmakingRuleSet' with the minimum fields required to make a request.
@@ -129,10 +131,12 @@ instance ToQuery ValidateMatchmakingRuleSet where
 --
 --
 -- /See:/ 'validateMatchmakingRuleSetResponse' smart constructor.
-data ValidateMatchmakingRuleSetResponse = ValidateMatchmakingRuleSetResponse'
-  { _vmrsrsValid          :: !(Maybe Bool)
-  , _vmrsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ValidateMatchmakingRuleSetResponse =
+  ValidateMatchmakingRuleSetResponse'
+    { _vmrsrsValid          :: !(Maybe Bool)
+    , _vmrsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ValidateMatchmakingRuleSetResponse' with the minimum fields required to make a request.

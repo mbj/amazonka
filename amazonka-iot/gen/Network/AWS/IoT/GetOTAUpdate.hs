@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getOTAUpdate' smart constructor.
-newtype GetOTAUpdate = GetOTAUpdate'
-  { _gotauOtaUpdateId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetOTAUpdate =
+  GetOTAUpdate'
+    { _gotauOtaUpdateId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetOTAUpdate' with the minimum fields required to make a request.
@@ -89,10 +91,12 @@ instance ToQuery GetOTAUpdate where
         toQuery = const mempty
 
 -- | /See:/ 'getOTAUpdateResponse' smart constructor.
-data GetOTAUpdateResponse = GetOTAUpdateResponse'
-  { _gotaursOtaUpdateInfo  :: !(Maybe OTAUpdateInfo)
-  , _gotaursResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetOTAUpdateResponse =
+  GetOTAUpdateResponse'
+    { _gotaursOtaUpdateInfo  :: !(Maybe OTAUpdateInfo)
+    , _gotaursResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetOTAUpdateResponse' with the minimum fields required to make a request.

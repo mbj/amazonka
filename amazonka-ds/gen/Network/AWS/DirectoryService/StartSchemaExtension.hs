@@ -48,12 +48,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'startSchemaExtension' smart constructor.
-data StartSchemaExtension = StartSchemaExtension'
-  { _sseDirectoryId                         :: !Text
-  , _sseCreateSnapshotBeforeSchemaExtension :: !Bool
-  , _sseLdifContent                         :: !Text
-  , _sseDescription                         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartSchemaExtension =
+  StartSchemaExtension'
+    { _sseDirectoryId                         :: !Text
+    , _sseCreateSnapshotBeforeSchemaExtension :: !Bool
+    , _sseLdifContent                         :: !Text
+    , _sseDescription                         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartSchemaExtension' with the minimum fields required to make a request.
@@ -141,10 +143,12 @@ instance ToQuery StartSchemaExtension where
         toQuery = const mempty
 
 -- | /See:/ 'startSchemaExtensionResponse' smart constructor.
-data StartSchemaExtensionResponse = StartSchemaExtensionResponse'
-  { _ssersSchemaExtensionId :: !(Maybe Text)
-  , _ssersResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartSchemaExtensionResponse =
+  StartSchemaExtensionResponse'
+    { _ssersSchemaExtensionId :: !(Maybe Text)
+    , _ssersResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartSchemaExtensionResponse' with the minimum fields required to make a request.

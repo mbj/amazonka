@@ -49,10 +49,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateRadius' smart constructor.
-data UpdateRadius = UpdateRadius'
-  { _urDirectoryId    :: !Text
-  , _urRadiusSettings :: !RadiusSettings
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data UpdateRadius =
+  UpdateRadius'
+    { _urDirectoryId    :: !Text
+    , _urRadiusSettings :: !RadiusSettings
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateRadius' with the minimum fields required to make a request.
@@ -119,9 +121,11 @@ instance ToQuery UpdateRadius where
 --
 --
 -- /See:/ 'updateRadiusResponse' smart constructor.
-newtype UpdateRadiusResponse = UpdateRadiusResponse'
-  { _urrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateRadiusResponse =
+  UpdateRadiusResponse'
+    { _urrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateRadiusResponse' with the minimum fields required to make a request.

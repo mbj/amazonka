@@ -51,11 +51,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeVPCs' smart constructor.
-data DescribeVPCs = DescribeVPCs'
-  { _dvsFilters :: !(Maybe [Filter])
-  , _dvsVPCIds  :: !(Maybe [Text])
-  , _dvsDryRun  :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeVPCs =
+  DescribeVPCs'
+    { _dvsFilters :: !(Maybe [Filter])
+    , _dvsVPCIds  :: !(Maybe [Text])
+    , _dvsDryRun  :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeVPCs' with the minimum fields required to make a request.
@@ -121,10 +123,12 @@ instance ToQuery DescribeVPCs where
 --
 --
 -- /See:/ 'describeVPCsResponse' smart constructor.
-data DescribeVPCsResponse = DescribeVPCsResponse'
-  { _dvrsVPCs           :: !(Maybe [VPC])
-  , _dvrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeVPCsResponse =
+  DescribeVPCsResponse'
+    { _dvrsVPCs           :: !(Maybe [VPC])
+    , _dvrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeVPCsResponse' with the minimum fields required to make a request.

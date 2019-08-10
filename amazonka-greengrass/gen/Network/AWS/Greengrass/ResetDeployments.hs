@@ -48,11 +48,13 @@ import Network.AWS.Response
 -- | Information needed to reset deployments.
 --
 -- /See:/ 'resetDeployments' smart constructor.
-data ResetDeployments = ResetDeployments'
-  { _rdAmznClientToken :: !(Maybe Text)
-  , _rdForce           :: !(Maybe Bool)
-  , _rdGroupId         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResetDeployments =
+  ResetDeployments'
+    { _rdAmznClientToken :: !(Maybe Text)
+    , _rdForce           :: !(Maybe Bool)
+    , _rdGroupId         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResetDeployments' with the minimum fields required to make a request.
@@ -119,11 +121,13 @@ instance ToQuery ResetDeployments where
         toQuery = const mempty
 
 -- | /See:/ 'resetDeploymentsResponse' smart constructor.
-data ResetDeploymentsResponse = ResetDeploymentsResponse'
-  { _rdrsDeploymentId   :: !(Maybe Text)
-  , _rdrsDeploymentARN  :: !(Maybe Text)
-  , _rdrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResetDeploymentsResponse =
+  ResetDeploymentsResponse'
+    { _rdrsDeploymentId   :: !(Maybe Text)
+    , _rdrsDeploymentARN  :: !(Maybe Text)
+    , _rdrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResetDeploymentsResponse' with the minimum fields required to make a request.

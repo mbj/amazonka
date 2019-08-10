@@ -51,11 +51,13 @@ import Network.AWS.Route53AutoNaming.Types
 import Network.AWS.Route53AutoNaming.Types.Product
 
 -- | /See:/ 'listOperations' smart constructor.
-data ListOperations = ListOperations'
-  { _loFilters    :: !(Maybe [OperationFilter])
-  , _loNextToken  :: !(Maybe Text)
-  , _loMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListOperations =
+  ListOperations'
+    { _loFilters    :: !(Maybe [OperationFilter])
+    , _loNextToken  :: !(Maybe Text)
+    , _loMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListOperations' with the minimum fields required to make a request.
@@ -133,11 +135,13 @@ instance ToQuery ListOperations where
         toQuery = const mempty
 
 -- | /See:/ 'listOperationsResponse' smart constructor.
-data ListOperationsResponse = ListOperationsResponse'
-  { _lorsNextToken      :: !(Maybe Text)
-  , _lorsOperations     :: !(Maybe [OperationSummary])
-  , _lorsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListOperationsResponse =
+  ListOperationsResponse'
+    { _lorsNextToken      :: !(Maybe Text)
+    , _lorsOperations     :: !(Maybe [OperationSummary])
+    , _lorsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListOperationsResponse' with the minimum fields required to make a request.

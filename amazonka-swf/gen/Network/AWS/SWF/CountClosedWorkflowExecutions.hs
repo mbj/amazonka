@@ -73,15 +73,17 @@ import Network.AWS.SWF.Types
 import Network.AWS.SWF.Types.Product
 
 -- | /See:/ 'countClosedWorkflowExecutions' smart constructor.
-data CountClosedWorkflowExecutions = CountClosedWorkflowExecutions'
-  { _ccweExecutionFilter   :: !(Maybe WorkflowExecutionFilter)
-  , _ccweCloseStatusFilter :: !(Maybe CloseStatusFilter)
-  , _ccweTypeFilter        :: !(Maybe WorkflowTypeFilter)
-  , _ccweCloseTimeFilter   :: !(Maybe ExecutionTimeFilter)
-  , _ccweTagFilter         :: !(Maybe TagFilter)
-  , _ccweStartTimeFilter   :: !(Maybe ExecutionTimeFilter)
-  , _ccweDomain            :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CountClosedWorkflowExecutions =
+  CountClosedWorkflowExecutions'
+    { _ccweExecutionFilter   :: !(Maybe WorkflowExecutionFilter)
+    , _ccweCloseStatusFilter :: !(Maybe CloseStatusFilter)
+    , _ccweTypeFilter        :: !(Maybe WorkflowTypeFilter)
+    , _ccweCloseTimeFilter   :: !(Maybe ExecutionTimeFilter)
+    , _ccweTagFilter         :: !(Maybe TagFilter)
+    , _ccweStartTimeFilter   :: !(Maybe ExecutionTimeFilter)
+    , _ccweDomain            :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CountClosedWorkflowExecutions' with the minimum fields required to make a request.

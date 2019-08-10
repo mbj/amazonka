@@ -55,10 +55,12 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'describeConfigurationSet' smart constructor.
-data DescribeConfigurationSet = DescribeConfigurationSet'
-  { _dcsConfigurationSetAttributeNames :: !(Maybe [ConfigurationSetAttribute])
-  , _dcsConfigurationSetName           :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeConfigurationSet =
+  DescribeConfigurationSet'
+    { _dcsConfigurationSetAttributeNames :: !(Maybe [ConfigurationSetAttribute])
+    , _dcsConfigurationSetName           :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeConfigurationSet' with the minimum fields required to make a request.
@@ -129,13 +131,15 @@ instance ToQuery DescribeConfigurationSet where
 --
 --
 -- /See:/ 'describeConfigurationSetResponse' smart constructor.
-data DescribeConfigurationSetResponse = DescribeConfigurationSetResponse'
-  { _dcsrsTrackingOptions   :: !(Maybe TrackingOptions)
-  , _dcsrsConfigurationSet  :: !(Maybe ConfigurationSet)
-  , _dcsrsReputationOptions :: !(Maybe ReputationOptions)
-  , _dcsrsEventDestinations :: !(Maybe [EventDestination])
-  , _dcsrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeConfigurationSetResponse =
+  DescribeConfigurationSetResponse'
+    { _dcsrsTrackingOptions   :: !(Maybe TrackingOptions)
+    , _dcsrsConfigurationSet  :: !(Maybe ConfigurationSet)
+    , _dcsrsReputationOptions :: !(Maybe ReputationOptions)
+    , _dcsrsEventDestinations :: !(Maybe [EventDestination])
+    , _dcsrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeConfigurationSetResponse' with the minimum fields required to make a request.

@@ -50,9 +50,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteRun' smart constructor.
-newtype DeleteRun = DeleteRun'
-  { _drArn :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteRun =
+  DeleteRun'
+    { _drArn :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteRun' with the minimum fields required to make a request.
@@ -106,9 +108,11 @@ instance ToQuery DeleteRun where
 --
 --
 -- /See:/ 'deleteRunResponse' smart constructor.
-newtype DeleteRunResponse = DeleteRunResponse'
-  { _drrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteRunResponse =
+  DeleteRunResponse'
+    { _drrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteRunResponse' with the minimum fields required to make a request.

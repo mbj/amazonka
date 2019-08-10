@@ -65,10 +65,12 @@ import Network.AWS.WAF.Types.Product
 --
 --
 -- /See:/ 'createXSSMatchSet' smart constructor.
-data CreateXSSMatchSet = CreateXSSMatchSet'
-  { _cxmsName        :: !Text
-  , _cxmsChangeToken :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateXSSMatchSet =
+  CreateXSSMatchSet'
+    { _cxmsName        :: !Text
+    , _cxmsChangeToken :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateXSSMatchSet' with the minimum fields required to make a request.
@@ -135,11 +137,13 @@ instance ToQuery CreateXSSMatchSet where
 --
 --
 -- /See:/ 'createXSSMatchSetResponse' smart constructor.
-data CreateXSSMatchSetResponse = CreateXSSMatchSetResponse'
-  { _cxmsrsXSSMatchSet    :: !(Maybe XSSMatchSet)
-  , _cxmsrsChangeToken    :: !(Maybe Text)
-  , _cxmsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateXSSMatchSetResponse =
+  CreateXSSMatchSetResponse'
+    { _cxmsrsXSSMatchSet    :: !(Maybe XSSMatchSet)
+    , _cxmsrsChangeToken    :: !(Maybe Text)
+    , _cxmsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateXSSMatchSetResponse' with the minimum fields required to make a request.

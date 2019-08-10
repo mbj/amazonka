@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'reloadTables' smart constructor.
-data ReloadTables = ReloadTables'
-  { _rtReplicationTaskARN :: !Text
-  , _rtTablesToReload     :: ![TableToReload]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReloadTables =
+  ReloadTables'
+    { _rtReplicationTaskARN :: !Text
+    , _rtTablesToReload     :: ![TableToReload]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReloadTables' with the minimum fields required to make a request.
@@ -112,10 +114,12 @@ instance ToQuery ReloadTables where
         toQuery = const mempty
 
 -- | /See:/ 'reloadTablesResponse' smart constructor.
-data ReloadTablesResponse = ReloadTablesResponse'
-  { _rtrsReplicationTaskARN :: !(Maybe Text)
-  , _rtrsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReloadTablesResponse =
+  ReloadTablesResponse'
+    { _rtrsReplicationTaskARN :: !(Maybe Text)
+    , _rtrsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReloadTablesResponse' with the minimum fields required to make a request.

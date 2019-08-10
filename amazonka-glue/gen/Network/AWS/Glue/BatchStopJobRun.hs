@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'batchStopJobRun' smart constructor.
-data BatchStopJobRun = BatchStopJobRun'
-  { _bsjrJobName   :: !Text
-  , _bsjrJobRunIds :: !(List1 Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchStopJobRun =
+  BatchStopJobRun'
+    { _bsjrJobName   :: !Text
+    , _bsjrJobRunIds :: !(List1 Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchStopJobRun' with the minimum fields required to make a request.
@@ -115,11 +117,13 @@ instance ToQuery BatchStopJobRun where
         toQuery = const mempty
 
 -- | /See:/ 'batchStopJobRunResponse' smart constructor.
-data BatchStopJobRunResponse = BatchStopJobRunResponse'
-  { _bsjrrsSuccessfulSubmissions :: !(Maybe [BatchStopJobRunSuccessfulSubmission])
-  , _bsjrrsErrors :: !(Maybe [BatchStopJobRunError])
-  , _bsjrrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchStopJobRunResponse =
+  BatchStopJobRunResponse'
+    { _bsjrrsSuccessfulSubmissions :: !(Maybe [BatchStopJobRunSuccessfulSubmission])
+    , _bsjrrsErrors :: !(Maybe [BatchStopJobRunError])
+    , _bsjrrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchStopJobRunResponse' with the minimum fields required to make a request.

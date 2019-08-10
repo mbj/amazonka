@@ -49,11 +49,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'disassociateNode' smart constructor.
-data DisassociateNode = DisassociateNode'
-  { _dnEngineAttributes :: !(Maybe [EngineAttribute])
-  , _dnServerName       :: !Text
-  , _dnNodeName         :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data DisassociateNode =
+  DisassociateNode'
+    { _dnEngineAttributes :: !(Maybe [EngineAttribute])
+    , _dnServerName       :: !Text
+    , _dnNodeName         :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisassociateNode' with the minimum fields required to make a request.
@@ -128,10 +130,12 @@ instance ToQuery DisassociateNode where
         toQuery = const mempty
 
 -- | /See:/ 'disassociateNodeResponse' smart constructor.
-data DisassociateNodeResponse = DisassociateNodeResponse'
-  { _dnrsNodeAssociationStatusToken :: !(Maybe Text)
-  , _dnrsResponseStatus             :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DisassociateNodeResponse =
+  DisassociateNodeResponse'
+    { _dnrsNodeAssociationStatusToken :: !(Maybe Text)
+    , _dnrsResponseStatus             :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisassociateNodeResponse' with the minimum fields required to make a request.

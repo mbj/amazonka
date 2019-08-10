@@ -43,10 +43,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updatePipeline' smart constructor.
-data UpdatePipeline = UpdatePipeline'
-  { _upPipelineName       :: !Text
-  , _upPipelineActivities :: !(List1 PipelineActivity)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdatePipeline =
+  UpdatePipeline'
+    { _upPipelineName       :: !Text
+    , _upPipelineActivities :: !(List1 PipelineActivity)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdatePipeline' with the minimum fields required to make a request.

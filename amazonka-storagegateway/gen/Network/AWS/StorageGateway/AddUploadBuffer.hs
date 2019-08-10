@@ -48,10 +48,12 @@ import Network.AWS.StorageGateway.Types
 import Network.AWS.StorageGateway.Types.Product
 
 -- | /See:/ 'addUploadBuffer' smart constructor.
-data AddUploadBuffer = AddUploadBuffer'
-  { _aubGatewayARN :: !Text
-  , _aubDiskIds    :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddUploadBuffer =
+  AddUploadBuffer'
+    { _aubGatewayARN :: !Text
+    , _aubDiskIds    :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddUploadBuffer' with the minimum fields required to make a request.
@@ -113,10 +115,12 @@ instance ToQuery AddUploadBuffer where
         toQuery = const mempty
 
 -- | /See:/ 'addUploadBufferResponse' smart constructor.
-data AddUploadBufferResponse = AddUploadBufferResponse'
-  { _aubrsGatewayARN     :: !(Maybe Text)
-  , _aubrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddUploadBufferResponse =
+  AddUploadBufferResponse'
+    { _aubrsGatewayARN     :: !(Maybe Text)
+    , _aubrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddUploadBufferResponse' with the minimum fields required to make a request.

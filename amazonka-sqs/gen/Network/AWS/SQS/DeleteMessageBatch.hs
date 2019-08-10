@@ -53,10 +53,12 @@ import Network.AWS.SQS.Types.Product
 --
 --
 -- /See:/ 'deleteMessageBatch' smart constructor.
-data DeleteMessageBatch = DeleteMessageBatch'
-  { _dmbQueueURL :: !Text
-  , _dmbEntries  :: ![DeleteMessageBatchRequestEntry]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteMessageBatch =
+  DeleteMessageBatch'
+    { _dmbQueueURL :: !Text
+    , _dmbEntries  :: ![DeleteMessageBatchRequestEntry]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteMessageBatch' with the minimum fields required to make a request.
@@ -117,11 +119,13 @@ instance ToQuery DeleteMessageBatch where
 --
 --
 -- /See:/ 'deleteMessageBatchResponse' smart constructor.
-data DeleteMessageBatchResponse = DeleteMessageBatchResponse'
-  { _dmbrsResponseStatus :: !Int
-  , _dmbrsSuccessful     :: ![DeleteMessageBatchResultEntry]
-  , _dmbrsFailed         :: ![BatchResultErrorEntry]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteMessageBatchResponse =
+  DeleteMessageBatchResponse'
+    { _dmbrsResponseStatus :: !Int
+    , _dmbrsSuccessful     :: ![DeleteMessageBatchResultEntry]
+    , _dmbrsFailed         :: ![BatchResultErrorEntry]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteMessageBatchResponse' with the minimum fields required to make a request.

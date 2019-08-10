@@ -49,10 +49,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'setUserSettings' smart constructor.
-data SetUserSettings = SetUserSettings'
-  { _susAccessToken :: !(Sensitive Text)
-  , _susMFAOptions  :: ![MFAOptionType]
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data SetUserSettings =
+  SetUserSettings'
+    { _susAccessToken :: !(Sensitive Text)
+    , _susMFAOptions  :: ![MFAOptionType]
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetUserSettings' with the minimum fields required to make a request.
@@ -118,9 +120,11 @@ instance ToQuery SetUserSettings where
 --
 --
 -- /See:/ 'setUserSettingsResponse' smart constructor.
-newtype SetUserSettingsResponse = SetUserSettingsResponse'
-  { _susrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype SetUserSettingsResponse =
+  SetUserSettingsResponse'
+    { _susrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetUserSettingsResponse' with the minimum fields required to make a request.

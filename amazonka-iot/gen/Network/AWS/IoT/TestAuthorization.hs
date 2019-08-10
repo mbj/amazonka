@@ -50,14 +50,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'testAuthorization' smart constructor.
-data TestAuthorization = TestAuthorization'
-  { _taClientId              :: !(Maybe Text)
-  , _taPolicyNamesToAdd      :: !(Maybe [Text])
-  , _taPrincipal             :: !(Maybe Text)
-  , _taCognitoIdentityPoolId :: !(Maybe Text)
-  , _taPolicyNamesToSkip     :: !(Maybe [Text])
-  , _taAuthInfos             :: !(List1 AuthInfo)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TestAuthorization =
+  TestAuthorization'
+    { _taClientId              :: !(Maybe Text)
+    , _taPolicyNamesToAdd      :: !(Maybe [Text])
+    , _taPrincipal             :: !(Maybe Text)
+    , _taCognitoIdentityPoolId :: !(Maybe Text)
+    , _taPolicyNamesToSkip     :: !(Maybe [Text])
+    , _taAuthInfos             :: !(List1 AuthInfo)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TestAuthorization' with the minimum fields required to make a request.
@@ -149,10 +151,12 @@ instance ToQuery TestAuthorization where
           = mconcat ["clientId" =: _taClientId]
 
 -- | /See:/ 'testAuthorizationResponse' smart constructor.
-data TestAuthorizationResponse = TestAuthorizationResponse'
-  { _tarsAuthResults    :: !(Maybe [AuthResult])
-  , _tarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TestAuthorizationResponse =
+  TestAuthorizationResponse'
+    { _tarsAuthResults    :: !(Maybe [AuthResult])
+    , _tarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TestAuthorizationResponse' with the minimum fields required to make a request.

@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getQualificationType' smart constructor.
-newtype GetQualificationType = GetQualificationType'
-  { _gqtQualificationTypeId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetQualificationType =
+  GetQualificationType'
+    { _gqtQualificationTypeId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetQualificationType' with the minimum fields required to make a request.
@@ -104,10 +106,12 @@ instance ToQuery GetQualificationType where
         toQuery = const mempty
 
 -- | /See:/ 'getQualificationTypeResponse' smart constructor.
-data GetQualificationTypeResponse = GetQualificationTypeResponse'
-  { _gqtrsQualificationType :: !(Maybe QualificationType)
-  , _gqtrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetQualificationTypeResponse =
+  GetQualificationTypeResponse'
+    { _gqtrsQualificationType :: !(Maybe QualificationType)
+    , _gqtrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetQualificationTypeResponse' with the minimum fields required to make a request.

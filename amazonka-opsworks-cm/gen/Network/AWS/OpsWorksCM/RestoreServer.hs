@@ -51,12 +51,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'restoreServer' smart constructor.
-data RestoreServer = RestoreServer'
-  { _rsKeyPair      :: !(Maybe Text)
-  , _rsInstanceType :: !(Maybe Text)
-  , _rsBackupId     :: !Text
-  , _rsServerName   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RestoreServer =
+  RestoreServer'
+    { _rsKeyPair      :: !(Maybe Text)
+    , _rsInstanceType :: !(Maybe Text)
+    , _rsBackupId     :: !Text
+    , _rsServerName   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RestoreServer' with the minimum fields required to make a request.
@@ -137,9 +139,11 @@ instance ToQuery RestoreServer where
         toQuery = const mempty
 
 -- | /See:/ 'restoreServerResponse' smart constructor.
-newtype RestoreServerResponse = RestoreServerResponse'
-  { _rsrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RestoreServerResponse =
+  RestoreServerResponse'
+    { _rsrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RestoreServerResponse' with the minimum fields required to make a request.

@@ -47,10 +47,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteStage' smart constructor.
-data DeleteStage = DeleteStage'
-  { _dsRestAPIId :: !Text
-  , _dsStageName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteStage =
+  DeleteStage'
+    { _dsRestAPIId :: !Text
+    , _dsStageName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteStage' with the minimum fields required to make a request.

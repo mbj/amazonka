@@ -44,10 +44,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createSegment' smart constructor.
-data CreateSegment = CreateSegment'
-  { _csApplicationId       :: !Text
-  , _csWriteSegmentRequest :: !WriteSegmentRequest
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateSegment =
+  CreateSegment'
+    { _csApplicationId       :: !Text
+    , _csWriteSegmentRequest :: !WriteSegmentRequest
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateSegment' with the minimum fields required to make a request.
@@ -112,10 +114,12 @@ instance ToQuery CreateSegment where
         toQuery = const mempty
 
 -- | /See:/ 'createSegmentResponse' smart constructor.
-data CreateSegmentResponse = CreateSegmentResponse'
-  { _csrsResponseStatus  :: !Int
-  , _csrsSegmentResponse :: !SegmentResponse
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateSegmentResponse =
+  CreateSegmentResponse'
+    { _csrsResponseStatus  :: !Int
+    , _csrsSegmentResponse :: !SegmentResponse
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateSegmentResponse' with the minimum fields required to make a request.

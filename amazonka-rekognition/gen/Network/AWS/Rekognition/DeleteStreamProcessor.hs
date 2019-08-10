@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteStreamProcessor' smart constructor.
-newtype DeleteStreamProcessor = DeleteStreamProcessor'
-  { _dName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteStreamProcessor =
+  DeleteStreamProcessor'
+    { _dName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteStreamProcessor' with the minimum fields required to make a request.
@@ -99,9 +101,11 @@ instance ToQuery DeleteStreamProcessor where
         toQuery = const mempty
 
 -- | /See:/ 'deleteStreamProcessorResponse' smart constructor.
-newtype DeleteStreamProcessorResponse = DeleteStreamProcessorResponse'
-  { _drsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteStreamProcessorResponse =
+  DeleteStreamProcessorResponse'
+    { _drsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteStreamProcessorResponse' with the minimum fields required to make a request.

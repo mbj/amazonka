@@ -51,11 +51,13 @@ import Network.AWS.Response
 -- | Input structure for the ListJobs operation.
 --
 -- /See:/ 'listJobs' smart constructor.
-data ListJobs = ListJobs'
-  { _ljAPIVersion :: !(Maybe Text)
-  , _ljMarker     :: !(Maybe Text)
-  , _ljMaxJobs    :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListJobs =
+  ListJobs'
+    { _ljAPIVersion :: !(Maybe Text)
+    , _ljMarker     :: !(Maybe Text)
+    , _ljMaxJobs    :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListJobs' with the minimum fields required to make a request.
@@ -128,11 +130,13 @@ instance ToQuery ListJobs where
 -- | Output structure for the ListJobs operation.
 --
 -- /See:/ 'listJobsResponse' smart constructor.
-data ListJobsResponse = ListJobsResponse'
-  { _ljrsJobs           :: !(Maybe [Job])
-  , _ljrsIsTruncated    :: !(Maybe Bool)
-  , _ljrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListJobsResponse =
+  ListJobsResponse'
+    { _ljrsJobs           :: !(Maybe [Job])
+    , _ljrsIsTruncated    :: !(Maybe Bool)
+    , _ljrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListJobsResponse' with the minimum fields required to make a request.

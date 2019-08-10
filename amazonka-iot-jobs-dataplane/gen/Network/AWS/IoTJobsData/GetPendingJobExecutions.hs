@@ -46,9 +46,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getPendingJobExecutions' smart constructor.
-newtype GetPendingJobExecutions = GetPendingJobExecutions'
-  { _gpjeThingName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetPendingJobExecutions =
+  GetPendingJobExecutions'
+    { _gpjeThingName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetPendingJobExecutions' with the minimum fields required to make a request.
@@ -94,11 +96,13 @@ instance ToQuery GetPendingJobExecutions where
         toQuery = const mempty
 
 -- | /See:/ 'getPendingJobExecutionsResponse' smart constructor.
-data GetPendingJobExecutionsResponse = GetPendingJobExecutionsResponse'
-  { _gpjersInProgressJobs :: !(Maybe [JobExecutionSummary])
-  , _gpjersQueuedJobs     :: !(Maybe [JobExecutionSummary])
-  , _gpjersResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetPendingJobExecutionsResponse =
+  GetPendingJobExecutionsResponse'
+    { _gpjersInProgressJobs :: !(Maybe [JobExecutionSummary])
+    , _gpjersQueuedJobs     :: !(Maybe [JobExecutionSummary])
+    , _gpjersResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetPendingJobExecutionsResponse' with the minimum fields required to make a request.

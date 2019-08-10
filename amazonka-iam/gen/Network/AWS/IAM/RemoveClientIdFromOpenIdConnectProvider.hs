@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'removeClientIdFromOpenIdConnectProvider' smart constructor.
-data RemoveClientIdFromOpenIdConnectProvider = RemoveClientIdFromOpenIdConnectProvider'
-  { _rcifoicpOpenIdConnectProviderARN :: !Text
-  , _rcifoicpClientId                 :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RemoveClientIdFromOpenIdConnectProvider =
+  RemoveClientIdFromOpenIdConnectProvider'
+    { _rcifoicpOpenIdConnectProviderARN :: !Text
+    , _rcifoicpClientId                 :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RemoveClientIdFromOpenIdConnectProvider' with the minimum fields required to make a request.

@@ -50,10 +50,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getQualificationScore' smart constructor.
-data GetQualificationScore = GetQualificationScore'
-  { _gqsQualificationTypeId :: !Text
-  , _gqsWorkerId            :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetQualificationScore =
+  GetQualificationScore'
+    { _gqsQualificationTypeId :: !Text
+    , _gqsWorkerId            :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetQualificationScore' with the minimum fields required to make a request.
@@ -119,10 +121,12 @@ instance ToQuery GetQualificationScore where
         toQuery = const mempty
 
 -- | /See:/ 'getQualificationScoreResponse' smart constructor.
-data GetQualificationScoreResponse = GetQualificationScoreResponse'
-  { _gqsrsQualification  :: !(Maybe Qualification)
-  , _gqsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetQualificationScoreResponse =
+  GetQualificationScoreResponse'
+    { _gqsrsQualification  :: !(Maybe Qualification)
+    , _gqsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetQualificationScoreResponse' with the minimum fields required to make a request.

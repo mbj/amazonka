@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeConfigurationAggregators' smart constructor.
-data DescribeConfigurationAggregators = DescribeConfigurationAggregators'
-  { _dcaNextToken                    :: !(Maybe Text)
-  , _dcaLimit                        :: !(Maybe Nat)
-  , _dcaConfigurationAggregatorNames :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeConfigurationAggregators =
+  DescribeConfigurationAggregators'
+    { _dcaNextToken                    :: !(Maybe Text)
+    , _dcaLimit                        :: !(Maybe Nat)
+    , _dcaConfigurationAggregatorNames :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeConfigurationAggregators' with the minimum fields required to make a request.
@@ -135,11 +137,13 @@ instance ToQuery DescribeConfigurationAggregators
         toQuery = const mempty
 
 -- | /See:/ 'describeConfigurationAggregatorsResponse' smart constructor.
-data DescribeConfigurationAggregatorsResponse = DescribeConfigurationAggregatorsResponse'
-  { _dcarsNextToken                :: !(Maybe Text)
-  , _dcarsConfigurationAggregators :: !(Maybe [ConfigurationAggregator])
-  , _dcarsResponseStatus           :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeConfigurationAggregatorsResponse =
+  DescribeConfigurationAggregatorsResponse'
+    { _dcarsNextToken                :: !(Maybe Text)
+    , _dcarsConfigurationAggregators :: !(Maybe [ConfigurationAggregator])
+    , _dcarsResponseStatus           :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeConfigurationAggregatorsResponse' with the minimum fields required to make a request.

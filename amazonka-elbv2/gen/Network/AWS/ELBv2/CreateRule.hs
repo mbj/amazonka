@@ -52,12 +52,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createRule' smart constructor.
-data CreateRule = CreateRule'
-  { _crListenerARN :: !Text
-  , _crConditions  :: ![RuleCondition]
-  , _crPriority    :: !Nat
-  , _crActions     :: ![Action]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateRule =
+  CreateRule'
+    { _crListenerARN :: !Text
+    , _crConditions  :: ![RuleCondition]
+    , _crPriority    :: !Nat
+    , _crActions     :: ![Action]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateRule' with the minimum fields required to make a request.
@@ -132,10 +134,12 @@ instance ToQuery CreateRule where
                "Actions" =: toQueryList "member" _crActions]
 
 -- | /See:/ 'createRuleResponse' smart constructor.
-data CreateRuleResponse = CreateRuleResponse'
-  { _crrsRules          :: !(Maybe [Rule])
-  , _crrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateRuleResponse =
+  CreateRuleResponse'
+    { _crrsRules          :: !(Maybe [Rule])
+    , _crrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateRuleResponse' with the minimum fields required to make a request.

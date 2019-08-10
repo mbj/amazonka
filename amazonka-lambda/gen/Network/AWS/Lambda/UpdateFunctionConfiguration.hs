@@ -82,21 +82,23 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateFunctionConfiguration' smart constructor.
-data UpdateFunctionConfiguration = UpdateFunctionConfiguration'
-  { _ufcMemorySize       :: !(Maybe Nat)
-  , _ufcRuntime          :: !(Maybe Runtime)
-  , _ufcKMSKeyARN        :: !(Maybe Text)
-  , _ufcEnvironment      :: !(Maybe Environment)
-  , _ufcDeadLetterConfig :: !(Maybe DeadLetterConfig)
-  , _ufcRole             :: !(Maybe Text)
-  , _ufcVPCConfig        :: !(Maybe VPCConfig)
-  , _ufcHandler          :: !(Maybe Text)
-  , _ufcTimeout          :: !(Maybe Nat)
-  , _ufcTracingConfig    :: !(Maybe TracingConfig)
-  , _ufcDescription      :: !(Maybe Text)
-  , _ufcRevisionId       :: !(Maybe Text)
-  , _ufcFunctionName     :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data UpdateFunctionConfiguration =
+  UpdateFunctionConfiguration'
+    { _ufcMemorySize       :: !(Maybe Nat)
+    , _ufcRuntime          :: !(Maybe Runtime)
+    , _ufcKMSKeyARN        :: !(Maybe Text)
+    , _ufcEnvironment      :: !(Maybe Environment)
+    , _ufcDeadLetterConfig :: !(Maybe DeadLetterConfig)
+    , _ufcRole             :: !(Maybe Text)
+    , _ufcVPCConfig        :: !(Maybe VPCConfig)
+    , _ufcHandler          :: !(Maybe Text)
+    , _ufcTimeout          :: !(Maybe Nat)
+    , _ufcTracingConfig    :: !(Maybe TracingConfig)
+    , _ufcDescription      :: !(Maybe Text)
+    , _ufcRevisionId       :: !(Maybe Text)
+    , _ufcFunctionName     :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateFunctionConfiguration' with the minimum fields required to make a request.

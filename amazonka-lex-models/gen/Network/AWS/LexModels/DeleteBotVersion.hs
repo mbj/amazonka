@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteBotVersion' smart constructor.
-data DeleteBotVersion = DeleteBotVersion'
-  { _dbvName    :: !Text
-  , _dbvVersion :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteBotVersion =
+  DeleteBotVersion'
+    { _dbvName    :: !Text
+    , _dbvVersion :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteBotVersion' with the minimum fields required to make a request.

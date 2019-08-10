@@ -52,15 +52,17 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getLoadBalancerMetricData' smart constructor.
-data GetLoadBalancerMetricData = GetLoadBalancerMetricData'
-  { _glbmdLoadBalancerName :: !Text
-  , _glbmdMetricName       :: !LoadBalancerMetricName
-  , _glbmdPeriod           :: !Nat
-  , _glbmdStartTime        :: !POSIX
-  , _glbmdEndTime          :: !POSIX
-  , _glbmdUnit             :: !MetricUnit
-  , _glbmdStatistics       :: ![MetricStatistic]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetLoadBalancerMetricData =
+  GetLoadBalancerMetricData'
+    { _glbmdLoadBalancerName :: !Text
+    , _glbmdMetricName       :: !LoadBalancerMetricName
+    , _glbmdPeriod           :: !Nat
+    , _glbmdStartTime        :: !POSIX
+    , _glbmdEndTime          :: !POSIX
+    , _glbmdUnit             :: !MetricUnit
+    , _glbmdStatistics       :: ![MetricStatistic]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetLoadBalancerMetricData' with the minimum fields required to make a request.
@@ -173,11 +175,13 @@ instance ToQuery GetLoadBalancerMetricData where
         toQuery = const mempty
 
 -- | /See:/ 'getLoadBalancerMetricDataResponse' smart constructor.
-data GetLoadBalancerMetricDataResponse = GetLoadBalancerMetricDataResponse'
-  { _glbmdrsMetricName     :: !(Maybe LoadBalancerMetricName)
-  , _glbmdrsMetricData     :: !(Maybe [MetricDatapoint])
-  , _glbmdrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetLoadBalancerMetricDataResponse =
+  GetLoadBalancerMetricDataResponse'
+    { _glbmdrsMetricName     :: !(Maybe LoadBalancerMetricName)
+    , _glbmdrsMetricData     :: !(Maybe [MetricDatapoint])
+    , _glbmdrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetLoadBalancerMetricDataResponse' with the minimum fields required to make a request.

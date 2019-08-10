@@ -45,10 +45,12 @@ import Network.AWS.WorkSpaces.Types
 import Network.AWS.WorkSpaces.Types.Product
 
 -- | /See:/ 'deleteTags' smart constructor.
-data DeleteTags = DeleteTags'
-  { _dResourceId :: !Text
-  , _dTagKeys    :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteTags =
+  DeleteTags'
+    { _dResourceId :: !Text
+    , _dTagKeys    :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteTags' with the minimum fields required to make a request.
@@ -108,9 +110,11 @@ instance ToQuery DeleteTags where
         toQuery = const mempty
 
 -- | /See:/ 'deleteTagsResponse' smart constructor.
-newtype DeleteTagsResponse = DeleteTagsResponse'
-  { _drsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteTagsResponse =
+  DeleteTagsResponse'
+    { _drsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteTagsResponse' with the minimum fields required to make a request.

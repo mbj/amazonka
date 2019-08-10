@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeDatastore' smart constructor.
-newtype DescribeDatastore = DescribeDatastore'
-  { _dDatastoreName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeDatastore =
+  DescribeDatastore'
+    { _dDatastoreName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDatastore' with the minimum fields required to make a request.
@@ -90,10 +92,12 @@ instance ToQuery DescribeDatastore where
         toQuery = const mempty
 
 -- | /See:/ 'describeDatastoreResponse' smart constructor.
-data DescribeDatastoreResponse = DescribeDatastoreResponse'
-  { _drsDatastore      :: !(Maybe Datastore)
-  , _drsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDatastoreResponse =
+  DescribeDatastoreResponse'
+    { _drsDatastore      :: !(Maybe Datastore)
+    , _drsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDatastoreResponse' with the minimum fields required to make a request.

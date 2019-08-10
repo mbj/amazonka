@@ -49,13 +49,15 @@ import Network.AWS.Response
 -- | CreateThreatIntelSet request body.
 --
 -- /See:/ 'createThreatIntelSet' smart constructor.
-data CreateThreatIntelSet = CreateThreatIntelSet'
-  { _ctisLocation   :: !(Maybe Text)
-  , _ctisFormat     :: !(Maybe ThreatIntelSetFormat)
-  , _ctisActivate   :: !(Maybe Bool)
-  , _ctisName       :: !(Maybe Text)
-  , _ctisDetectorId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateThreatIntelSet =
+  CreateThreatIntelSet'
+    { _ctisLocation   :: !(Maybe Text)
+    , _ctisFormat     :: !(Maybe ThreatIntelSetFormat)
+    , _ctisActivate   :: !(Maybe Bool)
+    , _ctisName       :: !(Maybe Text)
+    , _ctisDetectorId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateThreatIntelSet' with the minimum fields required to make a request.
@@ -144,10 +146,12 @@ instance ToQuery CreateThreatIntelSet where
         toQuery = const mempty
 
 -- | /See:/ 'createThreatIntelSetResponse' smart constructor.
-data CreateThreatIntelSetResponse = CreateThreatIntelSetResponse'
-  { _ctisrsThreatIntelSetId :: !(Maybe Text)
-  , _ctisrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateThreatIntelSetResponse =
+  CreateThreatIntelSetResponse'
+    { _ctisrsThreatIntelSetId :: !(Maybe Text)
+    , _ctisrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateThreatIntelSetResponse' with the minimum fields required to make a request.

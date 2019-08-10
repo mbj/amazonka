@@ -51,15 +51,17 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'createMaintenanceWindow' smart constructor.
-data CreateMaintenanceWindow = CreateMaintenanceWindow'
-  { _cmwClientToken              :: !(Maybe Text)
-  , _cmwDescription              :: !(Maybe (Sensitive Text))
-  , _cmwName                     :: !Text
-  , _cmwSchedule                 :: !Text
-  , _cmwDuration                 :: !Nat
-  , _cmwCutoff                   :: !Nat
-  , _cmwAllowUnassociatedTargets :: !Bool
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data CreateMaintenanceWindow =
+  CreateMaintenanceWindow'
+    { _cmwClientToken              :: !(Maybe Text)
+    , _cmwDescription              :: !(Maybe (Sensitive Text))
+    , _cmwName                     :: !Text
+    , _cmwSchedule                 :: !Text
+    , _cmwDuration                 :: !Nat
+    , _cmwCutoff                   :: !Nat
+    , _cmwAllowUnassociatedTargets :: !Bool
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateMaintenanceWindow' with the minimum fields required to make a request.
@@ -170,10 +172,12 @@ instance ToQuery CreateMaintenanceWindow where
         toQuery = const mempty
 
 -- | /See:/ 'createMaintenanceWindowResponse' smart constructor.
-data CreateMaintenanceWindowResponse = CreateMaintenanceWindowResponse'
-  { _cmwrsWindowId       :: !(Maybe Text)
-  , _cmwrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateMaintenanceWindowResponse =
+  CreateMaintenanceWindowResponse'
+    { _cmwrsWindowId       :: !(Maybe Text)
+    , _cmwrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateMaintenanceWindowResponse' with the minimum fields required to make a request.

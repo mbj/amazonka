@@ -69,13 +69,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeComplianceByResource' smart constructor.
-data DescribeComplianceByResource = DescribeComplianceByResource'
-  { _dcbrResourceId      :: !(Maybe Text)
-  , _dcbrResourceType    :: !(Maybe Text)
-  , _dcbrComplianceTypes :: !(Maybe [ComplianceType])
-  , _dcbrNextToken       :: !(Maybe Text)
-  , _dcbrLimit           :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeComplianceByResource =
+  DescribeComplianceByResource'
+    { _dcbrResourceId      :: !(Maybe Text)
+    , _dcbrResourceType    :: !(Maybe Text)
+    , _dcbrComplianceTypes :: !(Maybe [ComplianceType])
+    , _dcbrNextToken       :: !(Maybe Text)
+    , _dcbrLimit           :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeComplianceByResource' with the minimum fields required to make a request.
@@ -178,11 +180,13 @@ instance ToQuery DescribeComplianceByResource where
 --
 --
 -- /See:/ 'describeComplianceByResourceResponse' smart constructor.
-data DescribeComplianceByResourceResponse = DescribeComplianceByResourceResponse'
-  { _dcbrrsComplianceByResources :: !(Maybe [ComplianceByResource])
-  , _dcbrrsNextToken             :: !(Maybe Text)
-  , _dcbrrsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeComplianceByResourceResponse =
+  DescribeComplianceByResourceResponse'
+    { _dcbrrsComplianceByResources :: !(Maybe [ComplianceByResource])
+    , _dcbrrsNextToken             :: !(Maybe Text)
+    , _dcbrrsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeComplianceByResourceResponse' with the minimum fields required to make a request.

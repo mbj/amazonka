@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createDirectConnectGatewayAssociation' smart constructor.
-data CreateDirectConnectGatewayAssociation = CreateDirectConnectGatewayAssociation'
-  { _cdcgaDirectConnectGatewayId :: !Text
-  , _cdcgaVirtualGatewayId       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDirectConnectGatewayAssociation =
+  CreateDirectConnectGatewayAssociation'
+    { _cdcgaDirectConnectGatewayId :: !Text
+    , _cdcgaVirtualGatewayId       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDirectConnectGatewayAssociation' with the minimum fields required to make a request.
@@ -138,10 +140,12 @@ instance ToQuery
 --
 --
 -- /See:/ 'createDirectConnectGatewayAssociationResponse' smart constructor.
-data CreateDirectConnectGatewayAssociationResponse = CreateDirectConnectGatewayAssociationResponse'
-  { _cdcgarsDirectConnectGatewayAssociation :: !(Maybe DirectConnectGatewayAssociation)
-  , _cdcgarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDirectConnectGatewayAssociationResponse =
+  CreateDirectConnectGatewayAssociationResponse'
+    { _cdcgarsDirectConnectGatewayAssociation :: !(Maybe DirectConnectGatewayAssociation)
+    , _cdcgarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDirectConnectGatewayAssociationResponse' with the minimum fields required to make a request.

@@ -55,11 +55,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeEndpointTypes' smart constructor.
-data DescribeEndpointTypes = DescribeEndpointTypes'
-  { _detFilters    :: !(Maybe [Filter])
-  , _detMarker     :: !(Maybe Text)
-  , _detMaxRecords :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeEndpointTypes =
+  DescribeEndpointTypes'
+    { _detFilters    :: !(Maybe [Filter])
+    , _detMarker     :: !(Maybe Text)
+    , _detMaxRecords :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEndpointTypes' with the minimum fields required to make a request.
@@ -142,11 +144,13 @@ instance ToQuery DescribeEndpointTypes where
 --
 --
 -- /See:/ 'describeEndpointTypesResponse' smart constructor.
-data DescribeEndpointTypesResponse = DescribeEndpointTypesResponse'
-  { _detrsSupportedEndpointTypes :: !(Maybe [SupportedEndpointType])
-  , _detrsMarker                 :: !(Maybe Text)
-  , _detrsResponseStatus         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeEndpointTypesResponse =
+  DescribeEndpointTypesResponse'
+    { _detrsSupportedEndpointTypes :: !(Maybe [SupportedEndpointType])
+    , _detrsMarker                 :: !(Maybe Text)
+    , _detrsResponseStatus         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEndpointTypesResponse' with the minimum fields required to make a request.

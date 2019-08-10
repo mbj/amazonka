@@ -52,10 +52,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listRoots' smart constructor.
-data ListRoots = ListRoots'
-  { _lrNextToken  :: !(Maybe Text)
-  , _lrMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListRoots =
+  ListRoots'
+    { _lrNextToken  :: !(Maybe Text)
+    , _lrMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListRoots' with the minimum fields required to make a request.
@@ -123,11 +125,13 @@ instance ToQuery ListRoots where
         toQuery = const mempty
 
 -- | /See:/ 'listRootsResponse' smart constructor.
-data ListRootsResponse = ListRootsResponse'
-  { _lrrsRoots          :: !(Maybe [Root])
-  , _lrrsNextToken      :: !(Maybe Text)
-  , _lrrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListRootsResponse =
+  ListRootsResponse'
+    { _lrrsRoots          :: !(Maybe [Root])
+    , _lrrsNextToken      :: !(Maybe Text)
+    , _lrrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListRootsResponse' with the minimum fields required to make a request.

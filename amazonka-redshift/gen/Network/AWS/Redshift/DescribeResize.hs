@@ -62,9 +62,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeResize' smart constructor.
-newtype DescribeResize = DescribeResize'
-  { _drClusterIdentifier :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeResize =
+  DescribeResize'
+    { _drClusterIdentifier :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeResize' with the minimum fields required to make a request.
@@ -131,21 +133,23 @@ instance ToQuery DescribeResize where
 --
 --
 -- /See:/ 'describeResizeResponse' smart constructor.
-data DescribeResizeResponse = DescribeResizeResponse'
-  { _drrsImportTablesNotStarted             :: !(Maybe [Text])
-  , _drrsStatus                             :: !(Maybe Text)
-  , _drrsEstimatedTimeToCompletionInSeconds :: !(Maybe Integer)
-  , _drrsAvgResizeRateInMegaBytesPerSecond  :: !(Maybe Double)
-  , _drrsTargetNumberOfNodes                :: !(Maybe Int)
-  , _drrsTargetNodeType                     :: !(Maybe Text)
-  , _drrsImportTablesInProgress             :: !(Maybe [Text])
-  , _drrsImportTablesCompleted              :: !(Maybe [Text])
-  , _drrsProgressInMegaBytes                :: !(Maybe Integer)
-  , _drrsTotalResizeDataInMegaBytes         :: !(Maybe Integer)
-  , _drrsTargetClusterType                  :: !(Maybe Text)
-  , _drrsElapsedTimeInSeconds               :: !(Maybe Integer)
-  , _drrsResponseStatus                     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeResizeResponse =
+  DescribeResizeResponse'
+    { _drrsImportTablesNotStarted             :: !(Maybe [Text])
+    , _drrsStatus                             :: !(Maybe Text)
+    , _drrsEstimatedTimeToCompletionInSeconds :: !(Maybe Integer)
+    , _drrsAvgResizeRateInMegaBytesPerSecond  :: !(Maybe Double)
+    , _drrsTargetNumberOfNodes                :: !(Maybe Int)
+    , _drrsTargetNodeType                     :: !(Maybe Text)
+    , _drrsImportTablesInProgress             :: !(Maybe [Text])
+    , _drrsImportTablesCompleted              :: !(Maybe [Text])
+    , _drrsProgressInMegaBytes                :: !(Maybe Integer)
+    , _drrsTotalResizeDataInMegaBytes         :: !(Maybe Integer)
+    , _drrsTargetClusterType                  :: !(Maybe Text)
+    , _drrsElapsedTimeInSeconds               :: !(Maybe Integer)
+    , _drrsResponseStatus                     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeResizeResponse' with the minimum fields required to make a request.

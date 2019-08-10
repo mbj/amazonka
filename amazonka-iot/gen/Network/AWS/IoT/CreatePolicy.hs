@@ -55,10 +55,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createPolicy' smart constructor.
-data CreatePolicy = CreatePolicy'
-  { _cpPolicyName     :: !Text
-  , _cpPolicyDocument :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreatePolicy =
+  CreatePolicy'
+    { _cpPolicyName     :: !Text
+    , _cpPolicyDocument :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreatePolicy' with the minimum fields required to make a request.
@@ -122,13 +124,15 @@ instance ToQuery CreatePolicy where
 --
 --
 -- /See:/ 'createPolicyResponse' smart constructor.
-data CreatePolicyResponse = CreatePolicyResponse'
-  { _cprsPolicyName      :: !(Maybe Text)
-  , _cprsPolicyDocument  :: !(Maybe Text)
-  , _cprsPolicyVersionId :: !(Maybe Text)
-  , _cprsPolicyARN       :: !(Maybe Text)
-  , _cprsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreatePolicyResponse =
+  CreatePolicyResponse'
+    { _cprsPolicyName      :: !(Maybe Text)
+    , _cprsPolicyDocument  :: !(Maybe Text)
+    , _cprsPolicyVersionId :: !(Maybe Text)
+    , _cprsPolicyARN       :: !(Maybe Text)
+    , _cprsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreatePolicyResponse' with the minimum fields required to make a request.

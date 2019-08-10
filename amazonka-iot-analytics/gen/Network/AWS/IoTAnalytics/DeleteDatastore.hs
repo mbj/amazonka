@@ -42,9 +42,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteDatastore' smart constructor.
-newtype DeleteDatastore = DeleteDatastore'
-  { _ddDatastoreName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteDatastore =
+  DeleteDatastore'
+    { _ddDatastoreName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteDatastore' with the minimum fields required to make a request.

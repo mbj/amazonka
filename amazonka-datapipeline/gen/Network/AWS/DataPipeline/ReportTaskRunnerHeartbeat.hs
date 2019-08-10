@@ -51,11 +51,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'reportTaskRunnerHeartbeat' smart constructor.
-data ReportTaskRunnerHeartbeat = ReportTaskRunnerHeartbeat'
-  { _rtrhHostname     :: !(Maybe Text)
-  , _rtrhWorkerGroup  :: !(Maybe Text)
-  , _rtrhTaskrunnerId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReportTaskRunnerHeartbeat =
+  ReportTaskRunnerHeartbeat'
+    { _rtrhHostname     :: !(Maybe Text)
+    , _rtrhWorkerGroup  :: !(Maybe Text)
+    , _rtrhTaskrunnerId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReportTaskRunnerHeartbeat' with the minimum fields required to make a request.
@@ -133,10 +135,12 @@ instance ToQuery ReportTaskRunnerHeartbeat where
 --
 --
 -- /See:/ 'reportTaskRunnerHeartbeatResponse' smart constructor.
-data ReportTaskRunnerHeartbeatResponse = ReportTaskRunnerHeartbeatResponse'
-  { _rtrhrsResponseStatus :: !Int
-  , _rtrhrsTerminate      :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReportTaskRunnerHeartbeatResponse =
+  ReportTaskRunnerHeartbeatResponse'
+    { _rtrhrsResponseStatus :: !Int
+    , _rtrhrsTerminate      :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReportTaskRunnerHeartbeatResponse' with the minimum fields required to make a request.

@@ -50,9 +50,11 @@ import Network.AWS.StorageGateway.Types
 import Network.AWS.StorageGateway.Types.Product
 
 -- | /See:/ 'describeUploadBuffer' smart constructor.
-newtype DescribeUploadBuffer = DescribeUploadBuffer'
-  { _dubGatewayARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeUploadBuffer =
+  DescribeUploadBuffer'
+    { _dubGatewayARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeUploadBuffer' with the minimum fields required to make a request.
@@ -111,13 +113,15 @@ instance ToQuery DescribeUploadBuffer where
         toQuery = const mempty
 
 -- | /See:/ 'describeUploadBufferResponse' smart constructor.
-data DescribeUploadBufferResponse = DescribeUploadBufferResponse'
-  { _dubrsUploadBufferAllocatedInBytes :: !(Maybe Integer)
-  , _dubrsGatewayARN                   :: !(Maybe Text)
-  , _dubrsDiskIds                      :: !(Maybe [Text])
-  , _dubrsUploadBufferUsedInBytes      :: !(Maybe Integer)
-  , _dubrsResponseStatus               :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeUploadBufferResponse =
+  DescribeUploadBufferResponse'
+    { _dubrsUploadBufferAllocatedInBytes :: !(Maybe Integer)
+    , _dubrsGatewayARN                   :: !(Maybe Text)
+    , _dubrsDiskIds                      :: !(Maybe [Text])
+    , _dubrsUploadBufferUsedInBytes      :: !(Maybe Integer)
+    , _dubrsResponseStatus               :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeUploadBufferResponse' with the minimum fields required to make a request.

@@ -59,9 +59,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeCertificateAuthority' smart constructor.
-newtype DescribeCertificateAuthority = DescribeCertificateAuthority'
-  { _dCertificateAuthorityARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeCertificateAuthority =
+  DescribeCertificateAuthority'
+    { _dCertificateAuthorityARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeCertificateAuthority' with the minimum fields required to make a request.
@@ -122,10 +124,12 @@ instance ToQuery DescribeCertificateAuthority where
         toQuery = const mempty
 
 -- | /See:/ 'describeCertificateAuthorityResponse' smart constructor.
-data DescribeCertificateAuthorityResponse = DescribeCertificateAuthorityResponse'
-  { _dcarsCertificateAuthority :: !(Maybe CertificateAuthority)
-  , _dcarsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeCertificateAuthorityResponse =
+  DescribeCertificateAuthorityResponse'
+    { _dcarsCertificateAuthority :: !(Maybe CertificateAuthority)
+    , _dcarsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeCertificateAuthorityResponse' with the minimum fields required to make a request.

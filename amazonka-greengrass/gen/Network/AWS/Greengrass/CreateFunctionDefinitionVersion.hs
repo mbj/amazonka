@@ -50,11 +50,13 @@ import Network.AWS.Response
 -- | Information needed to create a function definition version.
 --
 -- /See:/ 'createFunctionDefinitionVersion' smart constructor.
-data CreateFunctionDefinitionVersion = CreateFunctionDefinitionVersion'
-  { _cfdvAmznClientToken      :: !(Maybe Text)
-  , _cfdvFunctions            :: !(Maybe [Function])
-  , _cfdvFunctionDefinitionId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateFunctionDefinitionVersion =
+  CreateFunctionDefinitionVersion'
+    { _cfdvAmznClientToken      :: !(Maybe Text)
+    , _cfdvFunctions            :: !(Maybe [Function])
+    , _cfdvFunctionDefinitionId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateFunctionDefinitionVersion' with the minimum fields required to make a request.
@@ -132,13 +134,15 @@ instance ToQuery CreateFunctionDefinitionVersion
         toQuery = const mempty
 
 -- | /See:/ 'createFunctionDefinitionVersionResponse' smart constructor.
-data CreateFunctionDefinitionVersionResponse = CreateFunctionDefinitionVersionResponse'
-  { _cfdvrsARN               :: !(Maybe Text)
-  , _cfdvrsCreationTimestamp :: !(Maybe Text)
-  , _cfdvrsVersion           :: !(Maybe Text)
-  , _cfdvrsId                :: !(Maybe Text)
-  , _cfdvrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateFunctionDefinitionVersionResponse =
+  CreateFunctionDefinitionVersionResponse'
+    { _cfdvrsARN               :: !(Maybe Text)
+    , _cfdvrsCreationTimestamp :: !(Maybe Text)
+    , _cfdvrsVersion           :: !(Maybe Text)
+    , _cfdvrsId                :: !(Maybe Text)
+    , _cfdvrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateFunctionDefinitionVersionResponse' with the minimum fields required to make a request.

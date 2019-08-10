@@ -52,10 +52,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'reportTaskProgress' smart constructor.
-data ReportTaskProgress = ReportTaskProgress'
-  { _rtpFields :: !(Maybe [Field])
-  , _rtpTaskId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReportTaskProgress =
+  ReportTaskProgress'
+    { _rtpFields :: !(Maybe [Field])
+    , _rtpTaskId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReportTaskProgress' with the minimum fields required to make a request.
@@ -121,10 +123,12 @@ instance ToQuery ReportTaskProgress where
 --
 --
 -- /See:/ 'reportTaskProgressResponse' smart constructor.
-data ReportTaskProgressResponse = ReportTaskProgressResponse'
-  { _rtprsResponseStatus :: !Int
-  , _rtprsCanceled       :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReportTaskProgressResponse =
+  ReportTaskProgressResponse'
+    { _rtprsResponseStatus :: !Int
+    , _rtprsCanceled       :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReportTaskProgressResponse' with the minimum fields required to make a request.

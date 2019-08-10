@@ -49,10 +49,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createDirectory' smart constructor.
-data CreateDirectory = CreateDirectory'
-  { _cdName      :: !Text
-  , _cdSchemaARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDirectory =
+  CreateDirectory'
+    { _cdName      :: !Text
+    , _cdSchemaARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDirectory' with the minimum fields required to make a request.
@@ -111,13 +113,15 @@ instance ToQuery CreateDirectory where
         toQuery = const mempty
 
 -- | /See:/ 'createDirectoryResponse' smart constructor.
-data CreateDirectoryResponse = CreateDirectoryResponse'
-  { _cdrsResponseStatus   :: !Int
-  , _cdrsDirectoryARN     :: !Text
-  , _cdrsName             :: !Text
-  , _cdrsObjectIdentifier :: !Text
-  , _cdrsAppliedSchemaARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDirectoryResponse =
+  CreateDirectoryResponse'
+    { _cdrsResponseStatus   :: !Int
+    , _cdrsDirectoryARN     :: !Text
+    , _cdrsName             :: !Text
+    , _cdrsObjectIdentifier :: !Text
+    , _cdrsAppliedSchemaARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDirectoryResponse' with the minimum fields required to make a request.

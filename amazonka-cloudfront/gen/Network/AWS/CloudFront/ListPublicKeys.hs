@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listPublicKeys' smart constructor.
-data ListPublicKeys = ListPublicKeys'
-  { _lpkMarker   :: !(Maybe Text)
-  , _lpkMaxItems :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListPublicKeys =
+  ListPublicKeys'
+    { _lpkMarker   :: !(Maybe Text)
+    , _lpkMaxItems :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListPublicKeys' with the minimum fields required to make a request.
@@ -97,10 +99,12 @@ instance ToQuery ListPublicKeys where
               ["Marker" =: _lpkMarker, "MaxItems" =: _lpkMaxItems]
 
 -- | /See:/ 'listPublicKeysResponse' smart constructor.
-data ListPublicKeysResponse = ListPublicKeysResponse'
-  { _lpkrsPublicKeyList  :: !(Maybe PublicKeyList)
-  , _lpkrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListPublicKeysResponse =
+  ListPublicKeysResponse'
+    { _lpkrsPublicKeyList  :: !(Maybe PublicKeyList)
+    , _lpkrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListPublicKeysResponse' with the minimum fields required to make a request.

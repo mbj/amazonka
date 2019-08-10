@@ -46,11 +46,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'setDesiredCapacity' smart constructor.
-data SetDesiredCapacity = SetDesiredCapacity'
-  { _sdcHonorCooldown        :: !(Maybe Bool)
-  , _sdcAutoScalingGroupName :: !Text
-  , _sdcDesiredCapacity      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SetDesiredCapacity =
+  SetDesiredCapacity'
+    { _sdcHonorCooldown        :: !(Maybe Bool)
+    , _sdcAutoScalingGroupName :: !Text
+    , _sdcDesiredCapacity      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetDesiredCapacity' with the minimum fields required to make a request.

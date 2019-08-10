@@ -26,11 +26,13 @@ import Network.AWS.RDS.Types.Sum
 --
 --
 -- /See:/ 'accountQuota' smart constructor.
-data AccountQuota = AccountQuota'
-  { _aqMax              :: !(Maybe Integer)
-  , _aqUsed             :: !(Maybe Integer)
-  , _aqAccountQuotaName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AccountQuota =
+  AccountQuota'
+    { _aqMax              :: !(Maybe Integer)
+    , _aqUsed             :: !(Maybe Integer)
+    , _aqAccountQuotaName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AccountQuota' with the minimum fields required to make a request.
@@ -82,9 +84,11 @@ instance NFData AccountQuota where
 --
 --
 -- /See:/ 'availabilityZone' smart constructor.
-newtype AvailabilityZone = AvailabilityZone'
-  { _azName :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AvailabilityZone =
+  AvailabilityZone'
+    { _azName :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AvailabilityZone' with the minimum fields required to make a request.
@@ -113,14 +117,16 @@ instance NFData AvailabilityZone where
 --
 --
 -- /See:/ 'certificate' smart constructor.
-data Certificate = Certificate'
-  { _cCertificateType       :: !(Maybe Text)
-  , _cCertificateARN        :: !(Maybe Text)
-  , _cValidTill             :: !(Maybe ISO8601)
-  , _cCertificateIdentifier :: !(Maybe Text)
-  , _cThumbprint            :: !(Maybe Text)
-  , _cValidFrom             :: !(Maybe ISO8601)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Certificate =
+  Certificate'
+    { _cCertificateType       :: !(Maybe Text)
+    , _cCertificateARN        :: !(Maybe Text)
+    , _cValidTill             :: !(Maybe ISO8601)
+    , _cCertificateIdentifier :: !(Maybe Text)
+    , _cThumbprint            :: !(Maybe Text)
+    , _cValidFrom             :: !(Maybe ISO8601)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Certificate' with the minimum fields required to make a request.
@@ -194,10 +200,12 @@ instance NFData Certificate where
 --
 --
 -- /See:/ 'characterSet' smart constructor.
-data CharacterSet = CharacterSet'
-  { _csCharacterSetName        :: !(Maybe Text)
-  , _csCharacterSetDescription :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CharacterSet =
+  CharacterSet'
+    { _csCharacterSetName        :: !(Maybe Text)
+    , _csCharacterSetDescription :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CharacterSet' with the minimum fields required to make a request.
@@ -237,10 +245,12 @@ instance NFData CharacterSet where
 --
 --
 -- /See:/ 'cloudwatchLogsExportConfiguration' smart constructor.
-data CloudwatchLogsExportConfiguration = CloudwatchLogsExportConfiguration'
-  { _clecDisableLogTypes :: !(Maybe [Text])
-  , _clecEnableLogTypes  :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CloudwatchLogsExportConfiguration =
+  CloudwatchLogsExportConfiguration'
+    { _clecDisableLogTypes :: !(Maybe [Text])
+    , _clecEnableLogTypes  :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CloudwatchLogsExportConfiguration' with the minimum fields required to make a request.
@@ -289,46 +299,48 @@ instance ToQuery CloudwatchLogsExportConfiguration
 --
 --
 -- /See:/ 'dbCluster' smart constructor.
-data DBCluster = DBCluster'
-  { _dcBacktrackConsumedChangeRecords   :: !(Maybe Integer)
-  , _dcEngineVersion                    :: !(Maybe Text)
-  , _dcStatus                           :: !(Maybe Text)
-  , _dcStorageEncrypted                 :: !(Maybe Bool)
-  , _dcDBClusterIdentifier              :: !(Maybe Text)
-  , _dcDBClusterMembers                 :: !(Maybe [DBClusterMember])
-  , _dcReadReplicaIdentifiers           :: !(Maybe [Text])
-  , _dcReplicationSourceIdentifier      :: !(Maybe Text)
-  , _dcHostedZoneId                     :: !(Maybe Text)
-  , _dcDBClusterParameterGroup          :: !(Maybe Text)
-  , _dcMasterUsername                   :: !(Maybe Text)
-  , _dcIAMDatabaseAuthenticationEnabled :: !(Maybe Bool)
-  , _dcEarliestBacktrackTime            :: !(Maybe ISO8601)
-  , _dcBacktrackWindow                  :: !(Maybe Integer)
-  , _dcDBClusterResourceId              :: !(Maybe Text)
-  , _dcEarliestRestorableTime           :: !(Maybe ISO8601)
-  , _dcEngine                           :: !(Maybe Text)
-  , _dcDBClusterARN                     :: !(Maybe Text)
-  , _dcCloneGroupId                     :: !(Maybe Text)
-  , _dcLatestRestorableTime             :: !(Maybe ISO8601)
-  , _dcPreferredMaintenanceWindow       :: !(Maybe Text)
-  , _dcAvailabilityZones                :: !(Maybe [Text])
-  , _dcCharacterSetName                 :: !(Maybe Text)
-  , _dcKMSKeyId                         :: !(Maybe Text)
-  , _dcPreferredBackupWindow            :: !(Maybe Text)
-  , _dcAssociatedRoles                  :: !(Maybe [DBClusterRole])
-  , _dcVPCSecurityGroups                :: !(Maybe [VPCSecurityGroupMembership])
-  , _dcBackupRetentionPeriod            :: !(Maybe Int)
-  , _dcDBSubnetGroup                    :: !(Maybe Text)
-  , _dcDatabaseName                     :: !(Maybe Text)
-  , _dcMultiAZ                          :: !(Maybe Bool)
-  , _dcAllocatedStorage                 :: !(Maybe Int)
-  , _dcClusterCreateTime                :: !(Maybe ISO8601)
-  , _dcEndpoint                         :: !(Maybe Text)
-  , _dcPercentProgress                  :: !(Maybe Text)
-  , _dcReaderEndpoint                   :: !(Maybe Text)
-  , _dcPort                             :: !(Maybe Int)
-  , _dcDBClusterOptionGroupMemberships  :: !(Maybe [DBClusterOptionGroupStatus])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DBCluster =
+  DBCluster'
+    { _dcBacktrackConsumedChangeRecords :: !(Maybe Integer)
+    , _dcEngineVersion :: !(Maybe Text)
+    , _dcStatus :: !(Maybe Text)
+    , _dcStorageEncrypted :: !(Maybe Bool)
+    , _dcDBClusterIdentifier :: !(Maybe Text)
+    , _dcDBClusterMembers :: !(Maybe [DBClusterMember])
+    , _dcReadReplicaIdentifiers :: !(Maybe [Text])
+    , _dcReplicationSourceIdentifier :: !(Maybe Text)
+    , _dcHostedZoneId :: !(Maybe Text)
+    , _dcDBClusterParameterGroup :: !(Maybe Text)
+    , _dcMasterUsername :: !(Maybe Text)
+    , _dcIAMDatabaseAuthenticationEnabled :: !(Maybe Bool)
+    , _dcEarliestBacktrackTime :: !(Maybe ISO8601)
+    , _dcBacktrackWindow :: !(Maybe Integer)
+    , _dcDBClusterResourceId :: !(Maybe Text)
+    , _dcEarliestRestorableTime :: !(Maybe ISO8601)
+    , _dcEngine :: !(Maybe Text)
+    , _dcDBClusterARN :: !(Maybe Text)
+    , _dcCloneGroupId :: !(Maybe Text)
+    , _dcLatestRestorableTime :: !(Maybe ISO8601)
+    , _dcPreferredMaintenanceWindow :: !(Maybe Text)
+    , _dcAvailabilityZones :: !(Maybe [Text])
+    , _dcCharacterSetName :: !(Maybe Text)
+    , _dcKMSKeyId :: !(Maybe Text)
+    , _dcPreferredBackupWindow :: !(Maybe Text)
+    , _dcAssociatedRoles :: !(Maybe [DBClusterRole])
+    , _dcVPCSecurityGroups :: !(Maybe [VPCSecurityGroupMembership])
+    , _dcBackupRetentionPeriod :: !(Maybe Int)
+    , _dcDBSubnetGroup :: !(Maybe Text)
+    , _dcDatabaseName :: !(Maybe Text)
+    , _dcMultiAZ :: !(Maybe Bool)
+    , _dcAllocatedStorage :: !(Maybe Int)
+    , _dcClusterCreateTime :: !(Maybe ISO8601)
+    , _dcEndpoint :: !(Maybe Text)
+    , _dcPercentProgress :: !(Maybe Text)
+    , _dcReaderEndpoint :: !(Maybe Text)
+    , _dcPort :: !(Maybe Int)
+    , _dcDBClusterOptionGroupMemberships :: !(Maybe [DBClusterOptionGroupStatus])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DBCluster' with the minimum fields required to make a request.
@@ -670,14 +682,16 @@ instance NFData DBCluster where
 --
 --
 -- /See:/ 'dbClusterBacktrack' smart constructor.
-data DBClusterBacktrack = DBClusterBacktrack'
-  { _dcbStatus                       :: !(Maybe Text)
-  , _dcbBacktrackIdentifier          :: !(Maybe Text)
-  , _dcbBacktrackTo                  :: !(Maybe ISO8601)
-  , _dcbDBClusterIdentifier          :: !(Maybe Text)
-  , _dcbBacktrackedFrom              :: !(Maybe ISO8601)
-  , _dcbBacktrackRequestCreationTime :: !(Maybe ISO8601)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DBClusterBacktrack =
+  DBClusterBacktrack'
+    { _dcbStatus                       :: !(Maybe Text)
+    , _dcbBacktrackIdentifier          :: !(Maybe Text)
+    , _dcbBacktrackTo                  :: !(Maybe ISO8601)
+    , _dcbDBClusterIdentifier          :: !(Maybe Text)
+    , _dcbBacktrackedFrom              :: !(Maybe ISO8601)
+    , _dcbBacktrackRequestCreationTime :: !(Maybe ISO8601)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DBClusterBacktrack' with the minimum fields required to make a request.
@@ -750,12 +764,14 @@ instance NFData DBClusterBacktrack where
 --
 --
 -- /See:/ 'dbClusterMember' smart constructor.
-data DBClusterMember = DBClusterMember'
-  { _dcmPromotionTier                 :: !(Maybe Int)
-  , _dcmDBInstanceIdentifier          :: !(Maybe Text)
-  , _dcmIsClusterWriter               :: !(Maybe Bool)
-  , _dcmDBClusterParameterGroupStatus :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DBClusterMember =
+  DBClusterMember'
+    { _dcmPromotionTier                 :: !(Maybe Int)
+    , _dcmDBInstanceIdentifier          :: !(Maybe Text)
+    , _dcmIsClusterWriter               :: !(Maybe Bool)
+    , _dcmDBClusterParameterGroupStatus :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DBClusterMember' with the minimum fields required to make a request.
@@ -813,10 +829,12 @@ instance NFData DBClusterMember where
 --
 --
 -- /See:/ 'dbClusterOptionGroupStatus' smart constructor.
-data DBClusterOptionGroupStatus = DBClusterOptionGroupStatus'
-  { _dcogsStatus                   :: !(Maybe Text)
-  , _dcogsDBClusterOptionGroupName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DBClusterOptionGroupStatus =
+  DBClusterOptionGroupStatus'
+    { _dcogsStatus                   :: !(Maybe Text)
+    , _dcogsDBClusterOptionGroupName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DBClusterOptionGroupStatus' with the minimum fields required to make a request.
@@ -858,12 +876,14 @@ instance NFData DBClusterOptionGroupStatus where
 --
 --
 -- /See:/ 'dbClusterParameterGroup' smart constructor.
-data DBClusterParameterGroup = DBClusterParameterGroup'
-  { _dcpgDBClusterParameterGroupARN  :: !(Maybe Text)
-  , _dcpgDBParameterGroupFamily      :: !(Maybe Text)
-  , _dcpgDBClusterParameterGroupName :: !(Maybe Text)
-  , _dcpgDescription                 :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DBClusterParameterGroup =
+  DBClusterParameterGroup'
+    { _dcpgDBClusterParameterGroupARN  :: !(Maybe Text)
+    , _dcpgDBParameterGroupFamily      :: !(Maybe Text)
+    , _dcpgDBClusterParameterGroupName :: !(Maybe Text)
+    , _dcpgDescription                 :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DBClusterParameterGroup' with the minimum fields required to make a request.
@@ -921,9 +941,11 @@ instance NFData DBClusterParameterGroup where
 --
 --
 -- /See:/ 'dbClusterParameterGroupNameMessage' smart constructor.
-newtype DBClusterParameterGroupNameMessage = DBClusterParameterGroupNameMessage'
-  { _dcpgnmDBClusterParameterGroupName :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DBClusterParameterGroupNameMessage =
+  DBClusterParameterGroupNameMessage'
+    { _dcpgnmDBClusterParameterGroupName :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DBClusterParameterGroupNameMessage' with the minimum fields required to make a request.
@@ -959,10 +981,12 @@ instance NFData DBClusterParameterGroupNameMessage
 --
 --
 -- /See:/ 'dbClusterRole' smart constructor.
-data DBClusterRole = DBClusterRole'
-  { _dcrStatus  :: !(Maybe Text)
-  , _dcrRoleARN :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DBClusterRole =
+  DBClusterRole'
+    { _dcrStatus  :: !(Maybe Text)
+    , _dcrRoleARN :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DBClusterRole' with the minimum fields required to make a request.
@@ -1001,28 +1025,30 @@ instance NFData DBClusterRole where
 --
 --
 -- /See:/ 'dbClusterSnapshot' smart constructor.
-data DBClusterSnapshot = DBClusterSnapshot'
-  { _dcsEngineVersion                    :: !(Maybe Text)
-  , _dcsStatus                           :: !(Maybe Text)
-  , _dcsStorageEncrypted                 :: !(Maybe Bool)
-  , _dcsDBClusterIdentifier              :: !(Maybe Text)
-  , _dcsMasterUsername                   :: !(Maybe Text)
-  , _dcsIAMDatabaseAuthenticationEnabled :: !(Maybe Bool)
-  , _dcsDBClusterSnapshotARN             :: !(Maybe Text)
-  , _dcsVPCId                            :: !(Maybe Text)
-  , _dcsDBClusterSnapshotIdentifier      :: !(Maybe Text)
-  , _dcsEngine                           :: !(Maybe Text)
-  , _dcsLicenseModel                     :: !(Maybe Text)
-  , _dcsAvailabilityZones                :: !(Maybe [Text])
-  , _dcsSnapshotType                     :: !(Maybe Text)
-  , _dcsKMSKeyId                         :: !(Maybe Text)
-  , _dcsSnapshotCreateTime               :: !(Maybe ISO8601)
-  , _dcsAllocatedStorage                 :: !(Maybe Int)
-  , _dcsSourceDBClusterSnapshotARN       :: !(Maybe Text)
-  , _dcsClusterCreateTime                :: !(Maybe ISO8601)
-  , _dcsPercentProgress                  :: !(Maybe Int)
-  , _dcsPort                             :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DBClusterSnapshot =
+  DBClusterSnapshot'
+    { _dcsEngineVersion                    :: !(Maybe Text)
+    , _dcsStatus                           :: !(Maybe Text)
+    , _dcsStorageEncrypted                 :: !(Maybe Bool)
+    , _dcsDBClusterIdentifier              :: !(Maybe Text)
+    , _dcsMasterUsername                   :: !(Maybe Text)
+    , _dcsIAMDatabaseAuthenticationEnabled :: !(Maybe Bool)
+    , _dcsDBClusterSnapshotARN             :: !(Maybe Text)
+    , _dcsVPCId                            :: !(Maybe Text)
+    , _dcsDBClusterSnapshotIdentifier      :: !(Maybe Text)
+    , _dcsEngine                           :: !(Maybe Text)
+    , _dcsLicenseModel                     :: !(Maybe Text)
+    , _dcsAvailabilityZones                :: !(Maybe [Text])
+    , _dcsSnapshotType                     :: !(Maybe Text)
+    , _dcsKMSKeyId                         :: !(Maybe Text)
+    , _dcsSnapshotCreateTime               :: !(Maybe ISO8601)
+    , _dcsAllocatedStorage                 :: !(Maybe Int)
+    , _dcsSourceDBClusterSnapshotARN       :: !(Maybe Text)
+    , _dcsClusterCreateTime                :: !(Maybe ISO8601)
+    , _dcsPercentProgress                  :: !(Maybe Int)
+    , _dcsPort                             :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DBClusterSnapshot' with the minimum fields required to make a request.
@@ -1211,10 +1237,12 @@ instance NFData DBClusterSnapshot where
 --
 --
 -- /See:/ 'dbClusterSnapshotAttribute' smart constructor.
-data DBClusterSnapshotAttribute = DBClusterSnapshotAttribute'
-  { _dcsaAttributeValues :: !(Maybe [Text])
-  , _dcsaAttributeName   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DBClusterSnapshotAttribute =
+  DBClusterSnapshotAttribute'
+    { _dcsaAttributeValues :: !(Maybe [Text])
+    , _dcsaAttributeName   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DBClusterSnapshotAttribute' with the minimum fields required to make a request.
@@ -1257,10 +1285,12 @@ instance NFData DBClusterSnapshotAttribute where
 --
 --
 -- /See:/ 'dbClusterSnapshotAttributesResult' smart constructor.
-data DBClusterSnapshotAttributesResult = DBClusterSnapshotAttributesResult'
-  { _dcsarDBClusterSnapshotIdentifier :: !(Maybe Text)
-  , _dcsarDBClusterSnapshotAttributes :: !(Maybe [DBClusterSnapshotAttribute])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DBClusterSnapshotAttributesResult =
+  DBClusterSnapshotAttributesResult'
+    { _dcsarDBClusterSnapshotIdentifier :: !(Maybe Text)
+    , _dcsarDBClusterSnapshotAttributes :: !(Maybe [DBClusterSnapshotAttribute])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DBClusterSnapshotAttributesResult' with the minimum fields required to make a request.
@@ -1306,20 +1336,22 @@ instance NFData DBClusterSnapshotAttributesResult
 --
 --
 -- /See:/ 'dbEngineVersion' smart constructor.
-data DBEngineVersion = DBEngineVersion'
-  { _devEngineVersion                      :: !(Maybe Text)
-  , _devDBEngineVersionDescription         :: !(Maybe Text)
-  , _devDefaultCharacterSet                :: !(Maybe CharacterSet)
-  , _devEngine                             :: !(Maybe Text)
-  , _devDBParameterGroupFamily             :: !(Maybe Text)
-  , _devSupportedCharacterSets             :: !(Maybe [CharacterSet])
-  , _devDBEngineDescription                :: !(Maybe Text)
-  , _devValidUpgradeTarget                 :: !(Maybe [UpgradeTarget])
-  , _devSupportsLogExportsToCloudwatchLogs :: !(Maybe Bool)
-  , _devSupportsReadReplica                :: !(Maybe Bool)
-  , _devSupportedTimezones                 :: !(Maybe [Timezone])
-  , _devExportableLogTypes                 :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DBEngineVersion =
+  DBEngineVersion'
+    { _devEngineVersion                      :: !(Maybe Text)
+    , _devDBEngineVersionDescription         :: !(Maybe Text)
+    , _devDefaultCharacterSet                :: !(Maybe CharacterSet)
+    , _devEngine                             :: !(Maybe Text)
+    , _devDBParameterGroupFamily             :: !(Maybe Text)
+    , _devSupportedCharacterSets             :: !(Maybe [CharacterSet])
+    , _devDBEngineDescription                :: !(Maybe Text)
+    , _devValidUpgradeTarget                 :: !(Maybe [UpgradeTarget])
+    , _devSupportsLogExportsToCloudwatchLogs :: !(Maybe Bool)
+    , _devSupportsReadReplica                :: !(Maybe Bool)
+    , _devSupportedTimezones                 :: !(Maybe [Timezone])
+    , _devExportableLogTypes                 :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DBEngineVersion' with the minimum fields required to make a request.
@@ -1451,60 +1483,62 @@ instance NFData DBEngineVersion where
 --
 --
 -- /See:/ 'dbInstance' smart constructor.
-data DBInstance = DBInstance'
-  { _diEngineVersion :: !(Maybe Text)
-  , _diDBSecurityGroups :: !(Maybe [DBSecurityGroupMembership])
-  , _diStorageEncrypted :: !(Maybe Bool)
-  , _diDBClusterIdentifier :: !(Maybe Text)
-  , _diPubliclyAccessible :: !(Maybe Bool)
-  , _diAutoMinorVersionUpgrade :: !(Maybe Bool)
-  , _diDBInstanceARN :: !(Maybe Text)
-  , _diMasterUsername :: !(Maybe Text)
-  , _diReadReplicaDBInstanceIdentifiers :: !(Maybe [Text])
-  , _diIAMDatabaseAuthenticationEnabled :: !(Maybe Bool)
-  , _diMonitoringRoleARN :: !(Maybe Text)
-  , _diIOPS :: !(Maybe Int)
-  , _diInstanceCreateTime :: !(Maybe ISO8601)
-  , _diReadReplicaSourceDBInstanceIdentifier :: !(Maybe Text)
-  , _diMonitoringInterval :: !(Maybe Int)
-  , _diEngine :: !(Maybe Text)
-  , _diLatestRestorableTime :: !(Maybe ISO8601)
-  , _diDBInstanceClass :: !(Maybe Text)
-  , _diPromotionTier :: !(Maybe Int)
-  , _diLicenseModel :: !(Maybe Text)
-  , _diPreferredMaintenanceWindow :: !(Maybe Text)
-  , _diCACertificateIdentifier :: !(Maybe Text)
-  , _diDBInstanceIdentifier :: !(Maybe Text)
-  , _diCharacterSetName :: !(Maybe Text)
-  , _diKMSKeyId :: !(Maybe Text)
-  , _diPreferredBackupWindow :: !(Maybe Text)
-  , _diAvailabilityZone :: !(Maybe Text)
-  , _diVPCSecurityGroups :: !(Maybe [VPCSecurityGroupMembership])
-  , _diBackupRetentionPeriod :: !(Maybe Int)
-  , _diPerformanceInsightsKMSKeyId :: !(Maybe Text)
-  , _diDBSubnetGroup :: !(Maybe DBSubnetGroup)
-  , _diMultiAZ :: !(Maybe Bool)
-  , _diOptionGroupMemberships :: !(Maybe [OptionGroupMembership])
-  , _diEnabledCloudwatchLogsExports :: !(Maybe [Text])
-  , _diEnhancedMonitoringResourceARN :: !(Maybe Text)
-  , _diSecondaryAvailabilityZone :: !(Maybe Text)
-  , _diPerformanceInsightsEnabled :: !(Maybe Bool)
-  , _diAllocatedStorage :: !(Maybe Int)
-  , _diDBiResourceId :: !(Maybe Text)
-  , _diDBParameterGroups :: !(Maybe [DBParameterGroupStatus])
-  , _diCopyTagsToSnapshot :: !(Maybe Bool)
-  , _diTimezone :: !(Maybe Text)
-  , _diTDECredentialARN :: !(Maybe Text)
-  , _diEndpoint :: !(Maybe Endpoint)
-  , _diDBInstanceStatus :: !(Maybe Text)
-  , _diDBInstancePort :: !(Maybe Int)
-  , _diPendingModifiedValues :: !(Maybe PendingModifiedValues)
-  , _diReadReplicaDBClusterIdentifiers :: !(Maybe [Text])
-  , _diStorageType :: !(Maybe Text)
-  , _diStatusInfos :: !(Maybe [DBInstanceStatusInfo])
-  , _diDomainMemberships :: !(Maybe [DomainMembership])
-  , _diDBName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DBInstance =
+  DBInstance'
+    { _diEngineVersion :: !(Maybe Text)
+    , _diDBSecurityGroups :: !(Maybe [DBSecurityGroupMembership])
+    , _diStorageEncrypted :: !(Maybe Bool)
+    , _diDBClusterIdentifier :: !(Maybe Text)
+    , _diPubliclyAccessible :: !(Maybe Bool)
+    , _diAutoMinorVersionUpgrade :: !(Maybe Bool)
+    , _diDBInstanceARN :: !(Maybe Text)
+    , _diMasterUsername :: !(Maybe Text)
+    , _diReadReplicaDBInstanceIdentifiers :: !(Maybe [Text])
+    , _diIAMDatabaseAuthenticationEnabled :: !(Maybe Bool)
+    , _diMonitoringRoleARN :: !(Maybe Text)
+    , _diIOPS :: !(Maybe Int)
+    , _diInstanceCreateTime :: !(Maybe ISO8601)
+    , _diReadReplicaSourceDBInstanceIdentifier :: !(Maybe Text)
+    , _diMonitoringInterval :: !(Maybe Int)
+    , _diEngine :: !(Maybe Text)
+    , _diLatestRestorableTime :: !(Maybe ISO8601)
+    , _diDBInstanceClass :: !(Maybe Text)
+    , _diPromotionTier :: !(Maybe Int)
+    , _diLicenseModel :: !(Maybe Text)
+    , _diPreferredMaintenanceWindow :: !(Maybe Text)
+    , _diCACertificateIdentifier :: !(Maybe Text)
+    , _diDBInstanceIdentifier :: !(Maybe Text)
+    , _diCharacterSetName :: !(Maybe Text)
+    , _diKMSKeyId :: !(Maybe Text)
+    , _diPreferredBackupWindow :: !(Maybe Text)
+    , _diAvailabilityZone :: !(Maybe Text)
+    , _diVPCSecurityGroups :: !(Maybe [VPCSecurityGroupMembership])
+    , _diBackupRetentionPeriod :: !(Maybe Int)
+    , _diPerformanceInsightsKMSKeyId :: !(Maybe Text)
+    , _diDBSubnetGroup :: !(Maybe DBSubnetGroup)
+    , _diMultiAZ :: !(Maybe Bool)
+    , _diOptionGroupMemberships :: !(Maybe [OptionGroupMembership])
+    , _diEnabledCloudwatchLogsExports :: !(Maybe [Text])
+    , _diEnhancedMonitoringResourceARN :: !(Maybe Text)
+    , _diSecondaryAvailabilityZone :: !(Maybe Text)
+    , _diPerformanceInsightsEnabled :: !(Maybe Bool)
+    , _diAllocatedStorage :: !(Maybe Int)
+    , _diDBiResourceId :: !(Maybe Text)
+    , _diDBParameterGroups :: !(Maybe [DBParameterGroupStatus])
+    , _diCopyTagsToSnapshot :: !(Maybe Bool)
+    , _diTimezone :: !(Maybe Text)
+    , _diTDECredentialARN :: !(Maybe Text)
+    , _diEndpoint :: !(Maybe Endpoint)
+    , _diDBInstanceStatus :: !(Maybe Text)
+    , _diDBInstancePort :: !(Maybe Int)
+    , _diPendingModifiedValues :: !(Maybe PendingModifiedValues)
+    , _diReadReplicaDBClusterIdentifiers :: !(Maybe [Text])
+    , _diStorageType :: !(Maybe Text)
+    , _diStatusInfos :: !(Maybe [DBInstanceStatusInfo])
+    , _diDomainMemberships :: !(Maybe [DomainMembership])
+    , _diDBName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DBInstance' with the minimum fields required to make a request.
@@ -1965,12 +1999,14 @@ instance NFData DBInstance where
 --
 --
 -- /See:/ 'dbInstanceStatusInfo' smart constructor.
-data DBInstanceStatusInfo = DBInstanceStatusInfo'
-  { _disiStatus     :: !(Maybe Text)
-  , _disiNormal     :: !(Maybe Bool)
-  , _disiStatusType :: !(Maybe Text)
-  , _disiMessage    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DBInstanceStatusInfo =
+  DBInstanceStatusInfo'
+    { _disiStatus     :: !(Maybe Text)
+    , _disiNormal     :: !(Maybe Bool)
+    , _disiStatusType :: !(Maybe Text)
+    , _disiMessage    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DBInstanceStatusInfo' with the minimum fields required to make a request.
@@ -2029,12 +2065,14 @@ instance NFData DBInstanceStatusInfo where
 --
 --
 -- /See:/ 'dbParameterGroup' smart constructor.
-data DBParameterGroup = DBParameterGroup'
-  { _dpgDBParameterGroupARN    :: !(Maybe Text)
-  , _dpgDBParameterGroupFamily :: !(Maybe Text)
-  , _dpgDBParameterGroupName   :: !(Maybe Text)
-  , _dpgDescription            :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DBParameterGroup =
+  DBParameterGroup'
+    { _dpgDBParameterGroupARN    :: !(Maybe Text)
+    , _dpgDBParameterGroupFamily :: !(Maybe Text)
+    , _dpgDBParameterGroupName   :: !(Maybe Text)
+    , _dpgDescription            :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DBParameterGroup' with the minimum fields required to make a request.
@@ -2092,9 +2130,11 @@ instance NFData DBParameterGroup where
 --
 --
 -- /See:/ 'dbParameterGroupNameMessage' smart constructor.
-newtype DBParameterGroupNameMessage = DBParameterGroupNameMessage'
-  { _dpgnmDBParameterGroupName :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DBParameterGroupNameMessage =
+  DBParameterGroupNameMessage'
+    { _dpgnmDBParameterGroupName :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DBParameterGroupNameMessage' with the minimum fields required to make a request.
@@ -2142,10 +2182,12 @@ instance NFData DBParameterGroupNameMessage where
 --
 --
 -- /See:/ 'dbParameterGroupStatus' smart constructor.
-data DBParameterGroupStatus = DBParameterGroupStatus'
-  { _dpgsDBParameterGroupName :: !(Maybe Text)
-  , _dpgsParameterApplyStatus :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DBParameterGroupStatus =
+  DBParameterGroupStatus'
+    { _dpgsDBParameterGroupName :: !(Maybe Text)
+    , _dpgsParameterApplyStatus :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DBParameterGroupStatus' with the minimum fields required to make a request.
@@ -2187,15 +2229,17 @@ instance NFData DBParameterGroupStatus where
 --
 --
 -- /See:/ 'dbSecurityGroup' smart constructor.
-data DBSecurityGroup = DBSecurityGroup'
-  { _dbsgVPCId                      :: !(Maybe Text)
-  , _dbsgOwnerId                    :: !(Maybe Text)
-  , _dbsgDBSecurityGroupARN         :: !(Maybe Text)
-  , _dbsgIPRanges                   :: !(Maybe [IPRange])
-  , _dbsgDBSecurityGroupName        :: !(Maybe Text)
-  , _dbsgEC2SecurityGroups          :: !(Maybe [EC2SecurityGroup])
-  , _dbsgDBSecurityGroupDescription :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DBSecurityGroup =
+  DBSecurityGroup'
+    { _dbsgVPCId                      :: !(Maybe Text)
+    , _dbsgOwnerId                    :: !(Maybe Text)
+    , _dbsgDBSecurityGroupARN         :: !(Maybe Text)
+    , _dbsgIPRanges                   :: !(Maybe [IPRange])
+    , _dbsgDBSecurityGroupName        :: !(Maybe Text)
+    , _dbsgEC2SecurityGroups          :: !(Maybe [EC2SecurityGroup])
+    , _dbsgDBSecurityGroupDescription :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DBSecurityGroup' with the minimum fields required to make a request.
@@ -2290,10 +2334,12 @@ instance NFData DBSecurityGroup where
 --
 --
 -- /See:/ 'dbSecurityGroupMembership' smart constructor.
-data DBSecurityGroupMembership = DBSecurityGroupMembership'
-  { _dsgmStatus              :: !(Maybe Text)
-  , _dsgmDBSecurityGroupName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DBSecurityGroupMembership =
+  DBSecurityGroupMembership'
+    { _dsgmStatus              :: !(Maybe Text)
+    , _dsgmDBSecurityGroupName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DBSecurityGroupMembership' with the minimum fields required to make a request.
@@ -2334,34 +2380,36 @@ instance NFData DBSecurityGroupMembership where
 --
 --
 -- /See:/ 'dbSnapshot' smart constructor.
-data DBSnapshot = DBSnapshot'
-  { _dsEngineVersion                    :: !(Maybe Text)
-  , _dsStatus                           :: !(Maybe Text)
-  , _dsDBSnapshotARN                    :: !(Maybe Text)
-  , _dsMasterUsername                   :: !(Maybe Text)
-  , _dsSourceRegion                     :: !(Maybe Text)
-  , _dsIAMDatabaseAuthenticationEnabled :: !(Maybe Bool)
-  , _dsIOPS                             :: !(Maybe Int)
-  , _dsVPCId                            :: !(Maybe Text)
-  , _dsInstanceCreateTime               :: !(Maybe ISO8601)
-  , _dsEngine                           :: !(Maybe Text)
-  , _dsEncrypted                        :: !(Maybe Bool)
-  , _dsDBSnapshotIdentifier             :: !(Maybe Text)
-  , _dsLicenseModel                     :: !(Maybe Text)
-  , _dsSourceDBSnapshotIdentifier       :: !(Maybe Text)
-  , _dsSnapshotType                     :: !(Maybe Text)
-  , _dsDBInstanceIdentifier             :: !(Maybe Text)
-  , _dsKMSKeyId                         :: !(Maybe Text)
-  , _dsAvailabilityZone                 :: !(Maybe Text)
-  , _dsSnapshotCreateTime               :: !(Maybe ISO8601)
-  , _dsAllocatedStorage                 :: !(Maybe Int)
-  , _dsOptionGroupName                  :: !(Maybe Text)
-  , _dsTimezone                         :: !(Maybe Text)
-  , _dsTDECredentialARN                 :: !(Maybe Text)
-  , _dsPercentProgress                  :: !(Maybe Int)
-  , _dsPort                             :: !(Maybe Int)
-  , _dsStorageType                      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DBSnapshot =
+  DBSnapshot'
+    { _dsEngineVersion                    :: !(Maybe Text)
+    , _dsStatus                           :: !(Maybe Text)
+    , _dsDBSnapshotARN                    :: !(Maybe Text)
+    , _dsMasterUsername                   :: !(Maybe Text)
+    , _dsSourceRegion                     :: !(Maybe Text)
+    , _dsIAMDatabaseAuthenticationEnabled :: !(Maybe Bool)
+    , _dsIOPS                             :: !(Maybe Int)
+    , _dsVPCId                            :: !(Maybe Text)
+    , _dsInstanceCreateTime               :: !(Maybe ISO8601)
+    , _dsEngine                           :: !(Maybe Text)
+    , _dsEncrypted                        :: !(Maybe Bool)
+    , _dsDBSnapshotIdentifier             :: !(Maybe Text)
+    , _dsLicenseModel                     :: !(Maybe Text)
+    , _dsSourceDBSnapshotIdentifier       :: !(Maybe Text)
+    , _dsSnapshotType                     :: !(Maybe Text)
+    , _dsDBInstanceIdentifier             :: !(Maybe Text)
+    , _dsKMSKeyId                         :: !(Maybe Text)
+    , _dsAvailabilityZone                 :: !(Maybe Text)
+    , _dsSnapshotCreateTime               :: !(Maybe ISO8601)
+    , _dsAllocatedStorage                 :: !(Maybe Int)
+    , _dsOptionGroupName                  :: !(Maybe Text)
+    , _dsTimezone                         :: !(Maybe Text)
+    , _dsTDECredentialARN                 :: !(Maybe Text)
+    , _dsPercentProgress                  :: !(Maybe Int)
+    , _dsPort                             :: !(Maybe Int)
+    , _dsStorageType                      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DBSnapshot' with the minimum fields required to make a request.
@@ -2596,10 +2644,12 @@ instance NFData DBSnapshot where
 --
 --
 -- /See:/ 'dbSnapshotAttribute' smart constructor.
-data DBSnapshotAttribute = DBSnapshotAttribute'
-  { _dsaAttributeValues :: !(Maybe [Text])
-  , _dsaAttributeName   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DBSnapshotAttribute =
+  DBSnapshotAttribute'
+    { _dsaAttributeValues :: !(Maybe [Text])
+    , _dsaAttributeName   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DBSnapshotAttribute' with the minimum fields required to make a request.
@@ -2642,10 +2692,12 @@ instance NFData DBSnapshotAttribute where
 --
 --
 -- /See:/ 'dbSnapshotAttributesResult' smart constructor.
-data DBSnapshotAttributesResult = DBSnapshotAttributesResult'
-  { _dsarDBSnapshotIdentifier :: !(Maybe Text)
-  , _dsarDBSnapshotAttributes :: !(Maybe [DBSnapshotAttribute])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DBSnapshotAttributesResult =
+  DBSnapshotAttributesResult'
+    { _dsarDBSnapshotIdentifier :: !(Maybe Text)
+    , _dsarDBSnapshotAttributes :: !(Maybe [DBSnapshotAttribute])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DBSnapshotAttributesResult' with the minimum fields required to make a request.
@@ -2688,14 +2740,16 @@ instance NFData DBSnapshotAttributesResult where
 --
 --
 -- /See:/ 'dbSubnetGroup' smart constructor.
-data DBSubnetGroup = DBSubnetGroup'
-  { _dsgDBSubnetGroupName        :: !(Maybe Text)
-  , _dsgVPCId                    :: !(Maybe Text)
-  , _dsgSubnets                  :: !(Maybe [Subnet])
-  , _dsgDBSubnetGroupDescription :: !(Maybe Text)
-  , _dsgDBSubnetGroupARN         :: !(Maybe Text)
-  , _dsgSubnetGroupStatus        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DBSubnetGroup =
+  DBSubnetGroup'
+    { _dsgDBSubnetGroupName        :: !(Maybe Text)
+    , _dsgVPCId                    :: !(Maybe Text)
+    , _dsgSubnets                  :: !(Maybe [Subnet])
+    , _dsgDBSubnetGroupDescription :: !(Maybe Text)
+    , _dsgDBSubnetGroupARN         :: !(Maybe Text)
+    , _dsgSubnetGroupStatus        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DBSubnetGroup' with the minimum fields required to make a request.
@@ -2769,11 +2823,13 @@ instance NFData DBSubnetGroup where
 --
 --
 -- /See:/ 'describeDBLogFilesDetails' smart constructor.
-data DescribeDBLogFilesDetails = DescribeDBLogFilesDetails'
-  { _ddlfdLastWritten :: !(Maybe Integer)
-  , _ddlfdSize        :: !(Maybe Integer)
-  , _ddlfdLogFileName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDBLogFilesDetails =
+  DescribeDBLogFilesDetails'
+    { _ddlfdLastWritten :: !(Maybe Integer)
+    , _ddlfdSize        :: !(Maybe Integer)
+    , _ddlfdLogFileName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDBLogFilesDetails' with the minimum fields required to make a request.
@@ -2822,12 +2878,14 @@ instance NFData DescribeDBLogFilesDetails where
 --
 --
 -- /See:/ 'domainMembership' smart constructor.
-data DomainMembership = DomainMembership'
-  { _dmStatus      :: !(Maybe Text)
-  , _dmFQDN        :: !(Maybe Text)
-  , _dmDomain      :: !(Maybe Text)
-  , _dmIAMRoleName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DomainMembership =
+  DomainMembership'
+    { _dmStatus      :: !(Maybe Text)
+    , _dmFQDN        :: !(Maybe Text)
+    , _dmDomain      :: !(Maybe Text)
+    , _dmIAMRoleName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DomainMembership' with the minimum fields required to make a request.
@@ -2884,10 +2942,12 @@ instance NFData DomainMembership where
 --
 --
 -- /See:/ 'doubleRange' smart constructor.
-data DoubleRange = DoubleRange'
-  { _drTo   :: !(Maybe Double)
-  , _drFrom :: !(Maybe Double)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DoubleRange =
+  DoubleRange'
+    { _drTo   :: !(Maybe Double)
+    , _drFrom :: !(Maybe Double)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DoubleRange' with the minimum fields required to make a request.
@@ -2931,12 +2991,14 @@ instance NFData DoubleRange where
 --
 --
 -- /See:/ 'ec2SecurityGroup' smart constructor.
-data EC2SecurityGroup = EC2SecurityGroup'
-  { _esgStatus                  :: !(Maybe Text)
-  , _esgEC2SecurityGroupOwnerId :: !(Maybe Text)
-  , _esgEC2SecurityGroupName    :: !(Maybe Text)
-  , _esgEC2SecurityGroupId      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EC2SecurityGroup =
+  EC2SecurityGroup'
+    { _esgStatus                  :: !(Maybe Text)
+    , _esgEC2SecurityGroupOwnerId :: !(Maybe Text)
+    , _esgEC2SecurityGroupName    :: !(Maybe Text)
+    , _esgEC2SecurityGroupId      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EC2SecurityGroup' with the minimum fields required to make a request.
@@ -3002,11 +3064,13 @@ instance NFData EC2SecurityGroup where
 --
 --
 -- /See:/ 'endpoint' smart constructor.
-data Endpoint = Endpoint'
-  { _eHostedZoneId :: !(Maybe Text)
-  , _eAddress      :: !(Maybe Text)
-  , _ePort         :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Endpoint =
+  Endpoint'
+    { _eHostedZoneId :: !(Maybe Text)
+    , _eAddress      :: !(Maybe Text)
+    , _ePort         :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Endpoint' with the minimum fields required to make a request.
@@ -3051,11 +3115,13 @@ instance NFData Endpoint where
 --
 --
 -- /See:/ 'engineDefaults' smart constructor.
-data EngineDefaults = EngineDefaults'
-  { _edDBParameterGroupFamily :: !(Maybe Text)
-  , _edMarker                 :: !(Maybe Text)
-  , _edParameters             :: !(Maybe [Parameter])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EngineDefaults =
+  EngineDefaults'
+    { _edDBParameterGroupFamily :: !(Maybe Text)
+    , _edMarker                 :: !(Maybe Text)
+    , _edParameters             :: !(Maybe [Parameter])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EngineDefaults' with the minimum fields required to make a request.
@@ -3106,14 +3172,16 @@ instance NFData EngineDefaults where
 --
 --
 -- /See:/ 'event' smart constructor.
-data Event = Event'
-  { _eSourceType       :: !(Maybe SourceType)
-  , _eSourceARN        :: !(Maybe Text)
-  , _eSourceIdentifier :: !(Maybe Text)
-  , _eDate             :: !(Maybe ISO8601)
-  , _eEventCategories  :: !(Maybe [Text])
-  , _eMessage          :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Event =
+  Event'
+    { _eSourceType       :: !(Maybe SourceType)
+    , _eSourceARN        :: !(Maybe Text)
+    , _eSourceIdentifier :: !(Maybe Text)
+    , _eDate             :: !(Maybe ISO8601)
+    , _eEventCategories  :: !(Maybe [Text])
+    , _eMessage          :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Event' with the minimum fields required to make a request.
@@ -3188,10 +3256,12 @@ instance NFData Event where
 --
 --
 -- /See:/ 'eventCategoriesMap' smart constructor.
-data EventCategoriesMap = EventCategoriesMap'
-  { _ecmSourceType      :: !(Maybe Text)
-  , _ecmEventCategories :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EventCategoriesMap =
+  EventCategoriesMap'
+    { _ecmSourceType      :: !(Maybe Text)
+    , _ecmEventCategories :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EventCategoriesMap' with the minimum fields required to make a request.
@@ -3231,18 +3301,20 @@ instance NFData EventCategoriesMap where
 --
 --
 -- /See:/ 'eventSubscription' smart constructor.
-data EventSubscription = EventSubscription'
-  { _esStatus                   :: !(Maybe Text)
-  , _esCustomerAWSId            :: !(Maybe Text)
-  , _esCustSubscriptionId       :: !(Maybe Text)
-  , _esSNSTopicARN              :: !(Maybe Text)
-  , _esEventSubscriptionARN     :: !(Maybe Text)
-  , _esEnabled                  :: !(Maybe Bool)
-  , _esSourceType               :: !(Maybe Text)
-  , _esSubscriptionCreationTime :: !(Maybe Text)
-  , _esEventCategoriesList      :: !(Maybe [Text])
-  , _esSourceIdsList            :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EventSubscription =
+  EventSubscription'
+    { _esStatus                   :: !(Maybe Text)
+    , _esCustomerAWSId            :: !(Maybe Text)
+    , _esCustSubscriptionId       :: !(Maybe Text)
+    , _esSNSTopicARN              :: !(Maybe Text)
+    , _esEventSubscriptionARN     :: !(Maybe Text)
+    , _esEnabled                  :: !(Maybe Bool)
+    , _esSourceType               :: !(Maybe Text)
+    , _esSubscriptionCreationTime :: !(Maybe Text)
+    , _esEventCategoriesList      :: !(Maybe [Text])
+    , _esSourceIdsList            :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EventSubscription' with the minimum fields required to make a request.
@@ -3363,10 +3435,12 @@ instance NFData EventSubscription where
 --
 --
 -- /See:/ 'filter'' smart constructor.
-data Filter = Filter'
-  { _fName   :: !Text
-  , _fValues :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Filter =
+  Filter'
+    { _fName   :: !Text
+    , _fValues :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Filter' with the minimum fields required to make a request.
@@ -3405,10 +3479,12 @@ instance ToQuery Filter where
 --
 --
 -- /See:/ 'ipRange' smart constructor.
-data IPRange = IPRange'
-  { _irStatus :: !(Maybe Text)
-  , _irCIdRIP :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data IPRange =
+  IPRange'
+    { _irStatus :: !(Maybe Text)
+    , _irCIdRIP :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'IPRange' with the minimum fields required to make a request.
@@ -3444,17 +3520,19 @@ instance NFData IPRange where
 --
 --
 -- /See:/ 'option' smart constructor.
-data Option = Option'
-  { _oOptionName                  :: !(Maybe Text)
-  , _oPermanent                   :: !(Maybe Bool)
-  , _oPersistent                  :: !(Maybe Bool)
-  , _oOptionDescription           :: !(Maybe Text)
-  , _oOptionSettings              :: !(Maybe [OptionSetting])
-  , _oVPCSecurityGroupMemberships :: !(Maybe [VPCSecurityGroupMembership])
-  , _oDBSecurityGroupMemberships  :: !(Maybe [DBSecurityGroupMembership])
-  , _oOptionVersion               :: !(Maybe Text)
-  , _oPort                        :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Option =
+  Option'
+    { _oOptionName                  :: !(Maybe Text)
+    , _oPermanent                   :: !(Maybe Bool)
+    , _oPersistent                  :: !(Maybe Bool)
+    , _oOptionDescription           :: !(Maybe Text)
+    , _oOptionSettings              :: !(Maybe [OptionSetting])
+    , _oVPCSecurityGroupMemberships :: !(Maybe [VPCSecurityGroupMembership])
+    , _oDBSecurityGroupMemberships  :: !(Maybe [DBSecurityGroupMembership])
+    , _oOptionVersion               :: !(Maybe Text)
+    , _oPort                        :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Option' with the minimum fields required to make a request.
@@ -3557,14 +3635,16 @@ instance NFData Option where
 --
 --
 -- /See:/ 'optionConfiguration' smart constructor.
-data OptionConfiguration = OptionConfiguration'
-  { _ocOptionSettings              :: !(Maybe [OptionSetting])
-  , _ocVPCSecurityGroupMemberships :: !(Maybe [Text])
-  , _ocDBSecurityGroupMemberships  :: !(Maybe [Text])
-  , _ocOptionVersion               :: !(Maybe Text)
-  , _ocPort                        :: !(Maybe Int)
-  , _ocOptionName                  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data OptionConfiguration =
+  OptionConfiguration'
+    { _ocOptionSettings              :: !(Maybe [OptionSetting])
+    , _ocVPCSecurityGroupMemberships :: !(Maybe [Text])
+    , _ocDBSecurityGroupMemberships  :: !(Maybe [Text])
+    , _ocOptionVersion               :: !(Maybe Text)
+    , _ocPort                        :: !(Maybe Int)
+    , _ocOptionName                  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OptionConfiguration' with the minimum fields required to make a request.
@@ -3646,16 +3726,18 @@ instance ToQuery OptionConfiguration where
 --
 --
 -- /See:/ 'optionGroup' smart constructor.
-data OptionGroup = OptionGroup'
-  { _ogOptionGroupDescription                :: !(Maybe Text)
-  , _ogVPCId                                 :: !(Maybe Text)
-  , _ogAllowsVPCAndNonVPCInstanceMemberships :: !(Maybe Bool)
-  , _ogEngineName                            :: !(Maybe Text)
-  , _ogOptionGroupARN                        :: !(Maybe Text)
-  , _ogMajorEngineVersion                    :: !(Maybe Text)
-  , _ogOptions                               :: !(Maybe [Option])
-  , _ogOptionGroupName                       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data OptionGroup =
+  OptionGroup'
+    { _ogOptionGroupDescription                :: !(Maybe Text)
+    , _ogVPCId                                 :: !(Maybe Text)
+    , _ogAllowsVPCAndNonVPCInstanceMemberships :: !(Maybe Bool)
+    , _ogEngineName                            :: !(Maybe Text)
+    , _ogOptionGroupARN                        :: !(Maybe Text)
+    , _ogMajorEngineVersion                    :: !(Maybe Text)
+    , _ogOptions                               :: !(Maybe [Option])
+    , _ogOptionGroupName                       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OptionGroup' with the minimum fields required to make a request.
@@ -3746,10 +3828,12 @@ instance NFData OptionGroup where
 --
 --
 -- /See:/ 'optionGroupMembership' smart constructor.
-data OptionGroupMembership = OptionGroupMembership'
-  { _ogmStatus          :: !(Maybe Text)
-  , _ogmOptionGroupName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data OptionGroupMembership =
+  OptionGroupMembership'
+    { _ogmStatus          :: !(Maybe Text)
+    , _ogmOptionGroupName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OptionGroupMembership' with the minimum fields required to make a request.
@@ -3787,24 +3871,26 @@ instance NFData OptionGroupMembership where
 --
 --
 -- /See:/ 'optionGroupOption' smart constructor.
-data OptionGroupOption = OptionGroupOption'
-  { _ogoMinimumRequiredMinorEngineVersion :: !(Maybe Text)
-  , _ogoOptionsConflictsWith :: !(Maybe [Text])
-  , _ogoPermanent :: !(Maybe Bool)
-  , _ogoPersistent :: !(Maybe Bool)
-  , _ogoOptionGroupOptionVersions :: !(Maybe [OptionVersion])
-  , _ogoEngineName :: !(Maybe Text)
-  , _ogoMajorEngineVersion :: !(Maybe Text)
-  , _ogoName :: !(Maybe Text)
-  , _ogoSupportsOptionVersionDowngrade :: !(Maybe Bool)
-  , _ogoDefaultPort :: !(Maybe Int)
-  , _ogoOptionGroupOptionSettings :: !(Maybe [OptionGroupOptionSetting])
-  , _ogoRequiresAutoMinorEngineVersionUpgrade :: !(Maybe Bool)
-  , _ogoPortRequired :: !(Maybe Bool)
-  , _ogoDescription :: !(Maybe Text)
-  , _ogoOptionsDependedOn :: !(Maybe [Text])
-  , _ogoVPCOnly :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data OptionGroupOption =
+  OptionGroupOption'
+    { _ogoMinimumRequiredMinorEngineVersion :: !(Maybe Text)
+    , _ogoOptionsConflictsWith :: !(Maybe [Text])
+    , _ogoPermanent :: !(Maybe Bool)
+    , _ogoPersistent :: !(Maybe Bool)
+    , _ogoOptionGroupOptionVersions :: !(Maybe [OptionVersion])
+    , _ogoEngineName :: !(Maybe Text)
+    , _ogoMajorEngineVersion :: !(Maybe Text)
+    , _ogoName :: !(Maybe Text)
+    , _ogoSupportsOptionVersionDowngrade :: !(Maybe Bool)
+    , _ogoDefaultPort :: !(Maybe Int)
+    , _ogoOptionGroupOptionSettings :: !(Maybe [OptionGroupOptionSetting])
+    , _ogoRequiresAutoMinorEngineVersionUpgrade :: !(Maybe Bool)
+    , _ogoPortRequired :: !(Maybe Bool)
+    , _ogoDescription :: !(Maybe Text)
+    , _ogoOptionsDependedOn :: !(Maybe [Text])
+    , _ogoVPCOnly :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OptionGroupOption' with the minimum fields required to make a request.
@@ -3965,14 +4051,16 @@ instance NFData OptionGroupOption where
 --
 --
 -- /See:/ 'optionGroupOptionSetting' smart constructor.
-data OptionGroupOptionSetting = OptionGroupOptionSetting'
-  { _ogosApplyType          :: !(Maybe Text)
-  , _ogosSettingName        :: !(Maybe Text)
-  , _ogosDefaultValue       :: !(Maybe Text)
-  , _ogosIsModifiable       :: !(Maybe Bool)
-  , _ogosSettingDescription :: !(Maybe Text)
-  , _ogosAllowedValues      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data OptionGroupOptionSetting =
+  OptionGroupOptionSetting'
+    { _ogosApplyType          :: !(Maybe Text)
+    , _ogosSettingName        :: !(Maybe Text)
+    , _ogosDefaultValue       :: !(Maybe Text)
+    , _ogosIsModifiable       :: !(Maybe Bool)
+    , _ogosSettingDescription :: !(Maybe Text)
+    , _ogosAllowedValues      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OptionGroupOptionSetting' with the minimum fields required to make a request.
@@ -4045,17 +4133,19 @@ instance NFData OptionGroupOptionSetting where
 --
 --
 -- /See:/ 'optionSetting' smart constructor.
-data OptionSetting = OptionSetting'
-  { _osIsCollection  :: !(Maybe Bool)
-  , _osApplyType     :: !(Maybe Text)
-  , _osValue         :: !(Maybe Text)
-  , _osName          :: !(Maybe Text)
-  , _osDefaultValue  :: !(Maybe Text)
-  , _osIsModifiable  :: !(Maybe Bool)
-  , _osDataType      :: !(Maybe Text)
-  , _osAllowedValues :: !(Maybe Text)
-  , _osDescription   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data OptionSetting =
+  OptionSetting'
+    { _osIsCollection  :: !(Maybe Bool)
+    , _osApplyType     :: !(Maybe Text)
+    , _osValue         :: !(Maybe Text)
+    , _osName          :: !(Maybe Text)
+    , _osDefaultValue  :: !(Maybe Text)
+    , _osIsModifiable  :: !(Maybe Bool)
+    , _osDataType      :: !(Maybe Text)
+    , _osAllowedValues :: !(Maybe Text)
+    , _osDescription   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OptionSetting' with the minimum fields required to make a request.
@@ -4163,10 +4253,12 @@ instance ToQuery OptionSetting where
 --
 --
 -- /See:/ 'optionVersion' smart constructor.
-data OptionVersion = OptionVersion'
-  { _ovVersion   :: !(Maybe Text)
-  , _ovIsDefault :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data OptionVersion =
+  OptionVersion'
+    { _ovVersion   :: !(Maybe Text)
+    , _ovIsDefault :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OptionVersion' with the minimum fields required to make a request.
@@ -4205,28 +4297,30 @@ instance NFData OptionVersion where
 --
 --
 -- /See:/ 'orderableDBInstanceOption' smart constructor.
-data OrderableDBInstanceOption = OrderableDBInstanceOption'
-  { _odioEngineVersion                     :: !(Maybe Text)
-  , _odioMinIOPSPerGib                     :: !(Maybe Double)
-  , _odioSupportsIAMDatabaseAuthentication :: !(Maybe Bool)
-  , _odioMinIOPSPerDBInstance              :: !(Maybe Int)
-  , _odioMultiAZCapable                    :: !(Maybe Bool)
-  , _odioMaxStorageSize                    :: !(Maybe Int)
-  , _odioEngine                            :: !(Maybe Text)
-  , _odioMinStorageSize                    :: !(Maybe Int)
-  , _odioSupportsIOPS                      :: !(Maybe Bool)
-  , _odioSupportsPerformanceInsights       :: !(Maybe Bool)
-  , _odioDBInstanceClass                   :: !(Maybe Text)
-  , _odioLicenseModel                      :: !(Maybe Text)
-  , _odioAvailabilityZones                 :: !(Maybe [AvailabilityZone])
-  , _odioSupportsStorageEncryption         :: !(Maybe Bool)
-  , _odioReadReplicaCapable                :: !(Maybe Bool)
-  , _odioMaxIOPSPerGib                     :: !(Maybe Double)
-  , _odioVPC                               :: !(Maybe Bool)
-  , _odioSupportsEnhancedMonitoring        :: !(Maybe Bool)
-  , _odioMaxIOPSPerDBInstance              :: !(Maybe Int)
-  , _odioStorageType                       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data OrderableDBInstanceOption =
+  OrderableDBInstanceOption'
+    { _odioEngineVersion                     :: !(Maybe Text)
+    , _odioMinIOPSPerGib                     :: !(Maybe Double)
+    , _odioSupportsIAMDatabaseAuthentication :: !(Maybe Bool)
+    , _odioMinIOPSPerDBInstance              :: !(Maybe Int)
+    , _odioMultiAZCapable                    :: !(Maybe Bool)
+    , _odioMaxStorageSize                    :: !(Maybe Int)
+    , _odioEngine                            :: !(Maybe Text)
+    , _odioMinStorageSize                    :: !(Maybe Int)
+    , _odioSupportsIOPS                      :: !(Maybe Bool)
+    , _odioSupportsPerformanceInsights       :: !(Maybe Bool)
+    , _odioDBInstanceClass                   :: !(Maybe Text)
+    , _odioLicenseModel                      :: !(Maybe Text)
+    , _odioAvailabilityZones                 :: !(Maybe [AvailabilityZone])
+    , _odioSupportsStorageEncryption         :: !(Maybe Bool)
+    , _odioReadReplicaCapable                :: !(Maybe Bool)
+    , _odioMaxIOPSPerGib                     :: !(Maybe Double)
+    , _odioVPC                               :: !(Maybe Bool)
+    , _odioSupportsEnhancedMonitoring        :: !(Maybe Bool)
+    , _odioMaxIOPSPerDBInstance              :: !(Maybe Int)
+    , _odioStorageType                       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OrderableDBInstanceOption' with the minimum fields required to make a request.
@@ -4415,18 +4509,20 @@ instance NFData OrderableDBInstanceOption where
 --
 --
 -- /See:/ 'parameter' smart constructor.
-data Parameter = Parameter'
-  { _pApplyType            :: !(Maybe Text)
-  , _pParameterValue       :: !(Maybe Text)
-  , _pApplyMethod          :: !(Maybe ApplyMethod)
-  , _pMinimumEngineVersion :: !(Maybe Text)
-  , _pSource               :: !(Maybe Text)
-  , _pIsModifiable         :: !(Maybe Bool)
-  , _pDataType             :: !(Maybe Text)
-  , _pAllowedValues        :: !(Maybe Text)
-  , _pParameterName        :: !(Maybe Text)
-  , _pDescription          :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Parameter =
+  Parameter'
+    { _pApplyType            :: !(Maybe Text)
+    , _pParameterValue       :: !(Maybe Text)
+    , _pApplyMethod          :: !(Maybe ApplyMethod)
+    , _pMinimumEngineVersion :: !(Maybe Text)
+    , _pSource               :: !(Maybe Text)
+    , _pIsModifiable         :: !(Maybe Bool)
+    , _pDataType             :: !(Maybe Text)
+    , _pAllowedValues        :: !(Maybe Text)
+    , _pParameterName        :: !(Maybe Text)
+    , _pDescription          :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Parameter' with the minimum fields required to make a request.
@@ -4545,10 +4641,12 @@ instance ToQuery Parameter where
 --
 --
 -- /See:/ 'pendingCloudwatchLogsExports' smart constructor.
-data PendingCloudwatchLogsExports = PendingCloudwatchLogsExports'
-  { _pcleLogTypesToEnable  :: !(Maybe [Text])
-  , _pcleLogTypesToDisable :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PendingCloudwatchLogsExports =
+  PendingCloudwatchLogsExports'
+    { _pcleLogTypesToEnable  :: !(Maybe [Text])
+    , _pcleLogTypesToDisable :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PendingCloudwatchLogsExports' with the minimum fields required to make a request.
@@ -4591,14 +4689,16 @@ instance NFData PendingCloudwatchLogsExports where
 --
 --
 -- /See:/ 'pendingMaintenanceAction' smart constructor.
-data PendingMaintenanceAction = PendingMaintenanceAction'
-  { _pmaAutoAppliedAfterDate :: !(Maybe ISO8601)
-  , _pmaAction               :: !(Maybe Text)
-  , _pmaOptInStatus          :: !(Maybe Text)
-  , _pmaDescription          :: !(Maybe Text)
-  , _pmaForcedApplyDate      :: !(Maybe ISO8601)
-  , _pmaCurrentApplyDate     :: !(Maybe ISO8601)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PendingMaintenanceAction =
+  PendingMaintenanceAction'
+    { _pmaAutoAppliedAfterDate :: !(Maybe ISO8601)
+    , _pmaAction               :: !(Maybe Text)
+    , _pmaOptInStatus          :: !(Maybe Text)
+    , _pmaDescription          :: !(Maybe Text)
+    , _pmaForcedApplyDate      :: !(Maybe ISO8601)
+    , _pmaCurrentApplyDate     :: !(Maybe ISO8601)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PendingMaintenanceAction' with the minimum fields required to make a request.
@@ -4671,22 +4771,24 @@ instance NFData PendingMaintenanceAction where
 --
 --
 -- /See:/ 'pendingModifiedValues' smart constructor.
-data PendingModifiedValues = PendingModifiedValues'
-  { _pmvEngineVersion                :: !(Maybe Text)
-  , _pmvMasterUserPassword           :: !(Maybe Text)
-  , _pmvDBSubnetGroupName            :: !(Maybe Text)
-  , _pmvIOPS                         :: !(Maybe Int)
-  , _pmvDBInstanceClass              :: !(Maybe Text)
-  , _pmvLicenseModel                 :: !(Maybe Text)
-  , _pmvCACertificateIdentifier      :: !(Maybe Text)
-  , _pmvDBInstanceIdentifier         :: !(Maybe Text)
-  , _pmvPendingCloudwatchLogsExports :: !(Maybe PendingCloudwatchLogsExports)
-  , _pmvBackupRetentionPeriod        :: !(Maybe Int)
-  , _pmvMultiAZ                      :: !(Maybe Bool)
-  , _pmvAllocatedStorage             :: !(Maybe Int)
-  , _pmvPort                         :: !(Maybe Int)
-  , _pmvStorageType                  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PendingModifiedValues =
+  PendingModifiedValues'
+    { _pmvEngineVersion                :: !(Maybe Text)
+    , _pmvMasterUserPassword           :: !(Maybe Text)
+    , _pmvDBSubnetGroupName            :: !(Maybe Text)
+    , _pmvIOPS                         :: !(Maybe Int)
+    , _pmvDBInstanceClass              :: !(Maybe Text)
+    , _pmvLicenseModel                 :: !(Maybe Text)
+    , _pmvCACertificateIdentifier      :: !(Maybe Text)
+    , _pmvDBInstanceIdentifier         :: !(Maybe Text)
+    , _pmvPendingCloudwatchLogsExports :: !(Maybe PendingCloudwatchLogsExports)
+    , _pmvBackupRetentionPeriod        :: !(Maybe Int)
+    , _pmvMultiAZ                      :: !(Maybe Bool)
+    , _pmvAllocatedStorage             :: !(Maybe Int)
+    , _pmvPort                         :: !(Maybe Int)
+    , _pmvStorageType                  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PendingModifiedValues' with the minimum fields required to make a request.
@@ -4824,11 +4926,13 @@ instance NFData PendingModifiedValues where
 --
 --
 -- /See:/ 'range' smart constructor.
-data Range = Range'
-  { _rTo   :: !(Maybe Int)
-  , _rFrom :: !(Maybe Int)
-  , _rStep :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Range =
+  Range'
+    { _rTo   :: !(Maybe Int)
+    , _rFrom :: !(Maybe Int)
+    , _rStep :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Range' with the minimum fields required to make a request.
@@ -4871,10 +4975,12 @@ instance NFData Range where
 --
 --
 -- /See:/ 'recurringCharge' smart constructor.
-data RecurringCharge = RecurringCharge'
-  { _rcRecurringChargeFrequency :: !(Maybe Text)
-  , _rcRecurringChargeAmount    :: !(Maybe Double)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RecurringCharge =
+  RecurringCharge'
+    { _rcRecurringChargeFrequency :: !(Maybe Text)
+    , _rcRecurringChargeAmount    :: !(Maybe Double)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RecurringCharge' with the minimum fields required to make a request.
@@ -4914,23 +5020,25 @@ instance NFData RecurringCharge where
 --
 --
 -- /See:/ 'reservedDBInstance' smart constructor.
-data ReservedDBInstance = ReservedDBInstance'
-  { _rdiDBInstanceCount               :: !(Maybe Int)
-  , _rdiState                         :: !(Maybe Text)
-  , _rdiCurrencyCode                  :: !(Maybe Text)
-  , _rdiStartTime                     :: !(Maybe ISO8601)
-  , _rdiProductDescription            :: !(Maybe Text)
-  , _rdiReservedDBInstanceId          :: !(Maybe Text)
-  , _rdiReservedDBInstanceARN         :: !(Maybe Text)
-  , _rdiDBInstanceClass               :: !(Maybe Text)
-  , _rdiMultiAZ                       :: !(Maybe Bool)
-  , _rdiReservedDBInstancesOfferingId :: !(Maybe Text)
-  , _rdiRecurringCharges              :: !(Maybe [RecurringCharge])
-  , _rdiOfferingType                  :: !(Maybe Text)
-  , _rdiUsagePrice                    :: !(Maybe Double)
-  , _rdiFixedPrice                    :: !(Maybe Double)
-  , _rdiDuration                      :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReservedDBInstance =
+  ReservedDBInstance'
+    { _rdiDBInstanceCount               :: !(Maybe Int)
+    , _rdiState                         :: !(Maybe Text)
+    , _rdiCurrencyCode                  :: !(Maybe Text)
+    , _rdiStartTime                     :: !(Maybe ISO8601)
+    , _rdiProductDescription            :: !(Maybe Text)
+    , _rdiReservedDBInstanceId          :: !(Maybe Text)
+    , _rdiReservedDBInstanceARN         :: !(Maybe Text)
+    , _rdiDBInstanceClass               :: !(Maybe Text)
+    , _rdiMultiAZ                       :: !(Maybe Bool)
+    , _rdiReservedDBInstancesOfferingId :: !(Maybe Text)
+    , _rdiRecurringCharges              :: !(Maybe [RecurringCharge])
+    , _rdiOfferingType                  :: !(Maybe Text)
+    , _rdiUsagePrice                    :: !(Maybe Double)
+    , _rdiFixedPrice                    :: !(Maybe Double)
+    , _rdiDuration                      :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReservedDBInstance' with the minimum fields required to make a request.
@@ -5077,18 +5185,20 @@ instance NFData ReservedDBInstance where
 --
 --
 -- /See:/ 'reservedDBInstancesOffering' smart constructor.
-data ReservedDBInstancesOffering = ReservedDBInstancesOffering'
-  { _rdioCurrencyCode                  :: !(Maybe Text)
-  , _rdioProductDescription            :: !(Maybe Text)
-  , _rdioDBInstanceClass               :: !(Maybe Text)
-  , _rdioMultiAZ                       :: !(Maybe Bool)
-  , _rdioReservedDBInstancesOfferingId :: !(Maybe Text)
-  , _rdioRecurringCharges              :: !(Maybe [RecurringCharge])
-  , _rdioOfferingType                  :: !(Maybe Text)
-  , _rdioUsagePrice                    :: !(Maybe Double)
-  , _rdioFixedPrice                    :: !(Maybe Double)
-  , _rdioDuration                      :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReservedDBInstancesOffering =
+  ReservedDBInstancesOffering'
+    { _rdioCurrencyCode                  :: !(Maybe Text)
+    , _rdioProductDescription            :: !(Maybe Text)
+    , _rdioDBInstanceClass               :: !(Maybe Text)
+    , _rdioMultiAZ                       :: !(Maybe Bool)
+    , _rdioReservedDBInstancesOfferingId :: !(Maybe Text)
+    , _rdioRecurringCharges              :: !(Maybe [RecurringCharge])
+    , _rdioOfferingType                  :: !(Maybe Text)
+    , _rdioUsagePrice                    :: !(Maybe Double)
+    , _rdioFixedPrice                    :: !(Maybe Double)
+    , _rdioDuration                      :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReservedDBInstancesOffering' with the minimum fields required to make a request.
@@ -5196,10 +5306,12 @@ instance NFData ReservedDBInstancesOffering where
 --
 --
 -- /See:/ 'resourcePendingMaintenanceActions' smart constructor.
-data ResourcePendingMaintenanceActions = ResourcePendingMaintenanceActions'
-  { _rpmaPendingMaintenanceActionDetails :: !(Maybe [PendingMaintenanceAction])
-  , _rpmaResourceIdentifier              :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResourcePendingMaintenanceActions =
+  ResourcePendingMaintenanceActions'
+    { _rpmaPendingMaintenanceActionDetails :: !(Maybe [PendingMaintenanceAction])
+    , _rpmaResourceIdentifier :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResourcePendingMaintenanceActions' with the minimum fields required to make a request.
@@ -5245,11 +5357,13 @@ instance NFData ResourcePendingMaintenanceActions
 --
 --
 -- /See:/ 'sourceRegion' smart constructor.
-data SourceRegion = SourceRegion'
-  { _srStatus     :: !(Maybe Text)
-  , _srRegionName :: !(Maybe Text)
-  , _srEndpoint   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SourceRegion =
+  SourceRegion'
+    { _srStatus     :: !(Maybe Text)
+    , _srRegionName :: !(Maybe Text)
+    , _srEndpoint   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SourceRegion' with the minimum fields required to make a request.
@@ -5295,11 +5409,13 @@ instance NFData SourceRegion where
 --
 --
 -- /See:/ 'subnet' smart constructor.
-data Subnet = Subnet'
-  { _sSubnetStatus           :: !(Maybe Text)
-  , _sSubnetIdentifier       :: !(Maybe Text)
-  , _sSubnetAvailabilityZone :: !(Maybe AvailabilityZone)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Subnet =
+  Subnet'
+    { _sSubnetStatus           :: !(Maybe Text)
+    , _sSubnetIdentifier       :: !(Maybe Text)
+    , _sSubnetAvailabilityZone :: !(Maybe AvailabilityZone)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Subnet' with the minimum fields required to make a request.
@@ -5348,10 +5464,12 @@ instance NFData Subnet where
 --
 --
 -- /See:/ 'tag' smart constructor.
-data Tag = Tag'
-  { _tagValue :: !(Maybe Text)
-  , _tagKey   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Tag =
+  Tag'
+    { _tagValue :: !(Maybe Text)
+    , _tagKey   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Tag' with the minimum fields required to make a request.
@@ -5391,9 +5509,11 @@ instance ToQuery Tag where
 --
 --
 -- /See:/ 'timezone' smart constructor.
-newtype Timezone = Timezone'
-  { _tTimezoneName :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype Timezone =
+  Timezone'
+    { _tTimezoneName :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Timezone' with the minimum fields required to make a request.
@@ -5422,13 +5542,15 @@ instance NFData Timezone where
 --
 --
 -- /See:/ 'upgradeTarget' smart constructor.
-data UpgradeTarget = UpgradeTarget'
-  { _utEngineVersion         :: !(Maybe Text)
-  , _utIsMajorVersionUpgrade :: !(Maybe Bool)
-  , _utEngine                :: !(Maybe Text)
-  , _utAutoUpgrade           :: !(Maybe Bool)
-  , _utDescription           :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpgradeTarget =
+  UpgradeTarget'
+    { _utEngineVersion         :: !(Maybe Text)
+    , _utIsMajorVersionUpgrade :: !(Maybe Bool)
+    , _utEngine                :: !(Maybe Text)
+    , _utAutoUpgrade           :: !(Maybe Bool)
+    , _utDescription           :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpgradeTarget' with the minimum fields required to make a request.
@@ -5494,10 +5616,12 @@ instance NFData UpgradeTarget where
 --
 --
 -- /See:/ 'vpcSecurityGroupMembership' smart constructor.
-data VPCSecurityGroupMembership = VPCSecurityGroupMembership'
-  { _vsgmStatus             :: !(Maybe Text)
-  , _vsgmVPCSecurityGroupId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VPCSecurityGroupMembership =
+  VPCSecurityGroupMembership'
+    { _vsgmStatus             :: !(Maybe Text)
+    , _vsgmVPCSecurityGroupId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VPCSecurityGroupMembership' with the minimum fields required to make a request.
@@ -5536,9 +5660,11 @@ instance NFData VPCSecurityGroupMembership where
 --
 --
 -- /See:/ 'validDBInstanceModificationsMessage' smart constructor.
-newtype ValidDBInstanceModificationsMessage = ValidDBInstanceModificationsMessage'
-  { _vdimmStorage :: Maybe [ValidStorageOptions]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ValidDBInstanceModificationsMessage =
+  ValidDBInstanceModificationsMessage'
+    { _vdimmStorage :: Maybe [ValidStorageOptions]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ValidDBInstanceModificationsMessage' with the minimum fields required to make a request.
@@ -5574,12 +5700,14 @@ instance NFData ValidDBInstanceModificationsMessage
 --
 --
 -- /See:/ 'validStorageOptions' smart constructor.
-data ValidStorageOptions = ValidStorageOptions'
-  { _vsoStorageSize        :: !(Maybe [Range])
-  , _vsoProvisionedIOPS    :: !(Maybe [Range])
-  , _vsoIOPSToStorageRatio :: !(Maybe [DoubleRange])
-  , _vsoStorageType        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ValidStorageOptions =
+  ValidStorageOptions'
+    { _vsoStorageSize        :: !(Maybe [Range])
+    , _vsoProvisionedIOPS    :: !(Maybe [Range])
+    , _vsoIOPSToStorageRatio :: !(Maybe [DoubleRange])
+    , _vsoStorageType        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ValidStorageOptions' with the minimum fields required to make a request.

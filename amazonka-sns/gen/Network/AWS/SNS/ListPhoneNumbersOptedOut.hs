@@ -52,9 +52,11 @@ import Network.AWS.SNS.Types.Product
 --
 --
 -- /See:/ 'listPhoneNumbersOptedOut' smart constructor.
-newtype ListPhoneNumbersOptedOut = ListPhoneNumbersOptedOut'
-  { _lpnooNextToken :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ListPhoneNumbersOptedOut =
+  ListPhoneNumbersOptedOut'
+    { _lpnooNextToken :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListPhoneNumbersOptedOut' with the minimum fields required to make a request.
@@ -107,11 +109,13 @@ instance ToQuery ListPhoneNumbersOptedOut where
 --
 --
 -- /See:/ 'listPhoneNumbersOptedOutResponse' smart constructor.
-data ListPhoneNumbersOptedOutResponse = ListPhoneNumbersOptedOutResponse'
-  { _lpnoorsPhoneNumbers   :: !(Maybe [Text])
-  , _lpnoorsNextToken      :: !(Maybe Text)
-  , _lpnoorsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListPhoneNumbersOptedOutResponse =
+  ListPhoneNumbersOptedOutResponse'
+    { _lpnoorsPhoneNumbers   :: !(Maybe [Text])
+    , _lpnoorsNextToken      :: !(Maybe Text)
+    , _lpnoorsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListPhoneNumbersOptedOutResponse' with the minimum fields required to make a request.

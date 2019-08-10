@@ -43,10 +43,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateChannel' smart constructor.
-data UpdateChannel = UpdateChannel'
-  { _ucRetentionPeriod :: !(Maybe RetentionPeriod)
-  , _ucChannelName     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateChannel =
+  UpdateChannel'
+    { _ucRetentionPeriod :: !(Maybe RetentionPeriod)
+    , _ucChannelName     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateChannel' with the minimum fields required to make a request.

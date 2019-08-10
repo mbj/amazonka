@@ -51,9 +51,11 @@ import Network.AWS.StorageGateway.Types.Product
 --
 --
 -- /See:/ 'updateGatewaySoftwareNow' smart constructor.
-newtype UpdateGatewaySoftwareNow = UpdateGatewaySoftwareNow'
-  { _ugsnGatewayARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateGatewaySoftwareNow =
+  UpdateGatewaySoftwareNow'
+    { _ugsnGatewayARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateGatewaySoftwareNow' with the minimum fields required to make a request.
@@ -112,10 +114,12 @@ instance ToQuery UpdateGatewaySoftwareNow where
 --
 --
 -- /See:/ 'updateGatewaySoftwareNowResponse' smart constructor.
-data UpdateGatewaySoftwareNowResponse = UpdateGatewaySoftwareNowResponse'
-  { _ugsnrsGatewayARN     :: !(Maybe Text)
-  , _ugsnrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateGatewaySoftwareNowResponse =
+  UpdateGatewaySoftwareNowResponse'
+    { _ugsnrsGatewayARN     :: !(Maybe Text)
+    , _ugsnrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateGatewaySoftwareNowResponse' with the minimum fields required to make a request.

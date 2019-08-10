@@ -54,13 +54,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createComputeEnvironment' smart constructor.
-data CreateComputeEnvironment = CreateComputeEnvironment'
-  { _cceState                  :: !(Maybe CEState)
-  , _cceComputeResources       :: !(Maybe ComputeResource)
-  , _cceComputeEnvironmentName :: !Text
-  , _cceType                   :: !CEType
-  , _cceServiceRole            :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateComputeEnvironment =
+  CreateComputeEnvironment'
+    { _cceState                  :: !(Maybe CEState)
+    , _cceComputeResources       :: !(Maybe ComputeResource)
+    , _cceComputeEnvironmentName :: !Text
+    , _cceType                   :: !CEType
+    , _cceServiceRole            :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateComputeEnvironment' with the minimum fields required to make a request.
@@ -153,11 +155,13 @@ instance ToQuery CreateComputeEnvironment where
         toQuery = const mempty
 
 -- | /See:/ 'createComputeEnvironmentResponse' smart constructor.
-data CreateComputeEnvironmentResponse = CreateComputeEnvironmentResponse'
-  { _ccersComputeEnvironmentName :: !(Maybe Text)
-  , _ccersComputeEnvironmentARN  :: !(Maybe Text)
-  , _ccersResponseStatus         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateComputeEnvironmentResponse =
+  CreateComputeEnvironmentResponse'
+    { _ccersComputeEnvironmentName :: !(Maybe Text)
+    , _ccersComputeEnvironmentARN  :: !(Maybe Text)
+    , _ccersResponseStatus         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateComputeEnvironmentResponse' with the minimum fields required to make a request.

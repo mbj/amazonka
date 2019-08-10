@@ -63,12 +63,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'initiateMultipartUpload' smart constructor.
-data InitiateMultipartUpload = InitiateMultipartUpload'
-  { _imuPartSize           :: !(Maybe Text)
-  , _imuArchiveDescription :: !(Maybe Text)
-  , _imuAccountId          :: !Text
-  , _imuVaultName          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InitiateMultipartUpload =
+  InitiateMultipartUpload'
+    { _imuPartSize           :: !(Maybe Text)
+    , _imuArchiveDescription :: !(Maybe Text)
+    , _imuAccountId          :: !Text
+    , _imuVaultName          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InitiateMultipartUpload' with the minimum fields required to make a request.
@@ -151,11 +153,13 @@ instance ToQuery InitiateMultipartUpload where
 --
 --
 -- /See:/ 'initiateMultipartUploadResponse' smart constructor.
-data InitiateMultipartUploadResponse = InitiateMultipartUploadResponse'
-  { _imursLocation       :: !(Maybe Text)
-  , _imursUploadId       :: !(Maybe Text)
-  , _imursResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InitiateMultipartUploadResponse =
+  InitiateMultipartUploadResponse'
+    { _imursLocation       :: !(Maybe Text)
+    , _imursUploadId       :: !(Maybe Text)
+    , _imursResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InitiateMultipartUploadResponse' with the minimum fields required to make a request.

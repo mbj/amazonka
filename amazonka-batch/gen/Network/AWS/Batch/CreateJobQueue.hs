@@ -51,12 +51,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createJobQueue' smart constructor.
-data CreateJobQueue = CreateJobQueue'
-  { _cjqState                   :: !(Maybe JQState)
-  , _cjqJobQueueName            :: !Text
-  , _cjqPriority                :: !Int
-  , _cjqComputeEnvironmentOrder :: ![ComputeEnvironmentOrder]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateJobQueue =
+  CreateJobQueue'
+    { _cjqState                   :: !(Maybe JQState)
+    , _cjqJobQueueName            :: !Text
+    , _cjqPriority                :: !Int
+    , _cjqComputeEnvironmentOrder :: ![ComputeEnvironmentOrder]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateJobQueue' with the minimum fields required to make a request.
@@ -138,11 +140,13 @@ instance ToQuery CreateJobQueue where
         toQuery = const mempty
 
 -- | /See:/ 'createJobQueueResponse' smart constructor.
-data CreateJobQueueResponse = CreateJobQueueResponse'
-  { _cjqrsResponseStatus :: !Int
-  , _cjqrsJobQueueName   :: !Text
-  , _cjqrsJobQueueARN    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateJobQueueResponse =
+  CreateJobQueueResponse'
+    { _cjqrsResponseStatus :: !Int
+    , _cjqrsJobQueueName   :: !Text
+    , _cjqrsJobQueueARN    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateJobQueueResponse' with the minimum fields required to make a request.

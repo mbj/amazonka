@@ -48,9 +48,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteIdentityPool' smart constructor.
-newtype DeleteIdentityPool = DeleteIdentityPool'
-  { _dIdentityPoolId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteIdentityPool =
+  DeleteIdentityPool'
+    { _dIdentityPoolId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteIdentityPool' with the minimum fields required to make a request.

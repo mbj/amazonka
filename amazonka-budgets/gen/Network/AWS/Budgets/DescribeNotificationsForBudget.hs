@@ -53,12 +53,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeNotificationsForBudget' smart constructor.
-data DescribeNotificationsForBudget = DescribeNotificationsForBudget'
-  { _dnfbNextToken  :: !(Maybe Text)
-  , _dnfbMaxResults :: !(Maybe Nat)
-  , _dnfbAccountId  :: !Text
-  , _dnfbBudgetName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeNotificationsForBudget =
+  DescribeNotificationsForBudget'
+    { _dnfbNextToken  :: !(Maybe Text)
+    , _dnfbMaxResults :: !(Maybe Nat)
+    , _dnfbAccountId  :: !Text
+    , _dnfbBudgetName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeNotificationsForBudget' with the minimum fields required to make a request.
@@ -150,11 +152,13 @@ instance ToQuery DescribeNotificationsForBudget where
 --
 --
 -- /See:/ 'describeNotificationsForBudgetResponse' smart constructor.
-data DescribeNotificationsForBudgetResponse = DescribeNotificationsForBudgetResponse'
-  { _dnfbrsNextToken      :: !(Maybe Text)
-  , _dnfbrsNotifications  :: !(Maybe [Notification])
-  , _dnfbrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeNotificationsForBudgetResponse =
+  DescribeNotificationsForBudgetResponse'
+    { _dnfbrsNextToken      :: !(Maybe Text)
+    , _dnfbrsNotifications  :: !(Maybe [Notification])
+    , _dnfbrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeNotificationsForBudgetResponse' with the minimum fields required to make a request.

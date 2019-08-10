@@ -66,24 +66,26 @@ import Network.AWS.Route53.Types.Product
 --
 --
 -- /See:/ 'updateHealthCheck' smart constructor.
-data UpdateHealthCheck = UpdateHealthCheck'
-  { _uhcFailureThreshold             :: !(Maybe Nat)
-  , _uhcIPAddress                    :: !(Maybe Text)
-  , _uhcEnableSNI                    :: !(Maybe Bool)
-  , _uhcResetElements                :: !(Maybe [ResettableElementName])
-  , _uhcSearchString                 :: !(Maybe Text)
-  , _uhcHealthThreshold              :: !(Maybe Nat)
-  , _uhcRegions                      :: !(Maybe (List1 HealthCheckRegion))
-  , _uhcResourcePath                 :: !(Maybe Text)
-  , _uhcInsufficientDataHealthStatus :: !(Maybe InsufficientDataHealthStatus)
-  , _uhcHealthCheckVersion           :: !(Maybe Nat)
-  , _uhcAlarmIdentifier              :: !(Maybe AlarmIdentifier)
-  , _uhcInverted                     :: !(Maybe Bool)
-  , _uhcFullyQualifiedDomainName     :: !(Maybe Text)
-  , _uhcChildHealthChecks            :: !(Maybe [Text])
-  , _uhcPort                         :: !(Maybe Nat)
-  , _uhcHealthCheckId                :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateHealthCheck =
+  UpdateHealthCheck'
+    { _uhcFailureThreshold             :: !(Maybe Nat)
+    , _uhcIPAddress                    :: !(Maybe Text)
+    , _uhcEnableSNI                    :: !(Maybe Bool)
+    , _uhcResetElements                :: !(Maybe [ResettableElementName])
+    , _uhcSearchString                 :: !(Maybe Text)
+    , _uhcHealthThreshold              :: !(Maybe Nat)
+    , _uhcRegions                      :: !(Maybe (List1 HealthCheckRegion))
+    , _uhcResourcePath                 :: !(Maybe Text)
+    , _uhcInsufficientDataHealthStatus :: !(Maybe InsufficientDataHealthStatus)
+    , _uhcHealthCheckVersion           :: !(Maybe Nat)
+    , _uhcAlarmIdentifier              :: !(Maybe AlarmIdentifier)
+    , _uhcInverted                     :: !(Maybe Bool)
+    , _uhcFullyQualifiedDomainName     :: !(Maybe Text)
+    , _uhcChildHealthChecks            :: !(Maybe [Text])
+    , _uhcPort                         :: !(Maybe Nat)
+    , _uhcHealthCheckId                :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateHealthCheck' with the minimum fields required to make a request.
@@ -267,10 +269,12 @@ instance ToXML UpdateHealthCheck where
                "Port" @= _uhcPort]
 
 -- | /See:/ 'updateHealthCheckResponse' smart constructor.
-data UpdateHealthCheckResponse = UpdateHealthCheckResponse'
-  { _uhcrsResponseStatus :: !Int
-  , _uhcrsHealthCheck    :: !HealthCheck
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateHealthCheckResponse =
+  UpdateHealthCheckResponse'
+    { _uhcrsResponseStatus :: !Int
+    , _uhcrsHealthCheck    :: !HealthCheck
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateHealthCheckResponse' with the minimum fields required to make a request.

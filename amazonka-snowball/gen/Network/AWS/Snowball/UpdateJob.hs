@@ -52,17 +52,19 @@ import Network.AWS.Snowball.Types
 import Network.AWS.Snowball.Types.Product
 
 -- | /See:/ 'updateJob' smart constructor.
-data UpdateJob = UpdateJob'
-  { _ujNotification               :: !(Maybe Notification)
-  , _ujForwardingAddressId        :: !(Maybe Text)
-  , _ujAddressId                  :: !(Maybe Text)
-  , _ujShippingOption             :: !(Maybe ShippingOption)
-  , _ujResources                  :: !(Maybe JobResource)
-  , _ujDescription                :: !(Maybe Text)
-  , _ujRoleARN                    :: !(Maybe Text)
-  , _ujSnowballCapacityPreference :: !(Maybe SnowballCapacity)
-  , _ujJobId                      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateJob =
+  UpdateJob'
+    { _ujNotification               :: !(Maybe Notification)
+    , _ujForwardingAddressId        :: !(Maybe Text)
+    , _ujAddressId                  :: !(Maybe Text)
+    , _ujShippingOption             :: !(Maybe ShippingOption)
+    , _ujResources                  :: !(Maybe JobResource)
+    , _ujDescription                :: !(Maybe Text)
+    , _ujRoleARN                    :: !(Maybe Text)
+    , _ujSnowballCapacityPreference :: !(Maybe SnowballCapacity)
+    , _ujJobId                      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateJob' with the minimum fields required to make a request.
@@ -184,9 +186,11 @@ instance ToQuery UpdateJob where
         toQuery = const mempty
 
 -- | /See:/ 'updateJobResponse' smart constructor.
-newtype UpdateJobResponse = UpdateJobResponse'
-  { _ujrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateJobResponse =
+  UpdateJobResponse'
+    { _ujrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateJobResponse' with the minimum fields required to make a request.

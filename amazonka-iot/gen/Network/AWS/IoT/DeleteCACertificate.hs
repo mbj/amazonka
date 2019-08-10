@@ -48,9 +48,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteCACertificate' smart constructor.
-newtype DeleteCACertificate = DeleteCACertificate'
-  { _dcacCertificateId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteCACertificate =
+  DeleteCACertificate'
+    { _dcacCertificateId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteCACertificate' with the minimum fields required to make a request.
@@ -98,9 +100,11 @@ instance ToQuery DeleteCACertificate where
 --
 --
 -- /See:/ 'deleteCACertificateResponse' smart constructor.
-newtype DeleteCACertificateResponse = DeleteCACertificateResponse'
-  { _dcacrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteCACertificateResponse =
+  DeleteCACertificateResponse'
+    { _dcacrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteCACertificateResponse' with the minimum fields required to make a request.

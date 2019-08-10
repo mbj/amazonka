@@ -47,11 +47,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createEnvironmentMembership' smart constructor.
-data CreateEnvironmentMembership = CreateEnvironmentMembership'
-  { _cemEnvironmentId :: !Text
-  , _cemUserARN       :: !Text
-  , _cemPermissions   :: !MemberPermissions
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateEnvironmentMembership =
+  CreateEnvironmentMembership'
+    { _cemEnvironmentId :: !Text
+    , _cemUserARN       :: !Text
+    , _cemPermissions   :: !MemberPermissions
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateEnvironmentMembership' with the minimum fields required to make a request.
@@ -127,10 +129,12 @@ instance ToQuery CreateEnvironmentMembership where
         toQuery = const mempty
 
 -- | /See:/ 'createEnvironmentMembershipResponse' smart constructor.
-data CreateEnvironmentMembershipResponse = CreateEnvironmentMembershipResponse'
-  { _cemrsMembership     :: !(Maybe EnvironmentMember)
-  , _cemrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateEnvironmentMembershipResponse =
+  CreateEnvironmentMembershipResponse'
+    { _cemrsMembership     :: !(Maybe EnvironmentMember)
+    , _cemrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateEnvironmentMembershipResponse' with the minimum fields required to make a request.

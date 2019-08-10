@@ -48,12 +48,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'decreaseReplicationFactor' smart constructor.
-data DecreaseReplicationFactor = DecreaseReplicationFactor'
-  { _drfNodeIdsToRemove      :: !(Maybe [Text])
-  , _drfAvailabilityZones    :: !(Maybe [Text])
-  , _drfClusterName          :: !Text
-  , _drfNewReplicationFactor :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DecreaseReplicationFactor =
+  DecreaseReplicationFactor'
+    { _drfNodeIdsToRemove      :: !(Maybe [Text])
+    , _drfAvailabilityZones    :: !(Maybe [Text])
+    , _drfClusterName          :: !Text
+    , _drfNewReplicationFactor :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DecreaseReplicationFactor' with the minimum fields required to make a request.
@@ -138,10 +140,12 @@ instance ToQuery DecreaseReplicationFactor where
         toQuery = const mempty
 
 -- | /See:/ 'decreaseReplicationFactorResponse' smart constructor.
-data DecreaseReplicationFactorResponse = DecreaseReplicationFactorResponse'
-  { _drfrsCluster        :: !(Maybe Cluster)
-  , _drfrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DecreaseReplicationFactorResponse =
+  DecreaseReplicationFactorResponse'
+    { _drfrsCluster        :: !(Maybe Cluster)
+    , _drfrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DecreaseReplicationFactorResponse' with the minimum fields required to make a request.

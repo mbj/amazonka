@@ -51,9 +51,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeRule' smart constructor.
-newtype DescribeRule = DescribeRule'
-  { _desName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeRule =
+  DescribeRule'
+    { _desName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeRule' with the minimum fields required to make a request.
@@ -110,16 +112,18 @@ instance ToQuery DescribeRule where
         toQuery = const mempty
 
 -- | /See:/ 'describeRuleResponse' smart constructor.
-data DescribeRuleResponse = DescribeRuleResponse'
-  { _drrsEventPattern       :: !(Maybe Text)
-  , _drrsState              :: !(Maybe RuleState)
-  , _drrsARN                :: !(Maybe Text)
-  , _drrsScheduleExpression :: !(Maybe Text)
-  , _drrsName               :: !(Maybe Text)
-  , _drrsDescription        :: !(Maybe Text)
-  , _drrsRoleARN            :: !(Maybe Text)
-  , _drrsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeRuleResponse =
+  DescribeRuleResponse'
+    { _drrsEventPattern       :: !(Maybe Text)
+    , _drrsState              :: !(Maybe RuleState)
+    , _drrsARN                :: !(Maybe Text)
+    , _drrsScheduleExpression :: !(Maybe Text)
+    , _drrsName               :: !(Maybe Text)
+    , _drrsDescription        :: !(Maybe Text)
+    , _drrsRoleARN            :: !(Maybe Text)
+    , _drrsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeRuleResponse' with the minimum fields required to make a request.

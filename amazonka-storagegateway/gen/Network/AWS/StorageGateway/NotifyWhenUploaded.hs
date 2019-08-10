@@ -50,9 +50,11 @@ import Network.AWS.StorageGateway.Types
 import Network.AWS.StorageGateway.Types.Product
 
 -- | /See:/ 'notifyWhenUploaded' smart constructor.
-newtype NotifyWhenUploaded = NotifyWhenUploaded'
-  { _nwuFileShareARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype NotifyWhenUploaded =
+  NotifyWhenUploaded'
+    { _nwuFileShareARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NotifyWhenUploaded' with the minimum fields required to make a request.
@@ -109,11 +111,13 @@ instance ToQuery NotifyWhenUploaded where
         toQuery = const mempty
 
 -- | /See:/ 'notifyWhenUploadedResponse' smart constructor.
-data NotifyWhenUploadedResponse = NotifyWhenUploadedResponse'
-  { _nwursFileShareARN   :: !(Maybe Text)
-  , _nwursNotificationId :: !(Maybe Text)
-  , _nwursResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NotifyWhenUploadedResponse =
+  NotifyWhenUploadedResponse'
+    { _nwursFileShareARN   :: !(Maybe Text)
+    , _nwursNotificationId :: !(Maybe Text)
+    , _nwursResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NotifyWhenUploadedResponse' with the minimum fields required to make a request.

@@ -88,11 +88,13 @@ instance ToQuery GetLoggingOptions where
 --
 --
 -- /See:/ 'getLoggingOptionsResponse' smart constructor.
-data GetLoggingOptionsResponse = GetLoggingOptionsResponse'
-  { _glorsLogLevel       :: !(Maybe LogLevel)
-  , _glorsRoleARN        :: !(Maybe Text)
-  , _glorsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetLoggingOptionsResponse =
+  GetLoggingOptionsResponse'
+    { _glorsLogLevel       :: !(Maybe LogLevel)
+    , _glorsRoleARN        :: !(Maybe Text)
+    , _glorsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetLoggingOptionsResponse' with the minimum fields required to make a request.

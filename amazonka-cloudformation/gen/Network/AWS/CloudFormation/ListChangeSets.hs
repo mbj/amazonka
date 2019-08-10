@@ -51,10 +51,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listChangeSets' smart constructor.
-data ListChangeSets = ListChangeSets'
-  { _lcsNextToken :: !(Maybe Text)
-  , _lcsStackName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListChangeSets =
+  ListChangeSets'
+    { _lcsNextToken :: !(Maybe Text)
+    , _lcsStackName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListChangeSets' with the minimum fields required to make a request.
@@ -114,11 +116,13 @@ instance ToQuery ListChangeSets where
 --
 --
 -- /See:/ 'listChangeSetsResponse' smart constructor.
-data ListChangeSetsResponse = ListChangeSetsResponse'
-  { _lcsrsNextToken      :: !(Maybe Text)
-  , _lcsrsSummaries      :: !(Maybe [ChangeSetSummary])
-  , _lcsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListChangeSetsResponse =
+  ListChangeSetsResponse'
+    { _lcsrsNextToken      :: !(Maybe Text)
+    , _lcsrsSummaries      :: !(Maybe [ChangeSetSummary])
+    , _lcsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListChangeSetsResponse' with the minimum fields required to make a request.

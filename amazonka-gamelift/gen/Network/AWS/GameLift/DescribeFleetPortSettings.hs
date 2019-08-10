@@ -97,9 +97,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeFleetPortSettings' smart constructor.
-newtype DescribeFleetPortSettings = DescribeFleetPortSettings'
-  { _dfpsFleetId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeFleetPortSettings =
+  DescribeFleetPortSettings'
+    { _dfpsFleetId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeFleetPortSettings' with the minimum fields required to make a request.
@@ -158,10 +160,12 @@ instance ToQuery DescribeFleetPortSettings where
 --
 --
 -- /See:/ 'describeFleetPortSettingsResponse' smart constructor.
-data DescribeFleetPortSettingsResponse = DescribeFleetPortSettingsResponse'
-  { _dfpsrsInboundPermissions :: !(Maybe [IPPermission])
-  , _dfpsrsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeFleetPortSettingsResponse =
+  DescribeFleetPortSettingsResponse'
+    { _dfpsrsInboundPermissions :: !(Maybe [IPPermission])
+    , _dfpsrsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeFleetPortSettingsResponse' with the minimum fields required to make a request.

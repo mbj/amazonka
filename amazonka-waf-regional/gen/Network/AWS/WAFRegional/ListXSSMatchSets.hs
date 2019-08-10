@@ -51,10 +51,12 @@ import Network.AWS.WAFRegional.Types.Product
 --
 --
 -- /See:/ 'listXSSMatchSets' smart constructor.
-data ListXSSMatchSets = ListXSSMatchSets'
-  { _lxmsNextMarker :: !(Maybe Text)
-  , _lxmsLimit      :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListXSSMatchSets =
+  ListXSSMatchSets'
+    { _lxmsNextMarker :: !(Maybe Text)
+    , _lxmsLimit      :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListXSSMatchSets' with the minimum fields required to make a request.
@@ -121,11 +123,13 @@ instance ToQuery ListXSSMatchSets where
 --
 --
 -- /See:/ 'listXSSMatchSetsResponse' smart constructor.
-data ListXSSMatchSetsResponse = ListXSSMatchSetsResponse'
-  { _lxmsrsXSSMatchSets   :: !(Maybe [XSSMatchSetSummary])
-  , _lxmsrsNextMarker     :: !(Maybe Text)
-  , _lxmsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListXSSMatchSetsResponse =
+  ListXSSMatchSetsResponse'
+    { _lxmsrsXSSMatchSets   :: !(Maybe [XSSMatchSetSummary])
+    , _lxmsrsNextMarker     :: !(Maybe Text)
+    , _lxmsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListXSSMatchSetsResponse' with the minimum fields required to make a request.

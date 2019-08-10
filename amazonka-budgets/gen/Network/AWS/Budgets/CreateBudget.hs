@@ -50,11 +50,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createBudget' smart constructor.
-data CreateBudget = CreateBudget'
-  { _cbNotificationsWithSubscribers :: !(Maybe [NotificationWithSubscribers])
-  , _cbAccountId                    :: !Text
-  , _cbBudget                       :: !Budget
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateBudget =
+  CreateBudget'
+    { _cbNotificationsWithSubscribers :: !(Maybe [NotificationWithSubscribers])
+    , _cbAccountId                    :: !Text
+    , _cbBudget                       :: !Budget
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateBudget' with the minimum fields required to make a request.
@@ -132,9 +134,11 @@ instance ToQuery CreateBudget where
 --
 --
 -- /See:/ 'createBudgetResponse' smart constructor.
-newtype CreateBudgetResponse = CreateBudgetResponse'
-  { _cbrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateBudgetResponse =
+  CreateBudgetResponse'
+    { _cbrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateBudgetResponse' with the minimum fields required to make a request.

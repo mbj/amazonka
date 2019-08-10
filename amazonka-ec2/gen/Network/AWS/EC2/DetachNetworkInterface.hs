@@ -48,11 +48,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'detachNetworkInterface' smart constructor.
-data DetachNetworkInterface = DetachNetworkInterface'
-  { _dniForce        :: !(Maybe Bool)
-  , _dniDryRun       :: !(Maybe Bool)
-  , _dniAttachmentId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DetachNetworkInterface =
+  DetachNetworkInterface'
+    { _dniForce        :: !(Maybe Bool)
+    , _dniDryRun       :: !(Maybe Bool)
+    , _dniAttachmentId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DetachNetworkInterface' with the minimum fields required to make a request.

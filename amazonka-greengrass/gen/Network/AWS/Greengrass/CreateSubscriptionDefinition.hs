@@ -51,11 +51,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createSubscriptionDefinition' smart constructor.
-data CreateSubscriptionDefinition = CreateSubscriptionDefinition'
-  { _csdAmznClientToken :: !(Maybe Text)
-  , _csdInitialVersion  :: !(Maybe SubscriptionDefinitionVersion)
-  , _csdName            :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateSubscriptionDefinition =
+  CreateSubscriptionDefinition'
+    { _csdAmznClientToken :: !(Maybe Text)
+    , _csdInitialVersion  :: !(Maybe SubscriptionDefinitionVersion)
+    , _csdName            :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateSubscriptionDefinition' with the minimum fields required to make a request.
@@ -131,16 +133,18 @@ instance ToQuery CreateSubscriptionDefinition where
         toQuery = const mempty
 
 -- | /See:/ 'createSubscriptionDefinitionResponse' smart constructor.
-data CreateSubscriptionDefinitionResponse = CreateSubscriptionDefinitionResponse'
-  { _csdrsLatestVersionARN     :: !(Maybe Text)
-  , _csdrsARN                  :: !(Maybe Text)
-  , _csdrsName                 :: !(Maybe Text)
-  , _csdrsCreationTimestamp    :: !(Maybe Text)
-  , _csdrsId                   :: !(Maybe Text)
-  , _csdrsLatestVersion        :: !(Maybe Text)
-  , _csdrsLastUpdatedTimestamp :: !(Maybe Text)
-  , _csdrsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateSubscriptionDefinitionResponse =
+  CreateSubscriptionDefinitionResponse'
+    { _csdrsLatestVersionARN     :: !(Maybe Text)
+    , _csdrsARN                  :: !(Maybe Text)
+    , _csdrsName                 :: !(Maybe Text)
+    , _csdrsCreationTimestamp    :: !(Maybe Text)
+    , _csdrsId                   :: !(Maybe Text)
+    , _csdrsLatestVersion        :: !(Maybe Text)
+    , _csdrsLastUpdatedTimestamp :: !(Maybe Text)
+    , _csdrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateSubscriptionDefinitionResponse' with the minimum fields required to make a request.

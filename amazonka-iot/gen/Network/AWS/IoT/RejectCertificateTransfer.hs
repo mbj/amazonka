@@ -51,10 +51,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'rejectCertificateTransfer' smart constructor.
-data RejectCertificateTransfer = RejectCertificateTransfer'
-  { _rctRejectReason  :: !(Maybe Text)
-  , _rctCertificateId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RejectCertificateTransfer =
+  RejectCertificateTransfer'
+    { _rctRejectReason  :: !(Maybe Text)
+    , _rctCertificateId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RejectCertificateTransfer' with the minimum fields required to make a request.

@@ -51,11 +51,13 @@ import Network.AWS.ServiceCatalog.Types
 import Network.AWS.ServiceCatalog.Types.Product
 
 -- | /See:/ 'listTagOptions' smart constructor.
-data ListTagOptions = ListTagOptions'
-  { _ltoFilters   :: !(Maybe ListTagOptionsFilters)
-  , _ltoPageToken :: !(Maybe Text)
-  , _ltoPageSize  :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTagOptions =
+  ListTagOptions'
+    { _ltoFilters   :: !(Maybe ListTagOptionsFilters)
+    , _ltoPageToken :: !(Maybe Text)
+    , _ltoPageSize  :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTagOptions' with the minimum fields required to make a request.
@@ -133,11 +135,13 @@ instance ToQuery ListTagOptions where
         toQuery = const mempty
 
 -- | /See:/ 'listTagOptionsResponse' smart constructor.
-data ListTagOptionsResponse = ListTagOptionsResponse'
-  { _ltorsPageToken        :: !(Maybe Text)
-  , _ltorsTagOptionDetails :: !(Maybe [TagOptionDetail])
-  , _ltorsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTagOptionsResponse =
+  ListTagOptionsResponse'
+    { _ltorsPageToken        :: !(Maybe Text)
+    , _ltorsTagOptionDetails :: !(Maybe [TagOptionDetail])
+    , _ltorsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTagOptionsResponse' with the minimum fields required to make a request.

@@ -54,11 +54,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'executeChangeSet' smart constructor.
-data ExecuteChangeSet = ExecuteChangeSet'
-  { _ecsClientRequestToken :: !(Maybe Text)
-  , _ecsStackName          :: !(Maybe Text)
-  , _ecsChangeSetName      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ExecuteChangeSet =
+  ExecuteChangeSet'
+    { _ecsClientRequestToken :: !(Maybe Text)
+    , _ecsStackName          :: !(Maybe Text)
+    , _ecsChangeSetName      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ExecuteChangeSet' with the minimum fields required to make a request.
@@ -125,9 +127,11 @@ instance ToQuery ExecuteChangeSet where
 --
 --
 -- /See:/ 'executeChangeSetResponse' smart constructor.
-newtype ExecuteChangeSetResponse = ExecuteChangeSetResponse'
-  { _ecsrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ExecuteChangeSetResponse =
+  ExecuteChangeSetResponse'
+    { _ecsrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ExecuteChangeSetResponse' with the minimum fields required to make a request.

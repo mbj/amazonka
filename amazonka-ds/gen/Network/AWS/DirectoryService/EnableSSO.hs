@@ -50,11 +50,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'enableSSO' smart constructor.
-data EnableSSO = EnableSSO'
-  { _esUserName    :: !(Maybe Text)
-  , _esPassword    :: !(Maybe (Sensitive Text))
-  , _esDirectoryId :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data EnableSSO =
+  EnableSSO'
+    { _esUserName    :: !(Maybe Text)
+    , _esPassword    :: !(Maybe (Sensitive Text))
+    , _esDirectoryId :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EnableSSO' with the minimum fields required to make a request.
@@ -130,9 +132,11 @@ instance ToQuery EnableSSO where
 --
 --
 -- /See:/ 'enableSSOResponse' smart constructor.
-newtype EnableSSOResponse = EnableSSOResponse'
-  { _esrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype EnableSSOResponse =
+  EnableSSOResponse'
+    { _esrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EnableSSOResponse' with the minimum fields required to make a request.

@@ -47,11 +47,13 @@ import Network.AWS.StepFunctions.Types
 import Network.AWS.StepFunctions.Types.Product
 
 -- | /See:/ 'stopExecution' smart constructor.
-data StopExecution = StopExecution'
-  { _seError        :: !(Maybe Text)
-  , _seCause        :: !(Maybe Text)
-  , _seExecutionARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StopExecution =
+  StopExecution'
+    { _seError        :: !(Maybe Text)
+    , _seCause        :: !(Maybe Text)
+    , _seExecutionARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopExecution' with the minimum fields required to make a request.
@@ -120,10 +122,12 @@ instance ToQuery StopExecution where
         toQuery = const mempty
 
 -- | /See:/ 'stopExecutionResponse' smart constructor.
-data StopExecutionResponse = StopExecutionResponse'
-  { _sersResponseStatus :: !Int
-  , _sersStopDate       :: !POSIX
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StopExecutionResponse =
+  StopExecutionResponse'
+    { _sersResponseStatus :: !Int
+    , _sersStopDate       :: !POSIX
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopExecutionResponse' with the minimum fields required to make a request.

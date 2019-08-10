@@ -47,10 +47,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'putJobFailureResult' smart constructor.
-data PutJobFailureResult = PutJobFailureResult'
-  { _pjfrJobId          :: !Text
-  , _pjfrFailureDetails :: !FailureDetails
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutJobFailureResult =
+  PutJobFailureResult'
+    { _pjfrJobId          :: !Text
+    , _pjfrFailureDetails :: !FailureDetails
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutJobFailureResult' with the minimum fields required to make a request.

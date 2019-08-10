@@ -48,10 +48,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getFilter' smart constructor.
-data GetFilter = GetFilter'
-  { _gDetectorId :: !Text
-  , _gFilterName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetFilter =
+  GetFilter'
+    { _gDetectorId :: !Text
+    , _gFilterName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetFilter' with the minimum fields required to make a request.
@@ -111,14 +113,16 @@ instance ToQuery GetFilter where
         toQuery = const mempty
 
 -- | /See:/ 'getFilterResponse' smart constructor.
-data GetFilterResponse = GetFilterResponse'
-  { _gfrsFindingCriteria :: !(Maybe FindingCriteria)
-  , _gfrsAction          :: !(Maybe FilterAction)
-  , _gfrsName            :: !(Maybe Text)
-  , _gfrsDescription     :: !(Maybe Text)
-  , _gfrsRank            :: !(Maybe Int)
-  , _gfrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetFilterResponse =
+  GetFilterResponse'
+    { _gfrsFindingCriteria :: !(Maybe FindingCriteria)
+    , _gfrsAction          :: !(Maybe FilterAction)
+    , _gfrsName            :: !(Maybe Text)
+    , _gfrsDescription     :: !(Maybe Text)
+    , _gfrsRank            :: !(Maybe Int)
+    , _gfrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetFilterResponse' with the minimum fields required to make a request.

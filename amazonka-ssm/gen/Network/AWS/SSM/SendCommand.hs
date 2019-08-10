@@ -60,24 +60,26 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'sendCommand' smart constructor.
-data SendCommand = SendCommand'
-  { _scServiceRoleARN     :: !(Maybe Text)
-  , _scNotificationConfig :: !(Maybe NotificationConfig)
-  , _scDocumentHashType   :: !(Maybe DocumentHashType)
-  , _scOutputS3KeyPrefix  :: !(Maybe Text)
-  , _scMaxErrors          :: !(Maybe Text)
-  , _scInstanceIds        :: !(Maybe [Text])
-  , _scOutputS3Region     :: !(Maybe Text)
-  , _scTargets            :: !(Maybe [Target])
-  , _scParameters         :: !(Maybe (Map Text [Text]))
-  , _scDocumentHash       :: !(Maybe Text)
-  , _scDocumentVersion    :: !(Maybe Text)
-  , _scTimeoutSeconds     :: !(Maybe Nat)
-  , _scComment            :: !(Maybe Text)
-  , _scOutputS3BucketName :: !(Maybe Text)
-  , _scMaxConcurrency     :: !(Maybe Text)
-  , _scDocumentName       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SendCommand =
+  SendCommand'
+    { _scServiceRoleARN     :: !(Maybe Text)
+    , _scNotificationConfig :: !(Maybe NotificationConfig)
+    , _scDocumentHashType   :: !(Maybe DocumentHashType)
+    , _scOutputS3KeyPrefix  :: !(Maybe Text)
+    , _scMaxErrors          :: !(Maybe Text)
+    , _scInstanceIds        :: !(Maybe [Text])
+    , _scOutputS3Region     :: !(Maybe Text)
+    , _scTargets            :: !(Maybe [Target])
+    , _scParameters         :: !(Maybe (Map Text [Text]))
+    , _scDocumentHash       :: !(Maybe Text)
+    , _scDocumentVersion    :: !(Maybe Text)
+    , _scTimeoutSeconds     :: !(Maybe Nat)
+    , _scComment            :: !(Maybe Text)
+    , _scOutputS3BucketName :: !(Maybe Text)
+    , _scMaxConcurrency     :: !(Maybe Text)
+    , _scDocumentName       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SendCommand' with the minimum fields required to make a request.
@@ -253,10 +255,12 @@ instance ToQuery SendCommand where
         toQuery = const mempty
 
 -- | /See:/ 'sendCommandResponse' smart constructor.
-data SendCommandResponse = SendCommandResponse'
-  { _scrsCommand        :: !(Maybe Command)
-  , _scrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SendCommandResponse =
+  SendCommandResponse'
+    { _scrsCommand        :: !(Maybe Command)
+    , _scrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SendCommandResponse' with the minimum fields required to make a request.

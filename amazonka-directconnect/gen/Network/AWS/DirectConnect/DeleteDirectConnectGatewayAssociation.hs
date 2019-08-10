@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteDirectConnectGatewayAssociation' smart constructor.
-data DeleteDirectConnectGatewayAssociation = DeleteDirectConnectGatewayAssociation'
-  { _delDirectConnectGatewayId :: !Text
-  , _delVirtualGatewayId       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteDirectConnectGatewayAssociation =
+  DeleteDirectConnectGatewayAssociation'
+    { _delDirectConnectGatewayId :: !Text
+    , _delVirtualGatewayId       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteDirectConnectGatewayAssociation' with the minimum fields required to make a request.
@@ -138,10 +140,12 @@ instance ToQuery
 --
 --
 -- /See:/ 'deleteDirectConnectGatewayAssociationResponse' smart constructor.
-data DeleteDirectConnectGatewayAssociationResponse = DeleteDirectConnectGatewayAssociationResponse'
-  { _delrsDirectConnectGatewayAssociation :: !(Maybe DirectConnectGatewayAssociation)
-  , _delrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteDirectConnectGatewayAssociationResponse =
+  DeleteDirectConnectGatewayAssociationResponse'
+    { _delrsDirectConnectGatewayAssociation :: !(Maybe DirectConnectGatewayAssociation)
+    , _delrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteDirectConnectGatewayAssociationResponse' with the minimum fields required to make a request.

@@ -54,12 +54,14 @@ import Network.AWS.Route53Domains.Types.Product
 --
 --
 -- /See:/ 'updateDomainContact' smart constructor.
-data UpdateDomainContact = UpdateDomainContact'
-  { _udcRegistrantContact :: !(Maybe (Sensitive ContactDetail))
-  , _udcAdminContact      :: !(Maybe (Sensitive ContactDetail))
-  , _udcTechContact       :: !(Maybe (Sensitive ContactDetail))
-  , _udcDomainName        :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data UpdateDomainContact =
+  UpdateDomainContact'
+    { _udcRegistrantContact :: !(Maybe (Sensitive ContactDetail))
+    , _udcAdminContact      :: !(Maybe (Sensitive ContactDetail))
+    , _udcTechContact       :: !(Maybe (Sensitive ContactDetail))
+    , _udcDomainName        :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateDomainContact' with the minimum fields required to make a request.
@@ -145,10 +147,12 @@ instance ToQuery UpdateDomainContact where
 --
 --
 -- /See:/ 'updateDomainContactResponse' smart constructor.
-data UpdateDomainContactResponse = UpdateDomainContactResponse'
-  { _udcrsResponseStatus :: !Int
-  , _udcrsOperationId    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateDomainContactResponse =
+  UpdateDomainContactResponse'
+    { _udcrsResponseStatus :: !Int
+    , _udcrsOperationId    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateDomainContactResponse' with the minimum fields required to make a request.

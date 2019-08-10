@@ -61,12 +61,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'encrypt' smart constructor.
-data Encrypt = Encrypt'
-  { _eEncryptionContext :: !(Maybe (Map Text Text))
-  , _eGrantTokens       :: !(Maybe [Text])
-  , _eKeyId             :: !Text
-  , _ePlaintext         :: !(Sensitive Base64)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data Encrypt =
+  Encrypt'
+    { _eEncryptionContext :: !(Maybe (Map Text Text))
+    , _eGrantTokens       :: !(Maybe [Text])
+    , _eKeyId             :: !Text
+    , _ePlaintext         :: !(Sensitive Base64)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Encrypt' with the minimum fields required to make a request.
@@ -148,11 +150,13 @@ instance ToQuery Encrypt where
         toQuery = const mempty
 
 -- | /See:/ 'encryptResponse' smart constructor.
-data EncryptResponse = EncryptResponse'
-  { _ersKeyId          :: !(Maybe Text)
-  , _ersCiphertextBlob :: !(Maybe Base64)
-  , _ersResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EncryptResponse =
+  EncryptResponse'
+    { _ersKeyId          :: !(Maybe Text)
+    , _ersCiphertextBlob :: !(Maybe Base64)
+    , _ersResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EncryptResponse' with the minimum fields required to make a request.

@@ -51,9 +51,11 @@ import Network.AWS.Route53.Types.Product
 --
 --
 -- /See:/ 'getHostedZone' smart constructor.
-newtype GetHostedZone = GetHostedZone'
-  { _ghzId :: ResourceId
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetHostedZone =
+  GetHostedZone'
+    { _ghzId :: ResourceId
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetHostedZone' with the minimum fields required to make a request.
@@ -103,12 +105,14 @@ instance ToQuery GetHostedZone where
 --
 --
 -- /See:/ 'getHostedZoneResponse' smart constructor.
-data GetHostedZoneResponse = GetHostedZoneResponse'
-  { _ghzrsVPCs           :: !(Maybe (List1 VPC))
-  , _ghzrsDelegationSet  :: !(Maybe DelegationSet)
-  , _ghzrsResponseStatus :: !Int
-  , _ghzrsHostedZone     :: !HostedZone
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetHostedZoneResponse =
+  GetHostedZoneResponse'
+    { _ghzrsVPCs           :: !(Maybe (List1 VPC))
+    , _ghzrsDelegationSet  :: !(Maybe DelegationSet)
+    , _ghzrsResponseStatus :: !Int
+    , _ghzrsHostedZone     :: !HostedZone
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetHostedZoneResponse' with the minimum fields required to make a request.

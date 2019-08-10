@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'modifySnapshotCopyRetentionPeriod' smart constructor.
-data ModifySnapshotCopyRetentionPeriod = ModifySnapshotCopyRetentionPeriod'
-  { _mscrpClusterIdentifier :: !Text
-  , _mscrpRetentionPeriod   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifySnapshotCopyRetentionPeriod =
+  ModifySnapshotCopyRetentionPeriod'
+    { _mscrpClusterIdentifier :: !Text
+    , _mscrpRetentionPeriod   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifySnapshotCopyRetentionPeriod' with the minimum fields required to make a request.
@@ -119,10 +121,12 @@ instance ToQuery ModifySnapshotCopyRetentionPeriod
                "RetentionPeriod" =: _mscrpRetentionPeriod]
 
 -- | /See:/ 'modifySnapshotCopyRetentionPeriodResponse' smart constructor.
-data ModifySnapshotCopyRetentionPeriodResponse = ModifySnapshotCopyRetentionPeriodResponse'
-  { _mscrprsCluster        :: !(Maybe Cluster)
-  , _mscrprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifySnapshotCopyRetentionPeriodResponse =
+  ModifySnapshotCopyRetentionPeriodResponse'
+    { _mscrprsCluster        :: !(Maybe Cluster)
+    , _mscrprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifySnapshotCopyRetentionPeriodResponse' with the minimum fields required to make a request.

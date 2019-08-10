@@ -51,15 +51,17 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'startBuild' smart constructor.
-data StartBuild = StartBuild'
-  { _sbEnvironmentVariablesOverride :: !(Maybe [EnvironmentVariable])
-  , _sbTimeoutInMinutesOverride     :: !(Maybe Nat)
-  , _sbGitCloneDepthOverride        :: !(Maybe Nat)
-  , _sbSourceVersion                :: !(Maybe Text)
-  , _sbBuildspecOverride            :: !(Maybe Text)
-  , _sbArtifactsOverride            :: !(Maybe ProjectArtifacts)
-  , _sbProjectName                  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartBuild =
+  StartBuild'
+    { _sbEnvironmentVariablesOverride :: !(Maybe [EnvironmentVariable])
+    , _sbTimeoutInMinutesOverride     :: !(Maybe Nat)
+    , _sbGitCloneDepthOverride        :: !(Maybe Nat)
+    , _sbSourceVersion                :: !(Maybe Text)
+    , _sbBuildspecOverride            :: !(Maybe Text)
+    , _sbArtifactsOverride            :: !(Maybe ProjectArtifacts)
+    , _sbProjectName                  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartBuild' with the minimum fields required to make a request.
@@ -166,10 +168,12 @@ instance ToQuery StartBuild where
         toQuery = const mempty
 
 -- | /See:/ 'startBuildResponse' smart constructor.
-data StartBuildResponse = StartBuildResponse'
-  { _srsBuild          :: !(Maybe Build)
-  , _srsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartBuildResponse =
+  StartBuildResponse'
+    { _srsBuild          :: !(Maybe Build)
+    , _srsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartBuildResponse' with the minimum fields required to make a request.

@@ -56,10 +56,12 @@ import Network.AWS.ServerlessApplicationRepository.Types
 import Network.AWS.ServerlessApplicationRepository.Types.Product
 
 -- | /See:/ 'getApplication' smart constructor.
-data GetApplication = GetApplication'
-  { _gaSemanticVersion :: !(Maybe Text)
-  , _gaApplicationId   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetApplication =
+  GetApplication'
+    { _gaSemanticVersion :: !(Maybe Text)
+    , _gaApplicationId   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetApplication' with the minimum fields required to make a request.
@@ -124,20 +126,22 @@ instance ToQuery GetApplication where
           = mconcat ["semanticVersion" =: _gaSemanticVersion]
 
 -- | /See:/ 'getApplicationResponse' smart constructor.
-data GetApplicationResponse = GetApplicationResponse'
-  { _garsCreationTime   :: !(Maybe Text)
-  , _garsHomePageURL    :: !(Maybe Text)
-  , _garsLicenseURL     :: !(Maybe Text)
-  , _garsReadmeURL      :: !(Maybe Text)
-  , _garsApplicationId  :: !(Maybe Text)
-  , _garsName           :: !(Maybe Text)
-  , _garsVersion        :: !(Maybe Version)
-  , _garsAuthor         :: !(Maybe Text)
-  , _garsLabels         :: !(Maybe [Text])
-  , _garsDescription    :: !(Maybe Text)
-  , _garsSpdxLicenseId  :: !(Maybe Text)
-  , _garsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetApplicationResponse =
+  GetApplicationResponse'
+    { _garsCreationTime   :: !(Maybe Text)
+    , _garsHomePageURL    :: !(Maybe Text)
+    , _garsLicenseURL     :: !(Maybe Text)
+    , _garsReadmeURL      :: !(Maybe Text)
+    , _garsApplicationId  :: !(Maybe Text)
+    , _garsName           :: !(Maybe Text)
+    , _garsVersion        :: !(Maybe Version)
+    , _garsAuthor         :: !(Maybe Text)
+    , _garsLabels         :: !(Maybe [Text])
+    , _garsDescription    :: !(Maybe Text)
+    , _garsSpdxLicenseId  :: !(Maybe Text)
+    , _garsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetApplicationResponse' with the minimum fields required to make a request.

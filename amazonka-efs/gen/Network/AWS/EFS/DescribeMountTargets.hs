@@ -59,12 +59,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeMountTargets' smart constructor.
-data DescribeMountTargets = DescribeMountTargets'
-  { _dmtFileSystemId  :: !(Maybe Text)
-  , _dmtMarker        :: !(Maybe Text)
-  , _dmtMaxItems      :: !(Maybe Nat)
-  , _dmtMountTargetId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeMountTargets =
+  DescribeMountTargets'
+    { _dmtFileSystemId  :: !(Maybe Text)
+    , _dmtMarker        :: !(Maybe Text)
+    , _dmtMaxItems      :: !(Maybe Nat)
+    , _dmtMountTargetId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeMountTargets' with the minimum fields required to make a request.
@@ -147,12 +149,14 @@ instance ToQuery DescribeMountTargets where
 --
 --
 -- /See:/ 'describeMountTargetsResponse' smart constructor.
-data DescribeMountTargetsResponse = DescribeMountTargetsResponse'
-  { _dmtrsMountTargets   :: !(Maybe [MountTargetDescription])
-  , _dmtrsMarker         :: !(Maybe Text)
-  , _dmtrsNextMarker     :: !(Maybe Text)
-  , _dmtrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeMountTargetsResponse =
+  DescribeMountTargetsResponse'
+    { _dmtrsMountTargets   :: !(Maybe [MountTargetDescription])
+    , _dmtrsMarker         :: !(Maybe Text)
+    , _dmtrsNextMarker     :: !(Maybe Text)
+    , _dmtrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeMountTargetsResponse' with the minimum fields required to make a request.

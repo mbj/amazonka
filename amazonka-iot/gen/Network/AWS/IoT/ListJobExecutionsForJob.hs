@@ -49,12 +49,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listJobExecutionsForJob' smart constructor.
-data ListJobExecutionsForJob = ListJobExecutionsForJob'
-  { _ljefjStatus     :: !(Maybe JobExecutionStatus)
-  , _ljefjNextToken  :: !(Maybe Text)
-  , _ljefjMaxResults :: !(Maybe Nat)
-  , _ljefjJobId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListJobExecutionsForJob =
+  ListJobExecutionsForJob'
+    { _ljefjStatus     :: !(Maybe JobExecutionStatus)
+    , _ljefjNextToken  :: !(Maybe Text)
+    , _ljefjMaxResults :: !(Maybe Nat)
+    , _ljefjJobId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListJobExecutionsForJob' with the minimum fields required to make a request.
@@ -127,11 +129,13 @@ instance ToQuery ListJobExecutionsForJob where
                "maxResults" =: _ljefjMaxResults]
 
 -- | /See:/ 'listJobExecutionsForJobResponse' smart constructor.
-data ListJobExecutionsForJobResponse = ListJobExecutionsForJobResponse'
-  { _ljefjrsExecutionSummaries :: !(Maybe [JobExecutionSummaryForJob])
-  , _ljefjrsNextToken          :: !(Maybe Text)
-  , _ljefjrsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListJobExecutionsForJobResponse =
+  ListJobExecutionsForJobResponse'
+    { _ljefjrsExecutionSummaries :: !(Maybe [JobExecutionSummaryForJob])
+    , _ljefjrsNextToken          :: !(Maybe Text)
+    , _ljefjrsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListJobExecutionsForJobResponse' with the minimum fields required to make a request.

@@ -54,11 +54,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getCredentialsForIdentity' smart constructor.
-data GetCredentialsForIdentity = GetCredentialsForIdentity'
-  { _gcfiCustomRoleARN :: !(Maybe Text)
-  , _gcfiLogins        :: !(Maybe (Map Text Text))
-  , _gcfiIdentityId    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetCredentialsForIdentity =
+  GetCredentialsForIdentity'
+    { _gcfiCustomRoleARN :: !(Maybe Text)
+    , _gcfiLogins        :: !(Maybe (Map Text Text))
+    , _gcfiIdentityId    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetCredentialsForIdentity' with the minimum fields required to make a request.
@@ -137,11 +139,13 @@ instance ToQuery GetCredentialsForIdentity where
 --
 --
 -- /See:/ 'getCredentialsForIdentityResponse' smart constructor.
-data GetCredentialsForIdentityResponse = GetCredentialsForIdentityResponse'
-  { _gcfirsCredentials    :: !(Maybe Credentials)
-  , _gcfirsIdentityId     :: !(Maybe Text)
-  , _gcfirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetCredentialsForIdentityResponse =
+  GetCredentialsForIdentityResponse'
+    { _gcfirsCredentials    :: !(Maybe Credentials)
+    , _gcfirsIdentityId     :: !(Maybe Text)
+    , _gcfirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetCredentialsForIdentityResponse' with the minimum fields required to make a request.

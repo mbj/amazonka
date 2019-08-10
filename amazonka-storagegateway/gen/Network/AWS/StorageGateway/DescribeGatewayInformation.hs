@@ -57,9 +57,11 @@ import Network.AWS.StorageGateway.Types.Product
 --
 --
 -- /See:/ 'describeGatewayInformation' smart constructor.
-newtype DescribeGatewayInformation = DescribeGatewayInformation'
-  { _dgiGatewayARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeGatewayInformation =
+  DescribeGatewayInformation'
+    { _dgiGatewayARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeGatewayInformation' with the minimum fields required to make a request.
@@ -126,18 +128,20 @@ instance ToQuery DescribeGatewayInformation where
 --
 --
 -- /See:/ 'describeGatewayInformationResponse' smart constructor.
-data DescribeGatewayInformationResponse = DescribeGatewayInformationResponse'
-  { _dgirsGatewayState               :: !(Maybe Text)
-  , _dgirsGatewayARN                 :: !(Maybe Text)
-  , _dgirsGatewayNetworkInterfaces   :: !(Maybe [NetworkInterface])
-  , _dgirsNextUpdateAvailabilityDate :: !(Maybe Text)
-  , _dgirsLastSoftwareUpdate         :: !(Maybe Text)
-  , _dgirsGatewayName                :: !(Maybe Text)
-  , _dgirsGatewayId                  :: !(Maybe Text)
-  , _dgirsGatewayType                :: !(Maybe Text)
-  , _dgirsGatewayTimezone            :: !(Maybe Text)
-  , _dgirsResponseStatus             :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeGatewayInformationResponse =
+  DescribeGatewayInformationResponse'
+    { _dgirsGatewayState               :: !(Maybe Text)
+    , _dgirsGatewayARN                 :: !(Maybe Text)
+    , _dgirsGatewayNetworkInterfaces   :: !(Maybe [NetworkInterface])
+    , _dgirsNextUpdateAvailabilityDate :: !(Maybe Text)
+    , _dgirsLastSoftwareUpdate         :: !(Maybe Text)
+    , _dgirsGatewayName                :: !(Maybe Text)
+    , _dgirsGatewayId                  :: !(Maybe Text)
+    , _dgirsGatewayType                :: !(Maybe Text)
+    , _dgirsGatewayTimezone            :: !(Maybe Text)
+    , _dgirsResponseStatus             :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeGatewayInformationResponse' with the minimum fields required to make a request.

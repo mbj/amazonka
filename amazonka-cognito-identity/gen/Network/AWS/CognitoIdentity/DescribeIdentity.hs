@@ -53,9 +53,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeIdentity' smart constructor.
-newtype DescribeIdentity = DescribeIdentity'
-  { _diIdentityId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeIdentity =
+  DescribeIdentity'
+    { _diIdentityId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeIdentity' with the minimum fields required to make a request.

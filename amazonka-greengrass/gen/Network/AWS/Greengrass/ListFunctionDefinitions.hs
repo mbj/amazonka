@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listFunctionDefinitions' smart constructor.
-data ListFunctionDefinitions = ListFunctionDefinitions'
-  { _lfdNextToken  :: !(Maybe Text)
-  , _lfdMaxResults :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListFunctionDefinitions =
+  ListFunctionDefinitions'
+    { _lfdNextToken  :: !(Maybe Text)
+    , _lfdMaxResults :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListFunctionDefinitions' with the minimum fields required to make a request.
@@ -105,11 +107,13 @@ instance ToQuery ListFunctionDefinitions where
                "MaxResults" =: _lfdMaxResults]
 
 -- | /See:/ 'listFunctionDefinitionsResponse' smart constructor.
-data ListFunctionDefinitionsResponse = ListFunctionDefinitionsResponse'
-  { _lfdrsNextToken      :: !(Maybe Text)
-  , _lfdrsDefinitions    :: !(Maybe [DefinitionInformation])
-  , _lfdrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListFunctionDefinitionsResponse =
+  ListFunctionDefinitionsResponse'
+    { _lfdrsNextToken      :: !(Maybe Text)
+    , _lfdrsDefinitions    :: !(Maybe [DefinitionInformation])
+    , _lfdrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListFunctionDefinitionsResponse' with the minimum fields required to make a request.

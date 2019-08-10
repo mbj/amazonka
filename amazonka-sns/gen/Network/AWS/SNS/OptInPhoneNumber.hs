@@ -50,9 +50,11 @@ import Network.AWS.SNS.Types.Product
 --
 --
 -- /See:/ 'optInPhoneNumber' smart constructor.
-newtype OptInPhoneNumber = OptInPhoneNumber'
-  { _oipnPhoneNumber :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype OptInPhoneNumber =
+  OptInPhoneNumber'
+    { _oipnPhoneNumber :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OptInPhoneNumber' with the minimum fields required to make a request.
@@ -101,9 +103,11 @@ instance ToQuery OptInPhoneNumber where
 --
 --
 -- /See:/ 'optInPhoneNumberResponse' smart constructor.
-newtype OptInPhoneNumberResponse = OptInPhoneNumberResponse'
-  { _oipnrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype OptInPhoneNumberResponse =
+  OptInPhoneNumberResponse'
+    { _oipnrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OptInPhoneNumberResponse' with the minimum fields required to make a request.

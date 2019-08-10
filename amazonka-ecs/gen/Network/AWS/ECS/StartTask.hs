@@ -54,15 +54,17 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'startTask' smart constructor.
-data StartTask = StartTask'
-  { _sOverrides            :: !(Maybe TaskOverride)
-  , _sGroup                :: !(Maybe Text)
-  , _sCluster              :: !(Maybe Text)
-  , _sStartedBy            :: !(Maybe Text)
-  , _sNetworkConfiguration :: !(Maybe NetworkConfiguration)
-  , _sTaskDefinition       :: !Text
-  , _sContainerInstances   :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartTask =
+  StartTask'
+    { _sOverrides            :: !(Maybe TaskOverride)
+    , _sGroup                :: !(Maybe Text)
+    , _sCluster              :: !(Maybe Text)
+    , _sStartedBy            :: !(Maybe Text)
+    , _sNetworkConfiguration :: !(Maybe NetworkConfiguration)
+    , _sTaskDefinition       :: !Text
+    , _sContainerInstances   :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartTask' with the minimum fields required to make a request.
@@ -170,11 +172,13 @@ instance ToQuery StartTask where
         toQuery = const mempty
 
 -- | /See:/ 'startTaskResponse' smart constructor.
-data StartTaskResponse = StartTaskResponse'
-  { _strsFailures       :: !(Maybe [Failure])
-  , _strsTasks          :: !(Maybe [Task])
-  , _strsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartTaskResponse =
+  StartTaskResponse'
+    { _strsFailures       :: !(Maybe [Failure])
+    , _strsTasks          :: !(Maybe [Task])
+    , _strsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartTaskResponse' with the minimum fields required to make a request.

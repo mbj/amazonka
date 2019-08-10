@@ -44,10 +44,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateEndpointsBatch' smart constructor.
-data UpdateEndpointsBatch = UpdateEndpointsBatch'
-  { _uebApplicationId        :: !Text
-  , _uebEndpointBatchRequest :: !EndpointBatchRequest
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateEndpointsBatch =
+  UpdateEndpointsBatch'
+    { _uebApplicationId        :: !Text
+    , _uebEndpointBatchRequest :: !EndpointBatchRequest
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateEndpointsBatch' with the minimum fields required to make a request.
@@ -114,10 +116,12 @@ instance ToQuery UpdateEndpointsBatch where
         toQuery = const mempty
 
 -- | /See:/ 'updateEndpointsBatchResponse' smart constructor.
-data UpdateEndpointsBatchResponse = UpdateEndpointsBatchResponse'
-  { _uebrsResponseStatus :: !Int
-  , _uebrsMessageBody    :: !MessageBody
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateEndpointsBatchResponse =
+  UpdateEndpointsBatchResponse'
+    { _uebrsResponseStatus :: !Int
+    , _uebrsMessageBody    :: !MessageBody
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateEndpointsBatchResponse' with the minimum fields required to make a request.

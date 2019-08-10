@@ -51,11 +51,13 @@ import Network.AWS.ServiceCatalog.Types
 import Network.AWS.ServiceCatalog.Types.Product
 
 -- | /See:/ 'listPortfolios' smart constructor.
-data ListPortfolios = ListPortfolios'
-  { _lpAcceptLanguage :: !(Maybe Text)
-  , _lpPageToken      :: !(Maybe Text)
-  , _lpPageSize       :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListPortfolios =
+  ListPortfolios'
+    { _lpAcceptLanguage :: !(Maybe Text)
+    , _lpPageToken      :: !(Maybe Text)
+    , _lpPageSize       :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListPortfolios' with the minimum fields required to make a request.
@@ -133,11 +135,13 @@ instance ToQuery ListPortfolios where
         toQuery = const mempty
 
 -- | /See:/ 'listPortfoliosResponse' smart constructor.
-data ListPortfoliosResponse = ListPortfoliosResponse'
-  { _lprsNextPageToken    :: !(Maybe Text)
-  , _lprsPortfolioDetails :: !(Maybe [PortfolioDetail])
-  , _lprsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListPortfoliosResponse =
+  ListPortfoliosResponse'
+    { _lprsNextPageToken    :: !(Maybe Text)
+    , _lprsPortfolioDetails :: !(Maybe [PortfolioDetail])
+    , _lprsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListPortfoliosResponse' with the minimum fields required to make a request.

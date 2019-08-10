@@ -81,14 +81,16 @@ import Network.AWS.STS.Types
 import Network.AWS.STS.Types.Product
 
 -- | /See:/ 'assumeRoleWithWebIdentity' smart constructor.
-data AssumeRoleWithWebIdentity = AssumeRoleWithWebIdentity'
-  { _arwwiProviderId       :: !(Maybe Text)
-  , _arwwiDurationSeconds  :: !(Maybe Nat)
-  , _arwwiPolicy           :: !(Maybe Text)
-  , _arwwiRoleARN          :: !Text
-  , _arwwiRoleSessionName  :: !Text
-  , _arwwiWebIdentityToken :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssumeRoleWithWebIdentity =
+  AssumeRoleWithWebIdentity'
+    { _arwwiProviderId       :: !(Maybe Text)
+    , _arwwiDurationSeconds  :: !(Maybe Nat)
+    , _arwwiPolicy           :: !(Maybe Text)
+    , _arwwiRoleARN          :: !Text
+    , _arwwiRoleSessionName  :: !Text
+    , _arwwiWebIdentityToken :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssumeRoleWithWebIdentity' with the minimum fields required to make a request.
@@ -189,15 +191,17 @@ instance ToQuery AssumeRoleWithWebIdentity where
 --
 --
 -- /See:/ 'assumeRoleWithWebIdentityResponse' smart constructor.
-data AssumeRoleWithWebIdentityResponse = AssumeRoleWithWebIdentityResponse'
-  { _arwwirsAudience                    :: !(Maybe Text)
-  , _arwwirsSubjectFromWebIdentityToken :: !(Maybe Text)
-  , _arwwirsPackedPolicySize            :: !(Maybe Nat)
-  , _arwwirsCredentials                 :: !(Maybe AuthEnv)
-  , _arwwirsAssumedRoleUser             :: !(Maybe AssumedRoleUser)
-  , _arwwirsProvider                    :: !(Maybe Text)
-  , _arwwirsResponseStatus              :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data AssumeRoleWithWebIdentityResponse =
+  AssumeRoleWithWebIdentityResponse'
+    { _arwwirsAudience                    :: !(Maybe Text)
+    , _arwwirsSubjectFromWebIdentityToken :: !(Maybe Text)
+    , _arwwirsPackedPolicySize            :: !(Maybe Nat)
+    , _arwwirsCredentials                 :: !(Maybe AuthEnv)
+    , _arwwirsAssumedRoleUser             :: !(Maybe AssumedRoleUser)
+    , _arwwirsProvider                    :: !(Maybe Text)
+    , _arwwirsResponseStatus              :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssumeRoleWithWebIdentityResponse' with the minimum fields required to make a request.

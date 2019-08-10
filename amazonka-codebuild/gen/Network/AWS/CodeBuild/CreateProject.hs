@@ -56,20 +56,22 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createProject' smart constructor.
-data CreateProject = CreateProject'
-  { _cpBadgeEnabled     :: !(Maybe Bool)
-  , _cpCache            :: !(Maybe ProjectCache)
-  , _cpVpcConfig        :: !(Maybe VPCConfig)
-  , _cpEncryptionKey    :: !(Maybe Text)
-  , _cpDescription      :: !(Maybe Text)
-  , _cpServiceRole      :: !(Maybe Text)
-  , _cpTags             :: !(Maybe [Tag])
-  , _cpTimeoutInMinutes :: !(Maybe Nat)
-  , _cpName             :: !Text
-  , _cpSource           :: !ProjectSource
-  , _cpArtifacts        :: !ProjectArtifacts
-  , _cpEnvironment      :: !ProjectEnvironment
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateProject =
+  CreateProject'
+    { _cpBadgeEnabled     :: !(Maybe Bool)
+    , _cpCache            :: !(Maybe ProjectCache)
+    , _cpVpcConfig        :: !(Maybe VPCConfig)
+    , _cpEncryptionKey    :: !(Maybe Text)
+    , _cpDescription      :: !(Maybe Text)
+    , _cpServiceRole      :: !(Maybe Text)
+    , _cpTags             :: !(Maybe [Tag])
+    , _cpTimeoutInMinutes :: !(Maybe Nat)
+    , _cpName             :: !Text
+    , _cpSource           :: !ProjectSource
+    , _cpArtifacts        :: !ProjectArtifacts
+    , _cpEnvironment      :: !ProjectEnvironment
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateProject' with the minimum fields required to make a request.
@@ -216,10 +218,12 @@ instance ToQuery CreateProject where
         toQuery = const mempty
 
 -- | /See:/ 'createProjectResponse' smart constructor.
-data CreateProjectResponse = CreateProjectResponse'
-  { _cprsProject        :: !(Maybe Project)
-  , _cprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateProjectResponse =
+  CreateProjectResponse'
+    { _cprsProject        :: !(Maybe Project)
+    , _cprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateProjectResponse' with the minimum fields required to make a request.

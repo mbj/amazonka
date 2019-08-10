@@ -51,11 +51,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateServerEngineAttributes' smart constructor.
-data UpdateServerEngineAttributes = UpdateServerEngineAttributes'
-  { _useaAttributeValue :: !(Maybe Text)
-  , _useaServerName     :: !Text
-  , _useaAttributeName  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateServerEngineAttributes =
+  UpdateServerEngineAttributes'
+    { _useaAttributeValue :: !(Maybe Text)
+    , _useaServerName     :: !Text
+    , _useaAttributeName  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateServerEngineAttributes' with the minimum fields required to make a request.
@@ -131,10 +133,12 @@ instance ToQuery UpdateServerEngineAttributes where
         toQuery = const mempty
 
 -- | /See:/ 'updateServerEngineAttributesResponse' smart constructor.
-data UpdateServerEngineAttributesResponse = UpdateServerEngineAttributesResponse'
-  { _usearsServer         :: !(Maybe Server)
-  , _usearsResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data UpdateServerEngineAttributesResponse =
+  UpdateServerEngineAttributesResponse'
+    { _usearsServer         :: !(Maybe Server)
+    , _usearsResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateServerEngineAttributesResponse' with the minimum fields required to make a request.

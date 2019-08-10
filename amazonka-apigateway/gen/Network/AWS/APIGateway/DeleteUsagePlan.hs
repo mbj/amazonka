@@ -46,9 +46,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteUsagePlan' smart constructor.
-newtype DeleteUsagePlan = DeleteUsagePlan'
-  { _dupUsagePlanId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteUsagePlan =
+  DeleteUsagePlan'
+    { _dupUsagePlanId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteUsagePlan' with the minimum fields required to make a request.

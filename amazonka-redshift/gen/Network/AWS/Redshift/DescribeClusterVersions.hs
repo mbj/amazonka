@@ -56,12 +56,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeClusterVersions' smart constructor.
-data DescribeClusterVersions = DescribeClusterVersions'
-  { _dcvClusterParameterGroupFamily :: !(Maybe Text)
-  , _dcvMarker                      :: !(Maybe Text)
-  , _dcvMaxRecords                  :: !(Maybe Int)
-  , _dcvClusterVersion              :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeClusterVersions =
+  DescribeClusterVersions'
+    { _dcvClusterParameterGroupFamily :: !(Maybe Text)
+    , _dcvMarker                      :: !(Maybe Text)
+    , _dcvMaxRecords                  :: !(Maybe Int)
+    , _dcvClusterVersion              :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeClusterVersions' with the minimum fields required to make a request.
@@ -149,11 +151,13 @@ instance ToQuery DescribeClusterVersions where
 --
 --
 -- /See:/ 'describeClusterVersionsResponse' smart constructor.
-data DescribeClusterVersionsResponse = DescribeClusterVersionsResponse'
-  { _dcvrsClusterVersions :: !(Maybe [ClusterVersion])
-  , _dcvrsMarker          :: !(Maybe Text)
-  , _dcvrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeClusterVersionsResponse =
+  DescribeClusterVersionsResponse'
+    { _dcvrsClusterVersions :: !(Maybe [ClusterVersion])
+    , _dcvrsMarker          :: !(Maybe Text)
+    , _dcvrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeClusterVersionsResponse' with the minimum fields required to make a request.

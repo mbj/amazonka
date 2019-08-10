@@ -46,9 +46,11 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'deleteDocument' smart constructor.
-newtype DeleteDocument = DeleteDocument'
-  { _dddName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteDocument =
+  DeleteDocument'
+    { _dddName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteDocument' with the minimum fields required to make a request.
@@ -98,9 +100,11 @@ instance ToQuery DeleteDocument where
         toQuery = const mempty
 
 -- | /See:/ 'deleteDocumentResponse' smart constructor.
-newtype DeleteDocumentResponse = DeleteDocumentResponse'
-  { _ddrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteDocumentResponse =
+  DeleteDocumentResponse'
+    { _ddrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteDocumentResponse' with the minimum fields required to make a request.

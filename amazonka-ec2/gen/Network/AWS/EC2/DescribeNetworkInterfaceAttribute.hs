@@ -55,11 +55,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeNetworkInterfaceAttribute' smart constructor.
-data DescribeNetworkInterfaceAttribute = DescribeNetworkInterfaceAttribute'
-  { _dniaAttribute          :: !(Maybe NetworkInterfaceAttribute)
-  , _dniaDryRun             :: !(Maybe Bool)
-  , _dniaNetworkInterfaceId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeNetworkInterfaceAttribute =
+  DescribeNetworkInterfaceAttribute'
+    { _dniaAttribute          :: !(Maybe NetworkInterfaceAttribute)
+    , _dniaDryRun             :: !(Maybe Bool)
+    , _dniaNetworkInterfaceId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeNetworkInterfaceAttribute' with the minimum fields required to make a request.
@@ -141,14 +143,16 @@ instance ToQuery DescribeNetworkInterfaceAttribute
 --
 --
 -- /See:/ 'describeNetworkInterfaceAttributeResponse' smart constructor.
-data DescribeNetworkInterfaceAttributeResponse = DescribeNetworkInterfaceAttributeResponse'
-  { _dniarsGroups             :: !(Maybe [GroupIdentifier])
-  , _dniarsSourceDestCheck    :: !(Maybe AttributeBooleanValue)
-  , _dniarsNetworkInterfaceId :: !(Maybe Text)
-  , _dniarsAttachment         :: !(Maybe NetworkInterfaceAttachment)
-  , _dniarsDescription        :: !(Maybe AttributeValue)
-  , _dniarsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeNetworkInterfaceAttributeResponse =
+  DescribeNetworkInterfaceAttributeResponse'
+    { _dniarsGroups             :: !(Maybe [GroupIdentifier])
+    , _dniarsSourceDestCheck    :: !(Maybe AttributeBooleanValue)
+    , _dniarsNetworkInterfaceId :: !(Maybe Text)
+    , _dniarsAttachment         :: !(Maybe NetworkInterfaceAttachment)
+    , _dniarsDescription        :: !(Maybe AttributeValue)
+    , _dniarsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeNetworkInterfaceAttributeResponse' with the minimum fields required to make a request.

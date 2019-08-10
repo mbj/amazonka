@@ -48,9 +48,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'cancelJob' smart constructor.
-newtype CancelJob = CancelJob'
-  { _cjId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CancelJob =
+  CancelJob'
+    { _cjId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CancelJob' with the minimum fields required to make a request.
@@ -95,9 +97,11 @@ instance ToQuery CancelJob where
 --
 --
 -- /See:/ 'cancelJobResponse' smart constructor.
-newtype CancelJobResponse = CancelJobResponse'
-  { _canrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CancelJobResponse =
+  CancelJobResponse'
+    { _canrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CancelJobResponse' with the minimum fields required to make a request.

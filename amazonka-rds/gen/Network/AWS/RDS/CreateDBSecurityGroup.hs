@@ -51,11 +51,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createDBSecurityGroup' smart constructor.
-data CreateDBSecurityGroup = CreateDBSecurityGroup'
-  { _cdsgTags                       :: !(Maybe [Tag])
-  , _cdsgDBSecurityGroupName        :: !Text
-  , _cdsgDBSecurityGroupDescription :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDBSecurityGroup =
+  CreateDBSecurityGroup'
+    { _cdsgTags                       :: !(Maybe [Tag])
+    , _cdsgDBSecurityGroupName        :: !Text
+    , _cdsgDBSecurityGroupDescription :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDBSecurityGroup' with the minimum fields required to make a request.
@@ -122,10 +124,12 @@ instance ToQuery CreateDBSecurityGroup where
                  _cdsgDBSecurityGroupDescription]
 
 -- | /See:/ 'createDBSecurityGroupResponse' smart constructor.
-data CreateDBSecurityGroupResponse = CreateDBSecurityGroupResponse'
-  { _cdbsgrsDBSecurityGroup :: !(Maybe DBSecurityGroup)
-  , _cdbsgrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDBSecurityGroupResponse =
+  CreateDBSecurityGroupResponse'
+    { _cdbsgrsDBSecurityGroup :: !(Maybe DBSecurityGroup)
+    , _cdbsgrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDBSecurityGroupResponse' with the minimum fields required to make a request.

@@ -53,13 +53,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'setRiskConfiguration' smart constructor.
-data SetRiskConfiguration = SetRiskConfiguration'
-  { _srcRiskExceptionConfiguration :: !(Maybe RiskExceptionConfigurationType)
-  , _srcClientId :: !(Maybe (Sensitive Text))
-  , _srcAccountTakeoverRiskConfiguration :: !(Maybe AccountTakeoverRiskConfigurationType)
-  , _srcCompromisedCredentialsRiskConfiguration :: !(Maybe CompromisedCredentialsRiskConfigurationType)
-  , _srcUserPoolId :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data SetRiskConfiguration =
+  SetRiskConfiguration'
+    { _srcRiskExceptionConfiguration :: !(Maybe RiskExceptionConfigurationType)
+    , _srcClientId :: !(Maybe (Sensitive Text))
+    , _srcAccountTakeoverRiskConfiguration :: !(Maybe AccountTakeoverRiskConfigurationType)
+    , _srcCompromisedCredentialsRiskConfiguration :: !(Maybe CompromisedCredentialsRiskConfigurationType)
+    , _srcUserPoolId :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetRiskConfiguration' with the minimum fields required to make a request.
@@ -152,10 +154,12 @@ instance ToQuery SetRiskConfiguration where
         toQuery = const mempty
 
 -- | /See:/ 'setRiskConfigurationResponse' smart constructor.
-data SetRiskConfigurationResponse = SetRiskConfigurationResponse'
-  { _srcrsResponseStatus    :: !Int
-  , _srcrsRiskConfiguration :: !RiskConfigurationType
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data SetRiskConfigurationResponse =
+  SetRiskConfigurationResponse'
+    { _srcrsResponseStatus    :: !Int
+    , _srcrsRiskConfiguration :: !RiskConfigurationType
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetRiskConfigurationResponse' with the minimum fields required to make a request.

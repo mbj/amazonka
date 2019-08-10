@@ -45,10 +45,12 @@ import Network.AWS.ServiceCatalog.Types
 import Network.AWS.ServiceCatalog.Types.Product
 
 -- | /See:/ 'rejectPortfolioShare' smart constructor.
-data RejectPortfolioShare = RejectPortfolioShare'
-  { _rpsAcceptLanguage :: !(Maybe Text)
-  , _rpsPortfolioId    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RejectPortfolioShare =
+  RejectPortfolioShare'
+    { _rpsAcceptLanguage :: !(Maybe Text)
+    , _rpsPortfolioId    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RejectPortfolioShare' with the minimum fields required to make a request.
@@ -112,9 +114,11 @@ instance ToQuery RejectPortfolioShare where
         toQuery = const mempty
 
 -- | /See:/ 'rejectPortfolioShareResponse' smart constructor.
-newtype RejectPortfolioShareResponse = RejectPortfolioShareResponse'
-  { _rpsrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RejectPortfolioShareResponse =
+  RejectPortfolioShareResponse'
+    { _rpsrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RejectPortfolioShareResponse' with the minimum fields required to make a request.

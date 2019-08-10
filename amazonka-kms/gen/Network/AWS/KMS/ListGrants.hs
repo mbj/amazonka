@@ -53,11 +53,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listGrants' smart constructor.
-data ListGrants = ListGrants'
-  { _lgMarker :: !(Maybe Text)
-  , _lgLimit  :: !(Maybe Nat)
-  , _lgKeyId  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListGrants =
+  ListGrants'
+    { _lgMarker :: !(Maybe Text)
+    , _lgLimit  :: !(Maybe Nat)
+    , _lgKeyId  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListGrants' with the minimum fields required to make a request.

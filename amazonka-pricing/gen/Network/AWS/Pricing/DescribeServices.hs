@@ -53,12 +53,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeServices' smart constructor.
-data DescribeServices = DescribeServices'
-  { _dsFormatVersion :: !(Maybe Text)
-  , _dsNextToken     :: !(Maybe Text)
-  , _dsServiceCode   :: !(Maybe Text)
-  , _dsMaxResults    :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeServices =
+  DescribeServices'
+    { _dsFormatVersion :: !(Maybe Text)
+    , _dsNextToken     :: !(Maybe Text)
+    , _dsServiceCode   :: !(Maybe Text)
+    , _dsMaxResults    :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeServices' with the minimum fields required to make a request.
@@ -147,12 +149,14 @@ instance ToQuery DescribeServices where
         toQuery = const mempty
 
 -- | /See:/ 'describeServicesResponse' smart constructor.
-data DescribeServicesResponse = DescribeServicesResponse'
-  { _dsrsFormatVersion  :: !(Maybe Text)
-  , _dsrsNextToken      :: !(Maybe Text)
-  , _dsrsServices       :: !(Maybe [PricingService])
-  , _dsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeServicesResponse =
+  DescribeServicesResponse'
+    { _dsrsFormatVersion  :: !(Maybe Text)
+    , _dsrsNextToken      :: !(Maybe Text)
+    , _dsrsServices       :: !(Maybe [PricingService])
+    , _dsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeServicesResponse' with the minimum fields required to make a request.

@@ -78,31 +78,33 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'createMultipartUpload' smart constructor.
-data CreateMultipartUpload = CreateMultipartUpload'
-  { _cmuExpires                 :: !(Maybe RFC822)
-  , _cmuGrantReadACP            :: !(Maybe Text)
-  , _cmuSSECustomerAlgorithm    :: !(Maybe Text)
-  , _cmuSSECustomerKey          :: !(Maybe (Sensitive Text))
-  , _cmuRequestPayer            :: !(Maybe RequestPayer)
-  , _cmuGrantWriteACP           :: !(Maybe Text)
-  , _cmuWebsiteRedirectLocation :: !(Maybe Text)
-  , _cmuGrantRead               :: !(Maybe Text)
-  , _cmuStorageClass            :: !(Maybe StorageClass)
-  , _cmuSSECustomerKeyMD5       :: !(Maybe Text)
-  , _cmuSSEKMSKeyId             :: !(Maybe (Sensitive Text))
-  , _cmuGrantFullControl        :: !(Maybe Text)
-  , _cmuContentEncoding         :: !(Maybe Text)
-  , _cmuTagging                 :: !(Maybe Text)
-  , _cmuMetadata                :: !(Map Text Text)
-  , _cmuCacheControl            :: !(Maybe Text)
-  , _cmuContentLanguage         :: !(Maybe Text)
-  , _cmuACL                     :: !(Maybe ObjectCannedACL)
-  , _cmuContentDisposition      :: !(Maybe Text)
-  , _cmuServerSideEncryption    :: !(Maybe ServerSideEncryption)
-  , _cmuContentType             :: !(Maybe Text)
-  , _cmuBucket                  :: !BucketName
-  , _cmuKey                     :: !ObjectKey
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data CreateMultipartUpload =
+  CreateMultipartUpload'
+    { _cmuExpires                 :: !(Maybe RFC822)
+    , _cmuGrantReadACP            :: !(Maybe Text)
+    , _cmuSSECustomerAlgorithm    :: !(Maybe Text)
+    , _cmuSSECustomerKey          :: !(Maybe (Sensitive Text))
+    , _cmuRequestPayer            :: !(Maybe RequestPayer)
+    , _cmuGrantWriteACP           :: !(Maybe Text)
+    , _cmuWebsiteRedirectLocation :: !(Maybe Text)
+    , _cmuGrantRead               :: !(Maybe Text)
+    , _cmuStorageClass            :: !(Maybe StorageClass)
+    , _cmuSSECustomerKeyMD5       :: !(Maybe Text)
+    , _cmuSSEKMSKeyId             :: !(Maybe (Sensitive Text))
+    , _cmuGrantFullControl        :: !(Maybe Text)
+    , _cmuContentEncoding         :: !(Maybe Text)
+    , _cmuTagging                 :: !(Maybe Text)
+    , _cmuMetadata                :: !(Map Text Text)
+    , _cmuCacheControl            :: !(Maybe Text)
+    , _cmuContentLanguage         :: !(Maybe Text)
+    , _cmuACL                     :: !(Maybe ObjectCannedACL)
+    , _cmuContentDisposition      :: !(Maybe Text)
+    , _cmuServerSideEncryption    :: !(Maybe ServerSideEncryption)
+    , _cmuContentType             :: !(Maybe Text)
+    , _cmuBucket                  :: !BucketName
+    , _cmuKey                     :: !ObjectKey
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateMultipartUpload' with the minimum fields required to make a request.
@@ -345,19 +347,21 @@ instance ToQuery CreateMultipartUpload where
         toQuery = const (mconcat ["uploads"])
 
 -- | /See:/ 'createMultipartUploadResponse' smart constructor.
-data CreateMultipartUploadResponse = CreateMultipartUploadResponse'
-  { _cmursRequestCharged       :: !(Maybe RequestCharged)
-  , _cmursBucket               :: !(Maybe BucketName)
-  , _cmursSSECustomerAlgorithm :: !(Maybe Text)
-  , _cmursAbortDate            :: !(Maybe RFC822)
-  , _cmursAbortRuleId          :: !(Maybe Text)
-  , _cmursKey                  :: !(Maybe ObjectKey)
-  , _cmursSSECustomerKeyMD5    :: !(Maybe Text)
-  , _cmursSSEKMSKeyId          :: !(Maybe (Sensitive Text))
-  , _cmursUploadId             :: !(Maybe Text)
-  , _cmursServerSideEncryption :: !(Maybe ServerSideEncryption)
-  , _cmursResponseStatus       :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data CreateMultipartUploadResponse =
+  CreateMultipartUploadResponse'
+    { _cmursRequestCharged       :: !(Maybe RequestCharged)
+    , _cmursBucket               :: !(Maybe BucketName)
+    , _cmursSSECustomerAlgorithm :: !(Maybe Text)
+    , _cmursAbortDate            :: !(Maybe RFC822)
+    , _cmursAbortRuleId          :: !(Maybe Text)
+    , _cmursKey                  :: !(Maybe ObjectKey)
+    , _cmursSSECustomerKeyMD5    :: !(Maybe Text)
+    , _cmursSSEKMSKeyId          :: !(Maybe (Sensitive Text))
+    , _cmursUploadId             :: !(Maybe Text)
+    , _cmursServerSideEncryption :: !(Maybe ServerSideEncryption)
+    , _cmursResponseStatus       :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateMultipartUploadResponse' with the minimum fields required to make a request.

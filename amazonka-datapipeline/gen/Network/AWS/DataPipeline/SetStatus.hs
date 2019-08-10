@@ -48,11 +48,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'setStatus' smart constructor.
-data SetStatus = SetStatus'
-  { _ssPipelineId :: !Text
-  , _ssObjectIds  :: ![Text]
-  , _ssStatus     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SetStatus =
+  SetStatus'
+    { _ssPipelineId :: !Text
+    , _ssObjectIds  :: ![Text]
+    , _ssStatus     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetStatus' with the minimum fields required to make a request.

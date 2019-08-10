@@ -52,12 +52,14 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'listDocuments' smart constructor.
-data ListDocuments = ListDocuments'
-  { _ldDocumentFilterList :: !(Maybe (List1 DocumentFilter))
-  , _ldFilters            :: !(Maybe [DocumentKeyValuesFilter])
-  , _ldNextToken          :: !(Maybe Text)
-  , _ldMaxResults         :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListDocuments =
+  ListDocuments'
+    { _ldDocumentFilterList :: !(Maybe (List1 DocumentFilter))
+    , _ldFilters            :: !(Maybe [DocumentKeyValuesFilter])
+    , _ldNextToken          :: !(Maybe Text)
+    , _ldMaxResults         :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDocuments' with the minimum fields required to make a request.
@@ -145,11 +147,13 @@ instance ToQuery ListDocuments where
         toQuery = const mempty
 
 -- | /See:/ 'listDocumentsResponse' smart constructor.
-data ListDocumentsResponse = ListDocumentsResponse'
-  { _ldrsDocumentIdentifiers :: !(Maybe [DocumentIdentifier])
-  , _ldrsNextToken           :: !(Maybe Text)
-  , _ldrsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListDocumentsResponse =
+  ListDocumentsResponse'
+    { _ldrsDocumentIdentifiers :: !(Maybe [DocumentIdentifier])
+    , _ldrsNextToken           :: !(Maybe Text)
+    , _ldrsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDocumentsResponse' with the minimum fields required to make a request.

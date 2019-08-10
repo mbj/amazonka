@@ -53,9 +53,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeLoggingStatus' smart constructor.
-newtype DescribeLoggingStatus = DescribeLoggingStatus'
-  { _dlsClusterIdentifier :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeLoggingStatus =
+  DescribeLoggingStatus'
+    { _dlsClusterIdentifier :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeLoggingStatus' with the minimum fields required to make a request.

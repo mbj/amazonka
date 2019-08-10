@@ -50,13 +50,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeVPCEndpointServiceConfigurations' smart constructor.
-data DescribeVPCEndpointServiceConfigurations = DescribeVPCEndpointServiceConfigurations'
-  { _dvescFilters    :: !(Maybe [Filter])
-  , _dvescServiceIds :: !(Maybe [Text])
-  , _dvescNextToken  :: !(Maybe Text)
-  , _dvescDryRun     :: !(Maybe Bool)
-  , _dvescMaxResults :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeVPCEndpointServiceConfigurations =
+  DescribeVPCEndpointServiceConfigurations'
+    { _dvescFilters    :: !(Maybe [Filter])
+    , _dvescServiceIds :: !(Maybe [Text])
+    , _dvescNextToken  :: !(Maybe Text)
+    , _dvescDryRun     :: !(Maybe Bool)
+    , _dvescMaxResults :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeVPCEndpointServiceConfigurations' with the minimum fields required to make a request.
@@ -154,11 +156,13 @@ instance ToQuery
                "MaxResults" =: _dvescMaxResults]
 
 -- | /See:/ 'describeVPCEndpointServiceConfigurationsResponse' smart constructor.
-data DescribeVPCEndpointServiceConfigurationsResponse = DescribeVPCEndpointServiceConfigurationsResponse'
-  { _dvescrsNextToken             :: !(Maybe Text)
-  , _dvescrsServiceConfigurations :: !(Maybe [ServiceConfiguration])
-  , _dvescrsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeVPCEndpointServiceConfigurationsResponse =
+  DescribeVPCEndpointServiceConfigurationsResponse'
+    { _dvescrsNextToken             :: !(Maybe Text)
+    , _dvescrsServiceConfigurations :: !(Maybe [ServiceConfiguration])
+    , _dvescrsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeVPCEndpointServiceConfigurationsResponse' with the minimum fields required to make a request.

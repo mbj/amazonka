@@ -43,9 +43,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteADMChannel' smart constructor.
-newtype DeleteADMChannel = DeleteADMChannel'
-  { _dadmcApplicationId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteADMChannel =
+  DeleteADMChannel'
+    { _dadmcApplicationId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteADMChannel' with the minimum fields required to make a request.
@@ -94,10 +96,12 @@ instance ToQuery DeleteADMChannel where
         toQuery = const mempty
 
 -- | /See:/ 'deleteADMChannelResponse' smart constructor.
-data DeleteADMChannelResponse = DeleteADMChannelResponse'
-  { _dadmcrsResponseStatus     :: !Int
-  , _dadmcrsADMChannelResponse :: !ADMChannelResponse
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteADMChannelResponse =
+  DeleteADMChannelResponse'
+    { _dadmcrsResponseStatus     :: !Int
+    , _dadmcrsADMChannelResponse :: !ADMChannelResponse
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteADMChannelResponse' with the minimum fields required to make a request.

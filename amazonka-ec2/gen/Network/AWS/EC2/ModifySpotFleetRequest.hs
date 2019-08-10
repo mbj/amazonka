@@ -59,11 +59,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'modifySpotFleetRequest' smart constructor.
-data ModifySpotFleetRequest = ModifySpotFleetRequest'
-  { _msfrTargetCapacity :: !(Maybe Int)
-  , _msfrExcessCapacityTerminationPolicy :: !(Maybe ExcessCapacityTerminationPolicy)
-  , _msfrSpotFleetRequestId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifySpotFleetRequest =
+  ModifySpotFleetRequest'
+    { _msfrTargetCapacity :: !(Maybe Int)
+    , _msfrExcessCapacityTerminationPolicy :: !(Maybe ExcessCapacityTerminationPolicy)
+    , _msfrSpotFleetRequestId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifySpotFleetRequest' with the minimum fields required to make a request.
@@ -134,10 +136,12 @@ instance ToQuery ModifySpotFleetRequest where
 --
 --
 -- /See:/ 'modifySpotFleetRequestResponse' smart constructor.
-data ModifySpotFleetRequestResponse = ModifySpotFleetRequestResponse'
-  { _msfrrsReturn         :: !(Maybe Bool)
-  , _msfrrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifySpotFleetRequestResponse =
+  ModifySpotFleetRequestResponse'
+    { _msfrrsReturn         :: !(Maybe Bool)
+    , _msfrrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifySpotFleetRequestResponse' with the minimum fields required to make a request.

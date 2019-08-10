@@ -52,13 +52,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateThing' smart constructor.
-data UpdateThing = UpdateThing'
-  { _utRemoveThingType  :: !(Maybe Bool)
-  , _utThingTypeName    :: !(Maybe Text)
-  , _utExpectedVersion  :: !(Maybe Integer)
-  , _utAttributePayload :: !(Maybe AttributePayload)
-  , _utThingName        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateThing =
+  UpdateThing'
+    { _utRemoveThingType  :: !(Maybe Bool)
+    , _utThingTypeName    :: !(Maybe Text)
+    , _utExpectedVersion  :: !(Maybe Integer)
+    , _utAttributePayload :: !(Maybe AttributePayload)
+    , _utThingName        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateThing' with the minimum fields required to make a request.
@@ -143,9 +145,11 @@ instance ToQuery UpdateThing where
 --
 --
 -- /See:/ 'updateThingResponse' smart constructor.
-newtype UpdateThingResponse = UpdateThingResponse'
-  { _utrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateThingResponse =
+  UpdateThingResponse'
+    { _utrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateThingResponse' with the minimum fields required to make a request.

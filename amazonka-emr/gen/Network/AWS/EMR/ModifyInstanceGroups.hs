@@ -47,10 +47,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'modifyInstanceGroups' smart constructor.
-data ModifyInstanceGroups = ModifyInstanceGroups'
-  { _migClusterId      :: !(Maybe Text)
-  , _migInstanceGroups :: !(Maybe [InstanceGroupModifyConfig])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyInstanceGroups =
+  ModifyInstanceGroups'
+    { _migClusterId      :: !(Maybe Text)
+    , _migInstanceGroups :: !(Maybe [InstanceGroupModifyConfig])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyInstanceGroups' with the minimum fields required to make a request.

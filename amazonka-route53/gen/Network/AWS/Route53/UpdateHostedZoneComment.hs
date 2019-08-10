@@ -50,10 +50,12 @@ import Network.AWS.Route53.Types.Product
 --
 --
 -- /See:/ 'updateHostedZoneComment' smart constructor.
-data UpdateHostedZoneComment = UpdateHostedZoneComment'
-  { _uhzcComment :: !(Maybe Text)
-  , _uhzcId      :: !ResourceId
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateHostedZoneComment =
+  UpdateHostedZoneComment'
+    { _uhzcComment :: !(Maybe Text)
+    , _uhzcId      :: !ResourceId
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateHostedZoneComment' with the minimum fields required to make a request.
@@ -116,10 +118,12 @@ instance ToXML UpdateHostedZoneComment where
 --
 --
 -- /See:/ 'updateHostedZoneCommentResponse' smart constructor.
-data UpdateHostedZoneCommentResponse = UpdateHostedZoneCommentResponse'
-  { _uhzcrsResponseStatus :: !Int
-  , _uhzcrsHostedZone     :: !HostedZone
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateHostedZoneCommentResponse =
+  UpdateHostedZoneCommentResponse'
+    { _uhzcrsResponseStatus :: !Int
+    , _uhzcrsHostedZone     :: !HostedZone
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateHostedZoneCommentResponse' with the minimum fields required to make a request.

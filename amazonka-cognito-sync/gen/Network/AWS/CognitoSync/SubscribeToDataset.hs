@@ -53,12 +53,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'subscribeToDataset' smart constructor.
-data SubscribeToDataset = SubscribeToDataset'
-  { _stdIdentityPoolId :: !Text
-  , _stdIdentityId     :: !Text
-  , _stdDatasetName    :: !Text
-  , _stdDeviceId       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SubscribeToDataset =
+  SubscribeToDataset'
+    { _stdIdentityPoolId :: !Text
+    , _stdIdentityId     :: !Text
+    , _stdDatasetName    :: !Text
+    , _stdDeviceId       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SubscribeToDataset' with the minimum fields required to make a request.
@@ -142,9 +144,11 @@ instance ToQuery SubscribeToDataset where
 --
 --
 -- /See:/ 'subscribeToDatasetResponse' smart constructor.
-newtype SubscribeToDatasetResponse = SubscribeToDatasetResponse'
-  { _stdrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype SubscribeToDatasetResponse =
+  SubscribeToDatasetResponse'
+    { _stdrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SubscribeToDatasetResponse' with the minimum fields required to make a request.

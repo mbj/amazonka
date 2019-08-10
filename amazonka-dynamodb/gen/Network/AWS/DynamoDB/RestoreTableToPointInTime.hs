@@ -82,12 +82,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'restoreTableToPointInTime' smart constructor.
-data RestoreTableToPointInTime = RestoreTableToPointInTime'
-  { _rttpitUseLatestRestorableTime :: !(Maybe Bool)
-  , _rttpitRestoreDateTime         :: !(Maybe POSIX)
-  , _rttpitSourceTableName         :: !Text
-  , _rttpitTargetTableName         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RestoreTableToPointInTime =
+  RestoreTableToPointInTime'
+    { _rttpitUseLatestRestorableTime :: !(Maybe Bool)
+    , _rttpitRestoreDateTime         :: !(Maybe POSIX)
+    , _rttpitSourceTableName         :: !Text
+    , _rttpitTargetTableName         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RestoreTableToPointInTime' with the minimum fields required to make a request.
@@ -171,10 +173,12 @@ instance ToQuery RestoreTableToPointInTime where
         toQuery = const mempty
 
 -- | /See:/ 'restoreTableToPointInTimeResponse' smart constructor.
-data RestoreTableToPointInTimeResponse = RestoreTableToPointInTimeResponse'
-  { _rttpitrsTableDescription :: !(Maybe TableDescription)
-  , _rttpitrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RestoreTableToPointInTimeResponse =
+  RestoreTableToPointInTimeResponse'
+    { _rttpitrsTableDescription :: !(Maybe TableDescription)
+    , _rttpitrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RestoreTableToPointInTimeResponse' with the minimum fields required to make a request.

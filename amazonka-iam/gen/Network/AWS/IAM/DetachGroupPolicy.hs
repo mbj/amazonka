@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'detachGroupPolicy' smart constructor.
-data DetachGroupPolicy = DetachGroupPolicy'
-  { _dgpGroupName :: !Text
-  , _dgpPolicyARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DetachGroupPolicy =
+  DetachGroupPolicy'
+    { _dgpGroupName :: !Text
+    , _dgpPolicyARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DetachGroupPolicy' with the minimum fields required to make a request.

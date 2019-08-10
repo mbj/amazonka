@@ -55,15 +55,17 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createExportTask' smart constructor.
-data CreateExportTask = CreateExportTask'
-  { _cetDestinationPrefix   :: !(Maybe Text)
-  , _cetTaskName            :: !(Maybe Text)
-  , _cetLogStreamNamePrefix :: !(Maybe Text)
-  , _cetLogGroupName        :: !Text
-  , _cetFrom                :: !Nat
-  , _cetTo                  :: !Nat
-  , _cetDestination         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateExportTask =
+  CreateExportTask'
+    { _cetDestinationPrefix   :: !(Maybe Text)
+    , _cetTaskName            :: !(Maybe Text)
+    , _cetLogStreamNamePrefix :: !(Maybe Text)
+    , _cetLogGroupName        :: !Text
+    , _cetFrom                :: !Nat
+    , _cetTo                  :: !Nat
+    , _cetDestination         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateExportTask' with the minimum fields required to make a request.
@@ -170,10 +172,12 @@ instance ToQuery CreateExportTask where
         toQuery = const mempty
 
 -- | /See:/ 'createExportTaskResponse' smart constructor.
-data CreateExportTaskResponse = CreateExportTaskResponse'
-  { _cetrsTaskId         :: !(Maybe Text)
-  , _cetrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateExportTaskResponse =
+  CreateExportTaskResponse'
+    { _cetrsTaskId         :: !(Maybe Text)
+    , _cetrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateExportTaskResponse' with the minimum fields required to make a request.

@@ -59,15 +59,17 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'copyDBSnapshot' smart constructor.
-data CopyDBSnapshot = CopyDBSnapshot'
-  { _cdsPreSignedURL               :: !(Maybe Text)
-  , _cdsCopyTags                   :: !(Maybe Bool)
-  , _cdsKMSKeyId                   :: !(Maybe Text)
-  , _cdsOptionGroupName            :: !(Maybe Text)
-  , _cdsTags                       :: !(Maybe [Tag])
-  , _cdsSourceDBSnapshotIdentifier :: !Text
-  , _cdsTargetDBSnapshotIdentifier :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CopyDBSnapshot =
+  CopyDBSnapshot'
+    { _cdsPreSignedURL               :: !(Maybe Text)
+    , _cdsCopyTags                   :: !(Maybe Bool)
+    , _cdsKMSKeyId                   :: !(Maybe Text)
+    , _cdsOptionGroupName            :: !(Maybe Text)
+    , _cdsTags                       :: !(Maybe [Tag])
+    , _cdsSourceDBSnapshotIdentifier :: !Text
+    , _cdsTargetDBSnapshotIdentifier :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CopyDBSnapshot' with the minimum fields required to make a request.
@@ -166,10 +168,12 @@ instance ToQuery CopyDBSnapshot where
                  _cdsTargetDBSnapshotIdentifier]
 
 -- | /See:/ 'copyDBSnapshotResponse' smart constructor.
-data CopyDBSnapshotResponse = CopyDBSnapshotResponse'
-  { _cdsrsDBSnapshot     :: !(Maybe DBSnapshot)
-  , _cdsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CopyDBSnapshotResponse =
+  CopyDBSnapshotResponse'
+    { _cdsrsDBSnapshot     :: !(Maybe DBSnapshot)
+    , _cdsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CopyDBSnapshotResponse' with the minimum fields required to make a request.

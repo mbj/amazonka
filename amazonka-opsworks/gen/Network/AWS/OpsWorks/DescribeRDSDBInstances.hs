@@ -50,10 +50,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeRDSDBInstances' smart constructor.
-data DescribeRDSDBInstances = DescribeRDSDBInstances'
-  { _drdiRDSDBInstanceARNs :: !(Maybe [Text])
-  , _drdiStackId           :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeRDSDBInstances =
+  DescribeRDSDBInstances'
+    { _drdiRDSDBInstanceARNs :: !(Maybe [Text])
+    , _drdiStackId           :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeRDSDBInstances' with the minimum fields required to make a request.
@@ -122,10 +124,12 @@ instance ToQuery DescribeRDSDBInstances where
 --
 --
 -- /See:/ 'describeRDSDBInstancesResponse' smart constructor.
-data DescribeRDSDBInstancesResponse = DescribeRDSDBInstancesResponse'
-  { _drdirsRDSDBInstances :: !(Maybe [RDSDBInstance])
-  , _drdirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeRDSDBInstancesResponse =
+  DescribeRDSDBInstancesResponse'
+    { _drdirsRDSDBInstances :: !(Maybe [RDSDBInstance])
+    , _drdirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeRDSDBInstancesResponse' with the minimum fields required to make a request.

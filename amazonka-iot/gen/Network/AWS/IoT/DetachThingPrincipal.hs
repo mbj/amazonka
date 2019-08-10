@@ -49,10 +49,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'detachThingPrincipal' smart constructor.
-data DetachThingPrincipal = DetachThingPrincipal'
-  { _dtpThingName :: !Text
-  , _dtpPrincipal :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DetachThingPrincipal =
+  DetachThingPrincipal'
+    { _dtpThingName :: !Text
+    , _dtpPrincipal :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DetachThingPrincipal' with the minimum fields required to make a request.
@@ -110,9 +112,11 @@ instance ToQuery DetachThingPrincipal where
 --
 --
 -- /See:/ 'detachThingPrincipalResponse' smart constructor.
-newtype DetachThingPrincipalResponse = DetachThingPrincipalResponse'
-  { _dtprsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DetachThingPrincipalResponse =
+  DetachThingPrincipalResponse'
+    { _dtprsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DetachThingPrincipalResponse' with the minimum fields required to make a request.

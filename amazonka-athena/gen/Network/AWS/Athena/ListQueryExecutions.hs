@@ -52,10 +52,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listQueryExecutions' smart constructor.
-data ListQueryExecutions = ListQueryExecutions'
-  { _lqeNextToken  :: !(Maybe Text)
-  , _lqeMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListQueryExecutions =
+  ListQueryExecutions'
+    { _lqeNextToken  :: !(Maybe Text)
+    , _lqeMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListQueryExecutions' with the minimum fields required to make a request.
@@ -124,11 +126,13 @@ instance ToQuery ListQueryExecutions where
         toQuery = const mempty
 
 -- | /See:/ 'listQueryExecutionsResponse' smart constructor.
-data ListQueryExecutionsResponse = ListQueryExecutionsResponse'
-  { _lqersQueryExecutionIds :: !(Maybe (List1 Text))
-  , _lqersNextToken         :: !(Maybe Text)
-  , _lqersResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListQueryExecutionsResponse =
+  ListQueryExecutionsResponse'
+    { _lqersQueryExecutionIds :: !(Maybe (List1 Text))
+    , _lqersNextToken         :: !(Maybe Text)
+    , _lqersResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListQueryExecutionsResponse' with the minimum fields required to make a request.

@@ -54,12 +54,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getBotAliases' smart constructor.
-data GetBotAliases = GetBotAliases'
-  { _gbaNameContains :: !(Maybe Text)
-  , _gbaNextToken    :: !(Maybe Text)
-  , _gbaMaxResults   :: !(Maybe Nat)
-  , _gbaBotName      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetBotAliases =
+  GetBotAliases'
+    { _gbaNameContains :: !(Maybe Text)
+    , _gbaNextToken    :: !(Maybe Text)
+    , _gbaMaxResults   :: !(Maybe Nat)
+    , _gbaBotName      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBotAliases' with the minimum fields required to make a request.
@@ -142,11 +144,13 @@ instance ToQuery GetBotAliases where
                "maxResults" =: _gbaMaxResults]
 
 -- | /See:/ 'getBotAliasesResponse' smart constructor.
-data GetBotAliasesResponse = GetBotAliasesResponse'
-  { _gbarsNextToken      :: !(Maybe Text)
-  , _gbarsBotAliases     :: !(Maybe [BotAliasMetadata])
-  , _gbarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetBotAliasesResponse =
+  GetBotAliasesResponse'
+    { _gbarsNextToken      :: !(Maybe Text)
+    , _gbarsBotAliases     :: !(Maybe [BotAliasMetadata])
+    , _gbarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBotAliasesResponse' with the minimum fields required to make a request.

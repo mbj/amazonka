@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listDataSources' smart constructor.
-data ListDataSources = ListDataSources'
-  { _ldsNextToken  :: !(Maybe Text)
-  , _ldsMaxResults :: !(Maybe Nat)
-  , _ldsApiId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListDataSources =
+  ListDataSources'
+    { _ldsNextToken  :: !(Maybe Text)
+    , _ldsMaxResults :: !(Maybe Nat)
+    , _ldsApiId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDataSources' with the minimum fields required to make a request.
@@ -118,11 +120,13 @@ instance ToQuery ListDataSources where
                "maxResults" =: _ldsMaxResults]
 
 -- | /See:/ 'listDataSourcesResponse' smart constructor.
-data ListDataSourcesResponse = ListDataSourcesResponse'
-  { _ldsrsDataSources    :: !(Maybe [DataSource])
-  , _ldsrsNextToken      :: !(Maybe Text)
-  , _ldsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListDataSourcesResponse =
+  ListDataSourcesResponse'
+    { _ldsrsDataSources    :: !(Maybe [DataSource])
+    , _ldsrsNextToken      :: !(Maybe Text)
+    , _ldsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDataSourcesResponse' with the minimum fields required to make a request.

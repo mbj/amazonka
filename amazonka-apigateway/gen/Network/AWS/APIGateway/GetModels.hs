@@ -55,11 +55,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getModels' smart constructor.
-data GetModels = GetModels'
-  { _gmsLimit     :: !(Maybe Int)
-  , _gmsPosition  :: !(Maybe Text)
-  , _gmsRestAPIId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetModels =
+  GetModels'
+    { _gmsLimit     :: !(Maybe Int)
+    , _gmsPosition  :: !(Maybe Text)
+    , _gmsRestAPIId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetModels' with the minimum fields required to make a request.
@@ -134,11 +136,13 @@ instance ToQuery GetModels where
 -- 'Method' , 'MethodResponse' , <http://docs.aws.amazon.com/apigateway/latest/developerguide/models-mappings.html Models and Mappings>
 --
 -- /See:/ 'getModelsResponse' smart constructor.
-data GetModelsResponse = GetModelsResponse'
-  { _gmrsItems          :: !(Maybe [Model])
-  , _gmrsPosition       :: !(Maybe Text)
-  , _gmrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetModelsResponse =
+  GetModelsResponse'
+    { _gmrsItems          :: !(Maybe [Model])
+    , _gmrsPosition       :: !(Maybe Text)
+    , _gmrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetModelsResponse' with the minimum fields required to make a request.

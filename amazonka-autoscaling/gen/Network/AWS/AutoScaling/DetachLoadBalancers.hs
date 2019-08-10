@@ -49,10 +49,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'detachLoadBalancers' smart constructor.
-data DetachLoadBalancers = DetachLoadBalancers'
-  { _dAutoScalingGroupName :: !Text
-  , _dLoadBalancerNames    :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DetachLoadBalancers =
+  DetachLoadBalancers'
+    { _dAutoScalingGroupName :: !Text
+    , _dLoadBalancerNames    :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DetachLoadBalancers' with the minimum fields required to make a request.
@@ -109,9 +111,11 @@ instance ToQuery DetachLoadBalancers where
                  toQueryList "member" _dLoadBalancerNames]
 
 -- | /See:/ 'detachLoadBalancersResponse' smart constructor.
-newtype DetachLoadBalancersResponse = DetachLoadBalancersResponse'
-  { _dlbsrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DetachLoadBalancersResponse =
+  DetachLoadBalancersResponse'
+    { _dlbsrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DetachLoadBalancersResponse' with the minimum fields required to make a request.

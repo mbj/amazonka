@@ -46,11 +46,13 @@ import Network.AWS.WorkMail.Types
 import Network.AWS.WorkMail.Types.Product
 
 -- | /See:/ 'disassociateMemberFromGroup' smart constructor.
-data DisassociateMemberFromGroup = DisassociateMemberFromGroup'
-  { _dmfgOrganizationId :: !Text
-  , _dmfgGroupId        :: !Text
-  , _dmfgMemberId       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DisassociateMemberFromGroup =
+  DisassociateMemberFromGroup'
+    { _dmfgOrganizationId :: !Text
+    , _dmfgGroupId        :: !Text
+    , _dmfgMemberId       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisassociateMemberFromGroup' with the minimum fields required to make a request.
@@ -126,9 +128,11 @@ instance ToQuery DisassociateMemberFromGroup where
         toQuery = const mempty
 
 -- | /See:/ 'disassociateMemberFromGroupResponse' smart constructor.
-newtype DisassociateMemberFromGroupResponse = DisassociateMemberFromGroupResponse'
-  { _dmfgrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DisassociateMemberFromGroupResponse =
+  DisassociateMemberFromGroupResponse'
+    { _dmfgrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisassociateMemberFromGroupResponse' with the minimum fields required to make a request.

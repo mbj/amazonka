@@ -62,12 +62,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'indexFaces' smart constructor.
-data IndexFaces = IndexFaces'
-  { _ifExternalImageId     :: !(Maybe Text)
-  , _ifDetectionAttributes :: !(Maybe [Attribute])
-  , _ifCollectionId        :: !Text
-  , _ifImage               :: !Image
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data IndexFaces =
+  IndexFaces'
+    { _ifExternalImageId     :: !(Maybe Text)
+    , _ifDetectionAttributes :: !(Maybe [Attribute])
+    , _ifCollectionId        :: !Text
+    , _ifImage               :: !Image
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'IndexFaces' with the minimum fields required to make a request.
@@ -152,12 +154,14 @@ instance ToQuery IndexFaces where
         toQuery = const mempty
 
 -- | /See:/ 'indexFacesResponse' smart constructor.
-data IndexFacesResponse = IndexFacesResponse'
-  { _ifrsFaceModelVersion      :: !(Maybe Text)
-  , _ifrsFaceRecords           :: !(Maybe [FaceRecord])
-  , _ifrsOrientationCorrection :: !(Maybe OrientationCorrection)
-  , _ifrsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data IndexFacesResponse =
+  IndexFacesResponse'
+    { _ifrsFaceModelVersion      :: !(Maybe Text)
+    , _ifrsFaceRecords           :: !(Maybe [FaceRecord])
+    , _ifrsOrientationCorrection :: !(Maybe OrientationCorrection)
+    , _ifrsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'IndexFacesResponse' with the minimum fields required to make a request.

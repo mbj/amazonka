@@ -51,9 +51,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'disableSnapshotCopy' smart constructor.
-newtype DisableSnapshotCopy = DisableSnapshotCopy'
-  { _dscClusterIdentifier :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DisableSnapshotCopy =
+  DisableSnapshotCopy'
+    { _dscClusterIdentifier :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisableSnapshotCopy' with the minimum fields required to make a request.
@@ -100,10 +102,12 @@ instance ToQuery DisableSnapshotCopy where
                "ClusterIdentifier" =: _dscClusterIdentifier]
 
 -- | /See:/ 'disableSnapshotCopyResponse' smart constructor.
-data DisableSnapshotCopyResponse = DisableSnapshotCopyResponse'
-  { _dscrsCluster        :: !(Maybe Cluster)
-  , _dscrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DisableSnapshotCopyResponse =
+  DisableSnapshotCopyResponse'
+    { _dscrsCluster        :: !(Maybe Cluster)
+    , _dscrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisableSnapshotCopyResponse' with the minimum fields required to make a request.

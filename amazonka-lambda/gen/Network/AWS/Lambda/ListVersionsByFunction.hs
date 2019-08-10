@@ -52,11 +52,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listVersionsByFunction' smart constructor.
-data ListVersionsByFunction = ListVersionsByFunction'
-  { _lvbfMarker       :: !(Maybe Text)
-  , _lvbfMaxItems     :: !(Maybe Nat)
-  , _lvbfFunctionName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListVersionsByFunction =
+  ListVersionsByFunction'
+    { _lvbfMarker       :: !(Maybe Text)
+    , _lvbfMaxItems     :: !(Maybe Nat)
+    , _lvbfFunctionName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListVersionsByFunction' with the minimum fields required to make a request.
@@ -127,11 +129,13 @@ instance ToQuery ListVersionsByFunction where
 --
 --
 -- /See:/ 'listVersionsByFunctionResponse' smart constructor.
-data ListVersionsByFunctionResponse = ListVersionsByFunctionResponse'
-  { _lvbfrsVersions       :: !(Maybe [FunctionConfiguration])
-  , _lvbfrsNextMarker     :: !(Maybe Text)
-  , _lvbfrsResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data ListVersionsByFunctionResponse =
+  ListVersionsByFunctionResponse'
+    { _lvbfrsVersions       :: !(Maybe [FunctionConfiguration])
+    , _lvbfrsNextMarker     :: !(Maybe Text)
+    , _lvbfrsResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListVersionsByFunctionResponse' with the minimum fields required to make a request.

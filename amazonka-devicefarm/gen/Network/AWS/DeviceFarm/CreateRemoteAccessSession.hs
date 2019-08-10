@@ -60,20 +60,22 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createRemoteAccessSession' smart constructor.
-data CreateRemoteAccessSession = CreateRemoteAccessSession'
-  { _crasClientId            :: !(Maybe Text)
-  , _crasSkipAppResign       :: !(Maybe Bool)
-  , _crasInstanceARN         :: !(Maybe Text)
-  , _crasRemoteRecordEnabled :: !(Maybe Bool)
-  , _crasRemoteRecordAppARN  :: !(Maybe Text)
-  , _crasSshPublicKey        :: !(Maybe Text)
-  , _crasName                :: !(Maybe Text)
-  , _crasRemoteDebugEnabled  :: !(Maybe Bool)
-  , _crasConfiguration       :: !(Maybe CreateRemoteAccessSessionConfiguration)
-  , _crasInteractionMode     :: !(Maybe InteractionMode)
-  , _crasProjectARN          :: !Text
-  , _crasDeviceARN           :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateRemoteAccessSession =
+  CreateRemoteAccessSession'
+    { _crasClientId :: !(Maybe Text)
+    , _crasSkipAppResign :: !(Maybe Bool)
+    , _crasInstanceARN :: !(Maybe Text)
+    , _crasRemoteRecordEnabled :: !(Maybe Bool)
+    , _crasRemoteRecordAppARN :: !(Maybe Text)
+    , _crasSshPublicKey :: !(Maybe Text)
+    , _crasName :: !(Maybe Text)
+    , _crasRemoteDebugEnabled :: !(Maybe Bool)
+    , _crasConfiguration :: !(Maybe CreateRemoteAccessSessionConfiguration)
+    , _crasInteractionMode :: !(Maybe InteractionMode)
+    , _crasProjectARN :: !Text
+    , _crasDeviceARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateRemoteAccessSession' with the minimum fields required to make a request.
@@ -228,10 +230,12 @@ instance ToQuery CreateRemoteAccessSession where
 --
 --
 -- /See:/ 'createRemoteAccessSessionResponse' smart constructor.
-data CreateRemoteAccessSessionResponse = CreateRemoteAccessSessionResponse'
-  { _crasrsRemoteAccessSession :: !(Maybe RemoteAccessSession)
-  , _crasrsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateRemoteAccessSessionResponse =
+  CreateRemoteAccessSessionResponse'
+    { _crasrsRemoteAccessSession :: !(Maybe RemoteAccessSession)
+    , _crasrsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateRemoteAccessSessionResponse' with the minimum fields required to make a request.

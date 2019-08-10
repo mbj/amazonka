@@ -52,12 +52,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listAssessmentRunAgents' smart constructor.
-data ListAssessmentRunAgents = ListAssessmentRunAgents'
-  { _laraNextToken        :: !(Maybe Text)
-  , _laraFilter           :: !(Maybe AgentFilter)
-  , _laraMaxResults       :: !(Maybe Int)
-  , _laraAssessmentRunARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAssessmentRunAgents =
+  ListAssessmentRunAgents'
+    { _laraNextToken        :: !(Maybe Text)
+    , _laraFilter           :: !(Maybe AgentFilter)
+    , _laraMaxResults       :: !(Maybe Int)
+    , _laraAssessmentRunARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAssessmentRunAgents' with the minimum fields required to make a request.
@@ -147,11 +149,13 @@ instance ToQuery ListAssessmentRunAgents where
         toQuery = const mempty
 
 -- | /See:/ 'listAssessmentRunAgentsResponse' smart constructor.
-data ListAssessmentRunAgentsResponse = ListAssessmentRunAgentsResponse'
-  { _lararsNextToken           :: !(Maybe Text)
-  , _lararsResponseStatus      :: !Int
-  , _lararsAssessmentRunAgents :: ![AssessmentRunAgent]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAssessmentRunAgentsResponse =
+  ListAssessmentRunAgentsResponse'
+    { _lararsNextToken           :: !(Maybe Text)
+    , _lararsResponseStatus      :: !Int
+    , _lararsAssessmentRunAgents :: ![AssessmentRunAgent]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAssessmentRunAgentsResponse' with the minimum fields required to make a request.

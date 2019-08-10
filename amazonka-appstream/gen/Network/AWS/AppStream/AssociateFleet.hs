@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'associateFleet' smart constructor.
-data AssociateFleet = AssociateFleet'
-  { _afFleetName :: !Text
-  , _afStackName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssociateFleet =
+  AssociateFleet'
+    { _afFleetName :: !Text
+    , _afStackName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateFleet' with the minimum fields required to make a request.
@@ -110,9 +112,11 @@ instance ToQuery AssociateFleet where
         toQuery = const mempty
 
 -- | /See:/ 'associateFleetResponse' smart constructor.
-newtype AssociateFleetResponse = AssociateFleetResponse'
-  { _afrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AssociateFleetResponse =
+  AssociateFleetResponse'
+    { _afrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateFleetResponse' with the minimum fields required to make a request.

@@ -43,9 +43,11 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'getBucketPolicy' smart constructor.
-newtype GetBucketPolicy = GetBucketPolicy'
-  { _gbpBucket :: BucketName
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetBucketPolicy =
+  GetBucketPolicy'
+    { _gbpBucket :: BucketName
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBucketPolicy' with the minimum fields required to make a request.
@@ -87,10 +89,12 @@ instance ToQuery GetBucketPolicy where
         toQuery = const (mconcat ["policy"])
 
 -- | /See:/ 'getBucketPolicyResponse' smart constructor.
-data GetBucketPolicyResponse = GetBucketPolicyResponse'
-  { _gbprsResponseStatus :: !Int
-  , _gbprsPolicy         :: !ByteString
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data GetBucketPolicyResponse =
+  GetBucketPolicyResponse'
+    { _gbprsResponseStatus :: !Int
+    , _gbprsPolicy         :: !ByteString
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBucketPolicyResponse' with the minimum fields required to make a request.

@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'registerThing' smart constructor.
-data RegisterThing = RegisterThing'
-  { _rtParameters   :: !(Maybe (Map Text Text))
-  , _rtTemplateBody :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RegisterThing =
+  RegisterThing'
+    { _rtParameters   :: !(Maybe (Map Text Text))
+    , _rtTemplateBody :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterThing' with the minimum fields required to make a request.
@@ -107,11 +109,13 @@ instance ToQuery RegisterThing where
         toQuery = const mempty
 
 -- | /See:/ 'registerThingResponse' smart constructor.
-data RegisterThingResponse = RegisterThingResponse'
-  { _rtrsCertificatePem :: !(Maybe Text)
-  , _rtrsResourceARNs   :: !(Maybe (Map Text Text))
-  , _rtrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RegisterThingResponse =
+  RegisterThingResponse'
+    { _rtrsCertificatePem :: !(Maybe Text)
+    , _rtrsResourceARNs   :: !(Maybe (Map Text Text))
+    , _rtrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterThingResponse' with the minimum fields required to make a request.

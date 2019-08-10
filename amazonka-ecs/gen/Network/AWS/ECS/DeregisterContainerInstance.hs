@@ -51,11 +51,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deregisterContainerInstance' smart constructor.
-data DeregisterContainerInstance = DeregisterContainerInstance'
-  { _derCluster           :: !(Maybe Text)
-  , _derForce             :: !(Maybe Bool)
-  , _derContainerInstance :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeregisterContainerInstance =
+  DeregisterContainerInstance'
+    { _derCluster           :: !(Maybe Text)
+    , _derForce             :: !(Maybe Bool)
+    , _derContainerInstance :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeregisterContainerInstance' with the minimum fields required to make a request.
@@ -129,10 +131,12 @@ instance ToQuery DeregisterContainerInstance where
         toQuery = const mempty
 
 -- | /See:/ 'deregisterContainerInstanceResponse' smart constructor.
-data DeregisterContainerInstanceResponse = DeregisterContainerInstanceResponse'
-  { _dcirsContainerInstance :: !(Maybe ContainerInstance)
-  , _dcirsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeregisterContainerInstanceResponse =
+  DeregisterContainerInstanceResponse'
+    { _dcirsContainerInstance :: !(Maybe ContainerInstance)
+    , _dcirsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeregisterContainerInstanceResponse' with the minimum fields required to make a request.

@@ -63,23 +63,25 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createUserPoolClient' smart constructor.
-data CreateUserPoolClient = CreateUserPoolClient'
-  { _cupcRefreshTokenValidity            :: !(Maybe Nat)
-  , _cupcExplicitAuthFlows               :: !(Maybe [ExplicitAuthFlowsType])
-  , _cupcSupportedIdentityProviders      :: !(Maybe [Text])
-  , _cupcLogoutURLs                      :: !(Maybe [Text])
-  , _cupcAllowedOAuthFlowsUserPoolClient :: !(Maybe Bool)
-  , _cupcGenerateSecret                  :: !(Maybe Bool)
-  , _cupcDefaultRedirectURI              :: !(Maybe Text)
-  , _cupcWriteAttributes                 :: !(Maybe [Text])
-  , _cupcReadAttributes                  :: !(Maybe [Text])
-  , _cupcAllowedOAuthScopes              :: !(Maybe [Text])
-  , _cupcAllowedOAuthFlows               :: !(Maybe [OAuthFlowType])
-  , _cupcAnalyticsConfiguration          :: !(Maybe AnalyticsConfigurationType)
-  , _cupcCallbackURLs                    :: !(Maybe [Text])
-  , _cupcUserPoolId                      :: !Text
-  , _cupcClientName                      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateUserPoolClient =
+  CreateUserPoolClient'
+    { _cupcRefreshTokenValidity :: !(Maybe Nat)
+    , _cupcExplicitAuthFlows :: !(Maybe [ExplicitAuthFlowsType])
+    , _cupcSupportedIdentityProviders :: !(Maybe [Text])
+    , _cupcLogoutURLs :: !(Maybe [Text])
+    , _cupcAllowedOAuthFlowsUserPoolClient :: !(Maybe Bool)
+    , _cupcGenerateSecret :: !(Maybe Bool)
+    , _cupcDefaultRedirectURI :: !(Maybe Text)
+    , _cupcWriteAttributes :: !(Maybe [Text])
+    , _cupcReadAttributes :: !(Maybe [Text])
+    , _cupcAllowedOAuthScopes :: !(Maybe [Text])
+    , _cupcAllowedOAuthFlows :: !(Maybe [OAuthFlowType])
+    , _cupcAnalyticsConfiguration :: !(Maybe AnalyticsConfigurationType)
+    , _cupcCallbackURLs :: !(Maybe [Text])
+    , _cupcUserPoolId :: !Text
+    , _cupcClientName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateUserPoolClient' with the minimum fields required to make a request.
@@ -260,10 +262,12 @@ instance ToQuery CreateUserPoolClient where
 --
 --
 -- /See:/ 'createUserPoolClientResponse' smart constructor.
-data CreateUserPoolClientResponse = CreateUserPoolClientResponse'
-  { _cupcrsUserPoolClient :: !(Maybe UserPoolClientType)
-  , _cupcrsResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data CreateUserPoolClientResponse =
+  CreateUserPoolClientResponse'
+    { _cupcrsUserPoolClient :: !(Maybe UserPoolClientType)
+    , _cupcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateUserPoolClientResponse' with the minimum fields required to make a request.

@@ -50,9 +50,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getCSVHeader' smart constructor.
-newtype GetCSVHeader = GetCSVHeader'
-  { _gchUserPoolId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetCSVHeader =
+  GetCSVHeader'
+    { _gchUserPoolId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetCSVHeader' with the minimum fields required to make a request.
@@ -111,11 +113,13 @@ instance ToQuery GetCSVHeader where
 --
 --
 -- /See:/ 'getCSVHeaderResponse' smart constructor.
-data GetCSVHeaderResponse = GetCSVHeaderResponse'
-  { _gchrsUserPoolId     :: !(Maybe Text)
-  , _gchrsCSVHeader      :: !(Maybe [Text])
-  , _gchrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetCSVHeaderResponse =
+  GetCSVHeaderResponse'
+    { _gchrsUserPoolId     :: !(Maybe Text)
+    , _gchrsCSVHeader      :: !(Maybe [Text])
+    , _gchrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetCSVHeaderResponse' with the minimum fields required to make a request.

@@ -48,9 +48,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getOpenIdConnectProvider' smart constructor.
-newtype GetOpenIdConnectProvider = GetOpenIdConnectProvider'
-  { _goicpOpenIdConnectProviderARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetOpenIdConnectProvider =
+  GetOpenIdConnectProvider'
+    { _goicpOpenIdConnectProviderARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetOpenIdConnectProvider' with the minimum fields required to make a request.
@@ -110,13 +112,15 @@ instance ToQuery GetOpenIdConnectProvider where
 --
 --
 -- /See:/ 'getOpenIdConnectProviderResponse' smart constructor.
-data GetOpenIdConnectProviderResponse = GetOpenIdConnectProviderResponse'
-  { _goicprsCreateDate     :: !(Maybe ISO8601)
-  , _goicprsURL            :: !(Maybe Text)
-  , _goicprsThumbprintList :: !(Maybe [Text])
-  , _goicprsClientIdList   :: !(Maybe [Text])
-  , _goicprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetOpenIdConnectProviderResponse =
+  GetOpenIdConnectProviderResponse'
+    { _goicprsCreateDate     :: !(Maybe ISO8601)
+    , _goicprsURL            :: !(Maybe Text)
+    , _goicprsThumbprintList :: !(Maybe [Text])
+    , _goicprsClientIdList   :: !(Maybe [Text])
+    , _goicprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetOpenIdConnectProviderResponse' with the minimum fields required to make a request.

@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createContainer' smart constructor.
-newtype CreateContainer = CreateContainer'
-  { _ccContainerName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateContainer =
+  CreateContainer'
+    { _ccContainerName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateContainer' with the minimum fields required to make a request.
@@ -102,10 +104,12 @@ instance ToQuery CreateContainer where
         toQuery = const mempty
 
 -- | /See:/ 'createContainerResponse' smart constructor.
-data CreateContainerResponse = CreateContainerResponse'
-  { _ccrsResponseStatus :: !Int
-  , _ccrsContainer      :: !Container
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateContainerResponse =
+  CreateContainerResponse'
+    { _ccrsResponseStatus :: !Int
+    , _ccrsContainer      :: !Container
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateContainerResponse' with the minimum fields required to make a request.

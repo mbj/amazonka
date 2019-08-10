@@ -49,9 +49,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'disassociateVPCCidrBlock' smart constructor.
-newtype DisassociateVPCCidrBlock = DisassociateVPCCidrBlock'
-  { _dvcbAssociationId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DisassociateVPCCidrBlock =
+  DisassociateVPCCidrBlock'
+    { _dvcbAssociationId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisassociateVPCCidrBlock' with the minimum fields required to make a request.
@@ -101,12 +103,14 @@ instance ToQuery DisassociateVPCCidrBlock where
                "AssociationId" =: _dvcbAssociationId]
 
 -- | /See:/ 'disassociateVPCCidrBlockResponse' smart constructor.
-data DisassociateVPCCidrBlockResponse = DisassociateVPCCidrBlockResponse'
-  { _dvcbrsVPCId                    :: !(Maybe Text)
-  , _dvcbrsCidrBlockAssociation     :: !(Maybe VPCCidrBlockAssociation)
-  , _dvcbrsIPv6CidrBlockAssociation :: !(Maybe VPCIPv6CidrBlockAssociation)
-  , _dvcbrsResponseStatus           :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DisassociateVPCCidrBlockResponse =
+  DisassociateVPCCidrBlockResponse'
+    { _dvcbrsVPCId                    :: !(Maybe Text)
+    , _dvcbrsCidrBlockAssociation     :: !(Maybe VPCCidrBlockAssociation)
+    , _dvcbrsIPv6CidrBlockAssociation :: !(Maybe VPCIPv6CidrBlockAssociation)
+    , _dvcbrsResponseStatus           :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisassociateVPCCidrBlockResponse' with the minimum fields required to make a request.

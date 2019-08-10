@@ -46,11 +46,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'attachPolicy' smart constructor.
-data AttachPolicy = AttachPolicy'
-  { _apDirectoryARN    :: !Text
-  , _apPolicyReference :: !ObjectReference
-  , _apObjectReference :: !ObjectReference
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AttachPolicy =
+  AttachPolicy'
+    { _apDirectoryARN    :: !Text
+    , _apPolicyReference :: !ObjectReference
+    , _apObjectReference :: !ObjectReference
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttachPolicy' with the minimum fields required to make a request.
@@ -119,9 +121,11 @@ instance ToQuery AttachPolicy where
         toQuery = const mempty
 
 -- | /See:/ 'attachPolicyResponse' smart constructor.
-newtype AttachPolicyResponse = AttachPolicyResponse'
-  { _aprsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AttachPolicyResponse =
+  AttachPolicyResponse'
+    { _aprsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttachPolicyResponse' with the minimum fields required to make a request.

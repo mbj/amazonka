@@ -53,12 +53,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeBackups' smart constructor.
-data DescribeBackups = DescribeBackups'
-  { _dServerName :: !(Maybe Text)
-  , _dBackupId   :: !(Maybe Text)
-  , _dNextToken  :: !(Maybe Text)
-  , _dMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeBackups =
+  DescribeBackups'
+    { _dServerName :: !(Maybe Text)
+    , _dBackupId   :: !(Maybe Text)
+    , _dNextToken  :: !(Maybe Text)
+    , _dMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeBackups' with the minimum fields required to make a request.
@@ -139,11 +141,13 @@ instance ToQuery DescribeBackups where
         toQuery = const mempty
 
 -- | /See:/ 'describeBackupsResponse' smart constructor.
-data DescribeBackupsResponse = DescribeBackupsResponse'
-  { _drsBackups        :: !(Maybe [Backup])
-  , _drsNextToken      :: !(Maybe Text)
-  , _drsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeBackupsResponse =
+  DescribeBackupsResponse'
+    { _drsBackups        :: !(Maybe [Backup])
+    , _drsNextToken      :: !(Maybe Text)
+    , _drsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeBackupsResponse' with the minimum fields required to make a request.

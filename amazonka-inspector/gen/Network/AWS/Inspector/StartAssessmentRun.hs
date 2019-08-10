@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'startAssessmentRun' smart constructor.
-data StartAssessmentRun = StartAssessmentRun'
-  { _sarAssessmentRunName     :: !(Maybe Text)
-  , _sarAssessmentTemplateARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartAssessmentRun =
+  StartAssessmentRun'
+    { _sarAssessmentRunName     :: !(Maybe Text)
+    , _sarAssessmentTemplateARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartAssessmentRun' with the minimum fields required to make a request.
@@ -117,10 +119,12 @@ instance ToQuery StartAssessmentRun where
         toQuery = const mempty
 
 -- | /See:/ 'startAssessmentRunResponse' smart constructor.
-data StartAssessmentRunResponse = StartAssessmentRunResponse'
-  { _sarrsResponseStatus   :: !Int
-  , _sarrsAssessmentRunARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartAssessmentRunResponse =
+  StartAssessmentRunResponse'
+    { _sarrsResponseStatus   :: !Int
+    , _sarrsAssessmentRunARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartAssessmentRunResponse' with the minimum fields required to make a request.

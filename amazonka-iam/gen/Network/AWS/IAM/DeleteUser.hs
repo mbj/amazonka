@@ -42,9 +42,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteUser' smart constructor.
-newtype DeleteUser = DeleteUser'
-  { _duUserName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteUser =
+  DeleteUser'
+    { _duUserName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteUser' with the minimum fields required to make a request.

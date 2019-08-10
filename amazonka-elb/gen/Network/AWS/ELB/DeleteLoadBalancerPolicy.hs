@@ -49,10 +49,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteLoadBalancerPolicy' smart constructor.
-data DeleteLoadBalancerPolicy = DeleteLoadBalancerPolicy'
-  { _dLoadBalancerName :: !Text
-  , _dPolicyName       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteLoadBalancerPolicy =
+  DeleteLoadBalancerPolicy'
+    { _dLoadBalancerName :: !Text
+    , _dPolicyName       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteLoadBalancerPolicy' with the minimum fields required to make a request.
@@ -113,9 +115,11 @@ instance ToQuery DeleteLoadBalancerPolicy where
 --
 --
 -- /See:/ 'deleteLoadBalancerPolicyResponse' smart constructor.
-newtype DeleteLoadBalancerPolicyResponse = DeleteLoadBalancerPolicyResponse'
-  { _delrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteLoadBalancerPolicyResponse =
+  DeleteLoadBalancerPolicyResponse'
+    { _delrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteLoadBalancerPolicyResponse' with the minimum fields required to make a request.

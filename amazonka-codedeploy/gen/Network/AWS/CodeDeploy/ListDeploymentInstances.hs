@@ -56,12 +56,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listDeploymentInstances' smart constructor.
-data ListDeploymentInstances = ListDeploymentInstances'
-  { _lInstanceStatusFilter :: !(Maybe [InstanceStatus])
-  , _lNextToken            :: !(Maybe Text)
-  , _lInstanceTypeFilter   :: !(Maybe [InstanceType])
-  , _lDeploymentId         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListDeploymentInstances =
+  ListDeploymentInstances'
+    { _lInstanceStatusFilter :: !(Maybe [InstanceStatus])
+    , _lNextToken            :: !(Maybe Text)
+    , _lInstanceTypeFilter   :: !(Maybe [InstanceType])
+    , _lDeploymentId         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDeploymentInstances' with the minimum fields required to make a request.
@@ -157,11 +159,13 @@ instance ToQuery ListDeploymentInstances where
 --
 --
 -- /See:/ 'listDeploymentInstancesResponse' smart constructor.
-data ListDeploymentInstancesResponse = ListDeploymentInstancesResponse'
-  { _ldirsNextToken      :: !(Maybe Text)
-  , _ldirsInstancesList  :: !(Maybe [Text])
-  , _ldirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListDeploymentInstancesResponse =
+  ListDeploymentInstancesResponse'
+    { _ldirsNextToken      :: !(Maybe Text)
+    , _ldirsInstancesList  :: !(Maybe [Text])
+    , _ldirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDeploymentInstancesResponse' with the minimum fields required to make a request.

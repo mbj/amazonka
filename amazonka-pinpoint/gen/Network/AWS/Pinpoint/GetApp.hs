@@ -43,9 +43,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getApp' smart constructor.
-newtype GetApp = GetApp'
-  { _gaApplicationId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetApp =
+  GetApp'
+    { _gaApplicationId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetApp' with the minimum fields required to make a request.
@@ -91,10 +93,12 @@ instance ToQuery GetApp where
         toQuery = const mempty
 
 -- | /See:/ 'getAppResponse' smart constructor.
-data GetAppResponse = GetAppResponse'
-  { _garsResponseStatus      :: !Int
-  , _garsApplicationResponse :: !ApplicationResponse
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetAppResponse =
+  GetAppResponse'
+    { _garsResponseStatus      :: !Int
+    , _garsApplicationResponse :: !ApplicationResponse
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetAppResponse' with the minimum fields required to make a request.

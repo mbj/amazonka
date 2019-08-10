@@ -60,16 +60,18 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeReservedCacheNodes' smart constructor.
-data DescribeReservedCacheNodes = DescribeReservedCacheNodes'
-  { _drcnCacheNodeType                :: !(Maybe Text)
-  , _drcnProductDescription           :: !(Maybe Text)
-  , _drcnMarker                       :: !(Maybe Text)
-  , _drcnMaxRecords                   :: !(Maybe Int)
-  , _drcnReservedCacheNodeId          :: !(Maybe Text)
-  , _drcnOfferingType                 :: !(Maybe Text)
-  , _drcnDuration                     :: !(Maybe Text)
-  , _drcnReservedCacheNodesOfferingId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeReservedCacheNodes =
+  DescribeReservedCacheNodes'
+    { _drcnCacheNodeType                :: !(Maybe Text)
+    , _drcnProductDescription           :: !(Maybe Text)
+    , _drcnMarker                       :: !(Maybe Text)
+    , _drcnMaxRecords                   :: !(Maybe Int)
+    , _drcnReservedCacheNodeId          :: !(Maybe Text)
+    , _drcnOfferingType                 :: !(Maybe Text)
+    , _drcnDuration                     :: !(Maybe Text)
+    , _drcnReservedCacheNodesOfferingId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeReservedCacheNodes' with the minimum fields required to make a request.
@@ -190,11 +192,13 @@ instance ToQuery DescribeReservedCacheNodes where
 --
 --
 -- /See:/ 'describeReservedCacheNodesResponse' smart constructor.
-data DescribeReservedCacheNodesResponse = DescribeReservedCacheNodesResponse'
-  { _drcnrsMarker             :: !(Maybe Text)
-  , _drcnrsReservedCacheNodes :: !(Maybe [ReservedCacheNode])
-  , _drcnrsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeReservedCacheNodesResponse =
+  DescribeReservedCacheNodesResponse'
+    { _drcnrsMarker             :: !(Maybe Text)
+    , _drcnrsReservedCacheNodes :: !(Maybe [ReservedCacheNode])
+    , _drcnrsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeReservedCacheNodesResponse' with the minimum fields required to make a request.

@@ -73,17 +73,19 @@ import Network.AWS.SageMaker.Types
 import Network.AWS.SageMaker.Types.Product
 
 -- | /See:/ 'createNotebookInstance' smart constructor.
-data CreateNotebookInstance = CreateNotebookInstance'
-  { _cniSecurityGroupIds     :: !(Maybe [Text])
-  , _cniLifecycleConfigName  :: !(Maybe Text)
-  , _cniSubnetId             :: !(Maybe Text)
-  , _cniKMSKeyId             :: !(Maybe Text)
-  , _cniDirectInternetAccess :: !(Maybe DirectInternetAccess)
-  , _cniTags                 :: !(Maybe [Tag])
-  , _cniNotebookInstanceName :: !Text
-  , _cniInstanceType         :: !InstanceType
-  , _cniRoleARN              :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateNotebookInstance =
+  CreateNotebookInstance'
+    { _cniSecurityGroupIds     :: !(Maybe [Text])
+    , _cniLifecycleConfigName  :: !(Maybe Text)
+    , _cniSubnetId             :: !(Maybe Text)
+    , _cniKMSKeyId             :: !(Maybe Text)
+    , _cniDirectInternetAccess :: !(Maybe DirectInternetAccess)
+    , _cniTags                 :: !(Maybe [Tag])
+    , _cniNotebookInstanceName :: !Text
+    , _cniInstanceType         :: !InstanceType
+    , _cniRoleARN              :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateNotebookInstance' with the minimum fields required to make a request.
@@ -210,10 +212,12 @@ instance ToQuery CreateNotebookInstance where
         toQuery = const mempty
 
 -- | /See:/ 'createNotebookInstanceResponse' smart constructor.
-data CreateNotebookInstanceResponse = CreateNotebookInstanceResponse'
-  { _cnirsNotebookInstanceARN :: !(Maybe Text)
-  , _cnirsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateNotebookInstanceResponse =
+  CreateNotebookInstanceResponse'
+    { _cnirsNotebookInstanceARN :: !(Maybe Text)
+    , _cnirsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateNotebookInstanceResponse' with the minimum fields required to make a request.

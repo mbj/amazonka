@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeTaskDefinition' smart constructor.
-newtype DescribeTaskDefinition = DescribeTaskDefinition'
-  { _dtdTaskDefinition :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeTaskDefinition =
+  DescribeTaskDefinition'
+    { _dtdTaskDefinition :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeTaskDefinition' with the minimum fields required to make a request.
@@ -103,10 +105,12 @@ instance ToQuery DescribeTaskDefinition where
         toQuery = const mempty
 
 -- | /See:/ 'describeTaskDefinitionResponse' smart constructor.
-data DescribeTaskDefinitionResponse = DescribeTaskDefinitionResponse'
-  { _desrsTaskDefinition :: !(Maybe TaskDefinition)
-  , _desrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeTaskDefinitionResponse =
+  DescribeTaskDefinitionResponse'
+    { _desrsTaskDefinition :: !(Maybe TaskDefinition)
+    , _desrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeTaskDefinitionResponse' with the minimum fields required to make a request.

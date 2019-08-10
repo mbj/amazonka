@@ -63,12 +63,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'recordLifecycleActionHeartbeat' smart constructor.
-data RecordLifecycleActionHeartbeat = RecordLifecycleActionHeartbeat'
-  { _rlahInstanceId           :: !(Maybe Text)
-  , _rlahLifecycleActionToken :: !(Maybe Text)
-  , _rlahLifecycleHookName    :: !Text
-  , _rlahAutoScalingGroupName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RecordLifecycleActionHeartbeat =
+  RecordLifecycleActionHeartbeat'
+    { _rlahInstanceId           :: !(Maybe Text)
+    , _rlahLifecycleActionToken :: !(Maybe Text)
+    , _rlahLifecycleHookName    :: !Text
+    , _rlahAutoScalingGroupName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RecordLifecycleActionHeartbeat' with the minimum fields required to make a request.
@@ -147,9 +149,11 @@ instance ToQuery RecordLifecycleActionHeartbeat where
                "AutoScalingGroupName" =: _rlahAutoScalingGroupName]
 
 -- | /See:/ 'recordLifecycleActionHeartbeatResponse' smart constructor.
-newtype RecordLifecycleActionHeartbeatResponse = RecordLifecycleActionHeartbeatResponse'
-  { _rlahrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RecordLifecycleActionHeartbeatResponse =
+  RecordLifecycleActionHeartbeatResponse'
+    { _rlahrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RecordLifecycleActionHeartbeatResponse' with the minimum fields required to make a request.

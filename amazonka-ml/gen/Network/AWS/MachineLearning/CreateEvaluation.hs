@@ -52,12 +52,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createEvaluation' smart constructor.
-data CreateEvaluation = CreateEvaluation'
-  { _ceEvaluationName         :: !(Maybe Text)
-  , _ceEvaluationId           :: !Text
-  , _ceMLModelId              :: !Text
-  , _ceEvaluationDataSourceId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateEvaluation =
+  CreateEvaluation'
+    { _ceEvaluationName         :: !(Maybe Text)
+    , _ceEvaluationId           :: !Text
+    , _ceMLModelId              :: !Text
+    , _ceEvaluationDataSourceId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateEvaluation' with the minimum fields required to make a request.
@@ -147,10 +149,12 @@ instance ToQuery CreateEvaluation where
 --
 --
 -- /See:/ 'createEvaluationResponse' smart constructor.
-data CreateEvaluationResponse = CreateEvaluationResponse'
-  { _cersEvaluationId   :: !(Maybe Text)
-  , _cersResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateEvaluationResponse =
+  CreateEvaluationResponse'
+    { _cersEvaluationId   :: !(Maybe Text)
+    , _cersResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateEvaluationResponse' with the minimum fields required to make a request.

@@ -102,10 +102,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateRuntimeConfiguration' smart constructor.
-data UpdateRuntimeConfiguration = UpdateRuntimeConfiguration'
-  { _urcFleetId              :: !Text
-  , _urcRuntimeConfiguration :: !RuntimeConfiguration
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateRuntimeConfiguration =
+  UpdateRuntimeConfiguration'
+    { _urcFleetId              :: !Text
+    , _urcRuntimeConfiguration :: !RuntimeConfiguration
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateRuntimeConfiguration' with the minimum fields required to make a request.
@@ -177,10 +179,12 @@ instance ToQuery UpdateRuntimeConfiguration where
 --
 --
 -- /See:/ 'updateRuntimeConfigurationResponse' smart constructor.
-data UpdateRuntimeConfigurationResponse = UpdateRuntimeConfigurationResponse'
-  { _urcrsRuntimeConfiguration :: !(Maybe RuntimeConfiguration)
-  , _urcrsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateRuntimeConfigurationResponse =
+  UpdateRuntimeConfigurationResponse'
+    { _urcrsRuntimeConfiguration :: !(Maybe RuntimeConfiguration)
+    , _urcrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateRuntimeConfigurationResponse' with the minimum fields required to make a request.

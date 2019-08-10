@@ -47,11 +47,13 @@ import Network.AWS.Response
 -- | GetFindings request body.
 --
 -- /See:/ 'getFindings' smart constructor.
-data GetFindings = GetFindings'
-  { _gfFindingIds   :: !(Maybe [Text])
-  , _gfSortCriteria :: !(Maybe SortCriteria)
-  , _gfDetectorId   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetFindings =
+  GetFindings'
+    { _gfFindingIds   :: !(Maybe [Text])
+    , _gfSortCriteria :: !(Maybe SortCriteria)
+    , _gfDetectorId   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetFindings' with the minimum fields required to make a request.
@@ -123,10 +125,12 @@ instance ToQuery GetFindings where
         toQuery = const mempty
 
 -- | /See:/ 'getFindingsResponse' smart constructor.
-data GetFindingsResponse = GetFindingsResponse'
-  { _grsFindings       :: !(Maybe [Finding])
-  , _grsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetFindingsResponse =
+  GetFindingsResponse'
+    { _grsFindings       :: !(Maybe [Finding])
+    , _grsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetFindingsResponse' with the minimum fields required to make a request.

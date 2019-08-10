@@ -46,10 +46,12 @@ import Network.AWS.Route53AutoNaming.Types
 import Network.AWS.Route53AutoNaming.Types.Product
 
 -- | /See:/ 'deregisterInstance' smart constructor.
-data DeregisterInstance = DeregisterInstance'
-  { _diServiceId  :: !Text
-  , _diInstanceId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeregisterInstance =
+  DeregisterInstance'
+    { _diServiceId  :: !Text
+    , _diInstanceId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeregisterInstance' with the minimum fields required to make a request.
@@ -113,10 +115,12 @@ instance ToQuery DeregisterInstance where
         toQuery = const mempty
 
 -- | /See:/ 'deregisterInstanceResponse' smart constructor.
-data DeregisterInstanceResponse = DeregisterInstanceResponse'
-  { _dirsOperationId    :: !(Maybe Text)
-  , _dirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeregisterInstanceResponse =
+  DeregisterInstanceResponse'
+    { _dirsOperationId    :: !(Maybe Text)
+    , _dirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeregisterInstanceResponse' with the minimum fields required to make a request.

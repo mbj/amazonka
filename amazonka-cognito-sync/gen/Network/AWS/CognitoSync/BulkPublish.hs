@@ -49,9 +49,11 @@ import Network.AWS.Response
 -- | The input for the BulkPublish operation.
 --
 -- /See:/ 'bulkPublish' smart constructor.
-newtype BulkPublish = BulkPublish'
-  { _bpIdentityPoolId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype BulkPublish =
+  BulkPublish'
+    { _bpIdentityPoolId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BulkPublish' with the minimum fields required to make a request.
@@ -105,10 +107,12 @@ instance ToQuery BulkPublish where
 -- | The output for the BulkPublish operation.
 --
 -- /See:/ 'bulkPublishResponse' smart constructor.
-data BulkPublishResponse = BulkPublishResponse'
-  { _bprsIdentityPoolId :: !(Maybe Text)
-  , _bprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BulkPublishResponse =
+  BulkPublishResponse'
+    { _bprsIdentityPoolId :: !(Maybe Text)
+    , _bprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BulkPublishResponse' with the minimum fields required to make a request.

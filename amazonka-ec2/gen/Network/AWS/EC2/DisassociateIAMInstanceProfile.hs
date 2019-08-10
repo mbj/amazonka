@@ -47,9 +47,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'disassociateIAMInstanceProfile' smart constructor.
-newtype DisassociateIAMInstanceProfile = DisassociateIAMInstanceProfile'
-  { _diapAssociationId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DisassociateIAMInstanceProfile =
+  DisassociateIAMInstanceProfile'
+    { _diapAssociationId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisassociateIAMInstanceProfile' with the minimum fields required to make a request.
@@ -101,10 +103,12 @@ instance ToQuery DisassociateIAMInstanceProfile where
                "AssociationId" =: _diapAssociationId]
 
 -- | /See:/ 'disassociateIAMInstanceProfileResponse' smart constructor.
-data DisassociateIAMInstanceProfileResponse = DisassociateIAMInstanceProfileResponse'
-  { _diaprsIAMInstanceProfileAssociation :: !(Maybe IAMInstanceProfileAssociation)
-  , _diaprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DisassociateIAMInstanceProfileResponse =
+  DisassociateIAMInstanceProfileResponse'
+    { _diaprsIAMInstanceProfileAssociation :: !(Maybe IAMInstanceProfileAssociation)
+    , _diaprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisassociateIAMInstanceProfileResponse' with the minimum fields required to make a request.

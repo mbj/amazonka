@@ -49,10 +49,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteTags' smart constructor.
-data DeleteTags = DeleteTags'
-  { _dFileSystemId :: !Text
-  , _dTagKeys      :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteTags =
+  DeleteTags'
+    { _dFileSystemId :: !Text
+    , _dTagKeys      :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteTags' with the minimum fields required to make a request.

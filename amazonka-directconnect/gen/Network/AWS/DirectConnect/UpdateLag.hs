@@ -71,11 +71,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateLag' smart constructor.
-data UpdateLag = UpdateLag'
-  { _ulMinimumLinks :: !(Maybe Int)
-  , _ulLagName      :: !(Maybe Text)
-  , _ulLagId        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateLag =
+  UpdateLag'
+    { _ulMinimumLinks :: !(Maybe Int)
+    , _ulLagName      :: !(Maybe Text)
+    , _ulLagId        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateLag' with the minimum fields required to make a request.

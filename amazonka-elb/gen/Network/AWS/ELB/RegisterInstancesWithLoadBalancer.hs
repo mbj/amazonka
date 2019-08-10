@@ -60,10 +60,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'registerInstancesWithLoadBalancer' smart constructor.
-data RegisterInstancesWithLoadBalancer = RegisterInstancesWithLoadBalancer'
-  { _riwlbLoadBalancerName :: !Text
-  , _riwlbInstances        :: ![Instance]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RegisterInstancesWithLoadBalancer =
+  RegisterInstancesWithLoadBalancer'
+    { _riwlbLoadBalancerName :: !Text
+    , _riwlbInstances        :: ![Instance]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterInstancesWithLoadBalancer' with the minimum fields required to make a request.
@@ -132,10 +134,12 @@ instance ToQuery RegisterInstancesWithLoadBalancer
 --
 --
 -- /See:/ 'registerInstancesWithLoadBalancerResponse' smart constructor.
-data RegisterInstancesWithLoadBalancerResponse = RegisterInstancesWithLoadBalancerResponse'
-  { _riwlbrsInstances      :: !(Maybe [Instance])
-  , _riwlbrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RegisterInstancesWithLoadBalancerResponse =
+  RegisterInstancesWithLoadBalancerResponse'
+    { _riwlbrsInstances      :: !(Maybe [Instance])
+    , _riwlbrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterInstancesWithLoadBalancerResponse' with the minimum fields required to make a request.

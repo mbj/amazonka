@@ -54,10 +54,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getRestAPIs' smart constructor.
-data GetRestAPIs = GetRestAPIs'
-  { _graLimit    :: !(Maybe Int)
-  , _graPosition :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetRestAPIs =
+  GetRestAPIs'
+    { _graLimit    :: !(Maybe Int)
+    , _graPosition :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetRestAPIs' with the minimum fields required to make a request.
@@ -121,11 +123,13 @@ instance ToQuery GetRestAPIs where
 -- <http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-create-api.html Create an API>
 --
 -- /See:/ 'getRestAPIsResponse' smart constructor.
-data GetRestAPIsResponse = GetRestAPIsResponse'
-  { _grarsItems          :: !(Maybe [RestAPI])
-  , _grarsPosition       :: !(Maybe Text)
-  , _grarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetRestAPIsResponse =
+  GetRestAPIsResponse'
+    { _grarsItems          :: !(Maybe [RestAPI])
+    , _grarsPosition       :: !(Maybe Text)
+    , _grarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetRestAPIsResponse' with the minimum fields required to make a request.

@@ -51,11 +51,13 @@ import Network.AWS.Response
 -- | A request for meta data about a dataset (creation date, number of records, size) by owner and dataset name.
 --
 -- /See:/ 'describeDataset' smart constructor.
-data DescribeDataset = DescribeDataset'
-  { _ddIdentityPoolId :: !Text
-  , _ddIdentityId     :: !Text
-  , _ddDatasetName    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDataset =
+  DescribeDataset'
+    { _ddIdentityPoolId :: !Text
+    , _ddIdentityId     :: !Text
+    , _ddDatasetName    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDataset' with the minimum fields required to make a request.
@@ -125,10 +127,12 @@ instance ToQuery DescribeDataset where
 -- | Response to a successful DescribeDataset request.
 --
 -- /See:/ 'describeDatasetResponse' smart constructor.
-data DescribeDatasetResponse = DescribeDatasetResponse'
-  { _ddrsDataset        :: !(Maybe Dataset)
-  , _ddrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDatasetResponse =
+  DescribeDatasetResponse'
+    { _ddrsDataset        :: !(Maybe Dataset)
+    , _ddrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDatasetResponse' with the minimum fields required to make a request.

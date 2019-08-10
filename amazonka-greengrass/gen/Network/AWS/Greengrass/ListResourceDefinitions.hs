@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listResourceDefinitions' smart constructor.
-data ListResourceDefinitions = ListResourceDefinitions'
-  { _lrdNextToken  :: !(Maybe Text)
-  , _lrdMaxResults :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListResourceDefinitions =
+  ListResourceDefinitions'
+    { _lrdNextToken  :: !(Maybe Text)
+    , _lrdMaxResults :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListResourceDefinitions' with the minimum fields required to make a request.
@@ -105,11 +107,13 @@ instance ToQuery ListResourceDefinitions where
                "MaxResults" =: _lrdMaxResults]
 
 -- | /See:/ 'listResourceDefinitionsResponse' smart constructor.
-data ListResourceDefinitionsResponse = ListResourceDefinitionsResponse'
-  { _lrdrsNextToken      :: !(Maybe Text)
-  , _lrdrsDefinitions    :: !(Maybe [DefinitionInformation])
-  , _lrdrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListResourceDefinitionsResponse =
+  ListResourceDefinitionsResponse'
+    { _lrdrsNextToken      :: !(Maybe Text)
+    , _lrdrsDefinitions    :: !(Maybe [DefinitionInformation])
+    , _lrdrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListResourceDefinitionsResponse' with the minimum fields required to make a request.

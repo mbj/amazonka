@@ -49,9 +49,11 @@ import Network.AWS.StorageGateway.Types.Product
 --
 --
 -- /See:/ 'describeChapCredentials' smart constructor.
-newtype DescribeChapCredentials = DescribeChapCredentials'
-  { _dccTargetARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeChapCredentials =
+  DescribeChapCredentials'
+    { _dccTargetARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeChapCredentials' with the minimum fields required to make a request.
@@ -111,10 +113,12 @@ instance ToQuery DescribeChapCredentials where
 --
 --
 -- /See:/ 'describeChapCredentialsResponse' smart constructor.
-data DescribeChapCredentialsResponse = DescribeChapCredentialsResponse'
-  { _dccrsChapCredentials :: !(Maybe [ChapInfo])
-  , _dccrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeChapCredentialsResponse =
+  DescribeChapCredentialsResponse'
+    { _dccrsChapCredentials :: !(Maybe [ChapInfo])
+    , _dccrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeChapCredentialsResponse' with the minimum fields required to make a request.

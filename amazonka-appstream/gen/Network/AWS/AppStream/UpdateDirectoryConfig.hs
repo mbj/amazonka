@@ -47,11 +47,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateDirectoryConfig' smart constructor.
-data UpdateDirectoryConfig = UpdateDirectoryConfig'
-  { _udcServiceAccountCredentials :: !(Maybe ServiceAccountCredentials)
-  , _udcOrganizationalUnitDistinguishedNames :: !(Maybe [Text])
-  , _udcDirectoryName :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data UpdateDirectoryConfig =
+  UpdateDirectoryConfig'
+    { _udcServiceAccountCredentials :: !(Maybe ServiceAccountCredentials)
+    , _udcOrganizationalUnitDistinguishedNames :: !(Maybe [Text])
+    , _udcDirectoryName :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateDirectoryConfig' with the minimum fields required to make a request.
@@ -127,10 +129,12 @@ instance ToQuery UpdateDirectoryConfig where
         toQuery = const mempty
 
 -- | /See:/ 'updateDirectoryConfigResponse' smart constructor.
-data UpdateDirectoryConfigResponse = UpdateDirectoryConfigResponse'
-  { _udcrsDirectoryConfig :: !(Maybe DirectoryConfig)
-  , _udcrsResponseStatus  :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data UpdateDirectoryConfigResponse =
+  UpdateDirectoryConfigResponse'
+    { _udcrsDirectoryConfig :: !(Maybe DirectoryConfig)
+    , _udcrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateDirectoryConfigResponse' with the minimum fields required to make a request.

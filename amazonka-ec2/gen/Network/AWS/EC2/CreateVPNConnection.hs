@@ -63,13 +63,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createVPNConnection' smart constructor.
-data CreateVPNConnection = CreateVPNConnection'
-  { _cvcOptions           :: !(Maybe VPNConnectionOptionsSpecification)
-  , _cvcDryRun            :: !(Maybe Bool)
-  , _cvcCustomerGatewayId :: !Text
-  , _cvcType              :: !Text
-  , _cvcVPNGatewayId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateVPNConnection =
+  CreateVPNConnection'
+    { _cvcOptions           :: !(Maybe VPNConnectionOptionsSpecification)
+    , _cvcDryRun            :: !(Maybe Bool)
+    , _cvcCustomerGatewayId :: !Text
+    , _cvcType              :: !Text
+    , _cvcVPNGatewayId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateVPNConnection' with the minimum fields required to make a request.
@@ -155,10 +157,12 @@ instance ToQuery CreateVPNConnection where
 --
 --
 -- /See:/ 'createVPNConnectionResponse' smart constructor.
-data CreateVPNConnectionResponse = CreateVPNConnectionResponse'
-  { _cvcrsVPNConnection  :: !(Maybe VPNConnection)
-  , _cvcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateVPNConnectionResponse =
+  CreateVPNConnectionResponse'
+    { _cvcrsVPNConnection  :: !(Maybe VPNConnection)
+    , _cvcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateVPNConnectionResponse' with the minimum fields required to make a request.

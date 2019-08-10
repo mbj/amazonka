@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteInstance' smart constructor.
-newtype DeleteInstance = DeleteInstance'
-  { _diInstanceName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteInstance =
+  DeleteInstance'
+    { _diInstanceName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteInstance' with the minimum fields required to make a request.
@@ -102,10 +104,12 @@ instance ToQuery DeleteInstance where
         toQuery = const mempty
 
 -- | /See:/ 'deleteInstanceResponse' smart constructor.
-data DeleteInstanceResponse = DeleteInstanceResponse'
-  { _dirsOperations     :: !(Maybe [Operation])
-  , _dirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteInstanceResponse =
+  DeleteInstanceResponse'
+    { _dirsOperations     :: !(Maybe [Operation])
+    , _dirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteInstanceResponse' with the minimum fields required to make a request.

@@ -84,25 +84,27 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'query' smart constructor.
-data Query = Query'
-  { _qKeyConditions             :: !(Maybe (Map Text Condition))
-  , _qProjectionExpression      :: !(Maybe Text)
-  , _qAttributesToGet           :: !(Maybe (List1 Text))
-  , _qExpressionAttributeNames  :: !(Maybe (Map Text Text))
-  , _qFilterExpression          :: !(Maybe Text)
-  , _qQueryFilter               :: !(Maybe (Map Text Condition))
-  , _qConsistentRead            :: !(Maybe Bool)
-  , _qExpressionAttributeValues :: !(Maybe (Map Text AttributeValue))
-  , _qReturnConsumedCapacity    :: !(Maybe ReturnConsumedCapacity)
-  , _qScanIndexForward          :: !(Maybe Bool)
-  , _qLimit                     :: !(Maybe Nat)
-  , _qSelect                    :: !(Maybe Select)
-  , _qKeyConditionExpression    :: !(Maybe Text)
-  , _qConditionalOperator       :: !(Maybe ConditionalOperator)
-  , _qExclusiveStartKey         :: !(Maybe (Map Text AttributeValue))
-  , _qIndexName                 :: !(Maybe Text)
-  , _qTableName                 :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Query =
+  Query'
+    { _qKeyConditions             :: !(Maybe (Map Text Condition))
+    , _qProjectionExpression      :: !(Maybe Text)
+    , _qAttributesToGet           :: !(Maybe (List1 Text))
+    , _qExpressionAttributeNames  :: !(Maybe (Map Text Text))
+    , _qFilterExpression          :: !(Maybe Text)
+    , _qQueryFilter               :: !(Maybe (Map Text Condition))
+    , _qConsistentRead            :: !(Maybe Bool)
+    , _qExpressionAttributeValues :: !(Maybe (Map Text AttributeValue))
+    , _qReturnConsumedCapacity    :: !(Maybe ReturnConsumedCapacity)
+    , _qScanIndexForward          :: !(Maybe Bool)
+    , _qLimit                     :: !(Maybe Nat)
+    , _qSelect                    :: !(Maybe Select)
+    , _qKeyConditionExpression    :: !(Maybe Text)
+    , _qConditionalOperator       :: !(Maybe ConditionalOperator)
+    , _qExclusiveStartKey         :: !(Maybe (Map Text AttributeValue))
+    , _qIndexName                 :: !(Maybe Text)
+    , _qTableName                 :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Query' with the minimum fields required to make a request.
@@ -306,14 +308,16 @@ instance ToQuery Query where
 --
 --
 -- /See:/ 'queryResponse' smart constructor.
-data QueryResponse = QueryResponse'
-  { _qrsLastEvaluatedKey :: !(Maybe (Map Text AttributeValue))
-  , _qrsCount            :: !(Maybe Int)
-  , _qrsScannedCount     :: !(Maybe Int)
-  , _qrsItems            :: !(Maybe [Map Text AttributeValue])
-  , _qrsConsumedCapacity :: !(Maybe ConsumedCapacity)
-  , _qrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data QueryResponse =
+  QueryResponse'
+    { _qrsLastEvaluatedKey :: !(Maybe (Map Text AttributeValue))
+    , _qrsCount            :: !(Maybe Int)
+    , _qrsScannedCount     :: !(Maybe Int)
+    , _qrsItems            :: !(Maybe [Map Text AttributeValue])
+    , _qrsConsumedCapacity :: !(Maybe ConsumedCapacity)
+    , _qrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'QueryResponse' with the minimum fields required to make a request.

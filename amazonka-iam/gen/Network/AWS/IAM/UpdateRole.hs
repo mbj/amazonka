@@ -46,11 +46,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateRole' smart constructor.
-data UpdateRole = UpdateRole'
-  { _urMaxSessionDuration :: !(Maybe Nat)
-  , _urDescription        :: !(Maybe Text)
-  , _urRoleName           :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateRole =
+  UpdateRole'
+    { _urMaxSessionDuration :: !(Maybe Nat)
+    , _urDescription        :: !(Maybe Text)
+    , _urRoleName           :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateRole' with the minimum fields required to make a request.
@@ -113,9 +115,11 @@ instance ToQuery UpdateRole where
                "RoleName" =: _urRoleName]
 
 -- | /See:/ 'updateRoleResponse' smart constructor.
-newtype UpdateRoleResponse = UpdateRoleResponse'
-  { _urrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateRoleResponse =
+  UpdateRoleResponse'
+    { _urrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateRoleResponse' with the minimum fields required to make a request.

@@ -50,9 +50,11 @@ import Network.AWS.Transcribe.Types
 import Network.AWS.Transcribe.Types.Product
 
 -- | /See:/ 'getVocabulary' smart constructor.
-newtype GetVocabulary = GetVocabulary'
-  { _gvVocabularyName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetVocabulary =
+  GetVocabulary'
+    { _gvVocabularyName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetVocabulary' with the minimum fields required to make a request.
@@ -111,15 +113,17 @@ instance ToQuery GetVocabulary where
         toQuery = const mempty
 
 -- | /See:/ 'getVocabularyResponse' smart constructor.
-data GetVocabularyResponse = GetVocabularyResponse'
-  { _gvrsFailureReason    :: !(Maybe Text)
-  , _gvrsLanguageCode     :: !(Maybe LanguageCode)
-  , _gvrsDownloadURI      :: !(Maybe Text)
-  , _gvrsVocabularyName   :: !(Maybe Text)
-  , _gvrsLastModifiedTime :: !(Maybe POSIX)
-  , _gvrsVocabularyState  :: !(Maybe VocabularyState)
-  , _gvrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetVocabularyResponse =
+  GetVocabularyResponse'
+    { _gvrsFailureReason    :: !(Maybe Text)
+    , _gvrsLanguageCode     :: !(Maybe LanguageCode)
+    , _gvrsDownloadURI      :: !(Maybe Text)
+    , _gvrsVocabularyName   :: !(Maybe Text)
+    , _gvrsLastModifiedTime :: !(Maybe POSIX)
+    , _gvrsVocabularyState  :: !(Maybe VocabularyState)
+    , _gvrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetVocabularyResponse' with the minimum fields required to make a request.

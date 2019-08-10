@@ -62,19 +62,21 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'uploadPart' smart constructor.
-data UploadPart = UploadPart'
-  { _upContentLength        :: !(Maybe Integer)
-  , _upSSECustomerAlgorithm :: !(Maybe Text)
-  , _upSSECustomerKey       :: !(Maybe (Sensitive Text))
-  , _upRequestPayer         :: !(Maybe RequestPayer)
-  , _upSSECustomerKeyMD5    :: !(Maybe Text)
-  , _upContentMD5           :: !(Maybe Text)
-  , _upBucket               :: !BucketName
-  , _upKey                  :: !ObjectKey
-  , _upPartNumber           :: !Int
-  , _upUploadId             :: !Text
-  , _upBody                 :: !RqBody
-  } deriving (Show, Generic)
+data UploadPart =
+  UploadPart'
+    { _upContentLength        :: !(Maybe Integer)
+    , _upSSECustomerAlgorithm :: !(Maybe Text)
+    , _upSSECustomerKey       :: !(Maybe (Sensitive Text))
+    , _upRequestPayer         :: !(Maybe RequestPayer)
+    , _upSSECustomerKeyMD5    :: !(Maybe Text)
+    , _upContentMD5           :: !(Maybe Text)
+    , _upBucket               :: !BucketName
+    , _upKey                  :: !ObjectKey
+    , _upPartNumber           :: !Int
+    , _upUploadId             :: !Text
+    , _upBody                 :: !RqBody
+    }
+  deriving (Show, Generic)
 
 
 -- | Creates a value of 'UploadPart' with the minimum fields required to make a request.
@@ -215,15 +217,17 @@ instance ToQuery UploadPart where
                "uploadId" =: _upUploadId]
 
 -- | /See:/ 'uploadPartResponse' smart constructor.
-data UploadPartResponse = UploadPartResponse'
-  { _uprsRequestCharged       :: !(Maybe RequestCharged)
-  , _uprsETag                 :: !(Maybe ETag)
-  , _uprsSSECustomerAlgorithm :: !(Maybe Text)
-  , _uprsSSECustomerKeyMD5    :: !(Maybe Text)
-  , _uprsSSEKMSKeyId          :: !(Maybe (Sensitive Text))
-  , _uprsServerSideEncryption :: !(Maybe ServerSideEncryption)
-  , _uprsResponseStatus       :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data UploadPartResponse =
+  UploadPartResponse'
+    { _uprsRequestCharged       :: !(Maybe RequestCharged)
+    , _uprsETag                 :: !(Maybe ETag)
+    , _uprsSSECustomerAlgorithm :: !(Maybe Text)
+    , _uprsSSECustomerKeyMD5    :: !(Maybe Text)
+    , _uprsSSEKMSKeyId          :: !(Maybe (Sensitive Text))
+    , _uprsServerSideEncryption :: !(Maybe ServerSideEncryption)
+    , _uprsResponseStatus       :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UploadPartResponse' with the minimum fields required to make a request.

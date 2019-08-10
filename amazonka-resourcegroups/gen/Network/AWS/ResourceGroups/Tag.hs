@@ -47,10 +47,12 @@ import Network.AWS.ResourceGroups.Types.Product
 import Network.AWS.Response
 
 -- | /See:/ 'tag' smart constructor.
-data Tag = Tag'
-  { _tagARN  :: !Text
-  , _tagTags :: !(Map Text Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Tag =
+  Tag'
+    { _tagARN  :: !Text
+    , _tagTags :: !(Map Text Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Tag' with the minimum fields required to make a request.
@@ -103,11 +105,13 @@ instance ToQuery Tag where
         toQuery = const mempty
 
 -- | /See:/ 'tagResponse' smart constructor.
-data TagResponse = TagResponse'
-  { _tagrsARN            :: !(Maybe Text)
-  , _tagrsTags           :: !(Maybe (Map Text Text))
-  , _tagrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TagResponse =
+  TagResponse'
+    { _tagrsARN            :: !(Maybe Text)
+    , _tagrsTags           :: !(Maybe (Map Text Text))
+    , _tagrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TagResponse' with the minimum fields required to make a request.

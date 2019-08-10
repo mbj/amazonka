@@ -46,9 +46,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteDBParameterGroup' smart constructor.
-newtype DeleteDBParameterGroup = DeleteDBParameterGroup'
-  { _ddbpgDBParameterGroupName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteDBParameterGroup =
+  DeleteDBParameterGroup'
+    { _ddbpgDBParameterGroupName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteDBParameterGroup' with the minimum fields required to make a request.

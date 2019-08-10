@@ -50,9 +50,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeThingGroup' smart constructor.
-newtype DescribeThingGroup = DescribeThingGroup'
-  { _dtgThingGroupName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeThingGroup =
+  DescribeThingGroup'
+    { _dtgThingGroupName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeThingGroup' with the minimum fields required to make a request.
@@ -101,15 +103,17 @@ instance ToQuery DescribeThingGroup where
         toQuery = const mempty
 
 -- | /See:/ 'describeThingGroupResponse' smart constructor.
-data DescribeThingGroupResponse = DescribeThingGroupResponse'
-  { _dtgrsThingGroupARN        :: !(Maybe Text)
-  , _dtgrsThingGroupId         :: !(Maybe Text)
-  , _dtgrsThingGroupMetadata   :: !(Maybe ThingGroupMetadata)
-  , _dtgrsThingGroupName       :: !(Maybe Text)
-  , _dtgrsVersion              :: !(Maybe Integer)
-  , _dtgrsThingGroupProperties :: !(Maybe ThingGroupProperties)
-  , _dtgrsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeThingGroupResponse =
+  DescribeThingGroupResponse'
+    { _dtgrsThingGroupARN        :: !(Maybe Text)
+    , _dtgrsThingGroupId         :: !(Maybe Text)
+    , _dtgrsThingGroupMetadata   :: !(Maybe ThingGroupMetadata)
+    , _dtgrsThingGroupName       :: !(Maybe Text)
+    , _dtgrsVersion              :: !(Maybe Integer)
+    , _dtgrsThingGroupProperties :: !(Maybe ThingGroupProperties)
+    , _dtgrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeThingGroupResponse' with the minimum fields required to make a request.

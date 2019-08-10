@@ -42,9 +42,11 @@ import Network.AWS.SageMaker.Types
 import Network.AWS.SageMaker.Types.Product
 
 -- | /See:/ 'startNotebookInstance' smart constructor.
-newtype StartNotebookInstance = StartNotebookInstance'
-  { _sNotebookInstanceName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StartNotebookInstance =
+  StartNotebookInstance'
+    { _sNotebookInstanceName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartNotebookInstance' with the minimum fields required to make a request.

@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeFindings' smart constructor.
-data DescribeFindings = DescribeFindings'
-  { _dfLocale      :: !(Maybe Locale)
-  , _dfFindingARNs :: !(List1 Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeFindings =
+  DescribeFindings'
+    { _dfLocale      :: !(Maybe Locale)
+    , _dfFindingARNs :: !(List1 Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeFindings' with the minimum fields required to make a request.
@@ -113,11 +115,13 @@ instance ToQuery DescribeFindings where
         toQuery = const mempty
 
 -- | /See:/ 'describeFindingsResponse' smart constructor.
-data DescribeFindingsResponse = DescribeFindingsResponse'
-  { _dfrsResponseStatus :: !Int
-  , _dfrsFindings       :: ![Finding]
-  , _dfrsFailedItems    :: !(Map Text FailedItemDetails)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeFindingsResponse =
+  DescribeFindingsResponse'
+    { _dfrsResponseStatus :: !Int
+    , _dfrsFindings       :: ![Finding]
+    , _dfrsFailedItems    :: !(Map Text FailedItemDetails)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeFindingsResponse' with the minimum fields required to make a request.

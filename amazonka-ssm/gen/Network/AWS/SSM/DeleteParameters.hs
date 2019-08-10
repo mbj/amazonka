@@ -46,9 +46,11 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'deleteParameters' smart constructor.
-newtype DeleteParameters = DeleteParameters'
-  { _dpNames :: List1 Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteParameters =
+  DeleteParameters'
+    { _dpNames :: List1 Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteParameters' with the minimum fields required to make a request.
@@ -101,11 +103,13 @@ instance ToQuery DeleteParameters where
         toQuery = const mempty
 
 -- | /See:/ 'deleteParametersResponse' smart constructor.
-data DeleteParametersResponse = DeleteParametersResponse'
-  { _drsDeletedParameters :: !(Maybe (List1 Text))
-  , _drsInvalidParameters :: !(Maybe (List1 Text))
-  , _drsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteParametersResponse =
+  DeleteParametersResponse'
+    { _drsDeletedParameters :: !(Maybe (List1 Text))
+    , _drsInvalidParameters :: !(Maybe (List1 Text))
+    , _drsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteParametersResponse' with the minimum fields required to make a request.

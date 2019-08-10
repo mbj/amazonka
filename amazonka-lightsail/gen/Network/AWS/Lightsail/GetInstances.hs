@@ -49,9 +49,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getInstances' smart constructor.
-newtype GetInstances = GetInstances'
-  { _giPageToken :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetInstances =
+  GetInstances'
+    { _giPageToken :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetInstances' with the minimum fields required to make a request.
@@ -111,11 +113,13 @@ instance ToQuery GetInstances where
         toQuery = const mempty
 
 -- | /See:/ 'getInstancesResponse' smart constructor.
-data GetInstancesResponse = GetInstancesResponse'
-  { _grsNextPageToken  :: !(Maybe Text)
-  , _grsInstances      :: !(Maybe [Instance])
-  , _grsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetInstancesResponse =
+  GetInstancesResponse'
+    { _grsNextPageToken  :: !(Maybe Text)
+    , _grsInstances      :: !(Maybe [Instance])
+    , _grsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetInstancesResponse' with the minimum fields required to make a request.

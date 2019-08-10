@@ -52,11 +52,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listUserImportJobs' smart constructor.
-data ListUserImportJobs = ListUserImportJobs'
-  { _luijPaginationToken :: !(Maybe Text)
-  , _luijUserPoolId      :: !Text
-  , _luijMaxResults      :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListUserImportJobs =
+  ListUserImportJobs'
+    { _luijPaginationToken :: !(Maybe Text)
+    , _luijUserPoolId      :: !Text
+    , _luijMaxResults      :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListUserImportJobs' with the minimum fields required to make a request.
@@ -137,11 +139,13 @@ instance ToQuery ListUserImportJobs where
 --
 --
 -- /See:/ 'listUserImportJobsResponse' smart constructor.
-data ListUserImportJobsResponse = ListUserImportJobsResponse'
-  { _luijrsPaginationToken :: !(Maybe Text)
-  , _luijrsUserImportJobs  :: !(Maybe (List1 UserImportJobType))
-  , _luijrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListUserImportJobsResponse =
+  ListUserImportJobsResponse'
+    { _luijrsPaginationToken :: !(Maybe Text)
+    , _luijrsUserImportJobs  :: !(Maybe (List1 UserImportJobType))
+    , _luijrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListUserImportJobsResponse' with the minimum fields required to make a request.

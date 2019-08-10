@@ -51,12 +51,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createStream' smart constructor.
-data CreateStream = CreateStream'
-  { _csDescription :: !(Maybe Text)
-  , _csStreamId    :: !Text
-  , _csFiles       :: !(List1 StreamFile)
-  , _csRoleARN     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateStream =
+  CreateStream'
+    { _csDescription :: !(Maybe Text)
+    , _csStreamId    :: !Text
+    , _csFiles       :: !(List1 StreamFile)
+    , _csRoleARN     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateStream' with the minimum fields required to make a request.
@@ -135,13 +137,15 @@ instance ToQuery CreateStream where
         toQuery = const mempty
 
 -- | /See:/ 'createStreamResponse' smart constructor.
-data CreateStreamResponse = CreateStreamResponse'
-  { _csrsStreamVersion  :: !(Maybe Nat)
-  , _csrsStreamARN      :: !(Maybe Text)
-  , _csrsDescription    :: !(Maybe Text)
-  , _csrsStreamId       :: !(Maybe Text)
-  , _csrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateStreamResponse =
+  CreateStreamResponse'
+    { _csrsStreamVersion  :: !(Maybe Nat)
+    , _csrsStreamARN      :: !(Maybe Text)
+    , _csrsDescription    :: !(Maybe Text)
+    , _csrsStreamId       :: !(Maybe Text)
+    , _csrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateStreamResponse' with the minimum fields required to make a request.

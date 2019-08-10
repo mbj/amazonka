@@ -55,12 +55,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'associateCreatedArtifact' smart constructor.
-data AssociateCreatedArtifact = AssociateCreatedArtifact'
-  { _acaDryRun               :: !(Maybe Bool)
-  , _acaProgressUpdateStream :: !Text
-  , _acaMigrationTaskName    :: !Text
-  , _acaCreatedArtifact      :: !CreatedArtifact
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssociateCreatedArtifact =
+  AssociateCreatedArtifact'
+    { _acaDryRun               :: !(Maybe Bool)
+    , _acaProgressUpdateStream :: !Text
+    , _acaMigrationTaskName    :: !Text
+    , _acaCreatedArtifact      :: !CreatedArtifact
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateCreatedArtifact' with the minimum fields required to make a request.
@@ -145,9 +147,11 @@ instance ToQuery AssociateCreatedArtifact where
         toQuery = const mempty
 
 -- | /See:/ 'associateCreatedArtifactResponse' smart constructor.
-newtype AssociateCreatedArtifactResponse = AssociateCreatedArtifactResponse'
-  { _acarsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AssociateCreatedArtifactResponse =
+  AssociateCreatedArtifactResponse'
+    { _acarsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateCreatedArtifactResponse' with the minimum fields required to make a request.

@@ -51,11 +51,13 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'listAssociations' smart constructor.
-data ListAssociations = ListAssociations'
-  { _laAssociationFilterList :: !(Maybe (List1 AssociationFilter))
-  , _laNextToken             :: !(Maybe Text)
-  , _laMaxResults            :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAssociations =
+  ListAssociations'
+    { _laAssociationFilterList :: !(Maybe (List1 AssociationFilter))
+    , _laNextToken             :: !(Maybe Text)
+    , _laMaxResults            :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAssociations' with the minimum fields required to make a request.
@@ -136,11 +138,13 @@ instance ToQuery ListAssociations where
         toQuery = const mempty
 
 -- | /See:/ 'listAssociationsResponse' smart constructor.
-data ListAssociationsResponse = ListAssociationsResponse'
-  { _larsNextToken      :: !(Maybe Text)
-  , _larsAssociations   :: !(Maybe [Association])
-  , _larsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAssociationsResponse =
+  ListAssociationsResponse'
+    { _larsNextToken      :: !(Maybe Text)
+    , _larsAssociations   :: !(Maybe [Association])
+    , _larsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAssociationsResponse' with the minimum fields required to make a request.

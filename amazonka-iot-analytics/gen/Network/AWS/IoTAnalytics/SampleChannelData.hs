@@ -48,12 +48,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'sampleChannelData' smart constructor.
-data SampleChannelData = SampleChannelData'
-  { _scdStartTime   :: !(Maybe POSIX)
-  , _scdMaxMessages :: !(Maybe Nat)
-  , _scdEndTime     :: !(Maybe POSIX)
-  , _scdChannelName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SampleChannelData =
+  SampleChannelData'
+    { _scdStartTime   :: !(Maybe POSIX)
+    , _scdMaxMessages :: !(Maybe Nat)
+    , _scdEndTime     :: !(Maybe POSIX)
+    , _scdChannelName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SampleChannelData' with the minimum fields required to make a request.
@@ -124,10 +126,12 @@ instance ToQuery SampleChannelData where
                "endTime" =: _scdEndTime]
 
 -- | /See:/ 'sampleChannelDataResponse' smart constructor.
-data SampleChannelDataResponse = SampleChannelDataResponse'
-  { _scdrsPayloads       :: !(Maybe (List1 Base64))
-  , _scdrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SampleChannelDataResponse =
+  SampleChannelDataResponse'
+    { _scdrsPayloads       :: !(Maybe (List1 Base64))
+    , _scdrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SampleChannelDataResponse' with the minimum fields required to make a request.

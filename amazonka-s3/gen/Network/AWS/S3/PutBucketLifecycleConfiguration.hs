@@ -41,10 +41,12 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'putBucketLifecycleConfiguration' smart constructor.
-data PutBucketLifecycleConfiguration = PutBucketLifecycleConfiguration'
-  { _pblcLifecycleConfiguration :: !(Maybe BucketLifecycleConfiguration)
-  , _pblcBucket                 :: !BucketName
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutBucketLifecycleConfiguration =
+  PutBucketLifecycleConfiguration'
+    { _pblcLifecycleConfiguration :: !(Maybe BucketLifecycleConfiguration)
+    , _pblcBucket                 :: !BucketName
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutBucketLifecycleConfiguration' with the minimum fields required to make a request.

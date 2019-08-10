@@ -56,12 +56,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeOrderableClusterOptions' smart constructor.
-data DescribeOrderableClusterOptions = DescribeOrderableClusterOptions'
-  { _docoMarker         :: !(Maybe Text)
-  , _docoMaxRecords     :: !(Maybe Int)
-  , _docoClusterVersion :: !(Maybe Text)
-  , _docoNodeType       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeOrderableClusterOptions =
+  DescribeOrderableClusterOptions'
+    { _docoMarker         :: !(Maybe Text)
+    , _docoMaxRecords     :: !(Maybe Int)
+    , _docoClusterVersion :: !(Maybe Text)
+    , _docoNodeType       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeOrderableClusterOptions' with the minimum fields required to make a request.
@@ -155,11 +157,13 @@ instance ToQuery DescribeOrderableClusterOptions
 --
 --
 -- /See:/ 'describeOrderableClusterOptionsResponse' smart constructor.
-data DescribeOrderableClusterOptionsResponse = DescribeOrderableClusterOptionsResponse'
-  { _docorsMarker                  :: !(Maybe Text)
-  , _docorsOrderableClusterOptions :: !(Maybe [OrderableClusterOption])
-  , _docorsResponseStatus          :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeOrderableClusterOptionsResponse =
+  DescribeOrderableClusterOptionsResponse'
+    { _docorsMarker                  :: !(Maybe Text)
+    , _docorsOrderableClusterOptions :: !(Maybe [OrderableClusterOption])
+    , _docorsResponseStatus          :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeOrderableClusterOptionsResponse' with the minimum fields required to make a request.

@@ -51,13 +51,15 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'createDocument' smart constructor.
-data CreateDocument = CreateDocument'
-  { _cdDocumentType   :: !(Maybe DocumentType)
-  , _cdTargetType     :: !(Maybe Text)
-  , _cdDocumentFormat :: !(Maybe DocumentFormat)
-  , _cdContent        :: !Text
-  , _cdName           :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDocument =
+  CreateDocument'
+    { _cdDocumentType   :: !(Maybe DocumentType)
+    , _cdTargetType     :: !(Maybe Text)
+    , _cdDocumentFormat :: !(Maybe DocumentFormat)
+    , _cdContent        :: !Text
+    , _cdName           :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDocument' with the minimum fields required to make a request.
@@ -147,10 +149,12 @@ instance ToQuery CreateDocument where
         toQuery = const mempty
 
 -- | /See:/ 'createDocumentResponse' smart constructor.
-data CreateDocumentResponse = CreateDocumentResponse'
-  { _cdrsDocumentDescription :: !(Maybe DocumentDescription)
-  , _cdrsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDocumentResponse =
+  CreateDocumentResponse'
+    { _cdrsDocumentDescription :: !(Maybe DocumentDescription)
+    , _cdrsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDocumentResponse' with the minimum fields required to make a request.

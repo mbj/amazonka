@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteOTAUpdate' smart constructor.
-newtype DeleteOTAUpdate = DeleteOTAUpdate'
-  { _dotauOtaUpdateId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteOTAUpdate =
+  DeleteOTAUpdate'
+    { _dotauOtaUpdateId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteOTAUpdate' with the minimum fields required to make a request.
@@ -88,9 +90,11 @@ instance ToQuery DeleteOTAUpdate where
         toQuery = const mempty
 
 -- | /See:/ 'deleteOTAUpdateResponse' smart constructor.
-newtype DeleteOTAUpdateResponse = DeleteOTAUpdateResponse'
-  { _dotaursResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteOTAUpdateResponse =
+  DeleteOTAUpdateResponse'
+    { _dotaursResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteOTAUpdateResponse' with the minimum fields required to make a request.

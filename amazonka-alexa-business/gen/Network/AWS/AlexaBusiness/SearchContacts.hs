@@ -50,12 +50,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'searchContacts' smart constructor.
-data SearchContacts = SearchContacts'
-  { _scFilters      :: !(Maybe [Filter])
-  , _scSortCriteria :: !(Maybe [Sort])
-  , _scNextToken    :: !(Maybe Text)
-  , _scMaxResults   :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SearchContacts =
+  SearchContacts'
+    { _scFilters      :: !(Maybe [Filter])
+    , _scSortCriteria :: !(Maybe [Sort])
+    , _scNextToken    :: !(Maybe Text)
+    , _scMaxResults   :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SearchContacts' with the minimum fields required to make a request.
@@ -136,12 +138,14 @@ instance ToQuery SearchContacts where
         toQuery = const mempty
 
 -- | /See:/ 'searchContactsResponse' smart constructor.
-data SearchContactsResponse = SearchContactsResponse'
-  { _scrsNextToken      :: !(Maybe Text)
-  , _scrsContacts       :: !(Maybe [ContactData])
-  , _scrsTotalCount     :: !(Maybe Int)
-  , _scrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SearchContactsResponse =
+  SearchContactsResponse'
+    { _scrsNextToken      :: !(Maybe Text)
+    , _scrsContacts       :: !(Maybe [ContactData])
+    , _scrsTotalCount     :: !(Maybe Int)
+    , _scrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SearchContactsResponse' with the minimum fields required to make a request.

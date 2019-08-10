@@ -57,10 +57,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateAPIKey' smart constructor.
-data UpdateAPIKey = UpdateAPIKey'
-  { _uakPatchOperations :: !(Maybe [PatchOperation])
-  , _uakApiKey          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateAPIKey =
+  UpdateAPIKey'
+    { _uakPatchOperations :: !(Maybe [PatchOperation])
+    , _uakApiKey          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateAPIKey' with the minimum fields required to make a request.

@@ -44,9 +44,11 @@ import Network.AWS.SageMaker.Types
 import Network.AWS.SageMaker.Types.Product
 
 -- | /See:/ 'deleteNotebookInstance' smart constructor.
-newtype DeleteNotebookInstance = DeleteNotebookInstance'
-  { _dNotebookInstanceName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteNotebookInstance =
+  DeleteNotebookInstance'
+    { _dNotebookInstanceName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteNotebookInstance' with the minimum fields required to make a request.

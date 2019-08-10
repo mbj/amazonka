@@ -45,9 +45,11 @@ import Network.AWS.Snowball.Types
 import Network.AWS.Snowball.Types.Product
 
 -- | /See:/ 'describeCluster' smart constructor.
-newtype DescribeCluster = DescribeCluster'
-  { _dcClusterId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeCluster =
+  DescribeCluster'
+    { _dcClusterId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeCluster' with the minimum fields required to make a request.
@@ -100,10 +102,12 @@ instance ToQuery DescribeCluster where
         toQuery = const mempty
 
 -- | /See:/ 'describeClusterResponse' smart constructor.
-data DescribeClusterResponse = DescribeClusterResponse'
-  { _dcrsClusterMetadata :: !(Maybe ClusterMetadata)
-  , _dcrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeClusterResponse =
+  DescribeClusterResponse'
+    { _dcrsClusterMetadata :: !(Maybe ClusterMetadata)
+    , _dcrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeClusterResponse' with the minimum fields required to make a request.

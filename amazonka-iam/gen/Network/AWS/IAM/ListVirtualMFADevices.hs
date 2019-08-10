@@ -54,11 +54,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listVirtualMFADevices' smart constructor.
-data ListVirtualMFADevices = ListVirtualMFADevices'
-  { _lvmdAssignmentStatus :: !(Maybe AssignmentStatusType)
-  , _lvmdMarker           :: !(Maybe Text)
-  , _lvmdMaxItems         :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListVirtualMFADevices =
+  ListVirtualMFADevices'
+    { _lvmdAssignmentStatus :: !(Maybe AssignmentStatusType)
+    , _lvmdMarker           :: !(Maybe Text)
+    , _lvmdMaxItems         :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListVirtualMFADevices' with the minimum fields required to make a request.
@@ -136,12 +138,14 @@ instance ToQuery ListVirtualMFADevices where
 --
 --
 -- /See:/ 'listVirtualMFADevicesResponse' smart constructor.
-data ListVirtualMFADevicesResponse = ListVirtualMFADevicesResponse'
-  { _lvmdrsMarker            :: !(Maybe Text)
-  , _lvmdrsIsTruncated       :: !(Maybe Bool)
-  , _lvmdrsResponseStatus    :: !Int
-  , _lvmdrsVirtualMFADevices :: ![VirtualMFADevice]
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data ListVirtualMFADevicesResponse =
+  ListVirtualMFADevicesResponse'
+    { _lvmdrsMarker            :: !(Maybe Text)
+    , _lvmdrsIsTruncated       :: !(Maybe Bool)
+    , _lvmdrsResponseStatus    :: !Int
+    , _lvmdrsVirtualMFADevices :: ![VirtualMFADevice]
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListVirtualMFADevicesResponse' with the minimum fields required to make a request.

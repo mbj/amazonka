@@ -52,10 +52,12 @@ import Network.AWS.StepFunctions.Types
 import Network.AWS.StepFunctions.Types.Product
 
 -- | /See:/ 'listStateMachines' smart constructor.
-data ListStateMachines = ListStateMachines'
-  { _lsmNextToken  :: !(Maybe Text)
-  , _lsmMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListStateMachines =
+  ListStateMachines'
+    { _lsmNextToken  :: !(Maybe Text)
+    , _lsmMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListStateMachines' with the minimum fields required to make a request.
@@ -123,11 +125,13 @@ instance ToQuery ListStateMachines where
         toQuery = const mempty
 
 -- | /See:/ 'listStateMachinesResponse' smart constructor.
-data ListStateMachinesResponse = ListStateMachinesResponse'
-  { _lsmrsNextToken      :: !(Maybe Text)
-  , _lsmrsResponseStatus :: !Int
-  , _lsmrsStateMachines  :: ![StateMachineListItem]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListStateMachinesResponse =
+  ListStateMachinesResponse'
+    { _lsmrsNextToken      :: !(Maybe Text)
+    , _lsmrsResponseStatus :: !Int
+    , _lsmrsStateMachines  :: ![StateMachineListItem]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListStateMachinesResponse' with the minimum fields required to make a request.

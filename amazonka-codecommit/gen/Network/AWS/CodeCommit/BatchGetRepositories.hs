@@ -50,9 +50,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'batchGetRepositories' smart constructor.
-newtype BatchGetRepositories = BatchGetRepositories'
-  { _bgrRepositoryNames :: [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype BatchGetRepositories =
+  BatchGetRepositories'
+    { _bgrRepositoryNames :: [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchGetRepositories' with the minimum fields required to make a request.
@@ -112,11 +114,13 @@ instance ToQuery BatchGetRepositories where
 --
 --
 -- /See:/ 'batchGetRepositoriesResponse' smart constructor.
-data BatchGetRepositoriesResponse = BatchGetRepositoriesResponse'
-  { _bgrrsRepositories         :: !(Maybe [RepositoryMetadata])
-  , _bgrrsRepositoriesNotFound :: !(Maybe [Text])
-  , _bgrrsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchGetRepositoriesResponse =
+  BatchGetRepositoriesResponse'
+    { _bgrrsRepositories         :: !(Maybe [RepositoryMetadata])
+    , _bgrrsRepositoriesNotFound :: !(Maybe [Text])
+    , _bgrrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchGetRepositoriesResponse' with the minimum fields required to make a request.

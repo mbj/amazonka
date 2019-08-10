@@ -56,12 +56,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createDBParameterGroup' smart constructor.
-data CreateDBParameterGroup = CreateDBParameterGroup'
-  { _cdbpgTags                   :: !(Maybe [Tag])
-  , _cdbpgDBParameterGroupName   :: !Text
-  , _cdbpgDBParameterGroupFamily :: !Text
-  , _cdbpgDescription            :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDBParameterGroup =
+  CreateDBParameterGroup'
+    { _cdbpgTags                   :: !(Maybe [Tag])
+    , _cdbpgDBParameterGroupName   :: !Text
+    , _cdbpgDBParameterGroupFamily :: !Text
+    , _cdbpgDescription            :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDBParameterGroup' with the minimum fields required to make a request.
@@ -138,10 +140,12 @@ instance ToQuery CreateDBParameterGroup where
                "Description" =: _cdbpgDescription]
 
 -- | /See:/ 'createDBParameterGroupResponse' smart constructor.
-data CreateDBParameterGroupResponse = CreateDBParameterGroupResponse'
-  { _cdpgrsDBParameterGroup :: !(Maybe DBParameterGroup)
-  , _cdpgrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDBParameterGroupResponse =
+  CreateDBParameterGroupResponse'
+    { _cdpgrsDBParameterGroup :: !(Maybe DBParameterGroup)
+    , _cdpgrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDBParameterGroupResponse' with the minimum fields required to make a request.

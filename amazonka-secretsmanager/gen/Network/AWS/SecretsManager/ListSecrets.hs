@@ -61,10 +61,12 @@ import Network.AWS.SecretsManager.Types
 import Network.AWS.SecretsManager.Types.Product
 
 -- | /See:/ 'listSecrets' smart constructor.
-data ListSecrets = ListSecrets'
-  { _lsNextToken  :: !(Maybe Text)
-  , _lsMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListSecrets =
+  ListSecrets'
+    { _lsNextToken  :: !(Maybe Text)
+    , _lsMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListSecrets' with the minimum fields required to make a request.
@@ -125,11 +127,13 @@ instance ToQuery ListSecrets where
         toQuery = const mempty
 
 -- | /See:/ 'listSecretsResponse' smart constructor.
-data ListSecretsResponse = ListSecretsResponse'
-  { _lsrsNextToken      :: !(Maybe Text)
-  , _lsrsSecretList     :: !(Maybe [SecretListEntry])
-  , _lsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListSecretsResponse =
+  ListSecretsResponse'
+    { _lsrsNextToken      :: !(Maybe Text)
+    , _lsrsSecretList     :: !(Maybe [SecretListEntry])
+    , _lsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListSecretsResponse' with the minimum fields required to make a request.

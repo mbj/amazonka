@@ -47,12 +47,14 @@ import Network.AWS.XRay.Types
 import Network.AWS.XRay.Types.Product
 
 -- | /See:/ 'putTelemetryRecords' smart constructor.
-data PutTelemetryRecords = PutTelemetryRecords'
-  { _ptrHostname         :: !(Maybe Text)
-  , _ptrEC2InstanceId    :: !(Maybe Text)
-  , _ptrResourceARN      :: !(Maybe Text)
-  , _ptrTelemetryRecords :: ![TelemetryRecord]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutTelemetryRecords =
+  PutTelemetryRecords'
+    { _ptrHostname         :: !(Maybe Text)
+    , _ptrEC2InstanceId    :: !(Maybe Text)
+    , _ptrResourceARN      :: !(Maybe Text)
+    , _ptrTelemetryRecords :: ![TelemetryRecord]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutTelemetryRecords' with the minimum fields required to make a request.
@@ -125,9 +127,11 @@ instance ToQuery PutTelemetryRecords where
         toQuery = const mempty
 
 -- | /See:/ 'putTelemetryRecordsResponse' smart constructor.
-newtype PutTelemetryRecordsResponse = PutTelemetryRecordsResponse'
-  { _ptrrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype PutTelemetryRecordsResponse =
+  PutTelemetryRecordsResponse'
+    { _ptrrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutTelemetryRecordsResponse' with the minimum fields required to make a request.

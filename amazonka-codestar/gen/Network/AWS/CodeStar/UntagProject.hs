@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'untagProject' smart constructor.
-data UntagProject = UntagProject'
-  { _uId   :: !Text
-  , _uTags :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UntagProject =
+  UntagProject'
+    { _uId   :: !Text
+    , _uTags :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UntagProject' with the minimum fields required to make a request.
@@ -106,9 +108,11 @@ instance ToQuery UntagProject where
         toQuery = const mempty
 
 -- | /See:/ 'untagProjectResponse' smart constructor.
-newtype UntagProjectResponse = UntagProjectResponse'
-  { _ursResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UntagProjectResponse =
+  UntagProjectResponse'
+    { _ursResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UntagProjectResponse' with the minimum fields required to make a request.

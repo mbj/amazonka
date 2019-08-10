@@ -49,9 +49,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteLunaClient' smart constructor.
-newtype DeleteLunaClient = DeleteLunaClient'
-  { _dClientARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteLunaClient =
+  DeleteLunaClient'
+    { _dClientARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteLunaClient' with the minimum fields required to make a request.
@@ -104,10 +106,12 @@ instance ToQuery DeleteLunaClient where
         toQuery = const mempty
 
 -- | /See:/ 'deleteLunaClientResponse' smart constructor.
-data DeleteLunaClientResponse = DeleteLunaClientResponse'
-  { _dlcrsResponseStatus :: !Int
-  , _dlcrsStatus         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteLunaClientResponse =
+  DeleteLunaClientResponse'
+    { _dlcrsResponseStatus :: !Int
+    , _dlcrsStatus         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteLunaClientResponse' with the minimum fields required to make a request.

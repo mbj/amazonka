@@ -52,9 +52,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'restoreFromSnapshot' smart constructor.
-newtype RestoreFromSnapshot = RestoreFromSnapshot'
-  { _rfsSnapshotId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RestoreFromSnapshot =
+  RestoreFromSnapshot'
+    { _rfsSnapshotId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RestoreFromSnapshot' with the minimum fields required to make a request.
@@ -112,9 +114,11 @@ instance ToQuery RestoreFromSnapshot where
 --
 --
 -- /See:/ 'restoreFromSnapshotResponse' smart constructor.
-newtype RestoreFromSnapshotResponse = RestoreFromSnapshotResponse'
-  { _rfsrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RestoreFromSnapshotResponse =
+  RestoreFromSnapshotResponse'
+    { _rfsrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RestoreFromSnapshotResponse' with the minimum fields required to make a request.

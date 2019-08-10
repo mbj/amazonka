@@ -53,10 +53,12 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'cloneReceiptRuleSet' smart constructor.
-data CloneReceiptRuleSet = CloneReceiptRuleSet'
-  { _cRuleSetName         :: !Text
-  , _cOriginalRuleSetName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CloneReceiptRuleSet =
+  CloneReceiptRuleSet'
+    { _cRuleSetName         :: !Text
+    , _cOriginalRuleSetName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CloneReceiptRuleSet' with the minimum fields required to make a request.
@@ -117,9 +119,11 @@ instance ToQuery CloneReceiptRuleSet where
 --
 --
 -- /See:/ 'cloneReceiptRuleSetResponse' smart constructor.
-newtype CloneReceiptRuleSetResponse = CloneReceiptRuleSetResponse'
-  { _crsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CloneReceiptRuleSetResponse =
+  CloneReceiptRuleSetResponse'
+    { _crsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CloneReceiptRuleSetResponse' with the minimum fields required to make a request.

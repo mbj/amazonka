@@ -47,11 +47,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getUserDefinedFunction' smart constructor.
-data GetUserDefinedFunction = GetUserDefinedFunction'
-  { _getCatalogId    :: !(Maybe Text)
-  , _getDatabaseName :: !Text
-  , _getFunctionName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetUserDefinedFunction =
+  GetUserDefinedFunction'
+    { _getCatalogId    :: !(Maybe Text)
+    , _getDatabaseName :: !Text
+    , _getFunctionName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetUserDefinedFunction' with the minimum fields required to make a request.
@@ -126,10 +128,12 @@ instance ToQuery GetUserDefinedFunction where
         toQuery = const mempty
 
 -- | /See:/ 'getUserDefinedFunctionResponse' smart constructor.
-data GetUserDefinedFunctionResponse = GetUserDefinedFunctionResponse'
-  { _gudfursUserDefinedFunction :: !(Maybe UserDefinedFunction)
-  , _gudfursResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetUserDefinedFunctionResponse =
+  GetUserDefinedFunctionResponse'
+    { _gudfursUserDefinedFunction :: !(Maybe UserDefinedFunction)
+    , _gudfursResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetUserDefinedFunctionResponse' with the minimum fields required to make a request.

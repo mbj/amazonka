@@ -46,11 +46,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateSSHPublicKey' smart constructor.
-data UpdateSSHPublicKey = UpdateSSHPublicKey'
-  { _uspkUserName       :: !Text
-  , _uspkSSHPublicKeyId :: !Text
-  , _uspkStatus         :: !StatusType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateSSHPublicKey =
+  UpdateSSHPublicKey'
+    { _uspkUserName       :: !Text
+    , _uspkSSHPublicKeyId :: !Text
+    , _uspkStatus         :: !StatusType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateSSHPublicKey' with the minimum fields required to make a request.

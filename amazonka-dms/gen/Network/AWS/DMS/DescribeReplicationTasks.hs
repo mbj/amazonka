@@ -55,11 +55,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeReplicationTasks' smart constructor.
-data DescribeReplicationTasks = DescribeReplicationTasks'
-  { _drtFilters    :: !(Maybe [Filter])
-  , _drtMarker     :: !(Maybe Text)
-  , _drtMaxRecords :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeReplicationTasks =
+  DescribeReplicationTasks'
+    { _drtFilters    :: !(Maybe [Filter])
+    , _drtMarker     :: !(Maybe Text)
+    , _drtMaxRecords :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeReplicationTasks' with the minimum fields required to make a request.
@@ -142,11 +144,13 @@ instance ToQuery DescribeReplicationTasks where
 --
 --
 -- /See:/ 'describeReplicationTasksResponse' smart constructor.
-data DescribeReplicationTasksResponse = DescribeReplicationTasksResponse'
-  { _drtsrsReplicationTasks :: !(Maybe [ReplicationTask])
-  , _drtsrsMarker           :: !(Maybe Text)
-  , _drtsrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeReplicationTasksResponse =
+  DescribeReplicationTasksResponse'
+    { _drtsrsReplicationTasks :: !(Maybe [ReplicationTask])
+    , _drtsrsMarker           :: !(Maybe Text)
+    , _drtsrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeReplicationTasksResponse' with the minimum fields required to make a request.

@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createCoreDefinitionVersion' smart constructor.
-data CreateCoreDefinitionVersion = CreateCoreDefinitionVersion'
-  { _ccdvAmznClientToken  :: !(Maybe Text)
-  , _ccdvCores            :: !(Maybe [Core])
-  , _ccdvCoreDefinitionId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateCoreDefinitionVersion =
+  CreateCoreDefinitionVersion'
+    { _ccdvAmznClientToken  :: !(Maybe Text)
+    , _ccdvCores            :: !(Maybe [Core])
+    , _ccdvCoreDefinitionId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateCoreDefinitionVersion' with the minimum fields required to make a request.
@@ -125,13 +127,15 @@ instance ToQuery CreateCoreDefinitionVersion where
         toQuery = const mempty
 
 -- | /See:/ 'createCoreDefinitionVersionResponse' smart constructor.
-data CreateCoreDefinitionVersionResponse = CreateCoreDefinitionVersionResponse'
-  { _ccdvrsARN               :: !(Maybe Text)
-  , _ccdvrsCreationTimestamp :: !(Maybe Text)
-  , _ccdvrsVersion           :: !(Maybe Text)
-  , _ccdvrsId                :: !(Maybe Text)
-  , _ccdvrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateCoreDefinitionVersionResponse =
+  CreateCoreDefinitionVersionResponse'
+    { _ccdvrsARN               :: !(Maybe Text)
+    , _ccdvrsCreationTimestamp :: !(Maybe Text)
+    , _ccdvrsVersion           :: !(Maybe Text)
+    , _ccdvrsId                :: !(Maybe Text)
+    , _ccdvrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateCoreDefinitionVersionResponse' with the minimum fields required to make a request.

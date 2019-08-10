@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateFieldLevelEncryptionProfile' smart constructor.
-data UpdateFieldLevelEncryptionProfile = UpdateFieldLevelEncryptionProfile'
-  { _uflepIfMatch :: !(Maybe Text)
-  , _uflepFieldLevelEncryptionProfileConfig :: !FieldLevelEncryptionProfileConfig
-  , _uflepId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateFieldLevelEncryptionProfile =
+  UpdateFieldLevelEncryptionProfile'
+    { _uflepIfMatch :: !(Maybe Text)
+    , _uflepFieldLevelEncryptionProfileConfig :: !FieldLevelEncryptionProfileConfig
+    , _uflepId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateFieldLevelEncryptionProfile' with the minimum fields required to make a request.
@@ -132,11 +134,13 @@ instance ToQuery UpdateFieldLevelEncryptionProfile
         toQuery = const mempty
 
 -- | /See:/ 'updateFieldLevelEncryptionProfileResponse' smart constructor.
-data UpdateFieldLevelEncryptionProfileResponse = UpdateFieldLevelEncryptionProfileResponse'
-  { _ufleprsETag                        :: !(Maybe Text)
-  , _ufleprsFieldLevelEncryptionProfile :: !(Maybe FieldLevelEncryptionProfile)
-  , _ufleprsResponseStatus              :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateFieldLevelEncryptionProfileResponse =
+  UpdateFieldLevelEncryptionProfileResponse'
+    { _ufleprsETag :: !(Maybe Text)
+    , _ufleprsFieldLevelEncryptionProfile :: !(Maybe FieldLevelEncryptionProfile)
+    , _ufleprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateFieldLevelEncryptionProfileResponse' with the minimum fields required to make a request.

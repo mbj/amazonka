@@ -54,12 +54,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listObjectParentPaths' smart constructor.
-data ListObjectParentPaths = ListObjectParentPaths'
-  { _loppNextToken       :: !(Maybe Text)
-  , _loppMaxResults      :: !(Maybe Nat)
-  , _loppDirectoryARN    :: !Text
-  , _loppObjectReference :: !ObjectReference
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListObjectParentPaths =
+  ListObjectParentPaths'
+    { _loppNextToken       :: !(Maybe Text)
+    , _loppMaxResults      :: !(Maybe Nat)
+    , _loppDirectoryARN    :: !Text
+    , _loppObjectReference :: !ObjectReference
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListObjectParentPaths' with the minimum fields required to make a request.
@@ -148,11 +150,13 @@ instance ToQuery ListObjectParentPaths where
         toQuery = const mempty
 
 -- | /See:/ 'listObjectParentPathsResponse' smart constructor.
-data ListObjectParentPathsResponse = ListObjectParentPathsResponse'
-  { _lopprsPathToObjectIdentifiersList :: !(Maybe [PathToObjectIdentifiers])
-  , _lopprsNextToken                   :: !(Maybe Text)
-  , _lopprsResponseStatus              :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListObjectParentPathsResponse =
+  ListObjectParentPathsResponse'
+    { _lopprsPathToObjectIdentifiersList :: !(Maybe [PathToObjectIdentifiers])
+    , _lopprsNextToken                   :: !(Maybe Text)
+    , _lopprsResponseStatus              :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListObjectParentPathsResponse' with the minimum fields required to make a request.

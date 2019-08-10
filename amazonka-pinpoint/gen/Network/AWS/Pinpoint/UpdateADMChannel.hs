@@ -44,10 +44,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateADMChannel' smart constructor.
-data UpdateADMChannel = UpdateADMChannel'
-  { _uadmcApplicationId     :: !Text
-  , _uadmcADMChannelRequest :: !ADMChannelRequest
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateADMChannel =
+  UpdateADMChannel'
+    { _uadmcApplicationId     :: !Text
+    , _uadmcADMChannelRequest :: !ADMChannelRequest
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateADMChannel' with the minimum fields required to make a request.
@@ -113,10 +115,12 @@ instance ToQuery UpdateADMChannel where
         toQuery = const mempty
 
 -- | /See:/ 'updateADMChannelResponse' smart constructor.
-data UpdateADMChannelResponse = UpdateADMChannelResponse'
-  { _uadmcrsResponseStatus     :: !Int
-  , _uadmcrsADMChannelResponse :: !ADMChannelResponse
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateADMChannelResponse =
+  UpdateADMChannelResponse'
+    { _uadmcrsResponseStatus     :: !Int
+    , _uadmcrsADMChannelResponse :: !ADMChannelResponse
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateADMChannelResponse' with the minimum fields required to make a request.

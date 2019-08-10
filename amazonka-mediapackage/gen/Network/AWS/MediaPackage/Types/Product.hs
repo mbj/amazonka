@@ -24,12 +24,14 @@ import Network.AWS.Prelude
 -- | A Channel resource configuration.
 --
 -- /See:/ 'channel' smart constructor.
-data Channel = Channel'
-  { _cHlsIngest   :: !(Maybe HlsIngest)
-  , _cARN         :: !(Maybe Text)
-  , _cId          :: !(Maybe Text)
-  , _cDescription :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Channel =
+  Channel'
+    { _cHlsIngest   :: !(Maybe HlsIngest)
+    , _cARN         :: !(Maybe Text)
+    , _cId          :: !(Maybe Text)
+    , _cDescription :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Channel' with the minimum fields required to make a request.
@@ -86,10 +88,12 @@ instance NFData Channel where
 -- | A Common Media Application Format (CMAF) encryption configuration.
 --
 -- /See:/ 'cmafEncryption' smart constructor.
-data CmafEncryption = CmafEncryption'
-  { _ceKeyRotationIntervalSeconds :: !(Maybe Int)
-  , _ceSpekeKeyProvider           :: !SpekeKeyProvider
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CmafEncryption =
+  CmafEncryption'
+    { _ceKeyRotationIntervalSeconds :: !(Maybe Int)
+    , _ceSpekeKeyProvider           :: !SpekeKeyProvider
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CmafEncryption' with the minimum fields required to make a request.
@@ -140,13 +144,15 @@ instance ToJSON CmafEncryption where
 -- | A Common Media Application Format (CMAF) packaging configuration.
 --
 -- /See:/ 'cmafPackage' smart constructor.
-data CmafPackage = CmafPackage'
-  { _cpHlsManifests           :: !(Maybe [HlsManifest])
-  , _cpSegmentDurationSeconds :: !(Maybe Int)
-  , _cpStreamSelection        :: !(Maybe StreamSelection)
-  , _cpEncryption             :: !(Maybe CmafEncryption)
-  , _cpSegmentPrefix          :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CmafPackage =
+  CmafPackage'
+    { _cpHlsManifests           :: !(Maybe [HlsManifest])
+    , _cpSegmentDurationSeconds :: !(Maybe Int)
+    , _cpStreamSelection        :: !(Maybe StreamSelection)
+    , _cpEncryption             :: !(Maybe CmafEncryption)
+    , _cpSegmentPrefix          :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CmafPackage' with the minimum fields required to make a request.
@@ -212,13 +218,15 @@ instance NFData CmafPackage where
 -- | A Common Media Application Format (CMAF) packaging configuration.
 --
 -- /See:/ 'cmafPackageCreateOrUpdateParameters' smart constructor.
-data CmafPackageCreateOrUpdateParameters = CmafPackageCreateOrUpdateParameters'
-  { _cpcoupHlsManifests :: !(Maybe [HlsManifestCreateOrUpdateParameters])
-  , _cpcoupSegmentDurationSeconds :: !(Maybe Int)
-  , _cpcoupStreamSelection :: !(Maybe StreamSelection)
-  , _cpcoupEncryption :: !(Maybe CmafEncryption)
-  , _cpcoupSegmentPrefix :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CmafPackageCreateOrUpdateParameters =
+  CmafPackageCreateOrUpdateParameters'
+    { _cpcoupHlsManifests :: !(Maybe [HlsManifestCreateOrUpdateParameters])
+    , _cpcoupSegmentDurationSeconds :: !(Maybe Int)
+    , _cpcoupStreamSelection :: !(Maybe StreamSelection)
+    , _cpcoupEncryption :: !(Maybe CmafEncryption)
+    , _cpcoupSegmentPrefix :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CmafPackageCreateOrUpdateParameters' with the minimum fields required to make a request.
@@ -287,10 +295,12 @@ instance ToJSON CmafPackageCreateOrUpdateParameters
 -- | A Dynamic Adaptive Streaming over HTTP (DASH) encryption configuration.
 --
 -- /See:/ 'dashEncryption' smart constructor.
-data DashEncryption = DashEncryption'
-  { _deKeyRotationIntervalSeconds :: !(Maybe Int)
-  , _deSpekeKeyProvider           :: !SpekeKeyProvider
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DashEncryption =
+  DashEncryption'
+    { _deKeyRotationIntervalSeconds :: !(Maybe Int)
+    , _deSpekeKeyProvider           :: !SpekeKeyProvider
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DashEncryption' with the minimum fields required to make a request.
@@ -341,16 +351,18 @@ instance ToJSON DashEncryption where
 -- | A Dynamic Adaptive Streaming over HTTP (DASH) packaging configuration.
 --
 -- /See:/ 'dashPackage' smart constructor.
-data DashPackage = DashPackage'
-  { _dpMinBufferTimeSeconds              :: !(Maybe Int)
-  , _dpProfile                           :: !(Maybe Profile)
-  , _dpSegmentDurationSeconds            :: !(Maybe Int)
-  , _dpStreamSelection                   :: !(Maybe StreamSelection)
-  , _dpEncryption                        :: !(Maybe DashEncryption)
-  , _dpMinUpdatePeriodSeconds            :: !(Maybe Int)
-  , _dpSuggestedPresentationDelaySeconds :: !(Maybe Int)
-  , _dpManifestWindowSeconds             :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DashPackage =
+  DashPackage'
+    { _dpMinBufferTimeSeconds              :: !(Maybe Int)
+    , _dpProfile                           :: !(Maybe Profile)
+    , _dpSegmentDurationSeconds            :: !(Maybe Int)
+    , _dpStreamSelection                   :: !(Maybe StreamSelection)
+    , _dpEncryption                        :: !(Maybe DashEncryption)
+    , _dpMinUpdatePeriodSeconds            :: !(Maybe Int)
+    , _dpSuggestedPresentationDelaySeconds :: !(Maybe Int)
+    , _dpManifestWindowSeconds             :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DashPackage' with the minimum fields required to make a request.
@@ -457,13 +469,15 @@ instance ToJSON DashPackage where
 -- | An HTTP Live Streaming (HLS) encryption configuration.
 --
 -- /See:/ 'hlsEncryption' smart constructor.
-data HlsEncryption = HlsEncryption'
-  { _heEncryptionMethod             :: !(Maybe EncryptionMethod)
-  , _heKeyRotationIntervalSeconds   :: !(Maybe Int)
-  , _heConstantInitializationVector :: !(Maybe Text)
-  , _heRepeatExtXKey                :: !(Maybe Bool)
-  , _heSpekeKeyProvider             :: !SpekeKeyProvider
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data HlsEncryption =
+  HlsEncryption'
+    { _heEncryptionMethod             :: !(Maybe EncryptionMethod)
+    , _heKeyRotationIntervalSeconds   :: !(Maybe Int)
+    , _heConstantInitializationVector :: !(Maybe Text)
+    , _heRepeatExtXKey                :: !(Maybe Bool)
+    , _heSpekeKeyProvider             :: !SpekeKeyProvider
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'HlsEncryption' with the minimum fields required to make a request.
@@ -542,9 +556,11 @@ instance ToJSON HlsEncryption where
 -- | An HTTP Live Streaming (HLS) ingest resource configuration.
 --
 -- /See:/ 'hlsIngest' smart constructor.
-newtype HlsIngest = HlsIngest'
-  { _hiIngestEndpoints :: Maybe [IngestEndpoint]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype HlsIngest =
+  HlsIngest'
+    { _hiIngestEndpoints :: Maybe [IngestEndpoint]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'HlsIngest' with the minimum fields required to make a request.
@@ -574,16 +590,18 @@ instance NFData HlsIngest where
 -- | A HTTP Live Streaming (HLS) manifest configuration.
 --
 -- /See:/ 'hlsManifest' smart constructor.
-data HlsManifest = HlsManifest'
-  { _hmManifestName                   :: !(Maybe Text)
-  , _hmURL                            :: !(Maybe Text)
-  , _hmPlaylistType                   :: !(Maybe PlaylistType)
-  , _hmProgramDateTimeIntervalSeconds :: !(Maybe Int)
-  , _hmAdMarkers                      :: !(Maybe AdMarkers)
-  , _hmIncludeIframeOnlyStream        :: !(Maybe Bool)
-  , _hmPlaylistWindowSeconds          :: !(Maybe Int)
-  , _hmId                             :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data HlsManifest =
+  HlsManifest'
+    { _hmManifestName                   :: !(Maybe Text)
+    , _hmURL                            :: !(Maybe Text)
+    , _hmPlaylistType                   :: !(Maybe PlaylistType)
+    , _hmProgramDateTimeIntervalSeconds :: !(Maybe Int)
+    , _hmAdMarkers                      :: !(Maybe AdMarkers)
+    , _hmIncludeIframeOnlyStream        :: !(Maybe Bool)
+    , _hmPlaylistWindowSeconds          :: !(Maybe Int)
+    , _hmId                             :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'HlsManifest' with the minimum fields required to make a request.
@@ -673,15 +691,17 @@ instance NFData HlsManifest where
 -- | A HTTP Live Streaming (HLS) manifest configuration.
 --
 -- /See:/ 'hlsManifestCreateOrUpdateParameters' smart constructor.
-data HlsManifestCreateOrUpdateParameters = HlsManifestCreateOrUpdateParameters'
-  { _hmcoupManifestName                   :: !(Maybe Text)
-  , _hmcoupPlaylistType                   :: !(Maybe PlaylistType)
-  , _hmcoupProgramDateTimeIntervalSeconds :: !(Maybe Int)
-  , _hmcoupAdMarkers                      :: !(Maybe AdMarkers)
-  , _hmcoupIncludeIframeOnlyStream        :: !(Maybe Bool)
-  , _hmcoupPlaylistWindowSeconds          :: !(Maybe Int)
-  , _hmcoupId                             :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data HlsManifestCreateOrUpdateParameters =
+  HlsManifestCreateOrUpdateParameters'
+    { _hmcoupManifestName                   :: !(Maybe Text)
+    , _hmcoupPlaylistType                   :: !(Maybe PlaylistType)
+    , _hmcoupProgramDateTimeIntervalSeconds :: !(Maybe Int)
+    , _hmcoupAdMarkers                      :: !(Maybe AdMarkers)
+    , _hmcoupIncludeIframeOnlyStream        :: !(Maybe Bool)
+    , _hmcoupPlaylistWindowSeconds          :: !(Maybe Int)
+    , _hmcoupId                             :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'HlsManifestCreateOrUpdateParameters' with the minimum fields required to make a request.
@@ -769,17 +789,19 @@ instance ToJSON HlsManifestCreateOrUpdateParameters
 -- | An HTTP Live Streaming (HLS) packaging configuration.
 --
 -- /See:/ 'hlsPackage' smart constructor.
-data HlsPackage = HlsPackage'
-  { _hpUseAudioRenditionGroup         :: !(Maybe Bool)
-  , _hpPlaylistType                   :: !(Maybe PlaylistType)
-  , _hpSegmentDurationSeconds         :: !(Maybe Int)
-  , _hpProgramDateTimeIntervalSeconds :: !(Maybe Int)
-  , _hpStreamSelection                :: !(Maybe StreamSelection)
-  , _hpAdMarkers                      :: !(Maybe AdMarkers)
-  , _hpEncryption                     :: !(Maybe HlsEncryption)
-  , _hpIncludeIframeOnlyStream        :: !(Maybe Bool)
-  , _hpPlaylistWindowSeconds          :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data HlsPackage =
+  HlsPackage'
+    { _hpUseAudioRenditionGroup         :: !(Maybe Bool)
+    , _hpPlaylistType                   :: !(Maybe PlaylistType)
+    , _hpSegmentDurationSeconds         :: !(Maybe Int)
+    , _hpProgramDateTimeIntervalSeconds :: !(Maybe Int)
+    , _hpStreamSelection                :: !(Maybe StreamSelection)
+    , _hpAdMarkers                      :: !(Maybe AdMarkers)
+    , _hpEncryption                     :: !(Maybe HlsEncryption)
+    , _hpIncludeIframeOnlyStream        :: !(Maybe Bool)
+    , _hpPlaylistWindowSeconds          :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'HlsPackage' with the minimum fields required to make a request.
@@ -896,11 +918,13 @@ instance ToJSON HlsPackage where
 -- | An endpoint for ingesting source content for a Channel.
 --
 -- /See:/ 'ingestEndpoint' smart constructor.
-data IngestEndpoint = IngestEndpoint'
-  { _ieURL      :: !(Maybe Text)
-  , _ieUsername :: !(Maybe Text)
-  , _iePassword :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data IngestEndpoint =
+  IngestEndpoint'
+    { _ieURL      :: !(Maybe Text)
+    , _ieUsername :: !(Maybe Text)
+    , _iePassword :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'IngestEndpoint' with the minimum fields required to make a request.
@@ -946,9 +970,11 @@ instance NFData IngestEndpoint where
 -- | A Microsoft Smooth Streaming (MSS) encryption configuration.
 --
 -- /See:/ 'mssEncryption' smart constructor.
-newtype MssEncryption = MssEncryption'
-  { _meSpekeKeyProvider :: SpekeKeyProvider
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype MssEncryption =
+  MssEncryption'
+    { _meSpekeKeyProvider :: SpekeKeyProvider
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MssEncryption' with the minimum fields required to make a request.
@@ -985,12 +1011,14 @@ instance ToJSON MssEncryption where
 -- | A Microsoft Smooth Streaming (MSS) packaging configuration.
 --
 -- /See:/ 'mssPackage' smart constructor.
-data MssPackage = MssPackage'
-  { _mpSegmentDurationSeconds :: !(Maybe Int)
-  , _mpStreamSelection        :: !(Maybe StreamSelection)
-  , _mpEncryption             :: !(Maybe MssEncryption)
-  , _mpManifestWindowSeconds  :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MssPackage =
+  MssPackage'
+    { _mpSegmentDurationSeconds :: !(Maybe Int)
+    , _mpStreamSelection        :: !(Maybe StreamSelection)
+    , _mpEncryption             :: !(Maybe MssEncryption)
+    , _mpManifestWindowSeconds  :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MssPackage' with the minimum fields required to make a request.
@@ -1059,21 +1087,23 @@ instance ToJSON MssPackage where
 -- | An OriginEndpoint resource configuration.
 --
 -- /See:/ 'originEndpoint' smart constructor.
-data OriginEndpoint = OriginEndpoint'
-  { _oeWhitelist              :: !(Maybe [Text])
-  , _oeHlsPackage             :: !(Maybe HlsPackage)
-  , _oeARN                    :: !(Maybe Text)
-  , _oeManifestName           :: !(Maybe Text)
-  , _oeURL                    :: !(Maybe Text)
-  , _oeChannelId              :: !(Maybe Text)
-  , _oeStartoverWindowSeconds :: !(Maybe Int)
-  , _oeDashPackage            :: !(Maybe DashPackage)
-  , _oeMssPackage             :: !(Maybe MssPackage)
-  , _oeId                     :: !(Maybe Text)
-  , _oeTimeDelaySeconds       :: !(Maybe Int)
-  , _oeCmafPackage            :: !(Maybe CmafPackage)
-  , _oeDescription            :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data OriginEndpoint =
+  OriginEndpoint'
+    { _oeWhitelist              :: !(Maybe [Text])
+    , _oeHlsPackage             :: !(Maybe HlsPackage)
+    , _oeARN                    :: !(Maybe Text)
+    , _oeManifestName           :: !(Maybe Text)
+    , _oeURL                    :: !(Maybe Text)
+    , _oeChannelId              :: !(Maybe Text)
+    , _oeStartoverWindowSeconds :: !(Maybe Int)
+    , _oeDashPackage            :: !(Maybe DashPackage)
+    , _oeMssPackage             :: !(Maybe MssPackage)
+    , _oeId                     :: !(Maybe Text)
+    , _oeTimeDelaySeconds       :: !(Maybe Int)
+    , _oeCmafPackage            :: !(Maybe CmafPackage)
+    , _oeDescription            :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OriginEndpoint' with the minimum fields required to make a request.
@@ -1203,12 +1233,14 @@ instance NFData OriginEndpoint where
 -- | A configuration for accessing an external Secure Packager and Encoder Key Exchange (SPEKE) service that will provide encryption keys.
 --
 -- /See:/ 'spekeKeyProvider' smart constructor.
-data SpekeKeyProvider = SpekeKeyProvider'
-  { _skpURL        :: !Text
-  , _skpResourceId :: !Text
-  , _skpRoleARN    :: !Text
-  , _skpSystemIds  :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SpekeKeyProvider =
+  SpekeKeyProvider'
+    { _skpURL        :: !Text
+    , _skpResourceId :: !Text
+    , _skpRoleARN    :: !Text
+    , _skpSystemIds  :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SpekeKeyProvider' with the minimum fields required to make a request.
@@ -1277,11 +1309,13 @@ instance ToJSON SpekeKeyProvider where
 -- | A StreamSelection configuration.
 --
 -- /See:/ 'streamSelection' smart constructor.
-data StreamSelection = StreamSelection'
-  { _ssStreamOrder           :: !(Maybe StreamOrder)
-  , _ssMinVideoBitsPerSecond :: !(Maybe Int)
-  , _ssMaxVideoBitsPerSecond :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StreamSelection =
+  StreamSelection'
+    { _ssStreamOrder           :: !(Maybe StreamOrder)
+    , _ssMinVideoBitsPerSecond :: !(Maybe Int)
+    , _ssMaxVideoBitsPerSecond :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StreamSelection' with the minimum fields required to make a request.

@@ -46,13 +46,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'executePolicy' smart constructor.
-data ExecutePolicy = ExecutePolicy'
-  { _epHonorCooldown        :: !(Maybe Bool)
-  , _epMetricValue          :: !(Maybe Double)
-  , _epAutoScalingGroupName :: !(Maybe Text)
-  , _epBreachThreshold      :: !(Maybe Double)
-  , _epPolicyName           :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ExecutePolicy =
+  ExecutePolicy'
+    { _epHonorCooldown        :: !(Maybe Bool)
+    , _epMetricValue          :: !(Maybe Double)
+    , _epAutoScalingGroupName :: !(Maybe Text)
+    , _epBreachThreshold      :: !(Maybe Double)
+    , _epPolicyName           :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ExecutePolicy' with the minimum fields required to make a request.

@@ -88,10 +88,12 @@ instance ToQuery DisassociateServiceRoleFromAccount
         toQuery = const mempty
 
 -- | /See:/ 'disassociateServiceRoleFromAccountResponse' smart constructor.
-data DisassociateServiceRoleFromAccountResponse = DisassociateServiceRoleFromAccountResponse'
-  { _dsrfarsDisassociatedAt :: !(Maybe Text)
-  , _dsrfarsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DisassociateServiceRoleFromAccountResponse =
+  DisassociateServiceRoleFromAccountResponse'
+    { _dsrfarsDisassociatedAt :: !(Maybe Text)
+    , _dsrfarsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisassociateServiceRoleFromAccountResponse' with the minimum fields required to make a request.

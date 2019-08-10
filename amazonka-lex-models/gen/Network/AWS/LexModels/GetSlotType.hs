@@ -55,10 +55,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getSlotType' smart constructor.
-data GetSlotType = GetSlotType'
-  { _gstName    :: !Text
-  , _gstVersion :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetSlotType =
+  GetSlotType'
+    { _gstName    :: !Text
+    , _gstVersion :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetSlotType' with the minimum fields required to make a request.
@@ -122,17 +124,19 @@ instance ToQuery GetSlotType where
         toQuery = const mempty
 
 -- | /See:/ 'getSlotTypeResponse' smart constructor.
-data GetSlotTypeResponse = GetSlotTypeResponse'
-  { _gstsrsChecksum               :: !(Maybe Text)
-  , _gstsrsValueSelectionStrategy :: !(Maybe SlotValueSelectionStrategy)
-  , _gstsrsCreatedDate            :: !(Maybe POSIX)
-  , _gstsrsName                   :: !(Maybe Text)
-  , _gstsrsVersion                :: !(Maybe Text)
-  , _gstsrsLastUpdatedDate        :: !(Maybe POSIX)
-  , _gstsrsDescription            :: !(Maybe Text)
-  , _gstsrsEnumerationValues      :: !(Maybe (List1 EnumerationValue))
-  , _gstsrsResponseStatus         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetSlotTypeResponse =
+  GetSlotTypeResponse'
+    { _gstsrsChecksum               :: !(Maybe Text)
+    , _gstsrsValueSelectionStrategy :: !(Maybe SlotValueSelectionStrategy)
+    , _gstsrsCreatedDate            :: !(Maybe POSIX)
+    , _gstsrsName                   :: !(Maybe Text)
+    , _gstsrsVersion                :: !(Maybe Text)
+    , _gstsrsLastUpdatedDate        :: !(Maybe POSIX)
+    , _gstsrsDescription            :: !(Maybe Text)
+    , _gstsrsEnumerationValues      :: !(Maybe (List1 EnumerationValue))
+    , _gstsrsResponseStatus         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetSlotTypeResponse' with the minimum fields required to make a request.

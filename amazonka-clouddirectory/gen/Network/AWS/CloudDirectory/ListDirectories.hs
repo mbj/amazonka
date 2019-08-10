@@ -51,11 +51,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listDirectories' smart constructor.
-data ListDirectories = ListDirectories'
-  { _ldState      :: !(Maybe DirectoryState)
-  , _ldNextToken  :: !(Maybe Text)
-  , _ldMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListDirectories =
+  ListDirectories'
+    { _ldState      :: !(Maybe DirectoryState)
+    , _ldNextToken  :: !(Maybe Text)
+    , _ldMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDirectories' with the minimum fields required to make a request.
@@ -127,11 +129,13 @@ instance ToQuery ListDirectories where
         toQuery = const mempty
 
 -- | /See:/ 'listDirectoriesResponse' smart constructor.
-data ListDirectoriesResponse = ListDirectoriesResponse'
-  { _ldrsNextToken      :: !(Maybe Text)
-  , _ldrsResponseStatus :: !Int
-  , _ldrsDirectories    :: ![Directory]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListDirectoriesResponse =
+  ListDirectoriesResponse'
+    { _ldrsNextToken      :: !(Maybe Text)
+    , _ldrsResponseStatus :: !Int
+    , _ldrsDirectories    :: ![Directory]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDirectoriesResponse' with the minimum fields required to make a request.

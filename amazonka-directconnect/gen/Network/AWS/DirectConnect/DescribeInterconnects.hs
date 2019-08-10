@@ -51,9 +51,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeInterconnects' smart constructor.
-newtype DescribeInterconnects = DescribeInterconnects'
-  { _diInterconnectId :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeInterconnects =
+  DescribeInterconnects'
+    { _diInterconnectId :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeInterconnects' with the minimum fields required to make a request.
@@ -112,10 +114,12 @@ instance ToQuery DescribeInterconnects where
 --
 --
 -- /See:/ 'describeInterconnectsResponse' smart constructor.
-data DescribeInterconnectsResponse = DescribeInterconnectsResponse'
-  { _dirsInterconnects  :: !(Maybe [Interconnect])
-  , _dirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeInterconnectsResponse =
+  DescribeInterconnectsResponse'
+    { _dirsInterconnects  :: !(Maybe [Interconnect])
+    , _dirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeInterconnectsResponse' with the minimum fields required to make a request.

@@ -54,13 +54,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'generateDataKeyWithoutPlaintext' smart constructor.
-data GenerateDataKeyWithoutPlaintext = GenerateDataKeyWithoutPlaintext'
-  { _gdkwpKeySpec           :: !(Maybe DataKeySpec)
-  , _gdkwpEncryptionContext :: !(Maybe (Map Text Text))
-  , _gdkwpNumberOfBytes     :: !(Maybe Nat)
-  , _gdkwpGrantTokens       :: !(Maybe [Text])
-  , _gdkwpKeyId             :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GenerateDataKeyWithoutPlaintext =
+  GenerateDataKeyWithoutPlaintext'
+    { _gdkwpKeySpec           :: !(Maybe DataKeySpec)
+    , _gdkwpEncryptionContext :: !(Maybe (Map Text Text))
+    , _gdkwpNumberOfBytes     :: !(Maybe Nat)
+    , _gdkwpGrantTokens       :: !(Maybe [Text])
+    , _gdkwpKeyId             :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GenerateDataKeyWithoutPlaintext' with the minimum fields required to make a request.
@@ -155,11 +157,13 @@ instance ToQuery GenerateDataKeyWithoutPlaintext
         toQuery = const mempty
 
 -- | /See:/ 'generateDataKeyWithoutPlaintextResponse' smart constructor.
-data GenerateDataKeyWithoutPlaintextResponse = GenerateDataKeyWithoutPlaintextResponse'
-  { _gdkwprsKeyId          :: !(Maybe Text)
-  , _gdkwprsCiphertextBlob :: !(Maybe Base64)
-  , _gdkwprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GenerateDataKeyWithoutPlaintextResponse =
+  GenerateDataKeyWithoutPlaintextResponse'
+    { _gdkwprsKeyId          :: !(Maybe Text)
+    , _gdkwprsCiphertextBlob :: !(Maybe Base64)
+    , _gdkwprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GenerateDataKeyWithoutPlaintextResponse' with the minimum fields required to make a request.

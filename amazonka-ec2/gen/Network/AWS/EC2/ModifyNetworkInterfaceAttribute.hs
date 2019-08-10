@@ -51,14 +51,16 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'modifyNetworkInterfaceAttribute' smart constructor.
-data ModifyNetworkInterfaceAttribute = ModifyNetworkInterfaceAttribute'
-  { _mniaGroups             :: !(Maybe [Text])
-  , _mniaSourceDestCheck    :: !(Maybe AttributeBooleanValue)
-  , _mniaAttachment         :: !(Maybe NetworkInterfaceAttachmentChanges)
-  , _mniaDescription        :: !(Maybe AttributeValue)
-  , _mniaDryRun             :: !(Maybe Bool)
-  , _mniaNetworkInterfaceId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyNetworkInterfaceAttribute =
+  ModifyNetworkInterfaceAttribute'
+    { _mniaGroups             :: !(Maybe [Text])
+    , _mniaSourceDestCheck    :: !(Maybe AttributeBooleanValue)
+    , _mniaAttachment         :: !(Maybe NetworkInterfaceAttachmentChanges)
+    , _mniaDescription        :: !(Maybe AttributeValue)
+    , _mniaDryRun             :: !(Maybe Bool)
+    , _mniaNetworkInterfaceId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyNetworkInterfaceAttribute' with the minimum fields required to make a request.

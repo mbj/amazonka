@@ -45,10 +45,12 @@ import Network.AWS.WorkSpaces.Types
 import Network.AWS.WorkSpaces.Types.Product
 
 -- | /See:/ 'updateRulesOfIPGroup' smart constructor.
-data UpdateRulesOfIPGroup = UpdateRulesOfIPGroup'
-  { _uroigGroupId   :: !Text
-  , _uroigUserRules :: ![IPRuleItem]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateRulesOfIPGroup =
+  UpdateRulesOfIPGroup'
+    { _uroigGroupId   :: !Text
+    , _uroigUserRules :: ![IPRuleItem]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateRulesOfIPGroup' with the minimum fields required to make a request.
@@ -111,9 +113,11 @@ instance ToQuery UpdateRulesOfIPGroup where
         toQuery = const mempty
 
 -- | /See:/ 'updateRulesOfIPGroupResponse' smart constructor.
-newtype UpdateRulesOfIPGroupResponse = UpdateRulesOfIPGroupResponse'
-  { _uroigrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateRulesOfIPGroupResponse =
+  UpdateRulesOfIPGroupResponse'
+    { _uroigrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateRulesOfIPGroupResponse' with the minimum fields required to make a request.

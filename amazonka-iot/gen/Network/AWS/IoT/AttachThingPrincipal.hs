@@ -49,10 +49,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'attachThingPrincipal' smart constructor.
-data AttachThingPrincipal = AttachThingPrincipal'
-  { _atpThingName :: !Text
-  , _atpPrincipal :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AttachThingPrincipal =
+  AttachThingPrincipal'
+    { _atpThingName :: !Text
+    , _atpPrincipal :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttachThingPrincipal' with the minimum fields required to make a request.
@@ -113,9 +115,11 @@ instance ToQuery AttachThingPrincipal where
 --
 --
 -- /See:/ 'attachThingPrincipalResponse' smart constructor.
-newtype AttachThingPrincipalResponse = AttachThingPrincipalResponse'
-  { _atprsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AttachThingPrincipalResponse =
+  AttachThingPrincipalResponse'
+    { _atprsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttachThingPrincipalResponse' with the minimum fields required to make a request.

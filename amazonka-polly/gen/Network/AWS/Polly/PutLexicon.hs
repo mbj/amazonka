@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putLexicon' smart constructor.
-data PutLexicon = PutLexicon'
-  { _plName    :: !(Sensitive Text)
-  , _plContent :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data PutLexicon =
+  PutLexicon'
+    { _plName    :: !(Sensitive Text)
+    , _plContent :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutLexicon' with the minimum fields required to make a request.
@@ -103,9 +105,11 @@ instance ToQuery PutLexicon where
         toQuery = const mempty
 
 -- | /See:/ 'putLexiconResponse' smart constructor.
-newtype PutLexiconResponse = PutLexiconResponse'
-  { _plrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype PutLexiconResponse =
+  PutLexiconResponse'
+    { _plrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutLexiconResponse' with the minimum fields required to make a request.

@@ -53,13 +53,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listPullRequests' smart constructor.
-data ListPullRequests = ListPullRequests'
-  { _lprAuthorARN         :: !(Maybe Text)
-  , _lprNextToken         :: !(Maybe Text)
-  , _lprPullRequestStatus :: !(Maybe PullRequestStatusEnum)
-  , _lprMaxResults        :: !(Maybe Int)
-  , _lprRepositoryName    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListPullRequests =
+  ListPullRequests'
+    { _lprAuthorARN         :: !(Maybe Text)
+    , _lprNextToken         :: !(Maybe Text)
+    , _lprPullRequestStatus :: !(Maybe PullRequestStatusEnum)
+    , _lprMaxResults        :: !(Maybe Int)
+    , _lprRepositoryName    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListPullRequests' with the minimum fields required to make a request.
@@ -156,11 +158,13 @@ instance ToQuery ListPullRequests where
         toQuery = const mempty
 
 -- | /See:/ 'listPullRequestsResponse' smart constructor.
-data ListPullRequestsResponse = ListPullRequestsResponse'
-  { _lprrsNextToken      :: !(Maybe Text)
-  , _lprrsResponseStatus :: !Int
-  , _lprrsPullRequestIds :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListPullRequestsResponse =
+  ListPullRequestsResponse'
+    { _lprrsNextToken      :: !(Maybe Text)
+    , _lprrsResponseStatus :: !Int
+    , _lprrsPullRequestIds :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListPullRequestsResponse' with the minimum fields required to make a request.

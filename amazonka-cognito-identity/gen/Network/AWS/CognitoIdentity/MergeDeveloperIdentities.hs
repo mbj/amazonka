@@ -54,12 +54,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'mergeDeveloperIdentities' smart constructor.
-data MergeDeveloperIdentities = MergeDeveloperIdentities'
-  { _mdiSourceUserIdentifier      :: !Text
-  , _mdiDestinationUserIdentifier :: !Text
-  , _mdiDeveloperProviderName     :: !Text
-  , _mdiIdentityPoolId            :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MergeDeveloperIdentities =
+  MergeDeveloperIdentities'
+    { _mdiSourceUserIdentifier      :: !Text
+    , _mdiDestinationUserIdentifier :: !Text
+    , _mdiDeveloperProviderName     :: !Text
+    , _mdiIdentityPoolId            :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MergeDeveloperIdentities' with the minimum fields required to make a request.
@@ -153,10 +155,12 @@ instance ToQuery MergeDeveloperIdentities where
 --
 --
 -- /See:/ 'mergeDeveloperIdentitiesResponse' smart constructor.
-data MergeDeveloperIdentitiesResponse = MergeDeveloperIdentitiesResponse'
-  { _mdirsIdentityId     :: !(Maybe Text)
-  , _mdirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MergeDeveloperIdentitiesResponse =
+  MergeDeveloperIdentitiesResponse'
+    { _mdirsIdentityId     :: !(Maybe Text)
+    , _mdirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MergeDeveloperIdentitiesResponse' with the minimum fields required to make a request.

@@ -50,10 +50,12 @@ import Network.AWS.Snowball.Types
 import Network.AWS.Snowball.Types.Product
 
 -- | /See:/ 'describeAddresses' smart constructor.
-data DescribeAddresses = DescribeAddresses'
-  { _daNextToken  :: !(Maybe Text)
-  , _daMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAddresses =
+  DescribeAddresses'
+    { _daNextToken  :: !(Maybe Text)
+    , _daMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAddresses' with the minimum fields required to make a request.
@@ -123,11 +125,13 @@ instance ToQuery DescribeAddresses where
         toQuery = const mempty
 
 -- | /See:/ 'describeAddressesResponse' smart constructor.
-data DescribeAddressesResponse = DescribeAddressesResponse'
-  { _drsAddresses      :: !(Maybe [Address])
-  , _drsNextToken      :: !(Maybe Text)
-  , _drsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAddressesResponse =
+  DescribeAddressesResponse'
+    { _drsAddresses      :: !(Maybe [Address])
+    , _drsNextToken      :: !(Maybe Text)
+    , _drsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAddressesResponse' with the minimum fields required to make a request.

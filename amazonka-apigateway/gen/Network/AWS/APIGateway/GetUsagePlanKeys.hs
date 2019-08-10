@@ -56,12 +56,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getUsagePlanKeys' smart constructor.
-data GetUsagePlanKeys = GetUsagePlanKeys'
-  { _gupkNameQuery   :: !(Maybe Text)
-  , _gupkLimit       :: !(Maybe Int)
-  , _gupkPosition    :: !(Maybe Text)
-  , _gupkUsagePlanId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetUsagePlanKeys =
+  GetUsagePlanKeys'
+    { _gupkNameQuery   :: !(Maybe Text)
+    , _gupkLimit       :: !(Maybe Int)
+    , _gupkPosition    :: !(Maybe Text)
+    , _gupkUsagePlanId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetUsagePlanKeys' with the minimum fields required to make a request.
@@ -147,11 +149,13 @@ instance ToQuery GetUsagePlanKeys where
 -- <http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-api-usage-plans.html Create and Use Usage Plans>
 --
 -- /See:/ 'getUsagePlanKeysResponse' smart constructor.
-data GetUsagePlanKeysResponse = GetUsagePlanKeysResponse'
-  { _gupkrsItems          :: !(Maybe [UsagePlanKey])
-  , _gupkrsPosition       :: !(Maybe Text)
-  , _gupkrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetUsagePlanKeysResponse =
+  GetUsagePlanKeysResponse'
+    { _gupkrsItems          :: !(Maybe [UsagePlanKey])
+    , _gupkrsPosition       :: !(Maybe Text)
+    , _gupkrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetUsagePlanKeysResponse' with the minimum fields required to make a request.

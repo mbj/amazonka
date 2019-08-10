@@ -48,10 +48,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createDatastore' smart constructor.
-data CreateDatastore = CreateDatastore'
-  { _cdRetentionPeriod :: !(Maybe RetentionPeriod)
-  , _cdDatastoreName   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDatastore =
+  CreateDatastore'
+    { _cdRetentionPeriod :: !(Maybe RetentionPeriod)
+    , _cdDatastoreName   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDatastore' with the minimum fields required to make a request.
@@ -109,12 +111,14 @@ instance ToQuery CreateDatastore where
         toQuery = const mempty
 
 -- | /See:/ 'createDatastoreResponse' smart constructor.
-data CreateDatastoreResponse = CreateDatastoreResponse'
-  { _cdrsDatastoreARN    :: !(Maybe Text)
-  , _cdrsDatastoreName   :: !(Maybe Text)
-  , _cdrsRetentionPeriod :: !(Maybe RetentionPeriod)
-  , _cdrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDatastoreResponse =
+  CreateDatastoreResponse'
+    { _cdrsDatastoreARN    :: !(Maybe Text)
+    , _cdrsDatastoreName   :: !(Maybe Text)
+    , _cdrsRetentionPeriod :: !(Maybe RetentionPeriod)
+    , _cdrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDatastoreResponse' with the minimum fields required to make a request.

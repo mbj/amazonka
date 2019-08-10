@@ -67,10 +67,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createPrivateVirtualInterface' smart constructor.
-data CreatePrivateVirtualInterface = CreatePrivateVirtualInterface'
-  { _creConnectionId               :: !Text
-  , _creNewPrivateVirtualInterface :: !NewPrivateVirtualInterface
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreatePrivateVirtualInterface =
+  CreatePrivateVirtualInterface'
+    { _creConnectionId               :: !Text
+    , _creNewPrivateVirtualInterface :: !NewPrivateVirtualInterface
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreatePrivateVirtualInterface' with the minimum fields required to make a request.

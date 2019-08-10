@@ -46,11 +46,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createClassifier' smart constructor.
-data CreateClassifier = CreateClassifier'
-  { _ccGrokClassifier :: !(Maybe CreateGrokClassifierRequest)
-  , _ccXMLClassifier  :: !(Maybe CreateXMLClassifierRequest)
-  , _ccJSONClassifier :: !(Maybe CreateJSONClassifierRequest)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateClassifier =
+  CreateClassifier'
+    { _ccGrokClassifier :: !(Maybe CreateGrokClassifierRequest)
+    , _ccXMLClassifier  :: !(Maybe CreateXMLClassifierRequest)
+    , _ccJSONClassifier :: !(Maybe CreateJSONClassifierRequest)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateClassifier' with the minimum fields required to make a request.
@@ -120,9 +122,11 @@ instance ToQuery CreateClassifier where
         toQuery = const mempty
 
 -- | /See:/ 'createClassifierResponse' smart constructor.
-newtype CreateClassifierResponse = CreateClassifierResponse'
-  { _ccrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateClassifierResponse =
+  CreateClassifierResponse'
+    { _ccrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateClassifierResponse' with the minimum fields required to make a request.

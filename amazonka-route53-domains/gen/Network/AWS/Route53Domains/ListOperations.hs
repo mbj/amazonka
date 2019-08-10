@@ -55,11 +55,13 @@ import Network.AWS.Route53Domains.Types.Product
 --
 --
 -- /See:/ 'listOperations' smart constructor.
-data ListOperations = ListOperations'
-  { _loMarker         :: !(Maybe Text)
-  , _loMaxItems       :: !(Maybe Int)
-  , _loSubmittedSince :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListOperations =
+  ListOperations'
+    { _loMarker         :: !(Maybe Text)
+    , _loMaxItems       :: !(Maybe Int)
+    , _loSubmittedSince :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListOperations' with the minimum fields required to make a request.
@@ -140,11 +142,13 @@ instance ToQuery ListOperations where
 --
 --
 -- /See:/ 'listOperationsResponse' smart constructor.
-data ListOperationsResponse = ListOperationsResponse'
-  { _lorsNextPageMarker :: !(Maybe Text)
-  , _lorsResponseStatus :: !Int
-  , _lorsOperations     :: ![OperationSummary]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListOperationsResponse =
+  ListOperationsResponse'
+    { _lorsNextPageMarker :: !(Maybe Text)
+    , _lorsResponseStatus :: !Int
+    , _lorsOperations     :: ![OperationSummary]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListOperationsResponse' with the minimum fields required to make a request.

@@ -55,11 +55,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listArtifacts' smart constructor.
-data ListArtifacts = ListArtifacts'
-  { _laNextToken :: !(Maybe Text)
-  , _laArn       :: !Text
-  , _laType      :: !ArtifactCategory
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListArtifacts =
+  ListArtifacts'
+    { _laNextToken :: !(Maybe Text)
+    , _laArn       :: !Text
+    , _laType      :: !ArtifactCategory
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListArtifacts' with the minimum fields required to make a request.
@@ -140,11 +142,13 @@ instance ToQuery ListArtifacts where
 --
 --
 -- /See:/ 'listArtifactsResponse' smart constructor.
-data ListArtifactsResponse = ListArtifactsResponse'
-  { _larsArtifacts      :: !(Maybe [Artifact])
-  , _larsNextToken      :: !(Maybe Text)
-  , _larsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListArtifactsResponse =
+  ListArtifactsResponse'
+    { _larsArtifacts      :: !(Maybe [Artifact])
+    , _larsNextToken      :: !(Maybe Text)
+    , _larsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListArtifactsResponse' with the minimum fields required to make a request.

@@ -48,10 +48,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getCoreDefinitionVersion' smart constructor.
-data GetCoreDefinitionVersion = GetCoreDefinitionVersion'
-  { _gcdvCoreDefinitionId        :: !Text
-  , _gcdvCoreDefinitionVersionId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetCoreDefinitionVersion =
+  GetCoreDefinitionVersion'
+    { _gcdvCoreDefinitionId        :: !Text
+    , _gcdvCoreDefinitionVersionId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetCoreDefinitionVersion' with the minimum fields required to make a request.
@@ -116,14 +118,16 @@ instance ToQuery GetCoreDefinitionVersion where
         toQuery = const mempty
 
 -- | /See:/ 'getCoreDefinitionVersionResponse' smart constructor.
-data GetCoreDefinitionVersionResponse = GetCoreDefinitionVersionResponse'
-  { _gcdvrsDefinition        :: !(Maybe CoreDefinitionVersion)
-  , _gcdvrsARN               :: !(Maybe Text)
-  , _gcdvrsCreationTimestamp :: !(Maybe Text)
-  , _gcdvrsVersion           :: !(Maybe Text)
-  , _gcdvrsId                :: !(Maybe Text)
-  , _gcdvrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetCoreDefinitionVersionResponse =
+  GetCoreDefinitionVersionResponse'
+    { _gcdvrsDefinition        :: !(Maybe CoreDefinitionVersion)
+    , _gcdvrsARN               :: !(Maybe Text)
+    , _gcdvrsCreationTimestamp :: !(Maybe Text)
+    , _gcdvrsVersion           :: !(Maybe Text)
+    , _gcdvrsId                :: !(Maybe Text)
+    , _gcdvrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetCoreDefinitionVersionResponse' with the minimum fields required to make a request.

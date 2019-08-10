@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteContainerPolicy' smart constructor.
-newtype DeleteContainerPolicy = DeleteContainerPolicy'
-  { _delContainerName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteContainerPolicy =
+  DeleteContainerPolicy'
+    { _delContainerName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteContainerPolicy' with the minimum fields required to make a request.
@@ -102,9 +104,11 @@ instance ToQuery DeleteContainerPolicy where
         toQuery = const mempty
 
 -- | /See:/ 'deleteContainerPolicyResponse' smart constructor.
-newtype DeleteContainerPolicyResponse = DeleteContainerPolicyResponse'
-  { _dcprsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteContainerPolicyResponse =
+  DeleteContainerPolicyResponse'
+    { _dcprsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteContainerPolicyResponse' with the minimum fields required to make a request.

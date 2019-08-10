@@ -49,12 +49,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteIntegrationResponse' smart constructor.
-data DeleteIntegrationResponse = DeleteIntegrationResponse'
-  { _diRestAPIId  :: !Text
-  , _diResourceId :: !Text
-  , _diHttpMethod :: !Text
-  , _diStatusCode :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteIntegrationResponse =
+  DeleteIntegrationResponse'
+    { _diRestAPIId  :: !Text
+    , _diResourceId :: !Text
+    , _diHttpMethod :: !Text
+    , _diStatusCode :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteIntegrationResponse' with the minimum fields required to make a request.

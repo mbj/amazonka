@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'associateSubnetCidrBlock' smart constructor.
-data AssociateSubnetCidrBlock = AssociateSubnetCidrBlock'
-  { _ascbIPv6CidrBlock :: !Text
-  , _ascbSubnetId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssociateSubnetCidrBlock =
+  AssociateSubnetCidrBlock'
+    { _ascbIPv6CidrBlock :: !Text
+    , _ascbSubnetId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateSubnetCidrBlock' with the minimum fields required to make a request.
@@ -109,11 +111,13 @@ instance ToQuery AssociateSubnetCidrBlock where
                "SubnetId" =: _ascbSubnetId]
 
 -- | /See:/ 'associateSubnetCidrBlockResponse' smart constructor.
-data AssociateSubnetCidrBlockResponse = AssociateSubnetCidrBlockResponse'
-  { _ascbrsSubnetId                 :: !(Maybe Text)
-  , _ascbrsIPv6CidrBlockAssociation :: !(Maybe SubnetIPv6CidrBlockAssociation)
-  , _ascbrsResponseStatus           :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssociateSubnetCidrBlockResponse =
+  AssociateSubnetCidrBlockResponse'
+    { _ascbrsSubnetId                 :: !(Maybe Text)
+    , _ascbrsIPv6CidrBlockAssociation :: !(Maybe SubnetIPv6CidrBlockAssociation)
+    , _ascbrsResponseStatus           :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateSubnetCidrBlockResponse' with the minimum fields required to make a request.

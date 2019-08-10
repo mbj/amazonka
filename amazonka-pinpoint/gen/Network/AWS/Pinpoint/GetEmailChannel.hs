@@ -43,9 +43,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getEmailChannel' smart constructor.
-newtype GetEmailChannel = GetEmailChannel'
-  { _gecApplicationId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetEmailChannel =
+  GetEmailChannel'
+    { _gecApplicationId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetEmailChannel' with the minimum fields required to make a request.
@@ -94,10 +96,12 @@ instance ToQuery GetEmailChannel where
         toQuery = const mempty
 
 -- | /See:/ 'getEmailChannelResponse' smart constructor.
-data GetEmailChannelResponse = GetEmailChannelResponse'
-  { _gecrsResponseStatus       :: !Int
-  , _gecrsEmailChannelResponse :: !EmailChannelResponse
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetEmailChannelResponse =
+  GetEmailChannelResponse'
+    { _gecrsResponseStatus       :: !Int
+    , _gecrsEmailChannelResponse :: !EmailChannelResponse
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetEmailChannelResponse' with the minimum fields required to make a request.

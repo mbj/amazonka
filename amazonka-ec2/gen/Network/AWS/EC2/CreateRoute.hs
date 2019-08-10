@@ -72,18 +72,20 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createRoute' smart constructor.
-data CreateRoute = CreateRoute'
-  { _crVPCPeeringConnectionId      :: !(Maybe Text)
-  , _crInstanceId                  :: !(Maybe Text)
-  , _crEgressOnlyInternetGatewayId :: !(Maybe Text)
-  , _crDestinationIPv6CidrBlock    :: !(Maybe Text)
-  , _crNatGatewayId                :: !(Maybe Text)
-  , _crNetworkInterfaceId          :: !(Maybe Text)
-  , _crGatewayId                   :: !(Maybe Text)
-  , _crDryRun                      :: !(Maybe Bool)
-  , _crDestinationCidrBlock        :: !(Maybe Text)
-  , _crRouteTableId                :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateRoute =
+  CreateRoute'
+    { _crVPCPeeringConnectionId      :: !(Maybe Text)
+    , _crInstanceId                  :: !(Maybe Text)
+    , _crEgressOnlyInternetGatewayId :: !(Maybe Text)
+    , _crDestinationIPv6CidrBlock    :: !(Maybe Text)
+    , _crNatGatewayId                :: !(Maybe Text)
+    , _crNetworkInterfaceId          :: !(Maybe Text)
+    , _crGatewayId                   :: !(Maybe Text)
+    , _crDryRun                      :: !(Maybe Bool)
+    , _crDestinationCidrBlock        :: !(Maybe Text)
+    , _crRouteTableId                :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateRoute' with the minimum fields required to make a request.
@@ -209,10 +211,12 @@ instance ToQuery CreateRoute where
 --
 --
 -- /See:/ 'createRouteResponse' smart constructor.
-data CreateRouteResponse = CreateRouteResponse'
-  { _crrsReturn         :: !(Maybe Bool)
-  , _crrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateRouteResponse =
+  CreateRouteResponse'
+    { _crrsReturn         :: !(Maybe Bool)
+    , _crrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateRouteResponse' with the minimum fields required to make a request.

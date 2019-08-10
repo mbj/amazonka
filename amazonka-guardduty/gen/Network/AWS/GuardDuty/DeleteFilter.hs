@@ -43,10 +43,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteFilter' smart constructor.
-data DeleteFilter = DeleteFilter'
-  { _dfDetectorId :: !Text
-  , _dfFilterName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteFilter =
+  DeleteFilter'
+    { _dfDetectorId :: !Text
+    , _dfFilterName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteFilter' with the minimum fields required to make a request.
@@ -101,9 +103,11 @@ instance ToQuery DeleteFilter where
         toQuery = const mempty
 
 -- | /See:/ 'deleteFilterResponse' smart constructor.
-newtype DeleteFilterResponse = DeleteFilterResponse'
-  { _dfrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteFilterResponse =
+  DeleteFilterResponse'
+    { _dfrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteFilterResponse' with the minimum fields required to make a request.

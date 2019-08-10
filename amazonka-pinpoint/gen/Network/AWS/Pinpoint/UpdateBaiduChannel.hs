@@ -44,10 +44,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateBaiduChannel' smart constructor.
-data UpdateBaiduChannel = UpdateBaiduChannel'
-  { _ubcApplicationId       :: !Text
-  , _ubcBaiduChannelRequest :: !BaiduChannelRequest
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateBaiduChannel =
+  UpdateBaiduChannel'
+    { _ubcApplicationId       :: !Text
+    , _ubcBaiduChannelRequest :: !BaiduChannelRequest
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateBaiduChannel' with the minimum fields required to make a request.
@@ -114,10 +116,12 @@ instance ToQuery UpdateBaiduChannel where
         toQuery = const mempty
 
 -- | /See:/ 'updateBaiduChannelResponse' smart constructor.
-data UpdateBaiduChannelResponse = UpdateBaiduChannelResponse'
-  { _ubcrsResponseStatus       :: !Int
-  , _ubcrsBaiduChannelResponse :: !BaiduChannelResponse
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateBaiduChannelResponse =
+  UpdateBaiduChannelResponse'
+    { _ubcrsResponseStatus       :: !Int
+    , _ubcrsBaiduChannelResponse :: !BaiduChannelResponse
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateBaiduChannelResponse' with the minimum fields required to make a request.

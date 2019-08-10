@@ -55,11 +55,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getBasePathMappings' smart constructor.
-data GetBasePathMappings = GetBasePathMappings'
-  { _gLimit      :: !(Maybe Int)
-  , _gPosition   :: !(Maybe Text)
-  , _gDomainName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetBasePathMappings =
+  GetBasePathMappings'
+    { _gLimit      :: !(Maybe Int)
+    , _gPosition   :: !(Maybe Text)
+    , _gDomainName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBasePathMappings' with the minimum fields required to make a request.
@@ -136,11 +138,13 @@ instance ToQuery GetBasePathMappings where
 -- <http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html Use Custom Domain Names>
 --
 -- /See:/ 'getBasePathMappingsResponse' smart constructor.
-data GetBasePathMappingsResponse = GetBasePathMappingsResponse'
-  { _gbpmrsItems          :: !(Maybe [BasePathMapping])
-  , _gbpmrsPosition       :: !(Maybe Text)
-  , _gbpmrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetBasePathMappingsResponse =
+  GetBasePathMappingsResponse'
+    { _gbpmrsItems          :: !(Maybe [BasePathMapping])
+    , _gbpmrsPosition       :: !(Maybe Text)
+    , _gbpmrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBasePathMappingsResponse' with the minimum fields required to make a request.

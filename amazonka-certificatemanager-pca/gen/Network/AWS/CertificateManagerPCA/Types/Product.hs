@@ -26,22 +26,24 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'asn1Subject' smart constructor.
-data ASN1Subject = ASN1Subject'
-  { _asGivenName                  :: !(Maybe Text)
-  , _asState                      :: !(Maybe Text)
-  , _asCommonName                 :: !(Maybe Text)
-  , _asOrganizationalUnit         :: !(Maybe Text)
-  , _asCountry                    :: !(Maybe Text)
-  , _asGenerationQualifier        :: !(Maybe Text)
-  , _asLocality                   :: !(Maybe Text)
-  , _asPseudonym                  :: !(Maybe Text)
-  , _asInitials                   :: !(Maybe Text)
-  , _asTitle                      :: !(Maybe Text)
-  , _asOrganization               :: !(Maybe Text)
-  , _asSerialNumber               :: !(Maybe Text)
-  , _asSurname                    :: !(Maybe Text)
-  , _asDistinguishedNameQualifier :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ASN1Subject =
+  ASN1Subject'
+    { _asGivenName                  :: !(Maybe Text)
+    , _asState                      :: !(Maybe Text)
+    , _asCommonName                 :: !(Maybe Text)
+    , _asOrganizationalUnit         :: !(Maybe Text)
+    , _asCountry                    :: !(Maybe Text)
+    , _asGenerationQualifier        :: !(Maybe Text)
+    , _asLocality                   :: !(Maybe Text)
+    , _asPseudonym                  :: !(Maybe Text)
+    , _asInitials                   :: !(Maybe Text)
+    , _asTitle                      :: !(Maybe Text)
+    , _asOrganization               :: !(Maybe Text)
+    , _asSerialNumber               :: !(Maybe Text)
+    , _asSurname                    :: !(Maybe Text)
+    , _asDistinguishedNameQualifier :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ASN1Subject' with the minimum fields required to make a request.
@@ -201,19 +203,21 @@ instance ToJSON ASN1Subject where
 --
 --
 -- /See:/ 'certificateAuthority' smart constructor.
-data CertificateAuthority = CertificateAuthority'
-  { _caStatus :: !(Maybe CertificateAuthorityStatus)
-  , _caFailureReason :: !(Maybe FailureReason)
-  , _caCertificateAuthorityConfiguration :: !(Maybe CertificateAuthorityConfiguration)
-  , _caARN :: !(Maybe Text)
-  , _caCreatedAt :: !(Maybe POSIX)
-  , _caSerial :: !(Maybe Text)
-  , _caNotBefore :: !(Maybe POSIX)
-  , _caType :: !(Maybe CertificateAuthorityType)
-  , _caRevocationConfiguration :: !(Maybe RevocationConfiguration)
-  , _caLastStateChangeAt :: !(Maybe POSIX)
-  , _caNotAfter :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CertificateAuthority =
+  CertificateAuthority'
+    { _caStatus :: !(Maybe CertificateAuthorityStatus)
+    , _caFailureReason :: !(Maybe FailureReason)
+    , _caCertificateAuthorityConfiguration :: !(Maybe CertificateAuthorityConfiguration)
+    , _caARN :: !(Maybe Text)
+    , _caCreatedAt :: !(Maybe POSIX)
+    , _caSerial :: !(Maybe Text)
+    , _caNotBefore :: !(Maybe POSIX)
+    , _caType :: !(Maybe CertificateAuthorityType)
+    , _caRevocationConfiguration :: !(Maybe RevocationConfiguration)
+    , _caLastStateChangeAt :: !(Maybe POSIX)
+    , _caNotAfter :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CertificateAuthority' with the minimum fields required to make a request.
@@ -328,11 +332,13 @@ instance NFData CertificateAuthority where
 --
 --
 -- /See:/ 'certificateAuthorityConfiguration' smart constructor.
-data CertificateAuthorityConfiguration = CertificateAuthorityConfiguration'
-  { _cacKeyAlgorithm     :: !KeyAlgorithm
-  , _cacSigningAlgorithm :: !SigningAlgorithm
-  , _cacSubject          :: !ASN1Subject
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CertificateAuthorityConfiguration =
+  CertificateAuthorityConfiguration'
+    { _cacKeyAlgorithm     :: !KeyAlgorithm
+    , _cacSigningAlgorithm :: !SigningAlgorithm
+    , _cacSubject          :: !ASN1Subject
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CertificateAuthorityConfiguration' with the minimum fields required to make a request.
@@ -444,12 +450,14 @@ instance ToJSON CertificateAuthorityConfiguration
 --
 --
 -- /See:/ 'crlConfiguration' smart constructor.
-data CrlConfiguration = CrlConfiguration'
-  { _ccCustomCname      :: !(Maybe Text)
-  , _ccExpirationInDays :: !(Maybe Nat)
-  , _ccS3BucketName     :: !(Maybe Text)
-  , _ccEnabled          :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CrlConfiguration =
+  CrlConfiguration'
+    { _ccCustomCname      :: !(Maybe Text)
+    , _ccExpirationInDays :: !(Maybe Nat)
+    , _ccS3BucketName     :: !(Maybe Text)
+    , _ccEnabled          :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CrlConfiguration' with the minimum fields required to make a request.
@@ -518,9 +526,11 @@ instance ToJSON CrlConfiguration where
 --
 --
 -- /See:/ 'revocationConfiguration' smart constructor.
-newtype RevocationConfiguration = RevocationConfiguration'
-  { _rcCrlConfiguration :: Maybe CrlConfiguration
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RevocationConfiguration =
+  RevocationConfiguration'
+    { _rcCrlConfiguration :: Maybe CrlConfiguration
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RevocationConfiguration' with the minimum fields required to make a request.
@@ -560,10 +570,12 @@ instance ToJSON RevocationConfiguration where
 --
 --
 -- /See:/ 'tag' smart constructor.
-data Tag = Tag'
-  { _tagValue :: !(Maybe Text)
-  , _tagKey   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Tag =
+  Tag'
+    { _tagValue :: !(Maybe Text)
+    , _tagKey   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Tag' with the minimum fields required to make a request.
@@ -608,10 +620,12 @@ instance ToJSON Tag where
 --
 --
 -- /See:/ 'validity' smart constructor.
-data Validity = Validity'
-  { _vValue :: !Nat
-  , _vType  :: !ValidityPeriodType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Validity =
+  Validity'
+    { _vValue :: !Nat
+    , _vType  :: !ValidityPeriodType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Validity' with the minimum fields required to make a request.

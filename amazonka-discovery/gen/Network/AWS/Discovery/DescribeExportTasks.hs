@@ -49,12 +49,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeExportTasks' smart constructor.
-data DescribeExportTasks = DescribeExportTasks'
-  { _detFilters    :: !(Maybe [ExportFilter])
-  , _detNextToken  :: !(Maybe Text)
-  , _detExportIds  :: !(Maybe [Text])
-  , _detMaxResults :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeExportTasks =
+  DescribeExportTasks'
+    { _detFilters    :: !(Maybe [ExportFilter])
+    , _detNextToken  :: !(Maybe Text)
+    , _detExportIds  :: !(Maybe [Text])
+    , _detMaxResults :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeExportTasks' with the minimum fields required to make a request.
@@ -137,11 +139,13 @@ instance ToQuery DescribeExportTasks where
         toQuery = const mempty
 
 -- | /See:/ 'describeExportTasksResponse' smart constructor.
-data DescribeExportTasksResponse = DescribeExportTasksResponse'
-  { _detrsNextToken      :: !(Maybe Text)
-  , _detrsExportsInfo    :: !(Maybe [ExportInfo])
-  , _detrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeExportTasksResponse =
+  DescribeExportTasksResponse'
+    { _detrsNextToken      :: !(Maybe Text)
+    , _detrsExportsInfo    :: !(Maybe [ExportInfo])
+    , _detrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeExportTasksResponse' with the minimum fields required to make a request.

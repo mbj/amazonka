@@ -63,14 +63,16 @@ import Network.AWS.SWF.Types
 import Network.AWS.SWF.Types.Product
 
 -- | /See:/ 'terminateWorkflowExecution' smart constructor.
-data TerminateWorkflowExecution = TerminateWorkflowExecution'
-  { _tweReason      :: !(Maybe Text)
-  , _tweRunId       :: !(Maybe Text)
-  , _tweChildPolicy :: !(Maybe ChildPolicy)
-  , _tweDetails     :: !(Maybe Text)
-  , _tweDomain      :: !Text
-  , _tweWorkflowId  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TerminateWorkflowExecution =
+  TerminateWorkflowExecution'
+    { _tweReason      :: !(Maybe Text)
+    , _tweRunId       :: !(Maybe Text)
+    , _tweChildPolicy :: !(Maybe ChildPolicy)
+    , _tweDetails     :: !(Maybe Text)
+    , _tweDomain      :: !Text
+    , _tweWorkflowId  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TerminateWorkflowExecution' with the minimum fields required to make a request.

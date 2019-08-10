@@ -53,11 +53,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createSnapshotCopyGrant' smart constructor.
-data CreateSnapshotCopyGrant = CreateSnapshotCopyGrant'
-  { _cscgKMSKeyId              :: !(Maybe Text)
-  , _cscgTags                  :: !(Maybe [Tag])
-  , _cscgSnapshotCopyGrantName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateSnapshotCopyGrant =
+  CreateSnapshotCopyGrant'
+    { _cscgKMSKeyId              :: !(Maybe Text)
+    , _cscgTags                  :: !(Maybe [Tag])
+    , _cscgSnapshotCopyGrantName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateSnapshotCopyGrant' with the minimum fields required to make a request.
@@ -124,10 +126,12 @@ instance ToQuery CreateSnapshotCopyGrant where
                  _cscgSnapshotCopyGrantName]
 
 -- | /See:/ 'createSnapshotCopyGrantResponse' smart constructor.
-data CreateSnapshotCopyGrantResponse = CreateSnapshotCopyGrantResponse'
-  { _cscgrsSnapshotCopyGrant :: !(Maybe SnapshotCopyGrant)
-  , _cscgrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateSnapshotCopyGrantResponse =
+  CreateSnapshotCopyGrantResponse'
+    { _cscgrsSnapshotCopyGrant :: !(Maybe SnapshotCopyGrant)
+    , _cscgrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateSnapshotCopyGrantResponse' with the minimum fields required to make a request.

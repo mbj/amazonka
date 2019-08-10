@@ -46,9 +46,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteHSMClientCertificate' smart constructor.
-newtype DeleteHSMClientCertificate = DeleteHSMClientCertificate'
-  { _dhsmccHSMClientCertificateIdentifier :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteHSMClientCertificate =
+  DeleteHSMClientCertificate'
+    { _dhsmccHSMClientCertificateIdentifier :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteHSMClientCertificate' with the minimum fields required to make a request.

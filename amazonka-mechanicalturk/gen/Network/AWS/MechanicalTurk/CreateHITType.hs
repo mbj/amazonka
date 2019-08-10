@@ -51,15 +51,17 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createHITType' smart constructor.
-data CreateHITType = CreateHITType'
-  { _chittAutoApprovalDelayInSeconds  :: !(Maybe Integer)
-  , _chittKeywords                    :: !(Maybe Text)
-  , _chittQualificationRequirements   :: !(Maybe [QualificationRequirement])
-  , _chittAssignmentDurationInSeconds :: !Integer
-  , _chittReward                      :: !Text
-  , _chittTitle                       :: !Text
-  , _chittDescription                 :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateHITType =
+  CreateHITType'
+    { _chittAutoApprovalDelayInSeconds  :: !(Maybe Integer)
+    , _chittKeywords                    :: !(Maybe Text)
+    , _chittQualificationRequirements   :: !(Maybe [QualificationRequirement])
+    , _chittAssignmentDurationInSeconds :: !Integer
+    , _chittReward                      :: !Text
+    , _chittTitle                       :: !Text
+    , _chittDescription                 :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateHITType' with the minimum fields required to make a request.
@@ -171,10 +173,12 @@ instance ToQuery CreateHITType where
         toQuery = const mempty
 
 -- | /See:/ 'createHITTypeResponse' smart constructor.
-data CreateHITTypeResponse = CreateHITTypeResponse'
-  { _chittrsHITTypeId      :: !(Maybe Text)
-  , _chittrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateHITTypeResponse =
+  CreateHITTypeResponse'
+    { _chittrsHITTypeId      :: !(Maybe Text)
+    , _chittrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateHITTypeResponse' with the minimum fields required to make a request.

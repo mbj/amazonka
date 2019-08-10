@@ -52,9 +52,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listHSMs' smart constructor.
-newtype ListHSMs = ListHSMs'
-  { _lhsmNextToken :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ListHSMs =
+  ListHSMs'
+    { _lhsmNextToken :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListHSMs' with the minimum fields required to make a request.
@@ -110,11 +112,13 @@ instance ToQuery ListHSMs where
 --
 --
 -- /See:/ 'listHSMsResponse' smart constructor.
-data ListHSMsResponse = ListHSMsResponse'
-  { _lhsmrsNextToken      :: !(Maybe Text)
-  , _lhsmrsHSMList        :: !(Maybe [Text])
-  , _lhsmrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListHSMsResponse =
+  ListHSMsResponse'
+    { _lhsmrsNextToken      :: !(Maybe Text)
+    , _lhsmrsHSMList        :: !(Maybe [Text])
+    , _lhsmrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListHSMsResponse' with the minimum fields required to make a request.

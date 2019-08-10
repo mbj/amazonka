@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listIdentityProviders' smart constructor.
-data ListIdentityProviders = ListIdentityProviders'
-  { _lipNextToken  :: !(Maybe Text)
-  , _lipMaxResults :: !(Maybe Nat)
-  , _lipUserPoolId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListIdentityProviders =
+  ListIdentityProviders'
+    { _lipNextToken  :: !(Maybe Text)
+    , _lipMaxResults :: !(Maybe Nat)
+    , _lipUserPoolId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListIdentityProviders' with the minimum fields required to make a request.
@@ -127,11 +129,13 @@ instance ToQuery ListIdentityProviders where
         toQuery = const mempty
 
 -- | /See:/ 'listIdentityProvidersResponse' smart constructor.
-data ListIdentityProvidersResponse = ListIdentityProvidersResponse'
-  { _liprsNextToken      :: !(Maybe Text)
-  , _liprsResponseStatus :: !Int
-  , _liprsProviders      :: ![ProviderDescription]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListIdentityProvidersResponse =
+  ListIdentityProvidersResponse'
+    { _liprsNextToken      :: !(Maybe Text)
+    , _liprsResponseStatus :: !Int
+    , _liprsProviders      :: ![ProviderDescription]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListIdentityProvidersResponse' with the minimum fields required to make a request.

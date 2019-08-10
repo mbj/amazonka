@@ -50,11 +50,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listDeliveryStreams' smart constructor.
-data ListDeliveryStreams = ListDeliveryStreams'
-  { _ldsLimit                            :: !(Maybe Nat)
-  , _ldsDeliveryStreamType               :: !(Maybe DeliveryStreamType)
-  , _ldsExclusiveStartDeliveryStreamName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListDeliveryStreams =
+  ListDeliveryStreams'
+    { _ldsLimit                            :: !(Maybe Nat)
+    , _ldsDeliveryStreamType               :: !(Maybe DeliveryStreamType)
+    , _ldsExclusiveStartDeliveryStreamName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDeliveryStreams' with the minimum fields required to make a request.
@@ -130,11 +132,13 @@ instance ToQuery ListDeliveryStreams where
         toQuery = const mempty
 
 -- | /See:/ 'listDeliveryStreamsResponse' smart constructor.
-data ListDeliveryStreamsResponse = ListDeliveryStreamsResponse'
-  { _ldsrsResponseStatus         :: !Int
-  , _ldsrsDeliveryStreamNames    :: ![Text]
-  , _ldsrsHasMoreDeliveryStreams :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListDeliveryStreamsResponse =
+  ListDeliveryStreamsResponse'
+    { _ldsrsResponseStatus         :: !Int
+    , _ldsrsDeliveryStreamNames    :: ![Text]
+    , _ldsrsHasMoreDeliveryStreams :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDeliveryStreamsResponse' with the minimum fields required to make a request.

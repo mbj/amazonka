@@ -53,9 +53,11 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'listIdentityPolicies' smart constructor.
-newtype ListIdentityPolicies = ListIdentityPolicies'
-  { _lipIdentity :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ListIdentityPolicies =
+  ListIdentityPolicies'
+    { _lipIdentity :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListIdentityPolicies' with the minimum fields required to make a request.
@@ -108,10 +110,12 @@ instance ToQuery ListIdentityPolicies where
 --
 --
 -- /See:/ 'listIdentityPoliciesResponse' smart constructor.
-data ListIdentityPoliciesResponse = ListIdentityPoliciesResponse'
-  { _liprsResponseStatus :: !Int
-  , _liprsPolicyNames    :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListIdentityPoliciesResponse =
+  ListIdentityPoliciesResponse'
+    { _liprsResponseStatus :: !Int
+    , _liprsPolicyNames    :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListIdentityPoliciesResponse' with the minimum fields required to make a request.

@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getStaticIP' smart constructor.
-newtype GetStaticIP = GetStaticIP'
-  { _gsiStaticIPName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetStaticIP =
+  GetStaticIP'
+    { _gsiStaticIPName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetStaticIP' with the minimum fields required to make a request.
@@ -100,10 +102,12 @@ instance ToQuery GetStaticIP where
         toQuery = const mempty
 
 -- | /See:/ 'getStaticIPResponse' smart constructor.
-data GetStaticIPResponse = GetStaticIPResponse'
-  { _gsirsStaticIP       :: !(Maybe StaticIP)
-  , _gsirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetStaticIPResponse =
+  GetStaticIPResponse'
+    { _gsirsStaticIP       :: !(Maybe StaticIP)
+    , _gsirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetStaticIPResponse' with the minimum fields required to make a request.

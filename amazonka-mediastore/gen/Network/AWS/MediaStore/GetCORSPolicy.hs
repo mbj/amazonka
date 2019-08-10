@@ -47,9 +47,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getCORSPolicy' smart constructor.
-newtype GetCORSPolicy = GetCORSPolicy'
-  { _gcpContainerName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetCORSPolicy =
+  GetCORSPolicy'
+    { _gcpContainerName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetCORSPolicy' with the minimum fields required to make a request.
@@ -103,10 +105,12 @@ instance ToQuery GetCORSPolicy where
         toQuery = const mempty
 
 -- | /See:/ 'getCORSPolicyResponse' smart constructor.
-data GetCORSPolicyResponse = GetCORSPolicyResponse'
-  { _gcorsprsResponseStatus :: !Int
-  , _gcorsprsCORSPolicy     :: !(List1 CORSRule)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetCORSPolicyResponse =
+  GetCORSPolicyResponse'
+    { _gcorsprsResponseStatus :: !Int
+    , _gcorsprsCORSPolicy     :: !(List1 CORSRule)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetCORSPolicyResponse' with the minimum fields required to make a request.

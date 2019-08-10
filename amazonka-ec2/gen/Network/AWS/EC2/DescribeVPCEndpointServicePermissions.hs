@@ -50,13 +50,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeVPCEndpointServicePermissions' smart constructor.
-data DescribeVPCEndpointServicePermissions = DescribeVPCEndpointServicePermissions'
-  { _dvespFilters    :: !(Maybe [Filter])
-  , _dvespNextToken  :: !(Maybe Text)
-  , _dvespDryRun     :: !(Maybe Bool)
-  , _dvespMaxResults :: !(Maybe Int)
-  , _dvespServiceId  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeVPCEndpointServicePermissions =
+  DescribeVPCEndpointServicePermissions'
+    { _dvespFilters    :: !(Maybe [Filter])
+    , _dvespNextToken  :: !(Maybe Text)
+    , _dvespDryRun     :: !(Maybe Bool)
+    , _dvespMaxResults :: !(Maybe Int)
+    , _dvespServiceId  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeVPCEndpointServicePermissions' with the minimum fields required to make a request.
@@ -152,11 +154,13 @@ instance ToQuery
                "ServiceId" =: _dvespServiceId]
 
 -- | /See:/ 'describeVPCEndpointServicePermissionsResponse' smart constructor.
-data DescribeVPCEndpointServicePermissionsResponse = DescribeVPCEndpointServicePermissionsResponse'
-  { _dvesprsNextToken         :: !(Maybe Text)
-  , _dvesprsAllowedPrincipals :: !(Maybe [AllowedPrincipal])
-  , _dvesprsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeVPCEndpointServicePermissionsResponse =
+  DescribeVPCEndpointServicePermissionsResponse'
+    { _dvesprsNextToken         :: !(Maybe Text)
+    , _dvesprsAllowedPrincipals :: !(Maybe [AllowedPrincipal])
+    , _dvesprsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeVPCEndpointServicePermissionsResponse' with the minimum fields required to make a request.

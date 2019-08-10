@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'batchDetectSentiment' smart constructor.
-data BatchDetectSentiment = BatchDetectSentiment'
-  { _bdsTextList     :: ![Text]
-  , _bdsLanguageCode :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchDetectSentiment =
+  BatchDetectSentiment'
+    { _bdsTextList     :: ![Text]
+    , _bdsLanguageCode :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchDetectSentiment' with the minimum fields required to make a request.
@@ -116,11 +118,13 @@ instance ToQuery BatchDetectSentiment where
         toQuery = const mempty
 
 -- | /See:/ 'batchDetectSentimentResponse' smart constructor.
-data BatchDetectSentimentResponse = BatchDetectSentimentResponse'
-  { _bdsrsResponseStatus :: !Int
-  , _bdsrsResultList     :: ![BatchDetectSentimentItemResult]
-  , _bdsrsErrorList      :: ![BatchItemError]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchDetectSentimentResponse =
+  BatchDetectSentimentResponse'
+    { _bdsrsResponseStatus :: !Int
+    , _bdsrsResultList     :: ![BatchDetectSentimentItemResult]
+    , _bdsrsErrorList      :: ![BatchItemError]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchDetectSentimentResponse' with the minimum fields required to make a request.

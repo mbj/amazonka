@@ -83,11 +83,13 @@ instance ToQuery GetAccountSettings where
         toQuery = const mempty
 
 -- | /See:/ 'getAccountSettingsResponse' smart constructor.
-data GetAccountSettingsResponse = GetAccountSettingsResponse'
-  { _gasrsAccountLimit   :: !(Maybe AccountLimit)
-  , _gasrsAccountUsage   :: !(Maybe AccountUsage)
-  , _gasrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetAccountSettingsResponse =
+  GetAccountSettingsResponse'
+    { _gasrsAccountLimit   :: !(Maybe AccountLimit)
+    , _gasrsAccountUsage   :: !(Maybe AccountUsage)
+    , _gasrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetAccountSettingsResponse' with the minimum fields required to make a request.

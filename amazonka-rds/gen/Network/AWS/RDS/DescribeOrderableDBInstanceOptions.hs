@@ -60,16 +60,18 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeOrderableDBInstanceOptions' smart constructor.
-data DescribeOrderableDBInstanceOptions = DescribeOrderableDBInstanceOptions'
-  { _dodioEngineVersion   :: !(Maybe Text)
-  , _dodioFilters         :: !(Maybe [Filter])
-  , _dodioDBInstanceClass :: !(Maybe Text)
-  , _dodioLicenseModel    :: !(Maybe Text)
-  , _dodioMarker          :: !(Maybe Text)
-  , _dodioMaxRecords      :: !(Maybe Int)
-  , _dodioVPC             :: !(Maybe Bool)
-  , _dodioEngine          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeOrderableDBInstanceOptions =
+  DescribeOrderableDBInstanceOptions'
+    { _dodioEngineVersion   :: !(Maybe Text)
+    , _dodioFilters         :: !(Maybe [Filter])
+    , _dodioDBInstanceClass :: !(Maybe Text)
+    , _dodioLicenseModel    :: !(Maybe Text)
+    , _dodioMarker          :: !(Maybe Text)
+    , _dodioMaxRecords      :: !(Maybe Int)
+    , _dodioVPC             :: !(Maybe Bool)
+    , _dodioEngine          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeOrderableDBInstanceOptions' with the minimum fields required to make a request.
@@ -199,11 +201,13 @@ instance ToQuery DescribeOrderableDBInstanceOptions
 --
 --
 -- /See:/ 'describeOrderableDBInstanceOptionsResponse' smart constructor.
-data DescribeOrderableDBInstanceOptionsResponse = DescribeOrderableDBInstanceOptionsResponse'
-  { _dodiorsOrderableDBInstanceOptions :: !(Maybe [OrderableDBInstanceOption])
-  , _dodiorsMarker                     :: !(Maybe Text)
-  , _dodiorsResponseStatus             :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeOrderableDBInstanceOptionsResponse =
+  DescribeOrderableDBInstanceOptionsResponse'
+    { _dodiorsOrderableDBInstanceOptions :: !(Maybe [OrderableDBInstanceOption])
+    , _dodiorsMarker                     :: !(Maybe Text)
+    , _dodiorsResponseStatus             :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeOrderableDBInstanceOptionsResponse' with the minimum fields required to make a request.

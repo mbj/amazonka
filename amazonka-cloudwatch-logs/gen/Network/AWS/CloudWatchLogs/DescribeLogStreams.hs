@@ -56,14 +56,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeLogStreams' smart constructor.
-data DescribeLogStreams = DescribeLogStreams'
-  { _dlssOrderBy             :: !(Maybe OrderBy)
-  , _dlssDescending          :: !(Maybe Bool)
-  , _dlssNextToken           :: !(Maybe Text)
-  , _dlssLogStreamNamePrefix :: !(Maybe Text)
-  , _dlssLimit               :: !(Maybe Nat)
-  , _dlssLogGroupName        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeLogStreams =
+  DescribeLogStreams'
+    { _dlssOrderBy             :: !(Maybe OrderBy)
+    , _dlssDescending          :: !(Maybe Bool)
+    , _dlssNextToken           :: !(Maybe Text)
+    , _dlssLogStreamNamePrefix :: !(Maybe Text)
+    , _dlssLimit               :: !(Maybe Nat)
+    , _dlssLogGroupName        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeLogStreams' with the minimum fields required to make a request.
@@ -170,11 +172,13 @@ instance ToQuery DescribeLogStreams where
         toQuery = const mempty
 
 -- | /See:/ 'describeLogStreamsResponse' smart constructor.
-data DescribeLogStreamsResponse = DescribeLogStreamsResponse'
-  { _dlsrsNextToken      :: !(Maybe Text)
-  , _dlsrsLogStreams     :: !(Maybe [LogStream])
-  , _dlsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeLogStreamsResponse =
+  DescribeLogStreamsResponse'
+    { _dlsrsNextToken      :: !(Maybe Text)
+    , _dlsrsLogStreams     :: !(Maybe [LogStream])
+    , _dlsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeLogStreamsResponse' with the minimum fields required to make a request.

@@ -55,11 +55,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeRouteTables' smart constructor.
-data DescribeRouteTables = DescribeRouteTables'
-  { _drtsFilters       :: !(Maybe [Filter])
-  , _drtsDryRun        :: !(Maybe Bool)
-  , _drtsRouteTableIds :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeRouteTables =
+  DescribeRouteTables'
+    { _drtsFilters       :: !(Maybe [Filter])
+    , _drtsDryRun        :: !(Maybe Bool)
+    , _drtsRouteTableIds :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeRouteTables' with the minimum fields required to make a request.
@@ -130,10 +132,12 @@ instance ToQuery DescribeRouteTables where
 --
 --
 -- /See:/ 'describeRouteTablesResponse' smart constructor.
-data DescribeRouteTablesResponse = DescribeRouteTablesResponse'
-  { _drtrsRouteTables    :: !(Maybe [RouteTable])
-  , _drtrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeRouteTablesResponse =
+  DescribeRouteTablesResponse'
+    { _drtrsRouteTables    :: !(Maybe [RouteTable])
+    , _drtrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeRouteTablesResponse' with the minimum fields required to make a request.

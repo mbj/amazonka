@@ -56,11 +56,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listServerCertificates' smart constructor.
-data ListServerCertificates = ListServerCertificates'
-  { _lscPathPrefix :: !(Maybe Text)
-  , _lscMarker     :: !(Maybe Text)
-  , _lscMaxItems   :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListServerCertificates =
+  ListServerCertificates'
+    { _lscPathPrefix :: !(Maybe Text)
+    , _lscMarker     :: !(Maybe Text)
+    , _lscMaxItems   :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListServerCertificates' with the minimum fields required to make a request.
@@ -136,12 +138,14 @@ instance ToQuery ListServerCertificates where
 --
 --
 -- /See:/ 'listServerCertificatesResponse' smart constructor.
-data ListServerCertificatesResponse = ListServerCertificatesResponse'
-  { _lscrsMarker                        :: !(Maybe Text)
-  , _lscrsIsTruncated                   :: !(Maybe Bool)
-  , _lscrsResponseStatus                :: !Int
-  , _lscrsServerCertificateMetadataList :: ![ServerCertificateMetadata]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListServerCertificatesResponse =
+  ListServerCertificatesResponse'
+    { _lscrsMarker                        :: !(Maybe Text)
+    , _lscrsIsTruncated                   :: !(Maybe Bool)
+    , _lscrsResponseStatus                :: !Int
+    , _lscrsServerCertificateMetadataList :: ![ServerCertificateMetadata]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListServerCertificatesResponse' with the minimum fields required to make a request.

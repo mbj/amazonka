@@ -51,10 +51,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deactivatePipeline' smart constructor.
-data DeactivatePipeline = DeactivatePipeline'
-  { _dCancelActive :: !(Maybe Bool)
-  , _dPipelineId   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeactivatePipeline =
+  DeactivatePipeline'
+    { _dCancelActive :: !(Maybe Bool)
+    , _dPipelineId   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeactivatePipeline' with the minimum fields required to make a request.
@@ -119,9 +121,11 @@ instance ToQuery DeactivatePipeline where
 --
 --
 -- /See:/ 'deactivatePipelineResponse' smart constructor.
-newtype DeactivatePipelineResponse = DeactivatePipelineResponse'
-  { _drsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeactivatePipelineResponse =
+  DeactivatePipelineResponse'
+    { _drsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeactivatePipelineResponse' with the minimum fields required to make a request.

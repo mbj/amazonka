@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeParameterGroups' smart constructor.
-data DescribeParameterGroups = DescribeParameterGroups'
-  { _dpgNextToken           :: !(Maybe Text)
-  , _dpgParameterGroupNames :: !(Maybe [Text])
-  , _dpgMaxResults          :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeParameterGroups =
+  DescribeParameterGroups'
+    { _dpgNextToken           :: !(Maybe Text)
+    , _dpgParameterGroupNames :: !(Maybe [Text])
+    , _dpgMaxResults          :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeParameterGroups' with the minimum fields required to make a request.
@@ -128,11 +130,13 @@ instance ToQuery DescribeParameterGroups where
         toQuery = const mempty
 
 -- | /See:/ 'describeParameterGroupsResponse' smart constructor.
-data DescribeParameterGroupsResponse = DescribeParameterGroupsResponse'
-  { _dpgsrsNextToken       :: !(Maybe Text)
-  , _dpgsrsParameterGroups :: !(Maybe [ParameterGroup])
-  , _dpgsrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeParameterGroupsResponse =
+  DescribeParameterGroupsResponse'
+    { _dpgsrsNextToken       :: !(Maybe Text)
+    , _dpgsrsParameterGroups :: !(Maybe [ParameterGroup])
+    , _dpgsrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeParameterGroupsResponse' with the minimum fields required to make a request.

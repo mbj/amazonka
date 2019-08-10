@@ -53,13 +53,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listObjectPolicies' smart constructor.
-data ListObjectPolicies = ListObjectPolicies'
-  { _lConsistencyLevel :: !(Maybe ConsistencyLevel)
-  , _lNextToken        :: !(Maybe Text)
-  , _lMaxResults       :: !(Maybe Nat)
-  , _lDirectoryARN     :: !Text
-  , _lObjectReference  :: !ObjectReference
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListObjectPolicies =
+  ListObjectPolicies'
+    { _lConsistencyLevel :: !(Maybe ConsistencyLevel)
+    , _lNextToken        :: !(Maybe Text)
+    , _lMaxResults       :: !(Maybe Nat)
+    , _lDirectoryARN     :: !Text
+    , _lObjectReference  :: !ObjectReference
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListObjectPolicies' with the minimum fields required to make a request.
@@ -155,11 +157,13 @@ instance ToQuery ListObjectPolicies where
         toQuery = const mempty
 
 -- | /See:/ 'listObjectPoliciesResponse' smart constructor.
-data ListObjectPoliciesResponse = ListObjectPoliciesResponse'
-  { _loprsNextToken         :: !(Maybe Text)
-  , _loprsAttachedPolicyIds :: !(Maybe [Text])
-  , _loprsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListObjectPoliciesResponse =
+  ListObjectPoliciesResponse'
+    { _loprsNextToken         :: !(Maybe Text)
+    , _loprsAttachedPolicyIds :: !(Maybe [Text])
+    , _loprsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListObjectPoliciesResponse' with the minimum fields required to make a request.

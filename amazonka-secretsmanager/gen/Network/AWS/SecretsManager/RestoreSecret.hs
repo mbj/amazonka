@@ -60,9 +60,11 @@ import Network.AWS.SecretsManager.Types
 import Network.AWS.SecretsManager.Types.Product
 
 -- | /See:/ 'restoreSecret' smart constructor.
-newtype RestoreSecret = RestoreSecret'
-  { _rSecretId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RestoreSecret =
+  RestoreSecret'
+    { _rSecretId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RestoreSecret' with the minimum fields required to make a request.
@@ -115,11 +117,13 @@ instance ToQuery RestoreSecret where
         toQuery = const mempty
 
 -- | /See:/ 'restoreSecretResponse' smart constructor.
-data RestoreSecretResponse = RestoreSecretResponse'
-  { _rrsARN            :: !(Maybe Text)
-  , _rrsName           :: !(Maybe Text)
-  , _rrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RestoreSecretResponse =
+  RestoreSecretResponse'
+    { _rrsARN            :: !(Maybe Text)
+    , _rrsName           :: !(Maybe Text)
+    , _rrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RestoreSecretResponse' with the minimum fields required to make a request.

@@ -52,9 +52,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listLunaClients' smart constructor.
-newtype ListLunaClients = ListLunaClients'
-  { _llcNextToken :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ListLunaClients =
+  ListLunaClients'
+    { _llcNextToken :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListLunaClients' with the minimum fields required to make a request.
@@ -107,11 +109,13 @@ instance ToQuery ListLunaClients where
         toQuery = const mempty
 
 -- | /See:/ 'listLunaClientsResponse' smart constructor.
-data ListLunaClientsResponse = ListLunaClientsResponse'
-  { _llcrsNextToken      :: !(Maybe Text)
-  , _llcrsResponseStatus :: !Int
-  , _llcrsClientList     :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListLunaClientsResponse =
+  ListLunaClientsResponse'
+    { _llcrsNextToken      :: !(Maybe Text)
+    , _llcrsResponseStatus :: !Int
+    , _llcrsClientList     :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListLunaClientsResponse' with the minimum fields required to make a request.

@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteCrawler' smart constructor.
-newtype DeleteCrawler = DeleteCrawler'
-  { _dcName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteCrawler =
+  DeleteCrawler'
+    { _dcName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteCrawler' with the minimum fields required to make a request.
@@ -96,9 +98,11 @@ instance ToQuery DeleteCrawler where
         toQuery = const mempty
 
 -- | /See:/ 'deleteCrawlerResponse' smart constructor.
-newtype DeleteCrawlerResponse = DeleteCrawlerResponse'
-  { _dccrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteCrawlerResponse =
+  DeleteCrawlerResponse'
+    { _dccrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteCrawlerResponse' with the minimum fields required to make a request.

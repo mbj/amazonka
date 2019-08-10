@@ -47,9 +47,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describePolicy' smart constructor.
-newtype DescribePolicy = DescribePolicy'
-  { _dpPolicyId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribePolicy =
+  DescribePolicy'
+    { _dpPolicyId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribePolicy' with the minimum fields required to make a request.
@@ -102,10 +104,12 @@ instance ToQuery DescribePolicy where
         toQuery = const mempty
 
 -- | /See:/ 'describePolicyResponse' smart constructor.
-data DescribePolicyResponse = DescribePolicyResponse'
-  { _dprsPolicy         :: !(Maybe Policy)
-  , _dprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribePolicyResponse =
+  DescribePolicyResponse'
+    { _dprsPolicy         :: !(Maybe Policy)
+    , _dprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribePolicyResponse' with the minimum fields required to make a request.

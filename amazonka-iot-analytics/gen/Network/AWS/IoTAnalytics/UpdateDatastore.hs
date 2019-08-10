@@ -43,10 +43,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateDatastore' smart constructor.
-data UpdateDatastore = UpdateDatastore'
-  { _udRetentionPeriod :: !(Maybe RetentionPeriod)
-  , _udDatastoreName   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateDatastore =
+  UpdateDatastore'
+    { _udRetentionPeriod :: !(Maybe RetentionPeriod)
+    , _udDatastoreName   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateDatastore' with the minimum fields required to make a request.

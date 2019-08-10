@@ -47,9 +47,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeSecurityConfiguration' smart constructor.
-newtype DescribeSecurityConfiguration = DescribeSecurityConfiguration'
-  { _dName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeSecurityConfiguration =
+  DescribeSecurityConfiguration'
+    { _dName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeSecurityConfiguration' with the minimum fields required to make a request.
@@ -107,12 +109,14 @@ instance ToQuery DescribeSecurityConfiguration where
         toQuery = const mempty
 
 -- | /See:/ 'describeSecurityConfigurationResponse' smart constructor.
-data DescribeSecurityConfigurationResponse = DescribeSecurityConfigurationResponse'
-  { _drsSecurityConfiguration :: !(Maybe Text)
-  , _drsName                  :: !(Maybe Text)
-  , _drsCreationDateTime      :: !(Maybe POSIX)
-  , _drsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeSecurityConfigurationResponse =
+  DescribeSecurityConfigurationResponse'
+    { _drsSecurityConfiguration :: !(Maybe Text)
+    , _drsName                  :: !(Maybe Text)
+    , _drsCreationDateTime      :: !(Maybe POSIX)
+    , _drsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeSecurityConfigurationResponse' with the minimum fields required to make a request.

@@ -46,9 +46,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteEventSubscription' smart constructor.
-newtype DeleteEventSubscription = DeleteEventSubscription'
-  { _desSubscriptionName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteEventSubscription =
+  DeleteEventSubscription'
+    { _desSubscriptionName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteEventSubscription' with the minimum fields required to make a request.

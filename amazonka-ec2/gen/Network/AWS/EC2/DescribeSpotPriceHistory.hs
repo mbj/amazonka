@@ -63,17 +63,19 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeSpotPriceHistory' smart constructor.
-data DescribeSpotPriceHistory = DescribeSpotPriceHistory'
-  { _dsphInstanceTypes       :: !(Maybe [InstanceType])
-  , _dsphStartTime           :: !(Maybe ISO8601)
-  , _dsphFilters             :: !(Maybe [Filter])
-  , _dsphNextToken           :: !(Maybe Text)
-  , _dsphAvailabilityZone    :: !(Maybe Text)
-  , _dsphEndTime             :: !(Maybe ISO8601)
-  , _dsphProductDescriptions :: !(Maybe [Text])
-  , _dsphDryRun              :: !(Maybe Bool)
-  , _dsphMaxResults          :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeSpotPriceHistory =
+  DescribeSpotPriceHistory'
+    { _dsphInstanceTypes       :: !(Maybe [InstanceType])
+    , _dsphStartTime           :: !(Maybe ISO8601)
+    , _dsphFilters             :: !(Maybe [Filter])
+    , _dsphNextToken           :: !(Maybe Text)
+    , _dsphAvailabilityZone    :: !(Maybe Text)
+    , _dsphEndTime             :: !(Maybe ISO8601)
+    , _dsphProductDescriptions :: !(Maybe [Text])
+    , _dsphDryRun              :: !(Maybe Bool)
+    , _dsphMaxResults          :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeSpotPriceHistory' with the minimum fields required to make a request.
@@ -203,11 +205,13 @@ instance ToQuery DescribeSpotPriceHistory where
 --
 --
 -- /See:/ 'describeSpotPriceHistoryResponse' smart constructor.
-data DescribeSpotPriceHistoryResponse = DescribeSpotPriceHistoryResponse'
-  { _dsphrsNextToken        :: !(Maybe Text)
-  , _dsphrsSpotPriceHistory :: !(Maybe [SpotPrice])
-  , _dsphrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeSpotPriceHistoryResponse =
+  DescribeSpotPriceHistoryResponse'
+    { _dsphrsNextToken        :: !(Maybe Text)
+    , _dsphrsSpotPriceHistory :: !(Maybe [SpotPrice])
+    , _dsphrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeSpotPriceHistoryResponse' with the minimum fields required to make a request.

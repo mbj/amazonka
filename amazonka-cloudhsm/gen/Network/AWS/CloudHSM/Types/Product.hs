@@ -26,10 +26,12 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'tag' smart constructor.
-data Tag = Tag'
-  { _tagKey   :: !Text
-  , _tagValue :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Tag =
+  Tag'
+    { _tagKey   :: !Text
+    , _tagValue :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Tag' with the minimum fields required to make a request.

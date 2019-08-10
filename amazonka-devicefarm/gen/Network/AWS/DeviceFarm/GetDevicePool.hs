@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getDevicePool' smart constructor.
-newtype GetDevicePool = GetDevicePool'
-  { _gdpArn :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetDevicePool =
+  GetDevicePool'
+    { _gdpArn :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDevicePool' with the minimum fields required to make a request.
@@ -106,10 +108,12 @@ instance ToQuery GetDevicePool where
 --
 --
 -- /See:/ 'getDevicePoolResponse' smart constructor.
-data GetDevicePoolResponse = GetDevicePoolResponse'
-  { _gdprsDevicePool     :: !(Maybe DevicePool)
-  , _gdprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDevicePoolResponse =
+  GetDevicePoolResponse'
+    { _gdprsDevicePool     :: !(Maybe DevicePool)
+    , _gdprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDevicePoolResponse' with the minimum fields required to make a request.

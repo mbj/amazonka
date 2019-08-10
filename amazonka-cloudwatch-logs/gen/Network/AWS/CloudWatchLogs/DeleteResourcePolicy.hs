@@ -42,9 +42,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteResourcePolicy' smart constructor.
-newtype DeleteResourcePolicy = DeleteResourcePolicy'
-  { _drpPolicyName :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteResourcePolicy =
+  DeleteResourcePolicy'
+    { _drpPolicyName :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteResourcePolicy' with the minimum fields required to make a request.

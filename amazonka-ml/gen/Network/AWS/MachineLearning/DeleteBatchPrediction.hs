@@ -49,9 +49,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteBatchPrediction' smart constructor.
-newtype DeleteBatchPrediction = DeleteBatchPrediction'
-  { _dbpBatchPredictionId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteBatchPrediction =
+  DeleteBatchPrediction'
+    { _dbpBatchPredictionId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteBatchPrediction' with the minimum fields required to make a request.
@@ -114,10 +116,12 @@ instance ToQuery DeleteBatchPrediction where
 --
 --
 -- /See:/ 'deleteBatchPredictionResponse' smart constructor.
-data DeleteBatchPredictionResponse = DeleteBatchPredictionResponse'
-  { _dbprsBatchPredictionId :: !(Maybe Text)
-  , _dbprsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteBatchPredictionResponse =
+  DeleteBatchPredictionResponse'
+    { _dbprsBatchPredictionId :: !(Maybe Text)
+    , _dbprsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteBatchPredictionResponse' with the minimum fields required to make a request.

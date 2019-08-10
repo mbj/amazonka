@@ -26,9 +26,11 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'batchArrayProperties' smart constructor.
-newtype BatchArrayProperties = BatchArrayProperties'
-  { _bapSize :: Maybe Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype BatchArrayProperties =
+  BatchArrayProperties'
+    { _bapSize :: Maybe Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchArrayProperties' with the minimum fields required to make a request.
@@ -63,12 +65,14 @@ instance ToJSON BatchArrayProperties where
 --
 --
 -- /See:/ 'batchParameters' smart constructor.
-data BatchParameters = BatchParameters'
-  { _bpRetryStrategy   :: !(Maybe BatchRetryStrategy)
-  , _bpArrayProperties :: !(Maybe BatchArrayProperties)
-  , _bpJobDefinition   :: !Text
-  , _bpJobName         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchParameters =
+  BatchParameters'
+    { _bpRetryStrategy   :: !(Maybe BatchRetryStrategy)
+    , _bpArrayProperties :: !(Maybe BatchArrayProperties)
+    , _bpJobDefinition   :: !Text
+    , _bpJobName         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchParameters' with the minimum fields required to make a request.
@@ -138,9 +142,11 @@ instance ToJSON BatchParameters where
 --
 --
 -- /See:/ 'batchRetryStrategy' smart constructor.
-newtype BatchRetryStrategy = BatchRetryStrategy'
-  { _brsAttempts :: Maybe Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype BatchRetryStrategy =
+  BatchRetryStrategy'
+    { _brsAttempts :: Maybe Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchRetryStrategy' with the minimum fields required to make a request.
@@ -176,10 +182,12 @@ instance ToJSON BatchRetryStrategy where
 --
 --
 -- /See:/ 'ecsParameters' smart constructor.
-data EcsParameters = EcsParameters'
-  { _epTaskCount         :: !(Maybe Nat)
-  , _epTaskDefinitionARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EcsParameters =
+  EcsParameters'
+    { _epTaskCount         :: !(Maybe Nat)
+    , _epTaskDefinitionARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EcsParameters' with the minimum fields required to make a request.
@@ -228,10 +236,12 @@ instance ToJSON EcsParameters where
 --
 --
 -- /See:/ 'inputTransformer' smart constructor.
-data InputTransformer = InputTransformer'
-  { _itInputPathsMap :: !(Maybe (Map Text Text))
-  , _itInputTemplate :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InputTransformer =
+  InputTransformer'
+    { _itInputPathsMap :: !(Maybe (Map Text Text))
+    , _itInputTemplate :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InputTransformer' with the minimum fields required to make a request.
@@ -281,9 +291,11 @@ instance ToJSON InputTransformer where
 --
 --
 -- /See:/ 'kinesisParameters' smart constructor.
-newtype KinesisParameters = KinesisParameters'
-  { _kpPartitionKeyPath :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype KinesisParameters =
+  KinesisParameters'
+    { _kpPartitionKeyPath :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'KinesisParameters' with the minimum fields required to make a request.
@@ -323,13 +335,15 @@ instance ToJSON KinesisParameters where
 --
 --
 -- /See:/ 'putEventsRequestEntry' smart constructor.
-data PutEventsRequestEntry = PutEventsRequestEntry'
-  { _pereTime       :: !(Maybe POSIX)
-  , _pereDetailType :: !(Maybe Text)
-  , _pereResources  :: !(Maybe [Text])
-  , _pereSource     :: !(Maybe Text)
-  , _pereDetail     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutEventsRequestEntry =
+  PutEventsRequestEntry'
+    { _pereTime       :: !(Maybe POSIX)
+    , _pereDetailType :: !(Maybe Text)
+    , _pereResources  :: !(Maybe [Text])
+    , _pereSource     :: !(Maybe Text)
+    , _pereDetail     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutEventsRequestEntry' with the minimum fields required to make a request.
@@ -396,11 +410,13 @@ instance ToJSON PutEventsRequestEntry where
 --
 --
 -- /See:/ 'putEventsResultEntry' smart constructor.
-data PutEventsResultEntry = PutEventsResultEntry'
-  { _pereErrorCode    :: !(Maybe Text)
-  , _pereErrorMessage :: !(Maybe Text)
-  , _pereEventId      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutEventsResultEntry =
+  PutEventsResultEntry'
+    { _pereErrorCode    :: !(Maybe Text)
+    , _pereErrorMessage :: !(Maybe Text)
+    , _pereEventId      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutEventsResultEntry' with the minimum fields required to make a request.
@@ -451,11 +467,13 @@ instance NFData PutEventsResultEntry where
 --
 --
 -- /See:/ 'putTargetsResultEntry' smart constructor.
-data PutTargetsResultEntry = PutTargetsResultEntry'
-  { _ptreTargetId     :: !(Maybe Text)
-  , _ptreErrorCode    :: !(Maybe Text)
-  , _ptreErrorMessage :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutTargetsResultEntry =
+  PutTargetsResultEntry'
+    { _ptreTargetId     :: !(Maybe Text)
+    , _ptreErrorCode    :: !(Maybe Text)
+    , _ptreErrorMessage :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutTargetsResultEntry' with the minimum fields required to make a request.
@@ -506,11 +524,13 @@ instance NFData PutTargetsResultEntry where
 --
 --
 -- /See:/ 'removeTargetsResultEntry' smart constructor.
-data RemoveTargetsResultEntry = RemoveTargetsResultEntry'
-  { _rtreTargetId     :: !(Maybe Text)
-  , _rtreErrorCode    :: !(Maybe Text)
-  , _rtreErrorMessage :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RemoveTargetsResultEntry =
+  RemoveTargetsResultEntry'
+    { _rtreTargetId     :: !(Maybe Text)
+    , _rtreErrorCode    :: !(Maybe Text)
+    , _rtreErrorMessage :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RemoveTargetsResultEntry' with the minimum fields required to make a request.
@@ -561,15 +581,17 @@ instance NFData RemoveTargetsResultEntry where
 --
 --
 -- /See:/ 'rule' smart constructor.
-data Rule = Rule'
-  { _rEventPattern       :: !(Maybe Text)
-  , _rState              :: !(Maybe RuleState)
-  , _rARN                :: !(Maybe Text)
-  , _rScheduleExpression :: !(Maybe Text)
-  , _rName               :: !(Maybe Text)
-  , _rDescription        :: !(Maybe Text)
-  , _rRoleARN            :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Rule =
+  Rule'
+    { _rEventPattern       :: !(Maybe Text)
+    , _rState              :: !(Maybe RuleState)
+    , _rARN                :: !(Maybe Text)
+    , _rScheduleExpression :: !(Maybe Text)
+    , _rName               :: !(Maybe Text)
+    , _rDescription        :: !(Maybe Text)
+    , _rRoleARN            :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Rule' with the minimum fields required to make a request.
@@ -652,9 +674,11 @@ instance NFData Rule where
 --
 --
 -- /See:/ 'runCommandParameters' smart constructor.
-newtype RunCommandParameters = RunCommandParameters'
-  { _rcpRunCommandTargets :: List1 RunCommandTarget
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RunCommandParameters =
+  RunCommandParameters'
+    { _rcpRunCommandTargets :: List1 RunCommandTarget
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RunCommandParameters' with the minimum fields required to make a request.
@@ -695,10 +719,12 @@ instance ToJSON RunCommandParameters where
 --
 --
 -- /See:/ 'runCommandTarget' smart constructor.
-data RunCommandTarget = RunCommandTarget'
-  { _rctKey    :: !Text
-  , _rctValues :: !(List1 Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RunCommandTarget =
+  RunCommandTarget'
+    { _rctKey    :: !Text
+    , _rctValues :: !(List1 Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RunCommandTarget' with the minimum fields required to make a request.
@@ -747,9 +773,11 @@ instance ToJSON RunCommandTarget where
 --
 --
 -- /See:/ 'sqsParameters' smart constructor.
-newtype SqsParameters = SqsParameters'
-  { _spMessageGroupId :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype SqsParameters =
+  SqsParameters'
+    { _spMessageGroupId :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SqsParameters' with the minimum fields required to make a request.
@@ -786,19 +814,21 @@ instance ToJSON SqsParameters where
 --
 --
 -- /See:/ 'target' smart constructor.
-data Target = Target'
-  { _tRunCommandParameters :: !(Maybe RunCommandParameters)
-  , _tKinesisParameters    :: !(Maybe KinesisParameters)
-  , _tInputTransformer     :: !(Maybe InputTransformer)
-  , _tSqsParameters        :: !(Maybe SqsParameters)
-  , _tInput                :: !(Maybe Text)
-  , _tBatchParameters      :: !(Maybe BatchParameters)
-  , _tEcsParameters        :: !(Maybe EcsParameters)
-  , _tInputPath            :: !(Maybe Text)
-  , _tRoleARN              :: !(Maybe Text)
-  , _tId                   :: !Text
-  , _tARN                  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Target =
+  Target'
+    { _tRunCommandParameters :: !(Maybe RunCommandParameters)
+    , _tKinesisParameters    :: !(Maybe KinesisParameters)
+    , _tInputTransformer     :: !(Maybe InputTransformer)
+    , _tSqsParameters        :: !(Maybe SqsParameters)
+    , _tInput                :: !(Maybe Text)
+    , _tBatchParameters      :: !(Maybe BatchParameters)
+    , _tEcsParameters        :: !(Maybe EcsParameters)
+    , _tInputPath            :: !(Maybe Text)
+    , _tRoleARN              :: !(Maybe Text)
+    , _tId                   :: !Text
+    , _tARN                  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Target' with the minimum fields required to make a request.

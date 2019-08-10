@@ -45,11 +45,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getSegmentVersion' smart constructor.
-data GetSegmentVersion = GetSegmentVersion'
-  { _gSegmentId     :: !Text
-  , _gVersion       :: !Text
-  , _gApplicationId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetSegmentVersion =
+  GetSegmentVersion'
+    { _gSegmentId     :: !Text
+    , _gVersion       :: !Text
+    , _gApplicationId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetSegmentVersion' with the minimum fields required to make a request.
@@ -116,10 +118,12 @@ instance ToQuery GetSegmentVersion where
         toQuery = const mempty
 
 -- | /See:/ 'getSegmentVersionResponse' smart constructor.
-data GetSegmentVersionResponse = GetSegmentVersionResponse'
-  { _gsvrsResponseStatus  :: !Int
-  , _gsvrsSegmentResponse :: !SegmentResponse
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetSegmentVersionResponse =
+  GetSegmentVersionResponse'
+    { _gsvrsResponseStatus  :: !Int
+    , _gsvrsSegmentResponse :: !SegmentResponse
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetSegmentVersionResponse' with the minimum fields required to make a request.

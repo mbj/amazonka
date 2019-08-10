@@ -46,11 +46,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateUser' smart constructor.
-data UpdateUser = UpdateUser'
-  { _uuNewUserName :: !(Maybe Text)
-  , _uuNewPath     :: !(Maybe Text)
-  , _uuUserName    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateUser =
+  UpdateUser'
+    { _uuNewUserName :: !(Maybe Text)
+    , _uuNewPath     :: !(Maybe Text)
+    , _uuUserName    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateUser' with the minimum fields required to make a request.

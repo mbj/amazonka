@@ -28,10 +28,12 @@ import Network.AWS.Rekognition.Types.Sum
 --
 --
 -- /See:/ 'ageRange' smart constructor.
-data AgeRange = AgeRange'
-  { _arLow  :: !(Maybe Nat)
-  , _arHigh :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AgeRange =
+  AgeRange'
+    { _arLow  :: !(Maybe Nat)
+    , _arHigh :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AgeRange' with the minimum fields required to make a request.
@@ -69,10 +71,12 @@ instance NFData AgeRange where
 --
 --
 -- /See:/ 'beard' smart constructor.
-data Beard = Beard'
-  { _bValue      :: !(Maybe Bool)
-  , _bConfidence :: !(Maybe Double)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Beard =
+  Beard'
+    { _bValue      :: !(Maybe Bool)
+    , _bConfidence :: !(Maybe Double)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Beard' with the minimum fields required to make a request.
@@ -114,12 +118,14 @@ instance NFData Beard where
 --
 --
 -- /See:/ 'boundingBox' smart constructor.
-data BoundingBox = BoundingBox'
-  { _bbHeight :: !(Maybe Double)
-  , _bbLeft   :: !(Maybe Double)
-  , _bbWidth  :: !(Maybe Double)
-  , _bbTop    :: !(Maybe Double)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BoundingBox =
+  BoundingBox'
+    { _bbHeight :: !(Maybe Double)
+    , _bbLeft   :: !(Maybe Double)
+    , _bbWidth  :: !(Maybe Double)
+    , _bbTop    :: !(Maybe Double)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BoundingBox' with the minimum fields required to make a request.
@@ -178,13 +184,15 @@ instance NFData BoundingBox where
 --
 --
 -- /See:/ 'celebrity' smart constructor.
-data Celebrity = Celebrity'
-  { _cMatchConfidence :: !(Maybe Double)
-  , _cURLs            :: !(Maybe [Text])
-  , _cName            :: !(Maybe Text)
-  , _cId              :: !(Maybe Text)
-  , _cFace            :: !(Maybe ComparedFace)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Celebrity =
+  Celebrity'
+    { _cMatchConfidence :: !(Maybe Double)
+    , _cURLs            :: !(Maybe [Text])
+    , _cName            :: !(Maybe Text)
+    , _cId              :: !(Maybe Text)
+    , _cFace            :: !(Maybe ComparedFace)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Celebrity' with the minimum fields required to make a request.
@@ -252,14 +260,16 @@ instance NFData Celebrity where
 --
 --
 -- /See:/ 'celebrityDetail' smart constructor.
-data CelebrityDetail = CelebrityDetail'
-  { _cdBoundingBox :: !(Maybe BoundingBox)
-  , _cdURLs        :: !(Maybe [Text])
-  , _cdConfidence  :: !(Maybe Double)
-  , _cdName        :: !(Maybe Text)
-  , _cdId          :: !(Maybe Text)
-  , _cdFace        :: !(Maybe FaceDetail)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CelebrityDetail =
+  CelebrityDetail'
+    { _cdBoundingBox :: !(Maybe BoundingBox)
+    , _cdURLs        :: !(Maybe [Text])
+    , _cdConfidence  :: !(Maybe Double)
+    , _cdName        :: !(Maybe Text)
+    , _cdId          :: !(Maybe Text)
+    , _cdFace        :: !(Maybe FaceDetail)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CelebrityDetail' with the minimum fields required to make a request.
@@ -334,10 +344,12 @@ instance NFData CelebrityDetail where
 --
 --
 -- /See:/ 'celebrityRecognition' smart constructor.
-data CelebrityRecognition = CelebrityRecognition'
-  { _crCelebrity :: !(Maybe CelebrityDetail)
-  , _crTimestamp :: !(Maybe Integer)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CelebrityRecognition =
+  CelebrityRecognition'
+    { _crCelebrity :: !(Maybe CelebrityDetail)
+    , _crTimestamp :: !(Maybe Integer)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CelebrityRecognition' with the minimum fields required to make a request.
@@ -377,10 +389,12 @@ instance NFData CelebrityRecognition where
 --
 --
 -- /See:/ 'compareFacesMatch' smart constructor.
-data CompareFacesMatch = CompareFacesMatch'
-  { _cfmSimilarity :: !(Maybe Double)
-  , _cfmFace       :: !(Maybe ComparedFace)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CompareFacesMatch =
+  CompareFacesMatch'
+    { _cfmSimilarity :: !(Maybe Double)
+    , _cfmFace       :: !(Maybe ComparedFace)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CompareFacesMatch' with the minimum fields required to make a request.
@@ -420,13 +434,15 @@ instance NFData CompareFacesMatch where
 --
 --
 -- /See:/ 'comparedFace' smart constructor.
-data ComparedFace = ComparedFace'
-  { _cfBoundingBox :: !(Maybe BoundingBox)
-  , _cfPose        :: !(Maybe Pose)
-  , _cfConfidence  :: !(Maybe Double)
-  , _cfQuality     :: !(Maybe ImageQuality)
-  , _cfLandmarks   :: !(Maybe [Landmark])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ComparedFace =
+  ComparedFace'
+    { _cfBoundingBox :: !(Maybe BoundingBox)
+    , _cfPose        :: !(Maybe Pose)
+    , _cfConfidence  :: !(Maybe Double)
+    , _cfQuality     :: !(Maybe ImageQuality)
+    , _cfLandmarks   :: !(Maybe [Landmark])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ComparedFace' with the minimum fields required to make a request.
@@ -493,10 +509,12 @@ instance NFData ComparedFace where
 --
 --
 -- /See:/ 'comparedSourceImageFace' smart constructor.
-data ComparedSourceImageFace = ComparedSourceImageFace'
-  { _csifBoundingBox :: !(Maybe BoundingBox)
-  , _csifConfidence  :: !(Maybe Double)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ComparedSourceImageFace =
+  ComparedSourceImageFace'
+    { _csifBoundingBox :: !(Maybe BoundingBox)
+    , _csifConfidence  :: !(Maybe Double)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ComparedSourceImageFace' with the minimum fields required to make a request.
@@ -537,10 +555,12 @@ instance NFData ComparedSourceImageFace where
 --
 --
 -- /See:/ 'contentModerationDetection' smart constructor.
-data ContentModerationDetection = ContentModerationDetection'
-  { _cmdModerationLabel :: !(Maybe ModerationLabel)
-  , _cmdTimestamp       :: !(Maybe Integer)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ContentModerationDetection =
+  ContentModerationDetection'
+    { _cmdModerationLabel :: !(Maybe ModerationLabel)
+    , _cmdTimestamp       :: !(Maybe Integer)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ContentModerationDetection' with the minimum fields required to make a request.
@@ -581,10 +601,12 @@ instance NFData ContentModerationDetection where
 --
 --
 -- /See:/ 'emotion' smart constructor.
-data Emotion = Emotion'
-  { _eConfidence :: !(Maybe Double)
-  , _eType       :: !(Maybe EmotionName)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Emotion =
+  Emotion'
+    { _eConfidence :: !(Maybe Double)
+    , _eType       :: !(Maybe EmotionName)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Emotion' with the minimum fields required to make a request.
@@ -622,10 +644,12 @@ instance NFData Emotion where
 --
 --
 -- /See:/ 'eyeOpen' smart constructor.
-data EyeOpen = EyeOpen'
-  { _eoValue      :: !(Maybe Bool)
-  , _eoConfidence :: !(Maybe Double)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EyeOpen =
+  EyeOpen'
+    { _eoValue      :: !(Maybe Bool)
+    , _eoConfidence :: !(Maybe Double)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EyeOpen' with the minimum fields required to make a request.
@@ -664,10 +688,12 @@ instance NFData EyeOpen where
 --
 --
 -- /See:/ 'eyeglasses' smart constructor.
-data Eyeglasses = Eyeglasses'
-  { _eyeValue      :: !(Maybe Bool)
-  , _eyeConfidence :: !(Maybe Double)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Eyeglasses =
+  Eyeglasses'
+    { _eyeValue      :: !(Maybe Bool)
+    , _eyeConfidence :: !(Maybe Double)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Eyeglasses' with the minimum fields required to make a request.
@@ -706,13 +732,15 @@ instance NFData Eyeglasses where
 --
 --
 -- /See:/ 'face' smart constructor.
-data Face = Face'
-  { _fFaceId          :: !(Maybe Text)
-  , _fBoundingBox     :: !(Maybe BoundingBox)
-  , _fExternalImageId :: !(Maybe Text)
-  , _fConfidence      :: !(Maybe Double)
-  , _fImageId         :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Face =
+  Face'
+    { _fFaceId          :: !(Maybe Text)
+    , _fBoundingBox     :: !(Maybe BoundingBox)
+    , _fExternalImageId :: !(Maybe Text)
+    , _fConfidence      :: !(Maybe Double)
+    , _fImageId         :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Face' with the minimum fields required to make a request.
@@ -793,23 +821,25 @@ instance NFData Face where
 --
 --
 -- /See:/ 'faceDetail' smart constructor.
-data FaceDetail = FaceDetail'
-  { _fdAgeRange    :: !(Maybe AgeRange)
-  , _fdSunglasses  :: !(Maybe Sunglasses)
-  , _fdMouthOpen   :: !(Maybe MouthOpen)
-  , _fdBoundingBox :: !(Maybe BoundingBox)
-  , _fdEmotions    :: !(Maybe [Emotion])
-  , _fdEyesOpen    :: !(Maybe EyeOpen)
-  , _fdPose        :: !(Maybe Pose)
-  , _fdConfidence  :: !(Maybe Double)
-  , _fdGender      :: !(Maybe Gender)
-  , _fdQuality     :: !(Maybe ImageQuality)
-  , _fdEyeglasses  :: !(Maybe Eyeglasses)
-  , _fdBeard       :: !(Maybe Beard)
-  , _fdMustache    :: !(Maybe Mustache)
-  , _fdSmile       :: !(Maybe Smile)
-  , _fdLandmarks   :: !(Maybe [Landmark])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FaceDetail =
+  FaceDetail'
+    { _fdAgeRange    :: !(Maybe AgeRange)
+    , _fdSunglasses  :: !(Maybe Sunglasses)
+    , _fdMouthOpen   :: !(Maybe MouthOpen)
+    , _fdBoundingBox :: !(Maybe BoundingBox)
+    , _fdEmotions    :: !(Maybe [Emotion])
+    , _fdEyesOpen    :: !(Maybe EyeOpen)
+    , _fdPose        :: !(Maybe Pose)
+    , _fdConfidence  :: !(Maybe Double)
+    , _fdGender      :: !(Maybe Gender)
+    , _fdQuality     :: !(Maybe ImageQuality)
+    , _fdEyeglasses  :: !(Maybe Eyeglasses)
+    , _fdBeard       :: !(Maybe Beard)
+    , _fdMustache    :: !(Maybe Mustache)
+    , _fdSmile       :: !(Maybe Smile)
+    , _fdLandmarks   :: !(Maybe [Landmark])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FaceDetail' with the minimum fields required to make a request.
@@ -956,10 +986,12 @@ instance NFData FaceDetail where
 --
 --
 -- /See:/ 'faceDetection' smart constructor.
-data FaceDetection = FaceDetection'
-  { _fdTimestamp :: !(Maybe Integer)
-  , _fdFace      :: !(Maybe FaceDetail)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FaceDetection =
+  FaceDetection'
+    { _fdTimestamp :: !(Maybe Integer)
+    , _fdFace      :: !(Maybe FaceDetail)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FaceDetection' with the minimum fields required to make a request.
@@ -998,10 +1030,12 @@ instance NFData FaceDetection where
 --
 --
 -- /See:/ 'faceMatch' smart constructor.
-data FaceMatch = FaceMatch'
-  { _fmSimilarity :: !(Maybe Double)
-  , _fmFace       :: !(Maybe Face)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FaceMatch =
+  FaceMatch'
+    { _fmSimilarity :: !(Maybe Double)
+    , _fmFace       :: !(Maybe Face)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FaceMatch' with the minimum fields required to make a request.
@@ -1040,10 +1074,12 @@ instance NFData FaceMatch where
 --
 --
 -- /See:/ 'faceRecord' smart constructor.
-data FaceRecord = FaceRecord'
-  { _frFaceDetail :: !(Maybe FaceDetail)
-  , _frFace       :: !(Maybe Face)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FaceRecord =
+  FaceRecord'
+    { _frFaceDetail :: !(Maybe FaceDetail)
+    , _frFace       :: !(Maybe Face)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FaceRecord' with the minimum fields required to make a request.
@@ -1082,10 +1118,12 @@ instance NFData FaceRecord where
 --
 --
 -- /See:/ 'faceSearchSettings' smart constructor.
-data FaceSearchSettings = FaceSearchSettings'
-  { _fssFaceMatchThreshold :: !(Maybe Double)
-  , _fssCollectionId       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FaceSearchSettings =
+  FaceSearchSettings'
+    { _fssFaceMatchThreshold :: !(Maybe Double)
+    , _fssCollectionId       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FaceSearchSettings' with the minimum fields required to make a request.
@@ -1135,10 +1173,12 @@ instance ToJSON FaceSearchSettings where
 --
 --
 -- /See:/ 'gender' smart constructor.
-data Gender = Gender'
-  { _gValue      :: !(Maybe GenderType)
-  , _gConfidence :: !(Maybe Double)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Gender =
+  Gender'
+    { _gValue      :: !(Maybe GenderType)
+    , _gConfidence :: !(Maybe Double)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Gender' with the minimum fields required to make a request.
@@ -1176,10 +1216,12 @@ instance NFData Gender where
 --
 --
 -- /See:/ 'geometry' smart constructor.
-data Geometry = Geometry'
-  { _gBoundingBox :: !(Maybe BoundingBox)
-  , _gPolygon     :: !(Maybe [Point])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Geometry =
+  Geometry'
+    { _gBoundingBox :: !(Maybe BoundingBox)
+    , _gPolygon     :: !(Maybe [Point])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Geometry' with the minimum fields required to make a request.
@@ -1229,10 +1271,12 @@ instance NFData Geometry where
 --
 --
 -- /See:/ 'image' smart constructor.
-data Image = Image'
-  { _iS3Object :: !(Maybe S3Object)
-  , _iBytes    :: !(Maybe Base64)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Image =
+  Image'
+    { _iS3Object :: !(Maybe S3Object)
+    , _iBytes    :: !(Maybe Base64)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Image' with the minimum fields required to make a request.
@@ -1271,10 +1315,12 @@ instance ToJSON Image where
 --
 --
 -- /See:/ 'imageQuality' smart constructor.
-data ImageQuality = ImageQuality'
-  { _iqSharpness  :: !(Maybe Double)
-  , _iqBrightness :: !(Maybe Double)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ImageQuality =
+  ImageQuality'
+    { _iqSharpness  :: !(Maybe Double)
+    , _iqBrightness :: !(Maybe Double)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ImageQuality' with the minimum fields required to make a request.
@@ -1313,9 +1359,11 @@ instance NFData ImageQuality where
 --
 --
 -- /See:/ 'kinesisDataStream' smart constructor.
-newtype KinesisDataStream = KinesisDataStream'
-  { _kdsARN :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype KinesisDataStream =
+  KinesisDataStream'
+    { _kdsARN :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'KinesisDataStream' with the minimum fields required to make a request.
@@ -1350,9 +1398,11 @@ instance ToJSON KinesisDataStream where
 --
 --
 -- /See:/ 'kinesisVideoStream' smart constructor.
-newtype KinesisVideoStream = KinesisVideoStream'
-  { _kvsARN :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype KinesisVideoStream =
+  KinesisVideoStream'
+    { _kvsARN :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'KinesisVideoStream' with the minimum fields required to make a request.
@@ -1387,10 +1437,12 @@ instance ToJSON KinesisVideoStream where
 --
 --
 -- /See:/ 'label' smart constructor.
-data Label = Label'
-  { _lConfidence :: !(Maybe Double)
-  , _lName       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Label =
+  Label'
+    { _lConfidence :: !(Maybe Double)
+    , _lName       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Label' with the minimum fields required to make a request.
@@ -1428,10 +1480,12 @@ instance NFData Label where
 --
 --
 -- /See:/ 'labelDetection' smart constructor.
-data LabelDetection = LabelDetection'
-  { _ldLabel     :: !(Maybe Label)
-  , _ldTimestamp :: !(Maybe Integer)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LabelDetection =
+  LabelDetection'
+    { _ldLabel     :: !(Maybe Label)
+    , _ldTimestamp :: !(Maybe Integer)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LabelDetection' with the minimum fields required to make a request.
@@ -1470,11 +1524,13 @@ instance NFData LabelDetection where
 --
 --
 -- /See:/ 'landmark' smart constructor.
-data Landmark = Landmark'
-  { _lType :: !(Maybe LandmarkType)
-  , _lX    :: !(Maybe Double)
-  , _lY    :: !(Maybe Double)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Landmark =
+  Landmark'
+    { _lType :: !(Maybe LandmarkType)
+    , _lX    :: !(Maybe Double)
+    , _lY    :: !(Maybe Double)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Landmark' with the minimum fields required to make a request.
@@ -1519,11 +1575,13 @@ instance NFData Landmark where
 --
 --
 -- /See:/ 'moderationLabel' smart constructor.
-data ModerationLabel = ModerationLabel'
-  { _mlConfidence :: !(Maybe Double)
-  , _mlName       :: !(Maybe Text)
-  , _mlParentName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModerationLabel =
+  ModerationLabel'
+    { _mlConfidence :: !(Maybe Double)
+    , _mlName       :: !(Maybe Text)
+    , _mlParentName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModerationLabel' with the minimum fields required to make a request.
@@ -1571,10 +1629,12 @@ instance NFData ModerationLabel where
 --
 --
 -- /See:/ 'mouthOpen' smart constructor.
-data MouthOpen = MouthOpen'
-  { _moValue      :: !(Maybe Bool)
-  , _moConfidence :: !(Maybe Double)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MouthOpen =
+  MouthOpen'
+    { _moValue      :: !(Maybe Bool)
+    , _moConfidence :: !(Maybe Double)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MouthOpen' with the minimum fields required to make a request.
@@ -1613,10 +1673,12 @@ instance NFData MouthOpen where
 --
 --
 -- /See:/ 'mustache' smart constructor.
-data Mustache = Mustache'
-  { _mValue      :: !(Maybe Bool)
-  , _mConfidence :: !(Maybe Double)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Mustache =
+  Mustache'
+    { _mValue      :: !(Maybe Bool)
+    , _mConfidence :: !(Maybe Double)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Mustache' with the minimum fields required to make a request.
@@ -1655,10 +1717,12 @@ instance NFData Mustache where
 --
 --
 -- /See:/ 'notificationChannel' smart constructor.
-data NotificationChannel = NotificationChannel'
-  { _ncSNSTopicARN :: !Text
-  , _ncRoleARN     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NotificationChannel =
+  NotificationChannel'
+    { _ncSNSTopicARN :: !Text
+    , _ncRoleARN     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NotificationChannel' with the minimum fields required to make a request.
@@ -1700,11 +1764,13 @@ instance ToJSON NotificationChannel where
 --
 --
 -- /See:/ 'personDetail' smart constructor.
-data PersonDetail = PersonDetail'
-  { _pdBoundingBox :: !(Maybe BoundingBox)
-  , _pdIndex       :: !(Maybe Integer)
-  , _pdFace        :: !(Maybe FaceDetail)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PersonDetail =
+  PersonDetail'
+    { _pdBoundingBox :: !(Maybe BoundingBox)
+    , _pdIndex       :: !(Maybe Integer)
+    , _pdFace        :: !(Maybe FaceDetail)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PersonDetail' with the minimum fields required to make a request.
@@ -1752,10 +1818,12 @@ instance NFData PersonDetail where
 --
 --
 -- /See:/ 'personDetection' smart constructor.
-data PersonDetection = PersonDetection'
-  { _pdPerson    :: !(Maybe PersonDetail)
-  , _pdTimestamp :: !(Maybe Integer)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PersonDetection =
+  PersonDetection'
+    { _pdPerson    :: !(Maybe PersonDetail)
+    , _pdTimestamp :: !(Maybe Integer)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PersonDetection' with the minimum fields required to make a request.
@@ -1794,11 +1862,13 @@ instance NFData PersonDetection where
 --
 --
 -- /See:/ 'personMatch' smart constructor.
-data PersonMatch = PersonMatch'
-  { _pmFaceMatches :: !(Maybe [FaceMatch])
-  , _pmPerson      :: !(Maybe PersonDetail)
-  , _pmTimestamp   :: !(Maybe Integer)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PersonMatch =
+  PersonMatch'
+    { _pmFaceMatches :: !(Maybe [FaceMatch])
+    , _pmPerson      :: !(Maybe PersonDetail)
+    , _pmTimestamp   :: !(Maybe Integer)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PersonMatch' with the minimum fields required to make a request.
@@ -1848,10 +1918,12 @@ instance NFData PersonMatch where
 --
 --
 -- /See:/ 'point' smart constructor.
-data Point = Point'
-  { _pX :: !(Maybe Double)
-  , _pY :: !(Maybe Double)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Point =
+  Point'
+    { _pX :: !(Maybe Double)
+    , _pY :: !(Maybe Double)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Point' with the minimum fields required to make a request.
@@ -1888,11 +1960,13 @@ instance NFData Point where
 --
 --
 -- /See:/ 'pose' smart constructor.
-data Pose = Pose'
-  { _pYaw   :: !(Maybe Double)
-  , _pRoll  :: !(Maybe Double)
-  , _pPitch :: !(Maybe Double)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Pose =
+  Pose'
+    { _pYaw   :: !(Maybe Double)
+    , _pRoll  :: !(Maybe Double)
+    , _pPitch :: !(Maybe Double)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Pose' with the minimum fields required to make a request.
@@ -1941,11 +2015,13 @@ instance NFData Pose where
 --
 --
 -- /See:/ 's3Object' smart constructor.
-data S3Object = S3Object'
-  { _soBucket  :: !(Maybe Text)
-  , _soName    :: !(Maybe Text)
-  , _soVersion :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data S3Object =
+  S3Object'
+    { _soBucket  :: !(Maybe Text)
+    , _soName    :: !(Maybe Text)
+    , _soVersion :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'S3Object' with the minimum fields required to make a request.
@@ -1992,10 +2068,12 @@ instance ToJSON S3Object where
 --
 --
 -- /See:/ 'smile' smart constructor.
-data Smile = Smile'
-  { _smiValue      :: !(Maybe Bool)
-  , _smiConfidence :: !(Maybe Double)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Smile =
+  Smile'
+    { _smiValue      :: !(Maybe Bool)
+    , _smiConfidence :: !(Maybe Double)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Smile' with the minimum fields required to make a request.
@@ -2033,10 +2111,12 @@ instance NFData Smile where
 --
 --
 -- /See:/ 'streamProcessor' smart constructor.
-data StreamProcessor = StreamProcessor'
-  { _spStatus :: !(Maybe StreamProcessorStatus)
-  , _spName   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StreamProcessor =
+  StreamProcessor'
+    { _spStatus :: !(Maybe StreamProcessorStatus)
+    , _spName   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StreamProcessor' with the minimum fields required to make a request.
@@ -2075,9 +2155,11 @@ instance NFData StreamProcessor where
 --
 --
 -- /See:/ 'streamProcessorInput' smart constructor.
-newtype StreamProcessorInput = StreamProcessorInput'
-  { _spiKinesisVideoStream :: Maybe KinesisVideoStream
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StreamProcessorInput =
+  StreamProcessorInput'
+    { _spiKinesisVideoStream :: Maybe KinesisVideoStream
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StreamProcessorInput' with the minimum fields required to make a request.
@@ -2117,9 +2199,11 @@ instance ToJSON StreamProcessorInput where
 --
 --
 -- /See:/ 'streamProcessorOutput' smart constructor.
-newtype StreamProcessorOutput = StreamProcessorOutput'
-  { _spoKinesisDataStream :: Maybe KinesisDataStream
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StreamProcessorOutput =
+  StreamProcessorOutput'
+    { _spoKinesisDataStream :: Maybe KinesisDataStream
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StreamProcessorOutput' with the minimum fields required to make a request.
@@ -2158,9 +2242,11 @@ instance ToJSON StreamProcessorOutput where
 --
 --
 -- /See:/ 'streamProcessorSettings' smart constructor.
-newtype StreamProcessorSettings = StreamProcessorSettings'
-  { _spsFaceSearch :: Maybe FaceSearchSettings
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StreamProcessorSettings =
+  StreamProcessorSettings'
+    { _spsFaceSearch :: Maybe FaceSearchSettings
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StreamProcessorSettings' with the minimum fields required to make a request.
@@ -2197,10 +2283,12 @@ instance ToJSON StreamProcessorSettings where
 --
 --
 -- /See:/ 'sunglasses' smart constructor.
-data Sunglasses = Sunglasses'
-  { _sValue      :: !(Maybe Bool)
-  , _sConfidence :: !(Maybe Double)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Sunglasses =
+  Sunglasses'
+    { _sValue      :: !(Maybe Bool)
+    , _sConfidence :: !(Maybe Double)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Sunglasses' with the minimum fields required to make a request.
@@ -2245,14 +2333,16 @@ instance NFData Sunglasses where
 --
 --
 -- /See:/ 'textDetection' smart constructor.
-data TextDetection = TextDetection'
-  { _tdDetectedText :: !(Maybe Text)
-  , _tdConfidence   :: !(Maybe Double)
-  , _tdGeometry     :: !(Maybe Geometry)
-  , _tdId           :: !(Maybe Nat)
-  , _tdType         :: !(Maybe TextTypes)
-  , _tdParentId     :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TextDetection =
+  TextDetection'
+    { _tdDetectedText :: !(Maybe Text)
+    , _tdConfidence   :: !(Maybe Double)
+    , _tdGeometry     :: !(Maybe Geometry)
+    , _tdId           :: !(Maybe Nat)
+    , _tdType         :: !(Maybe TextTypes)
+    , _tdParentId     :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TextDetection' with the minimum fields required to make a request.
@@ -2327,9 +2417,11 @@ instance NFData TextDetection where
 --
 --
 -- /See:/ 'video' smart constructor.
-newtype Video = Video'
-  { _vS3Object :: Maybe S3Object
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype Video =
+  Video'
+    { _vS3Object :: Maybe S3Object
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Video' with the minimum fields required to make a request.
@@ -2359,14 +2451,16 @@ instance ToJSON Video where
 --
 --
 -- /See:/ 'videoMetadata' smart constructor.
-data VideoMetadata = VideoMetadata'
-  { _vmFrameRate      :: !(Maybe Double)
-  , _vmFormat         :: !(Maybe Text)
-  , _vmCodec          :: !(Maybe Text)
-  , _vmFrameHeight    :: !(Maybe Nat)
-  , _vmDurationMillis :: !(Maybe Nat)
-  , _vmFrameWidth     :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VideoMetadata =
+  VideoMetadata'
+    { _vmFrameRate      :: !(Maybe Double)
+    , _vmFormat         :: !(Maybe Text)
+    , _vmCodec          :: !(Maybe Text)
+    , _vmFrameHeight    :: !(Maybe Nat)
+    , _vmDurationMillis :: !(Maybe Nat)
+    , _vmFrameWidth     :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VideoMetadata' with the minimum fields required to make a request.

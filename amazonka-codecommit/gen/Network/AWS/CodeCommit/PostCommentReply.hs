@@ -47,11 +47,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'postCommentReply' smart constructor.
-data PostCommentReply = PostCommentReply'
-  { _pcrClientRequestToken :: !(Maybe Text)
-  , _pcrInReplyTo          :: !Text
-  , _pcrContent            :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PostCommentReply =
+  PostCommentReply'
+    { _pcrClientRequestToken :: !(Maybe Text)
+    , _pcrInReplyTo          :: !Text
+    , _pcrContent            :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PostCommentReply' with the minimum fields required to make a request.
@@ -126,10 +128,12 @@ instance ToQuery PostCommentReply where
         toQuery = const mempty
 
 -- | /See:/ 'postCommentReplyResponse' smart constructor.
-data PostCommentReplyResponse = PostCommentReplyResponse'
-  { _pcrrsComment        :: !(Maybe Comment)
-  , _pcrrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PostCommentReplyResponse =
+  PostCommentReplyResponse'
+    { _pcrrsComment        :: !(Maybe Comment)
+    , _pcrrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PostCommentReplyResponse' with the minimum fields required to make a request.

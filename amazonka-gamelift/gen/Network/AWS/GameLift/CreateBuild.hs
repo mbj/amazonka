@@ -82,12 +82,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createBuild' smart constructor.
-data CreateBuild = CreateBuild'
-  { _cbStorageLocation :: !(Maybe S3Location)
-  , _cbOperatingSystem :: !(Maybe OperatingSystem)
-  , _cbName            :: !(Maybe Text)
-  , _cbVersion         :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateBuild =
+  CreateBuild'
+    { _cbStorageLocation :: !(Maybe S3Location)
+    , _cbOperatingSystem :: !(Maybe OperatingSystem)
+    , _cbName            :: !(Maybe Text)
+    , _cbVersion         :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateBuild' with the minimum fields required to make a request.
@@ -173,12 +175,14 @@ instance ToQuery CreateBuild where
 --
 --
 -- /See:/ 'createBuildResponse' smart constructor.
-data CreateBuildResponse = CreateBuildResponse'
-  { _cbrsStorageLocation   :: !(Maybe S3Location)
-  , _cbrsUploadCredentials :: !(Maybe (Sensitive AWSCredentials))
-  , _cbrsBuild             :: !(Maybe Build)
-  , _cbrsResponseStatus    :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data CreateBuildResponse =
+  CreateBuildResponse'
+    { _cbrsStorageLocation   :: !(Maybe S3Location)
+    , _cbrsUploadCredentials :: !(Maybe (Sensitive AWSCredentials))
+    , _cbrsBuild             :: !(Maybe Build)
+    , _cbrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateBuildResponse' with the minimum fields required to make a request.

@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updatePullRequestStatus' smart constructor.
-data UpdatePullRequestStatus = UpdatePullRequestStatus'
-  { _uprsPullRequestId     :: !Text
-  , _uprsPullRequestStatus :: !PullRequestStatusEnum
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdatePullRequestStatus =
+  UpdatePullRequestStatus'
+    { _uprsPullRequestId     :: !Text
+    , _uprsPullRequestStatus :: !PullRequestStatusEnum
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdatePullRequestStatus' with the minimum fields required to make a request.
@@ -117,10 +119,12 @@ instance ToQuery UpdatePullRequestStatus where
         toQuery = const mempty
 
 -- | /See:/ 'updatePullRequestStatusResponse' smart constructor.
-data UpdatePullRequestStatusResponse = UpdatePullRequestStatusResponse'
-  { _uprsrsResponseStatus :: !Int
-  , _uprsrsPullRequest    :: !PullRequest
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdatePullRequestStatusResponse =
+  UpdatePullRequestStatusResponse'
+    { _uprsrsResponseStatus :: !Int
+    , _uprsrsPullRequest    :: !PullRequest
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdatePullRequestStatusResponse' with the minimum fields required to make a request.

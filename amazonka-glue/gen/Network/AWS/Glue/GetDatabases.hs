@@ -51,11 +51,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getDatabases' smart constructor.
-data GetDatabases = GetDatabases'
-  { _gdCatalogId  :: !(Maybe Text)
-  , _gdNextToken  :: !(Maybe Text)
-  , _gdMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDatabases =
+  GetDatabases'
+    { _gdCatalogId  :: !(Maybe Text)
+    , _gdNextToken  :: !(Maybe Text)
+    , _gdMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDatabases' with the minimum fields required to make a request.
@@ -131,11 +133,13 @@ instance ToQuery GetDatabases where
         toQuery = const mempty
 
 -- | /See:/ 'getDatabasesResponse' smart constructor.
-data GetDatabasesResponse = GetDatabasesResponse'
-  { _gdsrsNextToken      :: !(Maybe Text)
-  , _gdsrsResponseStatus :: !Int
-  , _gdsrsDatabaseList   :: ![Database]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDatabasesResponse =
+  GetDatabasesResponse'
+    { _gdsrsNextToken      :: !(Maybe Text)
+    , _gdsrsResponseStatus :: !Int
+    , _gdsrsDatabaseList   :: ![Database]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDatabasesResponse' with the minimum fields required to make a request.

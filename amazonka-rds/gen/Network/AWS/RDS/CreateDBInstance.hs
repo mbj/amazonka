@@ -90,50 +90,52 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createDBInstance' smart constructor.
-data CreateDBInstance = CreateDBInstance'
-  { _cdiEngineVersion                   :: !(Maybe Text)
-  , _cdiDBSecurityGroups                :: !(Maybe [Text])
-  , _cdiStorageEncrypted                :: !(Maybe Bool)
-  , _cdiDBClusterIdentifier             :: !(Maybe Text)
-  , _cdiMasterUserPassword              :: !(Maybe Text)
-  , _cdiPubliclyAccessible              :: !(Maybe Bool)
-  , _cdiAutoMinorVersionUpgrade         :: !(Maybe Bool)
-  , _cdiMasterUsername                  :: !(Maybe Text)
-  , _cdiDBSubnetGroupName               :: !(Maybe Text)
-  , _cdiMonitoringRoleARN               :: !(Maybe Text)
-  , _cdiIOPS                            :: !(Maybe Int)
-  , _cdiDomain                          :: !(Maybe Text)
-  , _cdiMonitoringInterval              :: !(Maybe Int)
-  , _cdiTDECredentialPassword           :: !(Maybe Text)
-  , _cdiPromotionTier                   :: !(Maybe Int)
-  , _cdiLicenseModel                    :: !(Maybe Text)
-  , _cdiPreferredMaintenanceWindow      :: !(Maybe Text)
-  , _cdiCharacterSetName                :: !(Maybe Text)
-  , _cdiEnablePerformanceInsights       :: !(Maybe Bool)
-  , _cdiKMSKeyId                        :: !(Maybe Text)
-  , _cdiDBParameterGroupName            :: !(Maybe Text)
-  , _cdiPreferredBackupWindow           :: !(Maybe Text)
-  , _cdiAvailabilityZone                :: !(Maybe Text)
-  , _cdiBackupRetentionPeriod           :: !(Maybe Int)
-  , _cdiPerformanceInsightsKMSKeyId     :: !(Maybe Text)
-  , _cdiVPCSecurityGroupIds             :: !(Maybe [Text])
-  , _cdiMultiAZ                         :: !(Maybe Bool)
-  , _cdiAllocatedStorage                :: !(Maybe Int)
-  , _cdiOptionGroupName                 :: !(Maybe Text)
-  , _cdiCopyTagsToSnapshot              :: !(Maybe Bool)
-  , _cdiTimezone                        :: !(Maybe Text)
-  , _cdiTDECredentialARN                :: !(Maybe Text)
-  , _cdiDomainIAMRoleName               :: !(Maybe Text)
-  , _cdiTags                            :: !(Maybe [Tag])
-  , _cdiPort                            :: !(Maybe Int)
-  , _cdiEnableIAMDatabaseAuthentication :: !(Maybe Bool)
-  , _cdiStorageType                     :: !(Maybe Text)
-  , _cdiEnableCloudwatchLogsExports     :: !(Maybe [Text])
-  , _cdiDBName                          :: !(Maybe Text)
-  , _cdiDBInstanceIdentifier            :: !Text
-  , _cdiDBInstanceClass                 :: !Text
-  , _cdiEngine                          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDBInstance =
+  CreateDBInstance'
+    { _cdiEngineVersion                   :: !(Maybe Text)
+    , _cdiDBSecurityGroups                :: !(Maybe [Text])
+    , _cdiStorageEncrypted                :: !(Maybe Bool)
+    , _cdiDBClusterIdentifier             :: !(Maybe Text)
+    , _cdiMasterUserPassword              :: !(Maybe Text)
+    , _cdiPubliclyAccessible              :: !(Maybe Bool)
+    , _cdiAutoMinorVersionUpgrade         :: !(Maybe Bool)
+    , _cdiMasterUsername                  :: !(Maybe Text)
+    , _cdiDBSubnetGroupName               :: !(Maybe Text)
+    , _cdiMonitoringRoleARN               :: !(Maybe Text)
+    , _cdiIOPS                            :: !(Maybe Int)
+    , _cdiDomain                          :: !(Maybe Text)
+    , _cdiMonitoringInterval              :: !(Maybe Int)
+    , _cdiTDECredentialPassword           :: !(Maybe Text)
+    , _cdiPromotionTier                   :: !(Maybe Int)
+    , _cdiLicenseModel                    :: !(Maybe Text)
+    , _cdiPreferredMaintenanceWindow      :: !(Maybe Text)
+    , _cdiCharacterSetName                :: !(Maybe Text)
+    , _cdiEnablePerformanceInsights       :: !(Maybe Bool)
+    , _cdiKMSKeyId                        :: !(Maybe Text)
+    , _cdiDBParameterGroupName            :: !(Maybe Text)
+    , _cdiPreferredBackupWindow           :: !(Maybe Text)
+    , _cdiAvailabilityZone                :: !(Maybe Text)
+    , _cdiBackupRetentionPeriod           :: !(Maybe Int)
+    , _cdiPerformanceInsightsKMSKeyId     :: !(Maybe Text)
+    , _cdiVPCSecurityGroupIds             :: !(Maybe [Text])
+    , _cdiMultiAZ                         :: !(Maybe Bool)
+    , _cdiAllocatedStorage                :: !(Maybe Int)
+    , _cdiOptionGroupName                 :: !(Maybe Text)
+    , _cdiCopyTagsToSnapshot              :: !(Maybe Bool)
+    , _cdiTimezone                        :: !(Maybe Text)
+    , _cdiTDECredentialARN                :: !(Maybe Text)
+    , _cdiDomainIAMRoleName               :: !(Maybe Text)
+    , _cdiTags                            :: !(Maybe [Tag])
+    , _cdiPort                            :: !(Maybe Int)
+    , _cdiEnableIAMDatabaseAuthentication :: !(Maybe Bool)
+    , _cdiStorageType                     :: !(Maybe Text)
+    , _cdiEnableCloudwatchLogsExports     :: !(Maybe [Text])
+    , _cdiDBName                          :: !(Maybe Text)
+    , _cdiDBInstanceIdentifier            :: !Text
+    , _cdiDBInstanceClass                 :: !Text
+    , _cdiEngine                          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDBInstance' with the minimum fields required to make a request.
@@ -524,10 +526,12 @@ instance ToQuery CreateDBInstance where
                "Engine" =: _cdiEngine]
 
 -- | /See:/ 'createDBInstanceResponse' smart constructor.
-data CreateDBInstanceResponse = CreateDBInstanceResponse'
-  { _cdirsDBInstance     :: !(Maybe DBInstance)
-  , _cdirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDBInstanceResponse =
+  CreateDBInstanceResponse'
+    { _cdirsDBInstance     :: !(Maybe DBInstance)
+    , _cdirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDBInstanceResponse' with the minimum fields required to make a request.

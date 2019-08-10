@@ -64,12 +64,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateGameSessionQueue' smart constructor.
-data UpdateGameSessionQueue = UpdateGameSessionQueue'
-  { _ugsqPlayerLatencyPolicies :: !(Maybe [PlayerLatencyPolicy])
-  , _ugsqTimeoutInSeconds      :: !(Maybe Nat)
-  , _ugsqDestinations          :: !(Maybe [GameSessionQueueDestination])
-  , _ugsqName                  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateGameSessionQueue =
+  UpdateGameSessionQueue'
+    { _ugsqPlayerLatencyPolicies :: !(Maybe [PlayerLatencyPolicy])
+    , _ugsqTimeoutInSeconds      :: !(Maybe Nat)
+    , _ugsqDestinations          :: !(Maybe [GameSessionQueueDestination])
+    , _ugsqName                  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateGameSessionQueue' with the minimum fields required to make a request.
@@ -155,10 +157,12 @@ instance ToQuery UpdateGameSessionQueue where
 --
 --
 -- /See:/ 'updateGameSessionQueueResponse' smart constructor.
-data UpdateGameSessionQueueResponse = UpdateGameSessionQueueResponse'
-  { _ugsqrsGameSessionQueue :: !(Maybe GameSessionQueue)
-  , _ugsqrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateGameSessionQueueResponse =
+  UpdateGameSessionQueueResponse'
+    { _ugsqrsGameSessionQueue :: !(Maybe GameSessionQueue)
+    , _ugsqrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateGameSessionQueueResponse' with the minimum fields required to make a request.

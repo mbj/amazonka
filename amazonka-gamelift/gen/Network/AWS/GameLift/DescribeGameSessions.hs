@@ -85,14 +85,16 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeGameSessions' smart constructor.
-data DescribeGameSessions = DescribeGameSessions'
-  { _dgsGameSessionId :: !(Maybe Text)
-  , _dgsAliasId       :: !(Maybe Text)
-  , _dgsNextToken     :: !(Maybe Text)
-  , _dgsStatusFilter  :: !(Maybe Text)
-  , _dgsLimit         :: !(Maybe Nat)
-  , _dgsFleetId       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeGameSessions =
+  DescribeGameSessions'
+    { _dgsGameSessionId :: !(Maybe Text)
+    , _dgsAliasId       :: !(Maybe Text)
+    , _dgsNextToken     :: !(Maybe Text)
+    , _dgsStatusFilter  :: !(Maybe Text)
+    , _dgsLimit         :: !(Maybe Nat)
+    , _dgsFleetId       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeGameSessions' with the minimum fields required to make a request.
@@ -194,11 +196,13 @@ instance ToQuery DescribeGameSessions where
 --
 --
 -- /See:/ 'describeGameSessionsResponse' smart constructor.
-data DescribeGameSessionsResponse = DescribeGameSessionsResponse'
-  { _dgsrsGameSessions   :: !(Maybe [GameSession])
-  , _dgsrsNextToken      :: !(Maybe Text)
-  , _dgsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeGameSessionsResponse =
+  DescribeGameSessionsResponse'
+    { _dgsrsGameSessions   :: !(Maybe [GameSession])
+    , _dgsrsNextToken      :: !(Maybe Text)
+    , _dgsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeGameSessionsResponse' with the minimum fields required to make a request.

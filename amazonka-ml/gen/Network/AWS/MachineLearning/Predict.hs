@@ -47,11 +47,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'predict' smart constructor.
-data Predict = Predict'
-  { _pMLModelId       :: !Text
-  , _pRecord          :: !(Map Text Text)
-  , _pPredictEndpoint :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Predict =
+  Predict'
+    { _pMLModelId       :: !Text
+    , _pRecord          :: !(Map Text Text)
+    , _pPredictEndpoint :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Predict' with the minimum fields required to make a request.
@@ -124,10 +126,12 @@ instance ToQuery Predict where
         toQuery = const mempty
 
 -- | /See:/ 'predictResponse' smart constructor.
-data PredictResponse = PredictResponse'
-  { _prsPrediction     :: !(Maybe Prediction)
-  , _prsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PredictResponse =
+  PredictResponse'
+    { _prsPrediction     :: !(Maybe Prediction)
+    , _prsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PredictResponse' with the minimum fields required to make a request.

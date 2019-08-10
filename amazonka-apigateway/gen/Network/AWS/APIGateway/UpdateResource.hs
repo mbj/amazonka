@@ -54,11 +54,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateResource' smart constructor.
-data UpdateResource = UpdateResource'
-  { _urPatchOperations :: !(Maybe [PatchOperation])
-  , _urRestAPIId       :: !Text
-  , _urResourceId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateResource =
+  UpdateResource'
+    { _urPatchOperations :: !(Maybe [PatchOperation])
+    , _urRestAPIId       :: !Text
+    , _urResourceId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateResource' with the minimum fields required to make a request.

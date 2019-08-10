@@ -51,11 +51,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeElasticsearchInstanceTypeLimits' smart constructor.
-data DescribeElasticsearchInstanceTypeLimits = DescribeElasticsearchInstanceTypeLimits'
-  { _deitlDomainName           :: !(Maybe Text)
-  , _deitlInstanceType         :: !ESPartitionInstanceType
-  , _deitlElasticsearchVersion :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeElasticsearchInstanceTypeLimits =
+  DescribeElasticsearchInstanceTypeLimits'
+    { _deitlDomainName           :: !(Maybe Text)
+    , _deitlInstanceType         :: !ESPartitionInstanceType
+    , _deitlElasticsearchVersion :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeElasticsearchInstanceTypeLimits' with the minimum fields required to make a request.
@@ -137,10 +139,12 @@ instance ToQuery
 --
 --
 -- /See:/ 'describeElasticsearchInstanceTypeLimitsResponse' smart constructor.
-data DescribeElasticsearchInstanceTypeLimitsResponse = DescribeElasticsearchInstanceTypeLimitsResponse'
-  { _deitlrsLimitsByRole   :: !(Maybe (Map Text Limits))
-  , _deitlrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeElasticsearchInstanceTypeLimitsResponse =
+  DescribeElasticsearchInstanceTypeLimitsResponse'
+    { _deitlrsLimitsByRole   :: !(Maybe (Map Text Limits))
+    , _deitlrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeElasticsearchInstanceTypeLimitsResponse' with the minimum fields required to make a request.

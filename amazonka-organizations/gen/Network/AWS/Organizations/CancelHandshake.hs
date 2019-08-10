@@ -49,9 +49,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'cancelHandshake' smart constructor.
-newtype CancelHandshake = CancelHandshake'
-  { _chHandshakeId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CancelHandshake =
+  CancelHandshake'
+    { _chHandshakeId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CancelHandshake' with the minimum fields required to make a request.
@@ -105,10 +107,12 @@ instance ToQuery CancelHandshake where
         toQuery = const mempty
 
 -- | /See:/ 'cancelHandshakeResponse' smart constructor.
-data CancelHandshakeResponse = CancelHandshakeResponse'
-  { _chrsHandshake      :: !(Maybe Handshake)
-  , _chrsResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data CancelHandshakeResponse =
+  CancelHandshakeResponse'
+    { _chrsHandshake      :: !(Maybe Handshake)
+    , _chrsResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CancelHandshakeResponse' with the minimum fields required to make a request.

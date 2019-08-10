@@ -60,11 +60,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'addApplicationOutput' smart constructor.
-data AddApplicationOutput = AddApplicationOutput'
-  { _aaoApplicationName             :: !Text
-  , _aaoCurrentApplicationVersionId :: !Nat
-  , _aaoOutput                      :: !Output
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddApplicationOutput =
+  AddApplicationOutput'
+    { _aaoApplicationName             :: !Text
+    , _aaoCurrentApplicationVersionId :: !Nat
+    , _aaoOutput                      :: !Output
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddApplicationOutput' with the minimum fields required to make a request.
@@ -146,9 +148,11 @@ instance ToQuery AddApplicationOutput where
 --
 --
 -- /See:/ 'addApplicationOutputResponse' smart constructor.
-newtype AddApplicationOutputResponse = AddApplicationOutputResponse'
-  { _aaorsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AddApplicationOutputResponse =
+  AddApplicationOutputResponse'
+    { _aaorsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddApplicationOutputResponse' with the minimum fields required to make a request.

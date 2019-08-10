@@ -53,11 +53,13 @@ import Network.AWS.SNS.Types.Product
 --
 --
 -- /See:/ 'createPlatformApplication' smart constructor.
-data CreatePlatformApplication = CreatePlatformApplication'
-  { _cpaName       :: !Text
-  , _cpaPlatform   :: !Text
-  , _cpaAttributes :: !(Map Text Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreatePlatformApplication =
+  CreatePlatformApplication'
+    { _cpaName       :: !Text
+    , _cpaPlatform   :: !Text
+    , _cpaAttributes :: !(Map Text Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreatePlatformApplication' with the minimum fields required to make a request.
@@ -126,10 +128,12 @@ instance ToQuery CreatePlatformApplication where
 --
 --
 -- /See:/ 'createPlatformApplicationResponse' smart constructor.
-data CreatePlatformApplicationResponse = CreatePlatformApplicationResponse'
-  { _cparsPlatformApplicationARN :: !(Maybe Text)
-  , _cparsResponseStatus         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreatePlatformApplicationResponse =
+  CreatePlatformApplicationResponse'
+    { _cparsPlatformApplicationARN :: !(Maybe Text)
+    , _cparsResponseStatus         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreatePlatformApplicationResponse' with the minimum fields required to make a request.

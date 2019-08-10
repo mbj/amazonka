@@ -54,11 +54,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'applyEnvironmentManagedAction' smart constructor.
-data ApplyEnvironmentManagedAction = ApplyEnvironmentManagedAction'
-  { _aemaEnvironmentName :: !(Maybe Text)
-  , _aemaEnvironmentId   :: !(Maybe Text)
-  , _aemaActionId        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ApplyEnvironmentManagedAction =
+  ApplyEnvironmentManagedAction'
+    { _aemaEnvironmentName :: !(Maybe Text)
+    , _aemaEnvironmentId   :: !(Maybe Text)
+    , _aemaActionId        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ApplyEnvironmentManagedAction' with the minimum fields required to make a request.
@@ -134,13 +136,15 @@ instance ToQuery ApplyEnvironmentManagedAction where
 --
 --
 -- /See:/ 'applyEnvironmentManagedActionResponse' smart constructor.
-data ApplyEnvironmentManagedActionResponse = ApplyEnvironmentManagedActionResponse'
-  { _aemarsStatus            :: !(Maybe Text)
-  , _aemarsActionId          :: !(Maybe Text)
-  , _aemarsActionDescription :: !(Maybe Text)
-  , _aemarsActionType        :: !(Maybe ActionType)
-  , _aemarsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ApplyEnvironmentManagedActionResponse =
+  ApplyEnvironmentManagedActionResponse'
+    { _aemarsStatus            :: !(Maybe Text)
+    , _aemarsActionId          :: !(Maybe Text)
+    , _aemarsActionDescription :: !(Maybe Text)
+    , _aemarsActionType        :: !(Maybe ActionType)
+    , _aemarsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ApplyEnvironmentManagedActionResponse' with the minimum fields required to make a request.

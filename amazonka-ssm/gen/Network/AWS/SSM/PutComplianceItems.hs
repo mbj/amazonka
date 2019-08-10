@@ -83,14 +83,16 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'putComplianceItems' smart constructor.
-data PutComplianceItems = PutComplianceItems'
-  { _pciItemContentHash  :: !(Maybe Text)
-  , _pciResourceId       :: !Text
-  , _pciResourceType     :: !Text
-  , _pciComplianceType   :: !Text
-  , _pciExecutionSummary :: !ComplianceExecutionSummary
-  , _pciItems            :: ![ComplianceItemEntry]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutComplianceItems =
+  PutComplianceItems'
+    { _pciItemContentHash  :: !(Maybe Text)
+    , _pciResourceId       :: !Text
+    , _pciResourceType     :: !Text
+    , _pciComplianceType   :: !Text
+    , _pciExecutionSummary :: !ComplianceExecutionSummary
+    , _pciItems            :: ![ComplianceItemEntry]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutComplianceItems' with the minimum fields required to make a request.
@@ -189,9 +191,11 @@ instance ToQuery PutComplianceItems where
         toQuery = const mempty
 
 -- | /See:/ 'putComplianceItemsResponse' smart constructor.
-newtype PutComplianceItemsResponse = PutComplianceItemsResponse'
-  { _pcirsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype PutComplianceItemsResponse =
+  PutComplianceItemsResponse'
+    { _pcirsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutComplianceItemsResponse' with the minimum fields required to make a request.

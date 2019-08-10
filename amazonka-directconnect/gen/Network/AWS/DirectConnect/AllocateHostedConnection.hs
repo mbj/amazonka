@@ -65,13 +65,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'allocateHostedConnection' smart constructor.
-data AllocateHostedConnection = AllocateHostedConnection'
-  { _ahcConnectionId   :: !Text
-  , _ahcOwnerAccount   :: !Text
-  , _ahcBandwidth      :: !Text
-  , _ahcConnectionName :: !Text
-  , _ahcVlan           :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AllocateHostedConnection =
+  AllocateHostedConnection'
+    { _ahcConnectionId   :: !Text
+    , _ahcOwnerAccount   :: !Text
+    , _ahcBandwidth      :: !Text
+    , _ahcConnectionName :: !Text
+    , _ahcVlan           :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AllocateHostedConnection' with the minimum fields required to make a request.

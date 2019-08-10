@@ -47,10 +47,12 @@ import Network.AWS.SNS.Types.Product
 --
 --
 -- /See:/ 'removePermission' smart constructor.
-data RemovePermission = RemovePermission'
-  { _rpTopicARN :: !Text
-  , _rpLabel    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RemovePermission =
+  RemovePermission'
+    { _rpTopicARN :: !Text
+    , _rpLabel    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RemovePermission' with the minimum fields required to make a request.

@@ -50,12 +50,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createLoadBalancerTLSCertificate' smart constructor.
-data CreateLoadBalancerTLSCertificate = CreateLoadBalancerTLSCertificate'
-  { _clbtcCertificateAlternativeNames :: !(Maybe [Text])
-  , _clbtcLoadBalancerName            :: !Text
-  , _clbtcCertificateName             :: !Text
-  , _clbtcCertificateDomainName       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateLoadBalancerTLSCertificate =
+  CreateLoadBalancerTLSCertificate'
+    { _clbtcCertificateAlternativeNames :: !(Maybe [Text])
+    , _clbtcLoadBalancerName            :: !Text
+    , _clbtcCertificateName             :: !Text
+    , _clbtcCertificateDomainName       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateLoadBalancerTLSCertificate' with the minimum fields required to make a request.
@@ -150,10 +152,12 @@ instance ToQuery CreateLoadBalancerTLSCertificate
         toQuery = const mempty
 
 -- | /See:/ 'createLoadBalancerTLSCertificateResponse' smart constructor.
-data CreateLoadBalancerTLSCertificateResponse = CreateLoadBalancerTLSCertificateResponse'
-  { _clbtcrsOperations     :: !(Maybe [Operation])
-  , _clbtcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateLoadBalancerTLSCertificateResponse =
+  CreateLoadBalancerTLSCertificateResponse'
+    { _clbtcrsOperations     :: !(Maybe [Operation])
+    , _clbtcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateLoadBalancerTLSCertificateResponse' with the minimum fields required to make a request.

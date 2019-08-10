@@ -43,10 +43,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'addUserToGroup' smart constructor.
-data AddUserToGroup = AddUserToGroup'
-  { _autgGroupName :: !Text
-  , _autgUserName  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddUserToGroup =
+  AddUserToGroup'
+    { _autgGroupName :: !Text
+    , _autgUserName  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddUserToGroup' with the minimum fields required to make a request.

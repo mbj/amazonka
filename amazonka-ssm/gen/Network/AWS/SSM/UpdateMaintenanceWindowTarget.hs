@@ -70,15 +70,17 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'updateMaintenanceWindowTarget' smart constructor.
-data UpdateMaintenanceWindowTarget = UpdateMaintenanceWindowTarget'
-  { _uReplace          :: !(Maybe Bool)
-  , _uOwnerInformation :: !(Maybe (Sensitive Text))
-  , _uName             :: !(Maybe Text)
-  , _uTargets          :: !(Maybe [Target])
-  , _uDescription      :: !(Maybe (Sensitive Text))
-  , _uWindowId         :: !Text
-  , _uWindowTargetId   :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data UpdateMaintenanceWindowTarget =
+  UpdateMaintenanceWindowTarget'
+    { _uReplace          :: !(Maybe Bool)
+    , _uOwnerInformation :: !(Maybe (Sensitive Text))
+    , _uName             :: !(Maybe Text)
+    , _uTargets          :: !(Maybe [Target])
+    , _uDescription      :: !(Maybe (Sensitive Text))
+    , _uWindowId         :: !Text
+    , _uWindowTargetId   :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateMaintenanceWindowTarget' with the minimum fields required to make a request.
@@ -192,15 +194,17 @@ instance ToQuery UpdateMaintenanceWindowTarget where
         toQuery = const mempty
 
 -- | /See:/ 'updateMaintenanceWindowTargetResponse' smart constructor.
-data UpdateMaintenanceWindowTargetResponse = UpdateMaintenanceWindowTargetResponse'
-  { _ursOwnerInformation :: !(Maybe (Sensitive Text))
-  , _ursWindowTargetId   :: !(Maybe Text)
-  , _ursName             :: !(Maybe Text)
-  , _ursTargets          :: !(Maybe [Target])
-  , _ursDescription      :: !(Maybe (Sensitive Text))
-  , _ursWindowId         :: !(Maybe Text)
-  , _ursResponseStatus   :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data UpdateMaintenanceWindowTargetResponse =
+  UpdateMaintenanceWindowTargetResponse'
+    { _ursOwnerInformation :: !(Maybe (Sensitive Text))
+    , _ursWindowTargetId   :: !(Maybe Text)
+    , _ursName             :: !(Maybe Text)
+    , _ursTargets          :: !(Maybe [Target])
+    , _ursDescription      :: !(Maybe (Sensitive Text))
+    , _ursWindowId         :: !(Maybe Text)
+    , _ursResponseStatus   :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateMaintenanceWindowTargetResponse' with the minimum fields required to make a request.

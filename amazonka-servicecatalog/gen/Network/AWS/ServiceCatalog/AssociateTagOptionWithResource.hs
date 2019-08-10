@@ -45,10 +45,12 @@ import Network.AWS.ServiceCatalog.Types
 import Network.AWS.ServiceCatalog.Types.Product
 
 -- | /See:/ 'associateTagOptionWithResource' smart constructor.
-data AssociateTagOptionWithResource = AssociateTagOptionWithResource'
-  { _atowrResourceId  :: !Text
-  , _atowrTagOptionId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssociateTagOptionWithResource =
+  AssociateTagOptionWithResource'
+    { _atowrResourceId  :: !Text
+    , _atowrTagOptionId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateTagOptionWithResource' with the minimum fields required to make a request.
@@ -116,9 +118,11 @@ instance ToQuery AssociateTagOptionWithResource where
         toQuery = const mempty
 
 -- | /See:/ 'associateTagOptionWithResourceResponse' smart constructor.
-newtype AssociateTagOptionWithResourceResponse = AssociateTagOptionWithResourceResponse'
-  { _atowrrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AssociateTagOptionWithResourceResponse =
+  AssociateTagOptionWithResourceResponse'
+    { _atowrrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateTagOptionWithResourceResponse' with the minimum fields required to make a request.

@@ -49,9 +49,11 @@ import Network.AWS.Support.Types.Product
 --
 --
 -- /See:/ 'describeTrustedAdvisorCheckRefreshStatuses' smart constructor.
-newtype DescribeTrustedAdvisorCheckRefreshStatuses = DescribeTrustedAdvisorCheckRefreshStatuses'
-  { _dtacrsCheckIds :: [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeTrustedAdvisorCheckRefreshStatuses =
+  DescribeTrustedAdvisorCheckRefreshStatuses'
+    { _dtacrsCheckIds :: [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeTrustedAdvisorCheckRefreshStatuses' with the minimum fields required to make a request.
@@ -126,10 +128,12 @@ instance ToQuery
 --
 --
 -- /See:/ 'describeTrustedAdvisorCheckRefreshStatusesResponse' smart constructor.
-data DescribeTrustedAdvisorCheckRefreshStatusesResponse = DescribeTrustedAdvisorCheckRefreshStatusesResponse'
-  { _dtacrsrsResponseStatus :: !Int
-  , _dtacrsrsStatuses       :: ![TrustedAdvisorCheckRefreshStatus]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeTrustedAdvisorCheckRefreshStatusesResponse =
+  DescribeTrustedAdvisorCheckRefreshStatusesResponse'
+    { _dtacrsrsResponseStatus :: !Int
+    , _dtacrsrsStatuses       :: ![TrustedAdvisorCheckRefreshStatus]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeTrustedAdvisorCheckRefreshStatusesResponse' with the minimum fields required to make a request.

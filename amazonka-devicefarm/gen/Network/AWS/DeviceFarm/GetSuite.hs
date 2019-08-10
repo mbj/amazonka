@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getSuite' smart constructor.
-newtype GetSuite = GetSuite'
-  { _gsArn :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetSuite =
+  GetSuite'
+    { _gsArn :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetSuite' with the minimum fields required to make a request.
@@ -106,10 +108,12 @@ instance ToQuery GetSuite where
 --
 --
 -- /See:/ 'getSuiteResponse' smart constructor.
-data GetSuiteResponse = GetSuiteResponse'
-  { _gsrsSuite          :: !(Maybe Suite)
-  , _gsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetSuiteResponse =
+  GetSuiteResponse'
+    { _gsrsSuite          :: !(Maybe Suite)
+    , _gsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetSuiteResponse' with the minimum fields required to make a request.

@@ -50,9 +50,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteFileSystem' smart constructor.
-newtype DeleteFileSystem = DeleteFileSystem'
-  { _delFileSystemId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteFileSystem =
+  DeleteFileSystem'
+    { _delFileSystemId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteFileSystem' with the minimum fields required to make a request.

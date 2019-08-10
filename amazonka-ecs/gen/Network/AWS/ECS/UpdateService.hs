@@ -89,17 +89,19 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateService' smart constructor.
-data UpdateService = UpdateService'
-  { _usCluster                       :: !(Maybe Text)
-  , _usPlatformVersion               :: !(Maybe Text)
-  , _usDesiredCount                  :: !(Maybe Int)
-  , _usForceNewDeployment            :: !(Maybe Bool)
-  , _usTaskDefinition                :: !(Maybe Text)
-  , _usHealthCheckGracePeriodSeconds :: !(Maybe Int)
-  , _usNetworkConfiguration          :: !(Maybe NetworkConfiguration)
-  , _usDeploymentConfiguration       :: !(Maybe DeploymentConfiguration)
-  , _usService                       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateService =
+  UpdateService'
+    { _usCluster                       :: !(Maybe Text)
+    , _usPlatformVersion               :: !(Maybe Text)
+    , _usDesiredCount                  :: !(Maybe Int)
+    , _usForceNewDeployment            :: !(Maybe Bool)
+    , _usTaskDefinition                :: !(Maybe Text)
+    , _usHealthCheckGracePeriodSeconds :: !(Maybe Int)
+    , _usNetworkConfiguration          :: !(Maybe NetworkConfiguration)
+    , _usDeploymentConfiguration       :: !(Maybe DeploymentConfiguration)
+    , _usService                       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateService' with the minimum fields required to make a request.
@@ -223,10 +225,12 @@ instance ToQuery UpdateService where
         toQuery = const mempty
 
 -- | /See:/ 'updateServiceResponse' smart constructor.
-data UpdateServiceResponse = UpdateServiceResponse'
-  { _usrsService        :: !(Maybe ContainerService)
-  , _usrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateServiceResponse =
+  UpdateServiceResponse'
+    { _usrsService        :: !(Maybe ContainerService)
+    , _usrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateServiceResponse' with the minimum fields required to make a request.

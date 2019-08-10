@@ -48,9 +48,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeHostedConnections' smart constructor.
-newtype DescribeHostedConnections = DescribeHostedConnections'
-  { _dhcConnectionId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeHostedConnections =
+  DescribeHostedConnections'
+    { _dhcConnectionId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeHostedConnections' with the minimum fields required to make a request.

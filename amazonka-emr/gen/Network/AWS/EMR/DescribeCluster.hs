@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeCluster' smart constructor.
-newtype DescribeCluster = DescribeCluster'
-  { _dcClusterId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeCluster =
+  DescribeCluster'
+    { _dcClusterId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeCluster' with the minimum fields required to make a request.
@@ -107,10 +109,12 @@ instance ToQuery DescribeCluster where
 --
 --
 -- /See:/ 'describeClusterResponse' smart constructor.
-data DescribeClusterResponse = DescribeClusterResponse'
-  { _dcrsResponseStatus :: !Int
-  , _dcrsCluster        :: !Cluster
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeClusterResponse =
+  DescribeClusterResponse'
+    { _dcrsResponseStatus :: !Int
+    , _dcrsCluster        :: !Cluster
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeClusterResponse' with the minimum fields required to make a request.

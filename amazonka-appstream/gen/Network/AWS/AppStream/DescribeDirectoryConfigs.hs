@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeDirectoryConfigs' smart constructor.
-data DescribeDirectoryConfigs = DescribeDirectoryConfigs'
-  { _ddcNextToken      :: !(Maybe Text)
-  , _ddcDirectoryNames :: !(Maybe [Text])
-  , _ddcMaxResults     :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDirectoryConfigs =
+  DescribeDirectoryConfigs'
+    { _ddcNextToken      :: !(Maybe Text)
+    , _ddcDirectoryNames :: !(Maybe [Text])
+    , _ddcMaxResults     :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDirectoryConfigs' with the minimum fields required to make a request.
@@ -127,11 +129,13 @@ instance ToQuery DescribeDirectoryConfigs where
         toQuery = const mempty
 
 -- | /See:/ 'describeDirectoryConfigsResponse' smart constructor.
-data DescribeDirectoryConfigsResponse = DescribeDirectoryConfigsResponse'
-  { _ddcrsNextToken        :: !(Maybe Text)
-  , _ddcrsDirectoryConfigs :: !(Maybe [DirectoryConfig])
-  , _ddcrsResponseStatus   :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data DescribeDirectoryConfigsResponse =
+  DescribeDirectoryConfigsResponse'
+    { _ddcrsNextToken        :: !(Maybe Text)
+    , _ddcrsDirectoryConfigs :: !(Maybe [DirectoryConfig])
+    , _ddcrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDirectoryConfigsResponse' with the minimum fields required to make a request.

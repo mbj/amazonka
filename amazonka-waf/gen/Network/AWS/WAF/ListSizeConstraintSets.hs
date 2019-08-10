@@ -50,10 +50,12 @@ import Network.AWS.WAF.Types
 import Network.AWS.WAF.Types.Product
 
 -- | /See:/ 'listSizeConstraintSets' smart constructor.
-data ListSizeConstraintSets = ListSizeConstraintSets'
-  { _lscsNextMarker :: !(Maybe Text)
-  , _lscsLimit      :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListSizeConstraintSets =
+  ListSizeConstraintSets'
+    { _lscsNextMarker :: !(Maybe Text)
+    , _lscsLimit      :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListSizeConstraintSets' with the minimum fields required to make a request.
@@ -124,11 +126,13 @@ instance ToQuery ListSizeConstraintSets where
         toQuery = const mempty
 
 -- | /See:/ 'listSizeConstraintSetsResponse' smart constructor.
-data ListSizeConstraintSetsResponse = ListSizeConstraintSetsResponse'
-  { _lscsrsSizeConstraintSets :: !(Maybe [SizeConstraintSetSummary])
-  , _lscsrsNextMarker         :: !(Maybe Text)
-  , _lscsrsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListSizeConstraintSetsResponse =
+  ListSizeConstraintSetsResponse'
+    { _lscsrsSizeConstraintSets :: !(Maybe [SizeConstraintSetSummary])
+    , _lscsrsNextMarker         :: !(Maybe Text)
+    , _lscsrsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListSizeConstraintSetsResponse' with the minimum fields required to make a request.

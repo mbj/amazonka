@@ -52,10 +52,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'pollForThirdPartyJobs' smart constructor.
-data PollForThirdPartyJobs = PollForThirdPartyJobs'
-  { _pftpjMaxBatchSize :: !(Maybe Nat)
-  , _pftpjActionTypeId :: !ActionTypeId
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PollForThirdPartyJobs =
+  PollForThirdPartyJobs'
+    { _pftpjMaxBatchSize :: !(Maybe Nat)
+    , _pftpjActionTypeId :: !ActionTypeId
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PollForThirdPartyJobs' with the minimum fields required to make a request.
@@ -123,10 +125,12 @@ instance ToQuery PollForThirdPartyJobs where
 --
 --
 -- /See:/ 'pollForThirdPartyJobsResponse' smart constructor.
-data PollForThirdPartyJobsResponse = PollForThirdPartyJobsResponse'
-  { _pftpjrsJobs           :: !(Maybe [ThirdPartyJob])
-  , _pftpjrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PollForThirdPartyJobsResponse =
+  PollForThirdPartyJobsResponse'
+    { _pftpjrsJobs           :: !(Maybe [ThirdPartyJob])
+    , _pftpjrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PollForThirdPartyJobsResponse' with the minimum fields required to make a request.

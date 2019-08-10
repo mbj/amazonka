@@ -52,12 +52,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeRepositories' smart constructor.
-data DescribeRepositories = DescribeRepositories'
-  { _drRegistryId      :: !(Maybe Text)
-  , _drRepositoryNames :: !(Maybe (List1 Text))
-  , _drNextToken       :: !(Maybe Text)
-  , _drMaxResults      :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeRepositories =
+  DescribeRepositories'
+    { _drRegistryId      :: !(Maybe Text)
+    , _drRepositoryNames :: !(Maybe (List1 Text))
+    , _drNextToken       :: !(Maybe Text)
+    , _drMaxResults      :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeRepositories' with the minimum fields required to make a request.
@@ -147,11 +149,13 @@ instance ToQuery DescribeRepositories where
         toQuery = const mempty
 
 -- | /See:/ 'describeRepositoriesResponse' smart constructor.
-data DescribeRepositoriesResponse = DescribeRepositoriesResponse'
-  { _drrsRepositories   :: !(Maybe [Repository])
-  , _drrsNextToken      :: !(Maybe Text)
-  , _drrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeRepositoriesResponse =
+  DescribeRepositoriesResponse'
+    { _drrsRepositories   :: !(Maybe [Repository])
+    , _drrsNextToken      :: !(Maybe Text)
+    , _drrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeRepositoriesResponse' with the minimum fields required to make a request.

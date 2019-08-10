@@ -46,12 +46,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getSegmentVersions' smart constructor.
-data GetSegmentVersions = GetSegmentVersions'
-  { _gsvToken         :: !(Maybe Text)
-  , _gsvPageSize      :: !(Maybe Text)
-  , _gsvSegmentId     :: !Text
-  , _gsvApplicationId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetSegmentVersions =
+  GetSegmentVersions'
+    { _gsvToken         :: !(Maybe Text)
+    , _gsvPageSize      :: !(Maybe Text)
+    , _gsvSegmentId     :: !Text
+    , _gsvApplicationId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetSegmentVersions' with the minimum fields required to make a request.
@@ -127,10 +129,12 @@ instance ToQuery GetSegmentVersions where
               ["token" =: _gsvToken, "page-size" =: _gsvPageSize]
 
 -- | /See:/ 'getSegmentVersionsResponse' smart constructor.
-data GetSegmentVersionsResponse = GetSegmentVersionsResponse'
-  { _grsResponseStatus   :: !Int
-  , _grsSegmentsResponse :: !SegmentsResponse
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetSegmentVersionsResponse =
+  GetSegmentVersionsResponse'
+    { _grsResponseStatus   :: !Int
+    , _grsSegmentsResponse :: !SegmentsResponse
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetSegmentVersionsResponse' with the minimum fields required to make a request.

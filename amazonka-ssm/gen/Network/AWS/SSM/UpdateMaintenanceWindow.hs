@@ -60,17 +60,19 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'updateMaintenanceWindow' smart constructor.
-data UpdateMaintenanceWindow = UpdateMaintenanceWindow'
-  { _umwReplace                  :: !(Maybe Bool)
-  , _umwEnabled                  :: !(Maybe Bool)
-  , _umwSchedule                 :: !(Maybe Text)
-  , _umwName                     :: !(Maybe Text)
-  , _umwCutoff                   :: !(Maybe Nat)
-  , _umwAllowUnassociatedTargets :: !(Maybe Bool)
-  , _umwDescription              :: !(Maybe (Sensitive Text))
-  , _umwDuration                 :: !(Maybe Nat)
-  , _umwWindowId                 :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data UpdateMaintenanceWindow =
+  UpdateMaintenanceWindow'
+    { _umwReplace                  :: !(Maybe Bool)
+    , _umwEnabled                  :: !(Maybe Bool)
+    , _umwSchedule                 :: !(Maybe Text)
+    , _umwName                     :: !(Maybe Text)
+    , _umwCutoff                   :: !(Maybe Nat)
+    , _umwAllowUnassociatedTargets :: !(Maybe Bool)
+    , _umwDescription              :: !(Maybe (Sensitive Text))
+    , _umwDuration                 :: !(Maybe Nat)
+    , _umwWindowId                 :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateMaintenanceWindow' with the minimum fields required to make a request.
@@ -199,17 +201,19 @@ instance ToQuery UpdateMaintenanceWindow where
         toQuery = const mempty
 
 -- | /See:/ 'updateMaintenanceWindowResponse' smart constructor.
-data UpdateMaintenanceWindowResponse = UpdateMaintenanceWindowResponse'
-  { _umwrsEnabled                  :: !(Maybe Bool)
-  , _umwrsSchedule                 :: !(Maybe Text)
-  , _umwrsName                     :: !(Maybe Text)
-  , _umwrsCutoff                   :: !(Maybe Nat)
-  , _umwrsAllowUnassociatedTargets :: !(Maybe Bool)
-  , _umwrsDescription              :: !(Maybe (Sensitive Text))
-  , _umwrsDuration                 :: !(Maybe Nat)
-  , _umwrsWindowId                 :: !(Maybe Text)
-  , _umwrsResponseStatus           :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data UpdateMaintenanceWindowResponse =
+  UpdateMaintenanceWindowResponse'
+    { _umwrsEnabled                  :: !(Maybe Bool)
+    , _umwrsSchedule                 :: !(Maybe Text)
+    , _umwrsName                     :: !(Maybe Text)
+    , _umwrsCutoff                   :: !(Maybe Nat)
+    , _umwrsAllowUnassociatedTargets :: !(Maybe Bool)
+    , _umwrsDescription              :: !(Maybe (Sensitive Text))
+    , _umwrsDuration                 :: !(Maybe Nat)
+    , _umwrsWindowId                 :: !(Maybe Text)
+    , _umwrsResponseStatus           :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateMaintenanceWindowResponse' with the minimum fields required to make a request.

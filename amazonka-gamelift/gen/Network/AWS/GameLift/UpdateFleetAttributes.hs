@@ -102,14 +102,16 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateFleetAttributes' smart constructor.
-data UpdateFleetAttributes = UpdateFleetAttributes'
-  { _ufaNewGameSessionProtectionPolicy :: !(Maybe ProtectionPolicy)
-  , _ufaName                           :: !(Maybe Text)
-  , _ufaMetricGroups                   :: !(Maybe [Text])
-  , _ufaDescription                    :: !(Maybe Text)
-  , _ufaResourceCreationLimitPolicy    :: !(Maybe ResourceCreationLimitPolicy)
-  , _ufaFleetId                        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateFleetAttributes =
+  UpdateFleetAttributes'
+    { _ufaNewGameSessionProtectionPolicy :: !(Maybe ProtectionPolicy)
+    , _ufaName                           :: !(Maybe Text)
+    , _ufaMetricGroups                   :: !(Maybe [Text])
+    , _ufaDescription                    :: !(Maybe Text)
+    , _ufaResourceCreationLimitPolicy    :: !(Maybe ResourceCreationLimitPolicy)
+    , _ufaFleetId                        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateFleetAttributes' with the minimum fields required to make a request.
@@ -212,10 +214,12 @@ instance ToQuery UpdateFleetAttributes where
 --
 --
 -- /See:/ 'updateFleetAttributesResponse' smart constructor.
-data UpdateFleetAttributesResponse = UpdateFleetAttributesResponse'
-  { _ufarsFleetId        :: !(Maybe Text)
-  , _ufarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateFleetAttributesResponse =
+  UpdateFleetAttributesResponse'
+    { _ufarsFleetId        :: !(Maybe Text)
+    , _ufarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateFleetAttributesResponse' with the minimum fields required to make a request.

@@ -52,11 +52,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeServers' smart constructor.
-data DescribeServers = DescribeServers'
-  { _dssServerName :: !(Maybe Text)
-  , _dssNextToken  :: !(Maybe Text)
-  , _dssMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeServers =
+  DescribeServers'
+    { _dssServerName :: !(Maybe Text)
+    , _dssNextToken  :: !(Maybe Text)
+    , _dssMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeServers' with the minimum fields required to make a request.
@@ -129,11 +131,13 @@ instance ToQuery DescribeServers where
         toQuery = const mempty
 
 -- | /See:/ 'describeServersResponse' smart constructor.
-data DescribeServersResponse = DescribeServersResponse'
-  { _dssrsServers        :: !(Maybe [Server])
-  , _dssrsNextToken      :: !(Maybe Text)
-  , _dssrsResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data DescribeServersResponse =
+  DescribeServersResponse'
+    { _dssrsServers        :: !(Maybe [Server])
+    , _dssrsNextToken      :: !(Maybe Text)
+    , _dssrsResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeServersResponse' with the minimum fields required to make a request.

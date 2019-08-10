@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteCluster' smart constructor.
-newtype DeleteCluster = DeleteCluster'
-  { _dcClusterName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteCluster =
+  DeleteCluster'
+    { _dcClusterName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteCluster' with the minimum fields required to make a request.
@@ -99,10 +101,12 @@ instance ToQuery DeleteCluster where
         toQuery = const mempty
 
 -- | /See:/ 'deleteClusterResponse' smart constructor.
-data DeleteClusterResponse = DeleteClusterResponse'
-  { _drsCluster        :: !(Maybe Cluster)
-  , _drsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteClusterResponse =
+  DeleteClusterResponse'
+    { _drsCluster        :: !(Maybe Cluster)
+    , _drsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteClusterResponse' with the minimum fields required to make a request.

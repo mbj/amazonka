@@ -49,10 +49,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'associateKMSKey' smart constructor.
-data AssociateKMSKey = AssociateKMSKey'
-  { _akkLogGroupName :: !Text
-  , _akkKmsKeyId     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssociateKMSKey =
+  AssociateKMSKey'
+    { _akkLogGroupName :: !Text
+    , _akkKmsKeyId     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateKMSKey' with the minimum fields required to make a request.

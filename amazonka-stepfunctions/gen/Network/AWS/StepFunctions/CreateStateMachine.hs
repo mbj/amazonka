@@ -48,11 +48,13 @@ import Network.AWS.StepFunctions.Types
 import Network.AWS.StepFunctions.Types.Product
 
 -- | /See:/ 'createStateMachine' smart constructor.
-data CreateStateMachine = CreateStateMachine'
-  { _csmName       :: !Text
-  , _csmDefinition :: !Text
-  , _csmRoleARN    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateStateMachine =
+  CreateStateMachine'
+    { _csmName       :: !Text
+    , _csmDefinition :: !Text
+    , _csmRoleARN    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateStateMachine' with the minimum fields required to make a request.
@@ -126,11 +128,13 @@ instance ToQuery CreateStateMachine where
         toQuery = const mempty
 
 -- | /See:/ 'createStateMachineResponse' smart constructor.
-data CreateStateMachineResponse = CreateStateMachineResponse'
-  { _csmrsResponseStatus  :: !Int
-  , _csmrsStateMachineARN :: !Text
-  , _csmrsCreationDate    :: !POSIX
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateStateMachineResponse =
+  CreateStateMachineResponse'
+    { _csmrsResponseStatus  :: !Int
+    , _csmrsStateMachineARN :: !Text
+    , _csmrsCreationDate    :: !POSIX
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateStateMachineResponse' with the minimum fields required to make a request.

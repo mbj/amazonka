@@ -46,11 +46,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listSubscriptionDefinitionVersions' smart constructor.
-data ListSubscriptionDefinitionVersions = ListSubscriptionDefinitionVersions'
-  { _lsdvNextToken                :: !(Maybe Text)
-  , _lsdvMaxResults               :: !(Maybe Text)
-  , _lsdvSubscriptionDefinitionId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListSubscriptionDefinitionVersions =
+  ListSubscriptionDefinitionVersions'
+    { _lsdvNextToken                :: !(Maybe Text)
+    , _lsdvMaxResults               :: !(Maybe Text)
+    , _lsdvSubscriptionDefinitionId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListSubscriptionDefinitionVersions' with the minimum fields required to make a request.
@@ -127,11 +129,13 @@ instance ToQuery ListSubscriptionDefinitionVersions
                "MaxResults" =: _lsdvMaxResults]
 
 -- | /See:/ 'listSubscriptionDefinitionVersionsResponse' smart constructor.
-data ListSubscriptionDefinitionVersionsResponse = ListSubscriptionDefinitionVersionsResponse'
-  { _lsdvrsVersions       :: !(Maybe [VersionInformation])
-  , _lsdvrsNextToken      :: !(Maybe Text)
-  , _lsdvrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListSubscriptionDefinitionVersionsResponse =
+  ListSubscriptionDefinitionVersionsResponse'
+    { _lsdvrsVersions       :: !(Maybe [VersionInformation])
+    , _lsdvrsNextToken      :: !(Maybe Text)
+    , _lsdvrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListSubscriptionDefinitionVersionsResponse' with the minimum fields required to make a request.

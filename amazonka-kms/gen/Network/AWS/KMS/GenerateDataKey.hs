@@ -77,13 +77,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'generateDataKey' smart constructor.
-data GenerateDataKey = GenerateDataKey'
-  { _gdkKeySpec           :: !(Maybe DataKeySpec)
-  , _gdkEncryptionContext :: !(Maybe (Map Text Text))
-  , _gdkNumberOfBytes     :: !(Maybe Nat)
-  , _gdkGrantTokens       :: !(Maybe [Text])
-  , _gdkKeyId             :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GenerateDataKey =
+  GenerateDataKey'
+    { _gdkKeySpec           :: !(Maybe DataKeySpec)
+    , _gdkEncryptionContext :: !(Maybe (Map Text Text))
+    , _gdkNumberOfBytes     :: !(Maybe Nat)
+    , _gdkGrantTokens       :: !(Maybe [Text])
+    , _gdkKeyId             :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GenerateDataKey' with the minimum fields required to make a request.
@@ -173,12 +175,14 @@ instance ToQuery GenerateDataKey where
         toQuery = const mempty
 
 -- | /See:/ 'generateDataKeyResponse' smart constructor.
-data GenerateDataKeyResponse = GenerateDataKeyResponse'
-  { _gdkrsResponseStatus :: !Int
-  , _gdkrsKeyId          :: !Text
-  , _gdkrsPlaintext      :: !(Sensitive Base64)
-  , _gdkrsCiphertextBlob :: !Base64
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data GenerateDataKeyResponse =
+  GenerateDataKeyResponse'
+    { _gdkrsResponseStatus :: !Int
+    , _gdkrsKeyId          :: !Text
+    , _gdkrsPlaintext      :: !(Sensitive Base64)
+    , _gdkrsCiphertextBlob :: !Base64
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GenerateDataKeyResponse' with the minimum fields required to make a request.

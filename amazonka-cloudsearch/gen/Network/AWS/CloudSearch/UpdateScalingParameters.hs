@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateScalingParameters' smart constructor.
-data UpdateScalingParameters = UpdateScalingParameters'
-  { _uspDomainName        :: !Text
-  , _uspScalingParameters :: !ScalingParameters
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateScalingParameters =
+  UpdateScalingParameters'
+    { _uspDomainName        :: !Text
+    , _uspScalingParameters :: !ScalingParameters
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateScalingParameters' with the minimum fields required to make a request.
@@ -114,10 +116,12 @@ instance ToQuery UpdateScalingParameters where
 --
 --
 -- /See:/ 'updateScalingParametersResponse' smart constructor.
-data UpdateScalingParametersResponse = UpdateScalingParametersResponse'
-  { _usprsResponseStatus    :: !Int
-  , _usprsScalingParameters :: !ScalingParametersStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateScalingParametersResponse =
+  UpdateScalingParametersResponse'
+    { _usprsResponseStatus    :: !Int
+    , _usprsScalingParameters :: !ScalingParametersStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateScalingParametersResponse' with the minimum fields required to make a request.

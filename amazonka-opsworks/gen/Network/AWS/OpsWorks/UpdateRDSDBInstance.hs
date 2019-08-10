@@ -46,11 +46,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateRDSDBInstance' smart constructor.
-data UpdateRDSDBInstance = UpdateRDSDBInstance'
-  { _urdiDBUser           :: !(Maybe Text)
-  , _urdiDBPassword       :: !(Maybe Text)
-  , _urdiRDSDBInstanceARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateRDSDBInstance =
+  UpdateRDSDBInstance'
+    { _urdiDBUser           :: !(Maybe Text)
+    , _urdiDBPassword       :: !(Maybe Text)
+    , _urdiRDSDBInstanceARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateRDSDBInstance' with the minimum fields required to make a request.

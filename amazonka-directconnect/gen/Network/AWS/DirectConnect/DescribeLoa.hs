@@ -54,11 +54,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeLoa' smart constructor.
-data DescribeLoa = DescribeLoa'
-  { _dlLoaContentType :: !(Maybe LoaContentType)
-  , _dlProviderName   :: !(Maybe Text)
-  , _dlConnectionId   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeLoa =
+  DescribeLoa'
+    { _dlLoaContentType :: !(Maybe LoaContentType)
+    , _dlProviderName   :: !(Maybe Text)
+    , _dlConnectionId   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeLoa' with the minimum fields required to make a request.
@@ -135,11 +137,13 @@ instance ToQuery DescribeLoa where
 --
 --
 -- /See:/ 'describeLoaResponse' smart constructor.
-data DescribeLoaResponse = DescribeLoaResponse'
-  { _dlrsLoaContent     :: !(Maybe Base64)
-  , _dlrsLoaContentType :: !(Maybe LoaContentType)
-  , _dlrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeLoaResponse =
+  DescribeLoaResponse'
+    { _dlrsLoaContent     :: !(Maybe Base64)
+    , _dlrsLoaContentType :: !(Maybe LoaContentType)
+    , _dlrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeLoaResponse' with the minimum fields required to make a request.

@@ -47,12 +47,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'registerRDSDBInstance' smart constructor.
-data RegisterRDSDBInstance = RegisterRDSDBInstance'
-  { _rrdiStackId          :: !Text
-  , _rrdiRDSDBInstanceARN :: !Text
-  , _rrdiDBUser           :: !Text
-  , _rrdiDBPassword       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RegisterRDSDBInstance =
+  RegisterRDSDBInstance'
+    { _rrdiStackId          :: !Text
+    , _rrdiRDSDBInstanceARN :: !Text
+    , _rrdiDBUser           :: !Text
+    , _rrdiDBPassword       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterRDSDBInstance' with the minimum fields required to make a request.

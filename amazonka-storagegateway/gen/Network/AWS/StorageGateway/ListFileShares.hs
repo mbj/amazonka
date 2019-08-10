@@ -53,11 +53,13 @@ import Network.AWS.StorageGateway.Types.Product
 --
 --
 -- /See:/ 'listFileShares' smart constructor.
-data ListFileShares = ListFileShares'
-  { _lfsGatewayARN :: !(Maybe Text)
-  , _lfsMarker     :: !(Maybe Text)
-  , _lfsLimit      :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListFileShares =
+  ListFileShares'
+    { _lfsGatewayARN :: !(Maybe Text)
+    , _lfsMarker     :: !(Maybe Text)
+    , _lfsLimit      :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListFileShares' with the minimum fields required to make a request.
@@ -133,12 +135,14 @@ instance ToQuery ListFileShares where
 --
 --
 -- /See:/ 'listFileSharesResponse' smart constructor.
-data ListFileSharesResponse = ListFileSharesResponse'
-  { _lfsrsFileShareInfoList :: !(Maybe [FileShareInfo])
-  , _lfsrsMarker            :: !(Maybe Text)
-  , _lfsrsNextMarker        :: !(Maybe Text)
-  , _lfsrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListFileSharesResponse =
+  ListFileSharesResponse'
+    { _lfsrsFileShareInfoList :: !(Maybe [FileShareInfo])
+    , _lfsrsMarker            :: !(Maybe Text)
+    , _lfsrsNextMarker        :: !(Maybe Text)
+    , _lfsrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListFileSharesResponse' with the minimum fields required to make a request.

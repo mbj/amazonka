@@ -51,12 +51,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getTags' smart constructor.
-data GetTags = GetTags'
-  { _gtNextPageToken :: !(Maybe Text)
-  , _gtSearchString  :: !(Maybe Text)
-  , _gtTagKey        :: !(Maybe Text)
-  , _gtTimePeriod    :: !DateInterval
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetTags =
+  GetTags'
+    { _gtNextPageToken :: !(Maybe Text)
+    , _gtSearchString  :: !(Maybe Text)
+    , _gtTagKey        :: !(Maybe Text)
+    , _gtTimePeriod    :: !DateInterval
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetTags' with the minimum fields required to make a request.
@@ -139,13 +141,15 @@ instance ToQuery GetTags where
         toQuery = const mempty
 
 -- | /See:/ 'getTagsResponse' smart constructor.
-data GetTagsResponse = GetTagsResponse'
-  { _gtrsNextPageToken  :: !(Maybe Text)
-  , _gtrsResponseStatus :: !Int
-  , _gtrsTags           :: ![Text]
-  , _gtrsReturnSize     :: !Int
-  , _gtrsTotalSize      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetTagsResponse =
+  GetTagsResponse'
+    { _gtrsNextPageToken  :: !(Maybe Text)
+    , _gtrsResponseStatus :: !Int
+    , _gtrsTags           :: ![Text]
+    , _gtrsReturnSize     :: !Int
+    , _gtrsTotalSize      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetTagsResponse' with the minimum fields required to make a request.

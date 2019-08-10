@@ -52,14 +52,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'registerJobDefinition' smart constructor.
-data RegisterJobDefinition = RegisterJobDefinition'
-  { _rjdRetryStrategy       :: !(Maybe RetryStrategy)
-  , _rjdParameters          :: !(Maybe (Map Text Text))
-  , _rjdTimeout             :: !(Maybe JobTimeout)
-  , _rjdContainerProperties :: !(Maybe ContainerProperties)
-  , _rjdJobDefinitionName   :: !Text
-  , _rjdType                :: !JobDefinitionType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RegisterJobDefinition =
+  RegisterJobDefinition'
+    { _rjdRetryStrategy       :: !(Maybe RetryStrategy)
+    , _rjdParameters          :: !(Maybe (Map Text Text))
+    , _rjdTimeout             :: !(Maybe JobTimeout)
+    , _rjdContainerProperties :: !(Maybe ContainerProperties)
+    , _rjdJobDefinitionName   :: !Text
+    , _rjdType                :: !JobDefinitionType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterJobDefinition' with the minimum fields required to make a request.
@@ -158,12 +160,14 @@ instance ToQuery RegisterJobDefinition where
         toQuery = const mempty
 
 -- | /See:/ 'registerJobDefinitionResponse' smart constructor.
-data RegisterJobDefinitionResponse = RegisterJobDefinitionResponse'
-  { _rjdrsResponseStatus    :: !Int
-  , _rjdrsJobDefinitionName :: !Text
-  , _rjdrsJobDefinitionARN  :: !Text
-  , _rjdrsRevision          :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RegisterJobDefinitionResponse =
+  RegisterJobDefinitionResponse'
+    { _rjdrsResponseStatus    :: !Int
+    , _rjdrsJobDefinitionName :: !Text
+    , _rjdrsJobDefinitionARN  :: !Text
+    , _rjdrsRevision          :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterJobDefinitionResponse' with the minimum fields required to make a request.

@@ -52,12 +52,14 @@ import Network.AWS.ServiceCatalog.Types
 import Network.AWS.ServiceCatalog.Types.Product
 
 -- | /See:/ 'listPortfoliosForProduct' smart constructor.
-data ListPortfoliosForProduct = ListPortfoliosForProduct'
-  { _lisAcceptLanguage :: !(Maybe Text)
-  , _lisPageToken      :: !(Maybe Text)
-  , _lisPageSize       :: !(Maybe Nat)
-  , _lisProductId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListPortfoliosForProduct =
+  ListPortfoliosForProduct'
+    { _lisAcceptLanguage :: !(Maybe Text)
+    , _lisPageToken      :: !(Maybe Text)
+    , _lisPageSize       :: !(Maybe Nat)
+    , _lisProductId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListPortfoliosForProduct' with the minimum fields required to make a request.
@@ -148,11 +150,13 @@ instance ToQuery ListPortfoliosForProduct where
         toQuery = const mempty
 
 -- | /See:/ 'listPortfoliosForProductResponse' smart constructor.
-data ListPortfoliosForProductResponse = ListPortfoliosForProductResponse'
-  { _lpfprsNextPageToken    :: !(Maybe Text)
-  , _lpfprsPortfolioDetails :: !(Maybe [PortfolioDetail])
-  , _lpfprsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListPortfoliosForProductResponse =
+  ListPortfoliosForProductResponse'
+    { _lpfprsNextPageToken    :: !(Maybe Text)
+    , _lpfprsPortfolioDetails :: !(Maybe [PortfolioDetail])
+    , _lpfprsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListPortfoliosForProductResponse' with the minimum fields required to make a request.

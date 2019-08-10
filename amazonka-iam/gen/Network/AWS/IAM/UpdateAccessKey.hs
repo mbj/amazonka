@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateAccessKey' smart constructor.
-data UpdateAccessKey = UpdateAccessKey'
-  { _uakUserName    :: !(Maybe Text)
-  , _uakAccessKeyId :: !AccessKey
-  , _uakStatus      :: !StatusType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateAccessKey =
+  UpdateAccessKey'
+    { _uakUserName    :: !(Maybe Text)
+    , _uakAccessKeyId :: !AccessKey
+    , _uakStatus      :: !StatusType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateAccessKey' with the minimum fields required to make a request.

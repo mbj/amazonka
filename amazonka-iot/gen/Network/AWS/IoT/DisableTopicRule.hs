@@ -46,9 +46,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'disableTopicRule' smart constructor.
-newtype DisableTopicRule = DisableTopicRule'
-  { _dtrRuleName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DisableTopicRule =
+  DisableTopicRule'
+    { _dtrRuleName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisableTopicRule' with the minimum fields required to make a request.

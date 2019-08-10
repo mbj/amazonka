@@ -47,13 +47,15 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'putObjectTagging' smart constructor.
-data PutObjectTagging = PutObjectTagging'
-  { _potVersionId  :: !(Maybe ObjectVersionId)
-  , _potContentMD5 :: !(Maybe Text)
-  , _potBucket     :: !BucketName
-  , _potKey        :: !ObjectKey
-  , _potTagging    :: !Tagging
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutObjectTagging =
+  PutObjectTagging'
+    { _potVersionId  :: !(Maybe ObjectVersionId)
+    , _potContentMD5 :: !(Maybe Text)
+    , _potBucket     :: !BucketName
+    , _potKey        :: !ObjectKey
+    , _potTagging    :: !Tagging
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutObjectTagging' with the minimum fields required to make a request.
@@ -137,10 +139,12 @@ instance ToQuery PutObjectTagging where
           = mconcat ["versionId" =: _potVersionId, "tagging"]
 
 -- | /See:/ 'putObjectTaggingResponse' smart constructor.
-data PutObjectTaggingResponse = PutObjectTaggingResponse'
-  { _potrsVersionId      :: !(Maybe ObjectVersionId)
-  , _potrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutObjectTaggingResponse =
+  PutObjectTaggingResponse'
+    { _potrsVersionId      :: !(Maybe ObjectVersionId)
+    , _potrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutObjectTaggingResponse' with the minimum fields required to make a request.

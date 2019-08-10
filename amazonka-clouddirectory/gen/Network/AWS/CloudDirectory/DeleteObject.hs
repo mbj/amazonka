@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteObject' smart constructor.
-data DeleteObject = DeleteObject'
-  { _doDirectoryARN    :: !Text
-  , _doObjectReference :: !ObjectReference
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteObject =
+  DeleteObject'
+    { _doDirectoryARN    :: !Text
+    , _doObjectReference :: !ObjectReference
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteObject' with the minimum fields required to make a request.
@@ -106,9 +108,11 @@ instance ToQuery DeleteObject where
         toQuery = const mempty
 
 -- | /See:/ 'deleteObjectResponse' smart constructor.
-newtype DeleteObjectResponse = DeleteObjectResponse'
-  { _dorsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteObjectResponse =
+  DeleteObjectResponse'
+    { _dorsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteObjectResponse' with the minimum fields required to make a request.

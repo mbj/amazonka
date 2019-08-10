@@ -98,10 +98,12 @@ instance ToQuery EnableAllFeatures where
         toQuery = const mempty
 
 -- | /See:/ 'enableAllFeaturesResponse' smart constructor.
-data EnableAllFeaturesResponse = EnableAllFeaturesResponse'
-  { _eafrsHandshake      :: !(Maybe Handshake)
-  , _eafrsResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data EnableAllFeaturesResponse =
+  EnableAllFeaturesResponse'
+    { _eafrsHandshake      :: !(Maybe Handshake)
+    , _eafrsResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EnableAllFeaturesResponse' with the minimum fields required to make a request.

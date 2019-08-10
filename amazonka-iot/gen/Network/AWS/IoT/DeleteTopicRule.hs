@@ -46,9 +46,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteTopicRule' smart constructor.
-newtype DeleteTopicRule = DeleteTopicRule'
-  { _dRuleName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteTopicRule =
+  DeleteTopicRule'
+    { _dRuleName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteTopicRule' with the minimum fields required to make a request.

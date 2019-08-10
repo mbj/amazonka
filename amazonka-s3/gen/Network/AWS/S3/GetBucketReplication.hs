@@ -43,9 +43,11 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'getBucketReplication' smart constructor.
-newtype GetBucketReplication = GetBucketReplication'
-  { _gbrBucket :: BucketName
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetBucketReplication =
+  GetBucketReplication'
+    { _gbrBucket :: BucketName
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBucketReplication' with the minimum fields required to make a request.
@@ -88,10 +90,12 @@ instance ToQuery GetBucketReplication where
         toQuery = const (mconcat ["replication"])
 
 -- | /See:/ 'getBucketReplicationResponse' smart constructor.
-data GetBucketReplicationResponse = GetBucketReplicationResponse'
-  { _gbrrsReplicationConfiguration :: !(Maybe ReplicationConfiguration)
-  , _gbrrsResponseStatus           :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetBucketReplicationResponse =
+  GetBucketReplicationResponse'
+    { _gbrrsReplicationConfiguration :: !(Maybe ReplicationConfiguration)
+    , _gbrrsResponseStatus           :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBucketReplicationResponse' with the minimum fields required to make a request.

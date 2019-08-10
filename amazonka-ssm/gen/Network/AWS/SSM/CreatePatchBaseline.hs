@@ -55,19 +55,21 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'createPatchBaseline' smart constructor.
-data CreatePatchBaseline = CreatePatchBaseline'
-  { _cpbApprovalRules                    :: !(Maybe PatchRuleGroup)
-  , _cpbClientToken                      :: !(Maybe Text)
-  , _cpbOperatingSystem                  :: !(Maybe OperatingSystem)
-  , _cpbGlobalFilters                    :: !(Maybe PatchFilterGroup)
-  , _cpbApprovedPatchesComplianceLevel   :: !(Maybe PatchComplianceLevel)
-  , _cpbApprovedPatches                  :: !(Maybe [Text])
-  , _cpbApprovedPatchesEnableNonSecurity :: !(Maybe Bool)
-  , _cpbRejectedPatches                  :: !(Maybe [Text])
-  , _cpbSources                          :: !(Maybe [PatchSource])
-  , _cpbDescription                      :: !(Maybe Text)
-  , _cpbName                             :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data CreatePatchBaseline =
+  CreatePatchBaseline'
+    { _cpbApprovalRules                    :: !(Maybe PatchRuleGroup)
+    , _cpbClientToken                      :: !(Maybe Text)
+    , _cpbOperatingSystem                  :: !(Maybe OperatingSystem)
+    , _cpbGlobalFilters                    :: !(Maybe PatchFilterGroup)
+    , _cpbApprovedPatchesComplianceLevel   :: !(Maybe PatchComplianceLevel)
+    , _cpbApprovedPatches                  :: !(Maybe [Text])
+    , _cpbApprovedPatchesEnableNonSecurity :: !(Maybe Bool)
+    , _cpbRejectedPatches                  :: !(Maybe [Text])
+    , _cpbSources                          :: !(Maybe [PatchSource])
+    , _cpbDescription                      :: !(Maybe Text)
+    , _cpbName                             :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreatePatchBaseline' with the minimum fields required to make a request.
@@ -206,10 +208,12 @@ instance ToQuery CreatePatchBaseline where
         toQuery = const mempty
 
 -- | /See:/ 'createPatchBaselineResponse' smart constructor.
-data CreatePatchBaselineResponse = CreatePatchBaselineResponse'
-  { _cpbrsBaselineId     :: !(Maybe Text)
-  , _cpbrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreatePatchBaselineResponse =
+  CreatePatchBaselineResponse'
+    { _cpbrsBaselineId     :: !(Maybe Text)
+    , _cpbrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreatePatchBaselineResponse' with the minimum fields required to make a request.

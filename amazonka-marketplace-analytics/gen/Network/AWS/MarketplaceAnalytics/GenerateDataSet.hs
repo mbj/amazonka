@@ -51,15 +51,17 @@ import Network.AWS.Response
 -- | Container for the parameters to the GenerateDataSet operation.
 --
 -- /See:/ 'generateDataSet' smart constructor.
-data GenerateDataSet = GenerateDataSet'
-  { _gdsCustomerDefinedValues   :: !(Maybe (Map Text Text))
-  , _gdsDestinationS3Prefix     :: !(Maybe Text)
-  , _gdsDataSetType             :: !DataSetType
-  , _gdsDataSetPublicationDate  :: !POSIX
-  , _gdsRoleNameARN             :: !Text
-  , _gdsDestinationS3BucketName :: !Text
-  , _gdsSnsTopicARN             :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GenerateDataSet =
+  GenerateDataSet'
+    { _gdsCustomerDefinedValues   :: !(Maybe (Map Text Text))
+    , _gdsDestinationS3Prefix     :: !(Maybe Text)
+    , _gdsDataSetType             :: !DataSetType
+    , _gdsDataSetPublicationDate  :: !POSIX
+    , _gdsRoleNameARN             :: !Text
+    , _gdsDestinationS3BucketName :: !Text
+    , _gdsSnsTopicARN             :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GenerateDataSet' with the minimum fields required to make a request.
@@ -176,10 +178,12 @@ instance ToQuery GenerateDataSet where
 -- | Container for the result of the GenerateDataSet operation.
 --
 -- /See:/ 'generateDataSetResponse' smart constructor.
-data GenerateDataSetResponse = GenerateDataSetResponse'
-  { _gdsrsDataSetRequestId :: !(Maybe Text)
-  , _gdsrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GenerateDataSetResponse =
+  GenerateDataSetResponse'
+    { _gdsrsDataSetRequestId :: !(Maybe Text)
+    , _gdsrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GenerateDataSetResponse' with the minimum fields required to make a request.

@@ -46,11 +46,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateSkillGroup' smart constructor.
-data UpdateSkillGroup = UpdateSkillGroup'
-  { _usgSkillGroupARN  :: !(Maybe Text)
-  , _usgDescription    :: !(Maybe Text)
-  , _usgSkillGroupName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateSkillGroup =
+  UpdateSkillGroup'
+    { _usgSkillGroupARN  :: !(Maybe Text)
+    , _usgDescription    :: !(Maybe Text)
+    , _usgSkillGroupName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateSkillGroup' with the minimum fields required to make a request.
@@ -120,9 +122,11 @@ instance ToQuery UpdateSkillGroup where
         toQuery = const mempty
 
 -- | /See:/ 'updateSkillGroupResponse' smart constructor.
-newtype UpdateSkillGroupResponse = UpdateSkillGroupResponse'
-  { _usgrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateSkillGroupResponse =
+  UpdateSkillGroupResponse'
+    { _usgrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateSkillGroupResponse' with the minimum fields required to make a request.

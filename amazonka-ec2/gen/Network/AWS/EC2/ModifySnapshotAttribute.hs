@@ -54,15 +54,17 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'modifySnapshotAttribute' smart constructor.
-data ModifySnapshotAttribute = ModifySnapshotAttribute'
-  { _msaAttribute              :: !(Maybe SnapshotAttributeName)
-  , _msaCreateVolumePermission :: !(Maybe CreateVolumePermissionModifications)
-  , _msaUserIds                :: !(Maybe [Text])
-  , _msaGroupNames             :: !(Maybe [Text])
-  , _msaOperationType          :: !(Maybe OperationType)
-  , _msaDryRun                 :: !(Maybe Bool)
-  , _msaSnapshotId             :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifySnapshotAttribute =
+  ModifySnapshotAttribute'
+    { _msaAttribute              :: !(Maybe SnapshotAttributeName)
+    , _msaCreateVolumePermission :: !(Maybe CreateVolumePermissionModifications)
+    , _msaUserIds                :: !(Maybe [Text])
+    , _msaGroupNames             :: !(Maybe [Text])
+    , _msaOperationType          :: !(Maybe OperationType)
+    , _msaDryRun                 :: !(Maybe Bool)
+    , _msaSnapshotId             :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifySnapshotAttribute' with the minimum fields required to make a request.

@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'discoverPollEndpoint' smart constructor.
-data DiscoverPollEndpoint = DiscoverPollEndpoint'
-  { _dpeCluster           :: !(Maybe Text)
-  , _dpeContainerInstance :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DiscoverPollEndpoint =
+  DiscoverPollEndpoint'
+    { _dpeCluster           :: !(Maybe Text)
+    , _dpeContainerInstance :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DiscoverPollEndpoint' with the minimum fields required to make a request.
@@ -113,11 +115,13 @@ instance ToQuery DiscoverPollEndpoint where
         toQuery = const mempty
 
 -- | /See:/ 'discoverPollEndpointResponse' smart constructor.
-data DiscoverPollEndpointResponse = DiscoverPollEndpointResponse'
-  { _dpersTelemetryEndpoint :: !(Maybe Text)
-  , _dpersEndpoint          :: !(Maybe Text)
-  , _dpersResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DiscoverPollEndpointResponse =
+  DiscoverPollEndpointResponse'
+    { _dpersTelemetryEndpoint :: !(Maybe Text)
+    , _dpersEndpoint          :: !(Maybe Text)
+    , _dpersResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DiscoverPollEndpointResponse' with the minimum fields required to make a request.

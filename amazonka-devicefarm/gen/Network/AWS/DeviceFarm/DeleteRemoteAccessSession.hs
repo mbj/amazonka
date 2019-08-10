@@ -48,9 +48,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteRemoteAccessSession' smart constructor.
-newtype DeleteRemoteAccessSession = DeleteRemoteAccessSession'
-  { _drasArn :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteRemoteAccessSession =
+  DeleteRemoteAccessSession'
+    { _drasArn :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteRemoteAccessSession' with the minimum fields required to make a request.
@@ -107,9 +109,11 @@ instance ToQuery DeleteRemoteAccessSession where
 --
 --
 -- /See:/ 'deleteRemoteAccessSessionResponse' smart constructor.
-newtype DeleteRemoteAccessSessionResponse = DeleteRemoteAccessSessionResponse'
-  { _drasrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteRemoteAccessSessionResponse =
+  DeleteRemoteAccessSessionResponse'
+    { _drasrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteRemoteAccessSessionResponse' with the minimum fields required to make a request.

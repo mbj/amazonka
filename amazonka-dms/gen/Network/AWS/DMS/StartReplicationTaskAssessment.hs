@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'startReplicationTaskAssessment' smart constructor.
-newtype StartReplicationTaskAssessment = StartReplicationTaskAssessment'
-  { _srtaReplicationTaskARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StartReplicationTaskAssessment =
+  StartReplicationTaskAssessment'
+    { _srtaReplicationTaskARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartReplicationTaskAssessment' with the minimum fields required to make a request.
@@ -116,10 +118,12 @@ instance ToQuery StartReplicationTaskAssessment where
 --
 --
 -- /See:/ 'startReplicationTaskAssessmentResponse' smart constructor.
-data StartReplicationTaskAssessmentResponse = StartReplicationTaskAssessmentResponse'
-  { _srtarsReplicationTask :: !(Maybe ReplicationTask)
-  , _srtarsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartReplicationTaskAssessmentResponse =
+  StartReplicationTaskAssessmentResponse'
+    { _srtarsReplicationTask :: !(Maybe ReplicationTask)
+    , _srtarsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartReplicationTaskAssessmentResponse' with the minimum fields required to make a request.

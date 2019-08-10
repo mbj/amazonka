@@ -73,25 +73,27 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createServer' smart constructor.
-data CreateServer = CreateServer'
-  { _csEngineVersion              :: !(Maybe Text)
-  , _csDisableAutomatedBackup     :: !(Maybe Bool)
-  , _csSecurityGroupIds           :: !(Maybe [Text])
-  , _csAssociatePublicIPAddress   :: !(Maybe Bool)
-  , _csSubnetIds                  :: !(Maybe [Text])
-  , _csKeyPair                    :: !(Maybe Text)
-  , _csBackupId                   :: !(Maybe Text)
-  , _csEngine                     :: !(Maybe Text)
-  , _csEngineModel                :: !(Maybe Text)
-  , _csEngineAttributes           :: !(Maybe [EngineAttribute])
-  , _csPreferredMaintenanceWindow :: !(Maybe Text)
-  , _csPreferredBackupWindow      :: !(Maybe Text)
-  , _csBackupRetentionCount       :: !(Maybe Nat)
-  , _csServerName                 :: !Text
-  , _csInstanceProfileARN         :: !Text
-  , _csInstanceType               :: !Text
-  , _csServiceRoleARN             :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data CreateServer =
+  CreateServer'
+    { _csEngineVersion              :: !(Maybe Text)
+    , _csDisableAutomatedBackup     :: !(Maybe Bool)
+    , _csSecurityGroupIds           :: !(Maybe [Text])
+    , _csAssociatePublicIPAddress   :: !(Maybe Bool)
+    , _csSubnetIds                  :: !(Maybe [Text])
+    , _csKeyPair                    :: !(Maybe Text)
+    , _csBackupId                   :: !(Maybe Text)
+    , _csEngine                     :: !(Maybe Text)
+    , _csEngineModel                :: !(Maybe Text)
+    , _csEngineAttributes           :: !(Maybe [EngineAttribute])
+    , _csPreferredMaintenanceWindow :: !(Maybe Text)
+    , _csPreferredBackupWindow      :: !(Maybe Text)
+    , _csBackupRetentionCount       :: !(Maybe Nat)
+    , _csServerName                 :: !Text
+    , _csInstanceProfileARN         :: !Text
+    , _csInstanceType               :: !Text
+    , _csServiceRoleARN             :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateServer' with the minimum fields required to make a request.
@@ -284,10 +286,12 @@ instance ToQuery CreateServer where
         toQuery = const mempty
 
 -- | /See:/ 'createServerResponse' smart constructor.
-data CreateServerResponse = CreateServerResponse'
-  { _csrsServer         :: !(Maybe Server)
-  , _csrsResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data CreateServerResponse =
+  CreateServerResponse'
+    { _csrsServer         :: !(Maybe Server)
+    , _csrsResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateServerResponse' with the minimum fields required to make a request.

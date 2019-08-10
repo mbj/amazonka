@@ -69,12 +69,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'publishVersion' smart constructor.
-data PublishVersion = PublishVersion'
-  { _pvCodeSha256   :: !(Maybe Text)
-  , _pvDescription  :: !(Maybe Text)
-  , _pvRevisionId   :: !(Maybe Text)
-  , _pvFunctionName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PublishVersion =
+  PublishVersion'
+    { _pvCodeSha256   :: !(Maybe Text)
+    , _pvDescription  :: !(Maybe Text)
+    , _pvRevisionId   :: !(Maybe Text)
+    , _pvFunctionName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PublishVersion' with the minimum fields required to make a request.

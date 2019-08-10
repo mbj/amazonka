@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteKeyPair' smart constructor.
-newtype DeleteKeyPair = DeleteKeyPair'
-  { _dkpKeyPairName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteKeyPair =
+  DeleteKeyPair'
+    { _dkpKeyPairName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteKeyPair' with the minimum fields required to make a request.
@@ -99,10 +101,12 @@ instance ToQuery DeleteKeyPair where
         toQuery = const mempty
 
 -- | /See:/ 'deleteKeyPairResponse' smart constructor.
-data DeleteKeyPairResponse = DeleteKeyPairResponse'
-  { _dkprsOperation      :: !(Maybe Operation)
-  , _dkprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteKeyPairResponse =
+  DeleteKeyPairResponse'
+    { _dkprsOperation      :: !(Maybe Operation)
+    , _dkprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteKeyPairResponse' with the minimum fields required to make a request.

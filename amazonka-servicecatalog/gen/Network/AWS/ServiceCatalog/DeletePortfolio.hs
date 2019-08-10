@@ -47,10 +47,12 @@ import Network.AWS.ServiceCatalog.Types
 import Network.AWS.ServiceCatalog.Types.Product
 
 -- | /See:/ 'deletePortfolio' smart constructor.
-data DeletePortfolio = DeletePortfolio'
-  { _ddAcceptLanguage :: !(Maybe Text)
-  , _ddId             :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeletePortfolio =
+  DeletePortfolio'
+    { _ddAcceptLanguage :: !(Maybe Text)
+    , _ddId             :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeletePortfolio' with the minimum fields required to make a request.
@@ -111,9 +113,11 @@ instance ToQuery DeletePortfolio where
         toQuery = const mempty
 
 -- | /See:/ 'deletePortfolioResponse' smart constructor.
-newtype DeletePortfolioResponse = DeletePortfolioResponse'
-  { _delrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeletePortfolioResponse =
+  DeletePortfolioResponse'
+    { _delrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeletePortfolioResponse' with the minimum fields required to make a request.

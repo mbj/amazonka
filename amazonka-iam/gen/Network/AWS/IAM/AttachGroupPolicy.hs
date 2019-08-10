@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'attachGroupPolicy' smart constructor.
-data AttachGroupPolicy = AttachGroupPolicy'
-  { _agpGroupName :: !Text
-  , _agpPolicyARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AttachGroupPolicy =
+  AttachGroupPolicy'
+    { _agpGroupName :: !Text
+    , _agpPolicyARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttachGroupPolicy' with the minimum fields required to make a request.

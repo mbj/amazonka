@@ -45,9 +45,11 @@ import Network.AWS.Route53AutoNaming.Types
 import Network.AWS.Route53AutoNaming.Types.Product
 
 -- | /See:/ 'getNamespace' smart constructor.
-newtype GetNamespace = GetNamespace'
-  { _gnId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetNamespace =
+  GetNamespace'
+    { _gnId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetNamespace' with the minimum fields required to make a request.
@@ -99,10 +101,12 @@ instance ToQuery GetNamespace where
         toQuery = const mempty
 
 -- | /See:/ 'getNamespaceResponse' smart constructor.
-data GetNamespaceResponse = GetNamespaceResponse'
-  { _gnrsNamespace      :: !(Maybe Namespace)
-  , _gnrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetNamespaceResponse =
+  GetNamespaceResponse'
+    { _gnrsNamespace      :: !(Maybe Namespace)
+    , _gnrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetNamespaceResponse' with the minimum fields required to make a request.

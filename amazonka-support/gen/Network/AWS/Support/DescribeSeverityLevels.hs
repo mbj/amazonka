@@ -49,9 +49,11 @@ import Network.AWS.Support.Types.Product
 --
 --
 -- /See:/ 'describeSeverityLevels' smart constructor.
-newtype DescribeSeverityLevels = DescribeSeverityLevels'
-  { _dslLanguage :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeSeverityLevels =
+  DescribeSeverityLevels'
+    { _dslLanguage :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeSeverityLevels' with the minimum fields required to make a request.
@@ -109,10 +111,12 @@ instance ToQuery DescribeSeverityLevels where
 --
 --
 -- /See:/ 'describeSeverityLevelsResponse' smart constructor.
-data DescribeSeverityLevelsResponse = DescribeSeverityLevelsResponse'
-  { _dslrsSeverityLevels :: !(Maybe [SeverityLevel])
-  , _dslrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeSeverityLevelsResponse =
+  DescribeSeverityLevelsResponse'
+    { _dslrsSeverityLevels :: !(Maybe [SeverityLevel])
+    , _dslrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeSeverityLevelsResponse' with the minimum fields required to make a request.

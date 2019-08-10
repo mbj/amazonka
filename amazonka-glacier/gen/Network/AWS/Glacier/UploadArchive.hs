@@ -66,13 +66,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'uploadArchive' smart constructor.
-data UploadArchive = UploadArchive'
-  { _uaChecksum           :: !(Maybe Text)
-  , _uaArchiveDescription :: !(Maybe Text)
-  , _uaVaultName          :: !Text
-  , _uaAccountId          :: !Text
-  , _uaBody               :: !HashedBody
-  } deriving (Show, Generic)
+data UploadArchive =
+  UploadArchive'
+    { _uaChecksum           :: !(Maybe Text)
+    , _uaArchiveDescription :: !(Maybe Text)
+    , _uaVaultName          :: !Text
+    , _uaAccountId          :: !Text
+    , _uaBody               :: !HashedBody
+    }
+  deriving (Show, Generic)
 
 
 -- | Creates a value of 'UploadArchive' with the minimum fields required to make a request.

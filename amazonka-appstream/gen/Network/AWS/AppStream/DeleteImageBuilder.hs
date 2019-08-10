@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteImageBuilder' smart constructor.
-newtype DeleteImageBuilder = DeleteImageBuilder'
-  { _dibName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteImageBuilder =
+  DeleteImageBuilder'
+    { _dibName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteImageBuilder' with the minimum fields required to make a request.
@@ -100,10 +102,12 @@ instance ToQuery DeleteImageBuilder where
         toQuery = const mempty
 
 -- | /See:/ 'deleteImageBuilderResponse' smart constructor.
-data DeleteImageBuilderResponse = DeleteImageBuilderResponse'
-  { _dibrsImageBuilder   :: !(Maybe ImageBuilder)
-  , _dibrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteImageBuilderResponse =
+  DeleteImageBuilderResponse'
+    { _dibrsImageBuilder   :: !(Maybe ImageBuilder)
+    , _dibrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteImageBuilderResponse' with the minimum fields required to make a request.

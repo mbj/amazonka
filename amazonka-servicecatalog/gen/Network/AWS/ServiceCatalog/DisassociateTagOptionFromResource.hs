@@ -45,10 +45,12 @@ import Network.AWS.ServiceCatalog.Types
 import Network.AWS.ServiceCatalog.Types.Product
 
 -- | /See:/ 'disassociateTagOptionFromResource' smart constructor.
-data DisassociateTagOptionFromResource = DisassociateTagOptionFromResource'
-  { _dtofrResourceId  :: !Text
-  , _dtofrTagOptionId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DisassociateTagOptionFromResource =
+  DisassociateTagOptionFromResource'
+    { _dtofrResourceId  :: !Text
+    , _dtofrTagOptionId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisassociateTagOptionFromResource' with the minimum fields required to make a request.
@@ -120,9 +122,11 @@ instance ToQuery DisassociateTagOptionFromResource
         toQuery = const mempty
 
 -- | /See:/ 'disassociateTagOptionFromResourceResponse' smart constructor.
-newtype DisassociateTagOptionFromResourceResponse = DisassociateTagOptionFromResourceResponse'
-  { _dtofrrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DisassociateTagOptionFromResourceResponse =
+  DisassociateTagOptionFromResourceResponse'
+    { _dtofrrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisassociateTagOptionFromResourceResponse' with the minimum fields required to make a request.

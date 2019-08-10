@@ -52,12 +52,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeEventTypes' smart constructor.
-data DescribeEventTypes = DescribeEventTypes'
-  { _detLocale     :: !(Maybe Text)
-  , _detNextToken  :: !(Maybe Text)
-  , _detFilter     :: !(Maybe EventTypeFilter)
-  , _detMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeEventTypes =
+  DescribeEventTypes'
+    { _detLocale     :: !(Maybe Text)
+    , _detNextToken  :: !(Maybe Text)
+    , _detFilter     :: !(Maybe EventTypeFilter)
+    , _detMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEventTypes' with the minimum fields required to make a request.
@@ -147,11 +149,13 @@ instance ToQuery DescribeEventTypes where
         toQuery = const mempty
 
 -- | /See:/ 'describeEventTypesResponse' smart constructor.
-data DescribeEventTypesResponse = DescribeEventTypesResponse'
-  { _detrsEventTypes     :: !(Maybe [EventType])
-  , _detrsNextToken      :: !(Maybe Text)
-  , _detrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeEventTypesResponse =
+  DescribeEventTypesResponse'
+    { _detrsEventTypes     :: !(Maybe [EventType])
+    , _detrsNextToken      :: !(Maybe Text)
+    , _detrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEventTypesResponse' with the minimum fields required to make a request.

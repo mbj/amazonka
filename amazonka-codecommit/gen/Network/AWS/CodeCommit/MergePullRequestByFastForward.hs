@@ -47,11 +47,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'mergePullRequestByFastForward' smart constructor.
-data MergePullRequestByFastForward = MergePullRequestByFastForward'
-  { _mprbffSourceCommitId :: !(Maybe Text)
-  , _mprbffPullRequestId  :: !Text
-  , _mprbffRepositoryName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MergePullRequestByFastForward =
+  MergePullRequestByFastForward'
+    { _mprbffSourceCommitId :: !(Maybe Text)
+    , _mprbffPullRequestId  :: !Text
+    , _mprbffRepositoryName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MergePullRequestByFastForward' with the minimum fields required to make a request.
@@ -128,10 +130,12 @@ instance ToQuery MergePullRequestByFastForward where
         toQuery = const mempty
 
 -- | /See:/ 'mergePullRequestByFastForwardResponse' smart constructor.
-data MergePullRequestByFastForwardResponse = MergePullRequestByFastForwardResponse'
-  { _mprbffrsPullRequest    :: !(Maybe PullRequest)
-  , _mprbffrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MergePullRequestByFastForwardResponse =
+  MergePullRequestByFastForwardResponse'
+    { _mprbffrsPullRequest    :: !(Maybe PullRequest)
+    , _mprbffrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MergePullRequestByFastForwardResponse' with the minimum fields required to make a request.

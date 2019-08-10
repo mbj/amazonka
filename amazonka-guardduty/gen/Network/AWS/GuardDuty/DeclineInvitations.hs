@@ -45,9 +45,11 @@ import Network.AWS.Response
 -- | DeclineInvitations request body.
 --
 -- /See:/ 'declineInvitations' smart constructor.
-newtype DeclineInvitations = DeclineInvitations'
-  { _dAccountIds :: Maybe [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeclineInvitations =
+  DeclineInvitations'
+    { _dAccountIds :: Maybe [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeclineInvitations' with the minimum fields required to make a request.
@@ -98,10 +100,12 @@ instance ToQuery DeclineInvitations where
         toQuery = const mempty
 
 -- | /See:/ 'declineInvitationsResponse' smart constructor.
-data DeclineInvitationsResponse = DeclineInvitationsResponse'
-  { _disrsUnprocessedAccounts :: !(Maybe [UnprocessedAccount])
-  , _disrsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeclineInvitationsResponse =
+  DeclineInvitationsResponse'
+    { _disrsUnprocessedAccounts :: !(Maybe [UnprocessedAccount])
+    , _disrsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeclineInvitationsResponse' with the minimum fields required to make a request.

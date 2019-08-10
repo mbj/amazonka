@@ -50,9 +50,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'stopApplication' smart constructor.
-newtype StopApplication = StopApplication'
-  { _sApplicationName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StopApplication =
+  StopApplication'
+    { _sApplicationName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopApplication' with the minimum fields required to make a request.
@@ -110,9 +112,11 @@ instance ToQuery StopApplication where
 --
 --
 -- /See:/ 'stopApplicationResponse' smart constructor.
-newtype StopApplicationResponse = StopApplicationResponse'
-  { _srsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StopApplicationResponse =
+  StopApplicationResponse'
+    { _srsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopApplicationResponse' with the minimum fields required to make a request.

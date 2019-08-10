@@ -46,9 +46,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listLexicons' smart constructor.
-newtype ListLexicons = ListLexicons'
-  { _llNextToken :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ListLexicons =
+  ListLexicons'
+    { _llNextToken :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListLexicons' with the minimum fields required to make a request.
@@ -90,11 +92,13 @@ instance ToQuery ListLexicons where
           = mconcat ["NextToken" =: _llNextToken]
 
 -- | /See:/ 'listLexiconsResponse' smart constructor.
-data ListLexiconsResponse = ListLexiconsResponse'
-  { _llrsLexicons       :: !(Maybe [LexiconDescription])
-  , _llrsNextToken      :: !(Maybe Text)
-  , _llrsResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data ListLexiconsResponse =
+  ListLexiconsResponse'
+    { _llrsLexicons       :: !(Maybe [LexiconDescription])
+    , _llrsNextToken      :: !(Maybe Text)
+    , _llrsResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListLexiconsResponse' with the minimum fields required to make a request.

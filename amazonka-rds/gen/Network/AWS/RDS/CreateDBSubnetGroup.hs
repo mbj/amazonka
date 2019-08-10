@@ -52,12 +52,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createDBSubnetGroup' smart constructor.
-data CreateDBSubnetGroup = CreateDBSubnetGroup'
-  { _cdbsgTags                     :: !(Maybe [Tag])
-  , _cdbsgDBSubnetGroupName        :: !Text
-  , _cdbsgDBSubnetGroupDescription :: !Text
-  , _cdbsgSubnetIds                :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDBSubnetGroup =
+  CreateDBSubnetGroup'
+    { _cdbsgTags                     :: !(Maybe [Tag])
+    , _cdbsgDBSubnetGroupName        :: !Text
+    , _cdbsgDBSubnetGroupDescription :: !Text
+    , _cdbsgSubnetIds                :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDBSubnetGroup' with the minimum fields required to make a request.
@@ -133,10 +135,12 @@ instance ToQuery CreateDBSubnetGroup where
                  toQueryList "SubnetIdentifier" _cdbsgSubnetIds]
 
 -- | /See:/ 'createDBSubnetGroupResponse' smart constructor.
-data CreateDBSubnetGroupResponse = CreateDBSubnetGroupResponse'
-  { _cdsgrsDBSubnetGroup  :: !(Maybe DBSubnetGroup)
-  , _cdsgrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDBSubnetGroupResponse =
+  CreateDBSubnetGroupResponse'
+    { _cdsgrsDBSubnetGroup  :: !(Maybe DBSubnetGroup)
+    , _cdsgrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDBSubnetGroupResponse' with the minimum fields required to make a request.

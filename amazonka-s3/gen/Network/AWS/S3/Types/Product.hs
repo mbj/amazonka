@@ -25,9 +25,11 @@ import Network.AWS.S3.Types.Sum
 -- | Specifies the days since the initiation of an Incomplete Multipart Upload that Lifecycle will wait before permanently removing all parts of the upload.
 --
 -- /See:/ 'abortIncompleteMultipartUpload' smart constructor.
-newtype AbortIncompleteMultipartUpload = AbortIncompleteMultipartUpload'
-  { _aimuDaysAfterInitiation :: Maybe Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AbortIncompleteMultipartUpload =
+  AbortIncompleteMultipartUpload'
+    { _aimuDaysAfterInitiation :: Maybe Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AbortIncompleteMultipartUpload' with the minimum fields required to make a request.
@@ -61,9 +63,11 @@ instance ToXML AbortIncompleteMultipartUpload where
               ["DaysAfterInitiation" @= _aimuDaysAfterInitiation]
 
 -- | /See:/ 'accelerateConfiguration' smart constructor.
-newtype AccelerateConfiguration = AccelerateConfiguration'
-  { _acStatus :: Maybe BucketAccelerateStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AccelerateConfiguration =
+  AccelerateConfiguration'
+    { _acStatus :: Maybe BucketAccelerateStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AccelerateConfiguration' with the minimum fields required to make a request.
@@ -89,10 +93,12 @@ instance ToXML AccelerateConfiguration where
           = mconcat ["Status" @= _acStatus]
 
 -- | /See:/ 'accessControlPolicy' smart constructor.
-data AccessControlPolicy = AccessControlPolicy'
-  { _acpGrants :: !(Maybe [Grant])
-  , _acpOwner  :: !(Maybe Owner)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AccessControlPolicy =
+  AccessControlPolicy'
+    { _acpGrants :: !(Maybe [Grant])
+    , _acpOwner  :: !(Maybe Owner)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AccessControlPolicy' with the minimum fields required to make a request.
@@ -130,9 +136,11 @@ instance ToXML AccessControlPolicy where
 -- | Container for information regarding the access control for replicas.
 --
 -- /See:/ 'accessControlTranslation' smart constructor.
-newtype AccessControlTranslation = AccessControlTranslation'
-  { _actOwner :: OwnerOverride
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AccessControlTranslation =
+  AccessControlTranslation'
+    { _actOwner :: OwnerOverride
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AccessControlTranslation' with the minimum fields required to make a request.
@@ -164,10 +172,12 @@ instance ToXML AccessControlTranslation where
           = mconcat ["Owner" @= _actOwner]
 
 -- | /See:/ 'analyticsAndOperator' smart constructor.
-data AnalyticsAndOperator = AnalyticsAndOperator'
-  { _aaoPrefix :: !(Maybe Text)
-  , _aaoTags   :: !(Maybe [Tag])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AnalyticsAndOperator =
+  AnalyticsAndOperator'
+    { _aaoPrefix :: !(Maybe Text)
+    , _aaoTags   :: !(Maybe [Tag])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AnalyticsAndOperator' with the minimum fields required to make a request.
@@ -208,11 +218,13 @@ instance ToXML AnalyticsAndOperator where
                "Tag" @= toXML (toXMLList "Tag" <$> _aaoTags)]
 
 -- | /See:/ 'analyticsConfiguration' smart constructor.
-data AnalyticsConfiguration = AnalyticsConfiguration'
-  { _acFilter               :: !(Maybe AnalyticsFilter)
-  , _acId                   :: !Text
-  , _acStorageClassAnalysis :: !StorageClassAnalysis
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AnalyticsConfiguration =
+  AnalyticsConfiguration'
+    { _acFilter               :: !(Maybe AnalyticsFilter)
+    , _acId                   :: !Text
+    , _acStorageClassAnalysis :: !StorageClassAnalysis
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AnalyticsConfiguration' with the minimum fields required to make a request.
@@ -265,9 +277,11 @@ instance ToXML AnalyticsConfiguration where
                "StorageClassAnalysis" @= _acStorageClassAnalysis]
 
 -- | /See:/ 'analyticsExportDestination' smart constructor.
-newtype AnalyticsExportDestination = AnalyticsExportDestination'
-  { _aedS3BucketDestination :: AnalyticsS3BucketDestination
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AnalyticsExportDestination =
+  AnalyticsExportDestination'
+    { _aedS3BucketDestination :: AnalyticsS3BucketDestination
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AnalyticsExportDestination' with the minimum fields required to make a request.
@@ -301,11 +315,13 @@ instance ToXML AnalyticsExportDestination where
               ["S3BucketDestination" @= _aedS3BucketDestination]
 
 -- | /See:/ 'analyticsFilter' smart constructor.
-data AnalyticsFilter = AnalyticsFilter'
-  { _afTag    :: !(Maybe Tag)
-  , _afPrefix :: !(Maybe Text)
-  , _afAnd    :: !(Maybe AnalyticsAndOperator)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AnalyticsFilter =
+  AnalyticsFilter'
+    { _afTag    :: !(Maybe Tag)
+    , _afPrefix :: !(Maybe Text)
+    , _afAnd    :: !(Maybe AnalyticsAndOperator)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AnalyticsFilter' with the minimum fields required to make a request.
@@ -351,12 +367,14 @@ instance ToXML AnalyticsFilter where
                "And" @= _afAnd]
 
 -- | /See:/ 'analyticsS3BucketDestination' smart constructor.
-data AnalyticsS3BucketDestination = AnalyticsS3BucketDestination'
-  { _asbdBucketAccountId :: !(Maybe Text)
-  , _asbdPrefix          :: !(Maybe Text)
-  , _asbdFormat          :: !AnalyticsS3ExportFileFormat
-  , _asbdBucket          :: !BucketName
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AnalyticsS3BucketDestination =
+  AnalyticsS3BucketDestination'
+    { _asbdBucketAccountId :: !(Maybe Text)
+    , _asbdPrefix          :: !(Maybe Text)
+    , _asbdFormat          :: !AnalyticsS3ExportFileFormat
+    , _asbdBucket          :: !BucketName
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AnalyticsS3BucketDestination' with the minimum fields required to make a request.
@@ -418,10 +436,12 @@ instance ToXML AnalyticsS3BucketDestination where
                "Bucket" @= _asbdBucket]
 
 -- | /See:/ 'bucket' smart constructor.
-data Bucket = Bucket'
-  { _bCreationDate :: !RFC822
-  , _bName         :: !BucketName
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Bucket =
+  Bucket'
+    { _bCreationDate :: !RFC822
+    , _bName         :: !BucketName
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Bucket' with the minimum fields required to make a request.
@@ -456,9 +476,11 @@ instance Hashable Bucket where
 instance NFData Bucket where
 
 -- | /See:/ 'bucketLifecycleConfiguration' smart constructor.
-newtype BucketLifecycleConfiguration = BucketLifecycleConfiguration'
-  { _blcRules :: [LifecycleRule]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype BucketLifecycleConfiguration =
+  BucketLifecycleConfiguration'
+    { _blcRules :: [LifecycleRule]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BucketLifecycleConfiguration' with the minimum fields required to make a request.
@@ -485,9 +507,11 @@ instance ToXML BucketLifecycleConfiguration where
           = mconcat [toXMLList "Rule" _blcRules]
 
 -- | /See:/ 'bucketLoggingStatus' smart constructor.
-newtype BucketLoggingStatus = BucketLoggingStatus'
-  { _blsLoggingEnabled :: Maybe LoggingEnabled
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype BucketLoggingStatus =
+  BucketLoggingStatus'
+    { _blsLoggingEnabled :: Maybe LoggingEnabled
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BucketLoggingStatus' with the minimum fields required to make a request.
@@ -513,9 +537,11 @@ instance ToXML BucketLoggingStatus where
           = mconcat ["LoggingEnabled" @= _blsLoggingEnabled]
 
 -- | /See:/ 'corsConfiguration' smart constructor.
-newtype CORSConfiguration = CORSConfiguration'
-  { _ccCORSRules :: [CORSRule]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CORSConfiguration =
+  CORSConfiguration'
+    { _ccCORSRules :: [CORSRule]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CORSConfiguration' with the minimum fields required to make a request.
@@ -541,13 +567,15 @@ instance ToXML CORSConfiguration where
           = mconcat [toXMLList "CORSRule" _ccCORSRules]
 
 -- | /See:/ 'corsRule' smart constructor.
-data CORSRule = CORSRule'
-  { _crMaxAgeSeconds  :: !(Maybe Int)
-  , _crAllowedHeaders :: !(Maybe [Text])
-  , _crExposeHeaders  :: !(Maybe [Text])
-  , _crAllowedMethods :: ![Text]
-  , _crAllowedOrigins :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CORSRule =
+  CORSRule'
+    { _crMaxAgeSeconds  :: !(Maybe Int)
+    , _crAllowedHeaders :: !(Maybe [Text])
+    , _crExposeHeaders  :: !(Maybe [Text])
+    , _crAllowedMethods :: ![Text]
+    , _crAllowedOrigins :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CORSRule' with the minimum fields required to make a request.
@@ -622,14 +650,16 @@ instance ToXML CORSRule where
 -- | Describes how a CSV-formatted input object is formatted.
 --
 -- /See:/ 'csvInput' smart constructor.
-data CSVInput = CSVInput'
-  { _ciQuoteCharacter       :: !(Maybe Text)
-  , _ciRecordDelimiter      :: !(Maybe Text)
-  , _ciFileHeaderInfo       :: !(Maybe FileHeaderInfo)
-  , _ciQuoteEscapeCharacter :: !(Maybe Text)
-  , _ciComments             :: !(Maybe Text)
-  , _ciFieldDelimiter       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CSVInput =
+  CSVInput'
+    { _ciQuoteCharacter       :: !(Maybe Text)
+    , _ciRecordDelimiter      :: !(Maybe Text)
+    , _ciFileHeaderInfo       :: !(Maybe FileHeaderInfo)
+    , _ciQuoteEscapeCharacter :: !(Maybe Text)
+    , _ciComments             :: !(Maybe Text)
+    , _ciFieldDelimiter       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CSVInput' with the minimum fields required to make a request.
@@ -701,13 +731,15 @@ instance ToXML CSVInput where
 -- | Describes how CSV-formatted results are formatted.
 --
 -- /See:/ 'csvOutput' smart constructor.
-data CSVOutput = CSVOutput'
-  { _coQuoteCharacter       :: !(Maybe Text)
-  , _coQuoteFields          :: !(Maybe QuoteFields)
-  , _coRecordDelimiter      :: !(Maybe Text)
-  , _coQuoteEscapeCharacter :: !(Maybe Text)
-  , _coFieldDelimiter       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CSVOutput =
+  CSVOutput'
+    { _coQuoteCharacter       :: !(Maybe Text)
+    , _coQuoteFields          :: !(Maybe QuoteFields)
+    , _coRecordDelimiter      :: !(Maybe Text)
+    , _coQuoteEscapeCharacter :: !(Maybe Text)
+    , _coFieldDelimiter       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CSVOutput' with the minimum fields required to make a request.
@@ -769,9 +801,11 @@ instance ToXML CSVOutput where
                "FieldDelimiter" @= _coFieldDelimiter]
 
 -- | /See:/ 'commonPrefix' smart constructor.
-newtype CommonPrefix = CommonPrefix'
-  { _cpPrefix :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CommonPrefix =
+  CommonPrefix'
+    { _cpPrefix :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CommonPrefix' with the minimum fields required to make a request.
@@ -796,9 +830,11 @@ instance Hashable CommonPrefix where
 instance NFData CommonPrefix where
 
 -- | /See:/ 'completedMultipartUpload' smart constructor.
-newtype CompletedMultipartUpload = CompletedMultipartUpload'
-  { _cmuParts :: Maybe (List1 CompletedPart)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CompletedMultipartUpload =
+  CompletedMultipartUpload'
+    { _cmuParts :: Maybe (List1 CompletedPart)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CompletedMultipartUpload' with the minimum fields required to make a request.
@@ -824,10 +860,12 @@ instance ToXML CompletedMultipartUpload where
           = mconcat [toXML (toXMLList "Part" <$> _cmuParts)]
 
 -- | /See:/ 'completedPart' smart constructor.
-data CompletedPart = CompletedPart'
-  { _cpPartNumber :: !Int
-  , _cpETag       :: !ETag
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CompletedPart =
+  CompletedPart'
+    { _cpPartNumber :: !Int
+    , _cpETag       :: !ETag
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CompletedPart' with the minimum fields required to make a request.
@@ -863,10 +901,12 @@ instance ToXML CompletedPart where
               ["PartNumber" @= _cpPartNumber, "ETag" @= _cpETag]
 
 -- | /See:/ 'condition' smart constructor.
-data Condition = Condition'
-  { _cKeyPrefixEquals             :: !(Maybe Text)
-  , _cHTTPErrorCodeReturnedEquals :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Condition =
+  Condition'
+    { _cKeyPrefixEquals             :: !(Maybe Text)
+    , _cHTTPErrorCodeReturnedEquals :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Condition' with the minimum fields required to make a request.
@@ -929,10 +969,12 @@ instance Hashable ContinuationEvent where
 instance NFData ContinuationEvent where
 
 -- | /See:/ 'copyObjectResult' smart constructor.
-data CopyObjectResult = CopyObjectResult'
-  { _corETag         :: !(Maybe ETag)
-  , _corLastModified :: !(Maybe RFC822)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CopyObjectResult =
+  CopyObjectResult'
+    { _corETag         :: !(Maybe ETag)
+    , _corLastModified :: !(Maybe RFC822)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CopyObjectResult' with the minimum fields required to make a request.
@@ -966,10 +1008,12 @@ instance Hashable CopyObjectResult where
 instance NFData CopyObjectResult where
 
 -- | /See:/ 'copyPartResult' smart constructor.
-data CopyPartResult = CopyPartResult'
-  { _cprETag         :: !(Maybe ETag)
-  , _cprLastModified :: !(Maybe RFC822)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CopyPartResult =
+  CopyPartResult'
+    { _cprETag         :: !(Maybe ETag)
+    , _cprLastModified :: !(Maybe RFC822)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CopyPartResult' with the minimum fields required to make a request.
@@ -1003,9 +1047,11 @@ instance Hashable CopyPartResult where
 instance NFData CopyPartResult where
 
 -- | /See:/ 'createBucketConfiguration' smart constructor.
-newtype CreateBucketConfiguration = CreateBucketConfiguration'
-  { _cbcLocationConstraint :: Maybe LocationConstraint
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateBucketConfiguration =
+  CreateBucketConfiguration'
+    { _cbcLocationConstraint :: Maybe LocationConstraint
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateBucketConfiguration' with the minimum fields required to make a request.
@@ -1033,10 +1079,12 @@ instance ToXML CreateBucketConfiguration where
               ["LocationConstraint" @= _cbcLocationConstraint]
 
 -- | /See:/ 'delete'' smart constructor.
-data Delete = Delete'
-  { _dQuiet   :: !(Maybe Bool)
-  , _dObjects :: ![ObjectIdentifier]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Delete =
+  Delete'
+    { _dQuiet   :: !(Maybe Bool)
+    , _dObjects :: ![ObjectIdentifier]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Delete' with the minimum fields required to make a request.
@@ -1069,13 +1117,15 @@ instance ToXML Delete where
               ["Quiet" @= _dQuiet, toXMLList "Object" _dObjects]
 
 -- | /See:/ 'deleteMarkerEntry' smart constructor.
-data DeleteMarkerEntry = DeleteMarkerEntry'
-  { _dmeVersionId    :: !(Maybe ObjectVersionId)
-  , _dmeIsLatest     :: !(Maybe Bool)
-  , _dmeOwner        :: !(Maybe Owner)
-  , _dmeKey          :: !(Maybe ObjectKey)
-  , _dmeLastModified :: !(Maybe RFC822)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteMarkerEntry =
+  DeleteMarkerEntry'
+    { _dmeVersionId    :: !(Maybe ObjectVersionId)
+    , _dmeIsLatest     :: !(Maybe Bool)
+    , _dmeOwner        :: !(Maybe Owner)
+    , _dmeKey          :: !(Maybe ObjectKey)
+    , _dmeLastModified :: !(Maybe RFC822)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteMarkerEntry' with the minimum fields required to make a request.
@@ -1136,12 +1186,14 @@ instance Hashable DeleteMarkerEntry where
 instance NFData DeleteMarkerEntry where
 
 -- | /See:/ 'deletedObject' smart constructor.
-data DeletedObject = DeletedObject'
-  { _dVersionId             :: !(Maybe ObjectVersionId)
-  , _dDeleteMarker          :: !(Maybe Bool)
-  , _dDeleteMarkerVersionId :: !(Maybe Text)
-  , _dKey                   :: !(Maybe ObjectKey)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeletedObject =
+  DeletedObject'
+    { _dVersionId             :: !(Maybe ObjectVersionId)
+    , _dDeleteMarker          :: !(Maybe Bool)
+    , _dDeleteMarkerVersionId :: !(Maybe Text)
+    , _dKey                   :: !(Maybe ObjectKey)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeletedObject' with the minimum fields required to make a request.
@@ -1196,13 +1248,15 @@ instance NFData DeletedObject where
 -- | Container for replication destination information.
 --
 -- /See:/ 'destination' smart constructor.
-data Destination = Destination'
-  { _dAccessControlTranslation :: !(Maybe AccessControlTranslation)
-  , _dAccount                  :: !(Maybe Text)
-  , _dStorageClass             :: !(Maybe StorageClass)
-  , _dEncryptionConfiguration  :: !(Maybe EncryptionConfiguration)
-  , _dBucket                   :: !BucketName
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Destination =
+  Destination'
+    { _dAccessControlTranslation :: !(Maybe AccessControlTranslation)
+    , _dAccount                  :: !(Maybe Text)
+    , _dStorageClass             :: !(Maybe StorageClass)
+    , _dEncryptionConfiguration  :: !(Maybe EncryptionConfiguration)
+    , _dBucket                   :: !BucketName
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Destination' with the minimum fields required to make a request.
@@ -1278,11 +1332,13 @@ instance ToXML Destination where
 -- | Describes the server-side encryption that will be applied to the restore results.
 --
 -- /See:/ 'encryption' smart constructor.
-data Encryption = Encryption'
-  { _eKMSKeyId       :: !(Maybe (Sensitive Text))
-  , _eKMSContext     :: !(Maybe Text)
-  , _eEncryptionType :: !ServerSideEncryption
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data Encryption =
+  Encryption'
+    { _eKMSKeyId       :: !(Maybe (Sensitive Text))
+    , _eKMSContext     :: !(Maybe Text)
+    , _eEncryptionType :: !ServerSideEncryption
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Encryption' with the minimum fields required to make a request.
@@ -1331,9 +1387,11 @@ instance ToXML Encryption where
 -- | Container for information regarding encryption based configuration for replicas.
 --
 -- /See:/ 'encryptionConfiguration' smart constructor.
-newtype EncryptionConfiguration = EncryptionConfiguration'
-  { _ecReplicaKMSKeyId :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype EncryptionConfiguration =
+  EncryptionConfiguration'
+    { _ecReplicaKMSKeyId :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EncryptionConfiguration' with the minimum fields required to make a request.
@@ -1385,9 +1443,11 @@ instance Hashable EndEvent where
 instance NFData EndEvent where
 
 -- | /See:/ 'errorDocument' smart constructor.
-newtype ErrorDocument = ErrorDocument'
-  { _edKey :: ObjectKey
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ErrorDocument =
+  ErrorDocument'
+    { _edKey :: ObjectKey
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ErrorDocument' with the minimum fields required to make a request.
@@ -1418,10 +1478,12 @@ instance ToXML ErrorDocument where
 -- | Container for key value pair that defines the criteria for the filter rule.
 --
 -- /See:/ 'filterRule' smart constructor.
-data FilterRule = FilterRule'
-  { _frValue :: !(Maybe Text)
-  , _frName  :: !(Maybe FilterRuleName)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FilterRule =
+  FilterRule'
+    { _frValue :: !(Maybe Text)
+    , _frName  :: !(Maybe FilterRuleName)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FilterRule' with the minimum fields required to make a request.
@@ -1457,9 +1519,11 @@ instance ToXML FilterRule where
           = mconcat ["Value" @= _frValue, "Name" @= _frName]
 
 -- | /See:/ 'glacierJobParameters' smart constructor.
-newtype GlacierJobParameters = GlacierJobParameters'
-  { _gjpTier :: Tier
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GlacierJobParameters =
+  GlacierJobParameters'
+    { _gjpTier :: Tier
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GlacierJobParameters' with the minimum fields required to make a request.
@@ -1486,10 +1550,12 @@ instance ToXML GlacierJobParameters where
           = mconcat ["Tier" @= _gjpTier]
 
 -- | /See:/ 'grant' smart constructor.
-data Grant = Grant'
-  { _gPermission :: !(Maybe Permission)
-  , _gGrantee    :: !(Maybe Grantee)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Grant =
+  Grant'
+    { _gPermission :: !(Maybe Permission)
+    , _gGrantee    :: !(Maybe Grantee)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Grant' with the minimum fields required to make a request.
@@ -1528,13 +1594,15 @@ instance ToXML Grant where
                "Grantee" @= _gGrantee]
 
 -- | /See:/ 'grantee' smart constructor.
-data Grantee = Grantee'
-  { _gURI          :: !(Maybe Text)
-  , _gEmailAddress :: !(Maybe Text)
-  , _gDisplayName  :: !(Maybe Text)
-  , _gId           :: !(Maybe Text)
-  , _gType         :: !Type
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Grantee =
+  Grantee'
+    { _gURI          :: !(Maybe Text)
+    , _gEmailAddress :: !(Maybe Text)
+    , _gDisplayName  :: !(Maybe Text)
+    , _gId           :: !(Maybe Text)
+    , _gType         :: !Type
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Grantee' with the minimum fields required to make a request.
@@ -1603,9 +1671,11 @@ instance ToXML Grantee where
                "xsi:type" @@= _gType]
 
 -- | /See:/ 'indexDocument' smart constructor.
-newtype IndexDocument = IndexDocument'
-  { _idSuffix :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype IndexDocument =
+  IndexDocument'
+    { _idSuffix :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'IndexDocument' with the minimum fields required to make a request.
@@ -1635,10 +1705,12 @@ instance ToXML IndexDocument where
           = mconcat ["Suffix" @= _idSuffix]
 
 -- | /See:/ 'initiator' smart constructor.
-data Initiator = Initiator'
-  { _iDisplayName :: !(Maybe Text)
-  , _iId          :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Initiator =
+  Initiator'
+    { _iDisplayName :: !(Maybe Text)
+    , _iId          :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Initiator' with the minimum fields required to make a request.
@@ -1673,11 +1745,13 @@ instance NFData Initiator where
 -- | Describes the serialization format of the object.
 --
 -- /See:/ 'inputSerialization' smart constructor.
-data InputSerialization = InputSerialization'
-  { _isJSON            :: !(Maybe JSONInput)
-  , _isCSV             :: !(Maybe CSVInput)
-  , _isCompressionType :: !(Maybe CompressionType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InputSerialization =
+  InputSerialization'
+    { _isJSON            :: !(Maybe JSONInput)
+    , _isCSV             :: !(Maybe CSVInput)
+    , _isCompressionType :: !(Maybe CompressionType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InputSerialization' with the minimum fields required to make a request.
@@ -1719,15 +1793,17 @@ instance ToXML InputSerialization where
                "CompressionType" @= _isCompressionType]
 
 -- | /See:/ 'inventoryConfiguration' smart constructor.
-data InventoryConfiguration = InventoryConfiguration'
-  { _icOptionalFields         :: !(Maybe [InventoryOptionalField])
-  , _icFilter                 :: !(Maybe InventoryFilter)
-  , _icDestination            :: !InventoryDestination
-  , _icIsEnabled              :: !Bool
-  , _icId                     :: !Text
-  , _icIncludedObjectVersions :: !InventoryIncludedObjectVersions
-  , _icSchedule               :: !InventorySchedule
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data InventoryConfiguration =
+  InventoryConfiguration'
+    { _icOptionalFields         :: !(Maybe [InventoryOptionalField])
+    , _icFilter                 :: !(Maybe InventoryFilter)
+    , _icDestination            :: !InventoryDestination
+    , _icIsEnabled              :: !Bool
+    , _icId                     :: !Text
+    , _icIncludedObjectVersions :: !InventoryIncludedObjectVersions
+    , _icSchedule               :: !InventorySchedule
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InventoryConfiguration' with the minimum fields required to make a request.
@@ -1823,9 +1899,11 @@ instance ToXML InventoryConfiguration where
                "Schedule" @= _icSchedule]
 
 -- | /See:/ 'inventoryDestination' smart constructor.
-newtype InventoryDestination = InventoryDestination'
-  { _idS3BucketDestination :: InventoryS3BucketDestination
-  } deriving (Eq, Show, Data, Typeable, Generic)
+newtype InventoryDestination =
+  InventoryDestination'
+    { _idS3BucketDestination :: InventoryS3BucketDestination
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InventoryDestination' with the minimum fields required to make a request.
@@ -1861,10 +1939,12 @@ instance ToXML InventoryDestination where
 -- | Contains the type of server-side encryption used to encrypt the inventory results.
 --
 -- /See:/ 'inventoryEncryption' smart constructor.
-data InventoryEncryption = InventoryEncryption'
-  { _ieSSES3  :: !(Maybe SSES3)
-  , _ieSSEKMS :: !(Maybe SSEKMS)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data InventoryEncryption =
+  InventoryEncryption'
+    { _ieSSES3  :: !(Maybe SSES3)
+    , _ieSSEKMS :: !(Maybe SSEKMS)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InventoryEncryption' with the minimum fields required to make a request.
@@ -1903,9 +1983,11 @@ instance ToXML InventoryEncryption where
               ["SSE-S3" @= _ieSSES3, "SSE-KMS" @= _ieSSEKMS]
 
 -- | /See:/ 'inventoryFilter' smart constructor.
-newtype InventoryFilter = InventoryFilter'
-  { _ifPrefix :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype InventoryFilter =
+  InventoryFilter'
+    { _ifPrefix :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InventoryFilter' with the minimum fields required to make a request.
@@ -1935,13 +2017,15 @@ instance ToXML InventoryFilter where
           = mconcat ["Prefix" @= _ifPrefix]
 
 -- | /See:/ 'inventoryS3BucketDestination' smart constructor.
-data InventoryS3BucketDestination = InventoryS3BucketDestination'
-  { _isbdPrefix     :: !(Maybe Text)
-  , _isbdAccountId  :: !(Maybe Text)
-  , _isbdEncryption :: !(Maybe InventoryEncryption)
-  , _isbdBucket     :: !BucketName
-  , _isbdFormat     :: !InventoryFormat
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data InventoryS3BucketDestination =
+  InventoryS3BucketDestination'
+    { _isbdPrefix     :: !(Maybe Text)
+    , _isbdAccountId  :: !(Maybe Text)
+    , _isbdEncryption :: !(Maybe InventoryEncryption)
+    , _isbdBucket     :: !BucketName
+    , _isbdFormat     :: !InventoryFormat
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InventoryS3BucketDestination' with the minimum fields required to make a request.
@@ -2012,9 +2096,11 @@ instance ToXML InventoryS3BucketDestination where
                "Bucket" @= _isbdBucket, "Format" @= _isbdFormat]
 
 -- | /See:/ 'inventorySchedule' smart constructor.
-newtype InventorySchedule = InventorySchedule'
-  { _isFrequency :: InventoryFrequency
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype InventorySchedule =
+  InventorySchedule'
+    { _isFrequency :: InventoryFrequency
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InventorySchedule' with the minimum fields required to make a request.
@@ -2045,9 +2131,11 @@ instance ToXML InventorySchedule where
           = mconcat ["Frequency" @= _isFrequency]
 
 -- | /See:/ 'jsonInput' smart constructor.
-newtype JSONInput = JSONInput'
-  { _jiType :: Maybe JSONType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype JSONInput =
+  JSONInput'
+    { _jiType :: Maybe JSONType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'JSONInput' with the minimum fields required to make a request.
@@ -2072,9 +2160,11 @@ instance ToXML JSONInput where
         toXML JSONInput'{..} = mconcat ["Type" @= _jiType]
 
 -- | /See:/ 'jsonOutput' smart constructor.
-newtype JSONOutput = JSONOutput'
-  { _joRecordDelimiter :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype JSONOutput =
+  JSONOutput'
+    { _joRecordDelimiter :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'JSONOutput' with the minimum fields required to make a request.
@@ -2102,12 +2192,14 @@ instance ToXML JSONOutput where
 -- | Container for specifying the AWS Lambda notification configuration.
 --
 -- /See:/ 'lambdaFunctionConfiguration' smart constructor.
-data LambdaFunctionConfiguration = LambdaFunctionConfiguration'
-  { _lfcId                :: !(Maybe Text)
-  , _lfcFilter            :: !(Maybe NotificationConfigurationFilter)
-  , _lfcLambdaFunctionARN :: !Text
-  , _lfcEvents            :: ![Event]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LambdaFunctionConfiguration =
+  LambdaFunctionConfiguration'
+    { _lfcId                :: !(Maybe Text)
+    , _lfcFilter            :: !(Maybe NotificationConfigurationFilter)
+    , _lfcLambdaFunctionARN :: !Text
+    , _lfcEvents            :: ![Event]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LambdaFunctionConfiguration' with the minimum fields required to make a request.
@@ -2168,11 +2260,13 @@ instance ToXML LambdaFunctionConfiguration where
                toXMLList "Event" _lfcEvents]
 
 -- | /See:/ 'lifecycleExpiration' smart constructor.
-data LifecycleExpiration = LifecycleExpiration'
-  { _leDays                      :: !(Maybe Int)
-  , _leDate                      :: !(Maybe RFC822)
-  , _leExpiredObjectDeleteMarker :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LifecycleExpiration =
+  LifecycleExpiration'
+    { _leDays                      :: !(Maybe Int)
+    , _leDate                      :: !(Maybe RFC822)
+    , _leExpiredObjectDeleteMarker :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LifecycleExpiration' with the minimum fields required to make a request.
@@ -2224,17 +2318,19 @@ instance ToXML LifecycleExpiration where
                  _leExpiredObjectDeleteMarker]
 
 -- | /See:/ 'lifecycleRule' smart constructor.
-data LifecycleRule = LifecycleRule'
-  { _lrTransitions                    :: !(Maybe [Transition])
-  , _lrNoncurrentVersionExpiration    :: !(Maybe NoncurrentVersionExpiration)
-  , _lrPrefix                         :: !(Maybe Text)
-  , _lrNoncurrentVersionTransitions   :: !(Maybe [NoncurrentVersionTransition])
-  , _lrExpiration                     :: !(Maybe LifecycleExpiration)
-  , _lrId                             :: !(Maybe Text)
-  , _lrFilter                         :: !(Maybe LifecycleRuleFilter)
-  , _lrAbortIncompleteMultipartUpload :: !(Maybe AbortIncompleteMultipartUpload)
-  , _lrStatus                         :: !ExpirationStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LifecycleRule =
+  LifecycleRule'
+    { _lrTransitions :: !(Maybe [Transition])
+    , _lrNoncurrentVersionExpiration :: !(Maybe NoncurrentVersionExpiration)
+    , _lrPrefix :: !(Maybe Text)
+    , _lrNoncurrentVersionTransitions :: !(Maybe [NoncurrentVersionTransition])
+    , _lrExpiration :: !(Maybe LifecycleExpiration)
+    , _lrId :: !(Maybe Text)
+    , _lrFilter :: !(Maybe LifecycleRuleFilter)
+    , _lrAbortIncompleteMultipartUpload :: !(Maybe AbortIncompleteMultipartUpload)
+    , _lrStatus :: !ExpirationStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LifecycleRule' with the minimum fields required to make a request.
@@ -2348,10 +2444,12 @@ instance ToXML LifecycleRule where
 -- | This is used in a Lifecycle Rule Filter to apply a logical AND to two or more predicates. The Lifecycle Rule will apply to any object matching all of the predicates configured inside the And operator.
 --
 -- /See:/ 'lifecycleRuleAndOperator' smart constructor.
-data LifecycleRuleAndOperator = LifecycleRuleAndOperator'
-  { _lraoPrefix :: !(Maybe Text)
-  , _lraoTags   :: !(Maybe [Tag])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LifecycleRuleAndOperator =
+  LifecycleRuleAndOperator'
+    { _lraoPrefix :: !(Maybe Text)
+    , _lraoTags   :: !(Maybe [Tag])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LifecycleRuleAndOperator' with the minimum fields required to make a request.
@@ -2394,11 +2492,13 @@ instance ToXML LifecycleRuleAndOperator where
 -- | The Filter is used to identify objects that a Lifecycle Rule applies to. A Filter must have exactly one of Prefix, Tag, or And specified.
 --
 -- /See:/ 'lifecycleRuleFilter' smart constructor.
-data LifecycleRuleFilter = LifecycleRuleFilter'
-  { _lrfTag    :: !(Maybe Tag)
-  , _lrfPrefix :: !(Maybe Text)
-  , _lrfAnd    :: !(Maybe LifecycleRuleAndOperator)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LifecycleRuleFilter =
+  LifecycleRuleFilter'
+    { _lrfTag    :: !(Maybe Tag)
+    , _lrfPrefix :: !(Maybe Text)
+    , _lrfAnd    :: !(Maybe LifecycleRuleAndOperator)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LifecycleRuleFilter' with the minimum fields required to make a request.
@@ -2447,11 +2547,13 @@ instance ToXML LifecycleRuleFilter where
 -- | Container for logging information. Presence of this element indicates that logging is enabled. Parameters TargetBucket and TargetPrefix are required in this case.
 --
 -- /See:/ 'loggingEnabled' smart constructor.
-data LoggingEnabled = LoggingEnabled'
-  { _leTargetGrants :: !(Maybe [TargetGrant])
-  , _leTargetBucket :: !Text
-  , _leTargetPrefix :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LoggingEnabled =
+  LoggingEnabled'
+    { _leTargetGrants :: !(Maybe [TargetGrant])
+    , _leTargetBucket :: !Text
+    , _leTargetPrefix :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LoggingEnabled' with the minimum fields required to make a request.
@@ -2510,10 +2612,12 @@ instance ToXML LoggingEnabled where
 -- | A metadata key-value pair to store with an object.
 --
 -- /See:/ 'metadataEntry' smart constructor.
-data MetadataEntry = MetadataEntry'
-  { _meValue :: !(Maybe Text)
-  , _meName  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MetadataEntry =
+  MetadataEntry'
+    { _meValue :: !(Maybe Text)
+    , _meName  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MetadataEntry' with the minimum fields required to make a request.
@@ -2545,10 +2649,12 @@ instance ToXML MetadataEntry where
           = mconcat ["Value" @= _meValue, "Name" @= _meName]
 
 -- | /See:/ 'metricsAndOperator' smart constructor.
-data MetricsAndOperator = MetricsAndOperator'
-  { _maoPrefix :: !(Maybe Text)
-  , _maoTags   :: !(Maybe [Tag])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MetricsAndOperator =
+  MetricsAndOperator'
+    { _maoPrefix :: !(Maybe Text)
+    , _maoTags   :: !(Maybe [Tag])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MetricsAndOperator' with the minimum fields required to make a request.
@@ -2589,10 +2695,12 @@ instance ToXML MetricsAndOperator where
                "Tag" @= toXML (toXMLList "Tag" <$> _maoTags)]
 
 -- | /See:/ 'metricsConfiguration' smart constructor.
-data MetricsConfiguration = MetricsConfiguration'
-  { _mcFilter :: !(Maybe MetricsFilter)
-  , _mcId     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MetricsConfiguration =
+  MetricsConfiguration'
+    { _mcFilter :: !(Maybe MetricsFilter)
+    , _mcId     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MetricsConfiguration' with the minimum fields required to make a request.
@@ -2631,11 +2739,13 @@ instance ToXML MetricsConfiguration where
           = mconcat ["Filter" @= _mcFilter, "Id" @= _mcId]
 
 -- | /See:/ 'metricsFilter' smart constructor.
-data MetricsFilter = MetricsFilter'
-  { _mfTag    :: !(Maybe Tag)
-  , _mfPrefix :: !(Maybe Text)
-  , _mfAnd    :: !(Maybe MetricsAndOperator)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MetricsFilter =
+  MetricsFilter'
+    { _mfTag    :: !(Maybe Tag)
+    , _mfPrefix :: !(Maybe Text)
+    , _mfAnd    :: !(Maybe MetricsAndOperator)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MetricsFilter' with the minimum fields required to make a request.
@@ -2681,14 +2791,16 @@ instance ToXML MetricsFilter where
                "And" @= _mfAnd]
 
 -- | /See:/ 'multipartUpload' smart constructor.
-data MultipartUpload = MultipartUpload'
-  { _muInitiated    :: !(Maybe RFC822)
-  , _muInitiator    :: !(Maybe Initiator)
-  , _muOwner        :: !(Maybe Owner)
-  , _muKey          :: !(Maybe ObjectKey)
-  , _muStorageClass :: !(Maybe StorageClass)
-  , _muUploadId     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MultipartUpload =
+  MultipartUpload'
+    { _muInitiated    :: !(Maybe RFC822)
+    , _muInitiator    :: !(Maybe Initiator)
+    , _muOwner        :: !(Maybe Owner)
+    , _muKey          :: !(Maybe ObjectKey)
+    , _muStorageClass :: !(Maybe StorageClass)
+    , _muUploadId     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MultipartUpload' with the minimum fields required to make a request.
@@ -2759,9 +2871,11 @@ instance NFData MultipartUpload where
 -- | Specifies when noncurrent object versions expire. Upon expiration, Amazon S3 permanently deletes the noncurrent object versions. You set this lifecycle configuration action on a bucket that has versioning enabled (or suspended) to request that Amazon S3 delete noncurrent object versions at a specific period in the object's lifetime.
 --
 -- /See:/ 'noncurrentVersionExpiration' smart constructor.
-newtype NoncurrentVersionExpiration = NoncurrentVersionExpiration'
-  { _nveNoncurrentDays :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype NoncurrentVersionExpiration =
+  NoncurrentVersionExpiration'
+    { _nveNoncurrentDays :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NoncurrentVersionExpiration' with the minimum fields required to make a request.
@@ -2796,10 +2910,12 @@ instance ToXML NoncurrentVersionExpiration where
 -- | Container for the transition rule that describes when noncurrent objects transition to the STANDARD_IA, ONEZONE_IA or GLACIER storage class. If your bucket is versioning-enabled (or versioning is suspended), you can set this action to request that Amazon S3 transition noncurrent object versions to the STANDARD_IA, ONEZONE_IA or GLACIER storage class at a specific period in the object's lifetime.
 --
 -- /See:/ 'noncurrentVersionTransition' smart constructor.
-data NoncurrentVersionTransition = NoncurrentVersionTransition'
-  { _nvtNoncurrentDays :: !Int
-  , _nvtStorageClass   :: !TransitionStorageClass
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NoncurrentVersionTransition =
+  NoncurrentVersionTransition'
+    { _nvtNoncurrentDays :: !Int
+    , _nvtStorageClass   :: !TransitionStorageClass
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NoncurrentVersionTransition' with the minimum fields required to make a request.
@@ -2844,11 +2960,13 @@ instance ToXML NoncurrentVersionTransition where
 -- | Container for specifying the notification configuration of the bucket. If this element is empty, notifications are turned off on the bucket.
 --
 -- /See:/ 'notificationConfiguration' smart constructor.
-data NotificationConfiguration = NotificationConfiguration'
-  { _ncQueueConfigurations          :: !(Maybe [QueueConfiguration])
-  , _ncTopicConfigurations          :: !(Maybe [TopicConfiguration])
-  , _ncLambdaFunctionConfigurations :: !(Maybe [LambdaFunctionConfiguration])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NotificationConfiguration =
+  NotificationConfiguration'
+    { _ncQueueConfigurations          :: !(Maybe [QueueConfiguration])
+    , _ncTopicConfigurations          :: !(Maybe [TopicConfiguration])
+    , _ncLambdaFunctionConfigurations :: !(Maybe [LambdaFunctionConfiguration])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NotificationConfiguration' with the minimum fields required to make a request.
@@ -2910,9 +3028,11 @@ instance ToXML NotificationConfiguration where
 -- | <http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html Configuring Event Notifications>
 --
 -- /See:/ 'notificationConfigurationFilter' smart constructor.
-newtype NotificationConfigurationFilter = NotificationConfigurationFilter'
-  { _ncfKey :: Maybe S3KeyFilter
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype NotificationConfigurationFilter =
+  NotificationConfigurationFilter'
+    { _ncfKey :: Maybe S3KeyFilter
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NotificationConfigurationFilter' with the minimum fields required to make a request.
@@ -2946,14 +3066,16 @@ instance ToXML NotificationConfigurationFilter where
           = mconcat ["S3Key" @= _ncfKey]
 
 -- | /See:/ 'object'' smart constructor.
-data Object = Object'
-  { _oOwner        :: !(Maybe Owner)
-  , _oETag         :: !ETag
-  , _oSize         :: !Int
-  , _oKey          :: !ObjectKey
-  , _oStorageClass :: !ObjectStorageClass
-  , _oLastModified :: !RFC822
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Object =
+  Object'
+    { _oOwner        :: !(Maybe Owner)
+    , _oETag         :: !ETag
+    , _oSize         :: !Int
+    , _oKey          :: !ObjectKey
+    , _oStorageClass :: !ObjectStorageClass
+    , _oLastModified :: !RFC822
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Object' with the minimum fields required to make a request.
@@ -3026,10 +3148,12 @@ instance Hashable Object where
 instance NFData Object where
 
 -- | /See:/ 'objectIdentifier' smart constructor.
-data ObjectIdentifier = ObjectIdentifier'
-  { _oiVersionId :: !(Maybe ObjectVersionId)
-  , _oiKey       :: !ObjectKey
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ObjectIdentifier =
+  ObjectIdentifier'
+    { _oiVersionId :: !(Maybe ObjectVersionId)
+    , _oiKey       :: !ObjectKey
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ObjectIdentifier' with the minimum fields required to make a request.
@@ -3064,16 +3188,18 @@ instance ToXML ObjectIdentifier where
               ["VersionId" @= _oiVersionId, "Key" @= _oiKey]
 
 -- | /See:/ 'objectVersion' smart constructor.
-data ObjectVersion = ObjectVersion'
-  { _ovETag         :: !(Maybe ETag)
-  , _ovVersionId    :: !(Maybe ObjectVersionId)
-  , _ovSize         :: !(Maybe Int)
-  , _ovIsLatest     :: !(Maybe Bool)
-  , _ovOwner        :: !(Maybe Owner)
-  , _ovKey          :: !(Maybe ObjectKey)
-  , _ovStorageClass :: !(Maybe ObjectVersionStorageClass)
-  , _ovLastModified :: !(Maybe RFC822)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ObjectVersion =
+  ObjectVersion'
+    { _ovETag         :: !(Maybe ETag)
+    , _ovVersionId    :: !(Maybe ObjectVersionId)
+    , _ovSize         :: !(Maybe Int)
+    , _ovIsLatest     :: !(Maybe Bool)
+    , _ovOwner        :: !(Maybe Owner)
+    , _ovKey          :: !(Maybe ObjectKey)
+    , _ovStorageClass :: !(Maybe ObjectVersionStorageClass)
+    , _ovLastModified :: !(Maybe RFC822)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ObjectVersion' with the minimum fields required to make a request.
@@ -3160,9 +3286,11 @@ instance NFData ObjectVersion where
 -- | Describes the location where the restore job's output is stored.
 --
 -- /See:/ 'outputLocation' smart constructor.
-newtype OutputLocation = OutputLocation'
-  { _olS3 :: Maybe S3Location
-  } deriving (Eq, Show, Data, Typeable, Generic)
+newtype OutputLocation =
+  OutputLocation'
+    { _olS3 :: Maybe S3Location
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OutputLocation' with the minimum fields required to make a request.
@@ -3189,10 +3317,12 @@ instance ToXML OutputLocation where
 -- | Describes how results of the Select job are serialized.
 --
 -- /See:/ 'outputSerialization' smart constructor.
-data OutputSerialization = OutputSerialization'
-  { _osJSON :: !(Maybe JSONOutput)
-  , _osCSV  :: !(Maybe CSVOutput)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data OutputSerialization =
+  OutputSerialization'
+    { _osJSON :: !(Maybe JSONOutput)
+    , _osCSV  :: !(Maybe CSVOutput)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OutputSerialization' with the minimum fields required to make a request.
@@ -3224,10 +3354,12 @@ instance ToXML OutputSerialization where
           = mconcat ["JSON" @= _osJSON, "CSV" @= _osCSV]
 
 -- | /See:/ 'owner' smart constructor.
-data Owner = Owner'
-  { _oDisplayName :: !(Maybe Text)
-  , _oId          :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Owner =
+  Owner'
+    { _oDisplayName :: !(Maybe Text)
+    , _oId          :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Owner' with the minimum fields required to make a request.
@@ -3264,12 +3396,14 @@ instance ToXML Owner where
               ["DisplayName" @= _oDisplayName, "ID" @= _oId]
 
 -- | /See:/ 'part' smart constructor.
-data Part = Part'
-  { _pETag         :: !(Maybe ETag)
-  , _pSize         :: !(Maybe Int)
-  , _pPartNumber   :: !(Maybe Int)
-  , _pLastModified :: !(Maybe RFC822)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Part =
+  Part'
+    { _pETag         :: !(Maybe ETag)
+    , _pSize         :: !(Maybe Int)
+    , _pPartNumber   :: !(Maybe Int)
+    , _pLastModified :: !(Maybe RFC822)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Part' with the minimum fields required to make a request.
@@ -3322,11 +3456,13 @@ instance Hashable Part where
 instance NFData Part where
 
 -- | /See:/ 'progress' smart constructor.
-data Progress = Progress'
-  { _pBytesReturned  :: !(Maybe Integer)
-  , _pBytesScanned   :: !(Maybe Integer)
-  , _pBytesProcessed :: !(Maybe Integer)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Progress =
+  Progress'
+    { _pBytesReturned  :: !(Maybe Integer)
+    , _pBytesScanned   :: !(Maybe Integer)
+    , _pBytesProcessed :: !(Maybe Integer)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Progress' with the minimum fields required to make a request.
@@ -3371,9 +3507,11 @@ instance Hashable Progress where
 instance NFData Progress where
 
 -- | /See:/ 'progressEvent' smart constructor.
-newtype ProgressEvent = ProgressEvent'
-  { _peDetails :: Maybe Progress
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ProgressEvent =
+  ProgressEvent'
+    { _peDetails :: Maybe Progress
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ProgressEvent' with the minimum fields required to make a request.
@@ -3400,12 +3538,14 @@ instance NFData ProgressEvent where
 -- | Container for specifying an configuration when you want Amazon S3 to publish events to an Amazon Simple Queue Service (Amazon SQS) queue.
 --
 -- /See:/ 'queueConfiguration' smart constructor.
-data QueueConfiguration = QueueConfiguration'
-  { _qcId       :: !(Maybe Text)
-  , _qcFilter   :: !(Maybe NotificationConfigurationFilter)
-  , _qcQueueARN :: !Text
-  , _qcEvents   :: ![Event]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data QueueConfiguration =
+  QueueConfiguration'
+    { _qcId       :: !(Maybe Text)
+    , _qcFilter   :: !(Maybe NotificationConfigurationFilter)
+    , _qcQueueARN :: !Text
+    , _qcEvents   :: ![Event]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'QueueConfiguration' with the minimum fields required to make a request.
@@ -3464,9 +3604,11 @@ instance ToXML QueueConfiguration where
                "Queue" @= _qcQueueARN, toXMLList "Event" _qcEvents]
 
 -- | /See:/ 'recordsEvent' smart constructor.
-newtype RecordsEvent = RecordsEvent'
-  { _rePayload :: Maybe Base64
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RecordsEvent =
+  RecordsEvent'
+    { _rePayload :: Maybe Base64
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RecordsEvent' with the minimum fields required to make a request.
@@ -3491,13 +3633,15 @@ instance Hashable RecordsEvent where
 instance NFData RecordsEvent where
 
 -- | /See:/ 'redirect' smart constructor.
-data Redirect = Redirect'
-  { _rHostName             :: !(Maybe Text)
-  , _rProtocol             :: !(Maybe Protocol)
-  , _rHTTPRedirectCode     :: !(Maybe Text)
-  , _rReplaceKeyWith       :: !(Maybe Text)
-  , _rReplaceKeyPrefixWith :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Redirect =
+  Redirect'
+    { _rHostName             :: !(Maybe Text)
+    , _rProtocol             :: !(Maybe Protocol)
+    , _rHTTPRedirectCode     :: !(Maybe Text)
+    , _rReplaceKeyWith       :: !(Maybe Text)
+    , _rReplaceKeyPrefixWith :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Redirect' with the minimum fields required to make a request.
@@ -3566,10 +3710,12 @@ instance ToXML Redirect where
                "ReplaceKeyPrefixWith" @= _rReplaceKeyPrefixWith]
 
 -- | /See:/ 'redirectAllRequestsTo' smart constructor.
-data RedirectAllRequestsTo = RedirectAllRequestsTo'
-  { _rartProtocol :: !(Maybe Protocol)
-  , _rartHostName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RedirectAllRequestsTo =
+  RedirectAllRequestsTo'
+    { _rartProtocol :: !(Maybe Protocol)
+    , _rartHostName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RedirectAllRequestsTo' with the minimum fields required to make a request.
@@ -3612,10 +3758,12 @@ instance ToXML RedirectAllRequestsTo where
 -- | Container for replication rules. You can add as many as 1,000 rules. Total replication configuration size can be up to 2 MB.
 --
 -- /See:/ 'replicationConfiguration' smart constructor.
-data ReplicationConfiguration = ReplicationConfiguration'
-  { _rcRole  :: !Text
-  , _rcRules :: ![ReplicationRule]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReplicationConfiguration =
+  ReplicationConfiguration'
+    { _rcRole  :: !Text
+    , _rcRules :: ![ReplicationRule]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReplicationConfiguration' with the minimum fields required to make a request.
@@ -3657,13 +3805,15 @@ instance ToXML ReplicationConfiguration where
 -- | Container for information about a particular replication rule.
 --
 -- /See:/ 'replicationRule' smart constructor.
-data ReplicationRule = ReplicationRule'
-  { _rrId                      :: !(Maybe Text)
-  , _rrSourceSelectionCriteria :: !(Maybe SourceSelectionCriteria)
-  , _rrPrefix                  :: !Text
-  , _rrStatus                  :: !ReplicationRuleStatus
-  , _rrDestination             :: !Destination
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReplicationRule =
+  ReplicationRule'
+    { _rrId                      :: !(Maybe Text)
+    , _rrSourceSelectionCriteria :: !(Maybe SourceSelectionCriteria)
+    , _rrPrefix                  :: !Text
+    , _rrStatus                  :: !ReplicationRuleStatus
+    , _rrDestination             :: !Destination
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReplicationRule' with the minimum fields required to make a request.
@@ -3736,9 +3886,11 @@ instance ToXML ReplicationRule where
                "Destination" @= _rrDestination]
 
 -- | /See:/ 'requestPaymentConfiguration' smart constructor.
-newtype RequestPaymentConfiguration = RequestPaymentConfiguration'
-  { _rpcPayer :: Payer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RequestPaymentConfiguration =
+  RequestPaymentConfiguration'
+    { _rpcPayer :: Payer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RequestPaymentConfiguration' with the minimum fields required to make a request.
@@ -3766,9 +3918,11 @@ instance ToXML RequestPaymentConfiguration where
           = mconcat ["Payer" @= _rpcPayer]
 
 -- | /See:/ 'requestProgress' smart constructor.
-newtype RequestProgress = RequestProgress'
-  { _rpEnabled :: Maybe Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RequestProgress =
+  RequestProgress'
+    { _rpEnabled :: Maybe Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RequestProgress' with the minimum fields required to make a request.
@@ -3796,15 +3950,17 @@ instance ToXML RequestProgress where
 -- | Container for restore job parameters.
 --
 -- /See:/ 'restoreRequest' smart constructor.
-data RestoreRequest = RestoreRequest'
-  { _rrDays                 :: !(Maybe Int)
-  , _rrSelectParameters     :: !(Maybe SelectParameters)
-  , _rrOutputLocation       :: !(Maybe OutputLocation)
-  , _rrTier                 :: !(Maybe Tier)
-  , _rrGlacierJobParameters :: !(Maybe GlacierJobParameters)
-  , _rrType                 :: !(Maybe RestoreRequestType)
-  , _rrDescription          :: !(Maybe Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data RestoreRequest =
+  RestoreRequest'
+    { _rrDays                 :: !(Maybe Int)
+    , _rrSelectParameters     :: !(Maybe SelectParameters)
+    , _rrOutputLocation       :: !(Maybe OutputLocation)
+    , _rrTier                 :: !(Maybe Tier)
+    , _rrGlacierJobParameters :: !(Maybe GlacierJobParameters)
+    , _rrType                 :: !(Maybe RestoreRequestType)
+    , _rrDescription          :: !(Maybe Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RestoreRequest' with the minimum fields required to make a request.
@@ -3881,10 +4037,12 @@ instance ToXML RestoreRequest where
                "Type" @= _rrType, "Description" @= _rrDescription]
 
 -- | /See:/ 'routingRule' smart constructor.
-data RoutingRule = RoutingRule'
-  { _rrCondition :: !(Maybe Condition)
-  , _rrRedirect  :: !Redirect
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RoutingRule =
+  RoutingRule'
+    { _rrCondition :: !(Maybe Condition)
+    , _rrRedirect  :: !Redirect
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RoutingRule' with the minimum fields required to make a request.
@@ -3927,9 +4085,11 @@ instance ToXML RoutingRule where
 -- | Container for object key name prefix and suffix filtering rules.
 --
 -- /See:/ 's3KeyFilter' smart constructor.
-newtype S3KeyFilter = S3KeyFilter'
-  { _skfFilterRules :: Maybe [FilterRule]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype S3KeyFilter =
+  S3KeyFilter'
+    { _skfFilterRules :: Maybe [FilterRule]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'S3KeyFilter' with the minimum fields required to make a request.
@@ -3963,16 +4123,18 @@ instance ToXML S3KeyFilter where
 -- | Describes an S3 location that will receive the results of the restore request.
 --
 -- /See:/ 's3Location' smart constructor.
-data S3Location = S3Location'
-  { _slCannedACL         :: !(Maybe ObjectCannedACL)
-  , _slAccessControlList :: !(Maybe [Grant])
-  , _slUserMetadata      :: !(Maybe [MetadataEntry])
-  , _slEncryption        :: !(Maybe Encryption)
-  , _slStorageClass      :: !(Maybe StorageClass)
-  , _slTagging           :: !(Maybe Tagging)
-  , _slBucketName        :: !BucketName
-  , _slPrefix            :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data S3Location =
+  S3Location'
+    { _slCannedACL         :: !(Maybe ObjectCannedACL)
+    , _slAccessControlList :: !(Maybe [Grant])
+    , _slUserMetadata      :: !(Maybe [MetadataEntry])
+    , _slEncryption        :: !(Maybe Encryption)
+    , _slStorageClass      :: !(Maybe StorageClass)
+    , _slTagging           :: !(Maybe Tagging)
+    , _slBucketName        :: !BucketName
+    , _slPrefix            :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'S3Location' with the minimum fields required to make a request.
@@ -4062,12 +4224,14 @@ instance ToXML S3Location where
                "BucketName" @= _slBucketName, "Prefix" @= _slPrefix]
 
 -- | /See:/ 's3ServiceError' smart constructor.
-data S3ServiceError = S3ServiceError'
-  { _sseVersionId :: !(Maybe ObjectVersionId)
-  , _sseKey       :: !(Maybe ObjectKey)
-  , _sseCode      :: !(Maybe Text)
-  , _sseMessage   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data S3ServiceError =
+  S3ServiceError'
+    { _sseVersionId :: !(Maybe ObjectVersionId)
+    , _sseKey       :: !(Maybe ObjectKey)
+    , _sseCode      :: !(Maybe Text)
+    , _sseMessage   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'S3ServiceError' with the minimum fields required to make a request.
@@ -4122,9 +4286,11 @@ instance NFData S3ServiceError where
 -- | Specifies the use of SSE-KMS to encrypt delievered Inventory reports.
 --
 -- /See:/ 'sSEKMS' smart constructor.
-newtype SSEKMS = SSEKMS'
-  { _ssekKeyId :: Sensitive Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+newtype SSEKMS =
+  SSEKMS'
+    { _ssekKeyId :: Sensitive Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SSEKMS' with the minimum fields required to make a request.
@@ -4178,13 +4344,15 @@ instance ToXML SSES3 where
         toXML = const mempty
 
 -- | /See:/ 'selectObjectContentEventStream' smart constructor.
-data SelectObjectContentEventStream = SelectObjectContentEventStream'
-  { _socesProgress :: !(Maybe ProgressEvent)
-  , _socesRecords  :: !(Maybe RecordsEvent)
-  , _socesCont     :: !(Maybe ContinuationEvent)
-  , _socesStats    :: !(Maybe StatsEvent)
-  , _socesEnd      :: !(Maybe EndEvent)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SelectObjectContentEventStream =
+  SelectObjectContentEventStream'
+    { _socesProgress :: !(Maybe ProgressEvent)
+    , _socesRecords  :: !(Maybe RecordsEvent)
+    , _socesCont     :: !(Maybe ContinuationEvent)
+    , _socesStats    :: !(Maybe StatsEvent)
+    , _socesEnd      :: !(Maybe EndEvent)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SelectObjectContentEventStream' with the minimum fields required to make a request.
@@ -4248,12 +4416,14 @@ instance NFData SelectObjectContentEventStream where
 -- | Describes the parameters for Select job types.
 --
 -- /See:/ 'selectParameters' smart constructor.
-data SelectParameters = SelectParameters'
-  { _spInputSerialization  :: !InputSerialization
-  , _spExpressionType      :: !ExpressionType
-  , _spExpression          :: !Text
-  , _spOutputSerialization :: !OutputSerialization
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SelectParameters =
+  SelectParameters'
+    { _spInputSerialization  :: !InputSerialization
+    , _spExpressionType      :: !ExpressionType
+    , _spExpression          :: !Text
+    , _spOutputSerialization :: !OutputSerialization
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SelectParameters' with the minimum fields required to make a request.
@@ -4313,10 +4483,12 @@ instance ToXML SelectParameters where
 -- | Describes the default server-side encryption to apply to new objects in the bucket. If Put Object request does not specify any server-side encryption, this default encryption will be applied.
 --
 -- /See:/ 'serverSideEncryptionByDefault' smart constructor.
-data ServerSideEncryptionByDefault = ServerSideEncryptionByDefault'
-  { _ssebdKMSMasterKeyId :: !(Maybe (Sensitive Text))
-  , _ssebdSSEAlgorithm   :: !ServerSideEncryption
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data ServerSideEncryptionByDefault =
+  ServerSideEncryptionByDefault'
+    { _ssebdKMSMasterKeyId :: !(Maybe (Sensitive Text))
+    , _ssebdSSEAlgorithm   :: !ServerSideEncryption
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ServerSideEncryptionByDefault' with the minimum fields required to make a request.
@@ -4360,9 +4532,11 @@ instance ToXML ServerSideEncryptionByDefault where
 -- | Container for server-side encryption configuration rules. Currently S3 supports one rule only.
 --
 -- /See:/ 'serverSideEncryptionConfiguration' smart constructor.
-newtype ServerSideEncryptionConfiguration = ServerSideEncryptionConfiguration'
-  { _ssecRules :: [ServerSideEncryptionRule]
-  } deriving (Eq, Show, Data, Typeable, Generic)
+newtype ServerSideEncryptionConfiguration =
+  ServerSideEncryptionConfiguration'
+    { _ssecRules :: [ServerSideEncryptionRule]
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ServerSideEncryptionConfiguration' with the minimum fields required to make a request.
@@ -4400,9 +4574,11 @@ instance ToXML ServerSideEncryptionConfiguration
 -- | Container for information about a particular server-side encryption configuration rule.
 --
 -- /See:/ 'serverSideEncryptionRule' smart constructor.
-newtype ServerSideEncryptionRule = ServerSideEncryptionRule'
-  { _sserApplyServerSideEncryptionByDefault :: Maybe ServerSideEncryptionByDefault
-  } deriving (Eq, Show, Data, Typeable, Generic)
+newtype ServerSideEncryptionRule =
+  ServerSideEncryptionRule'
+    { _sserApplyServerSideEncryptionByDefault :: Maybe ServerSideEncryptionByDefault
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ServerSideEncryptionRule' with the minimum fields required to make a request.
@@ -4438,9 +4614,11 @@ instance ToXML ServerSideEncryptionRule where
 -- | Container for filters that define which source objects should be replicated.
 --
 -- /See:/ 'sourceSelectionCriteria' smart constructor.
-newtype SourceSelectionCriteria = SourceSelectionCriteria'
-  { _sscSseKMSEncryptedObjects :: Maybe SseKMSEncryptedObjects
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype SourceSelectionCriteria =
+  SourceSelectionCriteria'
+    { _sscSseKMSEncryptedObjects :: Maybe SseKMSEncryptedObjects
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SourceSelectionCriteria' with the minimum fields required to make a request.
@@ -4476,9 +4654,11 @@ instance ToXML SourceSelectionCriteria where
 -- | Container for filter information of selection of KMS Encrypted S3 objects.
 --
 -- /See:/ 'sseKMSEncryptedObjects' smart constructor.
-newtype SseKMSEncryptedObjects = SseKMSEncryptedObjects'
-  { _skeoStatus :: SseKMSEncryptedObjectsStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype SseKMSEncryptedObjects =
+  SseKMSEncryptedObjects'
+    { _skeoStatus :: SseKMSEncryptedObjectsStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SseKMSEncryptedObjects' with the minimum fields required to make a request.
@@ -4510,11 +4690,13 @@ instance ToXML SseKMSEncryptedObjects where
           = mconcat ["Status" @= _skeoStatus]
 
 -- | /See:/ 'stats' smart constructor.
-data Stats = Stats'
-  { _sBytesReturned  :: !(Maybe Integer)
-  , _sBytesScanned   :: !(Maybe Integer)
-  , _sBytesProcessed :: !(Maybe Integer)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Stats =
+  Stats'
+    { _sBytesReturned  :: !(Maybe Integer)
+    , _sBytesScanned   :: !(Maybe Integer)
+    , _sBytesProcessed :: !(Maybe Integer)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Stats' with the minimum fields required to make a request.
@@ -4559,9 +4741,11 @@ instance Hashable Stats where
 instance NFData Stats where
 
 -- | /See:/ 'statsEvent' smart constructor.
-newtype StatsEvent = StatsEvent'
-  { _seDetails :: Maybe Stats
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StatsEvent =
+  StatsEvent'
+    { _seDetails :: Maybe Stats
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StatsEvent' with the minimum fields required to make a request.
@@ -4586,9 +4770,11 @@ instance Hashable StatsEvent where
 instance NFData StatsEvent where
 
 -- | /See:/ 'storageClassAnalysis' smart constructor.
-newtype StorageClassAnalysis = StorageClassAnalysis'
-  { _scaDataExport :: Maybe StorageClassAnalysisDataExport
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StorageClassAnalysis =
+  StorageClassAnalysis'
+    { _scaDataExport :: Maybe StorageClassAnalysisDataExport
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StorageClassAnalysis' with the minimum fields required to make a request.
@@ -4618,10 +4804,12 @@ instance ToXML StorageClassAnalysis where
           = mconcat ["DataExport" @= _scaDataExport]
 
 -- | /See:/ 'storageClassAnalysisDataExport' smart constructor.
-data StorageClassAnalysisDataExport = StorageClassAnalysisDataExport'
-  { _scadeOutputSchemaVersion :: !StorageClassAnalysisSchemaVersion
-  , _scadeDestination         :: !AnalyticsExportDestination
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StorageClassAnalysisDataExport =
+  StorageClassAnalysisDataExport'
+    { _scadeOutputSchemaVersion :: !StorageClassAnalysisSchemaVersion
+    , _scadeDestination         :: !AnalyticsExportDestination
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StorageClassAnalysisDataExport' with the minimum fields required to make a request.
@@ -4667,10 +4855,12 @@ instance ToXML StorageClassAnalysisDataExport where
                "Destination" @= _scadeDestination]
 
 -- | /See:/ 'tag' smart constructor.
-data Tag = Tag'
-  { _tagKey   :: !ObjectKey
-  , _tagValue :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Tag =
+  Tag'
+    { _tagKey   :: !ObjectKey
+    , _tagValue :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Tag' with the minimum fields required to make a request.
@@ -4707,9 +4897,11 @@ instance ToXML Tag where
           = mconcat ["Key" @= _tagKey, "Value" @= _tagValue]
 
 -- | /See:/ 'tagging' smart constructor.
-newtype Tagging = Tagging'
-  { _tTagSet :: [Tag]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype Tagging =
+  Tagging'
+    { _tTagSet :: [Tag]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Tagging' with the minimum fields required to make a request.
@@ -4735,10 +4927,12 @@ instance ToXML Tagging where
           = mconcat ["TagSet" @= toXMLList "Tag" _tTagSet]
 
 -- | /See:/ 'targetGrant' smart constructor.
-data TargetGrant = TargetGrant'
-  { _tgPermission :: !(Maybe BucketLogsPermission)
-  , _tgGrantee    :: !(Maybe Grantee)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TargetGrant =
+  TargetGrant'
+    { _tgPermission :: !(Maybe BucketLogsPermission)
+    , _tgGrantee    :: !(Maybe Grantee)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TargetGrant' with the minimum fields required to make a request.
@@ -4779,12 +4973,14 @@ instance ToXML TargetGrant where
 -- | Container for specifying the configuration when you want Amazon S3 to publish events to an Amazon Simple Notification Service (Amazon SNS) topic.
 --
 -- /See:/ 'topicConfiguration' smart constructor.
-data TopicConfiguration = TopicConfiguration'
-  { _tcId       :: !(Maybe Text)
-  , _tcFilter   :: !(Maybe NotificationConfigurationFilter)
-  , _tcTopicARN :: !Text
-  , _tcEvents   :: ![Event]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TopicConfiguration =
+  TopicConfiguration'
+    { _tcId       :: !(Maybe Text)
+    , _tcFilter   :: !(Maybe NotificationConfigurationFilter)
+    , _tcTopicARN :: !Text
+    , _tcEvents   :: ![Event]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TopicConfiguration' with the minimum fields required to make a request.
@@ -4843,11 +5039,13 @@ instance ToXML TopicConfiguration where
                "Topic" @= _tcTopicARN, toXMLList "Event" _tcEvents]
 
 -- | /See:/ 'transition' smart constructor.
-data Transition = Transition'
-  { _tDays         :: !(Maybe Int)
-  , _tDate         :: !(Maybe RFC822)
-  , _tStorageClass :: !(Maybe TransitionStorageClass)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Transition =
+  Transition'
+    { _tDays         :: !(Maybe Int)
+    , _tDate         :: !(Maybe RFC822)
+    , _tStorageClass :: !(Maybe TransitionStorageClass)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Transition' with the minimum fields required to make a request.
@@ -4894,10 +5092,12 @@ instance ToXML Transition where
                "StorageClass" @= _tStorageClass]
 
 -- | /See:/ 'versioningConfiguration' smart constructor.
-data VersioningConfiguration = VersioningConfiguration'
-  { _vcStatus    :: !(Maybe BucketVersioningStatus)
-  , _vcMFADelete :: !(Maybe MFADelete)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VersioningConfiguration =
+  VersioningConfiguration'
+    { _vcStatus    :: !(Maybe BucketVersioningStatus)
+    , _vcMFADelete :: !(Maybe MFADelete)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VersioningConfiguration' with the minimum fields required to make a request.
@@ -4931,12 +5131,14 @@ instance ToXML VersioningConfiguration where
               ["Status" @= _vcStatus, "MfaDelete" @= _vcMFADelete]
 
 -- | /See:/ 'websiteConfiguration' smart constructor.
-data WebsiteConfiguration = WebsiteConfiguration'
-  { _wcRedirectAllRequestsTo :: !(Maybe RedirectAllRequestsTo)
-  , _wcErrorDocument         :: !(Maybe ErrorDocument)
-  , _wcIndexDocument         :: !(Maybe IndexDocument)
-  , _wcRoutingRules          :: !(Maybe [RoutingRule])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data WebsiteConfiguration =
+  WebsiteConfiguration'
+    { _wcRedirectAllRequestsTo :: !(Maybe RedirectAllRequestsTo)
+    , _wcErrorDocument         :: !(Maybe ErrorDocument)
+    , _wcIndexDocument         :: !(Maybe IndexDocument)
+    , _wcRoutingRules          :: !(Maybe [RoutingRule])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'WebsiteConfiguration' with the minimum fields required to make a request.

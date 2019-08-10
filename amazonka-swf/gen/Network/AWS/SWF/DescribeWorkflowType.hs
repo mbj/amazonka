@@ -67,10 +67,12 @@ import Network.AWS.SWF.Types
 import Network.AWS.SWF.Types.Product
 
 -- | /See:/ 'describeWorkflowType' smart constructor.
-data DescribeWorkflowType = DescribeWorkflowType'
-  { _dwtDomain       :: !Text
-  , _dwtWorkflowType :: !WorkflowType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeWorkflowType =
+  DescribeWorkflowType'
+    { _dwtDomain       :: !Text
+    , _dwtWorkflowType :: !WorkflowType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeWorkflowType' with the minimum fields required to make a request.
@@ -140,11 +142,13 @@ instance ToQuery DescribeWorkflowType where
 --
 --
 -- /See:/ 'describeWorkflowTypeResponse' smart constructor.
-data DescribeWorkflowTypeResponse = DescribeWorkflowTypeResponse'
-  { _dwtrsResponseStatus :: !Int
-  , _dwtrsTypeInfo       :: !WorkflowTypeInfo
-  , _dwtrsConfiguration  :: !WorkflowTypeConfiguration
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeWorkflowTypeResponse =
+  DescribeWorkflowTypeResponse'
+    { _dwtrsResponseStatus :: !Int
+    , _dwtrsTypeInfo       :: !WorkflowTypeInfo
+    , _dwtrsConfiguration  :: !WorkflowTypeConfiguration
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeWorkflowTypeResponse' with the minimum fields required to make a request.

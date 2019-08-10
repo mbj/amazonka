@@ -59,10 +59,12 @@ import Network.AWS.SQS.Types
 import Network.AWS.SQS.Types.Product
 
 -- | /See:/ 'tagQueue' smart constructor.
-data TagQueue = TagQueue'
-  { _tqQueueURL :: !Text
-  , _tqTags     :: !(Map Text Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TagQueue =
+  TagQueue'
+    { _tqQueueURL :: !Text
+    , _tqTags     :: !(Map Text Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TagQueue' with the minimum fields required to make a request.

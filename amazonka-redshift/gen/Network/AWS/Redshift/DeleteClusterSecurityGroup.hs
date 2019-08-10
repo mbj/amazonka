@@ -48,9 +48,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteClusterSecurityGroup' smart constructor.
-newtype DeleteClusterSecurityGroup = DeleteClusterSecurityGroup'
-  { _dClusterSecurityGroupName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteClusterSecurityGroup =
+  DeleteClusterSecurityGroup'
+    { _dClusterSecurityGroupName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteClusterSecurityGroup' with the minimum fields required to make a request.

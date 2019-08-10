@@ -54,15 +54,17 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createGrant' smart constructor.
-data CreateGrant = CreateGrant'
-  { _cgRetiringPrincipal :: !(Maybe Text)
-  , _cgGrantTokens       :: !(Maybe [Text])
-  , _cgConstraints       :: !(Maybe GrantConstraints)
-  , _cgName              :: !(Maybe Text)
-  , _cgKeyId             :: !Text
-  , _cgGranteePrincipal  :: !Text
-  , _cgOperations        :: ![GrantOperation]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateGrant =
+  CreateGrant'
+    { _cgRetiringPrincipal :: !(Maybe Text)
+    , _cgGrantTokens       :: !(Maybe [Text])
+    , _cgConstraints       :: !(Maybe GrantConstraints)
+    , _cgName              :: !(Maybe Text)
+    , _cgKeyId             :: !Text
+    , _cgGranteePrincipal  :: !Text
+    , _cgOperations        :: ![GrantOperation]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateGrant' with the minimum fields required to make a request.
@@ -167,11 +169,13 @@ instance ToQuery CreateGrant where
         toQuery = const mempty
 
 -- | /See:/ 'createGrantResponse' smart constructor.
-data CreateGrantResponse = CreateGrantResponse'
-  { _cgrsGrantId        :: !(Maybe Text)
-  , _cgrsGrantToken     :: !(Maybe Text)
-  , _cgrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateGrantResponse =
+  CreateGrantResponse'
+    { _cgrsGrantId        :: !(Maybe Text)
+    , _cgrsGrantToken     :: !(Maybe Text)
+    , _cgrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateGrantResponse' with the minimum fields required to make a request.

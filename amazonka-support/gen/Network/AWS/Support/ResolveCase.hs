@@ -50,9 +50,11 @@ import Network.AWS.Support.Types.Product
 --
 --
 -- /See:/ 'resolveCase' smart constructor.
-newtype ResolveCase = ResolveCase'
-  { _rcCaseId :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ResolveCase =
+  ResolveCase'
+    { _rcCaseId :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResolveCase' with the minimum fields required to make a request.
@@ -108,11 +110,13 @@ instance ToQuery ResolveCase where
 --
 --
 -- /See:/ 'resolveCaseResponse' smart constructor.
-data ResolveCaseResponse = ResolveCaseResponse'
-  { _rcrsInitialCaseStatus :: !(Maybe Text)
-  , _rcrsFinalCaseStatus   :: !(Maybe Text)
-  , _rcrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResolveCaseResponse =
+  ResolveCaseResponse'
+    { _rcrsInitialCaseStatus :: !(Maybe Text)
+    , _rcrsFinalCaseStatus   :: !(Maybe Text)
+    , _rcrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResolveCaseResponse' with the minimum fields required to make a request.

@@ -44,10 +44,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'associateRoleToGroup' smart constructor.
-data AssociateRoleToGroup = AssociateRoleToGroup'
-  { _artgRoleARN :: !(Maybe Text)
-  , _artgGroupId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssociateRoleToGroup =
+  AssociateRoleToGroup'
+    { _artgRoleARN :: !(Maybe Text)
+    , _artgGroupId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateRoleToGroup' with the minimum fields required to make a request.
@@ -107,10 +109,12 @@ instance ToQuery AssociateRoleToGroup where
         toQuery = const mempty
 
 -- | /See:/ 'associateRoleToGroupResponse' smart constructor.
-data AssociateRoleToGroupResponse = AssociateRoleToGroupResponse'
-  { _artgrsAssociatedAt   :: !(Maybe Text)
-  , _artgrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssociateRoleToGroupResponse =
+  AssociateRoleToGroupResponse'
+    { _artgrsAssociatedAt   :: !(Maybe Text)
+    , _artgrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateRoleToGroupResponse' with the minimum fields required to make a request.

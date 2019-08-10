@@ -64,10 +64,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getRecords' smart constructor.
-data GetRecords = GetRecords'
-  { _grLimit         :: !(Maybe Nat)
-  , _grShardIterator :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetRecords =
+  GetRecords'
+    { _grLimit         :: !(Maybe Nat)
+    , _grShardIterator :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetRecords' with the minimum fields required to make a request.
@@ -135,12 +137,14 @@ instance ToQuery GetRecords where
 --
 --
 -- /See:/ 'getRecordsResponse' smart constructor.
-data GetRecordsResponse = GetRecordsResponse'
-  { _grrsNextShardIterator  :: !(Maybe Text)
-  , _grrsMillisBehindLatest :: !(Maybe Nat)
-  , _grrsResponseStatus     :: !Int
-  , _grrsRecords            :: ![Record]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetRecordsResponse =
+  GetRecordsResponse'
+    { _grrsNextShardIterator  :: !(Maybe Text)
+    , _grrsMillisBehindLatest :: !(Maybe Nat)
+    , _grrsResponseStatus     :: !Int
+    , _grrsRecords            :: ![Record]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetRecordsResponse' with the minimum fields required to make a request.

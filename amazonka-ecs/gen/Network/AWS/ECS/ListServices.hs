@@ -52,12 +52,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listServices' smart constructor.
-data ListServices = ListServices'
-  { _lsCluster    :: !(Maybe Text)
-  , _lsNextToken  :: !(Maybe Text)
-  , _lsLaunchType :: !(Maybe LaunchType)
-  , _lsMaxResults :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListServices =
+  ListServices'
+    { _lsCluster    :: !(Maybe Text)
+    , _lsNextToken  :: !(Maybe Text)
+    , _lsLaunchType :: !(Maybe LaunchType)
+    , _lsMaxResults :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListServices' with the minimum fields required to make a request.
@@ -146,11 +148,13 @@ instance ToQuery ListServices where
         toQuery = const mempty
 
 -- | /See:/ 'listServicesResponse' smart constructor.
-data ListServicesResponse = ListServicesResponse'
-  { _lsrsServiceARNs    :: !(Maybe [Text])
-  , _lsrsNextToken      :: !(Maybe Text)
-  , _lsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListServicesResponse =
+  ListServicesResponse'
+    { _lsrsServiceARNs    :: !(Maybe [Text])
+    , _lsrsNextToken      :: !(Maybe Text)
+    , _lsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListServicesResponse' with the minimum fields required to make a request.

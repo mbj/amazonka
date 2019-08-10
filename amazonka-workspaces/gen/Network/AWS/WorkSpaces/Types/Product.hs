@@ -26,9 +26,11 @@ import Network.AWS.WorkSpaces.Types.Sum
 --
 --
 -- /See:/ 'computeType' smart constructor.
-newtype ComputeType = ComputeType'
-  { _ctName :: Maybe Compute
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ComputeType =
+  ComputeType'
+    { _ctName :: Maybe Compute
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ComputeType' with the minimum fields required to make a request.
@@ -59,13 +61,15 @@ instance NFData ComputeType where
 --
 --
 -- /See:/ 'defaultWorkspaceCreationProperties' smart constructor.
-data DefaultWorkspaceCreationProperties = DefaultWorkspaceCreationProperties'
-  { _dwcpCustomSecurityGroupId           :: !(Maybe Text)
-  , _dwcpUserEnabledAsLocalAdministrator :: !(Maybe Bool)
-  , _dwcpEnableWorkDocs                  :: !(Maybe Bool)
-  , _dwcpEnableInternetAccess            :: !(Maybe Bool)
-  , _dwcpDefaultOu                       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DefaultWorkspaceCreationProperties =
+  DefaultWorkspaceCreationProperties'
+    { _dwcpCustomSecurityGroupId           :: !(Maybe Text)
+    , _dwcpUserEnabledAsLocalAdministrator :: !(Maybe Bool)
+    , _dwcpEnableWorkDocs                  :: !(Maybe Bool)
+    , _dwcpEnableInternetAccess            :: !(Maybe Bool)
+    , _dwcpDefaultOu                       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DefaultWorkspaceCreationProperties' with the minimum fields required to make a request.
@@ -136,11 +140,13 @@ instance NFData DefaultWorkspaceCreationProperties
 --
 --
 -- /See:/ 'failedCreateWorkspaceRequest' smart constructor.
-data FailedCreateWorkspaceRequest = FailedCreateWorkspaceRequest'
-  { _fcwrWorkspaceRequest :: !(Maybe WorkspaceRequest)
-  , _fcwrErrorCode        :: !(Maybe Text)
-  , _fcwrErrorMessage     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FailedCreateWorkspaceRequest =
+  FailedCreateWorkspaceRequest'
+    { _fcwrWorkspaceRequest :: !(Maybe WorkspaceRequest)
+    , _fcwrErrorCode        :: !(Maybe Text)
+    , _fcwrErrorMessage     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FailedCreateWorkspaceRequest' with the minimum fields required to make a request.
@@ -191,11 +197,13 @@ instance NFData FailedCreateWorkspaceRequest where
 --
 --
 -- /See:/ 'failedWorkspaceChangeRequest' smart constructor.
-data FailedWorkspaceChangeRequest = FailedWorkspaceChangeRequest'
-  { _fwcrErrorCode    :: !(Maybe Text)
-  , _fwcrWorkspaceId  :: !(Maybe Text)
-  , _fwcrErrorMessage :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FailedWorkspaceChangeRequest =
+  FailedWorkspaceChangeRequest'
+    { _fwcrErrorCode    :: !(Maybe Text)
+    , _fwcrWorkspaceId  :: !(Maybe Text)
+    , _fwcrErrorMessage :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FailedWorkspaceChangeRequest' with the minimum fields required to make a request.
@@ -246,10 +254,12 @@ instance NFData FailedWorkspaceChangeRequest where
 --
 --
 -- /See:/ 'ipRuleItem' smart constructor.
-data IPRuleItem = IPRuleItem'
-  { _iriRuleDesc :: !(Maybe Text)
-  , _iriIpRule   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data IPRuleItem =
+  IPRuleItem'
+    { _iriRuleDesc :: !(Maybe Text)
+    , _iriIpRule   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'IPRuleItem' with the minimum fields required to make a request.
@@ -295,10 +305,12 @@ instance ToJSON IPRuleItem where
 --
 --
 -- /See:/ 'modificationState' smart constructor.
-data ModificationState = ModificationState'
-  { _msState    :: !(Maybe ModificationStateEnum)
-  , _msResource :: !(Maybe ModificationResourceEnum)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModificationState =
+  ModificationState'
+    { _msState    :: !(Maybe ModificationStateEnum)
+    , _msResource :: !(Maybe ModificationResourceEnum)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModificationState' with the minimum fields required to make a request.
@@ -338,9 +350,11 @@ instance NFData ModificationState where
 --
 --
 -- /See:/ 'rebootRequest' smart constructor.
-newtype RebootRequest = RebootRequest'
-  { _rWorkspaceId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RebootRequest =
+  RebootRequest'
+    { _rWorkspaceId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RebootRequest' with the minimum fields required to make a request.
@@ -372,9 +386,11 @@ instance ToJSON RebootRequest where
 --
 --
 -- /See:/ 'rebuildRequest' smart constructor.
-newtype RebuildRequest = RebuildRequest'
-  { _rrWorkspaceId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RebuildRequest =
+  RebuildRequest'
+    { _rrWorkspaceId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RebuildRequest' with the minimum fields required to make a request.
@@ -406,9 +422,11 @@ instance ToJSON RebuildRequest where
 --
 --
 -- /See:/ 'rootStorage' smart constructor.
-newtype RootStorage = RootStorage'
-  { _rsCapacity :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RootStorage =
+  RootStorage'
+    { _rsCapacity :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RootStorage' with the minimum fields required to make a request.
@@ -439,9 +457,11 @@ instance NFData RootStorage where
 --
 --
 -- /See:/ 'startRequest' smart constructor.
-newtype StartRequest = StartRequest'
-  { _sWorkspaceId :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StartRequest =
+  StartRequest'
+    { _sWorkspaceId :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartRequest' with the minimum fields required to make a request.
@@ -472,9 +492,11 @@ instance ToJSON StartRequest where
 --
 --
 -- /See:/ 'stopRequest' smart constructor.
-newtype StopRequest = StopRequest'
-  { _srWorkspaceId :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StopRequest =
+  StopRequest'
+    { _srWorkspaceId :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopRequest' with the minimum fields required to make a request.
@@ -505,10 +527,12 @@ instance ToJSON StopRequest where
 --
 --
 -- /See:/ 'tag' smart constructor.
-data Tag = Tag'
-  { _tagValue :: !(Maybe Text)
-  , _tagKey   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Tag =
+  Tag'
+    { _tagValue :: !(Maybe Text)
+    , _tagKey   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Tag' with the minimum fields required to make a request.
@@ -553,9 +577,11 @@ instance ToJSON Tag where
 --
 --
 -- /See:/ 'terminateRequest' smart constructor.
-newtype TerminateRequest = TerminateRequest'
-  { _trWorkspaceId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype TerminateRequest =
+  TerminateRequest'
+    { _trWorkspaceId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TerminateRequest' with the minimum fields required to make a request.
@@ -588,9 +614,11 @@ instance ToJSON TerminateRequest where
 --
 --
 -- /See:/ 'userStorage' smart constructor.
-newtype UserStorage = UserStorage'
-  { _usCapacity :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UserStorage =
+  UserStorage'
+    { _usCapacity :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UserStorage' with the minimum fields required to make a request.
@@ -621,23 +649,25 @@ instance NFData UserStorage where
 --
 --
 -- /See:/ 'workspace' smart constructor.
-data Workspace = Workspace'
-  { _wDirectoryId                 :: !(Maybe Text)
-  , _wState                       :: !(Maybe WorkspaceState)
-  , _wIPAddress                   :: !(Maybe Text)
-  , _wModificationStates          :: !(Maybe [ModificationState])
-  , _wUserName                    :: !(Maybe Text)
-  , _wSubnetId                    :: !(Maybe Text)
-  , _wBundleId                    :: !(Maybe Text)
-  , _wWorkspaceProperties         :: !(Maybe WorkspaceProperties)
-  , _wRootVolumeEncryptionEnabled :: !(Maybe Bool)
-  , _wErrorCode                   :: !(Maybe Text)
-  , _wVolumeEncryptionKey         :: !(Maybe Text)
-  , _wComputerName                :: !(Maybe Text)
-  , _wWorkspaceId                 :: !(Maybe Text)
-  , _wUserVolumeEncryptionEnabled :: !(Maybe Bool)
-  , _wErrorMessage                :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Workspace =
+  Workspace'
+    { _wDirectoryId                 :: !(Maybe Text)
+    , _wState                       :: !(Maybe WorkspaceState)
+    , _wIPAddress                   :: !(Maybe Text)
+    , _wModificationStates          :: !(Maybe [ModificationState])
+    , _wUserName                    :: !(Maybe Text)
+    , _wSubnetId                    :: !(Maybe Text)
+    , _wBundleId                    :: !(Maybe Text)
+    , _wWorkspaceProperties         :: !(Maybe WorkspaceProperties)
+    , _wRootVolumeEncryptionEnabled :: !(Maybe Bool)
+    , _wErrorCode                   :: !(Maybe Text)
+    , _wVolumeEncryptionKey         :: !(Maybe Text)
+    , _wComputerName                :: !(Maybe Text)
+    , _wWorkspaceId                 :: !(Maybe Text)
+    , _wUserVolumeEncryptionEnabled :: !(Maybe Bool)
+    , _wErrorMessage                :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Workspace' with the minimum fields required to make a request.
@@ -784,15 +814,17 @@ instance NFData Workspace where
 --
 --
 -- /See:/ 'workspaceBundle' smart constructor.
-data WorkspaceBundle = WorkspaceBundle'
-  { _wbBundleId    :: !(Maybe Text)
-  , _wbOwner       :: !(Maybe Text)
-  , _wbRootStorage :: !(Maybe RootStorage)
-  , _wbName        :: !(Maybe Text)
-  , _wbComputeType :: !(Maybe ComputeType)
-  , _wbUserStorage :: !(Maybe UserStorage)
-  , _wbDescription :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data WorkspaceBundle =
+  WorkspaceBundle'
+    { _wbBundleId    :: !(Maybe Text)
+    , _wbOwner       :: !(Maybe Text)
+    , _wbRootStorage :: !(Maybe RootStorage)
+    , _wbName        :: !(Maybe Text)
+    , _wbComputeType :: !(Maybe ComputeType)
+    , _wbUserStorage :: !(Maybe UserStorage)
+    , _wbDescription :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'WorkspaceBundle' with the minimum fields required to make a request.
@@ -875,12 +907,14 @@ instance NFData WorkspaceBundle where
 --
 --
 -- /See:/ 'workspaceConnectionStatus' smart constructor.
-data WorkspaceConnectionStatus = WorkspaceConnectionStatus'
-  { _wcsLastKnownUserConnectionTimestamp :: !(Maybe POSIX)
-  , _wcsConnectionStateCheckTimestamp    :: !(Maybe POSIX)
-  , _wcsWorkspaceId                      :: !(Maybe Text)
-  , _wcsConnectionState                  :: !(Maybe ConnectionState)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data WorkspaceConnectionStatus =
+  WorkspaceConnectionStatus'
+    { _wcsLastKnownUserConnectionTimestamp :: !(Maybe POSIX)
+    , _wcsConnectionStateCheckTimestamp    :: !(Maybe POSIX)
+    , _wcsWorkspaceId                      :: !(Maybe Text)
+    , _wcsConnectionState                  :: !(Maybe ConnectionState)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'WorkspaceConnectionStatus' with the minimum fields required to make a request.
@@ -940,21 +974,23 @@ instance NFData WorkspaceConnectionStatus where
 --
 --
 -- /See:/ 'workspaceDirectory' smart constructor.
-data WorkspaceDirectory = WorkspaceDirectory'
-  { _wdRegistrationCode :: !(Maybe Text)
-  , _wdIAMRoleId :: !(Maybe Text)
-  , _wdDirectoryId :: !(Maybe Text)
-  , _wdState :: !(Maybe WorkspaceDirectoryState)
-  , _wdCustomerUserName :: !(Maybe Text)
-  , _wdSubnetIds :: !(Maybe [Text])
-  , _wdIpGroupIds :: !(Maybe [Text])
-  , _wdAlias :: !(Maybe Text)
-  , _wdWorkspaceSecurityGroupId :: !(Maybe Text)
-  , _wdDirectoryType :: !(Maybe WorkspaceDirectoryType)
-  , _wdWorkspaceCreationProperties :: !(Maybe DefaultWorkspaceCreationProperties)
-  , _wdDNSIPAddresses :: !(Maybe [Text])
-  , _wdDirectoryName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data WorkspaceDirectory =
+  WorkspaceDirectory'
+    { _wdRegistrationCode :: !(Maybe Text)
+    , _wdIAMRoleId :: !(Maybe Text)
+    , _wdDirectoryId :: !(Maybe Text)
+    , _wdState :: !(Maybe WorkspaceDirectoryState)
+    , _wdCustomerUserName :: !(Maybe Text)
+    , _wdSubnetIds :: !(Maybe [Text])
+    , _wdIpGroupIds :: !(Maybe [Text])
+    , _wdAlias :: !(Maybe Text)
+    , _wdWorkspaceSecurityGroupId :: !(Maybe Text)
+    , _wdDirectoryType :: !(Maybe WorkspaceDirectoryType)
+    , _wdWorkspaceCreationProperties :: !(Maybe DefaultWorkspaceCreationProperties)
+    , _wdDNSIPAddresses :: !(Maybe [Text])
+    , _wdDirectoryName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'WorkspaceDirectory' with the minimum fields required to make a request.
@@ -1085,13 +1121,15 @@ instance NFData WorkspaceDirectory where
 --
 --
 -- /See:/ 'workspaceProperties' smart constructor.
-data WorkspaceProperties = WorkspaceProperties'
-  { _wpComputeTypeName                     :: !(Maybe Compute)
-  , _wpRunningMode                         :: !(Maybe RunningMode)
-  , _wpRootVolumeSizeGib                   :: !(Maybe Int)
-  , _wpRunningModeAutoStopTimeoutInMinutes :: !(Maybe Int)
-  , _wpUserVolumeSizeGib                   :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data WorkspaceProperties =
+  WorkspaceProperties'
+    { _wpComputeTypeName                     :: !(Maybe Compute)
+    , _wpRunningMode                         :: !(Maybe RunningMode)
+    , _wpRootVolumeSizeGib                   :: !(Maybe Int)
+    , _wpRunningModeAutoStopTimeoutInMinutes :: !(Maybe Int)
+    , _wpUserVolumeSizeGib                   :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'WorkspaceProperties' with the minimum fields required to make a request.
@@ -1169,16 +1207,18 @@ instance ToJSON WorkspaceProperties where
 --
 --
 -- /See:/ 'workspaceRequest' smart constructor.
-data WorkspaceRequest = WorkspaceRequest'
-  { _wrWorkspaceProperties         :: !(Maybe WorkspaceProperties)
-  , _wrRootVolumeEncryptionEnabled :: !(Maybe Bool)
-  , _wrVolumeEncryptionKey         :: !(Maybe Text)
-  , _wrUserVolumeEncryptionEnabled :: !(Maybe Bool)
-  , _wrTags                        :: !(Maybe [Tag])
-  , _wrDirectoryId                 :: !Text
-  , _wrUserName                    :: !Text
-  , _wrBundleId                    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data WorkspaceRequest =
+  WorkspaceRequest'
+    { _wrWorkspaceProperties         :: !(Maybe WorkspaceProperties)
+    , _wrRootVolumeEncryptionEnabled :: !(Maybe Bool)
+    , _wrVolumeEncryptionKey         :: !(Maybe Text)
+    , _wrUserVolumeEncryptionEnabled :: !(Maybe Bool)
+    , _wrTags                        :: !(Maybe [Tag])
+    , _wrDirectoryId                 :: !Text
+    , _wrUserName                    :: !Text
+    , _wrBundleId                    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'WorkspaceRequest' with the minimum fields required to make a request.
@@ -1290,12 +1330,14 @@ instance ToJSON WorkspaceRequest where
 --
 --
 -- /See:/ 'workspacesIPGroup' smart constructor.
-data WorkspacesIPGroup = WorkspacesIPGroup'
-  { _wigGroupDesc :: !(Maybe Text)
-  , _wigUserRules :: !(Maybe [IPRuleItem])
-  , _wigGroupId   :: !(Maybe Text)
-  , _wigGroupName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data WorkspacesIPGroup =
+  WorkspacesIPGroup'
+    { _wigGroupDesc :: !(Maybe Text)
+    , _wigUserRules :: !(Maybe [IPRuleItem])
+    , _wigGroupId   :: !(Maybe Text)
+    , _wigGroupName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'WorkspacesIPGroup' with the minimum fields required to make a request.

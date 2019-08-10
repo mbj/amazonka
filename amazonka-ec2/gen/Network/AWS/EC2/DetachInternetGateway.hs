@@ -48,11 +48,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'detachInternetGateway' smart constructor.
-data DetachInternetGateway = DetachInternetGateway'
-  { _digDryRun            :: !(Maybe Bool)
-  , _digInternetGatewayId :: !Text
-  , _digVPCId             :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DetachInternetGateway =
+  DetachInternetGateway'
+    { _digDryRun            :: !(Maybe Bool)
+    , _digInternetGatewayId :: !Text
+    , _digVPCId             :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DetachInternetGateway' with the minimum fields required to make a request.

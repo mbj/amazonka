@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateIndexingConfiguration' smart constructor.
-newtype UpdateIndexingConfiguration = UpdateIndexingConfiguration'
-  { _uicThingIndexingConfiguration :: Maybe ThingIndexingConfiguration
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateIndexingConfiguration =
+  UpdateIndexingConfiguration'
+    { _uicThingIndexingConfiguration :: Maybe ThingIndexingConfiguration
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateIndexingConfiguration' with the minimum fields required to make a request.
@@ -95,9 +97,11 @@ instance ToQuery UpdateIndexingConfiguration where
         toQuery = const mempty
 
 -- | /See:/ 'updateIndexingConfigurationResponse' smart constructor.
-newtype UpdateIndexingConfigurationResponse = UpdateIndexingConfigurationResponse'
-  { _uicrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateIndexingConfigurationResponse =
+  UpdateIndexingConfigurationResponse'
+    { _uicrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateIndexingConfigurationResponse' with the minimum fields required to make a request.

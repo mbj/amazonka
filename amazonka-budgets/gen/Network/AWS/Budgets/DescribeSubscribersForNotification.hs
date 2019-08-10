@@ -54,13 +54,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeSubscribersForNotification' smart constructor.
-data DescribeSubscribersForNotification = DescribeSubscribersForNotification'
-  { _dsfnNextToken    :: !(Maybe Text)
-  , _dsfnMaxResults   :: !(Maybe Nat)
-  , _dsfnAccountId    :: !Text
-  , _dsfnBudgetName   :: !Text
-  , _dsfnNotification :: !Notification
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeSubscribersForNotification =
+  DescribeSubscribersForNotification'
+    { _dsfnNextToken    :: !(Maybe Text)
+    , _dsfnMaxResults   :: !(Maybe Nat)
+    , _dsfnAccountId    :: !Text
+    , _dsfnBudgetName   :: !Text
+    , _dsfnNotification :: !Notification
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeSubscribersForNotification' with the minimum fields required to make a request.
@@ -165,11 +167,13 @@ instance ToQuery DescribeSubscribersForNotification
 --
 --
 -- /See:/ 'describeSubscribersForNotificationResponse' smart constructor.
-data DescribeSubscribersForNotificationResponse = DescribeSubscribersForNotificationResponse'
-  { _dsfnrsNextToken      :: !(Maybe Text)
-  , _dsfnrsSubscribers    :: !(Maybe (List1 Subscriber))
-  , _dsfnrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeSubscribersForNotificationResponse =
+  DescribeSubscribersForNotificationResponse'
+    { _dsfnrsNextToken      :: !(Maybe Text)
+    , _dsfnrsSubscribers    :: !(Maybe (List1 Subscriber))
+    , _dsfnrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeSubscribersForNotificationResponse' with the minimum fields required to make a request.

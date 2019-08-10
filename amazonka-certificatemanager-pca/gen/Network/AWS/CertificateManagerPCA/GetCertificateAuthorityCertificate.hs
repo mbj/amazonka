@@ -46,9 +46,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getCertificateAuthorityCertificate' smart constructor.
-newtype GetCertificateAuthorityCertificate = GetCertificateAuthorityCertificate'
-  { _gcacCertificateAuthorityARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetCertificateAuthorityCertificate =
+  GetCertificateAuthorityCertificate'
+    { _gcacCertificateAuthorityARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetCertificateAuthorityCertificate' with the minimum fields required to make a request.
@@ -116,11 +118,13 @@ instance ToQuery GetCertificateAuthorityCertificate
         toQuery = const mempty
 
 -- | /See:/ 'getCertificateAuthorityCertificateResponse' smart constructor.
-data GetCertificateAuthorityCertificateResponse = GetCertificateAuthorityCertificateResponse'
-  { _gcacrsCertificate      :: !(Maybe Text)
-  , _gcacrsCertificateChain :: !(Maybe Text)
-  , _gcacrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetCertificateAuthorityCertificateResponse =
+  GetCertificateAuthorityCertificateResponse'
+    { _gcacrsCertificate      :: !(Maybe Text)
+    , _gcacrsCertificateChain :: !(Maybe Text)
+    , _gcacrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetCertificateAuthorityCertificateResponse' with the minimum fields required to make a request.

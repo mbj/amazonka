@@ -62,10 +62,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getBot' smart constructor.
-data GetBot = GetBot'
-  { _gbName           :: !Text
-  , _gbVersionOrAlias :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetBot =
+  GetBot'
+    { _gbName           :: !Text
+    , _gbVersionOrAlias :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBot' with the minimum fields required to make a request.
@@ -135,24 +137,26 @@ instance ToQuery GetBot where
         toQuery = const mempty
 
 -- | /See:/ 'getBotResponse' smart constructor.
-data GetBotResponse = GetBotResponse'
-  { _gbrsFailureReason           :: !(Maybe Text)
-  , _gbrsStatus                  :: !(Maybe LexStatus)
-  , _gbrsAbortStatement          :: !(Maybe Statement)
-  , _gbrsIntents                 :: !(Maybe [Intent])
-  , _gbrsChecksum                :: !(Maybe Text)
-  , _gbrsLocale                  :: !(Maybe Locale)
-  , _gbrsCreatedDate             :: !(Maybe POSIX)
-  , _gbrsName                    :: !(Maybe Text)
-  , _gbrsVersion                 :: !(Maybe Text)
-  , _gbrsIdleSessionTTLInSeconds :: !(Maybe Nat)
-  , _gbrsClarificationPrompt     :: !(Maybe Prompt)
-  , _gbrsVoiceId                 :: !(Maybe Text)
-  , _gbrsLastUpdatedDate         :: !(Maybe POSIX)
-  , _gbrsChildDirected           :: !(Maybe Bool)
-  , _gbrsDescription             :: !(Maybe Text)
-  , _gbrsResponseStatus          :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetBotResponse =
+  GetBotResponse'
+    { _gbrsFailureReason           :: !(Maybe Text)
+    , _gbrsStatus                  :: !(Maybe LexStatus)
+    , _gbrsAbortStatement          :: !(Maybe Statement)
+    , _gbrsIntents                 :: !(Maybe [Intent])
+    , _gbrsChecksum                :: !(Maybe Text)
+    , _gbrsLocale                  :: !(Maybe Locale)
+    , _gbrsCreatedDate             :: !(Maybe POSIX)
+    , _gbrsName                    :: !(Maybe Text)
+    , _gbrsVersion                 :: !(Maybe Text)
+    , _gbrsIdleSessionTTLInSeconds :: !(Maybe Nat)
+    , _gbrsClarificationPrompt     :: !(Maybe Prompt)
+    , _gbrsVoiceId                 :: !(Maybe Text)
+    , _gbrsLastUpdatedDate         :: !(Maybe POSIX)
+    , _gbrsChildDirected           :: !(Maybe Bool)
+    , _gbrsDescription             :: !(Maybe Text)
+    , _gbrsResponseStatus          :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBotResponse' with the minimum fields required to make a request.

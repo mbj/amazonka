@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'modifyTargetGroupAttributes' smart constructor.
-data ModifyTargetGroupAttributes = ModifyTargetGroupAttributes'
-  { _mtgaTargetGroupARN :: !Text
-  , _mtgaAttributes     :: ![TargetGroupAttribute]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyTargetGroupAttributes =
+  ModifyTargetGroupAttributes'
+    { _mtgaTargetGroupARN :: !Text
+    , _mtgaAttributes     :: ![TargetGroupAttribute]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyTargetGroupAttributes' with the minimum fields required to make a request.
@@ -108,10 +110,12 @@ instance ToQuery ModifyTargetGroupAttributes where
                "Attributes" =: toQueryList "member" _mtgaAttributes]
 
 -- | /See:/ 'modifyTargetGroupAttributesResponse' smart constructor.
-data ModifyTargetGroupAttributesResponse = ModifyTargetGroupAttributesResponse'
-  { _mtgarsAttributes     :: !(Maybe [TargetGroupAttribute])
-  , _mtgarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyTargetGroupAttributesResponse =
+  ModifyTargetGroupAttributesResponse'
+    { _mtgarsAttributes     :: !(Maybe [TargetGroupAttribute])
+    , _mtgarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyTargetGroupAttributesResponse' with the minimum fields required to make a request.

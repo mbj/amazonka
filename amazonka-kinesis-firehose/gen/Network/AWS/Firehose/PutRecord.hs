@@ -58,10 +58,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putRecord' smart constructor.
-data PutRecord = PutRecord'
-  { _prDeliveryStreamName :: !Text
-  , _prRecord             :: !Record
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutRecord =
+  PutRecord'
+    { _prDeliveryStreamName :: !Text
+    , _prRecord             :: !Record
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutRecord' with the minimum fields required to make a request.
@@ -125,10 +127,12 @@ instance ToQuery PutRecord where
         toQuery = const mempty
 
 -- | /See:/ 'putRecordResponse' smart constructor.
-data PutRecordResponse = PutRecordResponse'
-  { _prrsResponseStatus :: !Int
-  , _prrsRecordId       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutRecordResponse =
+  PutRecordResponse'
+    { _prrsResponseStatus :: !Int
+    , _prrsRecordId       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutRecordResponse' with the minimum fields required to make a request.

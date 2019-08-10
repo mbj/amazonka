@@ -51,9 +51,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteThingShadow' smart constructor.
-newtype DeleteThingShadow = DeleteThingShadow'
-  { _dtsThingName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteThingShadow =
+  DeleteThingShadow'
+    { _dtsThingName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteThingShadow' with the minimum fields required to make a request.
@@ -99,10 +101,12 @@ instance ToQuery DeleteThingShadow where
 --
 --
 -- /See:/ 'deleteThingShadowResponse' smart constructor.
-data DeleteThingShadowResponse = DeleteThingShadowResponse'
-  { _dtsrsResponseStatus :: !Int
-  , _dtsrsPayload        :: !ByteString
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data DeleteThingShadowResponse =
+  DeleteThingShadowResponse'
+    { _dtsrsResponseStatus :: !Int
+    , _dtsrsPayload        :: !ByteString
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteThingShadowResponse' with the minimum fields required to make a request.

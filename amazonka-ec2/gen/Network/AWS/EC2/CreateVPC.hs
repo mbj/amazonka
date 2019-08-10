@@ -58,12 +58,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createVPC' smart constructor.
-data CreateVPC = CreateVPC'
-  { _cvAmazonProvidedIPv6CidrBlock :: !(Maybe Bool)
-  , _cvInstanceTenancy             :: !(Maybe Tenancy)
-  , _cvDryRun                      :: !(Maybe Bool)
-  , _cvCidrBlock                   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateVPC =
+  CreateVPC'
+    { _cvAmazonProvidedIPv6CidrBlock :: !(Maybe Bool)
+    , _cvInstanceTenancy             :: !(Maybe Tenancy)
+    , _cvDryRun                      :: !(Maybe Bool)
+    , _cvCidrBlock                   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateVPC' with the minimum fields required to make a request.
@@ -139,10 +141,12 @@ instance ToQuery CreateVPC where
 --
 --
 -- /See:/ 'createVPCResponse' smart constructor.
-data CreateVPCResponse = CreateVPCResponse'
-  { _cvrsVPC            :: !(Maybe VPC)
-  , _cvrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateVPCResponse =
+  CreateVPCResponse'
+    { _cvrsVPC            :: !(Maybe VPC)
+    , _cvrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateVPCResponse' with the minimum fields required to make a request.

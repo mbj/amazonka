@@ -48,10 +48,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'detachInstancesFromLoadBalancer' smart constructor.
-data DetachInstancesFromLoadBalancer = DetachInstancesFromLoadBalancer'
-  { _diflbLoadBalancerName :: !Text
-  , _diflbInstanceNames    :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DetachInstancesFromLoadBalancer =
+  DetachInstancesFromLoadBalancer'
+    { _diflbLoadBalancerName :: !Text
+    , _diflbInstanceNames    :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DetachInstancesFromLoadBalancer' with the minimum fields required to make a request.
@@ -120,10 +122,12 @@ instance ToQuery DetachInstancesFromLoadBalancer
         toQuery = const mempty
 
 -- | /See:/ 'detachInstancesFromLoadBalancerResponse' smart constructor.
-data DetachInstancesFromLoadBalancerResponse = DetachInstancesFromLoadBalancerResponse'
-  { _diflbrsOperations     :: !(Maybe [Operation])
-  , _diflbrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DetachInstancesFromLoadBalancerResponse =
+  DetachInstancesFromLoadBalancerResponse'
+    { _diflbrsOperations     :: !(Maybe [Operation])
+    , _diflbrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DetachInstancesFromLoadBalancerResponse' with the minimum fields required to make a request.

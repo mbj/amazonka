@@ -59,10 +59,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateDomainName' smart constructor.
-data UpdateDomainName = UpdateDomainName'
-  { _udnPatchOperations :: !(Maybe [PatchOperation])
-  , _udnDomainName      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateDomainName =
+  UpdateDomainName'
+    { _udnPatchOperations :: !(Maybe [PatchOperation])
+    , _udnDomainName      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateDomainName' with the minimum fields required to make a request.

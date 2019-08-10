@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createRoleAlias' smart constructor.
-data CreateRoleAlias = CreateRoleAlias'
-  { _craCredentialDurationSeconds :: !(Maybe Nat)
-  , _craRoleAlias                 :: !Text
-  , _craRoleARN                   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateRoleAlias =
+  CreateRoleAlias'
+    { _craCredentialDurationSeconds :: !(Maybe Nat)
+    , _craRoleAlias                 :: !Text
+    , _craRoleARN                   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateRoleAlias' with the minimum fields required to make a request.
@@ -121,11 +123,13 @@ instance ToQuery CreateRoleAlias where
         toQuery = const mempty
 
 -- | /See:/ 'createRoleAliasResponse' smart constructor.
-data CreateRoleAliasResponse = CreateRoleAliasResponse'
-  { _crarsRoleAliasARN   :: !(Maybe Text)
-  , _crarsRoleAlias      :: !(Maybe Text)
-  , _crarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateRoleAliasResponse =
+  CreateRoleAliasResponse'
+    { _crarsRoleAliasARN   :: !(Maybe Text)
+    , _crarsRoleAlias      :: !(Maybe Text)
+    , _crarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateRoleAliasResponse' with the minimum fields required to make a request.

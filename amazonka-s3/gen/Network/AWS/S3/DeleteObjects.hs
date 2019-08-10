@@ -48,12 +48,14 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'deleteObjects' smart constructor.
-data DeleteObjects = DeleteObjects'
-  { _dosMFA          :: !(Maybe Text)
-  , _dosRequestPayer :: !(Maybe RequestPayer)
-  , _dosBucket       :: !BucketName
-  , _dosDelete       :: !Delete
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteObjects =
+  DeleteObjects'
+    { _dosMFA          :: !(Maybe Text)
+    , _dosRequestPayer :: !(Maybe RequestPayer)
+    , _dosBucket       :: !BucketName
+    , _dosDelete       :: !Delete
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteObjects' with the minimum fields required to make a request.
@@ -133,12 +135,14 @@ instance ToQuery DeleteObjects where
         toQuery = const (mconcat ["delete"])
 
 -- | /See:/ 'deleteObjectsResponse' smart constructor.
-data DeleteObjectsResponse = DeleteObjectsResponse'
-  { _drsRequestCharged :: !(Maybe RequestCharged)
-  , _drsDeleted        :: !(Maybe [DeletedObject])
-  , _drsErrors         :: !(Maybe [S3ServiceError])
-  , _drsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteObjectsResponse =
+  DeleteObjectsResponse'
+    { _drsRequestCharged :: !(Maybe RequestCharged)
+    , _drsDeleted        :: !(Maybe [DeletedObject])
+    , _drsErrors         :: !(Maybe [S3ServiceError])
+    , _drsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteObjectsResponse' with the minimum fields required to make a request.

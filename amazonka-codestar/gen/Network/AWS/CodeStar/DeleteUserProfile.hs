@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteUserProfile' smart constructor.
-newtype DeleteUserProfile = DeleteUserProfile'
-  { _dUserARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteUserProfile =
+  DeleteUserProfile'
+    { _dUserARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteUserProfile' with the minimum fields required to make a request.
@@ -99,10 +101,12 @@ instance ToQuery DeleteUserProfile where
         toQuery = const mempty
 
 -- | /See:/ 'deleteUserProfileResponse' smart constructor.
-data DeleteUserProfileResponse = DeleteUserProfileResponse'
-  { _delrsResponseStatus :: !Int
-  , _delrsUserARN        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteUserProfileResponse =
+  DeleteUserProfileResponse'
+    { _delrsResponseStatus :: !Int
+    , _delrsUserARN        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteUserProfileResponse' with the minimum fields required to make a request.

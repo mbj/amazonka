@@ -47,10 +47,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteApplication' smart constructor.
-data DeleteApplication = DeleteApplication'
-  { _daTerminateEnvByForce :: !(Maybe Bool)
-  , _daApplicationName     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteApplication =
+  DeleteApplication'
+    { _daTerminateEnvByForce :: !(Maybe Bool)
+    , _daApplicationName     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteApplication' with the minimum fields required to make a request.

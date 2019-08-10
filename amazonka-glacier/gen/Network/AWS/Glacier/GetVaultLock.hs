@@ -67,10 +67,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getVaultLock' smart constructor.
-data GetVaultLock = GetVaultLock'
-  { _gvlAccountId :: !Text
-  , _gvlVaultName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetVaultLock =
+  GetVaultLock'
+    { _gvlAccountId :: !Text
+    , _gvlVaultName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetVaultLock' with the minimum fields required to make a request.
@@ -129,13 +131,15 @@ instance ToQuery GetVaultLock where
 --
 --
 -- /See:/ 'getVaultLockResponse' smart constructor.
-data GetVaultLockResponse = GetVaultLockResponse'
-  { _gvlrsState          :: !(Maybe Text)
-  , _gvlrsExpirationDate :: !(Maybe Text)
-  , _gvlrsCreationDate   :: !(Maybe Text)
-  , _gvlrsPolicy         :: !(Maybe Text)
-  , _gvlrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetVaultLockResponse =
+  GetVaultLockResponse'
+    { _gvlrsState          :: !(Maybe Text)
+    , _gvlrsExpirationDate :: !(Maybe Text)
+    , _gvlrsCreationDate   :: !(Maybe Text)
+    , _gvlrsPolicy         :: !(Maybe Text)
+    , _gvlrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetVaultLockResponse' with the minimum fields required to make a request.

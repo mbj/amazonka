@@ -46,11 +46,13 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'removeTagsFromResource' smart constructor.
-data RemoveTagsFromResource = RemoveTagsFromResource'
-  { _rtfrResourceType :: !ResourceTypeForTagging
-  , _rtfrResourceId   :: !Text
-  , _rtfrTagKeys      :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RemoveTagsFromResource =
+  RemoveTagsFromResource'
+    { _rtfrResourceType :: !ResourceTypeForTagging
+    , _rtfrResourceId   :: !Text
+    , _rtfrTagKeys      :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RemoveTagsFromResource' with the minimum fields required to make a request.
@@ -124,9 +126,11 @@ instance ToQuery RemoveTagsFromResource where
         toQuery = const mempty
 
 -- | /See:/ 'removeTagsFromResourceResponse' smart constructor.
-newtype RemoveTagsFromResourceResponse = RemoveTagsFromResourceResponse'
-  { _rtfrrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RemoveTagsFromResourceResponse =
+  RemoveTagsFromResourceResponse'
+    { _rtfrrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RemoveTagsFromResourceResponse' with the minimum fields required to make a request.

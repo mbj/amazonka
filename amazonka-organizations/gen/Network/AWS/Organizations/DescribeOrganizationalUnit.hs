@@ -47,9 +47,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeOrganizationalUnit' smart constructor.
-newtype DescribeOrganizationalUnit = DescribeOrganizationalUnit'
-  { _douOrganizationalUnitId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeOrganizationalUnit =
+  DescribeOrganizationalUnit'
+    { _douOrganizationalUnitId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeOrganizationalUnit' with the minimum fields required to make a request.
@@ -108,10 +110,12 @@ instance ToQuery DescribeOrganizationalUnit where
         toQuery = const mempty
 
 -- | /See:/ 'describeOrganizationalUnitResponse' smart constructor.
-data DescribeOrganizationalUnitResponse = DescribeOrganizationalUnitResponse'
-  { _doursOrganizationalUnit :: !(Maybe OrganizationalUnit)
-  , _doursResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeOrganizationalUnitResponse =
+  DescribeOrganizationalUnitResponse'
+    { _doursOrganizationalUnit :: !(Maybe OrganizationalUnit)
+    , _doursResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeOrganizationalUnitResponse' with the minimum fields required to make a request.

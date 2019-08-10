@@ -50,13 +50,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listThingGroups' smart constructor.
-data ListThingGroups = ListThingGroups'
-  { _ltgNamePrefixFilter :: !(Maybe Text)
-  , _ltgParentGroup      :: !(Maybe Text)
-  , _ltgNextToken        :: !(Maybe Text)
-  , _ltgRecursive        :: !(Maybe Bool)
-  , _ltgMaxResults       :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListThingGroups =
+  ListThingGroups'
+    { _ltgNamePrefixFilter :: !(Maybe Text)
+    , _ltgParentGroup      :: !(Maybe Text)
+    , _ltgNextToken        :: !(Maybe Text)
+    , _ltgRecursive        :: !(Maybe Bool)
+    , _ltgMaxResults       :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListThingGroups' with the minimum fields required to make a request.
@@ -135,11 +137,13 @@ instance ToQuery ListThingGroups where
                "maxResults" =: _ltgMaxResults]
 
 -- | /See:/ 'listThingGroupsResponse' smart constructor.
-data ListThingGroupsResponse = ListThingGroupsResponse'
-  { _ltgrsThingGroups    :: !(Maybe [GroupNameAndARN])
-  , _ltgrsNextToken      :: !(Maybe Text)
-  , _ltgrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListThingGroupsResponse =
+  ListThingGroupsResponse'
+    { _ltgrsThingGroups    :: !(Maybe [GroupNameAndARN])
+    , _ltgrsNextToken      :: !(Maybe Text)
+    , _ltgrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListThingGroupsResponse' with the minimum fields required to make a request.

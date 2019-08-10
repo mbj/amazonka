@@ -48,12 +48,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'startThingRegistrationTask' smart constructor.
-data StartThingRegistrationTask = StartThingRegistrationTask'
-  { _strtTemplateBody    :: !Text
-  , _strtInputFileBucket :: !Text
-  , _strtInputFileKey    :: !Text
-  , _strtRoleARN         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartThingRegistrationTask =
+  StartThingRegistrationTask'
+    { _strtTemplateBody    :: !Text
+    , _strtInputFileBucket :: !Text
+    , _strtInputFileKey    :: !Text
+    , _strtRoleARN         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartThingRegistrationTask' with the minimum fields required to make a request.
@@ -131,10 +133,12 @@ instance ToQuery StartThingRegistrationTask where
         toQuery = const mempty
 
 -- | /See:/ 'startThingRegistrationTaskResponse' smart constructor.
-data StartThingRegistrationTaskResponse = StartThingRegistrationTaskResponse'
-  { _strtrsTaskId         :: !(Maybe Text)
-  , _strtrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartThingRegistrationTaskResponse =
+  StartThingRegistrationTaskResponse'
+    { _strtrsTaskId         :: !(Maybe Text)
+    , _strtrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartThingRegistrationTaskResponse' with the minimum fields required to make a request.

@@ -49,9 +49,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeObject' smart constructor.
-newtype DescribeObject = DescribeObject'
-  { _dPath :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeObject =
+  DescribeObject'
+    { _dPath :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeObject' with the minimum fields required to make a request.
@@ -97,14 +99,16 @@ instance ToQuery DescribeObject where
         toQuery = const mempty
 
 -- | /See:/ 'describeObjectResponse' smart constructor.
-data DescribeObjectResponse = DescribeObjectResponse'
-  { _drsETag           :: !(Maybe Text)
-  , _drsContentLength  :: !(Maybe Nat)
-  , _drsCacheControl   :: !(Maybe Text)
-  , _drsLastModified   :: !(Maybe POSIX)
-  , _drsContentType    :: !(Maybe Text)
-  , _drsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeObjectResponse =
+  DescribeObjectResponse'
+    { _drsETag           :: !(Maybe Text)
+    , _drsContentLength  :: !(Maybe Nat)
+    , _drsCacheControl   :: !(Maybe Text)
+    , _drsLastModified   :: !(Maybe POSIX)
+    , _drsContentType    :: !(Maybe Text)
+    , _drsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeObjectResponse' with the minimum fields required to make a request.

@@ -47,12 +47,14 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'modifyDocumentPermission' smart constructor.
-data ModifyDocumentPermission = ModifyDocumentPermission'
-  { _mdpAccountIdsToAdd    :: !(Maybe [Text])
-  , _mdpAccountIdsToRemove :: !(Maybe [Text])
-  , _mdpName               :: !Text
-  , _mdpPermissionType     :: !DocumentPermissionType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyDocumentPermission =
+  ModifyDocumentPermission'
+    { _mdpAccountIdsToAdd    :: !(Maybe [Text])
+    , _mdpAccountIdsToRemove :: !(Maybe [Text])
+    , _mdpName               :: !Text
+    , _mdpPermissionType     :: !DocumentPermissionType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyDocumentPermission' with the minimum fields required to make a request.
@@ -134,9 +136,11 @@ instance ToQuery ModifyDocumentPermission where
         toQuery = const mempty
 
 -- | /See:/ 'modifyDocumentPermissionResponse' smart constructor.
-newtype ModifyDocumentPermissionResponse = ModifyDocumentPermissionResponse'
-  { _mdprsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ModifyDocumentPermissionResponse =
+  ModifyDocumentPermissionResponse'
+    { _mdprsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyDocumentPermissionResponse' with the minimum fields required to make a request.

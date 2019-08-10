@@ -53,9 +53,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getVPCLink' smart constructor.
-newtype GetVPCLink = GetVPCLink'
-  { _gvlVpcLinkId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetVPCLink =
+  GetVPCLink'
+    { _gvlVpcLinkId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetVPCLink' with the minimum fields required to make a request.

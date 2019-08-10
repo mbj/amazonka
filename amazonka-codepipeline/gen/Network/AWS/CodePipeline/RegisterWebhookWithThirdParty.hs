@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'registerWebhookWithThirdParty' smart constructor.
-newtype RegisterWebhookWithThirdParty = RegisterWebhookWithThirdParty'
-  { _rwwtpWebhookName :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RegisterWebhookWithThirdParty =
+  RegisterWebhookWithThirdParty'
+    { _rwwtpWebhookName :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterWebhookWithThirdParty' with the minimum fields required to make a request.
@@ -103,9 +105,11 @@ instance ToQuery RegisterWebhookWithThirdParty where
         toQuery = const mempty
 
 -- | /See:/ 'registerWebhookWithThirdPartyResponse' smart constructor.
-newtype RegisterWebhookWithThirdPartyResponse = RegisterWebhookWithThirdPartyResponse'
-  { _rwwtprsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RegisterWebhookWithThirdPartyResponse =
+  RegisterWebhookWithThirdPartyResponse'
+    { _rwwtprsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterWebhookWithThirdPartyResponse' with the minimum fields required to make a request.

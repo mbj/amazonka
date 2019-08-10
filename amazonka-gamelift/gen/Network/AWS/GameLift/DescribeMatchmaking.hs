@@ -67,9 +67,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeMatchmaking' smart constructor.
-newtype DescribeMatchmaking = DescribeMatchmaking'
-  { _dmTicketIds :: [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeMatchmaking =
+  DescribeMatchmaking'
+    { _dmTicketIds :: [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeMatchmaking' with the minimum fields required to make a request.
@@ -126,10 +128,12 @@ instance ToQuery DescribeMatchmaking where
 --
 --
 -- /See:/ 'describeMatchmakingResponse' smart constructor.
-data DescribeMatchmakingResponse = DescribeMatchmakingResponse'
-  { _dmrsTicketList     :: !(Maybe [MatchmakingTicket])
-  , _dmrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeMatchmakingResponse =
+  DescribeMatchmakingResponse'
+    { _dmrsTicketList     :: !(Maybe [MatchmakingTicket])
+    , _dmrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeMatchmakingResponse' with the minimum fields required to make a request.

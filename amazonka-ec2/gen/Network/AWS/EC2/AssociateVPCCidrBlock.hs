@@ -51,11 +51,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'associateVPCCidrBlock' smart constructor.
-data AssociateVPCCidrBlock = AssociateVPCCidrBlock'
-  { _avcbCidrBlock                   :: !(Maybe Text)
-  , _avcbAmazonProvidedIPv6CidrBlock :: !(Maybe Bool)
-  , _avcbVPCId                       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssociateVPCCidrBlock =
+  AssociateVPCCidrBlock'
+    { _avcbCidrBlock                   :: !(Maybe Text)
+    , _avcbAmazonProvidedIPv6CidrBlock :: !(Maybe Bool)
+    , _avcbVPCId                       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateVPCCidrBlock' with the minimum fields required to make a request.
@@ -123,12 +125,14 @@ instance ToQuery AssociateVPCCidrBlock where
                "VpcId" =: _avcbVPCId]
 
 -- | /See:/ 'associateVPCCidrBlockResponse' smart constructor.
-data AssociateVPCCidrBlockResponse = AssociateVPCCidrBlockResponse'
-  { _avcbrsVPCId                    :: !(Maybe Text)
-  , _avcbrsCidrBlockAssociation     :: !(Maybe VPCCidrBlockAssociation)
-  , _avcbrsIPv6CidrBlockAssociation :: !(Maybe VPCIPv6CidrBlockAssociation)
-  , _avcbrsResponseStatus           :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssociateVPCCidrBlockResponse =
+  AssociateVPCCidrBlockResponse'
+    { _avcbrsVPCId                    :: !(Maybe Text)
+    , _avcbrsCidrBlockAssociation     :: !(Maybe VPCCidrBlockAssociation)
+    , _avcbrsIPv6CidrBlockAssociation :: !(Maybe VPCIPv6CidrBlockAssociation)
+    , _avcbrsResponseStatus           :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateVPCCidrBlockResponse' with the minimum fields required to make a request.

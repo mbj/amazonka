@@ -65,25 +65,27 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'uploadPartCopy' smart constructor.
-data UploadPartCopy = UploadPartCopy'
-  { _upcCopySourceIfModifiedSince      :: !(Maybe RFC822)
-  , _upcCopySourceIfUnmodifiedSince    :: !(Maybe RFC822)
-  , _upcCopySourceRange                :: !(Maybe Text)
-  , _upcCopySourceSSECustomerKeyMD5    :: !(Maybe Text)
-  , _upcCopySourceIfNoneMatch          :: !(Maybe Text)
-  , _upcSSECustomerAlgorithm           :: !(Maybe Text)
-  , _upcSSECustomerKey                 :: !(Maybe (Sensitive Text))
-  , _upcRequestPayer                   :: !(Maybe RequestPayer)
-  , _upcCopySourceIfMatch              :: !(Maybe Text)
-  , _upcSSECustomerKeyMD5              :: !(Maybe Text)
-  , _upcCopySourceSSECustomerKey       :: !(Maybe (Sensitive Text))
-  , _upcCopySourceSSECustomerAlgorithm :: !(Maybe Text)
-  , _upcBucket                         :: !BucketName
-  , _upcCopySource                     :: !Text
-  , _upcKey                            :: !ObjectKey
-  , _upcPartNumber                     :: !Int
-  , _upcUploadId                       :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data UploadPartCopy =
+  UploadPartCopy'
+    { _upcCopySourceIfModifiedSince      :: !(Maybe RFC822)
+    , _upcCopySourceIfUnmodifiedSince    :: !(Maybe RFC822)
+    , _upcCopySourceRange                :: !(Maybe Text)
+    , _upcCopySourceSSECustomerKeyMD5    :: !(Maybe Text)
+    , _upcCopySourceIfNoneMatch          :: !(Maybe Text)
+    , _upcSSECustomerAlgorithm           :: !(Maybe Text)
+    , _upcSSECustomerKey                 :: !(Maybe (Sensitive Text))
+    , _upcRequestPayer                   :: !(Maybe RequestPayer)
+    , _upcCopySourceIfMatch              :: !(Maybe Text)
+    , _upcSSECustomerKeyMD5              :: !(Maybe Text)
+    , _upcCopySourceSSECustomerKey       :: !(Maybe (Sensitive Text))
+    , _upcCopySourceSSECustomerAlgorithm :: !(Maybe Text)
+    , _upcBucket                         :: !BucketName
+    , _upcCopySource                     :: !Text
+    , _upcKey                            :: !ObjectKey
+    , _upcPartNumber                     :: !Int
+    , _upcUploadId                       :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UploadPartCopy' with the minimum fields required to make a request.
@@ -281,16 +283,18 @@ instance ToQuery UploadPartCopy where
                "uploadId" =: _upcUploadId]
 
 -- | /See:/ 'uploadPartCopyResponse' smart constructor.
-data UploadPartCopyResponse = UploadPartCopyResponse'
-  { _upcrsRequestCharged       :: !(Maybe RequestCharged)
-  , _upcrsCopyPartResult       :: !(Maybe CopyPartResult)
-  , _upcrsSSECustomerAlgorithm :: !(Maybe Text)
-  , _upcrsCopySourceVersionId  :: !(Maybe Text)
-  , _upcrsSSECustomerKeyMD5    :: !(Maybe Text)
-  , _upcrsSSEKMSKeyId          :: !(Maybe (Sensitive Text))
-  , _upcrsServerSideEncryption :: !(Maybe ServerSideEncryption)
-  , _upcrsResponseStatus       :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data UploadPartCopyResponse =
+  UploadPartCopyResponse'
+    { _upcrsRequestCharged       :: !(Maybe RequestCharged)
+    , _upcrsCopyPartResult       :: !(Maybe CopyPartResult)
+    , _upcrsSSECustomerAlgorithm :: !(Maybe Text)
+    , _upcrsCopySourceVersionId  :: !(Maybe Text)
+    , _upcrsSSECustomerKeyMD5    :: !(Maybe Text)
+    , _upcrsSSEKMSKeyId          :: !(Maybe (Sensitive Text))
+    , _upcrsServerSideEncryption :: !(Maybe ServerSideEncryption)
+    , _upcrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UploadPartCopyResponse' with the minimum fields required to make a request.

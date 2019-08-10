@@ -47,9 +47,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deregisterTaskDefinition' smart constructor.
-newtype DeregisterTaskDefinition = DeregisterTaskDefinition'
-  { _derTaskDefinition :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeregisterTaskDefinition =
+  DeregisterTaskDefinition'
+    { _derTaskDefinition :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeregisterTaskDefinition' with the minimum fields required to make a request.
@@ -105,10 +107,12 @@ instance ToQuery DeregisterTaskDefinition where
         toQuery = const mempty
 
 -- | /See:/ 'deregisterTaskDefinitionResponse' smart constructor.
-data DeregisterTaskDefinitionResponse = DeregisterTaskDefinitionResponse'
-  { _dtdrsTaskDefinition :: !(Maybe TaskDefinition)
-  , _dtdrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeregisterTaskDefinitionResponse =
+  DeregisterTaskDefinitionResponse'
+    { _dtdrsTaskDefinition :: !(Maybe TaskDefinition)
+    , _dtdrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeregisterTaskDefinitionResponse' with the minimum fields required to make a request.

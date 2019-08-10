@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putAttributes' smart constructor.
-data PutAttributes = PutAttributes'
-  { _paCluster    :: !(Maybe Text)
-  , _paAttributes :: ![Attribute]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutAttributes =
+  PutAttributes'
+    { _paCluster    :: !(Maybe Text)
+    , _paAttributes :: ![Attribute]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutAttributes' with the minimum fields required to make a request.
@@ -110,10 +112,12 @@ instance ToQuery PutAttributes where
         toQuery = const mempty
 
 -- | /See:/ 'putAttributesResponse' smart constructor.
-data PutAttributesResponse = PutAttributesResponse'
-  { _parsAttributes     :: !(Maybe [Attribute])
-  , _parsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutAttributesResponse =
+  PutAttributesResponse'
+    { _parsAttributes     :: !(Maybe [Attribute])
+    , _parsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutAttributesResponse' with the minimum fields required to make a request.

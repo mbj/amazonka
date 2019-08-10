@@ -51,11 +51,13 @@ import Network.AWS.SNS.Types.Product
 --
 --
 -- /See:/ 'subscribe' smart constructor.
-data Subscribe = Subscribe'
-  { _subEndpoint :: !(Maybe Text)
-  , _subTopicARN :: !Text
-  , _subProtocol :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Subscribe =
+  Subscribe'
+    { _subEndpoint :: !(Maybe Text)
+    , _subTopicARN :: !Text
+    , _subProtocol :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Subscribe' with the minimum fields required to make a request.
@@ -124,10 +126,12 @@ instance ToQuery Subscribe where
 --
 --
 -- /See:/ 'subscribeResponse' smart constructor.
-data SubscribeResponse = SubscribeResponse'
-  { _srsSubscriptionARN :: !(Maybe Text)
-  , _srsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SubscribeResponse =
+  SubscribeResponse'
+    { _srsSubscriptionARN :: !(Maybe Text)
+    , _srsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SubscribeResponse' with the minimum fields required to make a request.

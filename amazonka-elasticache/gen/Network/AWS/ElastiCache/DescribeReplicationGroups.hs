@@ -55,11 +55,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeReplicationGroups' smart constructor.
-data DescribeReplicationGroups = DescribeReplicationGroups'
-  { _drgsMarker             :: !(Maybe Text)
-  , _drgsMaxRecords         :: !(Maybe Int)
-  , _drgsReplicationGroupId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeReplicationGroups =
+  DescribeReplicationGroups'
+    { _drgsMarker             :: !(Maybe Text)
+    , _drgsMaxRecords         :: !(Maybe Int)
+    , _drgsReplicationGroupId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeReplicationGroups' with the minimum fields required to make a request.
@@ -138,11 +140,13 @@ instance ToQuery DescribeReplicationGroups where
 --
 --
 -- /See:/ 'describeReplicationGroupsResponse' smart constructor.
-data DescribeReplicationGroupsResponse = DescribeReplicationGroupsResponse'
-  { _drgrsMarker            :: !(Maybe Text)
-  , _drgrsReplicationGroups :: !(Maybe [ReplicationGroup])
-  , _drgrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeReplicationGroupsResponse =
+  DescribeReplicationGroupsResponse'
+    { _drgrsMarker            :: !(Maybe Text)
+    , _drgrsReplicationGroups :: !(Maybe [ReplicationGroup])
+    , _drgrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeReplicationGroupsResponse' with the minimum fields required to make a request.

@@ -26,11 +26,13 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'accountAttribute' smart constructor.
-data AccountAttribute = AccountAttribute'
-  { _aaUsed    :: !(Maybe Int)
-  , _aaMaximum :: !(Maybe Int)
-  , _aaName    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AccountAttribute =
+  AccountAttribute'
+    { _aaUsed    :: !(Maybe Int)
+    , _aaMaximum :: !(Maybe Int)
+    , _aaName    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AccountAttribute' with the minimum fields required to make a request.
@@ -77,32 +79,34 @@ instance NFData AccountAttribute where
 --
 --
 -- /See:/ 'backup' smart constructor.
-data Backup = Backup'
-  { _bEngineVersion              :: !(Maybe Text)
-  , _bServiceRoleARN             :: !(Maybe Text)
-  , _bStatus                     :: !(Maybe BackupStatus)
-  , _bInstanceProfileARN         :: !(Maybe Text)
-  , _bSecurityGroupIds           :: !(Maybe [Text])
-  , _bStatusDescription          :: !(Maybe Text)
-  , _bServerName                 :: !(Maybe Text)
-  , _bSubnetIds                  :: !(Maybe [Text])
-  , _bKeyPair                    :: !(Maybe Text)
-  , _bCreatedAt                  :: !(Maybe POSIX)
-  , _bBackupId                   :: !(Maybe Text)
-  , _bEngine                     :: !(Maybe Text)
-  , _bInstanceType               :: !(Maybe Text)
-  , _bEngineModel                :: !(Maybe Text)
-  , _bPreferredMaintenanceWindow :: !(Maybe Text)
-  , _bUserARN                    :: !(Maybe Text)
-  , _bPreferredBackupWindow      :: !(Maybe Text)
-  , _bS3LogURL                   :: !(Maybe Text)
-  , _bS3DataSize                 :: !(Maybe Int)
-  , _bBackupARN                  :: !(Maybe Text)
-  , _bS3DataURL                  :: !(Maybe Text)
-  , _bDescription                :: !(Maybe Text)
-  , _bBackupType                 :: !(Maybe BackupType)
-  , _bToolsVersion               :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Backup =
+  Backup'
+    { _bEngineVersion              :: !(Maybe Text)
+    , _bServiceRoleARN             :: !(Maybe Text)
+    , _bStatus                     :: !(Maybe BackupStatus)
+    , _bInstanceProfileARN         :: !(Maybe Text)
+    , _bSecurityGroupIds           :: !(Maybe [Text])
+    , _bStatusDescription          :: !(Maybe Text)
+    , _bServerName                 :: !(Maybe Text)
+    , _bSubnetIds                  :: !(Maybe [Text])
+    , _bKeyPair                    :: !(Maybe Text)
+    , _bCreatedAt                  :: !(Maybe POSIX)
+    , _bBackupId                   :: !(Maybe Text)
+    , _bEngine                     :: !(Maybe Text)
+    , _bInstanceType               :: !(Maybe Text)
+    , _bEngineModel                :: !(Maybe Text)
+    , _bPreferredMaintenanceWindow :: !(Maybe Text)
+    , _bUserARN                    :: !(Maybe Text)
+    , _bPreferredBackupWindow      :: !(Maybe Text)
+    , _bS3LogURL                   :: !(Maybe Text)
+    , _bS3DataSize                 :: !(Maybe Int)
+    , _bBackupARN                  :: !(Maybe Text)
+    , _bS3DataURL                  :: !(Maybe Text)
+    , _bDescription                :: !(Maybe Text)
+    , _bBackupType                 :: !(Maybe BackupType)
+    , _bToolsVersion               :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Backup' with the minimum fields required to make a request.
@@ -321,10 +325,12 @@ instance NFData Backup where
 --
 --
 -- /See:/ 'engineAttribute' smart constructor.
-data EngineAttribute = EngineAttribute'
-  { _eaValue :: !(Maybe (Sensitive Text))
-  , _eaName  :: !(Maybe Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data EngineAttribute =
+  EngineAttribute'
+    { _eaValue :: !(Maybe (Sensitive Text))
+    , _eaName  :: !(Maybe Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EngineAttribute' with the minimum fields required to make a request.
@@ -369,31 +375,33 @@ instance ToJSON EngineAttribute where
 --
 --
 -- /See:/ 'server' smart constructor.
-data Server = Server'
-  { _sEngineVersion              :: !(Maybe Text)
-  , _sServiceRoleARN             :: !(Maybe Text)
-  , _sDisableAutomatedBackup     :: !(Maybe Bool)
-  , _sStatus                     :: !(Maybe ServerStatus)
-  , _sInstanceProfileARN         :: !(Maybe Text)
-  , _sSecurityGroupIds           :: !(Maybe [Text])
-  , _sAssociatePublicIPAddress   :: !(Maybe Bool)
-  , _sServerName                 :: !(Maybe Text)
-  , _sSubnetIds                  :: !(Maybe [Text])
-  , _sKeyPair                    :: !(Maybe Text)
-  , _sCreatedAt                  :: !(Maybe POSIX)
-  , _sServerARN                  :: !(Maybe Text)
-  , _sEngine                     :: !(Maybe Text)
-  , _sMaintenanceStatus          :: !(Maybe MaintenanceStatus)
-  , _sInstanceType               :: !(Maybe Text)
-  , _sEngineModel                :: !(Maybe Text)
-  , _sEngineAttributes           :: !(Maybe [EngineAttribute])
-  , _sPreferredMaintenanceWindow :: !(Maybe Text)
-  , _sPreferredBackupWindow      :: !(Maybe Text)
-  , _sStatusReason               :: !(Maybe Text)
-  , _sEndpoint                   :: !(Maybe Text)
-  , _sCloudFormationStackARN     :: !(Maybe Text)
-  , _sBackupRetentionCount       :: !(Maybe Int)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data Server =
+  Server'
+    { _sEngineVersion              :: !(Maybe Text)
+    , _sServiceRoleARN             :: !(Maybe Text)
+    , _sDisableAutomatedBackup     :: !(Maybe Bool)
+    , _sStatus                     :: !(Maybe ServerStatus)
+    , _sInstanceProfileARN         :: !(Maybe Text)
+    , _sSecurityGroupIds           :: !(Maybe [Text])
+    , _sAssociatePublicIPAddress   :: !(Maybe Bool)
+    , _sServerName                 :: !(Maybe Text)
+    , _sSubnetIds                  :: !(Maybe [Text])
+    , _sKeyPair                    :: !(Maybe Text)
+    , _sCreatedAt                  :: !(Maybe POSIX)
+    , _sServerARN                  :: !(Maybe Text)
+    , _sEngine                     :: !(Maybe Text)
+    , _sMaintenanceStatus          :: !(Maybe MaintenanceStatus)
+    , _sInstanceType               :: !(Maybe Text)
+    , _sEngineModel                :: !(Maybe Text)
+    , _sEngineAttributes           :: !(Maybe [EngineAttribute])
+    , _sPreferredMaintenanceWindow :: !(Maybe Text)
+    , _sPreferredBackupWindow      :: !(Maybe Text)
+    , _sStatusReason               :: !(Maybe Text)
+    , _sEndpoint                   :: !(Maybe Text)
+    , _sCloudFormationStackARN     :: !(Maybe Text)
+    , _sBackupRetentionCount       :: !(Maybe Int)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Server' with the minimum fields required to make a request.
@@ -604,12 +612,14 @@ instance NFData Server where
 --
 --
 -- /See:/ 'serverEvent' smart constructor.
-data ServerEvent = ServerEvent'
-  { _seLogURL     :: !(Maybe Text)
-  , _seServerName :: !(Maybe Text)
-  , _seCreatedAt  :: !(Maybe POSIX)
-  , _seMessage    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ServerEvent =
+  ServerEvent'
+    { _seLogURL     :: !(Maybe Text)
+    , _seServerName :: !(Maybe Text)
+    , _seCreatedAt  :: !(Maybe POSIX)
+    , _seMessage    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ServerEvent' with the minimum fields required to make a request.

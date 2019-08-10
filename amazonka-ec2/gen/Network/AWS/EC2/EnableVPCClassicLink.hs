@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'enableVPCClassicLink' smart constructor.
-data EnableVPCClassicLink = EnableVPCClassicLink'
-  { _evclDryRun :: !(Maybe Bool)
-  , _evclVPCId  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EnableVPCClassicLink =
+  EnableVPCClassicLink'
+    { _evclDryRun :: !(Maybe Bool)
+    , _evclVPCId  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EnableVPCClassicLink' with the minimum fields required to make a request.
@@ -110,10 +112,12 @@ instance ToQuery EnableVPCClassicLink where
 --
 --
 -- /See:/ 'enableVPCClassicLinkResponse' smart constructor.
-data EnableVPCClassicLinkResponse = EnableVPCClassicLinkResponse'
-  { _evclrsReturn         :: !(Maybe Bool)
-  , _evclrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EnableVPCClassicLinkResponse =
+  EnableVPCClassicLinkResponse'
+    { _evclrsReturn         :: !(Maybe Bool)
+    , _evclrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EnableVPCClassicLinkResponse' with the minimum fields required to make a request.

@@ -56,11 +56,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listGroupPolicies' smart constructor.
-data ListGroupPolicies = ListGroupPolicies'
-  { _lgpMarker    :: !(Maybe Text)
-  , _lgpMaxItems  :: !(Maybe Nat)
-  , _lgpGroupName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListGroupPolicies =
+  ListGroupPolicies'
+    { _lgpMarker    :: !(Maybe Text)
+    , _lgpMaxItems  :: !(Maybe Nat)
+    , _lgpGroupName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListGroupPolicies' with the minimum fields required to make a request.
@@ -135,12 +137,14 @@ instance ToQuery ListGroupPolicies where
 --
 --
 -- /See:/ 'listGroupPoliciesResponse' smart constructor.
-data ListGroupPoliciesResponse = ListGroupPoliciesResponse'
-  { _lgprsMarker         :: !(Maybe Text)
-  , _lgprsIsTruncated    :: !(Maybe Bool)
-  , _lgprsResponseStatus :: !Int
-  , _lgprsPolicyNames    :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListGroupPoliciesResponse =
+  ListGroupPoliciesResponse'
+    { _lgprsMarker         :: !(Maybe Text)
+    , _lgprsIsTruncated    :: !(Maybe Bool)
+    , _lgprsResponseStatus :: !Int
+    , _lgprsPolicyNames    :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListGroupPoliciesResponse' with the minimum fields required to make a request.

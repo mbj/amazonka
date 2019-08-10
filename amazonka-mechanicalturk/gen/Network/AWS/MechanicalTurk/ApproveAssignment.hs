@@ -58,11 +58,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'approveAssignment' smart constructor.
-data ApproveAssignment = ApproveAssignment'
-  { _aaOverrideRejection :: !(Maybe Bool)
-  , _aaRequesterFeedback :: !(Maybe Text)
-  , _aaAssignmentId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ApproveAssignment =
+  ApproveAssignment'
+    { _aaOverrideRejection :: !(Maybe Bool)
+    , _aaRequesterFeedback :: !(Maybe Text)
+    , _aaAssignmentId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ApproveAssignment' with the minimum fields required to make a request.
@@ -134,9 +136,11 @@ instance ToQuery ApproveAssignment where
         toQuery = const mempty
 
 -- | /See:/ 'approveAssignmentResponse' smart constructor.
-newtype ApproveAssignmentResponse = ApproveAssignmentResponse'
-  { _aarsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ApproveAssignmentResponse =
+  ApproveAssignmentResponse'
+    { _aarsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ApproveAssignmentResponse' with the minimum fields required to make a request.

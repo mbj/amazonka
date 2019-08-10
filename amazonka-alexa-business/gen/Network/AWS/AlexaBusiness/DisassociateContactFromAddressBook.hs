@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'disassociateContactFromAddressBook' smart constructor.
-data DisassociateContactFromAddressBook = DisassociateContactFromAddressBook'
-  { _dcfabContactARN     :: !Text
-  , _dcfabAddressBookARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DisassociateContactFromAddressBook =
+  DisassociateContactFromAddressBook'
+    { _dcfabContactARN     :: !Text
+    , _dcfabAddressBookARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisassociateContactFromAddressBook' with the minimum fields required to make a request.
@@ -121,9 +123,11 @@ instance ToQuery DisassociateContactFromAddressBook
         toQuery = const mempty
 
 -- | /See:/ 'disassociateContactFromAddressBookResponse' smart constructor.
-newtype DisassociateContactFromAddressBookResponse = DisassociateContactFromAddressBookResponse'
-  { _dcfabrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DisassociateContactFromAddressBookResponse =
+  DisassociateContactFromAddressBookResponse'
+    { _dcfabrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisassociateContactFromAddressBookResponse' with the minimum fields required to make a request.

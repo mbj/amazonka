@@ -46,10 +46,12 @@ import Network.AWS.WorkMail.Types
 import Network.AWS.WorkMail.Types.Product
 
 -- | /See:/ 'createGroup' smart constructor.
-data CreateGroup = CreateGroup'
-  { _cgOrganizationId :: !Text
-  , _cgName           :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateGroup =
+  CreateGroup'
+    { _cgOrganizationId :: !Text
+    , _cgName           :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateGroup' with the minimum fields required to make a request.
@@ -111,10 +113,12 @@ instance ToQuery CreateGroup where
         toQuery = const mempty
 
 -- | /See:/ 'createGroupResponse' smart constructor.
-data CreateGroupResponse = CreateGroupResponse'
-  { _cgrsGroupId        :: !(Maybe Text)
-  , _cgrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateGroupResponse =
+  CreateGroupResponse'
+    { _cgrsGroupId        :: !(Maybe Text)
+    , _cgrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateGroupResponse' with the minimum fields required to make a request.

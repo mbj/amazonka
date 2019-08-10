@@ -26,11 +26,13 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'awsVPCConfiguration' smart constructor.
-data AWSVPCConfiguration = AWSVPCConfiguration'
-  { _avcSecurityGroups :: !(Maybe [Text])
-  , _avcAssignPublicIP :: !(Maybe AssignPublicIP)
-  , _avcSubnets        :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AWSVPCConfiguration =
+  AWSVPCConfiguration'
+    { _avcSecurityGroups :: !(Maybe [Text])
+    , _avcAssignPublicIP :: !(Maybe AssignPublicIP)
+    , _avcSubnets        :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AWSVPCConfiguration' with the minimum fields required to make a request.
@@ -90,12 +92,14 @@ instance ToJSON AWSVPCConfiguration where
 --
 --
 -- /See:/ 'attachment' smart constructor.
-data Attachment = Attachment'
-  { _aStatus  :: !(Maybe Text)
-  , _aDetails :: !(Maybe [KeyValuePair])
-  , _aId      :: !(Maybe Text)
-  , _aType    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Attachment =
+  Attachment'
+    { _aStatus  :: !(Maybe Text)
+    , _aDetails :: !(Maybe [KeyValuePair])
+    , _aId      :: !(Maybe Text)
+    , _aType    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Attachment' with the minimum fields required to make a request.
@@ -150,10 +154,12 @@ instance NFData Attachment where
 --
 --
 -- /See:/ 'attachmentStateChange' smart constructor.
-data AttachmentStateChange = AttachmentStateChange'
-  { _ascAttachmentARN :: !Text
-  , _ascStatus        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AttachmentStateChange =
+  AttachmentStateChange'
+    { _ascAttachmentARN :: !Text
+    , _ascStatus        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttachmentStateChange' with the minimum fields required to make a request.
@@ -196,12 +202,14 @@ instance ToJSON AttachmentStateChange where
 --
 --
 -- /See:/ 'attribute' smart constructor.
-data Attribute = Attribute'
-  { _aTargetId   :: !(Maybe Text)
-  , _aValue      :: !(Maybe Text)
-  , _aTargetType :: !(Maybe TargetType)
-  , _aName       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Attribute =
+  Attribute'
+    { _aTargetId   :: !(Maybe Text)
+    , _aValue      :: !(Maybe Text)
+    , _aTargetType :: !(Maybe TargetType)
+    , _aName       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Attribute' with the minimum fields required to make a request.
@@ -270,16 +278,18 @@ instance ToJSON Attribute where
 --
 --
 -- /See:/ 'cluster' smart constructor.
-data Cluster = Cluster'
-  { _cStatus                            :: !(Maybe Text)
-  , _cClusterARN                        :: !(Maybe Text)
-  , _cRunningTasksCount                 :: !(Maybe Int)
-  , _cRegisteredContainerInstancesCount :: !(Maybe Int)
-  , _cPendingTasksCount                 :: !(Maybe Int)
-  , _cClusterName                       :: !(Maybe Text)
-  , _cStatistics                        :: !(Maybe [KeyValuePair])
-  , _cActiveServicesCount               :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Cluster =
+  Cluster'
+    { _cStatus                            :: !(Maybe Text)
+    , _cClusterARN                        :: !(Maybe Text)
+    , _cRunningTasksCount                 :: !(Maybe Int)
+    , _cRegisteredContainerInstancesCount :: !(Maybe Int)
+    , _cPendingTasksCount                 :: !(Maybe Int)
+    , _cClusterName                       :: !(Maybe Text)
+    , _cStatistics                        :: !(Maybe [KeyValuePair])
+    , _cActiveServicesCount               :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Cluster' with the minimum fields required to make a request.
@@ -370,17 +380,19 @@ instance NFData Cluster where
 --
 --
 -- /See:/ 'container' smart constructor.
-data Container = Container'
-  { _cNetworkBindings   :: !(Maybe [NetworkBinding])
-  , _cContainerARN      :: !(Maybe Text)
-  , _cNetworkInterfaces :: !(Maybe [NetworkInterface])
-  , _cTaskARN           :: !(Maybe Text)
-  , _cLastStatus        :: !(Maybe Text)
-  , _cReason            :: !(Maybe Text)
-  , _cName              :: !(Maybe Text)
-  , _cExitCode          :: !(Maybe Int)
-  , _cHealthStatus      :: !(Maybe HealthStatus)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Container =
+  Container'
+    { _cNetworkBindings   :: !(Maybe [NetworkBinding])
+    , _cContainerARN      :: !(Maybe Text)
+    , _cNetworkInterfaces :: !(Maybe [NetworkInterface])
+    , _cTaskARN           :: !(Maybe Text)
+    , _cLastStatus        :: !(Maybe Text)
+    , _cReason            :: !(Maybe Text)
+    , _cName              :: !(Maybe Text)
+    , _cExitCode          :: !(Maybe Int)
+    , _cHealthStatus      :: !(Maybe HealthStatus)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Container' with the minimum fields required to make a request.
@@ -480,36 +492,38 @@ instance NFData Container where
 --
 --
 -- /See:/ 'containerDefinition' smart constructor.
-data ContainerDefinition = ContainerDefinition'
-  { _cdImage                  :: !(Maybe Text)
-  , _cdCommand                :: !(Maybe [Text])
-  , _cdHostname               :: !(Maybe Text)
-  , _cdDockerSecurityOptions  :: !(Maybe [Text])
-  , _cdHealthCheck            :: !(Maybe HealthCheck)
-  , _cdDisableNetworking      :: !(Maybe Bool)
-  , _cdVolumesFrom            :: !(Maybe [VolumeFrom])
-  , _cdEnvironment            :: !(Maybe [KeyValuePair])
-  , _cdEntryPoint             :: !(Maybe [Text])
-  , _cdWorkingDirectory       :: !(Maybe Text)
-  , _cdUlimits                :: !(Maybe [Ulimit])
-  , _cdPrivileged             :: !(Maybe Bool)
-  , _cdPortMappings           :: !(Maybe [PortMapping])
-  , _cdDockerLabels           :: !(Maybe (Map Text Text))
-  , _cdExtraHosts             :: !(Maybe [HostEntry])
-  , _cdMemory                 :: !(Maybe Int)
-  , _cdUser                   :: !(Maybe Text)
-  , _cdDnsSearchDomains       :: !(Maybe [Text])
-  , _cdLogConfiguration       :: !(Maybe LogConfiguration)
-  , _cdLinuxParameters        :: !(Maybe LinuxParameters)
-  , _cdName                   :: !(Maybe Text)
-  , _cdDnsServers             :: !(Maybe [Text])
-  , _cdMountPoints            :: !(Maybe [MountPoint])
-  , _cdLinks                  :: !(Maybe [Text])
-  , _cdReadonlyRootFilesystem :: !(Maybe Bool)
-  , _cdEssential              :: !(Maybe Bool)
-  , _cdCpu                    :: !(Maybe Int)
-  , _cdMemoryReservation      :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ContainerDefinition =
+  ContainerDefinition'
+    { _cdImage                  :: !(Maybe Text)
+    , _cdCommand                :: !(Maybe [Text])
+    , _cdHostname               :: !(Maybe Text)
+    , _cdDockerSecurityOptions  :: !(Maybe [Text])
+    , _cdHealthCheck            :: !(Maybe HealthCheck)
+    , _cdDisableNetworking      :: !(Maybe Bool)
+    , _cdVolumesFrom            :: !(Maybe [VolumeFrom])
+    , _cdEnvironment            :: !(Maybe [KeyValuePair])
+    , _cdEntryPoint             :: !(Maybe [Text])
+    , _cdWorkingDirectory       :: !(Maybe Text)
+    , _cdUlimits                :: !(Maybe [Ulimit])
+    , _cdPrivileged             :: !(Maybe Bool)
+    , _cdPortMappings           :: !(Maybe [PortMapping])
+    , _cdDockerLabels           :: !(Maybe (Map Text Text))
+    , _cdExtraHosts             :: !(Maybe [HostEntry])
+    , _cdMemory                 :: !(Maybe Int)
+    , _cdUser                   :: !(Maybe Text)
+    , _cdDnsSearchDomains       :: !(Maybe [Text])
+    , _cdLogConfiguration       :: !(Maybe LogConfiguration)
+    , _cdLinuxParameters        :: !(Maybe LinuxParameters)
+    , _cdName                   :: !(Maybe Text)
+    , _cdDnsServers             :: !(Maybe [Text])
+    , _cdMountPoints            :: !(Maybe [MountPoint])
+    , _cdLinks                  :: !(Maybe [Text])
+    , _cdReadonlyRootFilesystem :: !(Maybe Bool)
+    , _cdEssential              :: !(Maybe Bool)
+    , _cdCpu                    :: !(Maybe Int)
+    , _cdMemoryReservation      :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ContainerDefinition' with the minimum fields required to make a request.
@@ -794,22 +808,24 @@ instance ToJSON ContainerDefinition where
 --
 --
 -- /See:/ 'containerInstance' smart constructor.
-data ContainerInstance = ContainerInstance'
-  { _ciStatus               :: !(Maybe Text)
-  , _ciAttachments          :: !(Maybe [Attachment])
-  , _ciRunningTasksCount    :: !(Maybe Int)
-  , _ciRemainingResources   :: !(Maybe [Resource])
-  , _ciEc2InstanceId        :: !(Maybe Text)
-  , _ciContainerInstanceARN :: !(Maybe Text)
-  , _ciAgentConnected       :: !(Maybe Bool)
-  , _ciVersionInfo          :: !(Maybe VersionInfo)
-  , _ciAgentUpdateStatus    :: !(Maybe AgentUpdateStatus)
-  , _ciAttributes           :: !(Maybe [Attribute])
-  , _ciVersion              :: !(Maybe Integer)
-  , _ciPendingTasksCount    :: !(Maybe Int)
-  , _ciRegisteredAt         :: !(Maybe POSIX)
-  , _ciRegisteredResources  :: !(Maybe [Resource])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ContainerInstance =
+  ContainerInstance'
+    { _ciStatus               :: !(Maybe Text)
+    , _ciAttachments          :: !(Maybe [Attachment])
+    , _ciRunningTasksCount    :: !(Maybe Int)
+    , _ciRemainingResources   :: !(Maybe [Resource])
+    , _ciEc2InstanceId        :: !(Maybe Text)
+    , _ciContainerInstanceARN :: !(Maybe Text)
+    , _ciAgentConnected       :: !(Maybe Bool)
+    , _ciVersionInfo          :: !(Maybe VersionInfo)
+    , _ciAgentUpdateStatus    :: !(Maybe AgentUpdateStatus)
+    , _ciAttributes           :: !(Maybe [Attribute])
+    , _ciVersion              :: !(Maybe Integer)
+    , _ciPendingTasksCount    :: !(Maybe Int)
+    , _ciRegisteredAt         :: !(Maybe POSIX)
+    , _ciRegisteredResources  :: !(Maybe [Resource])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ContainerInstance' with the minimum fields required to make a request.
@@ -948,14 +964,16 @@ instance NFData ContainerInstance where
 --
 --
 -- /See:/ 'containerOverride' smart constructor.
-data ContainerOverride = ContainerOverride'
-  { _coCommand           :: !(Maybe [Text])
-  , _coEnvironment       :: !(Maybe [KeyValuePair])
-  , _coMemory            :: !(Maybe Int)
-  , _coName              :: !(Maybe Text)
-  , _coCpu               :: !(Maybe Int)
-  , _coMemoryReservation :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ContainerOverride =
+  ContainerOverride'
+    { _coCommand           :: !(Maybe [Text])
+    , _coEnvironment       :: !(Maybe [KeyValuePair])
+    , _coMemory            :: !(Maybe Int)
+    , _coName              :: !(Maybe Text)
+    , _coCpu               :: !(Maybe Int)
+    , _coMemoryReservation :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ContainerOverride' with the minimum fields required to make a request.
@@ -1041,29 +1059,31 @@ instance ToJSON ContainerOverride where
 --
 --
 -- /See:/ 'containerService' smart constructor.
-data ContainerService = ContainerService'
-  { _csRunningCount                  :: !(Maybe Int)
-  , _csStatus                        :: !(Maybe Text)
-  , _csClusterARN                    :: !(Maybe Text)
-  , _csCreatedAt                     :: !(Maybe POSIX)
-  , _csPlatformVersion               :: !(Maybe Text)
-  , _csDesiredCount                  :: !(Maybe Int)
-  , _csLoadBalancers                 :: !(Maybe [LoadBalancer])
-  , _csPendingCount                  :: !(Maybe Int)
-  , _csPlacementConstraints          :: !(Maybe [PlacementConstraint])
-  , _csEvents                        :: !(Maybe [ServiceEvent])
-  , _csPlacementStrategy             :: !(Maybe [PlacementStrategy])
-  , _csDeployments                   :: !(Maybe [Deployment])
-  , _csServiceName                   :: !(Maybe Text)
-  , _csLaunchType                    :: !(Maybe LaunchType)
-  , _csServiceARN                    :: !(Maybe Text)
-  , _csTaskDefinition                :: !(Maybe Text)
-  , _csHealthCheckGracePeriodSeconds :: !(Maybe Int)
-  , _csNetworkConfiguration          :: !(Maybe NetworkConfiguration)
-  , _csServiceRegistries             :: !(Maybe [ServiceRegistry])
-  , _csRoleARN                       :: !(Maybe Text)
-  , _csDeploymentConfiguration       :: !(Maybe DeploymentConfiguration)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ContainerService =
+  ContainerService'
+    { _csRunningCount                  :: !(Maybe Int)
+    , _csStatus                        :: !(Maybe Text)
+    , _csClusterARN                    :: !(Maybe Text)
+    , _csCreatedAt                     :: !(Maybe POSIX)
+    , _csPlatformVersion               :: !(Maybe Text)
+    , _csDesiredCount                  :: !(Maybe Int)
+    , _csLoadBalancers                 :: !(Maybe [LoadBalancer])
+    , _csPendingCount                  :: !(Maybe Int)
+    , _csPlacementConstraints          :: !(Maybe [PlacementConstraint])
+    , _csEvents                        :: !(Maybe [ServiceEvent])
+    , _csPlacementStrategy             :: !(Maybe [PlacementStrategy])
+    , _csDeployments                   :: !(Maybe [Deployment])
+    , _csServiceName                   :: !(Maybe Text)
+    , _csLaunchType                    :: !(Maybe LaunchType)
+    , _csServiceARN                    :: !(Maybe Text)
+    , _csTaskDefinition                :: !(Maybe Text)
+    , _csHealthCheckGracePeriodSeconds :: !(Maybe Int)
+    , _csNetworkConfiguration          :: !(Maybe NetworkConfiguration)
+    , _csServiceRegistries             :: !(Maybe [ServiceRegistry])
+    , _csRoleARN                       :: !(Maybe Text)
+    , _csDeploymentConfiguration       :: !(Maybe DeploymentConfiguration)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ContainerService' with the minimum fields required to make a request.
@@ -1258,13 +1278,15 @@ instance NFData ContainerService where
 --
 --
 -- /See:/ 'containerStateChange' smart constructor.
-data ContainerStateChange = ContainerStateChange'
-  { _cscNetworkBindings :: !(Maybe [NetworkBinding])
-  , _cscStatus          :: !(Maybe Text)
-  , _cscContainerName   :: !(Maybe Text)
-  , _cscReason          :: !(Maybe Text)
-  , _cscExitCode        :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ContainerStateChange =
+  ContainerStateChange'
+    { _cscNetworkBindings :: !(Maybe [NetworkBinding])
+    , _cscStatus          :: !(Maybe Text)
+    , _cscContainerName   :: !(Maybe Text)
+    , _cscReason          :: !(Maybe Text)
+    , _cscExitCode        :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ContainerStateChange' with the minimum fields required to make a request.
@@ -1331,19 +1353,21 @@ instance ToJSON ContainerStateChange where
 --
 --
 -- /See:/ 'deployment' smart constructor.
-data Deployment = Deployment'
-  { _dRunningCount         :: !(Maybe Int)
-  , _dStatus               :: !(Maybe Text)
-  , _dCreatedAt            :: !(Maybe POSIX)
-  , _dPlatformVersion      :: !(Maybe Text)
-  , _dDesiredCount         :: !(Maybe Int)
-  , _dPendingCount         :: !(Maybe Int)
-  , _dId                   :: !(Maybe Text)
-  , _dLaunchType           :: !(Maybe LaunchType)
-  , _dUpdatedAt            :: !(Maybe POSIX)
-  , _dTaskDefinition       :: !(Maybe Text)
-  , _dNetworkConfiguration :: !(Maybe NetworkConfiguration)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Deployment =
+  Deployment'
+    { _dRunningCount         :: !(Maybe Int)
+    , _dStatus               :: !(Maybe Text)
+    , _dCreatedAt            :: !(Maybe POSIX)
+    , _dPlatformVersion      :: !(Maybe Text)
+    , _dDesiredCount         :: !(Maybe Int)
+    , _dPendingCount         :: !(Maybe Int)
+    , _dId                   :: !(Maybe Text)
+    , _dLaunchType           :: !(Maybe LaunchType)
+    , _dUpdatedAt            :: !(Maybe POSIX)
+    , _dTaskDefinition       :: !(Maybe Text)
+    , _dNetworkConfiguration :: !(Maybe NetworkConfiguration)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Deployment' with the minimum fields required to make a request.
@@ -1458,10 +1482,12 @@ instance NFData Deployment where
 --
 --
 -- /See:/ 'deploymentConfiguration' smart constructor.
-data DeploymentConfiguration = DeploymentConfiguration'
-  { _dcMinimumHealthyPercent :: !(Maybe Int)
-  , _dcMaximumPercent        :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeploymentConfiguration =
+  DeploymentConfiguration'
+    { _dcMinimumHealthyPercent :: !(Maybe Int)
+    , _dcMaximumPercent        :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeploymentConfiguration' with the minimum fields required to make a request.
@@ -1511,11 +1537,13 @@ instance ToJSON DeploymentConfiguration where
 --
 --
 -- /See:/ 'device' smart constructor.
-data Device = Device'
-  { _dContainerPath :: !(Maybe Text)
-  , _dPermissions   :: !(Maybe [DeviceCgroupPermission])
-  , _dHostPath      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Device =
+  Device'
+    { _dContainerPath :: !(Maybe Text)
+    , _dPermissions   :: !(Maybe [DeviceCgroupPermission])
+    , _dHostPath      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Device' with the minimum fields required to make a request.
@@ -1576,10 +1604,12 @@ instance ToJSON Device where
 --
 --
 -- /See:/ 'failure' smart constructor.
-data Failure = Failure'
-  { _fArn    :: !(Maybe Text)
-  , _fReason :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Failure =
+  Failure'
+    { _fArn    :: !(Maybe Text)
+    , _fReason :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Failure' with the minimum fields required to make a request.
@@ -1617,13 +1647,15 @@ instance NFData Failure where
 --
 --
 -- /See:/ 'healthCheck' smart constructor.
-data HealthCheck = HealthCheck'
-  { _hcStartPeriod :: !(Maybe Int)
-  , _hcRetries     :: !(Maybe Int)
-  , _hcInterval    :: !(Maybe Int)
-  , _hcTimeout     :: !(Maybe Int)
-  , _hcCommand     :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data HealthCheck =
+  HealthCheck'
+    { _hcStartPeriod :: !(Maybe Int)
+    , _hcRetries     :: !(Maybe Int)
+    , _hcInterval    :: !(Maybe Int)
+    , _hcTimeout     :: !(Maybe Int)
+    , _hcCommand     :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'HealthCheck' with the minimum fields required to make a request.
@@ -1700,10 +1732,12 @@ instance ToJSON HealthCheck where
 --
 --
 -- /See:/ 'hostEntry' smart constructor.
-data HostEntry = HostEntry'
-  { _heHostname  :: !Text
-  , _heIpAddress :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data HostEntry =
+  HostEntry'
+    { _heHostname  :: !Text
+    , _heIpAddress :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'HostEntry' with the minimum fields required to make a request.
@@ -1752,9 +1786,11 @@ instance ToJSON HostEntry where
 --
 --
 -- /See:/ 'hostVolumeProperties' smart constructor.
-newtype HostVolumeProperties = HostVolumeProperties'
-  { _hvpSourcePath :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype HostVolumeProperties =
+  HostVolumeProperties'
+    { _hvpSourcePath :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'HostVolumeProperties' with the minimum fields required to make a request.
@@ -1791,10 +1827,12 @@ instance ToJSON HostVolumeProperties where
 --
 --
 -- /See:/ 'kernelCapabilities' smart constructor.
-data KernelCapabilities = KernelCapabilities'
-  { _kcDrop :: !(Maybe [Text])
-  , _kcAdd  :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data KernelCapabilities =
+  KernelCapabilities'
+    { _kcDrop :: !(Maybe [Text])
+    , _kcAdd  :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'KernelCapabilities' with the minimum fields required to make a request.
@@ -1840,10 +1878,12 @@ instance ToJSON KernelCapabilities where
 --
 --
 -- /See:/ 'keyValuePair' smart constructor.
-data KeyValuePair = KeyValuePair'
-  { _kvpValue :: !(Maybe Text)
-  , _kvpName  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data KeyValuePair =
+  KeyValuePair'
+    { _kvpValue :: !(Maybe Text)
+    , _kvpName  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'KeyValuePair' with the minimum fields required to make a request.
@@ -1888,13 +1928,15 @@ instance ToJSON KeyValuePair where
 --
 --
 -- /See:/ 'linuxParameters' smart constructor.
-data LinuxParameters = LinuxParameters'
-  { _lpSharedMemorySize   :: !(Maybe Int)
-  , _lpInitProcessEnabled :: !(Maybe Bool)
-  , _lpTmpfs              :: !(Maybe [Tmpfs])
-  , _lpDevices            :: !(Maybe [Device])
-  , _lpCapabilities       :: !(Maybe KernelCapabilities)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LinuxParameters =
+  LinuxParameters'
+    { _lpSharedMemorySize   :: !(Maybe Int)
+    , _lpInitProcessEnabled :: !(Maybe Bool)
+    , _lpTmpfs              :: !(Maybe [Tmpfs])
+    , _lpDevices            :: !(Maybe [Device])
+    , _lpCapabilities       :: !(Maybe KernelCapabilities)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LinuxParameters' with the minimum fields required to make a request.
@@ -1972,12 +2014,14 @@ instance ToJSON LinuxParameters where
 --
 --
 -- /See:/ 'loadBalancer' smart constructor.
-data LoadBalancer = LoadBalancer'
-  { _lbLoadBalancerName :: !(Maybe Text)
-  , _lbContainerName    :: !(Maybe Text)
-  , _lbTargetGroupARN   :: !(Maybe Text)
-  , _lbContainerPort    :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LoadBalancer =
+  LoadBalancer'
+    { _lbLoadBalancerName :: !(Maybe Text)
+    , _lbContainerName    :: !(Maybe Text)
+    , _lbTargetGroupARN   :: !(Maybe Text)
+    , _lbContainerPort    :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LoadBalancer' with the minimum fields required to make a request.
@@ -2046,10 +2090,12 @@ instance ToJSON LoadBalancer where
 --
 --
 -- /See:/ 'logConfiguration' smart constructor.
-data LogConfiguration = LogConfiguration'
-  { _lcOptions   :: !(Maybe (Map Text Text))
-  , _lcLogDriver :: !LogDriver
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LogConfiguration =
+  LogConfiguration'
+    { _lcOptions   :: !(Maybe (Map Text Text))
+    , _lcLogDriver :: !LogDriver
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LogConfiguration' with the minimum fields required to make a request.
@@ -2097,11 +2143,13 @@ instance ToJSON LogConfiguration where
 --
 --
 -- /See:/ 'mountPoint' smart constructor.
-data MountPoint = MountPoint'
-  { _mpContainerPath :: !(Maybe Text)
-  , _mpSourceVolume  :: !(Maybe Text)
-  , _mpReadOnly      :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MountPoint =
+  MountPoint'
+    { _mpContainerPath :: !(Maybe Text)
+    , _mpSourceVolume  :: !(Maybe Text)
+    , _mpReadOnly      :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MountPoint' with the minimum fields required to make a request.
@@ -2160,12 +2208,14 @@ instance ToJSON MountPoint where
 --
 --
 -- /See:/ 'networkBinding' smart constructor.
-data NetworkBinding = NetworkBinding'
-  { _nbBindIP        :: !(Maybe Text)
-  , _nbProtocol      :: !(Maybe TransportProtocol)
-  , _nbHostPort      :: !(Maybe Int)
-  , _nbContainerPort :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NetworkBinding =
+  NetworkBinding'
+    { _nbBindIP        :: !(Maybe Text)
+    , _nbProtocol      :: !(Maybe TransportProtocol)
+    , _nbHostPort      :: !(Maybe Int)
+    , _nbContainerPort :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NetworkBinding' with the minimum fields required to make a request.
@@ -2233,9 +2283,11 @@ instance ToJSON NetworkBinding where
 --
 --
 -- /See:/ 'networkConfiguration' smart constructor.
-newtype NetworkConfiguration = NetworkConfiguration'
-  { _ncAwsvpcConfiguration :: Maybe AWSVPCConfiguration
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype NetworkConfiguration =
+  NetworkConfiguration'
+    { _ncAwsvpcConfiguration :: Maybe AWSVPCConfiguration
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NetworkConfiguration' with the minimum fields required to make a request.
@@ -2275,11 +2327,13 @@ instance ToJSON NetworkConfiguration where
 --
 --
 -- /See:/ 'networkInterface' smart constructor.
-data NetworkInterface = NetworkInterface'
-  { _niIpv6Address        :: !(Maybe Text)
-  , _niPrivateIPv4Address :: !(Maybe Text)
-  , _niAttachmentId       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NetworkInterface =
+  NetworkInterface'
+    { _niIpv6Address        :: !(Maybe Text)
+    , _niPrivateIPv4Address :: !(Maybe Text)
+    , _niAttachmentId       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NetworkInterface' with the minimum fields required to make a request.
@@ -2331,10 +2385,12 @@ instance NFData NetworkInterface where
 --
 --
 -- /See:/ 'placementConstraint' smart constructor.
-data PlacementConstraint = PlacementConstraint'
-  { _pcExpression :: !(Maybe Text)
-  , _pcType       :: !(Maybe PlacementConstraintType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PlacementConstraint =
+  PlacementConstraint'
+    { _pcExpression :: !(Maybe Text)
+    , _pcType       :: !(Maybe PlacementConstraintType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PlacementConstraint' with the minimum fields required to make a request.
@@ -2381,10 +2437,12 @@ instance ToJSON PlacementConstraint where
 --
 --
 -- /See:/ 'placementStrategy' smart constructor.
-data PlacementStrategy = PlacementStrategy'
-  { _psField :: !(Maybe Text)
-  , _psType  :: !(Maybe PlacementStrategyType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PlacementStrategy =
+  PlacementStrategy'
+    { _psField :: !(Maybe Text)
+    , _psType  :: !(Maybe PlacementStrategyType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PlacementStrategy' with the minimum fields required to make a request.
@@ -2433,11 +2491,13 @@ instance ToJSON PlacementStrategy where
 --
 --
 -- /See:/ 'portMapping' smart constructor.
-data PortMapping = PortMapping'
-  { _pmProtocol      :: !(Maybe TransportProtocol)
-  , _pmHostPort      :: !(Maybe Int)
-  , _pmContainerPort :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PortMapping =
+  PortMapping'
+    { _pmProtocol      :: !(Maybe TransportProtocol)
+    , _pmHostPort      :: !(Maybe Int)
+    , _pmContainerPort :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PortMapping' with the minimum fields required to make a request.
@@ -2493,14 +2553,16 @@ instance ToJSON PortMapping where
 --
 --
 -- /See:/ 'resource' smart constructor.
-data Resource = Resource'
-  { _rStringSetValue :: !(Maybe [Text])
-  , _rIntegerValue   :: !(Maybe Int)
-  , _rDoubleValue    :: !(Maybe Double)
-  , _rLongValue      :: !(Maybe Integer)
-  , _rName           :: !(Maybe Text)
-  , _rType           :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Resource =
+  Resource'
+    { _rStringSetValue :: !(Maybe [Text])
+    , _rIntegerValue   :: !(Maybe Int)
+    , _rDoubleValue    :: !(Maybe Double)
+    , _rLongValue      :: !(Maybe Integer)
+    , _rName           :: !(Maybe Text)
+    , _rType           :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Resource' with the minimum fields required to make a request.
@@ -2586,11 +2648,13 @@ instance ToJSON Resource where
 --
 --
 -- /See:/ 'serviceEvent' smart constructor.
-data ServiceEvent = ServiceEvent'
-  { _seCreatedAt :: !(Maybe POSIX)
-  , _seId        :: !(Maybe Text)
-  , _seMessage   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ServiceEvent =
+  ServiceEvent'
+    { _seCreatedAt :: !(Maybe POSIX)
+    , _seId        :: !(Maybe Text)
+    , _seMessage   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ServiceEvent' with the minimum fields required to make a request.
@@ -2637,10 +2701,12 @@ instance NFData ServiceEvent where
 --
 --
 -- /See:/ 'serviceRegistry' smart constructor.
-data ServiceRegistry = ServiceRegistry'
-  { _srRegistryARN :: !(Maybe Text)
-  , _srPort        :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ServiceRegistry =
+  ServiceRegistry'
+    { _srRegistryARN :: !(Maybe Text)
+    , _srPort        :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ServiceRegistry' with the minimum fields required to make a request.
@@ -2686,35 +2752,37 @@ instance ToJSON ServiceRegistry where
 --
 --
 -- /See:/ 'task' smart constructor.
-data Task = Task'
-  { _tStoppedAt            :: !(Maybe POSIX)
-  , _tDesiredStatus        :: !(Maybe Text)
-  , _tOverrides            :: !(Maybe TaskOverride)
-  , _tClusterARN           :: !(Maybe Text)
-  , _tGroup                :: !(Maybe Text)
-  , _tAttachments          :: !(Maybe [Attachment])
-  , _tCreatedAt            :: !(Maybe POSIX)
-  , _tPlatformVersion      :: !(Maybe Text)
-  , _tTaskARN              :: !(Maybe Text)
-  , _tContainerInstanceARN :: !(Maybe Text)
-  , _tExecutionStoppedAt   :: !(Maybe POSIX)
-  , _tLastStatus           :: !(Maybe Text)
-  , _tMemory               :: !(Maybe Text)
-  , _tPullStoppedAt        :: !(Maybe POSIX)
-  , _tContainers           :: !(Maybe [Container])
-  , _tStartedAt            :: !(Maybe POSIX)
-  , _tVersion              :: !(Maybe Integer)
-  , _tStartedBy            :: !(Maybe Text)
-  , _tStoppedReason        :: !(Maybe Text)
-  , _tConnectivity         :: !(Maybe Connectivity)
-  , _tStoppingAt           :: !(Maybe POSIX)
-  , _tLaunchType           :: !(Maybe LaunchType)
-  , _tTaskDefinitionARN    :: !(Maybe Text)
-  , _tHealthStatus         :: !(Maybe HealthStatus)
-  , _tConnectivityAt       :: !(Maybe POSIX)
-  , _tCpu                  :: !(Maybe Text)
-  , _tPullStartedAt        :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Task =
+  Task'
+    { _tStoppedAt            :: !(Maybe POSIX)
+    , _tDesiredStatus        :: !(Maybe Text)
+    , _tOverrides            :: !(Maybe TaskOverride)
+    , _tClusterARN           :: !(Maybe Text)
+    , _tGroup                :: !(Maybe Text)
+    , _tAttachments          :: !(Maybe [Attachment])
+    , _tCreatedAt            :: !(Maybe POSIX)
+    , _tPlatformVersion      :: !(Maybe Text)
+    , _tTaskARN              :: !(Maybe Text)
+    , _tContainerInstanceARN :: !(Maybe Text)
+    , _tExecutionStoppedAt   :: !(Maybe POSIX)
+    , _tLastStatus           :: !(Maybe Text)
+    , _tMemory               :: !(Maybe Text)
+    , _tPullStoppedAt        :: !(Maybe POSIX)
+    , _tContainers           :: !(Maybe [Container])
+    , _tStartedAt            :: !(Maybe POSIX)
+    , _tVersion              :: !(Maybe Integer)
+    , _tStartedBy            :: !(Maybe Text)
+    , _tStoppedReason        :: !(Maybe Text)
+    , _tConnectivity         :: !(Maybe Connectivity)
+    , _tStoppingAt           :: !(Maybe POSIX)
+    , _tLaunchType           :: !(Maybe LaunchType)
+    , _tTaskDefinitionARN    :: !(Maybe Text)
+    , _tHealthStatus         :: !(Maybe HealthStatus)
+    , _tConnectivityAt       :: !(Maybe POSIX)
+    , _tCpu                  :: !(Maybe Text)
+    , _tPullStartedAt        :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Task' with the minimum fields required to make a request.
@@ -2957,23 +3025,25 @@ instance NFData Task where
 --
 --
 -- /See:/ 'taskDefinition' smart constructor.
-data TaskDefinition = TaskDefinition'
-  { _tdStatus                  :: !(Maybe TaskDefinitionStatus)
-  , _tdExecutionRoleARN        :: !(Maybe Text)
-  , _tdRequiresCompatibilities :: !(Maybe [Compatibility])
-  , _tdFamily                  :: !(Maybe Text)
-  , _tdContainerDefinitions    :: !(Maybe [ContainerDefinition])
-  , _tdMemory                  :: !(Maybe Text)
-  , _tdTaskRoleARN             :: !(Maybe Text)
-  , _tdPlacementConstraints    :: !(Maybe [TaskDefinitionPlacementConstraint])
-  , _tdNetworkMode             :: !(Maybe NetworkMode)
-  , _tdTaskDefinitionARN       :: !(Maybe Text)
-  , _tdCompatibilities         :: !(Maybe [Compatibility])
-  , _tdRevision                :: !(Maybe Int)
-  , _tdVolumes                 :: !(Maybe [Volume])
-  , _tdCpu                     :: !(Maybe Text)
-  , _tdRequiresAttributes      :: !(Maybe [Attribute])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TaskDefinition =
+  TaskDefinition'
+    { _tdStatus                  :: !(Maybe TaskDefinitionStatus)
+    , _tdExecutionRoleARN        :: !(Maybe Text)
+    , _tdRequiresCompatibilities :: !(Maybe [Compatibility])
+    , _tdFamily                  :: !(Maybe Text)
+    , _tdContainerDefinitions    :: !(Maybe [ContainerDefinition])
+    , _tdMemory                  :: !(Maybe Text)
+    , _tdTaskRoleARN             :: !(Maybe Text)
+    , _tdPlacementConstraints    :: !(Maybe [TaskDefinitionPlacementConstraint])
+    , _tdNetworkMode             :: !(Maybe NetworkMode)
+    , _tdTaskDefinitionARN       :: !(Maybe Text)
+    , _tdCompatibilities         :: !(Maybe [Compatibility])
+    , _tdRevision                :: !(Maybe Int)
+    , _tdVolumes                 :: !(Maybe [Volume])
+    , _tdCpu                     :: !(Maybe Text)
+    , _tdRequiresAttributes      :: !(Maybe [Attribute])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TaskDefinition' with the minimum fields required to make a request.
@@ -3124,10 +3194,12 @@ instance NFData TaskDefinition where
 --
 --
 -- /See:/ 'taskDefinitionPlacementConstraint' smart constructor.
-data TaskDefinitionPlacementConstraint = TaskDefinitionPlacementConstraint'
-  { _tdpcExpression :: !(Maybe Text)
-  , _tdpcType       :: !(Maybe TaskDefinitionPlacementConstraintType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TaskDefinitionPlacementConstraint =
+  TaskDefinitionPlacementConstraint'
+    { _tdpcExpression :: !(Maybe Text)
+    , _tdpcType       :: !(Maybe TaskDefinitionPlacementConstraintType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TaskDefinitionPlacementConstraint' with the minimum fields required to make a request.
@@ -3179,11 +3251,13 @@ instance ToJSON TaskDefinitionPlacementConstraint
 --
 --
 -- /See:/ 'taskOverride' smart constructor.
-data TaskOverride = TaskOverride'
-  { _toContainerOverrides :: !(Maybe [ContainerOverride])
-  , _toExecutionRoleARN   :: !(Maybe Text)
-  , _toTaskRoleARN        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TaskOverride =
+  TaskOverride'
+    { _toContainerOverrides :: !(Maybe [ContainerOverride])
+    , _toExecutionRoleARN   :: !(Maybe Text)
+    , _toTaskRoleARN        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TaskOverride' with the minimum fields required to make a request.
@@ -3243,11 +3317,13 @@ instance ToJSON TaskOverride where
 --
 --
 -- /See:/ 'tmpfs' smart constructor.
-data Tmpfs = Tmpfs'
-  { _tMountOptions  :: !(Maybe [Text])
-  , _tContainerPath :: !Text
-  , _tSize          :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Tmpfs =
+  Tmpfs'
+    { _tMountOptions  :: !(Maybe [Text])
+    , _tContainerPath :: !Text
+    , _tSize          :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Tmpfs' with the minimum fields required to make a request.
@@ -3309,11 +3385,13 @@ instance ToJSON Tmpfs where
 --
 --
 -- /See:/ 'ulimit' smart constructor.
-data Ulimit = Ulimit'
-  { _uName      :: !UlimitName
-  , _uSoftLimit :: !Int
-  , _uHardLimit :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Ulimit =
+  Ulimit'
+    { _uName      :: !UlimitName
+    , _uSoftLimit :: !Int
+    , _uHardLimit :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Ulimit' with the minimum fields required to make a request.
@@ -3372,11 +3450,13 @@ instance ToJSON Ulimit where
 --
 --
 -- /See:/ 'versionInfo' smart constructor.
-data VersionInfo = VersionInfo'
-  { _viAgentHash     :: !(Maybe Text)
-  , _viAgentVersion  :: !(Maybe Text)
-  , _viDockerVersion :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VersionInfo =
+  VersionInfo'
+    { _viAgentHash     :: !(Maybe Text)
+    , _viAgentVersion  :: !(Maybe Text)
+    , _viDockerVersion :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VersionInfo' with the minimum fields required to make a request.
@@ -3435,10 +3515,12 @@ instance ToJSON VersionInfo where
 --
 --
 -- /See:/ 'volume' smart constructor.
-data Volume = Volume'
-  { _vName :: !(Maybe Text)
-  , _vHost :: !(Maybe HostVolumeProperties)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Volume =
+  Volume'
+    { _vName :: !(Maybe Text)
+    , _vHost :: !(Maybe HostVolumeProperties)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Volume' with the minimum fields required to make a request.
@@ -3482,10 +3564,12 @@ instance ToJSON Volume where
 --
 --
 -- /See:/ 'volumeFrom' smart constructor.
-data VolumeFrom = VolumeFrom'
-  { _vfSourceContainer :: !(Maybe Text)
-  , _vfReadOnly        :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VolumeFrom =
+  VolumeFrom'
+    { _vfSourceContainer :: !(Maybe Text)
+    , _vfReadOnly        :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VolumeFrom' with the minimum fields required to make a request.

@@ -57,11 +57,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'retrieveEnvironmentInfo' smart constructor.
-data RetrieveEnvironmentInfo = RetrieveEnvironmentInfo'
-  { _rEnvironmentName :: !(Maybe Text)
-  , _rEnvironmentId   :: !(Maybe Text)
-  , _rInfoType        :: !EnvironmentInfoType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RetrieveEnvironmentInfo =
+  RetrieveEnvironmentInfo'
+    { _rEnvironmentName :: !(Maybe Text)
+    , _rEnvironmentId   :: !(Maybe Text)
+    , _rInfoType        :: !EnvironmentInfoType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RetrieveEnvironmentInfo' with the minimum fields required to make a request.
@@ -133,10 +135,12 @@ instance ToQuery RetrieveEnvironmentInfo where
 --
 --
 -- /See:/ 'retrieveEnvironmentInfoResponse' smart constructor.
-data RetrieveEnvironmentInfoResponse = RetrieveEnvironmentInfoResponse'
-  { _reirsEnvironmentInfo :: !(Maybe [EnvironmentInfoDescription])
-  , _reirsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RetrieveEnvironmentInfoResponse =
+  RetrieveEnvironmentInfoResponse'
+    { _reirsEnvironmentInfo :: !(Maybe [EnvironmentInfoDescription])
+    , _reirsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RetrieveEnvironmentInfoResponse' with the minimum fields required to make a request.

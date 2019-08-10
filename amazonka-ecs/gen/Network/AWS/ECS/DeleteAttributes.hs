@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteAttributes' smart constructor.
-data DeleteAttributes = DeleteAttributes'
-  { _daCluster    :: !(Maybe Text)
-  , _daAttributes :: ![Attribute]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteAttributes =
+  DeleteAttributes'
+    { _daCluster    :: !(Maybe Text)
+    , _daAttributes :: ![Attribute]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteAttributes' with the minimum fields required to make a request.
@@ -111,10 +113,12 @@ instance ToQuery DeleteAttributes where
         toQuery = const mempty
 
 -- | /See:/ 'deleteAttributesResponse' smart constructor.
-data DeleteAttributesResponse = DeleteAttributesResponse'
-  { _darsAttributes     :: !(Maybe [Attribute])
-  , _darsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteAttributesResponse =
+  DeleteAttributesResponse'
+    { _darsAttributes     :: !(Maybe [Attribute])
+    , _darsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteAttributesResponse' with the minimum fields required to make a request.

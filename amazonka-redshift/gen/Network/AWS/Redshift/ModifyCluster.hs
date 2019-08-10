@@ -68,26 +68,28 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'modifyCluster' smart constructor.
-data ModifyCluster = ModifyCluster'
-  { _mcEnhancedVPCRouting               :: !(Maybe Bool)
-  , _mcMasterUserPassword               :: !(Maybe Text)
-  , _mcPubliclyAccessible               :: !(Maybe Bool)
-  , _mcHSMConfigurationIdentifier       :: !(Maybe Text)
-  , _mcClusterSecurityGroups            :: !(Maybe [Text])
-  , _mcAutomatedSnapshotRetentionPeriod :: !(Maybe Int)
-  , _mcHSMClientCertificateIdentifier   :: !(Maybe Text)
-  , _mcNumberOfNodes                    :: !(Maybe Int)
-  , _mcElasticIP                        :: !(Maybe Text)
-  , _mcPreferredMaintenanceWindow       :: !(Maybe Text)
-  , _mcVPCSecurityGroupIds              :: !(Maybe [Text])
-  , _mcClusterType                      :: !(Maybe Text)
-  , _mcNewClusterIdentifier             :: !(Maybe Text)
-  , _mcClusterVersion                   :: !(Maybe Text)
-  , _mcNodeType                         :: !(Maybe Text)
-  , _mcAllowVersionUpgrade              :: !(Maybe Bool)
-  , _mcClusterParameterGroupName        :: !(Maybe Text)
-  , _mcClusterIdentifier                :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyCluster =
+  ModifyCluster'
+    { _mcEnhancedVPCRouting               :: !(Maybe Bool)
+    , _mcMasterUserPassword               :: !(Maybe Text)
+    , _mcPubliclyAccessible               :: !(Maybe Bool)
+    , _mcHSMConfigurationIdentifier       :: !(Maybe Text)
+    , _mcClusterSecurityGroups            :: !(Maybe [Text])
+    , _mcAutomatedSnapshotRetentionPeriod :: !(Maybe Int)
+    , _mcHSMClientCertificateIdentifier   :: !(Maybe Text)
+    , _mcNumberOfNodes                    :: !(Maybe Int)
+    , _mcElasticIP                        :: !(Maybe Text)
+    , _mcPreferredMaintenanceWindow       :: !(Maybe Text)
+    , _mcVPCSecurityGroupIds              :: !(Maybe [Text])
+    , _mcClusterType                      :: !(Maybe Text)
+    , _mcNewClusterIdentifier             :: !(Maybe Text)
+    , _mcClusterVersion                   :: !(Maybe Text)
+    , _mcNodeType                         :: !(Maybe Text)
+    , _mcAllowVersionUpgrade              :: !(Maybe Bool)
+    , _mcClusterParameterGroupName        :: !(Maybe Text)
+    , _mcClusterIdentifier                :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyCluster' with the minimum fields required to make a request.
@@ -282,10 +284,12 @@ instance ToQuery ModifyCluster where
                "ClusterIdentifier" =: _mcClusterIdentifier]
 
 -- | /See:/ 'modifyClusterResponse' smart constructor.
-data ModifyClusterResponse = ModifyClusterResponse'
-  { _mcrsCluster        :: !(Maybe Cluster)
-  , _mcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyClusterResponse =
+  ModifyClusterResponse'
+    { _mcrsCluster        :: !(Maybe Cluster)
+    , _mcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyClusterResponse' with the minimum fields required to make a request.

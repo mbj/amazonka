@@ -53,9 +53,11 @@ import Network.AWS.SNS.Types.Product
 --
 --
 -- /See:/ 'listPlatformApplications' smart constructor.
-newtype ListPlatformApplications = ListPlatformApplications'
-  { _lpaNextToken :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ListPlatformApplications =
+  ListPlatformApplications'
+    { _lpaNextToken :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListPlatformApplications' with the minimum fields required to make a request.
@@ -115,11 +117,13 @@ instance ToQuery ListPlatformApplications where
 --
 --
 -- /See:/ 'listPlatformApplicationsResponse' smart constructor.
-data ListPlatformApplicationsResponse = ListPlatformApplicationsResponse'
-  { _lparsPlatformApplications :: !(Maybe [PlatformApplication])
-  , _lparsNextToken            :: !(Maybe Text)
-  , _lparsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListPlatformApplicationsResponse =
+  ListPlatformApplicationsResponse'
+    { _lparsPlatformApplications :: !(Maybe [PlatformApplication])
+    , _lparsNextToken            :: !(Maybe Text)
+    , _lparsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListPlatformApplicationsResponse' with the minimum fields required to make a request.

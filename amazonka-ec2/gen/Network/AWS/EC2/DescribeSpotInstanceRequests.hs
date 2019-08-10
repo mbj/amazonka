@@ -55,11 +55,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeSpotInstanceRequests' smart constructor.
-data DescribeSpotInstanceRequests = DescribeSpotInstanceRequests'
-  { _dsirFilters                :: !(Maybe [Filter])
-  , _dsirSpotInstanceRequestIds :: !(Maybe [Text])
-  , _dsirDryRun                 :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeSpotInstanceRequests =
+  DescribeSpotInstanceRequests'
+    { _dsirFilters                :: !(Maybe [Filter])
+    , _dsirSpotInstanceRequestIds :: !(Maybe [Text])
+    , _dsirDryRun                 :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeSpotInstanceRequests' with the minimum fields required to make a request.
@@ -133,10 +135,12 @@ instance ToQuery DescribeSpotInstanceRequests where
 --
 --
 -- /See:/ 'describeSpotInstanceRequestsResponse' smart constructor.
-data DescribeSpotInstanceRequestsResponse = DescribeSpotInstanceRequestsResponse'
-  { _dsirrsSpotInstanceRequests :: !(Maybe [SpotInstanceRequest])
-  , _dsirrsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeSpotInstanceRequestsResponse =
+  DescribeSpotInstanceRequestsResponse'
+    { _dsirrsSpotInstanceRequests :: !(Maybe [SpotInstanceRequest])
+    , _dsirrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeSpotInstanceRequestsResponse' with the minimum fields required to make a request.

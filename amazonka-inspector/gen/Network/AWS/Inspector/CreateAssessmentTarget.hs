@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createAssessmentTarget' smart constructor.
-data CreateAssessmentTarget = CreateAssessmentTarget'
-  { _catAssessmentTargetName :: !Text
-  , _catResourceGroupARN     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateAssessmentTarget =
+  CreateAssessmentTarget'
+    { _catAssessmentTargetName :: !Text
+    , _catResourceGroupARN     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateAssessmentTarget' with the minimum fields required to make a request.
@@ -118,10 +120,12 @@ instance ToQuery CreateAssessmentTarget where
         toQuery = const mempty
 
 -- | /See:/ 'createAssessmentTargetResponse' smart constructor.
-data CreateAssessmentTargetResponse = CreateAssessmentTargetResponse'
-  { _catrsResponseStatus      :: !Int
-  , _catrsAssessmentTargetARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateAssessmentTargetResponse =
+  CreateAssessmentTargetResponse'
+    { _catrsResponseStatus      :: !Int
+    , _catrsAssessmentTargetARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateAssessmentTargetResponse' with the minimum fields required to make a request.

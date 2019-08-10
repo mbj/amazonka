@@ -53,9 +53,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createDefaultVPC' smart constructor.
-newtype CreateDefaultVPC = CreateDefaultVPC'
-  { _cdvDryRun :: Maybe Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateDefaultVPC =
+  CreateDefaultVPC'
+    { _cdvDryRun :: Maybe Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDefaultVPC' with the minimum fields required to make a request.
@@ -103,10 +105,12 @@ instance ToQuery CreateDefaultVPC where
 --
 --
 -- /See:/ 'createDefaultVPCResponse' smart constructor.
-data CreateDefaultVPCResponse = CreateDefaultVPCResponse'
-  { _cdvrsVPC            :: !(Maybe VPC)
-  , _cdvrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDefaultVPCResponse =
+  CreateDefaultVPCResponse'
+    { _cdvrsVPC            :: !(Maybe VPC)
+    , _cdvrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDefaultVPCResponse' with the minimum fields required to make a request.

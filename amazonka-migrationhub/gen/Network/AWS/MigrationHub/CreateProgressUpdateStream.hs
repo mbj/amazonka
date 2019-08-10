@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createProgressUpdateStream' smart constructor.
-data CreateProgressUpdateStream = CreateProgressUpdateStream'
-  { _cpusDryRun                   :: !(Maybe Bool)
-  , _cpusProgressUpdateStreamName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateProgressUpdateStream =
+  CreateProgressUpdateStream'
+    { _cpusDryRun                   :: !(Maybe Bool)
+    , _cpusProgressUpdateStreamName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateProgressUpdateStream' with the minimum fields required to make a request.
@@ -116,9 +118,11 @@ instance ToQuery CreateProgressUpdateStream where
         toQuery = const mempty
 
 -- | /See:/ 'createProgressUpdateStreamResponse' smart constructor.
-newtype CreateProgressUpdateStreamResponse = CreateProgressUpdateStreamResponse'
-  { _cpusrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateProgressUpdateStreamResponse =
+  CreateProgressUpdateStreamResponse'
+    { _cpusrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateProgressUpdateStreamResponse' with the minimum fields required to make a request.

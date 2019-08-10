@@ -43,10 +43,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'detachTypedLink' smart constructor.
-data DetachTypedLink = DetachTypedLink'
-  { _dtlDirectoryARN       :: !Text
-  , _dtlTypedLinkSpecifier :: !TypedLinkSpecifier
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DetachTypedLink =
+  DetachTypedLink'
+    { _dtlDirectoryARN       :: !Text
+    , _dtlTypedLinkSpecifier :: !TypedLinkSpecifier
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DetachTypedLink' with the minimum fields required to make a request.

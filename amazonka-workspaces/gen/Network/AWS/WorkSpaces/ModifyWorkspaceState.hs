@@ -47,10 +47,12 @@ import Network.AWS.WorkSpaces.Types
 import Network.AWS.WorkSpaces.Types.Product
 
 -- | /See:/ 'modifyWorkspaceState' smart constructor.
-data ModifyWorkspaceState = ModifyWorkspaceState'
-  { _mwsWorkspaceId    :: !Text
-  , _mwsWorkspaceState :: !TargetWorkspaceState
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyWorkspaceState =
+  ModifyWorkspaceState'
+    { _mwsWorkspaceId    :: !Text
+    , _mwsWorkspaceState :: !TargetWorkspaceState
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyWorkspaceState' with the minimum fields required to make a request.
@@ -115,9 +117,11 @@ instance ToQuery ModifyWorkspaceState where
         toQuery = const mempty
 
 -- | /See:/ 'modifyWorkspaceStateResponse' smart constructor.
-newtype ModifyWorkspaceStateResponse = ModifyWorkspaceStateResponse'
-  { _mwsrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ModifyWorkspaceStateResponse =
+  ModifyWorkspaceStateResponse'
+    { _mwsrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyWorkspaceStateResponse' with the minimum fields required to make a request.

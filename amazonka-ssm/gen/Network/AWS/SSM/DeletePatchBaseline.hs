@@ -45,9 +45,11 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'deletePatchBaseline' smart constructor.
-newtype DeletePatchBaseline = DeletePatchBaseline'
-  { _dpbBaselineId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeletePatchBaseline =
+  DeletePatchBaseline'
+    { _dpbBaselineId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeletePatchBaseline' with the minimum fields required to make a request.
@@ -101,10 +103,12 @@ instance ToQuery DeletePatchBaseline where
         toQuery = const mempty
 
 -- | /See:/ 'deletePatchBaselineResponse' smart constructor.
-data DeletePatchBaselineResponse = DeletePatchBaselineResponse'
-  { _dpbrsBaselineId     :: !(Maybe Text)
-  , _dpbrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeletePatchBaselineResponse =
+  DeletePatchBaselineResponse'
+    { _dpbrsBaselineId     :: !(Maybe Text)
+    , _dpbrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeletePatchBaselineResponse' with the minimum fields required to make a request.

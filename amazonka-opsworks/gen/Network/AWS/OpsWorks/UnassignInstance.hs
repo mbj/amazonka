@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'unassignInstance' smart constructor.
-newtype UnassignInstance = UnassignInstance'
-  { _uInstanceId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UnassignInstance =
+  UnassignInstance'
+    { _uInstanceId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UnassignInstance' with the minimum fields required to make a request.

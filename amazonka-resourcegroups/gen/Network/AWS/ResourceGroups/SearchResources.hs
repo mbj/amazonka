@@ -51,11 +51,13 @@ import Network.AWS.ResourceGroups.Types.Product
 import Network.AWS.Response
 
 -- | /See:/ 'searchResources' smart constructor.
-data SearchResources = SearchResources'
-  { _srNextToken     :: !(Maybe Text)
-  , _srMaxResults    :: !(Maybe Nat)
-  , _srResourceQuery :: !ResourceQuery
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SearchResources =
+  SearchResources'
+    { _srNextToken     :: !(Maybe Text)
+    , _srMaxResults    :: !(Maybe Nat)
+    , _srResourceQuery :: !ResourceQuery
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SearchResources' with the minimum fields required to make a request.
@@ -130,11 +132,13 @@ instance ToQuery SearchResources where
         toQuery = const mempty
 
 -- | /See:/ 'searchResourcesResponse' smart constructor.
-data SearchResourcesResponse = SearchResourcesResponse'
-  { _srrsNextToken           :: !(Maybe Text)
-  , _srrsResourceIdentifiers :: !(Maybe [ResourceIdentifier])
-  , _srrsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SearchResourcesResponse =
+  SearchResourcesResponse'
+    { _srrsNextToken           :: !(Maybe Text)
+    , _srrsResourceIdentifiers :: !(Maybe [ResourceIdentifier])
+    , _srrsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SearchResourcesResponse' with the minimum fields required to make a request.

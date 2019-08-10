@@ -78,10 +78,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createCertificateFromCSR' smart constructor.
-data CreateCertificateFromCSR = CreateCertificateFromCSR'
-  { _ccfcsrSetAsActive               :: !(Maybe Bool)
-  , _ccfcsrCertificateSigningRequest :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateCertificateFromCSR =
+  CreateCertificateFromCSR'
+    { _ccfcsrSetAsActive               :: !(Maybe Bool)
+    , _ccfcsrCertificateSigningRequest :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateCertificateFromCSR' with the minimum fields required to make a request.
@@ -148,12 +150,14 @@ instance ToQuery CreateCertificateFromCSR where
 --
 --
 -- /See:/ 'createCertificateFromCSRResponse' smart constructor.
-data CreateCertificateFromCSRResponse = CreateCertificateFromCSRResponse'
-  { _ccfcsrrsCertificatePem :: !(Maybe Text)
-  , _ccfcsrrsCertificateARN :: !(Maybe Text)
-  , _ccfcsrrsCertificateId  :: !(Maybe Text)
-  , _ccfcsrrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateCertificateFromCSRResponse =
+  CreateCertificateFromCSRResponse'
+    { _ccfcsrrsCertificatePem :: !(Maybe Text)
+    , _ccfcsrrsCertificateARN :: !(Maybe Text)
+    , _ccfcsrrsCertificateId  :: !(Maybe Text)
+    , _ccfcsrrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateCertificateFromCSRResponse' with the minimum fields required to make a request.

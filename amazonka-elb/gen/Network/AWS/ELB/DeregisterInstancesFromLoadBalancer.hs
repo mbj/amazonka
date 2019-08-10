@@ -54,10 +54,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deregisterInstancesFromLoadBalancer' smart constructor.
-data DeregisterInstancesFromLoadBalancer = DeregisterInstancesFromLoadBalancer'
-  { _diflbLoadBalancerName :: !Text
-  , _diflbInstances        :: ![Instance]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeregisterInstancesFromLoadBalancer =
+  DeregisterInstancesFromLoadBalancer'
+    { _diflbLoadBalancerName :: !Text
+    , _diflbInstances        :: ![Instance]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeregisterInstancesFromLoadBalancer' with the minimum fields required to make a request.
@@ -129,10 +131,12 @@ instance ToQuery DeregisterInstancesFromLoadBalancer
 --
 --
 -- /See:/ 'deregisterInstancesFromLoadBalancerResponse' smart constructor.
-data DeregisterInstancesFromLoadBalancerResponse = DeregisterInstancesFromLoadBalancerResponse'
-  { _diflbrsInstances      :: !(Maybe [Instance])
-  , _diflbrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeregisterInstancesFromLoadBalancerResponse =
+  DeregisterInstancesFromLoadBalancerResponse'
+    { _diflbrsInstances      :: !(Maybe [Instance])
+    , _diflbrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeregisterInstancesFromLoadBalancerResponse' with the minimum fields required to make a request.

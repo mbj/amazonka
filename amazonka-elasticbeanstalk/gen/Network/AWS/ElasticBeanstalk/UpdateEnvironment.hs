@@ -82,20 +82,22 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateEnvironment' smart constructor.
-data UpdateEnvironment = UpdateEnvironment'
-  { _ueTemplateName      :: !(Maybe Text)
-  , _ueOptionsToRemove   :: !(Maybe [OptionSpecification])
-  , _ueOptionSettings    :: !(Maybe [ConfigurationOptionSetting])
-  , _ueVersionLabel      :: !(Maybe Text)
-  , _uePlatformARN       :: !(Maybe Text)
-  , _ueTier              :: !(Maybe EnvironmentTier)
-  , _ueEnvironmentName   :: !(Maybe Text)
-  , _ueApplicationName   :: !(Maybe Text)
-  , _ueSolutionStackName :: !(Maybe Text)
-  , _ueEnvironmentId     :: !(Maybe Text)
-  , _ueGroupName         :: !(Maybe Text)
-  , _ueDescription       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateEnvironment =
+  UpdateEnvironment'
+    { _ueTemplateName      :: !(Maybe Text)
+    , _ueOptionsToRemove   :: !(Maybe [OptionSpecification])
+    , _ueOptionSettings    :: !(Maybe [ConfigurationOptionSetting])
+    , _ueVersionLabel      :: !(Maybe Text)
+    , _uePlatformARN       :: !(Maybe Text)
+    , _ueTier              :: !(Maybe EnvironmentTier)
+    , _ueEnvironmentName   :: !(Maybe Text)
+    , _ueApplicationName   :: !(Maybe Text)
+    , _ueSolutionStackName :: !(Maybe Text)
+    , _ueEnvironmentId     :: !(Maybe Text)
+    , _ueGroupName         :: !(Maybe Text)
+    , _ueDescription       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateEnvironment' with the minimum fields required to make a request.

@@ -54,15 +54,17 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeEvents' smart constructor.
-data DescribeEvents = DescribeEvents'
-  { _deSourceName :: !(Maybe Text)
-  , _deStartTime  :: !(Maybe POSIX)
-  , _deSourceType :: !(Maybe SourceType)
-  , _deNextToken  :: !(Maybe Text)
-  , _deEndTime    :: !(Maybe POSIX)
-  , _deDuration   :: !(Maybe Int)
-  , _deMaxResults :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeEvents =
+  DescribeEvents'
+    { _deSourceName :: !(Maybe Text)
+    , _deStartTime  :: !(Maybe POSIX)
+    , _deSourceType :: !(Maybe SourceType)
+    , _deNextToken  :: !(Maybe Text)
+    , _deEndTime    :: !(Maybe POSIX)
+    , _deDuration   :: !(Maybe Int)
+    , _deMaxResults :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEvents' with the minimum fields required to make a request.
@@ -166,11 +168,13 @@ instance ToQuery DescribeEvents where
         toQuery = const mempty
 
 -- | /See:/ 'describeEventsResponse' smart constructor.
-data DescribeEventsResponse = DescribeEventsResponse'
-  { _dersNextToken      :: !(Maybe Text)
-  , _dersEvents         :: !(Maybe [Event])
-  , _dersResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeEventsResponse =
+  DescribeEventsResponse'
+    { _dersNextToken      :: !(Maybe Text)
+    , _dersEvents         :: !(Maybe [Event])
+    , _dersResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEventsResponse' with the minimum fields required to make a request.

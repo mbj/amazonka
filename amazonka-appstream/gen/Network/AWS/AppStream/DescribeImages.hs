@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeImages' smart constructor.
-newtype DescribeImages = DescribeImages'
-  { _diNames :: Maybe [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeImages =
+  DescribeImages'
+    { _diNames :: Maybe [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeImages' with the minimum fields required to make a request.
@@ -98,10 +100,12 @@ instance ToQuery DescribeImages where
         toQuery = const mempty
 
 -- | /See:/ 'describeImagesResponse' smart constructor.
-data DescribeImagesResponse = DescribeImagesResponse'
-  { _disrsImages         :: !(Maybe [Image])
-  , _disrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeImagesResponse =
+  DescribeImagesResponse'
+    { _disrsImages         :: !(Maybe [Image])
+    , _disrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeImagesResponse' with the minimum fields required to make a request.

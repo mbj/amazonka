@@ -61,14 +61,16 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'invoke' smart constructor.
-data Invoke = Invoke'
-  { _iInvocationType :: !(Maybe InvocationType)
-  , _iLogType        :: !(Maybe LogType)
-  , _iQualifier      :: !(Maybe Text)
-  , _iClientContext  :: !(Maybe Text)
-  , _iFunctionName   :: !Text
-  , _iPayload        :: !ByteString
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data Invoke =
+  Invoke'
+    { _iInvocationType :: !(Maybe InvocationType)
+    , _iLogType        :: !(Maybe LogType)
+    , _iQualifier      :: !(Maybe Text)
+    , _iClientContext  :: !(Maybe Text)
+    , _iFunctionName   :: !Text
+    , _iPayload        :: !ByteString
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Invoke' with the minimum fields required to make a request.
@@ -167,13 +169,15 @@ instance ToQuery Invoke where
 --
 --
 -- /See:/ 'invokeResponse' smart constructor.
-data InvokeResponse = InvokeResponse'
-  { _irsFunctionError   :: !(Maybe Text)
-  , _irsLogResult       :: !(Maybe Text)
-  , _irsPayload         :: !(Maybe ByteString)
-  , _irsExecutedVersion :: !(Maybe Text)
-  , _irsStatusCode      :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data InvokeResponse =
+  InvokeResponse'
+    { _irsFunctionError   :: !(Maybe Text)
+    , _irsLogResult       :: !(Maybe Text)
+    , _irsPayload         :: !(Maybe ByteString)
+    , _irsExecutedVersion :: !(Maybe Text)
+    , _irsStatusCode      :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InvokeResponse' with the minimum fields required to make a request.

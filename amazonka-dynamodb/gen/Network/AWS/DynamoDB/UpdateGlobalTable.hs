@@ -56,10 +56,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateGlobalTable' smart constructor.
-data UpdateGlobalTable = UpdateGlobalTable'
-  { _ugtGlobalTableName :: !Text
-  , _ugtReplicaUpdates  :: ![ReplicaUpdate]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateGlobalTable =
+  UpdateGlobalTable'
+    { _ugtGlobalTableName :: !Text
+    , _ugtReplicaUpdates  :: ![ReplicaUpdate]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateGlobalTable' with the minimum fields required to make a request.
@@ -123,10 +125,12 @@ instance ToQuery UpdateGlobalTable where
         toQuery = const mempty
 
 -- | /See:/ 'updateGlobalTableResponse' smart constructor.
-data UpdateGlobalTableResponse = UpdateGlobalTableResponse'
-  { _ugtrsGlobalTableDescription :: !(Maybe GlobalTableDescription)
-  , _ugtrsResponseStatus         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateGlobalTableResponse =
+  UpdateGlobalTableResponse'
+    { _ugtrsGlobalTableDescription :: !(Maybe GlobalTableDescription)
+    , _ugtrsResponseStatus         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateGlobalTableResponse' with the minimum fields required to make a request.

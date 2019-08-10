@@ -73,12 +73,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createFileSystem' smart constructor.
-data CreateFileSystem = CreateFileSystem'
-  { _cfsPerformanceMode :: !(Maybe PerformanceMode)
-  , _cfsEncrypted       :: !(Maybe Bool)
-  , _cfsKMSKeyId        :: !(Maybe Text)
-  , _cfsCreationToken   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateFileSystem =
+  CreateFileSystem'
+    { _cfsPerformanceMode :: !(Maybe PerformanceMode)
+    , _cfsEncrypted       :: !(Maybe Bool)
+    , _cfsKMSKeyId        :: !(Maybe Text)
+    , _cfsCreationToken   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateFileSystem' with the minimum fields required to make a request.

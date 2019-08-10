@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listRoleAliases' smart constructor.
-data ListRoleAliases = ListRoleAliases'
-  { _lraMarker         :: !(Maybe Text)
-  , _lraAscendingOrder :: !(Maybe Bool)
-  , _lraPageSize       :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListRoleAliases =
+  ListRoleAliases'
+    { _lraMarker         :: !(Maybe Text)
+    , _lraAscendingOrder :: !(Maybe Bool)
+    , _lraPageSize       :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListRoleAliases' with the minimum fields required to make a request.
@@ -112,11 +114,13 @@ instance ToQuery ListRoleAliases where
                "pageSize" =: _lraPageSize]
 
 -- | /See:/ 'listRoleAliasesResponse' smart constructor.
-data ListRoleAliasesResponse = ListRoleAliasesResponse'
-  { _lrarsRoleAliases    :: !(Maybe [Text])
-  , _lrarsNextMarker     :: !(Maybe Text)
-  , _lrarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListRoleAliasesResponse =
+  ListRoleAliasesResponse'
+    { _lrarsRoleAliases    :: !(Maybe [Text])
+    , _lrarsNextMarker     :: !(Maybe Text)
+    , _lrarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListRoleAliasesResponse' with the minimum fields required to make a request.

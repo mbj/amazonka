@@ -73,11 +73,13 @@ import Network.AWS.WAF.Types
 import Network.AWS.WAF.Types.Product
 
 -- | /See:/ 'updateRule' smart constructor.
-data UpdateRule = UpdateRule'
-  { _urRuleId      :: !Text
-  , _urChangeToken :: !Text
-  , _urUpdates     :: ![RuleUpdate]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateRule =
+  UpdateRule'
+    { _urRuleId      :: !Text
+    , _urChangeToken :: !Text
+    , _urUpdates     :: ![RuleUpdate]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateRule' with the minimum fields required to make a request.
@@ -147,10 +149,12 @@ instance ToQuery UpdateRule where
         toQuery = const mempty
 
 -- | /See:/ 'updateRuleResponse' smart constructor.
-data UpdateRuleResponse = UpdateRuleResponse'
-  { _urrsChangeToken    :: !(Maybe Text)
-  , _urrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateRuleResponse =
+  UpdateRuleResponse'
+    { _urrsChangeToken    :: !(Maybe Text)
+    , _urrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateRuleResponse' with the minimum fields required to make a request.

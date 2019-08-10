@@ -51,15 +51,17 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createInstances' smart constructor.
-data CreateInstances = CreateInstances'
-  { _ciCustomImageName  :: !(Maybe Text)
-  , _ciUserData         :: !(Maybe Text)
-  , _ciKeyPairName      :: !(Maybe Text)
-  , _ciInstanceNames    :: ![Text]
-  , _ciAvailabilityZone :: !Text
-  , _ciBlueprintId      :: !Text
-  , _ciBundleId         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateInstances =
+  CreateInstances'
+    { _ciCustomImageName  :: !(Maybe Text)
+    , _ciUserData         :: !(Maybe Text)
+    , _ciKeyPairName      :: !(Maybe Text)
+    , _ciInstanceNames    :: ![Text]
+    , _ciAvailabilityZone :: !Text
+    , _ciBlueprintId      :: !Text
+    , _ciBundleId         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateInstances' with the minimum fields required to make a request.
@@ -166,10 +168,12 @@ instance ToQuery CreateInstances where
         toQuery = const mempty
 
 -- | /See:/ 'createInstancesResponse' smart constructor.
-data CreateInstancesResponse = CreateInstancesResponse'
-  { _cirsOperations     :: !(Maybe [Operation])
-  , _cirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateInstancesResponse =
+  CreateInstancesResponse'
+    { _cirsOperations     :: !(Maybe [Operation])
+    , _cirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateInstancesResponse' with the minimum fields required to make a request.

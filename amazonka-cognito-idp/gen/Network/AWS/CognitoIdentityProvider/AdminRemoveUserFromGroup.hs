@@ -46,11 +46,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'adminRemoveUserFromGroup' smart constructor.
-data AdminRemoveUserFromGroup = AdminRemoveUserFromGroup'
-  { _arufgUserPoolId :: !Text
-  , _arufgUsername   :: !(Sensitive Text)
-  , _arufgGroupName  :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data AdminRemoveUserFromGroup =
+  AdminRemoveUserFromGroup'
+    { _arufgUserPoolId :: !Text
+    , _arufgUsername   :: !(Sensitive Text)
+    , _arufgGroupName  :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AdminRemoveUserFromGroup' with the minimum fields required to make a request.

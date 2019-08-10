@@ -51,12 +51,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'importDocumentationParts' smart constructor.
-data ImportDocumentationParts = ImportDocumentationParts'
-  { _idpMode           :: !(Maybe PutMode)
-  , _idpFailOnWarnings :: !(Maybe Bool)
-  , _idpRestAPIId      :: !Text
-  , _idpBody           :: !ByteString
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data ImportDocumentationParts =
+  ImportDocumentationParts'
+    { _idpMode           :: !(Maybe PutMode)
+    , _idpFailOnWarnings :: !(Maybe Bool)
+    , _idpRestAPIId      :: !Text
+    , _idpBody           :: !ByteString
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ImportDocumentationParts' with the minimum fields required to make a request.
@@ -142,11 +144,13 @@ instance ToQuery ImportDocumentationParts where
 -- This is used to return the result when documentation parts in an external (e.g., Swagger) file are imported into API Gateway<http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-documenting-api.html Documenting an API> , <http://docs.aws.amazon.com/apigateway/api-reference/link-relation/documentationpart-import/ documentationpart:import> , 'DocumentationPart'
 --
 -- /See:/ 'importDocumentationPartsResponse' smart constructor.
-data ImportDocumentationPartsResponse = ImportDocumentationPartsResponse'
-  { _idprsIds            :: !(Maybe [Text])
-  , _idprsWarnings       :: !(Maybe [Text])
-  , _idprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ImportDocumentationPartsResponse =
+  ImportDocumentationPartsResponse'
+    { _idprsIds            :: !(Maybe [Text])
+    , _idprsWarnings       :: !(Maybe [Text])
+    , _idprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ImportDocumentationPartsResponse' with the minimum fields required to make a request.

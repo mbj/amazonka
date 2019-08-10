@@ -96,9 +96,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteFleet' smart constructor.
-newtype DeleteFleet = DeleteFleet'
-  { _dfFleetId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteFleet =
+  DeleteFleet'
+    { _dfFleetId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteFleet' with the minimum fields required to make a request.

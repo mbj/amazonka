@@ -51,11 +51,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeIndexFields' smart constructor.
-data DescribeIndexFields = DescribeIndexFields'
-  { _difDeployed   :: !(Maybe Bool)
-  , _difFieldNames :: !(Maybe [Text])
-  , _difDomainName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeIndexFields =
+  DescribeIndexFields'
+    { _difDeployed   :: !(Maybe Bool)
+    , _difFieldNames :: !(Maybe [Text])
+    , _difDomainName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeIndexFields' with the minimum fields required to make a request.
@@ -127,10 +129,12 @@ instance ToQuery DescribeIndexFields where
 --
 --
 -- /See:/ 'describeIndexFieldsResponse' smart constructor.
-data DescribeIndexFieldsResponse = DescribeIndexFieldsResponse'
-  { _difsrsResponseStatus :: !Int
-  , _difsrsIndexFields    :: ![IndexFieldStatus]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeIndexFieldsResponse =
+  DescribeIndexFieldsResponse'
+    { _difsrsResponseStatus :: !Int
+    , _difsrsIndexFields    :: ![IndexFieldStatus]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeIndexFieldsResponse' with the minimum fields required to make a request.

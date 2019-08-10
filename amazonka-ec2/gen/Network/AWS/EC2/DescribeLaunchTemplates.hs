@@ -51,14 +51,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeLaunchTemplates' smart constructor.
-data DescribeLaunchTemplates = DescribeLaunchTemplates'
-  { _dltsFilters             :: !(Maybe [Filter])
-  , _dltsNextToken           :: !(Maybe Text)
-  , _dltsLaunchTemplateIds   :: !(Maybe [Text])
-  , _dltsDryRun              :: !(Maybe Bool)
-  , _dltsMaxResults          :: !(Maybe Int)
-  , _dltsLaunchTemplateNames :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeLaunchTemplates =
+  DescribeLaunchTemplates'
+    { _dltsFilters             :: !(Maybe [Filter])
+    , _dltsNextToken           :: !(Maybe Text)
+    , _dltsLaunchTemplateIds   :: !(Maybe [Text])
+    , _dltsDryRun              :: !(Maybe Bool)
+    , _dltsMaxResults          :: !(Maybe Int)
+    , _dltsLaunchTemplateNames :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeLaunchTemplates' with the minimum fields required to make a request.
@@ -154,11 +156,13 @@ instance ToQuery DescribeLaunchTemplates where
                     _dltsLaunchTemplateNames)]
 
 -- | /See:/ 'describeLaunchTemplatesResponse' smart constructor.
-data DescribeLaunchTemplatesResponse = DescribeLaunchTemplatesResponse'
-  { _dltsrsLaunchTemplates :: !(Maybe [LaunchTemplate])
-  , _dltsrsNextToken       :: !(Maybe Text)
-  , _dltsrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeLaunchTemplatesResponse =
+  DescribeLaunchTemplatesResponse'
+    { _dltsrsLaunchTemplates :: !(Maybe [LaunchTemplate])
+    , _dltsrsNextToken       :: !(Maybe Text)
+    , _dltsrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeLaunchTemplatesResponse' with the minimum fields required to make a request.

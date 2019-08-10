@@ -75,9 +75,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeGameSessionPlacement' smart constructor.
-newtype DescribeGameSessionPlacement = DescribeGameSessionPlacement'
-  { _dgspPlacementId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeGameSessionPlacement =
+  DescribeGameSessionPlacement'
+    { _dgspPlacementId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeGameSessionPlacement' with the minimum fields required to make a request.
@@ -139,10 +141,12 @@ instance ToQuery DescribeGameSessionPlacement where
 --
 --
 -- /See:/ 'describeGameSessionPlacementResponse' smart constructor.
-data DescribeGameSessionPlacementResponse = DescribeGameSessionPlacementResponse'
-  { _dgsprsGameSessionPlacement :: !(Maybe GameSessionPlacement)
-  , _dgsprsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeGameSessionPlacementResponse =
+  DescribeGameSessionPlacementResponse'
+    { _dgsprsGameSessionPlacement :: !(Maybe GameSessionPlacement)
+    , _dgsprsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeGameSessionPlacementResponse' with the minimum fields required to make a request.

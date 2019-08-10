@@ -54,15 +54,17 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'confirmForgotPassword' smart constructor.
-data ConfirmForgotPassword = ConfirmForgotPassword'
-  { _cfpAnalyticsMetadata :: !(Maybe AnalyticsMetadataType)
-  , _cfpUserContextData   :: !(Maybe UserContextDataType)
-  , _cfpSecretHash        :: !(Maybe (Sensitive Text))
-  , _cfpClientId          :: !(Sensitive Text)
-  , _cfpUsername          :: !(Sensitive Text)
-  , _cfpConfirmationCode  :: !Text
-  , _cfpPassword          :: !(Sensitive Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data ConfirmForgotPassword =
+  ConfirmForgotPassword'
+    { _cfpAnalyticsMetadata :: !(Maybe AnalyticsMetadataType)
+    , _cfpUserContextData   :: !(Maybe UserContextDataType)
+    , _cfpSecretHash        :: !(Maybe (Sensitive Text))
+    , _cfpClientId          :: !(Sensitive Text)
+    , _cfpUsername          :: !(Sensitive Text)
+    , _cfpConfirmationCode  :: !Text
+    , _cfpPassword          :: !(Sensitive Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ConfirmForgotPassword' with the minimum fields required to make a request.
@@ -175,9 +177,11 @@ instance ToQuery ConfirmForgotPassword where
 --
 --
 -- /See:/ 'confirmForgotPasswordResponse' smart constructor.
-newtype ConfirmForgotPasswordResponse = ConfirmForgotPasswordResponse'
-  { _cfprsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ConfirmForgotPasswordResponse =
+  ConfirmForgotPasswordResponse'
+    { _cfprsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ConfirmForgotPasswordResponse' with the minimum fields required to make a request.

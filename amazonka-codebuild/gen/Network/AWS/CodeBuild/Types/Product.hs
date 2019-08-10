@@ -26,27 +26,29 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'build' smart constructor.
-data Build = Build'
-  { _bPhases           :: !(Maybe [BuildPhase])
-  , _bBuildComplete    :: !(Maybe Bool)
-  , _bArn              :: !(Maybe Text)
-  , _bStartTime        :: !(Maybe POSIX)
-  , _bArtifacts        :: !(Maybe BuildArtifacts)
-  , _bEnvironment      :: !(Maybe ProjectEnvironment)
-  , _bInitiator        :: !(Maybe Text)
-  , _bNetworkInterface :: !(Maybe NetworkInterface)
-  , _bCurrentPhase     :: !(Maybe Text)
-  , _bCache            :: !(Maybe ProjectCache)
-  , _bSourceVersion    :: !(Maybe Text)
-  , _bLogs             :: !(Maybe LogsLocation)
-  , _bVpcConfig        :: !(Maybe VPCConfig)
-  , _bEndTime          :: !(Maybe POSIX)
-  , _bProjectName      :: !(Maybe Text)
-  , _bBuildStatus      :: !(Maybe StatusType)
-  , _bSource           :: !(Maybe ProjectSource)
-  , _bId               :: !(Maybe Text)
-  , _bTimeoutInMinutes :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Build =
+  Build'
+    { _bPhases           :: !(Maybe [BuildPhase])
+    , _bBuildComplete    :: !(Maybe Bool)
+    , _bArn              :: !(Maybe Text)
+    , _bStartTime        :: !(Maybe POSIX)
+    , _bArtifacts        :: !(Maybe BuildArtifacts)
+    , _bEnvironment      :: !(Maybe ProjectEnvironment)
+    , _bInitiator        :: !(Maybe Text)
+    , _bNetworkInterface :: !(Maybe NetworkInterface)
+    , _bCurrentPhase     :: !(Maybe Text)
+    , _bCache            :: !(Maybe ProjectCache)
+    , _bSourceVersion    :: !(Maybe Text)
+    , _bLogs             :: !(Maybe LogsLocation)
+    , _bVpcConfig        :: !(Maybe VPCConfig)
+    , _bEndTime          :: !(Maybe POSIX)
+    , _bProjectName      :: !(Maybe Text)
+    , _bBuildStatus      :: !(Maybe StatusType)
+    , _bSource           :: !(Maybe ProjectSource)
+    , _bId               :: !(Maybe Text)
+    , _bTimeoutInMinutes :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Build' with the minimum fields required to make a request.
@@ -226,11 +228,13 @@ instance NFData Build where
 --
 --
 -- /See:/ 'buildArtifacts' smart constructor.
-data BuildArtifacts = BuildArtifacts'
-  { _baLocation  :: !(Maybe Text)
-  , _baMd5sum    :: !(Maybe Text)
-  , _baSha256sum :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BuildArtifacts =
+  BuildArtifacts'
+    { _baLocation  :: !(Maybe Text)
+    , _baMd5sum    :: !(Maybe Text)
+    , _baSha256sum :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BuildArtifacts' with the minimum fields required to make a request.
@@ -278,10 +282,12 @@ instance NFData BuildArtifacts where
 --
 --
 -- /See:/ 'buildNotDeleted' smart constructor.
-data BuildNotDeleted = BuildNotDeleted'
-  { _bndId         :: !(Maybe Text)
-  , _bndStatusCode :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BuildNotDeleted =
+  BuildNotDeleted'
+    { _bndId         :: !(Maybe Text)
+    , _bndStatusCode :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BuildNotDeleted' with the minimum fields required to make a request.
@@ -320,14 +326,16 @@ instance NFData BuildNotDeleted where
 --
 --
 -- /See:/ 'buildPhase' smart constructor.
-data BuildPhase = BuildPhase'
-  { _bpContexts          :: !(Maybe [PhaseContext])
-  , _bpStartTime         :: !(Maybe POSIX)
-  , _bpPhaseStatus       :: !(Maybe StatusType)
-  , _bpPhaseType         :: !(Maybe BuildPhaseType)
-  , _bpEndTime           :: !(Maybe POSIX)
-  , _bpDurationInSeconds :: !(Maybe Integer)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BuildPhase =
+  BuildPhase'
+    { _bpContexts          :: !(Maybe [PhaseContext])
+    , _bpStartTime         :: !(Maybe POSIX)
+    , _bpPhaseStatus       :: !(Maybe StatusType)
+    , _bpPhaseType         :: !(Maybe BuildPhaseType)
+    , _bpEndTime           :: !(Maybe POSIX)
+    , _bpDurationInSeconds :: !(Maybe Integer)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BuildPhase' with the minimum fields required to make a request.
@@ -402,11 +410,13 @@ instance NFData BuildPhase where
 --
 --
 -- /See:/ 'environmentImage' smart constructor.
-data EnvironmentImage = EnvironmentImage'
-  { _eiVersions    :: !(Maybe [Text])
-  , _eiName        :: !(Maybe Text)
-  , _eiDescription :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EnvironmentImage =
+  EnvironmentImage'
+    { _eiVersions    :: !(Maybe [Text])
+    , _eiName        :: !(Maybe Text)
+    , _eiDescription :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EnvironmentImage' with the minimum fields required to make a request.
@@ -454,10 +464,12 @@ instance NFData EnvironmentImage where
 --
 --
 -- /See:/ 'environmentLanguage' smart constructor.
-data EnvironmentLanguage = EnvironmentLanguage'
-  { _elImages   :: !(Maybe [EnvironmentImage])
-  , _elLanguage :: !(Maybe LanguageType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EnvironmentLanguage =
+  EnvironmentLanguage'
+    { _elImages   :: !(Maybe [EnvironmentImage])
+    , _elLanguage :: !(Maybe LanguageType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EnvironmentLanguage' with the minimum fields required to make a request.
@@ -497,10 +509,12 @@ instance NFData EnvironmentLanguage where
 --
 --
 -- /See:/ 'environmentPlatform' smart constructor.
-data EnvironmentPlatform = EnvironmentPlatform'
-  { _epPlatform  :: !(Maybe PlatformType)
-  , _epLanguages :: !(Maybe [EnvironmentLanguage])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EnvironmentPlatform =
+  EnvironmentPlatform'
+    { _epPlatform  :: !(Maybe PlatformType)
+    , _epLanguages :: !(Maybe [EnvironmentLanguage])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EnvironmentPlatform' with the minimum fields required to make a request.
@@ -541,11 +555,13 @@ instance NFData EnvironmentPlatform where
 --
 --
 -- /See:/ 'environmentVariable' smart constructor.
-data EnvironmentVariable = EnvironmentVariable'
-  { _evType  :: !(Maybe EnvironmentVariableType)
-  , _evName  :: !Text
-  , _evValue :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EnvironmentVariable =
+  EnvironmentVariable'
+    { _evType  :: !(Maybe EnvironmentVariableType)
+    , _evName  :: !Text
+    , _evValue :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EnvironmentVariable' with the minimum fields required to make a request.
@@ -600,11 +616,13 @@ instance ToJSON EnvironmentVariable where
 --
 --
 -- /See:/ 'logsLocation' smart constructor.
-data LogsLocation = LogsLocation'
-  { _llDeepLink   :: !(Maybe Text)
-  , _llGroupName  :: !(Maybe Text)
-  , _llStreamName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LogsLocation =
+  LogsLocation'
+    { _llDeepLink   :: !(Maybe Text)
+    , _llGroupName  :: !(Maybe Text)
+    , _llStreamName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LogsLocation' with the minimum fields required to make a request.
@@ -652,10 +670,12 @@ instance NFData LogsLocation where
 --
 --
 -- /See:/ 'networkInterface' smart constructor.
-data NetworkInterface = NetworkInterface'
-  { _niSubnetId           :: !(Maybe Text)
-  , _niNetworkInterfaceId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NetworkInterface =
+  NetworkInterface'
+    { _niSubnetId           :: !(Maybe Text)
+    , _niNetworkInterfaceId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NetworkInterface' with the minimum fields required to make a request.
@@ -695,10 +715,12 @@ instance NFData NetworkInterface where
 --
 --
 -- /See:/ 'phaseContext' smart constructor.
-data PhaseContext = PhaseContext'
-  { _pcMessage    :: !(Maybe Text)
-  , _pcStatusCode :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PhaseContext =
+  PhaseContext'
+    { _pcMessage    :: !(Maybe Text)
+    , _pcStatusCode :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PhaseContext' with the minimum fields required to make a request.
@@ -737,24 +759,26 @@ instance NFData PhaseContext where
 --
 --
 -- /See:/ 'project' smart constructor.
-data Project = Project'
-  { _pArn              :: !(Maybe Text)
-  , _pArtifacts        :: !(Maybe ProjectArtifacts)
-  , _pEnvironment      :: !(Maybe ProjectEnvironment)
-  , _pCreated          :: !(Maybe POSIX)
-  , _pCache            :: !(Maybe ProjectCache)
-  , _pName             :: !(Maybe Text)
-  , _pVpcConfig        :: !(Maybe VPCConfig)
-  , _pSource           :: !(Maybe ProjectSource)
-  , _pBadge            :: !(Maybe ProjectBadge)
-  , _pEncryptionKey    :: !(Maybe Text)
-  , _pLastModified     :: !(Maybe POSIX)
-  , _pWebhook          :: !(Maybe Webhook)
-  , _pDescription      :: !(Maybe Text)
-  , _pServiceRole      :: !(Maybe Text)
-  , _pTags             :: !(Maybe [Tag])
-  , _pTimeoutInMinutes :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Project =
+  Project'
+    { _pArn              :: !(Maybe Text)
+    , _pArtifacts        :: !(Maybe ProjectArtifacts)
+    , _pEnvironment      :: !(Maybe ProjectEnvironment)
+    , _pCreated          :: !(Maybe POSIX)
+    , _pCache            :: !(Maybe ProjectCache)
+    , _pName             :: !(Maybe Text)
+    , _pVpcConfig        :: !(Maybe VPCConfig)
+    , _pSource           :: !(Maybe ProjectSource)
+    , _pBadge            :: !(Maybe ProjectBadge)
+    , _pEncryptionKey    :: !(Maybe Text)
+    , _pLastModified     :: !(Maybe POSIX)
+    , _pWebhook          :: !(Maybe Webhook)
+    , _pDescription      :: !(Maybe Text)
+    , _pServiceRole      :: !(Maybe Text)
+    , _pTags             :: !(Maybe [Tag])
+    , _pTimeoutInMinutes :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Project' with the minimum fields required to make a request.
@@ -909,14 +933,16 @@ instance NFData Project where
 --
 --
 -- /See:/ 'projectArtifacts' smart constructor.
-data ProjectArtifacts = ProjectArtifacts'
-  { _paPackaging     :: !(Maybe ArtifactPackaging)
-  , _paPath          :: !(Maybe Text)
-  , _paLocation      :: !(Maybe Text)
-  , _paName          :: !(Maybe Text)
-  , _paNamespaceType :: !(Maybe ArtifactNamespace)
-  , _paType          :: !ArtifactsType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ProjectArtifacts =
+  ProjectArtifacts'
+    { _paPackaging     :: !(Maybe ArtifactPackaging)
+    , _paPath          :: !(Maybe Text)
+    , _paLocation      :: !(Maybe Text)
+    , _paName          :: !(Maybe Text)
+    , _paNamespaceType :: !(Maybe ArtifactNamespace)
+    , _paType          :: !ArtifactsType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ProjectArtifacts' with the minimum fields required to make a request.
@@ -1003,10 +1029,12 @@ instance ToJSON ProjectArtifacts where
 --
 --
 -- /See:/ 'projectBadge' smart constructor.
-data ProjectBadge = ProjectBadge'
-  { _pbBadgeEnabled    :: !(Maybe Bool)
-  , _pbBadgeRequestURL :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ProjectBadge =
+  ProjectBadge'
+    { _pbBadgeEnabled    :: !(Maybe Bool)
+    , _pbBadgeRequestURL :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ProjectBadge' with the minimum fields required to make a request.
@@ -1046,10 +1074,12 @@ instance NFData ProjectBadge where
 --
 --
 -- /See:/ 'projectCache' smart constructor.
-data ProjectCache = ProjectCache'
-  { _pcLocation :: !(Maybe Text)
-  , _pcType     :: !CacheType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ProjectCache =
+  ProjectCache'
+    { _pcLocation :: !(Maybe Text)
+    , _pcType     :: !CacheType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ProjectCache' with the minimum fields required to make a request.
@@ -1096,14 +1126,16 @@ instance ToJSON ProjectCache where
 --
 --
 -- /See:/ 'projectEnvironment' smart constructor.
-data ProjectEnvironment = ProjectEnvironment'
-  { _pePrivilegedMode       :: !(Maybe Bool)
-  , _peCertificate          :: !(Maybe Text)
-  , _peEnvironmentVariables :: !(Maybe [EnvironmentVariable])
-  , _peType                 :: !EnvironmentType
-  , _peImage                :: !Text
-  , _peComputeType          :: !ComputeType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ProjectEnvironment =
+  ProjectEnvironment'
+    { _pePrivilegedMode       :: !(Maybe Bool)
+    , _peCertificate          :: !(Maybe Text)
+    , _peEnvironmentVariables :: !(Maybe [EnvironmentVariable])
+    , _peType                 :: !EnvironmentType
+    , _peImage                :: !Text
+    , _peComputeType          :: !ComputeType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ProjectEnvironment' with the minimum fields required to make a request.
@@ -1192,14 +1224,16 @@ instance ToJSON ProjectEnvironment where
 --
 --
 -- /See:/ 'projectSource' smart constructor.
-data ProjectSource = ProjectSource'
-  { _psInsecureSSL   :: !(Maybe Bool)
-  , _psLocation      :: !(Maybe Text)
-  , _psAuth          :: !(Maybe SourceAuth)
-  , _psBuildspec     :: !(Maybe Text)
-  , _psGitCloneDepth :: !(Maybe Nat)
-  , _psType          :: !SourceType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ProjectSource =
+  ProjectSource'
+    { _psInsecureSSL   :: !(Maybe Bool)
+    , _psLocation      :: !(Maybe Text)
+    , _psAuth          :: !(Maybe SourceAuth)
+    , _psBuildspec     :: !(Maybe Text)
+    , _psGitCloneDepth :: !(Maybe Nat)
+    , _psType          :: !SourceType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ProjectSource' with the minimum fields required to make a request.
@@ -1288,10 +1322,12 @@ instance ToJSON ProjectSource where
 --
 --
 -- /See:/ 'sourceAuth' smart constructor.
-data SourceAuth = SourceAuth'
-  { _saResource :: !(Maybe Text)
-  , _saType     :: !SourceAuthType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SourceAuth =
+  SourceAuth'
+    { _saResource :: !(Maybe Text)
+    , _saType     :: !SourceAuthType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SourceAuth' with the minimum fields required to make a request.
@@ -1339,10 +1375,12 @@ instance ToJSON SourceAuth where
 --
 --
 -- /See:/ 'tag' smart constructor.
-data Tag = Tag'
-  { _tagValue :: !(Maybe Text)
-  , _tagKey   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Tag =
+  Tag'
+    { _tagValue :: !(Maybe Text)
+    , _tagKey   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Tag' with the minimum fields required to make a request.
@@ -1385,11 +1423,13 @@ instance ToJSON Tag where
 --
 --
 -- /See:/ 'vpcConfig' smart constructor.
-data VPCConfig = VPCConfig'
-  { _vcSecurityGroupIds :: !(Maybe [Text])
-  , _vcVpcId            :: !(Maybe Text)
-  , _vcSubnets          :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VPCConfig =
+  VPCConfig'
+    { _vcSecurityGroupIds :: !(Maybe [Text])
+    , _vcVpcId            :: !(Maybe Text)
+    , _vcSubnets          :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VPCConfig' with the minimum fields required to make a request.
@@ -1446,13 +1486,15 @@ instance ToJSON VPCConfig where
 --
 --
 -- /See:/ 'webhook' smart constructor.
-data Webhook = Webhook'
-  { _wBranchFilter       :: !(Maybe Text)
-  , _wLastModifiedSecret :: !(Maybe POSIX)
-  , _wUrl                :: !(Maybe Text)
-  , _wSecret             :: !(Maybe Text)
-  , _wPayloadURL         :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Webhook =
+  Webhook'
+    { _wBranchFilter       :: !(Maybe Text)
+    , _wLastModifiedSecret :: !(Maybe POSIX)
+    , _wUrl                :: !(Maybe Text)
+    , _wSecret             :: !(Maybe Text)
+    , _wPayloadURL         :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Webhook' with the minimum fields required to make a request.

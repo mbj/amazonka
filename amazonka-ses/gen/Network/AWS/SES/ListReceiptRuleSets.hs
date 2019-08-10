@@ -54,9 +54,11 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'listReceiptRuleSets' smart constructor.
-newtype ListReceiptRuleSets = ListReceiptRuleSets'
-  { _lrrsNextToken :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ListReceiptRuleSets =
+  ListReceiptRuleSets'
+    { _lrrsNextToken :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListReceiptRuleSets' with the minimum fields required to make a request.
@@ -108,11 +110,13 @@ instance ToQuery ListReceiptRuleSets where
 --
 --
 -- /See:/ 'listReceiptRuleSetsResponse' smart constructor.
-data ListReceiptRuleSetsResponse = ListReceiptRuleSetsResponse'
-  { _lrrsrsRuleSets       :: !(Maybe [ReceiptRuleSetMetadata])
-  , _lrrsrsNextToken      :: !(Maybe Text)
-  , _lrrsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListReceiptRuleSetsResponse =
+  ListReceiptRuleSetsResponse'
+    { _lrrsrsRuleSets       :: !(Maybe [ReceiptRuleSetMetadata])
+    , _lrrsrsNextToken      :: !(Maybe Text)
+    , _lrrsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListReceiptRuleSetsResponse' with the minimum fields required to make a request.

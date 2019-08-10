@@ -51,13 +51,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listServerNeighbors' smart constructor.
-data ListServerNeighbors = ListServerNeighbors'
-  { _lsnPortInformationNeeded    :: !(Maybe Bool)
-  , _lsnNeighborConfigurationIds :: !(Maybe [Text])
-  , _lsnNextToken                :: !(Maybe Text)
-  , _lsnMaxResults               :: !(Maybe Int)
-  , _lsnConfigurationId          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListServerNeighbors =
+  ListServerNeighbors'
+    { _lsnPortInformationNeeded    :: !(Maybe Bool)
+    , _lsnNeighborConfigurationIds :: !(Maybe [Text])
+    , _lsnNextToken                :: !(Maybe Text)
+    , _lsnMaxResults               :: !(Maybe Int)
+    , _lsnConfigurationId          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListServerNeighbors' with the minimum fields required to make a request.
@@ -152,12 +154,14 @@ instance ToQuery ListServerNeighbors where
         toQuery = const mempty
 
 -- | /See:/ 'listServerNeighborsResponse' smart constructor.
-data ListServerNeighborsResponse = ListServerNeighborsResponse'
-  { _lsnrsNextToken            :: !(Maybe Text)
-  , _lsnrsKnownDependencyCount :: !(Maybe Integer)
-  , _lsnrsResponseStatus       :: !Int
-  , _lsnrsNeighbors            :: ![NeighborConnectionDetail]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListServerNeighborsResponse =
+  ListServerNeighborsResponse'
+    { _lsnrsNextToken            :: !(Maybe Text)
+    , _lsnrsKnownDependencyCount :: !(Maybe Integer)
+    , _lsnrsResponseStatus       :: !Int
+    , _lsnrsNeighbors            :: ![NeighborConnectionDetail]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListServerNeighborsResponse' with the minimum fields required to make a request.

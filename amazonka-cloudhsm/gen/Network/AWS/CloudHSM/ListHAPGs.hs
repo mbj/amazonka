@@ -52,9 +52,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listHAPGs' smart constructor.
-newtype ListHAPGs = ListHAPGs'
-  { _lhNextToken :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ListHAPGs =
+  ListHAPGs'
+    { _lhNextToken :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListHAPGs' with the minimum fields required to make a request.
@@ -106,11 +108,13 @@ instance ToQuery ListHAPGs where
         toQuery = const mempty
 
 -- | /See:/ 'listHAPGsResponse' smart constructor.
-data ListHAPGsResponse = ListHAPGsResponse'
-  { _lhrsNextToken      :: !(Maybe Text)
-  , _lhrsResponseStatus :: !Int
-  , _lhrsHAPGList       :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListHAPGsResponse =
+  ListHAPGsResponse'
+    { _lhrsNextToken      :: !(Maybe Text)
+    , _lhrsResponseStatus :: !Int
+    , _lhrsHAPGList       :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListHAPGsResponse' with the minimum fields required to make a request.

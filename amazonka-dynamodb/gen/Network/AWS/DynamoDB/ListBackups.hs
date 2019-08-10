@@ -57,13 +57,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listBackups' smart constructor.
-data ListBackups = ListBackups'
-  { _lbTimeRangeUpperBound     :: !(Maybe POSIX)
-  , _lbTimeRangeLowerBound     :: !(Maybe POSIX)
-  , _lbLimit                   :: !(Maybe Nat)
-  , _lbExclusiveStartBackupARN :: !(Maybe Text)
-  , _lbTableName               :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListBackups =
+  ListBackups'
+    { _lbTimeRangeUpperBound     :: !(Maybe POSIX)
+    , _lbTimeRangeLowerBound     :: !(Maybe POSIX)
+    , _lbLimit                   :: !(Maybe Nat)
+    , _lbExclusiveStartBackupARN :: !(Maybe Text)
+    , _lbTableName               :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListBackups' with the minimum fields required to make a request.
@@ -164,11 +166,13 @@ instance ToQuery ListBackups where
         toQuery = const mempty
 
 -- | /See:/ 'listBackupsResponse' smart constructor.
-data ListBackupsResponse = ListBackupsResponse'
-  { _lbrsBackupSummaries        :: !(Maybe [BackupSummary])
-  , _lbrsLastEvaluatedBackupARN :: !(Maybe Text)
-  , _lbrsResponseStatus         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListBackupsResponse =
+  ListBackupsResponse'
+    { _lbrsBackupSummaries        :: !(Maybe [BackupSummary])
+    , _lbrsLastEvaluatedBackupARN :: !(Maybe Text)
+    , _lbrsResponseStatus         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListBackupsResponse' with the minimum fields required to make a request.

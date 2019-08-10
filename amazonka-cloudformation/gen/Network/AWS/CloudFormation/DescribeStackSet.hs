@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeStackSet' smart constructor.
-newtype DescribeStackSet = DescribeStackSet'
-  { _desStackSetName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeStackSet =
+  DescribeStackSet'
+    { _desStackSetName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeStackSet' with the minimum fields required to make a request.
@@ -93,10 +95,12 @@ instance ToQuery DescribeStackSet where
                "StackSetName" =: _desStackSetName]
 
 -- | /See:/ 'describeStackSetResponse' smart constructor.
-data DescribeStackSetResponse = DescribeStackSetResponse'
-  { _drsStackSet       :: !(Maybe StackSet)
-  , _drsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeStackSetResponse =
+  DescribeStackSetResponse'
+    { _drsStackSet       :: !(Maybe StackSet)
+    , _drsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeStackSetResponse' with the minimum fields required to make a request.

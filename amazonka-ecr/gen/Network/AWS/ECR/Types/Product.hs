@@ -26,11 +26,13 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'authorizationData' smart constructor.
-data AuthorizationData = AuthorizationData'
-  { _adExpiresAt          :: !(Maybe POSIX)
-  , _adProxyEndpoint      :: !(Maybe Text)
-  , _adAuthorizationToken :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AuthorizationData =
+  AuthorizationData'
+    { _adExpiresAt          :: !(Maybe POSIX)
+    , _adProxyEndpoint      :: !(Maybe Text)
+    , _adAuthorizationToken :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AuthorizationData' with the minimum fields required to make a request.
@@ -81,9 +83,11 @@ instance NFData AuthorizationData where
 --
 --
 -- /See:/ 'describeImagesFilter' smart constructor.
-newtype DescribeImagesFilter = DescribeImagesFilter'
-  { _difTagStatus :: Maybe TagStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeImagesFilter =
+  DescribeImagesFilter'
+    { _difTagStatus :: Maybe TagStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeImagesFilter' with the minimum fields required to make a request.
@@ -114,12 +118,14 @@ instance ToJSON DescribeImagesFilter where
 --
 --
 -- /See:/ 'image' smart constructor.
-data Image = Image'
-  { _iRegistryId     :: !(Maybe Text)
-  , _iImageId        :: !(Maybe ImageIdentifier)
-  , _iRepositoryName :: !(Maybe Text)
-  , _iImageManifest  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Image =
+  Image'
+    { _iRegistryId     :: !(Maybe Text)
+    , _iImageId        :: !(Maybe ImageIdentifier)
+    , _iRepositoryName :: !(Maybe Text)
+    , _iImageManifest  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Image' with the minimum fields required to make a request.
@@ -178,14 +184,16 @@ instance NFData Image where
 --
 --
 -- /See:/ 'imageDetail' smart constructor.
-data ImageDetail = ImageDetail'
-  { _idRegistryId       :: !(Maybe Text)
-  , _idImageTags        :: !(Maybe [Text])
-  , _idImageSizeInBytes :: !(Maybe Integer)
-  , _idImageDigest      :: !(Maybe Text)
-  , _idImagePushedAt    :: !(Maybe POSIX)
-  , _idRepositoryName   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ImageDetail =
+  ImageDetail'
+    { _idRegistryId       :: !(Maybe Text)
+    , _idImageTags        :: !(Maybe [Text])
+    , _idImageSizeInBytes :: !(Maybe Integer)
+    , _idImageDigest      :: !(Maybe Text)
+    , _idImagePushedAt    :: !(Maybe POSIX)
+    , _idRepositoryName   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ImageDetail' with the minimum fields required to make a request.
@@ -261,11 +269,13 @@ instance NFData ImageDetail where
 --
 --
 -- /See:/ 'imageFailure' smart constructor.
-data ImageFailure = ImageFailure'
-  { _ifFailureReason :: !(Maybe Text)
-  , _ifFailureCode   :: !(Maybe ImageFailureCode)
-  , _ifImageId       :: !(Maybe ImageIdentifier)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ImageFailure =
+  ImageFailure'
+    { _ifFailureReason :: !(Maybe Text)
+    , _ifFailureCode   :: !(Maybe ImageFailureCode)
+    , _ifImageId       :: !(Maybe ImageIdentifier)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ImageFailure' with the minimum fields required to make a request.
@@ -313,10 +323,12 @@ instance NFData ImageFailure where
 --
 --
 -- /See:/ 'imageIdentifier' smart constructor.
-data ImageIdentifier = ImageIdentifier'
-  { _iiImageDigest :: !(Maybe Text)
-  , _iiImageTag    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ImageIdentifier =
+  ImageIdentifier'
+    { _iiImageDigest :: !(Maybe Text)
+    , _iiImageTag    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ImageIdentifier' with the minimum fields required to make a request.
@@ -363,12 +375,14 @@ instance ToJSON ImageIdentifier where
 --
 --
 -- /See:/ 'layer' smart constructor.
-data Layer = Layer'
-  { _lMediaType         :: !(Maybe Text)
-  , _lLayerDigest       :: !(Maybe Text)
-  , _lLayerSize         :: !(Maybe Integer)
-  , _lLayerAvailability :: !(Maybe LayerAvailability)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Layer =
+  Layer'
+    { _lMediaType         :: !(Maybe Text)
+    , _lLayerDigest       :: !(Maybe Text)
+    , _lLayerSize         :: !(Maybe Integer)
+    , _lLayerAvailability :: !(Maybe LayerAvailability)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Layer' with the minimum fields required to make a request.
@@ -427,11 +441,13 @@ instance NFData Layer where
 --
 --
 -- /See:/ 'layerFailure' smart constructor.
-data LayerFailure = LayerFailure'
-  { _lfFailureReason :: !(Maybe Text)
-  , _lfFailureCode   :: !(Maybe LayerFailureCode)
-  , _lfLayerDigest   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LayerFailure =
+  LayerFailure'
+    { _lfFailureReason :: !(Maybe Text)
+    , _lfFailureCode   :: !(Maybe LayerFailureCode)
+    , _lfLayerDigest   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LayerFailure' with the minimum fields required to make a request.
@@ -482,9 +498,11 @@ instance NFData LayerFailure where
 --
 --
 -- /See:/ 'lifecyclePolicyPreviewFilter' smart constructor.
-newtype LifecyclePolicyPreviewFilter = LifecyclePolicyPreviewFilter'
-  { _lppfTagStatus :: Maybe TagStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype LifecyclePolicyPreviewFilter =
+  LifecyclePolicyPreviewFilter'
+    { _lppfTagStatus :: Maybe TagStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LifecyclePolicyPreviewFilter' with the minimum fields required to make a request.
@@ -516,13 +534,15 @@ instance ToJSON LifecyclePolicyPreviewFilter where
 --
 --
 -- /See:/ 'lifecyclePolicyPreviewResult' smart constructor.
-data LifecyclePolicyPreviewResult = LifecyclePolicyPreviewResult'
-  { _lpprImageTags           :: !(Maybe [Text])
-  , _lpprAction              :: !(Maybe LifecyclePolicyRuleAction)
-  , _lpprImageDigest         :: !(Maybe Text)
-  , _lpprImagePushedAt       :: !(Maybe POSIX)
-  , _lpprAppliedRulePriority :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LifecyclePolicyPreviewResult =
+  LifecyclePolicyPreviewResult'
+    { _lpprImageTags           :: !(Maybe [Text])
+    , _lpprAction              :: !(Maybe LifecyclePolicyRuleAction)
+    , _lpprImageDigest         :: !(Maybe Text)
+    , _lpprImagePushedAt       :: !(Maybe POSIX)
+    , _lpprAppliedRulePriority :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LifecyclePolicyPreviewResult' with the minimum fields required to make a request.
@@ -589,9 +609,11 @@ instance NFData LifecyclePolicyPreviewResult where
 --
 --
 -- /See:/ 'lifecyclePolicyPreviewSummary' smart constructor.
-newtype LifecyclePolicyPreviewSummary = LifecyclePolicyPreviewSummary'
-  { _lppsExpiringImageTotalCount :: Maybe Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype LifecyclePolicyPreviewSummary =
+  LifecyclePolicyPreviewSummary'
+    { _lppsExpiringImageTotalCount :: Maybe Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LifecyclePolicyPreviewSummary' with the minimum fields required to make a request.
@@ -625,9 +647,11 @@ instance NFData LifecyclePolicyPreviewSummary where
 --
 --
 -- /See:/ 'lifecyclePolicyRuleAction' smart constructor.
-newtype LifecyclePolicyRuleAction = LifecyclePolicyRuleAction'
-  { _lpraType :: Maybe ImageActionType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype LifecyclePolicyRuleAction =
+  LifecyclePolicyRuleAction'
+    { _lpraType :: Maybe ImageActionType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LifecyclePolicyRuleAction' with the minimum fields required to make a request.
@@ -659,9 +683,11 @@ instance NFData LifecyclePolicyRuleAction where
 --
 --
 -- /See:/ 'listImagesFilter' smart constructor.
-newtype ListImagesFilter = ListImagesFilter'
-  { _lifTagStatus :: Maybe TagStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ListImagesFilter =
+  ListImagesFilter'
+    { _lifTagStatus :: Maybe TagStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListImagesFilter' with the minimum fields required to make a request.
@@ -692,13 +718,15 @@ instance ToJSON ListImagesFilter where
 --
 --
 -- /See:/ 'repository' smart constructor.
-data Repository = Repository'
-  { _rRepositoryARN  :: !(Maybe Text)
-  , _rCreatedAt      :: !(Maybe POSIX)
-  , _rRegistryId     :: !(Maybe Text)
-  , _rRepositoryURI  :: !(Maybe Text)
-  , _rRepositoryName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Repository =
+  Repository'
+    { _rRepositoryARN  :: !(Maybe Text)
+    , _rCreatedAt      :: !(Maybe POSIX)
+    , _rRegistryId     :: !(Maybe Text)
+    , _rRepositoryURI  :: !(Maybe Text)
+    , _rRepositoryName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Repository' with the minimum fields required to make a request.

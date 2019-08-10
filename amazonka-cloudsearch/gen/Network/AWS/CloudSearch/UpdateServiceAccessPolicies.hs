@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateServiceAccessPolicies' smart constructor.
-data UpdateServiceAccessPolicies = UpdateServiceAccessPolicies'
-  { _usapDomainName     :: !Text
-  , _usapAccessPolicies :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateServiceAccessPolicies =
+  UpdateServiceAccessPolicies'
+    { _usapDomainName     :: !Text
+    , _usapAccessPolicies :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateServiceAccessPolicies' with the minimum fields required to make a request.
@@ -115,10 +117,12 @@ instance ToQuery UpdateServiceAccessPolicies where
 --
 --
 -- /See:/ 'updateServiceAccessPoliciesResponse' smart constructor.
-data UpdateServiceAccessPoliciesResponse = UpdateServiceAccessPoliciesResponse'
-  { _usaprsResponseStatus :: !Int
-  , _usaprsAccessPolicies :: !AccessPoliciesStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateServiceAccessPoliciesResponse =
+  UpdateServiceAccessPoliciesResponse'
+    { _usaprsResponseStatus :: !Int
+    , _usaprsAccessPolicies :: !AccessPoliciesStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateServiceAccessPoliciesResponse' with the minimum fields required to make a request.

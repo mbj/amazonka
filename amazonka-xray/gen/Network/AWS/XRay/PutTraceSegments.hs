@@ -75,9 +75,11 @@ import Network.AWS.XRay.Types
 import Network.AWS.XRay.Types.Product
 
 -- | /See:/ 'putTraceSegments' smart constructor.
-newtype PutTraceSegments = PutTraceSegments'
-  { _ptsTraceSegmentDocuments :: [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype PutTraceSegments =
+  PutTraceSegments'
+    { _ptsTraceSegmentDocuments :: [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutTraceSegments' with the minimum fields required to make a request.
@@ -126,10 +128,12 @@ instance ToQuery PutTraceSegments where
         toQuery = const mempty
 
 -- | /See:/ 'putTraceSegmentsResponse' smart constructor.
-data PutTraceSegmentsResponse = PutTraceSegmentsResponse'
-  { _ptsrsUnprocessedTraceSegments :: !(Maybe [UnprocessedTraceSegment])
-  , _ptsrsResponseStatus           :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutTraceSegmentsResponse =
+  PutTraceSegmentsResponse'
+    { _ptsrsUnprocessedTraceSegments :: !(Maybe [UnprocessedTraceSegment])
+    , _ptsrsResponseStatus           :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutTraceSegmentsResponse' with the minimum fields required to make a request.

@@ -48,13 +48,15 @@ import Network.AWS.Response
 -- | UpdateThreatIntelSet request body.
 --
 -- /See:/ 'updateThreatIntelSet' smart constructor.
-data UpdateThreatIntelSet = UpdateThreatIntelSet'
-  { _utisLocation         :: !(Maybe Text)
-  , _utisActivate         :: !(Maybe Bool)
-  , _utisName             :: !(Maybe Text)
-  , _utisThreatIntelSetId :: !Text
-  , _utisDetectorId       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateThreatIntelSet =
+  UpdateThreatIntelSet'
+    { _utisLocation         :: !(Maybe Text)
+    , _utisActivate         :: !(Maybe Bool)
+    , _utisName             :: !(Maybe Text)
+    , _utisThreatIntelSetId :: !Text
+    , _utisDetectorId       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateThreatIntelSet' with the minimum fields required to make a request.
@@ -143,9 +145,11 @@ instance ToQuery UpdateThreatIntelSet where
         toQuery = const mempty
 
 -- | /See:/ 'updateThreatIntelSetResponse' smart constructor.
-newtype UpdateThreatIntelSetResponse = UpdateThreatIntelSetResponse'
-  { _utisrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateThreatIntelSetResponse =
+  UpdateThreatIntelSetResponse'
+    { _utisrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateThreatIntelSetResponse' with the minimum fields required to make a request.

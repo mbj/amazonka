@@ -50,10 +50,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getClassifiers' smart constructor.
-data GetClassifiers = GetClassifiers'
-  { _gcNextToken  :: !(Maybe Text)
-  , _gcMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetClassifiers =
+  GetClassifiers'
+    { _gcNextToken  :: !(Maybe Text)
+    , _gcMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetClassifiers' with the minimum fields required to make a request.
@@ -122,11 +124,13 @@ instance ToQuery GetClassifiers where
         toQuery = const mempty
 
 -- | /See:/ 'getClassifiersResponse' smart constructor.
-data GetClassifiersResponse = GetClassifiersResponse'
-  { _gcsrsNextToken      :: !(Maybe Text)
-  , _gcsrsClassifiers    :: !(Maybe [Classifier])
-  , _gcsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetClassifiersResponse =
+  GetClassifiersResponse'
+    { _gcsrsNextToken      :: !(Maybe Text)
+    , _gcsrsClassifiers    :: !(Maybe [Classifier])
+    , _gcsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetClassifiersResponse' with the minimum fields required to make a request.

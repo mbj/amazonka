@@ -54,11 +54,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listGroupsForUser' smart constructor.
-data ListGroupsForUser = ListGroupsForUser'
-  { _lgfuMarker   :: !(Maybe Text)
-  , _lgfuMaxItems :: !(Maybe Nat)
-  , _lgfuUserName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListGroupsForUser =
+  ListGroupsForUser'
+    { _lgfuMarker   :: !(Maybe Text)
+    , _lgfuMaxItems :: !(Maybe Nat)
+    , _lgfuUserName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListGroupsForUser' with the minimum fields required to make a request.
@@ -133,12 +135,14 @@ instance ToQuery ListGroupsForUser where
 --
 --
 -- /See:/ 'listGroupsForUserResponse' smart constructor.
-data ListGroupsForUserResponse = ListGroupsForUserResponse'
-  { _lgfursMarker         :: !(Maybe Text)
-  , _lgfursIsTruncated    :: !(Maybe Bool)
-  , _lgfursResponseStatus :: !Int
-  , _lgfursGroups         :: ![Group]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListGroupsForUserResponse =
+  ListGroupsForUserResponse'
+    { _lgfursMarker         :: !(Maybe Text)
+    , _lgfursIsTruncated    :: !(Maybe Bool)
+    , _lgfursResponseStatus :: !Int
+    , _lgfursGroups         :: ![Group]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListGroupsForUserResponse' with the minimum fields required to make a request.

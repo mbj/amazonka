@@ -55,11 +55,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeCacheSecurityGroups' smart constructor.
-data DescribeCacheSecurityGroups = DescribeCacheSecurityGroups'
-  { _dcsgsCacheSecurityGroupName :: !(Maybe Text)
-  , _dcsgsMarker                 :: !(Maybe Text)
-  , _dcsgsMaxRecords             :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeCacheSecurityGroups =
+  DescribeCacheSecurityGroups'
+    { _dcsgsCacheSecurityGroupName :: !(Maybe Text)
+    , _dcsgsMarker                 :: !(Maybe Text)
+    , _dcsgsMaxRecords             :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeCacheSecurityGroups' with the minimum fields required to make a request.
@@ -140,11 +142,13 @@ instance ToQuery DescribeCacheSecurityGroups where
 --
 --
 -- /See:/ 'describeCacheSecurityGroupsResponse' smart constructor.
-data DescribeCacheSecurityGroupsResponse = DescribeCacheSecurityGroupsResponse'
-  { _dcsgsrsCacheSecurityGroups :: !(Maybe [CacheSecurityGroup])
-  , _dcsgsrsMarker              :: !(Maybe Text)
-  , _dcsgsrsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeCacheSecurityGroupsResponse =
+  DescribeCacheSecurityGroupsResponse'
+    { _dcsgsrsCacheSecurityGroups :: !(Maybe [CacheSecurityGroup])
+    , _dcsgsrsMarker              :: !(Maybe Text)
+    , _dcsgsrsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeCacheSecurityGroupsResponse' with the minimum fields required to make a request.

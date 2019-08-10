@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getComment' smart constructor.
-newtype GetComment = GetComment'
-  { _gcCommentId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetComment =
+  GetComment'
+    { _gcCommentId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetComment' with the minimum fields required to make a request.
@@ -99,10 +101,12 @@ instance ToQuery GetComment where
         toQuery = const mempty
 
 -- | /See:/ 'getCommentResponse' smart constructor.
-data GetCommentResponse = GetCommentResponse'
-  { _getrsComment        :: !(Maybe Comment)
-  , _getrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetCommentResponse =
+  GetCommentResponse'
+    { _getrsComment        :: !(Maybe Comment)
+    , _getrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetCommentResponse' with the minimum fields required to make a request.

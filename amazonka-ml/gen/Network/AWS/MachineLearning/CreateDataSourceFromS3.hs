@@ -56,12 +56,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createDataSourceFromS3' smart constructor.
-data CreateDataSourceFromS3 = CreateDataSourceFromS3'
-  { _cdsfsDataSourceName    :: !(Maybe Text)
-  , _cdsfsComputeStatistics :: !(Maybe Bool)
-  , _cdsfsDataSourceId      :: !Text
-  , _cdsfsDataSpec          :: !S3DataSpec
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDataSourceFromS3 =
+  CreateDataSourceFromS3'
+    { _cdsfsDataSourceName    :: !(Maybe Text)
+    , _cdsfsComputeStatistics :: !(Maybe Bool)
+    , _cdsfsDataSourceId      :: !Text
+    , _cdsfsDataSpec          :: !S3DataSpec
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDataSourceFromS3' with the minimum fields required to make a request.
@@ -150,10 +152,12 @@ instance ToQuery CreateDataSourceFromS3 where
 --
 --
 -- /See:/ 'createDataSourceFromS3Response' smart constructor.
-data CreateDataSourceFromS3Response = CreateDataSourceFromS3Response'
-  { _cdsfsrsDataSourceId   :: !(Maybe Text)
-  , _cdsfsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDataSourceFromS3Response =
+  CreateDataSourceFromS3Response'
+    { _cdsfsrsDataSourceId   :: !(Maybe Text)
+    , _cdsfsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDataSourceFromS3Response' with the minimum fields required to make a request.

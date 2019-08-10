@@ -54,15 +54,17 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getDocumentationParts' smart constructor.
-data GetDocumentationParts = GetDocumentationParts'
-  { _gdpPath           :: !(Maybe Text)
-  , _gdpLocationStatus :: !(Maybe LocationStatusType)
-  , _gdpNameQuery      :: !(Maybe Text)
-  , _gdpLimit          :: !(Maybe Int)
-  , _gdpType           :: !(Maybe DocumentationPartType)
-  , _gdpPosition       :: !(Maybe Text)
-  , _gdpRestAPIId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDocumentationParts =
+  GetDocumentationParts'
+    { _gdpPath           :: !(Maybe Text)
+    , _gdpLocationStatus :: !(Maybe LocationStatusType)
+    , _gdpNameQuery      :: !(Maybe Text)
+    , _gdpLimit          :: !(Maybe Int)
+    , _gdpType           :: !(Maybe DocumentationPartType)
+    , _gdpPosition       :: !(Maybe Text)
+    , _gdpRestAPIId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDocumentationParts' with the minimum fields required to make a request.
@@ -166,11 +168,13 @@ instance ToQuery GetDocumentationParts where
 -- <http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-documenting-api.html Documenting an API> , 'DocumentationPart'
 --
 -- /See:/ 'getDocumentationPartsResponse' smart constructor.
-data GetDocumentationPartsResponse = GetDocumentationPartsResponse'
-  { _gdprsItems          :: !(Maybe [DocumentationPart])
-  , _gdprsPosition       :: !(Maybe Text)
-  , _gdprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDocumentationPartsResponse =
+  GetDocumentationPartsResponse'
+    { _gdprsItems          :: !(Maybe [DocumentationPart])
+    , _gdprsPosition       :: !(Maybe Text)
+    , _gdprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDocumentationPartsResponse' with the minimum fields required to make a request.

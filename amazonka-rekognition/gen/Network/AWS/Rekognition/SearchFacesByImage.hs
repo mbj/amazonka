@@ -59,12 +59,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'searchFacesByImage' smart constructor.
-data SearchFacesByImage = SearchFacesByImage'
-  { _sfbiFaceMatchThreshold :: !(Maybe Double)
-  , _sfbiMaxFaces           :: !(Maybe Nat)
-  , _sfbiCollectionId       :: !Text
-  , _sfbiImage              :: !Image
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SearchFacesByImage =
+  SearchFacesByImage'
+    { _sfbiFaceMatchThreshold :: !(Maybe Double)
+    , _sfbiMaxFaces           :: !(Maybe Nat)
+    , _sfbiCollectionId       :: !Text
+    , _sfbiImage              :: !Image
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SearchFacesByImage' with the minimum fields required to make a request.
@@ -152,13 +154,15 @@ instance ToQuery SearchFacesByImage where
         toQuery = const mempty
 
 -- | /See:/ 'searchFacesByImageResponse' smart constructor.
-data SearchFacesByImageResponse = SearchFacesByImageResponse'
-  { _sfbirsFaceMatches             :: !(Maybe [FaceMatch])
-  , _sfbirsFaceModelVersion        :: !(Maybe Text)
-  , _sfbirsSearchedFaceBoundingBox :: !(Maybe BoundingBox)
-  , _sfbirsSearchedFaceConfidence  :: !(Maybe Double)
-  , _sfbirsResponseStatus          :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SearchFacesByImageResponse =
+  SearchFacesByImageResponse'
+    { _sfbirsFaceMatches             :: !(Maybe [FaceMatch])
+    , _sfbirsFaceModelVersion        :: !(Maybe Text)
+    , _sfbirsSearchedFaceBoundingBox :: !(Maybe BoundingBox)
+    , _sfbirsSearchedFaceConfidence  :: !(Maybe Double)
+    , _sfbirsResponseStatus          :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SearchFacesByImageResponse' with the minimum fields required to make a request.

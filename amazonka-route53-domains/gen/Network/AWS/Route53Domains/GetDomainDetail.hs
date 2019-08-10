@@ -69,9 +69,11 @@ import Network.AWS.Route53Domains.Types.Product
 --
 --
 -- /See:/ 'getDomainDetail' smart constructor.
-newtype GetDomainDetail = GetDomainDetail'
-  { _gddDomainName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetDomainDetail =
+  GetDomainDetail'
+    { _gddDomainName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDomainDetail' with the minimum fields required to make a request.
@@ -148,30 +150,32 @@ instance ToQuery GetDomainDetail where
 --
 --
 -- /See:/ 'getDomainDetailResponse' smart constructor.
-data GetDomainDetailResponse = GetDomainDetailResponse'
-  { _gddrsTechPrivacy       :: !(Maybe Bool)
-  , _gddrsDNSSec            :: !(Maybe Text)
-  , _gddrsWhoIsServer       :: !(Maybe Text)
-  , _gddrsRegistryDomainId  :: !(Maybe Text)
-  , _gddrsRegistrantPrivacy :: !(Maybe Bool)
-  , _gddrsUpdatedDate       :: !(Maybe POSIX)
-  , _gddrsAdminPrivacy      :: !(Maybe Bool)
-  , _gddrsAutoRenew         :: !(Maybe Bool)
-  , _gddrsAbuseContactPhone :: !(Maybe Text)
-  , _gddrsRegistrarURL      :: !(Maybe Text)
-  , _gddrsAbuseContactEmail :: !(Maybe Text)
-  , _gddrsExpirationDate    :: !(Maybe POSIX)
-  , _gddrsCreationDate      :: !(Maybe POSIX)
-  , _gddrsRegistrarName     :: !(Maybe Text)
-  , _gddrsReseller          :: !(Maybe Text)
-  , _gddrsStatusList        :: !(Maybe [Text])
-  , _gddrsResponseStatus    :: !Int
-  , _gddrsDomainName        :: !Text
-  , _gddrsNameservers       :: ![Nameserver]
-  , _gddrsAdminContact      :: !(Sensitive ContactDetail)
-  , _gddrsRegistrantContact :: !(Sensitive ContactDetail)
-  , _gddrsTechContact       :: !(Sensitive ContactDetail)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data GetDomainDetailResponse =
+  GetDomainDetailResponse'
+    { _gddrsTechPrivacy       :: !(Maybe Bool)
+    , _gddrsDNSSec            :: !(Maybe Text)
+    , _gddrsWhoIsServer       :: !(Maybe Text)
+    , _gddrsRegistryDomainId  :: !(Maybe Text)
+    , _gddrsRegistrantPrivacy :: !(Maybe Bool)
+    , _gddrsUpdatedDate       :: !(Maybe POSIX)
+    , _gddrsAdminPrivacy      :: !(Maybe Bool)
+    , _gddrsAutoRenew         :: !(Maybe Bool)
+    , _gddrsAbuseContactPhone :: !(Maybe Text)
+    , _gddrsRegistrarURL      :: !(Maybe Text)
+    , _gddrsAbuseContactEmail :: !(Maybe Text)
+    , _gddrsExpirationDate    :: !(Maybe POSIX)
+    , _gddrsCreationDate      :: !(Maybe POSIX)
+    , _gddrsRegistrarName     :: !(Maybe Text)
+    , _gddrsReseller          :: !(Maybe Text)
+    , _gddrsStatusList        :: !(Maybe [Text])
+    , _gddrsResponseStatus    :: !Int
+    , _gddrsDomainName        :: !Text
+    , _gddrsNameservers       :: ![Nameserver]
+    , _gddrsAdminContact      :: !(Sensitive ContactDetail)
+    , _gddrsRegistrantContact :: !(Sensitive ContactDetail)
+    , _gddrsTechContact       :: !(Sensitive ContactDetail)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDomainDetailResponse' with the minimum fields required to make a request.

@@ -59,12 +59,14 @@ import Network.AWS.StorageGateway.Types.Product
 --
 --
 -- /See:/ 'describeVTLDevices' smart constructor.
-data DescribeVTLDevices = DescribeVTLDevices'
-  { _dvtldMarker        :: !(Maybe Text)
-  , _dvtldLimit         :: !(Maybe Nat)
-  , _dvtldVTLDeviceARNs :: !(Maybe [Text])
-  , _dvtldGatewayARN    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeVTLDevices =
+  DescribeVTLDevices'
+    { _dvtldMarker        :: !(Maybe Text)
+    , _dvtldLimit         :: !(Maybe Nat)
+    , _dvtldVTLDeviceARNs :: !(Maybe [Text])
+    , _dvtldGatewayARN    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeVTLDevices' with the minimum fields required to make a request.
@@ -160,12 +162,14 @@ instance ToQuery DescribeVTLDevices where
 --
 --
 -- /See:/ 'describeVTLDevicesResponse' smart constructor.
-data DescribeVTLDevicesResponse = DescribeVTLDevicesResponse'
-  { _dvtldrsVTLDevices     :: !(Maybe [VTLDevice])
-  , _dvtldrsGatewayARN     :: !(Maybe Text)
-  , _dvtldrsMarker         :: !(Maybe Text)
-  , _dvtldrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeVTLDevicesResponse =
+  DescribeVTLDevicesResponse'
+    { _dvtldrsVTLDevices     :: !(Maybe [VTLDevice])
+    , _dvtldrsGatewayARN     :: !(Maybe Text)
+    , _dvtldrsMarker         :: !(Maybe Text)
+    , _dvtldrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeVTLDevicesResponse' with the minimum fields required to make a request.

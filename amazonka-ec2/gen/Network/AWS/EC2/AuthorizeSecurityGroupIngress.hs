@@ -63,18 +63,20 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'authorizeSecurityGroupIngress' smart constructor.
-data AuthorizeSecurityGroupIngress = AuthorizeSecurityGroupIngress'
-  { _asgiFromPort                   :: !(Maybe Int)
-  , _asgiIPPermissions              :: !(Maybe [IPPermission])
-  , _asgiIPProtocol                 :: !(Maybe Text)
-  , _asgiGroupId                    :: !(Maybe Text)
-  , _asgiToPort                     :: !(Maybe Int)
-  , _asgiCidrIP                     :: !(Maybe Text)
-  , _asgiSourceSecurityGroupOwnerId :: !(Maybe Text)
-  , _asgiGroupName                  :: !(Maybe Text)
-  , _asgiSourceSecurityGroupName    :: !(Maybe Text)
-  , _asgiDryRun                     :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AuthorizeSecurityGroupIngress =
+  AuthorizeSecurityGroupIngress'
+    { _asgiFromPort                   :: !(Maybe Int)
+    , _asgiIPPermissions              :: !(Maybe [IPPermission])
+    , _asgiIPProtocol                 :: !(Maybe Text)
+    , _asgiGroupId                    :: !(Maybe Text)
+    , _asgiToPort                     :: !(Maybe Int)
+    , _asgiCidrIP                     :: !(Maybe Text)
+    , _asgiSourceSecurityGroupOwnerId :: !(Maybe Text)
+    , _asgiGroupName                  :: !(Maybe Text)
+    , _asgiSourceSecurityGroupName    :: !(Maybe Text)
+    , _asgiDryRun                     :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AuthorizeSecurityGroupIngress' with the minimum fields required to make a request.

@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getIdentityProviderByIdentifier' smart constructor.
-data GetIdentityProviderByIdentifier = GetIdentityProviderByIdentifier'
-  { _gipbiUserPoolId    :: !Text
-  , _gipbiIdpIdentifier :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetIdentityProviderByIdentifier =
+  GetIdentityProviderByIdentifier'
+    { _gipbiUserPoolId    :: !Text
+    , _gipbiIdpIdentifier :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetIdentityProviderByIdentifier' with the minimum fields required to make a request.
@@ -118,10 +120,12 @@ instance ToQuery GetIdentityProviderByIdentifier
         toQuery = const mempty
 
 -- | /See:/ 'getIdentityProviderByIdentifierResponse' smart constructor.
-data GetIdentityProviderByIdentifierResponse = GetIdentityProviderByIdentifierResponse'
-  { _gipbirsResponseStatus   :: !Int
-  , _gipbirsIdentityProvider :: !IdentityProviderType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetIdentityProviderByIdentifierResponse =
+  GetIdentityProviderByIdentifierResponse'
+    { _gipbirsResponseStatus   :: !Int
+    , _gipbirsIdentityProvider :: !IdentityProviderType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetIdentityProviderByIdentifierResponse' with the minimum fields required to make a request.

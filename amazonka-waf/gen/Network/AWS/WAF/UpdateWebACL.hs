@@ -76,12 +76,14 @@ import Network.AWS.WAF.Types
 import Network.AWS.WAF.Types.Product
 
 -- | /See:/ 'updateWebACL' smart constructor.
-data UpdateWebACL = UpdateWebACL'
-  { _uwaUpdates       :: !(Maybe [WebACLUpdate])
-  , _uwaDefaultAction :: !(Maybe WafAction)
-  , _uwaWebACLId      :: !Text
-  , _uwaChangeToken   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateWebACL =
+  UpdateWebACL'
+    { _uwaUpdates       :: !(Maybe [WebACLUpdate])
+    , _uwaDefaultAction :: !(Maybe WafAction)
+    , _uwaWebACLId      :: !Text
+    , _uwaChangeToken   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateWebACL' with the minimum fields required to make a request.
@@ -162,10 +164,12 @@ instance ToQuery UpdateWebACL where
         toQuery = const mempty
 
 -- | /See:/ 'updateWebACLResponse' smart constructor.
-data UpdateWebACLResponse = UpdateWebACLResponse'
-  { _uwarsChangeToken    :: !(Maybe Text)
-  , _uwarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateWebACLResponse =
+  UpdateWebACLResponse'
+    { _uwarsChangeToken    :: !(Maybe Text)
+    , _uwarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateWebACLResponse' with the minimum fields required to make a request.

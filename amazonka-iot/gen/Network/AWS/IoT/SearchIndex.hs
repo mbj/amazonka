@@ -50,13 +50,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'searchIndex' smart constructor.
-data SearchIndex = SearchIndex'
-  { _siQueryVersion :: !(Maybe Text)
-  , _siNextToken    :: !(Maybe Text)
-  , _siMaxResults   :: !(Maybe Nat)
-  , _siIndexName    :: !(Maybe Text)
-  , _siQueryString  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SearchIndex =
+  SearchIndex'
+    { _siQueryVersion :: !(Maybe Text)
+    , _siNextToken    :: !(Maybe Text)
+    , _siMaxResults   :: !(Maybe Nat)
+    , _siIndexName    :: !(Maybe Text)
+    , _siQueryString  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SearchIndex' with the minimum fields required to make a request.
@@ -139,11 +141,13 @@ instance ToQuery SearchIndex where
         toQuery = const mempty
 
 -- | /See:/ 'searchIndexResponse' smart constructor.
-data SearchIndexResponse = SearchIndexResponse'
-  { _sirsNextToken      :: !(Maybe Text)
-  , _sirsThings         :: !(Maybe [ThingDocument])
-  , _sirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SearchIndexResponse =
+  SearchIndexResponse'
+    { _sirsNextToken      :: !(Maybe Text)
+    , _sirsThings         :: !(Maybe [ThingDocument])
+    , _sirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SearchIndexResponse' with the minimum fields required to make a request.

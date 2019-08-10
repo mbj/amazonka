@@ -51,12 +51,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createProject' smart constructor.
-data CreateProject = CreateProject'
-  { _cpClientRequestToken :: !(Maybe Text)
-  , _cpDescription        :: !(Maybe (Sensitive Text))
-  , _cpName               :: !(Sensitive Text)
-  , _cpId                 :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data CreateProject =
+  CreateProject'
+    { _cpClientRequestToken :: !(Maybe Text)
+    , _cpDescription        :: !(Maybe (Sensitive Text))
+    , _cpName               :: !(Sensitive Text)
+    , _cpId                 :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateProject' with the minimum fields required to make a request.
@@ -140,13 +142,15 @@ instance ToQuery CreateProject where
         toQuery = const mempty
 
 -- | /See:/ 'createProjectResponse' smart constructor.
-data CreateProjectResponse = CreateProjectResponse'
-  { _cprsProjectTemplateId  :: !(Maybe Text)
-  , _cprsClientRequestToken :: !(Maybe Text)
-  , _cprsResponseStatus     :: !Int
-  , _cprsId                 :: !Text
-  , _cprsArn                :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateProjectResponse =
+  CreateProjectResponse'
+    { _cprsProjectTemplateId  :: !(Maybe Text)
+    , _cprsClientRequestToken :: !(Maybe Text)
+    , _cprsResponseStatus     :: !Int
+    , _cprsId                 :: !Text
+    , _cprsArn                :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateProjectResponse' with the minimum fields required to make a request.

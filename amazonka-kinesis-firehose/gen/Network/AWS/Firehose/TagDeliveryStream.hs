@@ -49,10 +49,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'tagDeliveryStream' smart constructor.
-data TagDeliveryStream = TagDeliveryStream'
-  { _tdsDeliveryStreamName :: !Text
-  , _tdsTags               :: !(List1 Tag)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TagDeliveryStream =
+  TagDeliveryStream'
+    { _tdsDeliveryStreamName :: !Text
+    , _tdsTags               :: !(List1 Tag)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TagDeliveryStream' with the minimum fields required to make a request.
@@ -116,9 +118,11 @@ instance ToQuery TagDeliveryStream where
         toQuery = const mempty
 
 -- | /See:/ 'tagDeliveryStreamResponse' smart constructor.
-newtype TagDeliveryStreamResponse = TagDeliveryStreamResponse'
-  { _tdsrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype TagDeliveryStreamResponse =
+  TagDeliveryStreamResponse'
+    { _tdsrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TagDeliveryStreamResponse' with the minimum fields required to make a request.

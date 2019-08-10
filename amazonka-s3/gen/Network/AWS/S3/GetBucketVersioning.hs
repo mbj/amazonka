@@ -44,9 +44,11 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'getBucketVersioning' smart constructor.
-newtype GetBucketVersioning = GetBucketVersioning'
-  { _gbvBucket :: BucketName
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetBucketVersioning =
+  GetBucketVersioning'
+    { _gbvBucket :: BucketName
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBucketVersioning' with the minimum fields required to make a request.
@@ -90,11 +92,13 @@ instance ToQuery GetBucketVersioning where
         toQuery = const (mconcat ["versioning"])
 
 -- | /See:/ 'getBucketVersioningResponse' smart constructor.
-data GetBucketVersioningResponse = GetBucketVersioningResponse'
-  { _gbvrsStatus         :: !(Maybe BucketVersioningStatus)
-  , _gbvrsMFADelete      :: !(Maybe MFADeleteStatus)
-  , _gbvrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetBucketVersioningResponse =
+  GetBucketVersioningResponse'
+    { _gbvrsStatus         :: !(Maybe BucketVersioningStatus)
+    , _gbvrsMFADelete      :: !(Maybe MFADeleteStatus)
+    , _gbvrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBucketVersioningResponse' with the minimum fields required to make a request.

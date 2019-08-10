@@ -55,11 +55,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'setIdentityPoolConfiguration' smart constructor.
-data SetIdentityPoolConfiguration = SetIdentityPoolConfiguration'
-  { _sipcCognitoStreams :: !(Maybe CognitoStreams)
-  , _sipcPushSync       :: !(Maybe PushSync)
-  , _sipcIdentityPoolId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SetIdentityPoolConfiguration =
+  SetIdentityPoolConfiguration'
+    { _sipcCognitoStreams :: !(Maybe CognitoStreams)
+    , _sipcPushSync       :: !(Maybe PushSync)
+    , _sipcIdentityPoolId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetIdentityPoolConfiguration' with the minimum fields required to make a request.
@@ -139,12 +141,14 @@ instance ToQuery SetIdentityPoolConfiguration where
 --
 --
 -- /See:/ 'setIdentityPoolConfigurationResponse' smart constructor.
-data SetIdentityPoolConfigurationResponse = SetIdentityPoolConfigurationResponse'
-  { _sipcrsIdentityPoolId :: !(Maybe Text)
-  , _sipcrsCognitoStreams :: !(Maybe CognitoStreams)
-  , _sipcrsPushSync       :: !(Maybe PushSync)
-  , _sipcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SetIdentityPoolConfigurationResponse =
+  SetIdentityPoolConfigurationResponse'
+    { _sipcrsIdentityPoolId :: !(Maybe Text)
+    , _sipcrsCognitoStreams :: !(Maybe CognitoStreams)
+    , _sipcrsPushSync       :: !(Maybe PushSync)
+    , _sipcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetIdentityPoolConfigurationResponse' with the minimum fields required to make a request.

@@ -45,9 +45,11 @@ import Network.AWS.Transcribe.Types
 import Network.AWS.Transcribe.Types.Product
 
 -- | /See:/ 'getTranscriptionJob' smart constructor.
-newtype GetTranscriptionJob = GetTranscriptionJob'
-  { _gtjTranscriptionJobName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetTranscriptionJob =
+  GetTranscriptionJob'
+    { _gtjTranscriptionJobName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetTranscriptionJob' with the minimum fields required to make a request.
@@ -104,10 +106,12 @@ instance ToQuery GetTranscriptionJob where
         toQuery = const mempty
 
 -- | /See:/ 'getTranscriptionJobResponse' smart constructor.
-data GetTranscriptionJobResponse = GetTranscriptionJobResponse'
-  { _gtjrsTranscriptionJob :: !(Maybe TranscriptionJob)
-  , _gtjrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetTranscriptionJobResponse =
+  GetTranscriptionJobResponse'
+    { _gtjrsTranscriptionJob :: !(Maybe TranscriptionJob)
+    , _gtjrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetTranscriptionJobResponse' with the minimum fields required to make a request.

@@ -43,9 +43,11 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'getBucketCORS' smart constructor.
-newtype GetBucketCORS = GetBucketCORS'
-  { _gbcBucket :: BucketName
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetBucketCORS =
+  GetBucketCORS'
+    { _gbcBucket :: BucketName
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBucketCORS' with the minimum fields required to make a request.
@@ -88,10 +90,12 @@ instance ToQuery GetBucketCORS where
         toQuery = const (mconcat ["cors"])
 
 -- | /See:/ 'getBucketCORSResponse' smart constructor.
-data GetBucketCORSResponse = GetBucketCORSResponse'
-  { _gbcrsCORSRules      :: !(Maybe [CORSRule])
-  , _gbcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetBucketCORSResponse =
+  GetBucketCORSResponse'
+    { _gbcrsCORSRules      :: !(Maybe [CORSRule])
+    , _gbcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBucketCORSResponse' with the minimum fields required to make a request.

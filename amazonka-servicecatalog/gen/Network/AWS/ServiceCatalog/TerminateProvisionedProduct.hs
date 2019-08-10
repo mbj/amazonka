@@ -53,13 +53,15 @@ import Network.AWS.ServiceCatalog.Types
 import Network.AWS.ServiceCatalog.Types.Product
 
 -- | /See:/ 'terminateProvisionedProduct' smart constructor.
-data TerminateProvisionedProduct = TerminateProvisionedProduct'
-  { _tppProvisionedProductName :: !(Maybe Text)
-  , _tppAcceptLanguage         :: !(Maybe Text)
-  , _tppIgnoreErrors           :: !(Maybe Bool)
-  , _tppProvisionedProductId   :: !(Maybe Text)
-  , _tppTerminateToken         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TerminateProvisionedProduct =
+  TerminateProvisionedProduct'
+    { _tppProvisionedProductName :: !(Maybe Text)
+    , _tppAcceptLanguage         :: !(Maybe Text)
+    , _tppIgnoreErrors           :: !(Maybe Bool)
+    , _tppProvisionedProductId   :: !(Maybe Text)
+    , _tppTerminateToken         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TerminateProvisionedProduct' with the minimum fields required to make a request.
@@ -151,10 +153,12 @@ instance ToQuery TerminateProvisionedProduct where
         toQuery = const mempty
 
 -- | /See:/ 'terminateProvisionedProductResponse' smart constructor.
-data TerminateProvisionedProductResponse = TerminateProvisionedProductResponse'
-  { _tpprsRecordDetail   :: !(Maybe RecordDetail)
-  , _tpprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TerminateProvisionedProductResponse =
+  TerminateProvisionedProductResponse'
+    { _tpprsRecordDetail   :: !(Maybe RecordDetail)
+    , _tpprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TerminateProvisionedProductResponse' with the minimum fields required to make a request.

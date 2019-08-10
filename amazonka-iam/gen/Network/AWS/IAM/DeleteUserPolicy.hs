@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteUserPolicy' smart constructor.
-data DeleteUserPolicy = DeleteUserPolicy'
-  { _dupUserName   :: !Text
-  , _dupPolicyName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteUserPolicy =
+  DeleteUserPolicy'
+    { _dupUserName   :: !Text
+    , _dupPolicyName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteUserPolicy' with the minimum fields required to make a request.

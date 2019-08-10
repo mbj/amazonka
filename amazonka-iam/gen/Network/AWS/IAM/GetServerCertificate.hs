@@ -47,9 +47,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getServerCertificate' smart constructor.
-newtype GetServerCertificate = GetServerCertificate'
-  { _gscServerCertificateName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetServerCertificate =
+  GetServerCertificate'
+    { _gscServerCertificateName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetServerCertificate' with the minimum fields required to make a request.
@@ -100,10 +102,12 @@ instance ToQuery GetServerCertificate where
 --
 --
 -- /See:/ 'getServerCertificateResponse' smart constructor.
-data GetServerCertificateResponse = GetServerCertificateResponse'
-  { _gscrsResponseStatus    :: !Int
-  , _gscrsServerCertificate :: !ServerCertificate
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetServerCertificateResponse =
+  GetServerCertificateResponse'
+    { _gscrsResponseStatus    :: !Int
+    , _gscrsServerCertificate :: !ServerCertificate
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetServerCertificateResponse' with the minimum fields required to make a request.

@@ -83,13 +83,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getReservationCoverage' smart constructor.
-data GetReservationCoverage = GetReservationCoverage'
-  { _grcGroupBy       :: !(Maybe [GroupDefinition])
-  , _grcNextPageToken :: !(Maybe Text)
-  , _grcGranularity   :: !(Maybe Granularity)
-  , _grcFilter        :: !(Maybe Expression)
-  , _grcTimePeriod    :: !DateInterval
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetReservationCoverage =
+  GetReservationCoverage'
+    { _grcGroupBy       :: !(Maybe [GroupDefinition])
+    , _grcNextPageToken :: !(Maybe Text)
+    , _grcGranularity   :: !(Maybe Granularity)
+    , _grcFilter        :: !(Maybe Expression)
+    , _grcTimePeriod    :: !DateInterval
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetReservationCoverage' with the minimum fields required to make a request.
@@ -181,12 +183,14 @@ instance ToQuery GetReservationCoverage where
         toQuery = const mempty
 
 -- | /See:/ 'getReservationCoverageResponse' smart constructor.
-data GetReservationCoverageResponse = GetReservationCoverageResponse'
-  { _grcrsNextPageToken   :: !(Maybe Text)
-  , _grcrsTotal           :: !(Maybe Coverage)
-  , _grcrsResponseStatus  :: !Int
-  , _grcrsCoveragesByTime :: ![CoverageByTime]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetReservationCoverageResponse =
+  GetReservationCoverageResponse'
+    { _grcrsNextPageToken   :: !(Maybe Text)
+    , _grcrsTotal           :: !(Maybe Coverage)
+    , _grcrsResponseStatus  :: !Int
+    , _grcrsCoveragesByTime :: ![CoverageByTime]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetReservationCoverageResponse' with the minimum fields required to make a request.

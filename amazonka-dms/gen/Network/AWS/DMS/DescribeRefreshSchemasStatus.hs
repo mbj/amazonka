@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeRefreshSchemasStatus' smart constructor.
-newtype DescribeRefreshSchemasStatus = DescribeRefreshSchemasStatus'
-  { _drssEndpointARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeRefreshSchemasStatus =
+  DescribeRefreshSchemasStatus'
+    { _drssEndpointARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeRefreshSchemasStatus' with the minimum fields required to make a request.
@@ -113,10 +115,12 @@ instance ToQuery DescribeRefreshSchemasStatus where
 --
 --
 -- /See:/ 'describeRefreshSchemasStatusResponse' smart constructor.
-data DescribeRefreshSchemasStatusResponse = DescribeRefreshSchemasStatusResponse'
-  { _drssrsRefreshSchemasStatus :: !(Maybe RefreshSchemasStatus)
-  , _drssrsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeRefreshSchemasStatusResponse =
+  DescribeRefreshSchemasStatusResponse'
+    { _drssrsRefreshSchemasStatus :: !(Maybe RefreshSchemasStatus)
+    , _drssrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeRefreshSchemasStatusResponse' with the minimum fields required to make a request.

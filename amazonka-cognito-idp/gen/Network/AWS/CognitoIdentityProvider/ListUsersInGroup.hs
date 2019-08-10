@@ -51,12 +51,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listUsersInGroup' smart constructor.
-data ListUsersInGroup = ListUsersInGroup'
-  { _luigNextToken  :: !(Maybe Text)
-  , _luigLimit      :: !(Maybe Nat)
-  , _luigUserPoolId :: !Text
-  , _luigGroupName  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListUsersInGroup =
+  ListUsersInGroup'
+    { _luigNextToken  :: !(Maybe Text)
+    , _luigLimit      :: !(Maybe Nat)
+    , _luigUserPoolId :: !Text
+    , _luigGroupName  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListUsersInGroup' with the minimum fields required to make a request.
@@ -139,11 +141,13 @@ instance ToQuery ListUsersInGroup where
         toQuery = const mempty
 
 -- | /See:/ 'listUsersInGroupResponse' smart constructor.
-data ListUsersInGroupResponse = ListUsersInGroupResponse'
-  { _luigrsUsers          :: !(Maybe [UserType])
-  , _luigrsNextToken      :: !(Maybe Text)
-  , _luigrsResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data ListUsersInGroupResponse =
+  ListUsersInGroupResponse'
+    { _luigrsUsers          :: !(Maybe [UserType])
+    , _luigrsNextToken      :: !(Maybe Text)
+    , _luigrsResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListUsersInGroupResponse' with the minimum fields required to make a request.

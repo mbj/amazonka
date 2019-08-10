@@ -64,14 +64,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putSlotType' smart constructor.
-data PutSlotType = PutSlotType'
-  { _pstChecksum               :: !(Maybe Text)
-  , _pstValueSelectionStrategy :: !(Maybe SlotValueSelectionStrategy)
-  , _pstCreateVersion          :: !(Maybe Bool)
-  , _pstDescription            :: !(Maybe Text)
-  , _pstEnumerationValues      :: !(Maybe (List1 EnumerationValue))
-  , _pstName                   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutSlotType =
+  PutSlotType'
+    { _pstChecksum               :: !(Maybe Text)
+    , _pstValueSelectionStrategy :: !(Maybe SlotValueSelectionStrategy)
+    , _pstCreateVersion          :: !(Maybe Bool)
+    , _pstDescription            :: !(Maybe Text)
+    , _pstEnumerationValues      :: !(Maybe (List1 EnumerationValue))
+    , _pstName                   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutSlotType' with the minimum fields required to make a request.
@@ -176,18 +178,20 @@ instance ToQuery PutSlotType where
         toQuery = const mempty
 
 -- | /See:/ 'putSlotTypeResponse' smart constructor.
-data PutSlotTypeResponse = PutSlotTypeResponse'
-  { _pstrsChecksum               :: !(Maybe Text)
-  , _pstrsValueSelectionStrategy :: !(Maybe SlotValueSelectionStrategy)
-  , _pstrsCreatedDate            :: !(Maybe POSIX)
-  , _pstrsName                   :: !(Maybe Text)
-  , _pstrsVersion                :: !(Maybe Text)
-  , _pstrsLastUpdatedDate        :: !(Maybe POSIX)
-  , _pstrsCreateVersion          :: !(Maybe Bool)
-  , _pstrsDescription            :: !(Maybe Text)
-  , _pstrsEnumerationValues      :: !(Maybe (List1 EnumerationValue))
-  , _pstrsResponseStatus         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutSlotTypeResponse =
+  PutSlotTypeResponse'
+    { _pstrsChecksum               :: !(Maybe Text)
+    , _pstrsValueSelectionStrategy :: !(Maybe SlotValueSelectionStrategy)
+    , _pstrsCreatedDate            :: !(Maybe POSIX)
+    , _pstrsName                   :: !(Maybe Text)
+    , _pstrsVersion                :: !(Maybe Text)
+    , _pstrsLastUpdatedDate        :: !(Maybe POSIX)
+    , _pstrsCreateVersion          :: !(Maybe Bool)
+    , _pstrsDescription            :: !(Maybe Text)
+    , _pstrsEnumerationValues      :: !(Maybe (List1 EnumerationValue))
+    , _pstrsResponseStatus         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutSlotTypeResponse' with the minimum fields required to make a request.

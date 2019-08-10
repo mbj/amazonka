@@ -72,12 +72,14 @@ import Network.AWS.Route53AutoNaming.Types
 import Network.AWS.Route53AutoNaming.Types.Product
 
 -- | /See:/ 'registerInstance' smart constructor.
-data RegisterInstance = RegisterInstance'
-  { _riCreatorRequestId :: !(Maybe Text)
-  , _riServiceId        :: !Text
-  , _riInstanceId       :: !Text
-  , _riAttributes       :: !(Map Text Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RegisterInstance =
+  RegisterInstance'
+    { _riCreatorRequestId :: !(Maybe Text)
+    , _riServiceId        :: !Text
+    , _riInstanceId       :: !Text
+    , _riAttributes       :: !(Map Text Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterInstance' with the minimum fields required to make a request.
@@ -159,10 +161,12 @@ instance ToQuery RegisterInstance where
         toQuery = const mempty
 
 -- | /See:/ 'registerInstanceResponse' smart constructor.
-data RegisterInstanceResponse = RegisterInstanceResponse'
-  { _rirsOperationId    :: !(Maybe Text)
-  , _rirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RegisterInstanceResponse =
+  RegisterInstanceResponse'
+    { _rirsOperationId    :: !(Maybe Text)
+    , _rirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterInstanceResponse' with the minimum fields required to make a request.

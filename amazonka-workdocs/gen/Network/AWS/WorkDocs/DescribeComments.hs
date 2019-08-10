@@ -50,13 +50,15 @@ import Network.AWS.WorkDocs.Types
 import Network.AWS.WorkDocs.Types.Product
 
 -- | /See:/ 'describeComments' smart constructor.
-data DescribeComments = DescribeComments'
-  { _dcAuthenticationToken :: !(Maybe (Sensitive Text))
-  , _dcMarker              :: !(Maybe Text)
-  , _dcLimit               :: !(Maybe Nat)
-  , _dcDocumentId          :: !Text
-  , _dcVersionId           :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data DescribeComments =
+  DescribeComments'
+    { _dcAuthenticationToken :: !(Maybe (Sensitive Text))
+    , _dcMarker              :: !(Maybe Text)
+    , _dcLimit               :: !(Maybe Nat)
+    , _dcDocumentId          :: !Text
+    , _dcVersionId           :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeComments' with the minimum fields required to make a request.
@@ -139,11 +141,13 @@ instance ToQuery DescribeComments where
               ["marker" =: _dcMarker, "limit" =: _dcLimit]
 
 -- | /See:/ 'describeCommentsResponse' smart constructor.
-data DescribeCommentsResponse = DescribeCommentsResponse'
-  { _dcrsMarker         :: !(Maybe Text)
-  , _dcrsComments       :: !(Maybe [Comment])
-  , _dcrsResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data DescribeCommentsResponse =
+  DescribeCommentsResponse'
+    { _dcrsMarker         :: !(Maybe Text)
+    , _dcrsComments       :: !(Maybe [Comment])
+    , _dcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeCommentsResponse' with the minimum fields required to make a request.

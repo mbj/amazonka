@@ -47,10 +47,12 @@ import Network.AWS.WAFRegional.Types
 import Network.AWS.WAFRegional.Types.Product
 
 -- | /See:/ 'getRateBasedRuleManagedKeys' smart constructor.
-data GetRateBasedRuleManagedKeys = GetRateBasedRuleManagedKeys'
-  { _grbrmkNextMarker :: !(Maybe Text)
-  , _grbrmkRuleId     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetRateBasedRuleManagedKeys =
+  GetRateBasedRuleManagedKeys'
+    { _grbrmkNextMarker :: !(Maybe Text)
+    , _grbrmkRuleId     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetRateBasedRuleManagedKeys' with the minimum fields required to make a request.
@@ -116,11 +118,13 @@ instance ToQuery GetRateBasedRuleManagedKeys where
         toQuery = const mempty
 
 -- | /See:/ 'getRateBasedRuleManagedKeysResponse' smart constructor.
-data GetRateBasedRuleManagedKeysResponse = GetRateBasedRuleManagedKeysResponse'
-  { _grbrmkrsNextMarker     :: !(Maybe Text)
-  , _grbrmkrsManagedKeys    :: !(Maybe [Text])
-  , _grbrmkrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetRateBasedRuleManagedKeysResponse =
+  GetRateBasedRuleManagedKeysResponse'
+    { _grbrmkrsNextMarker     :: !(Maybe Text)
+    , _grbrmkrsManagedKeys    :: !(Maybe [Text])
+    , _grbrmkrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetRateBasedRuleManagedKeysResponse' with the minimum fields required to make a request.

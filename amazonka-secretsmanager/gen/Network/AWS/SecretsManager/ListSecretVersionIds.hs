@@ -65,12 +65,14 @@ import Network.AWS.SecretsManager.Types
 import Network.AWS.SecretsManager.Types.Product
 
 -- | /See:/ 'listSecretVersionIds' smart constructor.
-data ListSecretVersionIds = ListSecretVersionIds'
-  { _lsviNextToken         :: !(Maybe Text)
-  , _lsviIncludeDeprecated :: !(Maybe Bool)
-  , _lsviMaxResults        :: !(Maybe Nat)
-  , _lsviSecretId          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListSecretVersionIds =
+  ListSecretVersionIds'
+    { _lsviNextToken         :: !(Maybe Text)
+    , _lsviIncludeDeprecated :: !(Maybe Bool)
+    , _lsviMaxResults        :: !(Maybe Nat)
+    , _lsviSecretId          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListSecretVersionIds' with the minimum fields required to make a request.
@@ -155,13 +157,15 @@ instance ToQuery ListSecretVersionIds where
         toQuery = const mempty
 
 -- | /See:/ 'listSecretVersionIdsResponse' smart constructor.
-data ListSecretVersionIdsResponse = ListSecretVersionIdsResponse'
-  { _lsvirsARN            :: !(Maybe Text)
-  , _lsvirsVersions       :: !(Maybe [SecretVersionsListEntry])
-  , _lsvirsNextToken      :: !(Maybe Text)
-  , _lsvirsName           :: !(Maybe Text)
-  , _lsvirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListSecretVersionIdsResponse =
+  ListSecretVersionIdsResponse'
+    { _lsvirsARN            :: !(Maybe Text)
+    , _lsvirsVersions       :: !(Maybe [SecretVersionsListEntry])
+    , _lsvirsNextToken      :: !(Maybe Text)
+    , _lsvirsName           :: !(Maybe Text)
+    , _lsvirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListSecretVersionIdsResponse' with the minimum fields required to make a request.

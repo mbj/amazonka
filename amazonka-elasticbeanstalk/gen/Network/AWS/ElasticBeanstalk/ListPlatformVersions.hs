@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listPlatformVersions' smart constructor.
-data ListPlatformVersions = ListPlatformVersions'
-  { _lpvFilters    :: !(Maybe [PlatformFilter])
-  , _lpvNextToken  :: !(Maybe Text)
-  , _lpvMaxRecords :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListPlatformVersions =
+  ListPlatformVersions'
+    { _lpvFilters    :: !(Maybe [PlatformFilter])
+    , _lpvNextToken  :: !(Maybe Text)
+    , _lpvMaxRecords :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListPlatformVersions' with the minimum fields required to make a request.
@@ -117,11 +119,13 @@ instance ToQuery ListPlatformVersions where
                "MaxRecords" =: _lpvMaxRecords]
 
 -- | /See:/ 'listPlatformVersionsResponse' smart constructor.
-data ListPlatformVersionsResponse = ListPlatformVersionsResponse'
-  { _lpvrsNextToken           :: !(Maybe Text)
-  , _lpvrsPlatformSummaryList :: !(Maybe [PlatformSummary])
-  , _lpvrsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListPlatformVersionsResponse =
+  ListPlatformVersionsResponse'
+    { _lpvrsNextToken           :: !(Maybe Text)
+    , _lpvrsPlatformSummaryList :: !(Maybe [PlatformSummary])
+    , _lpvrsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListPlatformVersionsResponse' with the minimum fields required to make a request.

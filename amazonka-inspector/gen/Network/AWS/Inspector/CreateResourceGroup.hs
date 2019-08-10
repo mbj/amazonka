@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createResourceGroup' smart constructor.
-newtype CreateResourceGroup = CreateResourceGroup'
-  { _crgResourceGroupTags :: List1 ResourceGroupTag
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateResourceGroup =
+  CreateResourceGroup'
+    { _crgResourceGroupTags :: List1 ResourceGroupTag
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateResourceGroup' with the minimum fields required to make a request.
@@ -104,10 +106,12 @@ instance ToQuery CreateResourceGroup where
         toQuery = const mempty
 
 -- | /See:/ 'createResourceGroupResponse' smart constructor.
-data CreateResourceGroupResponse = CreateResourceGroupResponse'
-  { _crgrsResponseStatus   :: !Int
-  , _crgrsResourceGroupARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateResourceGroupResponse =
+  CreateResourceGroupResponse'
+    { _crgrsResponseStatus   :: !Int
+    , _crgrsResourceGroupARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateResourceGroupResponse' with the minimum fields required to make a request.

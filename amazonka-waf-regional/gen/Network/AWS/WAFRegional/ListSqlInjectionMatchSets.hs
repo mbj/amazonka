@@ -51,10 +51,12 @@ import Network.AWS.WAFRegional.Types.Product
 --
 --
 -- /See:/ 'listSqlInjectionMatchSets' smart constructor.
-data ListSqlInjectionMatchSets = ListSqlInjectionMatchSets'
-  { _lsimsNextMarker :: !(Maybe Text)
-  , _lsimsLimit      :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListSqlInjectionMatchSets =
+  ListSqlInjectionMatchSets'
+    { _lsimsNextMarker :: !(Maybe Text)
+    , _lsimsLimit      :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListSqlInjectionMatchSets' with the minimum fields required to make a request.
@@ -122,11 +124,13 @@ instance ToQuery ListSqlInjectionMatchSets where
 --
 --
 -- /See:/ 'listSqlInjectionMatchSetsResponse' smart constructor.
-data ListSqlInjectionMatchSetsResponse = ListSqlInjectionMatchSetsResponse'
-  { _lsimsrsNextMarker            :: !(Maybe Text)
-  , _lsimsrsSqlInjectionMatchSets :: !(Maybe [SqlInjectionMatchSetSummary])
-  , _lsimsrsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListSqlInjectionMatchSetsResponse =
+  ListSqlInjectionMatchSetsResponse'
+    { _lsimsrsNextMarker            :: !(Maybe Text)
+    , _lsimsrsSqlInjectionMatchSets :: !(Maybe [SqlInjectionMatchSetSummary])
+    , _lsimsrsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListSqlInjectionMatchSetsResponse' with the minimum fields required to make a request.

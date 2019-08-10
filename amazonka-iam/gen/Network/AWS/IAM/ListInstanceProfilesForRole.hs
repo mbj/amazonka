@@ -54,11 +54,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listInstanceProfilesForRole' smart constructor.
-data ListInstanceProfilesForRole = ListInstanceProfilesForRole'
-  { _lipfrMarker   :: !(Maybe Text)
-  , _lipfrMaxItems :: !(Maybe Nat)
-  , _lipfrRoleName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListInstanceProfilesForRole =
+  ListInstanceProfilesForRole'
+    { _lipfrMarker   :: !(Maybe Text)
+    , _lipfrMaxItems :: !(Maybe Nat)
+    , _lipfrRoleName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListInstanceProfilesForRole' with the minimum fields required to make a request.
@@ -140,12 +142,14 @@ instance ToQuery ListInstanceProfilesForRole where
 --
 --
 -- /See:/ 'listInstanceProfilesForRoleResponse' smart constructor.
-data ListInstanceProfilesForRoleResponse = ListInstanceProfilesForRoleResponse'
-  { _lipfrrsMarker           :: !(Maybe Text)
-  , _lipfrrsIsTruncated      :: !(Maybe Bool)
-  , _lipfrrsResponseStatus   :: !Int
-  , _lipfrrsInstanceProfiles :: ![InstanceProfile]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListInstanceProfilesForRoleResponse =
+  ListInstanceProfilesForRoleResponse'
+    { _lipfrrsMarker           :: !(Maybe Text)
+    , _lipfrrsIsTruncated      :: !(Maybe Bool)
+    , _lipfrrsResponseStatus   :: !Int
+    , _lipfrrsInstanceProfiles :: ![InstanceProfile]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListInstanceProfilesForRoleResponse' with the minimum fields required to make a request.

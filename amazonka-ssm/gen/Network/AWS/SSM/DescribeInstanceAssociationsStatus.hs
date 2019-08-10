@@ -48,11 +48,13 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'describeInstanceAssociationsStatus' smart constructor.
-data DescribeInstanceAssociationsStatus = DescribeInstanceAssociationsStatus'
-  { _diasNextToken  :: !(Maybe Text)
-  , _diasMaxResults :: !(Maybe Nat)
-  , _diasInstanceId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeInstanceAssociationsStatus =
+  DescribeInstanceAssociationsStatus'
+    { _diasNextToken  :: !(Maybe Text)
+    , _diasMaxResults :: !(Maybe Nat)
+    , _diasInstanceId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeInstanceAssociationsStatus' with the minimum fields required to make a request.
@@ -136,11 +138,13 @@ instance ToQuery DescribeInstanceAssociationsStatus
         toQuery = const mempty
 
 -- | /See:/ 'describeInstanceAssociationsStatusResponse' smart constructor.
-data DescribeInstanceAssociationsStatusResponse = DescribeInstanceAssociationsStatusResponse'
-  { _diasrsInstanceAssociationStatusInfos :: !(Maybe [InstanceAssociationStatusInfo])
-  , _diasrsNextToken :: !(Maybe Text)
-  , _diasrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeInstanceAssociationsStatusResponse =
+  DescribeInstanceAssociationsStatusResponse'
+    { _diasrsInstanceAssociationStatusInfos :: !(Maybe [InstanceAssociationStatusInfo])
+    , _diasrsNextToken :: !(Maybe Text)
+    , _diasrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeInstanceAssociationsStatusResponse' with the minimum fields required to make a request.

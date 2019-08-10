@@ -53,12 +53,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'searchUsers' smart constructor.
-data SearchUsers = SearchUsers'
-  { _suFilters      :: !(Maybe [Filter])
-  , _suSortCriteria :: !(Maybe [Sort])
-  , _suNextToken    :: !(Maybe Text)
-  , _suMaxResults   :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SearchUsers =
+  SearchUsers'
+    { _suFilters      :: !(Maybe [Filter])
+    , _suSortCriteria :: !(Maybe [Sort])
+    , _suNextToken    :: !(Maybe Text)
+    , _suMaxResults   :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SearchUsers' with the minimum fields required to make a request.
@@ -146,12 +148,14 @@ instance ToQuery SearchUsers where
         toQuery = const mempty
 
 -- | /See:/ 'searchUsersResponse' smart constructor.
-data SearchUsersResponse = SearchUsersResponse'
-  { _sursUsers          :: !(Maybe [UserData])
-  , _sursNextToken      :: !(Maybe Text)
-  , _sursTotalCount     :: !(Maybe Int)
-  , _sursResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SearchUsersResponse =
+  SearchUsersResponse'
+    { _sursUsers          :: !(Maybe [UserData])
+    , _sursNextToken      :: !(Maybe Text)
+    , _sursTotalCount     :: !(Maybe Int)
+    , _sursResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SearchUsersResponse' with the minimum fields required to make a request.

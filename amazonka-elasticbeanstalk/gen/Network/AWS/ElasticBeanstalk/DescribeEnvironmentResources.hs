@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeEnvironmentResources' smart constructor.
-data DescribeEnvironmentResources = DescribeEnvironmentResources'
-  { _derEnvironmentName :: !(Maybe Text)
-  , _derEnvironmentId   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeEnvironmentResources =
+  DescribeEnvironmentResources'
+    { _derEnvironmentName :: !(Maybe Text)
+    , _derEnvironmentId   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEnvironmentResources' with the minimum fields required to make a request.
@@ -115,10 +117,12 @@ instance ToQuery DescribeEnvironmentResources where
 --
 --
 -- /See:/ 'describeEnvironmentResourcesResponse' smart constructor.
-data DescribeEnvironmentResourcesResponse = DescribeEnvironmentResourcesResponse'
-  { _derrsEnvironmentResources :: !(Maybe EnvironmentResourceDescription)
-  , _derrsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeEnvironmentResourcesResponse =
+  DescribeEnvironmentResourcesResponse'
+    { _derrsEnvironmentResources :: !(Maybe EnvironmentResourceDescription)
+    , _derrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEnvironmentResourcesResponse' with the minimum fields required to make a request.

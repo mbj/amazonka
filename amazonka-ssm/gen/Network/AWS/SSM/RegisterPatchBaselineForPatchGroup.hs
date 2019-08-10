@@ -47,10 +47,12 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'registerPatchBaselineForPatchGroup' smart constructor.
-data RegisterPatchBaselineForPatchGroup = RegisterPatchBaselineForPatchGroup'
-  { _rpbfpgBaselineId :: !Text
-  , _rpbfpgPatchGroup :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RegisterPatchBaselineForPatchGroup =
+  RegisterPatchBaselineForPatchGroup'
+    { _rpbfpgBaselineId :: !Text
+    , _rpbfpgPatchGroup :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterPatchBaselineForPatchGroup' with the minimum fields required to make a request.
@@ -124,11 +126,13 @@ instance ToQuery RegisterPatchBaselineForPatchGroup
         toQuery = const mempty
 
 -- | /See:/ 'registerPatchBaselineForPatchGroupResponse' smart constructor.
-data RegisterPatchBaselineForPatchGroupResponse = RegisterPatchBaselineForPatchGroupResponse'
-  { _rpbfpgrsBaselineId     :: !(Maybe Text)
-  , _rpbfpgrsPatchGroup     :: !(Maybe Text)
-  , _rpbfpgrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RegisterPatchBaselineForPatchGroupResponse =
+  RegisterPatchBaselineForPatchGroupResponse'
+    { _rpbfpgrsBaselineId     :: !(Maybe Text)
+    , _rpbfpgrsPatchGroup     :: !(Maybe Text)
+    , _rpbfpgrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterPatchBaselineForPatchGroupResponse' with the minimum fields required to make a request.

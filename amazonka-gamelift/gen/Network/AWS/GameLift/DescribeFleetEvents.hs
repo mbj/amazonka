@@ -102,13 +102,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeFleetEvents' smart constructor.
-data DescribeFleetEvents = DescribeFleetEvents'
-  { _dfeStartTime :: !(Maybe POSIX)
-  , _dfeNextToken :: !(Maybe Text)
-  , _dfeEndTime   :: !(Maybe POSIX)
-  , _dfeLimit     :: !(Maybe Nat)
-  , _dfeFleetId   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeFleetEvents =
+  DescribeFleetEvents'
+    { _dfeStartTime :: !(Maybe POSIX)
+    , _dfeNextToken :: !(Maybe Text)
+    , _dfeEndTime   :: !(Maybe POSIX)
+    , _dfeLimit     :: !(Maybe Nat)
+    , _dfeFleetId   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeFleetEvents' with the minimum fields required to make a request.
@@ -202,11 +204,13 @@ instance ToQuery DescribeFleetEvents where
 --
 --
 -- /See:/ 'describeFleetEventsResponse' smart constructor.
-data DescribeFleetEventsResponse = DescribeFleetEventsResponse'
-  { _dfersNextToken      :: !(Maybe Text)
-  , _dfersEvents         :: !(Maybe [Event])
-  , _dfersResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeFleetEventsResponse =
+  DescribeFleetEventsResponse'
+    { _dfersNextToken      :: !(Maybe Text)
+    , _dfersEvents         :: !(Maybe [Event])
+    , _dfersResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeFleetEventsResponse' with the minimum fields required to make a request.

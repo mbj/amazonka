@@ -53,10 +53,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'setTerminationProtection' smart constructor.
-data SetTerminationProtection = SetTerminationProtection'
-  { _stpJobFlowIds           :: ![Text]
-  , _stpTerminationProtected :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SetTerminationProtection =
+  SetTerminationProtection'
+    { _stpJobFlowIds           :: ![Text]
+    , _stpTerminationProtected :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetTerminationProtection' with the minimum fields required to make a request.

@@ -48,9 +48,11 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'getDefaultPatchBaseline' smart constructor.
-newtype GetDefaultPatchBaseline = GetDefaultPatchBaseline'
-  { _gdpbOperatingSystem :: Maybe OperatingSystem
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetDefaultPatchBaseline =
+  GetDefaultPatchBaseline'
+    { _gdpbOperatingSystem :: Maybe OperatingSystem
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDefaultPatchBaseline' with the minimum fields required to make a request.
@@ -105,11 +107,13 @@ instance ToQuery GetDefaultPatchBaseline where
         toQuery = const mempty
 
 -- | /See:/ 'getDefaultPatchBaselineResponse' smart constructor.
-data GetDefaultPatchBaselineResponse = GetDefaultPatchBaselineResponse'
-  { _gdpbrsOperatingSystem :: !(Maybe OperatingSystem)
-  , _gdpbrsBaselineId      :: !(Maybe Text)
-  , _gdpbrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDefaultPatchBaselineResponse =
+  GetDefaultPatchBaselineResponse'
+    { _gdpbrsOperatingSystem :: !(Maybe OperatingSystem)
+    , _gdpbrsBaselineId      :: !(Maybe Text)
+    , _gdpbrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDefaultPatchBaselineResponse' with the minimum fields required to make a request.

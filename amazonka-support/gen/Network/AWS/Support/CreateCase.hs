@@ -79,17 +79,19 @@ import Network.AWS.Support.Types.Product
 --
 --
 -- /See:/ 'createCase' smart constructor.
-data CreateCase = CreateCase'
-  { _ccSeverityCode      :: !(Maybe Text)
-  , _ccIssueType         :: !(Maybe Text)
-  , _ccCcEmailAddresses  :: !(Maybe [Text])
-  , _ccLanguage          :: !(Maybe Text)
-  , _ccCategoryCode      :: !(Maybe Text)
-  , _ccServiceCode       :: !(Maybe Text)
-  , _ccAttachmentSetId   :: !(Maybe Text)
-  , _ccSubject           :: !Text
-  , _ccCommunicationBody :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateCase =
+  CreateCase'
+    { _ccSeverityCode      :: !(Maybe Text)
+    , _ccIssueType         :: !(Maybe Text)
+    , _ccCcEmailAddresses  :: !(Maybe [Text])
+    , _ccLanguage          :: !(Maybe Text)
+    , _ccCategoryCode      :: !(Maybe Text)
+    , _ccServiceCode       :: !(Maybe Text)
+    , _ccAttachmentSetId   :: !(Maybe Text)
+    , _ccSubject           :: !Text
+    , _ccCommunicationBody :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateCase' with the minimum fields required to make a request.
@@ -214,10 +216,12 @@ instance ToQuery CreateCase where
 --
 --
 -- /See:/ 'createCaseResponse' smart constructor.
-data CreateCaseResponse = CreateCaseResponse'
-  { _ccrsCaseId         :: !(Maybe Text)
-  , _ccrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateCaseResponse =
+  CreateCaseResponse'
+    { _ccrsCaseId         :: !(Maybe Text)
+    , _ccrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateCaseResponse' with the minimum fields required to make a request.

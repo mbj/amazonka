@@ -46,10 +46,12 @@ import Network.AWS.SageMaker.Types
 import Network.AWS.SageMaker.Types.Product
 
 -- | /See:/ 'createPresignedNotebookInstanceURL' smart constructor.
-data CreatePresignedNotebookInstanceURL = CreatePresignedNotebookInstanceURL'
-  { _cpniuSessionExpirationDurationInSeconds :: !(Maybe Nat)
-  , _cpniuNotebookInstanceName               :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreatePresignedNotebookInstanceURL =
+  CreatePresignedNotebookInstanceURL'
+    { _cpniuSessionExpirationDurationInSeconds :: !(Maybe Nat)
+    , _cpniuNotebookInstanceName               :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreatePresignedNotebookInstanceURL' with the minimum fields required to make a request.
@@ -126,10 +128,12 @@ instance ToQuery CreatePresignedNotebookInstanceURL
         toQuery = const mempty
 
 -- | /See:/ 'createPresignedNotebookInstanceURLResponse' smart constructor.
-data CreatePresignedNotebookInstanceURLResponse = CreatePresignedNotebookInstanceURLResponse'
-  { _cpniursAuthorizedURL  :: !(Maybe Text)
-  , _cpniursResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreatePresignedNotebookInstanceURLResponse =
+  CreatePresignedNotebookInstanceURLResponse'
+    { _cpniursAuthorizedURL  :: !(Maybe Text)
+    , _cpniursResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreatePresignedNotebookInstanceURLResponse' with the minimum fields required to make a request.

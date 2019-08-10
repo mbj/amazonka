@@ -51,10 +51,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'batchGetDeploymentInstances' smart constructor.
-data BatchGetDeploymentInstances = BatchGetDeploymentInstances'
-  { _bgdiDeploymentId :: !Text
-  , _bgdiInstanceIds  :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchGetDeploymentInstances =
+  BatchGetDeploymentInstances'
+    { _bgdiDeploymentId :: !Text
+    , _bgdiInstanceIds  :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchGetDeploymentInstances' with the minimum fields required to make a request.
@@ -124,11 +126,13 @@ instance ToQuery BatchGetDeploymentInstances where
 --
 --
 -- /See:/ 'batchGetDeploymentInstancesResponse' smart constructor.
-data BatchGetDeploymentInstancesResponse = BatchGetDeploymentInstancesResponse'
-  { _bgdirsInstancesSummary :: !(Maybe [InstanceSummary])
-  , _bgdirsErrorMessage     :: !(Maybe Text)
-  , _bgdirsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchGetDeploymentInstancesResponse =
+  BatchGetDeploymentInstancesResponse'
+    { _bgdirsInstancesSummary :: !(Maybe [InstanceSummary])
+    , _bgdirsErrorMessage     :: !(Maybe Text)
+    , _bgdirsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchGetDeploymentInstancesResponse' with the minimum fields required to make a request.

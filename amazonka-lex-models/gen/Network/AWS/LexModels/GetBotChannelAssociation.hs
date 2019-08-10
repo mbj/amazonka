@@ -57,11 +57,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getBotChannelAssociation' smart constructor.
-data GetBotChannelAssociation = GetBotChannelAssociation'
-  { _gName     :: !Text
-  , _gBotName  :: !Text
-  , _gBotAlias :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetBotChannelAssociation =
+  GetBotChannelAssociation'
+    { _gName     :: !Text
+    , _gBotName  :: !Text
+    , _gBotAlias :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBotChannelAssociation' with the minimum fields required to make a request.
@@ -134,18 +136,20 @@ instance ToQuery GetBotChannelAssociation where
         toQuery = const mempty
 
 -- | /See:/ 'getBotChannelAssociationResponse' smart constructor.
-data GetBotChannelAssociationResponse = GetBotChannelAssociationResponse'
-  { _gbcarsFailureReason    :: !(Maybe Text)
-  , _gbcarsStatus           :: !(Maybe ChannelStatus)
-  , _gbcarsBotAlias         :: !(Maybe Text)
-  , _gbcarsBotName          :: !(Maybe Text)
-  , _gbcarsBotConfiguration :: !(Maybe (Sensitive (Map Text Text)))
-  , _gbcarsCreatedDate      :: !(Maybe POSIX)
-  , _gbcarsName             :: !(Maybe Text)
-  , _gbcarsType             :: !(Maybe ChannelType)
-  , _gbcarsDescription      :: !(Maybe Text)
-  , _gbcarsResponseStatus   :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data GetBotChannelAssociationResponse =
+  GetBotChannelAssociationResponse'
+    { _gbcarsFailureReason    :: !(Maybe Text)
+    , _gbcarsStatus           :: !(Maybe ChannelStatus)
+    , _gbcarsBotAlias         :: !(Maybe Text)
+    , _gbcarsBotName          :: !(Maybe Text)
+    , _gbcarsBotConfiguration :: !(Maybe (Sensitive (Map Text Text)))
+    , _gbcarsCreatedDate      :: !(Maybe POSIX)
+    , _gbcarsName             :: !(Maybe Text)
+    , _gbcarsType             :: !(Maybe ChannelType)
+    , _gbcarsDescription      :: !(Maybe Text)
+    , _gbcarsResponseStatus   :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBotChannelAssociationResponse' with the minimum fields required to make a request.

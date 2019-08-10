@@ -47,11 +47,13 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'updateAssociationStatus' smart constructor.
-data UpdateAssociationStatus = UpdateAssociationStatus'
-  { _uasName              :: !Text
-  , _uasInstanceId        :: !Text
-  , _uasAssociationStatus :: !AssociationStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateAssociationStatus =
+  UpdateAssociationStatus'
+    { _uasName              :: !Text
+    , _uasInstanceId        :: !Text
+    , _uasAssociationStatus :: !AssociationStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateAssociationStatus' with the minimum fields required to make a request.
@@ -127,10 +129,12 @@ instance ToQuery UpdateAssociationStatus where
         toQuery = const mempty
 
 -- | /See:/ 'updateAssociationStatusResponse' smart constructor.
-data UpdateAssociationStatusResponse = UpdateAssociationStatusResponse'
-  { _uasrsAssociationDescription :: !(Maybe AssociationDescription)
-  , _uasrsResponseStatus         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateAssociationStatusResponse =
+  UpdateAssociationStatusResponse'
+    { _uasrsAssociationDescription :: !(Maybe AssociationDescription)
+    , _uasrsResponseStatus         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateAssociationStatusResponse' with the minimum fields required to make a request.

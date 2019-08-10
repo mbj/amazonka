@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'revokeInvitation' smart constructor.
-data RevokeInvitation = RevokeInvitation'
-  { _riEnrollmentId :: !(Maybe Text)
-  , _riUserARN      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RevokeInvitation =
+  RevokeInvitation'
+    { _riEnrollmentId :: !(Maybe Text)
+    , _riUserARN      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RevokeInvitation' with the minimum fields required to make a request.
@@ -107,9 +109,11 @@ instance ToQuery RevokeInvitation where
         toQuery = const mempty
 
 -- | /See:/ 'revokeInvitationResponse' smart constructor.
-newtype RevokeInvitationResponse = RevokeInvitationResponse'
-  { _rirsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RevokeInvitationResponse =
+  RevokeInvitationResponse'
+    { _rirsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RevokeInvitationResponse' with the minimum fields required to make a request.

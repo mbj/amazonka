@@ -47,10 +47,12 @@ import Network.AWS.WorkSpaces.Types
 import Network.AWS.WorkSpaces.Types.Product
 
 -- | /See:/ 'authorizeIPRules' smart constructor.
-data AuthorizeIPRules = AuthorizeIPRules'
-  { _airGroupId   :: !Text
-  , _airUserRules :: ![IPRuleItem]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AuthorizeIPRules =
+  AuthorizeIPRules'
+    { _airGroupId   :: !Text
+    , _airUserRules :: ![IPRuleItem]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AuthorizeIPRules' with the minimum fields required to make a request.
@@ -110,9 +112,11 @@ instance ToQuery AuthorizeIPRules where
         toQuery = const mempty
 
 -- | /See:/ 'authorizeIPRulesResponse' smart constructor.
-newtype AuthorizeIPRulesResponse = AuthorizeIPRulesResponse'
-  { _airrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AuthorizeIPRulesResponse =
+  AuthorizeIPRulesResponse'
+    { _airrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AuthorizeIPRulesResponse' with the minimum fields required to make a request.

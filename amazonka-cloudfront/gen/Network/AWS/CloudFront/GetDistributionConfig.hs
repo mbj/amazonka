@@ -50,9 +50,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getDistributionConfig' smart constructor.
-newtype GetDistributionConfig = GetDistributionConfig'
-  { _gdcId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetDistributionConfig =
+  GetDistributionConfig'
+    { _gdcId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDistributionConfig' with the minimum fields required to make a request.
@@ -101,11 +103,13 @@ instance ToQuery GetDistributionConfig where
 --
 --
 -- /See:/ 'getDistributionConfigResponse' smart constructor.
-data GetDistributionConfigResponse = GetDistributionConfigResponse'
-  { _gdcrsETag               :: !(Maybe Text)
-  , _gdcrsDistributionConfig :: !(Maybe DistributionConfig)
-  , _gdcrsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDistributionConfigResponse =
+  GetDistributionConfigResponse'
+    { _gdcrsETag               :: !(Maybe Text)
+    , _gdcrsDistributionConfig :: !(Maybe DistributionConfig)
+    , _gdcrsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDistributionConfigResponse' with the minimum fields required to make a request.

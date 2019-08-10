@@ -96,12 +96,14 @@ instance ToQuery DescribeCrossAccountAccessRole where
         toQuery = const mempty
 
 -- | /See:/ 'describeCrossAccountAccessRoleResponse' smart constructor.
-data DescribeCrossAccountAccessRoleResponse = DescribeCrossAccountAccessRoleResponse'
-  { _dcaarrsResponseStatus :: !Int
-  , _dcaarrsRoleARN        :: !Text
-  , _dcaarrsValid          :: !Bool
-  , _dcaarrsRegisteredAt   :: !POSIX
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeCrossAccountAccessRoleResponse =
+  DescribeCrossAccountAccessRoleResponse'
+    { _dcaarrsResponseStatus :: !Int
+    , _dcaarrsRoleARN        :: !Text
+    , _dcaarrsValid          :: !Bool
+    , _dcaarrsRegisteredAt   :: !POSIX
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeCrossAccountAccessRoleResponse' with the minimum fields required to make a request.

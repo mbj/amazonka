@@ -54,17 +54,19 @@ import Network.AWS.SageMaker.Types
 import Network.AWS.SageMaker.Types.Product
 
 -- | /See:/ 'listNotebookInstanceLifecycleConfigs' smart constructor.
-data ListNotebookInstanceLifecycleConfigs = ListNotebookInstanceLifecycleConfigs'
-  { _lnilcNameContains :: !(Maybe Text)
-  , _lnilcLastModifiedTimeBefore :: !(Maybe POSIX)
-  , _lnilcCreationTimeAfter :: !(Maybe POSIX)
-  , _lnilcNextToken :: !(Maybe Text)
-  , _lnilcSortOrder :: !(Maybe NotebookInstanceLifecycleConfigSortOrder)
-  , _lnilcLastModifiedTimeAfter :: !(Maybe POSIX)
-  , _lnilcCreationTimeBefore :: !(Maybe POSIX)
-  , _lnilcMaxResults :: !(Maybe Nat)
-  , _lnilcSortBy :: !(Maybe NotebookInstanceLifecycleConfigSortKey)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListNotebookInstanceLifecycleConfigs =
+  ListNotebookInstanceLifecycleConfigs'
+    { _lnilcNameContains :: !(Maybe Text)
+    , _lnilcLastModifiedTimeBefore :: !(Maybe POSIX)
+    , _lnilcCreationTimeAfter :: !(Maybe POSIX)
+    , _lnilcNextToken :: !(Maybe Text)
+    , _lnilcSortOrder :: !(Maybe NotebookInstanceLifecycleConfigSortOrder)
+    , _lnilcLastModifiedTimeAfter :: !(Maybe POSIX)
+    , _lnilcCreationTimeBefore :: !(Maybe POSIX)
+    , _lnilcMaxResults :: !(Maybe Nat)
+    , _lnilcSortBy :: !(Maybe NotebookInstanceLifecycleConfigSortKey)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListNotebookInstanceLifecycleConfigs' with the minimum fields required to make a request.
@@ -200,11 +202,13 @@ instance ToQuery ListNotebookInstanceLifecycleConfigs
         toQuery = const mempty
 
 -- | /See:/ 'listNotebookInstanceLifecycleConfigsResponse' smart constructor.
-data ListNotebookInstanceLifecycleConfigsResponse = ListNotebookInstanceLifecycleConfigsResponse'
-  { _lnilcrsNextToken :: !(Maybe Text)
-  , _lnilcrsNotebookInstanceLifecycleConfigs :: !(Maybe [NotebookInstanceLifecycleConfigSummary])
-  , _lnilcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListNotebookInstanceLifecycleConfigsResponse =
+  ListNotebookInstanceLifecycleConfigsResponse'
+    { _lnilcrsNextToken :: !(Maybe Text)
+    , _lnilcrsNotebookInstanceLifecycleConfigs :: !(Maybe [NotebookInstanceLifecycleConfigSummary])
+    , _lnilcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListNotebookInstanceLifecycleConfigsResponse' with the minimum fields required to make a request.

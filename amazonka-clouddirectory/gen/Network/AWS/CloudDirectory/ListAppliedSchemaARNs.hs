@@ -52,12 +52,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listAppliedSchemaARNs' smart constructor.
-data ListAppliedSchemaARNs = ListAppliedSchemaARNs'
-  { _lasaNextToken    :: !(Maybe Text)
-  , _lasaSchemaARN    :: !(Maybe Text)
-  , _lasaMaxResults   :: !(Maybe Nat)
-  , _lasaDirectoryARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAppliedSchemaARNs =
+  ListAppliedSchemaARNs'
+    { _lasaNextToken    :: !(Maybe Text)
+    , _lasaSchemaARN    :: !(Maybe Text)
+    , _lasaMaxResults   :: !(Maybe Nat)
+    , _lasaDirectoryARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAppliedSchemaARNs' with the minimum fields required to make a request.
@@ -143,11 +145,13 @@ instance ToQuery ListAppliedSchemaARNs where
         toQuery = const mempty
 
 -- | /See:/ 'listAppliedSchemaARNsResponse' smart constructor.
-data ListAppliedSchemaARNsResponse = ListAppliedSchemaARNsResponse'
-  { _lasarsSchemaARNs     :: !(Maybe [Text])
-  , _lasarsNextToken      :: !(Maybe Text)
-  , _lasarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAppliedSchemaARNsResponse =
+  ListAppliedSchemaARNsResponse'
+    { _lasarsSchemaARNs     :: !(Maybe [Text])
+    , _lasarsNextToken      :: !(Maybe Text)
+    , _lasarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAppliedSchemaARNsResponse' with the minimum fields required to make a request.

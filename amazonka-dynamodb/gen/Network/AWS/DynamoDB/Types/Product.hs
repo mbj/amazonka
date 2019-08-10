@@ -26,10 +26,12 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'attributeDefinition' smart constructor.
-data AttributeDefinition = AttributeDefinition'
-  { _adAttributeName :: !Text
-  , _adAttributeType :: !ScalarAttributeType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AttributeDefinition =
+  AttributeDefinition'
+    { _adAttributeName :: !Text
+    , _adAttributeType :: !ScalarAttributeType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttributeDefinition' with the minimum fields required to make a request.
@@ -83,18 +85,20 @@ instance ToJSON AttributeDefinition where
 --
 --
 -- /See:/ 'attributeValue' smart constructor.
-data AttributeValue = AttributeValue'
-  { _avL    :: !(Maybe [AttributeValue])
-  , _avNS   :: !(Maybe [Text])
-  , _avM    :: !(Maybe (Map Text AttributeValue))
-  , _avNULL :: !(Maybe Bool)
-  , _avN    :: !(Maybe Text)
-  , _avBS   :: !(Maybe [Base64])
-  , _avB    :: !(Maybe Base64)
-  , _avSS   :: !(Maybe [Text])
-  , _avS    :: !(Maybe Text)
-  , _avBOOL :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AttributeValue =
+  AttributeValue'
+    { _avL    :: !(Maybe [AttributeValue])
+    , _avNS   :: !(Maybe [Text])
+    , _avM    :: !(Maybe (Map Text AttributeValue))
+    , _avNULL :: !(Maybe Bool)
+    , _avN    :: !(Maybe Text)
+    , _avBS   :: !(Maybe [Base64])
+    , _avB    :: !(Maybe Base64)
+    , _avSS   :: !(Maybe [Text])
+    , _avS    :: !(Maybe Text)
+    , _avBOOL :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttributeValue' with the minimum fields required to make a request.
@@ -213,10 +217,12 @@ instance ToJSON AttributeValue where
 --
 --
 -- /See:/ 'attributeValueUpdate' smart constructor.
-data AttributeValueUpdate = AttributeValueUpdate'
-  { _avuValue  :: !(Maybe AttributeValue)
-  , _avuAction :: !(Maybe AttributeAction)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AttributeValueUpdate =
+  AttributeValueUpdate'
+    { _avuValue  :: !(Maybe AttributeValue)
+    , _avuAction :: !(Maybe AttributeAction)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttributeValueUpdate' with the minimum fields required to make a request.
@@ -256,11 +262,13 @@ instance ToJSON AttributeValueUpdate where
 --
 --
 -- /See:/ 'backupDescription' smart constructor.
-data BackupDescription = BackupDescription'
-  { _bdBackupDetails             :: !(Maybe BackupDetails)
-  , _bdSourceTableDetails        :: !(Maybe SourceTableDetails)
-  , _bdSourceTableFeatureDetails :: !(Maybe SourceTableFeatureDetails)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BackupDescription =
+  BackupDescription'
+    { _bdBackupDetails             :: !(Maybe BackupDetails)
+    , _bdSourceTableDetails        :: !(Maybe SourceTableDetails)
+    , _bdSourceTableFeatureDetails :: !(Maybe SourceTableFeatureDetails)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BackupDescription' with the minimum fields required to make a request.
@@ -312,13 +320,15 @@ instance NFData BackupDescription where
 --
 --
 -- /See:/ 'backupDetails' smart constructor.
-data BackupDetails = BackupDetails'
-  { _bdBackupSizeBytes        :: !(Maybe Nat)
-  , _bdBackupARN              :: !Text
-  , _bdBackupName             :: !Text
-  , _bdBackupStatus           :: !BackupStatus
-  , _bdBackupCreationDateTime :: !POSIX
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BackupDetails =
+  BackupDetails'
+    { _bdBackupSizeBytes        :: !(Maybe Nat)
+    , _bdBackupARN              :: !Text
+    , _bdBackupName             :: !Text
+    , _bdBackupStatus           :: !BackupStatus
+    , _bdBackupCreationDateTime :: !POSIX
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BackupDetails' with the minimum fields required to make a request.
@@ -389,16 +399,18 @@ instance NFData BackupDetails where
 --
 --
 -- /See:/ 'backupSummary' smart constructor.
-data BackupSummary = BackupSummary'
-  { _bsTableARN               :: !(Maybe Text)
-  , _bsBackupName             :: !(Maybe Text)
-  , _bsBackupStatus           :: !(Maybe BackupStatus)
-  , _bsBackupSizeBytes        :: !(Maybe Nat)
-  , _bsBackupARN              :: !(Maybe Text)
-  , _bsTableId                :: !(Maybe Text)
-  , _bsBackupCreationDateTime :: !(Maybe POSIX)
-  , _bsTableName              :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BackupSummary =
+  BackupSummary'
+    { _bsTableARN               :: !(Maybe Text)
+    , _bsBackupName             :: !(Maybe Text)
+    , _bsBackupStatus           :: !(Maybe BackupStatus)
+    , _bsBackupSizeBytes        :: !(Maybe Nat)
+    , _bsBackupARN              :: !(Maybe Text)
+    , _bsTableId                :: !(Maybe Text)
+    , _bsBackupCreationDateTime :: !(Maybe POSIX)
+    , _bsTableName              :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BackupSummary' with the minimum fields required to make a request.
@@ -489,9 +501,11 @@ instance NFData BackupSummary where
 --
 --
 -- /See:/ 'capacity' smart constructor.
-newtype Capacity = Capacity'
-  { _cCapacityUnits :: Maybe Double
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype Capacity =
+  Capacity'
+    { _cCapacityUnits :: Maybe Double
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Capacity' with the minimum fields required to make a request.
@@ -532,10 +546,12 @@ instance NFData Capacity where
 --
 --
 -- /See:/ 'condition' smart constructor.
-data Condition = Condition'
-  { _cAttributeValueList :: !(Maybe [AttributeValue])
-  , _cComparisonOperator :: !ComparisonOperator
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Condition =
+  Condition'
+    { _cAttributeValueList :: !(Maybe [AttributeValue])
+    , _cComparisonOperator :: !ComparisonOperator
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Condition' with the minimum fields required to make a request.
@@ -579,13 +595,15 @@ instance ToJSON Condition where
 --
 --
 -- /See:/ 'consumedCapacity' smart constructor.
-data ConsumedCapacity = ConsumedCapacity'
-  { _ccGlobalSecondaryIndexes :: !(Maybe (Map Text Capacity))
-  , _ccCapacityUnits          :: !(Maybe Double)
-  , _ccLocalSecondaryIndexes  :: !(Maybe (Map Text Capacity))
-  , _ccTable                  :: !(Maybe Capacity)
-  , _ccTableName              :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ConsumedCapacity =
+  ConsumedCapacity'
+    { _ccGlobalSecondaryIndexes :: !(Maybe (Map Text Capacity))
+    , _ccCapacityUnits          :: !(Maybe Double)
+    , _ccLocalSecondaryIndexes  :: !(Maybe (Map Text Capacity))
+    , _ccTable                  :: !(Maybe Capacity)
+    , _ccTableName              :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ConsumedCapacity' with the minimum fields required to make a request.
@@ -653,10 +671,12 @@ instance NFData ConsumedCapacity where
 --
 --
 -- /See:/ 'continuousBackupsDescription' smart constructor.
-data ContinuousBackupsDescription = ContinuousBackupsDescription'
-  { _cbdPointInTimeRecoveryDescription :: !(Maybe PointInTimeRecoveryDescription)
-  , _cbdContinuousBackupsStatus :: !ContinuousBackupsStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ContinuousBackupsDescription =
+  ContinuousBackupsDescription'
+    { _cbdPointInTimeRecoveryDescription :: !(Maybe PointInTimeRecoveryDescription)
+    , _cbdContinuousBackupsStatus :: !ContinuousBackupsStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ContinuousBackupsDescription' with the minimum fields required to make a request.
@@ -701,12 +721,14 @@ instance NFData ContinuousBackupsDescription where
 --
 --
 -- /See:/ 'createGlobalSecondaryIndexAction' smart constructor.
-data CreateGlobalSecondaryIndexAction = CreateGlobalSecondaryIndexAction'
-  { _cgsiaIndexName             :: !Text
-  , _cgsiaKeySchema             :: !(List1 KeySchemaElement)
-  , _cgsiaProjection            :: !Projection
-  , _cgsiaProvisionedThroughput :: !ProvisionedThroughput
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateGlobalSecondaryIndexAction =
+  CreateGlobalSecondaryIndexAction'
+    { _cgsiaIndexName             :: !Text
+    , _cgsiaKeySchema             :: !(List1 KeySchemaElement)
+    , _cgsiaProjection            :: !Projection
+    , _cgsiaProvisionedThroughput :: !ProvisionedThroughput
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateGlobalSecondaryIndexAction' with the minimum fields required to make a request.
@@ -774,9 +796,11 @@ instance ToJSON CreateGlobalSecondaryIndexAction
 --
 --
 -- /See:/ 'createReplicaAction' smart constructor.
-newtype CreateReplicaAction = CreateReplicaAction'
-  { _craRegionName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateReplicaAction =
+  CreateReplicaAction'
+    { _craRegionName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateReplicaAction' with the minimum fields required to make a request.
@@ -809,9 +833,11 @@ instance ToJSON CreateReplicaAction where
 --
 --
 -- /See:/ 'deleteGlobalSecondaryIndexAction' smart constructor.
-newtype DeleteGlobalSecondaryIndexAction = DeleteGlobalSecondaryIndexAction'
-  { _dgsiaIndexName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteGlobalSecondaryIndexAction =
+  DeleteGlobalSecondaryIndexAction'
+    { _dgsiaIndexName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteGlobalSecondaryIndexAction' with the minimum fields required to make a request.
@@ -847,9 +873,11 @@ instance ToJSON DeleteGlobalSecondaryIndexAction
 --
 --
 -- /See:/ 'deleteReplicaAction' smart constructor.
-newtype DeleteReplicaAction = DeleteReplicaAction'
-  { _draRegionName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteReplicaAction =
+  DeleteReplicaAction'
+    { _draRegionName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteReplicaAction' with the minimum fields required to make a request.
@@ -882,9 +910,11 @@ instance ToJSON DeleteReplicaAction where
 --
 --
 -- /See:/ 'deleteRequest' smart constructor.
-newtype DeleteRequest = DeleteRequest'
-  { _drKey :: Map Text AttributeValue
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteRequest =
+  DeleteRequest'
+    { _drKey :: Map Text AttributeValue
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteRequest' with the minimum fields required to make a request.
@@ -927,12 +957,14 @@ instance ToJSON DeleteRequest where
 --
 --
 -- /See:/ 'expectedAttributeValue' smart constructor.
-data ExpectedAttributeValue = ExpectedAttributeValue'
-  { _eavAttributeValueList :: !(Maybe [AttributeValue])
-  , _eavExists             :: !(Maybe Bool)
-  , _eavValue              :: !(Maybe AttributeValue)
-  , _eavComparisonOperator :: !(Maybe ComparisonOperator)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ExpectedAttributeValue =
+  ExpectedAttributeValue'
+    { _eavAttributeValueList :: !(Maybe [AttributeValue])
+    , _eavExists             :: !(Maybe Bool)
+    , _eavValue              :: !(Maybe AttributeValue)
+    , _eavComparisonOperator :: !(Maybe ComparisonOperator)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ExpectedAttributeValue' with the minimum fields required to make a request.
@@ -993,12 +1025,14 @@ instance ToJSON ExpectedAttributeValue where
 --
 --
 -- /See:/ 'globalSecondaryIndex' smart constructor.
-data GlobalSecondaryIndex = GlobalSecondaryIndex'
-  { _gsiIndexName             :: !Text
-  , _gsiKeySchema             :: !(List1 KeySchemaElement)
-  , _gsiProjection            :: !Projection
-  , _gsiProvisionedThroughput :: !ProvisionedThroughput
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GlobalSecondaryIndex =
+  GlobalSecondaryIndex'
+    { _gsiIndexName             :: !Text
+    , _gsiKeySchema             :: !(List1 KeySchemaElement)
+    , _gsiProjection            :: !Projection
+    , _gsiProvisionedThroughput :: !ProvisionedThroughput
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GlobalSecondaryIndex' with the minimum fields required to make a request.
@@ -1063,17 +1097,19 @@ instance ToJSON GlobalSecondaryIndex where
 --
 --
 -- /See:/ 'globalSecondaryIndexDescription' smart constructor.
-data GlobalSecondaryIndexDescription = GlobalSecondaryIndexDescription'
-  { _gsidBackfilling           :: !(Maybe Bool)
-  , _gsidIndexSizeBytes        :: !(Maybe Integer)
-  , _gsidIndexStatus           :: !(Maybe IndexStatus)
-  , _gsidProvisionedThroughput :: !(Maybe ProvisionedThroughputDescription)
-  , _gsidIndexARN              :: !(Maybe Text)
-  , _gsidKeySchema             :: !(Maybe (List1 KeySchemaElement))
-  , _gsidProjection            :: !(Maybe Projection)
-  , _gsidItemCount             :: !(Maybe Integer)
-  , _gsidIndexName             :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GlobalSecondaryIndexDescription =
+  GlobalSecondaryIndexDescription'
+    { _gsidBackfilling           :: !(Maybe Bool)
+    , _gsidIndexSizeBytes        :: !(Maybe Integer)
+    , _gsidIndexStatus           :: !(Maybe IndexStatus)
+    , _gsidProvisionedThroughput :: !(Maybe ProvisionedThroughputDescription)
+    , _gsidIndexARN              :: !(Maybe Text)
+    , _gsidKeySchema             :: !(Maybe (List1 KeySchemaElement))
+    , _gsidProjection            :: !(Maybe Projection)
+    , _gsidItemCount             :: !(Maybe Integer)
+    , _gsidIndexName             :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GlobalSecondaryIndexDescription' with the minimum fields required to make a request.
@@ -1174,12 +1210,14 @@ instance NFData GlobalSecondaryIndexDescription where
 --
 --
 -- /See:/ 'globalSecondaryIndexInfo' smart constructor.
-data GlobalSecondaryIndexInfo = GlobalSecondaryIndexInfo'
-  { _gsiiProvisionedThroughput :: !(Maybe ProvisionedThroughput)
-  , _gsiiKeySchema             :: !(Maybe (List1 KeySchemaElement))
-  , _gsiiProjection            :: !(Maybe Projection)
-  , _gsiiIndexName             :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GlobalSecondaryIndexInfo =
+  GlobalSecondaryIndexInfo'
+    { _gsiiProvisionedThroughput :: !(Maybe ProvisionedThroughput)
+    , _gsiiKeySchema             :: !(Maybe (List1 KeySchemaElement))
+    , _gsiiProjection            :: !(Maybe Projection)
+    , _gsiiIndexName             :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GlobalSecondaryIndexInfo' with the minimum fields required to make a request.
@@ -1247,11 +1285,13 @@ instance NFData GlobalSecondaryIndexInfo where
 --
 --
 -- /See:/ 'globalSecondaryIndexUpdate' smart constructor.
-data GlobalSecondaryIndexUpdate = GlobalSecondaryIndexUpdate'
-  { _gsiuCreate :: !(Maybe CreateGlobalSecondaryIndexAction)
-  , _gsiuDelete :: !(Maybe DeleteGlobalSecondaryIndexAction)
-  , _gsiuUpdate :: !(Maybe UpdateGlobalSecondaryIndexAction)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GlobalSecondaryIndexUpdate =
+  GlobalSecondaryIndexUpdate'
+    { _gsiuCreate :: !(Maybe CreateGlobalSecondaryIndexAction)
+    , _gsiuDelete :: !(Maybe DeleteGlobalSecondaryIndexAction)
+    , _gsiuUpdate :: !(Maybe UpdateGlobalSecondaryIndexAction)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GlobalSecondaryIndexUpdate' with the minimum fields required to make a request.
@@ -1299,10 +1339,12 @@ instance ToJSON GlobalSecondaryIndexUpdate where
 --
 --
 -- /See:/ 'globalTable' smart constructor.
-data GlobalTable = GlobalTable'
-  { _gtGlobalTableName  :: !(Maybe Text)
-  , _gtReplicationGroup :: !(Maybe [Replica])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GlobalTable =
+  GlobalTable'
+    { _gtGlobalTableName  :: !(Maybe Text)
+    , _gtReplicationGroup :: !(Maybe [Replica])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GlobalTable' with the minimum fields required to make a request.
@@ -1343,13 +1385,15 @@ instance NFData GlobalTable where
 --
 --
 -- /See:/ 'globalTableDescription' smart constructor.
-data GlobalTableDescription = GlobalTableDescription'
-  { _gtdGlobalTableStatus :: !(Maybe GlobalTableStatus)
-  , _gtdGlobalTableName   :: !(Maybe Text)
-  , _gtdGlobalTableARN    :: !(Maybe Text)
-  , _gtdCreationDateTime  :: !(Maybe POSIX)
-  , _gtdReplicationGroup  :: !(Maybe [ReplicaDescription])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GlobalTableDescription =
+  GlobalTableDescription'
+    { _gtdGlobalTableStatus :: !(Maybe GlobalTableStatus)
+    , _gtdGlobalTableName   :: !(Maybe Text)
+    , _gtdGlobalTableARN    :: !(Maybe Text)
+    , _gtdCreationDateTime  :: !(Maybe POSIX)
+    , _gtdReplicationGroup  :: !(Maybe [ReplicaDescription])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GlobalTableDescription' with the minimum fields required to make a request.
@@ -1417,10 +1461,12 @@ instance NFData GlobalTableDescription where
 --
 --
 -- /See:/ 'globalTableGlobalSecondaryIndexSettingsUpdate' smart constructor.
-data GlobalTableGlobalSecondaryIndexSettingsUpdate = GlobalTableGlobalSecondaryIndexSettingsUpdate'
-  { _gtgsisuProvisionedWriteCapacityUnits :: !(Maybe Nat)
-  , _gtgsisuIndexName                     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GlobalTableGlobalSecondaryIndexSettingsUpdate =
+  GlobalTableGlobalSecondaryIndexSettingsUpdate'
+    { _gtgsisuProvisionedWriteCapacityUnits :: !(Maybe Nat)
+    , _gtgsisuIndexName                     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GlobalTableGlobalSecondaryIndexSettingsUpdate' with the minimum fields required to make a request.
@@ -1472,10 +1518,12 @@ instance ToJSON
 --
 --
 -- /See:/ 'itemCollectionMetrics' smart constructor.
-data ItemCollectionMetrics = ItemCollectionMetrics'
-  { _icmItemCollectionKey   :: !(Maybe (Map Text AttributeValue))
-  , _icmSizeEstimateRangeGB :: !(Maybe [Double])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ItemCollectionMetrics =
+  ItemCollectionMetrics'
+    { _icmItemCollectionKey   :: !(Maybe (Map Text AttributeValue))
+    , _icmSizeEstimateRangeGB :: !(Maybe [Double])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ItemCollectionMetrics' with the minimum fields required to make a request.
@@ -1521,10 +1569,12 @@ instance NFData ItemCollectionMetrics where
 --
 --
 -- /See:/ 'keySchemaElement' smart constructor.
-data KeySchemaElement = KeySchemaElement'
-  { _kseAttributeName :: !Text
-  , _kseKeyType       :: !KeyType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data KeySchemaElement =
+  KeySchemaElement'
+    { _kseAttributeName :: !Text
+    , _kseKeyType       :: !KeyType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'KeySchemaElement' with the minimum fields required to make a request.
@@ -1576,13 +1626,15 @@ instance ToJSON KeySchemaElement where
 --
 --
 -- /See:/ 'keysAndAttributes' smart constructor.
-data KeysAndAttributes = KeysAndAttributes'
-  { _kaaProjectionExpression     :: !(Maybe Text)
-  , _kaaAttributesToGet          :: !(Maybe (List1 Text))
-  , _kaaExpressionAttributeNames :: !(Maybe (Map Text Text))
-  , _kaaConsistentRead           :: !(Maybe Bool)
-  , _kaaKeys                     :: !(List1 (Map Text AttributeValue))
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data KeysAndAttributes =
+  KeysAndAttributes'
+    { _kaaProjectionExpression     :: !(Maybe Text)
+    , _kaaAttributesToGet          :: !(Maybe (List1 Text))
+    , _kaaExpressionAttributeNames :: !(Maybe (Map Text Text))
+    , _kaaConsistentRead           :: !(Maybe Bool)
+    , _kaaKeys                     :: !(List1 (Map Text AttributeValue))
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'KeysAndAttributes' with the minimum fields required to make a request.
@@ -1663,11 +1715,13 @@ instance ToJSON KeysAndAttributes where
 --
 --
 -- /See:/ 'localSecondaryIndex' smart constructor.
-data LocalSecondaryIndex = LocalSecondaryIndex'
-  { _lsiIndexName  :: !Text
-  , _lsiKeySchema  :: !(List1 KeySchemaElement)
-  , _lsiProjection :: !Projection
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LocalSecondaryIndex =
+  LocalSecondaryIndex'
+    { _lsiIndexName  :: !Text
+    , _lsiKeySchema  :: !(List1 KeySchemaElement)
+    , _lsiProjection :: !Projection
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LocalSecondaryIndex' with the minimum fields required to make a request.
@@ -1721,14 +1775,16 @@ instance ToJSON LocalSecondaryIndex where
 --
 --
 -- /See:/ 'localSecondaryIndexDescription' smart constructor.
-data LocalSecondaryIndexDescription = LocalSecondaryIndexDescription'
-  { _lsidIndexSizeBytes :: !(Maybe Integer)
-  , _lsidIndexARN       :: !(Maybe Text)
-  , _lsidKeySchema      :: !(Maybe (List1 KeySchemaElement))
-  , _lsidProjection     :: !(Maybe Projection)
-  , _lsidItemCount      :: !(Maybe Integer)
-  , _lsidIndexName      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LocalSecondaryIndexDescription =
+  LocalSecondaryIndexDescription'
+    { _lsidIndexSizeBytes :: !(Maybe Integer)
+    , _lsidIndexARN       :: !(Maybe Text)
+    , _lsidKeySchema      :: !(Maybe (List1 KeySchemaElement))
+    , _lsidProjection     :: !(Maybe Projection)
+    , _lsidItemCount      :: !(Maybe Integer)
+    , _lsidIndexName      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LocalSecondaryIndexDescription' with the minimum fields required to make a request.
@@ -1805,11 +1861,13 @@ instance NFData LocalSecondaryIndexDescription where
 --
 --
 -- /See:/ 'localSecondaryIndexInfo' smart constructor.
-data LocalSecondaryIndexInfo = LocalSecondaryIndexInfo'
-  { _lsiiKeySchema  :: !(Maybe (List1 KeySchemaElement))
-  , _lsiiProjection :: !(Maybe Projection)
-  , _lsiiIndexName  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LocalSecondaryIndexInfo =
+  LocalSecondaryIndexInfo'
+    { _lsiiKeySchema  :: !(Maybe (List1 KeySchemaElement))
+    , _lsiiProjection :: !(Maybe Projection)
+    , _lsiiIndexName  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LocalSecondaryIndexInfo' with the minimum fields required to make a request.
@@ -1860,11 +1918,13 @@ instance NFData LocalSecondaryIndexInfo where
 --
 --
 -- /See:/ 'pointInTimeRecoveryDescription' smart constructor.
-data PointInTimeRecoveryDescription = PointInTimeRecoveryDescription'
-  { _pitrdPointInTimeRecoveryStatus  :: !(Maybe PointInTimeRecoveryStatus)
-  , _pitrdEarliestRestorableDateTime :: !(Maybe POSIX)
-  , _pitrdLatestRestorableDateTime   :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PointInTimeRecoveryDescription =
+  PointInTimeRecoveryDescription'
+    { _pitrdPointInTimeRecoveryStatus  :: !(Maybe PointInTimeRecoveryStatus)
+    , _pitrdEarliestRestorableDateTime :: !(Maybe POSIX)
+    , _pitrdLatestRestorableDateTime   :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PointInTimeRecoveryDescription' with the minimum fields required to make a request.
@@ -1918,9 +1978,11 @@ instance NFData PointInTimeRecoveryDescription where
 --
 --
 -- /See:/ 'pointInTimeRecoverySpecification' smart constructor.
-newtype PointInTimeRecoverySpecification = PointInTimeRecoverySpecification'
-  { _pitrsPointInTimeRecoveryEnabled :: Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype PointInTimeRecoverySpecification =
+  PointInTimeRecoverySpecification'
+    { _pitrsPointInTimeRecoveryEnabled :: Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PointInTimeRecoverySpecification' with the minimum fields required to make a request.
@@ -1960,10 +2022,12 @@ instance ToJSON PointInTimeRecoverySpecification
 --
 --
 -- /See:/ 'projection' smart constructor.
-data Projection = Projection'
-  { _pProjectionType   :: !(Maybe ProjectionType)
-  , _pNonKeyAttributes :: !(Maybe (List1 Text))
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Projection =
+  Projection'
+    { _pProjectionType   :: !(Maybe ProjectionType)
+    , _pNonKeyAttributes :: !(Maybe (List1 Text))
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Projection' with the minimum fields required to make a request.
@@ -2013,10 +2077,12 @@ instance ToJSON Projection where
 --
 --
 -- /See:/ 'provisionedThroughput' smart constructor.
-data ProvisionedThroughput = ProvisionedThroughput'
-  { _ptReadCapacityUnits  :: !Nat
-  , _ptWriteCapacityUnits :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ProvisionedThroughput =
+  ProvisionedThroughput'
+    { _ptReadCapacityUnits  :: !Nat
+    , _ptWriteCapacityUnits :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ProvisionedThroughput' with the minimum fields required to make a request.
@@ -2070,13 +2136,15 @@ instance ToJSON ProvisionedThroughput where
 --
 --
 -- /See:/ 'provisionedThroughputDescription' smart constructor.
-data ProvisionedThroughputDescription = ProvisionedThroughputDescription'
-  { _ptdReadCapacityUnits      :: !(Maybe Nat)
-  , _ptdLastDecreaseDateTime   :: !(Maybe POSIX)
-  , _ptdWriteCapacityUnits     :: !(Maybe Nat)
-  , _ptdNumberOfDecreasesToday :: !(Maybe Nat)
-  , _ptdLastIncreaseDateTime   :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ProvisionedThroughputDescription =
+  ProvisionedThroughputDescription'
+    { _ptdReadCapacityUnits      :: !(Maybe Nat)
+    , _ptdLastDecreaseDateTime   :: !(Maybe POSIX)
+    , _ptdWriteCapacityUnits     :: !(Maybe Nat)
+    , _ptdNumberOfDecreasesToday :: !(Maybe Nat)
+    , _ptdLastIncreaseDateTime   :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ProvisionedThroughputDescription' with the minimum fields required to make a request.
@@ -2147,9 +2215,11 @@ instance NFData ProvisionedThroughputDescription
 --
 --
 -- /See:/ 'putRequest' smart constructor.
-newtype PutRequest = PutRequest'
-  { _prItem :: Map Text AttributeValue
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype PutRequest =
+  PutRequest'
+    { _prItem :: Map Text AttributeValue
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutRequest' with the minimum fields required to make a request.
@@ -2184,9 +2254,11 @@ instance ToJSON PutRequest where
 --
 --
 -- /See:/ 'replica' smart constructor.
-newtype Replica = Replica'
-  { _rRegionName :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype Replica =
+  Replica'
+    { _rRegionName :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Replica' with the minimum fields required to make a request.
@@ -2222,9 +2294,11 @@ instance ToJSON Replica where
 --
 --
 -- /See:/ 'replicaDescription' smart constructor.
-newtype ReplicaDescription = ReplicaDescription'
-  { _rdRegionName :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ReplicaDescription =
+  ReplicaDescription'
+    { _rdRegionName :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReplicaDescription' with the minimum fields required to make a request.
@@ -2255,12 +2329,14 @@ instance NFData ReplicaDescription where
 --
 --
 -- /See:/ 'replicaGlobalSecondaryIndexSettingsDescription' smart constructor.
-data ReplicaGlobalSecondaryIndexSettingsDescription = ReplicaGlobalSecondaryIndexSettingsDescription'
-  { _rgsisdIndexStatus                   :: !(Maybe IndexStatus)
-  , _rgsisdProvisionedReadCapacityUnits  :: !(Maybe Nat)
-  , _rgsisdProvisionedWriteCapacityUnits :: !(Maybe Nat)
-  , _rgsisdIndexName                     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReplicaGlobalSecondaryIndexSettingsDescription =
+  ReplicaGlobalSecondaryIndexSettingsDescription'
+    { _rgsisdIndexStatus                   :: !(Maybe IndexStatus)
+    , _rgsisdProvisionedReadCapacityUnits  :: !(Maybe Nat)
+    , _rgsisdProvisionedWriteCapacityUnits :: !(Maybe Nat)
+    , _rgsisdIndexName                     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReplicaGlobalSecondaryIndexSettingsDescription' with the minimum fields required to make a request.
@@ -2328,10 +2404,12 @@ instance NFData
 --
 --
 -- /See:/ 'replicaGlobalSecondaryIndexSettingsUpdate' smart constructor.
-data ReplicaGlobalSecondaryIndexSettingsUpdate = ReplicaGlobalSecondaryIndexSettingsUpdate'
-  { _rgsisuProvisionedReadCapacityUnits :: !(Maybe Nat)
-  , _rgsisuIndexName                    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReplicaGlobalSecondaryIndexSettingsUpdate =
+  ReplicaGlobalSecondaryIndexSettingsUpdate'
+    { _rgsisuProvisionedReadCapacityUnits :: !(Maybe Nat)
+    , _rgsisuIndexName                    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReplicaGlobalSecondaryIndexSettingsUpdate' with the minimum fields required to make a request.
@@ -2382,13 +2460,15 @@ instance ToJSON
 --
 --
 -- /See:/ 'replicaSettingsDescription' smart constructor.
-data ReplicaSettingsDescription = ReplicaSettingsDescription'
-  { _rsdReplicaStatus :: !(Maybe ReplicaStatus)
-  , _rsdReplicaProvisionedReadCapacityUnits :: !(Maybe Nat)
-  , _rsdReplicaProvisionedWriteCapacityUnits :: !(Maybe Nat)
-  , _rsdReplicaGlobalSecondaryIndexSettings :: !(Maybe [ReplicaGlobalSecondaryIndexSettingsDescription])
-  , _rsdRegionName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReplicaSettingsDescription =
+  ReplicaSettingsDescription'
+    { _rsdReplicaStatus :: !(Maybe ReplicaStatus)
+    , _rsdReplicaProvisionedReadCapacityUnits :: !(Maybe Nat)
+    , _rsdReplicaProvisionedWriteCapacityUnits :: !(Maybe Nat)
+    , _rsdReplicaGlobalSecondaryIndexSettings :: !(Maybe [ReplicaGlobalSecondaryIndexSettingsDescription])
+    , _rsdRegionName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReplicaSettingsDescription' with the minimum fields required to make a request.
@@ -2459,11 +2539,13 @@ instance NFData ReplicaSettingsDescription where
 --
 --
 -- /See:/ 'replicaSettingsUpdate' smart constructor.
-data ReplicaSettingsUpdate = ReplicaSettingsUpdate'
-  { _rsuReplicaProvisionedReadCapacityUnits :: !(Maybe Nat)
-  , _rsuReplicaGlobalSecondaryIndexSettingsUpdate :: !(Maybe (List1 ReplicaGlobalSecondaryIndexSettingsUpdate))
-  , _rsuRegionName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReplicaSettingsUpdate =
+  ReplicaSettingsUpdate'
+    { _rsuReplicaProvisionedReadCapacityUnits :: !(Maybe Nat)
+    , _rsuReplicaGlobalSecondaryIndexSettingsUpdate :: !(Maybe (List1 ReplicaGlobalSecondaryIndexSettingsUpdate))
+    , _rsuRegionName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReplicaSettingsUpdate' with the minimum fields required to make a request.
@@ -2525,10 +2607,12 @@ instance ToJSON ReplicaSettingsUpdate where
 --
 --
 -- /See:/ 'replicaUpdate' smart constructor.
-data ReplicaUpdate = ReplicaUpdate'
-  { _ruCreate :: !(Maybe CreateReplicaAction)
-  , _ruDelete :: !(Maybe DeleteReplicaAction)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReplicaUpdate =
+  ReplicaUpdate'
+    { _ruCreate :: !(Maybe CreateReplicaAction)
+    , _ruDelete :: !(Maybe DeleteReplicaAction)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReplicaUpdate' with the minimum fields required to make a request.
@@ -2567,12 +2651,14 @@ instance ToJSON ReplicaUpdate where
 --
 --
 -- /See:/ 'restoreSummary' smart constructor.
-data RestoreSummary = RestoreSummary'
-  { _rsSourceTableARN    :: !(Maybe Text)
-  , _rsSourceBackupARN   :: !(Maybe Text)
-  , _rsRestoreDateTime   :: !POSIX
-  , _rsRestoreInProgress :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RestoreSummary =
+  RestoreSummary'
+    { _rsSourceTableARN    :: !(Maybe Text)
+    , _rsSourceBackupARN   :: !(Maybe Text)
+    , _rsRestoreDateTime   :: !POSIX
+    , _rsRestoreInProgress :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RestoreSummary' with the minimum fields required to make a request.
@@ -2634,9 +2720,11 @@ instance NFData RestoreSummary where
 --
 --
 -- /See:/ 'sSEDescription' smart constructor.
-newtype SSEDescription = SSEDescription'
-  { _ssedStatus :: Maybe SSEStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype SSEDescription =
+  SSEDescription'
+    { _ssedStatus :: Maybe SSEStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SSEDescription' with the minimum fields required to make a request.
@@ -2667,9 +2755,11 @@ instance NFData SSEDescription where
 --
 --
 -- /See:/ 'sSESpecification' smart constructor.
-newtype SSESpecification = SSESpecification'
-  { _ssesEnabled :: Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype SSESpecification =
+  SSESpecification'
+    { _ssesEnabled :: Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SSESpecification' with the minimum fields required to make a request.
@@ -2701,16 +2791,18 @@ instance ToJSON SSESpecification where
 --
 --
 -- /See:/ 'sourceTableDetails' smart constructor.
-data SourceTableDetails = SourceTableDetails'
-  { _stdTableSizeBytes        :: !(Maybe Integer)
-  , _stdTableARN              :: !(Maybe Text)
-  , _stdItemCount             :: !(Maybe Nat)
-  , _stdTableName             :: !Text
-  , _stdTableId               :: !Text
-  , _stdKeySchema             :: !(List1 KeySchemaElement)
-  , _stdTableCreationDateTime :: !POSIX
-  , _stdProvisionedThroughput :: !ProvisionedThroughput
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SourceTableDetails =
+  SourceTableDetails'
+    { _stdTableSizeBytes        :: !(Maybe Integer)
+    , _stdTableARN              :: !(Maybe Text)
+    , _stdItemCount             :: !(Maybe Nat)
+    , _stdTableName             :: !Text
+    , _stdTableId               :: !Text
+    , _stdKeySchema             :: !(List1 KeySchemaElement)
+    , _stdTableCreationDateTime :: !POSIX
+    , _stdProvisionedThroughput :: !ProvisionedThroughput
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SourceTableDetails' with the minimum fields required to make a request.
@@ -2806,13 +2898,15 @@ instance NFData SourceTableDetails where
 --
 --
 -- /See:/ 'sourceTableFeatureDetails' smart constructor.
-data SourceTableFeatureDetails = SourceTableFeatureDetails'
-  { _stfdStreamDescription      :: !(Maybe StreamSpecification)
-  , _stfdGlobalSecondaryIndexes :: !(Maybe [GlobalSecondaryIndexInfo])
-  , _stfdLocalSecondaryIndexes  :: !(Maybe [LocalSecondaryIndexInfo])
-  , _stfdSSEDescription         :: !(Maybe SSEDescription)
-  , _stfdTimeToLiveDescription  :: !(Maybe TimeToLiveDescription)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SourceTableFeatureDetails =
+  SourceTableFeatureDetails'
+    { _stfdStreamDescription      :: !(Maybe StreamSpecification)
+    , _stfdGlobalSecondaryIndexes :: !(Maybe [GlobalSecondaryIndexInfo])
+    , _stfdLocalSecondaryIndexes  :: !(Maybe [LocalSecondaryIndexInfo])
+    , _stfdSSEDescription         :: !(Maybe SSEDescription)
+    , _stfdTimeToLiveDescription  :: !(Maybe TimeToLiveDescription)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SourceTableFeatureDetails' with the minimum fields required to make a request.
@@ -2880,10 +2974,12 @@ instance NFData SourceTableFeatureDetails where
 --
 --
 -- /See:/ 'streamSpecification' smart constructor.
-data StreamSpecification = StreamSpecification'
-  { _ssStreamViewType :: !(Maybe StreamViewType)
-  , _ssStreamEnabled  :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StreamSpecification =
+  StreamSpecification'
+    { _ssStreamViewType :: !(Maybe StreamViewType)
+    , _ssStreamEnabled  :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StreamSpecification' with the minimum fields required to make a request.
@@ -2930,25 +3026,27 @@ instance ToJSON StreamSpecification where
 --
 --
 -- /See:/ 'tableDescription' smart constructor.
-data TableDescription = TableDescription'
-  { _tdRestoreSummary         :: !(Maybe RestoreSummary)
-  , _tdTableSizeBytes         :: !(Maybe Integer)
-  , _tdAttributeDefinitions   :: !(Maybe [AttributeDefinition])
-  , _tdLatestStreamARN        :: !(Maybe Text)
-  , _tdProvisionedThroughput  :: !(Maybe ProvisionedThroughputDescription)
-  , _tdTableStatus            :: !(Maybe TableStatus)
-  , _tdTableARN               :: !(Maybe Text)
-  , _tdKeySchema              :: !(Maybe (List1 KeySchemaElement))
-  , _tdGlobalSecondaryIndexes :: !(Maybe [GlobalSecondaryIndexDescription])
-  , _tdLatestStreamLabel      :: !(Maybe Text)
-  , _tdLocalSecondaryIndexes  :: !(Maybe [LocalSecondaryIndexDescription])
-  , _tdCreationDateTime       :: !(Maybe POSIX)
-  , _tdSSEDescription         :: !(Maybe SSEDescription)
-  , _tdTableId                :: !(Maybe Text)
-  , _tdItemCount              :: !(Maybe Integer)
-  , _tdTableName              :: !(Maybe Text)
-  , _tdStreamSpecification    :: !(Maybe StreamSpecification)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TableDescription =
+  TableDescription'
+    { _tdRestoreSummary         :: !(Maybe RestoreSummary)
+    , _tdTableSizeBytes         :: !(Maybe Integer)
+    , _tdAttributeDefinitions   :: !(Maybe [AttributeDefinition])
+    , _tdLatestStreamARN        :: !(Maybe Text)
+    , _tdProvisionedThroughput  :: !(Maybe ProvisionedThroughputDescription)
+    , _tdTableStatus            :: !(Maybe TableStatus)
+    , _tdTableARN               :: !(Maybe Text)
+    , _tdKeySchema              :: !(Maybe (List1 KeySchemaElement))
+    , _tdGlobalSecondaryIndexes :: !(Maybe [GlobalSecondaryIndexDescription])
+    , _tdLatestStreamLabel      :: !(Maybe Text)
+    , _tdLocalSecondaryIndexes  :: !(Maybe [LocalSecondaryIndexDescription])
+    , _tdCreationDateTime       :: !(Maybe POSIX)
+    , _tdSSEDescription         :: !(Maybe SSEDescription)
+    , _tdTableId                :: !(Maybe Text)
+    , _tdItemCount              :: !(Maybe Integer)
+    , _tdTableName              :: !(Maybe Text)
+    , _tdStreamSpecification    :: !(Maybe StreamSpecification)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TableDescription' with the minimum fields required to make a request.
@@ -3115,10 +3213,12 @@ instance NFData TableDescription where
 --
 --
 -- /See:/ 'tag' smart constructor.
-data Tag = Tag'
-  { _tagKey   :: !Text
-  , _tagValue :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Tag =
+  Tag'
+    { _tagKey   :: !Text
+    , _tagValue :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Tag' with the minimum fields required to make a request.
@@ -3164,10 +3264,12 @@ instance ToJSON Tag where
 --
 --
 -- /See:/ 'timeToLiveDescription' smart constructor.
-data TimeToLiveDescription = TimeToLiveDescription'
-  { _ttldTimeToLiveStatus :: !(Maybe TimeToLiveStatus)
-  , _ttldAttributeName    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TimeToLiveDescription =
+  TimeToLiveDescription'
+    { _ttldTimeToLiveStatus :: !(Maybe TimeToLiveStatus)
+    , _ttldAttributeName    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TimeToLiveDescription' with the minimum fields required to make a request.
@@ -3209,10 +3311,12 @@ instance NFData TimeToLiveDescription where
 --
 --
 -- /See:/ 'timeToLiveSpecification' smart constructor.
-data TimeToLiveSpecification = TimeToLiveSpecification'
-  { _ttlsEnabled       :: !Bool
-  , _ttlsAttributeName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TimeToLiveSpecification =
+  TimeToLiveSpecification'
+    { _ttlsEnabled       :: !Bool
+    , _ttlsAttributeName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TimeToLiveSpecification' with the minimum fields required to make a request.
@@ -3262,10 +3366,12 @@ instance ToJSON TimeToLiveSpecification where
 --
 --
 -- /See:/ 'updateGlobalSecondaryIndexAction' smart constructor.
-data UpdateGlobalSecondaryIndexAction = UpdateGlobalSecondaryIndexAction'
-  { _ugsiaIndexName             :: !Text
-  , _ugsiaProvisionedThroughput :: !ProvisionedThroughput
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateGlobalSecondaryIndexAction =
+  UpdateGlobalSecondaryIndexAction'
+    { _ugsiaIndexName             :: !Text
+    , _ugsiaProvisionedThroughput :: !ProvisionedThroughput
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateGlobalSecondaryIndexAction' with the minimum fields required to make a request.
@@ -3315,10 +3421,12 @@ instance ToJSON UpdateGlobalSecondaryIndexAction
 --
 --
 -- /See:/ 'writeRequest' smart constructor.
-data WriteRequest = WriteRequest'
-  { _wrDeleteRequest :: !(Maybe DeleteRequest)
-  , _wrPutRequest    :: !(Maybe PutRequest)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data WriteRequest =
+  WriteRequest'
+    { _wrDeleteRequest :: !(Maybe DeleteRequest)
+    , _wrPutRequest    :: !(Maybe PutRequest)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'WriteRequest' with the minimum fields required to make a request.

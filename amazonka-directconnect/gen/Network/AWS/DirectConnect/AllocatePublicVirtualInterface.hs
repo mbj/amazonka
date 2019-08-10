@@ -74,11 +74,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'allocatePublicVirtualInterface' smart constructor.
-data AllocatePublicVirtualInterface = AllocatePublicVirtualInterface'
-  { _aConnectionId :: !Text
-  , _aOwnerAccount :: !Text
-  , _aNewPublicVirtualInterfaceAllocation :: !NewPublicVirtualInterfaceAllocation
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AllocatePublicVirtualInterface =
+  AllocatePublicVirtualInterface'
+    { _aConnectionId :: !Text
+    , _aOwnerAccount :: !Text
+    , _aNewPublicVirtualInterfaceAllocation :: !NewPublicVirtualInterfaceAllocation
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AllocatePublicVirtualInterface' with the minimum fields required to make a request.

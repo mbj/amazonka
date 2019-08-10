@@ -49,12 +49,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'batchGetImage' smart constructor.
-data BatchGetImage = BatchGetImage'
-  { _bgiRegistryId         :: !(Maybe Text)
-  , _bgiAcceptedMediaTypes :: !(Maybe (List1 Text))
-  , _bgiRepositoryName     :: !Text
-  , _bgiImageIds           :: ![ImageIdentifier]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchGetImage =
+  BatchGetImage'
+    { _bgiRegistryId         :: !(Maybe Text)
+    , _bgiAcceptedMediaTypes :: !(Maybe (List1 Text))
+    , _bgiRepositoryName     :: !Text
+    , _bgiImageIds           :: ![ImageIdentifier]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchGetImage' with the minimum fields required to make a request.
@@ -137,11 +139,13 @@ instance ToQuery BatchGetImage where
         toQuery = const mempty
 
 -- | /See:/ 'batchGetImageResponse' smart constructor.
-data BatchGetImageResponse = BatchGetImageResponse'
-  { _bgirsImages         :: !(Maybe [Image])
-  , _bgirsFailures       :: !(Maybe [ImageFailure])
-  , _bgirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchGetImageResponse =
+  BatchGetImageResponse'
+    { _bgirsImages         :: !(Maybe [Image])
+    , _bgirsFailures       :: !(Maybe [ImageFailure])
+    , _bgirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchGetImageResponse' with the minimum fields required to make a request.

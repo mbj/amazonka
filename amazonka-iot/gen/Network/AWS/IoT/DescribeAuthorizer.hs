@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeAuthorizer' smart constructor.
-newtype DescribeAuthorizer = DescribeAuthorizer'
-  { _daAuthorizerName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeAuthorizer =
+  DescribeAuthorizer'
+    { _daAuthorizerName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAuthorizer' with the minimum fields required to make a request.
@@ -92,10 +94,12 @@ instance ToQuery DescribeAuthorizer where
         toQuery = const mempty
 
 -- | /See:/ 'describeAuthorizerResponse' smart constructor.
-data DescribeAuthorizerResponse = DescribeAuthorizerResponse'
-  { _darsAuthorizerDescription :: !(Maybe AuthorizerDescription)
-  , _darsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAuthorizerResponse =
+  DescribeAuthorizerResponse'
+    { _darsAuthorizerDescription :: !(Maybe AuthorizerDescription)
+    , _darsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAuthorizerResponse' with the minimum fields required to make a request.

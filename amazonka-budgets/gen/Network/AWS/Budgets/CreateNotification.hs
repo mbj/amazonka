@@ -51,12 +51,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createNotification' smart constructor.
-data CreateNotification = CreateNotification'
-  { _cnAccountId    :: !Text
-  , _cnBudgetName   :: !Text
-  , _cnNotification :: !Notification
-  , _cnSubscribers  :: !(List1 Subscriber)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateNotification =
+  CreateNotification'
+    { _cnAccountId    :: !Text
+    , _cnBudgetName   :: !Text
+    , _cnNotification :: !Notification
+    , _cnSubscribers  :: !(List1 Subscriber)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateNotification' with the minimum fields required to make a request.
@@ -144,9 +146,11 @@ instance ToQuery CreateNotification where
 --
 --
 -- /See:/ 'createNotificationResponse' smart constructor.
-newtype CreateNotificationResponse = CreateNotificationResponse'
-  { _cnrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateNotificationResponse =
+  CreateNotificationResponse'
+    { _cnrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateNotificationResponse' with the minimum fields required to make a request.

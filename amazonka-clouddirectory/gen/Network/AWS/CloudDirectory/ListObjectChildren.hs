@@ -50,13 +50,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listObjectChildren' smart constructor.
-data ListObjectChildren = ListObjectChildren'
-  { _locConsistencyLevel :: !(Maybe ConsistencyLevel)
-  , _locNextToken        :: !(Maybe Text)
-  , _locMaxResults       :: !(Maybe Nat)
-  , _locDirectoryARN     :: !Text
-  , _locObjectReference  :: !ObjectReference
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListObjectChildren =
+  ListObjectChildren'
+    { _locConsistencyLevel :: !(Maybe ConsistencyLevel)
+    , _locNextToken        :: !(Maybe Text)
+    , _locMaxResults       :: !(Maybe Nat)
+    , _locDirectoryARN     :: !Text
+    , _locObjectReference  :: !ObjectReference
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListObjectChildren' with the minimum fields required to make a request.
@@ -144,11 +146,13 @@ instance ToQuery ListObjectChildren where
         toQuery = const mempty
 
 -- | /See:/ 'listObjectChildrenResponse' smart constructor.
-data ListObjectChildrenResponse = ListObjectChildrenResponse'
-  { _locrsChildren       :: !(Maybe (Map Text Text))
-  , _locrsNextToken      :: !(Maybe Text)
-  , _locrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListObjectChildrenResponse =
+  ListObjectChildrenResponse'
+    { _locrsChildren       :: !(Maybe (Map Text Text))
+    , _locrsNextToken      :: !(Maybe Text)
+    , _locrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListObjectChildrenResponse' with the minimum fields required to make a request.

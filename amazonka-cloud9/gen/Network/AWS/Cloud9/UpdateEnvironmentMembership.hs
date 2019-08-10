@@ -47,11 +47,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateEnvironmentMembership' smart constructor.
-data UpdateEnvironmentMembership = UpdateEnvironmentMembership'
-  { _uemEnvironmentId :: !Text
-  , _uemUserARN       :: !Text
-  , _uemPermissions   :: !MemberPermissions
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateEnvironmentMembership =
+  UpdateEnvironmentMembership'
+    { _uemEnvironmentId :: !Text
+    , _uemUserARN       :: !Text
+    , _uemPermissions   :: !MemberPermissions
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateEnvironmentMembership' with the minimum fields required to make a request.
@@ -127,10 +129,12 @@ instance ToQuery UpdateEnvironmentMembership where
         toQuery = const mempty
 
 -- | /See:/ 'updateEnvironmentMembershipResponse' smart constructor.
-data UpdateEnvironmentMembershipResponse = UpdateEnvironmentMembershipResponse'
-  { _uemrsMembership     :: !(Maybe EnvironmentMember)
-  , _uemrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateEnvironmentMembershipResponse =
+  UpdateEnvironmentMembershipResponse'
+    { _uemrsMembership     :: !(Maybe EnvironmentMember)
+    , _uemrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateEnvironmentMembershipResponse' with the minimum fields required to make a request.

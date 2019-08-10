@@ -51,11 +51,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeLaunchConfigurations' smart constructor.
-data DescribeLaunchConfigurations = DescribeLaunchConfigurations'
-  { _dlcLaunchConfigurationNames :: !(Maybe [Text])
-  , _dlcNextToken                :: !(Maybe Text)
-  , _dlcMaxRecords               :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeLaunchConfigurations =
+  DescribeLaunchConfigurations'
+    { _dlcLaunchConfigurationNames :: !(Maybe [Text])
+    , _dlcNextToken                :: !(Maybe Text)
+    , _dlcMaxRecords               :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeLaunchConfigurations' with the minimum fields required to make a request.
@@ -134,11 +136,13 @@ instance ToQuery DescribeLaunchConfigurations where
                "MaxRecords" =: _dlcMaxRecords]
 
 -- | /See:/ 'describeLaunchConfigurationsResponse' smart constructor.
-data DescribeLaunchConfigurationsResponse = DescribeLaunchConfigurationsResponse'
-  { _dlcrsNextToken            :: !(Maybe Text)
-  , _dlcrsResponseStatus       :: !Int
-  , _dlcrsLaunchConfigurations :: ![LaunchConfiguration]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeLaunchConfigurationsResponse =
+  DescribeLaunchConfigurationsResponse'
+    { _dlcrsNextToken            :: !(Maybe Text)
+    , _dlcrsResponseStatus       :: !Int
+    , _dlcrsLaunchConfigurations :: ![LaunchConfiguration]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeLaunchConfigurationsResponse' with the minimum fields required to make a request.

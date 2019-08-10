@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteTrust' smart constructor.
-data DeleteTrust = DeleteTrust'
-  { _dtDeleteAssociatedConditionalForwarder :: !(Maybe Bool)
-  , _dtTrustId                              :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteTrust =
+  DeleteTrust'
+    { _dtDeleteAssociatedConditionalForwarder :: !(Maybe Bool)
+    , _dtTrustId                              :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteTrust' with the minimum fields required to make a request.
@@ -121,10 +123,12 @@ instance ToQuery DeleteTrust where
 --
 --
 -- /See:/ 'deleteTrustResponse' smart constructor.
-data DeleteTrustResponse = DeleteTrustResponse'
-  { _dttrsTrustId        :: !(Maybe Text)
-  , _dttrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteTrustResponse =
+  DeleteTrustResponse'
+    { _dttrsTrustId        :: !(Maybe Text)
+    , _dttrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteTrustResponse' with the minimum fields required to make a request.

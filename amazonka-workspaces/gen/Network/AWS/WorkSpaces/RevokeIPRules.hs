@@ -45,10 +45,12 @@ import Network.AWS.WorkSpaces.Types
 import Network.AWS.WorkSpaces.Types.Product
 
 -- | /See:/ 'revokeIPRules' smart constructor.
-data RevokeIPRules = RevokeIPRules'
-  { _rirGroupId   :: !Text
-  , _rirUserRules :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RevokeIPRules =
+  RevokeIPRules'
+    { _rirGroupId   :: !Text
+    , _rirUserRules :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RevokeIPRules' with the minimum fields required to make a request.
@@ -108,9 +110,11 @@ instance ToQuery RevokeIPRules where
         toQuery = const mempty
 
 -- | /See:/ 'revokeIPRulesResponse' smart constructor.
-newtype RevokeIPRulesResponse = RevokeIPRulesResponse'
-  { _rirrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RevokeIPRulesResponse =
+  RevokeIPRulesResponse'
+    { _rirrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RevokeIPRulesResponse' with the minimum fields required to make a request.

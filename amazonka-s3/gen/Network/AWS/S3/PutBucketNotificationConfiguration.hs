@@ -41,10 +41,12 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'putBucketNotificationConfiguration' smart constructor.
-data PutBucketNotificationConfiguration = PutBucketNotificationConfiguration'
-  { _pbncBucket                    :: !BucketName
-  , _pbncNotificationConfiguration :: !NotificationConfiguration
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutBucketNotificationConfiguration =
+  PutBucketNotificationConfiguration'
+    { _pbncBucket                    :: !BucketName
+    , _pbncNotificationConfiguration :: !NotificationConfiguration
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutBucketNotificationConfiguration' with the minimum fields required to make a request.

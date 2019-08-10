@@ -53,11 +53,13 @@ import Network.AWS.Route53Domains.Types.Product
 --
 --
 -- /See:/ 'renewDomain' smart constructor.
-data RenewDomain = RenewDomain'
-  { _rdDurationInYears   :: !(Maybe Nat)
-  , _rdDomainName        :: !Text
-  , _rdCurrentExpiryYear :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RenewDomain =
+  RenewDomain'
+    { _rdDurationInYears   :: !(Maybe Nat)
+    , _rdDomainName        :: !Text
+    , _rdCurrentExpiryYear :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RenewDomain' with the minimum fields required to make a request.
@@ -131,10 +133,12 @@ instance ToQuery RenewDomain where
         toQuery = const mempty
 
 -- | /See:/ 'renewDomainResponse' smart constructor.
-data RenewDomainResponse = RenewDomainResponse'
-  { _rrsResponseStatus :: !Int
-  , _rrsOperationId    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RenewDomainResponse =
+  RenewDomainResponse'
+    { _rrsResponseStatus :: !Int
+    , _rrsOperationId    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RenewDomainResponse' with the minimum fields required to make a request.

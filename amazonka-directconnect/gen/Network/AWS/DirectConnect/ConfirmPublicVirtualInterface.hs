@@ -51,9 +51,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'confirmPublicVirtualInterface' smart constructor.
-newtype ConfirmPublicVirtualInterface = ConfirmPublicVirtualInterface'
-  { _cVirtualInterfaceId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ConfirmPublicVirtualInterface =
+  ConfirmPublicVirtualInterface'
+    { _cVirtualInterfaceId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ConfirmPublicVirtualInterface' with the minimum fields required to make a request.
@@ -117,10 +119,12 @@ instance ToQuery ConfirmPublicVirtualInterface where
 --
 --
 -- /See:/ 'confirmPublicVirtualInterfaceResponse' smart constructor.
-data ConfirmPublicVirtualInterfaceResponse = ConfirmPublicVirtualInterfaceResponse'
-  { _crsVirtualInterfaceState :: !(Maybe VirtualInterfaceState)
-  , _crsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ConfirmPublicVirtualInterfaceResponse =
+  ConfirmPublicVirtualInterfaceResponse'
+    { _crsVirtualInterfaceState :: !(Maybe VirtualInterfaceState)
+    , _crsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ConfirmPublicVirtualInterfaceResponse' with the minimum fields required to make a request.

@@ -49,12 +49,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'signalResource' smart constructor.
-data SignalResource = SignalResource'
-  { _sigStackName         :: !Text
-  , _sigLogicalResourceId :: !Text
-  , _sigUniqueId          :: !Text
-  , _sigStatus            :: !ResourceSignalStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SignalResource =
+  SignalResource'
+    { _sigStackName         :: !Text
+    , _sigLogicalResourceId :: !Text
+    , _sigUniqueId          :: !Text
+    , _sigStatus            :: !ResourceSignalStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SignalResource' with the minimum fields required to make a request.

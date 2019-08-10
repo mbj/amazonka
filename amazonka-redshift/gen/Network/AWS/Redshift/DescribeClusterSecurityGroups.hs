@@ -63,13 +63,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeClusterSecurityGroups' smart constructor.
-data DescribeClusterSecurityGroups = DescribeClusterSecurityGroups'
-  { _dcsgTagValues                :: !(Maybe [Text])
-  , _dcsgTagKeys                  :: !(Maybe [Text])
-  , _dcsgClusterSecurityGroupName :: !(Maybe Text)
-  , _dcsgMarker                   :: !(Maybe Text)
-  , _dcsgMaxRecords               :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeClusterSecurityGroups =
+  DescribeClusterSecurityGroups'
+    { _dcsgTagValues                :: !(Maybe [Text])
+    , _dcsgTagKeys                  :: !(Maybe [Text])
+    , _dcsgClusterSecurityGroupName :: !(Maybe Text)
+    , _dcsgMarker                   :: !(Maybe Text)
+    , _dcsgMaxRecords               :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeClusterSecurityGroups' with the minimum fields required to make a request.
@@ -170,11 +172,13 @@ instance ToQuery DescribeClusterSecurityGroups where
 --
 --
 -- /See:/ 'describeClusterSecurityGroupsResponse' smart constructor.
-data DescribeClusterSecurityGroupsResponse = DescribeClusterSecurityGroupsResponse'
-  { _dcsgsrsClusterSecurityGroups :: !(Maybe [ClusterSecurityGroup])
-  , _dcsgsrsMarker                :: !(Maybe Text)
-  , _dcsgsrsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeClusterSecurityGroupsResponse =
+  DescribeClusterSecurityGroupsResponse'
+    { _dcsgsrsClusterSecurityGroups :: !(Maybe [ClusterSecurityGroup])
+    , _dcsgsrsMarker                :: !(Maybe Text)
+    , _dcsgsrsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeClusterSecurityGroupsResponse' with the minimum fields required to make a request.

@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteSuggester' smart constructor.
-data DeleteSuggester = DeleteSuggester'
-  { _ddDomainName    :: !Text
-  , _ddSuggesterName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteSuggester =
+  DeleteSuggester'
+    { _ddDomainName    :: !Text
+    , _ddSuggesterName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteSuggester' with the minimum fields required to make a request.
@@ -112,10 +114,12 @@ instance ToQuery DeleteSuggester where
 --
 --
 -- /See:/ 'deleteSuggesterResponse' smart constructor.
-data DeleteSuggesterResponse = DeleteSuggesterResponse'
-  { _delersResponseStatus :: !Int
-  , _delersSuggester      :: !SuggesterStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteSuggesterResponse =
+  DeleteSuggesterResponse'
+    { _delersResponseStatus :: !Int
+    , _delersSuggester      :: !SuggesterStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteSuggesterResponse' with the minimum fields required to make a request.

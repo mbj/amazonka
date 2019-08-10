@@ -49,9 +49,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getResourceDefinition' smart constructor.
-newtype GetResourceDefinition = GetResourceDefinition'
-  { _grdResourceDefinitionId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetResourceDefinition =
+  GetResourceDefinition'
+    { _grdResourceDefinitionId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetResourceDefinition' with the minimum fields required to make a request.
@@ -107,16 +109,18 @@ instance ToQuery GetResourceDefinition where
         toQuery = const mempty
 
 -- | /See:/ 'getResourceDefinitionResponse' smart constructor.
-data GetResourceDefinitionResponse = GetResourceDefinitionResponse'
-  { _grdrsLatestVersionARN     :: !(Maybe Text)
-  , _grdrsARN                  :: !(Maybe Text)
-  , _grdrsName                 :: !(Maybe Text)
-  , _grdrsCreationTimestamp    :: !(Maybe Text)
-  , _grdrsId                   :: !(Maybe Text)
-  , _grdrsLatestVersion        :: !(Maybe Text)
-  , _grdrsLastUpdatedTimestamp :: !(Maybe Text)
-  , _grdrsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetResourceDefinitionResponse =
+  GetResourceDefinitionResponse'
+    { _grdrsLatestVersionARN     :: !(Maybe Text)
+    , _grdrsARN                  :: !(Maybe Text)
+    , _grdrsName                 :: !(Maybe Text)
+    , _grdrsCreationTimestamp    :: !(Maybe Text)
+    , _grdrsId                   :: !(Maybe Text)
+    , _grdrsLatestVersion        :: !(Maybe Text)
+    , _grdrsLastUpdatedTimestamp :: !(Maybe Text)
+    , _grdrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetResourceDefinitionResponse' with the minimum fields required to make a request.

@@ -45,10 +45,12 @@ import Network.AWS.WorkMail.Types
 import Network.AWS.WorkMail.Types.Product
 
 -- | /See:/ 'deleteGroup' smart constructor.
-data DeleteGroup = DeleteGroup'
-  { _dggOrganizationId :: !Text
-  , _dggGroupId        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteGroup =
+  DeleteGroup'
+    { _dggOrganizationId :: !Text
+    , _dggGroupId        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteGroup' with the minimum fields required to make a request.
@@ -109,9 +111,11 @@ instance ToQuery DeleteGroup where
         toQuery = const mempty
 
 -- | /See:/ 'deleteGroupResponse' smart constructor.
-newtype DeleteGroupResponse = DeleteGroupResponse'
-  { _dgrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteGroupResponse =
+  DeleteGroupResponse'
+    { _dgrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteGroupResponse' with the minimum fields required to make a request.

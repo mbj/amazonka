@@ -54,11 +54,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getTemplate' smart constructor.
-data GetTemplate = GetTemplate'
-  { _gtChangeSetName :: !(Maybe Text)
-  , _gtTemplateStage :: !(Maybe TemplateStage)
-  , _gtStackName     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetTemplate =
+  GetTemplate'
+    { _gtChangeSetName :: !(Maybe Text)
+    , _gtTemplateStage :: !(Maybe TemplateStage)
+    , _gtStackName     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetTemplate' with the minimum fields required to make a request.
@@ -128,11 +130,13 @@ instance ToQuery GetTemplate where
 --
 --
 -- /See:/ 'getTemplateResponse' smart constructor.
-data GetTemplateResponse = GetTemplateResponse'
-  { _gtrsStagesAvailable :: !(Maybe [TemplateStage])
-  , _gtrsTemplateBody    :: !(Maybe Text)
-  , _gtrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetTemplateResponse =
+  GetTemplateResponse'
+    { _gtrsStagesAvailable :: !(Maybe [TemplateStage])
+    , _gtrsTemplateBody    :: !(Maybe Text)
+    , _gtrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetTemplateResponse' with the minimum fields required to make a request.

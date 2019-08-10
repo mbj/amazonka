@@ -58,10 +58,12 @@ import Network.AWS.WAF.Types
 import Network.AWS.WAF.Types.Product
 
 -- | /See:/ 'deleteRule' smart constructor.
-data DeleteRule = DeleteRule'
-  { _drRuleId      :: !Text
-  , _drChangeToken :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteRule =
+  DeleteRule'
+    { _drRuleId      :: !Text
+    , _drChangeToken :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteRule' with the minimum fields required to make a request.
@@ -123,10 +125,12 @@ instance ToQuery DeleteRule where
         toQuery = const mempty
 
 -- | /See:/ 'deleteRuleResponse' smart constructor.
-data DeleteRuleResponse = DeleteRuleResponse'
-  { _drrsChangeToken    :: !(Maybe Text)
-  , _drrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteRuleResponse =
+  DeleteRuleResponse'
+    { _drrsChangeToken    :: !(Maybe Text)
+    , _drrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteRuleResponse' with the minimum fields required to make a request.

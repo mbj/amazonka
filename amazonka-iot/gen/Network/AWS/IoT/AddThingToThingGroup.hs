@@ -47,12 +47,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'addThingToThingGroup' smart constructor.
-data AddThingToThingGroup = AddThingToThingGroup'
-  { _atttgThingGroupARN  :: !(Maybe Text)
-  , _atttgThingARN       :: !(Maybe Text)
-  , _atttgThingGroupName :: !(Maybe Text)
-  , _atttgThingName      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddThingToThingGroup =
+  AddThingToThingGroup'
+    { _atttgThingGroupARN  :: !(Maybe Text)
+    , _atttgThingARN       :: !(Maybe Text)
+    , _atttgThingGroupName :: !(Maybe Text)
+    , _atttgThingName      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddThingToThingGroup' with the minimum fields required to make a request.
@@ -126,9 +128,11 @@ instance ToQuery AddThingToThingGroup where
         toQuery = const mempty
 
 -- | /See:/ 'addThingToThingGroupResponse' smart constructor.
-newtype AddThingToThingGroupResponse = AddThingToThingGroupResponse'
-  { _atttgrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AddThingToThingGroupResponse =
+  AddThingToThingGroupResponse'
+    { _atttgrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddThingToThingGroupResponse' with the minimum fields required to make a request.

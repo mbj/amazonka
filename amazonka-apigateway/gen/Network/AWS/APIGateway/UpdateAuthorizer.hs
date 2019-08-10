@@ -60,11 +60,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateAuthorizer' smart constructor.
-data UpdateAuthorizer = UpdateAuthorizer'
-  { _uaaPatchOperations :: !(Maybe [PatchOperation])
-  , _uaaRestAPIId       :: !Text
-  , _uaaAuthorizerId    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateAuthorizer =
+  UpdateAuthorizer'
+    { _uaaPatchOperations :: !(Maybe [PatchOperation])
+    , _uaaRestAPIId       :: !Text
+    , _uaaAuthorizerId    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateAuthorizer' with the minimum fields required to make a request.

@@ -57,16 +57,18 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putScheduledAction' smart constructor.
-data PutScheduledAction = PutScheduledAction'
-  { _psaScalableDimension    :: !(Maybe ScalableDimension)
-  , _psaStartTime            :: !(Maybe POSIX)
-  , _psaSchedule             :: !(Maybe Text)
-  , _psaEndTime              :: !(Maybe POSIX)
-  , _psaScalableTargetAction :: !(Maybe ScalableTargetAction)
-  , _psaServiceNamespace     :: !ServiceNamespace
-  , _psaScheduledActionName  :: !Text
-  , _psaResourceId           :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutScheduledAction =
+  PutScheduledAction'
+    { _psaScalableDimension    :: !(Maybe ScalableDimension)
+    , _psaStartTime            :: !(Maybe POSIX)
+    , _psaSchedule             :: !(Maybe Text)
+    , _psaEndTime              :: !(Maybe POSIX)
+    , _psaScalableTargetAction :: !(Maybe ScalableTargetAction)
+    , _psaServiceNamespace     :: !ServiceNamespace
+    , _psaScheduledActionName  :: !Text
+    , _psaResourceId           :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutScheduledAction' with the minimum fields required to make a request.
@@ -183,9 +185,11 @@ instance ToQuery PutScheduledAction where
         toQuery = const mempty
 
 -- | /See:/ 'putScheduledActionResponse' smart constructor.
-newtype PutScheduledActionResponse = PutScheduledActionResponse'
-  { _psarsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype PutScheduledActionResponse =
+  PutScheduledActionResponse'
+    { _psarsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutScheduledActionResponse' with the minimum fields required to make a request.

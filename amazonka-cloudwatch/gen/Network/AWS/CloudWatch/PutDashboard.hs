@@ -52,10 +52,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putDashboard' smart constructor.
-data PutDashboard = PutDashboard'
-  { _pdDashboardName :: !Text
-  , _pdDashboardBody :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutDashboard =
+  PutDashboard'
+    { _pdDashboardName :: !Text
+    , _pdDashboardBody :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutDashboard' with the minimum fields required to make a request.
@@ -112,10 +114,12 @@ instance ToQuery PutDashboard where
                "DashboardBody" =: _pdDashboardBody]
 
 -- | /See:/ 'putDashboardResponse' smart constructor.
-data PutDashboardResponse = PutDashboardResponse'
-  { _pdrsDashboardValidationMessages :: !(Maybe [DashboardValidationMessage])
-  , _pdrsResponseStatus              :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutDashboardResponse =
+  PutDashboardResponse'
+    { _pdrsDashboardValidationMessages :: !(Maybe [DashboardValidationMessage])
+    , _pdrsResponseStatus              :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutDashboardResponse' with the minimum fields required to make a request.

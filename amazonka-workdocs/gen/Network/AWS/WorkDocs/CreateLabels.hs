@@ -46,11 +46,13 @@ import Network.AWS.WorkDocs.Types
 import Network.AWS.WorkDocs.Types.Product
 
 -- | /See:/ 'createLabels' smart constructor.
-data CreateLabels = CreateLabels'
-  { _clAuthenticationToken :: !(Maybe (Sensitive Text))
-  , _clResourceId          :: !Text
-  , _clLabels              :: ![Text]
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data CreateLabels =
+  CreateLabels'
+    { _clAuthenticationToken :: !(Maybe (Sensitive Text))
+    , _clResourceId          :: !Text
+    , _clLabels              :: ![Text]
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateLabels' with the minimum fields required to make a request.
@@ -117,9 +119,11 @@ instance ToQuery CreateLabels where
         toQuery = const mempty
 
 -- | /See:/ 'createLabelsResponse' smart constructor.
-newtype CreateLabelsResponse = CreateLabelsResponse'
-  { _clrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateLabelsResponse =
+  CreateLabelsResponse'
+    { _clrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateLabelsResponse' with the minimum fields required to make a request.

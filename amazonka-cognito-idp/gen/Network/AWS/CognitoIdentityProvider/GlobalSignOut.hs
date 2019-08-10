@@ -48,9 +48,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'globalSignOut' smart constructor.
-newtype GlobalSignOut = GlobalSignOut'
-  { _gsoAccessToken :: Sensitive Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+newtype GlobalSignOut =
+  GlobalSignOut'
+    { _gsoAccessToken :: Sensitive Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GlobalSignOut' with the minimum fields required to make a request.
@@ -107,9 +109,11 @@ instance ToQuery GlobalSignOut where
 --
 --
 -- /See:/ 'globalSignOutResponse' smart constructor.
-newtype GlobalSignOutResponse = GlobalSignOutResponse'
-  { _gsorsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GlobalSignOutResponse =
+  GlobalSignOutResponse'
+    { _gsorsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GlobalSignOutResponse' with the minimum fields required to make a request.

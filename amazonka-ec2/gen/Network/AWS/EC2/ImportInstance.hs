@@ -55,13 +55,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'importInstance' smart constructor.
-data ImportInstance = ImportInstance'
-  { _iiLaunchSpecification :: !(Maybe ImportInstanceLaunchSpecification)
-  , _iiDiskImages          :: !(Maybe [DiskImage])
-  , _iiDescription         :: !(Maybe Text)
-  , _iiDryRun              :: !(Maybe Bool)
-  , _iiPlatform            :: !PlatformValues
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ImportInstance =
+  ImportInstance'
+    { _iiLaunchSpecification :: !(Maybe ImportInstanceLaunchSpecification)
+    , _iiDiskImages          :: !(Maybe [DiskImage])
+    , _iiDescription         :: !(Maybe Text)
+    , _iiDryRun              :: !(Maybe Bool)
+    , _iiPlatform            :: !PlatformValues
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ImportInstance' with the minimum fields required to make a request.
@@ -144,10 +146,12 @@ instance ToQuery ImportInstance where
 --
 --
 -- /See:/ 'importInstanceResponse' smart constructor.
-data ImportInstanceResponse = ImportInstanceResponse'
-  { _iirsConversionTask :: !(Maybe ConversionTask)
-  , _iirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ImportInstanceResponse =
+  ImportInstanceResponse'
+    { _iirsConversionTask :: !(Maybe ConversionTask)
+    , _iirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ImportInstanceResponse' with the minimum fields required to make a request.

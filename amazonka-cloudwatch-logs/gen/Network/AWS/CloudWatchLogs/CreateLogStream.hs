@@ -55,10 +55,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createLogStream' smart constructor.
-data CreateLogStream = CreateLogStream'
-  { _clsLogGroupName  :: !Text
-  , _clsLogStreamName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateLogStream =
+  CreateLogStream'
+    { _clsLogGroupName  :: !Text
+    , _clsLogStreamName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateLogStream' with the minimum fields required to make a request.

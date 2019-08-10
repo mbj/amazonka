@@ -58,14 +58,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putRule' smart constructor.
-data PutRule = PutRule'
-  { _prEventPattern       :: !(Maybe Text)
-  , _prState              :: !(Maybe RuleState)
-  , _prScheduleExpression :: !(Maybe Text)
-  , _prDescription        :: !(Maybe Text)
-  , _prRoleARN            :: !(Maybe Text)
-  , _prName               :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutRule =
+  PutRule'
+    { _prEventPattern       :: !(Maybe Text)
+    , _prState              :: !(Maybe RuleState)
+    , _prScheduleExpression :: !(Maybe Text)
+    , _prDescription        :: !(Maybe Text)
+    , _prRoleARN            :: !(Maybe Text)
+    , _prName               :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutRule' with the minimum fields required to make a request.
@@ -161,10 +163,12 @@ instance ToQuery PutRule where
         toQuery = const mempty
 
 -- | /See:/ 'putRuleResponse' smart constructor.
-data PutRuleResponse = PutRuleResponse'
-  { _prrsRuleARN        :: !(Maybe Text)
-  , _prrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutRuleResponse =
+  PutRuleResponse'
+    { _prrsRuleARN        :: !(Maybe Text)
+    , _prrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutRuleResponse' with the minimum fields required to make a request.

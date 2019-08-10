@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listAssociatedStacks' smart constructor.
-data ListAssociatedStacks = ListAssociatedStacks'
-  { _lasNextToken :: !(Maybe Text)
-  , _lasFleetName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAssociatedStacks =
+  ListAssociatedStacks'
+    { _lasNextToken :: !(Maybe Text)
+    , _lasFleetName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAssociatedStacks' with the minimum fields required to make a request.
@@ -114,11 +116,13 @@ instance ToQuery ListAssociatedStacks where
         toQuery = const mempty
 
 -- | /See:/ 'listAssociatedStacksResponse' smart constructor.
-data ListAssociatedStacksResponse = ListAssociatedStacksResponse'
-  { _lasrsNextToken      :: !(Maybe Text)
-  , _lasrsNames          :: !(Maybe [Text])
-  , _lasrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAssociatedStacksResponse =
+  ListAssociatedStacksResponse'
+    { _lasrsNextToken      :: !(Maybe Text)
+    , _lasrsNames          :: !(Maybe [Text])
+    , _lasrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAssociatedStacksResponse' with the minimum fields required to make a request.

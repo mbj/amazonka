@@ -55,13 +55,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'importVolume' smart constructor.
-data ImportVolume = ImportVolume'
-  { _ivDescription      :: !(Maybe Text)
-  , _ivDryRun           :: !(Maybe Bool)
-  , _ivAvailabilityZone :: !Text
-  , _ivImage            :: !DiskImageDetail
-  , _ivVolume           :: !VolumeDetail
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ImportVolume =
+  ImportVolume'
+    { _ivDescription      :: !(Maybe Text)
+    , _ivDryRun           :: !(Maybe Bool)
+    , _ivAvailabilityZone :: !Text
+    , _ivImage            :: !DiskImageDetail
+    , _ivVolume           :: !VolumeDetail
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ImportVolume' with the minimum fields required to make a request.
@@ -146,10 +148,12 @@ instance ToQuery ImportVolume where
 --
 --
 -- /See:/ 'importVolumeResponse' smart constructor.
-data ImportVolumeResponse = ImportVolumeResponse'
-  { _ivrsConversionTask :: !(Maybe ConversionTask)
-  , _ivrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ImportVolumeResponse =
+  ImportVolumeResponse'
+    { _ivrsConversionTask :: !(Maybe ConversionTask)
+    , _ivrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ImportVolumeResponse' with the minimum fields required to make a request.

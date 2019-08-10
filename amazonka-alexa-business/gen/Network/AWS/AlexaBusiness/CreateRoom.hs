@@ -50,14 +50,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createRoom' smart constructor.
-data CreateRoom = CreateRoom'
-  { _crProfileARN         :: !(Maybe Text)
-  , _crProviderCalendarId :: !(Maybe Text)
-  , _crClientRequestToken :: !(Maybe Text)
-  , _crDescription        :: !(Maybe Text)
-  , _crTags               :: !(Maybe [Tag])
-  , _crRoomName           :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateRoom =
+  CreateRoom'
+    { _crProfileARN         :: !(Maybe Text)
+    , _crProviderCalendarId :: !(Maybe Text)
+    , _crClientRequestToken :: !(Maybe Text)
+    , _crDescription        :: !(Maybe Text)
+    , _crTags               :: !(Maybe [Tag])
+    , _crRoomName           :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateRoom' with the minimum fields required to make a request.
@@ -153,10 +155,12 @@ instance ToQuery CreateRoom where
         toQuery = const mempty
 
 -- | /See:/ 'createRoomResponse' smart constructor.
-data CreateRoomResponse = CreateRoomResponse'
-  { _crrsRoomARN        :: !(Maybe Text)
-  , _crrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateRoomResponse =
+  CreateRoomResponse'
+    { _crrsRoomARN        :: !(Maybe Text)
+    , _crrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateRoomResponse' with the minimum fields required to make a request.

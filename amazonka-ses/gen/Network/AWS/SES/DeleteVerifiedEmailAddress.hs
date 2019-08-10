@@ -46,9 +46,11 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'deleteVerifiedEmailAddress' smart constructor.
-newtype DeleteVerifiedEmailAddress = DeleteVerifiedEmailAddress'
-  { _dveaEmailAddress :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteVerifiedEmailAddress =
+  DeleteVerifiedEmailAddress'
+    { _dveaEmailAddress :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteVerifiedEmailAddress' with the minimum fields required to make a request.

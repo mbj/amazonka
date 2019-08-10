@@ -49,11 +49,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listThreatIntelSets' smart constructor.
-data ListThreatIntelSets = ListThreatIntelSets'
-  { _ltisNextToken  :: !(Maybe Text)
-  , _ltisMaxResults :: !(Maybe Nat)
-  , _ltisDetectorId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListThreatIntelSets =
+  ListThreatIntelSets'
+    { _ltisNextToken  :: !(Maybe Text)
+    , _ltisMaxResults :: !(Maybe Nat)
+    , _ltisDetectorId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListThreatIntelSets' with the minimum fields required to make a request.
@@ -131,11 +133,13 @@ instance ToQuery ListThreatIntelSets where
                "maxResults" =: _ltisMaxResults]
 
 -- | /See:/ 'listThreatIntelSetsResponse' smart constructor.
-data ListThreatIntelSetsResponse = ListThreatIntelSetsResponse'
-  { _ltisrsThreatIntelSetIds :: !(Maybe [Text])
-  , _ltisrsNextToken         :: !(Maybe Text)
-  , _ltisrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListThreatIntelSetsResponse =
+  ListThreatIntelSetsResponse'
+    { _ltisrsThreatIntelSetIds :: !(Maybe [Text])
+    , _ltisrsNextToken         :: !(Maybe Text)
+    , _ltisrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListThreatIntelSetsResponse' with the minimum fields required to make a request.

@@ -54,11 +54,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getParametersForImport' smart constructor.
-data GetParametersForImport = GetParametersForImport'
-  { _gpfiKeyId             :: !Text
-  , _gpfiWrappingAlgorithm :: !AlgorithmSpec
-  , _gpfiWrappingKeySpec   :: !WrappingKeySpec
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetParametersForImport =
+  GetParametersForImport'
+    { _gpfiKeyId             :: !Text
+    , _gpfiWrappingAlgorithm :: !AlgorithmSpec
+    , _gpfiWrappingKeySpec   :: !WrappingKeySpec
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetParametersForImport' with the minimum fields required to make a request.
@@ -137,13 +139,15 @@ instance ToQuery GetParametersForImport where
         toQuery = const mempty
 
 -- | /See:/ 'getParametersForImportResponse' smart constructor.
-data GetParametersForImportResponse = GetParametersForImportResponse'
-  { _gpfirsKeyId             :: !(Maybe Text)
-  , _gpfirsPublicKey         :: !(Maybe (Sensitive Base64))
-  , _gpfirsParametersValidTo :: !(Maybe POSIX)
-  , _gpfirsImportToken       :: !(Maybe Base64)
-  , _gpfirsResponseStatus    :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data GetParametersForImportResponse =
+  GetParametersForImportResponse'
+    { _gpfirsKeyId             :: !(Maybe Text)
+    , _gpfirsPublicKey         :: !(Maybe (Sensitive Base64))
+    , _gpfirsParametersValidTo :: !(Maybe POSIX)
+    , _gpfirsImportToken       :: !(Maybe Base64)
+    , _gpfirsResponseStatus    :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetParametersForImportResponse' with the minimum fields required to make a request.

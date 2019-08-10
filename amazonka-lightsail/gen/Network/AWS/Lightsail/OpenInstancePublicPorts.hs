@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'openInstancePublicPorts' smart constructor.
-data OpenInstancePublicPorts = OpenInstancePublicPorts'
-  { _oippPortInfo     :: !PortInfo
-  , _oippInstanceName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data OpenInstancePublicPorts =
+  OpenInstancePublicPorts'
+    { _oippPortInfo     :: !PortInfo
+    , _oippInstanceName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OpenInstancePublicPorts' with the minimum fields required to make a request.
@@ -114,10 +116,12 @@ instance ToQuery OpenInstancePublicPorts where
         toQuery = const mempty
 
 -- | /See:/ 'openInstancePublicPortsResponse' smart constructor.
-data OpenInstancePublicPortsResponse = OpenInstancePublicPortsResponse'
-  { _oipprsOperation      :: !(Maybe Operation)
-  , _oipprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data OpenInstancePublicPortsResponse =
+  OpenInstancePublicPortsResponse'
+    { _oipprsOperation      :: !(Maybe Operation)
+    , _oipprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OpenInstancePublicPortsResponse' with the minimum fields required to make a request.

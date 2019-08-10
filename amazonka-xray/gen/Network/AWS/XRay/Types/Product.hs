@@ -26,11 +26,13 @@ import Network.AWS.XRay.Types.Sum
 --
 --
 -- /See:/ 'alias' smart constructor.
-data Alias = Alias'
-  { _aNames :: !(Maybe [Text])
-  , _aName  :: !(Maybe Text)
-  , _aType  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Alias =
+  Alias'
+    { _aNames :: !(Maybe [Text])
+    , _aName  :: !(Maybe Text)
+    , _aType  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Alias' with the minimum fields required to make a request.
@@ -76,11 +78,13 @@ instance NFData Alias where
 --
 --
 -- /See:/ 'annotationValue' smart constructor.
-data AnnotationValue = AnnotationValue'
-  { _avNumberValue  :: !(Maybe Double)
-  , _avStringValue  :: !(Maybe Text)
-  , _avBooleanValue :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AnnotationValue =
+  AnnotationValue'
+    { _avNumberValue  :: !(Maybe Double)
+    , _avStringValue  :: !(Maybe Text)
+    , _avBooleanValue :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AnnotationValue' with the minimum fields required to make a request.
@@ -131,14 +135,16 @@ instance NFData AnnotationValue where
 --
 --
 -- /See:/ 'backendConnectionErrors' smart constructor.
-data BackendConnectionErrors = BackendConnectionErrors'
-  { _bceOtherCount             :: !(Maybe Int)
-  , _bceTimeoutCount           :: !(Maybe Int)
-  , _bceHTTPCode5XXCount       :: !(Maybe Int)
-  , _bceConnectionRefusedCount :: !(Maybe Int)
-  , _bceHTTPCode4XXCount       :: !(Maybe Int)
-  , _bceUnknownHostCount       :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BackendConnectionErrors =
+  BackendConnectionErrors'
+    { _bceOtherCount             :: !(Maybe Int)
+    , _bceTimeoutCount           :: !(Maybe Int)
+    , _bceHTTPCode5XXCount       :: !(Maybe Int)
+    , _bceConnectionRefusedCount :: !(Maybe Int)
+    , _bceHTTPCode4XXCount       :: !(Maybe Int)
+    , _bceUnknownHostCount       :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BackendConnectionErrors' with the minimum fields required to make a request.
@@ -214,14 +220,16 @@ instance ToJSON BackendConnectionErrors where
 --
 --
 -- /See:/ 'edge' smart constructor.
-data Edge = Edge'
-  { _eStartTime             :: !(Maybe POSIX)
-  , _eAliases               :: !(Maybe [Alias])
-  , _eResponseTimeHistogram :: !(Maybe [HistogramEntry])
-  , _eReferenceId           :: !(Maybe Int)
-  , _eEndTime               :: !(Maybe POSIX)
-  , _eSummaryStatistics     :: !(Maybe EdgeStatistics)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Edge =
+  Edge'
+    { _eStartTime             :: !(Maybe POSIX)
+    , _eAliases               :: !(Maybe [Alias])
+    , _eResponseTimeHistogram :: !(Maybe [HistogramEntry])
+    , _eReferenceId           :: !(Maybe Int)
+    , _eEndTime               :: !(Maybe POSIX)
+    , _eSummaryStatistics     :: !(Maybe EdgeStatistics)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Edge' with the minimum fields required to make a request.
@@ -296,13 +304,15 @@ instance NFData Edge where
 --
 --
 -- /See:/ 'edgeStatistics' smart constructor.
-data EdgeStatistics = EdgeStatistics'
-  { _esFaultStatistics   :: !(Maybe FaultStatistics)
-  , _esOKCount           :: !(Maybe Integer)
-  , _esTotalResponseTime :: !(Maybe Double)
-  , _esErrorStatistics   :: !(Maybe ErrorStatistics)
-  , _esTotalCount        :: !(Maybe Integer)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EdgeStatistics =
+  EdgeStatistics'
+    { _esFaultStatistics   :: !(Maybe FaultStatistics)
+    , _esOKCount           :: !(Maybe Integer)
+    , _esTotalResponseTime :: !(Maybe Double)
+    , _esErrorStatistics   :: !(Maybe ErrorStatistics)
+    , _esTotalCount        :: !(Maybe Integer)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EdgeStatistics' with the minimum fields required to make a request.
@@ -369,11 +379,13 @@ instance NFData EdgeStatistics where
 --
 --
 -- /See:/ 'encryptionConfig' smart constructor.
-data EncryptionConfig = EncryptionConfig'
-  { _ecStatus :: !(Maybe EncryptionStatus)
-  , _ecKeyId  :: !(Maybe Text)
-  , _ecType   :: !(Maybe EncryptionType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EncryptionConfig =
+  EncryptionConfig'
+    { _ecStatus :: !(Maybe EncryptionStatus)
+    , _ecKeyId  :: !(Maybe Text)
+    , _ecType   :: !(Maybe EncryptionType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EncryptionConfig' with the minimum fields required to make a request.
@@ -420,11 +432,13 @@ instance NFData EncryptionConfig where
 --
 --
 -- /See:/ 'errorStatistics' smart constructor.
-data ErrorStatistics = ErrorStatistics'
-  { _eOtherCount    :: !(Maybe Integer)
-  , _eThrottleCount :: !(Maybe Integer)
-  , _eTotalCount    :: !(Maybe Integer)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ErrorStatistics =
+  ErrorStatistics'
+    { _eOtherCount    :: !(Maybe Integer)
+    , _eThrottleCount :: !(Maybe Integer)
+    , _eTotalCount    :: !(Maybe Integer)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ErrorStatistics' with the minimum fields required to make a request.
@@ -472,10 +486,12 @@ instance NFData ErrorStatistics where
 --
 --
 -- /See:/ 'faultStatistics' smart constructor.
-data FaultStatistics = FaultStatistics'
-  { _fsOtherCount :: !(Maybe Integer)
-  , _fsTotalCount :: !(Maybe Integer)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FaultStatistics =
+  FaultStatistics'
+    { _fsOtherCount :: !(Maybe Integer)
+    , _fsTotalCount :: !(Maybe Integer)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FaultStatistics' with the minimum fields required to make a request.
@@ -515,13 +531,15 @@ instance NFData FaultStatistics where
 --
 --
 -- /See:/ 'hTTP' smart constructor.
-data HTTP = HTTP'
-  { _httpHTTPMethod :: !(Maybe Text)
-  , _httpHTTPStatus :: !(Maybe Int)
-  , _httpClientIP   :: !(Maybe Text)
-  , _httpUserAgent  :: !(Maybe Text)
-  , _httpHTTPURL    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data HTTP =
+  HTTP'
+    { _httpHTTPMethod :: !(Maybe Text)
+    , _httpHTTPStatus :: !(Maybe Int)
+    , _httpClientIP   :: !(Maybe Text)
+    , _httpUserAgent  :: !(Maybe Text)
+    , _httpHTTPURL    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'HTTP' with the minimum fields required to make a request.
@@ -588,10 +606,12 @@ instance NFData HTTP where
 --
 --
 -- /See:/ 'histogramEntry' smart constructor.
-data HistogramEntry = HistogramEntry'
-  { _heCount :: !(Maybe Int)
-  , _heValue :: !(Maybe Double)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data HistogramEntry =
+  HistogramEntry'
+    { _heCount :: !(Maybe Int)
+    , _heValue :: !(Maybe Double)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'HistogramEntry' with the minimum fields required to make a request.
@@ -632,10 +652,12 @@ instance NFData HistogramEntry where
 --
 --
 -- /See:/ 'segment' smart constructor.
-data Segment = Segment'
-  { _sDocument :: !(Maybe Text)
-  , _sId       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Segment =
+  Segment'
+    { _sDocument :: !(Maybe Text)
+    , _sId       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Segment' with the minimum fields required to make a request.
@@ -673,12 +695,14 @@ instance NFData Segment where
 --
 --
 -- /See:/ 'serviceId' smart constructor.
-data ServiceId = ServiceId'
-  { _siAccountId :: !(Maybe Text)
-  , _siNames     :: !(Maybe [Text])
-  , _siName      :: !(Maybe Text)
-  , _siType      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ServiceId =
+  ServiceId'
+    { _siAccountId :: !(Maybe Text)
+    , _siNames     :: !(Maybe [Text])
+    , _siName      :: !(Maybe Text)
+    , _siType      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ServiceId' with the minimum fields required to make a request.
@@ -737,21 +761,23 @@ instance NFData ServiceId where
 --
 --
 -- /See:/ 'serviceInfo' smart constructor.
-data ServiceInfo = ServiceInfo'
-  { _sState                 :: !(Maybe Text)
-  , _sStartTime             :: !(Maybe POSIX)
-  , _sRoot                  :: !(Maybe Bool)
-  , _sResponseTimeHistogram :: !(Maybe [HistogramEntry])
-  , _sDurationHistogram     :: !(Maybe [HistogramEntry])
-  , _sReferenceId           :: !(Maybe Int)
-  , _sAccountId             :: !(Maybe Text)
-  , _sNames                 :: !(Maybe [Text])
-  , _sName                  :: !(Maybe Text)
-  , _sEndTime               :: !(Maybe POSIX)
-  , _sType                  :: !(Maybe Text)
-  , _sEdges                 :: !(Maybe [Edge])
-  , _sSummaryStatistics     :: !(Maybe ServiceStatistics)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ServiceInfo =
+  ServiceInfo'
+    { _sState                 :: !(Maybe Text)
+    , _sStartTime             :: !(Maybe POSIX)
+    , _sRoot                  :: !(Maybe Bool)
+    , _sResponseTimeHistogram :: !(Maybe [HistogramEntry])
+    , _sDurationHistogram     :: !(Maybe [HistogramEntry])
+    , _sReferenceId           :: !(Maybe Int)
+    , _sAccountId             :: !(Maybe Text)
+    , _sNames                 :: !(Maybe [Text])
+    , _sName                  :: !(Maybe Text)
+    , _sEndTime               :: !(Maybe POSIX)
+    , _sType                  :: !(Maybe Text)
+    , _sEdges                 :: !(Maybe [Edge])
+    , _sSummaryStatistics     :: !(Maybe ServiceStatistics)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ServiceInfo' with the minimum fields required to make a request.
@@ -882,13 +908,15 @@ instance NFData ServiceInfo where
 --
 --
 -- /See:/ 'serviceStatistics' smart constructor.
-data ServiceStatistics = ServiceStatistics'
-  { _ssFaultStatistics   :: !(Maybe FaultStatistics)
-  , _ssOKCount           :: !(Maybe Integer)
-  , _ssTotalResponseTime :: !(Maybe Double)
-  , _ssErrorStatistics   :: !(Maybe ErrorStatistics)
-  , _ssTotalCount        :: !(Maybe Integer)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ServiceStatistics =
+  ServiceStatistics'
+    { _ssFaultStatistics   :: !(Maybe FaultStatistics)
+    , _ssOKCount           :: !(Maybe Integer)
+    , _ssTotalResponseTime :: !(Maybe Double)
+    , _ssErrorStatistics   :: !(Maybe ErrorStatistics)
+    , _ssTotalCount        :: !(Maybe Integer)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ServiceStatistics' with the minimum fields required to make a request.
@@ -955,14 +983,16 @@ instance NFData ServiceStatistics where
 --
 --
 -- /See:/ 'telemetryRecord' smart constructor.
-data TelemetryRecord = TelemetryRecord'
-  { _trSegmentsReceivedCount   :: !(Maybe Int)
-  , _trSegmentsSentCount       :: !(Maybe Int)
-  , _trSegmentsSpilloverCount  :: !(Maybe Int)
-  , _trSegmentsRejectedCount   :: !(Maybe Int)
-  , _trBackendConnectionErrors :: !(Maybe BackendConnectionErrors)
-  , _trTimestamp               :: !POSIX
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TelemetryRecord =
+  TelemetryRecord'
+    { _trSegmentsReceivedCount   :: !(Maybe Int)
+    , _trSegmentsSentCount       :: !(Maybe Int)
+    , _trSegmentsSpilloverCount  :: !(Maybe Int)
+    , _trSegmentsRejectedCount   :: !(Maybe Int)
+    , _trBackendConnectionErrors :: !(Maybe BackendConnectionErrors)
+    , _trTimestamp               :: !POSIX
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TelemetryRecord' with the minimum fields required to make a request.
@@ -1042,11 +1072,13 @@ instance ToJSON TelemetryRecord where
 --
 --
 -- /See:/ 'trace' smart constructor.
-data Trace = Trace'
-  { _tId       :: !(Maybe Text)
-  , _tSegments :: !(Maybe [Segment])
-  , _tDuration :: !(Maybe Double)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Trace =
+  Trace'
+    { _tId       :: !(Maybe Text)
+    , _tSegments :: !(Maybe [Segment])
+    , _tDuration :: !(Maybe Double)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Trace' with the minimum fields required to make a request.
@@ -1092,19 +1124,21 @@ instance NFData Trace where
 --
 --
 -- /See:/ 'traceSummary' smart constructor.
-data TraceSummary = TraceSummary'
-  { _tsAnnotations  :: !(Maybe (Map Text [ValueWithServiceIds]))
-  , _tsHasThrottle  :: !(Maybe Bool)
-  , _tsUsers        :: !(Maybe [TraceUser])
-  , _tsHasFault     :: !(Maybe Bool)
-  , _tsServiceIds   :: !(Maybe [ServiceId])
-  , _tsIsPartial    :: !(Maybe Bool)
-  , _tsHasError     :: !(Maybe Bool)
-  , _tsId           :: !(Maybe Text)
-  , _tsHTTP         :: !(Maybe HTTP)
-  , _tsDuration     :: !(Maybe Double)
-  , _tsResponseTime :: !(Maybe Double)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TraceSummary =
+  TraceSummary'
+    { _tsAnnotations  :: !(Maybe (Map Text [ValueWithServiceIds]))
+    , _tsHasThrottle  :: !(Maybe Bool)
+    , _tsUsers        :: !(Maybe [TraceUser])
+    , _tsHasFault     :: !(Maybe Bool)
+    , _tsServiceIds   :: !(Maybe [ServiceId])
+    , _tsIsPartial    :: !(Maybe Bool)
+    , _tsHasError     :: !(Maybe Bool)
+    , _tsId           :: !(Maybe Text)
+    , _tsHTTP         :: !(Maybe HTTP)
+    , _tsDuration     :: !(Maybe Double)
+    , _tsResponseTime :: !(Maybe Double)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TraceSummary' with the minimum fields required to make a request.
@@ -1220,10 +1254,12 @@ instance NFData TraceSummary where
 --
 --
 -- /See:/ 'traceUser' smart constructor.
-data TraceUser = TraceUser'
-  { _tuServiceIds :: !(Maybe [ServiceId])
-  , _tuUserName   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TraceUser =
+  TraceUser'
+    { _tuServiceIds :: !(Maybe [ServiceId])
+    , _tuUserName   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TraceUser' with the minimum fields required to make a request.
@@ -1263,11 +1299,13 @@ instance NFData TraceUser where
 --
 --
 -- /See:/ 'unprocessedTraceSegment' smart constructor.
-data UnprocessedTraceSegment = UnprocessedTraceSegment'
-  { _utsErrorCode :: !(Maybe Text)
-  , _utsId        :: !(Maybe Text)
-  , _utsMessage   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UnprocessedTraceSegment =
+  UnprocessedTraceSegment'
+    { _utsErrorCode :: !(Maybe Text)
+    , _utsId        :: !(Maybe Text)
+    , _utsMessage   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UnprocessedTraceSegment' with the minimum fields required to make a request.
@@ -1315,10 +1353,12 @@ instance NFData UnprocessedTraceSegment where
 --
 --
 -- /See:/ 'valueWithServiceIds' smart constructor.
-data ValueWithServiceIds = ValueWithServiceIds'
-  { _vwsiServiceIds      :: !(Maybe [ServiceId])
-  , _vwsiAnnotationValue :: !(Maybe AnnotationValue)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ValueWithServiceIds =
+  ValueWithServiceIds'
+    { _vwsiServiceIds      :: !(Maybe [ServiceId])
+    , _vwsiAnnotationValue :: !(Maybe AnnotationValue)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ValueWithServiceIds' with the minimum fields required to make a request.

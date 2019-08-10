@@ -53,9 +53,11 @@ import Network.AWS.StorageGateway.Types.Product
 --
 --
 -- /See:/ 'describeMaintenanceStartTime' smart constructor.
-newtype DescribeMaintenanceStartTime = DescribeMaintenanceStartTime'
-  { _dmstGatewayARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeMaintenanceStartTime =
+  DescribeMaintenanceStartTime'
+    { _dmstGatewayARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeMaintenanceStartTime' with the minimum fields required to make a request.
@@ -129,14 +131,16 @@ instance ToQuery DescribeMaintenanceStartTime where
 --
 --
 -- /See:/ 'describeMaintenanceStartTimeResponse' smart constructor.
-data DescribeMaintenanceStartTimeResponse = DescribeMaintenanceStartTimeResponse'
-  { _dmstrsGatewayARN     :: !(Maybe Text)
-  , _dmstrsMinuteOfHour   :: !(Maybe Nat)
-  , _dmstrsHourOfDay      :: !(Maybe Nat)
-  , _dmstrsTimezone       :: !(Maybe Text)
-  , _dmstrsDayOfWeek      :: !(Maybe Nat)
-  , _dmstrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeMaintenanceStartTimeResponse =
+  DescribeMaintenanceStartTimeResponse'
+    { _dmstrsGatewayARN     :: !(Maybe Text)
+    , _dmstrsMinuteOfHour   :: !(Maybe Nat)
+    , _dmstrsHourOfDay      :: !(Maybe Nat)
+    , _dmstrsTimezone       :: !(Maybe Text)
+    , _dmstrsDayOfWeek      :: !(Maybe Nat)
+    , _dmstrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeMaintenanceStartTimeResponse' with the minimum fields required to make a request.

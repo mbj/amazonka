@@ -60,12 +60,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeClusterParameters' smart constructor.
-data DescribeClusterParameters = DescribeClusterParameters'
-  { _dcpsMarker             :: !(Maybe Text)
-  , _dcpsMaxRecords         :: !(Maybe Int)
-  , _dcpsSource             :: !(Maybe Text)
-  , _dcpsParameterGroupName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeClusterParameters =
+  DescribeClusterParameters'
+    { _dcpsMarker             :: !(Maybe Text)
+    , _dcpsMaxRecords         :: !(Maybe Int)
+    , _dcpsSource             :: !(Maybe Text)
+    , _dcpsParameterGroupName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeClusterParameters' with the minimum fields required to make a request.
@@ -153,11 +155,13 @@ instance ToQuery DescribeClusterParameters where
 --
 --
 -- /See:/ 'describeClusterParametersResponse' smart constructor.
-data DescribeClusterParametersResponse = DescribeClusterParametersResponse'
-  { _dcprsMarker         :: !(Maybe Text)
-  , _dcprsParameters     :: !(Maybe [Parameter])
-  , _dcprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeClusterParametersResponse =
+  DescribeClusterParametersResponse'
+    { _dcprsMarker         :: !(Maybe Text)
+    , _dcprsParameters     :: !(Maybe [Parameter])
+    , _dcprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeClusterParametersResponse' with the minimum fields required to make a request.

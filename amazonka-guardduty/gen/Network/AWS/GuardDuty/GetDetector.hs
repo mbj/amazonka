@@ -46,9 +46,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getDetector' smart constructor.
-newtype GetDetector = GetDetector'
-  { _gdDetectorId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetDetector =
+  GetDetector'
+    { _gdDetectorId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDetector' with the minimum fields required to make a request.
@@ -97,13 +99,15 @@ instance ToQuery GetDetector where
         toQuery = const mempty
 
 -- | /See:/ 'getDetectorResponse' smart constructor.
-data GetDetectorResponse = GetDetectorResponse'
-  { _gdrsStatus         :: !(Maybe DetectorStatus)
-  , _gdrsCreatedAt      :: !(Maybe Text)
-  , _gdrsUpdatedAt      :: !(Maybe Text)
-  , _gdrsServiceRole    :: !(Maybe Text)
-  , _gdrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDetectorResponse =
+  GetDetectorResponse'
+    { _gdrsStatus         :: !(Maybe DetectorStatus)
+    , _gdrsCreatedAt      :: !(Maybe Text)
+    , _gdrsUpdatedAt      :: !(Maybe Text)
+    , _gdrsServiceRole    :: !(Maybe Text)
+    , _gdrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDetectorResponse' with the minimum fields required to make a request.

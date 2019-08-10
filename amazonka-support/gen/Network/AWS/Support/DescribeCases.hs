@@ -71,17 +71,19 @@ import Network.AWS.Support.Types.Product
 --
 --
 -- /See:/ 'describeCases' smart constructor.
-data DescribeCases = DescribeCases'
-  { _dcIncludeResolvedCases  :: !(Maybe Bool)
-  , _dcCaseIdList            :: !(Maybe [Text])
-  , _dcAfterTime             :: !(Maybe Text)
-  , _dcBeforeTime            :: !(Maybe Text)
-  , _dcNextToken             :: !(Maybe Text)
-  , _dcIncludeCommunications :: !(Maybe Bool)
-  , _dcDisplayId             :: !(Maybe Text)
-  , _dcLanguage              :: !(Maybe Text)
-  , _dcMaxResults            :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeCases =
+  DescribeCases'
+    { _dcIncludeResolvedCases  :: !(Maybe Bool)
+    , _dcCaseIdList            :: !(Maybe [Text])
+    , _dcAfterTime             :: !(Maybe Text)
+    , _dcBeforeTime            :: !(Maybe Text)
+    , _dcNextToken             :: !(Maybe Text)
+    , _dcIncludeCommunications :: !(Maybe Bool)
+    , _dcDisplayId             :: !(Maybe Text)
+    , _dcLanguage              :: !(Maybe Text)
+    , _dcMaxResults            :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeCases' with the minimum fields required to make a request.
@@ -214,11 +216,13 @@ instance ToQuery DescribeCases where
 --
 --
 -- /See:/ 'describeCasesResponse' smart constructor.
-data DescribeCasesResponse = DescribeCasesResponse'
-  { _drsCases          :: !(Maybe [CaseDetails])
-  , _drsNextToken      :: !(Maybe Text)
-  , _drsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeCasesResponse =
+  DescribeCasesResponse'
+    { _drsCases          :: !(Maybe [CaseDetails])
+    , _drsNextToken      :: !(Maybe Text)
+    , _drsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeCasesResponse' with the minimum fields required to make a request.

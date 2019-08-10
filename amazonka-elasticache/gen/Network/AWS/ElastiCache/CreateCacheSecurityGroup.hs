@@ -52,10 +52,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createCacheSecurityGroup' smart constructor.
-data CreateCacheSecurityGroup = CreateCacheSecurityGroup'
-  { _ccsgCacheSecurityGroupName :: !Text
-  , _ccsgDescription            :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateCacheSecurityGroup =
+  CreateCacheSecurityGroup'
+    { _ccsgCacheSecurityGroupName :: !Text
+    , _ccsgDescription            :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateCacheSecurityGroup' with the minimum fields required to make a request.
@@ -115,10 +117,12 @@ instance ToQuery CreateCacheSecurityGroup where
                "Description" =: _ccsgDescription]
 
 -- | /See:/ 'createCacheSecurityGroupResponse' smart constructor.
-data CreateCacheSecurityGroupResponse = CreateCacheSecurityGroupResponse'
-  { _ccsgrsCacheSecurityGroup :: !(Maybe CacheSecurityGroup)
-  , _ccsgrsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateCacheSecurityGroupResponse =
+  CreateCacheSecurityGroupResponse'
+    { _ccsgrsCacheSecurityGroup :: !(Maybe CacheSecurityGroup)
+    , _ccsgrsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateCacheSecurityGroupResponse' with the minimum fields required to make a request.

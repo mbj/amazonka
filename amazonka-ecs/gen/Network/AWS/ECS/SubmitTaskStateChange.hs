@@ -53,17 +53,19 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'submitTaskStateChange' smart constructor.
-data SubmitTaskStateChange = SubmitTaskStateChange'
-  { _stscStatus             :: !(Maybe Text)
-  , _stscCluster            :: !(Maybe Text)
-  , _stscAttachments        :: !(Maybe [AttachmentStateChange])
-  , _stscExecutionStoppedAt :: !(Maybe POSIX)
-  , _stscPullStoppedAt      :: !(Maybe POSIX)
-  , _stscContainers         :: !(Maybe [ContainerStateChange])
-  , _stscReason             :: !(Maybe Text)
-  , _stscTask               :: !(Maybe Text)
-  , _stscPullStartedAt      :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SubmitTaskStateChange =
+  SubmitTaskStateChange'
+    { _stscStatus             :: !(Maybe Text)
+    , _stscCluster            :: !(Maybe Text)
+    , _stscAttachments        :: !(Maybe [AttachmentStateChange])
+    , _stscExecutionStoppedAt :: !(Maybe POSIX)
+    , _stscPullStoppedAt      :: !(Maybe POSIX)
+    , _stscContainers         :: !(Maybe [ContainerStateChange])
+    , _stscReason             :: !(Maybe Text)
+    , _stscTask               :: !(Maybe Text)
+    , _stscPullStartedAt      :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SubmitTaskStateChange' with the minimum fields required to make a request.
@@ -185,10 +187,12 @@ instance ToQuery SubmitTaskStateChange where
         toQuery = const mempty
 
 -- | /See:/ 'submitTaskStateChangeResponse' smart constructor.
-data SubmitTaskStateChangeResponse = SubmitTaskStateChangeResponse'
-  { _stscrsAcknowledgment :: !(Maybe Text)
-  , _stscrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SubmitTaskStateChangeResponse =
+  SubmitTaskStateChangeResponse'
+    { _stscrsAcknowledgment :: !(Maybe Text)
+    , _stscrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SubmitTaskStateChangeResponse' with the minimum fields required to make a request.

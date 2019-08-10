@@ -53,12 +53,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'searchProfiles' smart constructor.
-data SearchProfiles = SearchProfiles'
-  { _spFilters      :: !(Maybe [Filter])
-  , _spSortCriteria :: !(Maybe [Sort])
-  , _spNextToken    :: !(Maybe Text)
-  , _spMaxResults   :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SearchProfiles =
+  SearchProfiles'
+    { _spFilters      :: !(Maybe [Filter])
+    , _spSortCriteria :: !(Maybe [Sort])
+    , _spNextToken    :: !(Maybe Text)
+    , _spMaxResults   :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SearchProfiles' with the minimum fields required to make a request.
@@ -146,12 +148,14 @@ instance ToQuery SearchProfiles where
         toQuery = const mempty
 
 -- | /See:/ 'searchProfilesResponse' smart constructor.
-data SearchProfilesResponse = SearchProfilesResponse'
-  { _sprsProfiles       :: !(Maybe [ProfileData])
-  , _sprsNextToken      :: !(Maybe Text)
-  , _sprsTotalCount     :: !(Maybe Int)
-  , _sprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SearchProfilesResponse =
+  SearchProfilesResponse'
+    { _sprsProfiles       :: !(Maybe [ProfileData])
+    , _sprsNextToken      :: !(Maybe Text)
+    , _sprsTotalCount     :: !(Maybe Int)
+    , _sprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SearchProfilesResponse' with the minimum fields required to make a request.

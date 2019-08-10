@@ -47,10 +47,12 @@ import Network.AWS.SageMaker.Types
 import Network.AWS.SageMaker.Types.Product
 
 -- | /See:/ 'deleteTags' smart constructor.
-data DeleteTags = DeleteTags'
-  { _dtResourceARN :: !Text
-  , _dtTagKeys     :: !(List1 Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteTags =
+  DeleteTags'
+    { _dtResourceARN :: !Text
+    , _dtTagKeys     :: !(List1 Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteTags' with the minimum fields required to make a request.
@@ -111,9 +113,11 @@ instance ToQuery DeleteTags where
         toQuery = const mempty
 
 -- | /See:/ 'deleteTagsResponse' smart constructor.
-newtype DeleteTagsResponse = DeleteTagsResponse'
-  { _dtrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteTagsResponse =
+  DeleteTagsResponse'
+    { _dtrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteTagsResponse' with the minimum fields required to make a request.

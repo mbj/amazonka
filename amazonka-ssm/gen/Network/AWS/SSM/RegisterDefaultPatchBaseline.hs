@@ -45,9 +45,11 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'registerDefaultPatchBaseline' smart constructor.
-newtype RegisterDefaultPatchBaseline = RegisterDefaultPatchBaseline'
-  { _rdpbBaselineId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RegisterDefaultPatchBaseline =
+  RegisterDefaultPatchBaseline'
+    { _rdpbBaselineId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterDefaultPatchBaseline' with the minimum fields required to make a request.
@@ -103,10 +105,12 @@ instance ToQuery RegisterDefaultPatchBaseline where
         toQuery = const mempty
 
 -- | /See:/ 'registerDefaultPatchBaselineResponse' smart constructor.
-data RegisterDefaultPatchBaselineResponse = RegisterDefaultPatchBaselineResponse'
-  { _rdpbrsBaselineId     :: !(Maybe Text)
-  , _rdpbrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RegisterDefaultPatchBaselineResponse =
+  RegisterDefaultPatchBaselineResponse'
+    { _rdpbrsBaselineId     :: !(Maybe Text)
+    , _rdpbrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterDefaultPatchBaselineResponse' with the minimum fields required to make a request.

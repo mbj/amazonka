@@ -53,12 +53,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeEnvironmentManagedActionHistory' smart constructor.
-data DescribeEnvironmentManagedActionHistory = DescribeEnvironmentManagedActionHistory'
-  { _demahNextToken       :: !(Maybe Text)
-  , _demahEnvironmentName :: !(Maybe Text)
-  , _demahMaxItems        :: !(Maybe Int)
-  , _demahEnvironmentId   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeEnvironmentManagedActionHistory =
+  DescribeEnvironmentManagedActionHistory'
+    { _demahNextToken       :: !(Maybe Text)
+    , _demahEnvironmentName :: !(Maybe Text)
+    , _demahMaxItems        :: !(Maybe Int)
+    , _demahEnvironmentId   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEnvironmentManagedActionHistory' with the minimum fields required to make a request.
@@ -152,11 +154,13 @@ instance ToQuery
 --
 --
 -- /See:/ 'describeEnvironmentManagedActionHistoryResponse' smart constructor.
-data DescribeEnvironmentManagedActionHistoryResponse = DescribeEnvironmentManagedActionHistoryResponse'
-  { _demahrsManagedActionHistoryItems :: !(Maybe (List1 ManagedActionHistoryItem))
-  , _demahrsNextToken :: !(Maybe Text)
-  , _demahrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeEnvironmentManagedActionHistoryResponse =
+  DescribeEnvironmentManagedActionHistoryResponse'
+    { _demahrsManagedActionHistoryItems :: !(Maybe (List1 ManagedActionHistoryItem))
+    , _demahrsNextToken :: !(Maybe Text)
+    , _demahrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEnvironmentManagedActionHistoryResponse' with the minimum fields required to make a request.

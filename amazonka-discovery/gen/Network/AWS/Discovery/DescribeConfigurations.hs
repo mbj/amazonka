@@ -47,9 +47,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeConfigurations' smart constructor.
-newtype DescribeConfigurations = DescribeConfigurations'
-  { _dcConfigurationIds :: [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeConfigurations =
+  DescribeConfigurations'
+    { _dcConfigurationIds :: [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeConfigurations' with the minimum fields required to make a request.
@@ -104,10 +106,12 @@ instance ToQuery DescribeConfigurations where
         toQuery = const mempty
 
 -- | /See:/ 'describeConfigurationsResponse' smart constructor.
-data DescribeConfigurationsResponse = DescribeConfigurationsResponse'
-  { _dcrsConfigurations :: !(Maybe [Map Text Text])
-  , _dcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeConfigurationsResponse =
+  DescribeConfigurationsResponse'
+    { _dcrsConfigurations :: !(Maybe [Map Text Text])
+    , _dcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeConfigurationsResponse' with the minimum fields required to make a request.

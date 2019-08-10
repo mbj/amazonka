@@ -44,9 +44,11 @@ import Network.AWS.SageMaker.Types
 import Network.AWS.SageMaker.Types.Product
 
 -- | /See:/ 'stopNotebookInstance' smart constructor.
-newtype StopNotebookInstance = StopNotebookInstance'
-  { _sniNotebookInstanceName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StopNotebookInstance =
+  StopNotebookInstance'
+    { _sniNotebookInstanceName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopNotebookInstance' with the minimum fields required to make a request.

@@ -47,12 +47,14 @@ import Network.AWS.Response
 -- | UpdateFindingsFeedback request body.
 --
 -- /See:/ 'updateFindingsFeedback' smart constructor.
-data UpdateFindingsFeedback = UpdateFindingsFeedback'
-  { _uffFindingIds :: !(Maybe [Text])
-  , _uffComments   :: !(Maybe Text)
-  , _uffFeedback   :: !(Maybe Feedback)
-  , _uffDetectorId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateFindingsFeedback =
+  UpdateFindingsFeedback'
+    { _uffFindingIds :: !(Maybe [Text])
+    , _uffComments   :: !(Maybe Text)
+    , _uffFeedback   :: !(Maybe Feedback)
+    , _uffDetectorId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateFindingsFeedback' with the minimum fields required to make a request.
@@ -133,9 +135,11 @@ instance ToQuery UpdateFindingsFeedback where
         toQuery = const mempty
 
 -- | /See:/ 'updateFindingsFeedbackResponse' smart constructor.
-newtype UpdateFindingsFeedbackResponse = UpdateFindingsFeedbackResponse'
-  { _uffrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateFindingsFeedbackResponse =
+  UpdateFindingsFeedbackResponse'
+    { _uffrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateFindingsFeedbackResponse' with the minimum fields required to make a request.

@@ -89,10 +89,12 @@ instance ToQuery DescribeSubscription where
         toQuery = const mempty
 
 -- | /See:/ 'describeSubscriptionResponse' smart constructor.
-data DescribeSubscriptionResponse = DescribeSubscriptionResponse'
-  { _dsrsSubscription   :: !(Maybe Subscription)
-  , _dsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeSubscriptionResponse =
+  DescribeSubscriptionResponse'
+    { _dsrsSubscription   :: !(Maybe Subscription)
+    , _dsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeSubscriptionResponse' with the minimum fields required to make a request.

@@ -52,14 +52,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'startFaceSearch' smart constructor.
-data StartFaceSearch = StartFaceSearch'
-  { _sfsFaceMatchThreshold  :: !(Maybe Double)
-  , _sfsJobTag              :: !(Maybe Text)
-  , _sfsNotificationChannel :: !(Maybe NotificationChannel)
-  , _sfsClientRequestToken  :: !(Maybe Text)
-  , _sfsVideo               :: !Video
-  , _sfsCollectionId        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartFaceSearch =
+  StartFaceSearch'
+    { _sfsFaceMatchThreshold  :: !(Maybe Double)
+    , _sfsJobTag              :: !(Maybe Text)
+    , _sfsNotificationChannel :: !(Maybe NotificationChannel)
+    , _sfsClientRequestToken  :: !(Maybe Text)
+    , _sfsVideo               :: !Video
+    , _sfsCollectionId        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartFaceSearch' with the minimum fields required to make a request.
@@ -158,10 +160,12 @@ instance ToQuery StartFaceSearch where
         toQuery = const mempty
 
 -- | /See:/ 'startFaceSearchResponse' smart constructor.
-data StartFaceSearchResponse = StartFaceSearchResponse'
-  { _sfsrsJobId          :: !(Maybe Text)
-  , _sfsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartFaceSearchResponse =
+  StartFaceSearchResponse'
+    { _sfsrsJobId          :: !(Maybe Text)
+    , _sfsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartFaceSearchResponse' with the minimum fields required to make a request.

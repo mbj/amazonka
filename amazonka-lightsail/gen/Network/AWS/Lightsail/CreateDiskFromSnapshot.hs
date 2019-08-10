@@ -48,12 +48,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createDiskFromSnapshot' smart constructor.
-data CreateDiskFromSnapshot = CreateDiskFromSnapshot'
-  { _cdfsDiskName         :: !Text
-  , _cdfsDiskSnapshotName :: !Text
-  , _cdfsAvailabilityZone :: !Text
-  , _cdfsSizeInGb         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDiskFromSnapshot =
+  CreateDiskFromSnapshot'
+    { _cdfsDiskName         :: !Text
+    , _cdfsDiskSnapshotName :: !Text
+    , _cdfsAvailabilityZone :: !Text
+    , _cdfsSizeInGb         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDiskFromSnapshot' with the minimum fields required to make a request.
@@ -139,10 +141,12 @@ instance ToQuery CreateDiskFromSnapshot where
         toQuery = const mempty
 
 -- | /See:/ 'createDiskFromSnapshotResponse' smart constructor.
-data CreateDiskFromSnapshotResponse = CreateDiskFromSnapshotResponse'
-  { _cdfsrsOperations     :: !(Maybe [Operation])
-  , _cdfsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDiskFromSnapshotResponse =
+  CreateDiskFromSnapshotResponse'
+    { _cdfsrsOperations     :: !(Maybe [Operation])
+    , _cdfsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDiskFromSnapshotResponse' with the minimum fields required to make a request.

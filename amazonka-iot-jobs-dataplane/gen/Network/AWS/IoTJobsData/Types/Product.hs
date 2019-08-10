@@ -26,18 +26,20 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'jobExecution' smart constructor.
-data JobExecution = JobExecution'
-  { _jeStatus          :: !(Maybe JobExecutionStatus)
-  , _jeJobId           :: !(Maybe Text)
-  , _jeLastUpdatedAt   :: !(Maybe Integer)
-  , _jeQueuedAt        :: !(Maybe Integer)
-  , _jeJobDocument     :: !(Maybe Text)
-  , _jeStatusDetails   :: !(Maybe (Map Text Text))
-  , _jeExecutionNumber :: !(Maybe Integer)
-  , _jeVersionNumber   :: !(Maybe Integer)
-  , _jeStartedAt       :: !(Maybe Integer)
-  , _jeThingName       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data JobExecution =
+  JobExecution'
+    { _jeStatus          :: !(Maybe JobExecutionStatus)
+    , _jeJobId           :: !(Maybe Text)
+    , _jeLastUpdatedAt   :: !(Maybe Integer)
+    , _jeQueuedAt        :: !(Maybe Integer)
+    , _jeJobDocument     :: !(Maybe Text)
+    , _jeStatusDetails   :: !(Maybe (Map Text Text))
+    , _jeExecutionNumber :: !(Maybe Integer)
+    , _jeVersionNumber   :: !(Maybe Integer)
+    , _jeStartedAt       :: !(Maybe Integer)
+    , _jeThingName       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'JobExecution' with the minimum fields required to make a request.
@@ -144,11 +146,13 @@ instance NFData JobExecution where
 --
 --
 -- /See:/ 'jobExecutionState' smart constructor.
-data JobExecutionState = JobExecutionState'
-  { _jesStatus        :: !(Maybe JobExecutionStatus)
-  , _jesStatusDetails :: !(Maybe (Map Text Text))
-  , _jesVersionNumber :: !(Maybe Integer)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data JobExecutionState =
+  JobExecutionState'
+    { _jesStatus        :: !(Maybe JobExecutionStatus)
+    , _jesStatusDetails :: !(Maybe (Map Text Text))
+    , _jesVersionNumber :: !(Maybe Integer)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'JobExecutionState' with the minimum fields required to make a request.
@@ -200,14 +204,16 @@ instance NFData JobExecutionState where
 --
 --
 -- /See:/ 'jobExecutionSummary' smart constructor.
-data JobExecutionSummary = JobExecutionSummary'
-  { _jJobId           :: !(Maybe Text)
-  , _jLastUpdatedAt   :: !(Maybe Integer)
-  , _jQueuedAt        :: !(Maybe Integer)
-  , _jExecutionNumber :: !(Maybe Integer)
-  , _jVersionNumber   :: !(Maybe Integer)
-  , _jStartedAt       :: !(Maybe Integer)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data JobExecutionSummary =
+  JobExecutionSummary'
+    { _jJobId           :: !(Maybe Text)
+    , _jLastUpdatedAt   :: !(Maybe Integer)
+    , _jQueuedAt        :: !(Maybe Integer)
+    , _jExecutionNumber :: !(Maybe Integer)
+    , _jVersionNumber   :: !(Maybe Integer)
+    , _jStartedAt       :: !(Maybe Integer)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'JobExecutionSummary' with the minimum fields required to make a request.

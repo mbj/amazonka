@@ -49,9 +49,11 @@ import Network.AWS.SageMaker.Types
 import Network.AWS.SageMaker.Types.Product
 
 -- | /See:/ 'describeEndpointConfig' smart constructor.
-newtype DescribeEndpointConfig = DescribeEndpointConfig'
-  { _decEndpointConfigName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeEndpointConfig =
+  DescribeEndpointConfig'
+    { _decEndpointConfigName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEndpointConfig' with the minimum fields required to make a request.
@@ -111,14 +113,16 @@ instance ToQuery DescribeEndpointConfig where
         toQuery = const mempty
 
 -- | /See:/ 'describeEndpointConfigResponse' smart constructor.
-data DescribeEndpointConfigResponse = DescribeEndpointConfigResponse'
-  { _decrsKMSKeyId           :: !(Maybe Text)
-  , _decrsResponseStatus     :: !Int
-  , _decrsEndpointConfigName :: !Text
-  , _decrsEndpointConfigARN  :: !Text
-  , _decrsProductionVariants :: !(List1 ProductionVariant)
-  , _decrsCreationTime       :: !POSIX
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeEndpointConfigResponse =
+  DescribeEndpointConfigResponse'
+    { _decrsKMSKeyId           :: !(Maybe Text)
+    , _decrsResponseStatus     :: !Int
+    , _decrsEndpointConfigName :: !Text
+    , _decrsEndpointConfigARN  :: !Text
+    , _decrsProductionVariants :: !(List1 ProductionVariant)
+    , _decrsCreationTime       :: !POSIX
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEndpointConfigResponse' with the minimum fields required to make a request.

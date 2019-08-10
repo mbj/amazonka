@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteService' smart constructor.
-data DeleteService = DeleteService'
-  { _dsCluster :: !(Maybe Text)
-  , _dsService :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteService =
+  DeleteService'
+    { _dsCluster :: !(Maybe Text)
+    , _dsService :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteService' with the minimum fields required to make a request.
@@ -111,10 +113,12 @@ instance ToQuery DeleteService where
         toQuery = const mempty
 
 -- | /See:/ 'deleteServiceResponse' smart constructor.
-data DeleteServiceResponse = DeleteServiceResponse'
-  { _dsrsService        :: !(Maybe ContainerService)
-  , _dsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteServiceResponse =
+  DeleteServiceResponse'
+    { _dsrsService        :: !(Maybe ContainerService)
+    , _dsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteServiceResponse' with the minimum fields required to make a request.

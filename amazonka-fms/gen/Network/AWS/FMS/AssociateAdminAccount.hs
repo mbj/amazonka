@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'associateAdminAccount' smart constructor.
-newtype AssociateAdminAccount = AssociateAdminAccount'
-  { _aaaAdminAccount :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AssociateAdminAccount =
+  AssociateAdminAccount'
+    { _aaaAdminAccount :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateAdminAccount' with the minimum fields required to make a request.

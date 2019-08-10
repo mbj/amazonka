@@ -47,12 +47,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'setLoadBasedAutoScaling' smart constructor.
-data SetLoadBasedAutoScaling = SetLoadBasedAutoScaling'
-  { _slbasUpScaling   :: !(Maybe AutoScalingThresholds)
-  , _slbasEnable      :: !(Maybe Bool)
-  , _slbasDownScaling :: !(Maybe AutoScalingThresholds)
-  , _slbasLayerId     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SetLoadBasedAutoScaling =
+  SetLoadBasedAutoScaling'
+    { _slbasUpScaling   :: !(Maybe AutoScalingThresholds)
+    , _slbasEnable      :: !(Maybe Bool)
+    , _slbasDownScaling :: !(Maybe AutoScalingThresholds)
+    , _slbasLayerId     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetLoadBasedAutoScaling' with the minimum fields required to make a request.

@@ -52,10 +52,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'attachLoadBalancerToSubnets' smart constructor.
-data AttachLoadBalancerToSubnets = AttachLoadBalancerToSubnets'
-  { _albtsLoadBalancerName :: !Text
-  , _albtsSubnets          :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AttachLoadBalancerToSubnets =
+  AttachLoadBalancerToSubnets'
+    { _albtsLoadBalancerName :: !Text
+    , _albtsSubnets          :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttachLoadBalancerToSubnets' with the minimum fields required to make a request.
@@ -118,10 +120,12 @@ instance ToQuery AttachLoadBalancerToSubnets where
 --
 --
 -- /See:/ 'attachLoadBalancerToSubnetsResponse' smart constructor.
-data AttachLoadBalancerToSubnetsResponse = AttachLoadBalancerToSubnetsResponse'
-  { _albtsrsSubnets        :: !(Maybe [Text])
-  , _albtsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AttachLoadBalancerToSubnetsResponse =
+  AttachLoadBalancerToSubnetsResponse'
+    { _albtsrsSubnets        :: !(Maybe [Text])
+    , _albtsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttachLoadBalancerToSubnetsResponse' with the minimum fields required to make a request.

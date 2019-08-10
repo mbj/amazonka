@@ -46,9 +46,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteDeploymentConfig' smart constructor.
-newtype DeleteDeploymentConfig = DeleteDeploymentConfig'
-  { _ddcDeploymentConfigName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteDeploymentConfig =
+  DeleteDeploymentConfig'
+    { _ddcDeploymentConfigName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteDeploymentConfig' with the minimum fields required to make a request.

@@ -61,10 +61,12 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'setIdentityDkimEnabled' smart constructor.
-data SetIdentityDkimEnabled = SetIdentityDkimEnabled'
-  { _sideIdentity    :: !Text
-  , _sideDkimEnabled :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SetIdentityDkimEnabled =
+  SetIdentityDkimEnabled'
+    { _sideIdentity    :: !Text
+    , _sideDkimEnabled :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetIdentityDkimEnabled' with the minimum fields required to make a request.
@@ -125,9 +127,11 @@ instance ToQuery SetIdentityDkimEnabled where
 --
 --
 -- /See:/ 'setIdentityDkimEnabledResponse' smart constructor.
-newtype SetIdentityDkimEnabledResponse = SetIdentityDkimEnabledResponse'
-  { _sidersResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype SetIdentityDkimEnabledResponse =
+  SetIdentityDkimEnabledResponse'
+    { _sidersResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetIdentityDkimEnabledResponse' with the minimum fields required to make a request.

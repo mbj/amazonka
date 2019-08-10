@@ -87,10 +87,12 @@ instance ToQuery GetHealthCheckCount where
 --
 --
 -- /See:/ 'getHealthCheckCountResponse' smart constructor.
-data GetHealthCheckCountResponse = GetHealthCheckCountResponse'
-  { _ghccrsResponseStatus   :: !Int
-  , _ghccrsHealthCheckCount :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetHealthCheckCountResponse =
+  GetHealthCheckCountResponse'
+    { _ghccrsResponseStatus   :: !Int
+    , _ghccrsHealthCheckCount :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetHealthCheckCountResponse' with the minimum fields required to make a request.

@@ -56,12 +56,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listClusters' smart constructor.
-data ListClusters = ListClusters'
-  { _lcCreatedAfter  :: !(Maybe POSIX)
-  , _lcMarker        :: !(Maybe Text)
-  , _lcClusterStates :: !(Maybe [ClusterState])
-  , _lcCreatedBefore :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListClusters =
+  ListClusters'
+    { _lcCreatedAfter  :: !(Maybe POSIX)
+    , _lcMarker        :: !(Maybe Text)
+    , _lcClusterStates :: !(Maybe [ClusterState])
+    , _lcCreatedBefore :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListClusters' with the minimum fields required to make a request.
@@ -152,11 +154,13 @@ instance ToQuery ListClusters where
 --
 --
 -- /See:/ 'listClustersResponse' smart constructor.
-data ListClustersResponse = ListClustersResponse'
-  { _lcrsMarker         :: !(Maybe Text)
-  , _lcrsClusters       :: !(Maybe [ClusterSummary])
-  , _lcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListClustersResponse =
+  ListClustersResponse'
+    { _lcrsMarker         :: !(Maybe Text)
+    , _lcrsClusters       :: !(Maybe [ClusterSummary])
+    , _lcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListClustersResponse' with the minimum fields required to make a request.

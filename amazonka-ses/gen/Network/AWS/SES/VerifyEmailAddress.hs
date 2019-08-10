@@ -46,9 +46,11 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'verifyEmailAddress' smart constructor.
-newtype VerifyEmailAddress = VerifyEmailAddress'
-  { _veaEmailAddress :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype VerifyEmailAddress =
+  VerifyEmailAddress'
+    { _veaEmailAddress :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VerifyEmailAddress' with the minimum fields required to make a request.

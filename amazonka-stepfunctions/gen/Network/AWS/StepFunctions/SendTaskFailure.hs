@@ -46,11 +46,13 @@ import Network.AWS.StepFunctions.Types
 import Network.AWS.StepFunctions.Types.Product
 
 -- | /See:/ 'sendTaskFailure' smart constructor.
-data SendTaskFailure = SendTaskFailure'
-  { _stfError     :: !(Maybe Text)
-  , _stfCause     :: !(Maybe Text)
-  , _stfTaskToken :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SendTaskFailure =
+  SendTaskFailure'
+    { _stfError     :: !(Maybe Text)
+    , _stfCause     :: !(Maybe Text)
+    , _stfTaskToken :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SendTaskFailure' with the minimum fields required to make a request.
@@ -118,9 +120,11 @@ instance ToQuery SendTaskFailure where
         toQuery = const mempty
 
 -- | /See:/ 'sendTaskFailureResponse' smart constructor.
-newtype SendTaskFailureResponse = SendTaskFailureResponse'
-  { _stfrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype SendTaskFailureResponse =
+  SendTaskFailureResponse'
+    { _stfrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SendTaskFailureResponse' with the minimum fields required to make a request.

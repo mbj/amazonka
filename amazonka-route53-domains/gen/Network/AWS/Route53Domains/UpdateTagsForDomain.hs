@@ -51,10 +51,12 @@ import Network.AWS.Route53Domains.Types.Product
 --
 --
 -- /See:/ 'updateTagsForDomain' smart constructor.
-data UpdateTagsForDomain = UpdateTagsForDomain'
-  { _utfdTagsToUpdate :: !(Maybe [Tag])
-  , _utfdDomainName   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateTagsForDomain =
+  UpdateTagsForDomain'
+    { _utfdTagsToUpdate :: !(Maybe [Tag])
+    , _utfdDomainName   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateTagsForDomain' with the minimum fields required to make a request.
@@ -117,9 +119,11 @@ instance ToQuery UpdateTagsForDomain where
         toQuery = const mempty
 
 -- | /See:/ 'updateTagsForDomainResponse' smart constructor.
-newtype UpdateTagsForDomainResponse = UpdateTagsForDomainResponse'
-  { _utfdrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateTagsForDomainResponse =
+  UpdateTagsForDomainResponse'
+    { _utfdrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateTagsForDomainResponse' with the minimum fields required to make a request.

@@ -55,12 +55,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeTrusts' smart constructor.
-data DescribeTrusts = DescribeTrusts'
-  { _dtDirectoryId :: !(Maybe Text)
-  , _dtNextToken   :: !(Maybe Text)
-  , _dtTrustIds    :: !(Maybe [Text])
-  , _dtLimit       :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeTrusts =
+  DescribeTrusts'
+    { _dtDirectoryId :: !(Maybe Text)
+    , _dtNextToken   :: !(Maybe Text)
+    , _dtTrustIds    :: !(Maybe [Text])
+    , _dtLimit       :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeTrusts' with the minimum fields required to make a request.
@@ -145,11 +147,13 @@ instance ToQuery DescribeTrusts where
 --
 --
 -- /See:/ 'describeTrustsResponse' smart constructor.
-data DescribeTrustsResponse = DescribeTrustsResponse'
-  { _dtrsNextToken      :: !(Maybe Text)
-  , _dtrsTrusts         :: !(Maybe [Trust])
-  , _dtrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeTrustsResponse =
+  DescribeTrustsResponse'
+    { _dtrsNextToken      :: !(Maybe Text)
+    , _dtrsTrusts         :: !(Maybe [Trust])
+    , _dtrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeTrustsResponse' with the minimum fields required to make a request.

@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getAssociatedRole' smart constructor.
-newtype GetAssociatedRole = GetAssociatedRole'
-  { _garGroupId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetAssociatedRole =
+  GetAssociatedRole'
+    { _garGroupId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetAssociatedRole' with the minimum fields required to make a request.
@@ -94,11 +96,13 @@ instance ToQuery GetAssociatedRole where
         toQuery = const mempty
 
 -- | /See:/ 'getAssociatedRoleResponse' smart constructor.
-data GetAssociatedRoleResponse = GetAssociatedRoleResponse'
-  { _garrsAssociatedAt   :: !(Maybe Text)
-  , _garrsRoleARN        :: !(Maybe Text)
-  , _garrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetAssociatedRoleResponse =
+  GetAssociatedRoleResponse'
+    { _garrsAssociatedAt   :: !(Maybe Text)
+    , _garrsRoleARN        :: !(Maybe Text)
+    , _garrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetAssociatedRoleResponse' with the minimum fields required to make a request.

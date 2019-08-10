@@ -53,10 +53,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'adminResetUserPassword' smart constructor.
-data AdminResetUserPassword = AdminResetUserPassword'
-  { _arupUserPoolId :: !Text
-  , _arupUsername   :: !(Sensitive Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data AdminResetUserPassword =
+  AdminResetUserPassword'
+    { _arupUserPoolId :: !Text
+    , _arupUsername   :: !(Sensitive Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AdminResetUserPassword' with the minimum fields required to make a request.
@@ -125,9 +127,11 @@ instance ToQuery AdminResetUserPassword where
 --
 --
 -- /See:/ 'adminResetUserPasswordResponse' smart constructor.
-newtype AdminResetUserPasswordResponse = AdminResetUserPasswordResponse'
-  { _aruprsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AdminResetUserPasswordResponse =
+  AdminResetUserPasswordResponse'
+    { _aruprsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AdminResetUserPasswordResponse' with the minimum fields required to make a request.

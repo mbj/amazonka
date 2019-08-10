@@ -54,11 +54,13 @@ import Network.AWS.SWF.Types.Product
 --
 --
 -- /See:/ 'respondDecisionTaskCompleted' smart constructor.
-data RespondDecisionTaskCompleted = RespondDecisionTaskCompleted'
-  { _rdtcDecisions        :: !(Maybe [Decision])
-  , _rdtcExecutionContext :: !(Maybe Text)
-  , _rdtcTaskToken        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RespondDecisionTaskCompleted =
+  RespondDecisionTaskCompleted'
+    { _rdtcDecisions        :: !(Maybe [Decision])
+    , _rdtcExecutionContext :: !(Maybe Text)
+    , _rdtcTaskToken        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RespondDecisionTaskCompleted' with the minimum fields required to make a request.

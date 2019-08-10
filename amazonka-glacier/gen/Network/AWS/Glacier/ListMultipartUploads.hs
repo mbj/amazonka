@@ -64,12 +64,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listMultipartUploads' smart constructor.
-data ListMultipartUploads = ListMultipartUploads'
-  { _lmuMarker    :: !(Maybe Text)
-  , _lmuLimit     :: !(Maybe Text)
-  , _lmuAccountId :: !Text
-  , _lmuVaultName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListMultipartUploads =
+  ListMultipartUploads'
+    { _lmuMarker    :: !(Maybe Text)
+    , _lmuLimit     :: !(Maybe Text)
+    , _lmuAccountId :: !Text
+    , _lmuVaultName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListMultipartUploads' with the minimum fields required to make a request.
@@ -153,11 +155,13 @@ instance ToQuery ListMultipartUploads where
 --
 --
 -- /See:/ 'listMultipartUploadsResponse' smart constructor.
-data ListMultipartUploadsResponse = ListMultipartUploadsResponse'
-  { _lmursUploadsList    :: !(Maybe [UploadListElement])
-  , _lmursMarker         :: !(Maybe Text)
-  , _lmursResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListMultipartUploadsResponse =
+  ListMultipartUploadsResponse'
+    { _lmursUploadsList    :: !(Maybe [UploadListElement])
+    , _lmursMarker         :: !(Maybe Text)
+    , _lmursResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListMultipartUploadsResponse' with the minimum fields required to make a request.

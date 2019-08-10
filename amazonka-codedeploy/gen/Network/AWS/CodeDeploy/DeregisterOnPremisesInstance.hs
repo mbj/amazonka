@@ -46,9 +46,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deregisterOnPremisesInstance' smart constructor.
-newtype DeregisterOnPremisesInstance = DeregisterOnPremisesInstance'
-  { _dopiInstanceName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeregisterOnPremisesInstance =
+  DeregisterOnPremisesInstance'
+    { _dopiInstanceName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeregisterOnPremisesInstance' with the minimum fields required to make a request.

@@ -47,9 +47,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'cancelKeyDeletion' smart constructor.
-newtype CancelKeyDeletion = CancelKeyDeletion'
-  { _ckdKeyId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CancelKeyDeletion =
+  CancelKeyDeletion'
+    { _ckdKeyId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CancelKeyDeletion' with the minimum fields required to make a request.
@@ -100,10 +102,12 @@ instance ToQuery CancelKeyDeletion where
         toQuery = const mempty
 
 -- | /See:/ 'cancelKeyDeletionResponse' smart constructor.
-data CancelKeyDeletionResponse = CancelKeyDeletionResponse'
-  { _ckdrsKeyId          :: !(Maybe Text)
-  , _ckdrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CancelKeyDeletionResponse =
+  CancelKeyDeletionResponse'
+    { _ckdrsKeyId          :: !(Maybe Text)
+    , _ckdrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CancelKeyDeletionResponse' with the minimum fields required to make a request.

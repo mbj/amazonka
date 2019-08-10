@@ -64,10 +64,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createIntentVersion' smart constructor.
-data CreateIntentVersion = CreateIntentVersion'
-  { _civChecksum :: !(Maybe Text)
-  , _civName     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateIntentVersion =
+  CreateIntentVersion'
+    { _civChecksum :: !(Maybe Text)
+    , _civName     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateIntentVersion' with the minimum fields required to make a request.
@@ -141,24 +143,26 @@ instance ToQuery CreateIntentVersion where
         toQuery = const mempty
 
 -- | /See:/ 'createIntentVersionResponse' smart constructor.
-data CreateIntentVersionResponse = CreateIntentVersionResponse'
-  { _civrsFulfillmentActivity   :: !(Maybe FulfillmentActivity)
-  , _civrsSlots                 :: !(Maybe [Slot])
-  , _civrsRejectionStatement    :: !(Maybe Statement)
-  , _civrsChecksum              :: !(Maybe Text)
-  , _civrsConclusionStatement   :: !(Maybe Statement)
-  , _civrsSampleUtterances      :: !(Maybe [Text])
-  , _civrsParentIntentSignature :: !(Maybe Text)
-  , _civrsCreatedDate           :: !(Maybe POSIX)
-  , _civrsName                  :: !(Maybe Text)
-  , _civrsVersion               :: !(Maybe Text)
-  , _civrsFollowUpPrompt        :: !(Maybe FollowUpPrompt)
-  , _civrsLastUpdatedDate       :: !(Maybe POSIX)
-  , _civrsConfirmationPrompt    :: !(Maybe Prompt)
-  , _civrsDialogCodeHook        :: !(Maybe CodeHook)
-  , _civrsDescription           :: !(Maybe Text)
-  , _civrsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateIntentVersionResponse =
+  CreateIntentVersionResponse'
+    { _civrsFulfillmentActivity   :: !(Maybe FulfillmentActivity)
+    , _civrsSlots                 :: !(Maybe [Slot])
+    , _civrsRejectionStatement    :: !(Maybe Statement)
+    , _civrsChecksum              :: !(Maybe Text)
+    , _civrsConclusionStatement   :: !(Maybe Statement)
+    , _civrsSampleUtterances      :: !(Maybe [Text])
+    , _civrsParentIntentSignature :: !(Maybe Text)
+    , _civrsCreatedDate           :: !(Maybe POSIX)
+    , _civrsName                  :: !(Maybe Text)
+    , _civrsVersion               :: !(Maybe Text)
+    , _civrsFollowUpPrompt        :: !(Maybe FollowUpPrompt)
+    , _civrsLastUpdatedDate       :: !(Maybe POSIX)
+    , _civrsConfirmationPrompt    :: !(Maybe Prompt)
+    , _civrsDialogCodeHook        :: !(Maybe CodeHook)
+    , _civrsDescription           :: !(Maybe Text)
+    , _civrsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateIntentVersionResponse' with the minimum fields required to make a request.

@@ -64,20 +64,22 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateItem' smart constructor.
-data UpdateItem = UpdateItem'
-  { _uiExpressionAttributeNames    :: !(Maybe (Map Text Text))
-  , _uiReturnValues                :: !(Maybe ReturnValue)
-  , _uiUpdateExpression            :: !(Maybe Text)
-  , _uiExpressionAttributeValues   :: !(Maybe (Map Text AttributeValue))
-  , _uiAttributeUpdates            :: !(Maybe (Map Text AttributeValueUpdate))
-  , _uiReturnConsumedCapacity      :: !(Maybe ReturnConsumedCapacity)
-  , _uiReturnItemCollectionMetrics :: !(Maybe ReturnItemCollectionMetrics)
-  , _uiConditionExpression         :: !(Maybe Text)
-  , _uiConditionalOperator         :: !(Maybe ConditionalOperator)
-  , _uiExpected                    :: !(Maybe (Map Text ExpectedAttributeValue))
-  , _uiTableName                   :: !Text
-  , _uiKey                         :: !(Map Text AttributeValue)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateItem =
+  UpdateItem'
+    { _uiExpressionAttributeNames :: !(Maybe (Map Text Text))
+    , _uiReturnValues :: !(Maybe ReturnValue)
+    , _uiUpdateExpression :: !(Maybe Text)
+    , _uiExpressionAttributeValues :: !(Maybe (Map Text AttributeValue))
+    , _uiAttributeUpdates :: !(Maybe (Map Text AttributeValueUpdate))
+    , _uiReturnConsumedCapacity :: !(Maybe ReturnConsumedCapacity)
+    , _uiReturnItemCollectionMetrics :: !(Maybe ReturnItemCollectionMetrics)
+    , _uiConditionExpression :: !(Maybe Text)
+    , _uiConditionalOperator :: !(Maybe ConditionalOperator)
+    , _uiExpected :: !(Maybe (Map Text ExpectedAttributeValue))
+    , _uiTableName :: !Text
+    , _uiKey :: !(Map Text AttributeValue)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateItem' with the minimum fields required to make a request.
@@ -234,12 +236,14 @@ instance ToQuery UpdateItem where
 --
 --
 -- /See:/ 'updateItemResponse' smart constructor.
-data UpdateItemResponse = UpdateItemResponse'
-  { _uirsItemCollectionMetrics :: !(Maybe ItemCollectionMetrics)
-  , _uirsConsumedCapacity      :: !(Maybe ConsumedCapacity)
-  , _uirsAttributes            :: !(Maybe (Map Text AttributeValue))
-  , _uirsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateItemResponse =
+  UpdateItemResponse'
+    { _uirsItemCollectionMetrics :: !(Maybe ItemCollectionMetrics)
+    , _uirsConsumedCapacity      :: !(Maybe ConsumedCapacity)
+    , _uirsAttributes            :: !(Maybe (Map Text AttributeValue))
+    , _uirsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateItemResponse' with the minimum fields required to make a request.

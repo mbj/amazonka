@@ -42,9 +42,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteAlarms' smart constructor.
-newtype DeleteAlarms = DeleteAlarms'
-  { _dAlarmNames :: [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteAlarms =
+  DeleteAlarms'
+    { _dAlarmNames :: [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteAlarms' with the minimum fields required to make a request.

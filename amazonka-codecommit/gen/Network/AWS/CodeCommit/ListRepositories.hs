@@ -55,11 +55,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listRepositories' smart constructor.
-data ListRepositories = ListRepositories'
-  { _lrNextToken :: !(Maybe Text)
-  , _lrOrder     :: !(Maybe OrderEnum)
-  , _lrSortBy    :: !(Maybe SortByEnum)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListRepositories =
+  ListRepositories'
+    { _lrNextToken :: !(Maybe Text)
+    , _lrOrder     :: !(Maybe OrderEnum)
+    , _lrSortBy    :: !(Maybe SortByEnum)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListRepositories' with the minimum fields required to make a request.
@@ -141,11 +143,13 @@ instance ToQuery ListRepositories where
 --
 --
 -- /See:/ 'listRepositoriesResponse' smart constructor.
-data ListRepositoriesResponse = ListRepositoriesResponse'
-  { _lrrsRepositories   :: !(Maybe [RepositoryNameIdPair])
-  , _lrrsNextToken      :: !(Maybe Text)
-  , _lrrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListRepositoriesResponse =
+  ListRepositoriesResponse'
+    { _lrrsRepositories   :: !(Maybe [RepositoryNameIdPair])
+    , _lrrsNextToken      :: !(Maybe Text)
+    , _lrrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListRepositoriesResponse' with the minimum fields required to make a request.

@@ -53,9 +53,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteHSM' smart constructor.
-newtype DeleteHSM = DeleteHSM'
-  { _dhHSMARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteHSM =
+  DeleteHSM'
+    { _dhHSMARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteHSM' with the minimum fields required to make a request.
@@ -110,10 +112,12 @@ instance ToQuery DeleteHSM where
 --
 --
 -- /See:/ 'deleteHSMResponse' smart constructor.
-data DeleteHSMResponse = DeleteHSMResponse'
-  { _dhsmrsResponseStatus :: !Int
-  , _dhsmrsStatus         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteHSMResponse =
+  DeleteHSMResponse'
+    { _dhsmrsResponseStatus :: !Int
+    , _dhsmrsStatus         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteHSMResponse' with the minimum fields required to make a request.

@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getInstanceAccessDetails' smart constructor.
-data GetInstanceAccessDetails = GetInstanceAccessDetails'
-  { _giadProtocol     :: !(Maybe InstanceAccessProtocol)
-  , _giadInstanceName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetInstanceAccessDetails =
+  GetInstanceAccessDetails'
+    { _giadProtocol     :: !(Maybe InstanceAccessProtocol)
+    , _giadInstanceName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetInstanceAccessDetails' with the minimum fields required to make a request.
@@ -113,10 +115,12 @@ instance ToQuery GetInstanceAccessDetails where
         toQuery = const mempty
 
 -- | /See:/ 'getInstanceAccessDetailsResponse' smart constructor.
-data GetInstanceAccessDetailsResponse = GetInstanceAccessDetailsResponse'
-  { _giadrsAccessDetails  :: !(Maybe InstanceAccessDetails)
-  , _giadrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetInstanceAccessDetailsResponse =
+  GetInstanceAccessDetailsResponse'
+    { _giadrsAccessDetails  :: !(Maybe InstanceAccessDetails)
+    , _giadrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetInstanceAccessDetailsResponse' with the minimum fields required to make a request.

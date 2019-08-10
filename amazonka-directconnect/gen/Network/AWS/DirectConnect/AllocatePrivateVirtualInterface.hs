@@ -70,11 +70,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'allocatePrivateVirtualInterface' smart constructor.
-data AllocatePrivateVirtualInterface = AllocatePrivateVirtualInterface'
-  { _apviConnectionId :: !Text
-  , _apviOwnerAccount :: !Text
-  , _apviNewPrivateVirtualInterfaceAllocation :: !NewPrivateVirtualInterfaceAllocation
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AllocatePrivateVirtualInterface =
+  AllocatePrivateVirtualInterface'
+    { _apviConnectionId :: !Text
+    , _apviOwnerAccount :: !Text
+    , _apviNewPrivateVirtualInterfaceAllocation :: !NewPrivateVirtualInterfaceAllocation
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AllocatePrivateVirtualInterface' with the minimum fields required to make a request.

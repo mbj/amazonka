@@ -58,10 +58,12 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'getMaintenanceWindowExecutionTask' smart constructor.
-data GetMaintenanceWindowExecutionTask = GetMaintenanceWindowExecutionTask'
-  { _gmwetWindowExecutionId :: !Text
-  , _gmwetTaskId            :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetMaintenanceWindowExecutionTask =
+  GetMaintenanceWindowExecutionTask'
+    { _gmwetWindowExecutionId :: !Text
+    , _gmwetTaskId            :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetMaintenanceWindowExecutionTask' with the minimum fields required to make a request.
@@ -147,22 +149,24 @@ instance ToQuery GetMaintenanceWindowExecutionTask
         toQuery = const mempty
 
 -- | /See:/ 'getMaintenanceWindowExecutionTaskResponse' smart constructor.
-data GetMaintenanceWindowExecutionTaskResponse = GetMaintenanceWindowExecutionTaskResponse'
-  { _gmwetrsStatus :: !(Maybe MaintenanceWindowExecutionStatus)
-  , _gmwetrsTaskParameters :: !(Maybe (Sensitive [Sensitive (Map Text (Sensitive MaintenanceWindowTaskParameterValueExpression))]))
-  , _gmwetrsTaskExecutionId :: !(Maybe Text)
-  , _gmwetrsPriority :: !(Maybe Nat)
-  , _gmwetrsStartTime :: !(Maybe POSIX)
-  , _gmwetrsTaskARN :: !(Maybe Text)
-  , _gmwetrsWindowExecutionId :: !(Maybe Text)
-  , _gmwetrsStatusDetails :: !(Maybe Text)
-  , _gmwetrsMaxErrors :: !(Maybe Text)
-  , _gmwetrsEndTime :: !(Maybe POSIX)
-  , _gmwetrsType :: !(Maybe MaintenanceWindowTaskType)
-  , _gmwetrsMaxConcurrency :: !(Maybe Text)
-  , _gmwetrsServiceRole :: !(Maybe Text)
-  , _gmwetrsResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data GetMaintenanceWindowExecutionTaskResponse =
+  GetMaintenanceWindowExecutionTaskResponse'
+    { _gmwetrsStatus :: !(Maybe MaintenanceWindowExecutionStatus)
+    , _gmwetrsTaskParameters :: !(Maybe (Sensitive [Sensitive (Map Text (Sensitive MaintenanceWindowTaskParameterValueExpression))]))
+    , _gmwetrsTaskExecutionId :: !(Maybe Text)
+    , _gmwetrsPriority :: !(Maybe Nat)
+    , _gmwetrsStartTime :: !(Maybe POSIX)
+    , _gmwetrsTaskARN :: !(Maybe Text)
+    , _gmwetrsWindowExecutionId :: !(Maybe Text)
+    , _gmwetrsStatusDetails :: !(Maybe Text)
+    , _gmwetrsMaxErrors :: !(Maybe Text)
+    , _gmwetrsEndTime :: !(Maybe POSIX)
+    , _gmwetrsType :: !(Maybe MaintenanceWindowTaskType)
+    , _gmwetrsMaxConcurrency :: !(Maybe Text)
+    , _gmwetrsServiceRole :: !(Maybe Text)
+    , _gmwetrsResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetMaintenanceWindowExecutionTaskResponse' with the minimum fields required to make a request.

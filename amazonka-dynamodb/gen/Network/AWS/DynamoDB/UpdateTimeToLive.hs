@@ -60,10 +60,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateTimeToLive' smart constructor.
-data UpdateTimeToLive = UpdateTimeToLive'
-  { _uttlTableName               :: !Text
-  , _uttlTimeToLiveSpecification :: !TimeToLiveSpecification
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateTimeToLive =
+  UpdateTimeToLive'
+    { _uttlTableName               :: !Text
+    , _uttlTimeToLiveSpecification :: !TimeToLiveSpecification
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateTimeToLive' with the minimum fields required to make a request.
@@ -131,10 +133,12 @@ instance ToQuery UpdateTimeToLive where
         toQuery = const mempty
 
 -- | /See:/ 'updateTimeToLiveResponse' smart constructor.
-data UpdateTimeToLiveResponse = UpdateTimeToLiveResponse'
-  { _uttlrsTimeToLiveSpecification :: !(Maybe TimeToLiveSpecification)
-  , _uttlrsResponseStatus          :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateTimeToLiveResponse =
+  UpdateTimeToLiveResponse'
+    { _uttlrsTimeToLiveSpecification :: !(Maybe TimeToLiveSpecification)
+    , _uttlrsResponseStatus          :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateTimeToLiveResponse' with the minimum fields required to make a request.

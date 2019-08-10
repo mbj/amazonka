@@ -45,9 +45,11 @@ import Network.AWS.WAFRegional.Types
 import Network.AWS.WAFRegional.Types.Product
 
 -- | /See:/ 'getWebACL' smart constructor.
-newtype GetWebACL = GetWebACL'
-  { _gwaWebACLId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetWebACL =
+  GetWebACL'
+    { _gwaWebACLId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetWebACL' with the minimum fields required to make a request.
@@ -99,10 +101,12 @@ instance ToQuery GetWebACL where
         toQuery = const mempty
 
 -- | /See:/ 'getWebACLResponse' smart constructor.
-data GetWebACLResponse = GetWebACLResponse'
-  { _gwarsWebACL         :: !(Maybe WebACL)
-  , _gwarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetWebACLResponse =
+  GetWebACLResponse'
+    { _gwarsWebACL         :: !(Maybe WebACL)
+    , _gwarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetWebACLResponse' with the minimum fields required to make a request.

@@ -42,9 +42,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteChannel' smart constructor.
-newtype DeleteChannel = DeleteChannel'
-  { _dcChannelName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteChannel =
+  DeleteChannel'
+    { _dcChannelName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteChannel' with the minimum fields required to make a request.

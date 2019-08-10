@@ -56,11 +56,13 @@ import Network.AWS.Route53.Types.Product
 --
 --
 -- /See:/ 'listTrafficPolicyVersions' smart constructor.
-data ListTrafficPolicyVersions = ListTrafficPolicyVersions'
-  { _ltpvMaxItems                   :: !(Maybe Text)
-  , _ltpvTrafficPolicyVersionMarker :: !(Maybe Text)
-  , _ltpvId                         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTrafficPolicyVersions =
+  ListTrafficPolicyVersions'
+    { _ltpvMaxItems                   :: !(Maybe Text)
+    , _ltpvTrafficPolicyVersionMarker :: !(Maybe Text)
+    , _ltpvId                         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTrafficPolicyVersions' with the minimum fields required to make a request.
@@ -135,13 +137,15 @@ instance ToQuery ListTrafficPolicyVersions where
 --
 --
 -- /See:/ 'listTrafficPolicyVersionsResponse' smart constructor.
-data ListTrafficPolicyVersionsResponse = ListTrafficPolicyVersionsResponse'
-  { _ltpvrsResponseStatus             :: !Int
-  , _ltpvrsTrafficPolicies            :: ![TrafficPolicy]
-  , _ltpvrsIsTruncated                :: !Bool
-  , _ltpvrsTrafficPolicyVersionMarker :: !Text
-  , _ltpvrsMaxItems                   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTrafficPolicyVersionsResponse =
+  ListTrafficPolicyVersionsResponse'
+    { _ltpvrsResponseStatus             :: !Int
+    , _ltpvrsTrafficPolicies            :: ![TrafficPolicy]
+    , _ltpvrsIsTruncated                :: !Bool
+    , _ltpvrsTrafficPolicyVersionMarker :: !Text
+    , _ltpvrsMaxItems                   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTrafficPolicyVersionsResponse' with the minimum fields required to make a request.

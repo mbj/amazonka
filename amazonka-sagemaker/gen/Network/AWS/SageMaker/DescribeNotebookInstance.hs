@@ -59,9 +59,11 @@ import Network.AWS.SageMaker.Types
 import Network.AWS.SageMaker.Types.Product
 
 -- | /See:/ 'describeNotebookInstance' smart constructor.
-newtype DescribeNotebookInstance = DescribeNotebookInstance'
-  { _dniNotebookInstanceName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeNotebookInstance =
+  DescribeNotebookInstance'
+    { _dniNotebookInstanceName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeNotebookInstance' with the minimum fields required to make a request.
@@ -132,24 +134,26 @@ instance ToQuery DescribeNotebookInstance where
         toQuery = const mempty
 
 -- | /See:/ 'describeNotebookInstanceResponse' smart constructor.
-data DescribeNotebookInstanceResponse = DescribeNotebookInstanceResponse'
-  { _dnirsCreationTime                        :: !(Maybe POSIX)
-  , _dnirsFailureReason                       :: !(Maybe Text)
-  , _dnirsNotebookInstanceName                :: !(Maybe Text)
-  , _dnirsSecurityGroups                      :: !(Maybe [Text])
-  , _dnirsURL                                 :: !(Maybe Text)
-  , _dnirsLastModifiedTime                    :: !(Maybe POSIX)
-  , _dnirsNetworkInterfaceId                  :: !(Maybe Text)
-  , _dnirsSubnetId                            :: !(Maybe Text)
-  , _dnirsInstanceType                        :: !(Maybe InstanceType)
-  , _dnirsKMSKeyId                            :: !(Maybe Text)
-  , _dnirsDirectInternetAccess                :: !(Maybe DirectInternetAccess)
-  , _dnirsNotebookInstanceARN                 :: !(Maybe Text)
-  , _dnirsNotebookInstanceLifecycleConfigName :: !(Maybe Text)
-  , _dnirsRoleARN                             :: !(Maybe Text)
-  , _dnirsResponseStatus                      :: !Int
-  , _dnirsNotebookInstanceStatus              :: !NotebookInstanceStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeNotebookInstanceResponse =
+  DescribeNotebookInstanceResponse'
+    { _dnirsCreationTime                        :: !(Maybe POSIX)
+    , _dnirsFailureReason                       :: !(Maybe Text)
+    , _dnirsNotebookInstanceName                :: !(Maybe Text)
+    , _dnirsSecurityGroups                      :: !(Maybe [Text])
+    , _dnirsURL                                 :: !(Maybe Text)
+    , _dnirsLastModifiedTime                    :: !(Maybe POSIX)
+    , _dnirsNetworkInterfaceId                  :: !(Maybe Text)
+    , _dnirsSubnetId                            :: !(Maybe Text)
+    , _dnirsInstanceType                        :: !(Maybe InstanceType)
+    , _dnirsKMSKeyId                            :: !(Maybe Text)
+    , _dnirsDirectInternetAccess                :: !(Maybe DirectInternetAccess)
+    , _dnirsNotebookInstanceARN                 :: !(Maybe Text)
+    , _dnirsNotebookInstanceLifecycleConfigName :: !(Maybe Text)
+    , _dnirsRoleARN                             :: !(Maybe Text)
+    , _dnirsResponseStatus                      :: !Int
+    , _dnirsNotebookInstanceStatus              :: !NotebookInstanceStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeNotebookInstanceResponse' with the minimum fields required to make a request.

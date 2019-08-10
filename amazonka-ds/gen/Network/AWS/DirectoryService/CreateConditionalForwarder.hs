@@ -50,11 +50,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createConditionalForwarder' smart constructor.
-data CreateConditionalForwarder = CreateConditionalForwarder'
-  { _ccfDirectoryId      :: !Text
-  , _ccfRemoteDomainName :: !Text
-  , _ccfDNSIPAddrs       :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateConditionalForwarder =
+  CreateConditionalForwarder'
+    { _ccfDirectoryId      :: !Text
+    , _ccfRemoteDomainName :: !Text
+    , _ccfDNSIPAddrs       :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateConditionalForwarder' with the minimum fields required to make a request.
@@ -133,9 +135,11 @@ instance ToQuery CreateConditionalForwarder where
 --
 --
 -- /See:/ 'createConditionalForwarderResponse' smart constructor.
-newtype CreateConditionalForwarderResponse = CreateConditionalForwarderResponse'
-  { _ccfrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateConditionalForwarderResponse =
+  CreateConditionalForwarderResponse'
+    { _ccfrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateConditionalForwarderResponse' with the minimum fields required to make a request.

@@ -64,10 +64,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'restoreTableFromBackup' smart constructor.
-data RestoreTableFromBackup = RestoreTableFromBackup'
-  { _rtfbTargetTableName :: !Text
-  , _rtfbBackupARN       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RestoreTableFromBackup =
+  RestoreTableFromBackup'
+    { _rtfbTargetTableName :: !Text
+    , _rtfbBackupARN       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RestoreTableFromBackup' with the minimum fields required to make a request.
@@ -132,10 +134,12 @@ instance ToQuery RestoreTableFromBackup where
         toQuery = const mempty
 
 -- | /See:/ 'restoreTableFromBackupResponse' smart constructor.
-data RestoreTableFromBackupResponse = RestoreTableFromBackupResponse'
-  { _rtfbrsTableDescription :: !(Maybe TableDescription)
-  , _rtfbrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RestoreTableFromBackupResponse =
+  RestoreTableFromBackupResponse'
+    { _rtfbrsTableDescription :: !(Maybe TableDescription)
+    , _rtfbrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RestoreTableFromBackupResponse' with the minimum fields required to make a request.

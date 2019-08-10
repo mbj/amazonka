@@ -46,11 +46,13 @@ import Network.AWS.WorkMail.Types
 import Network.AWS.WorkMail.Types.Product
 
 -- | /See:/ 'deleteMailboxPermissions' smart constructor.
-data DeleteMailboxPermissions = DeleteMailboxPermissions'
-  { _dmpOrganizationId :: !Text
-  , _dmpEntityId       :: !Text
-  , _dmpGranteeId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteMailboxPermissions =
+  DeleteMailboxPermissions'
+    { _dmpOrganizationId :: !Text
+    , _dmpEntityId       :: !Text
+    , _dmpGranteeId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteMailboxPermissions' with the minimum fields required to make a request.
@@ -126,9 +128,11 @@ instance ToQuery DeleteMailboxPermissions where
         toQuery = const mempty
 
 -- | /See:/ 'deleteMailboxPermissionsResponse' smart constructor.
-newtype DeleteMailboxPermissionsResponse = DeleteMailboxPermissionsResponse'
-  { _dmprsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteMailboxPermissionsResponse =
+  DeleteMailboxPermissionsResponse'
+    { _dmprsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteMailboxPermissionsResponse' with the minimum fields required to make a request.

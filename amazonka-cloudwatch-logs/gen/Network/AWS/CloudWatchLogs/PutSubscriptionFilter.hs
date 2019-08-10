@@ -59,14 +59,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putSubscriptionFilter' smart constructor.
-data PutSubscriptionFilter = PutSubscriptionFilter'
-  { _psfDistribution   :: !(Maybe Distribution)
-  , _psfRoleARN        :: !(Maybe Text)
-  , _psfLogGroupName   :: !Text
-  , _psfFilterName     :: !Text
-  , _psfFilterPattern  :: !Text
-  , _psfDestinationARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutSubscriptionFilter =
+  PutSubscriptionFilter'
+    { _psfDistribution   :: !(Maybe Distribution)
+    , _psfRoleARN        :: !(Maybe Text)
+    , _psfLogGroupName   :: !Text
+    , _psfFilterName     :: !Text
+    , _psfFilterPattern  :: !Text
+    , _psfDestinationARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutSubscriptionFilter' with the minimum fields required to make a request.

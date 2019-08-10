@@ -46,9 +46,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteSnapshotCopyGrant' smart constructor.
-newtype DeleteSnapshotCopyGrant = DeleteSnapshotCopyGrant'
-  { _dscgSnapshotCopyGrantName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteSnapshotCopyGrant =
+  DeleteSnapshotCopyGrant'
+    { _dscgSnapshotCopyGrantName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteSnapshotCopyGrant' with the minimum fields required to make a request.

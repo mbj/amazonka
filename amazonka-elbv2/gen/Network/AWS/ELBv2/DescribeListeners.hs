@@ -52,12 +52,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeListeners' smart constructor.
-data DescribeListeners = DescribeListeners'
-  { _dlListenerARNs    :: !(Maybe [Text])
-  , _dlLoadBalancerARN :: !(Maybe Text)
-  , _dlMarker          :: !(Maybe Text)
-  , _dlPageSize        :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeListeners =
+  DescribeListeners'
+    { _dlListenerARNs    :: !(Maybe [Text])
+    , _dlLoadBalancerARN :: !(Maybe Text)
+    , _dlMarker          :: !(Maybe Text)
+    , _dlPageSize        :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeListeners' with the minimum fields required to make a request.
@@ -138,11 +140,13 @@ instance ToQuery DescribeListeners where
                "Marker" =: _dlMarker, "PageSize" =: _dlPageSize]
 
 -- | /See:/ 'describeListenersResponse' smart constructor.
-data DescribeListenersResponse = DescribeListenersResponse'
-  { _dlsrsNextMarker     :: !(Maybe Text)
-  , _dlsrsListeners      :: !(Maybe [Listener])
-  , _dlsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeListenersResponse =
+  DescribeListenersResponse'
+    { _dlsrsNextMarker     :: !(Maybe Text)
+    , _dlsrsListeners      :: !(Maybe [Listener])
+    , _dlsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeListenersResponse' with the minimum fields required to make a request.

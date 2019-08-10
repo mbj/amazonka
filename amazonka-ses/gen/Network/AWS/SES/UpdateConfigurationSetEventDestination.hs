@@ -51,10 +51,12 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'updateConfigurationSetEventDestination' smart constructor.
-data UpdateConfigurationSetEventDestination = UpdateConfigurationSetEventDestination'
-  { _ucsedConfigurationSetName :: !Text
-  , _ucsedEventDestination     :: !EventDestination
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateConfigurationSetEventDestination =
+  UpdateConfigurationSetEventDestination'
+    { _ucsedConfigurationSetName :: !Text
+    , _ucsedEventDestination     :: !EventDestination
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateConfigurationSetEventDestination' with the minimum fields required to make a request.
@@ -131,9 +133,11 @@ instance ToQuery
 --
 --
 -- /See:/ 'updateConfigurationSetEventDestinationResponse' smart constructor.
-newtype UpdateConfigurationSetEventDestinationResponse = UpdateConfigurationSetEventDestinationResponse'
-  { _ucsedrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateConfigurationSetEventDestinationResponse =
+  UpdateConfigurationSetEventDestinationResponse'
+    { _ucsedrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateConfigurationSetEventDestinationResponse' with the minimum fields required to make a request.

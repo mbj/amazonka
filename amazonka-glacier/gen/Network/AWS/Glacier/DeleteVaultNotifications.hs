@@ -51,10 +51,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteVaultNotifications' smart constructor.
-data DeleteVaultNotifications = DeleteVaultNotifications'
-  { _dvnAccountId :: !Text
-  , _dvnVaultName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteVaultNotifications =
+  DeleteVaultNotifications'
+    { _dvnAccountId :: !Text
+    , _dvnVaultName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteVaultNotifications' with the minimum fields required to make a request.

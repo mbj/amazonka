@@ -51,10 +51,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'testRepositoryTriggers' smart constructor.
-data TestRepositoryTriggers = TestRepositoryTriggers'
-  { _trtRepositoryName :: !Text
-  , _trtTriggers       :: ![RepositoryTrigger]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TestRepositoryTriggers =
+  TestRepositoryTriggers'
+    { _trtRepositoryName :: !Text
+    , _trtTriggers       :: ![RepositoryTrigger]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TestRepositoryTriggers' with the minimum fields required to make a request.
@@ -124,11 +126,13 @@ instance ToQuery TestRepositoryTriggers where
 --
 --
 -- /See:/ 'testRepositoryTriggersResponse' smart constructor.
-data TestRepositoryTriggersResponse = TestRepositoryTriggersResponse'
-  { _trtrsFailedExecutions     :: !(Maybe [RepositoryTriggerExecutionFailure])
-  , _trtrsSuccessfulExecutions :: !(Maybe [Text])
-  , _trtrsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TestRepositoryTriggersResponse =
+  TestRepositoryTriggersResponse'
+    { _trtrsFailedExecutions     :: !(Maybe [RepositoryTriggerExecutionFailure])
+    , _trtrsSuccessfulExecutions :: !(Maybe [Text])
+    , _trtrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TestRepositoryTriggersResponse' with the minimum fields required to make a request.

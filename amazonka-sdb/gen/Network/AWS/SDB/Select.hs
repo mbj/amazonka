@@ -55,11 +55,13 @@ import Network.AWS.SDB.Types
 import Network.AWS.SDB.Types.Product
 
 -- | /See:/ 'select' smart constructor.
-data Select = Select'
-  { _sConsistentRead   :: !(Maybe Bool)
-  , _sNextToken        :: !(Maybe Text)
-  , _sSelectExpression :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Select =
+  Select'
+    { _sConsistentRead   :: !(Maybe Bool)
+    , _sNextToken        :: !(Maybe Text)
+    , _sSelectExpression :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Select' with the minimum fields required to make a request.
@@ -131,11 +133,13 @@ instance ToQuery Select where
                "SelectExpression" =: _sSelectExpression]
 
 -- | /See:/ 'selectResponse' smart constructor.
-data SelectResponse = SelectResponse'
-  { _srsItems          :: !(Maybe [Item])
-  , _srsNextToken      :: !(Maybe Text)
-  , _srsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SelectResponse =
+  SelectResponse'
+    { _srsItems          :: !(Maybe [Item])
+    , _srsNextToken      :: !(Maybe Text)
+    , _srsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SelectResponse' with the minimum fields required to make a request.

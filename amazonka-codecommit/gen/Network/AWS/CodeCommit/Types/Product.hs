@@ -26,11 +26,13 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'blobMetadata' smart constructor.
-data BlobMetadata = BlobMetadata'
-  { _bmPath   :: !(Maybe Text)
-  , _bmMode   :: !(Maybe Text)
-  , _bmBlobId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BlobMetadata =
+  BlobMetadata'
+    { _bmPath   :: !(Maybe Text)
+    , _bmMode   :: !(Maybe Text)
+    , _bmBlobId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BlobMetadata' with the minimum fields required to make a request.
@@ -77,10 +79,12 @@ instance NFData BlobMetadata where
 --
 --
 -- /See:/ 'branchInfo' smart constructor.
-data BranchInfo = BranchInfo'
-  { _biCommitId   :: !(Maybe Text)
-  , _biBranchName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BranchInfo =
+  BranchInfo'
+    { _biCommitId   :: !(Maybe Text)
+    , _biBranchName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BranchInfo' with the minimum fields required to make a request.
@@ -119,16 +123,18 @@ instance NFData BranchInfo where
 --
 --
 -- /See:/ 'comment' smart constructor.
-data Comment = Comment'
-  { _cLastModifiedDate   :: !(Maybe POSIX)
-  , _cAuthorARN          :: !(Maybe Text)
-  , _cContent            :: !(Maybe Text)
-  , _cCreationDate       :: !(Maybe POSIX)
-  , _cDeleted            :: !(Maybe Bool)
-  , _cClientRequestToken :: !(Maybe Text)
-  , _cCommentId          :: !(Maybe Text)
-  , _cInReplyTo          :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Comment =
+  Comment'
+    { _cLastModifiedDate   :: !(Maybe POSIX)
+    , _cAuthorARN          :: !(Maybe Text)
+    , _cContent            :: !(Maybe Text)
+    , _cCreationDate       :: !(Maybe POSIX)
+    , _cDeleted            :: !(Maybe Bool)
+    , _cClientRequestToken :: !(Maybe Text)
+    , _cCommentId          :: !(Maybe Text)
+    , _cInReplyTo          :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Comment' with the minimum fields required to make a request.
@@ -219,15 +225,17 @@ instance NFData Comment where
 --
 --
 -- /See:/ 'commentsForComparedCommit' smart constructor.
-data CommentsForComparedCommit = CommentsForComparedCommit'
-  { _cfccBeforeBlobId   :: !(Maybe Text)
-  , _cfccLocation       :: !(Maybe Location)
-  , _cfccAfterCommitId  :: !(Maybe Text)
-  , _cfccAfterBlobId    :: !(Maybe Text)
-  , _cfccBeforeCommitId :: !(Maybe Text)
-  , _cfccRepositoryName :: !(Maybe Text)
-  , _cfccComments       :: !(Maybe [Comment])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CommentsForComparedCommit =
+  CommentsForComparedCommit'
+    { _cfccBeforeBlobId   :: !(Maybe Text)
+    , _cfccLocation       :: !(Maybe Location)
+    , _cfccAfterCommitId  :: !(Maybe Text)
+    , _cfccAfterBlobId    :: !(Maybe Text)
+    , _cfccBeforeCommitId :: !(Maybe Text)
+    , _cfccRepositoryName :: !(Maybe Text)
+    , _cfccComments       :: !(Maybe [Comment])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CommentsForComparedCommit' with the minimum fields required to make a request.
@@ -310,16 +318,18 @@ instance NFData CommentsForComparedCommit where
 --
 --
 -- /See:/ 'commentsForPullRequest' smart constructor.
-data CommentsForPullRequest = CommentsForPullRequest'
-  { _cfprBeforeBlobId   :: !(Maybe Text)
-  , _cfprLocation       :: !(Maybe Location)
-  , _cfprAfterCommitId  :: !(Maybe Text)
-  , _cfprPullRequestId  :: !(Maybe Text)
-  , _cfprAfterBlobId    :: !(Maybe Text)
-  , _cfprBeforeCommitId :: !(Maybe Text)
-  , _cfprRepositoryName :: !(Maybe Text)
-  , _cfprComments       :: !(Maybe [Comment])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CommentsForPullRequest =
+  CommentsForPullRequest'
+    { _cfprBeforeBlobId   :: !(Maybe Text)
+    , _cfprLocation       :: !(Maybe Location)
+    , _cfprAfterCommitId  :: !(Maybe Text)
+    , _cfprPullRequestId  :: !(Maybe Text)
+    , _cfprAfterBlobId    :: !(Maybe Text)
+    , _cfprBeforeCommitId :: !(Maybe Text)
+    , _cfprRepositoryName :: !(Maybe Text)
+    , _cfprComments       :: !(Maybe [Comment])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CommentsForPullRequest' with the minimum fields required to make a request.
@@ -410,15 +420,17 @@ instance NFData CommentsForPullRequest where
 --
 --
 -- /See:/ 'commit' smart constructor.
-data Commit = Commit'
-  { _cCommitId       :: !(Maybe Text)
-  , _cCommitter      :: !(Maybe UserInfo)
-  , _cTreeId         :: !(Maybe Text)
-  , _cAdditionalData :: !(Maybe Text)
-  , _cParents        :: !(Maybe [Text])
-  , _cAuthor         :: !(Maybe UserInfo)
-  , _cMessage        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Commit =
+  Commit'
+    { _cCommitId       :: !(Maybe Text)
+    , _cCommitter      :: !(Maybe UserInfo)
+    , _cTreeId         :: !(Maybe Text)
+    , _cAdditionalData :: !(Maybe Text)
+    , _cParents        :: !(Maybe [Text])
+    , _cAuthor         :: !(Maybe UserInfo)
+    , _cMessage        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Commit' with the minimum fields required to make a request.
@@ -501,11 +513,13 @@ instance NFData Commit where
 --
 --
 -- /See:/ 'difference' smart constructor.
-data Difference = Difference'
-  { _dAfterBlob  :: !(Maybe BlobMetadata)
-  , _dBeforeBlob :: !(Maybe BlobMetadata)
-  , _dChangeType :: !(Maybe ChangeTypeEnum)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Difference =
+  Difference'
+    { _dAfterBlob  :: !(Maybe BlobMetadata)
+    , _dBeforeBlob :: !(Maybe BlobMetadata)
+    , _dChangeType :: !(Maybe ChangeTypeEnum)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Difference' with the minimum fields required to make a request.
@@ -553,11 +567,13 @@ instance NFData Difference where
 --
 --
 -- /See:/ 'location' smart constructor.
-data Location = Location'
-  { _lRelativeFileVersion :: !(Maybe RelativeFileVersionEnum)
-  , _lFilePath            :: !(Maybe Text)
-  , _lFilePosition        :: !(Maybe Integer)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Location =
+  Location'
+    { _lRelativeFileVersion :: !(Maybe RelativeFileVersionEnum)
+    , _lFilePath            :: !(Maybe Text)
+    , _lFilePosition        :: !(Maybe Integer)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Location' with the minimum fields required to make a request.
@@ -617,10 +633,12 @@ instance ToJSON Location where
 --
 --
 -- /See:/ 'mergeMetadata' smart constructor.
-data MergeMetadata = MergeMetadata'
-  { _mmMergedBy :: !(Maybe Text)
-  , _mmIsMerged :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MergeMetadata =
+  MergeMetadata'
+    { _mmMergedBy :: !(Maybe Text)
+    , _mmIsMerged :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MergeMetadata' with the minimum fields required to make a request.
@@ -659,17 +677,19 @@ instance NFData MergeMetadata where
 --
 --
 -- /See:/ 'pullRequest' smart constructor.
-data PullRequest = PullRequest'
-  { _prAuthorARN          :: !(Maybe Text)
-  , _prPullRequestId      :: !(Maybe Text)
-  , _prCreationDate       :: !(Maybe POSIX)
-  , _prPullRequestStatus  :: !(Maybe PullRequestStatusEnum)
-  , _prTitle              :: !(Maybe Text)
-  , _prClientRequestToken :: !(Maybe Text)
-  , _prLastActivityDate   :: !(Maybe POSIX)
-  , _prPullRequestTargets :: !(Maybe [PullRequestTarget])
-  , _prDescription        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PullRequest =
+  PullRequest'
+    { _prAuthorARN          :: !(Maybe Text)
+    , _prPullRequestId      :: !(Maybe Text)
+    , _prCreationDate       :: !(Maybe POSIX)
+    , _prPullRequestStatus  :: !(Maybe PullRequestStatusEnum)
+    , _prTitle              :: !(Maybe Text)
+    , _prClientRequestToken :: !(Maybe Text)
+    , _prLastActivityDate   :: !(Maybe POSIX)
+    , _prPullRequestTargets :: !(Maybe [PullRequestTarget])
+    , _prDescription        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PullRequest' with the minimum fields required to make a request.
@@ -768,15 +788,17 @@ instance NFData PullRequest where
 --
 --
 -- /See:/ 'pullRequestEvent' smart constructor.
-data PullRequestEvent = PullRequestEvent'
-  { _prePullRequestMergedStateChangedEventMetadata :: !(Maybe PullRequestMergedStateChangedEventMetadata)
-  , _prePullRequestEventType :: !(Maybe PullRequestEventType)
-  , _prePullRequestStatusChangedEventMetadata :: !(Maybe PullRequestStatusChangedEventMetadata)
-  , _preActorARN :: !(Maybe Text)
-  , _prePullRequestId :: !(Maybe Text)
-  , _preEventDate :: !(Maybe POSIX)
-  , _prePullRequestSourceReferenceUpdatedEventMetadata :: !(Maybe PullRequestSourceReferenceUpdatedEventMetadata)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PullRequestEvent =
+  PullRequestEvent'
+    { _prePullRequestMergedStateChangedEventMetadata :: !(Maybe PullRequestMergedStateChangedEventMetadata)
+    , _prePullRequestEventType :: !(Maybe PullRequestEventType)
+    , _prePullRequestStatusChangedEventMetadata :: !(Maybe PullRequestStatusChangedEventMetadata)
+    , _preActorARN :: !(Maybe Text)
+    , _prePullRequestId :: !(Maybe Text)
+    , _preEventDate :: !(Maybe POSIX)
+    , _prePullRequestSourceReferenceUpdatedEventMetadata :: !(Maybe PullRequestSourceReferenceUpdatedEventMetadata)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PullRequestEvent' with the minimum fields required to make a request.
@@ -862,11 +884,13 @@ instance NFData PullRequestEvent where
 --
 --
 -- /See:/ 'pullRequestMergedStateChangedEventMetadata' smart constructor.
-data PullRequestMergedStateChangedEventMetadata = PullRequestMergedStateChangedEventMetadata'
-  { _prmscemDestinationReference :: !(Maybe Text)
-  , _prmscemMergeMetadata        :: !(Maybe MergeMetadata)
-  , _prmscemRepositoryName       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PullRequestMergedStateChangedEventMetadata =
+  PullRequestMergedStateChangedEventMetadata'
+    { _prmscemDestinationReference :: !(Maybe Text)
+    , _prmscemMergeMetadata        :: !(Maybe MergeMetadata)
+    , _prmscemRepositoryName       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PullRequestMergedStateChangedEventMetadata' with the minimum fields required to make a request.
@@ -925,11 +949,13 @@ instance NFData
 --
 --
 -- /See:/ 'pullRequestSourceReferenceUpdatedEventMetadata' smart constructor.
-data PullRequestSourceReferenceUpdatedEventMetadata = PullRequestSourceReferenceUpdatedEventMetadata'
-  { _prsruemAfterCommitId  :: !(Maybe Text)
-  , _prsruemBeforeCommitId :: !(Maybe Text)
-  , _prsruemRepositoryName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PullRequestSourceReferenceUpdatedEventMetadata =
+  PullRequestSourceReferenceUpdatedEventMetadata'
+    { _prsruemAfterCommitId  :: !(Maybe Text)
+    , _prsruemBeforeCommitId :: !(Maybe Text)
+    , _prsruemRepositoryName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PullRequestSourceReferenceUpdatedEventMetadata' with the minimum fields required to make a request.
@@ -987,9 +1013,11 @@ instance NFData
 --
 --
 -- /See:/ 'pullRequestStatusChangedEventMetadata' smart constructor.
-newtype PullRequestStatusChangedEventMetadata = PullRequestStatusChangedEventMetadata'
-  { _prscemPullRequestStatus :: Maybe PullRequestStatusEnum
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype PullRequestStatusChangedEventMetadata =
+  PullRequestStatusChangedEventMetadata'
+    { _prscemPullRequestStatus :: Maybe PullRequestStatusEnum
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PullRequestStatusChangedEventMetadata' with the minimum fields required to make a request.
@@ -1028,14 +1056,16 @@ instance NFData PullRequestStatusChangedEventMetadata
 --
 --
 -- /See:/ 'pullRequestTarget' smart constructor.
-data PullRequestTarget = PullRequestTarget'
-  { _prtSourceCommit         :: !(Maybe Text)
-  , _prtDestinationReference :: !(Maybe Text)
-  , _prtMergeMetadata        :: !(Maybe MergeMetadata)
-  , _prtDestinationCommit    :: !(Maybe Text)
-  , _prtRepositoryName       :: !(Maybe Text)
-  , _prtSourceReference      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PullRequestTarget =
+  PullRequestTarget'
+    { _prtSourceCommit         :: !(Maybe Text)
+    , _prtDestinationReference :: !(Maybe Text)
+    , _prtMergeMetadata        :: !(Maybe MergeMetadata)
+    , _prtDestinationCommit    :: !(Maybe Text)
+    , _prtRepositoryName       :: !(Maybe Text)
+    , _prtSourceReference      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PullRequestTarget' with the minimum fields required to make a request.
@@ -1111,18 +1141,20 @@ instance NFData PullRequestTarget where
 --
 --
 -- /See:/ 'repositoryMetadata' smart constructor.
-data RepositoryMetadata = RepositoryMetadata'
-  { _rmRepositoryDescription :: !(Maybe Text)
-  , _rmLastModifiedDate      :: !(Maybe POSIX)
-  , _rmARN                   :: !(Maybe Text)
-  , _rmCloneURLHTTP          :: !(Maybe Text)
-  , _rmAccountId             :: !(Maybe Text)
-  , _rmDefaultBranch         :: !(Maybe Text)
-  , _rmRepositoryId          :: !(Maybe Text)
-  , _rmRepositoryName        :: !(Maybe Text)
-  , _rmCreationDate          :: !(Maybe POSIX)
-  , _rmCloneURLSSH           :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RepositoryMetadata =
+  RepositoryMetadata'
+    { _rmRepositoryDescription :: !(Maybe Text)
+    , _rmLastModifiedDate      :: !(Maybe POSIX)
+    , _rmARN                   :: !(Maybe Text)
+    , _rmCloneURLHTTP          :: !(Maybe Text)
+    , _rmAccountId             :: !(Maybe Text)
+    , _rmDefaultBranch         :: !(Maybe Text)
+    , _rmRepositoryId          :: !(Maybe Text)
+    , _rmRepositoryName        :: !(Maybe Text)
+    , _rmCreationDate          :: !(Maybe POSIX)
+    , _rmCloneURLSSH           :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RepositoryMetadata' with the minimum fields required to make a request.
@@ -1230,10 +1262,12 @@ instance NFData RepositoryMetadata where
 --
 --
 -- /See:/ 'repositoryNameIdPair' smart constructor.
-data RepositoryNameIdPair = RepositoryNameIdPair'
-  { _rnipRepositoryId   :: !(Maybe Text)
-  , _rnipRepositoryName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RepositoryNameIdPair =
+  RepositoryNameIdPair'
+    { _rnipRepositoryId   :: !(Maybe Text)
+    , _rnipRepositoryName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RepositoryNameIdPair' with the minimum fields required to make a request.
@@ -1274,13 +1308,15 @@ instance NFData RepositoryNameIdPair where
 --
 --
 -- /See:/ 'repositoryTrigger' smart constructor.
-data RepositoryTrigger = RepositoryTrigger'
-  { _rtBranches       :: !(Maybe [Text])
-  , _rtCustomData     :: !(Maybe Text)
-  , _rtName           :: !Text
-  , _rtDestinationARN :: !Text
-  , _rtEvents         :: ![RepositoryTriggerEventEnum]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RepositoryTrigger =
+  RepositoryTrigger'
+    { _rtBranches       :: !(Maybe [Text])
+    , _rtCustomData     :: !(Maybe Text)
+    , _rtName           :: !Text
+    , _rtDestinationARN :: !Text
+    , _rtEvents         :: ![RepositoryTriggerEventEnum]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RepositoryTrigger' with the minimum fields required to make a request.
@@ -1360,10 +1396,12 @@ instance ToJSON RepositoryTrigger where
 --
 --
 -- /See:/ 'repositoryTriggerExecutionFailure' smart constructor.
-data RepositoryTriggerExecutionFailure = RepositoryTriggerExecutionFailure'
-  { _rtefFailureMessage :: !(Maybe Text)
-  , _rtefTrigger        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RepositoryTriggerExecutionFailure =
+  RepositoryTriggerExecutionFailure'
+    { _rtefFailureMessage :: !(Maybe Text)
+    , _rtefTrigger        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RepositoryTriggerExecutionFailure' with the minimum fields required to make a request.
@@ -1407,11 +1445,13 @@ instance NFData RepositoryTriggerExecutionFailure
 --
 --
 -- /See:/ 'target' smart constructor.
-data Target = Target'
-  { _tDestinationReference :: !(Maybe Text)
-  , _tRepositoryName       :: !Text
-  , _tSourceReference      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Target =
+  Target'
+    { _tDestinationReference :: !(Maybe Text)
+    , _tRepositoryName       :: !Text
+    , _tSourceReference      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Target' with the minimum fields required to make a request.
@@ -1465,11 +1505,13 @@ instance ToJSON Target where
 --
 --
 -- /See:/ 'userInfo' smart constructor.
-data UserInfo = UserInfo'
-  { _uiEmail :: !(Maybe Text)
-  , _uiDate  :: !(Maybe Text)
-  , _uiName  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UserInfo =
+  UserInfo'
+    { _uiEmail :: !(Maybe Text)
+    , _uiDate  :: !(Maybe Text)
+    , _uiName  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UserInfo' with the minimum fields required to make a request.

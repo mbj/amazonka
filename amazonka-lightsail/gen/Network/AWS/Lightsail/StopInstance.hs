@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'stopInstance' smart constructor.
-data StopInstance = StopInstance'
-  { _siForce        :: !(Maybe Bool)
-  , _siInstanceName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StopInstance =
+  StopInstance'
+    { _siForce        :: !(Maybe Bool)
+    , _siInstanceName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopInstance' with the minimum fields required to make a request.
@@ -111,10 +113,12 @@ instance ToQuery StopInstance where
         toQuery = const mempty
 
 -- | /See:/ 'stopInstanceResponse' smart constructor.
-data StopInstanceResponse = StopInstanceResponse'
-  { _sirsOperations     :: !(Maybe [Operation])
-  , _sirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StopInstanceResponse =
+  StopInstanceResponse'
+    { _sirsOperations     :: !(Maybe [Operation])
+    , _sirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopInstanceResponse' with the minimum fields required to make a request.

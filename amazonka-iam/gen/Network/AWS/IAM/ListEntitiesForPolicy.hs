@@ -60,13 +60,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listEntitiesForPolicy' smart constructor.
-data ListEntitiesForPolicy = ListEntitiesForPolicy'
-  { _lefpPathPrefix   :: !(Maybe Text)
-  , _lefpEntityFilter :: !(Maybe EntityType)
-  , _lefpMarker       :: !(Maybe Text)
-  , _lefpMaxItems     :: !(Maybe Nat)
-  , _lefpPolicyARN    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListEntitiesForPolicy =
+  ListEntitiesForPolicy'
+    { _lefpPathPrefix   :: !(Maybe Text)
+    , _lefpEntityFilter :: !(Maybe EntityType)
+    , _lefpMarker       :: !(Maybe Text)
+    , _lefpMaxItems     :: !(Maybe Nat)
+    , _lefpPolicyARN    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListEntitiesForPolicy' with the minimum fields required to make a request.
@@ -167,14 +169,16 @@ instance ToQuery ListEntitiesForPolicy where
 --
 --
 -- /See:/ 'listEntitiesForPolicyResponse' smart constructor.
-data ListEntitiesForPolicyResponse = ListEntitiesForPolicyResponse'
-  { _lefprsPolicyGroups   :: !(Maybe [PolicyGroup])
-  , _lefprsPolicyRoles    :: !(Maybe [PolicyRole])
-  , _lefprsMarker         :: !(Maybe Text)
-  , _lefprsPolicyUsers    :: !(Maybe [PolicyUser])
-  , _lefprsIsTruncated    :: !(Maybe Bool)
-  , _lefprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListEntitiesForPolicyResponse =
+  ListEntitiesForPolicyResponse'
+    { _lefprsPolicyGroups   :: !(Maybe [PolicyGroup])
+    , _lefprsPolicyRoles    :: !(Maybe [PolicyRole])
+    , _lefprsMarker         :: !(Maybe Text)
+    , _lefprsPolicyUsers    :: !(Maybe [PolicyUser])
+    , _lefprsIsTruncated    :: !(Maybe Bool)
+    , _lefprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListEntitiesForPolicyResponse' with the minimum fields required to make a request.

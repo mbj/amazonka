@@ -54,9 +54,11 @@ import Network.AWS.Route53Domains.Types.Product
 --
 --
 -- /See:/ 'getOperationDetail' smart constructor.
-newtype GetOperationDetail = GetOperationDetail'
-  { _godOperationId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetOperationDetail =
+  GetOperationDetail'
+    { _godOperationId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetOperationDetail' with the minimum fields required to make a request.
@@ -120,15 +122,17 @@ instance ToQuery GetOperationDetail where
 --
 --
 -- /See:/ 'getOperationDetailResponse' smart constructor.
-data GetOperationDetailResponse = GetOperationDetailResponse'
-  { _godrsStatus         :: !(Maybe OperationStatus)
-  , _godrsSubmittedDate  :: !(Maybe POSIX)
-  , _godrsDomainName     :: !(Maybe Text)
-  , _godrsOperationId    :: !(Maybe Text)
-  , _godrsType           :: !(Maybe OperationType)
-  , _godrsMessage        :: !(Maybe Text)
-  , _godrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetOperationDetailResponse =
+  GetOperationDetailResponse'
+    { _godrsStatus         :: !(Maybe OperationStatus)
+    , _godrsSubmittedDate  :: !(Maybe POSIX)
+    , _godrsDomainName     :: !(Maybe Text)
+    , _godrsOperationId    :: !(Maybe Text)
+    , _godrsType           :: !(Maybe OperationType)
+    , _godrsMessage        :: !(Maybe Text)
+    , _godrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetOperationDetailResponse' with the minimum fields required to make a request.

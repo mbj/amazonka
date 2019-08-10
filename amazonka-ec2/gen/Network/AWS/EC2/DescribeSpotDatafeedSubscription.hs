@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeSpotDatafeedSubscription' smart constructor.
-newtype DescribeSpotDatafeedSubscription = DescribeSpotDatafeedSubscription'
-  { _dsdsDryRun :: Maybe Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeSpotDatafeedSubscription =
+  DescribeSpotDatafeedSubscription'
+    { _dsdsDryRun :: Maybe Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeSpotDatafeedSubscription' with the minimum fields required to make a request.
@@ -109,10 +111,12 @@ instance ToQuery DescribeSpotDatafeedSubscription
 --
 --
 -- /See:/ 'describeSpotDatafeedSubscriptionResponse' smart constructor.
-data DescribeSpotDatafeedSubscriptionResponse = DescribeSpotDatafeedSubscriptionResponse'
-  { _dsdsrsSpotDatafeedSubscription :: !(Maybe SpotDatafeedSubscription)
-  , _dsdsrsResponseStatus           :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeSpotDatafeedSubscriptionResponse =
+  DescribeSpotDatafeedSubscriptionResponse'
+    { _dsdsrsSpotDatafeedSubscription :: !(Maybe SpotDatafeedSubscription)
+    , _dsdsrsResponseStatus           :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeSpotDatafeedSubscriptionResponse' with the minimum fields required to make a request.

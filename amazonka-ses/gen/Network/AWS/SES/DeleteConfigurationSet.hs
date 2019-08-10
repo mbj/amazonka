@@ -50,9 +50,11 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'deleteConfigurationSet' smart constructor.
-newtype DeleteConfigurationSet = DeleteConfigurationSet'
-  { _dConfigurationSetName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteConfigurationSet =
+  DeleteConfigurationSet'
+    { _dConfigurationSetName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteConfigurationSet' with the minimum fields required to make a request.
@@ -104,9 +106,11 @@ instance ToQuery DeleteConfigurationSet where
 --
 --
 -- /See:/ 'deleteConfigurationSetResponse' smart constructor.
-newtype DeleteConfigurationSetResponse = DeleteConfigurationSetResponse'
-  { _drsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteConfigurationSetResponse =
+  DeleteConfigurationSetResponse'
+    { _drsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteConfigurationSetResponse' with the minimum fields required to make a request.

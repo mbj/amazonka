@@ -49,13 +49,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createLaunchTemplate' smart constructor.
-data CreateLaunchTemplate = CreateLaunchTemplate'
-  { _cltClientToken        :: !(Maybe Text)
-  , _cltVersionDescription :: !(Maybe Text)
-  , _cltDryRun             :: !(Maybe Bool)
-  , _cltLaunchTemplateName :: !Text
-  , _cltLaunchTemplateData :: !RequestLaunchTemplateData
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateLaunchTemplate =
+  CreateLaunchTemplate'
+    { _cltClientToken        :: !(Maybe Text)
+    , _cltVersionDescription :: !(Maybe Text)
+    , _cltDryRun             :: !(Maybe Bool)
+    , _cltLaunchTemplateName :: !Text
+    , _cltLaunchTemplateData :: !RequestLaunchTemplateData
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateLaunchTemplate' with the minimum fields required to make a request.
@@ -137,10 +139,12 @@ instance ToQuery CreateLaunchTemplate where
                "LaunchTemplateData" =: _cltLaunchTemplateData]
 
 -- | /See:/ 'createLaunchTemplateResponse' smart constructor.
-data CreateLaunchTemplateResponse = CreateLaunchTemplateResponse'
-  { _cltrsLaunchTemplate :: !(Maybe LaunchTemplate)
-  , _cltrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateLaunchTemplateResponse =
+  CreateLaunchTemplateResponse'
+    { _cltrsLaunchTemplate :: !(Maybe LaunchTemplate)
+    , _cltrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateLaunchTemplateResponse' with the minimum fields required to make a request.

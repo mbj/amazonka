@@ -50,11 +50,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateDocumentationPart' smart constructor.
-data UpdateDocumentationPart = UpdateDocumentationPart'
-  { _udpPatchOperations     :: !(Maybe [PatchOperation])
-  , _udpRestAPIId           :: !Text
-  , _udpDocumentationPartId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateDocumentationPart =
+  UpdateDocumentationPart'
+    { _udpPatchOperations     :: !(Maybe [PatchOperation])
+    , _udpRestAPIId           :: !Text
+    , _udpDocumentationPartId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateDocumentationPart' with the minimum fields required to make a request.

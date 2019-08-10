@@ -50,13 +50,15 @@ import Network.AWS.ServiceCatalog.Types
 import Network.AWS.ServiceCatalog.Types.Product
 
 -- | /See:/ 'listProvisionedProductPlans' smart constructor.
-data ListProvisionedProductPlans = ListProvisionedProductPlans'
-  { _lpppProvisionProductId :: !(Maybe Text)
-  , _lpppAcceptLanguage     :: !(Maybe Text)
-  , _lpppAccessLevelFilter  :: !(Maybe AccessLevelFilter)
-  , _lpppPageToken          :: !(Maybe Text)
-  , _lpppPageSize           :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListProvisionedProductPlans =
+  ListProvisionedProductPlans'
+    { _lpppProvisionProductId :: !(Maybe Text)
+    , _lpppAcceptLanguage     :: !(Maybe Text)
+    , _lpppAccessLevelFilter  :: !(Maybe AccessLevelFilter)
+    , _lpppPageToken          :: !(Maybe Text)
+    , _lpppPageSize           :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListProvisionedProductPlans' with the minimum fields required to make a request.
@@ -148,11 +150,13 @@ instance ToQuery ListProvisionedProductPlans where
         toQuery = const mempty
 
 -- | /See:/ 'listProvisionedProductPlansResponse' smart constructor.
-data ListProvisionedProductPlansResponse = ListProvisionedProductPlansResponse'
-  { _lppprsNextPageToken           :: !(Maybe Text)
-  , _lppprsProvisionedProductPlans :: !(Maybe [ProvisionedProductPlanSummary])
-  , _lppprsResponseStatus          :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListProvisionedProductPlansResponse =
+  ListProvisionedProductPlansResponse'
+    { _lppprsNextPageToken           :: !(Maybe Text)
+    , _lppprsProvisionedProductPlans :: !(Maybe [ProvisionedProductPlanSummary])
+    , _lppprsResponseStatus          :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListProvisionedProductPlansResponse' with the minimum fields required to make a request.

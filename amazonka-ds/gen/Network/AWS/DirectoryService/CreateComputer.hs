@@ -53,13 +53,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createComputer' smart constructor.
-data CreateComputer = CreateComputer'
-  { _ccComputerAttributes                  :: !(Maybe [Attribute])
-  , _ccOrganizationalUnitDistinguishedName :: !(Maybe Text)
-  , _ccDirectoryId                         :: !Text
-  , _ccComputerName                        :: !Text
-  , _ccPassword                            :: !(Sensitive Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data CreateComputer =
+  CreateComputer'
+    { _ccComputerAttributes                  :: !(Maybe [Attribute])
+    , _ccOrganizationalUnitDistinguishedName :: !(Maybe Text)
+    , _ccDirectoryId                         :: !Text
+    , _ccComputerName                        :: !Text
+    , _ccPassword                            :: !(Sensitive Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateComputer' with the minimum fields required to make a request.
@@ -155,10 +157,12 @@ instance ToQuery CreateComputer where
 --
 --
 -- /See:/ 'createComputerResponse' smart constructor.
-data CreateComputerResponse = CreateComputerResponse'
-  { _ccrsComputer       :: !(Maybe Computer)
-  , _ccrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateComputerResponse =
+  CreateComputerResponse'
+    { _ccrsComputer       :: !(Maybe Computer)
+    , _ccrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateComputerResponse' with the minimum fields required to make a request.

@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateDomainEntry' smart constructor.
-data UpdateDomainEntry = UpdateDomainEntry'
-  { _udeDomainName  :: !Text
-  , _udeDomainEntry :: !DomainEntry
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateDomainEntry =
+  UpdateDomainEntry'
+    { _udeDomainName  :: !Text
+    , _udeDomainEntry :: !DomainEntry
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateDomainEntry' with the minimum fields required to make a request.
@@ -114,10 +116,12 @@ instance ToQuery UpdateDomainEntry where
         toQuery = const mempty
 
 -- | /See:/ 'updateDomainEntryResponse' smart constructor.
-data UpdateDomainEntryResponse = UpdateDomainEntryResponse'
-  { _udersOperations     :: !(Maybe [Operation])
-  , _udersResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateDomainEntryResponse =
+  UpdateDomainEntryResponse'
+    { _udersOperations     :: !(Maybe [Operation])
+    , _udersResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateDomainEntryResponse' with the minimum fields required to make a request.

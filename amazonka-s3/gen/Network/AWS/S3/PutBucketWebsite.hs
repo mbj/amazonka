@@ -42,11 +42,13 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'putBucketWebsite' smart constructor.
-data PutBucketWebsite = PutBucketWebsite'
-  { _pbwContentMD5           :: !(Maybe Text)
-  , _pbwBucket               :: !BucketName
-  , _pbwWebsiteConfiguration :: !WebsiteConfiguration
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutBucketWebsite =
+  PutBucketWebsite'
+    { _pbwContentMD5           :: !(Maybe Text)
+    , _pbwBucket               :: !BucketName
+    , _pbwWebsiteConfiguration :: !WebsiteConfiguration
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutBucketWebsite' with the minimum fields required to make a request.

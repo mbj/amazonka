@@ -91,11 +91,13 @@ instance ToQuery GetAccountBalance where
         toQuery = const mempty
 
 -- | /See:/ 'getAccountBalanceResponse' smart constructor.
-data GetAccountBalanceResponse = GetAccountBalanceResponse'
-  { _gabrsAvailableBalance :: !(Maybe Text)
-  , _gabrsOnHoldBalance    :: !(Maybe Text)
-  , _gabrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetAccountBalanceResponse =
+  GetAccountBalanceResponse'
+    { _gabrsAvailableBalance :: !(Maybe Text)
+    , _gabrsOnHoldBalance    :: !(Maybe Text)
+    , _gabrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetAccountBalanceResponse' with the minimum fields required to make a request.

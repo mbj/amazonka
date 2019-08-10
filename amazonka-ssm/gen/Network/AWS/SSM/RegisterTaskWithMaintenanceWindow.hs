@@ -58,22 +58,24 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'registerTaskWithMaintenanceWindow' smart constructor.
-data RegisterTaskWithMaintenanceWindow = RegisterTaskWithMaintenanceWindow'
-  { _rtwmwTaskParameters :: !(Maybe (Sensitive (Map Text (Sensitive MaintenanceWindowTaskParameterValueExpression))))
-  , _rtwmwPriority :: !(Maybe Nat)
-  , _rtwmwClientToken :: !(Maybe Text)
-  , _rtwmwTaskInvocationParameters :: !(Maybe MaintenanceWindowTaskInvocationParameters)
-  , _rtwmwName :: !(Maybe Text)
-  , _rtwmwLoggingInfo :: !(Maybe LoggingInfo)
-  , _rtwmwDescription :: !(Maybe (Sensitive Text))
-  , _rtwmwWindowId :: !Text
-  , _rtwmwTargets :: ![Target]
-  , _rtwmwTaskARN :: !Text
-  , _rtwmwServiceRoleARN :: !Text
-  , _rtwmwTaskType :: !MaintenanceWindowTaskType
-  , _rtwmwMaxConcurrency :: !Text
-  , _rtwmwMaxErrors :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data RegisterTaskWithMaintenanceWindow =
+  RegisterTaskWithMaintenanceWindow'
+    { _rtwmwTaskParameters :: !(Maybe (Sensitive (Map Text (Sensitive MaintenanceWindowTaskParameterValueExpression))))
+    , _rtwmwPriority :: !(Maybe Nat)
+    , _rtwmwClientToken :: !(Maybe Text)
+    , _rtwmwTaskInvocationParameters :: !(Maybe MaintenanceWindowTaskInvocationParameters)
+    , _rtwmwName :: !(Maybe Text)
+    , _rtwmwLoggingInfo :: !(Maybe LoggingInfo)
+    , _rtwmwDescription :: !(Maybe (Sensitive Text))
+    , _rtwmwWindowId :: !Text
+    , _rtwmwTargets :: ![Target]
+    , _rtwmwTaskARN :: !Text
+    , _rtwmwServiceRoleARN :: !Text
+    , _rtwmwTaskType :: !MaintenanceWindowTaskType
+    , _rtwmwMaxConcurrency :: !Text
+    , _rtwmwMaxErrors :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterTaskWithMaintenanceWindow' with the minimum fields required to make a request.
@@ -248,10 +250,12 @@ instance ToQuery RegisterTaskWithMaintenanceWindow
         toQuery = const mempty
 
 -- | /See:/ 'registerTaskWithMaintenanceWindowResponse' smart constructor.
-data RegisterTaskWithMaintenanceWindowResponse = RegisterTaskWithMaintenanceWindowResponse'
-  { _rtwmwrsWindowTaskId   :: !(Maybe Text)
-  , _rtwmwrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RegisterTaskWithMaintenanceWindowResponse =
+  RegisterTaskWithMaintenanceWindowResponse'
+    { _rtwmwrsWindowTaskId   :: !(Maybe Text)
+    , _rtwmwrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterTaskWithMaintenanceWindowResponse' with the minimum fields required to make a request.

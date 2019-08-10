@@ -61,10 +61,12 @@ import Network.AWS.WAF.Types
 import Network.AWS.WAF.Types.Product
 
 -- | /See:/ 'createIPSet' smart constructor.
-data CreateIPSet = CreateIPSet'
-  { _cisName        :: !Text
-  , _cisChangeToken :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateIPSet =
+  CreateIPSet'
+    { _cisName        :: !Text
+    , _cisChangeToken :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateIPSet' with the minimum fields required to make a request.
@@ -127,11 +129,13 @@ instance ToQuery CreateIPSet where
         toQuery = const mempty
 
 -- | /See:/ 'createIPSetResponse' smart constructor.
-data CreateIPSetResponse = CreateIPSetResponse'
-  { _cisrsChangeToken    :: !(Maybe Text)
-  , _cisrsIPSet          :: !(Maybe IPSet)
-  , _cisrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateIPSetResponse =
+  CreateIPSetResponse'
+    { _cisrsChangeToken    :: !(Maybe Text)
+    , _cisrsIPSet          :: !(Maybe IPSet)
+    , _cisrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateIPSetResponse' with the minimum fields required to make a request.

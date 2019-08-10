@@ -48,10 +48,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'modifyLoadBalancerAttributes' smart constructor.
-data ModifyLoadBalancerAttributes = ModifyLoadBalancerAttributes'
-  { _mlbaLoadBalancerARN :: !Text
-  , _mlbaAttributes      :: ![LoadBalancerAttribute]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyLoadBalancerAttributes =
+  ModifyLoadBalancerAttributes'
+    { _mlbaLoadBalancerARN :: !Text
+    , _mlbaAttributes      :: ![LoadBalancerAttribute]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyLoadBalancerAttributes' with the minimum fields required to make a request.
@@ -111,10 +113,12 @@ instance ToQuery ModifyLoadBalancerAttributes where
                "Attributes" =: toQueryList "member" _mlbaAttributes]
 
 -- | /See:/ 'modifyLoadBalancerAttributesResponse' smart constructor.
-data ModifyLoadBalancerAttributesResponse = ModifyLoadBalancerAttributesResponse'
-  { _mlbarsAttributes     :: !(Maybe [LoadBalancerAttribute])
-  , _mlbarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyLoadBalancerAttributesResponse =
+  ModifyLoadBalancerAttributesResponse'
+    { _mlbarsAttributes     :: !(Maybe [LoadBalancerAttribute])
+    , _mlbarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyLoadBalancerAttributesResponse' with the minimum fields required to make a request.

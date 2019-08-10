@@ -50,12 +50,14 @@ import Network.AWS.Transcribe.Types
 import Network.AWS.Transcribe.Types.Product
 
 -- | /See:/ 'listVocabularies' smart constructor.
-data ListVocabularies = ListVocabularies'
-  { _lvNameContains :: !(Maybe Text)
-  , _lvNextToken    :: !(Maybe Text)
-  , _lvStateEquals  :: !(Maybe VocabularyState)
-  , _lvMaxResults   :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListVocabularies =
+  ListVocabularies'
+    { _lvNameContains :: !(Maybe Text)
+    , _lvNextToken    :: !(Maybe Text)
+    , _lvStateEquals  :: !(Maybe VocabularyState)
+    , _lvMaxResults   :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListVocabularies' with the minimum fields required to make a request.
@@ -137,12 +139,14 @@ instance ToQuery ListVocabularies where
         toQuery = const mempty
 
 -- | /See:/ 'listVocabulariesResponse' smart constructor.
-data ListVocabulariesResponse = ListVocabulariesResponse'
-  { _lvrsVocabularies   :: !(Maybe [VocabularyInfo])
-  , _lvrsStatus         :: !(Maybe TranscriptionJobStatus)
-  , _lvrsNextToken      :: !(Maybe Text)
-  , _lvrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListVocabulariesResponse =
+  ListVocabulariesResponse'
+    { _lvrsVocabularies   :: !(Maybe [VocabularyInfo])
+    , _lvrsStatus         :: !(Maybe TranscriptionJobStatus)
+    , _lvrsNextToken      :: !(Maybe Text)
+    , _lvrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListVocabulariesResponse' with the minimum fields required to make a request.

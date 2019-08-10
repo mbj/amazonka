@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteTrigger' smart constructor.
-newtype DeleteTrigger = DeleteTrigger'
-  { _dttName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteTrigger =
+  DeleteTrigger'
+    { _dttName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteTrigger' with the minimum fields required to make a request.
@@ -98,10 +100,12 @@ instance ToQuery DeleteTrigger where
         toQuery = const mempty
 
 -- | /See:/ 'deleteTriggerResponse' smart constructor.
-data DeleteTriggerResponse = DeleteTriggerResponse'
-  { _delrsName           :: !(Maybe Text)
-  , _delrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteTriggerResponse =
+  DeleteTriggerResponse'
+    { _delrsName           :: !(Maybe Text)
+    , _delrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteTriggerResponse' with the minimum fields required to make a request.

@@ -48,11 +48,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'resetImageAttribute' smart constructor.
-data ResetImageAttribute = ResetImageAttribute'
-  { _resDryRun    :: !(Maybe Bool)
-  , _resAttribute :: !ResetImageAttributeName
-  , _resImageId   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResetImageAttribute =
+  ResetImageAttribute'
+    { _resDryRun    :: !(Maybe Bool)
+    , _resAttribute :: !ResetImageAttributeName
+    , _resImageId   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResetImageAttribute' with the minimum fields required to make a request.

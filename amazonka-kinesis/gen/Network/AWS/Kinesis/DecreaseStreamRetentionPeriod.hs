@@ -49,10 +49,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'decreaseStreamRetentionPeriod' smart constructor.
-data DecreaseStreamRetentionPeriod = DecreaseStreamRetentionPeriod'
-  { _dsrpStreamName           :: !Text
-  , _dsrpRetentionPeriodHours :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DecreaseStreamRetentionPeriod =
+  DecreaseStreamRetentionPeriod'
+    { _dsrpStreamName           :: !Text
+    , _dsrpRetentionPeriodHours :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DecreaseStreamRetentionPeriod' with the minimum fields required to make a request.

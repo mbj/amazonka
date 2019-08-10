@@ -52,11 +52,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeReservedElasticsearchInstanceOfferings' smart constructor.
-data DescribeReservedElasticsearchInstanceOfferings = DescribeReservedElasticsearchInstanceOfferings'
-  { _dreioReservedElasticsearchInstanceOfferingId :: !(Maybe Text)
-  , _dreioNextToken                               :: !(Maybe Text)
-  , _dreioMaxResults                              :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeReservedElasticsearchInstanceOfferings =
+  DescribeReservedElasticsearchInstanceOfferings'
+    { _dreioReservedElasticsearchInstanceOfferingId :: !(Maybe Text)
+    , _dreioNextToken                               :: !(Maybe Text)
+    , _dreioMaxResults                              :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeReservedElasticsearchInstanceOfferings' with the minimum fields required to make a request.
@@ -143,11 +145,13 @@ instance ToQuery
 --
 --
 -- /See:/ 'describeReservedElasticsearchInstanceOfferingsResponse' smart constructor.
-data DescribeReservedElasticsearchInstanceOfferingsResponse = DescribeReservedElasticsearchInstanceOfferingsResponse'
-  { _dreiorsReservedElasticsearchInstanceOfferings :: !(Maybe [ReservedElasticsearchInstanceOffering])
-  , _dreiorsNextToken :: !(Maybe Text)
-  , _dreiorsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeReservedElasticsearchInstanceOfferingsResponse =
+  DescribeReservedElasticsearchInstanceOfferingsResponse'
+    { _dreiorsReservedElasticsearchInstanceOfferings :: !(Maybe [ReservedElasticsearchInstanceOffering])
+    , _dreiorsNextToken :: !(Maybe Text)
+    , _dreiorsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeReservedElasticsearchInstanceOfferingsResponse' with the minimum fields required to make a request.

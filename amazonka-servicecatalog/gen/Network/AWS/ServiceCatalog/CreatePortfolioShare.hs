@@ -46,11 +46,13 @@ import Network.AWS.ServiceCatalog.Types
 import Network.AWS.ServiceCatalog.Types.Product
 
 -- | /See:/ 'createPortfolioShare' smart constructor.
-data CreatePortfolioShare = CreatePortfolioShare'
-  { _cpsAcceptLanguage :: !(Maybe Text)
-  , _cpsPortfolioId    :: !Text
-  , _cpsAccountId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreatePortfolioShare =
+  CreatePortfolioShare'
+    { _cpsAcceptLanguage :: !(Maybe Text)
+    , _cpsPortfolioId    :: !Text
+    , _cpsAccountId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreatePortfolioShare' with the minimum fields required to make a request.
@@ -125,9 +127,11 @@ instance ToQuery CreatePortfolioShare where
         toQuery = const mempty
 
 -- | /See:/ 'createPortfolioShareResponse' smart constructor.
-newtype CreatePortfolioShareResponse = CreatePortfolioShareResponse'
-  { _cpsrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreatePortfolioShareResponse =
+  CreatePortfolioShareResponse'
+    { _cpsrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreatePortfolioShareResponse' with the minimum fields required to make a request.

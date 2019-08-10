@@ -50,9 +50,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeAccountLimits' smart constructor.
-newtype DescribeAccountLimits = DescribeAccountLimits'
-  { _dalNextToken :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeAccountLimits =
+  DescribeAccountLimits'
+    { _dalNextToken :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAccountLimits' with the minimum fields required to make a request.
@@ -104,11 +106,13 @@ instance ToQuery DescribeAccountLimits where
 --
 --
 -- /See:/ 'describeAccountLimitsResponse' smart constructor.
-data DescribeAccountLimitsResponse = DescribeAccountLimitsResponse'
-  { _dalrsNextToken      :: !(Maybe Text)
-  , _dalrsAccountLimits  :: !(Maybe [AccountLimit])
-  , _dalrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAccountLimitsResponse =
+  DescribeAccountLimitsResponse'
+    { _dalrsNextToken      :: !(Maybe Text)
+    , _dalrsAccountLimits  :: !(Maybe [AccountLimit])
+    , _dalrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAccountLimitsResponse' with the minimum fields required to make a request.

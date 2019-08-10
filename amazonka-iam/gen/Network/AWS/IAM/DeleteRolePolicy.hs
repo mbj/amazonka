@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteRolePolicy' smart constructor.
-data DeleteRolePolicy = DeleteRolePolicy'
-  { _delRoleName   :: !Text
-  , _delPolicyName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteRolePolicy =
+  DeleteRolePolicy'
+    { _delRoleName   :: !Text
+    , _delPolicyName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteRolePolicy' with the minimum fields required to make a request.

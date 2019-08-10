@@ -69,10 +69,12 @@ import Network.AWS.WAF.Types
 import Network.AWS.WAF.Types.Product
 
 -- | /See:/ 'putPermissionPolicy' smart constructor.
-data PutPermissionPolicy = PutPermissionPolicy'
-  { _pppResourceARN :: !Text
-  , _pppPolicy      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutPermissionPolicy =
+  PutPermissionPolicy'
+    { _pppResourceARN :: !Text
+    , _pppPolicy      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutPermissionPolicy' with the minimum fields required to make a request.
@@ -135,9 +137,11 @@ instance ToQuery PutPermissionPolicy where
         toQuery = const mempty
 
 -- | /See:/ 'putPermissionPolicyResponse' smart constructor.
-newtype PutPermissionPolicyResponse = PutPermissionPolicyResponse'
-  { _ppprsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype PutPermissionPolicyResponse =
+  PutPermissionPolicyResponse'
+    { _ppprsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutPermissionPolicyResponse' with the minimum fields required to make a request.

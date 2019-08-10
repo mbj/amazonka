@@ -51,9 +51,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createDistributionWithTags' smart constructor.
-newtype CreateDistributionWithTags = CreateDistributionWithTags'
-  { _cdwtDistributionConfigWithTags :: DistributionConfigWithTags
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateDistributionWithTags =
+  CreateDistributionWithTags'
+    { _cdwtDistributionConfigWithTags :: DistributionConfigWithTags
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDistributionWithTags' with the minimum fields required to make a request.
@@ -110,12 +112,14 @@ instance ToQuery CreateDistributionWithTags where
 --
 --
 -- /See:/ 'createDistributionWithTagsResponse' smart constructor.
-data CreateDistributionWithTagsResponse = CreateDistributionWithTagsResponse'
-  { _cdwtrsETag           :: !(Maybe Text)
-  , _cdwtrsDistribution   :: !(Maybe Distribution)
-  , _cdwtrsLocation       :: !(Maybe Text)
-  , _cdwtrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDistributionWithTagsResponse =
+  CreateDistributionWithTagsResponse'
+    { _cdwtrsETag           :: !(Maybe Text)
+    , _cdwtrsDistribution   :: !(Maybe Distribution)
+    , _cdwtrsLocation       :: !(Maybe Text)
+    , _cdwtrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDistributionWithTagsResponse' with the minimum fields required to make a request.

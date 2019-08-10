@@ -43,9 +43,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getADMChannel' smart constructor.
-newtype GetADMChannel = GetADMChannel'
-  { _gadmcApplicationId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetADMChannel =
+  GetADMChannel'
+    { _gadmcApplicationId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetADMChannel' with the minimum fields required to make a request.
@@ -94,10 +96,12 @@ instance ToQuery GetADMChannel where
         toQuery = const mempty
 
 -- | /See:/ 'getADMChannelResponse' smart constructor.
-data GetADMChannelResponse = GetADMChannelResponse'
-  { _gadmcrsResponseStatus     :: !Int
-  , _gadmcrsADMChannelResponse :: !ADMChannelResponse
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetADMChannelResponse =
+  GetADMChannelResponse'
+    { _gadmcrsResponseStatus     :: !Int
+    , _gadmcrsADMChannelResponse :: !ADMChannelResponse
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetADMChannelResponse' with the minimum fields required to make a request.

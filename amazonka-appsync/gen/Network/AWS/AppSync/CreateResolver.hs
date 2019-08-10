@@ -52,14 +52,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createResolver' smart constructor.
-data CreateResolver = CreateResolver'
-  { _crResponseMappingTemplate :: !(Maybe Text)
-  , _crApiId                   :: !Text
-  , _crTypeName                :: !Text
-  , _crFieldName               :: !Text
-  , _crDataSourceName          :: !Text
-  , _crRequestMappingTemplate  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateResolver =
+  CreateResolver'
+    { _crResponseMappingTemplate :: !(Maybe Text)
+    , _crApiId                   :: !Text
+    , _crTypeName                :: !Text
+    , _crFieldName               :: !Text
+    , _crDataSourceName          :: !Text
+    , _crRequestMappingTemplate  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateResolver' with the minimum fields required to make a request.
@@ -161,10 +163,12 @@ instance ToQuery CreateResolver where
         toQuery = const mempty
 
 -- | /See:/ 'createResolverResponse' smart constructor.
-data CreateResolverResponse = CreateResolverResponse'
-  { _crrsResolver       :: !(Maybe Resolver)
-  , _crrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateResolverResponse =
+  CreateResolverResponse'
+    { _crrsResolver       :: !(Maybe Resolver)
+    , _crrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateResolverResponse' with the minimum fields required to make a request.

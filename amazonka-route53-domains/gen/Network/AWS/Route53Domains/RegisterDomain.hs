@@ -72,18 +72,20 @@ import Network.AWS.Route53Domains.Types.Product
 --
 --
 -- /See:/ 'registerDomain' smart constructor.
-data RegisterDomain = RegisterDomain'
-  { _rPrivacyProtectTechContact       :: !(Maybe Bool)
-  , _rPrivacyProtectRegistrantContact :: !(Maybe Bool)
-  , _rAutoRenew                       :: !(Maybe Bool)
-  , _rPrivacyProtectAdminContact      :: !(Maybe Bool)
-  , _rIdNLangCode                     :: !(Maybe Text)
-  , _rDomainName                      :: !Text
-  , _rDurationInYears                 :: !Nat
-  , _rAdminContact                    :: !(Sensitive ContactDetail)
-  , _rRegistrantContact               :: !(Sensitive ContactDetail)
-  , _rTechContact                     :: !(Sensitive ContactDetail)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data RegisterDomain =
+  RegisterDomain'
+    { _rPrivacyProtectTechContact       :: !(Maybe Bool)
+    , _rPrivacyProtectRegistrantContact :: !(Maybe Bool)
+    , _rAutoRenew                       :: !(Maybe Bool)
+    , _rPrivacyProtectAdminContact      :: !(Maybe Bool)
+    , _rIdNLangCode                     :: !(Maybe Text)
+    , _rDomainName                      :: !Text
+    , _rDurationInYears                 :: !Nat
+    , _rAdminContact                    :: !(Sensitive ContactDetail)
+    , _rRegistrantContact               :: !(Sensitive ContactDetail)
+    , _rTechContact                     :: !(Sensitive ContactDetail)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterDomain' with the minimum fields required to make a request.
@@ -223,10 +225,12 @@ instance ToQuery RegisterDomain where
 --
 --
 -- /See:/ 'registerDomainResponse' smart constructor.
-data RegisterDomainResponse = RegisterDomainResponse'
-  { _rdrsResponseStatus :: !Int
-  , _rdrsOperationId    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RegisterDomainResponse =
+  RegisterDomainResponse'
+    { _rdrsResponseStatus :: !Int
+    , _rdrsOperationId    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterDomainResponse' with the minimum fields required to make a request.

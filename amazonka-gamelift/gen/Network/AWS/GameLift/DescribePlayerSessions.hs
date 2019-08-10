@@ -79,14 +79,16 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describePlayerSessions' smart constructor.
-data DescribePlayerSessions = DescribePlayerSessions'
-  { _dpssGameSessionId             :: !(Maybe Text)
-  , _dpssNextToken                 :: !(Maybe Text)
-  , _dpssLimit                     :: !(Maybe Nat)
-  , _dpssPlayerSessionId           :: !(Maybe Text)
-  , _dpssPlayerId                  :: !(Maybe Text)
-  , _dpssPlayerSessionStatusFilter :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribePlayerSessions =
+  DescribePlayerSessions'
+    { _dpssGameSessionId             :: !(Maybe Text)
+    , _dpssNextToken                 :: !(Maybe Text)
+    , _dpssLimit                     :: !(Maybe Nat)
+    , _dpssPlayerSessionId           :: !(Maybe Text)
+    , _dpssPlayerId                  :: !(Maybe Text)
+    , _dpssPlayerSessionStatusFilter :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribePlayerSessions' with the minimum fields required to make a request.
@@ -189,11 +191,13 @@ instance ToQuery DescribePlayerSessions where
 --
 --
 -- /See:/ 'describePlayerSessionsResponse' smart constructor.
-data DescribePlayerSessionsResponse = DescribePlayerSessionsResponse'
-  { _dpsrsNextToken      :: !(Maybe Text)
-  , _dpsrsPlayerSessions :: !(Maybe [PlayerSession])
-  , _dpsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribePlayerSessionsResponse =
+  DescribePlayerSessionsResponse'
+    { _dpsrsNextToken      :: !(Maybe Text)
+    , _dpsrsPlayerSessions :: !(Maybe [PlayerSession])
+    , _dpsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribePlayerSessionsResponse' with the minimum fields required to make a request.

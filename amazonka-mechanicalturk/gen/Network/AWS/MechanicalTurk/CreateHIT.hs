@@ -66,24 +66,26 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createHIT' smart constructor.
-data CreateHIT = CreateHIT'
-  { _chitHITReviewPolicy             :: !(Maybe ReviewPolicy)
-  , _chitUniqueRequestToken          :: !(Maybe Text)
-  , _chitAutoApprovalDelayInSeconds  :: !(Maybe Integer)
-  , _chitRequesterAnnotation         :: !(Maybe Text)
-  , _chitMaxAssignments              :: !(Maybe Int)
-  , _chitKeywords                    :: !(Maybe Text)
-  , _chitHITLayoutId                 :: !(Maybe Text)
-  , _chitHITLayoutParameters         :: !(Maybe [HITLayoutParameter])
-  , _chitQualificationRequirements   :: !(Maybe [QualificationRequirement])
-  , _chitQuestion                    :: !(Maybe Text)
-  , _chitAssignmentReviewPolicy      :: !(Maybe ReviewPolicy)
-  , _chitLifetimeInSeconds           :: !Integer
-  , _chitAssignmentDurationInSeconds :: !Integer
-  , _chitReward                      :: !Text
-  , _chitTitle                       :: !Text
-  , _chitDescription                 :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateHIT =
+  CreateHIT'
+    { _chitHITReviewPolicy             :: !(Maybe ReviewPolicy)
+    , _chitUniqueRequestToken          :: !(Maybe Text)
+    , _chitAutoApprovalDelayInSeconds  :: !(Maybe Integer)
+    , _chitRequesterAnnotation         :: !(Maybe Text)
+    , _chitMaxAssignments              :: !(Maybe Int)
+    , _chitKeywords                    :: !(Maybe Text)
+    , _chitHITLayoutId                 :: !(Maybe Text)
+    , _chitHITLayoutParameters         :: !(Maybe [HITLayoutParameter])
+    , _chitQualificationRequirements   :: !(Maybe [QualificationRequirement])
+    , _chitQuestion                    :: !(Maybe Text)
+    , _chitAssignmentReviewPolicy      :: !(Maybe ReviewPolicy)
+    , _chitLifetimeInSeconds           :: !Integer
+    , _chitAssignmentDurationInSeconds :: !Integer
+    , _chitReward                      :: !Text
+    , _chitTitle                       :: !Text
+    , _chitDescription                 :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateHIT' with the minimum fields required to make a request.
@@ -272,10 +274,12 @@ instance ToQuery CreateHIT where
         toQuery = const mempty
 
 -- | /See:/ 'createHITResponse' smart constructor.
-data CreateHITResponse = CreateHITResponse'
-  { _chitrsHIT            :: !(Maybe HIT)
-  , _chitrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateHITResponse =
+  CreateHITResponse'
+    { _chitrsHIT            :: !(Maybe HIT)
+    , _chitrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateHITResponse' with the minimum fields required to make a request.

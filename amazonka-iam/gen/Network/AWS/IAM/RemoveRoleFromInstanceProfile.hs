@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'removeRoleFromInstanceProfile' smart constructor.
-data RemoveRoleFromInstanceProfile = RemoveRoleFromInstanceProfile'
-  { _rrfipInstanceProfileName :: !Text
-  , _rrfipRoleName            :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RemoveRoleFromInstanceProfile =
+  RemoveRoleFromInstanceProfile'
+    { _rrfipInstanceProfileName :: !Text
+    , _rrfipRoleName            :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RemoveRoleFromInstanceProfile' with the minimum fields required to make a request.

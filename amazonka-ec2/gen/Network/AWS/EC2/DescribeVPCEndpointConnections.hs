@@ -49,12 +49,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeVPCEndpointConnections' smart constructor.
-data DescribeVPCEndpointConnections = DescribeVPCEndpointConnections'
-  { _dvecFilters    :: !(Maybe [Filter])
-  , _dvecNextToken  :: !(Maybe Text)
-  , _dvecDryRun     :: !(Maybe Bool)
-  , _dvecMaxResults :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeVPCEndpointConnections =
+  DescribeVPCEndpointConnections'
+    { _dvecFilters    :: !(Maybe [Filter])
+    , _dvecNextToken  :: !(Maybe Text)
+    , _dvecDryRun     :: !(Maybe Bool)
+    , _dvecMaxResults :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeVPCEndpointConnections' with the minimum fields required to make a request.
@@ -133,11 +135,13 @@ instance ToQuery DescribeVPCEndpointConnections where
                "MaxResults" =: _dvecMaxResults]
 
 -- | /See:/ 'describeVPCEndpointConnectionsResponse' smart constructor.
-data DescribeVPCEndpointConnectionsResponse = DescribeVPCEndpointConnectionsResponse'
-  { _dvecrsVPCEndpointConnections :: !(Maybe [VPCEndpointConnection])
-  , _dvecrsNextToken              :: !(Maybe Text)
-  , _dvecrsResponseStatus         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeVPCEndpointConnectionsResponse =
+  DescribeVPCEndpointConnectionsResponse'
+    { _dvecrsVPCEndpointConnections :: !(Maybe [VPCEndpointConnection])
+    , _dvecrsNextToken              :: !(Maybe Text)
+    , _dvecrsResponseStatus         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeVPCEndpointConnectionsResponse' with the minimum fields required to make a request.

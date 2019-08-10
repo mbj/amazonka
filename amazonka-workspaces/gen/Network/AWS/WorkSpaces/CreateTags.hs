@@ -45,10 +45,12 @@ import Network.AWS.WorkSpaces.Types
 import Network.AWS.WorkSpaces.Types.Product
 
 -- | /See:/ 'createTags' smart constructor.
-data CreateTags = CreateTags'
-  { _ctResourceId :: !Text
-  , _ctTags       :: ![Tag]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateTags =
+  CreateTags'
+    { _ctResourceId :: !Text
+    , _ctTags       :: ![Tag]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateTags' with the minimum fields required to make a request.
@@ -108,9 +110,11 @@ instance ToQuery CreateTags where
         toQuery = const mempty
 
 -- | /See:/ 'createTagsResponse' smart constructor.
-newtype CreateTagsResponse = CreateTagsResponse'
-  { _ctrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateTagsResponse =
+  CreateTagsResponse'
+    { _ctrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateTagsResponse' with the minimum fields required to make a request.

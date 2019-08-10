@@ -47,10 +47,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'cancelUpdateStack' smart constructor.
-data CancelUpdateStack = CancelUpdateStack'
-  { _cusClientRequestToken :: !(Maybe Text)
-  , _cusStackName          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CancelUpdateStack =
+  CancelUpdateStack'
+    { _cusClientRequestToken :: !(Maybe Text)
+    , _cusStackName          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CancelUpdateStack' with the minimum fields required to make a request.

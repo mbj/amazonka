@@ -26,11 +26,13 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'accountQuota' smart constructor.
-data AccountQuota = AccountQuota'
-  { _aqMax              :: !(Maybe Integer)
-  , _aqUsed             :: !(Maybe Integer)
-  , _aqAccountQuotaName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AccountQuota =
+  AccountQuota'
+    { _aqMax              :: !(Maybe Integer)
+    , _aqUsed             :: !(Maybe Integer)
+    , _aqAccountQuotaName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AccountQuota' with the minimum fields required to make a request.
@@ -78,9 +80,11 @@ instance NFData AccountQuota where
 --
 --
 -- /See:/ 'availabilityZone' smart constructor.
-newtype AvailabilityZone = AvailabilityZone'
-  { _azName :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AvailabilityZone =
+  AvailabilityZone'
+    { _azName :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AvailabilityZone' with the minimum fields required to make a request.
@@ -111,18 +115,20 @@ instance NFData AvailabilityZone where
 --
 --
 -- /See:/ 'certificate' smart constructor.
-data Certificate = Certificate'
-  { _cCertificateOwner        :: !(Maybe Text)
-  , _cSigningAlgorithm        :: !(Maybe Text)
-  , _cValidFromDate           :: !(Maybe POSIX)
-  , _cCertificatePem          :: !(Maybe Text)
-  , _cCertificateARN          :: !(Maybe Text)
-  , _cCertificateCreationDate :: !(Maybe POSIX)
-  , _cCertificateIdentifier   :: !(Maybe Text)
-  , _cCertificateWallet       :: !(Maybe Base64)
-  , _cKeyLength               :: !(Maybe Int)
-  , _cValidToDate             :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Certificate =
+  Certificate'
+    { _cCertificateOwner        :: !(Maybe Text)
+    , _cSigningAlgorithm        :: !(Maybe Text)
+    , _cValidFromDate           :: !(Maybe POSIX)
+    , _cCertificatePem          :: !(Maybe Text)
+    , _cCertificateARN          :: !(Maybe Text)
+    , _cCertificateCreationDate :: !(Maybe POSIX)
+    , _cCertificateIdentifier   :: !(Maybe Text)
+    , _cCertificateWallet       :: !(Maybe Base64)
+    , _cKeyLength               :: !(Maybe Int)
+    , _cValidToDate             :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Certificate' with the minimum fields required to make a request.
@@ -230,14 +236,16 @@ instance NFData Certificate where
 --
 --
 -- /See:/ 'connection' smart constructor.
-data Connection = Connection'
-  { _cStatus                        :: !(Maybe Text)
-  , _cReplicationInstanceARN        :: !(Maybe Text)
-  , _cEndpointIdentifier            :: !(Maybe Text)
-  , _cReplicationInstanceIdentifier :: !(Maybe Text)
-  , _cEndpointARN                   :: !(Maybe Text)
-  , _cLastFailureMessage            :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Connection =
+  Connection'
+    { _cStatus                        :: !(Maybe Text)
+    , _cReplicationInstanceARN        :: !(Maybe Text)
+    , _cEndpointIdentifier            :: !(Maybe Text)
+    , _cReplicationInstanceIdentifier :: !(Maybe Text)
+    , _cEndpointARN                   :: !(Maybe Text)
+    , _cLastFailureMessage            :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Connection' with the minimum fields required to make a request.
@@ -312,9 +320,11 @@ instance NFData Connection where
 --
 --
 -- /See:/ 'dynamoDBSettings' smart constructor.
-newtype DynamoDBSettings = DynamoDBSettings'
-  { _ddsServiceAccessRoleARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DynamoDBSettings =
+  DynamoDBSettings'
+    { _ddsServiceAccessRoleARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DynamoDBSettings' with the minimum fields required to make a request.
@@ -356,28 +366,30 @@ instance ToJSON DynamoDBSettings where
 --
 --
 -- /See:/ 'endpoint' smart constructor.
-data Endpoint = Endpoint'
-  { _eStatus                    :: !(Maybe Text)
-  , _eServerName                :: !(Maybe Text)
-  , _eCertificateARN            :: !(Maybe Text)
-  , _eServiceAccessRoleARN      :: !(Maybe Text)
-  , _eEngineDisplayName         :: !(Maybe Text)
-  , _eExtraConnectionAttributes :: !(Maybe Text)
-  , _eEndpointType              :: !(Maybe ReplicationEndpointTypeValue)
-  , _eUsername                  :: !(Maybe Text)
-  , _eExternalTableDefinition   :: !(Maybe Text)
-  , _eEngineName                :: !(Maybe Text)
-  , _eKMSKeyId                  :: !(Maybe Text)
-  , _eMongoDBSettings           :: !(Maybe MongoDBSettings)
-  , _eSSLMode                   :: !(Maybe DmsSSLModeValue)
-  , _eDatabaseName              :: !(Maybe Text)
-  , _eS3Settings                :: !(Maybe S3Settings)
-  , _eEndpointIdentifier        :: !(Maybe Text)
-  , _eExternalId                :: !(Maybe Text)
-  , _eDynamoDBSettings          :: !(Maybe DynamoDBSettings)
-  , _eEndpointARN               :: !(Maybe Text)
-  , _ePort                      :: !(Maybe Int)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data Endpoint =
+  Endpoint'
+    { _eStatus                    :: !(Maybe Text)
+    , _eServerName                :: !(Maybe Text)
+    , _eCertificateARN            :: !(Maybe Text)
+    , _eServiceAccessRoleARN      :: !(Maybe Text)
+    , _eEngineDisplayName         :: !(Maybe Text)
+    , _eExtraConnectionAttributes :: !(Maybe Text)
+    , _eEndpointType              :: !(Maybe ReplicationEndpointTypeValue)
+    , _eUsername                  :: !(Maybe Text)
+    , _eExternalTableDefinition   :: !(Maybe Text)
+    , _eEngineName                :: !(Maybe Text)
+    , _eKMSKeyId                  :: !(Maybe Text)
+    , _eMongoDBSettings           :: !(Maybe MongoDBSettings)
+    , _eSSLMode                   :: !(Maybe DmsSSLModeValue)
+    , _eDatabaseName              :: !(Maybe Text)
+    , _eS3Settings                :: !(Maybe S3Settings)
+    , _eEndpointIdentifier        :: !(Maybe Text)
+    , _eExternalId                :: !(Maybe Text)
+    , _eDynamoDBSettings          :: !(Maybe DynamoDBSettings)
+    , _eEndpointARN               :: !(Maybe Text)
+    , _ePort                      :: !(Maybe Int)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Endpoint' with the minimum fields required to make a request.
@@ -564,13 +576,15 @@ instance NFData Endpoint where
 --
 --
 -- /See:/ 'event' smart constructor.
-data Event = Event'
-  { _eSourceType       :: !(Maybe SourceType)
-  , _eSourceIdentifier :: !(Maybe Text)
-  , _eDate             :: !(Maybe POSIX)
-  , _eEventCategories  :: !(Maybe [Text])
-  , _eMessage          :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Event =
+  Event'
+    { _eSourceType       :: !(Maybe SourceType)
+    , _eSourceIdentifier :: !(Maybe Text)
+    , _eDate             :: !(Maybe POSIX)
+    , _eEventCategories  :: !(Maybe [Text])
+    , _eMessage          :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Event' with the minimum fields required to make a request.
@@ -637,10 +651,12 @@ instance NFData Event where
 --
 --
 -- /See:/ 'eventCategoryGroup' smart constructor.
-data EventCategoryGroup = EventCategoryGroup'
-  { _ecgSourceType      :: !(Maybe Text)
-  , _ecgEventCategories :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EventCategoryGroup =
+  EventCategoryGroup'
+    { _ecgSourceType      :: !(Maybe Text)
+    , _ecgEventCategories :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EventCategoryGroup' with the minimum fields required to make a request.
@@ -681,17 +697,19 @@ instance NFData EventCategoryGroup where
 --
 --
 -- /See:/ 'eventSubscription' smart constructor.
-data EventSubscription = EventSubscription'
-  { _esStatus                   :: !(Maybe Text)
-  , _esCustomerAWSId            :: !(Maybe Text)
-  , _esCustSubscriptionId       :: !(Maybe Text)
-  , _esSNSTopicARN              :: !(Maybe Text)
-  , _esEnabled                  :: !(Maybe Bool)
-  , _esSourceType               :: !(Maybe Text)
-  , _esSubscriptionCreationTime :: !(Maybe Text)
-  , _esEventCategoriesList      :: !(Maybe [Text])
-  , _esSourceIdsList            :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EventSubscription =
+  EventSubscription'
+    { _esStatus                   :: !(Maybe Text)
+    , _esCustomerAWSId            :: !(Maybe Text)
+    , _esCustSubscriptionId       :: !(Maybe Text)
+    , _esSNSTopicARN              :: !(Maybe Text)
+    , _esEnabled                  :: !(Maybe Bool)
+    , _esSourceType               :: !(Maybe Text)
+    , _esSubscriptionCreationTime :: !(Maybe Text)
+    , _esEventCategoriesList      :: !(Maybe [Text])
+    , _esSourceIdsList            :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EventSubscription' with the minimum fields required to make a request.
@@ -790,10 +808,12 @@ instance NFData EventSubscription where
 --
 --
 -- /See:/ 'filter'' smart constructor.
-data Filter = Filter'
-  { _fName   :: !Text
-  , _fValues :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Filter =
+  Filter'
+    { _fName   :: !Text
+    , _fValues :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Filter' with the minimum fields required to make a request.
@@ -833,20 +853,22 @@ instance ToJSON Filter where
 --
 --
 -- /See:/ 'mongoDBSettings' smart constructor.
-data MongoDBSettings = MongoDBSettings'
-  { _mdsServerName        :: !(Maybe Text)
-  , _mdsAuthMechanism     :: !(Maybe AuthMechanismValue)
-  , _mdsUsername          :: !(Maybe Text)
-  , _mdsKMSKeyId          :: !(Maybe Text)
-  , _mdsPassword          :: !(Maybe (Sensitive Text))
-  , _mdsNestingLevel      :: !(Maybe NestingLevelValue)
-  , _mdsDatabaseName      :: !(Maybe Text)
-  , _mdsDocsToInvestigate :: !(Maybe Text)
-  , _mdsAuthSource        :: !(Maybe Text)
-  , _mdsExtractDocId      :: !(Maybe Text)
-  , _mdsAuthType          :: !(Maybe AuthTypeValue)
-  , _mdsPort              :: !(Maybe Int)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data MongoDBSettings =
+  MongoDBSettings'
+    { _mdsServerName        :: !(Maybe Text)
+    , _mdsAuthMechanism     :: !(Maybe AuthMechanismValue)
+    , _mdsUsername          :: !(Maybe Text)
+    , _mdsKMSKeyId          :: !(Maybe Text)
+    , _mdsPassword          :: !(Maybe (Sensitive Text))
+    , _mdsNestingLevel      :: !(Maybe NestingLevelValue)
+    , _mdsDatabaseName      :: !(Maybe Text)
+    , _mdsDocsToInvestigate :: !(Maybe Text)
+    , _mdsAuthSource        :: !(Maybe Text)
+    , _mdsExtractDocId      :: !(Maybe Text)
+    , _mdsAuthType          :: !(Maybe AuthTypeValue)
+    , _mdsPort              :: !(Maybe Int)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MongoDBSettings' with the minimum fields required to make a request.
@@ -986,15 +1008,17 @@ instance ToJSON MongoDBSettings where
 --
 --
 -- /See:/ 'orderableReplicationInstance' smart constructor.
-data OrderableReplicationInstance = OrderableReplicationInstance'
-  { _oriEngineVersion            :: !(Maybe Text)
-  , _oriMinAllocatedStorage      :: !(Maybe Int)
-  , _oriIncludedAllocatedStorage :: !(Maybe Int)
-  , _oriMaxAllocatedStorage      :: !(Maybe Int)
-  , _oriReplicationInstanceClass :: !(Maybe Text)
-  , _oriDefaultAllocatedStorage  :: !(Maybe Int)
-  , _oriStorageType              :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data OrderableReplicationInstance =
+  OrderableReplicationInstance'
+    { _oriEngineVersion            :: !(Maybe Text)
+    , _oriMinAllocatedStorage      :: !(Maybe Int)
+    , _oriIncludedAllocatedStorage :: !(Maybe Int)
+    , _oriMaxAllocatedStorage      :: !(Maybe Int)
+    , _oriReplicationInstanceClass :: !(Maybe Text)
+    , _oriDefaultAllocatedStorage  :: !(Maybe Int)
+    , _oriStorageType              :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OrderableReplicationInstance' with the minimum fields required to make a request.
@@ -1078,13 +1102,15 @@ instance NFData OrderableReplicationInstance where
 --
 --
 -- /See:/ 'refreshSchemasStatus' smart constructor.
-data RefreshSchemasStatus = RefreshSchemasStatus'
-  { _rssStatus                 :: !(Maybe RefreshSchemasStatusTypeValue)
-  , _rssLastRefreshDate        :: !(Maybe POSIX)
-  , _rssReplicationInstanceARN :: !(Maybe Text)
-  , _rssEndpointARN            :: !(Maybe Text)
-  , _rssLastFailureMessage     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RefreshSchemasStatus =
+  RefreshSchemasStatus'
+    { _rssStatus                 :: !(Maybe RefreshSchemasStatusTypeValue)
+    , _rssLastRefreshDate        :: !(Maybe POSIX)
+    , _rssReplicationInstanceARN :: !(Maybe Text)
+    , _rssEndpointARN            :: !(Maybe Text)
+    , _rssLastFailureMessage     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RefreshSchemasStatus' with the minimum fields required to make a request.
@@ -1151,30 +1177,32 @@ instance NFData RefreshSchemasStatus where
 --
 --
 -- /See:/ 'replicationInstance' smart constructor.
-data ReplicationInstance = ReplicationInstance'
-  { _riEngineVersion :: !(Maybe Text)
-  , _riPubliclyAccessible :: !(Maybe Bool)
-  , _riAutoMinorVersionUpgrade :: !(Maybe Bool)
-  , _riReplicationInstancePublicIPAddresses :: !(Maybe [Text])
-  , _riReplicationSubnetGroup :: !(Maybe ReplicationSubnetGroup)
-  , _riInstanceCreateTime :: !(Maybe POSIX)
-  , _riFreeUntil :: !(Maybe POSIX)
-  , _riReplicationInstanceStatus :: !(Maybe Text)
-  , _riReplicationInstancePrivateIPAddresses :: !(Maybe [Text])
-  , _riPreferredMaintenanceWindow :: !(Maybe Text)
-  , _riReplicationInstancePrivateIPAddress :: !(Maybe Text)
-  , _riKMSKeyId :: !(Maybe Text)
-  , _riAvailabilityZone :: !(Maybe Text)
-  , _riVPCSecurityGroups :: !(Maybe [VPCSecurityGroupMembership])
-  , _riMultiAZ :: !(Maybe Bool)
-  , _riSecondaryAvailabilityZone :: !(Maybe Text)
-  , _riReplicationInstanceARN :: !(Maybe Text)
-  , _riAllocatedStorage :: !(Maybe Int)
-  , _riReplicationInstancePublicIPAddress :: !(Maybe Text)
-  , _riReplicationInstanceClass :: !(Maybe Text)
-  , _riReplicationInstanceIdentifier :: !(Maybe Text)
-  , _riPendingModifiedValues :: !(Maybe ReplicationPendingModifiedValues)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReplicationInstance =
+  ReplicationInstance'
+    { _riEngineVersion :: !(Maybe Text)
+    , _riPubliclyAccessible :: !(Maybe Bool)
+    , _riAutoMinorVersionUpgrade :: !(Maybe Bool)
+    , _riReplicationInstancePublicIPAddresses :: !(Maybe [Text])
+    , _riReplicationSubnetGroup :: !(Maybe ReplicationSubnetGroup)
+    , _riInstanceCreateTime :: !(Maybe POSIX)
+    , _riFreeUntil :: !(Maybe POSIX)
+    , _riReplicationInstanceStatus :: !(Maybe Text)
+    , _riReplicationInstancePrivateIPAddresses :: !(Maybe [Text])
+    , _riPreferredMaintenanceWindow :: !(Maybe Text)
+    , _riReplicationInstancePrivateIPAddress :: !(Maybe Text)
+    , _riKMSKeyId :: !(Maybe Text)
+    , _riAvailabilityZone :: !(Maybe Text)
+    , _riVPCSecurityGroups :: !(Maybe [VPCSecurityGroupMembership])
+    , _riMultiAZ :: !(Maybe Bool)
+    , _riSecondaryAvailabilityZone :: !(Maybe Text)
+    , _riReplicationInstanceARN :: !(Maybe Text)
+    , _riAllocatedStorage :: !(Maybe Int)
+    , _riReplicationInstancePublicIPAddress :: !(Maybe Text)
+    , _riReplicationInstanceClass :: !(Maybe Text)
+    , _riReplicationInstanceIdentifier :: !(Maybe Text)
+    , _riPendingModifiedValues :: !(Maybe ReplicationPendingModifiedValues)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReplicationInstance' with the minimum fields required to make a request.
@@ -1382,11 +1410,13 @@ instance NFData ReplicationInstance where
 --
 --
 -- /See:/ 'replicationInstanceTaskLog' smart constructor.
-data ReplicationInstanceTaskLog = ReplicationInstanceTaskLog'
-  { _ritlReplicationTaskName            :: !(Maybe Text)
-  , _ritlReplicationTaskARN             :: !(Maybe Text)
-  , _ritlReplicationInstanceTaskLogSize :: !(Maybe Integer)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReplicationInstanceTaskLog =
+  ReplicationInstanceTaskLog'
+    { _ritlReplicationTaskName            :: !(Maybe Text)
+    , _ritlReplicationTaskARN             :: !(Maybe Text)
+    , _ritlReplicationInstanceTaskLogSize :: !(Maybe Integer)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReplicationInstanceTaskLog' with the minimum fields required to make a request.
@@ -1438,12 +1468,14 @@ instance NFData ReplicationInstanceTaskLog where
 --
 --
 -- /See:/ 'replicationPendingModifiedValues' smart constructor.
-data ReplicationPendingModifiedValues = ReplicationPendingModifiedValues'
-  { _rpmvEngineVersion            :: !(Maybe Text)
-  , _rpmvMultiAZ                  :: !(Maybe Bool)
-  , _rpmvAllocatedStorage         :: !(Maybe Int)
-  , _rpmvReplicationInstanceClass :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReplicationPendingModifiedValues =
+  ReplicationPendingModifiedValues'
+    { _rpmvEngineVersion            :: !(Maybe Text)
+    , _rpmvMultiAZ                  :: !(Maybe Bool)
+    , _rpmvAllocatedStorage         :: !(Maybe Int)
+    , _rpmvReplicationInstanceClass :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReplicationPendingModifiedValues' with the minimum fields required to make a request.
@@ -1505,13 +1537,15 @@ instance NFData ReplicationPendingModifiedValues
 --
 --
 -- /See:/ 'replicationSubnetGroup' smart constructor.
-data ReplicationSubnetGroup = ReplicationSubnetGroup'
-  { _rsgVPCId                             :: !(Maybe Text)
-  , _rsgSubnets                           :: !(Maybe [Subnet])
-  , _rsgReplicationSubnetGroupIdentifier  :: !(Maybe Text)
-  , _rsgSubnetGroupStatus                 :: !(Maybe Text)
-  , _rsgReplicationSubnetGroupDescription :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReplicationSubnetGroup =
+  ReplicationSubnetGroup'
+    { _rsgVPCId                             :: !(Maybe Text)
+    , _rsgSubnets                           :: !(Maybe [Subnet])
+    , _rsgReplicationSubnetGroupIdentifier  :: !(Maybe Text)
+    , _rsgSubnetGroupStatus                 :: !(Maybe Text)
+    , _rsgReplicationSubnetGroupDescription :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReplicationSubnetGroup' with the minimum fields required to make a request.
@@ -1578,25 +1612,27 @@ instance NFData ReplicationSubnetGroup where
 --
 --
 -- /See:/ 'replicationTask' smart constructor.
-data ReplicationTask = ReplicationTask'
-  { _rReplicationTaskSettings     :: !(Maybe Text)
-  , _rStatus                      :: !(Maybe Text)
-  , _rStopReason                  :: !(Maybe Text)
-  , _rTargetEndpointARN           :: !(Maybe Text)
-  , _rReplicationTaskIdentifier   :: !(Maybe Text)
-  , _rCdcStartPosition            :: !(Maybe Text)
-  , _rReplicationTaskStartDate    :: !(Maybe POSIX)
-  , _rSourceEndpointARN           :: !(Maybe Text)
-  , _rRecoveryCheckpoint          :: !(Maybe Text)
-  , _rTableMappings               :: !(Maybe Text)
-  , _rReplicationTaskCreationDate :: !(Maybe POSIX)
-  , _rMigrationType               :: !(Maybe MigrationTypeValue)
-  , _rReplicationTaskARN          :: !(Maybe Text)
-  , _rCdcStopPosition             :: !(Maybe Text)
-  , _rReplicationTaskStats        :: !(Maybe ReplicationTaskStats)
-  , _rReplicationInstanceARN      :: !(Maybe Text)
-  , _rLastFailureMessage          :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReplicationTask =
+  ReplicationTask'
+    { _rReplicationTaskSettings     :: !(Maybe Text)
+    , _rStatus                      :: !(Maybe Text)
+    , _rStopReason                  :: !(Maybe Text)
+    , _rTargetEndpointARN           :: !(Maybe Text)
+    , _rReplicationTaskIdentifier   :: !(Maybe Text)
+    , _rCdcStartPosition            :: !(Maybe Text)
+    , _rReplicationTaskStartDate    :: !(Maybe POSIX)
+    , _rSourceEndpointARN           :: !(Maybe Text)
+    , _rRecoveryCheckpoint          :: !(Maybe Text)
+    , _rTableMappings               :: !(Maybe Text)
+    , _rReplicationTaskCreationDate :: !(Maybe POSIX)
+    , _rMigrationType               :: !(Maybe MigrationTypeValue)
+    , _rReplicationTaskARN          :: !(Maybe Text)
+    , _rCdcStopPosition             :: !(Maybe Text)
+    , _rReplicationTaskStats        :: !(Maybe ReplicationTaskStats)
+    , _rReplicationInstanceARN      :: !(Maybe Text)
+    , _rLastFailureMessage          :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReplicationTask' with the minimum fields required to make a request.
@@ -1760,15 +1796,17 @@ instance NFData ReplicationTask where
 --
 --
 -- /See:/ 'replicationTaskAssessmentResult' smart constructor.
-data ReplicationTaskAssessmentResult = ReplicationTaskAssessmentResult'
-  { _rtarAssessmentResults                 :: !(Maybe Text)
-  , _rtarAssessmentResultsFile             :: !(Maybe Text)
-  , _rtarReplicationTaskIdentifier         :: !(Maybe Text)
-  , _rtarAssessmentStatus                  :: !(Maybe Text)
-  , _rtarS3ObjectURL                       :: !(Maybe Text)
-  , _rtarReplicationTaskLastAssessmentDate :: !(Maybe POSIX)
-  , _rtarReplicationTaskARN                :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReplicationTaskAssessmentResult =
+  ReplicationTaskAssessmentResult'
+    { _rtarAssessmentResults                 :: !(Maybe Text)
+    , _rtarAssessmentResultsFile             :: !(Maybe Text)
+    , _rtarReplicationTaskIdentifier         :: !(Maybe Text)
+    , _rtarAssessmentStatus                  :: !(Maybe Text)
+    , _rtarS3ObjectURL                       :: !(Maybe Text)
+    , _rtarReplicationTaskLastAssessmentDate :: !(Maybe POSIX)
+    , _rtarReplicationTaskARN                :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReplicationTaskAssessmentResult' with the minimum fields required to make a request.
@@ -1854,14 +1892,16 @@ instance NFData ReplicationTaskAssessmentResult where
 --
 --
 -- /See:/ 'replicationTaskStats' smart constructor.
-data ReplicationTaskStats = ReplicationTaskStats'
-  { _rtsFullLoadProgressPercent :: !(Maybe Int)
-  , _rtsElapsedTimeMillis       :: !(Maybe Integer)
-  , _rtsTablesErrored           :: !(Maybe Int)
-  , _rtsTablesLoaded            :: !(Maybe Int)
-  , _rtsTablesQueued            :: !(Maybe Int)
-  , _rtsTablesLoading           :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReplicationTaskStats =
+  ReplicationTaskStats'
+    { _rtsFullLoadProgressPercent :: !(Maybe Int)
+    , _rtsElapsedTimeMillis       :: !(Maybe Integer)
+    , _rtsTablesErrored           :: !(Maybe Int)
+    , _rtsTablesLoaded            :: !(Maybe Int)
+    , _rtsTablesQueued            :: !(Maybe Int)
+    , _rtsTablesLoading           :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReplicationTaskStats' with the minimum fields required to make a request.
@@ -1937,15 +1977,17 @@ instance NFData ReplicationTaskStats where
 --
 --
 -- /See:/ 's3Settings' smart constructor.
-data S3Settings = S3Settings'
-  { _ssCSVDelimiter            :: !(Maybe Text)
-  , _ssServiceAccessRoleARN    :: !(Maybe Text)
-  , _ssBucketFolder            :: !(Maybe Text)
-  , _ssExternalTableDefinition :: !(Maybe Text)
-  , _ssBucketName              :: !(Maybe Text)
-  , _ssCSVRowDelimiter         :: !(Maybe Text)
-  , _ssCompressionType         :: !(Maybe CompressionTypeValue)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data S3Settings =
+  S3Settings'
+    { _ssCSVDelimiter            :: !(Maybe Text)
+    , _ssServiceAccessRoleARN    :: !(Maybe Text)
+    , _ssBucketFolder            :: !(Maybe Text)
+    , _ssExternalTableDefinition :: !(Maybe Text)
+    , _ssBucketName              :: !(Maybe Text)
+    , _ssCSVRowDelimiter         :: !(Maybe Text)
+    , _ssCompressionType         :: !(Maybe CompressionTypeValue)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'S3Settings' with the minimum fields required to make a request.
@@ -2043,11 +2085,13 @@ instance ToJSON S3Settings where
 --
 --
 -- /See:/ 'subnet' smart constructor.
-data Subnet = Subnet'
-  { _sSubnetStatus           :: !(Maybe Text)
-  , _sSubnetIdentifier       :: !(Maybe Text)
-  , _sSubnetAvailabilityZone :: !(Maybe AvailabilityZone)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Subnet =
+  Subnet'
+    { _sSubnetStatus           :: !(Maybe Text)
+    , _sSubnetIdentifier       :: !(Maybe Text)
+    , _sSubnetAvailabilityZone :: !(Maybe AvailabilityZone)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Subnet' with the minimum fields required to make a request.
@@ -2098,12 +2142,14 @@ instance NFData Subnet where
 --
 --
 -- /See:/ 'supportedEndpointType' smart constructor.
-data SupportedEndpointType = SupportedEndpointType'
-  { _setEngineDisplayName :: !(Maybe Text)
-  , _setEndpointType      :: !(Maybe ReplicationEndpointTypeValue)
-  , _setEngineName        :: !(Maybe Text)
-  , _setSupportsCDC       :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SupportedEndpointType =
+  SupportedEndpointType'
+    { _setEngineDisplayName :: !(Maybe Text)
+    , _setEndpointType      :: !(Maybe ReplicationEndpointTypeValue)
+    , _setEngineName        :: !(Maybe Text)
+    , _setSupportsCDC       :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SupportedEndpointType' with the minimum fields required to make a request.
@@ -2163,23 +2209,25 @@ instance NFData SupportedEndpointType where
 --
 --
 -- /See:/ 'tableStatistics' smart constructor.
-data TableStatistics = TableStatistics'
-  { _tsValidationState              :: !(Maybe Text)
-  , _tsFullLoadRows                 :: !(Maybe Integer)
-  , _tsInserts                      :: !(Maybe Integer)
-  , _tsFullLoadCondtnlChkFailedRows :: !(Maybe Integer)
-  , _tsValidationFailedRecords      :: !(Maybe Integer)
-  , _tsValidationSuspendedRecords   :: !(Maybe Integer)
-  , _tsSchemaName                   :: !(Maybe Text)
-  , _tsTableState                   :: !(Maybe Text)
-  , _tsFullLoadErrorRows            :: !(Maybe Integer)
-  , _tsDdls                         :: !(Maybe Integer)
-  , _tsDeletes                      :: !(Maybe Integer)
-  , _tsUpdates                      :: !(Maybe Integer)
-  , _tsValidationPendingRecords     :: !(Maybe Integer)
-  , _tsLastUpdateTime               :: !(Maybe POSIX)
-  , _tsTableName                    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TableStatistics =
+  TableStatistics'
+    { _tsValidationState              :: !(Maybe Text)
+    , _tsFullLoadRows                 :: !(Maybe Integer)
+    , _tsInserts                      :: !(Maybe Integer)
+    , _tsFullLoadCondtnlChkFailedRows :: !(Maybe Integer)
+    , _tsValidationFailedRecords      :: !(Maybe Integer)
+    , _tsValidationSuspendedRecords   :: !(Maybe Integer)
+    , _tsSchemaName                   :: !(Maybe Text)
+    , _tsTableState                   :: !(Maybe Text)
+    , _tsFullLoadErrorRows            :: !(Maybe Integer)
+    , _tsDdls                         :: !(Maybe Integer)
+    , _tsDeletes                      :: !(Maybe Integer)
+    , _tsUpdates                      :: !(Maybe Integer)
+    , _tsValidationPendingRecords     :: !(Maybe Integer)
+    , _tsLastUpdateTime               :: !(Maybe POSIX)
+    , _tsTableName                    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TableStatistics' with the minimum fields required to make a request.
@@ -2326,10 +2374,12 @@ instance NFData TableStatistics where
 --
 --
 -- /See:/ 'tableToReload' smart constructor.
-data TableToReload = TableToReload'
-  { _ttrSchemaName :: !(Maybe Text)
-  , _ttrTableName  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TableToReload =
+  TableToReload'
+    { _ttrSchemaName :: !(Maybe Text)
+    , _ttrTableName  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TableToReload' with the minimum fields required to make a request.
@@ -2369,10 +2419,12 @@ instance ToJSON TableToReload where
 --
 --
 -- /See:/ 'tag' smart constructor.
-data Tag = Tag'
-  { _tagValue :: !(Maybe Text)
-  , _tagKey   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Tag =
+  Tag'
+    { _tagValue :: !(Maybe Text)
+    , _tagKey   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Tag' with the minimum fields required to make a request.
@@ -2415,10 +2467,12 @@ instance ToJSON Tag where
 --
 --
 -- /See:/ 'vpcSecurityGroupMembership' smart constructor.
-data VPCSecurityGroupMembership = VPCSecurityGroupMembership'
-  { _vsgmStatus             :: !(Maybe Text)
-  , _vsgmVPCSecurityGroupId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VPCSecurityGroupMembership =
+  VPCSecurityGroupMembership'
+    { _vsgmStatus             :: !(Maybe Text)
+    , _vsgmVPCSecurityGroupId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VPCSecurityGroupMembership' with the minimum fields required to make a request.

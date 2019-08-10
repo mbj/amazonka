@@ -59,14 +59,16 @@ import Network.AWS.Route53.Types.Product
 --
 --
 -- /See:/ 'testDNSAnswer' smart constructor.
-data TestDNSAnswer = TestDNSAnswer'
-  { _tdaResolverIP            :: !(Maybe Text)
-  , _tdaEDNS0ClientSubnetIP   :: !(Maybe Text)
-  , _tdaEDNS0ClientSubnetMask :: !(Maybe Text)
-  , _tdaHostedZoneId          :: !ResourceId
-  , _tdaRecordName            :: !Text
-  , _tdaRecordType            :: !RecordType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TestDNSAnswer =
+  TestDNSAnswer'
+    { _tdaResolverIP            :: !(Maybe Text)
+    , _tdaEDNS0ClientSubnetIP   :: !(Maybe Text)
+    , _tdaEDNS0ClientSubnetMask :: !(Maybe Text)
+    , _tdaHostedZoneId          :: !ResourceId
+    , _tdaRecordName            :: !Text
+    , _tdaRecordType            :: !RecordType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TestDNSAnswer' with the minimum fields required to make a request.
@@ -165,15 +167,17 @@ instance ToQuery TestDNSAnswer where
 --
 --
 -- /See:/ 'testDNSAnswerResponse' smart constructor.
-data TestDNSAnswerResponse = TestDNSAnswerResponse'
-  { _tdarsResponseStatus :: !Int
-  , _tdarsNameserver     :: !Text
-  , _tdarsRecordName     :: !Text
-  , _tdarsRecordType     :: !RecordType
-  , _tdarsRecordData     :: ![Text]
-  , _tdarsResponseCode   :: !Text
-  , _tdarsProtocol       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TestDNSAnswerResponse =
+  TestDNSAnswerResponse'
+    { _tdarsResponseStatus :: !Int
+    , _tdarsNameserver     :: !Text
+    , _tdarsRecordName     :: !Text
+    , _tdarsRecordType     :: !RecordType
+    , _tdarsRecordData     :: ![Text]
+    , _tdarsResponseCode   :: !Text
+    , _tdarsProtocol       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TestDNSAnswerResponse' with the minimum fields required to make a request.

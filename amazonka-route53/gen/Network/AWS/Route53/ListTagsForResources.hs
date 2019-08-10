@@ -52,10 +52,12 @@ import Network.AWS.Route53.Types.Product
 --
 --
 -- /See:/ 'listTagsForResources' smart constructor.
-data ListTagsForResources = ListTagsForResources'
-  { _lResourceType :: !TagResourceType
-  , _lResourceIds  :: !(List1 Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTagsForResources =
+  ListTagsForResources'
+    { _lResourceType :: !TagResourceType
+    , _lResourceIds  :: !(List1 Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTagsForResources' with the minimum fields required to make a request.
@@ -124,10 +126,12 @@ instance ToXML ListTagsForResources where
 --
 --
 -- /See:/ 'listTagsForResourcesResponse' smart constructor.
-data ListTagsForResourcesResponse = ListTagsForResourcesResponse'
-  { _lrsResponseStatus  :: !Int
-  , _lrsResourceTagSets :: ![ResourceTagSet]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTagsForResourcesResponse =
+  ListTagsForResourcesResponse'
+    { _lrsResponseStatus  :: !Int
+    , _lrsResourceTagSets :: ![ResourceTagSet]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTagsForResourcesResponse' with the minimum fields required to make a request.

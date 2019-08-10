@@ -68,22 +68,24 @@ import Network.AWS.ServerlessApplicationRepository.Types
 import Network.AWS.ServerlessApplicationRepository.Types.Product
 
 -- | /See:/ 'createApplication' smart constructor.
-data CreateApplication = CreateApplication'
-  { _caHomePageURL     :: !(Maybe Text)
-  , _caReadmeBody      :: !(Maybe Text)
-  , _caLicenseURL      :: !(Maybe Text)
-  , _caSemanticVersion :: !(Maybe Text)
-  , _caSourceCodeURL   :: !(Maybe Text)
-  , _caReadmeURL       :: !(Maybe Text)
-  , _caName            :: !(Maybe Text)
-  , _caAuthor          :: !(Maybe Text)
-  , _caLabels          :: !(Maybe [Text])
-  , _caTemplateBody    :: !(Maybe Text)
-  , _caTemplateURL     :: !(Maybe Text)
-  , _caLicenseBody     :: !(Maybe Text)
-  , _caDescription     :: !(Maybe Text)
-  , _caSpdxLicenseId   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateApplication =
+  CreateApplication'
+    { _caHomePageURL     :: !(Maybe Text)
+    , _caReadmeBody      :: !(Maybe Text)
+    , _caLicenseURL      :: !(Maybe Text)
+    , _caSemanticVersion :: !(Maybe Text)
+    , _caSourceCodeURL   :: !(Maybe Text)
+    , _caReadmeURL       :: !(Maybe Text)
+    , _caName            :: !(Maybe Text)
+    , _caAuthor          :: !(Maybe Text)
+    , _caLabels          :: !(Maybe [Text])
+    , _caTemplateBody    :: !(Maybe Text)
+    , _caTemplateURL     :: !(Maybe Text)
+    , _caLicenseBody     :: !(Maybe Text)
+    , _caDescription     :: !(Maybe Text)
+    , _caSpdxLicenseId   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateApplication' with the minimum fields required to make a request.
@@ -249,20 +251,22 @@ instance ToQuery CreateApplication where
         toQuery = const mempty
 
 -- | /See:/ 'createApplicationResponse' smart constructor.
-data CreateApplicationResponse = CreateApplicationResponse'
-  { _carsCreationTime   :: !(Maybe Text)
-  , _carsHomePageURL    :: !(Maybe Text)
-  , _carsLicenseURL     :: !(Maybe Text)
-  , _carsReadmeURL      :: !(Maybe Text)
-  , _carsApplicationId  :: !(Maybe Text)
-  , _carsName           :: !(Maybe Text)
-  , _carsVersion        :: !(Maybe Version)
-  , _carsAuthor         :: !(Maybe Text)
-  , _carsLabels         :: !(Maybe [Text])
-  , _carsDescription    :: !(Maybe Text)
-  , _carsSpdxLicenseId  :: !(Maybe Text)
-  , _carsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateApplicationResponse =
+  CreateApplicationResponse'
+    { _carsCreationTime   :: !(Maybe Text)
+    , _carsHomePageURL    :: !(Maybe Text)
+    , _carsLicenseURL     :: !(Maybe Text)
+    , _carsReadmeURL      :: !(Maybe Text)
+    , _carsApplicationId  :: !(Maybe Text)
+    , _carsName           :: !(Maybe Text)
+    , _carsVersion        :: !(Maybe Version)
+    , _carsAuthor         :: !(Maybe Text)
+    , _carsLabels         :: !(Maybe [Text])
+    , _carsDescription    :: !(Maybe Text)
+    , _carsSpdxLicenseId  :: !(Maybe Text)
+    , _carsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateApplicationResponse' with the minimum fields required to make a request.

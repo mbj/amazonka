@@ -43,10 +43,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deletePendingAggregationRequest' smart constructor.
-data DeletePendingAggregationRequest = DeletePendingAggregationRequest'
-  { _dparRequesterAccountId :: !Text
-  , _dparRequesterAWSRegion :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeletePendingAggregationRequest =
+  DeletePendingAggregationRequest'
+    { _dparRequesterAccountId :: !Text
+    , _dparRequesterAWSRegion :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeletePendingAggregationRequest' with the minimum fields required to make a request.

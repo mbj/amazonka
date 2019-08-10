@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeBundle' smart constructor.
-newtype DescribeBundle = DescribeBundle'
-  { _dbBundleId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeBundle =
+  DescribeBundle'
+    { _dbBundleId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeBundle' with the minimum fields required to make a request.
@@ -101,10 +103,12 @@ instance ToQuery DescribeBundle where
 --
 --
 -- /See:/ 'describeBundleResponse' smart constructor.
-data DescribeBundleResponse = DescribeBundleResponse'
-  { _dbrsDetails        :: !(Maybe BundleDetails)
-  , _dbrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeBundleResponse =
+  DescribeBundleResponse'
+    { _dbrsDetails        :: !(Maybe BundleDetails)
+    , _dbrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeBundleResponse' with the minimum fields required to make a request.

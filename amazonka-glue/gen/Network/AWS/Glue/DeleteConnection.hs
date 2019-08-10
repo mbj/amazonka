@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteConnection' smart constructor.
-data DeleteConnection = DeleteConnection'
-  { _dcCatalogId      :: !(Maybe Text)
-  , _dcConnectionName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteConnection =
+  DeleteConnection'
+    { _dcCatalogId      :: !(Maybe Text)
+    , _dcConnectionName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteConnection' with the minimum fields required to make a request.
@@ -109,9 +111,11 @@ instance ToQuery DeleteConnection where
         toQuery = const mempty
 
 -- | /See:/ 'deleteConnectionResponse' smart constructor.
-newtype DeleteConnectionResponse = DeleteConnectionResponse'
-  { _dcrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteConnectionResponse =
+  DeleteConnectionResponse'
+    { _dcrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteConnectionResponse' with the minimum fields required to make a request.

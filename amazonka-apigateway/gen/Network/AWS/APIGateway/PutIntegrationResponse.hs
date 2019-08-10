@@ -59,16 +59,18 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'putIntegrationResponse' smart constructor.
-data PutIntegrationResponse = PutIntegrationResponse'
-  { _piContentHandling    :: !(Maybe ContentHandlingStrategy)
-  , _piResponseTemplates  :: !(Maybe (Map Text Text))
-  , _piSelectionPattern   :: !(Maybe Text)
-  , _piResponseParameters :: !(Maybe (Map Text Text))
-  , _piRestAPIId          :: !Text
-  , _piResourceId         :: !Text
-  , _piHttpMethod         :: !Text
-  , _piStatusCode         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutIntegrationResponse =
+  PutIntegrationResponse'
+    { _piContentHandling    :: !(Maybe ContentHandlingStrategy)
+    , _piResponseTemplates  :: !(Maybe (Map Text Text))
+    , _piSelectionPattern   :: !(Maybe Text)
+    , _piResponseParameters :: !(Maybe (Map Text Text))
+    , _piRestAPIId          :: !Text
+    , _piResourceId         :: !Text
+    , _piHttpMethod         :: !Text
+    , _piStatusCode         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutIntegrationResponse' with the minimum fields required to make a request.

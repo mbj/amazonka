@@ -48,9 +48,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteTrail' smart constructor.
-newtype DeleteTrail = DeleteTrail'
-  { _dtName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteTrail =
+  DeleteTrail'
+    { _dtName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteTrail' with the minimum fields required to make a request.
@@ -105,9 +107,11 @@ instance ToQuery DeleteTrail where
 --
 --
 -- /See:/ 'deleteTrailResponse' smart constructor.
-newtype DeleteTrailResponse = DeleteTrailResponse'
-  { _drsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteTrailResponse =
+  DeleteTrailResponse'
+    { _drsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteTrailResponse' with the minimum fields required to make a request.

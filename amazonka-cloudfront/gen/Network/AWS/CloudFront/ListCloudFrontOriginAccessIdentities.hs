@@ -53,10 +53,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listCloudFrontOriginAccessIdentities' smart constructor.
-data ListCloudFrontOriginAccessIdentities = ListCloudFrontOriginAccessIdentities'
-  { _lcfoaiMarker   :: !(Maybe Text)
-  , _lcfoaiMaxItems :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListCloudFrontOriginAccessIdentities =
+  ListCloudFrontOriginAccessIdentities'
+    { _lcfoaiMarker   :: !(Maybe Text)
+    , _lcfoaiMaxItems :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListCloudFrontOriginAccessIdentities' with the minimum fields required to make a request.
@@ -144,10 +146,12 @@ instance ToQuery ListCloudFrontOriginAccessIdentities
 --
 --
 -- /See:/ 'listCloudFrontOriginAccessIdentitiesResponse' smart constructor.
-data ListCloudFrontOriginAccessIdentitiesResponse = ListCloudFrontOriginAccessIdentitiesResponse'
-  { _lcfoairsResponseStatus :: !Int
-  , _lcfoairsCloudFrontOriginAccessIdentityList :: !CloudFrontOriginAccessIdentityList
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListCloudFrontOriginAccessIdentitiesResponse =
+  ListCloudFrontOriginAccessIdentitiesResponse'
+    { _lcfoairsResponseStatus :: !Int
+    , _lcfoairsCloudFrontOriginAccessIdentityList :: !CloudFrontOriginAccessIdentityList
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListCloudFrontOriginAccessIdentitiesResponse' with the minimum fields required to make a request.

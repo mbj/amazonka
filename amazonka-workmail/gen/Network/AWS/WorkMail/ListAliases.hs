@@ -52,12 +52,14 @@ import Network.AWS.WorkMail.Types
 import Network.AWS.WorkMail.Types.Product
 
 -- | /See:/ 'listAliases' smart constructor.
-data ListAliases = ListAliases'
-  { _laNextToken      :: !(Maybe Text)
-  , _laMaxResults     :: !(Maybe Nat)
-  , _laOrganizationId :: !Text
-  , _laEntityId       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAliases =
+  ListAliases'
+    { _laNextToken      :: !(Maybe Text)
+    , _laMaxResults     :: !(Maybe Nat)
+    , _laOrganizationId :: !Text
+    , _laEntityId       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAliases' with the minimum fields required to make a request.
@@ -146,11 +148,13 @@ instance ToQuery ListAliases where
         toQuery = const mempty
 
 -- | /See:/ 'listAliasesResponse' smart constructor.
-data ListAliasesResponse = ListAliasesResponse'
-  { _larsAliases        :: !(Maybe [Text])
-  , _larsNextToken      :: !(Maybe Text)
-  , _larsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAliasesResponse =
+  ListAliasesResponse'
+    { _larsAliases        :: !(Maybe [Text])
+    , _larsNextToken      :: !(Maybe Text)
+    , _larsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAliasesResponse' with the minimum fields required to make a request.

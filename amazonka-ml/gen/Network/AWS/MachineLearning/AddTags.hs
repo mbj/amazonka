@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'addTags' smart constructor.
-data AddTags = AddTags'
-  { _atTags         :: ![Tag]
-  , _atResourceId   :: !Text
-  , _atResourceType :: !TaggableResourceType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddTags =
+  AddTags'
+    { _atTags         :: ![Tag]
+    , _atResourceId   :: !Text
+    , _atResourceType :: !TaggableResourceType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddTags' with the minimum fields required to make a request.
@@ -130,11 +132,13 @@ instance ToQuery AddTags where
 --
 --
 -- /See:/ 'addTagsResponse' smart constructor.
-data AddTagsResponse = AddTagsResponse'
-  { _atrsResourceId     :: !(Maybe Text)
-  , _atrsResourceType   :: !(Maybe TaggableResourceType)
-  , _atrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddTagsResponse =
+  AddTagsResponse'
+    { _atrsResourceId     :: !(Maybe Text)
+    , _atrsResourceType   :: !(Maybe TaggableResourceType)
+    , _atrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddTagsResponse' with the minimum fields required to make a request.

@@ -62,10 +62,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getIntent' smart constructor.
-data GetIntent = GetIntent'
-  { _giName    :: !Text
-  , _giVersion :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetIntent =
+  GetIntent'
+    { _giName    :: !Text
+    , _giVersion :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetIntent' with the minimum fields required to make a request.
@@ -136,24 +138,26 @@ instance ToQuery GetIntent where
         toQuery = const mempty
 
 -- | /See:/ 'getIntentResponse' smart constructor.
-data GetIntentResponse = GetIntentResponse'
-  { _getrsFulfillmentActivity   :: !(Maybe FulfillmentActivity)
-  , _getrsSlots                 :: !(Maybe [Slot])
-  , _getrsRejectionStatement    :: !(Maybe Statement)
-  , _getrsChecksum              :: !(Maybe Text)
-  , _getrsConclusionStatement   :: !(Maybe Statement)
-  , _getrsSampleUtterances      :: !(Maybe [Text])
-  , _getrsParentIntentSignature :: !(Maybe Text)
-  , _getrsCreatedDate           :: !(Maybe POSIX)
-  , _getrsName                  :: !(Maybe Text)
-  , _getrsVersion               :: !(Maybe Text)
-  , _getrsFollowUpPrompt        :: !(Maybe FollowUpPrompt)
-  , _getrsLastUpdatedDate       :: !(Maybe POSIX)
-  , _getrsConfirmationPrompt    :: !(Maybe Prompt)
-  , _getrsDialogCodeHook        :: !(Maybe CodeHook)
-  , _getrsDescription           :: !(Maybe Text)
-  , _getrsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetIntentResponse =
+  GetIntentResponse'
+    { _getrsFulfillmentActivity   :: !(Maybe FulfillmentActivity)
+    , _getrsSlots                 :: !(Maybe [Slot])
+    , _getrsRejectionStatement    :: !(Maybe Statement)
+    , _getrsChecksum              :: !(Maybe Text)
+    , _getrsConclusionStatement   :: !(Maybe Statement)
+    , _getrsSampleUtterances      :: !(Maybe [Text])
+    , _getrsParentIntentSignature :: !(Maybe Text)
+    , _getrsCreatedDate           :: !(Maybe POSIX)
+    , _getrsName                  :: !(Maybe Text)
+    , _getrsVersion               :: !(Maybe Text)
+    , _getrsFollowUpPrompt        :: !(Maybe FollowUpPrompt)
+    , _getrsLastUpdatedDate       :: !(Maybe POSIX)
+    , _getrsConfirmationPrompt    :: !(Maybe Prompt)
+    , _getrsDialogCodeHook        :: !(Maybe CodeHook)
+    , _getrsDescription           :: !(Maybe Text)
+    , _getrsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetIntentResponse' with the minimum fields required to make a request.

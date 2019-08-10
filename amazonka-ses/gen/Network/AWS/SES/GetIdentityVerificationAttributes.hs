@@ -55,9 +55,11 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'getIdentityVerificationAttributes' smart constructor.
-newtype GetIdentityVerificationAttributes = GetIdentityVerificationAttributes'
-  { _givaIdentities :: [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetIdentityVerificationAttributes =
+  GetIdentityVerificationAttributes'
+    { _givaIdentities :: [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetIdentityVerificationAttributes' with the minimum fields required to make a request.
@@ -117,10 +119,12 @@ instance ToQuery GetIdentityVerificationAttributes
 --
 --
 -- /See:/ 'getIdentityVerificationAttributesResponse' smart constructor.
-data GetIdentityVerificationAttributesResponse = GetIdentityVerificationAttributesResponse'
-  { _givarsResponseStatus         :: !Int
-  , _givarsVerificationAttributes :: !(Map Text IdentityVerificationAttributes)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetIdentityVerificationAttributesResponse =
+  GetIdentityVerificationAttributesResponse'
+    { _givarsResponseStatus :: !Int
+    , _givarsVerificationAttributes :: !(Map Text IdentityVerificationAttributes)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetIdentityVerificationAttributesResponse' with the minimum fields required to make a request.

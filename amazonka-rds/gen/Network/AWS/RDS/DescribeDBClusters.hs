@@ -55,12 +55,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeDBClusters' smart constructor.
-data DescribeDBClusters = DescribeDBClusters'
-  { _ddcDBClusterIdentifier :: !(Maybe Text)
-  , _ddcFilters             :: !(Maybe [Filter])
-  , _ddcMarker              :: !(Maybe Text)
-  , _ddcMaxRecords          :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDBClusters =
+  DescribeDBClusters'
+    { _ddcDBClusterIdentifier :: !(Maybe Text)
+    , _ddcFilters             :: !(Maybe [Filter])
+    , _ddcMarker              :: !(Maybe Text)
+    , _ddcMaxRecords          :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDBClusters' with the minimum fields required to make a request.
@@ -140,11 +142,13 @@ instance ToQuery DescribeDBClusters where
 --
 --
 -- /See:/ 'describeDBClustersResponse' smart constructor.
-data DescribeDBClustersResponse = DescribeDBClustersResponse'
-  { _ddcrsDBClusters     :: !(Maybe [DBCluster])
-  , _ddcrsMarker         :: !(Maybe Text)
-  , _ddcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDBClustersResponse =
+  DescribeDBClustersResponse'
+    { _ddcrsDBClusters     :: !(Maybe [DBCluster])
+    , _ddcrsMarker         :: !(Maybe Text)
+    , _ddcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDBClustersResponse' with the minimum fields required to make a request.

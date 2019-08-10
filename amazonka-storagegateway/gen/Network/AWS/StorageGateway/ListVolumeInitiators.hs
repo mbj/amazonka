@@ -49,9 +49,11 @@ import Network.AWS.StorageGateway.Types.Product
 --
 --
 -- /See:/ 'listVolumeInitiators' smart constructor.
-newtype ListVolumeInitiators = ListVolumeInitiators'
-  { _lviVolumeARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ListVolumeInitiators =
+  ListVolumeInitiators'
+    { _lviVolumeARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListVolumeInitiators' with the minimum fields required to make a request.
@@ -111,10 +113,12 @@ instance ToQuery ListVolumeInitiators where
 --
 --
 -- /See:/ 'listVolumeInitiatorsResponse' smart constructor.
-data ListVolumeInitiatorsResponse = ListVolumeInitiatorsResponse'
-  { _lvirsInitiators     :: !(Maybe [Text])
-  , _lvirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListVolumeInitiatorsResponse =
+  ListVolumeInitiatorsResponse'
+    { _lvirsInitiators     :: !(Maybe [Text])
+    , _lvirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListVolumeInitiatorsResponse' with the minimum fields required to make a request.

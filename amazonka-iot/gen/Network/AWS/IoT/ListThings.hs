@@ -57,13 +57,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listThings' smart constructor.
-data ListThings = ListThings'
-  { _ltAttributeValue :: !(Maybe Text)
-  , _ltThingTypeName  :: !(Maybe Text)
-  , _ltNextToken      :: !(Maybe Text)
-  , _ltAttributeName  :: !(Maybe Text)
-  , _ltMaxResults     :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListThings =
+  ListThings'
+    { _ltAttributeValue :: !(Maybe Text)
+    , _ltThingTypeName  :: !(Maybe Text)
+    , _ltNextToken      :: !(Maybe Text)
+    , _ltAttributeName  :: !(Maybe Text)
+    , _ltMaxResults     :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListThings' with the minimum fields required to make a request.
@@ -152,11 +154,13 @@ instance ToQuery ListThings where
 --
 --
 -- /See:/ 'listThingsResponse' smart constructor.
-data ListThingsResponse = ListThingsResponse'
-  { _ltrsNextToken      :: !(Maybe Text)
-  , _ltrsThings         :: !(Maybe [ThingAttribute])
-  , _ltrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListThingsResponse =
+  ListThingsResponse'
+    { _ltrsNextToken      :: !(Maybe Text)
+    , _ltrsThings         :: !(Maybe [ThingAttribute])
+    , _ltrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListThingsResponse' with the minimum fields required to make a request.

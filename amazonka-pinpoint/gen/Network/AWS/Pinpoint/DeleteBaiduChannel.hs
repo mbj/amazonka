@@ -43,9 +43,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteBaiduChannel' smart constructor.
-newtype DeleteBaiduChannel = DeleteBaiduChannel'
-  { _dbcApplicationId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteBaiduChannel =
+  DeleteBaiduChannel'
+    { _dbcApplicationId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteBaiduChannel' with the minimum fields required to make a request.
@@ -95,10 +97,12 @@ instance ToQuery DeleteBaiduChannel where
         toQuery = const mempty
 
 -- | /See:/ 'deleteBaiduChannelResponse' smart constructor.
-data DeleteBaiduChannelResponse = DeleteBaiduChannelResponse'
-  { _dbcrsResponseStatus       :: !Int
-  , _dbcrsBaiduChannelResponse :: !BaiduChannelResponse
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteBaiduChannelResponse =
+  DeleteBaiduChannelResponse'
+    { _dbcrsResponseStatus       :: !Int
+    , _dbcrsBaiduChannelResponse :: !BaiduChannelResponse
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteBaiduChannelResponse' with the minimum fields required to make a request.

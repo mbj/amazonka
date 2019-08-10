@@ -55,15 +55,17 @@ import Network.AWS.SageMaker.Types
 import Network.AWS.SageMaker.Types.Product
 
 -- | /See:/ 'listEndpointConfigs' smart constructor.
-data ListEndpointConfigs = ListEndpointConfigs'
-  { _lecNameContains       :: !(Maybe Text)
-  , _lecCreationTimeAfter  :: !(Maybe POSIX)
-  , _lecNextToken          :: !(Maybe Text)
-  , _lecSortOrder          :: !(Maybe OrderKey)
-  , _lecCreationTimeBefore :: !(Maybe POSIX)
-  , _lecMaxResults         :: !(Maybe Nat)
-  , _lecSortBy             :: !(Maybe EndpointConfigSortKey)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListEndpointConfigs =
+  ListEndpointConfigs'
+    { _lecNameContains       :: !(Maybe Text)
+    , _lecCreationTimeAfter  :: !(Maybe POSIX)
+    , _lecNextToken          :: !(Maybe Text)
+    , _lecSortOrder          :: !(Maybe OrderKey)
+    , _lecCreationTimeBefore :: !(Maybe POSIX)
+    , _lecMaxResults         :: !(Maybe Nat)
+    , _lecSortBy             :: !(Maybe EndpointConfigSortKey)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListEndpointConfigs' with the minimum fields required to make a request.
@@ -175,11 +177,13 @@ instance ToQuery ListEndpointConfigs where
         toQuery = const mempty
 
 -- | /See:/ 'listEndpointConfigsResponse' smart constructor.
-data ListEndpointConfigsResponse = ListEndpointConfigsResponse'
-  { _lecrsNextToken       :: !(Maybe Text)
-  , _lecrsResponseStatus  :: !Int
-  , _lecrsEndpointConfigs :: ![EndpointConfigSummary]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListEndpointConfigsResponse =
+  ListEndpointConfigsResponse'
+    { _lecrsNextToken       :: !(Maybe Text)
+    , _lecrsResponseStatus  :: !Int
+    , _lecrsEndpointConfigs :: ![EndpointConfigSummary]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListEndpointConfigsResponse' with the minimum fields required to make a request.

@@ -77,11 +77,13 @@ import Network.AWS.WAF.Types
 import Network.AWS.WAF.Types.Product
 
 -- | /See:/ 'updateRegexPatternSet' smart constructor.
-data UpdateRegexPatternSet = UpdateRegexPatternSet'
-  { _urpsRegexPatternSetId :: !Text
-  , _urpsUpdates           :: !(List1 RegexPatternSetUpdate)
-  , _urpsChangeToken       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateRegexPatternSet =
+  UpdateRegexPatternSet'
+    { _urpsRegexPatternSetId :: !Text
+    , _urpsUpdates           :: !(List1 RegexPatternSetUpdate)
+    , _urpsChangeToken       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateRegexPatternSet' with the minimum fields required to make a request.
@@ -158,10 +160,12 @@ instance ToQuery UpdateRegexPatternSet where
         toQuery = const mempty
 
 -- | /See:/ 'updateRegexPatternSetResponse' smart constructor.
-data UpdateRegexPatternSetResponse = UpdateRegexPatternSetResponse'
-  { _urpsrsChangeToken    :: !(Maybe Text)
-  , _urpsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateRegexPatternSetResponse =
+  UpdateRegexPatternSetResponse'
+    { _urpsrsChangeToken    :: !(Maybe Text)
+    , _urpsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateRegexPatternSetResponse' with the minimum fields required to make a request.

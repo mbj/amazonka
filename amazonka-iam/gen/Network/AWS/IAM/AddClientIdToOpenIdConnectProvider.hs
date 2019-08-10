@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'addClientIdToOpenIdConnectProvider' smart constructor.
-data AddClientIdToOpenIdConnectProvider = AddClientIdToOpenIdConnectProvider'
-  { _acitoicpOpenIdConnectProviderARN :: !Text
-  , _acitoicpClientId                 :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddClientIdToOpenIdConnectProvider =
+  AddClientIdToOpenIdConnectProvider'
+    { _acitoicpOpenIdConnectProviderARN :: !Text
+    , _acitoicpClientId                 :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddClientIdToOpenIdConnectProvider' with the minimum fields required to make a request.

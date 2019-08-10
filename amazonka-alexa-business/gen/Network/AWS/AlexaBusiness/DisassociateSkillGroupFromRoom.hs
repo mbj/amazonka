@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'disassociateSkillGroupFromRoom' smart constructor.
-data DisassociateSkillGroupFromRoom = DisassociateSkillGroupFromRoom'
-  { _dsgfrSkillGroupARN :: !(Maybe Text)
-  , _dsgfrRoomARN       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DisassociateSkillGroupFromRoom =
+  DisassociateSkillGroupFromRoom'
+    { _dsgfrSkillGroupARN :: !(Maybe Text)
+    , _dsgfrRoomARN       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisassociateSkillGroupFromRoom' with the minimum fields required to make a request.
@@ -114,9 +116,11 @@ instance ToQuery DisassociateSkillGroupFromRoom where
         toQuery = const mempty
 
 -- | /See:/ 'disassociateSkillGroupFromRoomResponse' smart constructor.
-newtype DisassociateSkillGroupFromRoomResponse = DisassociateSkillGroupFromRoomResponse'
-  { _dsgfrrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DisassociateSkillGroupFromRoomResponse =
+  DisassociateSkillGroupFromRoomResponse'
+    { _dsgfrrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisassociateSkillGroupFromRoomResponse' with the minimum fields required to make a request.

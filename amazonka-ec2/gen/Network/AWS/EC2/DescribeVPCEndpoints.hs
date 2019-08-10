@@ -54,13 +54,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeVPCEndpoints' smart constructor.
-data DescribeVPCEndpoints = DescribeVPCEndpoints'
-  { _dvpceFilters        :: !(Maybe [Filter])
-  , _dvpceNextToken      :: !(Maybe Text)
-  , _dvpceVPCEndpointIds :: !(Maybe [Text])
-  , _dvpceDryRun         :: !(Maybe Bool)
-  , _dvpceMaxResults     :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeVPCEndpoints =
+  DescribeVPCEndpoints'
+    { _dvpceFilters        :: !(Maybe [Filter])
+    , _dvpceNextToken      :: !(Maybe Text)
+    , _dvpceVPCEndpointIds :: !(Maybe [Text])
+    , _dvpceDryRun         :: !(Maybe Bool)
+    , _dvpceMaxResults     :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeVPCEndpoints' with the minimum fields required to make a request.
@@ -149,11 +151,13 @@ instance ToQuery DescribeVPCEndpoints where
 --
 --
 -- /See:/ 'describeVPCEndpointsResponse' smart constructor.
-data DescribeVPCEndpointsResponse = DescribeVPCEndpointsResponse'
-  { _dvpcersNextToken      :: !(Maybe Text)
-  , _dvpcersVPCEndpoints   :: !(Maybe [VPCEndpoint])
-  , _dvpcersResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeVPCEndpointsResponse =
+  DescribeVPCEndpointsResponse'
+    { _dvpcersNextToken      :: !(Maybe Text)
+    , _dvpcersVPCEndpoints   :: !(Maybe [VPCEndpoint])
+    , _dvpcersResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeVPCEndpointsResponse' with the minimum fields required to make a request.

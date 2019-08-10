@@ -55,11 +55,13 @@ import Network.AWS.Route53Domains.Types.Product
 --
 --
 -- /See:/ 'updateDomainNameservers' smart constructor.
-data UpdateDomainNameservers = UpdateDomainNameservers'
-  { _udnFIAuthKey   :: !(Maybe Text)
-  , _udnDomainName  :: !Text
-  , _udnNameservers :: ![Nameserver]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateDomainNameservers =
+  UpdateDomainNameservers'
+    { _udnFIAuthKey   :: !(Maybe Text)
+    , _udnDomainName  :: !Text
+    , _udnNameservers :: ![Nameserver]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateDomainNameservers' with the minimum fields required to make a request.
@@ -137,10 +139,12 @@ instance ToQuery UpdateDomainNameservers where
 --
 --
 -- /See:/ 'updateDomainNameserversResponse' smart constructor.
-data UpdateDomainNameserversResponse = UpdateDomainNameserversResponse'
-  { _udnrsResponseStatus :: !Int
-  , _udnrsOperationId    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateDomainNameserversResponse =
+  UpdateDomainNameserversResponse'
+    { _udnrsResponseStatus :: !Int
+    , _udnrsOperationId    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateDomainNameserversResponse' with the minimum fields required to make a request.

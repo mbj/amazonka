@@ -51,11 +51,13 @@ import Network.AWS.SNS.Types.Product
 --
 --
 -- /See:/ 'confirmSubscription' smart constructor.
-data ConfirmSubscription = ConfirmSubscription'
-  { _csAuthenticateOnUnsubscribe :: !(Maybe Text)
-  , _csTopicARN                  :: !Text
-  , _csToken                     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ConfirmSubscription =
+  ConfirmSubscription'
+    { _csAuthenticateOnUnsubscribe :: !(Maybe Text)
+    , _csTopicARN                  :: !Text
+    , _csToken                     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ConfirmSubscription' with the minimum fields required to make a request.
@@ -125,10 +127,12 @@ instance ToQuery ConfirmSubscription where
 --
 --
 -- /See:/ 'confirmSubscriptionResponse' smart constructor.
-data ConfirmSubscriptionResponse = ConfirmSubscriptionResponse'
-  { _csrsSubscriptionARN :: !(Maybe Text)
-  , _csrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ConfirmSubscriptionResponse =
+  ConfirmSubscriptionResponse'
+    { _csrsSubscriptionARN :: !(Maybe Text)
+    , _csrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ConfirmSubscriptionResponse' with the minimum fields required to make a request.

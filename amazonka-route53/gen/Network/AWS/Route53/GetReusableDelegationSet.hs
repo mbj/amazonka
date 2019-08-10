@@ -49,9 +49,11 @@ import Network.AWS.Route53.Types.Product
 --
 --
 -- /See:/ 'getReusableDelegationSet' smart constructor.
-newtype GetReusableDelegationSet = GetReusableDelegationSet'
-  { _grdsId :: ResourceId
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetReusableDelegationSet =
+  GetReusableDelegationSet'
+    { _grdsId :: ResourceId
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetReusableDelegationSet' with the minimum fields required to make a request.
@@ -99,10 +101,12 @@ instance ToQuery GetReusableDelegationSet where
 --
 --
 -- /See:/ 'getReusableDelegationSetResponse' smart constructor.
-data GetReusableDelegationSetResponse = GetReusableDelegationSetResponse'
-  { _grdsrsResponseStatus :: !Int
-  , _grdsrsDelegationSet  :: !DelegationSet
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetReusableDelegationSetResponse =
+  GetReusableDelegationSetResponse'
+    { _grdsrsResponseStatus :: !Int
+    , _grdsrsDelegationSet  :: !DelegationSet
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetReusableDelegationSetResponse' with the minimum fields required to make a request.

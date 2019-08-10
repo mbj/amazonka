@@ -73,11 +73,13 @@ import Network.AWS.WAFRegional.Types.Product
 --
 --
 -- /See:/ 'updateXSSMatchSet' smart constructor.
-data UpdateXSSMatchSet = UpdateXSSMatchSet'
-  { _uxmsXSSMatchSetId :: !Text
-  , _uxmsChangeToken   :: !Text
-  , _uxmsUpdates       :: !(List1 XSSMatchSetUpdate)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateXSSMatchSet =
+  UpdateXSSMatchSet'
+    { _uxmsXSSMatchSetId :: !Text
+    , _uxmsChangeToken   :: !Text
+    , _uxmsUpdates       :: !(List1 XSSMatchSetUpdate)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateXSSMatchSet' with the minimum fields required to make a request.
@@ -156,10 +158,12 @@ instance ToQuery UpdateXSSMatchSet where
 --
 --
 -- /See:/ 'updateXSSMatchSetResponse' smart constructor.
-data UpdateXSSMatchSetResponse = UpdateXSSMatchSetResponse'
-  { _uxmsrsChangeToken    :: !(Maybe Text)
-  , _uxmsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateXSSMatchSetResponse =
+  UpdateXSSMatchSetResponse'
+    { _uxmsrsChangeToken    :: !(Maybe Text)
+    , _uxmsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateXSSMatchSetResponse' with the minimum fields required to make a request.

@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteContact' smart constructor.
-newtype DeleteContact = DeleteContact'
-  { _dcContactARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteContact =
+  DeleteContact'
+    { _dcContactARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteContact' with the minimum fields required to make a request.
@@ -97,9 +99,11 @@ instance ToQuery DeleteContact where
         toQuery = const mempty
 
 -- | /See:/ 'deleteContactResponse' smart constructor.
-newtype DeleteContactResponse = DeleteContactResponse'
-  { _dcrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteContactResponse =
+  DeleteContactResponse'
+    { _dcrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteContactResponse' with the minimum fields required to make a request.

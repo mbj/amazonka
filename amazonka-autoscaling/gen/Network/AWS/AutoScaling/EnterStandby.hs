@@ -49,11 +49,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'enterStandby' smart constructor.
-data EnterStandby = EnterStandby'
-  { _esInstanceIds                    :: !(Maybe [Text])
-  , _esAutoScalingGroupName           :: !Text
-  , _esShouldDecrementDesiredCapacity :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EnterStandby =
+  EnterStandby'
+    { _esInstanceIds                    :: !(Maybe [Text])
+    , _esAutoScalingGroupName           :: !Text
+    , _esShouldDecrementDesiredCapacity :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EnterStandby' with the minimum fields required to make a request.
@@ -122,10 +124,12 @@ instance ToQuery EnterStandby where
                  _esShouldDecrementDesiredCapacity]
 
 -- | /See:/ 'enterStandbyResponse' smart constructor.
-data EnterStandbyResponse = EnterStandbyResponse'
-  { _ersActivities     :: !(Maybe [Activity])
-  , _ersResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EnterStandbyResponse =
+  EnterStandbyResponse'
+    { _ersActivities     :: !(Maybe [Activity])
+    , _ersResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EnterStandbyResponse' with the minimum fields required to make a request.

@@ -53,10 +53,12 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'updateReceiptRule' smart constructor.
-data UpdateReceiptRule = UpdateReceiptRule'
-  { _urrRuleSetName :: !Text
-  , _urrRule        :: !ReceiptRule
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateReceiptRule =
+  UpdateReceiptRule'
+    { _urrRuleSetName :: !Text
+    , _urrRule        :: !ReceiptRule
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateReceiptRule' with the minimum fields required to make a request.
@@ -112,9 +114,11 @@ instance ToQuery UpdateReceiptRule where
 --
 --
 -- /See:/ 'updateReceiptRuleResponse' smart constructor.
-newtype UpdateReceiptRuleResponse = UpdateReceiptRuleResponse'
-  { _urrrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateReceiptRuleResponse =
+  UpdateReceiptRuleResponse'
+    { _urrrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateReceiptRuleResponse' with the minimum fields required to make a request.

@@ -48,11 +48,13 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'describePatchGroups' smart constructor.
-data DescribePatchGroups = DescribePatchGroups'
-  { _dpgFilters    :: !(Maybe [PatchOrchestratorFilter])
-  , _dpgNextToken  :: !(Maybe Text)
-  , _dpgMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribePatchGroups =
+  DescribePatchGroups'
+    { _dpgFilters    :: !(Maybe [PatchOrchestratorFilter])
+    , _dpgNextToken  :: !(Maybe Text)
+    , _dpgMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribePatchGroups' with the minimum fields required to make a request.
@@ -122,11 +124,13 @@ instance ToQuery DescribePatchGroups where
         toQuery = const mempty
 
 -- | /See:/ 'describePatchGroupsResponse' smart constructor.
-data DescribePatchGroupsResponse = DescribePatchGroupsResponse'
-  { _dpgrsMappings       :: !(Maybe [PatchGroupPatchBaselineMapping])
-  , _dpgrsNextToken      :: !(Maybe Text)
-  , _dpgrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribePatchGroupsResponse =
+  DescribePatchGroupsResponse'
+    { _dpgrsMappings       :: !(Maybe [PatchGroupPatchBaselineMapping])
+    , _dpgrsNextToken      :: !(Maybe Text)
+    , _dpgrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribePatchGroupsResponse' with the minimum fields required to make a request.

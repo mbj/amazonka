@@ -52,12 +52,14 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'describeInstanceInformation' smart constructor.
-data DescribeInstanceInformation = DescribeInstanceInformation'
-  { _diiInstanceInformationFilterList :: !(Maybe [InstanceInformationFilter])
-  , _diiFilters :: !(Maybe [InstanceInformationStringFilter])
-  , _diiNextToken :: !(Maybe Text)
-  , _diiMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeInstanceInformation =
+  DescribeInstanceInformation'
+    { _diiInstanceInformationFilterList :: !(Maybe [InstanceInformationFilter])
+    , _diiFilters :: !(Maybe [InstanceInformationStringFilter])
+    , _diiNextToken :: !(Maybe Text)
+    , _diiMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeInstanceInformation' with the minimum fields required to make a request.
@@ -148,11 +150,13 @@ instance ToQuery DescribeInstanceInformation where
         toQuery = const mempty
 
 -- | /See:/ 'describeInstanceInformationResponse' smart constructor.
-data DescribeInstanceInformationResponse = DescribeInstanceInformationResponse'
-  { _diirsNextToken               :: !(Maybe Text)
-  , _diirsInstanceInformationList :: !(Maybe [InstanceInformation])
-  , _diirsResponseStatus          :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeInstanceInformationResponse =
+  DescribeInstanceInformationResponse'
+    { _diirsNextToken               :: !(Maybe Text)
+    , _diirsInstanceInformationList :: !(Maybe [InstanceInformation])
+    , _diirsResponseStatus          :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeInstanceInformationResponse' with the minimum fields required to make a request.

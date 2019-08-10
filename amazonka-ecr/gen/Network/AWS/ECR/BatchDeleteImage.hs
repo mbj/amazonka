@@ -56,11 +56,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'batchDeleteImage' smart constructor.
-data BatchDeleteImage = BatchDeleteImage'
-  { _bdiRegistryId     :: !(Maybe Text)
-  , _bdiRepositoryName :: !Text
-  , _bdiImageIds       :: ![ImageIdentifier]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchDeleteImage =
+  BatchDeleteImage'
+    { _bdiRegistryId     :: !(Maybe Text)
+    , _bdiRepositoryName :: !Text
+    , _bdiImageIds       :: ![ImageIdentifier]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchDeleteImage' with the minimum fields required to make a request.
@@ -135,11 +137,13 @@ instance ToQuery BatchDeleteImage where
         toQuery = const mempty
 
 -- | /See:/ 'batchDeleteImageResponse' smart constructor.
-data BatchDeleteImageResponse = BatchDeleteImageResponse'
-  { _bdirsFailures       :: !(Maybe [ImageFailure])
-  , _bdirsImageIds       :: !(Maybe [ImageIdentifier])
-  , _bdirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchDeleteImageResponse =
+  BatchDeleteImageResponse'
+    { _bdirsFailures       :: !(Maybe [ImageFailure])
+    , _bdirsImageIds       :: !(Maybe [ImageIdentifier])
+    , _bdirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchDeleteImageResponse' with the minimum fields required to make a request.

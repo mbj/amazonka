@@ -57,11 +57,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getIntentVersions' smart constructor.
-data GetIntentVersions = GetIntentVersions'
-  { _givNextToken  :: !(Maybe Text)
-  , _givMaxResults :: !(Maybe Nat)
-  , _givName       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetIntentVersions =
+  GetIntentVersions'
+    { _givNextToken  :: !(Maybe Text)
+    , _givMaxResults :: !(Maybe Nat)
+    , _givName       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetIntentVersions' with the minimum fields required to make a request.
@@ -132,11 +134,13 @@ instance ToQuery GetIntentVersions where
                "maxResults" =: _givMaxResults]
 
 -- | /See:/ 'getIntentVersionsResponse' smart constructor.
-data GetIntentVersionsResponse = GetIntentVersionsResponse'
-  { _givrsIntents        :: !(Maybe [IntentMetadata])
-  , _givrsNextToken      :: !(Maybe Text)
-  , _givrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetIntentVersionsResponse =
+  GetIntentVersionsResponse'
+    { _givrsIntents        :: !(Maybe [IntentMetadata])
+    , _givrsNextToken      :: !(Maybe Text)
+    , _givrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetIntentVersionsResponse' with the minimum fields required to make a request.

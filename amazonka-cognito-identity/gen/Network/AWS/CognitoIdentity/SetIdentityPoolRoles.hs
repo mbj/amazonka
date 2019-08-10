@@ -50,11 +50,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'setIdentityPoolRoles' smart constructor.
-data SetIdentityPoolRoles = SetIdentityPoolRoles'
-  { _siprRoleMappings   :: !(Maybe (Map Text RoleMapping))
-  , _siprIdentityPoolId :: !Text
-  , _siprRoles          :: !(Map Text Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SetIdentityPoolRoles =
+  SetIdentityPoolRoles'
+    { _siprRoleMappings   :: !(Maybe (Map Text RoleMapping))
+    , _siprIdentityPoolId :: !Text
+    , _siprRoles          :: !(Map Text Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetIdentityPoolRoles' with the minimum fields required to make a request.

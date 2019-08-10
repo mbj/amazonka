@@ -53,12 +53,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'putActionRevision' smart constructor.
-data PutActionRevision = PutActionRevision'
-  { _pPipelineName   :: !Text
-  , _pStageName      :: !Text
-  , _pActionName     :: !Text
-  , _pActionRevision :: !ActionRevision
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutActionRevision =
+  PutActionRevision'
+    { _pPipelineName   :: !Text
+    , _pStageName      :: !Text
+    , _pActionName     :: !Text
+    , _pActionRevision :: !ActionRevision
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutActionRevision' with the minimum fields required to make a request.
@@ -148,11 +150,13 @@ instance ToQuery PutActionRevision where
 --
 --
 -- /See:/ 'putActionRevisionResponse' smart constructor.
-data PutActionRevisionResponse = PutActionRevisionResponse'
-  { _prsNewRevision         :: !(Maybe Bool)
-  , _prsPipelineExecutionId :: !(Maybe Text)
-  , _prsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutActionRevisionResponse =
+  PutActionRevisionResponse'
+    { _prsNewRevision         :: !(Maybe Bool)
+    , _prsPipelineExecutionId :: !(Maybe Text)
+    , _prsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutActionRevisionResponse' with the minimum fields required to make a request.

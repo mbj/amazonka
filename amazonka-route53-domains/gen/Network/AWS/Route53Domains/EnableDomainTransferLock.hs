@@ -49,9 +49,11 @@ import Network.AWS.Route53Domains.Types.Product
 --
 --
 -- /See:/ 'enableDomainTransferLock' smart constructor.
-newtype EnableDomainTransferLock = EnableDomainTransferLock'
-  { _edtlDomainName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype EnableDomainTransferLock =
+  EnableDomainTransferLock'
+    { _edtlDomainName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EnableDomainTransferLock' with the minimum fields required to make a request.
@@ -110,10 +112,12 @@ instance ToQuery EnableDomainTransferLock where
 --
 --
 -- /See:/ 'enableDomainTransferLockResponse' smart constructor.
-data EnableDomainTransferLockResponse = EnableDomainTransferLockResponse'
-  { _edtlrsResponseStatus :: !Int
-  , _edtlrsOperationId    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EnableDomainTransferLockResponse =
+  EnableDomainTransferLockResponse'
+    { _edtlrsResponseStatus :: !Int
+    , _edtlrsOperationId    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EnableDomainTransferLockResponse' with the minimum fields required to make a request.

@@ -56,9 +56,11 @@ import Network.AWS.SWF.Types
 import Network.AWS.SWF.Types.Product
 
 -- | /See:/ 'deprecateDomain' smart constructor.
-newtype DeprecateDomain = DeprecateDomain'
-  { _dName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeprecateDomain =
+  DeprecateDomain'
+    { _dName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeprecateDomain' with the minimum fields required to make a request.

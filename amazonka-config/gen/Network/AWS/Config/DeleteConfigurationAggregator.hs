@@ -42,9 +42,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteConfigurationAggregator' smart constructor.
-newtype DeleteConfigurationAggregator = DeleteConfigurationAggregator'
-  { _dcaConfigurationAggregatorName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteConfigurationAggregator =
+  DeleteConfigurationAggregator'
+    { _dcaConfigurationAggregatorName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteConfigurationAggregator' with the minimum fields required to make a request.

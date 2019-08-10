@@ -105,10 +105,12 @@ import Network.AWS.Route53.Types
 import Network.AWS.Route53.Types.Product
 
 -- | /See:/ 'createQueryLoggingConfig' smart constructor.
-data CreateQueryLoggingConfig = CreateQueryLoggingConfig'
-  { _cqlcHostedZoneId              :: !ResourceId
-  , _cqlcCloudWatchLogsLogGroupARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateQueryLoggingConfig =
+  CreateQueryLoggingConfig'
+    { _cqlcHostedZoneId              :: !ResourceId
+    , _cqlcCloudWatchLogsLogGroupARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateQueryLoggingConfig' with the minimum fields required to make a request.
@@ -174,11 +176,13 @@ instance ToXML CreateQueryLoggingConfig where
                  _cqlcCloudWatchLogsLogGroupARN]
 
 -- | /See:/ 'createQueryLoggingConfigResponse' smart constructor.
-data CreateQueryLoggingConfigResponse = CreateQueryLoggingConfigResponse'
-  { _cqlcrsResponseStatus     :: !Int
-  , _cqlcrsQueryLoggingConfig :: !QueryLoggingConfig
-  , _cqlcrsLocation           :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateQueryLoggingConfigResponse =
+  CreateQueryLoggingConfigResponse'
+    { _cqlcrsResponseStatus     :: !Int
+    , _cqlcrsQueryLoggingConfig :: !QueryLoggingConfig
+    , _cqlcrsLocation           :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateQueryLoggingConfigResponse' with the minimum fields required to make a request.

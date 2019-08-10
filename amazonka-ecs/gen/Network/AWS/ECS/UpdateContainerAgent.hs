@@ -48,10 +48,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateContainerAgent' smart constructor.
-data UpdateContainerAgent = UpdateContainerAgent'
-  { _ucaCluster           :: !(Maybe Text)
-  , _ucaContainerInstance :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateContainerAgent =
+  UpdateContainerAgent'
+    { _ucaCluster           :: !(Maybe Text)
+    , _ucaContainerInstance :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateContainerAgent' with the minimum fields required to make a request.
@@ -115,10 +117,12 @@ instance ToQuery UpdateContainerAgent where
         toQuery = const mempty
 
 -- | /See:/ 'updateContainerAgentResponse' smart constructor.
-data UpdateContainerAgentResponse = UpdateContainerAgentResponse'
-  { _ucarsContainerInstance :: !(Maybe ContainerInstance)
-  , _ucarsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateContainerAgentResponse =
+  UpdateContainerAgentResponse'
+    { _ucarsContainerInstance :: !(Maybe ContainerInstance)
+    , _ucarsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateContainerAgentResponse' with the minimum fields required to make a request.

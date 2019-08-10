@@ -48,10 +48,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getOperationsForResource' smart constructor.
-data GetOperationsForResource = GetOperationsForResource'
-  { _gofrPageToken    :: !(Maybe Text)
-  , _gofrResourceName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetOperationsForResource =
+  GetOperationsForResource'
+    { _gofrPageToken    :: !(Maybe Text)
+    , _gofrResourceName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetOperationsForResource' with the minimum fields required to make a request.
@@ -117,12 +119,14 @@ instance ToQuery GetOperationsForResource where
         toQuery = const mempty
 
 -- | /See:/ 'getOperationsForResourceResponse' smart constructor.
-data GetOperationsForResourceResponse = GetOperationsForResourceResponse'
-  { _gofrrsNextPageCount  :: !(Maybe Text)
-  , _gofrrsNextPageToken  :: !(Maybe Text)
-  , _gofrrsOperations     :: !(Maybe [Operation])
-  , _gofrrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetOperationsForResourceResponse =
+  GetOperationsForResourceResponse'
+    { _gofrrsNextPageCount  :: !(Maybe Text)
+    , _gofrrsNextPageToken  :: !(Maybe Text)
+    , _gofrrsOperations     :: !(Maybe [Operation])
+    , _gofrrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetOperationsForResourceResponse' with the minimum fields required to make a request.

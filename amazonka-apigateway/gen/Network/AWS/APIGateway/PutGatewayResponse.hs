@@ -56,13 +56,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'putGatewayResponse' smart constructor.
-data PutGatewayResponse = PutGatewayResponse'
-  { _pgResponseTemplates  :: !(Maybe (Map Text Text))
-  , _pgStatusCode         :: !(Maybe Text)
-  , _pgResponseParameters :: !(Maybe (Map Text Text))
-  , _pgRestAPIId          :: !Text
-  , _pgResponseType       :: !GatewayResponseType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutGatewayResponse =
+  PutGatewayResponse'
+    { _pgResponseTemplates  :: !(Maybe (Map Text Text))
+    , _pgStatusCode         :: !(Maybe Text)
+    , _pgResponseParameters :: !(Maybe (Map Text Text))
+    , _pgRestAPIId          :: !Text
+    , _pgResponseType       :: !GatewayResponseType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutGatewayResponse' with the minimum fields required to make a request.

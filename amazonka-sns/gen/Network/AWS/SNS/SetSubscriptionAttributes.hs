@@ -48,11 +48,13 @@ import Network.AWS.SNS.Types.Product
 --
 --
 -- /See:/ 'setSubscriptionAttributes' smart constructor.
-data SetSubscriptionAttributes = SetSubscriptionAttributes'
-  { _ssaAttributeValue  :: !(Maybe Text)
-  , _ssaSubscriptionARN :: !Text
-  , _ssaAttributeName   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SetSubscriptionAttributes =
+  SetSubscriptionAttributes'
+    { _ssaAttributeValue  :: !(Maybe Text)
+    , _ssaSubscriptionARN :: !Text
+    , _ssaAttributeName   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetSubscriptionAttributes' with the minimum fields required to make a request.

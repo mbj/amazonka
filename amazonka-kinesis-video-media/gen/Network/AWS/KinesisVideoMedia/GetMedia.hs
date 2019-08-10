@@ -58,11 +58,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getMedia' smart constructor.
-data GetMedia = GetMedia'
-  { _gmStreamARN     :: !(Maybe Text)
-  , _gmStreamName    :: !(Maybe Text)
-  , _gmStartSelector :: !StartSelector
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetMedia =
+  GetMedia'
+    { _gmStreamARN     :: !(Maybe Text)
+    , _gmStreamName    :: !(Maybe Text)
+    , _gmStartSelector :: !StartSelector
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetMedia' with the minimum fields required to make a request.
@@ -129,11 +131,13 @@ instance ToQuery GetMedia where
         toQuery = const mempty
 
 -- | /See:/ 'getMediaResponse' smart constructor.
-data GetMediaResponse = GetMediaResponse'
-  { _gmrsContentType    :: !(Maybe Text)
-  , _gmrsResponseStatus :: !Int
-  , _gmrsPayload        :: !RsBody
-  } deriving (Show, Generic)
+data GetMediaResponse =
+  GetMediaResponse'
+    { _gmrsContentType    :: !(Maybe Text)
+    , _gmrsResponseStatus :: !Int
+    , _gmrsPayload        :: !RsBody
+    }
+  deriving (Show, Generic)
 
 
 -- | Creates a value of 'GetMediaResponse' with the minimum fields required to make a request.

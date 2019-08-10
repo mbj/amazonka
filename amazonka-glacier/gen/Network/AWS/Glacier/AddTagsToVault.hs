@@ -48,11 +48,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'addTagsToVault' smart constructor.
-data AddTagsToVault = AddTagsToVault'
-  { _attvTags      :: !(Maybe (Map Text Text))
-  , _attvAccountId :: !Text
-  , _attvVaultName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddTagsToVault =
+  AddTagsToVault'
+    { _attvTags      :: !(Maybe (Map Text Text))
+    , _attvAccountId :: !Text
+    , _attvVaultName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddTagsToVault' with the minimum fields required to make a request.

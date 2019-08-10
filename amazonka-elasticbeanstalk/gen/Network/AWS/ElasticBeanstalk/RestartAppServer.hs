@@ -47,10 +47,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'restartAppServer' smart constructor.
-data RestartAppServer = RestartAppServer'
-  { _rasEnvironmentName :: !(Maybe Text)
-  , _rasEnvironmentId   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RestartAppServer =
+  RestartAppServer'
+    { _rasEnvironmentName :: !(Maybe Text)
+    , _rasEnvironmentId   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RestartAppServer' with the minimum fields required to make a request.

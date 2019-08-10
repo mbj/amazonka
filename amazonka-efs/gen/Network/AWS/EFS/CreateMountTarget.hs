@@ -119,12 +119,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createMountTarget' smart constructor.
-data CreateMountTarget = CreateMountTarget'
-  { _cmtIPAddress      :: !(Maybe Text)
-  , _cmtSecurityGroups :: !(Maybe [Text])
-  , _cmtFileSystemId   :: !Text
-  , _cmtSubnetId       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateMountTarget =
+  CreateMountTarget'
+    { _cmtIPAddress      :: !(Maybe Text)
+    , _cmtSecurityGroups :: !(Maybe [Text])
+    , _cmtFileSystemId   :: !Text
+    , _cmtSubnetId       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateMountTarget' with the minimum fields required to make a request.

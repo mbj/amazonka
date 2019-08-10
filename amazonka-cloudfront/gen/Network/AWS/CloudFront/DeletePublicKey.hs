@@ -43,10 +43,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deletePublicKey' smart constructor.
-data DeletePublicKey = DeletePublicKey'
-  { _dpkIfMatch :: !(Maybe Text)
-  , _dpkId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeletePublicKey =
+  DeletePublicKey'
+    { _dpkIfMatch :: !(Maybe Text)
+    , _dpkId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeletePublicKey' with the minimum fields required to make a request.

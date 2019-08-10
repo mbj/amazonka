@@ -79,24 +79,26 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'scan' smart constructor.
-data Scan = Scan'
-  { _sProjectionExpression      :: !(Maybe Text)
-  , _sScanFilter                :: !(Maybe (Map Text Condition))
-  , _sAttributesToGet           :: !(Maybe (List1 Text))
-  , _sTotalSegments             :: !(Maybe Nat)
-  , _sExpressionAttributeNames  :: !(Maybe (Map Text Text))
-  , _sFilterExpression          :: !(Maybe Text)
-  , _sConsistentRead            :: !(Maybe Bool)
-  , _sExpressionAttributeValues :: !(Maybe (Map Text AttributeValue))
-  , _sReturnConsumedCapacity    :: !(Maybe ReturnConsumedCapacity)
-  , _sLimit                     :: !(Maybe Nat)
-  , _sSelect                    :: !(Maybe Select)
-  , _sSegment                   :: !(Maybe Nat)
-  , _sConditionalOperator       :: !(Maybe ConditionalOperator)
-  , _sExclusiveStartKey         :: !(Maybe (Map Text AttributeValue))
-  , _sIndexName                 :: !(Maybe Text)
-  , _sTableName                 :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Scan =
+  Scan'
+    { _sProjectionExpression      :: !(Maybe Text)
+    , _sScanFilter                :: !(Maybe (Map Text Condition))
+    , _sAttributesToGet           :: !(Maybe (List1 Text))
+    , _sTotalSegments             :: !(Maybe Nat)
+    , _sExpressionAttributeNames  :: !(Maybe (Map Text Text))
+    , _sFilterExpression          :: !(Maybe Text)
+    , _sConsistentRead            :: !(Maybe Bool)
+    , _sExpressionAttributeValues :: !(Maybe (Map Text AttributeValue))
+    , _sReturnConsumedCapacity    :: !(Maybe ReturnConsumedCapacity)
+    , _sLimit                     :: !(Maybe Nat)
+    , _sSelect                    :: !(Maybe Select)
+    , _sSegment                   :: !(Maybe Nat)
+    , _sConditionalOperator       :: !(Maybe ConditionalOperator)
+    , _sExclusiveStartKey         :: !(Maybe (Map Text AttributeValue))
+    , _sIndexName                 :: !(Maybe Text)
+    , _sTableName                 :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Scan' with the minimum fields required to make a request.
@@ -291,14 +293,16 @@ instance ToQuery Scan where
 --
 --
 -- /See:/ 'scanResponse' smart constructor.
-data ScanResponse = ScanResponse'
-  { _srsLastEvaluatedKey :: !(Maybe (Map Text AttributeValue))
-  , _srsCount            :: !(Maybe Int)
-  , _srsScannedCount     :: !(Maybe Int)
-  , _srsItems            :: !(Maybe [Map Text AttributeValue])
-  , _srsConsumedCapacity :: !(Maybe ConsumedCapacity)
-  , _srsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ScanResponse =
+  ScanResponse'
+    { _srsLastEvaluatedKey :: !(Maybe (Map Text AttributeValue))
+    , _srsCount            :: !(Maybe Int)
+    , _srsScannedCount     :: !(Maybe Int)
+    , _srsItems            :: !(Maybe [Map Text AttributeValue])
+    , _srsConsumedCapacity :: !(Maybe ConsumedCapacity)
+    , _srsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ScanResponse' with the minimum fields required to make a request.

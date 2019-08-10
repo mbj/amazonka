@@ -90,10 +90,12 @@ import Network.AWS.Route53.Types.Product
 --
 --
 -- /See:/ 'changeResourceRecordSets' smart constructor.
-data ChangeResourceRecordSets = ChangeResourceRecordSets'
-  { _crrsHostedZoneId :: !ResourceId
-  , _crrsChangeBatch  :: !ChangeBatch
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ChangeResourceRecordSets =
+  ChangeResourceRecordSets'
+    { _crrsHostedZoneId :: !ResourceId
+    , _crrsChangeBatch  :: !ChangeBatch
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ChangeResourceRecordSets' with the minimum fields required to make a request.
@@ -160,10 +162,12 @@ instance ToXML ChangeResourceRecordSets where
 --
 --
 -- /See:/ 'changeResourceRecordSetsResponse' smart constructor.
-data ChangeResourceRecordSetsResponse = ChangeResourceRecordSetsResponse'
-  { _crrsrsResponseStatus :: !Int
-  , _crrsrsChangeInfo     :: !ChangeInfo
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ChangeResourceRecordSetsResponse =
+  ChangeResourceRecordSetsResponse'
+    { _crrsrsResponseStatus :: !Int
+    , _crrsrsChangeInfo     :: !ChangeInfo
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ChangeResourceRecordSetsResponse' with the minimum fields required to make a request.

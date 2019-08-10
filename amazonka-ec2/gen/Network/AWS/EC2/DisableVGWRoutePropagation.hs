@@ -47,10 +47,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'disableVGWRoutePropagation' smart constructor.
-data DisableVGWRoutePropagation = DisableVGWRoutePropagation'
-  { _dvrpGatewayId    :: !Text
-  , _dvrpRouteTableId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DisableVGWRoutePropagation =
+  DisableVGWRoutePropagation'
+    { _dvrpGatewayId    :: !Text
+    , _dvrpRouteTableId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisableVGWRoutePropagation' with the minimum fields required to make a request.

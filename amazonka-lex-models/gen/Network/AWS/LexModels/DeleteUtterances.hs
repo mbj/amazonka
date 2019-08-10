@@ -49,10 +49,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteUtterances' smart constructor.
-data DeleteUtterances = DeleteUtterances'
-  { _duBotName :: !Text
-  , _duUserId  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteUtterances =
+  DeleteUtterances'
+    { _duBotName :: !Text
+    , _duUserId  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteUtterances' with the minimum fields required to make a request.

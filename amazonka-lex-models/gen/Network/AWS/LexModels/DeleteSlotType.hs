@@ -46,9 +46,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteSlotType' smart constructor.
-newtype DeleteSlotType = DeleteSlotType'
-  { _dstName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteSlotType =
+  DeleteSlotType'
+    { _dstName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteSlotType' with the minimum fields required to make a request.

@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteInstanceSnapshot' smart constructor.
-newtype DeleteInstanceSnapshot = DeleteInstanceSnapshot'
-  { _disInstanceSnapshotName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteInstanceSnapshot =
+  DeleteInstanceSnapshot'
+    { _disInstanceSnapshotName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteInstanceSnapshot' with the minimum fields required to make a request.
@@ -106,10 +108,12 @@ instance ToQuery DeleteInstanceSnapshot where
         toQuery = const mempty
 
 -- | /See:/ 'deleteInstanceSnapshotResponse' smart constructor.
-data DeleteInstanceSnapshotResponse = DeleteInstanceSnapshotResponse'
-  { _disrsOperations     :: !(Maybe [Operation])
-  , _disrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteInstanceSnapshotResponse =
+  DeleteInstanceSnapshotResponse'
+    { _disrsOperations     :: !(Maybe [Operation])
+    , _disrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteInstanceSnapshotResponse' with the minimum fields required to make a request.

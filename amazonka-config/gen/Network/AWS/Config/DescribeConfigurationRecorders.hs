@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeConfigurationRecorders' smart constructor.
-newtype DescribeConfigurationRecorders = DescribeConfigurationRecorders'
-  { _dcrConfigurationRecorderNames :: Maybe [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeConfigurationRecorders =
+  DescribeConfigurationRecorders'
+    { _dcrConfigurationRecorderNames :: Maybe [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeConfigurationRecorders' with the minimum fields required to make a request.
@@ -115,10 +117,12 @@ instance ToQuery DescribeConfigurationRecorders where
 --
 --
 -- /See:/ 'describeConfigurationRecordersResponse' smart constructor.
-data DescribeConfigurationRecordersResponse = DescribeConfigurationRecordersResponse'
-  { _drsConfigurationRecorders :: !(Maybe [ConfigurationRecorder])
-  , _drsResponseStatus         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeConfigurationRecordersResponse =
+  DescribeConfigurationRecordersResponse'
+    { _drsConfigurationRecorders :: !(Maybe [ConfigurationRecorder])
+    , _drsResponseStatus         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeConfigurationRecordersResponse' with the minimum fields required to make a request.

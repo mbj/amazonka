@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listAPIKeys' smart constructor.
-data ListAPIKeys = ListAPIKeys'
-  { _lakNextToken  :: !(Maybe Text)
-  , _lakMaxResults :: !(Maybe Nat)
-  , _lakApiId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAPIKeys =
+  ListAPIKeys'
+    { _lakNextToken  :: !(Maybe Text)
+    , _lakMaxResults :: !(Maybe Nat)
+    , _lakApiId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAPIKeys' with the minimum fields required to make a request.
@@ -116,11 +118,13 @@ instance ToQuery ListAPIKeys where
                "maxResults" =: _lakMaxResults]
 
 -- | /See:/ 'listAPIKeysResponse' smart constructor.
-data ListAPIKeysResponse = ListAPIKeysResponse'
-  { _lakrsApiKeys        :: !(Maybe [APIKey])
-  , _lakrsNextToken      :: !(Maybe Text)
-  , _lakrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAPIKeysResponse =
+  ListAPIKeysResponse'
+    { _lakrsApiKeys        :: !(Maybe [APIKey])
+    , _lakrsNextToken      :: !(Maybe Text)
+    , _lakrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAPIKeysResponse' with the minimum fields required to make a request.

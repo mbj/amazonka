@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteAuthorizer' smart constructor.
-newtype DeleteAuthorizer = DeleteAuthorizer'
-  { _dAuthorizerName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteAuthorizer =
+  DeleteAuthorizer'
+    { _dAuthorizerName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteAuthorizer' with the minimum fields required to make a request.
@@ -88,9 +90,11 @@ instance ToQuery DeleteAuthorizer where
         toQuery = const mempty
 
 -- | /See:/ 'deleteAuthorizerResponse' smart constructor.
-newtype DeleteAuthorizerResponse = DeleteAuthorizerResponse'
-  { _delrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteAuthorizerResponse =
+  DeleteAuthorizerResponse'
+    { _delrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteAuthorizerResponse' with the minimum fields required to make a request.

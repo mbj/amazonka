@@ -54,12 +54,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getSDK' smart constructor.
-data GetSDK = GetSDK'
-  { _gsdkParameters :: !(Maybe (Map Text Text))
-  , _gsdkRestAPIId  :: !Text
-  , _gsdkStageName  :: !Text
-  , _gsdkSdkType    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetSDK =
+  GetSDK'
+    { _gsdkParameters :: !(Maybe (Map Text Text))
+    , _gsdkRestAPIId  :: !Text
+    , _gsdkStageName  :: !Text
+    , _gsdkSdkType    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetSDK' with the minimum fields required to make a request.
@@ -143,12 +145,14 @@ instance ToQuery GetSDK where
 --
 --
 -- /See:/ 'getSDKResponse' smart constructor.
-data GetSDKResponse = GetSDKResponse'
-  { _gsdkrsBody               :: !(Maybe ByteString)
-  , _gsdkrsContentDisposition :: !(Maybe Text)
-  , _gsdkrsContentType        :: !(Maybe Text)
-  , _gsdkrsResponseStatus     :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data GetSDKResponse =
+  GetSDKResponse'
+    { _gsdkrsBody               :: !(Maybe ByteString)
+    , _gsdkrsContentDisposition :: !(Maybe Text)
+    , _gsdkrsContentType        :: !(Maybe Text)
+    , _gsdkrsResponseStatus     :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetSDKResponse' with the minimum fields required to make a request.

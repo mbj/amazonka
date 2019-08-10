@@ -42,9 +42,11 @@ import Network.AWS.SDB.Types
 import Network.AWS.SDB.Types.Product
 
 -- | /See:/ 'deleteDomain' smart constructor.
-newtype DeleteDomain = DeleteDomain'
-  { _ddDomainName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteDomain =
+  DeleteDomain'
+    { _ddDomainName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteDomain' with the minimum fields required to make a request.

@@ -63,23 +63,25 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createDeploymentGroup' smart constructor.
-data CreateDeploymentGroup = CreateDeploymentGroup'
-  { _cdgEc2TagSet :: !(Maybe EC2TagSet)
-  , _cdgDeploymentConfigName :: !(Maybe Text)
-  , _cdgOnPremisesTagSet :: !(Maybe OnPremisesTagSet)
-  , _cdgEc2TagFilters :: !(Maybe [EC2TagFilter])
-  , _cdgBlueGreenDeploymentConfiguration :: !(Maybe BlueGreenDeploymentConfiguration)
-  , _cdgLoadBalancerInfo :: !(Maybe LoadBalancerInfo)
-  , _cdgOnPremisesInstanceTagFilters :: !(Maybe [TagFilter])
-  , _cdgAlarmConfiguration :: !(Maybe AlarmConfiguration)
-  , _cdgTriggerConfigurations :: !(Maybe [TriggerConfig])
-  , _cdgAutoScalingGroups :: !(Maybe [Text])
-  , _cdgDeploymentStyle :: !(Maybe DeploymentStyle)
-  , _cdgAutoRollbackConfiguration :: !(Maybe AutoRollbackConfiguration)
-  , _cdgApplicationName :: !Text
-  , _cdgDeploymentGroupName :: !Text
-  , _cdgServiceRoleARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDeploymentGroup =
+  CreateDeploymentGroup'
+    { _cdgEc2TagSet :: !(Maybe EC2TagSet)
+    , _cdgDeploymentConfigName :: !(Maybe Text)
+    , _cdgOnPremisesTagSet :: !(Maybe OnPremisesTagSet)
+    , _cdgEc2TagFilters :: !(Maybe [EC2TagFilter])
+    , _cdgBlueGreenDeploymentConfiguration :: !(Maybe BlueGreenDeploymentConfiguration)
+    , _cdgLoadBalancerInfo :: !(Maybe LoadBalancerInfo)
+    , _cdgOnPremisesInstanceTagFilters :: !(Maybe [TagFilter])
+    , _cdgAlarmConfiguration :: !(Maybe AlarmConfiguration)
+    , _cdgTriggerConfigurations :: !(Maybe [TriggerConfig])
+    , _cdgAutoScalingGroups :: !(Maybe [Text])
+    , _cdgDeploymentStyle :: !(Maybe DeploymentStyle)
+    , _cdgAutoRollbackConfiguration :: !(Maybe AutoRollbackConfiguration)
+    , _cdgApplicationName :: !Text
+    , _cdgDeploymentGroupName :: !Text
+    , _cdgServiceRoleARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDeploymentGroup' with the minimum fields required to make a request.
@@ -261,10 +263,12 @@ instance ToQuery CreateDeploymentGroup where
 --
 --
 -- /See:/ 'createDeploymentGroupResponse' smart constructor.
-data CreateDeploymentGroupResponse = CreateDeploymentGroupResponse'
-  { _cdgrsDeploymentGroupId :: !(Maybe Text)
-  , _cdgrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDeploymentGroupResponse =
+  CreateDeploymentGroupResponse'
+    { _cdgrsDeploymentGroupId :: !(Maybe Text)
+    , _cdgrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDeploymentGroupResponse' with the minimum fields required to make a request.

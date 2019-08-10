@@ -51,13 +51,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createGroup' smart constructor.
-data CreateGroup = CreateGroup'
-  { _cgPrecedence  :: !(Maybe Nat)
-  , _cgDescription :: !(Maybe Text)
-  , _cgRoleARN     :: !(Maybe Text)
-  , _cgGroupName   :: !Text
-  , _cgUserPoolId  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateGroup =
+  CreateGroup'
+    { _cgPrecedence  :: !(Maybe Nat)
+    , _cgDescription :: !(Maybe Text)
+    , _cgRoleARN     :: !(Maybe Text)
+    , _cgGroupName   :: !Text
+    , _cgUserPoolId  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateGroup' with the minimum fields required to make a request.
@@ -147,10 +149,12 @@ instance ToQuery CreateGroup where
         toQuery = const mempty
 
 -- | /See:/ 'createGroupResponse' smart constructor.
-data CreateGroupResponse = CreateGroupResponse'
-  { _cgrsGroup          :: !(Maybe GroupType)
-  , _cgrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateGroupResponse =
+  CreateGroupResponse'
+    { _cgrsGroup          :: !(Maybe GroupType)
+    , _cgrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateGroupResponse' with the minimum fields required to make a request.

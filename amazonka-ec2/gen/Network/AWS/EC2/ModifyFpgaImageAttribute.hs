@@ -54,18 +54,20 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'modifyFpgaImageAttribute' smart constructor.
-data ModifyFpgaImageAttribute = ModifyFpgaImageAttribute'
-  { _mfiaAttribute      :: !(Maybe FpgaImageAttributeName)
-  , _mfiaUserIds        :: !(Maybe [Text])
-  , _mfiaUserGroups     :: !(Maybe [Text])
-  , _mfiaLoadPermission :: !(Maybe LoadPermissionModifications)
-  , _mfiaName           :: !(Maybe Text)
-  , _mfiaOperationType  :: !(Maybe OperationType)
-  , _mfiaProductCodes   :: !(Maybe [Text])
-  , _mfiaDescription    :: !(Maybe Text)
-  , _mfiaDryRun         :: !(Maybe Bool)
-  , _mfiaFpgaImageId    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyFpgaImageAttribute =
+  ModifyFpgaImageAttribute'
+    { _mfiaAttribute      :: !(Maybe FpgaImageAttributeName)
+    , _mfiaUserIds        :: !(Maybe [Text])
+    , _mfiaUserGroups     :: !(Maybe [Text])
+    , _mfiaLoadPermission :: !(Maybe LoadPermissionModifications)
+    , _mfiaName           :: !(Maybe Text)
+    , _mfiaOperationType  :: !(Maybe OperationType)
+    , _mfiaProductCodes   :: !(Maybe [Text])
+    , _mfiaDescription    :: !(Maybe Text)
+    , _mfiaDryRun         :: !(Maybe Bool)
+    , _mfiaFpgaImageId    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyFpgaImageAttribute' with the minimum fields required to make a request.
@@ -189,10 +191,12 @@ instance ToQuery ModifyFpgaImageAttribute where
                "FpgaImageId" =: _mfiaFpgaImageId]
 
 -- | /See:/ 'modifyFpgaImageAttributeResponse' smart constructor.
-data ModifyFpgaImageAttributeResponse = ModifyFpgaImageAttributeResponse'
-  { _mfiarsFpgaImageAttribute :: !(Maybe FpgaImageAttribute)
-  , _mfiarsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyFpgaImageAttributeResponse =
+  ModifyFpgaImageAttributeResponse'
+    { _mfiarsFpgaImageAttribute :: !(Maybe FpgaImageAttribute)
+    , _mfiarsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyFpgaImageAttributeResponse' with the minimum fields required to make a request.

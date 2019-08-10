@@ -49,10 +49,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'registerEventTopic' smart constructor.
-data RegisterEventTopic = RegisterEventTopic'
-  { _retDirectoryId :: !Text
-  , _retTopicName   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RegisterEventTopic =
+  RegisterEventTopic'
+    { _retDirectoryId :: !Text
+    , _retTopicName   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterEventTopic' with the minimum fields required to make a request.
@@ -120,9 +122,11 @@ instance ToQuery RegisterEventTopic where
 --
 --
 -- /See:/ 'registerEventTopicResponse' smart constructor.
-newtype RegisterEventTopicResponse = RegisterEventTopicResponse'
-  { _retrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RegisterEventTopicResponse =
+  RegisterEventTopicResponse'
+    { _retrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterEventTopicResponse' with the minimum fields required to make a request.

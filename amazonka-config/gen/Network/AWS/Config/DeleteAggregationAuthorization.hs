@@ -43,10 +43,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteAggregationAuthorization' smart constructor.
-data DeleteAggregationAuthorization = DeleteAggregationAuthorization'
-  { _daaAuthorizedAccountId :: !Text
-  , _daaAuthorizedAWSRegion :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteAggregationAuthorization =
+  DeleteAggregationAuthorization'
+    { _daaAuthorizedAccountId :: !Text
+    , _daaAuthorizedAWSRegion :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteAggregationAuthorization' with the minimum fields required to make a request.

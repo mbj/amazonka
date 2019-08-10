@@ -48,10 +48,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'terminateInstanceInAutoScalingGroup' smart constructor.
-data TerminateInstanceInAutoScalingGroup = TerminateInstanceInAutoScalingGroup'
-  { _tiiasgInstanceId                     :: !Text
-  , _tiiasgShouldDecrementDesiredCapacity :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TerminateInstanceInAutoScalingGroup =
+  TerminateInstanceInAutoScalingGroup'
+    { _tiiasgInstanceId                     :: !Text
+    , _tiiasgShouldDecrementDesiredCapacity :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TerminateInstanceInAutoScalingGroup' with the minimum fields required to make a request.
@@ -121,10 +123,12 @@ instance ToQuery TerminateInstanceInAutoScalingGroup
                  _tiiasgShouldDecrementDesiredCapacity]
 
 -- | /See:/ 'terminateInstanceInAutoScalingGroupResponse' smart constructor.
-data TerminateInstanceInAutoScalingGroupResponse = TerminateInstanceInAutoScalingGroupResponse'
-  { _tiiasgrsActivity       :: !(Maybe Activity)
-  , _tiiasgrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TerminateInstanceInAutoScalingGroupResponse =
+  TerminateInstanceInAutoScalingGroupResponse'
+    { _tiiasgrsActivity       :: !(Maybe Activity)
+    , _tiiasgrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TerminateInstanceInAutoScalingGroupResponse' with the minimum fields required to make a request.

@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteVPCEConfiguration' smart constructor.
-newtype DeleteVPCEConfiguration = DeleteVPCEConfiguration'
-  { _dvecArn :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteVPCEConfiguration =
+  DeleteVPCEConfiguration'
+    { _dvecArn :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteVPCEConfiguration' with the minimum fields required to make a request.
@@ -99,9 +101,11 @@ instance ToQuery DeleteVPCEConfiguration where
         toQuery = const mempty
 
 -- | /See:/ 'deleteVPCEConfigurationResponse' smart constructor.
-newtype DeleteVPCEConfigurationResponse = DeleteVPCEConfigurationResponse'
-  { _dvecrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteVPCEConfigurationResponse =
+  DeleteVPCEConfigurationResponse'
+    { _dvecrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteVPCEConfigurationResponse' with the minimum fields required to make a request.

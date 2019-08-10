@@ -49,10 +49,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateAlias' smart constructor.
-data UpdateAlias = UpdateAlias'
-  { _uaAliasName   :: !Text
-  , _uaTargetKeyId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateAlias =
+  UpdateAlias'
+    { _uaAliasName   :: !Text
+    , _uaTargetKeyId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateAlias' with the minimum fields required to make a request.

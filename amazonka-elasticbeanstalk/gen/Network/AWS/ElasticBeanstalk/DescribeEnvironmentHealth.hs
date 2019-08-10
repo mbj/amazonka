@@ -58,11 +58,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeEnvironmentHealth' smart constructor.
-data DescribeEnvironmentHealth = DescribeEnvironmentHealth'
-  { _dehEnvironmentName :: !(Maybe Text)
-  , _dehAttributeNames  :: !(Maybe [EnvironmentHealthAttribute])
-  , _dehEnvironmentId   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeEnvironmentHealth =
+  DescribeEnvironmentHealth'
+    { _dehEnvironmentName :: !(Maybe Text)
+    , _dehAttributeNames  :: !(Maybe [EnvironmentHealthAttribute])
+    , _dehEnvironmentId   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEnvironmentHealth' with the minimum fields required to make a request.
@@ -142,17 +144,19 @@ instance ToQuery DescribeEnvironmentHealth where
 --
 --
 -- /See:/ 'describeEnvironmentHealthResponse' smart constructor.
-data DescribeEnvironmentHealthResponse = DescribeEnvironmentHealthResponse'
-  { _dehrsStatus             :: !(Maybe EnvironmentHealth)
-  , _dehrsCauses             :: !(Maybe [Text])
-  , _dehrsApplicationMetrics :: !(Maybe ApplicationMetrics)
-  , _dehrsColor              :: !(Maybe Text)
-  , _dehrsEnvironmentName    :: !(Maybe Text)
-  , _dehrsHealthStatus       :: !(Maybe Text)
-  , _dehrsInstancesHealth    :: !(Maybe InstanceHealthSummary)
-  , _dehrsRefreshedAt        :: !(Maybe ISO8601)
-  , _dehrsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeEnvironmentHealthResponse =
+  DescribeEnvironmentHealthResponse'
+    { _dehrsStatus             :: !(Maybe EnvironmentHealth)
+    , _dehrsCauses             :: !(Maybe [Text])
+    , _dehrsApplicationMetrics :: !(Maybe ApplicationMetrics)
+    , _dehrsColor              :: !(Maybe Text)
+    , _dehrsEnvironmentName    :: !(Maybe Text)
+    , _dehrsHealthStatus       :: !(Maybe Text)
+    , _dehrsInstancesHealth    :: !(Maybe InstanceHealthSummary)
+    , _dehrsRefreshedAt        :: !(Maybe ISO8601)
+    , _dehrsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEnvironmentHealthResponse' with the minimum fields required to make a request.

@@ -49,12 +49,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listDeviceEvents' smart constructor.
-data ListDeviceEvents = ListDeviceEvents'
-  { _ldeNextToken  :: !(Maybe Text)
-  , _ldeEventType  :: !(Maybe DeviceEventType)
-  , _ldeMaxResults :: !(Maybe Nat)
-  , _ldeDeviceARN  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListDeviceEvents =
+  ListDeviceEvents'
+    { _ldeNextToken  :: !(Maybe Text)
+    , _ldeEventType  :: !(Maybe DeviceEventType)
+    , _ldeMaxResults :: !(Maybe Nat)
+    , _ldeDeviceARN  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDeviceEvents' with the minimum fields required to make a request.
@@ -136,11 +138,13 @@ instance ToQuery ListDeviceEvents where
         toQuery = const mempty
 
 -- | /See:/ 'listDeviceEventsResponse' smart constructor.
-data ListDeviceEventsResponse = ListDeviceEventsResponse'
-  { _ldersNextToken      :: !(Maybe Text)
-  , _ldersDeviceEvents   :: !(Maybe [DeviceEvent])
-  , _ldersResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListDeviceEventsResponse =
+  ListDeviceEventsResponse'
+    { _ldersNextToken      :: !(Maybe Text)
+    , _ldersDeviceEvents   :: !(Maybe [DeviceEvent])
+    , _ldersResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDeviceEventsResponse' with the minimum fields required to make a request.

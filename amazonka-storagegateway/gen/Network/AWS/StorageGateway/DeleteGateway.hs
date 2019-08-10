@@ -53,9 +53,11 @@ import Network.AWS.StorageGateway.Types.Product
 --
 --
 -- /See:/ 'deleteGateway' smart constructor.
-newtype DeleteGateway = DeleteGateway'
-  { _dgGatewayARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteGateway =
+  DeleteGateway'
+    { _dgGatewayARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteGateway' with the minimum fields required to make a request.
@@ -112,10 +114,12 @@ instance ToQuery DeleteGateway where
 --
 --
 -- /See:/ 'deleteGatewayResponse' smart constructor.
-data DeleteGatewayResponse = DeleteGatewayResponse'
-  { _dgrsGatewayARN     :: !(Maybe Text)
-  , _dgrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteGatewayResponse =
+  DeleteGatewayResponse'
+    { _dgrsGatewayARN     :: !(Maybe Text)
+    , _dgrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteGatewayResponse' with the minimum fields required to make a request.

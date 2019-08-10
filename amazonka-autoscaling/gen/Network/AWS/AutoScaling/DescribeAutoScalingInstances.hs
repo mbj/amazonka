@@ -51,11 +51,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeAutoScalingInstances' smart constructor.
-data DescribeAutoScalingInstances = DescribeAutoScalingInstances'
-  { _dasiNextToken   :: !(Maybe Text)
-  , _dasiInstanceIds :: !(Maybe [Text])
-  , _dasiMaxRecords  :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAutoScalingInstances =
+  DescribeAutoScalingInstances'
+    { _dasiNextToken   :: !(Maybe Text)
+    , _dasiInstanceIds :: !(Maybe [Text])
+    , _dasiMaxRecords  :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAutoScalingInstances' with the minimum fields required to make a request.
@@ -133,11 +135,13 @@ instance ToQuery DescribeAutoScalingInstances where
                "MaxRecords" =: _dasiMaxRecords]
 
 -- | /See:/ 'describeAutoScalingInstancesResponse' smart constructor.
-data DescribeAutoScalingInstancesResponse = DescribeAutoScalingInstancesResponse'
-  { _dasirsNextToken            :: !(Maybe Text)
-  , _dasirsAutoScalingInstances :: !(Maybe [AutoScalingInstanceDetails])
-  , _dasirsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAutoScalingInstancesResponse =
+  DescribeAutoScalingInstancesResponse'
+    { _dasirsNextToken            :: !(Maybe Text)
+    , _dasirsAutoScalingInstances :: !(Maybe [AutoScalingInstanceDetails])
+    , _dasirsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAutoScalingInstancesResponse' with the minimum fields required to make a request.

@@ -52,10 +52,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeVirtualInterfaces' smart constructor.
-data DescribeVirtualInterfaces = DescribeVirtualInterfaces'
-  { _dviConnectionId       :: !(Maybe Text)
-  , _dviVirtualInterfaceId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeVirtualInterfaces =
+  DescribeVirtualInterfaces'
+    { _dviConnectionId       :: !(Maybe Text)
+    , _dviVirtualInterfaceId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeVirtualInterfaces' with the minimum fields required to make a request.
@@ -124,10 +126,12 @@ instance ToQuery DescribeVirtualInterfaces where
 --
 --
 -- /See:/ 'describeVirtualInterfacesResponse' smart constructor.
-data DescribeVirtualInterfacesResponse = DescribeVirtualInterfacesResponse'
-  { _dvisrsVirtualInterfaces :: !(Maybe [VirtualInterface])
-  , _dvisrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeVirtualInterfacesResponse =
+  DescribeVirtualInterfacesResponse'
+    { _dvisrsVirtualInterfaces :: !(Maybe [VirtualInterface])
+    , _dvisrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeVirtualInterfacesResponse' with the minimum fields required to make a request.

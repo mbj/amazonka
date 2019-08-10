@@ -50,10 +50,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listBuilds' smart constructor.
-data ListBuilds = ListBuilds'
-  { _lbSortOrder :: !(Maybe SortOrderType)
-  , _lbNextToken :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListBuilds =
+  ListBuilds'
+    { _lbSortOrder :: !(Maybe SortOrderType)
+    , _lbNextToken :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListBuilds' with the minimum fields required to make a request.
@@ -120,11 +122,13 @@ instance ToQuery ListBuilds where
         toQuery = const mempty
 
 -- | /See:/ 'listBuildsResponse' smart constructor.
-data ListBuildsResponse = ListBuildsResponse'
-  { _lbrsIds            :: !(Maybe (List1 Text))
-  , _lbrsNextToken      :: !(Maybe Text)
-  , _lbrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListBuildsResponse =
+  ListBuildsResponse'
+    { _lbrsIds            :: !(Maybe (List1 Text))
+    , _lbrsNextToken      :: !(Maybe Text)
+    , _lbrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListBuildsResponse' with the minimum fields required to make a request.

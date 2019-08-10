@@ -45,12 +45,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'setAlarmState' smart constructor.
-data SetAlarmState = SetAlarmState'
-  { _sasStateReasonData :: !(Maybe Text)
-  , _sasAlarmName       :: !Text
-  , _sasStateValue      :: !StateValue
-  , _sasStateReason     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SetAlarmState =
+  SetAlarmState'
+    { _sasStateReasonData :: !(Maybe Text)
+    , _sasAlarmName       :: !Text
+    , _sasStateValue      :: !StateValue
+    , _sasStateReason     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetAlarmState' with the minimum fields required to make a request.

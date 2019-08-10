@@ -48,11 +48,13 @@ import Network.AWS.WAFRegional.Types
 import Network.AWS.WAFRegional.Types.Product
 
 -- | /See:/ 'listActivatedRulesInRuleGroup' smart constructor.
-data ListActivatedRulesInRuleGroup = ListActivatedRulesInRuleGroup'
-  { _larirgRuleGroupId :: !(Maybe Text)
-  , _larirgNextMarker  :: !(Maybe Text)
-  , _larirgLimit       :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListActivatedRulesInRuleGroup =
+  ListActivatedRulesInRuleGroup'
+    { _larirgRuleGroupId :: !(Maybe Text)
+    , _larirgNextMarker  :: !(Maybe Text)
+    , _larirgLimit       :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListActivatedRulesInRuleGroup' with the minimum fields required to make a request.
@@ -129,11 +131,13 @@ instance ToQuery ListActivatedRulesInRuleGroup where
         toQuery = const mempty
 
 -- | /See:/ 'listActivatedRulesInRuleGroupResponse' smart constructor.
-data ListActivatedRulesInRuleGroupResponse = ListActivatedRulesInRuleGroupResponse'
-  { _larirgrsNextMarker     :: !(Maybe Text)
-  , _larirgrsActivatedRules :: !(Maybe [ActivatedRule])
-  , _larirgrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListActivatedRulesInRuleGroupResponse =
+  ListActivatedRulesInRuleGroupResponse'
+    { _larirgrsNextMarker     :: !(Maybe Text)
+    , _larirgrsActivatedRules :: !(Maybe [ActivatedRule])
+    , _larirgrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListActivatedRulesInRuleGroupResponse' with the minimum fields required to make a request.

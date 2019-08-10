@@ -53,12 +53,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeApplicationVersions' smart constructor.
-data DescribeApplicationVersions = DescribeApplicationVersions'
-  { _dVersionLabels   :: !(Maybe [Text])
-  , _dNextToken       :: !(Maybe Text)
-  , _dMaxRecords      :: !(Maybe Nat)
-  , _dApplicationName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeApplicationVersions =
+  DescribeApplicationVersions'
+    { _dVersionLabels   :: !(Maybe [Text])
+    , _dNextToken       :: !(Maybe Text)
+    , _dMaxRecords      :: !(Maybe Nat)
+    , _dApplicationName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeApplicationVersions' with the minimum fields required to make a request.
@@ -140,11 +142,13 @@ instance ToQuery DescribeApplicationVersions where
 --
 --
 -- /See:/ 'describeApplicationVersionsResponse' smart constructor.
-data DescribeApplicationVersionsResponse = DescribeApplicationVersionsResponse'
-  { _davrsApplicationVersions :: !(Maybe [ApplicationVersionDescription])
-  , _davrsNextToken           :: !(Maybe Text)
-  , _davrsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeApplicationVersionsResponse =
+  DescribeApplicationVersionsResponse'
+    { _davrsApplicationVersions :: !(Maybe [ApplicationVersionDescription])
+    , _davrsNextToken           :: !(Maybe Text)
+    , _davrsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeApplicationVersionsResponse' with the minimum fields required to make a request.

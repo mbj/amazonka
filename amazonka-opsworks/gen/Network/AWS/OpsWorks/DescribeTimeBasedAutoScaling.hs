@@ -47,9 +47,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeTimeBasedAutoScaling' smart constructor.
-newtype DescribeTimeBasedAutoScaling = DescribeTimeBasedAutoScaling'
-  { _dtbasInstanceIds :: [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeTimeBasedAutoScaling =
+  DescribeTimeBasedAutoScaling'
+    { _dtbasInstanceIds :: [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeTimeBasedAutoScaling' with the minimum fields required to make a request.
@@ -111,10 +113,12 @@ instance ToQuery DescribeTimeBasedAutoScaling where
 --
 --
 -- /See:/ 'describeTimeBasedAutoScalingResponse' smart constructor.
-data DescribeTimeBasedAutoScalingResponse = DescribeTimeBasedAutoScalingResponse'
-  { _dtbasrsTimeBasedAutoScalingConfigurations :: !(Maybe [TimeBasedAutoScalingConfiguration])
-  , _dtbasrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeTimeBasedAutoScalingResponse =
+  DescribeTimeBasedAutoScalingResponse'
+    { _dtbasrsTimeBasedAutoScalingConfigurations :: !(Maybe [TimeBasedAutoScalingConfiguration])
+    , _dtbasrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeTimeBasedAutoScalingResponse' with the minimum fields required to make a request.

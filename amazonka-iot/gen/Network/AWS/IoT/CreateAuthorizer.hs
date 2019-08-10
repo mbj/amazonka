@@ -50,13 +50,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createAuthorizer' smart constructor.
-data CreateAuthorizer = CreateAuthorizer'
-  { _caStatus                 :: !(Maybe AuthorizerStatus)
-  , _caAuthorizerName         :: !Text
-  , _caAuthorizerFunctionARN  :: !Text
-  , _caTokenKeyName           :: !Text
-  , _caTokenSigningPublicKeys :: !(Map Text Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateAuthorizer =
+  CreateAuthorizer'
+    { _caStatus                 :: !(Maybe AuthorizerStatus)
+    , _caAuthorizerName         :: !Text
+    , _caAuthorizerFunctionARN  :: !Text
+    , _caTokenKeyName           :: !Text
+    , _caTokenSigningPublicKeys :: !(Map Text Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateAuthorizer' with the minimum fields required to make a request.
@@ -145,11 +147,13 @@ instance ToQuery CreateAuthorizer where
         toQuery = const mempty
 
 -- | /See:/ 'createAuthorizerResponse' smart constructor.
-data CreateAuthorizerResponse = CreateAuthorizerResponse'
-  { _carsAuthorizerName :: !(Maybe Text)
-  , _carsAuthorizerARN  :: !(Maybe Text)
-  , _carsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateAuthorizerResponse =
+  CreateAuthorizerResponse'
+    { _carsAuthorizerName :: !(Maybe Text)
+    , _carsAuthorizerARN  :: !(Maybe Text)
+    , _carsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateAuthorizerResponse' with the minimum fields required to make a request.

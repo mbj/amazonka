@@ -51,11 +51,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getCrawlerMetrics' smart constructor.
-data GetCrawlerMetrics = GetCrawlerMetrics'
-  { _gcmNextToken       :: !(Maybe Text)
-  , _gcmMaxResults      :: !(Maybe Nat)
-  , _gcmCrawlerNameList :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetCrawlerMetrics =
+  GetCrawlerMetrics'
+    { _gcmNextToken       :: !(Maybe Text)
+    , _gcmMaxResults      :: !(Maybe Nat)
+    , _gcmCrawlerNameList :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetCrawlerMetrics' with the minimum fields required to make a request.
@@ -135,11 +137,13 @@ instance ToQuery GetCrawlerMetrics where
         toQuery = const mempty
 
 -- | /See:/ 'getCrawlerMetricsResponse' smart constructor.
-data GetCrawlerMetricsResponse = GetCrawlerMetricsResponse'
-  { _gcmrsCrawlerMetricsList :: !(Maybe [CrawlerMetrics])
-  , _gcmrsNextToken          :: !(Maybe Text)
-  , _gcmrsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetCrawlerMetricsResponse =
+  GetCrawlerMetricsResponse'
+    { _gcmrsCrawlerMetricsList :: !(Maybe [CrawlerMetrics])
+    , _gcmrsNextToken          :: !(Maybe Text)
+    , _gcmrsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetCrawlerMetricsResponse' with the minimum fields required to make a request.

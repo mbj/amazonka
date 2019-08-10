@@ -52,9 +52,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeProject' smart constructor.
-newtype DescribeProject = DescribeProject'
-  { _dId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeProject =
+  DescribeProject'
+    { _dId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeProject' with the minimum fields required to make a request.
@@ -112,17 +114,19 @@ instance ToQuery DescribeProject where
         toQuery = const mempty
 
 -- | /See:/ 'describeProjectResponse' smart constructor.
-data DescribeProjectResponse = DescribeProjectResponse'
-  { _drsArn                :: !(Maybe Text)
-  , _drsProjectTemplateId  :: !(Maybe Text)
-  , _drsName               :: !(Maybe (Sensitive Text))
-  , _drsId                 :: !(Maybe Text)
-  , _drsStackId            :: !(Maybe Text)
-  , _drsClientRequestToken :: !(Maybe Text)
-  , _drsCreatedTimeStamp   :: !(Maybe POSIX)
-  , _drsDescription        :: !(Maybe (Sensitive Text))
-  , _drsResponseStatus     :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data DescribeProjectResponse =
+  DescribeProjectResponse'
+    { _drsArn                :: !(Maybe Text)
+    , _drsProjectTemplateId  :: !(Maybe Text)
+    , _drsName               :: !(Maybe (Sensitive Text))
+    , _drsId                 :: !(Maybe Text)
+    , _drsStackId            :: !(Maybe Text)
+    , _drsClientRequestToken :: !(Maybe Text)
+    , _drsCreatedTimeStamp   :: !(Maybe POSIX)
+    , _drsDescription        :: !(Maybe (Sensitive Text))
+    , _drsResponseStatus     :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeProjectResponse' with the minimum fields required to make a request.

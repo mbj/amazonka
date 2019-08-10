@@ -55,17 +55,19 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createImageBuilder' smart constructor.
-data CreateImageBuilder = CreateImageBuilder'
-  { _cibDomainJoinInfo              :: !(Maybe DomainJoinInfo)
-  , _cibVPCConfig                   :: !(Maybe VPCConfig)
-  , _cibDisplayName                 :: !(Maybe Text)
-  , _cibEnableDefaultInternetAccess :: !(Maybe Bool)
-  , _cibDescription                 :: !(Maybe Text)
-  , _cibAppstreamAgentVersion       :: !(Maybe Text)
-  , _cibName                        :: !Text
-  , _cibImageName                   :: !Text
-  , _cibInstanceType                :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateImageBuilder =
+  CreateImageBuilder'
+    { _cibDomainJoinInfo              :: !(Maybe DomainJoinInfo)
+    , _cibVPCConfig                   :: !(Maybe VPCConfig)
+    , _cibDisplayName                 :: !(Maybe Text)
+    , _cibEnableDefaultInternetAccess :: !(Maybe Bool)
+    , _cibDescription                 :: !(Maybe Text)
+    , _cibAppstreamAgentVersion       :: !(Maybe Text)
+    , _cibName                        :: !Text
+    , _cibImageName                   :: !Text
+    , _cibInstanceType                :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateImageBuilder' with the minimum fields required to make a request.
@@ -191,10 +193,12 @@ instance ToQuery CreateImageBuilder where
         toQuery = const mempty
 
 -- | /See:/ 'createImageBuilderResponse' smart constructor.
-data CreateImageBuilderResponse = CreateImageBuilderResponse'
-  { _cibrsImageBuilder   :: !(Maybe ImageBuilder)
-  , _cibrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateImageBuilderResponse =
+  CreateImageBuilderResponse'
+    { _cibrsImageBuilder   :: !(Maybe ImageBuilder)
+    , _cibrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateImageBuilderResponse' with the minimum fields required to make a request.

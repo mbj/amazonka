@@ -52,12 +52,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createProject' smart constructor.
-data CreateProject = CreateProject'
-  { _cpContents   :: !(Maybe ByteString)
-  , _cpName       :: !(Maybe Text)
-  , _cpRegion     :: !(Maybe Text)
-  , _cpSnapshotId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateProject =
+  CreateProject'
+    { _cpContents   :: !(Maybe ByteString)
+    , _cpName       :: !(Maybe Text)
+    , _cpRegion     :: !(Maybe Text)
+    , _cpSnapshotId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateProject' with the minimum fields required to make a request.
@@ -135,10 +137,12 @@ instance ToQuery CreateProject where
 --
 --
 -- /See:/ 'createProjectResponse' smart constructor.
-data CreateProjectResponse = CreateProjectResponse'
-  { _cprsDetails        :: !(Maybe ProjectDetails)
-  , _cprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateProjectResponse =
+  CreateProjectResponse'
+    { _cprsDetails        :: !(Maybe ProjectDetails)
+    , _cprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateProjectResponse' with the minimum fields required to make a request.

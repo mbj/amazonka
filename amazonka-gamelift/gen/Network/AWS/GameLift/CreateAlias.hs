@@ -71,11 +71,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createAlias' smart constructor.
-data CreateAlias = CreateAlias'
-  { _caDescription     :: !(Maybe Text)
-  , _caName            :: !Text
-  , _caRoutingStrategy :: !RoutingStrategy
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateAlias =
+  CreateAlias'
+    { _caDescription     :: !(Maybe Text)
+    , _caName            :: !Text
+    , _caRoutingStrategy :: !RoutingStrategy
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateAlias' with the minimum fields required to make a request.
@@ -152,10 +154,12 @@ instance ToQuery CreateAlias where
 --
 --
 -- /See:/ 'createAliasResponse' smart constructor.
-data CreateAliasResponse = CreateAliasResponse'
-  { _carsAlias          :: !(Maybe Alias)
-  , _carsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateAliasResponse =
+  CreateAliasResponse'
+    { _carsAlias          :: !(Maybe Alias)
+    , _carsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateAliasResponse' with the minimum fields required to make a request.

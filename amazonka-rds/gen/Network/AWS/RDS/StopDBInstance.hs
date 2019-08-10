@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'stopDBInstance' smart constructor.
-data StopDBInstance = StopDBInstance'
-  { _sdiDBSnapshotIdentifier :: !(Maybe Text)
-  , _sdiDBInstanceIdentifier :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StopDBInstance =
+  StopDBInstance'
+    { _sdiDBSnapshotIdentifier :: !(Maybe Text)
+    , _sdiDBInstanceIdentifier :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopDBInstance' with the minimum fields required to make a request.
@@ -105,10 +107,12 @@ instance ToQuery StopDBInstance where
                "DBInstanceIdentifier" =: _sdiDBInstanceIdentifier]
 
 -- | /See:/ 'stopDBInstanceResponse' smart constructor.
-data StopDBInstanceResponse = StopDBInstanceResponse'
-  { _sdirsDBInstance     :: !(Maybe DBInstance)
-  , _sdirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StopDBInstanceResponse =
+  StopDBInstanceResponse'
+    { _sdirsDBInstance     :: !(Maybe DBInstance)
+    , _sdirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopDBInstanceResponse' with the minimum fields required to make a request.

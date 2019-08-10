@@ -46,10 +46,12 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'describeDocumentPermission' smart constructor.
-data DescribeDocumentPermission = DescribeDocumentPermission'
-  { _ddpName           :: !Text
-  , _ddpPermissionType :: !DocumentPermissionType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDocumentPermission =
+  DescribeDocumentPermission'
+    { _ddpName           :: !Text
+    , _ddpPermissionType :: !DocumentPermissionType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDocumentPermission' with the minimum fields required to make a request.
@@ -115,10 +117,12 @@ instance ToQuery DescribeDocumentPermission where
         toQuery = const mempty
 
 -- | /See:/ 'describeDocumentPermissionResponse' smart constructor.
-data DescribeDocumentPermissionResponse = DescribeDocumentPermissionResponse'
-  { _ddprsAccountIds     :: !(Maybe [Text])
-  , _ddprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDocumentPermissionResponse =
+  DescribeDocumentPermissionResponse'
+    { _ddprsAccountIds     :: !(Maybe [Text])
+    , _ddprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDocumentPermissionResponse' with the minimum fields required to make a request.

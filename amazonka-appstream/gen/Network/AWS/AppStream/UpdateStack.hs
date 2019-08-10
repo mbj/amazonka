@@ -52,16 +52,18 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateStack' smart constructor.
-data UpdateStack = UpdateStack'
-  { _usFeedbackURL             :: !(Maybe Text)
-  , _usAttributesToDelete      :: !(Maybe [StackAttribute])
-  , _usDeleteStorageConnectors :: !(Maybe Bool)
-  , _usStorageConnectors       :: !(Maybe [StorageConnector])
-  , _usDisplayName             :: !(Maybe Text)
-  , _usDescription             :: !(Maybe Text)
-  , _usRedirectURL             :: !(Maybe Text)
-  , _usName                    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateStack =
+  UpdateStack'
+    { _usFeedbackURL             :: !(Maybe Text)
+    , _usAttributesToDelete      :: !(Maybe [StackAttribute])
+    , _usDeleteStorageConnectors :: !(Maybe Bool)
+    , _usStorageConnectors       :: !(Maybe [StorageConnector])
+    , _usDisplayName             :: !(Maybe Text)
+    , _usDescription             :: !(Maybe Text)
+    , _usRedirectURL             :: !(Maybe Text)
+    , _usName                    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateStack' with the minimum fields required to make a request.
@@ -175,10 +177,12 @@ instance ToQuery UpdateStack where
         toQuery = const mempty
 
 -- | /See:/ 'updateStackResponse' smart constructor.
-data UpdateStackResponse = UpdateStackResponse'
-  { _usrsStack          :: !(Maybe Stack)
-  , _usrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateStackResponse =
+  UpdateStackResponse'
+    { _usrsStack          :: !(Maybe Stack)
+    , _usrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateStackResponse' with the minimum fields required to make a request.

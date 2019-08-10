@@ -51,15 +51,17 @@ import Network.AWS.Response
 -- | Container for the parameters to the StartSupportDataExport operation.
 --
 -- /See:/ 'startSupportDataExport' smart constructor.
-data StartSupportDataExport = StartSupportDataExport'
-  { _ssdeCustomerDefinedValues   :: !(Maybe (Map Text Text))
-  , _ssdeDestinationS3Prefix     :: !(Maybe Text)
-  , _ssdeDataSetType             :: !SupportDataSetType
-  , _ssdeFromDate                :: !POSIX
-  , _ssdeRoleNameARN             :: !Text
-  , _ssdeDestinationS3BucketName :: !Text
-  , _ssdeSnsTopicARN             :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartSupportDataExport =
+  StartSupportDataExport'
+    { _ssdeCustomerDefinedValues   :: !(Maybe (Map Text Text))
+    , _ssdeDestinationS3Prefix     :: !(Maybe Text)
+    , _ssdeDataSetType             :: !SupportDataSetType
+    , _ssdeFromDate                :: !POSIX
+    , _ssdeRoleNameARN             :: !Text
+    , _ssdeDestinationS3BucketName :: !Text
+    , _ssdeSnsTopicARN             :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartSupportDataExport' with the minimum fields required to make a request.
@@ -175,10 +177,12 @@ instance ToQuery StartSupportDataExport where
 -- | Container for the result of the StartSupportDataExport operation.
 --
 -- /See:/ 'startSupportDataExportResponse' smart constructor.
-data StartSupportDataExportResponse = StartSupportDataExportResponse'
-  { _ssdersDataSetRequestId :: !(Maybe Text)
-  , _ssdersResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartSupportDataExportResponse =
+  StartSupportDataExportResponse'
+    { _ssdersDataSetRequestId :: !(Maybe Text)
+    , _ssdersResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartSupportDataExportResponse' with the minimum fields required to make a request.

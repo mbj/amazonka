@@ -47,14 +47,16 @@ import Network.AWS.SMS.Types
 import Network.AWS.SMS.Types.Product
 
 -- | /See:/ 'updateReplicationJob' smart constructor.
-data UpdateReplicationJob = UpdateReplicationJob'
-  { _urjFrequency                   :: !(Maybe Int)
-  , _urjLicenseType                 :: !(Maybe LicenseType)
-  , _urjRoleName                    :: !(Maybe Text)
-  , _urjNextReplicationRunStartTime :: !(Maybe POSIX)
-  , _urjDescription                 :: !(Maybe Text)
-  , _urjReplicationJobId            :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateReplicationJob =
+  UpdateReplicationJob'
+    { _urjFrequency                   :: !(Maybe Int)
+    , _urjLicenseType                 :: !(Maybe LicenseType)
+    , _urjRoleName                    :: !(Maybe Text)
+    , _urjNextReplicationRunStartTime :: !(Maybe POSIX)
+    , _urjDescription                 :: !(Maybe Text)
+    , _urjReplicationJobId            :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateReplicationJob' with the minimum fields required to make a request.
@@ -153,9 +155,11 @@ instance ToQuery UpdateReplicationJob where
         toQuery = const mempty
 
 -- | /See:/ 'updateReplicationJobResponse' smart constructor.
-newtype UpdateReplicationJobResponse = UpdateReplicationJobResponse'
-  { _urjrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateReplicationJobResponse =
+  UpdateReplicationJobResponse'
+    { _urjrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateReplicationJobResponse' with the minimum fields required to make a request.

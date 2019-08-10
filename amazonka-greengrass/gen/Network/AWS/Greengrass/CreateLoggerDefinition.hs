@@ -51,11 +51,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createLoggerDefinition' smart constructor.
-data CreateLoggerDefinition = CreateLoggerDefinition'
-  { _cldAmznClientToken :: !(Maybe Text)
-  , _cldInitialVersion  :: !(Maybe LoggerDefinitionVersion)
-  , _cldName            :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateLoggerDefinition =
+  CreateLoggerDefinition'
+    { _cldAmznClientToken :: !(Maybe Text)
+    , _cldInitialVersion  :: !(Maybe LoggerDefinitionVersion)
+    , _cldName            :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateLoggerDefinition' with the minimum fields required to make a request.
@@ -130,16 +132,18 @@ instance ToQuery CreateLoggerDefinition where
         toQuery = const mempty
 
 -- | /See:/ 'createLoggerDefinitionResponse' smart constructor.
-data CreateLoggerDefinitionResponse = CreateLoggerDefinitionResponse'
-  { _cldrsLatestVersionARN     :: !(Maybe Text)
-  , _cldrsARN                  :: !(Maybe Text)
-  , _cldrsName                 :: !(Maybe Text)
-  , _cldrsCreationTimestamp    :: !(Maybe Text)
-  , _cldrsId                   :: !(Maybe Text)
-  , _cldrsLatestVersion        :: !(Maybe Text)
-  , _cldrsLastUpdatedTimestamp :: !(Maybe Text)
-  , _cldrsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateLoggerDefinitionResponse =
+  CreateLoggerDefinitionResponse'
+    { _cldrsLatestVersionARN     :: !(Maybe Text)
+    , _cldrsARN                  :: !(Maybe Text)
+    , _cldrsName                 :: !(Maybe Text)
+    , _cldrsCreationTimestamp    :: !(Maybe Text)
+    , _cldrsId                   :: !(Maybe Text)
+    , _cldrsLatestVersion        :: !(Maybe Text)
+    , _cldrsLastUpdatedTimestamp :: !(Maybe Text)
+    , _cldrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateLoggerDefinitionResponse' with the minimum fields required to make a request.

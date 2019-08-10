@@ -51,11 +51,13 @@ import Network.AWS.WorkMail.Types
 import Network.AWS.WorkMail.Types.Product
 
 -- | /See:/ 'listGroups' smart constructor.
-data ListGroups = ListGroups'
-  { _lgNextToken      :: !(Maybe Text)
-  , _lgMaxResults     :: !(Maybe Nat)
-  , _lgOrganizationId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListGroups =
+  ListGroups'
+    { _lgNextToken      :: !(Maybe Text)
+    , _lgMaxResults     :: !(Maybe Nat)
+    , _lgOrganizationId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListGroups' with the minimum fields required to make a request.
@@ -135,11 +137,13 @@ instance ToQuery ListGroups where
         toQuery = const mempty
 
 -- | /See:/ 'listGroupsResponse' smart constructor.
-data ListGroupsResponse = ListGroupsResponse'
-  { _lgrsGroups         :: !(Maybe [Group])
-  , _lgrsNextToken      :: !(Maybe Text)
-  , _lgrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListGroupsResponse =
+  ListGroupsResponse'
+    { _lgrsGroups         :: !(Maybe [Group])
+    , _lgrsNextToken      :: !(Maybe Text)
+    , _lgrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListGroupsResponse' with the minimum fields required to make a request.

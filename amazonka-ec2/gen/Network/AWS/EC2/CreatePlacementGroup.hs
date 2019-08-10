@@ -52,11 +52,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createPlacementGroup' smart constructor.
-data CreatePlacementGroup = CreatePlacementGroup'
-  { _cpgDryRun    :: !(Maybe Bool)
-  , _cpgGroupName :: !Text
-  , _cpgStrategy  :: !PlacementStrategy
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreatePlacementGroup =
+  CreatePlacementGroup'
+    { _cpgDryRun    :: !(Maybe Bool)
+    , _cpgGroupName :: !Text
+    , _cpgStrategy  :: !PlacementStrategy
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreatePlacementGroup' with the minimum fields required to make a request.

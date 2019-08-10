@@ -70,14 +70,16 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'uploadMultipartPart' smart constructor.
-data UploadMultipartPart = UploadMultipartPart'
-  { _umpChecksum  :: !(Maybe Text)
-  , _umpRange     :: !(Maybe Text)
-  , _umpAccountId :: !Text
-  , _umpVaultName :: !Text
-  , _umpUploadId  :: !Text
-  , _umpBody      :: !HashedBody
-  } deriving (Show, Generic)
+data UploadMultipartPart =
+  UploadMultipartPart'
+    { _umpChecksum  :: !(Maybe Text)
+    , _umpRange     :: !(Maybe Text)
+    , _umpAccountId :: !Text
+    , _umpVaultName :: !Text
+    , _umpUploadId  :: !Text
+    , _umpBody      :: !HashedBody
+    }
+  deriving (Show, Generic)
 
 
 -- | Creates a value of 'UploadMultipartPart' with the minimum fields required to make a request.
@@ -171,10 +173,12 @@ instance ToQuery UploadMultipartPart where
 --
 --
 -- /See:/ 'uploadMultipartPartResponse' smart constructor.
-data UploadMultipartPartResponse = UploadMultipartPartResponse'
-  { _umprsChecksum       :: !(Maybe Text)
-  , _umprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UploadMultipartPartResponse =
+  UploadMultipartPartResponse'
+    { _umprsChecksum       :: !(Maybe Text)
+    , _umprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UploadMultipartPartResponse' with the minimum fields required to make a request.

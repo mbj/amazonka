@@ -97,10 +97,12 @@ instance ToQuery ListReceiptFilters where
 --
 --
 -- /See:/ 'listReceiptFiltersResponse' smart constructor.
-data ListReceiptFiltersResponse = ListReceiptFiltersResponse'
-  { _lrfrsFilters        :: !(Maybe [ReceiptFilter])
-  , _lrfrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListReceiptFiltersResponse =
+  ListReceiptFiltersResponse'
+    { _lrfrsFilters        :: !(Maybe [ReceiptFilter])
+    , _lrfrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListReceiptFiltersResponse' with the minimum fields required to make a request.

@@ -44,9 +44,11 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'deleteActivation' smart constructor.
-newtype DeleteActivation = DeleteActivation'
-  { _daActivationId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteActivation =
+  DeleteActivation'
+    { _daActivationId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteActivation' with the minimum fields required to make a request.
@@ -99,9 +101,11 @@ instance ToQuery DeleteActivation where
         toQuery = const mempty
 
 -- | /See:/ 'deleteActivationResponse' smart constructor.
-newtype DeleteActivationResponse = DeleteActivationResponse'
-  { _delersResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteActivationResponse =
+  DeleteActivationResponse'
+    { _delersResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteActivationResponse' with the minimum fields required to make a request.

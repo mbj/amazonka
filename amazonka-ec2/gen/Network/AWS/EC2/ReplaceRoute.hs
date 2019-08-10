@@ -57,18 +57,20 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'replaceRoute' smart constructor.
-data ReplaceRoute = ReplaceRoute'
-  { _rrVPCPeeringConnectionId      :: !(Maybe Text)
-  , _rrInstanceId                  :: !(Maybe Text)
-  , _rrEgressOnlyInternetGatewayId :: !(Maybe Text)
-  , _rrDestinationIPv6CidrBlock    :: !(Maybe Text)
-  , _rrNatGatewayId                :: !(Maybe Text)
-  , _rrNetworkInterfaceId          :: !(Maybe Text)
-  , _rrGatewayId                   :: !(Maybe Text)
-  , _rrDryRun                      :: !(Maybe Bool)
-  , _rrDestinationCidrBlock        :: !(Maybe Text)
-  , _rrRouteTableId                :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReplaceRoute =
+  ReplaceRoute'
+    { _rrVPCPeeringConnectionId      :: !(Maybe Text)
+    , _rrInstanceId                  :: !(Maybe Text)
+    , _rrEgressOnlyInternetGatewayId :: !(Maybe Text)
+    , _rrDestinationIPv6CidrBlock    :: !(Maybe Text)
+    , _rrNatGatewayId                :: !(Maybe Text)
+    , _rrNetworkInterfaceId          :: !(Maybe Text)
+    , _rrGatewayId                   :: !(Maybe Text)
+    , _rrDryRun                      :: !(Maybe Bool)
+    , _rrDestinationCidrBlock        :: !(Maybe Text)
+    , _rrRouteTableId                :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReplaceRoute' with the minimum fields required to make a request.

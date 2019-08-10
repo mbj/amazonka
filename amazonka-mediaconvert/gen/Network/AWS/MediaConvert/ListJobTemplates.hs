@@ -48,13 +48,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listJobTemplates' smart constructor.
-data ListJobTemplates = ListJobTemplates'
-  { _ljtCategory   :: !(Maybe Text)
-  , _ljtListBy     :: !(Maybe JobTemplateListBy)
-  , _ljtNextToken  :: !(Maybe Text)
-  , _ljtOrder      :: !(Maybe Order)
-  , _ljtMaxResults :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListJobTemplates =
+  ListJobTemplates'
+    { _ljtCategory   :: !(Maybe Text)
+    , _ljtListBy     :: !(Maybe JobTemplateListBy)
+    , _ljtNextToken  :: !(Maybe Text)
+    , _ljtOrder      :: !(Maybe Order)
+    , _ljtMaxResults :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListJobTemplates' with the minimum fields required to make a request.
@@ -135,11 +137,13 @@ instance ToQuery ListJobTemplates where
                "maxResults" =: _ljtMaxResults]
 
 -- | /See:/ 'listJobTemplatesResponse' smart constructor.
-data ListJobTemplatesResponse = ListJobTemplatesResponse'
-  { _ljtrsJobTemplates   :: !(Maybe [JobTemplate])
-  , _ljtrsNextToken      :: !(Maybe Text)
-  , _ljtrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListJobTemplatesResponse =
+  ListJobTemplatesResponse'
+    { _ljtrsJobTemplates   :: !(Maybe [JobTemplate])
+    , _ljtrsNextToken      :: !(Maybe Text)
+    , _ljtrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListJobTemplatesResponse' with the minimum fields required to make a request.

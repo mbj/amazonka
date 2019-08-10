@@ -70,19 +70,21 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'runTask' smart constructor.
-data RunTask = RunTask'
-  { _rtOverrides            :: !(Maybe TaskOverride)
-  , _rtGroup                :: !(Maybe Text)
-  , _rtCluster              :: !(Maybe Text)
-  , _rtPlatformVersion      :: !(Maybe Text)
-  , _rtCount                :: !(Maybe Int)
-  , _rtPlacementConstraints :: !(Maybe [PlacementConstraint])
-  , _rtPlacementStrategy    :: !(Maybe [PlacementStrategy])
-  , _rtStartedBy            :: !(Maybe Text)
-  , _rtLaunchType           :: !(Maybe LaunchType)
-  , _rtNetworkConfiguration :: !(Maybe NetworkConfiguration)
-  , _rtTaskDefinition       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RunTask =
+  RunTask'
+    { _rtOverrides            :: !(Maybe TaskOverride)
+    , _rtGroup                :: !(Maybe Text)
+    , _rtCluster              :: !(Maybe Text)
+    , _rtPlatformVersion      :: !(Maybe Text)
+    , _rtCount                :: !(Maybe Int)
+    , _rtPlacementConstraints :: !(Maybe [PlacementConstraint])
+    , _rtPlacementStrategy    :: !(Maybe [PlacementStrategy])
+    , _rtStartedBy            :: !(Maybe Text)
+    , _rtLaunchType           :: !(Maybe LaunchType)
+    , _rtNetworkConfiguration :: !(Maybe NetworkConfiguration)
+    , _rtTaskDefinition       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RunTask' with the minimum fields required to make a request.
@@ -223,11 +225,13 @@ instance ToQuery RunTask where
         toQuery = const mempty
 
 -- | /See:/ 'runTaskResponse' smart constructor.
-data RunTaskResponse = RunTaskResponse'
-  { _rtrsFailures       :: !(Maybe [Failure])
-  , _rtrsTasks          :: !(Maybe [Task])
-  , _rtrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RunTaskResponse =
+  RunTaskResponse'
+    { _rtrsFailures       :: !(Maybe [Failure])
+    , _rtrsTasks          :: !(Maybe [Task])
+    , _rtrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RunTaskResponse' with the minimum fields required to make a request.

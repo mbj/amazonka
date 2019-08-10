@@ -46,10 +46,12 @@ import Network.AWS.Shield.Types
 import Network.AWS.Shield.Types.Product
 
 -- | /See:/ 'createProtection' smart constructor.
-data CreateProtection = CreateProtection'
-  { _cpName        :: !Text
-  , _cpResourceARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateProtection =
+  CreateProtection'
+    { _cpName        :: !Text
+    , _cpResourceARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateProtection' with the minimum fields required to make a request.
@@ -112,10 +114,12 @@ instance ToQuery CreateProtection where
         toQuery = const mempty
 
 -- | /See:/ 'createProtectionResponse' smart constructor.
-data CreateProtectionResponse = CreateProtectionResponse'
-  { _cprsProtectionId   :: !(Maybe Text)
-  , _cprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateProtectionResponse =
+  CreateProtectionResponse'
+    { _cprsProtectionId   :: !(Maybe Text)
+    , _cprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateProtectionResponse' with the minimum fields required to make a request.

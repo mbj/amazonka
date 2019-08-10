@@ -53,11 +53,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeSubnets' smart constructor.
-data DescribeSubnets = DescribeSubnets'
-  { _dsSubnetIds :: !(Maybe [Text])
-  , _dsFilters   :: !(Maybe [Filter])
-  , _dsDryRun    :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeSubnets =
+  DescribeSubnets'
+    { _dsSubnetIds :: !(Maybe [Text])
+    , _dsFilters   :: !(Maybe [Filter])
+    , _dsDryRun    :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeSubnets' with the minimum fields required to make a request.
@@ -123,10 +125,12 @@ instance ToQuery DescribeSubnets where
 --
 --
 -- /See:/ 'describeSubnetsResponse' smart constructor.
-data DescribeSubnetsResponse = DescribeSubnetsResponse'
-  { _dsrsSubnets        :: !(Maybe [Subnet])
-  , _dsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeSubnetsResponse =
+  DescribeSubnetsResponse'
+    { _dsrsSubnets        :: !(Maybe [Subnet])
+    , _dsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeSubnetsResponse' with the minimum fields required to make a request.

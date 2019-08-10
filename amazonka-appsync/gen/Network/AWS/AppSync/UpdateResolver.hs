@@ -50,14 +50,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateResolver' smart constructor.
-data UpdateResolver = UpdateResolver'
-  { _urResponseMappingTemplate :: !(Maybe Text)
-  , _urApiId                   :: !Text
-  , _urTypeName                :: !Text
-  , _urFieldName               :: !Text
-  , _urDataSourceName          :: !Text
-  , _urRequestMappingTemplate  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateResolver =
+  UpdateResolver'
+    { _urResponseMappingTemplate :: !(Maybe Text)
+    , _urApiId                   :: !Text
+    , _urTypeName                :: !Text
+    , _urFieldName               :: !Text
+    , _urDataSourceName          :: !Text
+    , _urRequestMappingTemplate  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateResolver' with the minimum fields required to make a request.
@@ -158,10 +160,12 @@ instance ToQuery UpdateResolver where
         toQuery = const mempty
 
 -- | /See:/ 'updateResolverResponse' smart constructor.
-data UpdateResolverResponse = UpdateResolverResponse'
-  { _urrsResolver       :: !(Maybe Resolver)
-  , _urrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateResolverResponse =
+  UpdateResolverResponse'
+    { _urrsResolver       :: !(Maybe Resolver)
+    , _urrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateResolverResponse' with the minimum fields required to make a request.

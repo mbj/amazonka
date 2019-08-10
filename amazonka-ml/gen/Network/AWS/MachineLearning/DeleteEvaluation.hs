@@ -51,9 +51,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteEvaluation' smart constructor.
-newtype DeleteEvaluation = DeleteEvaluation'
-  { _deEvaluationId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteEvaluation =
+  DeleteEvaluation'
+    { _deEvaluationId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteEvaluation' with the minimum fields required to make a request.
@@ -113,10 +115,12 @@ instance ToQuery DeleteEvaluation where
 --
 --
 -- /See:/ 'deleteEvaluationResponse' smart constructor.
-data DeleteEvaluationResponse = DeleteEvaluationResponse'
-  { _dersEvaluationId   :: !(Maybe Text)
-  , _dersResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteEvaluationResponse =
+  DeleteEvaluationResponse'
+    { _dersEvaluationId   :: !(Maybe Text)
+    , _dersResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteEvaluationResponse' with the minimum fields required to make a request.

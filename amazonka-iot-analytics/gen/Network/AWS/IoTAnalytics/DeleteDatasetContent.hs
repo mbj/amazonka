@@ -43,10 +43,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteDatasetContent' smart constructor.
-data DeleteDatasetContent = DeleteDatasetContent'
-  { _ddcVersionId   :: !(Maybe Text)
-  , _ddcDatasetName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteDatasetContent =
+  DeleteDatasetContent'
+    { _ddcVersionId   :: !(Maybe Text)
+    , _ddcDatasetName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteDatasetContent' with the minimum fields required to make a request.

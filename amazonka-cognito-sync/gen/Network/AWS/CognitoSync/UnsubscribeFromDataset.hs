@@ -53,12 +53,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'unsubscribeFromDataset' smart constructor.
-data UnsubscribeFromDataset = UnsubscribeFromDataset'
-  { _ufdIdentityPoolId :: !Text
-  , _ufdIdentityId     :: !Text
-  , _ufdDatasetName    :: !Text
-  , _ufdDeviceId       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UnsubscribeFromDataset =
+  UnsubscribeFromDataset'
+    { _ufdIdentityPoolId :: !Text
+    , _ufdIdentityId     :: !Text
+    , _ufdDatasetName    :: !Text
+    , _ufdDeviceId       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UnsubscribeFromDataset' with the minimum fields required to make a request.
@@ -140,9 +142,11 @@ instance ToQuery UnsubscribeFromDataset where
 --
 --
 -- /See:/ 'unsubscribeFromDatasetResponse' smart constructor.
-newtype UnsubscribeFromDatasetResponse = UnsubscribeFromDatasetResponse'
-  { _ufdrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UnsubscribeFromDatasetResponse =
+  UnsubscribeFromDatasetResponse'
+    { _ufdrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UnsubscribeFromDatasetResponse' with the minimum fields required to make a request.

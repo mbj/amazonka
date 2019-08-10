@@ -46,10 +46,12 @@ import Network.AWS.WAFRegional.Types
 import Network.AWS.WAFRegional.Types.Product
 
 -- | /See:/ 'deleteRegexPatternSet' smart constructor.
-data DeleteRegexPatternSet = DeleteRegexPatternSet'
-  { _drpsRegexPatternSetId :: !Text
-  , _drpsChangeToken       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteRegexPatternSet =
+  DeleteRegexPatternSet'
+    { _drpsRegexPatternSetId :: !Text
+    , _drpsChangeToken       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteRegexPatternSet' with the minimum fields required to make a request.
@@ -117,10 +119,12 @@ instance ToQuery DeleteRegexPatternSet where
         toQuery = const mempty
 
 -- | /See:/ 'deleteRegexPatternSetResponse' smart constructor.
-data DeleteRegexPatternSetResponse = DeleteRegexPatternSetResponse'
-  { _drpsrsChangeToken    :: !(Maybe Text)
-  , _drpsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteRegexPatternSetResponse =
+  DeleteRegexPatternSetResponse'
+    { _drpsrsChangeToken    :: !(Maybe Text)
+    , _drpsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteRegexPatternSetResponse' with the minimum fields required to make a request.

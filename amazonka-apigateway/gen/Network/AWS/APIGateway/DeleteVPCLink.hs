@@ -46,9 +46,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteVPCLink' smart constructor.
-newtype DeleteVPCLink = DeleteVPCLink'
-  { _dvlVpcLinkId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteVPCLink =
+  DeleteVPCLink'
+    { _dvlVpcLinkId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteVPCLink' with the minimum fields required to make a request.

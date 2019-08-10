@@ -26,12 +26,14 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'backup' smart constructor.
-data Backup = Backup'
-  { _bClusterId       :: !(Maybe Text)
-  , _bCreateTimestamp :: !(Maybe POSIX)
-  , _bBackupState     :: !(Maybe BackupState)
-  , _bBackupId        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Backup =
+  Backup'
+    { _bClusterId       :: !(Maybe Text)
+    , _bCreateTimestamp :: !(Maybe POSIX)
+    , _bBackupState     :: !(Maybe BackupState)
+    , _bBackupId        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Backup' with the minimum fields required to make a request.
@@ -91,13 +93,15 @@ instance NFData Backup where
 --
 --
 -- /See:/ 'certificates' smart constructor.
-data Certificates = Certificates'
-  { _cManufacturerHardwareCertificate :: !(Maybe Text)
-  , _cClusterCSR                      :: !(Maybe Text)
-  , _cHSMCertificate                  :: !(Maybe Text)
-  , _cClusterCertificate              :: !(Maybe Text)
-  , _cAWSHardwareCertificate          :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Certificates =
+  Certificates'
+    { _cManufacturerHardwareCertificate :: !(Maybe Text)
+    , _cClusterCSR                      :: !(Maybe Text)
+    , _cHSMCertificate                  :: !(Maybe Text)
+    , _cClusterCertificate              :: !(Maybe Text)
+    , _cAWSHardwareCertificate          :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Certificates' with the minimum fields required to make a request.
@@ -165,21 +169,23 @@ instance NFData Certificates where
 --
 --
 -- /See:/ 'cluster' smart constructor.
-data Cluster = Cluster'
-  { _cPreCoPassword   :: !(Maybe Text)
-  , _cStateMessage    :: !(Maybe Text)
-  , _cState           :: !(Maybe ClusterState)
-  , _cSubnetMapping   :: !(Maybe (Map Text Text))
-  , _cHSMs            :: !(Maybe [HSM])
-  , _cVPCId           :: !(Maybe Text)
-  , _cSourceBackupId  :: !(Maybe Text)
-  , _cCertificates    :: !(Maybe Certificates)
-  , _cSecurityGroup   :: !(Maybe Text)
-  , _cClusterId       :: !(Maybe Text)
-  , _cCreateTimestamp :: !(Maybe POSIX)
-  , _cBackupPolicy    :: !(Maybe BackupPolicy)
-  , _cHSMType         :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Cluster =
+  Cluster'
+    { _cPreCoPassword   :: !(Maybe Text)
+    , _cStateMessage    :: !(Maybe Text)
+    , _cState           :: !(Maybe ClusterState)
+    , _cSubnetMapping   :: !(Maybe (Map Text Text))
+    , _cHSMs            :: !(Maybe [HSM])
+    , _cVPCId           :: !(Maybe Text)
+    , _cSourceBackupId  :: !(Maybe Text)
+    , _cCertificates    :: !(Maybe Certificates)
+    , _cSecurityGroup   :: !(Maybe Text)
+    , _cClusterId       :: !(Maybe Text)
+    , _cCreateTimestamp :: !(Maybe POSIX)
+    , _cBackupPolicy    :: !(Maybe BackupPolicy)
+    , _cHSMType         :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Cluster' with the minimum fields required to make a request.
@@ -310,16 +316,18 @@ instance NFData Cluster where
 --
 --
 -- /See:/ 'hsm' smart constructor.
-data HSM = HSM'
-  { _hsmStateMessage     :: !(Maybe Text)
-  , _hsmState            :: !(Maybe HSMState)
-  , _hsmEniId            :: !(Maybe Text)
-  , _hsmSubnetId         :: !(Maybe Text)
-  , _hsmAvailabilityZone :: !(Maybe Text)
-  , _hsmClusterId        :: !(Maybe Text)
-  , _hsmEniIP            :: !(Maybe Text)
-  , _hsmHSMId            :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data HSM =
+  HSM'
+    { _hsmStateMessage     :: !(Maybe Text)
+    , _hsmState            :: !(Maybe HSMState)
+    , _hsmEniId            :: !(Maybe Text)
+    , _hsmSubnetId         :: !(Maybe Text)
+    , _hsmAvailabilityZone :: !(Maybe Text)
+    , _hsmClusterId        :: !(Maybe Text)
+    , _hsmEniIP            :: !(Maybe Text)
+    , _hsmHSMId            :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'HSM' with the minimum fields required to make a request.
@@ -411,10 +419,12 @@ instance NFData HSM where
 --
 --
 -- /See:/ 'tag' smart constructor.
-data Tag = Tag'
-  { _tagKey   :: !Text
-  , _tagValue :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Tag =
+  Tag'
+    { _tagKey   :: !Text
+    , _tagValue :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Tag' with the minimum fields required to make a request.

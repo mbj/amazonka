@@ -54,10 +54,12 @@ import Network.AWS.StorageGateway.Types.Product
 --
 --
 -- /See:/ 'deleteBandwidthRateLimit' smart constructor.
-data DeleteBandwidthRateLimit = DeleteBandwidthRateLimit'
-  { _dbrlbGatewayARN    :: !Text
-  , _dbrlbBandwidthType :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteBandwidthRateLimit =
+  DeleteBandwidthRateLimit'
+    { _dbrlbGatewayARN    :: !Text
+    , _dbrlbBandwidthType :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteBandwidthRateLimit' with the minimum fields required to make a request.
@@ -126,10 +128,12 @@ instance ToQuery DeleteBandwidthRateLimit where
 --
 --
 -- /See:/ 'deleteBandwidthRateLimitResponse' smart constructor.
-data DeleteBandwidthRateLimitResponse = DeleteBandwidthRateLimitResponse'
-  { _delrsGatewayARN     :: !(Maybe Text)
-  , _delrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteBandwidthRateLimitResponse =
+  DeleteBandwidthRateLimitResponse'
+    { _delrsGatewayARN     :: !(Maybe Text)
+    , _delrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteBandwidthRateLimitResponse' with the minimum fields required to make a request.

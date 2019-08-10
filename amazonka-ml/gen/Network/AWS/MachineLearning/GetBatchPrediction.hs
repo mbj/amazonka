@@ -61,9 +61,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getBatchPrediction' smart constructor.
-newtype GetBatchPrediction = GetBatchPrediction'
-  { _gbpBatchPredictionId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetBatchPrediction =
+  GetBatchPrediction'
+    { _gbpBatchPredictionId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBatchPrediction' with the minimum fields required to make a request.
@@ -140,26 +142,28 @@ instance ToQuery GetBatchPrediction where
 --
 --
 -- /See:/ 'getBatchPredictionResponse' smart constructor.
-data GetBatchPredictionResponse = GetBatchPredictionResponse'
-  { _gbprsStatus                      :: !(Maybe EntityStatus)
-  , _gbprsLastUpdatedAt               :: !(Maybe POSIX)
-  , _gbprsCreatedAt                   :: !(Maybe POSIX)
-  , _gbprsComputeTime                 :: !(Maybe Integer)
-  , _gbprsInputDataLocationS3         :: !(Maybe Text)
-  , _gbprsMLModelId                   :: !(Maybe Text)
-  , _gbprsBatchPredictionDataSourceId :: !(Maybe Text)
-  , _gbprsTotalRecordCount            :: !(Maybe Integer)
-  , _gbprsStartedAt                   :: !(Maybe POSIX)
-  , _gbprsBatchPredictionId           :: !(Maybe Text)
-  , _gbprsFinishedAt                  :: !(Maybe POSIX)
-  , _gbprsInvalidRecordCount          :: !(Maybe Integer)
-  , _gbprsCreatedByIAMUser            :: !(Maybe Text)
-  , _gbprsName                        :: !(Maybe Text)
-  , _gbprsLogURI                      :: !(Maybe Text)
-  , _gbprsMessage                     :: !(Maybe Text)
-  , _gbprsOutputURI                   :: !(Maybe Text)
-  , _gbprsResponseStatus              :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetBatchPredictionResponse =
+  GetBatchPredictionResponse'
+    { _gbprsStatus                      :: !(Maybe EntityStatus)
+    , _gbprsLastUpdatedAt               :: !(Maybe POSIX)
+    , _gbprsCreatedAt                   :: !(Maybe POSIX)
+    , _gbprsComputeTime                 :: !(Maybe Integer)
+    , _gbprsInputDataLocationS3         :: !(Maybe Text)
+    , _gbprsMLModelId                   :: !(Maybe Text)
+    , _gbprsBatchPredictionDataSourceId :: !(Maybe Text)
+    , _gbprsTotalRecordCount            :: !(Maybe Integer)
+    , _gbprsStartedAt                   :: !(Maybe POSIX)
+    , _gbprsBatchPredictionId           :: !(Maybe Text)
+    , _gbprsFinishedAt                  :: !(Maybe POSIX)
+    , _gbprsInvalidRecordCount          :: !(Maybe Integer)
+    , _gbprsCreatedByIAMUser            :: !(Maybe Text)
+    , _gbprsName                        :: !(Maybe Text)
+    , _gbprsLogURI                      :: !(Maybe Text)
+    , _gbprsMessage                     :: !(Maybe Text)
+    , _gbprsOutputURI                   :: !(Maybe Text)
+    , _gbprsResponseStatus              :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBatchPredictionResponse' with the minimum fields required to make a request.

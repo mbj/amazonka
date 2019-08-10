@@ -53,12 +53,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listReviewableHITs' smart constructor.
-data ListReviewableHITs = ListReviewableHITs'
-  { _lrhitStatus     :: !(Maybe ReviewableHITStatus)
-  , _lrhitHITTypeId  :: !(Maybe Text)
-  , _lrhitNextToken  :: !(Maybe Text)
-  , _lrhitMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListReviewableHITs =
+  ListReviewableHITs'
+    { _lrhitStatus     :: !(Maybe ReviewableHITStatus)
+    , _lrhitHITTypeId  :: !(Maybe Text)
+    , _lrhitNextToken  :: !(Maybe Text)
+    , _lrhitMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListReviewableHITs' with the minimum fields required to make a request.
@@ -148,12 +150,14 @@ instance ToQuery ListReviewableHITs where
         toQuery = const mempty
 
 -- | /See:/ 'listReviewableHITsResponse' smart constructor.
-data ListReviewableHITsResponse = ListReviewableHITsResponse'
-  { _lrhitrsNextToken      :: !(Maybe Text)
-  , _lrhitrsNumResults     :: !(Maybe Int)
-  , _lrhitrsHITs           :: !(Maybe [HIT])
-  , _lrhitrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListReviewableHITsResponse =
+  ListReviewableHITsResponse'
+    { _lrhitrsNextToken      :: !(Maybe Text)
+    , _lrhitrsNumResults     :: !(Maybe Int)
+    , _lrhitrsHITs           :: !(Maybe [HIT])
+    , _lrhitrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListReviewableHITsResponse' with the minimum fields required to make a request.

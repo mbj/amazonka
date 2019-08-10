@@ -47,11 +47,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'resetFpgaImageAttribute' smart constructor.
-data ResetFpgaImageAttribute = ResetFpgaImageAttribute'
-  { _rfiaAttribute   :: !(Maybe ResetFpgaImageAttributeName)
-  , _rfiaDryRun      :: !(Maybe Bool)
-  , _rfiaFpgaImageId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResetFpgaImageAttribute =
+  ResetFpgaImageAttribute'
+    { _rfiaAttribute   :: !(Maybe ResetFpgaImageAttributeName)
+    , _rfiaDryRun      :: !(Maybe Bool)
+    , _rfiaFpgaImageId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResetFpgaImageAttribute' with the minimum fields required to make a request.
@@ -117,10 +119,12 @@ instance ToQuery ResetFpgaImageAttribute where
                "FpgaImageId" =: _rfiaFpgaImageId]
 
 -- | /See:/ 'resetFpgaImageAttributeResponse' smart constructor.
-data ResetFpgaImageAttributeResponse = ResetFpgaImageAttributeResponse'
-  { _rfiarsReturn         :: !(Maybe Bool)
-  , _rfiarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResetFpgaImageAttributeResponse =
+  ResetFpgaImageAttributeResponse'
+    { _rfiarsReturn         :: !(Maybe Bool)
+    , _rfiarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResetFpgaImageAttributeResponse' with the minimum fields required to make a request.

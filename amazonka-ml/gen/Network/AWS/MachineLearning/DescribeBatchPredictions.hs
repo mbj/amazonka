@@ -59,19 +59,21 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeBatchPredictions' smart constructor.
-data DescribeBatchPredictions = DescribeBatchPredictions'
-  { _dbpEQ             :: !(Maybe Text)
-  , _dbpGE             :: !(Maybe Text)
-  , _dbpPrefix         :: !(Maybe Text)
-  , _dbpGT             :: !(Maybe Text)
-  , _dbpNE             :: !(Maybe Text)
-  , _dbpNextToken      :: !(Maybe Text)
-  , _dbpSortOrder      :: !(Maybe SortOrder)
-  , _dbpLimit          :: !(Maybe Nat)
-  , _dbpLT             :: !(Maybe Text)
-  , _dbpFilterVariable :: !(Maybe BatchPredictionFilterVariable)
-  , _dbpLE             :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeBatchPredictions =
+  DescribeBatchPredictions'
+    { _dbpEQ             :: !(Maybe Text)
+    , _dbpGE             :: !(Maybe Text)
+    , _dbpPrefix         :: !(Maybe Text)
+    , _dbpGT             :: !(Maybe Text)
+    , _dbpNE             :: !(Maybe Text)
+    , _dbpNextToken      :: !(Maybe Text)
+    , _dbpSortOrder      :: !(Maybe SortOrder)
+    , _dbpLimit          :: !(Maybe Nat)
+    , _dbpLT             :: !(Maybe Text)
+    , _dbpFilterVariable :: !(Maybe BatchPredictionFilterVariable)
+    , _dbpLE             :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeBatchPredictions' with the minimum fields required to make a request.
@@ -217,11 +219,13 @@ instance ToQuery DescribeBatchPredictions where
 --
 --
 -- /See:/ 'describeBatchPredictionsResponse' smart constructor.
-data DescribeBatchPredictionsResponse = DescribeBatchPredictionsResponse'
-  { _dbpsrsResults        :: !(Maybe [BatchPrediction])
-  , _dbpsrsNextToken      :: !(Maybe Text)
-  , _dbpsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeBatchPredictionsResponse =
+  DescribeBatchPredictionsResponse'
+    { _dbpsrsResults        :: !(Maybe [BatchPrediction])
+    , _dbpsrsNextToken      :: !(Maybe Text)
+    , _dbpsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeBatchPredictionsResponse' with the minimum fields required to make a request.

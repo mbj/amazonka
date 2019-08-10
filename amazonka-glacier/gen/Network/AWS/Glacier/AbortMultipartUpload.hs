@@ -58,11 +58,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'abortMultipartUpload' smart constructor.
-data AbortMultipartUpload = AbortMultipartUpload'
-  { _amuAccountId :: !Text
-  , _amuVaultName :: !Text
-  , _amuUploadId  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AbortMultipartUpload =
+  AbortMultipartUpload'
+    { _amuAccountId :: !Text
+    , _amuVaultName :: !Text
+    , _amuUploadId  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AbortMultipartUpload' with the minimum fields required to make a request.

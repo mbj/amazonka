@@ -45,10 +45,12 @@ import Network.AWS.Response
 -- | CreateSampleFindings request body.
 --
 -- /See:/ 'createSampleFindings' smart constructor.
-data CreateSampleFindings = CreateSampleFindings'
-  { _csfFindingTypes :: !(Maybe [Text])
-  , _csfDetectorId   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateSampleFindings =
+  CreateSampleFindings'
+    { _csfFindingTypes :: !(Maybe [Text])
+    , _csfDetectorId   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateSampleFindings' with the minimum fields required to make a request.
@@ -111,9 +113,11 @@ instance ToQuery CreateSampleFindings where
         toQuery = const mempty
 
 -- | /See:/ 'createSampleFindingsResponse' smart constructor.
-newtype CreateSampleFindingsResponse = CreateSampleFindingsResponse'
-  { _csfrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateSampleFindingsResponse =
+  CreateSampleFindingsResponse'
+    { _csfrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateSampleFindingsResponse' with the minimum fields required to make a request.

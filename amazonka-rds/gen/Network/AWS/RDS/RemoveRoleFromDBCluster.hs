@@ -43,10 +43,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'removeRoleFromDBCluster' smart constructor.
-data RemoveRoleFromDBCluster = RemoveRoleFromDBCluster'
-  { _rrfdcDBClusterIdentifier :: !Text
-  , _rrfdcRoleARN             :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RemoveRoleFromDBCluster =
+  RemoveRoleFromDBCluster'
+    { _rrfdcDBClusterIdentifier :: !Text
+    , _rrfdcRoleARN             :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RemoveRoleFromDBCluster' with the minimum fields required to make a request.

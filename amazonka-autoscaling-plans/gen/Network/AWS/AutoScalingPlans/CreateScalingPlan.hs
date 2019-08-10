@@ -49,11 +49,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createScalingPlan' smart constructor.
-data CreateScalingPlan = CreateScalingPlan'
-  { _cspScalingPlanName     :: !Text
-  , _cspApplicationSource   :: !ApplicationSource
-  , _cspScalingInstructions :: ![ScalingInstruction]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateScalingPlan =
+  CreateScalingPlan'
+    { _cspScalingPlanName     :: !Text
+    , _cspApplicationSource   :: !ApplicationSource
+    , _cspScalingInstructions :: ![ScalingInstruction]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateScalingPlan' with the minimum fields required to make a request.
@@ -128,10 +130,12 @@ instance ToQuery CreateScalingPlan where
         toQuery = const mempty
 
 -- | /See:/ 'createScalingPlanResponse' smart constructor.
-data CreateScalingPlanResponse = CreateScalingPlanResponse'
-  { _csprsResponseStatus     :: !Int
-  , _csprsScalingPlanVersion :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateScalingPlanResponse =
+  CreateScalingPlanResponse'
+    { _csprsResponseStatus     :: !Int
+    , _csprsScalingPlanVersion :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateScalingPlanResponse' with the minimum fields required to make a request.

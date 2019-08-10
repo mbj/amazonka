@@ -56,14 +56,16 @@ import Network.AWS.WorkDocs.Types
 import Network.AWS.WorkDocs.Types.Product
 
 -- | /See:/ 'describeDocumentVersions' smart constructor.
-data DescribeDocumentVersions = DescribeDocumentVersions'
-  { _ddvInclude             :: !(Maybe Text)
-  , _ddvAuthenticationToken :: !(Maybe (Sensitive Text))
-  , _ddvMarker              :: !(Maybe Text)
-  , _ddvLimit               :: !(Maybe Nat)
-  , _ddvFields              :: !(Maybe Text)
-  , _ddvDocumentId          :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data DescribeDocumentVersions =
+  DescribeDocumentVersions'
+    { _ddvInclude             :: !(Maybe Text)
+    , _ddvAuthenticationToken :: !(Maybe (Sensitive Text))
+    , _ddvMarker              :: !(Maybe Text)
+    , _ddvLimit               :: !(Maybe Nat)
+    , _ddvFields              :: !(Maybe Text)
+    , _ddvDocumentId          :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDocumentVersions' with the minimum fields required to make a request.
@@ -162,11 +164,13 @@ instance ToQuery DescribeDocumentVersions where
                "limit" =: _ddvLimit, "fields" =: _ddvFields]
 
 -- | /See:/ 'describeDocumentVersionsResponse' smart constructor.
-data DescribeDocumentVersionsResponse = DescribeDocumentVersionsResponse'
-  { _ddvrsDocumentVersions :: !(Maybe [DocumentVersionMetadata])
-  , _ddvrsMarker           :: !(Maybe Text)
-  , _ddvrsResponseStatus   :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data DescribeDocumentVersionsResponse =
+  DescribeDocumentVersionsResponse'
+    { _ddvrsDocumentVersions :: !(Maybe [DocumentVersionMetadata])
+    , _ddvrsMarker           :: !(Maybe Text)
+    , _ddvrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDocumentVersionsResponse' with the minimum fields required to make a request.

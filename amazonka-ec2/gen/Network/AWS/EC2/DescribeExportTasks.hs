@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeExportTasks' smart constructor.
-newtype DescribeExportTasks = DescribeExportTasks'
-  { _detExportTaskIds :: Maybe [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeExportTasks =
+  DescribeExportTasks'
+    { _detExportTaskIds :: Maybe [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeExportTasks' with the minimum fields required to make a request.
@@ -103,10 +105,12 @@ instance ToQuery DescribeExportTasks where
 --
 --
 -- /See:/ 'describeExportTasksResponse' smart constructor.
-data DescribeExportTasksResponse = DescribeExportTasksResponse'
-  { _detrsExportTasks    :: !(Maybe [ExportTask])
-  , _detrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeExportTasksResponse =
+  DescribeExportTasksResponse'
+    { _detrsExportTasks    :: !(Maybe [ExportTask])
+    , _detrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeExportTasksResponse' with the minimum fields required to make a request.

@@ -49,9 +49,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getBuiltinIntent' smart constructor.
-newtype GetBuiltinIntent = GetBuiltinIntent'
-  { _gbiSignature :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetBuiltinIntent =
+  GetBuiltinIntent'
+    { _gbiSignature :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBuiltinIntent' with the minimum fields required to make a request.
@@ -99,12 +101,14 @@ instance ToQuery GetBuiltinIntent where
         toQuery = const mempty
 
 -- | /See:/ 'getBuiltinIntentResponse' smart constructor.
-data GetBuiltinIntentResponse = GetBuiltinIntentResponse'
-  { _gbirsSignature        :: !(Maybe Text)
-  , _gbirsSlots            :: !(Maybe [BuiltinIntentSlot])
-  , _gbirsSupportedLocales :: !(Maybe [Locale])
-  , _gbirsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetBuiltinIntentResponse =
+  GetBuiltinIntentResponse'
+    { _gbirsSignature        :: !(Maybe Text)
+    , _gbirsSlots            :: !(Maybe [BuiltinIntentSlot])
+    , _gbirsSupportedLocales :: !(Maybe [Locale])
+    , _gbirsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBuiltinIntentResponse' with the minimum fields required to make a request.

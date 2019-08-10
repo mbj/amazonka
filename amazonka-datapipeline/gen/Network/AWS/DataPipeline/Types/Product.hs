@@ -26,11 +26,13 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'field' smart constructor.
-data Field = Field'
-  { _fRefValue    :: !(Maybe Text)
-  , _fStringValue :: !(Maybe Text)
-  , _fKey         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Field =
+  Field'
+    { _fRefValue    :: !(Maybe Text)
+    , _fStringValue :: !(Maybe Text)
+    , _fKey         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Field' with the minimum fields required to make a request.
@@ -88,10 +90,12 @@ instance ToJSON Field where
 --
 --
 -- /See:/ 'instanceIdentity' smart constructor.
-data InstanceIdentity = InstanceIdentity'
-  { _iiSignature :: !(Maybe Text)
-  , _iiDocument  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceIdentity =
+  InstanceIdentity'
+    { _iiSignature :: !(Maybe Text)
+    , _iiDocument  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceIdentity' with the minimum fields required to make a request.
@@ -131,10 +135,12 @@ instance ToJSON InstanceIdentity where
 --
 --
 -- /See:/ 'operator' smart constructor.
-data Operator = Operator'
-  { _oValues :: !(Maybe [Text])
-  , _oType   :: !(Maybe OperatorType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Operator =
+  Operator'
+    { _oValues :: !(Maybe [Text])
+    , _oType   :: !(Maybe OperatorType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Operator' with the minimum fields required to make a request.
@@ -172,10 +178,12 @@ instance ToJSON Operator where
 --
 --
 -- /See:/ 'parameterAttribute' smart constructor.
-data ParameterAttribute = ParameterAttribute'
-  { _paKey         :: !Text
-  , _paStringValue :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ParameterAttribute =
+  ParameterAttribute'
+    { _paKey         :: !Text
+    , _paStringValue :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ParameterAttribute' with the minimum fields required to make a request.
@@ -224,10 +232,12 @@ instance ToJSON ParameterAttribute where
 --
 --
 -- /See:/ 'parameterObject' smart constructor.
-data ParameterObject = ParameterObject'
-  { _poId         :: !Text
-  , _poAttributes :: ![ParameterAttribute]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ParameterObject =
+  ParameterObject'
+    { _poId         :: !Text
+    , _poAttributes :: ![ParameterAttribute]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ParameterObject' with the minimum fields required to make a request.
@@ -274,10 +284,12 @@ instance ToJSON ParameterObject where
 --
 --
 -- /See:/ 'parameterValue' smart constructor.
-data ParameterValue = ParameterValue'
-  { _pvId          :: !Text
-  , _pvStringValue :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ParameterValue =
+  ParameterValue'
+    { _pvId          :: !Text
+    , _pvStringValue :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ParameterValue' with the minimum fields required to make a request.
@@ -326,13 +338,15 @@ instance ToJSON ParameterValue where
 --
 --
 -- /See:/ 'pipelineDescription' smart constructor.
-data PipelineDescription = PipelineDescription'
-  { _pdDescription :: !(Maybe Text)
-  , _pdTags        :: !(Maybe [Tag])
-  , _pdPipelineId  :: !Text
-  , _pdName        :: !Text
-  , _pdFields      :: ![Field]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PipelineDescription =
+  PipelineDescription'
+    { _pdDescription :: !(Maybe Text)
+    , _pdTags        :: !(Maybe [Tag])
+    , _pdPipelineId  :: !Text
+    , _pdName        :: !Text
+    , _pdFields      :: ![Field]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PipelineDescription' with the minimum fields required to make a request.
@@ -401,10 +415,12 @@ instance NFData PipelineDescription where
 --
 --
 -- /See:/ 'pipelineIdName' smart constructor.
-data PipelineIdName = PipelineIdName'
-  { _pinName :: !(Maybe Text)
-  , _pinId   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PipelineIdName =
+  PipelineIdName'
+    { _pinName :: !(Maybe Text)
+    , _pinId   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PipelineIdName' with the minimum fields required to make a request.
@@ -442,11 +458,13 @@ instance NFData PipelineIdName where
 --
 --
 -- /See:/ 'pipelineObject' smart constructor.
-data PipelineObject = PipelineObject'
-  { _pId     :: !Text
-  , _pName   :: !Text
-  , _pFields :: ![Field]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PipelineObject =
+  PipelineObject'
+    { _pId     :: !Text
+    , _pName   :: !Text
+    , _pFields :: ![Field]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PipelineObject' with the minimum fields required to make a request.
@@ -502,9 +520,11 @@ instance ToJSON PipelineObject where
 --
 --
 -- /See:/ 'query' smart constructor.
-newtype Query = Query'
-  { _qSelectors :: Maybe [Selector]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype Query =
+  Query'
+    { _qSelectors :: Maybe [Selector]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Query' with the minimum fields required to make a request.
@@ -535,10 +555,12 @@ instance ToJSON Query where
 --
 --
 -- /See:/ 'selector' smart constructor.
-data Selector = Selector'
-  { _sOperator  :: !(Maybe Operator)
-  , _sFieldName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Selector =
+  Selector'
+    { _sOperator  :: !(Maybe Operator)
+    , _sFieldName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Selector' with the minimum fields required to make a request.
@@ -577,10 +599,12 @@ instance ToJSON Selector where
 --
 --
 -- /See:/ 'tag' smart constructor.
-data Tag = Tag'
-  { _tagKey   :: !Text
-  , _tagValue :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Tag =
+  Tag'
+    { _tagKey   :: !Text
+    , _tagValue :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Tag' with the minimum fields required to make a request.
@@ -626,12 +650,14 @@ instance ToJSON Tag where
 --
 --
 -- /See:/ 'taskObject' smart constructor.
-data TaskObject = TaskObject'
-  { _toPipelineId :: !(Maybe Text)
-  , _toAttemptId  :: !(Maybe Text)
-  , _toTaskId     :: !(Maybe Text)
-  , _toObjects    :: !(Maybe (Map Text PipelineObject))
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TaskObject =
+  TaskObject'
+    { _toPipelineId :: !(Maybe Text)
+    , _toAttemptId  :: !(Maybe Text)
+    , _toTaskId     :: !(Maybe Text)
+    , _toObjects    :: !(Maybe (Map Text PipelineObject))
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TaskObject' with the minimum fields required to make a request.
@@ -690,10 +716,12 @@ instance NFData TaskObject where
 --
 --
 -- /See:/ 'validationError' smart constructor.
-data ValidationError = ValidationError'
-  { _veId     :: !(Maybe Text)
-  , _veErrors :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ValidationError =
+  ValidationError'
+    { _veId     :: !(Maybe Text)
+    , _veErrors :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ValidationError' with the minimum fields required to make a request.
@@ -732,10 +760,12 @@ instance NFData ValidationError where
 --
 --
 -- /See:/ 'validationWarning' smart constructor.
-data ValidationWarning = ValidationWarning'
-  { _vwWarnings :: !(Maybe [Text])
-  , _vwId       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ValidationWarning =
+  ValidationWarning'
+    { _vwWarnings :: !(Maybe [Text])
+    , _vwId       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ValidationWarning' with the minimum fields required to make a request.

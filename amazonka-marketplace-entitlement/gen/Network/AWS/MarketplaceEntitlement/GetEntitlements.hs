@@ -53,12 +53,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getEntitlements' smart constructor.
-data GetEntitlements = GetEntitlements'
-  { _geNextToken   :: !(Maybe Text)
-  , _geFilter      :: !(Maybe (Map GetEntitlementFilterName (List1 Text)))
-  , _geMaxResults  :: !(Maybe Int)
-  , _geProductCode :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetEntitlements =
+  GetEntitlements'
+    { _geNextToken   :: !(Maybe Text)
+    , _geFilter      :: !(Maybe (Map GetEntitlementFilterName (List1 Text)))
+    , _geMaxResults  :: !(Maybe Int)
+    , _geProductCode :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetEntitlements' with the minimum fields required to make a request.
@@ -145,11 +147,13 @@ instance ToQuery GetEntitlements where
 --
 --
 -- /See:/ 'getEntitlementsResponse' smart constructor.
-data GetEntitlementsResponse = GetEntitlementsResponse'
-  { _gersNextToken      :: !(Maybe Text)
-  , _gersEntitlements   :: !(Maybe [Entitlement])
-  , _gersResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetEntitlementsResponse =
+  GetEntitlementsResponse'
+    { _gersNextToken      :: !(Maybe Text)
+    , _gersEntitlements   :: !(Maybe [Entitlement])
+    , _gersResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetEntitlementsResponse' with the minimum fields required to make a request.

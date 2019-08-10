@@ -50,9 +50,11 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'describePatchGroupState' smart constructor.
-newtype DescribePatchGroupState = DescribePatchGroupState'
-  { _dpgsPatchGroup :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribePatchGroupState =
+  DescribePatchGroupState'
+    { _dpgsPatchGroup :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribePatchGroupState' with the minimum fields required to make a request.
@@ -112,15 +114,17 @@ instance ToQuery DescribePatchGroupState where
         toQuery = const mempty
 
 -- | /See:/ 'describePatchGroupStateResponse' smart constructor.
-data DescribePatchGroupStateResponse = DescribePatchGroupStateResponse'
-  { _dpgsrsInstancesWithMissingPatches        :: !(Maybe Int)
-  , _dpgsrsInstancesWithInstalledOtherPatches :: !(Maybe Int)
-  , _dpgsrsInstancesWithNotApplicablePatches  :: !(Maybe Int)
-  , _dpgsrsInstancesWithInstalledPatches      :: !(Maybe Int)
-  , _dpgsrsInstances                          :: !(Maybe Int)
-  , _dpgsrsInstancesWithFailedPatches         :: !(Maybe Int)
-  , _dpgsrsResponseStatus                     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribePatchGroupStateResponse =
+  DescribePatchGroupStateResponse'
+    { _dpgsrsInstancesWithMissingPatches        :: !(Maybe Int)
+    , _dpgsrsInstancesWithInstalledOtherPatches :: !(Maybe Int)
+    , _dpgsrsInstancesWithNotApplicablePatches  :: !(Maybe Int)
+    , _dpgsrsInstancesWithInstalledPatches      :: !(Maybe Int)
+    , _dpgsrsInstances                          :: !(Maybe Int)
+    , _dpgsrsInstancesWithFailedPatches         :: !(Maybe Int)
+    , _dpgsrsResponseStatus                     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribePatchGroupStateResponse' with the minimum fields required to make a request.

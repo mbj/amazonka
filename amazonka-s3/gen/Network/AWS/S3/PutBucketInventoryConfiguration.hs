@@ -42,11 +42,13 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'putBucketInventoryConfiguration' smart constructor.
-data PutBucketInventoryConfiguration = PutBucketInventoryConfiguration'
-  { _pbicBucket                 :: !BucketName
-  , _pbicId                     :: !Text
-  , _pbicInventoryConfiguration :: !InventoryConfiguration
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data PutBucketInventoryConfiguration =
+  PutBucketInventoryConfiguration'
+    { _pbicBucket                 :: !BucketName
+    , _pbicId                     :: !Text
+    , _pbicInventoryConfiguration :: !InventoryConfiguration
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutBucketInventoryConfiguration' with the minimum fields required to make a request.

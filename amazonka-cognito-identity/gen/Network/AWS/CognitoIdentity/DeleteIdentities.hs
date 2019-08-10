@@ -51,9 +51,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteIdentities' smart constructor.
-newtype DeleteIdentities = DeleteIdentities'
-  { _diIdentityIdsToDelete :: List1 Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteIdentities =
+  DeleteIdentities'
+    { _diIdentityIdsToDelete :: List1 Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteIdentities' with the minimum fields required to make a request.
@@ -114,10 +116,12 @@ instance ToQuery DeleteIdentities where
 --
 --
 -- /See:/ 'deleteIdentitiesResponse' smart constructor.
-data DeleteIdentitiesResponse = DeleteIdentitiesResponse'
-  { _dirsUnprocessedIdentityIds :: !(Maybe [UnprocessedIdentityId])
-  , _dirsResponseStatus         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteIdentitiesResponse =
+  DeleteIdentitiesResponse'
+    { _dirsUnprocessedIdentityIds :: !(Maybe [UnprocessedIdentityId])
+    , _dirsResponseStatus         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteIdentitiesResponse' with the minimum fields required to make a request.

@@ -62,22 +62,24 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'modifyDBCluster' smart constructor.
-data ModifyDBCluster = ModifyDBCluster'
-  { _mdcEngineVersion                   :: !(Maybe Text)
-  , _mdcMasterUserPassword              :: !(Maybe Text)
-  , _mdcBacktrackWindow                 :: !(Maybe Integer)
-  , _mdcPreferredMaintenanceWindow      :: !(Maybe Text)
-  , _mdcPreferredBackupWindow           :: !(Maybe Text)
-  , _mdcBackupRetentionPeriod           :: !(Maybe Int)
-  , _mdcVPCSecurityGroupIds             :: !(Maybe [Text])
-  , _mdcDBClusterParameterGroupName     :: !(Maybe Text)
-  , _mdcApplyImmediately                :: !(Maybe Bool)
-  , _mdcOptionGroupName                 :: !(Maybe Text)
-  , _mdcNewDBClusterIdentifier          :: !(Maybe Text)
-  , _mdcPort                            :: !(Maybe Int)
-  , _mdcEnableIAMDatabaseAuthentication :: !(Maybe Bool)
-  , _mdcDBClusterIdentifier             :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyDBCluster =
+  ModifyDBCluster'
+    { _mdcEngineVersion                   :: !(Maybe Text)
+    , _mdcMasterUserPassword              :: !(Maybe Text)
+    , _mdcBacktrackWindow                 :: !(Maybe Integer)
+    , _mdcPreferredMaintenanceWindow      :: !(Maybe Text)
+    , _mdcPreferredBackupWindow           :: !(Maybe Text)
+    , _mdcBackupRetentionPeriod           :: !(Maybe Int)
+    , _mdcVPCSecurityGroupIds             :: !(Maybe [Text])
+    , _mdcDBClusterParameterGroupName     :: !(Maybe Text)
+    , _mdcApplyImmediately                :: !(Maybe Bool)
+    , _mdcOptionGroupName                 :: !(Maybe Text)
+    , _mdcNewDBClusterIdentifier          :: !(Maybe Text)
+    , _mdcPort                            :: !(Maybe Int)
+    , _mdcEnableIAMDatabaseAuthentication :: !(Maybe Bool)
+    , _mdcDBClusterIdentifier             :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyDBCluster' with the minimum fields required to make a request.
@@ -236,10 +238,12 @@ instance ToQuery ModifyDBCluster where
                "DBClusterIdentifier" =: _mdcDBClusterIdentifier]
 
 -- | /See:/ 'modifyDBClusterResponse' smart constructor.
-data ModifyDBClusterResponse = ModifyDBClusterResponse'
-  { _mdcrsDBCluster      :: !(Maybe DBCluster)
-  , _mdcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyDBClusterResponse =
+  ModifyDBClusterResponse'
+    { _mdcrsDBCluster      :: !(Maybe DBCluster)
+    , _mdcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyDBClusterResponse' with the minimum fields required to make a request.

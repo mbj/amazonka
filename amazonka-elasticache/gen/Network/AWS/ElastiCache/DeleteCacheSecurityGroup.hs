@@ -46,9 +46,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteCacheSecurityGroup' smart constructor.
-newtype DeleteCacheSecurityGroup = DeleteCacheSecurityGroup'
-  { _dcsgCacheSecurityGroupName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteCacheSecurityGroup =
+  DeleteCacheSecurityGroup'
+    { _dcsgCacheSecurityGroupName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteCacheSecurityGroup' with the minimum fields required to make a request.

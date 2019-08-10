@@ -66,18 +66,20 @@ import Network.AWS.Response
 -- | Configuration parameters used to update an existing OriginEndpoint.
 --
 -- /See:/ 'updateOriginEndpoint' smart constructor.
-data UpdateOriginEndpoint = UpdateOriginEndpoint'
-  { _uoeWhitelist              :: !(Maybe [Text])
-  , _uoeHlsPackage             :: !(Maybe HlsPackage)
-  , _uoeManifestName           :: !(Maybe Text)
-  , _uoeStartoverWindowSeconds :: !(Maybe Int)
-  , _uoeDashPackage            :: !(Maybe DashPackage)
-  , _uoeMssPackage             :: !(Maybe MssPackage)
-  , _uoeTimeDelaySeconds       :: !(Maybe Int)
-  , _uoeCmafPackage            :: !(Maybe CmafPackageCreateOrUpdateParameters)
-  , _uoeDescription            :: !(Maybe Text)
-  , _uoeId                     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateOriginEndpoint =
+  UpdateOriginEndpoint'
+    { _uoeWhitelist              :: !(Maybe [Text])
+    , _uoeHlsPackage             :: !(Maybe HlsPackage)
+    , _uoeManifestName           :: !(Maybe Text)
+    , _uoeStartoverWindowSeconds :: !(Maybe Int)
+    , _uoeDashPackage            :: !(Maybe DashPackage)
+    , _uoeMssPackage             :: !(Maybe MssPackage)
+    , _uoeTimeDelaySeconds       :: !(Maybe Int)
+    , _uoeCmafPackage            :: !(Maybe CmafPackageCreateOrUpdateParameters)
+    , _uoeDescription            :: !(Maybe Text)
+    , _uoeId                     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateOriginEndpoint' with the minimum fields required to make a request.
@@ -218,22 +220,24 @@ instance ToQuery UpdateOriginEndpoint where
         toQuery = const mempty
 
 -- | /See:/ 'updateOriginEndpointResponse' smart constructor.
-data UpdateOriginEndpointResponse = UpdateOriginEndpointResponse'
-  { _uoersWhitelist              :: !(Maybe [Text])
-  , _uoersHlsPackage             :: !(Maybe HlsPackage)
-  , _uoersARN                    :: !(Maybe Text)
-  , _uoersManifestName           :: !(Maybe Text)
-  , _uoersURL                    :: !(Maybe Text)
-  , _uoersChannelId              :: !(Maybe Text)
-  , _uoersStartoverWindowSeconds :: !(Maybe Int)
-  , _uoersDashPackage            :: !(Maybe DashPackage)
-  , _uoersMssPackage             :: !(Maybe MssPackage)
-  , _uoersId                     :: !(Maybe Text)
-  , _uoersTimeDelaySeconds       :: !(Maybe Int)
-  , _uoersCmafPackage            :: !(Maybe CmafPackage)
-  , _uoersDescription            :: !(Maybe Text)
-  , _uoersResponseStatus         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateOriginEndpointResponse =
+  UpdateOriginEndpointResponse'
+    { _uoersWhitelist              :: !(Maybe [Text])
+    , _uoersHlsPackage             :: !(Maybe HlsPackage)
+    , _uoersARN                    :: !(Maybe Text)
+    , _uoersManifestName           :: !(Maybe Text)
+    , _uoersURL                    :: !(Maybe Text)
+    , _uoersChannelId              :: !(Maybe Text)
+    , _uoersStartoverWindowSeconds :: !(Maybe Int)
+    , _uoersDashPackage            :: !(Maybe DashPackage)
+    , _uoersMssPackage             :: !(Maybe MssPackage)
+    , _uoersId                     :: !(Maybe Text)
+    , _uoersTimeDelaySeconds       :: !(Maybe Int)
+    , _uoersCmafPackage            :: !(Maybe CmafPackage)
+    , _uoersDescription            :: !(Maybe Text)
+    , _uoersResponseStatus         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateOriginEndpointResponse' with the minimum fields required to make a request.

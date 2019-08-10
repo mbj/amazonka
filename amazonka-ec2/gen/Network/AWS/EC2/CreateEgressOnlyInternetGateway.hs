@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createEgressOnlyInternetGateway' smart constructor.
-data CreateEgressOnlyInternetGateway = CreateEgressOnlyInternetGateway'
-  { _ceoigClientToken :: !(Maybe Text)
-  , _ceoigDryRun      :: !(Maybe Bool)
-  , _ceoigVPCId       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateEgressOnlyInternetGateway =
+  CreateEgressOnlyInternetGateway'
+    { _ceoigClientToken :: !(Maybe Text)
+    , _ceoigDryRun      :: !(Maybe Bool)
+    , _ceoigVPCId       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateEgressOnlyInternetGateway' with the minimum fields required to make a request.
@@ -120,11 +122,13 @@ instance ToQuery CreateEgressOnlyInternetGateway
                "DryRun" =: _ceoigDryRun, "VpcId" =: _ceoigVPCId]
 
 -- | /See:/ 'createEgressOnlyInternetGatewayResponse' smart constructor.
-data CreateEgressOnlyInternetGatewayResponse = CreateEgressOnlyInternetGatewayResponse'
-  { _ceoigrsClientToken               :: !(Maybe Text)
-  , _ceoigrsEgressOnlyInternetGateway :: !(Maybe EgressOnlyInternetGateway)
-  , _ceoigrsResponseStatus            :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateEgressOnlyInternetGatewayResponse =
+  CreateEgressOnlyInternetGatewayResponse'
+    { _ceoigrsClientToken               :: !(Maybe Text)
+    , _ceoigrsEgressOnlyInternetGateway :: !(Maybe EgressOnlyInternetGateway)
+    , _ceoigrsResponseStatus            :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateEgressOnlyInternetGatewayResponse' with the minimum fields required to make a request.

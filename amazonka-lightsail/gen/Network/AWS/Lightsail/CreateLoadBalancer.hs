@@ -52,14 +52,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createLoadBalancer' smart constructor.
-data CreateLoadBalancer = CreateLoadBalancer'
-  { _clbHealthCheckPath             :: !(Maybe Text)
-  , _clbCertificateName             :: !(Maybe Text)
-  , _clbCertificateDomainName       :: !(Maybe Text)
-  , _clbCertificateAlternativeNames :: !(Maybe [Text])
-  , _clbLoadBalancerName            :: !Text
-  , _clbInstancePort                :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateLoadBalancer =
+  CreateLoadBalancer'
+    { _clbHealthCheckPath             :: !(Maybe Text)
+    , _clbCertificateName             :: !(Maybe Text)
+    , _clbCertificateDomainName       :: !(Maybe Text)
+    , _clbCertificateAlternativeNames :: !(Maybe [Text])
+    , _clbLoadBalancerName            :: !Text
+    , _clbInstancePort                :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateLoadBalancer' with the minimum fields required to make a request.
@@ -161,10 +163,12 @@ instance ToQuery CreateLoadBalancer where
         toQuery = const mempty
 
 -- | /See:/ 'createLoadBalancerResponse' smart constructor.
-data CreateLoadBalancerResponse = CreateLoadBalancerResponse'
-  { _clbrsOperations     :: !(Maybe [Operation])
-  , _clbrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateLoadBalancerResponse =
+  CreateLoadBalancerResponse'
+    { _clbrsOperations     :: !(Maybe [Operation])
+    , _clbrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateLoadBalancerResponse' with the minimum fields required to make a request.

@@ -55,11 +55,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeSnapshotAttribute' smart constructor.
-data DescribeSnapshotAttribute = DescribeSnapshotAttribute'
-  { _dsaDryRun     :: !(Maybe Bool)
-  , _dsaAttribute  :: !SnapshotAttributeName
-  , _dsaSnapshotId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeSnapshotAttribute =
+  DescribeSnapshotAttribute'
+    { _dsaDryRun     :: !(Maybe Bool)
+    , _dsaAttribute  :: !SnapshotAttributeName
+    , _dsaSnapshotId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeSnapshotAttribute' with the minimum fields required to make a request.
@@ -135,12 +137,14 @@ instance ToQuery DescribeSnapshotAttribute where
 --
 --
 -- /See:/ 'describeSnapshotAttributeResponse' smart constructor.
-data DescribeSnapshotAttributeResponse = DescribeSnapshotAttributeResponse'
-  { _dsarsCreateVolumePermissions :: !(Maybe [CreateVolumePermission])
-  , _dsarsProductCodes            :: !(Maybe [ProductCode])
-  , _dsarsSnapshotId              :: !(Maybe Text)
-  , _dsarsResponseStatus          :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeSnapshotAttributeResponse =
+  DescribeSnapshotAttributeResponse'
+    { _dsarsCreateVolumePermissions :: !(Maybe [CreateVolumePermission])
+    , _dsarsProductCodes            :: !(Maybe [ProductCode])
+    , _dsarsSnapshotId              :: !(Maybe Text)
+    , _dsarsResponseStatus          :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeSnapshotAttributeResponse' with the minimum fields required to make a request.

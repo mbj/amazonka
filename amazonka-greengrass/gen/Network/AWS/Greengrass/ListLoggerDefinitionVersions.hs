@@ -46,11 +46,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listLoggerDefinitionVersions' smart constructor.
-data ListLoggerDefinitionVersions = ListLoggerDefinitionVersions'
-  { _lldvNextToken          :: !(Maybe Text)
-  , _lldvMaxResults         :: !(Maybe Text)
-  , _lldvLoggerDefinitionId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListLoggerDefinitionVersions =
+  ListLoggerDefinitionVersions'
+    { _lldvNextToken          :: !(Maybe Text)
+    , _lldvMaxResults         :: !(Maybe Text)
+    , _lldvLoggerDefinitionId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListLoggerDefinitionVersions' with the minimum fields required to make a request.
@@ -121,11 +123,13 @@ instance ToQuery ListLoggerDefinitionVersions where
                "MaxResults" =: _lldvMaxResults]
 
 -- | /See:/ 'listLoggerDefinitionVersionsResponse' smart constructor.
-data ListLoggerDefinitionVersionsResponse = ListLoggerDefinitionVersionsResponse'
-  { _lldvrsVersions       :: !(Maybe [VersionInformation])
-  , _lldvrsNextToken      :: !(Maybe Text)
-  , _lldvrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListLoggerDefinitionVersionsResponse =
+  ListLoggerDefinitionVersionsResponse'
+    { _lldvrsVersions       :: !(Maybe [VersionInformation])
+    , _lldvrsNextToken      :: !(Maybe Text)
+    , _lldvrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListLoggerDefinitionVersionsResponse' with the minimum fields required to make a request.

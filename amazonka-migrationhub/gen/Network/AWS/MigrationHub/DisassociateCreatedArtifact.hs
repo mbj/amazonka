@@ -55,12 +55,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'disassociateCreatedArtifact' smart constructor.
-data DisassociateCreatedArtifact = DisassociateCreatedArtifact'
-  { _dcaDryRun               :: !(Maybe Bool)
-  , _dcaProgressUpdateStream :: !Text
-  , _dcaMigrationTaskName    :: !Text
-  , _dcaCreatedArtifactName  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DisassociateCreatedArtifact =
+  DisassociateCreatedArtifact'
+    { _dcaDryRun               :: !(Maybe Bool)
+    , _dcaProgressUpdateStream :: !Text
+    , _dcaMigrationTaskName    :: !Text
+    , _dcaCreatedArtifactName  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisassociateCreatedArtifact' with the minimum fields required to make a request.
@@ -146,9 +148,11 @@ instance ToQuery DisassociateCreatedArtifact where
         toQuery = const mempty
 
 -- | /See:/ 'disassociateCreatedArtifactResponse' smart constructor.
-newtype DisassociateCreatedArtifactResponse = DisassociateCreatedArtifactResponse'
-  { _dcarsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DisassociateCreatedArtifactResponse =
+  DisassociateCreatedArtifactResponse'
+    { _dcarsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisassociateCreatedArtifactResponse' with the minimum fields required to make a request.

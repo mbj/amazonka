@@ -46,11 +46,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateThingGroupsForThing' smart constructor.
-data UpdateThingGroupsForThing = UpdateThingGroupsForThing'
-  { _utgftThingGroupsToAdd    :: !(Maybe [Text])
-  , _utgftThingGroupsToRemove :: !(Maybe [Text])
-  , _utgftThingName           :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateThingGroupsForThing =
+  UpdateThingGroupsForThing'
+    { _utgftThingGroupsToAdd    :: !(Maybe [Text])
+    , _utgftThingGroupsToRemove :: !(Maybe [Text])
+    , _utgftThingName           :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateThingGroupsForThing' with the minimum fields required to make a request.
@@ -118,9 +120,11 @@ instance ToQuery UpdateThingGroupsForThing where
         toQuery = const mempty
 
 -- | /See:/ 'updateThingGroupsForThingResponse' smart constructor.
-newtype UpdateThingGroupsForThingResponse = UpdateThingGroupsForThingResponse'
-  { _utgftrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateThingGroupsForThingResponse =
+  UpdateThingGroupsForThingResponse'
+    { _utgftrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateThingGroupsForThingResponse' with the minimum fields required to make a request.

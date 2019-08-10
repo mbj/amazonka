@@ -48,9 +48,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getDisks' smart constructor.
-newtype GetDisks = GetDisks'
-  { _gPageToken :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetDisks =
+  GetDisks'
+    { _gPageToken :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDisks' with the minimum fields required to make a request.
@@ -103,11 +105,13 @@ instance ToQuery GetDisks where
         toQuery = const mempty
 
 -- | /See:/ 'getDisksResponse' smart constructor.
-data GetDisksResponse = GetDisksResponse'
-  { _gddrsNextPageToken  :: !(Maybe Text)
-  , _gddrsDisks          :: !(Maybe [Disk])
-  , _gddrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDisksResponse =
+  GetDisksResponse'
+    { _gddrsNextPageToken  :: !(Maybe Text)
+    , _gddrsDisks          :: !(Maybe [Disk])
+    , _gddrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDisksResponse' with the minimum fields required to make a request.

@@ -45,11 +45,13 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'deleteObjectTagging' smart constructor.
-data DeleteObjectTagging = DeleteObjectTagging'
-  { _dotVersionId :: !(Maybe ObjectVersionId)
-  , _dotBucket    :: !BucketName
-  , _dotKey       :: !ObjectKey
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteObjectTagging =
+  DeleteObjectTagging'
+    { _dotVersionId :: !(Maybe ObjectVersionId)
+    , _dotBucket    :: !BucketName
+    , _dotKey       :: !ObjectKey
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteObjectTagging' with the minimum fields required to make a request.
@@ -108,10 +110,12 @@ instance ToQuery DeleteObjectTagging where
           = mconcat ["versionId" =: _dotVersionId, "tagging"]
 
 -- | /See:/ 'deleteObjectTaggingResponse' smart constructor.
-data DeleteObjectTaggingResponse = DeleteObjectTaggingResponse'
-  { _dotrsVersionId      :: !(Maybe ObjectVersionId)
-  , _dotrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteObjectTaggingResponse =
+  DeleteObjectTaggingResponse'
+    { _dotrsVersionId      :: !(Maybe ObjectVersionId)
+    , _dotrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteObjectTaggingResponse' with the minimum fields required to make a request.

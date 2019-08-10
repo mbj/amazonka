@@ -52,12 +52,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createDeploymentConfig' smart constructor.
-data CreateDeploymentConfig = CreateDeploymentConfig'
-  { _cdcComputePlatform      :: !(Maybe ComputePlatform)
-  , _cdcMinimumHealthyHosts  :: !(Maybe MinimumHealthyHosts)
-  , _cdcTrafficRoutingConfig :: !(Maybe TrafficRoutingConfig)
-  , _cdcDeploymentConfigName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDeploymentConfig =
+  CreateDeploymentConfig'
+    { _cdcComputePlatform      :: !(Maybe ComputePlatform)
+    , _cdcMinimumHealthyHosts  :: !(Maybe MinimumHealthyHosts)
+    , _cdcTrafficRoutingConfig :: !(Maybe TrafficRoutingConfig)
+    , _cdcDeploymentConfigName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDeploymentConfig' with the minimum fields required to make a request.
@@ -147,10 +149,12 @@ instance ToQuery CreateDeploymentConfig where
 --
 --
 -- /See:/ 'createDeploymentConfigResponse' smart constructor.
-data CreateDeploymentConfigResponse = CreateDeploymentConfigResponse'
-  { _cdcrsDeploymentConfigId :: !(Maybe Text)
-  , _cdcrsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDeploymentConfigResponse =
+  CreateDeploymentConfigResponse'
+    { _cdcrsDeploymentConfigId :: !(Maybe Text)
+    , _cdcrsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDeploymentConfigResponse' with the minimum fields required to make a request.

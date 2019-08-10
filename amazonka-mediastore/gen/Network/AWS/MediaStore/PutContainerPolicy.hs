@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putContainerPolicy' smart constructor.
-data PutContainerPolicy = PutContainerPolicy'
-  { _pContainerName :: !Text
-  , _pPolicy        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutContainerPolicy =
+  PutContainerPolicy'
+    { _pContainerName :: !Text
+    , _pPolicy        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutContainerPolicy' with the minimum fields required to make a request.
@@ -113,9 +115,11 @@ instance ToQuery PutContainerPolicy where
         toQuery = const mempty
 
 -- | /See:/ 'putContainerPolicyResponse' smart constructor.
-newtype PutContainerPolicyResponse = PutContainerPolicyResponse'
-  { _pcprsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype PutContainerPolicyResponse =
+  PutContainerPolicyResponse'
+    { _pcprsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutContainerPolicyResponse' with the minimum fields required to make a request.

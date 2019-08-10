@@ -52,10 +52,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'applySecurityGroupsToLoadBalancer' smart constructor.
-data ApplySecurityGroupsToLoadBalancer = ApplySecurityGroupsToLoadBalancer'
-  { _asgtlbLoadBalancerName :: !Text
-  , _asgtlbSecurityGroups   :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ApplySecurityGroupsToLoadBalancer =
+  ApplySecurityGroupsToLoadBalancer'
+    { _asgtlbLoadBalancerName :: !Text
+    , _asgtlbSecurityGroups   :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ApplySecurityGroupsToLoadBalancer' with the minimum fields required to make a request.
@@ -127,10 +129,12 @@ instance ToQuery ApplySecurityGroupsToLoadBalancer
 --
 --
 -- /See:/ 'applySecurityGroupsToLoadBalancerResponse' smart constructor.
-data ApplySecurityGroupsToLoadBalancerResponse = ApplySecurityGroupsToLoadBalancerResponse'
-  { _asgtlbrsSecurityGroups :: !(Maybe [Text])
-  , _asgtlbrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ApplySecurityGroupsToLoadBalancerResponse =
+  ApplySecurityGroupsToLoadBalancerResponse'
+    { _asgtlbrsSecurityGroups :: !(Maybe [Text])
+    , _asgtlbrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ApplySecurityGroupsToLoadBalancerResponse' with the minimum fields required to make a request.

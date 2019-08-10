@@ -51,10 +51,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listUserPools' smart constructor.
-data ListUserPools = ListUserPools'
-  { _lupNextToken  :: !(Maybe Text)
-  , _lupMaxResults :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListUserPools =
+  ListUserPools'
+    { _lupNextToken  :: !(Maybe Text)
+    , _lupMaxResults :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListUserPools' with the minimum fields required to make a request.
@@ -122,11 +124,13 @@ instance ToQuery ListUserPools where
 --
 --
 -- /See:/ 'listUserPoolsResponse' smart constructor.
-data ListUserPoolsResponse = ListUserPoolsResponse'
-  { _luprsUserPools      :: !(Maybe [UserPoolDescriptionType])
-  , _luprsNextToken      :: !(Maybe Text)
-  , _luprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListUserPoolsResponse =
+  ListUserPoolsResponse'
+    { _luprsUserPools      :: !(Maybe [UserPoolDescriptionType])
+    , _luprsNextToken      :: !(Maybe Text)
+    , _luprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListUserPoolsResponse' with the minimum fields required to make a request.

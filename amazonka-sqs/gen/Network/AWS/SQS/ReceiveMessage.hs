@@ -79,15 +79,17 @@ import Network.AWS.SQS.Types.Product
 --
 --
 -- /See:/ 'receiveMessage' smart constructor.
-data ReceiveMessage = ReceiveMessage'
-  { _rmReceiveRequestAttemptId :: !(Maybe Text)
-  , _rmVisibilityTimeout       :: !(Maybe Int)
-  , _rmMessageAttributeNames   :: !(Maybe [Text])
-  , _rmWaitTimeSeconds         :: !(Maybe Int)
-  , _rmAttributeNames          :: !(Maybe [MessageAttribute])
-  , _rmMaxNumberOfMessages     :: !(Maybe Int)
-  , _rmQueueURL                :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReceiveMessage =
+  ReceiveMessage'
+    { _rmReceiveRequestAttemptId :: !(Maybe Text)
+    , _rmVisibilityTimeout       :: !(Maybe Int)
+    , _rmMessageAttributeNames   :: !(Maybe [Text])
+    , _rmWaitTimeSeconds         :: !(Maybe Int)
+    , _rmAttributeNames          :: !(Maybe [MessageAttribute])
+    , _rmMaxNumberOfMessages     :: !(Maybe Int)
+    , _rmQueueURL                :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReceiveMessage' with the minimum fields required to make a request.
@@ -192,10 +194,12 @@ instance ToQuery ReceiveMessage where
 --
 --
 -- /See:/ 'receiveMessageResponse' smart constructor.
-data ReceiveMessageResponse = ReceiveMessageResponse'
-  { _rmrsMessages       :: !(Maybe [Message])
-  , _rmrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReceiveMessageResponse =
+  ReceiveMessageResponse'
+    { _rmrsMessages       :: !(Maybe [Message])
+    , _rmrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReceiveMessageResponse' with the minimum fields required to make a request.

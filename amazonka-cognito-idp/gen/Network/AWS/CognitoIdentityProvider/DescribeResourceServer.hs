@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeResourceServer' smart constructor.
-data DescribeResourceServer = DescribeResourceServer'
-  { _desUserPoolId :: !Text
-  , _desIdentifier :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeResourceServer =
+  DescribeResourceServer'
+    { _desUserPoolId :: !Text
+    , _desIdentifier :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeResourceServer' with the minimum fields required to make a request.
@@ -114,10 +116,12 @@ instance ToQuery DescribeResourceServer where
         toQuery = const mempty
 
 -- | /See:/ 'describeResourceServerResponse' smart constructor.
-data DescribeResourceServerResponse = DescribeResourceServerResponse'
-  { _drsrsResponseStatus :: !Int
-  , _drsrsResourceServer :: !ResourceServerType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeResourceServerResponse =
+  DescribeResourceServerResponse'
+    { _drsrsResponseStatus :: !Int
+    , _drsrsResourceServer :: !ResourceServerType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeResourceServerResponse' with the minimum fields required to make a request.

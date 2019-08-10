@@ -50,9 +50,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getStreamingDistributionConfig' smart constructor.
-newtype GetStreamingDistributionConfig = GetStreamingDistributionConfig'
-  { _gsdcId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetStreamingDistributionConfig =
+  GetStreamingDistributionConfig'
+    { _gsdcId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetStreamingDistributionConfig' with the minimum fields required to make a request.
@@ -106,11 +108,13 @@ instance ToQuery GetStreamingDistributionConfig where
 --
 --
 -- /See:/ 'getStreamingDistributionConfigResponse' smart constructor.
-data GetStreamingDistributionConfigResponse = GetStreamingDistributionConfigResponse'
-  { _gsdcrsStreamingDistributionConfig :: !(Maybe StreamingDistributionConfig)
-  , _gsdcrsETag                        :: !(Maybe Text)
-  , _gsdcrsResponseStatus              :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetStreamingDistributionConfigResponse =
+  GetStreamingDistributionConfigResponse'
+    { _gsdcrsStreamingDistributionConfig :: !(Maybe StreamingDistributionConfig)
+    , _gsdcrsETag                        :: !(Maybe Text)
+    , _gsdcrsResponseStatus              :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetStreamingDistributionConfigResponse' with the minimum fields required to make a request.

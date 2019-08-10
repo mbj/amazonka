@@ -46,11 +46,13 @@ import Network.AWS.WorkMail.Types
 import Network.AWS.WorkMail.Types.Product
 
 -- | /See:/ 'deleteAlias' smart constructor.
-data DeleteAlias = DeleteAlias'
-  { _daOrganizationId :: !Text
-  , _daEntityId       :: !Text
-  , _daAlias          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteAlias =
+  DeleteAlias'
+    { _daOrganizationId :: !Text
+    , _daEntityId       :: !Text
+    , _daAlias          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteAlias' with the minimum fields required to make a request.
@@ -123,9 +125,11 @@ instance ToQuery DeleteAlias where
         toQuery = const mempty
 
 -- | /See:/ 'deleteAliasResponse' smart constructor.
-newtype DeleteAliasResponse = DeleteAliasResponse'
-  { _darsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteAliasResponse =
+  DeleteAliasResponse'
+    { _darsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteAliasResponse' with the minimum fields required to make a request.

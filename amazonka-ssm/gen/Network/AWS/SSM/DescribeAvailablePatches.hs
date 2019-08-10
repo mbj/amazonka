@@ -48,11 +48,13 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'describeAvailablePatches' smart constructor.
-data DescribeAvailablePatches = DescribeAvailablePatches'
-  { _dapFilters    :: !(Maybe [PatchOrchestratorFilter])
-  , _dapNextToken  :: !(Maybe Text)
-  , _dapMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAvailablePatches =
+  DescribeAvailablePatches'
+    { _dapFilters    :: !(Maybe [PatchOrchestratorFilter])
+    , _dapNextToken  :: !(Maybe Text)
+    , _dapMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAvailablePatches' with the minimum fields required to make a request.
@@ -122,11 +124,13 @@ instance ToQuery DescribeAvailablePatches where
         toQuery = const mempty
 
 -- | /See:/ 'describeAvailablePatchesResponse' smart constructor.
-data DescribeAvailablePatchesResponse = DescribeAvailablePatchesResponse'
-  { _daprsPatches        :: !(Maybe [Patch])
-  , _daprsNextToken      :: !(Maybe Text)
-  , _daprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAvailablePatchesResponse =
+  DescribeAvailablePatchesResponse'
+    { _daprsPatches        :: !(Maybe [Patch])
+    , _daprsNextToken      :: !(Maybe Text)
+    , _daprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAvailablePatchesResponse' with the minimum fields required to make a request.

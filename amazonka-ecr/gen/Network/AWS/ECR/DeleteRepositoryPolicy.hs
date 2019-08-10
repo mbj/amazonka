@@ -48,10 +48,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteRepositoryPolicy' smart constructor.
-data DeleteRepositoryPolicy = DeleteRepositoryPolicy'
-  { _drpRegistryId     :: !(Maybe Text)
-  , _drpRepositoryName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteRepositoryPolicy =
+  DeleteRepositoryPolicy'
+    { _drpRegistryId     :: !(Maybe Text)
+    , _drpRepositoryName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteRepositoryPolicy' with the minimum fields required to make a request.
@@ -117,12 +119,14 @@ instance ToQuery DeleteRepositoryPolicy where
         toQuery = const mempty
 
 -- | /See:/ 'deleteRepositoryPolicyResponse' smart constructor.
-data DeleteRepositoryPolicyResponse = DeleteRepositoryPolicyResponse'
-  { _drprsRegistryId     :: !(Maybe Text)
-  , _drprsRepositoryName :: !(Maybe Text)
-  , _drprsPolicyText     :: !(Maybe Text)
-  , _drprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteRepositoryPolicyResponse =
+  DeleteRepositoryPolicyResponse'
+    { _drprsRegistryId     :: !(Maybe Text)
+    , _drprsRepositoryName :: !(Maybe Text)
+    , _drprsPolicyText     :: !(Maybe Text)
+    , _drprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteRepositoryPolicyResponse' with the minimum fields required to make a request.

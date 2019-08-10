@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getOperation' smart constructor.
-newtype GetOperation = GetOperation'
-  { _goOperationId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetOperation =
+  GetOperation'
+    { _goOperationId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetOperation' with the minimum fields required to make a request.
@@ -99,10 +101,12 @@ instance ToQuery GetOperation where
         toQuery = const mempty
 
 -- | /See:/ 'getOperationResponse' smart constructor.
-data GetOperationResponse = GetOperationResponse'
-  { _gorsOperation      :: !(Maybe Operation)
-  , _gorsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetOperationResponse =
+  GetOperationResponse'
+    { _gorsOperation      :: !(Maybe Operation)
+    , _gorsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetOperationResponse' with the minimum fields required to make a request.

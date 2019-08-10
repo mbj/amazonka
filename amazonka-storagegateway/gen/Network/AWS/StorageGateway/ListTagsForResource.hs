@@ -53,11 +53,13 @@ import Network.AWS.StorageGateway.Types.Product
 --
 --
 -- /See:/ 'listTagsForResource' smart constructor.
-data ListTagsForResource = ListTagsForResource'
-  { _ltfrMarker      :: !(Maybe Text)
-  , _ltfrLimit       :: !(Maybe Nat)
-  , _ltfrResourceARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTagsForResource =
+  ListTagsForResource'
+    { _ltfrMarker      :: !(Maybe Text)
+    , _ltfrLimit       :: !(Maybe Nat)
+    , _ltfrResourceARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTagsForResource' with the minimum fields required to make a request.
@@ -137,12 +139,14 @@ instance ToQuery ListTagsForResource where
 --
 --
 -- /See:/ 'listTagsForResourceResponse' smart constructor.
-data ListTagsForResourceResponse = ListTagsForResourceResponse'
-  { _ltfrrsResourceARN    :: !(Maybe Text)
-  , _ltfrrsMarker         :: !(Maybe Text)
-  , _ltfrrsTags           :: !(Maybe [Tag])
-  , _ltfrrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTagsForResourceResponse =
+  ListTagsForResourceResponse'
+    { _ltfrrsResourceARN    :: !(Maybe Text)
+    , _ltfrrsMarker         :: !(Maybe Text)
+    , _ltfrrsTags           :: !(Maybe [Tag])
+    , _ltfrrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTagsForResourceResponse' with the minimum fields required to make a request.

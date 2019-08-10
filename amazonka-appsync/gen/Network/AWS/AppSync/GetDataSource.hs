@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getDataSource' smart constructor.
-data GetDataSource = GetDataSource'
-  { _gdsApiId :: !Text
-  , _gdsName  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDataSource =
+  GetDataSource'
+    { _gdsApiId :: !Text
+    , _gdsName  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDataSource' with the minimum fields required to make a request.
@@ -105,10 +107,12 @@ instance ToQuery GetDataSource where
         toQuery = const mempty
 
 -- | /See:/ 'getDataSourceResponse' smart constructor.
-data GetDataSourceResponse = GetDataSourceResponse'
-  { _gdsrsDataSource     :: !(Maybe DataSource)
-  , _gdsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDataSourceResponse =
+  GetDataSourceResponse'
+    { _gdsrsDataSource     :: !(Maybe DataSource)
+    , _gdsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDataSourceResponse' with the minimum fields required to make a request.

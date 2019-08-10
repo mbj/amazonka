@@ -48,12 +48,14 @@ import Network.AWS.WorkMail.Types
 import Network.AWS.WorkMail.Types.Product
 
 -- | /See:/ 'createUser' smart constructor.
-data CreateUser = CreateUser'
-  { _cuOrganizationId :: !Text
-  , _cuName           :: !Text
-  , _cuDisplayName    :: !Text
-  , _cuPassword       :: !(Sensitive Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data CreateUser =
+  CreateUser'
+    { _cuOrganizationId :: !Text
+    , _cuName           :: !Text
+    , _cuDisplayName    :: !Text
+    , _cuPassword       :: !(Sensitive Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateUser' with the minimum fields required to make a request.
@@ -136,10 +138,12 @@ instance ToQuery CreateUser where
         toQuery = const mempty
 
 -- | /See:/ 'createUserResponse' smart constructor.
-data CreateUserResponse = CreateUserResponse'
-  { _cursUserId         :: !(Maybe Text)
-  , _cursResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateUserResponse =
+  CreateUserResponse'
+    { _cursUserId         :: !(Maybe Text)
+    , _cursResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateUserResponse' with the minimum fields required to make a request.

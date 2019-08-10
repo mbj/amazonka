@@ -51,11 +51,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listFacetNames' smart constructor.
-data ListFacetNames = ListFacetNames'
-  { _lfnNextToken  :: !(Maybe Text)
-  , _lfnMaxResults :: !(Maybe Nat)
-  , _lfnSchemaARN  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListFacetNames =
+  ListFacetNames'
+    { _lfnNextToken  :: !(Maybe Text)
+    , _lfnMaxResults :: !(Maybe Nat)
+    , _lfnSchemaARN  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListFacetNames' with the minimum fields required to make a request.
@@ -131,11 +133,13 @@ instance ToQuery ListFacetNames where
         toQuery = const mempty
 
 -- | /See:/ 'listFacetNamesResponse' smart constructor.
-data ListFacetNamesResponse = ListFacetNamesResponse'
-  { _lfnrsNextToken      :: !(Maybe Text)
-  , _lfnrsFacetNames     :: !(Maybe [Text])
-  , _lfnrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListFacetNamesResponse =
+  ListFacetNamesResponse'
+    { _lfnrsNextToken      :: !(Maybe Text)
+    , _lfnrsFacetNames     :: !(Maybe [Text])
+    , _lfnrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListFacetNamesResponse' with the minimum fields required to make a request.

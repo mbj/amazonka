@@ -47,11 +47,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'batchRead' smart constructor.
-data BatchRead = BatchRead'
-  { _brConsistencyLevel :: !(Maybe ConsistencyLevel)
-  , _brDirectoryARN     :: !Text
-  , _brOperations       :: ![BatchReadOperation]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchRead =
+  BatchRead'
+    { _brConsistencyLevel :: !(Maybe ConsistencyLevel)
+    , _brDirectoryARN     :: !Text
+    , _brOperations       :: ![BatchReadOperation]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchRead' with the minimum fields required to make a request.
@@ -119,10 +121,12 @@ instance ToQuery BatchRead where
         toQuery = const mempty
 
 -- | /See:/ 'batchReadResponse' smart constructor.
-data BatchReadResponse = BatchReadResponse'
-  { _brrsResponses      :: !(Maybe [BatchReadOperationResponse])
-  , _brrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchReadResponse =
+  BatchReadResponse'
+    { _brrsResponses      :: !(Maybe [BatchReadOperationResponse])
+    , _brrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchReadResponse' with the minimum fields required to make a request.

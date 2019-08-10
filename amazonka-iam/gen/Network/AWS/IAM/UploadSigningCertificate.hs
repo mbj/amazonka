@@ -48,10 +48,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'uploadSigningCertificate' smart constructor.
-data UploadSigningCertificate = UploadSigningCertificate'
-  { _uplUserName        :: !(Maybe Text)
-  , _uplCertificateBody :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UploadSigningCertificate =
+  UploadSigningCertificate'
+    { _uplUserName        :: !(Maybe Text)
+    , _uplCertificateBody :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UploadSigningCertificate' with the minimum fields required to make a request.
@@ -111,10 +113,12 @@ instance ToQuery UploadSigningCertificate where
 --
 --
 -- /See:/ 'uploadSigningCertificateResponse' smart constructor.
-data UploadSigningCertificateResponse = UploadSigningCertificateResponse'
-  { _uscrsResponseStatus :: !Int
-  , _uscrsCertificate    :: !SigningCertificate
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UploadSigningCertificateResponse =
+  UploadSigningCertificateResponse'
+    { _uscrsResponseStatus :: !Int
+    , _uscrsCertificate    :: !SigningCertificate
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UploadSigningCertificateResponse' with the minimum fields required to make a request.

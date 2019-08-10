@@ -51,14 +51,16 @@ import Network.AWS.ServiceCatalog.Types
 import Network.AWS.ServiceCatalog.Types.Product
 
 -- | /See:/ 'createPortfolio' smart constructor.
-data CreatePortfolio = CreatePortfolio'
-  { _creAcceptLanguage   :: !(Maybe Text)
-  , _creDescription      :: !(Maybe Text)
-  , _creTags             :: !(Maybe [Tag])
-  , _creDisplayName      :: !Text
-  , _creProviderName     :: !Text
-  , _creIdempotencyToken :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreatePortfolio =
+  CreatePortfolio'
+    { _creAcceptLanguage   :: !(Maybe Text)
+    , _creDescription      :: !(Maybe Text)
+    , _creTags             :: !(Maybe [Tag])
+    , _creDisplayName      :: !Text
+    , _creProviderName     :: !Text
+    , _creIdempotencyToken :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreatePortfolio' with the minimum fields required to make a request.
@@ -159,11 +161,13 @@ instance ToQuery CreatePortfolio where
         toQuery = const mempty
 
 -- | /See:/ 'createPortfolioResponse' smart constructor.
-data CreatePortfolioResponse = CreatePortfolioResponse'
-  { _crsPortfolioDetail :: !(Maybe PortfolioDetail)
-  , _crsTags            :: !(Maybe [Tag])
-  , _crsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreatePortfolioResponse =
+  CreatePortfolioResponse'
+    { _crsPortfolioDetail :: !(Maybe PortfolioDetail)
+    , _crsTags            :: !(Maybe [Tag])
+    , _crsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreatePortfolioResponse' with the minimum fields required to make a request.

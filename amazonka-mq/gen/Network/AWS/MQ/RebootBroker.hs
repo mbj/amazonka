@@ -42,9 +42,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'rebootBroker' smart constructor.
-newtype RebootBroker = RebootBroker'
-  { _rbBrokerId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RebootBroker =
+  RebootBroker'
+    { _rbBrokerId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RebootBroker' with the minimum fields required to make a request.
@@ -93,9 +95,11 @@ instance ToQuery RebootBroker where
         toQuery = const mempty
 
 -- | /See:/ 'rebootBrokerResponse' smart constructor.
-newtype RebootBrokerResponse = RebootBrokerResponse'
-  { _rbrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RebootBrokerResponse =
+  RebootBrokerResponse'
+    { _rbrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RebootBrokerResponse' with the minimum fields required to make a request.

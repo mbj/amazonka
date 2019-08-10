@@ -26,11 +26,13 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'accountAggregationSource' smart constructor.
-data AccountAggregationSource = AccountAggregationSource'
-  { _aasAWSRegions    :: !(Maybe (List1 Text))
-  , _aasAllAWSRegions :: !(Maybe Bool)
-  , _aasAccountIds    :: !(List1 Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AccountAggregationSource =
+  AccountAggregationSource'
+    { _aasAWSRegions    :: !(Maybe (List1 Text))
+    , _aasAllAWSRegions :: !(Maybe Bool)
+    , _aasAccountIds    :: !(List1 Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AccountAggregationSource' with the minimum fields required to make a request.
@@ -92,12 +94,14 @@ instance ToJSON AccountAggregationSource where
 --
 --
 -- /See:/ 'aggregateComplianceByConfigRule' smart constructor.
-data AggregateComplianceByConfigRule = AggregateComplianceByConfigRule'
-  { _acbcrCompliance     :: !(Maybe Compliance)
-  , _acbcrConfigRuleName :: !(Maybe Text)
-  , _acbcrAccountId      :: !(Maybe Text)
-  , _acbcrAWSRegion      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AggregateComplianceByConfigRule =
+  AggregateComplianceByConfigRule'
+    { _acbcrCompliance     :: !(Maybe Compliance)
+    , _acbcrConfigRuleName :: !(Maybe Text)
+    , _acbcrAccountId      :: !(Maybe Text)
+    , _acbcrAWSRegion      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AggregateComplianceByConfigRule' with the minimum fields required to make a request.
@@ -158,10 +162,12 @@ instance NFData AggregateComplianceByConfigRule where
 --
 --
 -- /See:/ 'aggregateComplianceCount' smart constructor.
-data AggregateComplianceCount = AggregateComplianceCount'
-  { _accGroupName         :: !(Maybe Text)
-  , _accComplianceSummary :: !(Maybe ComplianceSummary)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AggregateComplianceCount =
+  AggregateComplianceCount'
+    { _accGroupName         :: !(Maybe Text)
+    , _accComplianceSummary :: !(Maybe ComplianceSummary)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AggregateComplianceCount' with the minimum fields required to make a request.
@@ -202,15 +208,17 @@ instance NFData AggregateComplianceCount where
 --
 --
 -- /See:/ 'aggregateEvaluationResult' smart constructor.
-data AggregateEvaluationResult = AggregateEvaluationResult'
-  { _aerEvaluationResultIdentifier :: !(Maybe EvaluationResultIdentifier)
-  , _aerAnnotation                 :: !(Maybe Text)
-  , _aerConfigRuleInvokedTime      :: !(Maybe POSIX)
-  , _aerResultRecordedTime         :: !(Maybe POSIX)
-  , _aerAccountId                  :: !(Maybe Text)
-  , _aerComplianceType             :: !(Maybe ComplianceType)
-  , _aerAWSRegion                  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AggregateEvaluationResult =
+  AggregateEvaluationResult'
+    { _aerEvaluationResultIdentifier :: !(Maybe EvaluationResultIdentifier)
+    , _aerAnnotation                 :: !(Maybe Text)
+    , _aerConfigRuleInvokedTime      :: !(Maybe POSIX)
+    , _aerResultRecordedTime         :: !(Maybe POSIX)
+    , _aerAccountId                  :: !(Maybe Text)
+    , _aerComplianceType             :: !(Maybe ComplianceType)
+    , _aerAWSRegion                  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AggregateEvaluationResult' with the minimum fields required to make a request.
@@ -294,15 +302,17 @@ instance NFData AggregateEvaluationResult where
 --
 --
 -- /See:/ 'aggregatedSourceStatus' smart constructor.
-data AggregatedSourceStatus = AggregatedSourceStatus'
-  { _assLastErrorCode    :: !(Maybe Text)
-  , _assLastUpdateStatus :: !(Maybe AggregatedSourceStatusType)
-  , _assSourceType       :: !(Maybe AggregatedSourceType)
-  , _assSourceId         :: !(Maybe Text)
-  , _assLastErrorMessage :: !(Maybe Text)
-  , _assAWSRegion        :: !(Maybe Text)
-  , _assLastUpdateTime   :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AggregatedSourceStatus =
+  AggregatedSourceStatus'
+    { _assLastErrorCode    :: !(Maybe Text)
+    , _assLastUpdateStatus :: !(Maybe AggregatedSourceStatusType)
+    , _assSourceType       :: !(Maybe AggregatedSourceType)
+    , _assSourceId         :: !(Maybe Text)
+    , _assLastErrorMessage :: !(Maybe Text)
+    , _assAWSRegion        :: !(Maybe Text)
+    , _assLastUpdateTime   :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AggregatedSourceStatus' with the minimum fields required to make a request.
@@ -386,12 +396,14 @@ instance NFData AggregatedSourceStatus where
 --
 --
 -- /See:/ 'aggregationAuthorization' smart constructor.
-data AggregationAuthorization = AggregationAuthorization'
-  { _aaCreationTime                :: !(Maybe POSIX)
-  , _aaAuthorizedAWSRegion         :: !(Maybe Text)
-  , _aaAggregationAuthorizationARN :: !(Maybe Text)
-  , _aaAuthorizedAccountId         :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AggregationAuthorization =
+  AggregationAuthorization'
+    { _aaCreationTime                :: !(Maybe POSIX)
+    , _aaAuthorizedAWSRegion         :: !(Maybe Text)
+    , _aaAggregationAuthorizationARN :: !(Maybe Text)
+    , _aaAuthorizedAccountId         :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AggregationAuthorization' with the minimum fields required to make a request.
@@ -451,22 +463,24 @@ instance NFData AggregationAuthorization where
 --
 --
 -- /See:/ 'baseConfigurationItem' smart constructor.
-data BaseConfigurationItem = BaseConfigurationItem'
-  { _bciResourceId                   :: !(Maybe Text)
-  , _bciResourceType                 :: !(Maybe ResourceType)
-  , _bciConfigurationStateId         :: !(Maybe Text)
-  , _bciArn                          :: !(Maybe Text)
-  , _bciResourceName                 :: !(Maybe Text)
-  , _bciResourceCreationTime         :: !(Maybe POSIX)
-  , _bciConfigurationItemStatus      :: !(Maybe ConfigurationItemStatus)
-  , _bciConfigurationItemCaptureTime :: !(Maybe POSIX)
-  , _bciAccountId                    :: !(Maybe Text)
-  , _bciSupplementaryConfiguration   :: !(Maybe (Map Text Text))
-  , _bciAvailabilityZone             :: !(Maybe Text)
-  , _bciVersion                      :: !(Maybe Text)
-  , _bciAwsRegion                    :: !(Maybe Text)
-  , _bciConfiguration                :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BaseConfigurationItem =
+  BaseConfigurationItem'
+    { _bciResourceId                   :: !(Maybe Text)
+    , _bciResourceType                 :: !(Maybe ResourceType)
+    , _bciConfigurationStateId         :: !(Maybe Text)
+    , _bciArn                          :: !(Maybe Text)
+    , _bciResourceName                 :: !(Maybe Text)
+    , _bciResourceCreationTime         :: !(Maybe POSIX)
+    , _bciConfigurationItemStatus      :: !(Maybe ConfigurationItemStatus)
+    , _bciConfigurationItemCaptureTime :: !(Maybe POSIX)
+    , _bciAccountId                    :: !(Maybe Text)
+    , _bciSupplementaryConfiguration   :: !(Maybe (Map Text Text))
+    , _bciAvailabilityZone             :: !(Maybe Text)
+    , _bciVersion                      :: !(Maybe Text)
+    , _bciAwsRegion                    :: !(Maybe Text)
+    , _bciConfiguration                :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BaseConfigurationItem' with the minimum fields required to make a request.
@@ -605,10 +619,12 @@ instance NFData BaseConfigurationItem where
 --
 --
 -- /See:/ 'compliance' smart constructor.
-data Compliance = Compliance'
-  { _cComplianceContributorCount :: !(Maybe ComplianceContributorCount)
-  , _cComplianceType             :: !(Maybe ComplianceType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Compliance =
+  Compliance'
+    { _cComplianceContributorCount :: !(Maybe ComplianceContributorCount)
+    , _cComplianceType             :: !(Maybe ComplianceType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Compliance' with the minimum fields required to make a request.
@@ -650,10 +666,12 @@ instance NFData Compliance where
 --
 --
 -- /See:/ 'complianceByConfigRule' smart constructor.
-data ComplianceByConfigRule = ComplianceByConfigRule'
-  { _cbcrCompliance     :: !(Maybe Compliance)
-  , _cbcrConfigRuleName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ComplianceByConfigRule =
+  ComplianceByConfigRule'
+    { _cbcrCompliance     :: !(Maybe Compliance)
+    , _cbcrConfigRuleName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ComplianceByConfigRule' with the minimum fields required to make a request.
@@ -694,11 +712,13 @@ instance NFData ComplianceByConfigRule where
 --
 --
 -- /See:/ 'complianceByResource' smart constructor.
-data ComplianceByResource = ComplianceByResource'
-  { _cbrResourceId   :: !(Maybe Text)
-  , _cbrResourceType :: !(Maybe Text)
-  , _cbrCompliance   :: !(Maybe Compliance)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ComplianceByResource =
+  ComplianceByResource'
+    { _cbrResourceId   :: !(Maybe Text)
+    , _cbrResourceType :: !(Maybe Text)
+    , _cbrCompliance   :: !(Maybe Compliance)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ComplianceByResource' with the minimum fields required to make a request.
@@ -749,10 +769,12 @@ instance NFData ComplianceByResource where
 --
 --
 -- /See:/ 'complianceContributorCount' smart constructor.
-data ComplianceContributorCount = ComplianceContributorCount'
-  { _cccCappedCount :: !(Maybe Int)
-  , _cccCapExceeded :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ComplianceContributorCount =
+  ComplianceContributorCount'
+    { _cccCappedCount :: !(Maybe Int)
+    , _cccCapExceeded :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ComplianceContributorCount' with the minimum fields required to make a request.
@@ -793,11 +815,13 @@ instance NFData ComplianceContributorCount where
 --
 --
 -- /See:/ 'complianceSummary' smart constructor.
-data ComplianceSummary = ComplianceSummary'
-  { _csComplianceSummaryTimestamp :: !(Maybe POSIX)
-  , _csCompliantResourceCount     :: !(Maybe ComplianceContributorCount)
-  , _csNonCompliantResourceCount  :: !(Maybe ComplianceContributorCount)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ComplianceSummary =
+  ComplianceSummary'
+    { _csComplianceSummaryTimestamp :: !(Maybe POSIX)
+    , _csCompliantResourceCount     :: !(Maybe ComplianceContributorCount)
+    , _csNonCompliantResourceCount  :: !(Maybe ComplianceContributorCount)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ComplianceSummary' with the minimum fields required to make a request.
@@ -849,10 +873,12 @@ instance NFData ComplianceSummary where
 --
 --
 -- /See:/ 'complianceSummaryByResourceType' smart constructor.
-data ComplianceSummaryByResourceType = ComplianceSummaryByResourceType'
-  { _csbrtResourceType      :: !(Maybe Text)
-  , _csbrtComplianceSummary :: !(Maybe ComplianceSummary)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ComplianceSummaryByResourceType =
+  ComplianceSummaryByResourceType'
+    { _csbrtResourceType      :: !(Maybe Text)
+    , _csbrtComplianceSummary :: !(Maybe ComplianceSummary)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ComplianceSummaryByResourceType' with the minimum fields required to make a request.
@@ -896,14 +922,16 @@ instance NFData ComplianceSummaryByResourceType where
 --
 --
 -- /See:/ 'configExportDeliveryInfo' smart constructor.
-data ConfigExportDeliveryInfo = ConfigExportDeliveryInfo'
-  { _cediLastErrorCode      :: !(Maybe Text)
-  , _cediLastAttemptTime    :: !(Maybe POSIX)
-  , _cediLastSuccessfulTime :: !(Maybe POSIX)
-  , _cediLastStatus         :: !(Maybe DeliveryStatus)
-  , _cediLastErrorMessage   :: !(Maybe Text)
-  , _cediNextDeliveryTime   :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ConfigExportDeliveryInfo =
+  ConfigExportDeliveryInfo'
+    { _cediLastErrorCode      :: !(Maybe Text)
+    , _cediLastAttemptTime    :: !(Maybe POSIX)
+    , _cediLastSuccessfulTime :: !(Maybe POSIX)
+    , _cediLastStatus         :: !(Maybe DeliveryStatus)
+    , _cediLastErrorMessage   :: !(Maybe Text)
+    , _cediNextDeliveryTime   :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ConfigExportDeliveryInfo' with the minimum fields required to make a request.
@@ -980,17 +1008,19 @@ instance NFData ConfigExportDeliveryInfo where
 --
 --
 -- /See:/ 'configRule' smart constructor.
-data ConfigRule = ConfigRule'
-  { _crInputParameters           :: !(Maybe Text)
-  , _crConfigRuleName            :: !(Maybe Text)
-  , _crMaximumExecutionFrequency :: !(Maybe MaximumExecutionFrequency)
-  , _crConfigRuleId              :: !(Maybe Text)
-  , _crScope                     :: !(Maybe Scope)
-  , _crConfigRuleState           :: !(Maybe ConfigRuleState)
-  , _crDescription               :: !(Maybe Text)
-  , _crConfigRuleARN             :: !(Maybe Text)
-  , _crSource                    :: !Source
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ConfigRule =
+  ConfigRule'
+    { _crInputParameters           :: !(Maybe Text)
+    , _crConfigRuleName            :: !(Maybe Text)
+    , _crMaximumExecutionFrequency :: !(Maybe MaximumExecutionFrequency)
+    , _crConfigRuleId              :: !(Maybe Text)
+    , _crScope                     :: !(Maybe Scope)
+    , _crConfigRuleState           :: !(Maybe ConfigRuleState)
+    , _crDescription               :: !(Maybe Text)
+    , _crConfigRuleARN             :: !(Maybe Text)
+    , _crSource                    :: !Source
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ConfigRule' with the minimum fields required to make a request.
@@ -1106,12 +1136,14 @@ instance ToJSON ConfigRule where
 --
 --
 -- /See:/ 'configRuleComplianceFilters' smart constructor.
-data ConfigRuleComplianceFilters = ConfigRuleComplianceFilters'
-  { _crcfConfigRuleName :: !(Maybe Text)
-  , _crcfAccountId      :: !(Maybe Text)
-  , _crcfComplianceType :: !(Maybe ComplianceType)
-  , _crcfAWSRegion      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ConfigRuleComplianceFilters =
+  ConfigRuleComplianceFilters'
+    { _crcfConfigRuleName :: !(Maybe Text)
+    , _crcfAccountId      :: !(Maybe Text)
+    , _crcfComplianceType :: !(Maybe ComplianceType)
+    , _crcfAWSRegion      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ConfigRuleComplianceFilters' with the minimum fields required to make a request.
@@ -1170,10 +1202,12 @@ instance ToJSON ConfigRuleComplianceFilters where
 --
 --
 -- /See:/ 'configRuleComplianceSummaryFilters' smart constructor.
-data ConfigRuleComplianceSummaryFilters = ConfigRuleComplianceSummaryFilters'
-  { _crcsfAccountId :: !(Maybe Text)
-  , _crcsfAWSRegion :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ConfigRuleComplianceSummaryFilters =
+  ConfigRuleComplianceSummaryFilters'
+    { _crcsfAccountId :: !(Maybe Text)
+    , _crcsfAWSRegion :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ConfigRuleComplianceSummaryFilters' with the minimum fields required to make a request.
@@ -1219,19 +1253,21 @@ instance ToJSON ConfigRuleComplianceSummaryFilters
 --
 --
 -- /See:/ 'configRuleEvaluationStatus' smart constructor.
-data ConfigRuleEvaluationStatus = ConfigRuleEvaluationStatus'
-  { _cresLastErrorCode                :: !(Maybe Text)
-  , _cresLastFailedEvaluationTime     :: !(Maybe POSIX)
-  , _cresFirstActivatedTime           :: !(Maybe POSIX)
-  , _cresLastSuccessfulEvaluationTime :: !(Maybe POSIX)
-  , _cresConfigRuleName               :: !(Maybe Text)
-  , _cresLastErrorMessage             :: !(Maybe Text)
-  , _cresConfigRuleId                 :: !(Maybe Text)
-  , _cresLastFailedInvocationTime     :: !(Maybe POSIX)
-  , _cresFirstEvaluationStarted       :: !(Maybe Bool)
-  , _cresLastSuccessfulInvocationTime :: !(Maybe POSIX)
-  , _cresConfigRuleARN                :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ConfigRuleEvaluationStatus =
+  ConfigRuleEvaluationStatus'
+    { _cresLastErrorCode                :: !(Maybe Text)
+    , _cresLastFailedEvaluationTime     :: !(Maybe POSIX)
+    , _cresFirstActivatedTime           :: !(Maybe POSIX)
+    , _cresLastSuccessfulEvaluationTime :: !(Maybe POSIX)
+    , _cresConfigRuleName               :: !(Maybe Text)
+    , _cresLastErrorMessage             :: !(Maybe Text)
+    , _cresConfigRuleId                 :: !(Maybe Text)
+    , _cresLastFailedInvocationTime     :: !(Maybe POSIX)
+    , _cresFirstEvaluationStarted       :: !(Maybe Bool)
+    , _cresLastSuccessfulInvocationTime :: !(Maybe POSIX)
+    , _cresConfigRuleARN                :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ConfigRuleEvaluationStatus' with the minimum fields required to make a request.
@@ -1371,9 +1407,11 @@ instance NFData ConfigRuleEvaluationStatus where
 --
 --
 -- /See:/ 'configSnapshotDeliveryProperties' smart constructor.
-newtype ConfigSnapshotDeliveryProperties = ConfigSnapshotDeliveryProperties'
-  { _csdpDeliveryFrequency :: Maybe MaximumExecutionFrequency
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ConfigSnapshotDeliveryProperties =
+  ConfigSnapshotDeliveryProperties'
+    { _csdpDeliveryFrequency :: Maybe MaximumExecutionFrequency
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ConfigSnapshotDeliveryProperties' with the minimum fields required to make a request.
@@ -1418,12 +1456,14 @@ instance ToJSON ConfigSnapshotDeliveryProperties
 --
 --
 -- /See:/ 'configStreamDeliveryInfo' smart constructor.
-data ConfigStreamDeliveryInfo = ConfigStreamDeliveryInfo'
-  { _csdiLastErrorCode        :: !(Maybe Text)
-  , _csdiLastStatusChangeTime :: !(Maybe POSIX)
-  , _csdiLastStatus           :: !(Maybe DeliveryStatus)
-  , _csdiLastErrorMessage     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ConfigStreamDeliveryInfo =
+  ConfigStreamDeliveryInfo'
+    { _csdiLastErrorCode        :: !(Maybe Text)
+    , _csdiLastStatusChangeTime :: !(Maybe POSIX)
+    , _csdiLastStatus           :: !(Maybe DeliveryStatus)
+    , _csdiLastErrorMessage     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ConfigStreamDeliveryInfo' with the minimum fields required to make a request.
@@ -1483,14 +1523,16 @@ instance NFData ConfigStreamDeliveryInfo where
 --
 --
 -- /See:/ 'configurationAggregator' smart constructor.
-data ConfigurationAggregator = ConfigurationAggregator'
-  { _caConfigurationAggregatorARN    :: !(Maybe Text)
-  , _caCreationTime                  :: !(Maybe POSIX)
-  , _caOrganizationAggregationSource :: !(Maybe OrganizationAggregationSource)
-  , _caLastUpdatedTime               :: !(Maybe POSIX)
-  , _caAccountAggregationSources     :: !(Maybe [AccountAggregationSource])
-  , _caConfigurationAggregatorName   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ConfigurationAggregator =
+  ConfigurationAggregator'
+    { _caConfigurationAggregatorARN    :: !(Maybe Text)
+    , _caCreationTime                  :: !(Maybe POSIX)
+    , _caOrganizationAggregationSource :: !(Maybe OrganizationAggregationSource)
+    , _caLastUpdatedTime               :: !(Maybe POSIX)
+    , _caAccountAggregationSources     :: !(Maybe [AccountAggregationSource])
+    , _caConfigurationAggregatorName   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ConfigurationAggregator' with the minimum fields required to make a request.
@@ -1566,26 +1608,28 @@ instance NFData ConfigurationAggregator where
 --
 --
 -- /See:/ 'configurationItem' smart constructor.
-data ConfigurationItem = ConfigurationItem'
-  { _ciResourceId                   :: !(Maybe Text)
-  , _ciResourceType                 :: !(Maybe ResourceType)
-  , _ciConfigurationStateId         :: !(Maybe Text)
-  , _ciArn                          :: !(Maybe Text)
-  , _ciResourceName                 :: !(Maybe Text)
-  , _ciResourceCreationTime         :: !(Maybe POSIX)
-  , _ciConfigurationItemStatus      :: !(Maybe ConfigurationItemStatus)
-  , _ciConfigurationItemCaptureTime :: !(Maybe POSIX)
-  , _ciAccountId                    :: !(Maybe Text)
-  , _ciSupplementaryConfiguration   :: !(Maybe (Map Text Text))
-  , _ciAvailabilityZone             :: !(Maybe Text)
-  , _ciRelationships                :: !(Maybe [Relationship])
-  , _ciVersion                      :: !(Maybe Text)
-  , _ciAwsRegion                    :: !(Maybe Text)
-  , _ciRelatedEvents                :: !(Maybe [Text])
-  , _ciConfiguration                :: !(Maybe Text)
-  , _ciConfigurationItemMD5Hash     :: !(Maybe Text)
-  , _ciTags                         :: !(Maybe (Map Text Text))
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ConfigurationItem =
+  ConfigurationItem'
+    { _ciResourceId                   :: !(Maybe Text)
+    , _ciResourceType                 :: !(Maybe ResourceType)
+    , _ciConfigurationStateId         :: !(Maybe Text)
+    , _ciArn                          :: !(Maybe Text)
+    , _ciResourceName                 :: !(Maybe Text)
+    , _ciResourceCreationTime         :: !(Maybe POSIX)
+    , _ciConfigurationItemStatus      :: !(Maybe ConfigurationItemStatus)
+    , _ciConfigurationItemCaptureTime :: !(Maybe POSIX)
+    , _ciAccountId                    :: !(Maybe Text)
+    , _ciSupplementaryConfiguration   :: !(Maybe (Map Text Text))
+    , _ciAvailabilityZone             :: !(Maybe Text)
+    , _ciRelationships                :: !(Maybe [Relationship])
+    , _ciVersion                      :: !(Maybe Text)
+    , _ciAwsRegion                    :: !(Maybe Text)
+    , _ciRelatedEvents                :: !(Maybe [Text])
+    , _ciConfiguration                :: !(Maybe Text)
+    , _ciConfigurationItemMD5Hash     :: !(Maybe Text)
+    , _ciTags                         :: !(Maybe (Map Text Text))
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ConfigurationItem' with the minimum fields required to make a request.
@@ -1756,11 +1800,13 @@ instance NFData ConfigurationItem where
 --
 --
 -- /See:/ 'configurationRecorder' smart constructor.
-data ConfigurationRecorder = ConfigurationRecorder'
-  { _crName           :: !(Maybe Text)
-  , _crRecordingGroup :: !(Maybe RecordingGroup)
-  , _crRoleARN        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ConfigurationRecorder =
+  ConfigurationRecorder'
+    { _crName           :: !(Maybe Text)
+    , _crRecordingGroup :: !(Maybe RecordingGroup)
+    , _crRoleARN        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ConfigurationRecorder' with the minimum fields required to make a request.
@@ -1816,16 +1862,18 @@ instance ToJSON ConfigurationRecorder where
 --
 --
 -- /See:/ 'configurationRecorderStatus' smart constructor.
-data ConfigurationRecorderStatus = ConfigurationRecorderStatus'
-  { _crsLastErrorCode        :: !(Maybe Text)
-  , _crsLastStopTime         :: !(Maybe POSIX)
-  , _crsLastStatusChangeTime :: !(Maybe POSIX)
-  , _crsRecording            :: !(Maybe Bool)
-  , _crsLastStatus           :: !(Maybe RecorderStatus)
-  , _crsLastErrorMessage     :: !(Maybe Text)
-  , _crsName                 :: !(Maybe Text)
-  , _crsLastStartTime        :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ConfigurationRecorderStatus =
+  ConfigurationRecorderStatus'
+    { _crsLastErrorCode        :: !(Maybe Text)
+    , _crsLastStopTime         :: !(Maybe POSIX)
+    , _crsLastStatusChangeTime :: !(Maybe POSIX)
+    , _crsRecording            :: !(Maybe Bool)
+    , _crsLastStatus           :: !(Maybe RecorderStatus)
+    , _crsLastErrorMessage     :: !(Maybe Text)
+    , _crsName                 :: !(Maybe Text)
+    , _crsLastStartTime        :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ConfigurationRecorderStatus' with the minimum fields required to make a request.
@@ -1916,13 +1964,15 @@ instance NFData ConfigurationRecorderStatus where
 --
 --
 -- /See:/ 'deliveryChannel' smart constructor.
-data DeliveryChannel = DeliveryChannel'
-  { _dcS3KeyPrefix :: !(Maybe Text)
-  , _dcSnsTopicARN :: !(Maybe Text)
-  , _dcName :: !(Maybe Text)
-  , _dcConfigSnapshotDeliveryProperties :: !(Maybe ConfigSnapshotDeliveryProperties)
-  , _dcS3BucketName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeliveryChannel =
+  DeliveryChannel'
+    { _dcS3KeyPrefix :: !(Maybe Text)
+    , _dcSnsTopicARN :: !(Maybe Text)
+    , _dcName :: !(Maybe Text)
+    , _dcConfigSnapshotDeliveryProperties :: !(Maybe ConfigSnapshotDeliveryProperties)
+    , _dcS3BucketName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeliveryChannel' with the minimum fields required to make a request.
@@ -2002,12 +2052,14 @@ instance ToJSON DeliveryChannel where
 --
 --
 -- /See:/ 'deliveryChannelStatus' smart constructor.
-data DeliveryChannelStatus = DeliveryChannelStatus'
-  { _dcsConfigSnapshotDeliveryInfo :: !(Maybe ConfigExportDeliveryInfo)
-  , _dcsConfigStreamDeliveryInfo   :: !(Maybe ConfigStreamDeliveryInfo)
-  , _dcsConfigHistoryDeliveryInfo  :: !(Maybe ConfigExportDeliveryInfo)
-  , _dcsName                       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeliveryChannelStatus =
+  DeliveryChannelStatus'
+    { _dcsConfigSnapshotDeliveryInfo :: !(Maybe ConfigExportDeliveryInfo)
+    , _dcsConfigStreamDeliveryInfo   :: !(Maybe ConfigStreamDeliveryInfo)
+    , _dcsConfigHistoryDeliveryInfo  :: !(Maybe ConfigExportDeliveryInfo)
+    , _dcsName                       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeliveryChannelStatus' with the minimum fields required to make a request.
@@ -2067,13 +2119,15 @@ instance NFData DeliveryChannelStatus where
 --
 --
 -- /See:/ 'evaluation' smart constructor.
-data Evaluation = Evaluation'
-  { _eAnnotation             :: !(Maybe Text)
-  , _eComplianceResourceType :: !Text
-  , _eComplianceResourceId   :: !Text
-  , _eComplianceType         :: !ComplianceType
-  , _eOrderingTimestamp      :: !POSIX
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Evaluation =
+  Evaluation'
+    { _eAnnotation             :: !(Maybe Text)
+    , _eComplianceResourceType :: !Text
+    , _eComplianceResourceId   :: !Text
+    , _eComplianceType         :: !ComplianceType
+    , _eOrderingTimestamp      :: !POSIX
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Evaluation' with the minimum fields required to make a request.
@@ -2158,14 +2212,16 @@ instance ToJSON Evaluation where
 --
 --
 -- /See:/ 'evaluationResult' smart constructor.
-data EvaluationResult = EvaluationResult'
-  { _erEvaluationResultIdentifier :: !(Maybe EvaluationResultIdentifier)
-  , _erAnnotation                 :: !(Maybe Text)
-  , _erConfigRuleInvokedTime      :: !(Maybe POSIX)
-  , _erResultRecordedTime         :: !(Maybe POSIX)
-  , _erResultToken                :: !(Maybe Text)
-  , _erComplianceType             :: !(Maybe ComplianceType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EvaluationResult =
+  EvaluationResult'
+    { _erEvaluationResultIdentifier :: !(Maybe EvaluationResultIdentifier)
+    , _erAnnotation                 :: !(Maybe Text)
+    , _erConfigRuleInvokedTime      :: !(Maybe POSIX)
+    , _erResultRecordedTime         :: !(Maybe POSIX)
+    , _erResultToken                :: !(Maybe Text)
+    , _erComplianceType             :: !(Maybe ComplianceType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EvaluationResult' with the minimum fields required to make a request.
@@ -2241,10 +2297,12 @@ instance NFData EvaluationResult where
 --
 --
 -- /See:/ 'evaluationResultIdentifier' smart constructor.
-data EvaluationResultIdentifier = EvaluationResultIdentifier'
-  { _eriEvaluationResultQualifier :: !(Maybe EvaluationResultQualifier)
-  , _eriOrderingTimestamp         :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EvaluationResultIdentifier =
+  EvaluationResultIdentifier'
+    { _eriEvaluationResultQualifier :: !(Maybe EvaluationResultQualifier)
+    , _eriOrderingTimestamp         :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EvaluationResultIdentifier' with the minimum fields required to make a request.
@@ -2286,11 +2344,13 @@ instance NFData EvaluationResultIdentifier where
 --
 --
 -- /See:/ 'evaluationResultQualifier' smart constructor.
-data EvaluationResultQualifier = EvaluationResultQualifier'
-  { _erqResourceId     :: !(Maybe Text)
-  , _erqResourceType   :: !(Maybe Text)
-  , _erqConfigRuleName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EvaluationResultQualifier =
+  EvaluationResultQualifier'
+    { _erqResourceId     :: !(Maybe Text)
+    , _erqResourceType   :: !(Maybe Text)
+    , _erqConfigRuleName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EvaluationResultQualifier' with the minimum fields required to make a request.
@@ -2341,11 +2401,13 @@ instance NFData EvaluationResultQualifier where
 --
 --
 -- /See:/ 'organizationAggregationSource' smart constructor.
-data OrganizationAggregationSource = OrganizationAggregationSource'
-  { _oasAWSRegions    :: !(Maybe (List1 Text))
-  , _oasAllAWSRegions :: !(Maybe Bool)
-  , _oasRoleARN       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data OrganizationAggregationSource =
+  OrganizationAggregationSource'
+    { _oasAWSRegions    :: !(Maybe (List1 Text))
+    , _oasAllAWSRegions :: !(Maybe Bool)
+    , _oasRoleARN       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OrganizationAggregationSource' with the minimum fields required to make a request.
@@ -2405,10 +2467,12 @@ instance ToJSON OrganizationAggregationSource where
 --
 --
 -- /See:/ 'pendingAggregationRequest' smart constructor.
-data PendingAggregationRequest = PendingAggregationRequest'
-  { _parRequesterAccountId :: !(Maybe Text)
-  , _parRequesterAWSRegion :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PendingAggregationRequest =
+  PendingAggregationRequest'
+    { _parRequesterAccountId :: !(Maybe Text)
+    , _parRequesterAWSRegion :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PendingAggregationRequest' with the minimum fields required to make a request.
@@ -2464,11 +2528,13 @@ instance NFData PendingAggregationRequest where
 --
 --
 -- /See:/ 'recordingGroup' smart constructor.
-data RecordingGroup = RecordingGroup'
-  { _rgAllSupported               :: !(Maybe Bool)
-  , _rgIncludeGlobalResourceTypes :: !(Maybe Bool)
-  , _rgResourceTypes              :: !(Maybe [ResourceType])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RecordingGroup =
+  RecordingGroup'
+    { _rgAllSupported               :: !(Maybe Bool)
+    , _rgIncludeGlobalResourceTypes :: !(Maybe Bool)
+    , _rgResourceTypes              :: !(Maybe [ResourceType])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RecordingGroup' with the minimum fields required to make a request.
@@ -2529,12 +2595,14 @@ instance ToJSON RecordingGroup where
 --
 --
 -- /See:/ 'relationship' smart constructor.
-data Relationship = Relationship'
-  { _rResourceId       :: !(Maybe Text)
-  , _rResourceType     :: !(Maybe ResourceType)
-  , _rResourceName     :: !(Maybe Text)
-  , _rRelationshipName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Relationship =
+  Relationship'
+    { _rResourceId       :: !(Maybe Text)
+    , _rResourceType     :: !(Maybe ResourceType)
+    , _rResourceName     :: !(Maybe Text)
+    , _rRelationshipName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Relationship' with the minimum fields required to make a request.
@@ -2593,10 +2661,12 @@ instance NFData Relationship where
 --
 --
 -- /See:/ 'resourceCount' smart constructor.
-data ResourceCount = ResourceCount'
-  { _rcResourceType :: !(Maybe ResourceType)
-  , _rcCount        :: !(Maybe Integer)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResourceCount =
+  ResourceCount'
+    { _rcResourceType :: !(Maybe ResourceType)
+    , _rcCount        :: !(Maybe Integer)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResourceCount' with the minimum fields required to make a request.
@@ -2635,12 +2705,14 @@ instance NFData ResourceCount where
 --
 --
 -- /See:/ 'resourceIdentifier' smart constructor.
-data ResourceIdentifier = ResourceIdentifier'
-  { _riResourceId           :: !(Maybe Text)
-  , _riResourceType         :: !(Maybe ResourceType)
-  , _riResourceName         :: !(Maybe Text)
-  , _riResourceDeletionTime :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResourceIdentifier =
+  ResourceIdentifier'
+    { _riResourceId           :: !(Maybe Text)
+    , _riResourceType         :: !(Maybe ResourceType)
+    , _riResourceName         :: !(Maybe Text)
+    , _riResourceDeletionTime :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResourceIdentifier' with the minimum fields required to make a request.
@@ -2699,10 +2771,12 @@ instance NFData ResourceIdentifier where
 --
 --
 -- /See:/ 'resourceKey' smart constructor.
-data ResourceKey = ResourceKey'
-  { _rkResourceType :: !ResourceType
-  , _rkResourceId   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResourceKey =
+  ResourceKey'
+    { _rkResourceType :: !ResourceType
+    , _rkResourceId   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResourceKey' with the minimum fields required to make a request.
@@ -2751,12 +2825,14 @@ instance ToJSON ResourceKey where
 --
 --
 -- /See:/ 'scope' smart constructor.
-data Scope = Scope'
-  { _sComplianceResourceTypes :: !(Maybe [Text])
-  , _sComplianceResourceId    :: !(Maybe Text)
-  , _sTagValue                :: !(Maybe Text)
-  , _sTagKey                  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Scope =
+  Scope'
+    { _sComplianceResourceTypes :: !(Maybe [Text])
+    , _sComplianceResourceId    :: !(Maybe Text)
+    , _sTagValue                :: !(Maybe Text)
+    , _sTagKey                  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Scope' with the minimum fields required to make a request.
@@ -2827,11 +2903,13 @@ instance ToJSON Scope where
 --
 --
 -- /See:/ 'source' smart constructor.
-data Source = Source'
-  { _sSourceDetails    :: !(Maybe [SourceDetail])
-  , _sOwner            :: !Owner
-  , _sSourceIdentifier :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Source =
+  Source'
+    { _sSourceDetails    :: !(Maybe [SourceDetail])
+    , _sOwner            :: !Owner
+    , _sSourceIdentifier :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Source' with the minimum fields required to make a request.
@@ -2892,11 +2970,13 @@ instance ToJSON Source where
 --
 --
 -- /See:/ 'sourceDetail' smart constructor.
-data SourceDetail = SourceDetail'
-  { _sdMessageType               :: !(Maybe MessageType)
-  , _sdMaximumExecutionFrequency :: !(Maybe MaximumExecutionFrequency)
-  , _sdEventSource               :: !(Maybe EventSource)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SourceDetail =
+  SourceDetail'
+    { _sdMessageType               :: !(Maybe MessageType)
+    , _sdMaximumExecutionFrequency :: !(Maybe MaximumExecutionFrequency)
+    , _sdEventSource               :: !(Maybe EventSource)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SourceDetail' with the minimum fields required to make a request.

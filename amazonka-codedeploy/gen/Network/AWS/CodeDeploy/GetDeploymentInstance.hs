@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getDeploymentInstance' smart constructor.
-data GetDeploymentInstance = GetDeploymentInstance'
-  { _gdiDeploymentId :: !Text
-  , _gdiInstanceId   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDeploymentInstance =
+  GetDeploymentInstance'
+    { _gdiDeploymentId :: !Text
+    , _gdiInstanceId   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDeploymentInstance' with the minimum fields required to make a request.
@@ -122,10 +124,12 @@ instance ToQuery GetDeploymentInstance where
 --
 --
 -- /See:/ 'getDeploymentInstanceResponse' smart constructor.
-data GetDeploymentInstanceResponse = GetDeploymentInstanceResponse'
-  { _gdirsInstanceSummary :: !(Maybe InstanceSummary)
-  , _gdirsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDeploymentInstanceResponse =
+  GetDeploymentInstanceResponse'
+    { _gdirsInstanceSummary :: !(Maybe InstanceSummary)
+    , _gdirsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDeploymentInstanceResponse' with the minimum fields required to make a request.

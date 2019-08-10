@@ -58,13 +58,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'queryObjects' smart constructor.
-data QueryObjects = QueryObjects'
-  { _qoQuery      :: !(Maybe Query)
-  , _qoMarker     :: !(Maybe Text)
-  , _qoLimit      :: !(Maybe Int)
-  , _qoPipelineId :: !Text
-  , _qoSphere     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data QueryObjects =
+  QueryObjects'
+    { _qoQuery      :: !(Maybe Query)
+    , _qoMarker     :: !(Maybe Text)
+    , _qoLimit      :: !(Maybe Int)
+    , _qoPipelineId :: !Text
+    , _qoSphere     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'QueryObjects' with the minimum fields required to make a request.
@@ -166,12 +168,14 @@ instance ToQuery QueryObjects where
 --
 --
 -- /See:/ 'queryObjectsResponse' smart constructor.
-data QueryObjectsResponse = QueryObjectsResponse'
-  { _qorsHasMoreResults :: !(Maybe Bool)
-  , _qorsIds            :: !(Maybe [Text])
-  , _qorsMarker         :: !(Maybe Text)
-  , _qorsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data QueryObjectsResponse =
+  QueryObjectsResponse'
+    { _qorsHasMoreResults :: !(Maybe Bool)
+    , _qorsIds            :: !(Maybe [Text])
+    , _qorsMarker         :: !(Maybe Text)
+    , _qorsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'QueryObjectsResponse' with the minimum fields required to make a request.

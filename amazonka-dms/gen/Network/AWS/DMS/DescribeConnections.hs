@@ -55,11 +55,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeConnections' smart constructor.
-data DescribeConnections = DescribeConnections'
-  { _dcFilters    :: !(Maybe [Filter])
-  , _dcMarker     :: !(Maybe Text)
-  , _dcMaxRecords :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeConnections =
+  DescribeConnections'
+    { _dcFilters    :: !(Maybe [Filter])
+    , _dcMarker     :: !(Maybe Text)
+    , _dcMaxRecords :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeConnections' with the minimum fields required to make a request.
@@ -140,11 +142,13 @@ instance ToQuery DescribeConnections where
 --
 --
 -- /See:/ 'describeConnectionsResponse' smart constructor.
-data DescribeConnectionsResponse = DescribeConnectionsResponse'
-  { _drsConnections    :: !(Maybe [Connection])
-  , _drsMarker         :: !(Maybe Text)
-  , _drsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeConnectionsResponse =
+  DescribeConnectionsResponse'
+    { _drsConnections    :: !(Maybe [Connection])
+    , _drsMarker         :: !(Maybe Text)
+    , _drsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeConnectionsResponse' with the minimum fields required to make a request.

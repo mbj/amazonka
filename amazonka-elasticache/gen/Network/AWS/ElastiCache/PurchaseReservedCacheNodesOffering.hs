@@ -51,11 +51,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'purchaseReservedCacheNodesOffering' smart constructor.
-data PurchaseReservedCacheNodesOffering = PurchaseReservedCacheNodesOffering'
-  { _prcnoCacheNodeCount               :: !(Maybe Int)
-  , _prcnoReservedCacheNodeId          :: !(Maybe Text)
-  , _prcnoReservedCacheNodesOfferingId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PurchaseReservedCacheNodesOffering =
+  PurchaseReservedCacheNodesOffering'
+    { _prcnoCacheNodeCount               :: !(Maybe Int)
+    , _prcnoReservedCacheNodeId          :: !(Maybe Text)
+    , _prcnoReservedCacheNodesOfferingId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PurchaseReservedCacheNodesOffering' with the minimum fields required to make a request.
@@ -130,10 +132,12 @@ instance ToQuery PurchaseReservedCacheNodesOffering
                  _prcnoReservedCacheNodesOfferingId]
 
 -- | /See:/ 'purchaseReservedCacheNodesOfferingResponse' smart constructor.
-data PurchaseReservedCacheNodesOfferingResponse = PurchaseReservedCacheNodesOfferingResponse'
-  { _prcnorsReservedCacheNode :: !(Maybe ReservedCacheNode)
-  , _prcnorsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PurchaseReservedCacheNodesOfferingResponse =
+  PurchaseReservedCacheNodesOfferingResponse'
+    { _prcnorsReservedCacheNode :: !(Maybe ReservedCacheNode)
+    , _prcnorsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PurchaseReservedCacheNodesOfferingResponse' with the minimum fields required to make a request.

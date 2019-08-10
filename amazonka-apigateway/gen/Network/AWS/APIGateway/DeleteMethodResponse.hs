@@ -49,12 +49,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteMethodResponse' smart constructor.
-data DeleteMethodResponse = DeleteMethodResponse'
-  { _dmRestAPIId  :: !Text
-  , _dmResourceId :: !Text
-  , _dmHttpMethod :: !Text
-  , _dmStatusCode :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteMethodResponse =
+  DeleteMethodResponse'
+    { _dmRestAPIId  :: !Text
+    , _dmResourceId :: !Text
+    , _dmHttpMethod :: !Text
+    , _dmStatusCode :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteMethodResponse' with the minimum fields required to make a request.

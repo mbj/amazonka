@@ -57,10 +57,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'detectFaces' smart constructor.
-data DetectFaces = DetectFaces'
-  { _dfAttributes :: !(Maybe [Attribute])
-  , _dfImage      :: !Image
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DetectFaces =
+  DetectFaces'
+    { _dfAttributes :: !(Maybe [Attribute])
+    , _dfImage      :: !Image
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DetectFaces' with the minimum fields required to make a request.
@@ -122,11 +124,13 @@ instance ToQuery DetectFaces where
         toQuery = const mempty
 
 -- | /See:/ 'detectFacesResponse' smart constructor.
-data DetectFacesResponse = DetectFacesResponse'
-  { _dfrsOrientationCorrection :: !(Maybe OrientationCorrection)
-  , _dfrsFaceDetails           :: !(Maybe [FaceDetail])
-  , _dfrsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DetectFacesResponse =
+  DetectFacesResponse'
+    { _dfrsOrientationCorrection :: !(Maybe OrientationCorrection)
+    , _dfrsFaceDetails           :: !(Maybe [FaceDetail])
+    , _dfrsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DetectFacesResponse' with the minimum fields required to make a request.

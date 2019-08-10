@@ -58,18 +58,20 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createHITWithHITType' smart constructor.
-data CreateHITWithHITType = CreateHITWithHITType'
-  { _chitwhittHITReviewPolicy        :: !(Maybe ReviewPolicy)
-  , _chitwhittUniqueRequestToken     :: !(Maybe Text)
-  , _chitwhittRequesterAnnotation    :: !(Maybe Text)
-  , _chitwhittMaxAssignments         :: !(Maybe Int)
-  , _chitwhittHITLayoutId            :: !(Maybe Text)
-  , _chitwhittHITLayoutParameters    :: !(Maybe [HITLayoutParameter])
-  , _chitwhittQuestion               :: !(Maybe Text)
-  , _chitwhittAssignmentReviewPolicy :: !(Maybe ReviewPolicy)
-  , _chitwhittHITTypeId              :: !Text
-  , _chitwhittLifetimeInSeconds      :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateHITWithHITType =
+  CreateHITWithHITType'
+    { _chitwhittHITReviewPolicy        :: !(Maybe ReviewPolicy)
+    , _chitwhittUniqueRequestToken     :: !(Maybe Text)
+    , _chitwhittRequesterAnnotation    :: !(Maybe Text)
+    , _chitwhittMaxAssignments         :: !(Maybe Int)
+    , _chitwhittHITLayoutId            :: !(Maybe Text)
+    , _chitwhittHITLayoutParameters    :: !(Maybe [HITLayoutParameter])
+    , _chitwhittQuestion               :: !(Maybe Text)
+    , _chitwhittAssignmentReviewPolicy :: !(Maybe ReviewPolicy)
+    , _chitwhittHITTypeId              :: !Text
+    , _chitwhittLifetimeInSeconds      :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateHITWithHITType' with the minimum fields required to make a request.
@@ -207,10 +209,12 @@ instance ToQuery CreateHITWithHITType where
         toQuery = const mempty
 
 -- | /See:/ 'createHITWithHITTypeResponse' smart constructor.
-data CreateHITWithHITTypeResponse = CreateHITWithHITTypeResponse'
-  { _chitwhittrsHIT            :: !(Maybe HIT)
-  , _chitwhittrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateHITWithHITTypeResponse =
+  CreateHITWithHITTypeResponse'
+    { _chitwhittrsHIT            :: !(Maybe HIT)
+    , _chitwhittrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateHITWithHITTypeResponse' with the minimum fields required to make a request.

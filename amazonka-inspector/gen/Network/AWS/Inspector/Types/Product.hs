@@ -26,10 +26,12 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'agentFilter' smart constructor.
-data AgentFilter = AgentFilter'
-  { _afAgentHealths     :: ![AgentHealth]
-  , _afAgentHealthCodes :: ![AgentHealthCode]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AgentFilter =
+  AgentFilter'
+    { _afAgentHealths     :: ![AgentHealth]
+    , _afAgentHealthCodes :: ![AgentHealthCode]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AgentFilter' with the minimum fields required to make a request.
@@ -69,16 +71,18 @@ instance ToJSON AgentFilter where
 --
 --
 -- /See:/ 'agentPreview' smart constructor.
-data AgentPreview = AgentPreview'
-  { _apHostname         :: !(Maybe Text)
-  , _apAutoScalingGroup :: !(Maybe Text)
-  , _apOperatingSystem  :: !(Maybe Text)
-  , _apAgentVersion     :: !(Maybe Text)
-  , _apKernelVersion    :: !(Maybe Text)
-  , _apAgentHealth      :: !(Maybe AgentHealth)
-  , _apIpv4Address      :: !(Maybe Text)
-  , _apAgentId          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AgentPreview =
+  AgentPreview'
+    { _apHostname         :: !(Maybe Text)
+    , _apAutoScalingGroup :: !(Maybe Text)
+    , _apOperatingSystem  :: !(Maybe Text)
+    , _apAgentVersion     :: !(Maybe Text)
+    , _apKernelVersion    :: !(Maybe Text)
+    , _apAgentHealth      :: !(Maybe AgentHealth)
+    , _apIpv4Address      :: !(Maybe Text)
+    , _apAgentId          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AgentPreview' with the minimum fields required to make a request.
@@ -172,23 +176,25 @@ instance NFData AgentPreview where
 --
 --
 -- /See:/ 'assessmentRun' smart constructor.
-data AssessmentRun = AssessmentRun'
-  { _arStartedAt                 :: !(Maybe POSIX)
-  , _arCompletedAt               :: !(Maybe POSIX)
-  , _arArn                       :: !Text
-  , _arName                      :: !Text
-  , _arAssessmentTemplateARN     :: !Text
-  , _arState                     :: !AssessmentRunState
-  , _arDurationInSeconds         :: !Nat
-  , _arRulesPackageARNs          :: !(List1 Text)
-  , _arUserAttributesForFindings :: ![Attribute]
-  , _arCreatedAt                 :: !POSIX
-  , _arStateChangedAt            :: !POSIX
-  , _arDataCollected             :: !Bool
-  , _arStateChanges              :: ![AssessmentRunStateChange]
-  , _arNotifications             :: ![AssessmentRunNotification]
-  , _arFindingCounts             :: !(Map Severity Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssessmentRun =
+  AssessmentRun'
+    { _arStartedAt                 :: !(Maybe POSIX)
+    , _arCompletedAt               :: !(Maybe POSIX)
+    , _arArn                       :: !Text
+    , _arName                      :: !Text
+    , _arAssessmentTemplateARN     :: !Text
+    , _arState                     :: !AssessmentRunState
+    , _arDurationInSeconds         :: !Nat
+    , _arRulesPackageARNs          :: !(List1 Text)
+    , _arUserAttributesForFindings :: ![Attribute]
+    , _arCreatedAt                 :: !POSIX
+    , _arStateChangedAt            :: !POSIX
+    , _arDataCollected             :: !Bool
+    , _arStateChanges              :: ![AssessmentRunStateChange]
+    , _arNotifications             :: ![AssessmentRunNotification]
+    , _arFindingCounts             :: !(Map Severity Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssessmentRun' with the minimum fields required to make a request.
@@ -344,15 +350,17 @@ instance NFData AssessmentRun where
 --
 --
 -- /See:/ 'assessmentRunAgent' smart constructor.
-data AssessmentRunAgent = AssessmentRunAgent'
-  { _araAutoScalingGroup   :: !(Maybe Text)
-  , _araAgentHealthDetails :: !(Maybe Text)
-  , _araAgentId            :: !Text
-  , _araAssessmentRunARN   :: !Text
-  , _araAgentHealth        :: !AgentHealth
-  , _araAgentHealthCode    :: !AgentHealthCode
-  , _araTelemetryMetadata  :: ![TelemetryMetadata]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssessmentRunAgent =
+  AssessmentRunAgent'
+    { _araAutoScalingGroup   :: !(Maybe Text)
+    , _araAgentHealthDetails :: !(Maybe Text)
+    , _araAgentId            :: !Text
+    , _araAssessmentRunARN   :: !Text
+    , _araAgentHealth        :: !AgentHealth
+    , _araAgentHealthCode    :: !AgentHealthCode
+    , _araTelemetryMetadata  :: ![TelemetryMetadata]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssessmentRunAgent' with the minimum fields required to make a request.
@@ -440,15 +448,17 @@ instance NFData AssessmentRunAgent where
 --
 --
 -- /See:/ 'assessmentRunFilter' smart constructor.
-data AssessmentRunFilter = AssessmentRunFilter'
-  { _arfStates               :: !(Maybe [AssessmentRunState])
-  , _arfNamePattern          :: !(Maybe Text)
-  , _arfStartTimeRange       :: !(Maybe TimestampRange)
-  , _arfStateChangeTimeRange :: !(Maybe TimestampRange)
-  , _arfRulesPackageARNs     :: !(Maybe [Text])
-  , _arfCompletionTimeRange  :: !(Maybe TimestampRange)
-  , _arfDurationRange        :: !(Maybe DurationRange)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssessmentRunFilter =
+  AssessmentRunFilter'
+    { _arfStates               :: !(Maybe [AssessmentRunState])
+    , _arfNamePattern          :: !(Maybe Text)
+    , _arfStartTimeRange       :: !(Maybe TimestampRange)
+    , _arfStateChangeTimeRange :: !(Maybe TimestampRange)
+    , _arfRulesPackageARNs     :: !(Maybe [Text])
+    , _arfCompletionTimeRange  :: !(Maybe TimestampRange)
+    , _arfDurationRange        :: !(Maybe DurationRange)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssessmentRunFilter' with the minimum fields required to make a request.
@@ -533,14 +543,16 @@ instance ToJSON AssessmentRunFilter where
 --
 --
 -- /See:/ 'assessmentRunNotification' smart constructor.
-data AssessmentRunNotification = AssessmentRunNotification'
-  { _arnSnsTopicARN          :: !(Maybe Text)
-  , _arnSnsPublishStatusCode :: !(Maybe AssessmentRunNotificationSNSStatusCode)
-  , _arnMessage              :: !(Maybe Text)
-  , _arnDate                 :: !POSIX
-  , _arnEvent                :: !InspectorEvent
-  , _arnError                :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssessmentRunNotification =
+  AssessmentRunNotification'
+    { _arnSnsTopicARN :: !(Maybe Text)
+    , _arnSnsPublishStatusCode :: !(Maybe AssessmentRunNotificationSNSStatusCode)
+    , _arnMessage :: !(Maybe Text)
+    , _arnDate :: !POSIX
+    , _arnEvent :: !InspectorEvent
+    , _arnError :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssessmentRunNotification' with the minimum fields required to make a request.
@@ -619,10 +631,12 @@ instance NFData AssessmentRunNotification where
 --
 --
 -- /See:/ 'assessmentRunStateChange' smart constructor.
-data AssessmentRunStateChange = AssessmentRunStateChange'
-  { _arscStateChangedAt :: !POSIX
-  , _arscState          :: !AssessmentRunState
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssessmentRunStateChange =
+  AssessmentRunStateChange'
+    { _arscStateChangedAt :: !POSIX
+    , _arscState          :: !AssessmentRunState
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssessmentRunStateChange' with the minimum fields required to make a request.
@@ -665,13 +679,15 @@ instance NFData AssessmentRunStateChange where
 --
 --
 -- /See:/ 'assessmentTarget' smart constructor.
-data AssessmentTarget = AssessmentTarget'
-  { _aArn              :: !Text
-  , _aName             :: !Text
-  , _aResourceGroupARN :: !Text
-  , _aCreatedAt        :: !POSIX
-  , _aUpdatedAt        :: !POSIX
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssessmentTarget =
+  AssessmentTarget'
+    { _aArn              :: !Text
+    , _aName             :: !Text
+    , _aResourceGroupARN :: !Text
+    , _aCreatedAt        :: !POSIX
+    , _aUpdatedAt        :: !POSIX
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssessmentTarget' with the minimum fields required to make a request.
@@ -743,9 +759,11 @@ instance NFData AssessmentTarget where
 --
 --
 -- /See:/ 'assessmentTargetFilter' smart constructor.
-newtype AssessmentTargetFilter = AssessmentTargetFilter'
-  { _atfAssessmentTargetNamePattern :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AssessmentTargetFilter =
+  AssessmentTargetFilter'
+    { _atfAssessmentTargetNamePattern :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssessmentTargetFilter' with the minimum fields required to make a request.
@@ -779,17 +797,19 @@ instance ToJSON AssessmentTargetFilter where
 --
 --
 -- /See:/ 'assessmentTemplate' smart constructor.
-data AssessmentTemplate = AssessmentTemplate'
-  { _atLastAssessmentRunARN      :: !(Maybe Text)
-  , _atArn                       :: !Text
-  , _atName                      :: !Text
-  , _atAssessmentTargetARN       :: !Text
-  , _atDurationInSeconds         :: !Nat
-  , _atRulesPackageARNs          :: ![Text]
-  , _atUserAttributesForFindings :: ![Attribute]
-  , _atAssessmentRunCount        :: !Int
-  , _atCreatedAt                 :: !POSIX
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssessmentTemplate =
+  AssessmentTemplate'
+    { _atLastAssessmentRunARN      :: !(Maybe Text)
+    , _atArn                       :: !Text
+    , _atName                      :: !Text
+    , _atAssessmentTargetARN       :: !Text
+    , _atDurationInSeconds         :: !Nat
+    , _atRulesPackageARNs          :: ![Text]
+    , _atUserAttributesForFindings :: ![Attribute]
+    , _atAssessmentRunCount        :: !Int
+    , _atCreatedAt                 :: !POSIX
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssessmentTemplate' with the minimum fields required to make a request.
@@ -894,11 +914,13 @@ instance NFData AssessmentTemplate where
 --
 --
 -- /See:/ 'assessmentTemplateFilter' smart constructor.
-data AssessmentTemplateFilter = AssessmentTemplateFilter'
-  { _atfNamePattern      :: !(Maybe Text)
-  , _atfRulesPackageARNs :: !(Maybe [Text])
-  , _atfDurationRange    :: !(Maybe DurationRange)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssessmentTemplateFilter =
+  AssessmentTemplateFilter'
+    { _atfNamePattern      :: !(Maybe Text)
+    , _atfRulesPackageARNs :: !(Maybe [Text])
+    , _atfDurationRange    :: !(Maybe DurationRange)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssessmentTemplateFilter' with the minimum fields required to make a request.
@@ -949,14 +971,16 @@ instance ToJSON AssessmentTemplateFilter where
 --
 --
 -- /See:/ 'assetAttributes' smart constructor.
-data AssetAttributes = AssetAttributes'
-  { _aaHostname         :: !(Maybe Text)
-  , _aaAutoScalingGroup :: !(Maybe Text)
-  , _aaIpv4Addresses    :: !(Maybe [Text])
-  , _aaAgentId          :: !(Maybe Text)
-  , _aaAmiId            :: !(Maybe Text)
-  , _aaSchemaVersion    :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssetAttributes =
+  AssetAttributes'
+    { _aaHostname         :: !(Maybe Text)
+    , _aaAutoScalingGroup :: !(Maybe Text)
+    , _aaIpv4Addresses    :: !(Maybe [Text])
+    , _aaAgentId          :: !(Maybe Text)
+    , _aaAmiId            :: !(Maybe Text)
+    , _aaSchemaVersion    :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssetAttributes' with the minimum fields required to make a request.
@@ -1032,10 +1056,12 @@ instance NFData AssetAttributes where
 --
 --
 -- /See:/ 'attribute' smart constructor.
-data Attribute = Attribute'
-  { _aValue :: !(Maybe Text)
-  , _aKey   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Attribute =
+  Attribute'
+    { _aValue :: !(Maybe Text)
+    , _aKey   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Attribute' with the minimum fields required to make a request.
@@ -1080,10 +1106,12 @@ instance ToJSON Attribute where
 --
 --
 -- /See:/ 'durationRange' smart constructor.
-data DurationRange = DurationRange'
-  { _drMinSeconds :: !(Maybe Nat)
-  , _drMaxSeconds :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DurationRange =
+  DurationRange'
+    { _drMinSeconds :: !(Maybe Nat)
+    , _drMaxSeconds :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DurationRange' with the minimum fields required to make a request.
@@ -1123,10 +1151,12 @@ instance ToJSON DurationRange where
 --
 --
 -- /See:/ 'eventSubscription' smart constructor.
-data EventSubscription = EventSubscription'
-  { _esEvent        :: !InspectorEvent
-  , _esSubscribedAt :: !POSIX
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EventSubscription =
+  EventSubscription'
+    { _esEvent        :: !InspectorEvent
+    , _esSubscribedAt :: !POSIX
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EventSubscription' with the minimum fields required to make a request.
@@ -1169,10 +1199,12 @@ instance NFData EventSubscription where
 --
 --
 -- /See:/ 'failedItemDetails' smart constructor.
-data FailedItemDetails = FailedItemDetails'
-  { _fidFailureCode :: !FailedItemErrorCode
-  , _fidRetryable   :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FailedItemDetails =
+  FailedItemDetails'
+    { _fidFailureCode :: !FailedItemErrorCode
+    , _fidRetryable   :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FailedItemDetails' with the minimum fields required to make a request.
@@ -1215,26 +1247,28 @@ instance NFData FailedItemDetails where
 --
 --
 -- /See:/ 'finding' smart constructor.
-data Finding = Finding'
-  { _fService               :: !(Maybe Text)
-  , _fSeverity              :: !(Maybe Severity)
-  , _fSchemaVersion         :: !(Maybe Nat)
-  , _fConfidence            :: !(Maybe Nat)
-  , _fAssetAttributes       :: !(Maybe AssetAttributes)
-  , _fServiceAttributes     :: !(Maybe InspectorServiceAttributes)
-  , _fId                    :: !(Maybe Text)
-  , _fNumericSeverity       :: !(Maybe Double)
-  , _fAssetType             :: !(Maybe AssetType)
-  , _fTitle                 :: !(Maybe Text)
-  , _fIndicatorOfCompromise :: !(Maybe Bool)
-  , _fDescription           :: !(Maybe Text)
-  , _fRecommendation        :: !(Maybe Text)
-  , _fArn                   :: !Text
-  , _fAttributes            :: ![Attribute]
-  , _fUserAttributes        :: ![Attribute]
-  , _fCreatedAt             :: !POSIX
-  , _fUpdatedAt             :: !POSIX
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Finding =
+  Finding'
+    { _fService               :: !(Maybe Text)
+    , _fSeverity              :: !(Maybe Severity)
+    , _fSchemaVersion         :: !(Maybe Nat)
+    , _fConfidence            :: !(Maybe Nat)
+    , _fAssetAttributes       :: !(Maybe AssetAttributes)
+    , _fServiceAttributes     :: !(Maybe InspectorServiceAttributes)
+    , _fId                    :: !(Maybe Text)
+    , _fNumericSeverity       :: !(Maybe Double)
+    , _fAssetType             :: !(Maybe AssetType)
+    , _fTitle                 :: !(Maybe Text)
+    , _fIndicatorOfCompromise :: !(Maybe Bool)
+    , _fDescription           :: !(Maybe Text)
+    , _fRecommendation        :: !(Maybe Text)
+    , _fArn                   :: !Text
+    , _fAttributes            :: ![Attribute]
+    , _fUserAttributes        :: ![Attribute]
+    , _fCreatedAt             :: !POSIX
+    , _fUpdatedAt             :: !POSIX
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Finding' with the minimum fields required to make a request.
@@ -1408,16 +1442,18 @@ instance NFData Finding where
 --
 --
 -- /See:/ 'findingFilter' smart constructor.
-data FindingFilter = FindingFilter'
-  { _ffAgentIds          :: !(Maybe [Text])
-  , _ffRuleNames         :: !(Maybe [Text])
-  , _ffUserAttributes    :: !(Maybe [Attribute])
-  , _ffRulesPackageARNs  :: !(Maybe [Text])
-  , _ffAttributes        :: !(Maybe [Attribute])
-  , _ffSeverities        :: !(Maybe [Severity])
-  , _ffCreationTimeRange :: !(Maybe TimestampRange)
-  , _ffAutoScalingGroups :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FindingFilter =
+  FindingFilter'
+    { _ffAgentIds          :: !(Maybe [Text])
+    , _ffRuleNames         :: !(Maybe [Text])
+    , _ffUserAttributes    :: !(Maybe [Attribute])
+    , _ffRulesPackageARNs  :: !(Maybe [Text])
+    , _ffAttributes        :: !(Maybe [Attribute])
+    , _ffSeverities        :: !(Maybe [Severity])
+    , _ffCreationTimeRange :: !(Maybe TimestampRange)
+    , _ffAutoScalingGroups :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FindingFilter' with the minimum fields required to make a request.
@@ -1508,11 +1544,13 @@ instance ToJSON FindingFilter where
 --
 --
 -- /See:/ 'inspectorServiceAttributes' smart constructor.
-data InspectorServiceAttributes = InspectorServiceAttributes'
-  { _isaRulesPackageARN  :: !(Maybe Text)
-  , _isaAssessmentRunARN :: !(Maybe Text)
-  , _isaSchemaVersion    :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InspectorServiceAttributes =
+  InspectorServiceAttributes'
+    { _isaRulesPackageARN  :: !(Maybe Text)
+    , _isaAssessmentRunARN :: !(Maybe Text)
+    , _isaSchemaVersion    :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InspectorServiceAttributes' with the minimum fields required to make a request.
@@ -1565,11 +1603,13 @@ instance NFData InspectorServiceAttributes where
 --
 --
 -- /See:/ 'resourceGroup' smart constructor.
-data ResourceGroup = ResourceGroup'
-  { _rgArn       :: !Text
-  , _rgTags      :: !(List1 ResourceGroupTag)
-  , _rgCreatedAt :: !POSIX
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResourceGroup =
+  ResourceGroup'
+    { _rgArn       :: !Text
+    , _rgTags      :: !(List1 ResourceGroupTag)
+    , _rgCreatedAt :: !POSIX
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResourceGroup' with the minimum fields required to make a request.
@@ -1623,10 +1663,12 @@ instance NFData ResourceGroup where
 --
 --
 -- /See:/ 'resourceGroupTag' smart constructor.
-data ResourceGroupTag = ResourceGroupTag'
-  { _rgtValue :: !(Maybe Text)
-  , _rgtKey   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResourceGroupTag =
+  ResourceGroupTag'
+    { _rgtValue :: !(Maybe Text)
+    , _rgtKey   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResourceGroupTag' with the minimum fields required to make a request.
@@ -1674,13 +1716,15 @@ instance ToJSON ResourceGroupTag where
 --
 --
 -- /See:/ 'rulesPackage' smart constructor.
-data RulesPackage = RulesPackage'
-  { _rpDescription :: !(Maybe Text)
-  , _rpArn         :: !Text
-  , _rpName        :: !Text
-  , _rpVersion     :: !Text
-  , _rpProvider    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RulesPackage =
+  RulesPackage'
+    { _rpDescription :: !(Maybe Text)
+    , _rpArn         :: !Text
+    , _rpName        :: !Text
+    , _rpVersion     :: !Text
+    , _rpProvider    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RulesPackage' with the minimum fields required to make a request.
@@ -1751,11 +1795,13 @@ instance NFData RulesPackage where
 --
 --
 -- /See:/ 'subscription' smart constructor.
-data Subscription = Subscription'
-  { _sResourceARN        :: !Text
-  , _sTopicARN           :: !Text
-  , _sEventSubscriptions :: !(List1 EventSubscription)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Subscription =
+  Subscription'
+    { _sResourceARN        :: !Text
+    , _sTopicARN           :: !Text
+    , _sEventSubscriptions :: !(List1 EventSubscription)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Subscription' with the minimum fields required to make a request.
@@ -1809,10 +1855,12 @@ instance NFData Subscription where
 --
 --
 -- /See:/ 'tag' smart constructor.
-data Tag = Tag'
-  { _tagValue :: !(Maybe Text)
-  , _tagKey   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Tag =
+  Tag'
+    { _tagValue :: !(Maybe Text)
+    , _tagKey   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Tag' with the minimum fields required to make a request.
@@ -1857,11 +1905,13 @@ instance ToJSON Tag where
 --
 --
 -- /See:/ 'telemetryMetadata' smart constructor.
-data TelemetryMetadata = TelemetryMetadata'
-  { _tmDataSize    :: !(Maybe Integer)
-  , _tmMessageType :: !Text
-  , _tmCount       :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TelemetryMetadata =
+  TelemetryMetadata'
+    { _tmDataSize    :: !(Maybe Integer)
+    , _tmMessageType :: !Text
+    , _tmCount       :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TelemetryMetadata' with the minimum fields required to make a request.
@@ -1911,10 +1961,12 @@ instance NFData TelemetryMetadata where
 --
 --
 -- /See:/ 'timestampRange' smart constructor.
-data TimestampRange = TimestampRange'
-  { _trEndDate   :: !(Maybe POSIX)
-  , _trBeginDate :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TimestampRange =
+  TimestampRange'
+    { _trEndDate   :: !(Maybe POSIX)
+    , _trBeginDate :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TimestampRange' with the minimum fields required to make a request.

@@ -46,9 +46,11 @@ import Network.AWS.WorkSpaces.Types
 import Network.AWS.WorkSpaces.Types.Product
 
 -- | /See:/ 'deleteIPGroup' smart constructor.
-newtype DeleteIPGroup = DeleteIPGroup'
-  { _digGroupId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteIPGroup =
+  DeleteIPGroup'
+    { _digGroupId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteIPGroup' with the minimum fields required to make a request.
@@ -99,9 +101,11 @@ instance ToQuery DeleteIPGroup where
         toQuery = const mempty
 
 -- | /See:/ 'deleteIPGroupResponse' smart constructor.
-newtype DeleteIPGroupResponse = DeleteIPGroupResponse'
-  { _dipgrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteIPGroupResponse =
+  DeleteIPGroupResponse'
+    { _dipgrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteIPGroupResponse' with the minimum fields required to make a request.

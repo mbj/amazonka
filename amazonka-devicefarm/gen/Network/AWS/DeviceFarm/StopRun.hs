@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'stopRun' smart constructor.
-newtype StopRun = StopRun'
-  { _srArn :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StopRun =
+  StopRun'
+    { _srArn :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopRun' with the minimum fields required to make a request.
@@ -106,10 +108,12 @@ instance ToQuery StopRun where
 --
 --
 -- /See:/ 'stopRunResponse' smart constructor.
-data StopRunResponse = StopRunResponse'
-  { _srsRun            :: !(Maybe Run)
-  , _srsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StopRunResponse =
+  StopRunResponse'
+    { _srsRun            :: !(Maybe Run)
+    , _srsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopRunResponse' with the minimum fields required to make a request.

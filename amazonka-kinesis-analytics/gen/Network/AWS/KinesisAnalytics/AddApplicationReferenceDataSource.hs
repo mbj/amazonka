@@ -56,11 +56,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'addApplicationReferenceDataSource' smart constructor.
-data AddApplicationReferenceDataSource = AddApplicationReferenceDataSource'
-  { _aardsApplicationName             :: !Text
-  , _aardsCurrentApplicationVersionId :: !Nat
-  , _aardsReferenceDataSource         :: !ReferenceDataSource
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddApplicationReferenceDataSource =
+  AddApplicationReferenceDataSource'
+    { _aardsApplicationName             :: !Text
+    , _aardsCurrentApplicationVersionId :: !Nat
+    , _aardsReferenceDataSource         :: !ReferenceDataSource
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddApplicationReferenceDataSource' with the minimum fields required to make a request.
@@ -151,9 +153,11 @@ instance ToQuery AddApplicationReferenceDataSource
 --
 --
 -- /See:/ 'addApplicationReferenceDataSourceResponse' smart constructor.
-newtype AddApplicationReferenceDataSourceResponse = AddApplicationReferenceDataSourceResponse'
-  { _aardsrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AddApplicationReferenceDataSourceResponse =
+  AddApplicationReferenceDataSourceResponse'
+    { _aardsrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddApplicationReferenceDataSourceResponse' with the minimum fields required to make a request.

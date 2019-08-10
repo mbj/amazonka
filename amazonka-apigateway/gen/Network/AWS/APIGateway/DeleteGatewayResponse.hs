@@ -47,10 +47,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteGatewayResponse' smart constructor.
-data DeleteGatewayResponse = DeleteGatewayResponse'
-  { _dgRestAPIId    :: !Text
-  , _dgResponseType :: !GatewayResponseType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteGatewayResponse =
+  DeleteGatewayResponse'
+    { _dgRestAPIId    :: !Text
+    , _dgResponseType :: !GatewayResponseType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteGatewayResponse' with the minimum fields required to make a request.

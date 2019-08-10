@@ -41,10 +41,12 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'deleteBucketAnalyticsConfiguration' smart constructor.
-data DeleteBucketAnalyticsConfiguration = DeleteBucketAnalyticsConfiguration'
-  { _dbacBucket :: !BucketName
-  , _dbacId     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteBucketAnalyticsConfiguration =
+  DeleteBucketAnalyticsConfiguration'
+    { _dbacBucket :: !BucketName
+    , _dbacId     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteBucketAnalyticsConfiguration' with the minimum fields required to make a request.

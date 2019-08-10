@@ -51,11 +51,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'composeEnvironments' smart constructor.
-data ComposeEnvironments = ComposeEnvironments'
-  { _ceVersionLabels   :: !(Maybe [Text])
-  , _ceApplicationName :: !(Maybe Text)
-  , _ceGroupName       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ComposeEnvironments =
+  ComposeEnvironments'
+    { _ceVersionLabels   :: !(Maybe [Text])
+    , _ceApplicationName :: !(Maybe Text)
+    , _ceGroupName       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ComposeEnvironments' with the minimum fields required to make a request.

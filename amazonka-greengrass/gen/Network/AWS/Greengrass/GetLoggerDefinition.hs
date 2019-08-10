@@ -49,9 +49,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getLoggerDefinition' smart constructor.
-newtype GetLoggerDefinition = GetLoggerDefinition'
-  { _gldLoggerDefinitionId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetLoggerDefinition =
+  GetLoggerDefinition'
+    { _gldLoggerDefinitionId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetLoggerDefinition' with the minimum fields required to make a request.
@@ -107,16 +109,18 @@ instance ToQuery GetLoggerDefinition where
         toQuery = const mempty
 
 -- | /See:/ 'getLoggerDefinitionResponse' smart constructor.
-data GetLoggerDefinitionResponse = GetLoggerDefinitionResponse'
-  { _gldrsLatestVersionARN     :: !(Maybe Text)
-  , _gldrsARN                  :: !(Maybe Text)
-  , _gldrsName                 :: !(Maybe Text)
-  , _gldrsCreationTimestamp    :: !(Maybe Text)
-  , _gldrsId                   :: !(Maybe Text)
-  , _gldrsLatestVersion        :: !(Maybe Text)
-  , _gldrsLastUpdatedTimestamp :: !(Maybe Text)
-  , _gldrsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetLoggerDefinitionResponse =
+  GetLoggerDefinitionResponse'
+    { _gldrsLatestVersionARN     :: !(Maybe Text)
+    , _gldrsARN                  :: !(Maybe Text)
+    , _gldrsName                 :: !(Maybe Text)
+    , _gldrsCreationTimestamp    :: !(Maybe Text)
+    , _gldrsId                   :: !(Maybe Text)
+    , _gldrsLatestVersion        :: !(Maybe Text)
+    , _gldrsLastUpdatedTimestamp :: !(Maybe Text)
+    , _gldrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetLoggerDefinitionResponse' with the minimum fields required to make a request.

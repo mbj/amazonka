@@ -45,9 +45,11 @@ import Network.AWS.Route53AutoNaming.Types
 import Network.AWS.Route53AutoNaming.Types.Product
 
 -- | /See:/ 'deleteNamespace' smart constructor.
-newtype DeleteNamespace = DeleteNamespace'
-  { _dnId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteNamespace =
+  DeleteNamespace'
+    { _dnId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteNamespace' with the minimum fields required to make a request.
@@ -99,10 +101,12 @@ instance ToQuery DeleteNamespace where
         toQuery = const mempty
 
 -- | /See:/ 'deleteNamespaceResponse' smart constructor.
-data DeleteNamespaceResponse = DeleteNamespaceResponse'
-  { _dnrsOperationId    :: !(Maybe Text)
-  , _dnrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteNamespaceResponse =
+  DeleteNamespaceResponse'
+    { _dnrsOperationId    :: !(Maybe Text)
+    , _dnrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteNamespaceResponse' with the minimum fields required to make a request.

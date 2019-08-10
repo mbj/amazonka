@@ -51,14 +51,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeFpgaImages' smart constructor.
-data DescribeFpgaImages = DescribeFpgaImages'
-  { _dfifOwners       :: !(Maybe [Text])
-  , _dfifFilters      :: !(Maybe [Filter])
-  , _dfifNextToken    :: !(Maybe Text)
-  , _dfifDryRun       :: !(Maybe Bool)
-  , _dfifMaxResults   :: !(Maybe Nat)
-  , _dfifFpgaImageIds :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeFpgaImages =
+  DescribeFpgaImages'
+    { _dfifOwners       :: !(Maybe [Text])
+    , _dfifFilters      :: !(Maybe [Filter])
+    , _dfifNextToken    :: !(Maybe Text)
+    , _dfifDryRun       :: !(Maybe Bool)
+    , _dfifMaxResults   :: !(Maybe Nat)
+    , _dfifFpgaImageIds :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeFpgaImages' with the minimum fields required to make a request.
@@ -150,11 +152,13 @@ instance ToQuery DescribeFpgaImages where
                  (toQueryList "FpgaImageId" <$> _dfifFpgaImageIds)]
 
 -- | /See:/ 'describeFpgaImagesResponse' smart constructor.
-data DescribeFpgaImagesResponse = DescribeFpgaImagesResponse'
-  { _dfirsFpgaImages     :: !(Maybe [FpgaImage])
-  , _dfirsNextToken      :: !(Maybe Text)
-  , _dfirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeFpgaImagesResponse =
+  DescribeFpgaImagesResponse'
+    { _dfirsFpgaImages     :: !(Maybe [FpgaImage])
+    , _dfirsNextToken      :: !(Maybe Text)
+    , _dfirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeFpgaImagesResponse' with the minimum fields required to make a request.

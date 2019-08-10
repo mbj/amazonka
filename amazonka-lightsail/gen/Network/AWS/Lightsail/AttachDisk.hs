@@ -47,11 +47,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'attachDisk' smart constructor.
-data AttachDisk = AttachDisk'
-  { _adDiskName     :: !Text
-  , _adInstanceName :: !Text
-  , _adDiskPath     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AttachDisk =
+  AttachDisk'
+    { _adDiskName     :: !Text
+    , _adInstanceName :: !Text
+    , _adDiskPath     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttachDisk' with the minimum fields required to make a request.
@@ -126,10 +128,12 @@ instance ToQuery AttachDisk where
         toQuery = const mempty
 
 -- | /See:/ 'attachDiskResponse' smart constructor.
-data AttachDiskResponse = AttachDiskResponse'
-  { _adrsOperations     :: !(Maybe [Operation])
-  , _adrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AttachDiskResponse =
+  AttachDiskResponse'
+    { _adrsOperations     :: !(Maybe [Operation])
+    , _adrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttachDiskResponse' with the minimum fields required to make a request.

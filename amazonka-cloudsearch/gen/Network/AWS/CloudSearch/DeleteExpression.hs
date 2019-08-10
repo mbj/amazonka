@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteExpression' smart constructor.
-data DeleteExpression = DeleteExpression'
-  { _delDomainName     :: !Text
-  , _delExpressionName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteExpression =
+  DeleteExpression'
+    { _delDomainName     :: !Text
+    , _delExpressionName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteExpression' with the minimum fields required to make a request.
@@ -112,10 +114,12 @@ instance ToQuery DeleteExpression where
 --
 --
 -- /See:/ 'deleteExpressionResponse' smart constructor.
-data DeleteExpressionResponse = DeleteExpressionResponse'
-  { _delrsResponseStatus :: !Int
-  , _delrsExpression     :: !ExpressionStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteExpressionResponse =
+  DeleteExpressionResponse'
+    { _delrsResponseStatus :: !Int
+    , _delrsExpression     :: !ExpressionStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteExpressionResponse' with the minimum fields required to make a request.

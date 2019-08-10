@@ -52,12 +52,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listFindings' smart constructor.
-data ListFindings = ListFindings'
-  { _lfAssessmentRunARNs :: !(Maybe [Text])
-  , _lfNextToken         :: !(Maybe Text)
-  , _lfFilter            :: !(Maybe FindingFilter)
-  , _lfMaxResults        :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListFindings =
+  ListFindings'
+    { _lfAssessmentRunARNs :: !(Maybe [Text])
+    , _lfNextToken         :: !(Maybe Text)
+    , _lfFilter            :: !(Maybe FindingFilter)
+    , _lfMaxResults        :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListFindings' with the minimum fields required to make a request.
@@ -144,11 +146,13 @@ instance ToQuery ListFindings where
         toQuery = const mempty
 
 -- | /See:/ 'listFindingsResponse' smart constructor.
-data ListFindingsResponse = ListFindingsResponse'
-  { _lfrsNextToken      :: !(Maybe Text)
-  , _lfrsResponseStatus :: !Int
-  , _lfrsFindingARNs    :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListFindingsResponse =
+  ListFindingsResponse'
+    { _lfrsNextToken      :: !(Maybe Text)
+    , _lfrsResponseStatus :: !Int
+    , _lfrsFindingARNs    :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListFindingsResponse' with the minimum fields required to make a request.

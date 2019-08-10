@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateSAMLProvider' smart constructor.
-data UpdateSAMLProvider = UpdateSAMLProvider'
-  { _usamlpSAMLMetadataDocument :: !Text
-  , _usamlpSAMLProviderARN      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateSAMLProvider =
+  UpdateSAMLProvider'
+    { _usamlpSAMLMetadataDocument :: !Text
+    , _usamlpSAMLProviderARN      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateSAMLProvider' with the minimum fields required to make a request.
@@ -112,10 +114,12 @@ instance ToQuery UpdateSAMLProvider where
 --
 --
 -- /See:/ 'updateSAMLProviderResponse' smart constructor.
-data UpdateSAMLProviderResponse = UpdateSAMLProviderResponse'
-  { _usamlprsSAMLProviderARN :: !(Maybe Text)
-  , _usamlprsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateSAMLProviderResponse =
+  UpdateSAMLProviderResponse'
+    { _usamlprsSAMLProviderARN :: !(Maybe Text)
+    , _usamlprsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateSAMLProviderResponse' with the minimum fields required to make a request.

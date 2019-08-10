@@ -54,13 +54,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateMethodResponse' smart constructor.
-data UpdateMethodResponse = UpdateMethodResponse'
-  { _umPatchOperations :: !(Maybe [PatchOperation])
-  , _umRestAPIId       :: !Text
-  , _umResourceId      :: !Text
-  , _umHttpMethod      :: !Text
-  , _umStatusCode      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateMethodResponse =
+  UpdateMethodResponse'
+    { _umPatchOperations :: !(Maybe [PatchOperation])
+    , _umRestAPIId       :: !Text
+    , _umResourceId      :: !Text
+    , _umHttpMethod      :: !Text
+    , _umStatusCode      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateMethodResponse' with the minimum fields required to make a request.

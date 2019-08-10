@@ -48,10 +48,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'uploadSSHPublicKey' smart constructor.
-data UploadSSHPublicKey = UploadSSHPublicKey'
-  { _usshpkUserName         :: !Text
-  , _usshpkSSHPublicKeyBody :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UploadSSHPublicKey =
+  UploadSSHPublicKey'
+    { _usshpkUserName         :: !Text
+    , _usshpkSSHPublicKeyBody :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UploadSSHPublicKey' with the minimum fields required to make a request.
@@ -111,10 +113,12 @@ instance ToQuery UploadSSHPublicKey where
 --
 --
 -- /See:/ 'uploadSSHPublicKeyResponse' smart constructor.
-data UploadSSHPublicKeyResponse = UploadSSHPublicKeyResponse'
-  { _uspkrsSSHPublicKey   :: !(Maybe SSHPublicKey)
-  , _uspkrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UploadSSHPublicKeyResponse =
+  UploadSSHPublicKeyResponse'
+    { _uspkrsSSHPublicKey   :: !(Maybe SSHPublicKey)
+    , _uspkrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UploadSSHPublicKeyResponse' with the minimum fields required to make a request.

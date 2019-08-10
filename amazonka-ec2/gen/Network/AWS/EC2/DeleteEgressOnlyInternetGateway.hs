@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteEgressOnlyInternetGateway' smart constructor.
-data DeleteEgressOnlyInternetGateway = DeleteEgressOnlyInternetGateway'
-  { _deoigeDryRun                      :: !(Maybe Bool)
-  , _deoigeEgressOnlyInternetGatewayId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteEgressOnlyInternetGateway =
+  DeleteEgressOnlyInternetGateway'
+    { _deoigeDryRun                      :: !(Maybe Bool)
+    , _deoigeEgressOnlyInternetGatewayId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteEgressOnlyInternetGateway' with the minimum fields required to make a request.
@@ -112,10 +114,12 @@ instance ToQuery DeleteEgressOnlyInternetGateway
                  _deoigeEgressOnlyInternetGatewayId]
 
 -- | /See:/ 'deleteEgressOnlyInternetGatewayResponse' smart constructor.
-data DeleteEgressOnlyInternetGatewayResponse = DeleteEgressOnlyInternetGatewayResponse'
-  { _deoigersReturnCode     :: !(Maybe Bool)
-  , _deoigersResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteEgressOnlyInternetGatewayResponse =
+  DeleteEgressOnlyInternetGatewayResponse'
+    { _deoigersReturnCode     :: !(Maybe Bool)
+    , _deoigersResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteEgressOnlyInternetGatewayResponse' with the minimum fields required to make a request.

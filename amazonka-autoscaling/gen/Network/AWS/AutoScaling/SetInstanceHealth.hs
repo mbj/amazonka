@@ -46,11 +46,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'setInstanceHealth' smart constructor.
-data SetInstanceHealth = SetInstanceHealth'
-  { _sihShouldRespectGracePeriod :: !(Maybe Bool)
-  , _sihInstanceId               :: !Text
-  , _sihHealthStatus             :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SetInstanceHealth =
+  SetInstanceHealth'
+    { _sihShouldRespectGracePeriod :: !(Maybe Bool)
+    , _sihInstanceId               :: !Text
+    , _sihHealthStatus             :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetInstanceHealth' with the minimum fields required to make a request.

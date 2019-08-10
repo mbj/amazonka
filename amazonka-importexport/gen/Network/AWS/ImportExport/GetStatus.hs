@@ -61,10 +61,12 @@ import Network.AWS.Response
 -- | Input structure for the GetStatus operation.
 --
 -- /See:/ 'getStatus' smart constructor.
-data GetStatus = GetStatus'
-  { _gsAPIVersion :: !(Maybe Text)
-  , _gsJobId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetStatus =
+  GetStatus'
+    { _gsAPIVersion :: !(Maybe Text)
+    , _gsJobId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetStatus' with the minimum fields required to make a request.
@@ -135,25 +137,27 @@ instance ToQuery GetStatus where
 -- | Output structure for the GetStatus operation.
 --
 -- /See:/ 'getStatusResponse' smart constructor.
-data GetStatusResponse = GetStatusResponse'
-  { _gsrsCarrier               :: !(Maybe Text)
-  , _gsrsTrackingNumber        :: !(Maybe Text)
-  , _gsrsSignature             :: !(Maybe Text)
-  , _gsrsJobType               :: !(Maybe JobType)
-  , _gsrsJobId                 :: !(Maybe Text)
-  , _gsrsSignatureFileContents :: !(Maybe Text)
-  , _gsrsErrorCount            :: !(Maybe Int)
-  , _gsrsCurrentManifest       :: !(Maybe Text)
-  , _gsrsArtifactList          :: !(Maybe [Artifact])
-  , _gsrsLogBucket             :: !(Maybe Text)
-  , _gsrsCreationDate          :: !(Maybe ISO8601)
-  , _gsrsProgressCode          :: !(Maybe Text)
-  , _gsrsLocationCode          :: !(Maybe Text)
-  , _gsrsLogKey                :: !(Maybe Text)
-  , _gsrsLocationMessage       :: !(Maybe Text)
-  , _gsrsProgressMessage       :: !(Maybe Text)
-  , _gsrsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetStatusResponse =
+  GetStatusResponse'
+    { _gsrsCarrier               :: !(Maybe Text)
+    , _gsrsTrackingNumber        :: !(Maybe Text)
+    , _gsrsSignature             :: !(Maybe Text)
+    , _gsrsJobType               :: !(Maybe JobType)
+    , _gsrsJobId                 :: !(Maybe Text)
+    , _gsrsSignatureFileContents :: !(Maybe Text)
+    , _gsrsErrorCount            :: !(Maybe Int)
+    , _gsrsCurrentManifest       :: !(Maybe Text)
+    , _gsrsArtifactList          :: !(Maybe [Artifact])
+    , _gsrsLogBucket             :: !(Maybe Text)
+    , _gsrsCreationDate          :: !(Maybe ISO8601)
+    , _gsrsProgressCode          :: !(Maybe Text)
+    , _gsrsLocationCode          :: !(Maybe Text)
+    , _gsrsLogKey                :: !(Maybe Text)
+    , _gsrsLocationMessage       :: !(Maybe Text)
+    , _gsrsProgressMessage       :: !(Maybe Text)
+    , _gsrsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetStatusResponse' with the minimum fields required to make a request.

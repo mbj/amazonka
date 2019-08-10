@@ -50,12 +50,14 @@ import Network.AWS.Transcribe.Types
 import Network.AWS.Transcribe.Types.Product
 
 -- | /See:/ 'listTranscriptionJobs' smart constructor.
-data ListTranscriptionJobs = ListTranscriptionJobs'
-  { _ltjStatus          :: !(Maybe TranscriptionJobStatus)
-  , _ltjNextToken       :: !(Maybe Text)
-  , _ltjJobNameContains :: !(Maybe Text)
-  , _ltjMaxResults      :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTranscriptionJobs =
+  ListTranscriptionJobs'
+    { _ltjStatus          :: !(Maybe TranscriptionJobStatus)
+    , _ltjNextToken       :: !(Maybe Text)
+    , _ltjJobNameContains :: !(Maybe Text)
+    , _ltjMaxResults      :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTranscriptionJobs' with the minimum fields required to make a request.
@@ -137,12 +139,14 @@ instance ToQuery ListTranscriptionJobs where
         toQuery = const mempty
 
 -- | /See:/ 'listTranscriptionJobsResponse' smart constructor.
-data ListTranscriptionJobsResponse = ListTranscriptionJobsResponse'
-  { _ltjrsStatus                    :: !(Maybe TranscriptionJobStatus)
-  , _ltjrsNextToken                 :: !(Maybe Text)
-  , _ltjrsTranscriptionJobSummaries :: !(Maybe [TranscriptionJobSummary])
-  , _ltjrsResponseStatus            :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTranscriptionJobsResponse =
+  ListTranscriptionJobsResponse'
+    { _ltjrsStatus                    :: !(Maybe TranscriptionJobStatus)
+    , _ltjrsNextToken                 :: !(Maybe Text)
+    , _ltjrsTranscriptionJobSummaries :: !(Maybe [TranscriptionJobSummary])
+    , _ltjrsResponseStatus            :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTranscriptionJobsResponse' with the minimum fields required to make a request.

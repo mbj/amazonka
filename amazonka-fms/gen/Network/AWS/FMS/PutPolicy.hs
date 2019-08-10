@@ -46,9 +46,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putPolicy' smart constructor.
-newtype PutPolicy = PutPolicy'
-  { _ppPolicy :: Policy
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype PutPolicy =
+  PutPolicy'
+    { _ppPolicy :: Policy
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutPolicy' with the minimum fields required to make a request.
@@ -100,11 +102,13 @@ instance ToQuery PutPolicy where
         toQuery = const mempty
 
 -- | /See:/ 'putPolicyResponse' smart constructor.
-data PutPolicyResponse = PutPolicyResponse'
-  { _pprsPolicyARN      :: !(Maybe Text)
-  , _pprsPolicy         :: !(Maybe Policy)
-  , _pprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutPolicyResponse =
+  PutPolicyResponse'
+    { _pprsPolicyARN      :: !(Maybe Text)
+    , _pprsPolicy         :: !(Maybe Policy)
+    , _pprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutPolicyResponse' with the minimum fields required to make a request.

@@ -48,11 +48,13 @@ import Network.AWS.StepFunctions.Types
 import Network.AWS.StepFunctions.Types.Product
 
 -- | /See:/ 'startExecution' smart constructor.
-data StartExecution = StartExecution'
-  { _seInput           :: !(Maybe Text)
-  , _seName            :: !(Maybe Text)
-  , _seStateMachineARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartExecution =
+  StartExecution'
+    { _seInput           :: !(Maybe Text)
+    , _seName            :: !(Maybe Text)
+    , _seStateMachineARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartExecution' with the minimum fields required to make a request.
@@ -124,11 +126,13 @@ instance ToQuery StartExecution where
         toQuery = const mempty
 
 -- | /See:/ 'startExecutionResponse' smart constructor.
-data StartExecutionResponse = StartExecutionResponse'
-  { _srsResponseStatus :: !Int
-  , _srsExecutionARN   :: !Text
-  , _srsStartDate      :: !POSIX
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartExecutionResponse =
+  StartExecutionResponse'
+    { _srsResponseStatus :: !Int
+    , _srsExecutionARN   :: !Text
+    , _srsStartDate      :: !POSIX
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartExecutionResponse' with the minimum fields required to make a request.

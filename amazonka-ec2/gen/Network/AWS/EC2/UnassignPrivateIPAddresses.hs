@@ -47,10 +47,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'unassignPrivateIPAddresses' smart constructor.
-data UnassignPrivateIPAddresses = UnassignPrivateIPAddresses'
-  { _upiaNetworkInterfaceId :: !Text
-  , _upiaPrivateIPAddresses :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UnassignPrivateIPAddresses =
+  UnassignPrivateIPAddresses'
+    { _upiaNetworkInterfaceId :: !Text
+    , _upiaPrivateIPAddresses :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UnassignPrivateIPAddresses' with the minimum fields required to make a request.

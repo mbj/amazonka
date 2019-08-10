@@ -48,12 +48,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createPullRequest' smart constructor.
-data CreatePullRequest = CreatePullRequest'
-  { _cprClientRequestToken :: !(Maybe Text)
-  , _cprDescription        :: !(Maybe Text)
-  , _cprTitle              :: !Text
-  , _cprTargets            :: ![Target]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreatePullRequest =
+  CreatePullRequest'
+    { _cprClientRequestToken :: !(Maybe Text)
+    , _cprDescription        :: !(Maybe Text)
+    , _cprTitle              :: !Text
+    , _cprTargets            :: ![Target]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreatePullRequest' with the minimum fields required to make a request.
@@ -135,10 +137,12 @@ instance ToQuery CreatePullRequest where
         toQuery = const mempty
 
 -- | /See:/ 'createPullRequestResponse' smart constructor.
-data CreatePullRequestResponse = CreatePullRequestResponse'
-  { _cprrsResponseStatus :: !Int
-  , _cprrsPullRequest    :: !PullRequest
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreatePullRequestResponse =
+  CreatePullRequestResponse'
+    { _cprrsResponseStatus :: !Int
+    , _cprrsPullRequest    :: !PullRequest
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreatePullRequestResponse' with the minimum fields required to make a request.

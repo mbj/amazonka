@@ -51,9 +51,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeLags' smart constructor.
-newtype DescribeLags = DescribeLags'
-  { _dlLagId :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeLags =
+  DescribeLags'
+    { _dlLagId :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeLags' with the minimum fields required to make a request.
@@ -107,10 +109,12 @@ instance ToQuery DescribeLags where
 --
 --
 -- /See:/ 'describeLagsResponse' smart constructor.
-data DescribeLagsResponse = DescribeLagsResponse'
-  { _desrsLags           :: !(Maybe [Lag])
-  , _desrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeLagsResponse =
+  DescribeLagsResponse'
+    { _desrsLags           :: !(Maybe [Lag])
+    , _desrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeLagsResponse' with the minimum fields required to make a request.

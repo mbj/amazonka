@@ -56,12 +56,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getResources' smart constructor.
-data GetResources = GetResources'
-  { _grsEmbed     :: !(Maybe [Text])
-  , _grsLimit     :: !(Maybe Int)
-  , _grsPosition  :: !(Maybe Text)
-  , _grsRestAPIId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetResources =
+  GetResources'
+    { _grsEmbed     :: !(Maybe [Text])
+    , _grsLimit     :: !(Maybe Int)
+    , _grsPosition  :: !(Maybe Text)
+    , _grsRestAPIId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetResources' with the minimum fields required to make a request.
@@ -148,11 +150,13 @@ instance ToQuery GetResources where
 -- <http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-create-api.html Create an API>
 --
 -- /See:/ 'getResourcesResponse' smart constructor.
-data GetResourcesResponse = GetResourcesResponse'
-  { _grrsItems          :: !(Maybe [Resource])
-  , _grrsPosition       :: !(Maybe Text)
-  , _grrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetResourcesResponse =
+  GetResourcesResponse'
+    { _grrsItems          :: !(Maybe [Resource])
+    , _grrsPosition       :: !(Maybe Text)
+    , _grrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetResourcesResponse' with the minimum fields required to make a request.

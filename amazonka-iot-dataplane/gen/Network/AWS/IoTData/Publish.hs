@@ -50,11 +50,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'publish' smart constructor.
-data Publish = Publish'
-  { _pPayload :: !(Maybe ByteString)
-  , _pQos     :: !(Maybe Nat)
-  , _pTopic   :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data Publish =
+  Publish'
+    { _pPayload :: !(Maybe ByteString)
+    , _pQos     :: !(Maybe Nat)
+    , _pTopic   :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Publish' with the minimum fields required to make a request.

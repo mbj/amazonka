@@ -58,11 +58,13 @@ import Network.AWS.SWF.Types
 import Network.AWS.SWF.Types.Product
 
 -- | /See:/ 'requestCancelWorkflowExecution' smart constructor.
-data RequestCancelWorkflowExecution = RequestCancelWorkflowExecution'
-  { _rcweRunId      :: !(Maybe Text)
-  , _rcweDomain     :: !Text
-  , _rcweWorkflowId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RequestCancelWorkflowExecution =
+  RequestCancelWorkflowExecution'
+    { _rcweRunId      :: !(Maybe Text)
+    , _rcweDomain     :: !Text
+    , _rcweWorkflowId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RequestCancelWorkflowExecution' with the minimum fields required to make a request.

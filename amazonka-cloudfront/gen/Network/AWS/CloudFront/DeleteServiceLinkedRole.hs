@@ -40,9 +40,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteServiceLinkedRole' smart constructor.
-newtype DeleteServiceLinkedRole = DeleteServiceLinkedRole'
-  { _dslrRoleName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteServiceLinkedRole =
+  DeleteServiceLinkedRole'
+    { _dslrRoleName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteServiceLinkedRole' with the minimum fields required to make a request.

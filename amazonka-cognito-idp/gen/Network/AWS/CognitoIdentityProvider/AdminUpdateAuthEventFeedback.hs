@@ -47,12 +47,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'adminUpdateAuthEventFeedback' smart constructor.
-data AdminUpdateAuthEventFeedback = AdminUpdateAuthEventFeedback'
-  { _auaefUserPoolId    :: !Text
-  , _auaefUsername      :: !(Sensitive Text)
-  , _auaefEventId       :: !Text
-  , _auaefFeedbackValue :: !FeedbackValueType
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data AdminUpdateAuthEventFeedback =
+  AdminUpdateAuthEventFeedback'
+    { _auaefUserPoolId    :: !Text
+    , _auaefUsername      :: !(Sensitive Text)
+    , _auaefEventId       :: !Text
+    , _auaefFeedbackValue :: !FeedbackValueType
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AdminUpdateAuthEventFeedback' with the minimum fields required to make a request.
@@ -138,9 +140,11 @@ instance ToQuery AdminUpdateAuthEventFeedback where
         toQuery = const mempty
 
 -- | /See:/ 'adminUpdateAuthEventFeedbackResponse' smart constructor.
-newtype AdminUpdateAuthEventFeedbackResponse = AdminUpdateAuthEventFeedbackResponse'
-  { _auaefrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AdminUpdateAuthEventFeedbackResponse =
+  AdminUpdateAuthEventFeedbackResponse'
+    { _auaefrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AdminUpdateAuthEventFeedbackResponse' with the minimum fields required to make a request.

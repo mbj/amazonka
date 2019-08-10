@@ -45,9 +45,11 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'getAutomationExecution' smart constructor.
-newtype GetAutomationExecution = GetAutomationExecution'
-  { _gaeAutomationExecutionId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetAutomationExecution =
+  GetAutomationExecution'
+    { _gaeAutomationExecutionId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetAutomationExecution' with the minimum fields required to make a request.
@@ -105,10 +107,12 @@ instance ToQuery GetAutomationExecution where
         toQuery = const mempty
 
 -- | /See:/ 'getAutomationExecutionResponse' smart constructor.
-data GetAutomationExecutionResponse = GetAutomationExecutionResponse'
-  { _gaersAutomationExecution :: !(Maybe AutomationExecution)
-  , _gaersResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetAutomationExecutionResponse =
+  GetAutomationExecutionResponse'
+    { _gaersAutomationExecution :: !(Maybe AutomationExecution)
+    , _gaersResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetAutomationExecutionResponse' with the minimum fields required to make a request.

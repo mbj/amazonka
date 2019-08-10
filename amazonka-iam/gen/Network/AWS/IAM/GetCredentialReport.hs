@@ -91,12 +91,14 @@ instance ToQuery GetCredentialReport where
 --
 --
 -- /See:/ 'getCredentialReportResponse' smart constructor.
-data GetCredentialReportResponse = GetCredentialReportResponse'
-  { _grsContent        :: !(Maybe Base64)
-  , _grsGeneratedTime  :: !(Maybe ISO8601)
-  , _grsReportFormat   :: !(Maybe ReportFormatType)
-  , _grsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetCredentialReportResponse =
+  GetCredentialReportResponse'
+    { _grsContent        :: !(Maybe Base64)
+    , _grsGeneratedTime  :: !(Maybe ISO8601)
+    , _grsReportFormat   :: !(Maybe ReportFormatType)
+    , _grsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetCredentialReportResponse' with the minimum fields required to make a request.

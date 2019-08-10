@@ -75,18 +75,20 @@ import Network.AWS.SWF.Types
 import Network.AWS.SWF.Types.Product
 
 -- | /See:/ 'registerActivityType' smart constructor.
-data RegisterActivityType = RegisterActivityType'
-  { _ratDefaultTaskScheduleToStartTimeout :: !(Maybe Text)
-  , _ratDefaultTaskList                   :: !(Maybe TaskList)
-  , _ratDefaultTaskPriority               :: !(Maybe Text)
-  , _ratDefaultTaskHeartbeatTimeout       :: !(Maybe Text)
-  , _ratDefaultTaskScheduleToCloseTimeout :: !(Maybe Text)
-  , _ratDefaultTaskStartToCloseTimeout    :: !(Maybe Text)
-  , _ratDescription                       :: !(Maybe Text)
-  , _ratDomain                            :: !Text
-  , _ratName                              :: !Text
-  , _ratVersion                           :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RegisterActivityType =
+  RegisterActivityType'
+    { _ratDefaultTaskScheduleToStartTimeout :: !(Maybe Text)
+    , _ratDefaultTaskList                   :: !(Maybe TaskList)
+    , _ratDefaultTaskPriority               :: !(Maybe Text)
+    , _ratDefaultTaskHeartbeatTimeout       :: !(Maybe Text)
+    , _ratDefaultTaskScheduleToCloseTimeout :: !(Maybe Text)
+    , _ratDefaultTaskStartToCloseTimeout    :: !(Maybe Text)
+    , _ratDescription                       :: !(Maybe Text)
+    , _ratDomain                            :: !Text
+    , _ratName                              :: !Text
+    , _ratVersion                           :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterActivityType' with the minimum fields required to make a request.

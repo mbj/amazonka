@@ -49,10 +49,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deprecateThingType' smart constructor.
-data DeprecateThingType = DeprecateThingType'
-  { _depUndoDeprecate :: !(Maybe Bool)
-  , _depThingTypeName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeprecateThingType =
+  DeprecateThingType'
+    { _depUndoDeprecate :: !(Maybe Bool)
+    , _depThingTypeName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeprecateThingType' with the minimum fields required to make a request.
@@ -114,9 +116,11 @@ instance ToQuery DeprecateThingType where
 --
 --
 -- /See:/ 'deprecateThingTypeResponse' smart constructor.
-newtype DeprecateThingTypeResponse = DeprecateThingTypeResponse'
-  { _deprsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeprecateThingTypeResponse =
+  DeprecateThingTypeResponse'
+    { _deprsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeprecateThingTypeResponse' with the minimum fields required to make a request.

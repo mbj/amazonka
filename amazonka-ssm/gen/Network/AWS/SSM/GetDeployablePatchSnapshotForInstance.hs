@@ -49,10 +49,12 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'getDeployablePatchSnapshotForInstance' smart constructor.
-data GetDeployablePatchSnapshotForInstance = GetDeployablePatchSnapshotForInstance'
-  { _gdpsfiInstanceId :: !Text
-  , _gdpsfiSnapshotId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDeployablePatchSnapshotForInstance =
+  GetDeployablePatchSnapshotForInstance'
+    { _gdpsfiInstanceId :: !Text
+    , _gdpsfiSnapshotId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDeployablePatchSnapshotForInstance' with the minimum fields required to make a request.
@@ -131,13 +133,15 @@ instance ToQuery
         toQuery = const mempty
 
 -- | /See:/ 'getDeployablePatchSnapshotForInstanceResponse' smart constructor.
-data GetDeployablePatchSnapshotForInstanceResponse = GetDeployablePatchSnapshotForInstanceResponse'
-  { _gdpsfirsInstanceId          :: !(Maybe Text)
-  , _gdpsfirsProduct             :: !(Maybe Text)
-  , _gdpsfirsSnapshotDownloadURL :: !(Maybe Text)
-  , _gdpsfirsSnapshotId          :: !(Maybe Text)
-  , _gdpsfirsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDeployablePatchSnapshotForInstanceResponse =
+  GetDeployablePatchSnapshotForInstanceResponse'
+    { _gdpsfirsInstanceId          :: !(Maybe Text)
+    , _gdpsfirsProduct             :: !(Maybe Text)
+    , _gdpsfirsSnapshotDownloadURL :: !(Maybe Text)
+    , _gdpsfirsSnapshotId          :: !(Maybe Text)
+    , _gdpsfirsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDeployablePatchSnapshotForInstanceResponse' with the minimum fields required to make a request.

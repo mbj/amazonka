@@ -53,11 +53,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeVPNConnections' smart constructor.
-data DescribeVPNConnections = DescribeVPNConnections'
-  { _dvpncFilters          :: !(Maybe [Filter])
-  , _dvpncVPNConnectionIds :: !(Maybe [Text])
-  , _dvpncDryRun           :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeVPNConnections =
+  DescribeVPNConnections'
+    { _dvpncFilters          :: !(Maybe [Filter])
+    , _dvpncVPNConnectionIds :: !(Maybe [Text])
+    , _dvpncDryRun           :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeVPNConnections' with the minimum fields required to make a request.
@@ -130,10 +132,12 @@ instance ToQuery DescribeVPNConnections where
 --
 --
 -- /See:/ 'describeVPNConnectionsResponse' smart constructor.
-data DescribeVPNConnectionsResponse = DescribeVPNConnectionsResponse'
-  { _dvcrsVPNConnections :: !(Maybe [VPNConnection])
-  , _dvcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeVPNConnectionsResponse =
+  DescribeVPNConnectionsResponse'
+    { _dvcrsVPNConnections :: !(Maybe [VPNConnection])
+    , _dvcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeVPNConnectionsResponse' with the minimum fields required to make a request.

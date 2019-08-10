@@ -46,9 +46,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'batchDeleteBuilds' smart constructor.
-newtype BatchDeleteBuilds = BatchDeleteBuilds'
-  { _bdbIds :: List1 Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype BatchDeleteBuilds =
+  BatchDeleteBuilds'
+    { _bdbIds :: List1 Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchDeleteBuilds' with the minimum fields required to make a request.
@@ -102,11 +104,13 @@ instance ToQuery BatchDeleteBuilds where
         toQuery = const mempty
 
 -- | /See:/ 'batchDeleteBuildsResponse' smart constructor.
-data BatchDeleteBuildsResponse = BatchDeleteBuildsResponse'
-  { _bdbrsBuildsNotDeleted :: !(Maybe [BuildNotDeleted])
-  , _bdbrsBuildsDeleted    :: !(Maybe (List1 Text))
-  , _bdbrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchDeleteBuildsResponse =
+  BatchDeleteBuildsResponse'
+    { _bdbrsBuildsNotDeleted :: !(Maybe [BuildNotDeleted])
+    , _bdbrsBuildsDeleted    :: !(Maybe (List1 Text))
+    , _bdbrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchDeleteBuildsResponse' with the minimum fields required to make a request.

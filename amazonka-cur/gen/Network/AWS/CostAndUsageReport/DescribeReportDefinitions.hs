@@ -50,10 +50,12 @@ import Network.AWS.Response
 -- | Request of DescribeReportDefinitions
 --
 -- /See:/ 'describeReportDefinitions' smart constructor.
-data DescribeReportDefinitions = DescribeReportDefinitions'
-  { _drdNextToken  :: !(Maybe Text)
-  , _drdMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeReportDefinitions =
+  DescribeReportDefinitions'
+    { _drdNextToken  :: !(Maybe Text)
+    , _drdMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeReportDefinitions' with the minimum fields required to make a request.
@@ -126,11 +128,13 @@ instance ToQuery DescribeReportDefinitions where
 -- | Response of DescribeReportDefinitions
 --
 -- /See:/ 'describeReportDefinitionsResponse' smart constructor.
-data DescribeReportDefinitionsResponse = DescribeReportDefinitionsResponse'
-  { _drdrsNextToken         :: !(Maybe Text)
-  , _drdrsReportDefinitions :: !(Maybe [ReportDefinition])
-  , _drdrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeReportDefinitionsResponse =
+  DescribeReportDefinitionsResponse'
+    { _drdrsNextToken         :: !(Maybe Text)
+    , _drdrsReportDefinitions :: !(Maybe [ReportDefinition])
+    , _drdrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeReportDefinitionsResponse' with the minimum fields required to make a request.

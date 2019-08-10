@@ -51,11 +51,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeEnvironmentManagedActions' smart constructor.
-data DescribeEnvironmentManagedActions = DescribeEnvironmentManagedActions'
-  { _demaStatus          :: !(Maybe ActionStatus)
-  , _demaEnvironmentName :: !(Maybe Text)
-  , _demaEnvironmentId   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeEnvironmentManagedActions =
+  DescribeEnvironmentManagedActions'
+    { _demaStatus          :: !(Maybe ActionStatus)
+    , _demaEnvironmentName :: !(Maybe Text)
+    , _demaEnvironmentId   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEnvironmentManagedActions' with the minimum fields required to make a request.
@@ -133,10 +135,12 @@ instance ToQuery DescribeEnvironmentManagedActions
 --
 --
 -- /See:/ 'describeEnvironmentManagedActionsResponse' smart constructor.
-data DescribeEnvironmentManagedActionsResponse = DescribeEnvironmentManagedActionsResponse'
-  { _demarsManagedActions :: !(Maybe (List1 ManagedAction))
-  , _demarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeEnvironmentManagedActionsResponse =
+  DescribeEnvironmentManagedActionsResponse'
+    { _demarsManagedActions :: !(Maybe (List1 ManagedAction))
+    , _demarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEnvironmentManagedActionsResponse' with the minimum fields required to make a request.

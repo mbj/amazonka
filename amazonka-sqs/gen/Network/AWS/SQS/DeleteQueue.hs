@@ -52,9 +52,11 @@ import Network.AWS.SQS.Types.Product
 --
 --
 -- /See:/ 'deleteQueue' smart constructor.
-newtype DeleteQueue = DeleteQueue'
-  { _dqQueueURL :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteQueue =
+  DeleteQueue'
+    { _dqQueueURL :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteQueue' with the minimum fields required to make a request.

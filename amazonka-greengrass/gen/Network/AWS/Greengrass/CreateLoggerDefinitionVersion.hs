@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createLoggerDefinitionVersion' smart constructor.
-data CreateLoggerDefinitionVersion = CreateLoggerDefinitionVersion'
-  { _cldvLoggers            :: !(Maybe [GreengrassLogger])
-  , _cldvAmznClientToken    :: !(Maybe Text)
-  , _cldvLoggerDefinitionId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateLoggerDefinitionVersion =
+  CreateLoggerDefinitionVersion'
+    { _cldvLoggers            :: !(Maybe [GreengrassLogger])
+    , _cldvAmznClientToken    :: !(Maybe Text)
+    , _cldvLoggerDefinitionId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateLoggerDefinitionVersion' with the minimum fields required to make a request.
@@ -128,13 +130,15 @@ instance ToQuery CreateLoggerDefinitionVersion where
         toQuery = const mempty
 
 -- | /See:/ 'createLoggerDefinitionVersionResponse' smart constructor.
-data CreateLoggerDefinitionVersionResponse = CreateLoggerDefinitionVersionResponse'
-  { _cldvrsARN               :: !(Maybe Text)
-  , _cldvrsCreationTimestamp :: !(Maybe Text)
-  , _cldvrsVersion           :: !(Maybe Text)
-  , _cldvrsId                :: !(Maybe Text)
-  , _cldvrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateLoggerDefinitionVersionResponse =
+  CreateLoggerDefinitionVersionResponse'
+    { _cldvrsARN               :: !(Maybe Text)
+    , _cldvrsCreationTimestamp :: !(Maybe Text)
+    , _cldvrsVersion           :: !(Maybe Text)
+    , _cldvrsId                :: !(Maybe Text)
+    , _cldvrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateLoggerDefinitionVersionResponse' with the minimum fields required to make a request.

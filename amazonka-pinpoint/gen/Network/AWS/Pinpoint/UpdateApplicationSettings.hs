@@ -44,10 +44,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateApplicationSettings' smart constructor.
-data UpdateApplicationSettings = UpdateApplicationSettings'
-  { _uasApplicationId                   :: !Text
-  , _uasWriteApplicationSettingsRequest :: !WriteApplicationSettingsRequest
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateApplicationSettings =
+  UpdateApplicationSettings'
+    { _uasApplicationId                   :: !Text
+    , _uasWriteApplicationSettingsRequest :: !WriteApplicationSettingsRequest
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateApplicationSettings' with the minimum fields required to make a request.
@@ -114,10 +116,12 @@ instance ToQuery UpdateApplicationSettings where
         toQuery = const mempty
 
 -- | /See:/ 'updateApplicationSettingsResponse' smart constructor.
-data UpdateApplicationSettingsResponse = UpdateApplicationSettingsResponse'
-  { _uasrsResponseStatus              :: !Int
-  , _uasrsApplicationSettingsResource :: !ApplicationSettingsResource
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateApplicationSettingsResponse =
+  UpdateApplicationSettingsResponse'
+    { _uasrsResponseStatus              :: !Int
+    , _uasrsApplicationSettingsResource :: !ApplicationSettingsResource
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateApplicationSettingsResponse' with the minimum fields required to make a request.

@@ -54,10 +54,12 @@ import Network.AWS.SNS.Types.Product
 --
 --
 -- /See:/ 'listEndpointsByPlatformApplication' smart constructor.
-data ListEndpointsByPlatformApplication = ListEndpointsByPlatformApplication'
-  { _lebpaNextToken              :: !(Maybe Text)
-  , _lebpaPlatformApplicationARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListEndpointsByPlatformApplication =
+  ListEndpointsByPlatformApplication'
+    { _lebpaNextToken              :: !(Maybe Text)
+    , _lebpaPlatformApplicationARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListEndpointsByPlatformApplication' with the minimum fields required to make a request.
@@ -139,11 +141,13 @@ instance ToQuery ListEndpointsByPlatformApplication
 --
 --
 -- /See:/ 'listEndpointsByPlatformApplicationResponse' smart constructor.
-data ListEndpointsByPlatformApplicationResponse = ListEndpointsByPlatformApplicationResponse'
-  { _lebparsNextToken      :: !(Maybe Text)
-  , _lebparsEndpoints      :: !(Maybe [Endpoint])
-  , _lebparsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListEndpointsByPlatformApplicationResponse =
+  ListEndpointsByPlatformApplicationResponse'
+    { _lebparsNextToken      :: !(Maybe Text)
+    , _lebparsEndpoints      :: !(Maybe [Endpoint])
+    , _lebparsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListEndpointsByPlatformApplicationResponse' with the minimum fields required to make a request.

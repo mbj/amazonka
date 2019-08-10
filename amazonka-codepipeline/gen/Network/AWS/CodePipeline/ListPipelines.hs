@@ -50,9 +50,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listPipelines' smart constructor.
-newtype ListPipelines = ListPipelines'
-  { _lpNextToken :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ListPipelines =
+  ListPipelines'
+    { _lpNextToken :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListPipelines' with the minimum fields required to make a request.
@@ -110,11 +112,13 @@ instance ToQuery ListPipelines where
 --
 --
 -- /See:/ 'listPipelinesResponse' smart constructor.
-data ListPipelinesResponse = ListPipelinesResponse'
-  { _lprsPipelines      :: !(Maybe [PipelineSummary])
-  , _lprsNextToken      :: !(Maybe Text)
-  , _lprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListPipelinesResponse =
+  ListPipelinesResponse'
+    { _lprsPipelines      :: !(Maybe [PipelineSummary])
+    , _lprsNextToken      :: !(Maybe Text)
+    , _lprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListPipelinesResponse' with the minimum fields required to make a request.

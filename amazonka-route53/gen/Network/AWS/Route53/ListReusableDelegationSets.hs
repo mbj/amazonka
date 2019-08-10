@@ -54,10 +54,12 @@ import Network.AWS.Route53.Types.Product
 --
 --
 -- /See:/ 'listReusableDelegationSets' smart constructor.
-data ListReusableDelegationSets = ListReusableDelegationSets'
-  { _lrdsMarker   :: !(Maybe Text)
-  , _lrdsMaxItems :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListReusableDelegationSets =
+  ListReusableDelegationSets'
+    { _lrdsMarker   :: !(Maybe Text)
+    , _lrdsMaxItems :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListReusableDelegationSets' with the minimum fields required to make a request.
@@ -117,14 +119,16 @@ instance ToQuery ListReusableDelegationSets where
 --
 --
 -- /See:/ 'listReusableDelegationSetsResponse' smart constructor.
-data ListReusableDelegationSetsResponse = ListReusableDelegationSetsResponse'
-  { _lrdsrsNextMarker     :: !(Maybe Text)
-  , _lrdsrsResponseStatus :: !Int
-  , _lrdsrsDelegationSets :: ![DelegationSet]
-  , _lrdsrsMarker         :: !Text
-  , _lrdsrsIsTruncated    :: !Bool
-  , _lrdsrsMaxItems       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListReusableDelegationSetsResponse =
+  ListReusableDelegationSetsResponse'
+    { _lrdsrsNextMarker     :: !(Maybe Text)
+    , _lrdsrsResponseStatus :: !Int
+    , _lrdsrsDelegationSets :: ![DelegationSet]
+    , _lrdsrsMarker         :: !Text
+    , _lrdsrsIsTruncated    :: !Bool
+    , _lrdsrsMaxItems       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListReusableDelegationSetsResponse' with the minimum fields required to make a request.

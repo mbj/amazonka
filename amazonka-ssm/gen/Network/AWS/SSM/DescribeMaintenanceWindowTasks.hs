@@ -49,12 +49,14 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'describeMaintenanceWindowTasks' smart constructor.
-data DescribeMaintenanceWindowTasks = DescribeMaintenanceWindowTasks'
-  { _dFilters    :: !(Maybe [MaintenanceWindowFilter])
-  , _dNextToken  :: !(Maybe Text)
-  , _dMaxResults :: !(Maybe Nat)
-  , _dWindowId   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeMaintenanceWindowTasks =
+  DescribeMaintenanceWindowTasks'
+    { _dFilters    :: !(Maybe [MaintenanceWindowFilter])
+    , _dNextToken  :: !(Maybe Text)
+    , _dMaxResults :: !(Maybe Nat)
+    , _dWindowId   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeMaintenanceWindowTasks' with the minimum fields required to make a request.
@@ -140,11 +142,13 @@ instance ToQuery DescribeMaintenanceWindowTasks where
         toQuery = const mempty
 
 -- | /See:/ 'describeMaintenanceWindowTasksResponse' smart constructor.
-data DescribeMaintenanceWindowTasksResponse = DescribeMaintenanceWindowTasksResponse'
-  { _dmwtsrsTasks          :: !(Maybe [MaintenanceWindowTask])
-  , _dmwtsrsNextToken      :: !(Maybe Text)
-  , _dmwtsrsResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data DescribeMaintenanceWindowTasksResponse =
+  DescribeMaintenanceWindowTasksResponse'
+    { _dmwtsrsTasks          :: !(Maybe [MaintenanceWindowTask])
+    , _dmwtsrsNextToken      :: !(Maybe Text)
+    , _dmwtsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeMaintenanceWindowTasksResponse' with the minimum fields required to make a request.

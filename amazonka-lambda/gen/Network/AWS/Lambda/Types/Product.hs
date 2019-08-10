@@ -26,13 +26,15 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'accountLimit' smart constructor.
-data AccountLimit = AccountLimit'
-  { _alConcurrentExecutions           :: !(Maybe Int)
-  , _alTotalCodeSize                  :: !(Maybe Integer)
-  , _alUnreservedConcurrentExecutions :: !(Maybe Nat)
-  , _alCodeSizeUnzipped               :: !(Maybe Integer)
-  , _alCodeSizeZipped                 :: !(Maybe Integer)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AccountLimit =
+  AccountLimit'
+    { _alConcurrentExecutions           :: !(Maybe Int)
+    , _alTotalCodeSize                  :: !(Maybe Integer)
+    , _alUnreservedConcurrentExecutions :: !(Maybe Nat)
+    , _alCodeSizeUnzipped               :: !(Maybe Integer)
+    , _alCodeSizeZipped                 :: !(Maybe Integer)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AccountLimit' with the minimum fields required to make a request.
@@ -100,10 +102,12 @@ instance NFData AccountLimit where
 --
 --
 -- /See:/ 'accountUsage' smart constructor.
-data AccountUsage = AccountUsage'
-  { _auTotalCodeSize :: !(Maybe Integer)
-  , _auFunctionCount :: !(Maybe Integer)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AccountUsage =
+  AccountUsage'
+    { _auTotalCodeSize :: !(Maybe Integer)
+    , _auFunctionCount :: !(Maybe Integer)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AccountUsage' with the minimum fields required to make a request.
@@ -143,14 +147,16 @@ instance NFData AccountUsage where
 --
 --
 -- /See:/ 'aliasConfiguration' smart constructor.
-data AliasConfiguration = AliasConfiguration'
-  { _acRoutingConfig   :: !(Maybe AliasRoutingConfiguration)
-  , _acName            :: !(Maybe Text)
-  , _acFunctionVersion :: !(Maybe Text)
-  , _acAliasARN        :: !(Maybe Text)
-  , _acDescription     :: !(Maybe Text)
-  , _acRevisionId      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AliasConfiguration =
+  AliasConfiguration'
+    { _acRoutingConfig   :: !(Maybe AliasRoutingConfiguration)
+    , _acName            :: !(Maybe Text)
+    , _acFunctionVersion :: !(Maybe Text)
+    , _acAliasARN        :: !(Maybe Text)
+    , _acDescription     :: !(Maybe Text)
+    , _acRevisionId      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AliasConfiguration' with the minimum fields required to make a request.
@@ -225,9 +231,11 @@ instance NFData AliasConfiguration where
 --
 --
 -- /See:/ 'aliasRoutingConfiguration' smart constructor.
-newtype AliasRoutingConfiguration = AliasRoutingConfiguration'
-  { _arcAdditionalVersionWeights :: Maybe (Map Text Double)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AliasRoutingConfiguration =
+  AliasRoutingConfiguration'
+    { _arcAdditionalVersionWeights :: Maybe (Map Text Double)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AliasRoutingConfiguration' with the minimum fields required to make a request.
@@ -264,9 +272,11 @@ instance ToJSON AliasRoutingConfiguration where
                     _arcAdditionalVersionWeights])
 
 -- | /See:/ 'concurrency' smart constructor.
-newtype Concurrency = Concurrency'
-  { _cReservedConcurrentExecutions :: Maybe Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype Concurrency =
+  Concurrency'
+    { _cReservedConcurrentExecutions :: Maybe Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Concurrency' with the minimum fields required to make a request.
@@ -299,9 +309,11 @@ instance NFData Concurrency where
 --
 --
 -- /See:/ 'deadLetterConfig' smart constructor.
-newtype DeadLetterConfig = DeadLetterConfig'
-  { _dlcTargetARN :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeadLetterConfig =
+  DeadLetterConfig'
+    { _dlcTargetARN :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeadLetterConfig' with the minimum fields required to make a request.
@@ -337,9 +349,11 @@ instance ToJSON DeadLetterConfig where
 --
 --
 -- /See:/ 'environment' smart constructor.
-newtype Environment = Environment'
-  { _eVariables :: Maybe (Sensitive (Map Text (Sensitive Text)))
-  } deriving (Eq, Show, Data, Typeable, Generic)
+newtype Environment =
+  Environment'
+    { _eVariables :: Maybe (Sensitive (Map Text (Sensitive Text)))
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Environment' with the minimum fields required to make a request.
@@ -370,10 +384,12 @@ instance ToJSON Environment where
 --
 --
 -- /See:/ 'environmentError' smart constructor.
-data EnvironmentError = EnvironmentError'
-  { _eeErrorCode :: !(Maybe Text)
-  , _eeMessage   :: !(Maybe (Sensitive Text))
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data EnvironmentError =
+  EnvironmentError'
+    { _eeErrorCode :: !(Maybe Text)
+    , _eeMessage   :: !(Maybe (Sensitive Text))
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EnvironmentError' with the minimum fields required to make a request.
@@ -413,10 +429,12 @@ instance NFData EnvironmentError where
 --
 --
 -- /See:/ 'environmentResponse' smart constructor.
-data EnvironmentResponse = EnvironmentResponse'
-  { _envVariables :: !(Maybe (Sensitive (Map Text (Sensitive Text))))
-  , _envError     :: !(Maybe EnvironmentError)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data EnvironmentResponse =
+  EnvironmentResponse'
+    { _envVariables :: !(Maybe (Sensitive (Map Text (Sensitive Text))))
+    , _envError     :: !(Maybe EnvironmentError)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EnvironmentResponse' with the minimum fields required to make a request.
@@ -456,16 +474,18 @@ instance NFData EnvironmentResponse where
 --
 --
 -- /See:/ 'eventSourceMappingConfiguration' smart constructor.
-data EventSourceMappingConfiguration = EventSourceMappingConfiguration'
-  { _esmcEventSourceARN        :: !(Maybe Text)
-  , _esmcState                 :: !(Maybe Text)
-  , _esmcFunctionARN           :: !(Maybe Text)
-  , _esmcUUId                  :: !(Maybe Text)
-  , _esmcLastProcessingResult  :: !(Maybe Text)
-  , _esmcBatchSize             :: !(Maybe Nat)
-  , _esmcStateTransitionReason :: !(Maybe Text)
-  , _esmcLastModified          :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EventSourceMappingConfiguration =
+  EventSourceMappingConfiguration'
+    { _esmcEventSourceARN        :: !(Maybe Text)
+    , _esmcState                 :: !(Maybe Text)
+    , _esmcFunctionARN           :: !(Maybe Text)
+    , _esmcUUId                  :: !(Maybe Text)
+    , _esmcLastProcessingResult  :: !(Maybe Text)
+    , _esmcBatchSize             :: !(Maybe Nat)
+    , _esmcStateTransitionReason :: !(Maybe Text)
+    , _esmcLastModified          :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EventSourceMappingConfiguration' with the minimum fields required to make a request.
@@ -558,12 +578,14 @@ instance NFData EventSourceMappingConfiguration where
 --
 --
 -- /See:/ 'functionCode' smart constructor.
-data FunctionCode = FunctionCode'
-  { _fcS3ObjectVersion :: !(Maybe Text)
-  , _fcS3Key           :: !(Maybe Text)
-  , _fcZipFile         :: !(Maybe (Sensitive Base64))
-  , _fcS3Bucket        :: !(Maybe Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data FunctionCode =
+  FunctionCode'
+    { _fcS3ObjectVersion :: !(Maybe Text)
+    , _fcS3Key           :: !(Maybe Text)
+    , _fcZipFile         :: !(Maybe (Sensitive Base64))
+    , _fcS3Bucket        :: !(Maybe Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FunctionCode' with the minimum fields required to make a request.
@@ -622,10 +644,12 @@ instance ToJSON FunctionCode where
 --
 --
 -- /See:/ 'functionCodeLocation' smart constructor.
-data FunctionCodeLocation = FunctionCodeLocation'
-  { _fclLocation       :: !(Maybe Text)
-  , _fclRepositoryType :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FunctionCodeLocation =
+  FunctionCodeLocation'
+    { _fclLocation       :: !(Maybe Text)
+    , _fclRepositoryType :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FunctionCodeLocation' with the minimum fields required to make a request.
@@ -665,27 +689,29 @@ instance NFData FunctionCodeLocation where
 --
 --
 -- /See:/ 'functionConfiguration' smart constructor.
-data FunctionConfiguration = FunctionConfiguration'
-  { _fcMemorySize       :: !(Maybe Nat)
-  , _fcRuntime          :: !(Maybe Runtime)
-  , _fcFunctionARN      :: !(Maybe Text)
-  , _fcKMSKeyARN        :: !(Maybe Text)
-  , _fcEnvironment      :: !(Maybe EnvironmentResponse)
-  , _fcDeadLetterConfig :: !(Maybe DeadLetterConfig)
-  , _fcRole             :: !(Maybe Text)
-  , _fcVPCConfig        :: !(Maybe VPCConfigResponse)
-  , _fcVersion          :: !(Maybe Text)
-  , _fcFunctionName     :: !(Maybe Text)
-  , _fcCodeSize         :: !(Maybe Integer)
-  , _fcHandler          :: !(Maybe Text)
-  , _fcTimeout          :: !(Maybe Nat)
-  , _fcLastModified     :: !(Maybe Text)
-  , _fcCodeSha256       :: !(Maybe Text)
-  , _fcTracingConfig    :: !(Maybe TracingConfigResponse)
-  , _fcDescription      :: !(Maybe Text)
-  , _fcRevisionId       :: !(Maybe Text)
-  , _fcMasterARN        :: !(Maybe Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data FunctionConfiguration =
+  FunctionConfiguration'
+    { _fcMemorySize       :: !(Maybe Nat)
+    , _fcRuntime          :: !(Maybe Runtime)
+    , _fcFunctionARN      :: !(Maybe Text)
+    , _fcKMSKeyARN        :: !(Maybe Text)
+    , _fcEnvironment      :: !(Maybe EnvironmentResponse)
+    , _fcDeadLetterConfig :: !(Maybe DeadLetterConfig)
+    , _fcRole             :: !(Maybe Text)
+    , _fcVPCConfig        :: !(Maybe VPCConfigResponse)
+    , _fcVersion          :: !(Maybe Text)
+    , _fcFunctionName     :: !(Maybe Text)
+    , _fcCodeSize         :: !(Maybe Integer)
+    , _fcHandler          :: !(Maybe Text)
+    , _fcTimeout          :: !(Maybe Nat)
+    , _fcLastModified     :: !(Maybe Text)
+    , _fcCodeSha256       :: !(Maybe Text)
+    , _fcTracingConfig    :: !(Maybe TracingConfigResponse)
+    , _fcDescription      :: !(Maybe Text)
+    , _fcRevisionId       :: !(Maybe Text)
+    , _fcMasterARN        :: !(Maybe Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FunctionConfiguration' with the minimum fields required to make a request.
@@ -864,9 +890,11 @@ instance NFData FunctionConfiguration where
 --
 --
 -- /See:/ 'tracingConfig' smart constructor.
-newtype TracingConfig = TracingConfig'
-  { _tMode :: Maybe TracingMode
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype TracingConfig =
+  TracingConfig'
+    { _tMode :: Maybe TracingMode
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TracingConfig' with the minimum fields required to make a request.
@@ -896,9 +924,11 @@ instance ToJSON TracingConfig where
 --
 --
 -- /See:/ 'tracingConfigResponse' smart constructor.
-newtype TracingConfigResponse = TracingConfigResponse'
-  { _tcMode :: Maybe TracingMode
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype TracingConfigResponse =
+  TracingConfigResponse'
+    { _tcMode :: Maybe TracingMode
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TracingConfigResponse' with the minimum fields required to make a request.
@@ -929,10 +959,12 @@ instance NFData TracingConfigResponse where
 --
 --
 -- /See:/ 'vpcConfig' smart constructor.
-data VPCConfig = VPCConfig'
-  { _vpccSecurityGroupIds :: !(Maybe [Text])
-  , _vpccSubnetIds        :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VPCConfig =
+  VPCConfig'
+    { _vpccSecurityGroupIds :: !(Maybe [Text])
+    , _vpccSubnetIds        :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VPCConfig' with the minimum fields required to make a request.
@@ -972,11 +1004,13 @@ instance ToJSON VPCConfig where
 --
 --
 -- /See:/ 'vpcConfigResponse' smart constructor.
-data VPCConfigResponse = VPCConfigResponse'
-  { _vcSecurityGroupIds :: !(Maybe [Text])
-  , _vcSubnetIds        :: !(Maybe [Text])
-  , _vcVPCId            :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VPCConfigResponse =
+  VPCConfigResponse'
+    { _vcSecurityGroupIds :: !(Maybe [Text])
+    , _vcSubnetIds        :: !(Maybe [Text])
+    , _vcVPCId            :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VPCConfigResponse' with the minimum fields required to make a request.

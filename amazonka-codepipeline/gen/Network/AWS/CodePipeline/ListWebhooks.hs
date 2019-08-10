@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listWebhooks' smart constructor.
-data ListWebhooks = ListWebhooks'
-  { _lwNextToken  :: !(Maybe Text)
-  , _lwMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListWebhooks =
+  ListWebhooks'
+    { _lwNextToken  :: !(Maybe Text)
+    , _lwMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListWebhooks' with the minimum fields required to make a request.
@@ -110,11 +112,13 @@ instance ToQuery ListWebhooks where
         toQuery = const mempty
 
 -- | /See:/ 'listWebhooksResponse' smart constructor.
-data ListWebhooksResponse = ListWebhooksResponse'
-  { _lwrsNextToken      :: !(Maybe Text)
-  , _lwrsWebhooks       :: !(Maybe [ListWebhookItem])
-  , _lwrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListWebhooksResponse =
+  ListWebhooksResponse'
+    { _lwrsNextToken      :: !(Maybe Text)
+    , _lwrsWebhooks       :: !(Maybe [ListWebhookItem])
+    , _lwrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListWebhooksResponse' with the minimum fields required to make a request.

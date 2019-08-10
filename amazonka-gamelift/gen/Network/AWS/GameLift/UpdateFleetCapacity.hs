@@ -104,12 +104,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateFleetCapacity' smart constructor.
-data UpdateFleetCapacity = UpdateFleetCapacity'
-  { _ufcMaxSize          :: !(Maybe Nat)
-  , _ufcMinSize          :: !(Maybe Nat)
-  , _ufcDesiredInstances :: !(Maybe Nat)
-  , _ufcFleetId          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateFleetCapacity =
+  UpdateFleetCapacity'
+    { _ufcMaxSize          :: !(Maybe Nat)
+    , _ufcMinSize          :: !(Maybe Nat)
+    , _ufcDesiredInstances :: !(Maybe Nat)
+    , _ufcFleetId          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateFleetCapacity' with the minimum fields required to make a request.
@@ -194,10 +196,12 @@ instance ToQuery UpdateFleetCapacity where
 --
 --
 -- /See:/ 'updateFleetCapacityResponse' smart constructor.
-data UpdateFleetCapacityResponse = UpdateFleetCapacityResponse'
-  { _ufcrsFleetId        :: !(Maybe Text)
-  , _ufcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateFleetCapacityResponse =
+  UpdateFleetCapacityResponse'
+    { _ufcrsFleetId        :: !(Maybe Text)
+    , _ufcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateFleetCapacityResponse' with the minimum fields required to make a request.

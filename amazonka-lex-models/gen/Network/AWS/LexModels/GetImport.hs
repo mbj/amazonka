@@ -51,9 +51,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getImport' smart constructor.
-newtype GetImport = GetImport'
-  { _giImportId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetImport =
+  GetImport'
+    { _giImportId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetImport' with the minimum fields required to make a request.
@@ -106,16 +108,18 @@ instance ToQuery GetImport where
         toQuery = const mempty
 
 -- | /See:/ 'getImportResponse' smart constructor.
-data GetImportResponse = GetImportResponse'
-  { _girsFailureReason  :: !(Maybe [Text])
-  , _girsResourceType   :: !(Maybe ResourceType)
-  , _girsImportId       :: !(Maybe Text)
-  , _girsCreatedDate    :: !(Maybe POSIX)
-  , _girsName           :: !(Maybe Text)
-  , _girsMergeStrategy  :: !(Maybe MergeStrategy)
-  , _girsImportStatus   :: !(Maybe ImportStatus)
-  , _girsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetImportResponse =
+  GetImportResponse'
+    { _girsFailureReason  :: !(Maybe [Text])
+    , _girsResourceType   :: !(Maybe ResourceType)
+    , _girsImportId       :: !(Maybe Text)
+    , _girsCreatedDate    :: !(Maybe POSIX)
+    , _girsName           :: !(Maybe Text)
+    , _girsMergeStrategy  :: !(Maybe MergeStrategy)
+    , _girsImportStatus   :: !(Maybe ImportStatus)
+    , _girsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetImportResponse' with the minimum fields required to make a request.

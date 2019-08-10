@@ -50,14 +50,16 @@ import Network.AWS.Response
 -- | UpdateFilterRequest request body.
 --
 -- /See:/ 'updateFilter' smart constructor.
-data UpdateFilter = UpdateFilter'
-  { _ufFindingCriteria :: !(Maybe FindingCriteria)
-  , _ufAction          :: !(Maybe FilterAction)
-  , _ufDescription     :: !(Maybe Text)
-  , _ufRank            :: !(Maybe Int)
-  , _ufDetectorId      :: !Text
-  , _ufFilterName      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateFilter =
+  UpdateFilter'
+    { _ufFindingCriteria :: !(Maybe FindingCriteria)
+    , _ufAction          :: !(Maybe FilterAction)
+    , _ufDescription     :: !(Maybe Text)
+    , _ufRank            :: !(Maybe Int)
+    , _ufDetectorId      :: !Text
+    , _ufFilterName      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateFilter' with the minimum fields required to make a request.
@@ -153,10 +155,12 @@ instance ToQuery UpdateFilter where
         toQuery = const mempty
 
 -- | /See:/ 'updateFilterResponse' smart constructor.
-data UpdateFilterResponse = UpdateFilterResponse'
-  { _ufrsName           :: !(Maybe Text)
-  , _ufrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateFilterResponse =
+  UpdateFilterResponse'
+    { _ufrsName           :: !(Maybe Text)
+    , _ufrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateFilterResponse' with the minimum fields required to make a request.

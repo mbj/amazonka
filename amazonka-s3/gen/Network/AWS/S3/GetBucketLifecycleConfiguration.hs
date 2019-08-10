@@ -43,9 +43,11 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'getBucketLifecycleConfiguration' smart constructor.
-newtype GetBucketLifecycleConfiguration = GetBucketLifecycleConfiguration'
-  { _gblcBucket :: BucketName
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetBucketLifecycleConfiguration =
+  GetBucketLifecycleConfiguration'
+    { _gblcBucket :: BucketName
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBucketLifecycleConfiguration' with the minimum fields required to make a request.
@@ -94,10 +96,12 @@ instance ToQuery GetBucketLifecycleConfiguration
         toQuery = const (mconcat ["lifecycle"])
 
 -- | /See:/ 'getBucketLifecycleConfigurationResponse' smart constructor.
-data GetBucketLifecycleConfigurationResponse = GetBucketLifecycleConfigurationResponse'
-  { _gblcrsRules          :: !(Maybe [LifecycleRule])
-  , _gblcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetBucketLifecycleConfigurationResponse =
+  GetBucketLifecycleConfigurationResponse'
+    { _gblcrsRules          :: !(Maybe [LifecycleRule])
+    , _gblcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBucketLifecycleConfigurationResponse' with the minimum fields required to make a request.

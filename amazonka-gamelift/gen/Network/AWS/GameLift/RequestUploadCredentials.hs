@@ -52,9 +52,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'requestUploadCredentials' smart constructor.
-newtype RequestUploadCredentials = RequestUploadCredentials'
-  { _rucBuildId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RequestUploadCredentials =
+  RequestUploadCredentials'
+    { _rucBuildId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RequestUploadCredentials' with the minimum fields required to make a request.
@@ -114,11 +116,13 @@ instance ToQuery RequestUploadCredentials where
 --
 --
 -- /See:/ 'requestUploadCredentialsResponse' smart constructor.
-data RequestUploadCredentialsResponse = RequestUploadCredentialsResponse'
-  { _rucrsStorageLocation   :: !(Maybe S3Location)
-  , _rucrsUploadCredentials :: !(Maybe (Sensitive AWSCredentials))
-  , _rucrsResponseStatus    :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data RequestUploadCredentialsResponse =
+  RequestUploadCredentialsResponse'
+    { _rucrsStorageLocation   :: !(Maybe S3Location)
+    , _rucrsUploadCredentials :: !(Maybe (Sensitive AWSCredentials))
+    , _rucrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RequestUploadCredentialsResponse' with the minimum fields required to make a request.

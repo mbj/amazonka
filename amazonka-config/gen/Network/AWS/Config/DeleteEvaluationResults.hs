@@ -48,9 +48,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteEvaluationResults' smart constructor.
-newtype DeleteEvaluationResults = DeleteEvaluationResults'
-  { _derConfigRuleName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteEvaluationResults =
+  DeleteEvaluationResults'
+    { _derConfigRuleName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteEvaluationResults' with the minimum fields required to make a request.
@@ -110,9 +112,11 @@ instance ToQuery DeleteEvaluationResults where
 --
 --
 -- /See:/ 'deleteEvaluationResultsResponse' smart constructor.
-newtype DeleteEvaluationResultsResponse = DeleteEvaluationResultsResponse'
-  { _derrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteEvaluationResultsResponse =
+  DeleteEvaluationResultsResponse'
+    { _derrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteEvaluationResultsResponse' with the minimum fields required to make a request.

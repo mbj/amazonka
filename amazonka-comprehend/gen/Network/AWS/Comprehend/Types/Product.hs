@@ -26,10 +26,12 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'batchDetectDominantLanguageItemResult' smart constructor.
-data BatchDetectDominantLanguageItemResult = BatchDetectDominantLanguageItemResult'
-  { _bddlirLanguages :: !(Maybe [DominantLanguage])
-  , _bddlirIndex     :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchDetectDominantLanguageItemResult =
+  BatchDetectDominantLanguageItemResult'
+    { _bddlirLanguages :: !(Maybe [DominantLanguage])
+    , _bddlirIndex     :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchDetectDominantLanguageItemResult' with the minimum fields required to make a request.
@@ -75,10 +77,12 @@ instance NFData BatchDetectDominantLanguageItemResult
 --
 --
 -- /See:/ 'batchDetectEntitiesItemResult' smart constructor.
-data BatchDetectEntitiesItemResult = BatchDetectEntitiesItemResult'
-  { _bdeirEntities :: !(Maybe [Entity])
-  , _bdeirIndex    :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchDetectEntitiesItemResult =
+  BatchDetectEntitiesItemResult'
+    { _bdeirEntities :: !(Maybe [Entity])
+    , _bdeirIndex    :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchDetectEntitiesItemResult' with the minimum fields required to make a request.
@@ -119,10 +123,12 @@ instance NFData BatchDetectEntitiesItemResult where
 --
 --
 -- /See:/ 'batchDetectKeyPhrasesItemResult' smart constructor.
-data BatchDetectKeyPhrasesItemResult = BatchDetectKeyPhrasesItemResult'
-  { _bdkpirIndex      :: !(Maybe Int)
-  , _bdkpirKeyPhrases :: !(Maybe [KeyPhrase])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchDetectKeyPhrasesItemResult =
+  BatchDetectKeyPhrasesItemResult'
+    { _bdkpirIndex      :: !(Maybe Int)
+    , _bdkpirKeyPhrases :: !(Maybe [KeyPhrase])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchDetectKeyPhrasesItemResult' with the minimum fields required to make a request.
@@ -165,11 +171,13 @@ instance NFData BatchDetectKeyPhrasesItemResult where
 --
 --
 -- /See:/ 'batchDetectSentimentItemResult' smart constructor.
-data BatchDetectSentimentItemResult = BatchDetectSentimentItemResult'
-  { _bdsirSentiment      :: !(Maybe SentimentType)
-  , _bdsirSentimentScore :: !(Maybe SentimentScore)
-  , _bdsirIndex          :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchDetectSentimentItemResult =
+  BatchDetectSentimentItemResult'
+    { _bdsirSentiment      :: !(Maybe SentimentType)
+    , _bdsirSentimentScore :: !(Maybe SentimentScore)
+    , _bdsirIndex          :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchDetectSentimentItemResult' with the minimum fields required to make a request.
@@ -222,11 +230,13 @@ instance NFData BatchDetectSentimentItemResult where
 --
 --
 -- /See:/ 'batchItemError' smart constructor.
-data BatchItemError = BatchItemError'
-  { _bieErrorCode    :: !(Maybe Text)
-  , _bieErrorMessage :: !(Maybe Text)
-  , _bieIndex        :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchItemError =
+  BatchItemError'
+    { _bieErrorCode    :: !(Maybe Text)
+    , _bieErrorMessage :: !(Maybe Text)
+    , _bieIndex        :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchItemError' with the minimum fields required to make a request.
@@ -274,10 +284,12 @@ instance NFData BatchItemError where
 --
 --
 -- /See:/ 'dominantLanguage' smart constructor.
-data DominantLanguage = DominantLanguage'
-  { _dlLanguageCode :: !(Maybe Text)
-  , _dlScore        :: !(Maybe Double)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DominantLanguage =
+  DominantLanguage'
+    { _dlLanguageCode :: !(Maybe Text)
+    , _dlScore        :: !(Maybe Double)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DominantLanguage' with the minimum fields required to make a request.
@@ -319,13 +331,15 @@ instance NFData DominantLanguage where
 --
 --
 -- /See:/ 'entity' smart constructor.
-data Entity = Entity'
-  { _eBeginOffset :: !(Maybe Int)
-  , _eText        :: !(Maybe Text)
-  , _eScore       :: !(Maybe Double)
-  , _eEndOffset   :: !(Maybe Int)
-  , _eType        :: !(Maybe EntityType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Entity =
+  Entity'
+    { _eBeginOffset :: !(Maybe Int)
+    , _eText        :: !(Maybe Text)
+    , _eScore       :: !(Maybe Double)
+    , _eEndOffset   :: !(Maybe Int)
+    , _eType        :: !(Maybe EntityType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Entity' with the minimum fields required to make a request.
@@ -392,10 +406,12 @@ instance NFData Entity where
 --
 --
 -- /See:/ 'inputDataConfig' smart constructor.
-data InputDataConfig = InputDataConfig'
-  { _idcInputFormat :: !(Maybe InputFormat)
-  , _idcS3URI       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InputDataConfig =
+  InputDataConfig'
+    { _idcInputFormat :: !(Maybe InputFormat)
+    , _idcS3URI       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InputDataConfig' with the minimum fields required to make a request.
@@ -443,12 +459,14 @@ instance ToJSON InputDataConfig where
 --
 --
 -- /See:/ 'keyPhrase' smart constructor.
-data KeyPhrase = KeyPhrase'
-  { _kpBeginOffset :: !(Maybe Int)
-  , _kpText        :: !(Maybe Text)
-  , _kpScore       :: !(Maybe Double)
-  , _kpEndOffset   :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data KeyPhrase =
+  KeyPhrase'
+    { _kpBeginOffset :: !(Maybe Int)
+    , _kpText        :: !(Maybe Text)
+    , _kpScore       :: !(Maybe Double)
+    , _kpEndOffset   :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'KeyPhrase' with the minimum fields required to make a request.
@@ -509,9 +527,11 @@ instance NFData KeyPhrase where
 --
 --
 -- /See:/ 'outputDataConfig' smart constructor.
-newtype OutputDataConfig = OutputDataConfig'
-  { _odcS3URI :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype OutputDataConfig =
+  OutputDataConfig'
+    { _odcS3URI :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OutputDataConfig' with the minimum fields required to make a request.
@@ -547,12 +567,14 @@ instance ToJSON OutputDataConfig where
 --
 --
 -- /See:/ 'sentimentScore' smart constructor.
-data SentimentScore = SentimentScore'
-  { _ssMixed    :: !(Maybe Double)
-  , _ssNegative :: !(Maybe Double)
-  , _ssNeutral  :: !(Maybe Double)
-  , _ssPositive :: !(Maybe Double)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SentimentScore =
+  SentimentScore'
+    { _ssMixed    :: !(Maybe Double)
+    , _ssNegative :: !(Maybe Double)
+    , _ssNeutral  :: !(Maybe Double)
+    , _ssPositive :: !(Maybe Double)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SentimentScore' with the minimum fields required to make a request.
@@ -611,12 +633,14 @@ instance NFData SentimentScore where
 --
 --
 -- /See:/ 'topicsDetectionJobFilter' smart constructor.
-data TopicsDetectionJobFilter = TopicsDetectionJobFilter'
-  { _tdjfSubmitTimeAfter  :: !(Maybe POSIX)
-  , _tdjfSubmitTimeBefore :: !(Maybe POSIX)
-  , _tdjfJobName          :: !(Maybe Text)
-  , _tdjfJobStatus        :: !(Maybe JobStatus)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TopicsDetectionJobFilter =
+  TopicsDetectionJobFilter'
+    { _tdjfSubmitTimeAfter  :: !(Maybe POSIX)
+    , _tdjfSubmitTimeBefore :: !(Maybe POSIX)
+    , _tdjfJobName          :: !(Maybe Text)
+    , _tdjfJobStatus        :: !(Maybe JobStatus)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TopicsDetectionJobFilter' with the minimum fields required to make a request.
@@ -675,17 +699,19 @@ instance ToJSON TopicsDetectionJobFilter where
 --
 --
 -- /See:/ 'topicsDetectionJobProperties' smart constructor.
-data TopicsDetectionJobProperties = TopicsDetectionJobProperties'
-  { _tdjpJobId            :: !(Maybe Text)
-  , _tdjpJobName          :: !(Maybe Text)
-  , _tdjpInputDataConfig  :: !(Maybe InputDataConfig)
-  , _tdjpEndTime          :: !(Maybe POSIX)
-  , _tdjpOutputDataConfig :: !(Maybe OutputDataConfig)
-  , _tdjpNumberOfTopics   :: !(Maybe Int)
-  , _tdjpJobStatus        :: !(Maybe JobStatus)
-  , _tdjpMessage          :: !(Maybe Text)
-  , _tdjpSubmitTime       :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TopicsDetectionJobProperties =
+  TopicsDetectionJobProperties'
+    { _tdjpJobId            :: !(Maybe Text)
+    , _tdjpJobName          :: !(Maybe Text)
+    , _tdjpInputDataConfig  :: !(Maybe InputDataConfig)
+    , _tdjpEndTime          :: !(Maybe POSIX)
+    , _tdjpOutputDataConfig :: !(Maybe OutputDataConfig)
+    , _tdjpNumberOfTopics   :: !(Maybe Int)
+    , _tdjpJobStatus        :: !(Maybe JobStatus)
+    , _tdjpMessage          :: !(Maybe Text)
+    , _tdjpSubmitTime       :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TopicsDetectionJobProperties' with the minimum fields required to make a request.

@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'detachDisk' smart constructor.
-newtype DetachDisk = DetachDisk'
-  { _ddDiskName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DetachDisk =
+  DetachDisk'
+    { _ddDiskName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DetachDisk' with the minimum fields required to make a request.
@@ -100,10 +102,12 @@ instance ToQuery DetachDisk where
         toQuery = const mempty
 
 -- | /See:/ 'detachDiskResponse' smart constructor.
-data DetachDiskResponse = DetachDiskResponse'
-  { _ddrsOperations     :: !(Maybe [Operation])
-  , _ddrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DetachDiskResponse =
+  DetachDiskResponse'
+    { _ddrsOperations     :: !(Maybe [Operation])
+    , _ddrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DetachDiskResponse' with the minimum fields required to make a request.

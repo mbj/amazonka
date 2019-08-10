@@ -53,15 +53,17 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'requestCertificate' smart constructor.
-data RequestCertificate = RequestCertificate'
-  { _rcIdempotencyToken        :: !(Maybe Text)
-  , _rcValidationMethod        :: !(Maybe ValidationMethod)
-  , _rcSubjectAlternativeNames :: !(Maybe (List1 Text))
-  , _rcOptions                 :: !(Maybe CertificateOptions)
-  , _rcDomainValidationOptions :: !(Maybe (List1 DomainValidationOption))
-  , _rcCertificateAuthorityARN :: !(Maybe Text)
-  , _rcDomainName              :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RequestCertificate =
+  RequestCertificate'
+    { _rcIdempotencyToken        :: !(Maybe Text)
+    , _rcValidationMethod        :: !(Maybe ValidationMethod)
+    , _rcSubjectAlternativeNames :: !(Maybe (List1 Text))
+    , _rcOptions                 :: !(Maybe CertificateOptions)
+    , _rcDomainValidationOptions :: !(Maybe (List1 DomainValidationOption))
+    , _rcCertificateAuthorityARN :: !(Maybe Text)
+    , _rcDomainName              :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RequestCertificate' with the minimum fields required to make a request.
@@ -170,10 +172,12 @@ instance ToQuery RequestCertificate where
         toQuery = const mempty
 
 -- | /See:/ 'requestCertificateResponse' smart constructor.
-data RequestCertificateResponse = RequestCertificateResponse'
-  { _rcrsCertificateARN :: !(Maybe Text)
-  , _rcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RequestCertificateResponse =
+  RequestCertificateResponse'
+    { _rcrsCertificateARN :: !(Maybe Text)
+    , _rcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RequestCertificateResponse' with the minimum fields required to make a request.

@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteDomainEntry' smart constructor.
-data DeleteDomainEntry = DeleteDomainEntry'
-  { _ddeDomainName  :: !Text
-  , _ddeDomainEntry :: !DomainEntry
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteDomainEntry =
+  DeleteDomainEntry'
+    { _ddeDomainName  :: !Text
+    , _ddeDomainEntry :: !DomainEntry
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteDomainEntry' with the minimum fields required to make a request.
@@ -113,10 +115,12 @@ instance ToQuery DeleteDomainEntry where
         toQuery = const mempty
 
 -- | /See:/ 'deleteDomainEntryResponse' smart constructor.
-data DeleteDomainEntryResponse = DeleteDomainEntryResponse'
-  { _ddersOperation      :: !(Maybe Operation)
-  , _ddersResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteDomainEntryResponse =
+  DeleteDomainEntryResponse'
+    { _ddersOperation      :: !(Maybe Operation)
+    , _ddersResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteDomainEntryResponse' with the minimum fields required to make a request.

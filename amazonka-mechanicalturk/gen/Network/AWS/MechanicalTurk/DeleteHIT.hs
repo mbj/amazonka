@@ -46,9 +46,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteHIT' smart constructor.
-newtype DeleteHIT = DeleteHIT'
-  { _dhitHITId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteHIT =
+  DeleteHIT'
+    { _dhitHITId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteHIT' with the minimum fields required to make a request.
@@ -99,9 +101,11 @@ instance ToQuery DeleteHIT where
         toQuery = const mempty
 
 -- | /See:/ 'deleteHITResponse' smart constructor.
-newtype DeleteHITResponse = DeleteHITResponse'
-  { _dhitrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteHITResponse =
+  DeleteHITResponse'
+    { _dhitrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteHITResponse' with the minimum fields required to make a request.

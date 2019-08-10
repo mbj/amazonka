@@ -50,11 +50,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'unlinkIdentity' smart constructor.
-data UnlinkIdentity = UnlinkIdentity'
-  { _uiIdentityId     :: !Text
-  , _uiLogins         :: !(Map Text Text)
-  , _uiLoginsToRemove :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UnlinkIdentity =
+  UnlinkIdentity'
+    { _uiIdentityId     :: !Text
+    , _uiLogins         :: !(Map Text Text)
+    , _uiLoginsToRemove :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UnlinkIdentity' with the minimum fields required to make a request.

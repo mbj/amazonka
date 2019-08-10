@@ -48,13 +48,15 @@ import Network.AWS.WorkDocs.Types
 import Network.AWS.WorkDocs.Types.Product
 
 -- | /See:/ 'deleteCustomMetadata' smart constructor.
-data DeleteCustomMetadata = DeleteCustomMetadata'
-  { _dcmVersionId           :: !(Maybe Text)
-  , _dcmDeleteAll           :: !(Maybe Bool)
-  , _dcmAuthenticationToken :: !(Maybe (Sensitive Text))
-  , _dcmKeys                :: !(Maybe [Text])
-  , _dcmResourceId          :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data DeleteCustomMetadata =
+  DeleteCustomMetadata'
+    { _dcmVersionId           :: !(Maybe Text)
+    , _dcmDeleteAll           :: !(Maybe Bool)
+    , _dcmAuthenticationToken :: !(Maybe (Sensitive Text))
+    , _dcmKeys                :: !(Maybe [Text])
+    , _dcmResourceId          :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteCustomMetadata' with the minimum fields required to make a request.
@@ -139,9 +141,11 @@ instance ToQuery DeleteCustomMetadata where
                  toQuery (toQueryList "member" <$> _dcmKeys)]
 
 -- | /See:/ 'deleteCustomMetadataResponse' smart constructor.
-newtype DeleteCustomMetadataResponse = DeleteCustomMetadataResponse'
-  { _dcmrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteCustomMetadataResponse =
+  DeleteCustomMetadataResponse'
+    { _dcmrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteCustomMetadataResponse' with the minimum fields required to make a request.

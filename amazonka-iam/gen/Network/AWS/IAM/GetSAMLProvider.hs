@@ -47,9 +47,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getSAMLProvider' smart constructor.
-newtype GetSAMLProvider = GetSAMLProvider'
-  { _gsamlpSAMLProviderARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetSAMLProvider =
+  GetSAMLProvider'
+    { _gsamlpSAMLProviderARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetSAMLProvider' with the minimum fields required to make a request.
@@ -101,12 +103,14 @@ instance ToQuery GetSAMLProvider where
 --
 --
 -- /See:/ 'getSAMLProviderResponse' smart constructor.
-data GetSAMLProviderResponse = GetSAMLProviderResponse'
-  { _gsamlprsCreateDate           :: !(Maybe ISO8601)
-  , _gsamlprsValidUntil           :: !(Maybe ISO8601)
-  , _gsamlprsSAMLMetadataDocument :: !(Maybe Text)
-  , _gsamlprsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetSAMLProviderResponse =
+  GetSAMLProviderResponse'
+    { _gsamlprsCreateDate           :: !(Maybe ISO8601)
+    , _gsamlprsValidUntil           :: !(Maybe ISO8601)
+    , _gsamlprsSAMLMetadataDocument :: !(Maybe Text)
+    , _gsamlprsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetSAMLProviderResponse' with the minimum fields required to make a request.

@@ -26,15 +26,17 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'affectedEntity' smart constructor.
-data AffectedEntity = AffectedEntity'
-  { _aeLastUpdatedTime :: !(Maybe POSIX)
-  , _aeEntityValue     :: !(Maybe Text)
-  , _aeAwsAccountId    :: !(Maybe Text)
-  , _aeEventARN        :: !(Maybe Text)
-  , _aeEntityARN       :: !(Maybe Text)
-  , _aeTags            :: !(Maybe (Map Text Text))
-  , _aeStatusCode      :: !(Maybe EntityStatusCode)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AffectedEntity =
+  AffectedEntity'
+    { _aeLastUpdatedTime :: !(Maybe POSIX)
+    , _aeEntityValue     :: !(Maybe Text)
+    , _aeAwsAccountId    :: !(Maybe Text)
+    , _aeEventARN        :: !(Maybe Text)
+    , _aeEntityARN       :: !(Maybe Text)
+    , _aeTags            :: !(Maybe (Map Text Text))
+    , _aeStatusCode      :: !(Maybe EntityStatusCode)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AffectedEntity' with the minimum fields required to make a request.
@@ -117,10 +119,12 @@ instance NFData AffectedEntity where
 --
 --
 -- /See:/ 'dateTimeRange' smart constructor.
-data DateTimeRange = DateTimeRange'
-  { _dtrTo   :: !(Maybe POSIX)
-  , _dtrFrom :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DateTimeRange =
+  DateTimeRange'
+    { _dtrTo   :: !(Maybe POSIX)
+    , _dtrFrom :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DateTimeRange' with the minimum fields required to make a request.
@@ -158,10 +162,12 @@ instance ToJSON DateTimeRange where
 --
 --
 -- /See:/ 'entityAggregate' smart constructor.
-data EntityAggregate = EntityAggregate'
-  { _eCount    :: !(Maybe Int)
-  , _eEventARN :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EntityAggregate =
+  EntityAggregate'
+    { _eCount    :: !(Maybe Int)
+    , _eEventARN :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EntityAggregate' with the minimum fields required to make a request.
@@ -200,14 +206,16 @@ instance NFData EntityAggregate where
 --
 --
 -- /See:/ 'entityFilter' smart constructor.
-data EntityFilter = EntityFilter'
-  { _eStatusCodes      :: !(Maybe (List1 EntityStatusCode))
-  , _eEntityARNs       :: !(Maybe (List1 Text))
-  , _eEntityValues     :: !(Maybe (List1 Text))
-  , _eTags             :: !(Maybe [Map Text Text])
-  , _eLastUpdatedTimes :: !(Maybe (List1 DateTimeRange))
-  , _eEventARNs        :: !(List1 Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EntityFilter =
+  EntityFilter'
+    { _eStatusCodes      :: !(Maybe (List1 EntityStatusCode))
+    , _eEntityARNs       :: !(Maybe (List1 Text))
+    , _eEntityValues     :: !(Maybe (List1 Text))
+    , _eTags             :: !(Maybe [Map Text Text])
+    , _eLastUpdatedTimes :: !(Maybe (List1 DateTimeRange))
+    , _eEventARNs        :: !(List1 Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EntityFilter' with the minimum fields required to make a request.
@@ -283,18 +291,20 @@ instance ToJSON EntityFilter where
 --
 --
 -- /See:/ 'event' smart constructor.
-data Event = Event'
-  { _eLastUpdatedTime   :: !(Maybe POSIX)
-  , _eArn               :: !(Maybe Text)
-  , _eService           :: !(Maybe Text)
-  , _eStartTime         :: !(Maybe POSIX)
-  , _eEventTypeCode     :: !(Maybe Text)
-  , _eEventTypeCategory :: !(Maybe EventTypeCategory)
-  , _eAvailabilityZone  :: !(Maybe Text)
-  , _eEndTime           :: !(Maybe POSIX)
-  , _eRegion            :: !(Maybe Text)
-  , _eStatusCode        :: !(Maybe EventStatusCode)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Event =
+  Event'
+    { _eLastUpdatedTime   :: !(Maybe POSIX)
+    , _eArn               :: !(Maybe Text)
+    , _eService           :: !(Maybe Text)
+    , _eStartTime         :: !(Maybe POSIX)
+    , _eEventTypeCode     :: !(Maybe Text)
+    , _eEventTypeCategory :: !(Maybe EventTypeCategory)
+    , _eAvailabilityZone  :: !(Maybe Text)
+    , _eEndTime           :: !(Maybe POSIX)
+    , _eRegion            :: !(Maybe Text)
+    , _eStatusCode        :: !(Maybe EventStatusCode)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Event' with the minimum fields required to make a request.
@@ -401,10 +411,12 @@ instance NFData Event where
 --
 --
 -- /See:/ 'eventAggregate' smart constructor.
-data EventAggregate = EventAggregate'
-  { _eaCount          :: !(Maybe Int)
-  , _eaAggregateValue :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EventAggregate =
+  EventAggregate'
+    { _eaCount          :: !(Maybe Int)
+    , _eaAggregateValue :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EventAggregate' with the minimum fields required to make a request.
@@ -444,9 +456,11 @@ instance NFData EventAggregate where
 --
 --
 -- /See:/ 'eventDescription' smart constructor.
-newtype EventDescription = EventDescription'
-  { _edLatestDescription :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype EventDescription =
+  EventDescription'
+    { _edLatestDescription :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EventDescription' with the minimum fields required to make a request.
@@ -478,11 +492,13 @@ instance NFData EventDescription where
 --
 --
 -- /See:/ 'eventDetails' smart constructor.
-data EventDetails = EventDetails'
-  { _edEvent            :: !(Maybe Event)
-  , _edEventDescription :: !(Maybe EventDescription)
-  , _edEventMetadata    :: !(Maybe (Map Text Text))
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EventDetails =
+  EventDetails'
+    { _edEvent            :: !(Maybe Event)
+    , _edEventDescription :: !(Maybe EventDescription)
+    , _edEventMetadata    :: !(Maybe (Map Text Text))
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EventDetails' with the minimum fields required to make a request.
@@ -533,11 +549,13 @@ instance NFData EventDetails where
 --
 --
 -- /See:/ 'eventDetailsErrorItem' smart constructor.
-data EventDetailsErrorItem = EventDetailsErrorItem'
-  { _edeiEventARN     :: !(Maybe Text)
-  , _edeiErrorName    :: !(Maybe Text)
-  , _edeiErrorMessage :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EventDetailsErrorItem =
+  EventDetailsErrorItem'
+    { _edeiEventARN     :: !(Maybe Text)
+    , _edeiErrorName    :: !(Maybe Text)
+    , _edeiErrorMessage :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EventDetailsErrorItem' with the minimum fields required to make a request.
@@ -588,21 +606,23 @@ instance NFData EventDetailsErrorItem where
 --
 --
 -- /See:/ 'eventFilter' smart constructor.
-data EventFilter = EventFilter'
-  { _efEventARNs           :: !(Maybe (List1 Text))
-  , _efEventTypeCategories :: !(Maybe (List1 EventTypeCategory))
-  , _efEventTypeCodes      :: !(Maybe (List1 Text))
-  , _efRegions             :: !(Maybe (List1 Text))
-  , _efEventStatusCodes    :: !(Maybe (List1 EventStatusCode))
-  , _efEndTimes            :: !(Maybe (List1 DateTimeRange))
-  , _efAvailabilityZones   :: !(Maybe [Text])
-  , _efEntityARNs          :: !(Maybe (List1 Text))
-  , _efEntityValues        :: !(Maybe (List1 Text))
-  , _efStartTimes          :: !(Maybe (List1 DateTimeRange))
-  , _efServices            :: !(Maybe (List1 Text))
-  , _efTags                :: !(Maybe [Map Text Text])
-  , _efLastUpdatedTimes    :: !(Maybe (List1 DateTimeRange))
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EventFilter =
+  EventFilter'
+    { _efEventARNs           :: !(Maybe (List1 Text))
+    , _efEventTypeCategories :: !(Maybe (List1 EventTypeCategory))
+    , _efEventTypeCodes      :: !(Maybe (List1 Text))
+    , _efRegions             :: !(Maybe (List1 Text))
+    , _efEventStatusCodes    :: !(Maybe (List1 EventStatusCode))
+    , _efEndTimes            :: !(Maybe (List1 DateTimeRange))
+    , _efAvailabilityZones   :: !(Maybe [Text])
+    , _efEntityARNs          :: !(Maybe (List1 Text))
+    , _efEntityValues        :: !(Maybe (List1 Text))
+    , _efStartTimes          :: !(Maybe (List1 DateTimeRange))
+    , _efServices            :: !(Maybe (List1 Text))
+    , _efTags                :: !(Maybe [Map Text Text])
+    , _efLastUpdatedTimes    :: !(Maybe (List1 DateTimeRange))
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EventFilter' with the minimum fields required to make a request.
@@ -734,11 +754,13 @@ instance ToJSON EventFilter where
 --
 --
 -- /See:/ 'eventType' smart constructor.
-data EventType = EventType'
-  { _etService  :: !(Maybe Text)
-  , _etCategory :: !(Maybe EventTypeCategory)
-  , _etCode     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EventType =
+  EventType'
+    { _etService  :: !(Maybe Text)
+    , _etCategory :: !(Maybe EventTypeCategory)
+    , _etCode     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EventType' with the minimum fields required to make a request.
@@ -785,11 +807,13 @@ instance NFData EventType where
 --
 --
 -- /See:/ 'eventTypeFilter' smart constructor.
-data EventTypeFilter = EventTypeFilter'
-  { _etfEventTypeCategories :: !(Maybe (List1 EventTypeCategory))
-  , _etfEventTypeCodes      :: !(Maybe (List1 Text))
-  , _etfServices            :: !(Maybe (List1 Text))
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EventTypeFilter =
+  EventTypeFilter'
+    { _etfEventTypeCategories :: !(Maybe (List1 EventTypeCategory))
+    , _etfEventTypeCodes      :: !(Maybe (List1 Text))
+    , _etfServices            :: !(Maybe (List1 Text))
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EventTypeFilter' with the minimum fields required to make a request.

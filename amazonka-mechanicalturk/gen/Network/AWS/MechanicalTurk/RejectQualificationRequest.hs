@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'rejectQualificationRequest' smart constructor.
-data RejectQualificationRequest = RejectQualificationRequest'
-  { _rqrReason                 :: !(Maybe Text)
-  , _rqrQualificationRequestId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RejectQualificationRequest =
+  RejectQualificationRequest'
+    { _rqrReason                 :: !(Maybe Text)
+    , _rqrQualificationRequestId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RejectQualificationRequest' with the minimum fields required to make a request.
@@ -118,9 +120,11 @@ instance ToQuery RejectQualificationRequest where
         toQuery = const mempty
 
 -- | /See:/ 'rejectQualificationRequestResponse' smart constructor.
-newtype RejectQualificationRequestResponse = RejectQualificationRequestResponse'
-  { _rqrrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RejectQualificationRequestResponse =
+  RejectQualificationRequestResponse'
+    { _rqrrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RejectQualificationRequestResponse' with the minimum fields required to make a request.

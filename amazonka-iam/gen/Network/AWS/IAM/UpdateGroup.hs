@@ -46,11 +46,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateGroup' smart constructor.
-data UpdateGroup = UpdateGroup'
-  { _ugNewGroupName :: !(Maybe Text)
-  , _ugNewPath      :: !(Maybe Text)
-  , _ugGroupName    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateGroup =
+  UpdateGroup'
+    { _ugNewGroupName :: !(Maybe Text)
+    , _ugNewPath      :: !(Maybe Text)
+    , _ugGroupName    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateGroup' with the minimum fields required to make a request.

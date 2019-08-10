@@ -51,10 +51,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listWorkerBlocks' smart constructor.
-data ListWorkerBlocks = ListWorkerBlocks'
-  { _lwbNextToken  :: !(Maybe Text)
-  , _lwbMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListWorkerBlocks =
+  ListWorkerBlocks'
+    { _lwbNextToken  :: !(Maybe Text)
+    , _lwbMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListWorkerBlocks' with the minimum fields required to make a request.
@@ -125,12 +127,14 @@ instance ToQuery ListWorkerBlocks where
         toQuery = const mempty
 
 -- | /See:/ 'listWorkerBlocksResponse' smart constructor.
-data ListWorkerBlocksResponse = ListWorkerBlocksResponse'
-  { _lwbrsWorkerBlocks   :: !(Maybe [WorkerBlock])
-  , _lwbrsNextToken      :: !(Maybe Text)
-  , _lwbrsNumResults     :: !(Maybe Int)
-  , _lwbrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListWorkerBlocksResponse =
+  ListWorkerBlocksResponse'
+    { _lwbrsWorkerBlocks   :: !(Maybe [WorkerBlock])
+    , _lwbrsNextToken      :: !(Maybe Text)
+    , _lwbrsNumResults     :: !(Maybe Int)
+    , _lwbrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListWorkerBlocksResponse' with the minimum fields required to make a request.

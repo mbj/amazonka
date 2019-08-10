@@ -42,9 +42,11 @@ import Network.AWS.SageMaker.Types
 import Network.AWS.SageMaker.Types.Product
 
 -- | /See:/ 'deleteNotebookInstanceLifecycleConfig' smart constructor.
-newtype DeleteNotebookInstanceLifecycleConfig = DeleteNotebookInstanceLifecycleConfig'
-  { _dnilcNotebookInstanceLifecycleConfigName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteNotebookInstanceLifecycleConfig =
+  DeleteNotebookInstanceLifecycleConfig'
+    { _dnilcNotebookInstanceLifecycleConfigName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteNotebookInstanceLifecycleConfig' with the minimum fields required to make a request.

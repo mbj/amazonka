@@ -58,10 +58,12 @@ import Network.AWS.Route53AutoNaming.Types
 import Network.AWS.Route53AutoNaming.Types.Product
 
 -- | /See:/ 'updateService' smart constructor.
-data UpdateService = UpdateService'
-  { _usId      :: !Text
-  , _usService :: !ServiceChange
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateService =
+  UpdateService'
+    { _usId      :: !Text
+    , _usService :: !ServiceChange
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateService' with the minimum fields required to make a request.
@@ -124,10 +126,12 @@ instance ToQuery UpdateService where
         toQuery = const mempty
 
 -- | /See:/ 'updateServiceResponse' smart constructor.
-data UpdateServiceResponse = UpdateServiceResponse'
-  { _usrsOperationId    :: !(Maybe Text)
-  , _usrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateServiceResponse =
+  UpdateServiceResponse'
+    { _usrsOperationId    :: !(Maybe Text)
+    , _usrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateServiceResponse' with the minimum fields required to make a request.

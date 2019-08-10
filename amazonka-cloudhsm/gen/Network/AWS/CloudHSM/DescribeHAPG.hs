@@ -61,9 +61,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeHAPG' smart constructor.
-newtype DescribeHAPG = DescribeHAPG'
-  { _dhapgHAPGARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeHAPG =
+  DescribeHAPG'
+    { _dhapgHAPGARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeHAPG' with the minimum fields required to make a request.
@@ -128,18 +130,20 @@ instance ToQuery DescribeHAPG where
 --
 --
 -- /See:/ 'describeHAPGResponse' smart constructor.
-data DescribeHAPGResponse = DescribeHAPGResponse'
-  { _dhapgrsState                   :: !(Maybe CloudHSMObjectState)
-  , _dhapgrsLastModifiedTimestamp   :: !(Maybe Text)
-  , _dhapgrsHSMsPendingRegistration :: !(Maybe [Text])
-  , _dhapgrsHSMsPendingDeletion     :: !(Maybe [Text])
-  , _dhapgrsHAPGSerial              :: !(Maybe Text)
-  , _dhapgrsHSMsLastActionFailed    :: !(Maybe [Text])
-  , _dhapgrsPartitionSerialList     :: !(Maybe [Text])
-  , _dhapgrsHAPGARN                 :: !(Maybe Text)
-  , _dhapgrsLabel                   :: !(Maybe Text)
-  , _dhapgrsResponseStatus          :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeHAPGResponse =
+  DescribeHAPGResponse'
+    { _dhapgrsState                   :: !(Maybe CloudHSMObjectState)
+    , _dhapgrsLastModifiedTimestamp   :: !(Maybe Text)
+    , _dhapgrsHSMsPendingRegistration :: !(Maybe [Text])
+    , _dhapgrsHSMsPendingDeletion     :: !(Maybe [Text])
+    , _dhapgrsHAPGSerial              :: !(Maybe Text)
+    , _dhapgrsHSMsLastActionFailed    :: !(Maybe [Text])
+    , _dhapgrsPartitionSerialList     :: !(Maybe [Text])
+    , _dhapgrsHAPGARN                 :: !(Maybe Text)
+    , _dhapgrsLabel                   :: !(Maybe Text)
+    , _dhapgrsResponseStatus          :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeHAPGResponse' with the minimum fields required to make a request.

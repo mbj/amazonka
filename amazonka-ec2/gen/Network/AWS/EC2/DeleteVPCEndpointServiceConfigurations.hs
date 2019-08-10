@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteVPCEndpointServiceConfigurations' smart constructor.
-data DeleteVPCEndpointServiceConfigurations = DeleteVPCEndpointServiceConfigurations'
-  { _dvpcescDryRun     :: !(Maybe Bool)
-  , _dvpcescServiceIds :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteVPCEndpointServiceConfigurations =
+  DeleteVPCEndpointServiceConfigurations'
+    { _dvpcescDryRun     :: !(Maybe Bool)
+    , _dvpcescServiceIds :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteVPCEndpointServiceConfigurations' with the minimum fields required to make a request.
@@ -119,10 +121,12 @@ instance ToQuery
                toQueryList "ServiceId" _dvpcescServiceIds]
 
 -- | /See:/ 'deleteVPCEndpointServiceConfigurationsResponse' smart constructor.
-data DeleteVPCEndpointServiceConfigurationsResponse = DeleteVPCEndpointServiceConfigurationsResponse'
-  { _dvpcescrsUnsuccessful   :: !(Maybe [UnsuccessfulItem])
-  , _dvpcescrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteVPCEndpointServiceConfigurationsResponse =
+  DeleteVPCEndpointServiceConfigurationsResponse'
+    { _dvpcescrsUnsuccessful   :: !(Maybe [UnsuccessfulItem])
+    , _dvpcescrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteVPCEndpointServiceConfigurationsResponse' with the minimum fields required to make a request.

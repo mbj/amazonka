@@ -51,13 +51,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateServer' smart constructor.
-data UpdateServer = UpdateServer'
-  { _usDisableAutomatedBackup     :: !(Maybe Bool)
-  , _usPreferredMaintenanceWindow :: !(Maybe Text)
-  , _usPreferredBackupWindow      :: !(Maybe Text)
-  , _usBackupRetentionCount       :: !(Maybe Int)
-  , _usServerName                 :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateServer =
+  UpdateServer'
+    { _usDisableAutomatedBackup     :: !(Maybe Bool)
+    , _usPreferredMaintenanceWindow :: !(Maybe Text)
+    , _usPreferredBackupWindow      :: !(Maybe Text)
+    , _usBackupRetentionCount       :: !(Maybe Int)
+    , _usServerName                 :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateServer' with the minimum fields required to make a request.
@@ -150,10 +152,12 @@ instance ToQuery UpdateServer where
         toQuery = const mempty
 
 -- | /See:/ 'updateServerResponse' smart constructor.
-data UpdateServerResponse = UpdateServerResponse'
-  { _usrsServer         :: !(Maybe Server)
-  , _usrsResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data UpdateServerResponse =
+  UpdateServerResponse'
+    { _usrsServer         :: !(Maybe Server)
+    , _usrsResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateServerResponse' with the minimum fields required to make a request.

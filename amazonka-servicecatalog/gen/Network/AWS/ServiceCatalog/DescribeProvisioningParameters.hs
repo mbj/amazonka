@@ -53,12 +53,14 @@ import Network.AWS.ServiceCatalog.Types
 import Network.AWS.ServiceCatalog.Types.Product
 
 -- | /See:/ 'describeProvisioningParameters' smart constructor.
-data DescribeProvisioningParameters = DescribeProvisioningParameters'
-  { _dppsAcceptLanguage         :: !(Maybe Text)
-  , _dppsPathId                 :: !(Maybe Text)
-  , _dppsProductId              :: !Text
-  , _dppsProvisioningArtifactId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeProvisioningParameters =
+  DescribeProvisioningParameters'
+    { _dppsAcceptLanguage         :: !(Maybe Text)
+    , _dppsPathId                 :: !(Maybe Text)
+    , _dppsProductId              :: !Text
+    , _dppsProvisioningArtifactId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeProvisioningParameters' with the minimum fields required to make a request.
@@ -150,13 +152,15 @@ instance ToQuery DescribeProvisioningParameters where
         toQuery = const mempty
 
 -- | /See:/ 'describeProvisioningParametersResponse' smart constructor.
-data DescribeProvisioningParametersResponse = DescribeProvisioningParametersResponse'
-  { _dpprsProvisioningArtifactParameters :: !(Maybe [ProvisioningArtifactParameter])
-  , _dpprsUsageInstructions :: !(Maybe [UsageInstruction])
-  , _dpprsConstraintSummaries :: !(Maybe [ConstraintSummary])
-  , _dpprsTagOptions :: !(Maybe [TagOptionSummary])
-  , _dpprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeProvisioningParametersResponse =
+  DescribeProvisioningParametersResponse'
+    { _dpprsProvisioningArtifactParameters :: !(Maybe [ProvisioningArtifactParameter])
+    , _dpprsUsageInstructions :: !(Maybe [UsageInstruction])
+    , _dpprsConstraintSummaries :: !(Maybe [ConstraintSummary])
+    , _dpprsTagOptions :: !(Maybe [TagOptionSummary])
+    , _dpprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeProvisioningParametersResponse' with the minimum fields required to make a request.

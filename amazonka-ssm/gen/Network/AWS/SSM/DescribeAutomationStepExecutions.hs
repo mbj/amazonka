@@ -50,13 +50,15 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'describeAutomationStepExecutions' smart constructor.
-data DescribeAutomationStepExecutions = DescribeAutomationStepExecutions'
-  { _daseFilters               :: !(Maybe (List1 StepExecutionFilter))
-  , _daseReverseOrder          :: !(Maybe Bool)
-  , _daseNextToken             :: !(Maybe Text)
-  , _daseMaxResults            :: !(Maybe Nat)
-  , _daseAutomationExecutionId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAutomationStepExecutions =
+  DescribeAutomationStepExecutions'
+    { _daseFilters               :: !(Maybe (List1 StepExecutionFilter))
+    , _daseReverseOrder          :: !(Maybe Bool)
+    , _daseNextToken             :: !(Maybe Text)
+    , _daseMaxResults            :: !(Maybe Nat)
+    , _daseAutomationExecutionId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAutomationStepExecutions' with the minimum fields required to make a request.
@@ -157,11 +159,13 @@ instance ToQuery DescribeAutomationStepExecutions
         toQuery = const mempty
 
 -- | /See:/ 'describeAutomationStepExecutionsResponse' smart constructor.
-data DescribeAutomationStepExecutionsResponse = DescribeAutomationStepExecutionsResponse'
-  { _dasersNextToken      :: !(Maybe Text)
-  , _dasersStepExecutions :: !(Maybe [StepExecution])
-  , _dasersResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAutomationStepExecutionsResponse =
+  DescribeAutomationStepExecutionsResponse'
+    { _dasersNextToken      :: !(Maybe Text)
+    , _dasersStepExecutions :: !(Maybe [StepExecution])
+    , _dasersResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAutomationStepExecutionsResponse' with the minimum fields required to make a request.

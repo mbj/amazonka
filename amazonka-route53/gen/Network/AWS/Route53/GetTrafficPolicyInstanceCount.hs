@@ -91,10 +91,12 @@ instance ToQuery GetTrafficPolicyInstanceCount where
 --
 --
 -- /See:/ 'getTrafficPolicyInstanceCountResponse' smart constructor.
-data GetTrafficPolicyInstanceCountResponse = GetTrafficPolicyInstanceCountResponse'
-  { _gtpicrsResponseStatus             :: !Int
-  , _gtpicrsTrafficPolicyInstanceCount :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetTrafficPolicyInstanceCountResponse =
+  GetTrafficPolicyInstanceCountResponse'
+    { _gtpicrsResponseStatus             :: !Int
+    , _gtpicrsTrafficPolicyInstanceCount :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetTrafficPolicyInstanceCountResponse' with the minimum fields required to make a request.

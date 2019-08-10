@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeConfigurationRevision' smart constructor.
-data DescribeConfigurationRevision = DescribeConfigurationRevision'
-  { _dcrConfigurationRevision :: !Text
-  , _dcrConfigurationId       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeConfigurationRevision =
+  DescribeConfigurationRevision'
+    { _dcrConfigurationRevision :: !Text
+    , _dcrConfigurationId       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeConfigurationRevision' with the minimum fields required to make a request.
@@ -113,12 +115,14 @@ instance ToQuery DescribeConfigurationRevision where
         toQuery = const mempty
 
 -- | /See:/ 'describeConfigurationRevisionResponse' smart constructor.
-data DescribeConfigurationRevisionResponse = DescribeConfigurationRevisionResponse'
-  { _dcrrsConfigurationId :: !(Maybe Text)
-  , _dcrrsData            :: !(Maybe Text)
-  , _dcrrsDescription     :: !(Maybe Text)
-  , _dcrrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeConfigurationRevisionResponse =
+  DescribeConfigurationRevisionResponse'
+    { _dcrrsConfigurationId :: !(Maybe Text)
+    , _dcrrsData            :: !(Maybe Text)
+    , _dcrrsDescription     :: !(Maybe Text)
+    , _dcrrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeConfigurationRevisionResponse' with the minimum fields required to make a request.

@@ -97,10 +97,12 @@ instance ToQuery GetDirectoryLimits where
 --
 --
 -- /See:/ 'getDirectoryLimitsResponse' smart constructor.
-data GetDirectoryLimitsResponse = GetDirectoryLimitsResponse'
-  { _gdlrsDirectoryLimits :: !(Maybe DirectoryLimits)
-  , _gdlrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDirectoryLimitsResponse =
+  GetDirectoryLimitsResponse'
+    { _gdlrsDirectoryLimits :: !(Maybe DirectoryLimits)
+    , _gdlrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDirectoryLimitsResponse' with the minimum fields required to make a request.

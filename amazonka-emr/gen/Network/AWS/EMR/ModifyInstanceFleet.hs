@@ -43,10 +43,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'modifyInstanceFleet' smart constructor.
-data ModifyInstanceFleet = ModifyInstanceFleet'
-  { _mifClusterId     :: !Text
-  , _mifInstanceFleet :: !InstanceFleetModifyConfig
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyInstanceFleet =
+  ModifyInstanceFleet'
+    { _mifClusterId     :: !Text
+    , _mifInstanceFleet :: !InstanceFleetModifyConfig
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyInstanceFleet' with the minimum fields required to make a request.

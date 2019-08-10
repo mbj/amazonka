@@ -55,10 +55,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listCollections' smart constructor.
-data ListCollections = ListCollections'
-  { _lcNextToken  :: !(Maybe Text)
-  , _lcMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListCollections =
+  ListCollections'
+    { _lcNextToken  :: !(Maybe Text)
+    , _lcMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListCollections' with the minimum fields required to make a request.
@@ -129,12 +131,14 @@ instance ToQuery ListCollections where
         toQuery = const mempty
 
 -- | /See:/ 'listCollectionsResponse' smart constructor.
-data ListCollectionsResponse = ListCollectionsResponse'
-  { _lcrsCollectionIds     :: !(Maybe [Text])
-  , _lcrsNextToken         :: !(Maybe Text)
-  , _lcrsFaceModelVersions :: !(Maybe [Text])
-  , _lcrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListCollectionsResponse =
+  ListCollectionsResponse'
+    { _lcrsCollectionIds     :: !(Maybe [Text])
+    , _lcrsNextToken         :: !(Maybe Text)
+    , _lcrsFaceModelVersions :: !(Maybe [Text])
+    , _lcrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListCollectionsResponse' with the minimum fields required to make a request.

@@ -71,23 +71,25 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeReservedInstancesOfferings' smart constructor.
-data DescribeReservedInstancesOfferings = DescribeReservedInstancesOfferings'
-  { _drioMaxDuration                  :: !(Maybe Integer)
-  , _drioProductDescription           :: !(Maybe RIProductDescription)
-  , _drioFilters                      :: !(Maybe [Filter])
-  , _drioIncludeMarketplace           :: !(Maybe Bool)
-  , _drioInstanceType                 :: !(Maybe InstanceType)
-  , _drioNextToken                    :: !(Maybe Text)
-  , _drioMinDuration                  :: !(Maybe Integer)
-  , _drioAvailabilityZone             :: !(Maybe Text)
-  , _drioOfferingType                 :: !(Maybe OfferingTypeValues)
-  , _drioReservedInstancesOfferingIds :: !(Maybe [Text])
-  , _drioInstanceTenancy              :: !(Maybe Tenancy)
-  , _drioOfferingClass                :: !(Maybe OfferingClassType)
-  , _drioMaxInstanceCount             :: !(Maybe Int)
-  , _drioDryRun                       :: !(Maybe Bool)
-  , _drioMaxResults                   :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeReservedInstancesOfferings =
+  DescribeReservedInstancesOfferings'
+    { _drioMaxDuration                  :: !(Maybe Integer)
+    , _drioProductDescription           :: !(Maybe RIProductDescription)
+    , _drioFilters                      :: !(Maybe [Filter])
+    , _drioIncludeMarketplace           :: !(Maybe Bool)
+    , _drioInstanceType                 :: !(Maybe InstanceType)
+    , _drioNextToken                    :: !(Maybe Text)
+    , _drioMinDuration                  :: !(Maybe Integer)
+    , _drioAvailabilityZone             :: !(Maybe Text)
+    , _drioOfferingType                 :: !(Maybe OfferingTypeValues)
+    , _drioReservedInstancesOfferingIds :: !(Maybe [Text])
+    , _drioInstanceTenancy              :: !(Maybe Tenancy)
+    , _drioOfferingClass                :: !(Maybe OfferingClassType)
+    , _drioMaxInstanceCount             :: !(Maybe Int)
+    , _drioDryRun                       :: !(Maybe Bool)
+    , _drioMaxResults                   :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeReservedInstancesOfferings' with the minimum fields required to make a request.
@@ -273,11 +275,13 @@ instance ToQuery DescribeReservedInstancesOfferings
 --
 --
 -- /See:/ 'describeReservedInstancesOfferingsResponse' smart constructor.
-data DescribeReservedInstancesOfferingsResponse = DescribeReservedInstancesOfferingsResponse'
-  { _driorsNextToken                  :: !(Maybe Text)
-  , _driorsReservedInstancesOfferings :: !(Maybe [ReservedInstancesOffering])
-  , _driorsResponseStatus             :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeReservedInstancesOfferingsResponse =
+  DescribeReservedInstancesOfferingsResponse'
+    { _driorsNextToken                  :: !(Maybe Text)
+    , _driorsReservedInstancesOfferings :: !(Maybe [ReservedInstancesOffering])
+    , _driorsResponseStatus             :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeReservedInstancesOfferingsResponse' with the minimum fields required to make a request.

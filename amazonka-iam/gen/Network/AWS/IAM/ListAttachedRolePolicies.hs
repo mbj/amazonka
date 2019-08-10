@@ -57,12 +57,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listAttachedRolePolicies' smart constructor.
-data ListAttachedRolePolicies = ListAttachedRolePolicies'
-  { _larpPathPrefix :: !(Maybe Text)
-  , _larpMarker     :: !(Maybe Text)
-  , _larpMaxItems   :: !(Maybe Nat)
-  , _larpRoleName   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAttachedRolePolicies =
+  ListAttachedRolePolicies'
+    { _larpPathPrefix :: !(Maybe Text)
+    , _larpMarker     :: !(Maybe Text)
+    , _larpMaxItems   :: !(Maybe Nat)
+    , _larpRoleName   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAttachedRolePolicies' with the minimum fields required to make a request.
@@ -150,12 +152,14 @@ instance ToQuery ListAttachedRolePolicies where
 --
 --
 -- /See:/ 'listAttachedRolePoliciesResponse' smart constructor.
-data ListAttachedRolePoliciesResponse = ListAttachedRolePoliciesResponse'
-  { _larprsAttachedPolicies :: !(Maybe [AttachedPolicy])
-  , _larprsMarker           :: !(Maybe Text)
-  , _larprsIsTruncated      :: !(Maybe Bool)
-  , _larprsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAttachedRolePoliciesResponse =
+  ListAttachedRolePoliciesResponse'
+    { _larprsAttachedPolicies :: !(Maybe [AttachedPolicy])
+    , _larprsMarker           :: !(Maybe Text)
+    , _larprsIsTruncated      :: !(Maybe Bool)
+    , _larprsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAttachedRolePoliciesResponse' with the minimum fields required to make a request.

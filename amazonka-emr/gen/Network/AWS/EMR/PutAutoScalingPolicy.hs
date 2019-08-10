@@ -49,11 +49,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putAutoScalingPolicy' smart constructor.
-data PutAutoScalingPolicy = PutAutoScalingPolicy'
-  { _paspClusterId         :: !Text
-  , _paspInstanceGroupId   :: !Text
-  , _paspAutoScalingPolicy :: !AutoScalingPolicy
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutAutoScalingPolicy =
+  PutAutoScalingPolicy'
+    { _paspClusterId         :: !Text
+    , _paspInstanceGroupId   :: !Text
+    , _paspAutoScalingPolicy :: !AutoScalingPolicy
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutAutoScalingPolicy' with the minimum fields required to make a request.
@@ -132,12 +134,14 @@ instance ToQuery PutAutoScalingPolicy where
         toQuery = const mempty
 
 -- | /See:/ 'putAutoScalingPolicyResponse' smart constructor.
-data PutAutoScalingPolicyResponse = PutAutoScalingPolicyResponse'
-  { _pasprsClusterId         :: !(Maybe Text)
-  , _pasprsAutoScalingPolicy :: !(Maybe AutoScalingPolicyDescription)
-  , _pasprsInstanceGroupId   :: !(Maybe Text)
-  , _pasprsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutAutoScalingPolicyResponse =
+  PutAutoScalingPolicyResponse'
+    { _pasprsClusterId         :: !(Maybe Text)
+    , _pasprsAutoScalingPolicy :: !(Maybe AutoScalingPolicyDescription)
+    , _pasprsInstanceGroupId   :: !(Maybe Text)
+    , _pasprsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutAutoScalingPolicyResponse' with the minimum fields required to make a request.

@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getAssessmentReport' smart constructor.
-data GetAssessmentReport = GetAssessmentReport'
-  { _garAssessmentRunARN :: !Text
-  , _garReportFileFormat :: !ReportFileFormat
-  , _garReportType       :: !ReportType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetAssessmentReport =
+  GetAssessmentReport'
+    { _garAssessmentRunARN :: !Text
+    , _garReportFileFormat :: !ReportFileFormat
+    , _garReportType       :: !ReportType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetAssessmentReport' with the minimum fields required to make a request.
@@ -129,11 +131,13 @@ instance ToQuery GetAssessmentReport where
         toQuery = const mempty
 
 -- | /See:/ 'getAssessmentReportResponse' smart constructor.
-data GetAssessmentReportResponse = GetAssessmentReportResponse'
-  { _garrsUrl            :: !(Maybe Text)
-  , _garrsResponseStatus :: !Int
-  , _garrsStatus         :: !ReportStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetAssessmentReportResponse =
+  GetAssessmentReportResponse'
+    { _garrsUrl            :: !(Maybe Text)
+    , _garrsResponseStatus :: !Int
+    , _garrsStatus         :: !ReportStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetAssessmentReportResponse' with the minimum fields required to make a request.

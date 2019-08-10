@@ -48,11 +48,13 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'describeAutomationExecutions' smart constructor.
-data DescribeAutomationExecutions = DescribeAutomationExecutions'
-  { _daeFilters    :: !(Maybe (List1 AutomationExecutionFilter))
-  , _daeNextToken  :: !(Maybe Text)
-  , _daeMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAutomationExecutions =
+  DescribeAutomationExecutions'
+    { _daeFilters    :: !(Maybe (List1 AutomationExecutionFilter))
+    , _daeNextToken  :: !(Maybe Text)
+    , _daeMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAutomationExecutions' with the minimum fields required to make a request.
@@ -125,11 +127,13 @@ instance ToQuery DescribeAutomationExecutions where
         toQuery = const mempty
 
 -- | /See:/ 'describeAutomationExecutionsResponse' smart constructor.
-data DescribeAutomationExecutionsResponse = DescribeAutomationExecutionsResponse'
-  { _daersNextToken :: !(Maybe Text)
-  , _daersAutomationExecutionMetadataList :: !(Maybe [AutomationExecutionMetadata])
-  , _daersResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAutomationExecutionsResponse =
+  DescribeAutomationExecutionsResponse'
+    { _daersNextToken :: !(Maybe Text)
+    , _daersAutomationExecutionMetadataList :: !(Maybe [AutomationExecutionMetadata])
+    , _daersResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAutomationExecutionsResponse' with the minimum fields required to make a request.

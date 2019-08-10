@@ -67,21 +67,23 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createTargetGroup' smart constructor.
-data CreateTargetGroup = CreateTargetGroup'
-  { _ctgMatcher                    :: !(Maybe Matcher)
-  , _ctgHealthCheckPath            :: !(Maybe Text)
-  , _ctgUnhealthyThresholdCount    :: !(Maybe Nat)
-  , _ctgHealthCheckIntervalSeconds :: !(Maybe Nat)
-  , _ctgTargetType                 :: !(Maybe TargetTypeEnum)
-  , _ctgHealthyThresholdCount      :: !(Maybe Nat)
-  , _ctgHealthCheckProtocol        :: !(Maybe ProtocolEnum)
-  , _ctgHealthCheckTimeoutSeconds  :: !(Maybe Nat)
-  , _ctgHealthCheckPort            :: !(Maybe Text)
-  , _ctgName                       :: !Text
-  , _ctgProtocol                   :: !ProtocolEnum
-  , _ctgPort                       :: !Nat
-  , _ctgVPCId                      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateTargetGroup =
+  CreateTargetGroup'
+    { _ctgMatcher                    :: !(Maybe Matcher)
+    , _ctgHealthCheckPath            :: !(Maybe Text)
+    , _ctgUnhealthyThresholdCount    :: !(Maybe Nat)
+    , _ctgHealthCheckIntervalSeconds :: !(Maybe Nat)
+    , _ctgTargetType                 :: !(Maybe TargetTypeEnum)
+    , _ctgHealthyThresholdCount      :: !(Maybe Nat)
+    , _ctgHealthCheckProtocol        :: !(Maybe ProtocolEnum)
+    , _ctgHealthCheckTimeoutSeconds  :: !(Maybe Nat)
+    , _ctgHealthCheckPort            :: !(Maybe Text)
+    , _ctgName                       :: !Text
+    , _ctgProtocol                   :: !ProtocolEnum
+    , _ctgPort                       :: !Nat
+    , _ctgVPCId                      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateTargetGroup' with the minimum fields required to make a request.
@@ -231,10 +233,12 @@ instance ToQuery CreateTargetGroup where
                "Port" =: _ctgPort, "VpcId" =: _ctgVPCId]
 
 -- | /See:/ 'createTargetGroupResponse' smart constructor.
-data CreateTargetGroupResponse = CreateTargetGroupResponse'
-  { _ctgrsTargetGroups   :: !(Maybe [TargetGroup])
-  , _ctgrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateTargetGroupResponse =
+  CreateTargetGroupResponse'
+    { _ctgrsTargetGroups   :: !(Maybe [TargetGroup])
+    , _ctgrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateTargetGroupResponse' with the minimum fields required to make a request.

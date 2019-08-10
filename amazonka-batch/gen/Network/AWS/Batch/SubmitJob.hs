@@ -54,17 +54,19 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'submitJob' smart constructor.
-data SubmitJob = SubmitJob'
-  { _sjContainerOverrides :: !(Maybe ContainerOverrides)
-  , _sjRetryStrategy      :: !(Maybe RetryStrategy)
-  , _sjDependsOn          :: !(Maybe [JobDependency])
-  , _sjParameters         :: !(Maybe (Map Text Text))
-  , _sjArrayProperties    :: !(Maybe ArrayProperties)
-  , _sjTimeout            :: !(Maybe JobTimeout)
-  , _sjJobName            :: !Text
-  , _sjJobQueue           :: !Text
-  , _sjJobDefinition      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SubmitJob =
+  SubmitJob'
+    { _sjContainerOverrides :: !(Maybe ContainerOverrides)
+    , _sjRetryStrategy      :: !(Maybe RetryStrategy)
+    , _sjDependsOn          :: !(Maybe [JobDependency])
+    , _sjParameters         :: !(Maybe (Map Text Text))
+    , _sjArrayProperties    :: !(Maybe ArrayProperties)
+    , _sjTimeout            :: !(Maybe JobTimeout)
+    , _sjJobName            :: !Text
+    , _sjJobQueue           :: !Text
+    , _sjJobDefinition      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SubmitJob' with the minimum fields required to make a request.
@@ -185,11 +187,13 @@ instance ToQuery SubmitJob where
         toQuery = const mempty
 
 -- | /See:/ 'submitJobResponse' smart constructor.
-data SubmitJobResponse = SubmitJobResponse'
-  { _sjrsResponseStatus :: !Int
-  , _sjrsJobName        :: !Text
-  , _sjrsJobId          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SubmitJobResponse =
+  SubmitJobResponse'
+    { _sjrsResponseStatus :: !Int
+    , _sjrsJobName        :: !Text
+    , _sjrsJobId          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SubmitJobResponse' with the minimum fields required to make a request.

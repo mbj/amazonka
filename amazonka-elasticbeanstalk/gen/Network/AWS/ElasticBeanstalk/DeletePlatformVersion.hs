@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deletePlatformVersion' smart constructor.
-newtype DeletePlatformVersion = DeletePlatformVersion'
-  { _dpvPlatformARN :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeletePlatformVersion =
+  DeletePlatformVersion'
+    { _dpvPlatformARN :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeletePlatformVersion' with the minimum fields required to make a request.
@@ -92,10 +94,12 @@ instance ToQuery DeletePlatformVersion where
                "PlatformArn" =: _dpvPlatformARN]
 
 -- | /See:/ 'deletePlatformVersionResponse' smart constructor.
-data DeletePlatformVersionResponse = DeletePlatformVersionResponse'
-  { _dpvrsPlatformSummary :: !(Maybe PlatformSummary)
-  , _dpvrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeletePlatformVersionResponse =
+  DeletePlatformVersionResponse'
+    { _dpvrsPlatformSummary :: !(Maybe PlatformSummary)
+    , _dpvrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeletePlatformVersionResponse' with the minimum fields required to make a request.

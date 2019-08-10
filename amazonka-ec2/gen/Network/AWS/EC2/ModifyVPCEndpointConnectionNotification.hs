@@ -48,12 +48,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'modifyVPCEndpointConnectionNotification' smart constructor.
-data ModifyVPCEndpointConnectionNotification = ModifyVPCEndpointConnectionNotification'
-  { _mvecnConnectionEvents          :: !(Maybe [Text])
-  , _mvecnConnectionNotificationARN :: !(Maybe Text)
-  , _mvecnDryRun                    :: !(Maybe Bool)
-  , _mvecnConnectionNotificationId  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyVPCEndpointConnectionNotification =
+  ModifyVPCEndpointConnectionNotification'
+    { _mvecnConnectionEvents          :: !(Maybe [Text])
+    , _mvecnConnectionNotificationARN :: !(Maybe Text)
+    , _mvecnDryRun                    :: !(Maybe Bool)
+    , _mvecnConnectionNotificationId  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyVPCEndpointConnectionNotification' with the minimum fields required to make a request.
@@ -144,10 +146,12 @@ instance ToQuery
                  _mvecnConnectionNotificationId]
 
 -- | /See:/ 'modifyVPCEndpointConnectionNotificationResponse' smart constructor.
-data ModifyVPCEndpointConnectionNotificationResponse = ModifyVPCEndpointConnectionNotificationResponse'
-  { _mvecnrsReturnValue    :: !(Maybe Bool)
-  , _mvecnrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyVPCEndpointConnectionNotificationResponse =
+  ModifyVPCEndpointConnectionNotificationResponse'
+    { _mvecnrsReturnValue    :: !(Maybe Bool)
+    , _mvecnrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyVPCEndpointConnectionNotificationResponse' with the minimum fields required to make a request.

@@ -46,11 +46,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'detachPolicy' smart constructor.
-data DetachPolicy = DetachPolicy'
-  { _dpDirectoryARN    :: !Text
-  , _dpPolicyReference :: !ObjectReference
-  , _dpObjectReference :: !ObjectReference
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DetachPolicy =
+  DetachPolicy'
+    { _dpDirectoryARN    :: !Text
+    , _dpPolicyReference :: !ObjectReference
+    , _dpObjectReference :: !ObjectReference
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DetachPolicy' with the minimum fields required to make a request.
@@ -119,9 +121,11 @@ instance ToQuery DetachPolicy where
         toQuery = const mempty
 
 -- | /See:/ 'detachPolicyResponse' smart constructor.
-newtype DetachPolicyResponse = DetachPolicyResponse'
-  { _dprsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DetachPolicyResponse =
+  DetachPolicyResponse'
+    { _dprsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DetachPolicyResponse' with the minimum fields required to make a request.

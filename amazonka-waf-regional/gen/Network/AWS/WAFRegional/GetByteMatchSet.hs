@@ -45,9 +45,11 @@ import Network.AWS.WAFRegional.Types
 import Network.AWS.WAFRegional.Types.Product
 
 -- | /See:/ 'getByteMatchSet' smart constructor.
-newtype GetByteMatchSet = GetByteMatchSet'
-  { _gbmsByteMatchSetId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetByteMatchSet =
+  GetByteMatchSet'
+    { _gbmsByteMatchSetId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetByteMatchSet' with the minimum fields required to make a request.
@@ -102,10 +104,12 @@ instance ToQuery GetByteMatchSet where
         toQuery = const mempty
 
 -- | /See:/ 'getByteMatchSetResponse' smart constructor.
-data GetByteMatchSetResponse = GetByteMatchSetResponse'
-  { _gbmsrsByteMatchSet   :: !(Maybe ByteMatchSet)
-  , _gbmsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetByteMatchSetResponse =
+  GetByteMatchSetResponse'
+    { _gbmsrsByteMatchSet   :: !(Maybe ByteMatchSet)
+    , _gbmsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetByteMatchSetResponse' with the minimum fields required to make a request.

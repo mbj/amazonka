@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listOTAUpdates' smart constructor.
-data ListOTAUpdates = ListOTAUpdates'
-  { _lotauNextToken       :: !(Maybe Text)
-  , _lotauOtaUpdateStatus :: !(Maybe OTAUpdateStatus)
-  , _lotauMaxResults      :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListOTAUpdates =
+  ListOTAUpdates'
+    { _lotauNextToken       :: !(Maybe Text)
+    , _lotauOtaUpdateStatus :: !(Maybe OTAUpdateStatus)
+    , _lotauMaxResults      :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListOTAUpdates' with the minimum fields required to make a request.
@@ -115,11 +117,13 @@ instance ToQuery ListOTAUpdates where
                "maxResults" =: _lotauMaxResults]
 
 -- | /See:/ 'listOTAUpdatesResponse' smart constructor.
-data ListOTAUpdatesResponse = ListOTAUpdatesResponse'
-  { _lotaursNextToken      :: !(Maybe Text)
-  , _lotaursOtaUpdates     :: !(Maybe [OTAUpdateSummary])
-  , _lotaursResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListOTAUpdatesResponse =
+  ListOTAUpdatesResponse'
+    { _lotaursNextToken      :: !(Maybe Text)
+    , _lotaursOtaUpdates     :: !(Maybe [OTAUpdateSummary])
+    , _lotaursResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListOTAUpdatesResponse' with the minimum fields required to make a request.

@@ -53,10 +53,12 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'reorderReceiptRuleSet' smart constructor.
-data ReorderReceiptRuleSet = ReorderReceiptRuleSet'
-  { _rrrsRuleSetName :: !Text
-  , _rrrsRuleNames   :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReorderReceiptRuleSet =
+  ReorderReceiptRuleSet'
+    { _rrrsRuleSetName :: !Text
+    , _rrrsRuleNames   :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReorderReceiptRuleSet' with the minimum fields required to make a request.
@@ -115,9 +117,11 @@ instance ToQuery ReorderReceiptRuleSet where
 --
 --
 -- /See:/ 'reorderReceiptRuleSetResponse' smart constructor.
-newtype ReorderReceiptRuleSetResponse = ReorderReceiptRuleSetResponse'
-  { _rrrsrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ReorderReceiptRuleSetResponse =
+  ReorderReceiptRuleSetResponse'
+    { _rrrsrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReorderReceiptRuleSetResponse' with the minimum fields required to make a request.

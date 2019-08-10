@@ -52,12 +52,14 @@ import Network.AWS.WAF.Types
 import Network.AWS.WAF.Types.Product
 
 -- | /See:/ 'getSampledRequests' smart constructor.
-data GetSampledRequests = GetSampledRequests'
-  { _gsrWebACLId   :: !Text
-  , _gsrRuleId     :: !Text
-  , _gsrTimeWindow :: !TimeWindow
-  , _gsrMaxItems   :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetSampledRequests =
+  GetSampledRequests'
+    { _gsrWebACLId   :: !Text
+    , _gsrRuleId     :: !Text
+    , _gsrTimeWindow :: !TimeWindow
+    , _gsrMaxItems   :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetSampledRequests' with the minimum fields required to make a request.
@@ -144,12 +146,14 @@ instance ToQuery GetSampledRequests where
         toQuery = const mempty
 
 -- | /See:/ 'getSampledRequestsResponse' smart constructor.
-data GetSampledRequestsResponse = GetSampledRequestsResponse'
-  { _gsrrsSampledRequests :: !(Maybe [SampledHTTPRequest])
-  , _gsrrsPopulationSize  :: !(Maybe Integer)
-  , _gsrrsTimeWindow      :: !(Maybe TimeWindow)
-  , _gsrrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetSampledRequestsResponse =
+  GetSampledRequestsResponse'
+    { _gsrrsSampledRequests :: !(Maybe [SampledHTTPRequest])
+    , _gsrrsPopulationSize  :: !(Maybe Integer)
+    , _gsrrsTimeWindow      :: !(Maybe TimeWindow)
+    , _gsrrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetSampledRequestsResponse' with the minimum fields required to make a request.

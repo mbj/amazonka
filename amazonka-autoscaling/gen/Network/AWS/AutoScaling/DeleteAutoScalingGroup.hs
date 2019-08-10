@@ -51,10 +51,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteAutoScalingGroup' smart constructor.
-data DeleteAutoScalingGroup = DeleteAutoScalingGroup'
-  { _dasgForceDelete          :: !(Maybe Bool)
-  , _dasgAutoScalingGroupName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteAutoScalingGroup =
+  DeleteAutoScalingGroup'
+    { _dasgForceDelete          :: !(Maybe Bool)
+    , _dasgAutoScalingGroupName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteAutoScalingGroup' with the minimum fields required to make a request.

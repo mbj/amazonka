@@ -51,9 +51,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describePipelines' smart constructor.
-newtype DescribePipelines = DescribePipelines'
-  { _dpPipelineIds :: [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribePipelines =
+  DescribePipelines'
+    { _dpPipelineIds :: [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribePipelines' with the minimum fields required to make a request.
@@ -109,10 +111,12 @@ instance ToQuery DescribePipelines where
 --
 --
 -- /See:/ 'describePipelinesResponse' smart constructor.
-data DescribePipelinesResponse = DescribePipelinesResponse'
-  { _dprsResponseStatus          :: !Int
-  , _dprsPipelineDescriptionList :: ![PipelineDescription]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribePipelinesResponse =
+  DescribePipelinesResponse'
+    { _dprsResponseStatus          :: !Int
+    , _dprsPipelineDescriptionList :: ![PipelineDescription]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribePipelinesResponse' with the minimum fields required to make a request.

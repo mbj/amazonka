@@ -54,9 +54,11 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'getMaintenanceWindow' smart constructor.
-newtype GetMaintenanceWindow = GetMaintenanceWindow'
-  { _gmwWindowId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetMaintenanceWindow =
+  GetMaintenanceWindow'
+    { _gmwWindowId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetMaintenanceWindow' with the minimum fields required to make a request.
@@ -119,19 +121,21 @@ instance ToQuery GetMaintenanceWindow where
         toQuery = const mempty
 
 -- | /See:/ 'getMaintenanceWindowResponse' smart constructor.
-data GetMaintenanceWindowResponse = GetMaintenanceWindowResponse'
-  { _gmwrsEnabled                  :: !(Maybe Bool)
-  , _gmwrsSchedule                 :: !(Maybe Text)
-  , _gmwrsCreatedDate              :: !(Maybe POSIX)
-  , _gmwrsName                     :: !(Maybe Text)
-  , _gmwrsModifiedDate             :: !(Maybe POSIX)
-  , _gmwrsCutoff                   :: !(Maybe Nat)
-  , _gmwrsAllowUnassociatedTargets :: !(Maybe Bool)
-  , _gmwrsDescription              :: !(Maybe (Sensitive Text))
-  , _gmwrsDuration                 :: !(Maybe Nat)
-  , _gmwrsWindowId                 :: !(Maybe Text)
-  , _gmwrsResponseStatus           :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data GetMaintenanceWindowResponse =
+  GetMaintenanceWindowResponse'
+    { _gmwrsEnabled                  :: !(Maybe Bool)
+    , _gmwrsSchedule                 :: !(Maybe Text)
+    , _gmwrsCreatedDate              :: !(Maybe POSIX)
+    , _gmwrsName                     :: !(Maybe Text)
+    , _gmwrsModifiedDate             :: !(Maybe POSIX)
+    , _gmwrsCutoff                   :: !(Maybe Nat)
+    , _gmwrsAllowUnassociatedTargets :: !(Maybe Bool)
+    , _gmwrsDescription              :: !(Maybe (Sensitive Text))
+    , _gmwrsDuration                 :: !(Maybe Nat)
+    , _gmwrsWindowId                 :: !(Maybe Text)
+    , _gmwrsResponseStatus           :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetMaintenanceWindowResponse' with the minimum fields required to make a request.

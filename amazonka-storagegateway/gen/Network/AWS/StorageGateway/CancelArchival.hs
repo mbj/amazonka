@@ -50,10 +50,12 @@ import Network.AWS.StorageGateway.Types.Product
 --
 --
 -- /See:/ 'cancelArchival' smart constructor.
-data CancelArchival = CancelArchival'
-  { _caGatewayARN :: !Text
-  , _caTapeARN    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CancelArchival =
+  CancelArchival'
+    { _caGatewayARN :: !Text
+    , _caTapeARN    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CancelArchival' with the minimum fields required to make a request.
@@ -120,10 +122,12 @@ instance ToQuery CancelArchival where
 --
 --
 -- /See:/ 'cancelArchivalResponse' smart constructor.
-data CancelArchivalResponse = CancelArchivalResponse'
-  { _carsTapeARN        :: !(Maybe Text)
-  , _carsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CancelArchivalResponse =
+  CancelArchivalResponse'
+    { _carsTapeARN        :: !(Maybe Text)
+    , _carsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CancelArchivalResponse' with the minimum fields required to make a request.

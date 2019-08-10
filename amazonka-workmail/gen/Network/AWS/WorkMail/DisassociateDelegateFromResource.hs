@@ -46,11 +46,13 @@ import Network.AWS.WorkMail.Types
 import Network.AWS.WorkMail.Types.Product
 
 -- | /See:/ 'disassociateDelegateFromResource' smart constructor.
-data DisassociateDelegateFromResource = DisassociateDelegateFromResource'
-  { _ddfrOrganizationId :: !Text
-  , _ddfrResourceId     :: !Text
-  , _ddfrEntityId       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DisassociateDelegateFromResource =
+  DisassociateDelegateFromResource'
+    { _ddfrOrganizationId :: !Text
+    , _ddfrResourceId     :: !Text
+    , _ddfrEntityId       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisassociateDelegateFromResource' with the minimum fields required to make a request.
@@ -133,9 +135,11 @@ instance ToQuery DisassociateDelegateFromResource
         toQuery = const mempty
 
 -- | /See:/ 'disassociateDelegateFromResourceResponse' smart constructor.
-newtype DisassociateDelegateFromResourceResponse = DisassociateDelegateFromResourceResponse'
-  { _ddfrrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DisassociateDelegateFromResourceResponse =
+  DisassociateDelegateFromResourceResponse'
+    { _ddfrrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisassociateDelegateFromResourceResponse' with the minimum fields required to make a request.

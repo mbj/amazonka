@@ -53,10 +53,12 @@ import Network.AWS.Route53.Types.Product
 --
 --
 -- /See:/ 'listTrafficPolicies' smart constructor.
-data ListTrafficPolicies = ListTrafficPolicies'
-  { _ltpTrafficPolicyIdMarker :: !(Maybe Text)
-  , _ltpMaxItems              :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTrafficPolicies =
+  ListTrafficPolicies'
+    { _ltpTrafficPolicyIdMarker :: !(Maybe Text)
+    , _ltpMaxItems              :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTrafficPolicies' with the minimum fields required to make a request.
@@ -117,13 +119,15 @@ instance ToQuery ListTrafficPolicies where
 --
 --
 -- /See:/ 'listTrafficPoliciesResponse' smart constructor.
-data ListTrafficPoliciesResponse = ListTrafficPoliciesResponse'
-  { _ltprsResponseStatus         :: !Int
-  , _ltprsTrafficPolicySummaries :: ![TrafficPolicySummary]
-  , _ltprsIsTruncated            :: !Bool
-  , _ltprsTrafficPolicyIdMarker  :: !Text
-  , _ltprsMaxItems               :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTrafficPoliciesResponse =
+  ListTrafficPoliciesResponse'
+    { _ltprsResponseStatus         :: !Int
+    , _ltprsTrafficPolicySummaries :: ![TrafficPolicySummary]
+    , _ltprsIsTruncated            :: !Bool
+    , _ltprsTrafficPolicyIdMarker  :: !Text
+    , _ltprsMaxItems               :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTrafficPoliciesResponse' with the minimum fields required to make a request.

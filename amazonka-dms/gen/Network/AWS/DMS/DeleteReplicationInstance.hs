@@ -51,9 +51,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteReplicationInstance' smart constructor.
-newtype DeleteReplicationInstance = DeleteReplicationInstance'
-  { _driReplicationInstanceARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteReplicationInstance =
+  DeleteReplicationInstance'
+    { _driReplicationInstanceARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteReplicationInstance' with the minimum fields required to make a request.
@@ -117,10 +119,12 @@ instance ToQuery DeleteReplicationInstance where
 --
 --
 -- /See:/ 'deleteReplicationInstanceResponse' smart constructor.
-data DeleteReplicationInstanceResponse = DeleteReplicationInstanceResponse'
-  { _drirsReplicationInstance :: !(Maybe ReplicationInstance)
-  , _drirsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteReplicationInstanceResponse =
+  DeleteReplicationInstanceResponse'
+    { _drirsReplicationInstance :: !(Maybe ReplicationInstance)
+    , _drirsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteReplicationInstanceResponse' with the minimum fields required to make a request.

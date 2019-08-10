@@ -52,9 +52,11 @@ import Network.AWS.WorkMail.Types
 import Network.AWS.WorkMail.Types.Product
 
 -- | /See:/ 'describeOrganization' smart constructor.
-newtype DescribeOrganization = DescribeOrganization'
-  { _doOrganizationId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeOrganization =
+  DescribeOrganization'
+    { _doOrganizationId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeOrganization' with the minimum fields required to make a request.
@@ -117,17 +119,19 @@ instance ToQuery DescribeOrganization where
         toQuery = const mempty
 
 -- | /See:/ 'describeOrganizationResponse' smart constructor.
-data DescribeOrganizationResponse = DescribeOrganizationResponse'
-  { _dorsDirectoryId       :: !(Maybe Text)
-  , _dorsState             :: !(Maybe Text)
-  , _dorsAlias             :: !(Maybe Text)
-  , _dorsCompletedDate     :: !(Maybe POSIX)
-  , _dorsDirectoryType     :: !(Maybe Text)
-  , _dorsDefaultMailDomain :: !(Maybe Text)
-  , _dorsErrorMessage      :: !(Maybe Text)
-  , _dorsOrganizationId    :: !(Maybe Text)
-  , _dorsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeOrganizationResponse =
+  DescribeOrganizationResponse'
+    { _dorsDirectoryId       :: !(Maybe Text)
+    , _dorsState             :: !(Maybe Text)
+    , _dorsAlias             :: !(Maybe Text)
+    , _dorsCompletedDate     :: !(Maybe POSIX)
+    , _dorsDirectoryType     :: !(Maybe Text)
+    , _dorsDefaultMailDomain :: !(Maybe Text)
+    , _dorsErrorMessage      :: !(Maybe Text)
+    , _dorsOrganizationId    :: !(Maybe Text)
+    , _dorsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeOrganizationResponse' with the minimum fields required to make a request.

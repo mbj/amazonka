@@ -53,11 +53,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeNetworkACLs' smart constructor.
-data DescribeNetworkACLs = DescribeNetworkACLs'
-  { _dnaclFilters       :: !(Maybe [Filter])
-  , _dnaclNetworkACLIds :: !(Maybe [Text])
-  , _dnaclDryRun        :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeNetworkACLs =
+  DescribeNetworkACLs'
+    { _dnaclFilters       :: !(Maybe [Filter])
+    , _dnaclNetworkACLIds :: !(Maybe [Text])
+    , _dnaclDryRun        :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeNetworkACLs' with the minimum fields required to make a request.
@@ -128,10 +130,12 @@ instance ToQuery DescribeNetworkACLs where
 --
 --
 -- /See:/ 'describeNetworkACLsResponse' smart constructor.
-data DescribeNetworkACLsResponse = DescribeNetworkACLsResponse'
-  { _dnarsNetworkACLs    :: !(Maybe [NetworkACL])
-  , _dnarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeNetworkACLsResponse =
+  DescribeNetworkACLsResponse'
+    { _dnarsNetworkACLs    :: !(Maybe [NetworkACL])
+    , _dnarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeNetworkACLsResponse' with the minimum fields required to make a request.

@@ -49,11 +49,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeCommands' smart constructor.
-data DescribeCommands = DescribeCommands'
-  { _dcDeploymentId :: !(Maybe Text)
-  , _dcInstanceId   :: !(Maybe Text)
-  , _dcCommandIds   :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeCommands =
+  DescribeCommands'
+    { _dcDeploymentId :: !(Maybe Text)
+    , _dcInstanceId   :: !(Maybe Text)
+    , _dcCommandIds   :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeCommands' with the minimum fields required to make a request.
@@ -129,10 +131,12 @@ instance ToQuery DescribeCommands where
 --
 --
 -- /See:/ 'describeCommandsResponse' smart constructor.
-data DescribeCommandsResponse = DescribeCommandsResponse'
-  { _dcrsCommands       :: !(Maybe [Command])
-  , _dcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeCommandsResponse =
+  DescribeCommandsResponse'
+    { _dcrsCommands       :: !(Maybe [Command])
+    , _dcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeCommandsResponse' with the minimum fields required to make a request.

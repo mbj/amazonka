@@ -47,9 +47,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeStackSummary' smart constructor.
-newtype DescribeStackSummary = DescribeStackSummary'
-  { _dssStackId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeStackSummary =
+  DescribeStackSummary'
+    { _dssStackId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeStackSummary' with the minimum fields required to make a request.
@@ -107,10 +109,12 @@ instance ToQuery DescribeStackSummary where
 --
 --
 -- /See:/ 'describeStackSummaryResponse' smart constructor.
-data DescribeStackSummaryResponse = DescribeStackSummaryResponse'
-  { _dssrsStackSummary   :: !(Maybe StackSummary)
-  , _dssrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeStackSummaryResponse =
+  DescribeStackSummaryResponse'
+    { _dssrsStackSummary   :: !(Maybe StackSummary)
+    , _dssrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeStackSummaryResponse' with the minimum fields required to make a request.

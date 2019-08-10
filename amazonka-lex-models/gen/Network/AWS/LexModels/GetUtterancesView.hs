@@ -54,11 +54,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getUtterancesView' smart constructor.
-data GetUtterancesView = GetUtterancesView'
-  { _guvBotName     :: !Text
-  , _guvBotVersions :: !(List1 Text)
-  , _guvStatusType  :: !StatusType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetUtterancesView =
+  GetUtterancesView'
+    { _guvBotName     :: !Text
+    , _guvBotVersions :: !(List1 Text)
+    , _guvStatusType  :: !StatusType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetUtterancesView' with the minimum fields required to make a request.
@@ -128,11 +130,13 @@ instance ToQuery GetUtterancesView where
                "status_type" =: _guvStatusType, "view=aggregation"]
 
 -- | /See:/ 'getUtterancesViewResponse' smart constructor.
-data GetUtterancesViewResponse = GetUtterancesViewResponse'
-  { _guvrsBotName        :: !(Maybe Text)
-  , _guvrsUtterances     :: !(Maybe [UtteranceList])
-  , _guvrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetUtterancesViewResponse =
+  GetUtterancesViewResponse'
+    { _guvrsBotName        :: !(Maybe Text)
+    , _guvrsUtterances     :: !(Maybe [UtteranceList])
+    , _guvrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetUtterancesViewResponse' with the minimum fields required to make a request.

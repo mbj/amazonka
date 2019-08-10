@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteIndexField' smart constructor.
-data DeleteIndexField = DeleteIndexField'
-  { _difiDomainName     :: !Text
-  , _difiIndexFieldName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteIndexField =
+  DeleteIndexField'
+    { _difiDomainName     :: !Text
+    , _difiIndexFieldName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteIndexField' with the minimum fields required to make a request.
@@ -112,10 +114,12 @@ instance ToQuery DeleteIndexField where
 --
 --
 -- /See:/ 'deleteIndexFieldResponse' smart constructor.
-data DeleteIndexFieldResponse = DeleteIndexFieldResponse'
-  { _difrsResponseStatus :: !Int
-  , _difrsIndexField     :: !IndexFieldStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteIndexFieldResponse =
+  DeleteIndexFieldResponse'
+    { _difrsResponseStatus :: !Int
+    , _difrsIndexField     :: !IndexFieldStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteIndexFieldResponse' with the minimum fields required to make a request.

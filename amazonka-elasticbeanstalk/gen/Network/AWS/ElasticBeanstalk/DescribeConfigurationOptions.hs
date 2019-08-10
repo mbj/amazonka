@@ -56,14 +56,16 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeConfigurationOptions' smart constructor.
-data DescribeConfigurationOptions = DescribeConfigurationOptions'
-  { _dcoTemplateName      :: !(Maybe Text)
-  , _dcoPlatformARN       :: !(Maybe Text)
-  , _dcoEnvironmentName   :: !(Maybe Text)
-  , _dcoApplicationName   :: !(Maybe Text)
-  , _dcoSolutionStackName :: !(Maybe Text)
-  , _dcoOptions           :: !(Maybe [OptionSpecification])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeConfigurationOptions =
+  DescribeConfigurationOptions'
+    { _dcoTemplateName      :: !(Maybe Text)
+    , _dcoPlatformARN       :: !(Maybe Text)
+    , _dcoEnvironmentName   :: !(Maybe Text)
+    , _dcoApplicationName   :: !(Maybe Text)
+    , _dcoSolutionStackName :: !(Maybe Text)
+    , _dcoOptions           :: !(Maybe [OptionSpecification])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeConfigurationOptions' with the minimum fields required to make a request.
@@ -163,12 +165,14 @@ instance ToQuery DescribeConfigurationOptions where
 --
 --
 -- /See:/ 'describeConfigurationOptionsResponse' smart constructor.
-data DescribeConfigurationOptionsResponse = DescribeConfigurationOptionsResponse'
-  { _dcorsPlatformARN       :: !(Maybe Text)
-  , _dcorsSolutionStackName :: !(Maybe Text)
-  , _dcorsOptions           :: !(Maybe [ConfigurationOptionDescription])
-  , _dcorsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeConfigurationOptionsResponse =
+  DescribeConfigurationOptionsResponse'
+    { _dcorsPlatformARN       :: !(Maybe Text)
+    , _dcorsSolutionStackName :: !(Maybe Text)
+    , _dcorsOptions           :: !(Maybe [ConfigurationOptionDescription])
+    , _dcorsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeConfigurationOptionsResponse' with the minimum fields required to make a request.

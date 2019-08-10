@@ -92,11 +92,13 @@ instance ToQuery GetSnowballUsage where
         toQuery = const mempty
 
 -- | /See:/ 'getSnowballUsageResponse' smart constructor.
-data GetSnowballUsageResponse = GetSnowballUsageResponse'
-  { _gsursSnowballsInUse :: !(Maybe Int)
-  , _gsursSnowballLimit  :: !(Maybe Int)
-  , _gsursResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetSnowballUsageResponse =
+  GetSnowballUsageResponse'
+    { _gsursSnowballsInUse :: !(Maybe Int)
+    , _gsursSnowballLimit  :: !(Maybe Int)
+    , _gsursResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetSnowballUsageResponse' with the minimum fields required to make a request.

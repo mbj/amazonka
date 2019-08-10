@@ -59,9 +59,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'acceptHandshake' smart constructor.
-newtype AcceptHandshake = AcceptHandshake'
-  { _ahHandshakeId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AcceptHandshake =
+  AcceptHandshake'
+    { _ahHandshakeId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AcceptHandshake' with the minimum fields required to make a request.
@@ -115,10 +117,12 @@ instance ToQuery AcceptHandshake where
         toQuery = const mempty
 
 -- | /See:/ 'acceptHandshakeResponse' smart constructor.
-data AcceptHandshakeResponse = AcceptHandshakeResponse'
-  { _ahrsHandshake      :: !(Maybe Handshake)
-  , _ahrsResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data AcceptHandshakeResponse =
+  AcceptHandshakeResponse'
+    { _ahrsHandshake      :: !(Maybe Handshake)
+    , _ahrsResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AcceptHandshakeResponse' with the minimum fields required to make a request.

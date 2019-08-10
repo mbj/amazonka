@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getTypedLinkFacetInformation' smart constructor.
-data GetTypedLinkFacetInformation = GetTypedLinkFacetInformation'
-  { _gtlfiSchemaARN :: !Text
-  , _gtlfiName      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetTypedLinkFacetInformation =
+  GetTypedLinkFacetInformation'
+    { _gtlfiSchemaARN :: !Text
+    , _gtlfiName      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetTypedLinkFacetInformation' with the minimum fields required to make a request.
@@ -109,10 +111,12 @@ instance ToQuery GetTypedLinkFacetInformation where
         toQuery = const mempty
 
 -- | /See:/ 'getTypedLinkFacetInformationResponse' smart constructor.
-data GetTypedLinkFacetInformationResponse = GetTypedLinkFacetInformationResponse'
-  { _gtlfirsIdentityAttributeOrder :: !(Maybe [Text])
-  , _gtlfirsResponseStatus         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetTypedLinkFacetInformationResponse =
+  GetTypedLinkFacetInformationResponse'
+    { _gtlfirsIdentityAttributeOrder :: !(Maybe [Text])
+    , _gtlfirsResponseStatus         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetTypedLinkFacetInformationResponse' with the minimum fields required to make a request.

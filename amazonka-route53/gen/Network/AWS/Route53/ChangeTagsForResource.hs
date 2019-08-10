@@ -53,12 +53,14 @@ import Network.AWS.Route53.Types.Product
 --
 --
 -- /See:/ 'changeTagsForResource' smart constructor.
-data ChangeTagsForResource = ChangeTagsForResource'
-  { _ctfrRemoveTagKeys :: !(Maybe (List1 Text))
-  , _ctfrAddTags       :: !(Maybe (List1 Tag))
-  , _ctfrResourceType  :: !TagResourceType
-  , _ctfrResourceId    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ChangeTagsForResource =
+  ChangeTagsForResource'
+    { _ctfrRemoveTagKeys :: !(Maybe (List1 Text))
+    , _ctfrAddTags       :: !(Maybe (List1 Tag))
+    , _ctfrResourceType  :: !TagResourceType
+    , _ctfrResourceId    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ChangeTagsForResource' with the minimum fields required to make a request.
@@ -145,9 +147,11 @@ instance ToXML ChangeTagsForResource where
 --
 --
 -- /See:/ 'changeTagsForResourceResponse' smart constructor.
-newtype ChangeTagsForResourceResponse = ChangeTagsForResourceResponse'
-  { _ctfrrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ChangeTagsForResourceResponse =
+  ChangeTagsForResourceResponse'
+    { _ctfrrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ChangeTagsForResourceResponse' with the minimum fields required to make a request.

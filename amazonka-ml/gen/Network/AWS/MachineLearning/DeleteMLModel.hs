@@ -49,9 +49,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteMLModel' smart constructor.
-newtype DeleteMLModel = DeleteMLModel'
-  { _dmlmMLModelId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteMLModel =
+  DeleteMLModel'
+    { _dmlmMLModelId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteMLModel' with the minimum fields required to make a request.
@@ -109,10 +111,12 @@ instance ToQuery DeleteMLModel where
 --
 --
 -- /See:/ 'deleteMLModelResponse' smart constructor.
-data DeleteMLModelResponse = DeleteMLModelResponse'
-  { _dmlmrsMLModelId      :: !(Maybe Text)
-  , _dmlmrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteMLModelResponse =
+  DeleteMLModelResponse'
+    { _dmlmrsMLModelId      :: !(Maybe Text)
+    , _dmlmrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteMLModelResponse' with the minimum fields required to make a request.

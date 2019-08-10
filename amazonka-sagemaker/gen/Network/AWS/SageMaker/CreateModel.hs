@@ -57,13 +57,15 @@ import Network.AWS.SageMaker.Types
 import Network.AWS.SageMaker.Types.Product
 
 -- | /See:/ 'createModel' smart constructor.
-data CreateModel = CreateModel'
-  { _cmVPCConfig        :: !(Maybe VPCConfig)
-  , _cmTags             :: !(Maybe [Tag])
-  , _cmModelName        :: !Text
-  , _cmPrimaryContainer :: !ContainerDefinition
-  , _cmExecutionRoleARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateModel =
+  CreateModel'
+    { _cmVPCConfig        :: !(Maybe VPCConfig)
+    , _cmTags             :: !(Maybe [Tag])
+    , _cmModelName        :: !Text
+    , _cmPrimaryContainer :: !ContainerDefinition
+    , _cmExecutionRoleARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateModel' with the minimum fields required to make a request.
@@ -153,10 +155,12 @@ instance ToQuery CreateModel where
         toQuery = const mempty
 
 -- | /See:/ 'createModelResponse' smart constructor.
-data CreateModelResponse = CreateModelResponse'
-  { _cmrsResponseStatus :: !Int
-  , _cmrsModelARN       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateModelResponse =
+  CreateModelResponse'
+    { _cmrsResponseStatus :: !Int
+    , _cmrsModelARN       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateModelResponse' with the minimum fields required to make a request.

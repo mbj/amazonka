@@ -53,11 +53,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateDeployment' smart constructor.
-data UpdateDeployment = UpdateDeployment'
-  { _udPatchOperations :: !(Maybe [PatchOperation])
-  , _udRestAPIId       :: !Text
-  , _udDeploymentId    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateDeployment =
+  UpdateDeployment'
+    { _udPatchOperations :: !(Maybe [PatchOperation])
+    , _udRestAPIId       :: !Text
+    , _udDeploymentId    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateDeployment' with the minimum fields required to make a request.

@@ -53,11 +53,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateRequestValidator' smart constructor.
-data UpdateRequestValidator = UpdateRequestValidator'
-  { _urvPatchOperations    :: !(Maybe [PatchOperation])
-  , _urvRestAPIId          :: !Text
-  , _urvRequestValidatorId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateRequestValidator =
+  UpdateRequestValidator'
+    { _urvPatchOperations    :: !(Maybe [PatchOperation])
+    , _urvRestAPIId          :: !Text
+    , _urvRequestValidatorId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateRequestValidator' with the minimum fields required to make a request.

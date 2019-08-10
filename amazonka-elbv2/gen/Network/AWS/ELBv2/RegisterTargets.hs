@@ -53,10 +53,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'registerTargets' smart constructor.
-data RegisterTargets = RegisterTargets'
-  { _rtTargetGroupARN :: !Text
-  , _rtTargets        :: ![TargetDescription]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RegisterTargets =
+  RegisterTargets'
+    { _rtTargetGroupARN :: !Text
+    , _rtTargets        :: ![TargetDescription]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterTargets' with the minimum fields required to make a request.
@@ -108,9 +110,11 @@ instance ToQuery RegisterTargets where
                "Targets" =: toQueryList "member" _rtTargets]
 
 -- | /See:/ 'registerTargetsResponse' smart constructor.
-newtype RegisterTargetsResponse = RegisterTargetsResponse'
-  { _rrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RegisterTargetsResponse =
+  RegisterTargetsResponse'
+    { _rrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterTargetsResponse' with the minimum fields required to make a request.

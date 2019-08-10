@@ -58,10 +58,12 @@ import Network.AWS.WAF.Types
 import Network.AWS.WAF.Types.Product
 
 -- | /See:/ 'deleteByteMatchSet' smart constructor.
-data DeleteByteMatchSet = DeleteByteMatchSet'
-  { _dbmsByteMatchSetId :: !Text
-  , _dbmsChangeToken    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteByteMatchSet =
+  DeleteByteMatchSet'
+    { _dbmsByteMatchSetId :: !Text
+    , _dbmsChangeToken    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteByteMatchSet' with the minimum fields required to make a request.
@@ -125,10 +127,12 @@ instance ToQuery DeleteByteMatchSet where
         toQuery = const mempty
 
 -- | /See:/ 'deleteByteMatchSetResponse' smart constructor.
-data DeleteByteMatchSetResponse = DeleteByteMatchSetResponse'
-  { _dbmsrsChangeToken    :: !(Maybe Text)
-  , _dbmsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteByteMatchSetResponse =
+  DeleteByteMatchSetResponse'
+    { _dbmsrsChangeToken    :: !(Maybe Text)
+    , _dbmsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteByteMatchSetResponse' with the minimum fields required to make a request.

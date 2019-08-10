@@ -48,9 +48,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'putConfigurationRecorder' smart constructor.
-newtype PutConfigurationRecorder = PutConfigurationRecorder'
-  { _pcrConfigurationRecorder :: ConfigurationRecorder
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype PutConfigurationRecorder =
+  PutConfigurationRecorder'
+    { _pcrConfigurationRecorder :: ConfigurationRecorder
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutConfigurationRecorder' with the minimum fields required to make a request.

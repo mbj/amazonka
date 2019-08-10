@@ -47,10 +47,12 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'createResourceDataSync' smart constructor.
-data CreateResourceDataSync = CreateResourceDataSync'
-  { _crdsSyncName      :: !Text
-  , _crdsS3Destination :: !ResourceDataSyncS3Destination
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateResourceDataSync =
+  CreateResourceDataSync'
+    { _crdsSyncName      :: !Text
+    , _crdsS3Destination :: !ResourceDataSyncS3Destination
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateResourceDataSync' with the minimum fields required to make a request.
@@ -114,9 +116,11 @@ instance ToQuery CreateResourceDataSync where
         toQuery = const mempty
 
 -- | /See:/ 'createResourceDataSyncResponse' smart constructor.
-newtype CreateResourceDataSyncResponse = CreateResourceDataSyncResponse'
-  { _crdsrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateResourceDataSyncResponse =
+  CreateResourceDataSyncResponse'
+    { _crdsrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateResourceDataSyncResponse' with the minimum fields required to make a request.

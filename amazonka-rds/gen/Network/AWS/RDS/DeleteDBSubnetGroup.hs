@@ -46,9 +46,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteDBSubnetGroup' smart constructor.
-newtype DeleteDBSubnetGroup = DeleteDBSubnetGroup'
-  { _ddbsgDBSubnetGroupName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteDBSubnetGroup =
+  DeleteDBSubnetGroup'
+    { _ddbsgDBSubnetGroupName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteDBSubnetGroup' with the minimum fields required to make a request.

@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getPullRequest' smart constructor.
-newtype GetPullRequest = GetPullRequest'
-  { _gprPullRequestId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetPullRequest =
+  GetPullRequest'
+    { _gprPullRequestId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetPullRequest' with the minimum fields required to make a request.
@@ -101,10 +103,12 @@ instance ToQuery GetPullRequest where
         toQuery = const mempty
 
 -- | /See:/ 'getPullRequestResponse' smart constructor.
-data GetPullRequestResponse = GetPullRequestResponse'
-  { _gprrsResponseStatus :: !Int
-  , _gprrsPullRequest    :: !PullRequest
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetPullRequestResponse =
+  GetPullRequestResponse'
+    { _gprrsResponseStatus :: !Int
+    , _gprrsPullRequest    :: !PullRequest
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetPullRequestResponse' with the minimum fields required to make a request.

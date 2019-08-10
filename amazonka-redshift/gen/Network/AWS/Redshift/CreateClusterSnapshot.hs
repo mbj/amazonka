@@ -53,11 +53,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createClusterSnapshot' smart constructor.
-data CreateClusterSnapshot = CreateClusterSnapshot'
-  { _ccsTags               :: !(Maybe [Tag])
-  , _ccsSnapshotIdentifier :: !Text
-  , _ccsClusterIdentifier  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateClusterSnapshot =
+  CreateClusterSnapshot'
+    { _ccsTags               :: !(Maybe [Tag])
+    , _ccsSnapshotIdentifier :: !Text
+    , _ccsClusterIdentifier  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateClusterSnapshot' with the minimum fields required to make a request.
@@ -123,10 +125,12 @@ instance ToQuery CreateClusterSnapshot where
                "ClusterIdentifier" =: _ccsClusterIdentifier]
 
 -- | /See:/ 'createClusterSnapshotResponse' smart constructor.
-data CreateClusterSnapshotResponse = CreateClusterSnapshotResponse'
-  { _crersSnapshot       :: !(Maybe Snapshot)
-  , _crersResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateClusterSnapshotResponse =
+  CreateClusterSnapshotResponse'
+    { _crersSnapshot       :: !(Maybe Snapshot)
+    , _crersResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateClusterSnapshotResponse' with the minimum fields required to make a request.

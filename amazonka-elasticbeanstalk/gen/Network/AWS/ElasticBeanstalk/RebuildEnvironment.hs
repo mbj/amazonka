@@ -47,10 +47,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'rebuildEnvironment' smart constructor.
-data RebuildEnvironment = RebuildEnvironment'
-  { _reEnvironmentName :: !(Maybe Text)
-  , _reEnvironmentId   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RebuildEnvironment =
+  RebuildEnvironment'
+    { _reEnvironmentName :: !(Maybe Text)
+    , _reEnvironmentId   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RebuildEnvironment' with the minimum fields required to make a request.

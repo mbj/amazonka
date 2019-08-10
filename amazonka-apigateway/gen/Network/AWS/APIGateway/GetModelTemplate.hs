@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getModelTemplate' smart constructor.
-data GetModelTemplate = GetModelTemplate'
-  { _gmtRestAPIId :: !Text
-  , _gmtModelName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetModelTemplate =
+  GetModelTemplate'
+    { _gmtRestAPIId :: !Text
+    , _gmtModelName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetModelTemplate' with the minimum fields required to make a request.
@@ -113,10 +115,12 @@ instance ToQuery GetModelTemplate where
 -- <http://docs.aws.amazon.com/apigateway/latest/developerguide/models-mappings.html#models-mappings-mappings Mapping Templates>
 --
 -- /See:/ 'getModelTemplateResponse' smart constructor.
-data GetModelTemplateResponse = GetModelTemplateResponse'
-  { _gmtrsValue          :: !(Maybe Text)
-  , _gmtrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetModelTemplateResponse =
+  GetModelTemplateResponse'
+    { _gmtrsValue          :: !(Maybe Text)
+    , _gmtrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetModelTemplateResponse' with the minimum fields required to make a request.

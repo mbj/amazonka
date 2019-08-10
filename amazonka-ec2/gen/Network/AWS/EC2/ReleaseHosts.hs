@@ -54,9 +54,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'releaseHosts' smart constructor.
-newtype ReleaseHosts = ReleaseHosts'
-  { _rhHostIds :: [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ReleaseHosts =
+  ReleaseHosts'
+    { _rhHostIds :: [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReleaseHosts' with the minimum fields required to make a request.
@@ -109,11 +111,13 @@ instance ToQuery ReleaseHosts where
 --
 --
 -- /See:/ 'releaseHostsResponse' smart constructor.
-data ReleaseHostsResponse = ReleaseHostsResponse'
-  { _rhrsUnsuccessful   :: !(Maybe [UnsuccessfulItem])
-  , _rhrsSuccessful     :: !(Maybe [Text])
-  , _rhrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReleaseHostsResponse =
+  ReleaseHostsResponse'
+    { _rhrsUnsuccessful   :: !(Maybe [UnsuccessfulItem])
+    , _rhrsSuccessful     :: !(Maybe [Text])
+    , _rhrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReleaseHostsResponse' with the minimum fields required to make a request.

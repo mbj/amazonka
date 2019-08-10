@@ -53,11 +53,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getDeployment' smart constructor.
-data GetDeployment = GetDeployment'
-  { _gEmbed        :: !(Maybe [Text])
-  , _gRestAPIId    :: !Text
-  , _gDeploymentId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDeployment =
+  GetDeployment'
+    { _gEmbed        :: !(Maybe [Text])
+    , _gRestAPIId    :: !Text
+    , _gDeploymentId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDeployment' with the minimum fields required to make a request.

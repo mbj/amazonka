@@ -48,11 +48,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'registerOnPremisesInstance' smart constructor.
-data RegisterOnPremisesInstance = RegisterOnPremisesInstance'
-  { _ropiIamUserARN    :: !(Maybe Text)
-  , _ropiIamSessionARN :: !(Maybe Text)
-  , _ropiInstanceName  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RegisterOnPremisesInstance =
+  RegisterOnPremisesInstance'
+    { _ropiIamUserARN    :: !(Maybe Text)
+    , _ropiIamSessionARN :: !(Maybe Text)
+    , _ropiInstanceName  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterOnPremisesInstance' with the minimum fields required to make a request.

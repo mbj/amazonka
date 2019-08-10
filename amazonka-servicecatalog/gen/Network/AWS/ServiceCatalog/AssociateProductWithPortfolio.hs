@@ -47,12 +47,14 @@ import Network.AWS.ServiceCatalog.Types
 import Network.AWS.ServiceCatalog.Types.Product
 
 -- | /See:/ 'associateProductWithPortfolio' smart constructor.
-data AssociateProductWithPortfolio = AssociateProductWithPortfolio'
-  { _apwpSourcePortfolioId :: !(Maybe Text)
-  , _apwpAcceptLanguage    :: !(Maybe Text)
-  , _apwpProductId         :: !Text
-  , _apwpPortfolioId       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssociateProductWithPortfolio =
+  AssociateProductWithPortfolio'
+    { _apwpSourcePortfolioId :: !(Maybe Text)
+    , _apwpAcceptLanguage    :: !(Maybe Text)
+    , _apwpProductId         :: !Text
+    , _apwpPortfolioId       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateProductWithPortfolio' with the minimum fields required to make a request.
@@ -137,9 +139,11 @@ instance ToQuery AssociateProductWithPortfolio where
         toQuery = const mempty
 
 -- | /See:/ 'associateProductWithPortfolioResponse' smart constructor.
-newtype AssociateProductWithPortfolioResponse = AssociateProductWithPortfolioResponse'
-  { _arsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AssociateProductWithPortfolioResponse =
+  AssociateProductWithPortfolioResponse'
+    { _arsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateProductWithPortfolioResponse' with the minimum fields required to make a request.

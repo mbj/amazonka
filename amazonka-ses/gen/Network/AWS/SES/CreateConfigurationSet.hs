@@ -52,9 +52,11 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'createConfigurationSet' smart constructor.
-newtype CreateConfigurationSet = CreateConfigurationSet'
-  { _ccsConfigurationSet :: ConfigurationSet
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateConfigurationSet =
+  CreateConfigurationSet'
+    { _ccsConfigurationSet :: ConfigurationSet
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateConfigurationSet' with the minimum fields required to make a request.
@@ -106,9 +108,11 @@ instance ToQuery CreateConfigurationSet where
 --
 --
 -- /See:/ 'createConfigurationSetResponse' smart constructor.
-newtype CreateConfigurationSetResponse = CreateConfigurationSetResponse'
-  { _ccsrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateConfigurationSetResponse =
+  CreateConfigurationSetResponse'
+    { _ccsrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateConfigurationSetResponse' with the minimum fields required to make a request.

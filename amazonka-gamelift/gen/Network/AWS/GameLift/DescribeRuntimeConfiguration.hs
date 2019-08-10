@@ -97,9 +97,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeRuntimeConfiguration' smart constructor.
-newtype DescribeRuntimeConfiguration = DescribeRuntimeConfiguration'
-  { _drcFleetId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeRuntimeConfiguration =
+  DescribeRuntimeConfiguration'
+    { _drcFleetId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeRuntimeConfiguration' with the minimum fields required to make a request.
@@ -160,10 +162,12 @@ instance ToQuery DescribeRuntimeConfiguration where
 --
 --
 -- /See:/ 'describeRuntimeConfigurationResponse' smart constructor.
-data DescribeRuntimeConfigurationResponse = DescribeRuntimeConfigurationResponse'
-  { _drcrsRuntimeConfiguration :: !(Maybe RuntimeConfiguration)
-  , _drcrsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeRuntimeConfigurationResponse =
+  DescribeRuntimeConfigurationResponse'
+    { _drcrsRuntimeConfiguration :: !(Maybe RuntimeConfiguration)
+    , _drcrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeRuntimeConfigurationResponse' with the minimum fields required to make a request.

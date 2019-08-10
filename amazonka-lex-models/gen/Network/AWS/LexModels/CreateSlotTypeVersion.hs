@@ -57,10 +57,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createSlotTypeVersion' smart constructor.
-data CreateSlotTypeVersion = CreateSlotTypeVersion'
-  { _cstvChecksum :: !(Maybe Text)
-  , _cstvName     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateSlotTypeVersion =
+  CreateSlotTypeVersion'
+    { _cstvChecksum :: !(Maybe Text)
+    , _cstvName     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateSlotTypeVersion' with the minimum fields required to make a request.
@@ -128,17 +130,19 @@ instance ToQuery CreateSlotTypeVersion where
         toQuery = const mempty
 
 -- | /See:/ 'createSlotTypeVersionResponse' smart constructor.
-data CreateSlotTypeVersionResponse = CreateSlotTypeVersionResponse'
-  { _cstvrsChecksum               :: !(Maybe Text)
-  , _cstvrsValueSelectionStrategy :: !(Maybe SlotValueSelectionStrategy)
-  , _cstvrsCreatedDate            :: !(Maybe POSIX)
-  , _cstvrsName                   :: !(Maybe Text)
-  , _cstvrsVersion                :: !(Maybe Text)
-  , _cstvrsLastUpdatedDate        :: !(Maybe POSIX)
-  , _cstvrsDescription            :: !(Maybe Text)
-  , _cstvrsEnumerationValues      :: !(Maybe (List1 EnumerationValue))
-  , _cstvrsResponseStatus         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateSlotTypeVersionResponse =
+  CreateSlotTypeVersionResponse'
+    { _cstvrsChecksum               :: !(Maybe Text)
+    , _cstvrsValueSelectionStrategy :: !(Maybe SlotValueSelectionStrategy)
+    , _cstvrsCreatedDate            :: !(Maybe POSIX)
+    , _cstvrsName                   :: !(Maybe Text)
+    , _cstvrsVersion                :: !(Maybe Text)
+    , _cstvrsLastUpdatedDate        :: !(Maybe POSIX)
+    , _cstvrsDescription            :: !(Maybe Text)
+    , _cstvrsEnumerationValues      :: !(Maybe (List1 EnumerationValue))
+    , _cstvrsResponseStatus         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateSlotTypeVersionResponse' with the minimum fields required to make a request.

@@ -46,11 +46,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listDeviceDefinitionVersions' smart constructor.
-data ListDeviceDefinitionVersions = ListDeviceDefinitionVersions'
-  { _lddvNextToken          :: !(Maybe Text)
-  , _lddvMaxResults         :: !(Maybe Text)
-  , _lddvDeviceDefinitionId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListDeviceDefinitionVersions =
+  ListDeviceDefinitionVersions'
+    { _lddvNextToken          :: !(Maybe Text)
+    , _lddvMaxResults         :: !(Maybe Text)
+    , _lddvDeviceDefinitionId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDeviceDefinitionVersions' with the minimum fields required to make a request.
@@ -121,11 +123,13 @@ instance ToQuery ListDeviceDefinitionVersions where
                "MaxResults" =: _lddvMaxResults]
 
 -- | /See:/ 'listDeviceDefinitionVersionsResponse' smart constructor.
-data ListDeviceDefinitionVersionsResponse = ListDeviceDefinitionVersionsResponse'
-  { _lddvrsVersions       :: !(Maybe [VersionInformation])
-  , _lddvrsNextToken      :: !(Maybe Text)
-  , _lddvrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListDeviceDefinitionVersionsResponse =
+  ListDeviceDefinitionVersionsResponse'
+    { _lddvrsVersions       :: !(Maybe [VersionInformation])
+    , _lddvrsNextToken      :: !(Maybe Text)
+    , _lddvrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDeviceDefinitionVersionsResponse' with the minimum fields required to make a request.

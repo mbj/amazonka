@@ -47,10 +47,12 @@ import Network.AWS.ServiceCatalog.Types
 import Network.AWS.ServiceCatalog.Types.Product
 
 -- | /See:/ 'describeProduct' smart constructor.
-data DescribeProduct = DescribeProduct'
-  { _dpAcceptLanguage :: !(Maybe Text)
-  , _dpId             :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeProduct =
+  DescribeProduct'
+    { _dpAcceptLanguage :: !(Maybe Text)
+    , _dpId             :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeProduct' with the minimum fields required to make a request.
@@ -114,11 +116,13 @@ instance ToQuery DescribeProduct where
         toQuery = const mempty
 
 -- | /See:/ 'describeProductResponse' smart constructor.
-data DescribeProductResponse = DescribeProductResponse'
-  { _ddrsProductViewSummary    :: !(Maybe ProductViewSummary)
-  , _ddrsProvisioningArtifacts :: !(Maybe [ProvisioningArtifact])
-  , _ddrsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeProductResponse =
+  DescribeProductResponse'
+    { _ddrsProductViewSummary    :: !(Maybe ProductViewSummary)
+    , _ddrsProvisioningArtifacts :: !(Maybe [ProvisioningArtifact])
+    , _ddrsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeProductResponse' with the minimum fields required to make a request.

@@ -45,9 +45,11 @@ import Network.AWS.WAFRegional.Types
 import Network.AWS.WAFRegional.Types.Product
 
 -- | /See:/ 'getRegexPatternSet' smart constructor.
-newtype GetRegexPatternSet = GetRegexPatternSet'
-  { _grpsRegexPatternSetId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetRegexPatternSet =
+  GetRegexPatternSet'
+    { _grpsRegexPatternSetId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetRegexPatternSet' with the minimum fields required to make a request.
@@ -104,10 +106,12 @@ instance ToQuery GetRegexPatternSet where
         toQuery = const mempty
 
 -- | /See:/ 'getRegexPatternSetResponse' smart constructor.
-data GetRegexPatternSetResponse = GetRegexPatternSetResponse'
-  { _grpsrsRegexPatternSet :: !(Maybe RegexPatternSet)
-  , _grpsrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetRegexPatternSetResponse =
+  GetRegexPatternSetResponse'
+    { _grpsrsRegexPatternSet :: !(Maybe RegexPatternSet)
+    , _grpsrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetRegexPatternSetResponse' with the minimum fields required to make a request.

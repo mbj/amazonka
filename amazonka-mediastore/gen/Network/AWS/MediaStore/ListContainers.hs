@@ -51,10 +51,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listContainers' smart constructor.
-data ListContainers = ListContainers'
-  { _lcNextToken  :: !(Maybe Text)
-  , _lcMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListContainers =
+  ListContainers'
+    { _lcNextToken  :: !(Maybe Text)
+    , _lcMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListContainers' with the minimum fields required to make a request.
@@ -115,11 +117,13 @@ instance ToQuery ListContainers where
         toQuery = const mempty
 
 -- | /See:/ 'listContainersResponse' smart constructor.
-data ListContainersResponse = ListContainersResponse'
-  { _lcrsNextToken      :: !(Maybe Text)
-  , _lcrsResponseStatus :: !Int
-  , _lcrsContainers     :: ![Container]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListContainersResponse =
+  ListContainersResponse'
+    { _lcrsNextToken      :: !(Maybe Text)
+    , _lcrsResponseStatus :: !Int
+    , _lcrsContainers     :: ![Container]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListContainersResponse' with the minimum fields required to make a request.

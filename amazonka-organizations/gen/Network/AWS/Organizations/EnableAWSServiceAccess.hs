@@ -48,9 +48,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'enableAWSServiceAccess' smart constructor.
-newtype EnableAWSServiceAccess = EnableAWSServiceAccess'
-  { _easaServicePrincipal :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype EnableAWSServiceAccess =
+  EnableAWSServiceAccess'
+    { _easaServicePrincipal :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EnableAWSServiceAccess' with the minimum fields required to make a request.

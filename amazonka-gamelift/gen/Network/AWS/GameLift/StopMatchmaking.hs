@@ -62,9 +62,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'stopMatchmaking' smart constructor.
-newtype StopMatchmaking = StopMatchmaking'
-  { _smTicketId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StopMatchmaking =
+  StopMatchmaking'
+    { _smTicketId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopMatchmaking' with the minimum fields required to make a request.
@@ -115,9 +117,11 @@ instance ToQuery StopMatchmaking where
         toQuery = const mempty
 
 -- | /See:/ 'stopMatchmakingResponse' smart constructor.
-newtype StopMatchmakingResponse = StopMatchmakingResponse'
-  { _smrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StopMatchmakingResponse =
+  StopMatchmakingResponse'
+    { _smrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopMatchmakingResponse' with the minimum fields required to make a request.

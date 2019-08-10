@@ -84,12 +84,14 @@ instance ToQuery DescribeEventConfigurations where
         toQuery = const mempty
 
 -- | /See:/ 'describeEventConfigurationsResponse' smart constructor.
-data DescribeEventConfigurationsResponse = DescribeEventConfigurationsResponse'
-  { _decrsLastModifiedDate    :: !(Maybe POSIX)
-  , _decrsEventConfigurations :: !(Maybe (Map EventType Configuration))
-  , _decrsCreationDate        :: !(Maybe POSIX)
-  , _decrsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeEventConfigurationsResponse =
+  DescribeEventConfigurationsResponse'
+    { _decrsLastModifiedDate    :: !(Maybe POSIX)
+    , _decrsEventConfigurations :: !(Maybe (Map EventType Configuration))
+    , _decrsCreationDate        :: !(Maybe POSIX)
+    , _decrsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEventConfigurationsResponse' with the minimum fields required to make a request.

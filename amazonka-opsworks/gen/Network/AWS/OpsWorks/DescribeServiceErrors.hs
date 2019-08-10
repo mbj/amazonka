@@ -51,11 +51,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeServiceErrors' smart constructor.
-data DescribeServiceErrors = DescribeServiceErrors'
-  { _dseInstanceId      :: !(Maybe Text)
-  , _dseStackId         :: !(Maybe Text)
-  , _dseServiceErrorIds :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeServiceErrors =
+  DescribeServiceErrors'
+    { _dseInstanceId      :: !(Maybe Text)
+    , _dseStackId         :: !(Maybe Text)
+    , _dseServiceErrorIds :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeServiceErrors' with the minimum fields required to make a request.
@@ -133,10 +135,12 @@ instance ToQuery DescribeServiceErrors where
 --
 --
 -- /See:/ 'describeServiceErrorsResponse' smart constructor.
-data DescribeServiceErrorsResponse = DescribeServiceErrorsResponse'
-  { _dsersServiceErrors  :: !(Maybe [ServiceError'])
-  , _dsersResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeServiceErrorsResponse =
+  DescribeServiceErrorsResponse'
+    { _dsersServiceErrors  :: !(Maybe [ServiceError'])
+    , _dsersResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeServiceErrorsResponse' with the minimum fields required to make a request.

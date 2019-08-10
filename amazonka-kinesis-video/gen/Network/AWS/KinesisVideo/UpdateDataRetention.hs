@@ -58,13 +58,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateDataRetention' smart constructor.
-data UpdateDataRetention = UpdateDataRetention'
-  { _udrStreamARN                  :: !(Maybe Text)
-  , _udrStreamName                 :: !(Maybe Text)
-  , _udrCurrentVersion             :: !Text
-  , _udrOperation                  :: !UpdateDataRetentionOperation
-  , _udrDataRetentionChangeInHours :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateDataRetention =
+  UpdateDataRetention'
+    { _udrStreamARN                  :: !(Maybe Text)
+    , _udrStreamName                 :: !(Maybe Text)
+    , _udrCurrentVersion             :: !Text
+    , _udrOperation                  :: !UpdateDataRetentionOperation
+    , _udrDataRetentionChangeInHours :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateDataRetention' with the minimum fields required to make a request.
@@ -150,9 +152,11 @@ instance ToQuery UpdateDataRetention where
         toQuery = const mempty
 
 -- | /See:/ 'updateDataRetentionResponse' smart constructor.
-newtype UpdateDataRetentionResponse = UpdateDataRetentionResponse'
-  { _udrrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateDataRetentionResponse =
+  UpdateDataRetentionResponse'
+    { _udrrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateDataRetentionResponse' with the minimum fields required to make a request.

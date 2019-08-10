@@ -51,9 +51,11 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'verifyDomainIdentity' smart constructor.
-newtype VerifyDomainIdentity = VerifyDomainIdentity'
-  { _vdiDomain :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype VerifyDomainIdentity =
+  VerifyDomainIdentity'
+    { _vdiDomain :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VerifyDomainIdentity' with the minimum fields required to make a request.
@@ -103,10 +105,12 @@ instance ToQuery VerifyDomainIdentity where
 --
 --
 -- /See:/ 'verifyDomainIdentityResponse' smart constructor.
-data VerifyDomainIdentityResponse = VerifyDomainIdentityResponse'
-  { _vdirsResponseStatus    :: !Int
-  , _vdirsVerificationToken :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VerifyDomainIdentityResponse =
+  VerifyDomainIdentityResponse'
+    { _vdirsResponseStatus    :: !Int
+    , _vdirsVerificationToken :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VerifyDomainIdentityResponse' with the minimum fields required to make a request.

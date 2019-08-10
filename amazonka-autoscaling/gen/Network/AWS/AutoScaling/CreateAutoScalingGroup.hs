@@ -65,28 +65,30 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createAutoScalingGroup' smart constructor.
-data CreateAutoScalingGroup = CreateAutoScalingGroup'
-  { _casgInstanceId :: !(Maybe Text)
-  , _casgTerminationPolicies :: !(Maybe [Text])
-  , _casgHealthCheckGracePeriod :: !(Maybe Int)
-  , _casgServiceLinkedRoleARN :: !(Maybe Text)
-  , _casgNewInstancesProtectedFromScaleIn :: !(Maybe Bool)
-  , _casgVPCZoneIdentifier :: !(Maybe Text)
-  , _casgTargetGroupARNs :: !(Maybe [Text])
-  , _casgDefaultCooldown :: !(Maybe Int)
-  , _casgAvailabilityZones :: !(Maybe (List1 Text))
-  , _casgDesiredCapacity :: !(Maybe Int)
-  , _casgLaunchConfigurationName :: !(Maybe Text)
-  , _casgLifecycleHookSpecificationList :: !(Maybe [LifecycleHookSpecification])
-  , _casgHealthCheckType :: !(Maybe Text)
-  , _casgLaunchTemplate :: !(Maybe LaunchTemplateSpecification)
-  , _casgPlacementGroup :: !(Maybe Text)
-  , _casgLoadBalancerNames :: !(Maybe [Text])
-  , _casgTags :: !(Maybe [Tag])
-  , _casgAutoScalingGroupName :: !Text
-  , _casgMinSize :: !Int
-  , _casgMaxSize :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateAutoScalingGroup =
+  CreateAutoScalingGroup'
+    { _casgInstanceId :: !(Maybe Text)
+    , _casgTerminationPolicies :: !(Maybe [Text])
+    , _casgHealthCheckGracePeriod :: !(Maybe Int)
+    , _casgServiceLinkedRoleARN :: !(Maybe Text)
+    , _casgNewInstancesProtectedFromScaleIn :: !(Maybe Bool)
+    , _casgVPCZoneIdentifier :: !(Maybe Text)
+    , _casgTargetGroupARNs :: !(Maybe [Text])
+    , _casgDefaultCooldown :: !(Maybe Int)
+    , _casgAvailabilityZones :: !(Maybe (List1 Text))
+    , _casgDesiredCapacity :: !(Maybe Int)
+    , _casgLaunchConfigurationName :: !(Maybe Text)
+    , _casgLifecycleHookSpecificationList :: !(Maybe [LifecycleHookSpecification])
+    , _casgHealthCheckType :: !(Maybe Text)
+    , _casgLaunchTemplate :: !(Maybe LaunchTemplateSpecification)
+    , _casgPlacementGroup :: !(Maybe Text)
+    , _casgLoadBalancerNames :: !(Maybe [Text])
+    , _casgTags :: !(Maybe [Tag])
+    , _casgAutoScalingGroupName :: !Text
+    , _casgMinSize :: !Int
+    , _casgMaxSize :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateAutoScalingGroup' with the minimum fields required to make a request.

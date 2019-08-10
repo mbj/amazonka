@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'importCatalogToGlue' smart constructor.
-newtype ImportCatalogToGlue = ImportCatalogToGlue'
-  { _ictgCatalogId :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ImportCatalogToGlue =
+  ImportCatalogToGlue'
+    { _ictgCatalogId :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ImportCatalogToGlue' with the minimum fields required to make a request.
@@ -97,9 +99,11 @@ instance ToQuery ImportCatalogToGlue where
         toQuery = const mempty
 
 -- | /See:/ 'importCatalogToGlueResponse' smart constructor.
-newtype ImportCatalogToGlueResponse = ImportCatalogToGlueResponse'
-  { _ictgrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ImportCatalogToGlueResponse =
+  ImportCatalogToGlueResponse'
+    { _ictgrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ImportCatalogToGlueResponse' with the minimum fields required to make a request.

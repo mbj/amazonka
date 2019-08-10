@@ -51,10 +51,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listAccountAliases' smart constructor.
-data ListAccountAliases = ListAccountAliases'
-  { _laaMarker   :: !(Maybe Text)
-  , _laaMaxItems :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAccountAliases =
+  ListAccountAliases'
+    { _laaMarker   :: !(Maybe Text)
+    , _laaMaxItems :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAccountAliases' with the minimum fields required to make a request.
@@ -121,12 +123,14 @@ instance ToQuery ListAccountAliases where
 --
 --
 -- /See:/ 'listAccountAliasesResponse' smart constructor.
-data ListAccountAliasesResponse = ListAccountAliasesResponse'
-  { _laarsMarker         :: !(Maybe Text)
-  , _laarsIsTruncated    :: !(Maybe Bool)
-  , _laarsResponseStatus :: !Int
-  , _laarsAccountAliases :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAccountAliasesResponse =
+  ListAccountAliasesResponse'
+    { _laarsMarker         :: !(Maybe Text)
+    , _laarsIsTruncated    :: !(Maybe Bool)
+    , _laarsResponseStatus :: !Int
+    , _laarsAccountAliases :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAccountAliasesResponse' with the minimum fields required to make a request.

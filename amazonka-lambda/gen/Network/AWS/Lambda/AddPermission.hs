@@ -63,17 +63,19 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'addPermission' smart constructor.
-data AddPermission = AddPermission'
-  { _apSourceAccount    :: !(Maybe Text)
-  , _apEventSourceToken :: !(Maybe Text)
-  , _apSourceARN        :: !(Maybe Text)
-  , _apQualifier        :: !(Maybe Text)
-  , _apRevisionId       :: !(Maybe Text)
-  , _apFunctionName     :: !Text
-  , _apStatementId      :: !Text
-  , _apAction           :: !Text
-  , _apPrincipal        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddPermission =
+  AddPermission'
+    { _apSourceAccount    :: !(Maybe Text)
+    , _apEventSourceToken :: !(Maybe Text)
+    , _apSourceARN        :: !(Maybe Text)
+    , _apQualifier        :: !(Maybe Text)
+    , _apRevisionId       :: !(Maybe Text)
+    , _apFunctionName     :: !Text
+    , _apStatementId      :: !Text
+    , _apAction           :: !Text
+    , _apPrincipal        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddPermission' with the minimum fields required to make a request.
@@ -196,10 +198,12 @@ instance ToQuery AddPermission where
 --
 --
 -- /See:/ 'addPermissionResponse' smart constructor.
-data AddPermissionResponse = AddPermissionResponse'
-  { _aprsStatement      :: !(Maybe Text)
-  , _aprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddPermissionResponse =
+  AddPermissionResponse'
+    { _aprsStatement      :: !(Maybe Text)
+    , _aprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddPermissionResponse' with the minimum fields required to make a request.

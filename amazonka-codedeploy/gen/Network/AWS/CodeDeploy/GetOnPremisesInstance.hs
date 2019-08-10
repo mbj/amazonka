@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getOnPremisesInstance' smart constructor.
-newtype GetOnPremisesInstance = GetOnPremisesInstance'
-  { _gopiInstanceName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetOnPremisesInstance =
+  GetOnPremisesInstance'
+    { _gopiInstanceName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetOnPremisesInstance' with the minimum fields required to make a request.
@@ -111,10 +113,12 @@ instance ToQuery GetOnPremisesInstance where
 --
 --
 -- /See:/ 'getOnPremisesInstanceResponse' smart constructor.
-data GetOnPremisesInstanceResponse = GetOnPremisesInstanceResponse'
-  { _gopirsInstanceInfo   :: !(Maybe InstanceInfo)
-  , _gopirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetOnPremisesInstanceResponse =
+  GetOnPremisesInstanceResponse'
+    { _gopirsInstanceInfo   :: !(Maybe InstanceInfo)
+    , _gopirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetOnPremisesInstanceResponse' with the minimum fields required to make a request.

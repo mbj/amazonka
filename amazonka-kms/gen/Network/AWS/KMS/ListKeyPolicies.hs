@@ -52,11 +52,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listKeyPolicies' smart constructor.
-data ListKeyPolicies = ListKeyPolicies'
-  { _lkpMarker :: !(Maybe Text)
-  , _lkpLimit  :: !(Maybe Nat)
-  , _lkpKeyId  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListKeyPolicies =
+  ListKeyPolicies'
+    { _lkpMarker :: !(Maybe Text)
+    , _lkpLimit  :: !(Maybe Nat)
+    , _lkpKeyId  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListKeyPolicies' with the minimum fields required to make a request.
@@ -135,12 +137,14 @@ instance ToQuery ListKeyPolicies where
         toQuery = const mempty
 
 -- | /See:/ 'listKeyPoliciesResponse' smart constructor.
-data ListKeyPoliciesResponse = ListKeyPoliciesResponse'
-  { _lkprsPolicyNames    :: !(Maybe [Text])
-  , _lkprsTruncated      :: !(Maybe Bool)
-  , _lkprsNextMarker     :: !(Maybe Text)
-  , _lkprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListKeyPoliciesResponse =
+  ListKeyPoliciesResponse'
+    { _lkprsPolicyNames    :: !(Maybe [Text])
+    , _lkprsTruncated      :: !(Maybe Bool)
+    , _lkprsNextMarker     :: !(Maybe Text)
+    , _lkprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListKeyPoliciesResponse' with the minimum fields required to make a request.

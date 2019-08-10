@@ -53,12 +53,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describePrincipalIdFormat' smart constructor.
-data DescribePrincipalIdFormat = DescribePrincipalIdFormat'
-  { _dpifResources  :: !(Maybe [Text])
-  , _dpifNextToken  :: !(Maybe Text)
-  , _dpifDryRun     :: !(Maybe Bool)
-  , _dpifMaxResults :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribePrincipalIdFormat =
+  DescribePrincipalIdFormat'
+    { _dpifResources  :: !(Maybe [Text])
+    , _dpifNextToken  :: !(Maybe Text)
+    , _dpifDryRun     :: !(Maybe Bool)
+    , _dpifMaxResults :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribePrincipalIdFormat' with the minimum fields required to make a request.
@@ -134,11 +136,13 @@ instance ToQuery DescribePrincipalIdFormat where
                "MaxResults" =: _dpifMaxResults]
 
 -- | /See:/ 'describePrincipalIdFormatResponse' smart constructor.
-data DescribePrincipalIdFormatResponse = DescribePrincipalIdFormatResponse'
-  { _dpifrsPrincipals     :: !(Maybe [PrincipalIdFormat])
-  , _dpifrsNextToken      :: !(Maybe Text)
-  , _dpifrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribePrincipalIdFormatResponse =
+  DescribePrincipalIdFormatResponse'
+    { _dpifrsPrincipals     :: !(Maybe [PrincipalIdFormat])
+    , _dpifrsNextToken      :: !(Maybe Text)
+    , _dpifrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribePrincipalIdFormatResponse' with the minimum fields required to make a request.

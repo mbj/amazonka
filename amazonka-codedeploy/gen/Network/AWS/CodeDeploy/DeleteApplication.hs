@@ -46,9 +46,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteApplication' smart constructor.
-newtype DeleteApplication = DeleteApplication'
-  { _daApplicationName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteApplication =
+  DeleteApplication'
+    { _daApplicationName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteApplication' with the minimum fields required to make a request.

@@ -60,13 +60,15 @@ import Network.AWS.SWF.Types
 import Network.AWS.SWF.Types.Product
 
 -- | /See:/ 'signalWorkflowExecution' smart constructor.
-data SignalWorkflowExecution = SignalWorkflowExecution'
-  { _sweInput      :: !(Maybe Text)
-  , _sweRunId      :: !(Maybe Text)
-  , _sweDomain     :: !Text
-  , _sweWorkflowId :: !Text
-  , _sweSignalName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SignalWorkflowExecution =
+  SignalWorkflowExecution'
+    { _sweInput      :: !(Maybe Text)
+    , _sweRunId      :: !(Maybe Text)
+    , _sweDomain     :: !Text
+    , _sweWorkflowId :: !Text
+    , _sweSignalName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SignalWorkflowExecution' with the minimum fields required to make a request.

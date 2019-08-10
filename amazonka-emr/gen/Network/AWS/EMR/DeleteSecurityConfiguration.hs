@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteSecurityConfiguration' smart constructor.
-newtype DeleteSecurityConfiguration = DeleteSecurityConfiguration'
-  { _dscName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteSecurityConfiguration =
+  DeleteSecurityConfiguration'
+    { _dscName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteSecurityConfiguration' with the minimum fields required to make a request.
@@ -100,9 +102,11 @@ instance ToQuery DeleteSecurityConfiguration where
         toQuery = const mempty
 
 -- | /See:/ 'deleteSecurityConfigurationResponse' smart constructor.
-newtype DeleteSecurityConfigurationResponse = DeleteSecurityConfigurationResponse'
-  { _dscrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteSecurityConfigurationResponse =
+  DeleteSecurityConfigurationResponse'
+    { _dscrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteSecurityConfigurationResponse' with the minimum fields required to make a request.

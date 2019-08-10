@@ -60,14 +60,16 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeSpotFleetRequestHistory' smart constructor.
-data DescribeSpotFleetRequestHistory = DescribeSpotFleetRequestHistory'
-  { _dsfrhNextToken          :: !(Maybe Text)
-  , _dsfrhEventType          :: !(Maybe EventType)
-  , _dsfrhDryRun             :: !(Maybe Bool)
-  , _dsfrhMaxResults         :: !(Maybe Int)
-  , _dsfrhSpotFleetRequestId :: !Text
-  , _dsfrhStartTime          :: !ISO8601
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeSpotFleetRequestHistory =
+  DescribeSpotFleetRequestHistory'
+    { _dsfrhNextToken          :: !(Maybe Text)
+    , _dsfrhEventType          :: !(Maybe EventType)
+    , _dsfrhDryRun             :: !(Maybe Bool)
+    , _dsfrhMaxResults         :: !(Maybe Int)
+    , _dsfrhSpotFleetRequestId :: !Text
+    , _dsfrhStartTime          :: !ISO8601
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeSpotFleetRequestHistory' with the minimum fields required to make a request.
@@ -171,14 +173,16 @@ instance ToQuery DescribeSpotFleetRequestHistory
 --
 --
 -- /See:/ 'describeSpotFleetRequestHistoryResponse' smart constructor.
-data DescribeSpotFleetRequestHistoryResponse = DescribeSpotFleetRequestHistoryResponse'
-  { _dsfrhrsNextToken          :: !(Maybe Text)
-  , _dsfrhrsResponseStatus     :: !Int
-  , _dsfrhrsHistoryRecords     :: ![HistoryRecord]
-  , _dsfrhrsLastEvaluatedTime  :: !ISO8601
-  , _dsfrhrsSpotFleetRequestId :: !Text
-  , _dsfrhrsStartTime          :: !ISO8601
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeSpotFleetRequestHistoryResponse =
+  DescribeSpotFleetRequestHistoryResponse'
+    { _dsfrhrsNextToken          :: !(Maybe Text)
+    , _dsfrhrsResponseStatus     :: !Int
+    , _dsfrhrsHistoryRecords     :: ![HistoryRecord]
+    , _dsfrhrsLastEvaluatedTime  :: !ISO8601
+    , _dsfrhrsSpotFleetRequestId :: !Text
+    , _dsfrhrsStartTime          :: !ISO8601
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeSpotFleetRequestHistoryResponse' with the minimum fields required to make a request.

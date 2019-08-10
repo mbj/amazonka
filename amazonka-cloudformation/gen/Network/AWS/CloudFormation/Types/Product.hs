@@ -30,10 +30,12 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'accountGateResult' smart constructor.
-data AccountGateResult = AccountGateResult'
-  { _agrStatus       :: !(Maybe AccountGateStatus)
-  , _agrStatusReason :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AccountGateResult =
+  AccountGateResult'
+    { _agrStatus       :: !(Maybe AccountGateStatus)
+    , _agrStatusReason :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AccountGateResult' with the minimum fields required to make a request.
@@ -71,10 +73,12 @@ instance NFData AccountGateResult where
 --
 --
 -- /See:/ 'accountLimit' smart constructor.
-data AccountLimit = AccountLimit'
-  { _alValue :: !(Maybe Int)
-  , _alName  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AccountLimit =
+  AccountLimit'
+    { _alValue :: !(Maybe Int)
+    , _alName  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AccountLimit' with the minimum fields required to make a request.
@@ -111,10 +115,12 @@ instance NFData AccountLimit where
 --
 --
 -- /See:/ 'change' smart constructor.
-data Change = Change'
-  { _cResourceChange :: !(Maybe ResourceChange)
-  , _cType           :: !(Maybe ChangeType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Change =
+  Change'
+    { _cResourceChange :: !(Maybe ResourceChange)
+    , _cType           :: !(Maybe ChangeType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Change' with the minimum fields required to make a request.
@@ -151,17 +157,19 @@ instance NFData Change where
 --
 --
 -- /See:/ 'changeSetSummary' smart constructor.
-data ChangeSetSummary = ChangeSetSummary'
-  { _cCreationTime    :: !(Maybe ISO8601)
-  , _cStatus          :: !(Maybe ChangeSetStatus)
-  , _cChangeSetName   :: !(Maybe Text)
-  , _cExecutionStatus :: !(Maybe ExecutionStatus)
-  , _cChangeSetId     :: !(Maybe Text)
-  , _cStatusReason    :: !(Maybe Text)
-  , _cStackId         :: !(Maybe Text)
-  , _cDescription     :: !(Maybe Text)
-  , _cStackName       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ChangeSetSummary =
+  ChangeSetSummary'
+    { _cCreationTime    :: !(Maybe ISO8601)
+    , _cStatus          :: !(Maybe ChangeSetStatus)
+    , _cChangeSetName   :: !(Maybe Text)
+    , _cExecutionStatus :: !(Maybe ExecutionStatus)
+    , _cChangeSetId     :: !(Maybe Text)
+    , _cStatusReason    :: !(Maybe Text)
+    , _cStackId         :: !(Maybe Text)
+    , _cDescription     :: !(Maybe Text)
+    , _cStackName       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ChangeSetSummary' with the minimum fields required to make a request.
@@ -258,11 +266,13 @@ instance NFData ChangeSetSummary where
 --
 --
 -- /See:/ 'export'' smart constructor.
-data Export = Export'
-  { _eValue            :: !(Maybe Text)
-  , _eExportingStackId :: !(Maybe Text)
-  , _eName             :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Export =
+  Export'
+    { _eValue            :: !(Maybe Text)
+    , _eExportingStackId :: !(Maybe Text)
+    , _eName             :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Export' with the minimum fields required to make a request.
@@ -307,12 +317,14 @@ instance NFData Export where
 --
 --
 -- /See:/ 'output' smart constructor.
-data Output = Output'
-  { _oOutputValue :: !(Maybe Text)
-  , _oOutputKey   :: !(Maybe Text)
-  , _oExportName  :: !(Maybe Text)
-  , _oDescription :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Output =
+  Output'
+    { _oOutputValue :: !(Maybe Text)
+    , _oOutputKey   :: !(Maybe Text)
+    , _oExportName  :: !(Maybe Text)
+    , _oDescription :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Output' with the minimum fields required to make a request.
@@ -369,12 +381,14 @@ instance NFData Output where
 --
 --
 -- /See:/ 'parameter' smart constructor.
-data Parameter = Parameter'
-  { _pParameterValue   :: !(Maybe Text)
-  , _pResolvedValue    :: !(Maybe Text)
-  , _pParameterKey     :: !(Maybe Text)
-  , _pUsePreviousValue :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Parameter =
+  Parameter'
+    { _pParameterValue   :: !(Maybe Text)
+    , _pResolvedValue    :: !(Maybe Text)
+    , _pParameterKey     :: !(Maybe Text)
+    , _pUsePreviousValue :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Parameter' with the minimum fields required to make a request.
@@ -439,9 +453,11 @@ instance ToQuery Parameter where
 --
 --
 -- /See:/ 'parameterConstraints' smart constructor.
-newtype ParameterConstraints = ParameterConstraints'
-  { _pcAllowedValues :: Maybe [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ParameterConstraints =
+  ParameterConstraints'
+    { _pcAllowedValues :: Maybe [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ParameterConstraints' with the minimum fields required to make a request.
@@ -473,14 +489,16 @@ instance NFData ParameterConstraints where
 --
 --
 -- /See:/ 'parameterDeclaration' smart constructor.
-data ParameterDeclaration = ParameterDeclaration'
-  { _pdParameterKey         :: !(Maybe Text)
-  , _pdParameterType        :: !(Maybe Text)
-  , _pdParameterConstraints :: !(Maybe ParameterConstraints)
-  , _pdDefaultValue         :: !(Maybe Text)
-  , _pdNoEcho               :: !(Maybe Bool)
-  , _pdDescription          :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ParameterDeclaration =
+  ParameterDeclaration'
+    { _pdParameterKey         :: !(Maybe Text)
+    , _pdParameterType        :: !(Maybe Text)
+    , _pdParameterConstraints :: !(Maybe ParameterConstraints)
+    , _pdDefaultValue         :: !(Maybe Text)
+    , _pdNoEcho               :: !(Maybe Bool)
+    , _pdDescription          :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ParameterDeclaration' with the minimum fields required to make a request.
@@ -553,15 +571,17 @@ instance NFData ParameterDeclaration where
 --
 --
 -- /See:/ 'resourceChange' smart constructor.
-data ResourceChange = ResourceChange'
-  { _rcLogicalResourceId  :: !(Maybe Text)
-  , _rcPhysicalResourceId :: !(Maybe Text)
-  , _rcResourceType       :: !(Maybe Text)
-  , _rcAction             :: !(Maybe ChangeAction)
-  , _rcScope              :: !(Maybe [ResourceAttribute])
-  , _rcDetails            :: !(Maybe [ResourceChangeDetail])
-  , _rcReplacement        :: !(Maybe Replacement)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResourceChange =
+  ResourceChange'
+    { _rcLogicalResourceId  :: !(Maybe Text)
+    , _rcPhysicalResourceId :: !(Maybe Text)
+    , _rcResourceType       :: !(Maybe Text)
+    , _rcAction             :: !(Maybe ChangeAction)
+    , _rcScope              :: !(Maybe [ResourceAttribute])
+    , _rcDetails            :: !(Maybe [ResourceChangeDetail])
+    , _rcReplacement        :: !(Maybe Replacement)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResourceChange' with the minimum fields required to make a request.
@@ -647,12 +667,14 @@ instance NFData ResourceChange where
 --
 --
 -- /See:/ 'resourceChangeDetail' smart constructor.
-data ResourceChangeDetail = ResourceChangeDetail'
-  { _rcdCausingEntity :: !(Maybe Text)
-  , _rcdChangeSource  :: !(Maybe ChangeSource)
-  , _rcdEvaluation    :: !(Maybe EvaluationType)
-  , _rcdTarget        :: !(Maybe ResourceTargetDefinition)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResourceChangeDetail =
+  ResourceChangeDetail'
+    { _rcdCausingEntity :: !(Maybe Text)
+    , _rcdChangeSource  :: !(Maybe ChangeSource)
+    , _rcdEvaluation    :: !(Maybe EvaluationType)
+    , _rcdTarget        :: !(Maybe ResourceTargetDefinition)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResourceChangeDetail' with the minimum fields required to make a request.
@@ -709,11 +731,13 @@ instance NFData ResourceChangeDetail where
 --
 --
 -- /See:/ 'resourceTargetDefinition' smart constructor.
-data ResourceTargetDefinition = ResourceTargetDefinition'
-  { _rtdAttribute          :: !(Maybe ResourceAttribute)
-  , _rtdRequiresRecreation :: !(Maybe RequiresRecreation)
-  , _rtdName               :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResourceTargetDefinition =
+  ResourceTargetDefinition'
+    { _rtdAttribute          :: !(Maybe ResourceAttribute)
+    , _rtdRequiresRecreation :: !(Maybe RequiresRecreation)
+    , _rtdName               :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResourceTargetDefinition' with the minimum fields required to make a request.
@@ -764,10 +788,12 @@ instance NFData ResourceTargetDefinition where
 --
 --
 -- /See:/ 'rollbackConfiguration' smart constructor.
-data RollbackConfiguration = RollbackConfiguration'
-  { _rcRollbackTriggers        :: !(Maybe [RollbackTrigger])
-  , _rcMonitoringTimeInMinutes :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RollbackConfiguration =
+  RollbackConfiguration'
+    { _rcRollbackTriggers        :: !(Maybe [RollbackTrigger])
+    , _rcMonitoringTimeInMinutes :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RollbackConfiguration' with the minimum fields required to make a request.
@@ -817,10 +843,12 @@ instance ToQuery RollbackConfiguration where
 --
 --
 -- /See:/ 'rollbackTrigger' smart constructor.
-data RollbackTrigger = RollbackTrigger'
-  { _rtARN  :: !Text
-  , _rtType :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RollbackTrigger =
+  RollbackTrigger'
+    { _rtARN  :: !Text
+    , _rtType :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RollbackTrigger' with the minimum fields required to make a request.
@@ -863,29 +891,31 @@ instance ToQuery RollbackTrigger where
 --
 --
 -- /See:/ 'stack' smart constructor.
-data Stack = Stack'
-  { _sDisableRollback             :: !(Maybe Bool)
-  , _sLastUpdatedTime             :: !(Maybe ISO8601)
-  , _sRootId                      :: !(Maybe Text)
-  , _sNotificationARNs            :: !(Maybe [Text])
-  , _sStackStatusReason           :: !(Maybe Text)
-  , _sEnableTerminationProtection :: !(Maybe Bool)
-  , _sChangeSetId                 :: !(Maybe Text)
-  , _sDeletionTime                :: !(Maybe ISO8601)
-  , _sOutputs                     :: !(Maybe [Output])
-  , _sParameters                  :: !(Maybe [Parameter])
-  , _sStackId                     :: !(Maybe Text)
-  , _sDescription                 :: !(Maybe Text)
-  , _sCapabilities                :: !(Maybe [Capability])
-  , _sRollbackConfiguration       :: !(Maybe RollbackConfiguration)
-  , _sTags                        :: !(Maybe [Tag])
-  , _sTimeoutInMinutes            :: !(Maybe Nat)
-  , _sParentId                    :: !(Maybe Text)
-  , _sRoleARN                     :: !(Maybe Text)
-  , _sStackName                   :: !Text
-  , _sCreationTime                :: !ISO8601
-  , _sStackStatus                 :: !StackStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Stack =
+  Stack'
+    { _sDisableRollback             :: !(Maybe Bool)
+    , _sLastUpdatedTime             :: !(Maybe ISO8601)
+    , _sRootId                      :: !(Maybe Text)
+    , _sNotificationARNs            :: !(Maybe [Text])
+    , _sStackStatusReason           :: !(Maybe Text)
+    , _sEnableTerminationProtection :: !(Maybe Bool)
+    , _sChangeSetId                 :: !(Maybe Text)
+    , _sDeletionTime                :: !(Maybe ISO8601)
+    , _sOutputs                     :: !(Maybe [Output])
+    , _sParameters                  :: !(Maybe [Parameter])
+    , _sStackId                     :: !(Maybe Text)
+    , _sDescription                 :: !(Maybe Text)
+    , _sCapabilities                :: !(Maybe [Capability])
+    , _sRollbackConfiguration       :: !(Maybe RollbackConfiguration)
+    , _sTags                        :: !(Maybe [Tag])
+    , _sTimeoutInMinutes            :: !(Maybe Nat)
+    , _sParentId                    :: !(Maybe Text)
+    , _sRoleARN                     :: !(Maybe Text)
+    , _sStackName                   :: !Text
+    , _sCreationTime                :: !ISO8601
+    , _sStackStatus                 :: !StackStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Stack' with the minimum fields required to make a request.
@@ -1092,19 +1122,21 @@ instance NFData Stack where
 --
 --
 -- /See:/ 'stackEvent' smart constructor.
-data StackEvent = StackEvent'
-  { _seLogicalResourceId    :: !(Maybe Text)
-  , _sePhysicalResourceId   :: !(Maybe Text)
-  , _seResourceType         :: !(Maybe Text)
-  , _seResourceStatusReason :: !(Maybe Text)
-  , _seResourceProperties   :: !(Maybe Text)
-  , _seResourceStatus       :: !(Maybe ResourceStatus)
-  , _seClientRequestToken   :: !(Maybe Text)
-  , _seStackId              :: !Text
-  , _seEventId              :: !Text
-  , _seStackName            :: !Text
-  , _seTimestamp            :: !ISO8601
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StackEvent =
+  StackEvent'
+    { _seLogicalResourceId    :: !(Maybe Text)
+    , _sePhysicalResourceId   :: !(Maybe Text)
+    , _seResourceType         :: !(Maybe Text)
+    , _seResourceStatusReason :: !(Maybe Text)
+    , _seResourceProperties   :: !(Maybe Text)
+    , _seResourceStatus       :: !(Maybe ResourceStatus)
+    , _seClientRequestToken   :: !(Maybe Text)
+    , _seStackId              :: !Text
+    , _seEventId              :: !Text
+    , _seStackName            :: !Text
+    , _seTimestamp            :: !ISO8601
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StackEvent' with the minimum fields required to make a request.
@@ -1222,15 +1254,17 @@ instance NFData StackEvent where
 --
 --
 -- /See:/ 'stackInstance' smart constructor.
-data StackInstance = StackInstance'
-  { _siStatus             :: !(Maybe StackInstanceStatus)
-  , _siAccount            :: !(Maybe Text)
-  , _siRegion             :: !(Maybe Text)
-  , _siStatusReason       :: !(Maybe Text)
-  , _siStackId            :: !(Maybe Text)
-  , _siParameterOverrides :: !(Maybe [Parameter])
-  , _siStackSetId         :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StackInstance =
+  StackInstance'
+    { _siStatus             :: !(Maybe StackInstanceStatus)
+    , _siAccount            :: !(Maybe Text)
+    , _siRegion             :: !(Maybe Text)
+    , _siStatusReason       :: !(Maybe Text)
+    , _siStackId            :: !(Maybe Text)
+    , _siParameterOverrides :: !(Maybe [Parameter])
+    , _siStackSetId         :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StackInstance' with the minimum fields required to make a request.
@@ -1313,14 +1347,16 @@ instance NFData StackInstance where
 --
 --
 -- /See:/ 'stackInstanceSummary' smart constructor.
-data StackInstanceSummary = StackInstanceSummary'
-  { _sisStatus       :: !(Maybe StackInstanceStatus)
-  , _sisAccount      :: !(Maybe Text)
-  , _sisRegion       :: !(Maybe Text)
-  , _sisStatusReason :: !(Maybe Text)
-  , _sisStackId      :: !(Maybe Text)
-  , _sisStackSetId   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StackInstanceSummary =
+  StackInstanceSummary'
+    { _sisStatus       :: !(Maybe StackInstanceStatus)
+    , _sisAccount      :: !(Maybe Text)
+    , _sisRegion       :: !(Maybe Text)
+    , _sisStatusReason :: !(Maybe Text)
+    , _sisStackId      :: !(Maybe Text)
+    , _sisStackSetId   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StackInstanceSummary' with the minimum fields required to make a request.
@@ -1393,17 +1429,19 @@ instance NFData StackInstanceSummary where
 --
 --
 -- /See:/ 'stackResource' smart constructor.
-data StackResource = StackResource'
-  { _srPhysicalResourceId   :: !(Maybe Text)
-  , _srResourceStatusReason :: !(Maybe Text)
-  , _srStackId              :: !(Maybe Text)
-  , _srDescription          :: !(Maybe Text)
-  , _srStackName            :: !(Maybe Text)
-  , _srLogicalResourceId    :: !Text
-  , _srResourceType         :: !Text
-  , _srTimestamp            :: !ISO8601
-  , _srResourceStatus       :: !ResourceStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StackResource =
+  StackResource'
+    { _srPhysicalResourceId   :: !(Maybe Text)
+    , _srResourceStatusReason :: !(Maybe Text)
+    , _srStackId              :: !(Maybe Text)
+    , _srDescription          :: !(Maybe Text)
+    , _srStackName            :: !(Maybe Text)
+    , _srLogicalResourceId    :: !Text
+    , _srResourceType         :: !Text
+    , _srTimestamp            :: !ISO8601
+    , _srResourceStatus       :: !ResourceStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StackResource' with the minimum fields required to make a request.
@@ -1505,18 +1543,20 @@ instance NFData StackResource where
 --
 --
 -- /See:/ 'stackResourceDetail' smart constructor.
-data StackResourceDetail = StackResourceDetail'
-  { _srdPhysicalResourceId   :: !(Maybe Text)
-  , _srdResourceStatusReason :: !(Maybe Text)
-  , _srdMetadata             :: !(Maybe Text)
-  , _srdStackId              :: !(Maybe Text)
-  , _srdDescription          :: !(Maybe Text)
-  , _srdStackName            :: !(Maybe Text)
-  , _srdLogicalResourceId    :: !Text
-  , _srdResourceType         :: !Text
-  , _srdLastUpdatedTimestamp :: !ISO8601
-  , _srdResourceStatus       :: !ResourceStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StackResourceDetail =
+  StackResourceDetail'
+    { _srdPhysicalResourceId   :: !(Maybe Text)
+    , _srdResourceStatusReason :: !(Maybe Text)
+    , _srdMetadata             :: !(Maybe Text)
+    , _srdStackId              :: !(Maybe Text)
+    , _srdDescription          :: !(Maybe Text)
+    , _srdStackName            :: !(Maybe Text)
+    , _srdLogicalResourceId    :: !Text
+    , _srdResourceType         :: !Text
+    , _srdLastUpdatedTimestamp :: !ISO8601
+    , _srdResourceStatus       :: !ResourceStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StackResourceDetail' with the minimum fields required to make a request.
@@ -1626,14 +1666,16 @@ instance NFData StackResourceDetail where
 --
 --
 -- /See:/ 'stackResourceSummary' smart constructor.
-data StackResourceSummary = StackResourceSummary'
-  { _srsPhysicalResourceId   :: !(Maybe Text)
-  , _srsResourceStatusReason :: !(Maybe Text)
-  , _srsLogicalResourceId    :: !Text
-  , _srsResourceType         :: !Text
-  , _srsLastUpdatedTimestamp :: !ISO8601
-  , _srsResourceStatus       :: !ResourceStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StackResourceSummary =
+  StackResourceSummary'
+    { _srsPhysicalResourceId   :: !(Maybe Text)
+    , _srsResourceStatusReason :: !(Maybe Text)
+    , _srsLogicalResourceId    :: !Text
+    , _srsResourceType         :: !Text
+    , _srsLastUpdatedTimestamp :: !ISO8601
+    , _srsResourceStatus       :: !ResourceStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StackResourceSummary' with the minimum fields required to make a request.
@@ -1711,18 +1753,20 @@ instance NFData StackResourceSummary where
 --
 --
 -- /See:/ 'stackSet' smart constructor.
-data StackSet = StackSet'
-  { _ssStatus                :: !(Maybe StackSetStatus)
-  , _ssAdministrationRoleARN :: !(Maybe Text)
-  , _ssStackSetARN           :: !(Maybe Text)
-  , _ssParameters            :: !(Maybe [Parameter])
-  , _ssTemplateBody          :: !(Maybe Text)
-  , _ssStackSetName          :: !(Maybe Text)
-  , _ssDescription           :: !(Maybe Text)
-  , _ssCapabilities          :: !(Maybe [Capability])
-  , _ssTags                  :: !(Maybe [Tag])
-  , _ssStackSetId            :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StackSet =
+  StackSet'
+    { _ssStatus                :: !(Maybe StackSetStatus)
+    , _ssAdministrationRoleARN :: !(Maybe Text)
+    , _ssStackSetARN           :: !(Maybe Text)
+    , _ssParameters            :: !(Maybe [Parameter])
+    , _ssTemplateBody          :: !(Maybe Text)
+    , _ssStackSetName          :: !(Maybe Text)
+    , _ssDescription           :: !(Maybe Text)
+    , _ssCapabilities          :: !(Maybe [Capability])
+    , _ssTags                  :: !(Maybe [Tag])
+    , _ssStackSetId            :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StackSet' with the minimum fields required to make a request.
@@ -1833,17 +1877,19 @@ instance NFData StackSet where
 --
 --
 -- /See:/ 'stackSetOperation' smart constructor.
-data StackSetOperation = StackSetOperation'
-  { _ssoStatus                :: !(Maybe StackSetOperationStatus)
-  , _ssoAdministrationRoleARN :: !(Maybe Text)
-  , _ssoAction                :: !(Maybe StackSetOperationAction)
-  , _ssoEndTimestamp          :: !(Maybe ISO8601)
-  , _ssoCreationTimestamp     :: !(Maybe ISO8601)
-  , _ssoOperationPreferences  :: !(Maybe StackSetOperationPreferences)
-  , _ssoOperationId           :: !(Maybe Text)
-  , _ssoRetainStacks          :: !(Maybe Bool)
-  , _ssoStackSetId            :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StackSetOperation =
+  StackSetOperation'
+    { _ssoStatus                :: !(Maybe StackSetOperationStatus)
+    , _ssoAdministrationRoleARN :: !(Maybe Text)
+    , _ssoAction                :: !(Maybe StackSetOperationAction)
+    , _ssoEndTimestamp          :: !(Maybe ISO8601)
+    , _ssoCreationTimestamp     :: !(Maybe ISO8601)
+    , _ssoOperationPreferences  :: !(Maybe StackSetOperationPreferences)
+    , _ssoOperationId           :: !(Maybe Text)
+    , _ssoRetainStacks          :: !(Maybe Bool)
+    , _ssoStackSetId            :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StackSetOperation' with the minimum fields required to make a request.
@@ -1942,13 +1988,15 @@ instance NFData StackSetOperation where
 --
 --
 -- /See:/ 'stackSetOperationPreferences' smart constructor.
-data StackSetOperationPreferences = StackSetOperationPreferences'
-  { _ssopRegionOrder                :: !(Maybe [Text])
-  , _ssopMaxConcurrentCount         :: !(Maybe Nat)
-  , _ssopMaxConcurrentPercentage    :: !(Maybe Nat)
-  , _ssopFailureToleranceCount      :: !(Maybe Nat)
-  , _ssopFailureTolerancePercentage :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StackSetOperationPreferences =
+  StackSetOperationPreferences'
+    { _ssopRegionOrder                :: !(Maybe [Text])
+    , _ssopMaxConcurrentCount         :: !(Maybe Nat)
+    , _ssopMaxConcurrentPercentage    :: !(Maybe Nat)
+    , _ssopFailureToleranceCount      :: !(Maybe Nat)
+    , _ssopFailureTolerancePercentage :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StackSetOperationPreferences' with the minimum fields required to make a request.
@@ -2028,13 +2076,15 @@ instance ToQuery StackSetOperationPreferences where
 --
 --
 -- /See:/ 'stackSetOperationResultSummary' smart constructor.
-data StackSetOperationResultSummary = StackSetOperationResultSummary'
-  { _ssorsStatus            :: !(Maybe StackSetOperationResultStatus)
-  , _ssorsAccount           :: !(Maybe Text)
-  , _ssorsAccountGateResult :: !(Maybe AccountGateResult)
-  , _ssorsRegion            :: !(Maybe Text)
-  , _ssorsStatusReason      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StackSetOperationResultSummary =
+  StackSetOperationResultSummary'
+    { _ssorsStatus            :: !(Maybe StackSetOperationResultStatus)
+    , _ssorsAccount           :: !(Maybe Text)
+    , _ssorsAccountGateResult :: !(Maybe AccountGateResult)
+    , _ssorsRegion            :: !(Maybe Text)
+    , _ssorsStatusReason      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StackSetOperationResultSummary' with the minimum fields required to make a request.
@@ -2100,13 +2150,15 @@ instance NFData StackSetOperationResultSummary where
 --
 --
 -- /See:/ 'stackSetOperationSummary' smart constructor.
-data StackSetOperationSummary = StackSetOperationSummary'
-  { _ssosStatus            :: !(Maybe StackSetOperationStatus)
-  , _ssosAction            :: !(Maybe StackSetOperationAction)
-  , _ssosEndTimestamp      :: !(Maybe ISO8601)
-  , _ssosCreationTimestamp :: !(Maybe ISO8601)
-  , _ssosOperationId       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StackSetOperationSummary =
+  StackSetOperationSummary'
+    { _ssosStatus            :: !(Maybe StackSetOperationStatus)
+    , _ssosAction            :: !(Maybe StackSetOperationAction)
+    , _ssosEndTimestamp      :: !(Maybe ISO8601)
+    , _ssosCreationTimestamp :: !(Maybe ISO8601)
+    , _ssosOperationId       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StackSetOperationSummary' with the minimum fields required to make a request.
@@ -2171,12 +2223,14 @@ instance NFData StackSetOperationSummary where
 --
 --
 -- /See:/ 'stackSetSummary' smart constructor.
-data StackSetSummary = StackSetSummary'
-  { _sssStatus       :: !(Maybe StackSetStatus)
-  , _sssStackSetName :: !(Maybe Text)
-  , _sssDescription  :: !(Maybe Text)
-  , _sssStackSetId   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StackSetSummary =
+  StackSetSummary'
+    { _sssStatus       :: !(Maybe StackSetStatus)
+    , _sssStackSetName :: !(Maybe Text)
+    , _sssDescription  :: !(Maybe Text)
+    , _sssStackSetId   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StackSetSummary' with the minimum fields required to make a request.
@@ -2233,18 +2287,20 @@ instance NFData StackSetSummary where
 --
 --
 -- /See:/ 'stackSummary' smart constructor.
-data StackSummary = StackSummary'
-  { _ssLastUpdatedTime     :: !(Maybe ISO8601)
-  , _ssRootId              :: !(Maybe Text)
-  , _ssStackStatusReason   :: !(Maybe Text)
-  , _ssTemplateDescription :: !(Maybe Text)
-  , _ssDeletionTime        :: !(Maybe ISO8601)
-  , _ssStackId             :: !(Maybe Text)
-  , _ssParentId            :: !(Maybe Text)
-  , _ssStackName           :: !Text
-  , _ssCreationTime        :: !ISO8601
-  , _ssStackStatus         :: !StackStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StackSummary =
+  StackSummary'
+    { _ssLastUpdatedTime     :: !(Maybe ISO8601)
+    , _ssRootId              :: !(Maybe Text)
+    , _ssStackStatusReason   :: !(Maybe Text)
+    , _ssTemplateDescription :: !(Maybe Text)
+    , _ssDeletionTime        :: !(Maybe ISO8601)
+    , _ssStackId             :: !(Maybe Text)
+    , _ssParentId            :: !(Maybe Text)
+    , _ssStackName           :: !Text
+    , _ssCreationTime        :: !ISO8601
+    , _ssStackStatus         :: !StackStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StackSummary' with the minimum fields required to make a request.
@@ -2352,10 +2408,12 @@ instance NFData StackSummary where
 --
 --
 -- /See:/ 'tag' smart constructor.
-data Tag = Tag'
-  { _tagKey   :: !Text
-  , _tagValue :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Tag =
+  Tag'
+    { _tagKey   :: !Text
+    , _tagValue :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Tag' with the minimum fields required to make a request.
@@ -2396,12 +2454,14 @@ instance ToQuery Tag where
 --
 --
 -- /See:/ 'templateParameter' smart constructor.
-data TemplateParameter = TemplateParameter'
-  { _tpParameterKey :: !(Maybe Text)
-  , _tpDefaultValue :: !(Maybe Text)
-  , _tpNoEcho       :: !(Maybe Bool)
-  , _tpDescription  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TemplateParameter =
+  TemplateParameter'
+    { _tpParameterKey :: !(Maybe Text)
+    , _tpDefaultValue :: !(Maybe Text)
+    , _tpNoEcho       :: !(Maybe Bool)
+    , _tpDescription  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TemplateParameter' with the minimum fields required to make a request.

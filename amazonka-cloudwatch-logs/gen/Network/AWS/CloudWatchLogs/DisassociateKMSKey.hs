@@ -46,9 +46,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'disassociateKMSKey' smart constructor.
-newtype DisassociateKMSKey = DisassociateKMSKey'
-  { _dkkLogGroupName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DisassociateKMSKey =
+  DisassociateKMSKey'
+    { _dkkLogGroupName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisassociateKMSKey' with the minimum fields required to make a request.

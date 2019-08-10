@@ -26,10 +26,12 @@ import Network.AWS.SNS.Types.Sum
 --
 --
 -- /See:/ 'endpoint' smart constructor.
-data Endpoint = Endpoint'
-  { _eAttributes  :: !(Maybe (Map Text Text))
-  , _eEndpointARN :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Endpoint =
+  Endpoint'
+    { _eAttributes  :: !(Maybe (Map Text Text))
+    , _eEndpointARN :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Endpoint' with the minimum fields required to make a request.
@@ -70,11 +72,13 @@ instance NFData Endpoint where
 --
 --
 -- /See:/ 'messageAttributeValue' smart constructor.
-data MessageAttributeValue = MessageAttributeValue'
-  { _mavBinaryValue :: !(Maybe Base64)
-  , _mavStringValue :: !(Maybe Text)
-  , _mavDataType    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MessageAttributeValue =
+  MessageAttributeValue'
+    { _mavBinaryValue :: !(Maybe Base64)
+    , _mavStringValue :: !(Maybe Text)
+    , _mavDataType    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MessageAttributeValue' with the minimum fields required to make a request.
@@ -125,10 +129,12 @@ instance ToQuery MessageAttributeValue where
 --
 --
 -- /See:/ 'platformApplication' smart constructor.
-data PlatformApplication = PlatformApplication'
-  { _paPlatformApplicationARN :: !(Maybe Text)
-  , _paAttributes             :: !(Maybe (Map Text Text))
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PlatformApplication =
+  PlatformApplication'
+    { _paPlatformApplicationARN :: !(Maybe Text)
+    , _paAttributes             :: !(Maybe (Map Text Text))
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PlatformApplication' with the minimum fields required to make a request.
@@ -169,13 +175,15 @@ instance NFData PlatformApplication where
 --
 --
 -- /See:/ 'subscription' smart constructor.
-data Subscription = Subscription'
-  { _sProtocol        :: !(Maybe Text)
-  , _sOwner           :: !(Maybe Text)
-  , _sTopicARN        :: !(Maybe Text)
-  , _sEndpoint        :: !(Maybe Text)
-  , _sSubscriptionARN :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Subscription =
+  Subscription'
+    { _sProtocol        :: !(Maybe Text)
+    , _sOwner           :: !(Maybe Text)
+    , _sTopicARN        :: !(Maybe Text)
+    , _sEndpoint        :: !(Maybe Text)
+    , _sSubscriptionARN :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Subscription' with the minimum fields required to make a request.
@@ -240,9 +248,11 @@ instance NFData Subscription where
 --
 --
 -- /See:/ 'topic' smart constructor.
-newtype Topic = Topic'
-  { _tTopicARN :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype Topic =
+  Topic'
+    { _tTopicARN :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Topic' with the minimum fields required to make a request.

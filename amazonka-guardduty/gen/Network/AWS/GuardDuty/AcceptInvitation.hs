@@ -46,11 +46,13 @@ import Network.AWS.Response
 -- | AcceptInvitation request body.
 --
 -- /See:/ 'acceptInvitation' smart constructor.
-data AcceptInvitation = AcceptInvitation'
-  { _aiMasterId     :: !(Maybe Text)
-  , _aiInvitationId :: !(Maybe Text)
-  , _aiDetectorId   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AcceptInvitation =
+  AcceptInvitation'
+    { _aiMasterId     :: !(Maybe Text)
+    , _aiInvitationId :: !(Maybe Text)
+    , _aiDetectorId   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AcceptInvitation' with the minimum fields required to make a request.
@@ -120,9 +122,11 @@ instance ToQuery AcceptInvitation where
         toQuery = const mempty
 
 -- | /See:/ 'acceptInvitationResponse' smart constructor.
-newtype AcceptInvitationResponse = AcceptInvitationResponse'
-  { _airsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AcceptInvitationResponse =
+  AcceptInvitationResponse'
+    { _airsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AcceptInvitationResponse' with the minimum fields required to make a request.

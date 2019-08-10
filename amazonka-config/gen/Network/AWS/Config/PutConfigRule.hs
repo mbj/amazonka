@@ -58,9 +58,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putConfigRule' smart constructor.
-newtype PutConfigRule = PutConfigRule'
-  { _pcrConfigRule :: ConfigRule
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype PutConfigRule =
+  PutConfigRule'
+    { _pcrConfigRule :: ConfigRule
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutConfigRule' with the minimum fields required to make a request.

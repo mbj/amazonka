@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createRepository' smart constructor.
-data CreateRepository = CreateRepository'
-  { _crRepositoryDescription :: !(Maybe Text)
-  , _crRepositoryName        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateRepository =
+  CreateRepository'
+    { _crRepositoryDescription :: !(Maybe Text)
+    , _crRepositoryName        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateRepository' with the minimum fields required to make a request.
@@ -121,10 +123,12 @@ instance ToQuery CreateRepository where
 --
 --
 -- /See:/ 'createRepositoryResponse' smart constructor.
-data CreateRepositoryResponse = CreateRepositoryResponse'
-  { _crrsRepositoryMetadata :: !(Maybe RepositoryMetadata)
-  , _crrsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateRepositoryResponse =
+  CreateRepositoryResponse'
+    { _crrsRepositoryMetadata :: !(Maybe RepositoryMetadata)
+    , _crrsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateRepositoryResponse' with the minimum fields required to make a request.

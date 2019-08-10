@@ -57,11 +57,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listCACertificates' smart constructor.
-data ListCACertificates = ListCACertificates'
-  { _lcacMarker         :: !(Maybe Text)
-  , _lcacAscendingOrder :: !(Maybe Bool)
-  , _lcacPageSize       :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListCACertificates =
+  ListCACertificates'
+    { _lcacMarker         :: !(Maybe Text)
+    , _lcacAscendingOrder :: !(Maybe Bool)
+    , _lcacPageSize       :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListCACertificates' with the minimum fields required to make a request.
@@ -136,11 +138,13 @@ instance ToQuery ListCACertificates where
 --
 --
 -- /See:/ 'listCACertificatesResponse' smart constructor.
-data ListCACertificatesResponse = ListCACertificatesResponse'
-  { _lcacrsCertificates   :: !(Maybe [CACertificate])
-  , _lcacrsNextMarker     :: !(Maybe Text)
-  , _lcacrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListCACertificatesResponse =
+  ListCACertificatesResponse'
+    { _lcacrsCertificates   :: !(Maybe [CACertificate])
+    , _lcacrsNextMarker     :: !(Maybe Text)
+    , _lcacrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListCACertificatesResponse' with the minimum fields required to make a request.

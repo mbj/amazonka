@@ -61,13 +61,15 @@ import Network.AWS.Support.Types.Product
 --
 --
 -- /See:/ 'describeCommunications' smart constructor.
-data DescribeCommunications = DescribeCommunications'
-  { _dAfterTime  :: !(Maybe Text)
-  , _dBeforeTime :: !(Maybe Text)
-  , _dNextToken  :: !(Maybe Text)
-  , _dMaxResults :: !(Maybe Nat)
-  , _dCaseId     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeCommunications =
+  DescribeCommunications'
+    { _dAfterTime  :: !(Maybe Text)
+    , _dBeforeTime :: !(Maybe Text)
+    , _dNextToken  :: !(Maybe Text)
+    , _dMaxResults :: !(Maybe Nat)
+    , _dCaseId     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeCommunications' with the minimum fields required to make a request.
@@ -170,11 +172,13 @@ instance ToQuery DescribeCommunications where
 --
 --
 -- /See:/ 'describeCommunicationsResponse' smart constructor.
-data DescribeCommunicationsResponse = DescribeCommunicationsResponse'
-  { _dcrsNextToken      :: !(Maybe Text)
-  , _dcrsCommunications :: !(Maybe [Communication])
-  , _dcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeCommunicationsResponse =
+  DescribeCommunicationsResponse'
+    { _dcrsNextToken      :: !(Maybe Text)
+    , _dcrsCommunications :: !(Maybe [Communication])
+    , _dcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeCommunicationsResponse' with the minimum fields required to make a request.

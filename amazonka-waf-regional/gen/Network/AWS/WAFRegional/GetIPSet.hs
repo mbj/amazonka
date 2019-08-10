@@ -45,9 +45,11 @@ import Network.AWS.WAFRegional.Types
 import Network.AWS.WAFRegional.Types.Product
 
 -- | /See:/ 'getIPSet' smart constructor.
-newtype GetIPSet = GetIPSet'
-  { _gisIPSetId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetIPSet =
+  GetIPSet'
+    { _gisIPSetId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetIPSet' with the minimum fields required to make a request.
@@ -99,10 +101,12 @@ instance ToQuery GetIPSet where
         toQuery = const mempty
 
 -- | /See:/ 'getIPSetResponse' smart constructor.
-data GetIPSetResponse = GetIPSetResponse'
-  { _gisrsIPSet          :: !(Maybe IPSet)
-  , _gisrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetIPSetResponse =
+  GetIPSetResponse'
+    { _gisrsIPSet          :: !(Maybe IPSet)
+    , _gisrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetIPSetResponse' with the minimum fields required to make a request.

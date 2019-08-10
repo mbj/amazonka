@@ -89,14 +89,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'postText' smart constructor.
-data PostText = PostText'
-  { _ptRequestAttributes :: !(Maybe (Sensitive (Map Text Text)))
-  , _ptSessionAttributes :: !(Maybe (Sensitive (Map Text Text)))
-  , _ptBotName           :: !Text
-  , _ptBotAlias          :: !Text
-  , _ptUserId            :: !Text
-  , _ptInputText         :: !(Sensitive Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data PostText =
+  PostText'
+    { _ptRequestAttributes :: !(Maybe (Sensitive (Map Text Text)))
+    , _ptSessionAttributes :: !(Maybe (Sensitive (Map Text Text)))
+    , _ptBotName           :: !Text
+    , _ptBotAlias          :: !Text
+    , _ptUserId            :: !Text
+    , _ptInputText         :: !(Sensitive Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PostText' with the minimum fields required to make a request.
@@ -200,17 +202,19 @@ instance ToQuery PostText where
         toQuery = const mempty
 
 -- | /See:/ 'postTextResponse' smart constructor.
-data PostTextResponse = PostTextResponse'
-  { _ptrsSlots             :: !(Maybe (Sensitive (Map Text Text)))
-  , _ptrsResponseCard      :: !(Maybe ResponseCard)
-  , _ptrsIntentName        :: !(Maybe Text)
-  , _ptrsDialogState       :: !(Maybe DialogState)
-  , _ptrsMessageFormat     :: !(Maybe MessageFormatType)
-  , _ptrsMessage           :: !(Maybe (Sensitive Text))
-  , _ptrsSlotToElicit      :: !(Maybe Text)
-  , _ptrsSessionAttributes :: !(Maybe (Sensitive (Map Text Text)))
-  , _ptrsResponseStatus    :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data PostTextResponse =
+  PostTextResponse'
+    { _ptrsSlots             :: !(Maybe (Sensitive (Map Text Text)))
+    , _ptrsResponseCard      :: !(Maybe ResponseCard)
+    , _ptrsIntentName        :: !(Maybe Text)
+    , _ptrsDialogState       :: !(Maybe DialogState)
+    , _ptrsMessageFormat     :: !(Maybe MessageFormatType)
+    , _ptrsMessage           :: !(Maybe (Sensitive Text))
+    , _ptrsSlotToElicit      :: !(Maybe Text)
+    , _ptrsSessionAttributes :: !(Maybe (Sensitive (Map Text Text)))
+    , _ptrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PostTextResponse' with the minimum fields required to make a request.

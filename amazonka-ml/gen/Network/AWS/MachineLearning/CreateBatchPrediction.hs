@@ -53,13 +53,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createBatchPrediction' smart constructor.
-data CreateBatchPrediction = CreateBatchPrediction'
-  { _cbpBatchPredictionName         :: !(Maybe Text)
-  , _cbpBatchPredictionId           :: !Text
-  , _cbpMLModelId                   :: !Text
-  , _cbpBatchPredictionDataSourceId :: !Text
-  , _cbpOutputURI                   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateBatchPrediction =
+  CreateBatchPrediction'
+    { _cbpBatchPredictionName         :: !(Maybe Text)
+    , _cbpBatchPredictionId           :: !Text
+    , _cbpMLModelId                   :: !Text
+    , _cbpBatchPredictionDataSourceId :: !Text
+    , _cbpOutputURI                   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateBatchPrediction' with the minimum fields required to make a request.
@@ -161,10 +163,12 @@ instance ToQuery CreateBatchPrediction where
 --
 --
 -- /See:/ 'createBatchPredictionResponse' smart constructor.
-data CreateBatchPredictionResponse = CreateBatchPredictionResponse'
-  { _cbprsBatchPredictionId :: !(Maybe Text)
-  , _cbprsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateBatchPredictionResponse =
+  CreateBatchPredictionResponse'
+    { _cbprsBatchPredictionId :: !(Maybe Text)
+    , _cbprsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateBatchPredictionResponse' with the minimum fields required to make a request.

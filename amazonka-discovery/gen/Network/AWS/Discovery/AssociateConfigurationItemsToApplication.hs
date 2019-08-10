@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'associateConfigurationItemsToApplication' smart constructor.
-data AssociateConfigurationItemsToApplication = AssociateConfigurationItemsToApplication'
-  { _acitaApplicationConfigurationId :: !Text
-  , _acitaConfigurationIds           :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssociateConfigurationItemsToApplication =
+  AssociateConfigurationItemsToApplication'
+    { _acitaApplicationConfigurationId :: !Text
+    , _acitaConfigurationIds           :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateConfigurationItemsToApplication' with the minimum fields required to make a request.
@@ -130,9 +132,11 @@ instance ToQuery
         toQuery = const mempty
 
 -- | /See:/ 'associateConfigurationItemsToApplicationResponse' smart constructor.
-newtype AssociateConfigurationItemsToApplicationResponse = AssociateConfigurationItemsToApplicationResponse'
-  { _acitarsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AssociateConfigurationItemsToApplicationResponse =
+  AssociateConfigurationItemsToApplicationResponse'
+    { _acitarsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateConfigurationItemsToApplicationResponse' with the minimum fields required to make a request.

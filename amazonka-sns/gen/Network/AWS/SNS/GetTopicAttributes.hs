@@ -49,9 +49,11 @@ import Network.AWS.SNS.Types.Product
 --
 --
 -- /See:/ 'getTopicAttributes' smart constructor.
-newtype GetTopicAttributes = GetTopicAttributes'
-  { _gtaTopicARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetTopicAttributes =
+  GetTopicAttributes'
+    { _gtaTopicARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetTopicAttributes' with the minimum fields required to make a request.
@@ -103,10 +105,12 @@ instance ToQuery GetTopicAttributes where
 --
 --
 -- /See:/ 'getTopicAttributesResponse' smart constructor.
-data GetTopicAttributesResponse = GetTopicAttributesResponse'
-  { _gtarsAttributes     :: !(Maybe (Map Text Text))
-  , _gtarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetTopicAttributesResponse =
+  GetTopicAttributesResponse'
+    { _gtarsAttributes     :: !(Maybe (Map Text Text))
+    , _gtarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetTopicAttributesResponse' with the minimum fields required to make a request.

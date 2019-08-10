@@ -50,11 +50,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'changePassword' smart constructor.
-data ChangePassword = ChangePassword'
-  { _cpPreviousPassword :: !(Sensitive Text)
-  , _cpProposedPassword :: !(Sensitive Text)
-  , _cpAccessToken      :: !(Sensitive Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data ChangePassword =
+  ChangePassword'
+    { _cpPreviousPassword :: !(Sensitive Text)
+    , _cpProposedPassword :: !(Sensitive Text)
+    , _cpAccessToken      :: !(Sensitive Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ChangePassword' with the minimum fields required to make a request.
@@ -132,9 +134,11 @@ instance ToQuery ChangePassword where
 --
 --
 -- /See:/ 'changePasswordResponse' smart constructor.
-newtype ChangePasswordResponse = ChangePasswordResponse'
-  { _cprsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ChangePasswordResponse =
+  ChangePasswordResponse'
+    { _cprsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ChangePasswordResponse' with the minimum fields required to make a request.

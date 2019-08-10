@@ -46,9 +46,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'batchGetNamedQuery' smart constructor.
-newtype BatchGetNamedQuery = BatchGetNamedQuery'
-  { _bgnqNamedQueryIds :: List1 Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype BatchGetNamedQuery =
+  BatchGetNamedQuery'
+    { _bgnqNamedQueryIds :: List1 Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchGetNamedQuery' with the minimum fields required to make a request.
@@ -105,11 +107,13 @@ instance ToQuery BatchGetNamedQuery where
         toQuery = const mempty
 
 -- | /See:/ 'batchGetNamedQueryResponse' smart constructor.
-data BatchGetNamedQueryResponse = BatchGetNamedQueryResponse'
-  { _bgnqrsNamedQueries             :: !(Maybe [NamedQuery])
-  , _bgnqrsUnprocessedNamedQueryIds :: !(Maybe [UnprocessedNamedQueryId])
-  , _bgnqrsResponseStatus           :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchGetNamedQueryResponse =
+  BatchGetNamedQueryResponse'
+    { _bgnqrsNamedQueries             :: !(Maybe [NamedQuery])
+    , _bgnqrsUnprocessedNamedQueryIds :: !(Maybe [UnprocessedNamedQueryId])
+    , _bgnqrsResponseStatus           :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchGetNamedQueryResponse' with the minimum fields required to make a request.

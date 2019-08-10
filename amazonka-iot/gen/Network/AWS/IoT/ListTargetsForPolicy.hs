@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listTargetsForPolicy' smart constructor.
-data ListTargetsForPolicy = ListTargetsForPolicy'
-  { _ltfpMarker     :: !(Maybe Text)
-  , _ltfpPageSize   :: !(Maybe Nat)
-  , _ltfpPolicyName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTargetsForPolicy =
+  ListTargetsForPolicy'
+    { _ltfpMarker     :: !(Maybe Text)
+    , _ltfpPageSize   :: !(Maybe Nat)
+    , _ltfpPolicyName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTargetsForPolicy' with the minimum fields required to make a request.
@@ -119,11 +121,13 @@ instance ToQuery ListTargetsForPolicy where
                "pageSize" =: _ltfpPageSize]
 
 -- | /See:/ 'listTargetsForPolicyResponse' smart constructor.
-data ListTargetsForPolicyResponse = ListTargetsForPolicyResponse'
-  { _ltfprsTargets        :: !(Maybe [Text])
-  , _ltfprsNextMarker     :: !(Maybe Text)
-  , _ltfprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTargetsForPolicyResponse =
+  ListTargetsForPolicyResponse'
+    { _ltfprsTargets        :: !(Maybe [Text])
+    , _ltfprsNextMarker     :: !(Maybe Text)
+    , _ltfprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTargetsForPolicyResponse' with the minimum fields required to make a request.

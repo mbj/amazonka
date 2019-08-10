@@ -68,24 +68,26 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateStack' smart constructor.
-data UpdateStack = UpdateStack'
-  { _usUsePreviousTemplate         :: !(Maybe Bool)
-  , _usNotificationARNs            :: !(Maybe [Text])
-  , _usStackPolicyBody             :: !(Maybe Text)
-  , _usStackPolicyDuringUpdateBody :: !(Maybe Text)
-  , _usStackPolicyDuringUpdateURL  :: !(Maybe Text)
-  , _usParameters                  :: !(Maybe [Parameter])
-  , _usStackPolicyURL              :: !(Maybe Text)
-  , _usTemplateBody                :: !(Maybe Text)
-  , _usTemplateURL                 :: !(Maybe Text)
-  , _usClientRequestToken          :: !(Maybe Text)
-  , _usCapabilities                :: !(Maybe [Capability])
-  , _usRollbackConfiguration       :: !(Maybe RollbackConfiguration)
-  , _usResourceTypes               :: !(Maybe [Text])
-  , _usTags                        :: !(Maybe [Tag])
-  , _usRoleARN                     :: !(Maybe Text)
-  , _usStackName                   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateStack =
+  UpdateStack'
+    { _usUsePreviousTemplate         :: !(Maybe Bool)
+    , _usNotificationARNs            :: !(Maybe [Text])
+    , _usStackPolicyBody             :: !(Maybe Text)
+    , _usStackPolicyDuringUpdateBody :: !(Maybe Text)
+    , _usStackPolicyDuringUpdateURL  :: !(Maybe Text)
+    , _usParameters                  :: !(Maybe [Parameter])
+    , _usStackPolicyURL              :: !(Maybe Text)
+    , _usTemplateBody                :: !(Maybe Text)
+    , _usTemplateURL                 :: !(Maybe Text)
+    , _usClientRequestToken          :: !(Maybe Text)
+    , _usCapabilities                :: !(Maybe [Capability])
+    , _usRollbackConfiguration       :: !(Maybe RollbackConfiguration)
+    , _usResourceTypes               :: !(Maybe [Text])
+    , _usTags                        :: !(Maybe [Tag])
+    , _usRoleARN                     :: !(Maybe Text)
+    , _usStackName                   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateStack' with the minimum fields required to make a request.
@@ -263,10 +265,12 @@ instance ToQuery UpdateStack where
 --
 --
 -- /See:/ 'updateStackResponse' smart constructor.
-data UpdateStackResponse = UpdateStackResponse'
-  { _usrsStackId        :: !(Maybe Text)
-  , _usrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateStackResponse =
+  UpdateStackResponse'
+    { _usrsStackId        :: !(Maybe Text)
+    , _usrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateStackResponse' with the minimum fields required to make a request.

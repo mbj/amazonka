@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeTrails' smart constructor.
-data DescribeTrails = DescribeTrails'
-  { _dtIncludeShadowTrails :: !(Maybe Bool)
-  , _dtTrailNameList       :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeTrails =
+  DescribeTrails'
+    { _dtIncludeShadowTrails :: !(Maybe Bool)
+    , _dtTrailNameList       :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeTrails' with the minimum fields required to make a request.
@@ -120,10 +122,12 @@ instance ToQuery DescribeTrails where
 --
 --
 -- /See:/ 'describeTrailsResponse' smart constructor.
-data DescribeTrailsResponse = DescribeTrailsResponse'
-  { _dtrsTrailList      :: !(Maybe [Trail])
-  , _dtrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeTrailsResponse =
+  DescribeTrailsResponse'
+    { _dtrsTrailList      :: !(Maybe [Trail])
+    , _dtrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeTrailsResponse' with the minimum fields required to make a request.

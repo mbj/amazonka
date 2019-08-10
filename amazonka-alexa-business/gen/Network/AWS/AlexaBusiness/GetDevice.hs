@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getDevice' smart constructor.
-newtype GetDevice = GetDevice'
-  { _gdDeviceARN :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetDevice =
+  GetDevice'
+    { _gdDeviceARN :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDevice' with the minimum fields required to make a request.
@@ -98,10 +100,12 @@ instance ToQuery GetDevice where
         toQuery = const mempty
 
 -- | /See:/ 'getDeviceResponse' smart constructor.
-data GetDeviceResponse = GetDeviceResponse'
-  { _gdrsDevice         :: !(Maybe Device)
-  , _gdrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDeviceResponse =
+  GetDeviceResponse'
+    { _gdrsDevice         :: !(Maybe Device)
+    , _gdrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDeviceResponse' with the minimum fields required to make a request.

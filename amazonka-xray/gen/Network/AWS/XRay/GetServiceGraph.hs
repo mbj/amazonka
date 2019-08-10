@@ -53,11 +53,13 @@ import Network.AWS.XRay.Types
 import Network.AWS.XRay.Types.Product
 
 -- | /See:/ 'getServiceGraph' smart constructor.
-data GetServiceGraph = GetServiceGraph'
-  { _gsgNextToken :: !(Maybe Text)
-  , _gsgStartTime :: !POSIX
-  , _gsgEndTime   :: !POSIX
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetServiceGraph =
+  GetServiceGraph'
+    { _gsgNextToken :: !(Maybe Text)
+    , _gsgStartTime :: !POSIX
+    , _gsgEndTime   :: !POSIX
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetServiceGraph' with the minimum fields required to make a request.
@@ -134,13 +136,15 @@ instance ToQuery GetServiceGraph where
         toQuery = const mempty
 
 -- | /See:/ 'getServiceGraphResponse' smart constructor.
-data GetServiceGraphResponse = GetServiceGraphResponse'
-  { _gsgrsStartTime      :: !(Maybe POSIX)
-  , _gsgrsNextToken      :: !(Maybe Text)
-  , _gsgrsEndTime        :: !(Maybe POSIX)
-  , _gsgrsServices       :: !(Maybe [ServiceInfo])
-  , _gsgrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetServiceGraphResponse =
+  GetServiceGraphResponse'
+    { _gsgrsStartTime      :: !(Maybe POSIX)
+    , _gsgrsNextToken      :: !(Maybe Text)
+    , _gsgrsEndTime        :: !(Maybe POSIX)
+    , _gsgrsServices       :: !(Maybe [ServiceInfo])
+    , _gsgrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetServiceGraphResponse' with the minimum fields required to make a request.

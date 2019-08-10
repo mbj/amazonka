@@ -45,9 +45,11 @@ import Network.AWS.Response
 -- | DeleteInvitations request body.
 --
 -- /See:/ 'deleteInvitations' smart constructor.
-newtype DeleteInvitations = DeleteInvitations'
-  { _diAccountIds :: Maybe [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteInvitations =
+  DeleteInvitations'
+    { _diAccountIds :: Maybe [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteInvitations' with the minimum fields required to make a request.
@@ -97,10 +99,12 @@ instance ToQuery DeleteInvitations where
         toQuery = const mempty
 
 -- | /See:/ 'deleteInvitationsResponse' smart constructor.
-data DeleteInvitationsResponse = DeleteInvitationsResponse'
-  { _dirsUnprocessedAccounts :: !(Maybe [UnprocessedAccount])
-  , _dirsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteInvitationsResponse =
+  DeleteInvitationsResponse'
+    { _dirsUnprocessedAccounts :: !(Maybe [UnprocessedAccount])
+    , _dirsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteInvitationsResponse' with the minimum fields required to make a request.

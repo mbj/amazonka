@@ -44,10 +44,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'sendMessages' smart constructor.
-data SendMessages = SendMessages'
-  { _smApplicationId  :: !Text
-  , _smMessageRequest :: !MessageRequest
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SendMessages =
+  SendMessages'
+    { _smApplicationId  :: !Text
+    , _smMessageRequest :: !MessageRequest
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SendMessages' with the minimum fields required to make a request.
@@ -109,10 +111,12 @@ instance ToQuery SendMessages where
         toQuery = const mempty
 
 -- | /See:/ 'sendMessagesResponse' smart constructor.
-data SendMessagesResponse = SendMessagesResponse'
-  { _smrsResponseStatus  :: !Int
-  , _smrsMessageResponse :: !MessageResponse
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SendMessagesResponse =
+  SendMessagesResponse'
+    { _smrsResponseStatus  :: !Int
+    , _smrsMessageResponse :: !MessageResponse
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SendMessagesResponse' with the minimum fields required to make a request.

@@ -56,12 +56,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getComplianceDetailsByResource' smart constructor.
-data GetComplianceDetailsByResource = GetComplianceDetailsByResource'
-  { _gcdbrComplianceTypes :: !(Maybe [ComplianceType])
-  , _gcdbrNextToken       :: !(Maybe Text)
-  , _gcdbrResourceType    :: !Text
-  , _gcdbrResourceId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetComplianceDetailsByResource =
+  GetComplianceDetailsByResource'
+    { _gcdbrComplianceTypes :: !(Maybe [ComplianceType])
+    , _gcdbrNextToken       :: !(Maybe Text)
+    , _gcdbrResourceType    :: !Text
+    , _gcdbrResourceId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetComplianceDetailsByResource' with the minimum fields required to make a request.
@@ -161,11 +163,13 @@ instance ToQuery GetComplianceDetailsByResource where
 --
 --
 -- /See:/ 'getComplianceDetailsByResourceResponse' smart constructor.
-data GetComplianceDetailsByResourceResponse = GetComplianceDetailsByResourceResponse'
-  { _gcdbrrsEvaluationResults :: !(Maybe [EvaluationResult])
-  , _gcdbrrsNextToken         :: !(Maybe Text)
-  , _gcdbrrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetComplianceDetailsByResourceResponse =
+  GetComplianceDetailsByResourceResponse'
+    { _gcdbrrsEvaluationResults :: !(Maybe [EvaluationResult])
+    , _gcdbrrsNextToken         :: !(Maybe Text)
+    , _gcdbrrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetComplianceDetailsByResourceResponse' with the minimum fields required to make a request.

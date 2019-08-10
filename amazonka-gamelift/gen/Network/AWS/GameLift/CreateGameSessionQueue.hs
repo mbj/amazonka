@@ -70,12 +70,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createGameSessionQueue' smart constructor.
-data CreateGameSessionQueue = CreateGameSessionQueue'
-  { _cgsqPlayerLatencyPolicies :: !(Maybe [PlayerLatencyPolicy])
-  , _cgsqTimeoutInSeconds      :: !(Maybe Nat)
-  , _cgsqDestinations          :: !(Maybe [GameSessionQueueDestination])
-  , _cgsqName                  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateGameSessionQueue =
+  CreateGameSessionQueue'
+    { _cgsqPlayerLatencyPolicies :: !(Maybe [PlayerLatencyPolicy])
+    , _cgsqTimeoutInSeconds      :: !(Maybe Nat)
+    , _cgsqDestinations          :: !(Maybe [GameSessionQueueDestination])
+    , _cgsqName                  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateGameSessionQueue' with the minimum fields required to make a request.
@@ -161,10 +163,12 @@ instance ToQuery CreateGameSessionQueue where
 --
 --
 -- /See:/ 'createGameSessionQueueResponse' smart constructor.
-data CreateGameSessionQueueResponse = CreateGameSessionQueueResponse'
-  { _cgsqrsGameSessionQueue :: !(Maybe GameSessionQueue)
-  , _cgsqrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateGameSessionQueueResponse =
+  CreateGameSessionQueueResponse'
+    { _cgsqrsGameSessionQueue :: !(Maybe GameSessionQueue)
+    , _cgsqrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateGameSessionQueueResponse' with the minimum fields required to make a request.

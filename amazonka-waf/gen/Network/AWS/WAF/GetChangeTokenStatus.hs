@@ -53,9 +53,11 @@ import Network.AWS.WAF.Types
 import Network.AWS.WAF.Types.Product
 
 -- | /See:/ 'getChangeTokenStatus' smart constructor.
-newtype GetChangeTokenStatus = GetChangeTokenStatus'
-  { _gctsChangeToken :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetChangeTokenStatus =
+  GetChangeTokenStatus'
+    { _gctsChangeToken :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetChangeTokenStatus' with the minimum fields required to make a request.
@@ -111,10 +113,12 @@ instance ToQuery GetChangeTokenStatus where
         toQuery = const mempty
 
 -- | /See:/ 'getChangeTokenStatusResponse' smart constructor.
-data GetChangeTokenStatusResponse = GetChangeTokenStatusResponse'
-  { _gctsrsChangeTokenStatus :: !(Maybe ChangeTokenStatus)
-  , _gctsrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetChangeTokenStatusResponse =
+  GetChangeTokenStatusResponse'
+    { _gctsrsChangeTokenStatus :: !(Maybe ChangeTokenStatus)
+    , _gctsrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetChangeTokenStatusResponse' with the minimum fields required to make a request.

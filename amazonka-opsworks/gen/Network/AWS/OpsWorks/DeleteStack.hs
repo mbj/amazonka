@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteStack' smart constructor.
-newtype DeleteStack = DeleteStack'
-  { _dsStackId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteStack =
+  DeleteStack'
+    { _dsStackId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteStack' with the minimum fields required to make a request.

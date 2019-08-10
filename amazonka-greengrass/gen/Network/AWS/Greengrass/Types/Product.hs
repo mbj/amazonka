@@ -24,12 +24,14 @@ import Network.AWS.Prelude
 -- | Information about a Greengrass core's connectivity.
 --
 -- /See:/ 'connectivityInfo' smart constructor.
-data ConnectivityInfo = ConnectivityInfo'
-  { _ciPortNumber  :: !(Maybe Int)
-  , _ciId          :: !(Maybe Text)
-  , _ciMetadata    :: !(Maybe Text)
-  , _ciHostAddress :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ConnectivityInfo =
+  ConnectivityInfo'
+    { _ciPortNumber  :: !(Maybe Int)
+    , _ciId          :: !(Maybe Text)
+    , _ciMetadata    :: !(Maybe Text)
+    , _ciHostAddress :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ConnectivityInfo' with the minimum fields required to make a request.
@@ -94,12 +96,14 @@ instance ToJSON ConnectivityInfo where
 -- | Information about a core.
 --
 -- /See:/ 'core' smart constructor.
-data Core = Core'
-  { _cCertificateARN :: !(Maybe Text)
-  , _cThingARN       :: !(Maybe Text)
-  , _cSyncShadow     :: !(Maybe Bool)
-  , _cId             :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Core =
+  Core'
+    { _cCertificateARN :: !(Maybe Text)
+    , _cThingARN       :: !(Maybe Text)
+    , _cSyncShadow     :: !(Maybe Bool)
+    , _cId             :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Core' with the minimum fields required to make a request.
@@ -165,9 +169,11 @@ instance ToJSON Core where
 -- | Information about a core definition version.
 --
 -- /See:/ 'coreDefinitionVersion' smart constructor.
-newtype CoreDefinitionVersion = CoreDefinitionVersion'
-  { _cdvCores :: Maybe [Core]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CoreDefinitionVersion =
+  CoreDefinitionVersion'
+    { _cdvCores :: Maybe [Core]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CoreDefinitionVersion' with the minimum fields required to make a request.
@@ -202,15 +208,17 @@ instance ToJSON CoreDefinitionVersion where
 -- | Information about a definition.
 --
 -- /See:/ 'definitionInformation' smart constructor.
-data DefinitionInformation = DefinitionInformation'
-  { _diLatestVersionARN     :: !(Maybe Text)
-  , _diARN                  :: !(Maybe Text)
-  , _diName                 :: !(Maybe Text)
-  , _diCreationTimestamp    :: !(Maybe Text)
-  , _diId                   :: !(Maybe Text)
-  , _diLatestVersion        :: !(Maybe Text)
-  , _diLastUpdatedTimestamp :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DefinitionInformation =
+  DefinitionInformation'
+    { _diLatestVersionARN     :: !(Maybe Text)
+    , _diARN                  :: !(Maybe Text)
+    , _diName                 :: !(Maybe Text)
+    , _diCreationTimestamp    :: !(Maybe Text)
+    , _diId                   :: !(Maybe Text)
+    , _diLatestVersion        :: !(Maybe Text)
+    , _diLastUpdatedTimestamp :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DefinitionInformation' with the minimum fields required to make a request.
@@ -291,13 +299,15 @@ instance NFData DefinitionInformation where
 -- | Information about a deployment.
 --
 -- /See:/ 'deployment' smart constructor.
-data Deployment = Deployment'
-  { _dDeploymentId   :: !(Maybe Text)
-  , _dDeploymentARN  :: !(Maybe Text)
-  , _dCreatedAt      :: !(Maybe Text)
-  , _dDeploymentType :: !(Maybe DeploymentType)
-  , _dGroupARN       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Deployment =
+  Deployment'
+    { _dDeploymentId   :: !(Maybe Text)
+    , _dDeploymentARN  :: !(Maybe Text)
+    , _dCreatedAt      :: !(Maybe Text)
+    , _dDeploymentType :: !(Maybe DeploymentType)
+    , _dGroupARN       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Deployment' with the minimum fields required to make a request.
@@ -362,12 +372,14 @@ instance NFData Deployment where
 -- | Information about a device.
 --
 -- /See:/ 'device' smart constructor.
-data Device = Device'
-  { _dCertificateARN :: !(Maybe Text)
-  , _dThingARN       :: !(Maybe Text)
-  , _dSyncShadow     :: !(Maybe Bool)
-  , _dId             :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Device =
+  Device'
+    { _dCertificateARN :: !(Maybe Text)
+    , _dThingARN       :: !(Maybe Text)
+    , _dSyncShadow     :: !(Maybe Bool)
+    , _dId             :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Device' with the minimum fields required to make a request.
@@ -433,9 +445,11 @@ instance ToJSON Device where
 -- | Information about a device definition version.
 --
 -- /See:/ 'deviceDefinitionVersion' smart constructor.
-newtype DeviceDefinitionVersion = DeviceDefinitionVersion'
-  { _ddvDevices :: Maybe [Device]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeviceDefinitionVersion =
+  DeviceDefinitionVersion'
+    { _ddvDevices :: Maybe [Device]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeviceDefinitionVersion' with the minimum fields required to make a request.
@@ -470,10 +484,12 @@ instance ToJSON DeviceDefinitionVersion where
 -- | Details about the error.
 --
 -- /See:/ 'errorDetail' smart constructor.
-data ErrorDetail = ErrorDetail'
-  { _edDetailedErrorCode    :: !(Maybe Text)
-  , _edDetailedErrorMessage :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ErrorDetail =
+  ErrorDetail'
+    { _edDetailedErrorCode    :: !(Maybe Text)
+    , _edDetailedErrorMessage :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ErrorDetail' with the minimum fields required to make a request.
@@ -513,11 +529,13 @@ instance NFData ErrorDetail where
 -- | Information about a Lambda function.
 --
 -- /See:/ 'function' smart constructor.
-data Function = Function'
-  { _fFunctionARN           :: !(Maybe Text)
-  , _fFunctionConfiguration :: !(Maybe FunctionConfiguration)
-  , _fId                    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Function =
+  Function'
+    { _fFunctionARN           :: !(Maybe Text)
+    , _fFunctionConfiguration :: !(Maybe FunctionConfiguration)
+    , _fId                    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Function' with the minimum fields required to make a request.
@@ -573,15 +591,17 @@ instance ToJSON Function where
 -- | The configuration of the Lambda function.
 --
 -- /See:/ 'functionConfiguration' smart constructor.
-data FunctionConfiguration = FunctionConfiguration'
-  { _fcMemorySize   :: !(Maybe Int)
-  , _fcExecArgs     :: !(Maybe Text)
-  , _fcEnvironment  :: !(Maybe FunctionConfigurationEnvironment)
-  , _fcExecutable   :: !(Maybe Text)
-  , _fcPinned       :: !(Maybe Bool)
-  , _fcEncodingType :: !(Maybe EncodingType)
-  , _fcTimeout      :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FunctionConfiguration =
+  FunctionConfiguration'
+    { _fcMemorySize   :: !(Maybe Int)
+    , _fcExecArgs     :: !(Maybe Text)
+    , _fcEnvironment  :: !(Maybe FunctionConfigurationEnvironment)
+    , _fcExecutable   :: !(Maybe Text)
+    , _fcPinned       :: !(Maybe Bool)
+    , _fcEncodingType :: !(Maybe EncodingType)
+    , _fcTimeout      :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FunctionConfiguration' with the minimum fields required to make a request.
@@ -674,11 +694,13 @@ instance ToJSON FunctionConfiguration where
 -- | The environment configuration of the function.
 --
 -- /See:/ 'functionConfigurationEnvironment' smart constructor.
-data FunctionConfigurationEnvironment = FunctionConfigurationEnvironment'
-  { _fceVariables              :: !(Maybe (Map Text Text))
-  , _fceResourceAccessPolicies :: !(Maybe [ResourceAccessPolicy])
-  , _fceAccessSysfs            :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FunctionConfigurationEnvironment =
+  FunctionConfigurationEnvironment'
+    { _fceVariables              :: !(Maybe (Map Text Text))
+    , _fceResourceAccessPolicies :: !(Maybe [ResourceAccessPolicy])
+    , _fceAccessSysfs            :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FunctionConfigurationEnvironment' with the minimum fields required to make a request.
@@ -741,9 +763,11 @@ instance ToJSON FunctionConfigurationEnvironment
 -- | Information about a function definition version.
 --
 -- /See:/ 'functionDefinitionVersion' smart constructor.
-newtype FunctionDefinitionVersion = FunctionDefinitionVersion'
-  { _fdvFunctions :: Maybe [Function]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype FunctionDefinitionVersion =
+  FunctionDefinitionVersion'
+    { _fdvFunctions :: Maybe [Function]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FunctionDefinitionVersion' with the minimum fields required to make a request.
@@ -779,13 +803,15 @@ instance ToJSON FunctionDefinitionVersion where
 -- | Information about a logger
 --
 -- /See:/ 'greengrassLogger' smart constructor.
-data GreengrassLogger = GreengrassLogger'
-  { _glSpace     :: !(Maybe Int)
-  , _glComponent :: !(Maybe LoggerComponent)
-  , _glId        :: !(Maybe Text)
-  , _glType      :: !(Maybe LoggerType)
-  , _glLevel     :: !(Maybe LoggerLevel)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GreengrassLogger =
+  GreengrassLogger'
+    { _glSpace     :: !(Maybe Int)
+    , _glComponent :: !(Maybe LoggerComponent)
+    , _glId        :: !(Maybe Text)
+    , _glType      :: !(Maybe LoggerType)
+    , _glLevel     :: !(Maybe LoggerLevel)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GreengrassLogger' with the minimum fields required to make a request.
@@ -859,10 +885,12 @@ instance ToJSON GreengrassLogger where
 -- | Information about a certificate authority for a group.
 --
 -- /See:/ 'groupCertificateAuthorityProperties' smart constructor.
-data GroupCertificateAuthorityProperties = GroupCertificateAuthorityProperties'
-  { _gcapGroupCertificateAuthorityARN :: !(Maybe Text)
-  , _gcapGroupCertificateAuthorityId  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GroupCertificateAuthorityProperties =
+  GroupCertificateAuthorityProperties'
+    { _gcapGroupCertificateAuthorityARN :: !(Maybe Text)
+    , _gcapGroupCertificateAuthorityId  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GroupCertificateAuthorityProperties' with the minimum fields required to make a request.
@@ -907,15 +935,17 @@ instance NFData GroupCertificateAuthorityProperties
 -- | Information about a group.
 --
 -- /See:/ 'groupInformation' smart constructor.
-data GroupInformation = GroupInformation'
-  { _giLatestVersionARN     :: !(Maybe Text)
-  , _giARN                  :: !(Maybe Text)
-  , _giName                 :: !(Maybe Text)
-  , _giCreationTimestamp    :: !(Maybe Text)
-  , _giId                   :: !(Maybe Text)
-  , _giLatestVersion        :: !(Maybe Text)
-  , _giLastUpdatedTimestamp :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GroupInformation =
+  GroupInformation'
+    { _giLatestVersionARN     :: !(Maybe Text)
+    , _giARN                  :: !(Maybe Text)
+    , _giName                 :: !(Maybe Text)
+    , _giCreationTimestamp    :: !(Maybe Text)
+    , _giId                   :: !(Maybe Text)
+    , _giLatestVersion        :: !(Maybe Text)
+    , _giLastUpdatedTimestamp :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GroupInformation' with the minimum fields required to make a request.
@@ -996,10 +1026,12 @@ instance NFData GroupInformation where
 -- | Group owner related settings for local resources.
 --
 -- /See:/ 'groupOwnerSetting' smart constructor.
-data GroupOwnerSetting = GroupOwnerSetting'
-  { _gosAutoAddGroupOwner :: !(Maybe Bool)
-  , _gosGroupOwner        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GroupOwnerSetting =
+  GroupOwnerSetting'
+    { _gosAutoAddGroupOwner :: !(Maybe Bool)
+    , _gosGroupOwner        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GroupOwnerSetting' with the minimum fields required to make a request.
@@ -1044,14 +1076,16 @@ instance ToJSON GroupOwnerSetting where
 -- | Information about a group version.
 --
 -- /See:/ 'groupVersion' smart constructor.
-data GroupVersion = GroupVersion'
-  { _gvResourceDefinitionVersionARN     :: !(Maybe Text)
-  , _gvSubscriptionDefinitionVersionARN :: !(Maybe Text)
-  , _gvCoreDefinitionVersionARN         :: !(Maybe Text)
-  , _gvDeviceDefinitionVersionARN       :: !(Maybe Text)
-  , _gvFunctionDefinitionVersionARN     :: !(Maybe Text)
-  , _gvLoggerDefinitionVersionARN       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GroupVersion =
+  GroupVersion'
+    { _gvResourceDefinitionVersionARN     :: !(Maybe Text)
+    , _gvSubscriptionDefinitionVersionARN :: !(Maybe Text)
+    , _gvCoreDefinitionVersionARN         :: !(Maybe Text)
+    , _gvDeviceDefinitionVersionARN       :: !(Maybe Text)
+    , _gvFunctionDefinitionVersionARN     :: !(Maybe Text)
+    , _gvLoggerDefinitionVersionARN       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GroupVersion' with the minimum fields required to make a request.
@@ -1142,10 +1176,12 @@ instance ToJSON GroupVersion where
 -- | Attributes that define a local device resource.
 --
 -- /See:/ 'localDeviceResourceData' smart constructor.
-data LocalDeviceResourceData = LocalDeviceResourceData'
-  { _ldrdGroupOwnerSetting :: !(Maybe GroupOwnerSetting)
-  , _ldrdSourcePath        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LocalDeviceResourceData =
+  LocalDeviceResourceData'
+    { _ldrdGroupOwnerSetting :: !(Maybe GroupOwnerSetting)
+    , _ldrdSourcePath        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LocalDeviceResourceData' with the minimum fields required to make a request.
@@ -1191,11 +1227,13 @@ instance ToJSON LocalDeviceResourceData where
 -- | Attributes that define a local volume resource.
 --
 -- /See:/ 'localVolumeResourceData' smart constructor.
-data LocalVolumeResourceData = LocalVolumeResourceData'
-  { _lvrdGroupOwnerSetting :: !(Maybe GroupOwnerSetting)
-  , _lvrdDestinationPath   :: !(Maybe Text)
-  , _lvrdSourcePath        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LocalVolumeResourceData =
+  LocalVolumeResourceData'
+    { _lvrdGroupOwnerSetting :: !(Maybe GroupOwnerSetting)
+    , _lvrdDestinationPath   :: !(Maybe Text)
+    , _lvrdSourcePath        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LocalVolumeResourceData' with the minimum fields required to make a request.
@@ -1253,9 +1291,11 @@ instance ToJSON LocalVolumeResourceData where
 -- | Information about a logger definition version.
 --
 -- /See:/ 'loggerDefinitionVersion' smart constructor.
-newtype LoggerDefinitionVersion = LoggerDefinitionVersion'
-  { _ldvLoggers :: Maybe [GreengrassLogger]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype LoggerDefinitionVersion =
+  LoggerDefinitionVersion'
+    { _ldvLoggers :: Maybe [GreengrassLogger]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LoggerDefinitionVersion' with the minimum fields required to make a request.
@@ -1290,11 +1330,13 @@ instance ToJSON LoggerDefinitionVersion where
 -- | Information about a resource.
 --
 -- /See:/ 'resource' smart constructor.
-data Resource = Resource'
-  { _rResourceDataContainer :: !(Maybe ResourceDataContainer)
-  , _rName                  :: !(Maybe Text)
-  , _rId                    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Resource =
+  Resource'
+    { _rResourceDataContainer :: !(Maybe ResourceDataContainer)
+    , _rName                  :: !(Maybe Text)
+    , _rId                    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Resource' with the minimum fields required to make a request.
@@ -1348,10 +1390,12 @@ instance ToJSON Resource where
 -- | A policy used by the function to access a resource.
 --
 -- /See:/ 'resourceAccessPolicy' smart constructor.
-data ResourceAccessPolicy = ResourceAccessPolicy'
-  { _rapResourceId :: !(Maybe Text)
-  , _rapPermission :: !(Maybe Permission)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResourceAccessPolicy =
+  ResourceAccessPolicy'
+    { _rapResourceId :: !(Maybe Text)
+    , _rapPermission :: !(Maybe Permission)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResourceAccessPolicy' with the minimum fields required to make a request.
@@ -1396,12 +1440,14 @@ instance ToJSON ResourceAccessPolicy where
 -- | A container for resource data. The container takes only one of the following supported resource data types: ''LocalDeviceResourceData'', ''LocalVolumeResourceData'', ''SageMakerMachineLearningModelResourceData'', ''S3MachineLearningModelResourceData''.
 --
 -- /See:/ 'resourceDataContainer' smart constructor.
-data ResourceDataContainer = ResourceDataContainer'
-  { _rdcS3MachineLearningModelResourceData :: !(Maybe S3MachineLearningModelResourceData)
-  , _rdcSageMakerMachineLearningModelResourceData :: !(Maybe SageMakerMachineLearningModelResourceData)
-  , _rdcLocalVolumeResourceData :: !(Maybe LocalVolumeResourceData)
-  , _rdcLocalDeviceResourceData :: !(Maybe LocalDeviceResourceData)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResourceDataContainer =
+  ResourceDataContainer'
+    { _rdcS3MachineLearningModelResourceData :: !(Maybe S3MachineLearningModelResourceData)
+    , _rdcSageMakerMachineLearningModelResourceData :: !(Maybe SageMakerMachineLearningModelResourceData)
+    , _rdcLocalVolumeResourceData :: !(Maybe LocalVolumeResourceData)
+    , _rdcLocalDeviceResourceData :: !(Maybe LocalDeviceResourceData)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResourceDataContainer' with the minimum fields required to make a request.
@@ -1472,9 +1518,11 @@ instance ToJSON ResourceDataContainer where
 -- | Information about a resource definition version.
 --
 -- /See:/ 'resourceDefinitionVersion' smart constructor.
-newtype ResourceDefinitionVersion = ResourceDefinitionVersion'
-  { _rdvResources :: Maybe [Resource]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ResourceDefinitionVersion =
+  ResourceDefinitionVersion'
+    { _rdvResources :: Maybe [Resource]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResourceDefinitionVersion' with the minimum fields required to make a request.
@@ -1510,10 +1558,12 @@ instance ToJSON ResourceDefinitionVersion where
 -- | Attributes that define an S3 machine learning resource.
 --
 -- /See:/ 's3MachineLearningModelResourceData' smart constructor.
-data S3MachineLearningModelResourceData = S3MachineLearningModelResourceData'
-  { _smlmrdDestinationPath :: !(Maybe Text)
-  , _smlmrdS3URI           :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data S3MachineLearningModelResourceData =
+  S3MachineLearningModelResourceData'
+    { _smlmrdDestinationPath :: !(Maybe Text)
+    , _smlmrdS3URI           :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'S3MachineLearningModelResourceData' with the minimum fields required to make a request.
@@ -1563,10 +1613,12 @@ instance ToJSON S3MachineLearningModelResourceData
 -- | Attributes that define an SageMaker machine learning resource.
 --
 -- /See:/ 'sageMakerMachineLearningModelResourceData' smart constructor.
-data SageMakerMachineLearningModelResourceData = SageMakerMachineLearningModelResourceData'
-  { _smmlmrdSageMakerJobARN :: !(Maybe Text)
-  , _smmlmrdDestinationPath :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SageMakerMachineLearningModelResourceData =
+  SageMakerMachineLearningModelResourceData'
+    { _smmlmrdSageMakerJobARN :: !(Maybe Text)
+    , _smmlmrdDestinationPath :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SageMakerMachineLearningModelResourceData' with the minimum fields required to make a request.
@@ -1622,12 +1674,14 @@ instance ToJSON
 -- | Information about a subscription.
 --
 -- /See:/ 'subscription' smart constructor.
-data Subscription = Subscription'
-  { _sSubject :: !(Maybe Text)
-  , _sSource  :: !(Maybe Text)
-  , _sId      :: !(Maybe Text)
-  , _sTarget  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Subscription =
+  Subscription'
+    { _sSubject :: !(Maybe Text)
+    , _sSource  :: !(Maybe Text)
+    , _sId      :: !(Maybe Text)
+    , _sTarget  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Subscription' with the minimum fields required to make a request.
@@ -1692,9 +1746,11 @@ instance ToJSON Subscription where
 -- | Information about a subscription definition version.
 --
 -- /See:/ 'subscriptionDefinitionVersion' smart constructor.
-newtype SubscriptionDefinitionVersion = SubscriptionDefinitionVersion'
-  { _sdvSubscriptions :: Maybe [Subscription]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype SubscriptionDefinitionVersion =
+  SubscriptionDefinitionVersion'
+    { _sdvSubscriptions :: Maybe [Subscription]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SubscriptionDefinitionVersion' with the minimum fields required to make a request.
@@ -1732,12 +1788,14 @@ instance ToJSON SubscriptionDefinitionVersion where
 -- | Information about a version.
 --
 -- /See:/ 'versionInformation' smart constructor.
-data VersionInformation = VersionInformation'
-  { _viARN               :: !(Maybe Text)
-  , _viCreationTimestamp :: !(Maybe Text)
-  , _viVersion           :: !(Maybe Text)
-  , _viId                :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VersionInformation =
+  VersionInformation'
+    { _viARN               :: !(Maybe Text)
+    , _viCreationTimestamp :: !(Maybe Text)
+    , _viVersion           :: !(Maybe Text)
+    , _viId                :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VersionInformation' with the minimum fields required to make a request.

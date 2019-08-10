@@ -48,9 +48,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getDiskSnapshots' smart constructor.
-newtype GetDiskSnapshots = GetDiskSnapshots'
-  { _gdsPageToken :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetDiskSnapshots =
+  GetDiskSnapshots'
+    { _gdsPageToken :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDiskSnapshots' with the minimum fields required to make a request.
@@ -104,11 +106,13 @@ instance ToQuery GetDiskSnapshots where
         toQuery = const mempty
 
 -- | /See:/ 'getDiskSnapshotsResponse' smart constructor.
-data GetDiskSnapshotsResponse = GetDiskSnapshotsResponse'
-  { _gdssrsNextPageToken  :: !(Maybe Text)
-  , _gdssrsDiskSnapshots  :: !(Maybe [DiskSnapshot])
-  , _gdssrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDiskSnapshotsResponse =
+  GetDiskSnapshotsResponse'
+    { _gdssrsNextPageToken  :: !(Maybe Text)
+    , _gdssrsDiskSnapshots  :: !(Maybe [DiskSnapshot])
+    , _gdssrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDiskSnapshotsResponse' with the minimum fields required to make a request.

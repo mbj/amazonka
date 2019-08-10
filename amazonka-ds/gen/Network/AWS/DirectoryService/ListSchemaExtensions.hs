@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listSchemaExtensions' smart constructor.
-data ListSchemaExtensions = ListSchemaExtensions'
-  { _lseNextToken   :: !(Maybe Text)
-  , _lseLimit       :: !(Maybe Nat)
-  , _lseDirectoryId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListSchemaExtensions =
+  ListSchemaExtensions'
+    { _lseNextToken   :: !(Maybe Text)
+    , _lseLimit       :: !(Maybe Nat)
+    , _lseDirectoryId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListSchemaExtensions' with the minimum fields required to make a request.
@@ -128,11 +130,13 @@ instance ToQuery ListSchemaExtensions where
         toQuery = const mempty
 
 -- | /See:/ 'listSchemaExtensionsResponse' smart constructor.
-data ListSchemaExtensionsResponse = ListSchemaExtensionsResponse'
-  { _lsersSchemaExtensionsInfo :: !(Maybe [SchemaExtensionInfo])
-  , _lsersNextToken            :: !(Maybe Text)
-  , _lsersResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListSchemaExtensionsResponse =
+  ListSchemaExtensionsResponse'
+    { _lsersSchemaExtensionsInfo :: !(Maybe [SchemaExtensionInfo])
+    , _lsersNextToken            :: !(Maybe Text)
+    , _lsersResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListSchemaExtensionsResponse' with the minimum fields required to make a request.

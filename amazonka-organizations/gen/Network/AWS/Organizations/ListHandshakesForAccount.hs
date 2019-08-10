@@ -55,11 +55,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listHandshakesForAccount' smart constructor.
-data ListHandshakesForAccount = ListHandshakesForAccount'
-  { _lhfaNextToken  :: !(Maybe Text)
-  , _lhfaFilter     :: !(Maybe HandshakeFilter)
-  , _lhfaMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListHandshakesForAccount =
+  ListHandshakesForAccount'
+    { _lhfaNextToken  :: !(Maybe Text)
+    , _lhfaFilter     :: !(Maybe HandshakeFilter)
+    , _lhfaMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListHandshakesForAccount' with the minimum fields required to make a request.
@@ -138,11 +140,13 @@ instance ToQuery ListHandshakesForAccount where
         toQuery = const mempty
 
 -- | /See:/ 'listHandshakesForAccountResponse' smart constructor.
-data ListHandshakesForAccountResponse = ListHandshakesForAccountResponse'
-  { _lhfarsHandshakes     :: !(Maybe [Handshake])
-  , _lhfarsNextToken      :: !(Maybe Text)
-  , _lhfarsResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data ListHandshakesForAccountResponse =
+  ListHandshakesForAccountResponse'
+    { _lhfarsHandshakes     :: !(Maybe [Handshake])
+    , _lhfarsNextToken      :: !(Maybe Text)
+    , _lhfarsResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListHandshakesForAccountResponse' with the minimum fields required to make a request.

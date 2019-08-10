@@ -52,11 +52,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'adminDeleteUserAttributes' smart constructor.
-data AdminDeleteUserAttributes = AdminDeleteUserAttributes'
-  { _aduaUserPoolId         :: !Text
-  , _aduaUsername           :: !(Sensitive Text)
-  , _aduaUserAttributeNames :: ![Text]
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data AdminDeleteUserAttributes =
+  AdminDeleteUserAttributes'
+    { _aduaUserPoolId         :: !Text
+    , _aduaUsername           :: !(Sensitive Text)
+    , _aduaUserAttributeNames :: ![Text]
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AdminDeleteUserAttributes' with the minimum fields required to make a request.
@@ -136,9 +138,11 @@ instance ToQuery AdminDeleteUserAttributes where
 --
 --
 -- /See:/ 'adminDeleteUserAttributesResponse' smart constructor.
-newtype AdminDeleteUserAttributesResponse = AdminDeleteUserAttributesResponse'
-  { _aduarsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AdminDeleteUserAttributesResponse =
+  AdminDeleteUserAttributesResponse'
+    { _aduarsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AdminDeleteUserAttributesResponse' with the minimum fields required to make a request.

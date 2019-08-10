@@ -46,10 +46,12 @@ import Network.AWS.Route53AutoNaming.Types
 import Network.AWS.Route53AutoNaming.Types.Product
 
 -- | /See:/ 'getInstance' smart constructor.
-data GetInstance = GetInstance'
-  { _giServiceId  :: !Text
-  , _giInstanceId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetInstance =
+  GetInstance'
+    { _giServiceId  :: !Text
+    , _giInstanceId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetInstance' with the minimum fields required to make a request.
@@ -112,10 +114,12 @@ instance ToQuery GetInstance where
         toQuery = const mempty
 
 -- | /See:/ 'getInstanceResponse' smart constructor.
-data GetInstanceResponse = GetInstanceResponse'
-  { _girsInstance       :: !(Maybe Instance)
-  , _girsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetInstanceResponse =
+  GetInstanceResponse'
+    { _girsInstance       :: !(Maybe Instance)
+    , _girsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetInstanceResponse' with the minimum fields required to make a request.

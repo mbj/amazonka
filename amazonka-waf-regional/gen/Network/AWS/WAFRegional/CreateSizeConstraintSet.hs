@@ -61,10 +61,12 @@ import Network.AWS.WAFRegional.Types
 import Network.AWS.WAFRegional.Types.Product
 
 -- | /See:/ 'createSizeConstraintSet' smart constructor.
-data CreateSizeConstraintSet = CreateSizeConstraintSet'
-  { _cscsName        :: !Text
-  , _cscsChangeToken :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateSizeConstraintSet =
+  CreateSizeConstraintSet'
+    { _cscsName        :: !Text
+    , _cscsChangeToken :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateSizeConstraintSet' with the minimum fields required to make a request.
@@ -130,11 +132,13 @@ instance ToQuery CreateSizeConstraintSet where
         toQuery = const mempty
 
 -- | /See:/ 'createSizeConstraintSetResponse' smart constructor.
-data CreateSizeConstraintSetResponse = CreateSizeConstraintSetResponse'
-  { _cscsrsSizeConstraintSet :: !(Maybe SizeConstraintSet)
-  , _cscsrsChangeToken       :: !(Maybe Text)
-  , _cscsrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateSizeConstraintSetResponse =
+  CreateSizeConstraintSetResponse'
+    { _cscsrsSizeConstraintSet :: !(Maybe SizeConstraintSet)
+    , _cscsrsChangeToken       :: !(Maybe Text)
+    , _cscsrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateSizeConstraintSetResponse' with the minimum fields required to make a request.

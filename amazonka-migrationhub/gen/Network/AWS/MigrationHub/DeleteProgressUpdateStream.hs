@@ -57,10 +57,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteProgressUpdateStream' smart constructor.
-data DeleteProgressUpdateStream = DeleteProgressUpdateStream'
-  { _dpusDryRun                   :: !(Maybe Bool)
-  , _dpusProgressUpdateStreamName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteProgressUpdateStream =
+  DeleteProgressUpdateStream'
+    { _dpusDryRun                   :: !(Maybe Bool)
+    , _dpusProgressUpdateStreamName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteProgressUpdateStream' with the minimum fields required to make a request.
@@ -128,9 +130,11 @@ instance ToQuery DeleteProgressUpdateStream where
         toQuery = const mempty
 
 -- | /See:/ 'deleteProgressUpdateStreamResponse' smart constructor.
-newtype DeleteProgressUpdateStreamResponse = DeleteProgressUpdateStreamResponse'
-  { _dpusrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteProgressUpdateStreamResponse =
+  DeleteProgressUpdateStreamResponse'
+    { _dpusrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteProgressUpdateStreamResponse' with the minimum fields required to make a request.

@@ -49,9 +49,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getFunctionDefinition' smart constructor.
-newtype GetFunctionDefinition = GetFunctionDefinition'
-  { _gfdFunctionDefinitionId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetFunctionDefinition =
+  GetFunctionDefinition'
+    { _gfdFunctionDefinitionId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetFunctionDefinition' with the minimum fields required to make a request.
@@ -107,16 +109,18 @@ instance ToQuery GetFunctionDefinition where
         toQuery = const mempty
 
 -- | /See:/ 'getFunctionDefinitionResponse' smart constructor.
-data GetFunctionDefinitionResponse = GetFunctionDefinitionResponse'
-  { _gfdrsLatestVersionARN     :: !(Maybe Text)
-  , _gfdrsARN                  :: !(Maybe Text)
-  , _gfdrsName                 :: !(Maybe Text)
-  , _gfdrsCreationTimestamp    :: !(Maybe Text)
-  , _gfdrsId                   :: !(Maybe Text)
-  , _gfdrsLatestVersion        :: !(Maybe Text)
-  , _gfdrsLastUpdatedTimestamp :: !(Maybe Text)
-  , _gfdrsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetFunctionDefinitionResponse =
+  GetFunctionDefinitionResponse'
+    { _gfdrsLatestVersionARN     :: !(Maybe Text)
+    , _gfdrsARN                  :: !(Maybe Text)
+    , _gfdrsName                 :: !(Maybe Text)
+    , _gfdrsCreationTimestamp    :: !(Maybe Text)
+    , _gfdrsId                   :: !(Maybe Text)
+    , _gfdrsLatestVersion        :: !(Maybe Text)
+    , _gfdrsLastUpdatedTimestamp :: !(Maybe Text)
+    , _gfdrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetFunctionDefinitionResponse' with the minimum fields required to make a request.

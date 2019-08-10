@@ -49,10 +49,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteUserAttributes' smart constructor.
-data DeleteUserAttributes = DeleteUserAttributes'
-  { _duaUserAttributeNames :: ![Text]
-  , _duaAccessToken        :: !(Sensitive Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data DeleteUserAttributes =
+  DeleteUserAttributes'
+    { _duaUserAttributeNames :: ![Text]
+    , _duaAccessToken        :: !(Sensitive Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteUserAttributes' with the minimum fields required to make a request.
@@ -123,9 +125,11 @@ instance ToQuery DeleteUserAttributes where
 --
 --
 -- /See:/ 'deleteUserAttributesResponse' smart constructor.
-newtype DeleteUserAttributesResponse = DeleteUserAttributesResponse'
-  { _duarsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteUserAttributesResponse =
+  DeleteUserAttributesResponse'
+    { _duarsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteUserAttributesResponse' with the minimum fields required to make a request.

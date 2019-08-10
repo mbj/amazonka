@@ -46,9 +46,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteClientCertificate' smart constructor.
-newtype DeleteClientCertificate = DeleteClientCertificate'
-  { _dccClientCertificateId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteClientCertificate =
+  DeleteClientCertificate'
+    { _dccClientCertificateId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteClientCertificate' with the minimum fields required to make a request.

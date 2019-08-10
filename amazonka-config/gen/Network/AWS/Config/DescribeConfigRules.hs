@@ -54,10 +54,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeConfigRules' smart constructor.
-data DescribeConfigRules = DescribeConfigRules'
-  { _dcrConfigRuleNames :: !(Maybe [Text])
-  , _dcrNextToken       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeConfigRules =
+  DescribeConfigRules'
+    { _dcrConfigRuleNames :: !(Maybe [Text])
+    , _dcrNextToken       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeConfigRules' with the minimum fields required to make a request.
@@ -132,11 +134,13 @@ instance ToQuery DescribeConfigRules where
 --
 --
 -- /See:/ 'describeConfigRulesResponse' smart constructor.
-data DescribeConfigRulesResponse = DescribeConfigRulesResponse'
-  { _dcrrsConfigRules    :: !(Maybe [ConfigRule])
-  , _dcrrsNextToken      :: !(Maybe Text)
-  , _dcrrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeConfigRulesResponse =
+  DescribeConfigRulesResponse'
+    { _dcrrsConfigRules    :: !(Maybe [ConfigRule])
+    , _dcrrsNextToken      :: !(Maybe Text)
+    , _dcrrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeConfigRulesResponse' with the minimum fields required to make a request.

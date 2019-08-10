@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeFleets' smart constructor.
-data DescribeFleets = DescribeFleets'
-  { _dfNextToken :: !(Maybe Text)
-  , _dfNames     :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeFleets =
+  DescribeFleets'
+    { _dfNextToken :: !(Maybe Text)
+    , _dfNames     :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeFleets' with the minimum fields required to make a request.
@@ -111,11 +113,13 @@ instance ToQuery DescribeFleets where
         toQuery = const mempty
 
 -- | /See:/ 'describeFleetsResponse' smart constructor.
-data DescribeFleetsResponse = DescribeFleetsResponse'
-  { _dfsrsNextToken      :: !(Maybe Text)
-  , _dfsrsFleets         :: !(Maybe [Fleet])
-  , _dfsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeFleetsResponse =
+  DescribeFleetsResponse'
+    { _dfsrsNextToken      :: !(Maybe Text)
+    , _dfsrsFleets         :: !(Maybe [Fleet])
+    , _dfsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeFleetsResponse' with the minimum fields required to make a request.

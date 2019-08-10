@@ -49,9 +49,11 @@ import Network.AWS.StorageGateway.Types.Product
 --
 --
 -- /See:/ 'describeStorediSCSIVolumes' smart constructor.
-newtype DescribeStorediSCSIVolumes = DescribeStorediSCSIVolumes'
-  { _dsscsivVolumeARNs :: [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeStorediSCSIVolumes =
+  DescribeStorediSCSIVolumes'
+    { _dsscsivVolumeARNs :: [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeStorediSCSIVolumes' with the minimum fields required to make a request.
@@ -107,10 +109,12 @@ instance ToQuery DescribeStorediSCSIVolumes where
         toQuery = const mempty
 
 -- | /See:/ 'describeStorediSCSIVolumesResponse' smart constructor.
-data DescribeStorediSCSIVolumesResponse = DescribeStorediSCSIVolumesResponse'
-  { _dsscsivrsStorediSCSIVolumes :: !(Maybe [StorediSCSIVolume])
-  , _dsscsivrsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeStorediSCSIVolumesResponse =
+  DescribeStorediSCSIVolumesResponse'
+    { _dsscsivrsStorediSCSIVolumes :: !(Maybe [StorediSCSIVolume])
+    , _dsscsivrsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeStorediSCSIVolumesResponse' with the minimum fields required to make a request.

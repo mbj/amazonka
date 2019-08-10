@@ -95,10 +95,12 @@ instance ToQuery DescribeMyUserProfile where
 --
 --
 -- /See:/ 'describeMyUserProfileResponse' smart constructor.
-data DescribeMyUserProfileResponse = DescribeMyUserProfileResponse'
-  { _dmuprsUserProfile    :: !(Maybe SelfUserProfile)
-  , _dmuprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeMyUserProfileResponse =
+  DescribeMyUserProfileResponse'
+    { _dmuprsUserProfile    :: !(Maybe SelfUserProfile)
+    , _dmuprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeMyUserProfileResponse' with the minimum fields required to make a request.

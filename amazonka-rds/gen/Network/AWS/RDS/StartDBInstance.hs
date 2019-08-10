@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'startDBInstance' smart constructor.
-newtype StartDBInstance = StartDBInstance'
-  { _sdbiDBInstanceIdentifier :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StartDBInstance =
+  StartDBInstance'
+    { _sdbiDBInstanceIdentifier :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartDBInstance' with the minimum fields required to make a request.
@@ -93,10 +95,12 @@ instance ToQuery StartDBInstance where
                "DBInstanceIdentifier" =: _sdbiDBInstanceIdentifier]
 
 -- | /See:/ 'startDBInstanceResponse' smart constructor.
-data StartDBInstanceResponse = StartDBInstanceResponse'
-  { _sdbirsDBInstance     :: !(Maybe DBInstance)
-  , _sdbirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartDBInstanceResponse =
+  StartDBInstanceResponse'
+    { _sdbirsDBInstance     :: !(Maybe DBInstance)
+    , _sdbirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartDBInstanceResponse' with the minimum fields required to make a request.

@@ -50,14 +50,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createStackInstances' smart constructor.
-data CreateStackInstances = CreateStackInstances'
-  { _csiOperationPreferences :: !(Maybe StackSetOperationPreferences)
-  , _csiOperationId          :: !(Maybe Text)
-  , _csiParameterOverrides   :: !(Maybe [Parameter])
-  , _csiStackSetName         :: !Text
-  , _csiAccounts             :: ![Text]
-  , _csiRegions              :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateStackInstances =
+  CreateStackInstances'
+    { _csiOperationPreferences :: !(Maybe StackSetOperationPreferences)
+    , _csiOperationId          :: !(Maybe Text)
+    , _csiParameterOverrides   :: !(Maybe [Parameter])
+    , _csiStackSetName         :: !Text
+    , _csiAccounts             :: ![Text]
+    , _csiRegions              :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateStackInstances' with the minimum fields required to make a request.
@@ -148,10 +150,12 @@ instance ToQuery CreateStackInstances where
                "Regions" =: toQueryList "member" _csiRegions]
 
 -- | /See:/ 'createStackInstancesResponse' smart constructor.
-data CreateStackInstancesResponse = CreateStackInstancesResponse'
-  { _csirsOperationId    :: !(Maybe Text)
-  , _csirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateStackInstancesResponse =
+  CreateStackInstancesResponse'
+    { _csirsOperationId    :: !(Maybe Text)
+    , _csirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateStackInstancesResponse' with the minimum fields required to make a request.

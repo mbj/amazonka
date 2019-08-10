@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeDefaultParameters' smart constructor.
-data DescribeDefaultParameters = DescribeDefaultParameters'
-  { _ddpNextToken  :: !(Maybe Text)
-  , _ddpMaxResults :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDefaultParameters =
+  DescribeDefaultParameters'
+    { _ddpNextToken  :: !(Maybe Text)
+    , _ddpMaxResults :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDefaultParameters' with the minimum fields required to make a request.
@@ -114,11 +116,13 @@ instance ToQuery DescribeDefaultParameters where
         toQuery = const mempty
 
 -- | /See:/ 'describeDefaultParametersResponse' smart constructor.
-data DescribeDefaultParametersResponse = DescribeDefaultParametersResponse'
-  { _ddprsNextToken      :: !(Maybe Text)
-  , _ddprsParameters     :: !(Maybe [Parameter])
-  , _ddprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDefaultParametersResponse =
+  DescribeDefaultParametersResponse'
+    { _ddprsNextToken      :: !(Maybe Text)
+    , _ddprsParameters     :: !(Maybe [Parameter])
+    , _ddprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDefaultParametersResponse' with the minimum fields required to make a request.

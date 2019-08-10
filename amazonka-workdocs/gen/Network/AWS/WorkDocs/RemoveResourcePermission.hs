@@ -45,12 +45,14 @@ import Network.AWS.WorkDocs.Types
 import Network.AWS.WorkDocs.Types.Product
 
 -- | /See:/ 'removeResourcePermission' smart constructor.
-data RemoveResourcePermission = RemoveResourcePermission'
-  { _rrpPrincipalType       :: !(Maybe PrincipalType)
-  , _rrpAuthenticationToken :: !(Maybe (Sensitive Text))
-  , _rrpResourceId          :: !Text
-  , _rrpPrincipalId         :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data RemoveResourcePermission =
+  RemoveResourcePermission'
+    { _rrpPrincipalType       :: !(Maybe PrincipalType)
+    , _rrpAuthenticationToken :: !(Maybe (Sensitive Text))
+    , _rrpResourceId          :: !Text
+    , _rrpPrincipalId         :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RemoveResourcePermission' with the minimum fields required to make a request.

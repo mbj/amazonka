@@ -55,13 +55,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getExport' smart constructor.
-data GetExport = GetExport'
-  { _geParameters :: !(Maybe (Map Text Text))
-  , _geAccepts    :: !(Maybe Text)
-  , _geRestAPIId  :: !Text
-  , _geStageName  :: !Text
-  , _geExportType :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetExport =
+  GetExport'
+    { _geParameters :: !(Maybe (Map Text Text))
+    , _geAccepts    :: !(Maybe Text)
+    , _geRestAPIId  :: !Text
+    , _geStageName  :: !Text
+    , _geExportType :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetExport' with the minimum fields required to make a request.
@@ -151,12 +153,14 @@ instance ToQuery GetExport where
 --
 --
 -- /See:/ 'getExportResponse' smart constructor.
-data GetExportResponse = GetExportResponse'
-  { _gersBody               :: !(Maybe ByteString)
-  , _gersContentDisposition :: !(Maybe Text)
-  , _gersContentType        :: !(Maybe Text)
-  , _gersResponseStatus     :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data GetExportResponse =
+  GetExportResponse'
+    { _gersBody               :: !(Maybe ByteString)
+    , _gersContentDisposition :: !(Maybe Text)
+    , _gersContentType        :: !(Maybe Text)
+    , _gersResponseStatus     :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetExportResponse' with the minimum fields required to make a request.

@@ -52,11 +52,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'setLoadBalancerListenerSSLCertificate' smart constructor.
-data SetLoadBalancerListenerSSLCertificate = SetLoadBalancerListenerSSLCertificate'
-  { _slblscLoadBalancerName :: !Text
-  , _slblscLoadBalancerPort :: !Int
-  , _slblscSSLCertificateId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SetLoadBalancerListenerSSLCertificate =
+  SetLoadBalancerListenerSSLCertificate'
+    { _slblscLoadBalancerName :: !Text
+    , _slblscLoadBalancerPort :: !Int
+    , _slblscSSLCertificateId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetLoadBalancerListenerSSLCertificate' with the minimum fields required to make a request.
@@ -140,9 +142,11 @@ instance ToQuery
 --
 --
 -- /See:/ 'setLoadBalancerListenerSSLCertificateResponse' smart constructor.
-newtype SetLoadBalancerListenerSSLCertificateResponse = SetLoadBalancerListenerSSLCertificateResponse'
-  { _slblscrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype SetLoadBalancerListenerSSLCertificateResponse =
+  SetLoadBalancerListenerSSLCertificateResponse'
+    { _slblscrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetLoadBalancerListenerSSLCertificateResponse' with the minimum fields required to make a request.

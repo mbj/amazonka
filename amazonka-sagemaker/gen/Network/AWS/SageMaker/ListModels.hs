@@ -55,15 +55,17 @@ import Network.AWS.SageMaker.Types
 import Network.AWS.SageMaker.Types.Product
 
 -- | /See:/ 'listModels' smart constructor.
-data ListModels = ListModels'
-  { _lmNameContains       :: !(Maybe Text)
-  , _lmCreationTimeAfter  :: !(Maybe POSIX)
-  , _lmNextToken          :: !(Maybe Text)
-  , _lmSortOrder          :: !(Maybe OrderKey)
-  , _lmCreationTimeBefore :: !(Maybe POSIX)
-  , _lmMaxResults         :: !(Maybe Nat)
-  , _lmSortBy             :: !(Maybe ModelSortKey)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListModels =
+  ListModels'
+    { _lmNameContains       :: !(Maybe Text)
+    , _lmCreationTimeAfter  :: !(Maybe POSIX)
+    , _lmNextToken          :: !(Maybe Text)
+    , _lmSortOrder          :: !(Maybe OrderKey)
+    , _lmCreationTimeBefore :: !(Maybe POSIX)
+    , _lmMaxResults         :: !(Maybe Nat)
+    , _lmSortBy             :: !(Maybe ModelSortKey)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListModels' with the minimum fields required to make a request.
@@ -174,11 +176,13 @@ instance ToQuery ListModels where
         toQuery = const mempty
 
 -- | /See:/ 'listModelsResponse' smart constructor.
-data ListModelsResponse = ListModelsResponse'
-  { _lmrsNextToken      :: !(Maybe Text)
-  , _lmrsResponseStatus :: !Int
-  , _lmrsModels         :: ![ModelSummary]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListModelsResponse =
+  ListModelsResponse'
+    { _lmrsNextToken      :: !(Maybe Text)
+    , _lmrsResponseStatus :: !Int
+    , _lmrsModels         :: ![ModelSummary]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListModelsResponse' with the minimum fields required to make a request.

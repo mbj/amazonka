@@ -48,9 +48,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteUpload' smart constructor.
-newtype DeleteUpload = DeleteUpload'
-  { _duArn :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteUpload =
+  DeleteUpload'
+    { _duArn :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteUpload' with the minimum fields required to make a request.
@@ -104,9 +106,11 @@ instance ToQuery DeleteUpload where
 --
 --
 -- /See:/ 'deleteUploadResponse' smart constructor.
-newtype DeleteUploadResponse = DeleteUploadResponse'
-  { _dursResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteUploadResponse =
+  DeleteUploadResponse'
+    { _dursResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteUploadResponse' with the minimum fields required to make a request.

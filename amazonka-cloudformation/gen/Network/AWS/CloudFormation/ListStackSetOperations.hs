@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listStackSetOperations' smart constructor.
-data ListStackSetOperations = ListStackSetOperations'
-  { _lssoNextToken    :: !(Maybe Text)
-  , _lssoMaxResults   :: !(Maybe Nat)
-  , _lssoStackSetName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListStackSetOperations =
+  ListStackSetOperations'
+    { _lssoNextToken    :: !(Maybe Text)
+    , _lssoMaxResults   :: !(Maybe Nat)
+    , _lssoStackSetName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListStackSetOperations' with the minimum fields required to make a request.
@@ -121,11 +123,13 @@ instance ToQuery ListStackSetOperations where
                "StackSetName" =: _lssoStackSetName]
 
 -- | /See:/ 'listStackSetOperationsResponse' smart constructor.
-data ListStackSetOperationsResponse = ListStackSetOperationsResponse'
-  { _lssorsNextToken      :: !(Maybe Text)
-  , _lssorsSummaries      :: !(Maybe [StackSetOperationSummary])
-  , _lssorsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListStackSetOperationsResponse =
+  ListStackSetOperationsResponse'
+    { _lssorsNextToken      :: !(Maybe Text)
+    , _lssorsSummaries      :: !(Maybe [StackSetOperationSummary])
+    , _lssorsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListStackSetOperationsResponse' with the minimum fields required to make a request.

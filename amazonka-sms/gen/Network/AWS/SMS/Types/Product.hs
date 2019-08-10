@@ -24,18 +24,20 @@ import Network.AWS.SMS.Types.Sum
 -- | Object representing a Connector
 --
 -- /See:/ 'connector' smart constructor.
-data Connector = Connector'
-  { _cStatus         :: !(Maybe ConnectorStatus)
-  , _cVmManagerName  :: !(Maybe Text)
-  , _cIpAddress      :: !(Maybe Text)
-  , _cVmManagerId    :: !(Maybe Text)
-  , _cVmManagerType  :: !(Maybe VMManagerType)
-  , _cConnectorId    :: !(Maybe Text)
-  , _cAssociatedOn   :: !(Maybe POSIX)
-  , _cMacAddress     :: !(Maybe Text)
-  , _cVersion        :: !(Maybe Text)
-  , _cCapabilityList :: !(Maybe [ConnectorCapability])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Connector =
+  Connector'
+    { _cStatus         :: !(Maybe ConnectorStatus)
+    , _cVmManagerName  :: !(Maybe Text)
+    , _cIpAddress      :: !(Maybe Text)
+    , _cVmManagerId    :: !(Maybe Text)
+    , _cVmManagerType  :: !(Maybe VMManagerType)
+    , _cConnectorId    :: !(Maybe Text)
+    , _cAssociatedOn   :: !(Maybe POSIX)
+    , _cMacAddress     :: !(Maybe Text)
+    , _cVersion        :: !(Maybe Text)
+    , _cCapabilityList :: !(Maybe [ConnectorCapability])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Connector' with the minimum fields required to make a request.
@@ -140,22 +142,24 @@ instance NFData Connector where
 -- | Object representing a Replication Job
 --
 -- /See:/ 'replicationJob' smart constructor.
-data ReplicationJob = ReplicationJob'
-  { _rjFrequency                   :: !(Maybe Int)
-  , _rjState                       :: !(Maybe ReplicationJobState)
-  , _rjServerType                  :: !(Maybe ServerType)
-  , _rjServerId                    :: !(Maybe Text)
-  , _rjLicenseType                 :: !(Maybe LicenseType)
-  , _rjRoleName                    :: !(Maybe Text)
-  , _rjVmServer                    :: !(Maybe VMServer)
-  , _rjReplicationJobId            :: !(Maybe Text)
-  , _rjReplicationRunList          :: !(Maybe [ReplicationRun])
-  , _rjNextReplicationRunStartTime :: !(Maybe POSIX)
-  , _rjStatusMessage               :: !(Maybe Text)
-  , _rjLatestAMIId                 :: !(Maybe Text)
-  , _rjSeedReplicationTime         :: !(Maybe POSIX)
-  , _rjDescription                 :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReplicationJob =
+  ReplicationJob'
+    { _rjFrequency                   :: !(Maybe Int)
+    , _rjState                       :: !(Maybe ReplicationJobState)
+    , _rjServerType                  :: !(Maybe ServerType)
+    , _rjServerId                    :: !(Maybe Text)
+    , _rjLicenseType                 :: !(Maybe LicenseType)
+    , _rjRoleName                    :: !(Maybe Text)
+    , _rjVmServer                    :: !(Maybe VMServer)
+    , _rjReplicationJobId            :: !(Maybe Text)
+    , _rjReplicationRunList          :: !(Maybe [ReplicationRun])
+    , _rjNextReplicationRunStartTime :: !(Maybe POSIX)
+    , _rjStatusMessage               :: !(Maybe Text)
+    , _rjLatestAMIId                 :: !(Maybe Text)
+    , _rjSeedReplicationTime         :: !(Maybe POSIX)
+    , _rjDescription                 :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReplicationJob' with the minimum fields required to make a request.
@@ -292,16 +296,18 @@ instance NFData ReplicationJob where
 -- | Object representing a Replication Run
 --
 -- /See:/ 'replicationRun' smart constructor.
-data ReplicationRun = ReplicationRun'
-  { _rrState              :: !(Maybe ReplicationRunState)
-  , _rrReplicationRunId   :: !(Maybe Text)
-  , _rrScheduledStartTime :: !(Maybe POSIX)
-  , _rrStatusMessage      :: !(Maybe Text)
-  , _rrCompletedTime      :: !(Maybe POSIX)
-  , _rrAmiId              :: !(Maybe Text)
-  , _rrType               :: !(Maybe ReplicationRunType)
-  , _rrDescription        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReplicationRun =
+  ReplicationRun'
+    { _rrState              :: !(Maybe ReplicationRunState)
+    , _rrReplicationRunId   :: !(Maybe Text)
+    , _rrScheduledStartTime :: !(Maybe POSIX)
+    , _rrStatusMessage      :: !(Maybe Text)
+    , _rrCompletedTime      :: !(Maybe POSIX)
+    , _rrAmiId              :: !(Maybe Text)
+    , _rrType               :: !(Maybe ReplicationRunType)
+    , _rrDescription        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReplicationRun' with the minimum fields required to make a request.
@@ -390,13 +396,15 @@ instance NFData ReplicationRun where
 -- | Object representing a server
 --
 -- /See:/ 'server' smart constructor.
-data Server = Server'
-  { _sServerType               :: !(Maybe ServerType)
-  , _sServerId                 :: !(Maybe Text)
-  , _sReplicationJobTerminated :: !(Maybe Bool)
-  , _sVmServer                 :: !(Maybe VMServer)
-  , _sReplicationJobId         :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Server =
+  Server'
+    { _sServerType               :: !(Maybe ServerType)
+    , _sServerId                 :: !(Maybe Text)
+    , _sReplicationJobTerminated :: !(Maybe Bool)
+    , _sVmServer                 :: !(Maybe VMServer)
+    , _sReplicationJobId         :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Server' with the minimum fields required to make a request.
@@ -461,13 +469,15 @@ instance NFData Server where
 -- | Object representing a VM server
 --
 -- /See:/ 'vMServer' smart constructor.
-data VMServer = VMServer'
-  { _vmsVmManagerName   :: !(Maybe Text)
-  , _vmsVmManagerType   :: !(Maybe VMManagerType)
-  , _vmsVmServerAddress :: !(Maybe VMServerAddress)
-  , _vmsVmName          :: !(Maybe Text)
-  , _vmsVmPath          :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VMServer =
+  VMServer'
+    { _vmsVmManagerName   :: !(Maybe Text)
+    , _vmsVmManagerType   :: !(Maybe VMManagerType)
+    , _vmsVmServerAddress :: !(Maybe VMServerAddress)
+    , _vmsVmName          :: !(Maybe Text)
+    , _vmsVmPath          :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VMServer' with the minimum fields required to make a request.
@@ -532,10 +542,12 @@ instance NFData VMServer where
 -- | Object representing a server's location
 --
 -- /See:/ 'vMServerAddress' smart constructor.
-data VMServerAddress = VMServerAddress'
-  { _vmsaVmManagerId :: !(Maybe Text)
-  , _vmsaVmId        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VMServerAddress =
+  VMServerAddress'
+    { _vmsaVmManagerId :: !(Maybe Text)
+    , _vmsaVmId        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VMServerAddress' with the minimum fields required to make a request.

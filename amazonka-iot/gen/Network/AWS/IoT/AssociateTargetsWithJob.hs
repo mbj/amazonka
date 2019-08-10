@@ -57,11 +57,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'associateTargetsWithJob' smart constructor.
-data AssociateTargetsWithJob = AssociateTargetsWithJob'
-  { _atwjComment :: !(Maybe Text)
-  , _atwjTargets :: !(List1 Text)
-  , _atwjJobId   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssociateTargetsWithJob =
+  AssociateTargetsWithJob'
+    { _atwjComment :: !(Maybe Text)
+    , _atwjTargets :: !(List1 Text)
+    , _atwjJobId   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateTargetsWithJob' with the minimum fields required to make a request.
@@ -131,12 +133,14 @@ instance ToQuery AssociateTargetsWithJob where
         toQuery = const mempty
 
 -- | /See:/ 'associateTargetsWithJobResponse' smart constructor.
-data AssociateTargetsWithJobResponse = AssociateTargetsWithJobResponse'
-  { _atwjrsJobId          :: !(Maybe Text)
-  , _atwjrsJobARN         :: !(Maybe Text)
-  , _atwjrsDescription    :: !(Maybe Text)
-  , _atwjrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssociateTargetsWithJobResponse =
+  AssociateTargetsWithJobResponse'
+    { _atwjrsJobId          :: !(Maybe Text)
+    , _atwjrsJobARN         :: !(Maybe Text)
+    , _atwjrsDescription    :: !(Maybe Text)
+    , _atwjrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateTargetsWithJobResponse' with the minimum fields required to make a request.

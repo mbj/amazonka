@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteSkillGroup' smart constructor.
-newtype DeleteSkillGroup = DeleteSkillGroup'
-  { _dsgSkillGroupARN :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteSkillGroup =
+  DeleteSkillGroup'
+    { _dsgSkillGroupARN :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteSkillGroup' with the minimum fields required to make a request.
@@ -97,9 +99,11 @@ instance ToQuery DeleteSkillGroup where
         toQuery = const mempty
 
 -- | /See:/ 'deleteSkillGroupResponse' smart constructor.
-newtype DeleteSkillGroupResponse = DeleteSkillGroupResponse'
-  { _dsgrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteSkillGroupResponse =
+  DeleteSkillGroupResponse'
+    { _dsgrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteSkillGroupResponse' with the minimum fields required to make a request.

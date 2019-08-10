@@ -51,11 +51,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listEventSubscriptions' smart constructor.
-data ListEventSubscriptions = ListEventSubscriptions'
-  { _lesNextToken   :: !(Maybe Text)
-  , _lesResourceARN :: !(Maybe Text)
-  , _lesMaxResults  :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListEventSubscriptions =
+  ListEventSubscriptions'
+    { _lesNextToken   :: !(Maybe Text)
+    , _lesResourceARN :: !(Maybe Text)
+    , _lesMaxResults  :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListEventSubscriptions' with the minimum fields required to make a request.
@@ -136,11 +138,13 @@ instance ToQuery ListEventSubscriptions where
         toQuery = const mempty
 
 -- | /See:/ 'listEventSubscriptionsResponse' smart constructor.
-data ListEventSubscriptionsResponse = ListEventSubscriptionsResponse'
-  { _lesrsNextToken      :: !(Maybe Text)
-  , _lesrsResponseStatus :: !Int
-  , _lesrsSubscriptions  :: ![Subscription]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListEventSubscriptionsResponse =
+  ListEventSubscriptionsResponse'
+    { _lesrsNextToken      :: !(Maybe Text)
+    , _lesrsResponseStatus :: !Int
+    , _lesrsSubscriptions  :: ![Subscription]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListEventSubscriptionsResponse' with the minimum fields required to make a request.

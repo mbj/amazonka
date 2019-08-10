@@ -46,9 +46,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeAssessmentTemplates' smart constructor.
-newtype DescribeAssessmentTemplates = DescribeAssessmentTemplates'
-  { _datAssessmentTemplateARNs :: List1 Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeAssessmentTemplates =
+  DescribeAssessmentTemplates'
+    { _datAssessmentTemplateARNs :: List1 Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAssessmentTemplates' with the minimum fields required to make a request.
@@ -109,11 +111,13 @@ instance ToQuery DescribeAssessmentTemplates where
         toQuery = const mempty
 
 -- | /See:/ 'describeAssessmentTemplatesResponse' smart constructor.
-data DescribeAssessmentTemplatesResponse = DescribeAssessmentTemplatesResponse'
-  { _datrsResponseStatus      :: !Int
-  , _datrsAssessmentTemplates :: ![AssessmentTemplate]
-  , _datrsFailedItems         :: !(Map Text FailedItemDetails)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAssessmentTemplatesResponse =
+  DescribeAssessmentTemplatesResponse'
+    { _datrsResponseStatus      :: !Int
+    , _datrsAssessmentTemplates :: ![AssessmentTemplate]
+    , _datrsFailedItems         :: !(Map Text FailedItemDetails)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAssessmentTemplatesResponse' with the minimum fields required to make a request.

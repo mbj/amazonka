@@ -42,9 +42,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteOriginEndpoint' smart constructor.
-newtype DeleteOriginEndpoint = DeleteOriginEndpoint'
-  { _delId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteOriginEndpoint =
+  DeleteOriginEndpoint'
+    { _delId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteOriginEndpoint' with the minimum fields required to make a request.
@@ -91,9 +93,11 @@ instance ToQuery DeleteOriginEndpoint where
         toQuery = const mempty
 
 -- | /See:/ 'deleteOriginEndpointResponse' smart constructor.
-newtype DeleteOriginEndpointResponse = DeleteOriginEndpointResponse'
-  { _doersResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteOriginEndpointResponse =
+  DeleteOriginEndpointResponse'
+    { _doersResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteOriginEndpointResponse' with the minimum fields required to make a request.

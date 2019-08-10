@@ -54,15 +54,17 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'reportInstanceStatus' smart constructor.
-data ReportInstanceStatus = ReportInstanceStatus'
-  { _rissStartTime   :: !(Maybe ISO8601)
-  , _rissEndTime     :: !(Maybe ISO8601)
-  , _rissDescription :: !(Maybe Text)
-  , _rissDryRun      :: !(Maybe Bool)
-  , _rissInstances   :: ![Text]
-  , _rissReasonCodes :: ![ReportInstanceReasonCodes]
-  , _rissStatus      :: !ReportStatusType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReportInstanceStatus =
+  ReportInstanceStatus'
+    { _rissStartTime   :: !(Maybe ISO8601)
+    , _rissEndTime     :: !(Maybe ISO8601)
+    , _rissDescription :: !(Maybe Text)
+    , _rissDryRun      :: !(Maybe Bool)
+    , _rissInstances   :: ![Text]
+    , _rissReasonCodes :: ![ReportInstanceReasonCodes]
+    , _rissStatus      :: !ReportStatusType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReportInstanceStatus' with the minimum fields required to make a request.

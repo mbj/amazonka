@@ -52,10 +52,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'enablePolicyType' smart constructor.
-data EnablePolicyType = EnablePolicyType'
-  { _eptRootId     :: !Text
-  , _eptPolicyType :: !PolicyType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EnablePolicyType =
+  EnablePolicyType'
+    { _eptRootId     :: !Text
+    , _eptPolicyType :: !PolicyType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EnablePolicyType' with the minimum fields required to make a request.
@@ -118,10 +120,12 @@ instance ToQuery EnablePolicyType where
         toQuery = const mempty
 
 -- | /See:/ 'enablePolicyTypeResponse' smart constructor.
-data EnablePolicyTypeResponse = EnablePolicyTypeResponse'
-  { _eptrsRoot           :: !(Maybe Root)
-  , _eptrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EnablePolicyTypeResponse =
+  EnablePolicyTypeResponse'
+    { _eptrsRoot           :: !(Maybe Root)
+    , _eptrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EnablePolicyTypeResponse' with the minimum fields required to make a request.

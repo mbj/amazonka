@@ -45,9 +45,11 @@ import Network.AWS.WorkDocs.Types
 import Network.AWS.WorkDocs.Types.Product
 
 -- | /See:/ 'getCurrentUser' smart constructor.
-newtype GetCurrentUser = GetCurrentUser'
-  { _gcuAuthenticationToken :: Sensitive Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+newtype GetCurrentUser =
+  GetCurrentUser'
+    { _gcuAuthenticationToken :: Sensitive Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetCurrentUser' with the minimum fields required to make a request.
@@ -93,10 +95,12 @@ instance ToQuery GetCurrentUser where
         toQuery = const mempty
 
 -- | /See:/ 'getCurrentUserResponse' smart constructor.
-data GetCurrentUserResponse = GetCurrentUserResponse'
-  { _gcursUser           :: !(Maybe User)
-  , _gcursResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetCurrentUserResponse =
+  GetCurrentUserResponse'
+    { _gcursUser           :: !(Maybe User)
+    , _gcursResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetCurrentUserResponse' with the minimum fields required to make a request.

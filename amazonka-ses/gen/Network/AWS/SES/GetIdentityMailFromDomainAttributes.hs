@@ -51,9 +51,11 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'getIdentityMailFromDomainAttributes' smart constructor.
-newtype GetIdentityMailFromDomainAttributes = GetIdentityMailFromDomainAttributes'
-  { _gimfdaIdentities :: [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetIdentityMailFromDomainAttributes =
+  GetIdentityMailFromDomainAttributes'
+    { _gimfdaIdentities :: [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetIdentityMailFromDomainAttributes' with the minimum fields required to make a request.
@@ -117,10 +119,12 @@ instance ToQuery GetIdentityMailFromDomainAttributes
 --
 --
 -- /See:/ 'getIdentityMailFromDomainAttributesResponse' smart constructor.
-data GetIdentityMailFromDomainAttributesResponse = GetIdentityMailFromDomainAttributesResponse'
-  { _gimfdarsResponseStatus :: !Int
-  , _gimfdarsMailFromDomainAttributes :: !(Map Text IdentityMailFromDomainAttributes)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetIdentityMailFromDomainAttributesResponse =
+  GetIdentityMailFromDomainAttributesResponse'
+    { _gimfdarsResponseStatus :: !Int
+    , _gimfdarsMailFromDomainAttributes :: !(Map Text IdentityMailFromDomainAttributes)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetIdentityMailFromDomainAttributesResponse' with the minimum fields required to make a request.

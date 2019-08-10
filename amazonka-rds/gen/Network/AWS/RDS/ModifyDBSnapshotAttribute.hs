@@ -56,12 +56,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'modifyDBSnapshotAttribute' smart constructor.
-data ModifyDBSnapshotAttribute = ModifyDBSnapshotAttribute'
-  { _mdsaValuesToAdd          :: !(Maybe [Text])
-  , _mdsaValuesToRemove       :: !(Maybe [Text])
-  , _mdsaDBSnapshotIdentifier :: !Text
-  , _mdsaAttributeName        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyDBSnapshotAttribute =
+  ModifyDBSnapshotAttribute'
+    { _mdsaValuesToAdd          :: !(Maybe [Text])
+    , _mdsaValuesToRemove       :: !(Maybe [Text])
+    , _mdsaDBSnapshotIdentifier :: !Text
+    , _mdsaAttributeName        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyDBSnapshotAttribute' with the minimum fields required to make a request.
@@ -142,10 +144,12 @@ instance ToQuery ModifyDBSnapshotAttribute where
                "AttributeName" =: _mdsaAttributeName]
 
 -- | /See:/ 'modifyDBSnapshotAttributeResponse' smart constructor.
-data ModifyDBSnapshotAttributeResponse = ModifyDBSnapshotAttributeResponse'
-  { _mdsarsDBSnapshotAttributesResult :: !(Maybe DBSnapshotAttributesResult)
-  , _mdsarsResponseStatus             :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyDBSnapshotAttributeResponse =
+  ModifyDBSnapshotAttributeResponse'
+    { _mdsarsDBSnapshotAttributesResult :: !(Maybe DBSnapshotAttributesResult)
+    , _mdsarsResponseStatus             :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyDBSnapshotAttributeResponse' with the minimum fields required to make a request.

@@ -59,10 +59,12 @@ import Network.AWS.SQS.Types
 import Network.AWS.SQS.Types.Product
 
 -- | /See:/ 'untagQueue' smart constructor.
-data UntagQueue = UntagQueue'
-  { _uqQueueURL :: !Text
-  , _uqTagKeys  :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UntagQueue =
+  UntagQueue'
+    { _uqQueueURL :: !Text
+    , _uqTagKeys  :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UntagQueue' with the minimum fields required to make a request.

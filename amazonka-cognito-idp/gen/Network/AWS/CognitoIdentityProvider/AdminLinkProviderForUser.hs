@@ -54,11 +54,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'adminLinkProviderForUser' smart constructor.
-data AdminLinkProviderForUser = AdminLinkProviderForUser'
-  { _alpfuUserPoolId      :: !Text
-  , _alpfuDestinationUser :: !ProviderUserIdentifierType
-  , _alpfuSourceUser      :: !ProviderUserIdentifierType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AdminLinkProviderForUser =
+  AdminLinkProviderForUser'
+    { _alpfuUserPoolId      :: !Text
+    , _alpfuDestinationUser :: !ProviderUserIdentifierType
+    , _alpfuSourceUser      :: !ProviderUserIdentifierType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AdminLinkProviderForUser' with the minimum fields required to make a request.
@@ -134,9 +136,11 @@ instance ToQuery AdminLinkProviderForUser where
         toQuery = const mempty
 
 -- | /See:/ 'adminLinkProviderForUserResponse' smart constructor.
-newtype AdminLinkProviderForUserResponse = AdminLinkProviderForUserResponse'
-  { _alpfursResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AdminLinkProviderForUserResponse =
+  AdminLinkProviderForUserResponse'
+    { _alpfursResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AdminLinkProviderForUserResponse' with the minimum fields required to make a request.

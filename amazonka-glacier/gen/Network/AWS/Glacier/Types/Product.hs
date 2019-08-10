@@ -28,11 +28,13 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'archiveCreationOutput' smart constructor.
-data ArchiveCreationOutput = ArchiveCreationOutput'
-  { _acoArchiveId :: !(Maybe Text)
-  , _acoChecksum  :: !(Maybe Text)
-  , _acoLocation  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ArchiveCreationOutput =
+  ArchiveCreationOutput'
+    { _acoArchiveId :: !(Maybe Text)
+    , _acoChecksum  :: !(Maybe Text)
+    , _acoLocation  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ArchiveCreationOutput' with the minimum fields required to make a request.
@@ -81,14 +83,16 @@ instance NFData ArchiveCreationOutput where
 --
 --
 -- /See:/ 'csvInput' smart constructor.
-data CSVInput = CSVInput'
-  { _ciQuoteCharacter       :: !(Maybe Text)
-  , _ciRecordDelimiter      :: !(Maybe Text)
-  , _ciFileHeaderInfo       :: !(Maybe FileHeaderInfo)
-  , _ciQuoteEscapeCharacter :: !(Maybe Text)
-  , _ciComments             :: !(Maybe Text)
-  , _ciFieldDelimiter       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CSVInput =
+  CSVInput'
+    { _ciQuoteCharacter       :: !(Maybe Text)
+    , _ciRecordDelimiter      :: !(Maybe Text)
+    , _ciFileHeaderInfo       :: !(Maybe FileHeaderInfo)
+    , _ciQuoteEscapeCharacter :: !(Maybe Text)
+    , _ciComments             :: !(Maybe Text)
+    , _ciFieldDelimiter       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CSVInput' with the minimum fields required to make a request.
@@ -176,13 +180,15 @@ instance ToJSON CSVInput where
 --
 --
 -- /See:/ 'csvOutput' smart constructor.
-data CSVOutput = CSVOutput'
-  { _coQuoteCharacter       :: !(Maybe Text)
-  , _coQuoteFields          :: !(Maybe QuoteFields)
-  , _coRecordDelimiter      :: !(Maybe Text)
-  , _coQuoteEscapeCharacter :: !(Maybe Text)
-  , _coFieldDelimiter       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CSVOutput =
+  CSVOutput'
+    { _coQuoteCharacter       :: !(Maybe Text)
+    , _coQuoteFields          :: !(Maybe QuoteFields)
+    , _coRecordDelimiter      :: !(Maybe Text)
+    , _coQuoteEscapeCharacter :: !(Maybe Text)
+    , _coFieldDelimiter       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CSVOutput' with the minimum fields required to make a request.
@@ -260,9 +266,11 @@ instance ToJSON CSVOutput where
 --
 --
 -- /See:/ 'dataRetrievalPolicy' smart constructor.
-newtype DataRetrievalPolicy = DataRetrievalPolicy'
-  { _drpRules :: Maybe [DataRetrievalRule]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DataRetrievalPolicy =
+  DataRetrievalPolicy'
+    { _drpRules :: Maybe [DataRetrievalRule]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DataRetrievalPolicy' with the minimum fields required to make a request.
@@ -298,10 +306,12 @@ instance ToJSON DataRetrievalPolicy where
 --
 --
 -- /See:/ 'dataRetrievalRule' smart constructor.
-data DataRetrievalRule = DataRetrievalRule'
-  { _drrStrategy     :: !(Maybe Text)
-  , _drrBytesPerHour :: !(Maybe Integer)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DataRetrievalRule =
+  DataRetrievalRule'
+    { _drrStrategy     :: !(Maybe Text)
+    , _drrBytesPerHour :: !(Maybe Integer)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DataRetrievalRule' with the minimum fields required to make a request.
@@ -348,14 +358,16 @@ instance ToJSON DataRetrievalRule where
 --
 --
 -- /See:/ 'describeVaultOutput' smart constructor.
-data DescribeVaultOutput = DescribeVaultOutput'
-  { _dvoVaultName         :: !(Maybe Text)
-  , _dvoSizeInBytes       :: !(Maybe Integer)
-  , _dvoLastInventoryDate :: !(Maybe Text)
-  , _dvoVaultARN          :: !(Maybe Text)
-  , _dvoCreationDate      :: !(Maybe Text)
-  , _dvoNumberOfArchives  :: !(Maybe Integer)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeVaultOutput =
+  DescribeVaultOutput'
+    { _dvoVaultName         :: !(Maybe Text)
+    , _dvoSizeInBytes       :: !(Maybe Integer)
+    , _dvoLastInventoryDate :: !(Maybe Text)
+    , _dvoVaultARN          :: !(Maybe Text)
+    , _dvoCreationDate      :: !(Maybe Text)
+    , _dvoNumberOfArchives  :: !(Maybe Integer)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeVaultOutput' with the minimum fields required to make a request.
@@ -430,11 +442,13 @@ instance NFData DescribeVaultOutput where
 --
 --
 -- /See:/ 'encryption' smart constructor.
-data Encryption = Encryption'
-  { _eEncryptionType :: !(Maybe EncryptionType)
-  , _eKMSKeyId       :: !(Maybe Text)
-  , _eKMSContext     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Encryption =
+  Encryption'
+    { _eEncryptionType :: !(Maybe EncryptionType)
+    , _eKMSKeyId       :: !(Maybe Text)
+    , _eKMSContext     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Encryption' with the minimum fields required to make a request.
@@ -490,29 +504,31 @@ instance ToJSON Encryption where
 --
 --
 -- /See:/ 'glacierJobDescription' smart constructor.
-data GlacierJobDescription = GlacierJobDescription'
-  { _gjdSHA256TreeHash :: !(Maybe Text)
-  , _gjdArchiveId :: !(Maybe Text)
-  , _gjdSelectParameters :: !(Maybe SelectParameters)
-  , _gjdJobId :: !(Maybe Text)
-  , _gjdJobOutputPath :: !(Maybe Text)
-  , _gjdRetrievalByteRange :: !(Maybe Text)
-  , _gjdInventoryRetrievalParameters :: !(Maybe InventoryRetrievalJobDescription)
-  , _gjdAction :: !(Maybe ActionCode)
-  , _gjdJobDescription :: !(Maybe Text)
-  , _gjdSNSTopic :: !(Maybe Text)
-  , _gjdStatusMessage :: !(Maybe Text)
-  , _gjdVaultARN :: !(Maybe Text)
-  , _gjdOutputLocation :: !(Maybe OutputLocation)
-  , _gjdTier :: !(Maybe Text)
-  , _gjdArchiveSHA256TreeHash :: !(Maybe Text)
-  , _gjdCreationDate :: !(Maybe Text)
-  , _gjdCompleted :: !(Maybe Bool)
-  , _gjdCompletionDate :: !(Maybe Text)
-  , _gjdInventorySizeInBytes :: !(Maybe Integer)
-  , _gjdArchiveSizeInBytes :: !(Maybe Integer)
-  , _gjdStatusCode :: !(Maybe StatusCode)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GlacierJobDescription =
+  GlacierJobDescription'
+    { _gjdSHA256TreeHash :: !(Maybe Text)
+    , _gjdArchiveId :: !(Maybe Text)
+    , _gjdSelectParameters :: !(Maybe SelectParameters)
+    , _gjdJobId :: !(Maybe Text)
+    , _gjdJobOutputPath :: !(Maybe Text)
+    , _gjdRetrievalByteRange :: !(Maybe Text)
+    , _gjdInventoryRetrievalParameters :: !(Maybe InventoryRetrievalJobDescription)
+    , _gjdAction :: !(Maybe ActionCode)
+    , _gjdJobDescription :: !(Maybe Text)
+    , _gjdSNSTopic :: !(Maybe Text)
+    , _gjdStatusMessage :: !(Maybe Text)
+    , _gjdVaultARN :: !(Maybe Text)
+    , _gjdOutputLocation :: !(Maybe OutputLocation)
+    , _gjdTier :: !(Maybe Text)
+    , _gjdArchiveSHA256TreeHash :: !(Maybe Text)
+    , _gjdCreationDate :: !(Maybe Text)
+    , _gjdCompleted :: !(Maybe Bool)
+    , _gjdCompletionDate :: !(Maybe Text)
+    , _gjdInventorySizeInBytes :: !(Maybe Integer)
+    , _gjdArchiveSizeInBytes :: !(Maybe Integer)
+    , _gjdStatusCode :: !(Maybe StatusCode)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GlacierJobDescription' with the minimum fields required to make a request.
@@ -707,10 +723,12 @@ instance NFData GlacierJobDescription where
 --
 --
 -- /See:/ 'grant' smart constructor.
-data Grant = Grant'
-  { _gPermission :: !(Maybe Permission)
-  , _gGrantee    :: !(Maybe Grantee)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Grant =
+  Grant'
+    { _gPermission :: !(Maybe Permission)
+    , _gGrantee    :: !(Maybe Grantee)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Grant' with the minimum fields required to make a request.
@@ -756,13 +774,15 @@ instance ToJSON Grant where
 --
 --
 -- /See:/ 'grantee' smart constructor.
-data Grantee = Grantee'
-  { _gURI          :: !(Maybe Text)
-  , _gEmailAddress :: !(Maybe Text)
-  , _gDisplayName  :: !(Maybe Text)
-  , _gId           :: !(Maybe Text)
-  , _gType         :: !Type
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Grantee =
+  Grantee'
+    { _gURI          :: !(Maybe Text)
+    , _gEmailAddress :: !(Maybe Text)
+    , _gDisplayName  :: !(Maybe Text)
+    , _gId           :: !(Maybe Text)
+    , _gType         :: !Type
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Grantee' with the minimum fields required to make a request.
@@ -839,9 +859,11 @@ instance ToJSON Grantee where
 --
 --
 -- /See:/ 'inputSerialization' smart constructor.
-newtype InputSerialization = InputSerialization'
-  { _isCsv :: Maybe CSVInput
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype InputSerialization =
+  InputSerialization'
+    { _isCsv :: Maybe CSVInput
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InputSerialization' with the minimum fields required to make a request.
@@ -876,13 +898,15 @@ instance ToJSON InputSerialization where
 --
 --
 -- /See:/ 'inventoryRetrievalJobDescription' smart constructor.
-data InventoryRetrievalJobDescription = InventoryRetrievalJobDescription'
-  { _irjdFormat    :: !(Maybe Text)
-  , _irjdEndDate   :: !(Maybe Text)
-  , _irjdStartDate :: !(Maybe Text)
-  , _irjdMarker    :: !(Maybe Text)
-  , _irjdLimit     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InventoryRetrievalJobDescription =
+  InventoryRetrievalJobDescription'
+    { _irjdFormat    :: !(Maybe Text)
+    , _irjdEndDate   :: !(Maybe Text)
+    , _irjdStartDate :: !(Maybe Text)
+    , _irjdMarker    :: !(Maybe Text)
+    , _irjdLimit     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InventoryRetrievalJobDescription' with the minimum fields required to make a request.
@@ -952,12 +976,14 @@ instance NFData InventoryRetrievalJobDescription
 --
 --
 -- /See:/ 'inventoryRetrievalJobInput' smart constructor.
-data InventoryRetrievalJobInput = InventoryRetrievalJobInput'
-  { _irjiEndDate   :: !(Maybe Text)
-  , _irjiStartDate :: !(Maybe Text)
-  , _irjiMarker    :: !(Maybe Text)
-  , _irjiLimit     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InventoryRetrievalJobInput =
+  InventoryRetrievalJobInput'
+    { _irjiEndDate   :: !(Maybe Text)
+    , _irjiStartDate :: !(Maybe Text)
+    , _irjiMarker    :: !(Maybe Text)
+    , _irjiLimit     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InventoryRetrievalJobInput' with the minimum fields required to make a request.
@@ -1016,18 +1042,20 @@ instance ToJSON InventoryRetrievalJobInput where
 --
 --
 -- /See:/ 'jobParameters' smart constructor.
-data JobParameters = JobParameters'
-  { _jpArchiveId                    :: !(Maybe Text)
-  , _jpSelectParameters             :: !(Maybe SelectParameters)
-  , _jpFormat                       :: !(Maybe Text)
-  , _jpRetrievalByteRange           :: !(Maybe Text)
-  , _jpInventoryRetrievalParameters :: !(Maybe InventoryRetrievalJobInput)
-  , _jpSNSTopic                     :: !(Maybe Text)
-  , _jpOutputLocation               :: !(Maybe OutputLocation)
-  , _jpTier                         :: !(Maybe Text)
-  , _jpType                         :: !(Maybe Text)
-  , _jpDescription                  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data JobParameters =
+  JobParameters'
+    { _jpArchiveId                    :: !(Maybe Text)
+    , _jpSelectParameters             :: !(Maybe SelectParameters)
+    , _jpFormat                       :: !(Maybe Text)
+    , _jpRetrievalByteRange           :: !(Maybe Text)
+    , _jpInventoryRetrievalParameters :: !(Maybe InventoryRetrievalJobInput)
+    , _jpSNSTopic                     :: !(Maybe Text)
+    , _jpOutputLocation               :: !(Maybe OutputLocation)
+    , _jpTier                         :: !(Maybe Text)
+    , _jpType                         :: !(Maybe Text)
+    , _jpDescription                  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'JobParameters' with the minimum fields required to make a request.
@@ -1134,9 +1162,11 @@ instance ToJSON JobParameters where
 --
 --
 -- /See:/ 'outputLocation' smart constructor.
-newtype OutputLocation = OutputLocation'
-  { _olS3 :: Maybe S3Location
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype OutputLocation =
+  OutputLocation'
+    { _olS3 :: Maybe S3Location
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OutputLocation' with the minimum fields required to make a request.
@@ -1171,9 +1201,11 @@ instance ToJSON OutputLocation where
 --
 --
 -- /See:/ 'outputSerialization' smart constructor.
-newtype OutputSerialization = OutputSerialization'
-  { _osCsv :: Maybe CSVOutput
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype OutputSerialization =
+  OutputSerialization'
+    { _osCsv :: Maybe CSVOutput
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OutputSerialization' with the minimum fields required to make a request.
@@ -1208,10 +1240,12 @@ instance ToJSON OutputSerialization where
 --
 --
 -- /See:/ 'partListElement' smart constructor.
-data PartListElement = PartListElement'
-  { _pleSHA256TreeHash :: !(Maybe Text)
-  , _pleRangeInBytes   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PartListElement =
+  PartListElement'
+    { _pleSHA256TreeHash :: !(Maybe Text)
+    , _pleRangeInBytes   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PartListElement' with the minimum fields required to make a request.
@@ -1251,11 +1285,13 @@ instance NFData PartListElement where
 --
 --
 -- /See:/ 'provisionedCapacityDescription' smart constructor.
-data ProvisionedCapacityDescription = ProvisionedCapacityDescription'
-  { _pcdCapacityId     :: !(Maybe Text)
-  , _pcdStartDate      :: !(Maybe Text)
-  , _pcdExpirationDate :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ProvisionedCapacityDescription =
+  ProvisionedCapacityDescription'
+    { _pcdCapacityId     :: !(Maybe Text)
+    , _pcdStartDate      :: !(Maybe Text)
+    , _pcdExpirationDate :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ProvisionedCapacityDescription' with the minimum fields required to make a request.
@@ -1308,16 +1344,18 @@ instance NFData ProvisionedCapacityDescription where
 --
 --
 -- /See:/ 's3Location' smart constructor.
-data S3Location = S3Location'
-  { _slCannedACL         :: !(Maybe CannedACL)
-  , _slPrefix            :: !(Maybe Text)
-  , _slBucketName        :: !(Maybe Text)
-  , _slAccessControlList :: !(Maybe [Grant])
-  , _slUserMetadata      :: !(Maybe (Map Text Text))
-  , _slEncryption        :: !(Maybe Encryption)
-  , _slStorageClass      :: !(Maybe StorageClass)
-  , _slTagging           :: !(Maybe (Map Text Text))
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data S3Location =
+  S3Location'
+    { _slCannedACL         :: !(Maybe CannedACL)
+    , _slPrefix            :: !(Maybe Text)
+    , _slBucketName        :: !(Maybe Text)
+    , _slAccessControlList :: !(Maybe [Grant])
+    , _slUserMetadata      :: !(Maybe (Map Text Text))
+    , _slEncryption        :: !(Maybe Encryption)
+    , _slStorageClass      :: !(Maybe StorageClass)
+    , _slTagging           :: !(Maybe (Map Text Text))
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'S3Location' with the minimum fields required to make a request.
@@ -1421,12 +1459,14 @@ instance ToJSON S3Location where
 --
 --
 -- /See:/ 'selectParameters' smart constructor.
-data SelectParameters = SelectParameters'
-  { _spExpressionType      :: !(Maybe ExpressionType)
-  , _spOutputSerialization :: !(Maybe OutputSerialization)
-  , _spExpression          :: !(Maybe Text)
-  , _spInputSerialization  :: !(Maybe InputSerialization)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SelectParameters =
+  SelectParameters'
+    { _spExpressionType      :: !(Maybe ExpressionType)
+    , _spOutputSerialization :: !(Maybe OutputSerialization)
+    , _spExpression          :: !(Maybe Text)
+    , _spInputSerialization  :: !(Maybe InputSerialization)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SelectParameters' with the minimum fields required to make a request.
@@ -1496,13 +1536,15 @@ instance ToJSON SelectParameters where
 --
 --
 -- /See:/ 'uploadListElement' smart constructor.
-data UploadListElement = UploadListElement'
-  { _uleMultipartUploadId  :: !(Maybe Text)
-  , _ulePartSizeInBytes    :: !(Maybe Integer)
-  , _uleArchiveDescription :: !(Maybe Text)
-  , _uleVaultARN           :: !(Maybe Text)
-  , _uleCreationDate       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UploadListElement =
+  UploadListElement'
+    { _uleMultipartUploadId  :: !(Maybe Text)
+    , _ulePartSizeInBytes    :: !(Maybe Integer)
+    , _uleArchiveDescription :: !(Maybe Text)
+    , _uleVaultARN           :: !(Maybe Text)
+    , _uleCreationDate       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UploadListElement' with the minimum fields required to make a request.
@@ -1570,9 +1612,11 @@ instance NFData UploadListElement where
 --
 --
 -- /See:/ 'vaultAccessPolicy' smart constructor.
-newtype VaultAccessPolicy = VaultAccessPolicy'
-  { _vapPolicy :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype VaultAccessPolicy =
+  VaultAccessPolicy'
+    { _vapPolicy :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VaultAccessPolicy' with the minimum fields required to make a request.
@@ -1607,9 +1651,11 @@ instance ToJSON VaultAccessPolicy where
 --
 --
 -- /See:/ 'vaultLockPolicy' smart constructor.
-newtype VaultLockPolicy = VaultLockPolicy'
-  { _vlpPolicy :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype VaultLockPolicy =
+  VaultLockPolicy'
+    { _vlpPolicy :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VaultLockPolicy' with the minimum fields required to make a request.
@@ -1639,10 +1685,12 @@ instance ToJSON VaultLockPolicy where
 --
 --
 -- /See:/ 'vaultNotificationConfig' smart constructor.
-data VaultNotificationConfig = VaultNotificationConfig'
-  { _vncSNSTopic :: !(Maybe Text)
-  , _vncEvents   :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VaultNotificationConfig =
+  VaultNotificationConfig'
+    { _vncSNSTopic :: !(Maybe Text)
+    , _vncEvents   :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VaultNotificationConfig' with the minimum fields required to make a request.

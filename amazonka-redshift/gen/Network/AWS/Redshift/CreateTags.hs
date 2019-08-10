@@ -51,10 +51,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createTags' smart constructor.
-data CreateTags = CreateTags'
-  { _ctResourceName :: !Text
-  , _ctTags         :: ![Tag]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateTags =
+  CreateTags'
+    { _ctResourceName :: !Text
+    , _ctTags         :: ![Tag]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateTags' with the minimum fields required to make a request.

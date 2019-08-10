@@ -59,15 +59,17 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listInstances' smart constructor.
-data ListInstances = ListInstances'
-  { _liInstanceGroupTypes :: !(Maybe [InstanceGroupType])
-  , _liInstanceFleetType  :: !(Maybe InstanceFleetType)
-  , _liMarker             :: !(Maybe Text)
-  , _liInstanceFleetId    :: !(Maybe Text)
-  , _liInstanceStates     :: !(Maybe [InstanceState])
-  , _liInstanceGroupId    :: !(Maybe Text)
-  , _liClusterId          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListInstances =
+  ListInstances'
+    { _liInstanceGroupTypes :: !(Maybe [InstanceGroupType])
+    , _liInstanceFleetType  :: !(Maybe InstanceFleetType)
+    , _liMarker             :: !(Maybe Text)
+    , _liInstanceFleetId    :: !(Maybe Text)
+    , _liInstanceStates     :: !(Maybe [InstanceState])
+    , _liInstanceGroupId    :: !(Maybe Text)
+    , _liClusterId          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListInstances' with the minimum fields required to make a request.
@@ -183,11 +185,13 @@ instance ToQuery ListInstances where
 --
 --
 -- /See:/ 'listInstancesResponse' smart constructor.
-data ListInstancesResponse = ListInstancesResponse'
-  { _lirsMarker         :: !(Maybe Text)
-  , _lirsInstances      :: !(Maybe [Instance])
-  , _lirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListInstancesResponse =
+  ListInstancesResponse'
+    { _lirsMarker         :: !(Maybe Text)
+    , _lirsInstances      :: !(Maybe [Instance])
+    , _lirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListInstancesResponse' with the minimum fields required to make a request.

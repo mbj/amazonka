@@ -58,13 +58,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getAPIKeys' smart constructor.
-data GetAPIKeys = GetAPIKeys'
-  { _gakIncludeValues :: !(Maybe Bool)
-  , _gakCustomerId    :: !(Maybe Text)
-  , _gakNameQuery     :: !(Maybe Text)
-  , _gakLimit         :: !(Maybe Int)
-  , _gakPosition      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetAPIKeys =
+  GetAPIKeys'
+    { _gakIncludeValues :: !(Maybe Bool)
+    , _gakCustomerId    :: !(Maybe Text)
+    , _gakNameQuery     :: !(Maybe Text)
+    , _gakLimit         :: !(Maybe Int)
+    , _gakPosition      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetAPIKeys' with the minimum fields required to make a request.
@@ -158,12 +160,14 @@ instance ToQuery GetAPIKeys where
 -- <http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-api-keys.html Use API Keys>
 --
 -- /See:/ 'getAPIKeysResponse' smart constructor.
-data GetAPIKeysResponse = GetAPIKeysResponse'
-  { _gakrsItems          :: !(Maybe [APIKey])
-  , _gakrsWarnings       :: !(Maybe [Text])
-  , _gakrsPosition       :: !(Maybe Text)
-  , _gakrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetAPIKeysResponse =
+  GetAPIKeysResponse'
+    { _gakrsItems          :: !(Maybe [APIKey])
+    , _gakrsWarnings       :: !(Maybe [Text])
+    , _gakrsPosition       :: !(Maybe Text)
+    , _gakrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetAPIKeysResponse' with the minimum fields required to make a request.

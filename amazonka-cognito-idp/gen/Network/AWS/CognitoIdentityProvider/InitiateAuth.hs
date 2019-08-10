@@ -57,14 +57,16 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'initiateAuth' smart constructor.
-data InitiateAuth = InitiateAuth'
-  { _iaClientMetadata    :: !(Maybe (Map Text Text))
-  , _iaAnalyticsMetadata :: !(Maybe AnalyticsMetadataType)
-  , _iaUserContextData   :: !(Maybe UserContextDataType)
-  , _iaAuthParameters    :: !(Maybe (Map Text Text))
-  , _iaAuthFlow          :: !AuthFlowType
-  , _iaClientId          :: !(Sensitive Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data InitiateAuth =
+  InitiateAuth'
+    { _iaClientMetadata    :: !(Maybe (Map Text Text))
+    , _iaAnalyticsMetadata :: !(Maybe AnalyticsMetadataType)
+    , _iaUserContextData   :: !(Maybe UserContextDataType)
+    , _iaAuthParameters    :: !(Maybe (Map Text Text))
+    , _iaAuthFlow          :: !AuthFlowType
+    , _iaClientId          :: !(Sensitive Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InitiateAuth' with the minimum fields required to make a request.
@@ -170,13 +172,15 @@ instance ToQuery InitiateAuth where
 --
 --
 -- /See:/ 'initiateAuthResponse' smart constructor.
-data InitiateAuthResponse = InitiateAuthResponse'
-  { _iarsChallengeName        :: !(Maybe ChallengeNameType)
-  , _iarsChallengeParameters  :: !(Maybe (Map Text Text))
-  , _iarsAuthenticationResult :: !(Maybe AuthenticationResultType)
-  , _iarsSession              :: !(Maybe Text)
-  , _iarsResponseStatus       :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data InitiateAuthResponse =
+  InitiateAuthResponse'
+    { _iarsChallengeName        :: !(Maybe ChallengeNameType)
+    , _iarsChallengeParameters  :: !(Maybe (Map Text Text))
+    , _iarsAuthenticationResult :: !(Maybe AuthenticationResultType)
+    , _iarsSession              :: !(Maybe Text)
+    , _iarsResponseStatus       :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InitiateAuthResponse' with the minimum fields required to make a request.

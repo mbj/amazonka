@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteDataset' smart constructor.
-newtype DeleteDataset = DeleteDataset'
-  { _dDatasetName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteDataset =
+  DeleteDataset'
+    { _dDatasetName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteDataset' with the minimum fields required to make a request.

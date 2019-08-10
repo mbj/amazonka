@@ -57,12 +57,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeCacheParameters' smart constructor.
-data DescribeCacheParameters = DescribeCacheParameters'
-  { _dcpMarker                  :: !(Maybe Text)
-  , _dcpMaxRecords              :: !(Maybe Int)
-  , _dcpSource                  :: !(Maybe Text)
-  , _dcpCacheParameterGroupName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeCacheParameters =
+  DescribeCacheParameters'
+    { _dcpMarker                  :: !(Maybe Text)
+    , _dcpMaxRecords              :: !(Maybe Int)
+    , _dcpSource                  :: !(Maybe Text)
+    , _dcpCacheParameterGroupName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeCacheParameters' with the minimum fields required to make a request.
@@ -155,12 +157,14 @@ instance ToQuery DescribeCacheParameters where
 --
 --
 -- /See:/ 'describeCacheParametersResponse' smart constructor.
-data DescribeCacheParametersResponse = DescribeCacheParametersResponse'
-  { _dcprsCacheNodeTypeSpecificParameters :: !(Maybe [CacheNodeTypeSpecificParameter])
-  , _dcprsMarker :: !(Maybe Text)
-  , _dcprsParameters :: !(Maybe [Parameter])
-  , _dcprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeCacheParametersResponse =
+  DescribeCacheParametersResponse'
+    { _dcprsCacheNodeTypeSpecificParameters :: !(Maybe [CacheNodeTypeSpecificParameter])
+    , _dcprsMarker :: !(Maybe Text)
+    , _dcprsParameters :: !(Maybe [Parameter])
+    , _dcprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeCacheParametersResponse' with the minimum fields required to make a request.

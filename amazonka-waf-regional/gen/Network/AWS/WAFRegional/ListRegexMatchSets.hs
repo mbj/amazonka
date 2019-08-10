@@ -47,10 +47,12 @@ import Network.AWS.WAFRegional.Types
 import Network.AWS.WAFRegional.Types.Product
 
 -- | /See:/ 'listRegexMatchSets' smart constructor.
-data ListRegexMatchSets = ListRegexMatchSets'
-  { _lrmsNextMarker :: !(Maybe Text)
-  , _lrmsLimit      :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListRegexMatchSets =
+  ListRegexMatchSets'
+    { _lrmsNextMarker :: !(Maybe Text)
+    , _lrmsLimit      :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListRegexMatchSets' with the minimum fields required to make a request.
@@ -114,11 +116,13 @@ instance ToQuery ListRegexMatchSets where
         toQuery = const mempty
 
 -- | /See:/ 'listRegexMatchSetsResponse' smart constructor.
-data ListRegexMatchSetsResponse = ListRegexMatchSetsResponse'
-  { _lrmsrsRegexMatchSets :: !(Maybe [RegexMatchSetSummary])
-  , _lrmsrsNextMarker     :: !(Maybe Text)
-  , _lrmsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListRegexMatchSetsResponse =
+  ListRegexMatchSetsResponse'
+    { _lrmsrsRegexMatchSets :: !(Maybe [RegexMatchSetSummary])
+    , _lrmsrsNextMarker     :: !(Maybe Text)
+    , _lrmsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListRegexMatchSetsResponse' with the minimum fields required to make a request.

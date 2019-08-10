@@ -51,11 +51,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeAutoScalingGroups' smart constructor.
-data DescribeAutoScalingGroups = DescribeAutoScalingGroups'
-  { _dasgAutoScalingGroupNames :: !(Maybe [Text])
-  , _dasgNextToken             :: !(Maybe Text)
-  , _dasgMaxRecords            :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAutoScalingGroups =
+  DescribeAutoScalingGroups'
+    { _dasgAutoScalingGroupNames :: !(Maybe [Text])
+    , _dasgNextToken             :: !(Maybe Text)
+    , _dasgMaxRecords            :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAutoScalingGroups' with the minimum fields required to make a request.
@@ -132,11 +134,13 @@ instance ToQuery DescribeAutoScalingGroups where
                "MaxRecords" =: _dasgMaxRecords]
 
 -- | /See:/ 'describeAutoScalingGroupsResponse' smart constructor.
-data DescribeAutoScalingGroupsResponse = DescribeAutoScalingGroupsResponse'
-  { _dasgrsNextToken         :: !(Maybe Text)
-  , _dasgrsResponseStatus    :: !Int
-  , _dasgrsAutoScalingGroups :: ![AutoScalingGroup]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAutoScalingGroupsResponse =
+  DescribeAutoScalingGroupsResponse'
+    { _dasgrsNextToken         :: !(Maybe Text)
+    , _dasgrsResponseStatus    :: !Int
+    , _dasgrsAutoScalingGroups :: ![AutoScalingGroup]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAutoScalingGroupsResponse' with the minimum fields required to make a request.

@@ -44,10 +44,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getApps' smart constructor.
-data GetApps = GetApps'
-  { _gaToken    :: !(Maybe Text)
-  , _gaPageSize :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetApps =
+  GetApps'
+    { _gaToken    :: !(Maybe Text)
+    , _gaPageSize :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetApps' with the minimum fields required to make a request.
@@ -99,10 +101,12 @@ instance ToQuery GetApps where
               ["token" =: _gaToken, "page-size" =: _gaPageSize]
 
 -- | /See:/ 'getAppsResponse' smart constructor.
-data GetAppsResponse = GetAppsResponse'
-  { _gasrsResponseStatus       :: !Int
-  , _gasrsApplicationsResponse :: !ApplicationsResponse
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetAppsResponse =
+  GetAppsResponse'
+    { _gasrsResponseStatus       :: !Int
+    , _gasrsApplicationsResponse :: !ApplicationsResponse
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetAppsResponse' with the minimum fields required to make a request.

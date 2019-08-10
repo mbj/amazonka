@@ -44,10 +44,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createCampaign' smart constructor.
-data CreateCampaign = CreateCampaign'
-  { _ccApplicationId        :: !Text
-  , _ccWriteCampaignRequest :: !WriteCampaignRequest
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateCampaign =
+  CreateCampaign'
+    { _ccApplicationId        :: !Text
+    , _ccWriteCampaignRequest :: !WriteCampaignRequest
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateCampaign' with the minimum fields required to make a request.
@@ -112,10 +114,12 @@ instance ToQuery CreateCampaign where
         toQuery = const mempty
 
 -- | /See:/ 'createCampaignResponse' smart constructor.
-data CreateCampaignResponse = CreateCampaignResponse'
-  { _ccrsResponseStatus   :: !Int
-  , _ccrsCampaignResponse :: !CampaignResponse
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateCampaignResponse =
+  CreateCampaignResponse'
+    { _ccrsResponseStatus   :: !Int
+    , _ccrsCampaignResponse :: !CampaignResponse
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateCampaignResponse' with the minimum fields required to make a request.

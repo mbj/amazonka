@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteSSHPublicKey' smart constructor.
-data DeleteSSHPublicKey = DeleteSSHPublicKey'
-  { _dspkUserName       :: !Text
-  , _dspkSSHPublicKeyId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteSSHPublicKey =
+  DeleteSSHPublicKey'
+    { _dspkUserName       :: !Text
+    , _dspkSSHPublicKeyId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteSSHPublicKey' with the minimum fields required to make a request.

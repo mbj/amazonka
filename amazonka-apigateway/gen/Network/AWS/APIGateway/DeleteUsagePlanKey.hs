@@ -47,10 +47,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteUsagePlanKey' smart constructor.
-data DeleteUsagePlanKey = DeleteUsagePlanKey'
-  { _dupkUsagePlanId :: !Text
-  , _dupkKeyId       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteUsagePlanKey =
+  DeleteUsagePlanKey'
+    { _dupkUsagePlanId :: !Text
+    , _dupkKeyId       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteUsagePlanKey' with the minimum fields required to make a request.

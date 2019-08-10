@@ -47,11 +47,13 @@ import Network.AWS.Response
 -- | GetFindingsStatistics request body.
 --
 -- /See:/ 'getFindingsStatistics' smart constructor.
-data GetFindingsStatistics = GetFindingsStatistics'
-  { _gfsFindingStatisticTypes :: !(Maybe [FindingStatisticType])
-  , _gfsFindingCriteria       :: !(Maybe FindingCriteria)
-  , _gfsDetectorId            :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetFindingsStatistics =
+  GetFindingsStatistics'
+    { _gfsFindingStatisticTypes :: !(Maybe [FindingStatisticType])
+    , _gfsFindingCriteria       :: !(Maybe FindingCriteria)
+    , _gfsDetectorId            :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetFindingsStatistics' with the minimum fields required to make a request.
@@ -125,10 +127,12 @@ instance ToQuery GetFindingsStatistics where
         toQuery = const mempty
 
 -- | /See:/ 'getFindingsStatisticsResponse' smart constructor.
-data GetFindingsStatisticsResponse = GetFindingsStatisticsResponse'
-  { _gfsrsFindingStatistics :: !(Maybe FindingStatistics)
-  , _gfsrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetFindingsStatisticsResponse =
+  GetFindingsStatisticsResponse'
+    { _gfsrsFindingStatistics :: !(Maybe FindingStatistics)
+    , _gfsrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetFindingsStatisticsResponse' with the minimum fields required to make a request.

@@ -46,9 +46,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteSpotDatafeedSubscription' smart constructor.
-newtype DeleteSpotDatafeedSubscription = DeleteSpotDatafeedSubscription'
-  { _dsdssDryRun :: Maybe Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteSpotDatafeedSubscription =
+  DeleteSpotDatafeedSubscription'
+    { _dsdssDryRun :: Maybe Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteSpotDatafeedSubscription' with the minimum fields required to make a request.

@@ -56,14 +56,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateStackInstances' smart constructor.
-data UpdateStackInstances = UpdateStackInstances'
-  { _usiOperationPreferences :: !(Maybe StackSetOperationPreferences)
-  , _usiOperationId          :: !(Maybe Text)
-  , _usiParameterOverrides   :: !(Maybe [Parameter])
-  , _usiStackSetName         :: !Text
-  , _usiAccounts             :: ![Text]
-  , _usiRegions              :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateStackInstances =
+  UpdateStackInstances'
+    { _usiOperationPreferences :: !(Maybe StackSetOperationPreferences)
+    , _usiOperationId          :: !(Maybe Text)
+    , _usiParameterOverrides   :: !(Maybe [Parameter])
+    , _usiStackSetName         :: !Text
+    , _usiAccounts             :: ![Text]
+    , _usiRegions              :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateStackInstances' with the minimum fields required to make a request.
@@ -154,10 +156,12 @@ instance ToQuery UpdateStackInstances where
                "Regions" =: toQueryList "member" _usiRegions]
 
 -- | /See:/ 'updateStackInstancesResponse' smart constructor.
-data UpdateStackInstancesResponse = UpdateStackInstancesResponse'
-  { _usirsOperationId    :: !(Maybe Text)
-  , _usirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateStackInstancesResponse =
+  UpdateStackInstancesResponse'
+    { _usirsOperationId    :: !(Maybe Text)
+    , _usirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateStackInstancesResponse' with the minimum fields required to make a request.

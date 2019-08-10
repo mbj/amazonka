@@ -51,11 +51,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createResourceDefinition' smart constructor.
-data CreateResourceDefinition = CreateResourceDefinition'
-  { _crdAmznClientToken :: !(Maybe Text)
-  , _crdInitialVersion  :: !(Maybe ResourceDefinitionVersion)
-  , _crdName            :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateResourceDefinition =
+  CreateResourceDefinition'
+    { _crdAmznClientToken :: !(Maybe Text)
+    , _crdInitialVersion  :: !(Maybe ResourceDefinitionVersion)
+    , _crdName            :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateResourceDefinition' with the minimum fields required to make a request.
@@ -130,16 +132,18 @@ instance ToQuery CreateResourceDefinition where
         toQuery = const mempty
 
 -- | /See:/ 'createResourceDefinitionResponse' smart constructor.
-data CreateResourceDefinitionResponse = CreateResourceDefinitionResponse'
-  { _crdrsLatestVersionARN     :: !(Maybe Text)
-  , _crdrsARN                  :: !(Maybe Text)
-  , _crdrsName                 :: !(Maybe Text)
-  , _crdrsCreationTimestamp    :: !(Maybe Text)
-  , _crdrsId                   :: !(Maybe Text)
-  , _crdrsLatestVersion        :: !(Maybe Text)
-  , _crdrsLastUpdatedTimestamp :: !(Maybe Text)
-  , _crdrsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateResourceDefinitionResponse =
+  CreateResourceDefinitionResponse'
+    { _crdrsLatestVersionARN     :: !(Maybe Text)
+    , _crdrsARN                  :: !(Maybe Text)
+    , _crdrsName                 :: !(Maybe Text)
+    , _crdrsCreationTimestamp    :: !(Maybe Text)
+    , _crdrsId                   :: !(Maybe Text)
+    , _crdrsLatestVersion        :: !(Maybe Text)
+    , _crdrsLastUpdatedTimestamp :: !(Maybe Text)
+    , _crdrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateResourceDefinitionResponse' with the minimum fields required to make a request.

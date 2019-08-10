@@ -48,10 +48,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'exitStandby' smart constructor.
-data ExitStandby = ExitStandby'
-  { _eInstanceIds          :: !(Maybe [Text])
-  , _eAutoScalingGroupName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ExitStandby =
+  ExitStandby'
+    { _eInstanceIds          :: !(Maybe [Text])
+    , _eAutoScalingGroupName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ExitStandby' with the minimum fields required to make a request.
@@ -108,10 +110,12 @@ instance ToQuery ExitStandby where
                "AutoScalingGroupName" =: _eAutoScalingGroupName]
 
 -- | /See:/ 'exitStandbyResponse' smart constructor.
-data ExitStandbyResponse = ExitStandbyResponse'
-  { _esrsActivities     :: !(Maybe [Activity])
-  , _esrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ExitStandbyResponse =
+  ExitStandbyResponse'
+    { _esrsActivities     :: !(Maybe [Activity])
+    , _esrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ExitStandbyResponse' with the minimum fields required to make a request.

@@ -69,12 +69,14 @@ import Network.AWS.SecretsManager.Types
 import Network.AWS.SecretsManager.Types.Product
 
 -- | /See:/ 'updateSecretVersionStage' smart constructor.
-data UpdateSecretVersionStage = UpdateSecretVersionStage'
-  { _usvsRemoveFromVersionId :: !(Maybe Text)
-  , _usvsMoveToVersionId     :: !(Maybe Text)
-  , _usvsSecretId            :: !Text
-  , _usvsVersionStage        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateSecretVersionStage =
+  UpdateSecretVersionStage'
+    { _usvsRemoveFromVersionId :: !(Maybe Text)
+    , _usvsMoveToVersionId     :: !(Maybe Text)
+    , _usvsSecretId            :: !Text
+    , _usvsVersionStage        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateSecretVersionStage' with the minimum fields required to make a request.
@@ -159,11 +161,13 @@ instance ToQuery UpdateSecretVersionStage where
         toQuery = const mempty
 
 -- | /See:/ 'updateSecretVersionStageResponse' smart constructor.
-data UpdateSecretVersionStageResponse = UpdateSecretVersionStageResponse'
-  { _usvsrsARN            :: !(Maybe Text)
-  , _usvsrsName           :: !(Maybe Text)
-  , _usvsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateSecretVersionStageResponse =
+  UpdateSecretVersionStageResponse'
+    { _usvsrsARN            :: !(Maybe Text)
+    , _usvsrsName           :: !(Maybe Text)
+    , _usvsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateSecretVersionStageResponse' with the minimum fields required to make a request.

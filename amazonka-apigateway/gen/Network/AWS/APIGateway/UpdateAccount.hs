@@ -51,9 +51,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateAccount' smart constructor.
-newtype UpdateAccount = UpdateAccount'
-  { _uaPatchOperations :: Maybe [PatchOperation]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateAccount =
+  UpdateAccount'
+    { _uaPatchOperations :: Maybe [PatchOperation]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateAccount' with the minimum fields required to make a request.

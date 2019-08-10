@@ -54,11 +54,13 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'setIdentityHeadersInNotificationsEnabled' smart constructor.
-data SetIdentityHeadersInNotificationsEnabled = SetIdentityHeadersInNotificationsEnabled'
-  { _sihineIdentity         :: !Text
-  , _sihineNotificationType :: !NotificationType
-  , _sihineEnabled          :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SetIdentityHeadersInNotificationsEnabled =
+  SetIdentityHeadersInNotificationsEnabled'
+    { _sihineIdentity         :: !Text
+    , _sihineNotificationType :: !NotificationType
+    , _sihineEnabled          :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetIdentityHeadersInNotificationsEnabled' with the minimum fields required to make a request.
@@ -144,9 +146,11 @@ instance ToQuery
 --
 --
 -- /See:/ 'setIdentityHeadersInNotificationsEnabledResponse' smart constructor.
-newtype SetIdentityHeadersInNotificationsEnabledResponse = SetIdentityHeadersInNotificationsEnabledResponse'
-  { _sihinersResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype SetIdentityHeadersInNotificationsEnabledResponse =
+  SetIdentityHeadersInNotificationsEnabledResponse'
+    { _sihinersResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetIdentityHeadersInNotificationsEnabledResponse' with the minimum fields required to make a request.

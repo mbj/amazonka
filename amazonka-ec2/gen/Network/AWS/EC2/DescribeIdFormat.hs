@@ -53,9 +53,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeIdFormat' smart constructor.
-newtype DescribeIdFormat = DescribeIdFormat'
-  { _difResource :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeIdFormat =
+  DescribeIdFormat'
+    { _difResource :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeIdFormat' with the minimum fields required to make a request.
@@ -105,10 +107,12 @@ instance ToQuery DescribeIdFormat where
 --
 --
 -- /See:/ 'describeIdFormatResponse' smart constructor.
-data DescribeIdFormatResponse = DescribeIdFormatResponse'
-  { _difrsStatuses       :: !(Maybe [IdFormat])
-  , _difrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeIdFormatResponse =
+  DescribeIdFormatResponse'
+    { _difrsStatuses       :: !(Maybe [IdFormat])
+    , _difrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeIdFormatResponse' with the minimum fields required to make a request.

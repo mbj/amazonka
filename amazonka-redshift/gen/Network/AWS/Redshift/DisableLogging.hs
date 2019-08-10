@@ -53,9 +53,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'disableLogging' smart constructor.
-newtype DisableLogging = DisableLogging'
-  { _dlClusterIdentifier :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DisableLogging =
+  DisableLogging'
+    { _dlClusterIdentifier :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisableLogging' with the minimum fields required to make a request.

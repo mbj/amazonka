@@ -49,10 +49,12 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'updateConfigurationSetReputationMetricsEnabled' smart constructor.
-data UpdateConfigurationSetReputationMetricsEnabled = UpdateConfigurationSetReputationMetricsEnabled'
-  { _ucsrmeConfigurationSetName :: !Text
-  , _ucsrmeEnabled              :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateConfigurationSetReputationMetricsEnabled =
+  UpdateConfigurationSetReputationMetricsEnabled'
+    { _ucsrmeConfigurationSetName :: !Text
+    , _ucsrmeEnabled              :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateConfigurationSetReputationMetricsEnabled' with the minimum fields required to make a request.

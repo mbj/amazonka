@@ -53,10 +53,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createAlias' smart constructor.
-data CreateAlias = CreateAlias'
-  { _caAliasName   :: !Text
-  , _caTargetKeyId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateAlias =
+  CreateAlias'
+    { _caAliasName   :: !Text
+    , _caTargetKeyId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateAlias' with the minimum fields required to make a request.

@@ -26,10 +26,12 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'button' smart constructor.
-data Button = Button'
-  { _bText  :: !Text
-  , _bValue :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Button =
+  Button'
+    { _bText  :: !Text
+    , _bValue :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Button' with the minimum fields required to make a request.
@@ -68,13 +70,15 @@ instance NFData Button where
 --
 --
 -- /See:/ 'genericAttachment' smart constructor.
-data GenericAttachment = GenericAttachment'
-  { _gaButtons           :: !(Maybe [Button])
-  , _gaSubTitle          :: !(Maybe Text)
-  , _gaImageURL          :: !(Maybe Text)
-  , _gaAttachmentLinkURL :: !(Maybe Text)
-  , _gaTitle             :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GenericAttachment =
+  GenericAttachment'
+    { _gaButtons           :: !(Maybe [Button])
+    , _gaSubTitle          :: !(Maybe Text)
+    , _gaImageURL          :: !(Maybe Text)
+    , _gaAttachmentLinkURL :: !(Maybe Text)
+    , _gaTitle             :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GenericAttachment' with the minimum fields required to make a request.
@@ -141,11 +145,13 @@ instance NFData GenericAttachment where
 --
 --
 -- /See:/ 'responseCard' smart constructor.
-data ResponseCard = ResponseCard'
-  { _rcGenericAttachments :: !(Maybe [GenericAttachment])
-  , _rcVersion            :: !(Maybe Text)
-  , _rcContentType        :: !(Maybe ContentType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResponseCard =
+  ResponseCard'
+    { _rcGenericAttachments :: !(Maybe [GenericAttachment])
+    , _rcVersion            :: !(Maybe Text)
+    , _rcContentType        :: !(Maybe ContentType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResponseCard' with the minimum fields required to make a request.

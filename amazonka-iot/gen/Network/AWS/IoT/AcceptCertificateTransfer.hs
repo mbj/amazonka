@@ -49,10 +49,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'acceptCertificateTransfer' smart constructor.
-data AcceptCertificateTransfer = AcceptCertificateTransfer'
-  { _actSetAsActive   :: !(Maybe Bool)
-  , _actCertificateId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AcceptCertificateTransfer =
+  AcceptCertificateTransfer'
+    { _actSetAsActive   :: !(Maybe Bool)
+    , _actCertificateId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AcceptCertificateTransfer' with the minimum fields required to make a request.

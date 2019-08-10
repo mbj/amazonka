@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getKeyPair' smart constructor.
-newtype GetKeyPair = GetKeyPair'
-  { _gkpKeyPairName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetKeyPair =
+  GetKeyPair'
+    { _gkpKeyPairName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetKeyPair' with the minimum fields required to make a request.
@@ -99,10 +101,12 @@ instance ToQuery GetKeyPair where
         toQuery = const mempty
 
 -- | /See:/ 'getKeyPairResponse' smart constructor.
-data GetKeyPairResponse = GetKeyPairResponse'
-  { _gkprsKeyPair        :: !(Maybe KeyPair)
-  , _gkprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetKeyPairResponse =
+  GetKeyPairResponse'
+    { _gkprsKeyPair        :: !(Maybe KeyPair)
+    , _gkprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetKeyPairResponse' with the minimum fields required to make a request.

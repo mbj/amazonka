@@ -42,11 +42,13 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'putBucketRequestPayment' smart constructor.
-data PutBucketRequestPayment = PutBucketRequestPayment'
-  { _pbrpContentMD5                  :: !(Maybe Text)
-  , _pbrpBucket                      :: !BucketName
-  , _pbrpRequestPaymentConfiguration :: !RequestPaymentConfiguration
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutBucketRequestPayment =
+  PutBucketRequestPayment'
+    { _pbrpContentMD5                  :: !(Maybe Text)
+    , _pbrpBucket                      :: !BucketName
+    , _pbrpRequestPaymentConfiguration :: !RequestPaymentConfiguration
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutBucketRequestPayment' with the minimum fields required to make a request.

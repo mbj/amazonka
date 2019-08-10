@@ -55,13 +55,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'modifyReplicationGroupShardConfiguration' smart constructor.
-data ModifyReplicationGroupShardConfiguration = ModifyReplicationGroupShardConfiguration'
-  { _mrgscReshardingConfiguration :: !(Maybe [ReshardingConfiguration])
-  , _mrgscNodeGroupsToRemove      :: !(Maybe [Text])
-  , _mrgscReplicationGroupId      :: !Text
-  , _mrgscNodeGroupCount          :: !Int
-  , _mrgscApplyImmediately        :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyReplicationGroupShardConfiguration =
+  ModifyReplicationGroupShardConfiguration'
+    { _mrgscReshardingConfiguration :: !(Maybe [ReshardingConfiguration])
+    , _mrgscNodeGroupsToRemove      :: !(Maybe [Text])
+    , _mrgscReplicationGroupId      :: !Text
+    , _mrgscNodeGroupCount          :: !Int
+    , _mrgscApplyImmediately        :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyReplicationGroupShardConfiguration' with the minimum fields required to make a request.
@@ -165,10 +167,12 @@ instance ToQuery
                "ApplyImmediately" =: _mrgscApplyImmediately]
 
 -- | /See:/ 'modifyReplicationGroupShardConfigurationResponse' smart constructor.
-data ModifyReplicationGroupShardConfigurationResponse = ModifyReplicationGroupShardConfigurationResponse'
-  { _mrgscrsReplicationGroup :: !(Maybe ReplicationGroup)
-  , _mrgscrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyReplicationGroupShardConfigurationResponse =
+  ModifyReplicationGroupShardConfigurationResponse'
+    { _mrgscrsReplicationGroup :: !(Maybe ReplicationGroup)
+    , _mrgscrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyReplicationGroupShardConfigurationResponse' with the minimum fields required to make a request.

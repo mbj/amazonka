@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'startPipelineExecution' smart constructor.
-newtype StartPipelineExecution = StartPipelineExecution'
-  { _speName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StartPipelineExecution =
+  StartPipelineExecution'
+    { _speName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartPipelineExecution' with the minimum fields required to make a request.
@@ -109,10 +111,12 @@ instance ToQuery StartPipelineExecution where
 --
 --
 -- /See:/ 'startPipelineExecutionResponse' smart constructor.
-data StartPipelineExecutionResponse = StartPipelineExecutionResponse'
-  { _spersPipelineExecutionId :: !(Maybe Text)
-  , _spersResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartPipelineExecutionResponse =
+  StartPipelineExecutionResponse'
+    { _spersPipelineExecutionId :: !(Maybe Text)
+    , _spersResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartPipelineExecutionResponse' with the minimum fields required to make a request.

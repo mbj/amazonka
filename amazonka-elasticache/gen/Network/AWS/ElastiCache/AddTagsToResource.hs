@@ -51,10 +51,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'addTagsToResource' smart constructor.
-data AddTagsToResource = AddTagsToResource'
-  { _attrResourceName :: !Text
-  , _attrTags         :: ![Tag]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddTagsToResource =
+  AddTagsToResource'
+    { _attrResourceName :: !Text
+    , _attrTags         :: ![Tag]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddTagsToResource' with the minimum fields required to make a request.

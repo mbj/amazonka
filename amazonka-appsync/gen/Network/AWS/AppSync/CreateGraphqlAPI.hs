@@ -49,13 +49,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createGraphqlAPI' smart constructor.
-data CreateGraphqlAPI = CreateGraphqlAPI'
-  { _cgaOpenIdConnectConfig :: !(Maybe OpenIdConnectConfig)
-  , _cgaUserPoolConfig      :: !(Maybe UserPoolConfig)
-  , _cgaLogConfig           :: !(Maybe LogConfig)
-  , _cgaName                :: !Text
-  , _cgaAuthenticationType  :: !AuthenticationType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateGraphqlAPI =
+  CreateGraphqlAPI'
+    { _cgaOpenIdConnectConfig :: !(Maybe OpenIdConnectConfig)
+    , _cgaUserPoolConfig      :: !(Maybe UserPoolConfig)
+    , _cgaLogConfig           :: !(Maybe LogConfig)
+    , _cgaName                :: !Text
+    , _cgaAuthenticationType  :: !AuthenticationType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateGraphqlAPI' with the minimum fields required to make a request.
@@ -144,10 +146,12 @@ instance ToQuery CreateGraphqlAPI where
         toQuery = const mempty
 
 -- | /See:/ 'createGraphqlAPIResponse' smart constructor.
-data CreateGraphqlAPIResponse = CreateGraphqlAPIResponse'
-  { _cgarsGraphqlAPI     :: !(Maybe GraphqlAPI)
-  , _cgarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateGraphqlAPIResponse =
+  CreateGraphqlAPIResponse'
+    { _cgarsGraphqlAPI     :: !(Maybe GraphqlAPI)
+    , _cgarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateGraphqlAPIResponse' with the minimum fields required to make a request.

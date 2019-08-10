@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getIntrospectionSchema' smart constructor.
-data GetIntrospectionSchema = GetIntrospectionSchema'
-  { _gisApiId  :: !Text
-  , _gisFormat :: !OutputType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetIntrospectionSchema =
+  GetIntrospectionSchema'
+    { _gisApiId  :: !Text
+    , _gisFormat :: !OutputType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetIntrospectionSchema' with the minimum fields required to make a request.
@@ -105,10 +107,12 @@ instance ToQuery GetIntrospectionSchema where
           = mconcat ["format" =: _gisFormat]
 
 -- | /See:/ 'getIntrospectionSchemaResponse' smart constructor.
-data GetIntrospectionSchemaResponse = GetIntrospectionSchemaResponse'
-  { _gisrsSchema         :: !(Maybe ByteString)
-  , _gisrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetIntrospectionSchemaResponse =
+  GetIntrospectionSchemaResponse'
+    { _gisrsSchema         :: !(Maybe ByteString)
+    , _gisrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetIntrospectionSchemaResponse' with the minimum fields required to make a request.

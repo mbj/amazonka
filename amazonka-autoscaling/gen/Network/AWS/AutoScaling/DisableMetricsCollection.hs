@@ -43,10 +43,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'disableMetricsCollection' smart constructor.
-data DisableMetricsCollection = DisableMetricsCollection'
-  { _dmcMetrics              :: !(Maybe [Text])
-  , _dmcAutoScalingGroupName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DisableMetricsCollection =
+  DisableMetricsCollection'
+    { _dmcMetrics              :: !(Maybe [Text])
+    , _dmcAutoScalingGroupName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisableMetricsCollection' with the minimum fields required to make a request.

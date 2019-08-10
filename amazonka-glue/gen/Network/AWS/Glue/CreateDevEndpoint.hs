@@ -65,16 +65,18 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createDevEndpoint' smart constructor.
-data CreateDevEndpoint = CreateDevEndpoint'
-  { _cdeExtraPythonLibsS3Path :: !(Maybe Text)
-  , _cdeSecurityGroupIds      :: !(Maybe [Text])
-  , _cdePublicKey             :: !(Maybe Text)
-  , _cdeSubnetId              :: !(Maybe Text)
-  , _cdeNumberOfNodes         :: !(Maybe Int)
-  , _cdeExtraJARsS3Path       :: !(Maybe Text)
-  , _cdeEndpointName          :: !Text
-  , _cdeRoleARN               :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDevEndpoint =
+  CreateDevEndpoint'
+    { _cdeExtraPythonLibsS3Path :: !(Maybe Text)
+    , _cdeSecurityGroupIds      :: !(Maybe [Text])
+    , _cdePublicKey             :: !(Maybe Text)
+    , _cdeSubnetId              :: !(Maybe Text)
+    , _cdeNumberOfNodes         :: !(Maybe Int)
+    , _cdeExtraJARsS3Path       :: !(Maybe Text)
+    , _cdeEndpointName          :: !Text
+    , _cdeRoleARN               :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDevEndpoint' with the minimum fields required to make a request.
@@ -201,23 +203,25 @@ instance ToQuery CreateDevEndpoint where
         toQuery = const mempty
 
 -- | /See:/ 'createDevEndpointResponse' smart constructor.
-data CreateDevEndpointResponse = CreateDevEndpointResponse'
-  { _cdersStatus                             :: !(Maybe Text)
-  , _cdersFailureReason                      :: !(Maybe Text)
-  , _cdersEndpointName                       :: !(Maybe Text)
-  , _cdersExtraPythonLibsS3Path              :: !(Maybe Text)
-  , _cdersSecurityGroupIds                   :: !(Maybe [Text])
-  , _cdersVPCId                              :: !(Maybe Text)
-  , _cdersSubnetId                           :: !(Maybe Text)
-  , _cdersNumberOfNodes                      :: !(Maybe Int)
-  , _cdersAvailabilityZone                   :: !(Maybe Text)
-  , _cdersZeppelinRemoteSparkInterpreterPort :: !(Maybe Int)
-  , _cdersExtraJARsS3Path                    :: !(Maybe Text)
-  , _cdersCreatedTimestamp                   :: !(Maybe POSIX)
-  , _cdersYarnEndpointAddress                :: !(Maybe Text)
-  , _cdersRoleARN                            :: !(Maybe Text)
-  , _cdersResponseStatus                     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDevEndpointResponse =
+  CreateDevEndpointResponse'
+    { _cdersStatus                             :: !(Maybe Text)
+    , _cdersFailureReason                      :: !(Maybe Text)
+    , _cdersEndpointName                       :: !(Maybe Text)
+    , _cdersExtraPythonLibsS3Path              :: !(Maybe Text)
+    , _cdersSecurityGroupIds                   :: !(Maybe [Text])
+    , _cdersVPCId                              :: !(Maybe Text)
+    , _cdersSubnetId                           :: !(Maybe Text)
+    , _cdersNumberOfNodes                      :: !(Maybe Int)
+    , _cdersAvailabilityZone                   :: !(Maybe Text)
+    , _cdersZeppelinRemoteSparkInterpreterPort :: !(Maybe Int)
+    , _cdersExtraJARsS3Path                    :: !(Maybe Text)
+    , _cdersCreatedTimestamp                   :: !(Maybe POSIX)
+    , _cdersYarnEndpointAddress                :: !(Maybe Text)
+    , _cdersRoleARN                            :: !(Maybe Text)
+    , _cdersResponseStatus                     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDevEndpointResponse' with the minimum fields required to make a request.

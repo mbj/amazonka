@@ -53,9 +53,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createSchema' smart constructor.
-newtype CreateSchema = CreateSchema'
-  { _csName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateSchema =
+  CreateSchema'
+    { _csName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateSchema' with the minimum fields required to make a request.
@@ -102,10 +104,12 @@ instance ToQuery CreateSchema where
         toQuery = const mempty
 
 -- | /See:/ 'createSchemaResponse' smart constructor.
-data CreateSchemaResponse = CreateSchemaResponse'
-  { _csrsSchemaARN      :: !(Maybe Text)
-  , _csrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateSchemaResponse =
+  CreateSchemaResponse'
+    { _csrsSchemaARN      :: !(Maybe Text)
+    , _csrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateSchemaResponse' with the minimum fields required to make a request.

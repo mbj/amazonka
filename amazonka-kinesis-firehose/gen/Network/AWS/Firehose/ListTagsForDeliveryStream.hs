@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listTagsForDeliveryStream' smart constructor.
-data ListTagsForDeliveryStream = ListTagsForDeliveryStream'
-  { _ltfdsLimit                :: !(Maybe Nat)
-  , _ltfdsExclusiveStartTagKey :: !(Maybe Text)
-  , _ltfdsDeliveryStreamName   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTagsForDeliveryStream =
+  ListTagsForDeliveryStream'
+    { _ltfdsLimit                :: !(Maybe Nat)
+    , _ltfdsExclusiveStartTagKey :: !(Maybe Text)
+    , _ltfdsDeliveryStreamName   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTagsForDeliveryStream' with the minimum fields required to make a request.
@@ -129,11 +131,13 @@ instance ToQuery ListTagsForDeliveryStream where
         toQuery = const mempty
 
 -- | /See:/ 'listTagsForDeliveryStreamResponse' smart constructor.
-data ListTagsForDeliveryStreamResponse = ListTagsForDeliveryStreamResponse'
-  { _ltfdsrsResponseStatus :: !Int
-  , _ltfdsrsTags           :: ![Tag]
-  , _ltfdsrsHasMoreTags    :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTagsForDeliveryStreamResponse =
+  ListTagsForDeliveryStreamResponse'
+    { _ltfdsrsResponseStatus :: !Int
+    , _ltfdsrsTags           :: ![Tag]
+    , _ltfdsrsHasMoreTags    :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTagsForDeliveryStreamResponse' with the minimum fields required to make a request.

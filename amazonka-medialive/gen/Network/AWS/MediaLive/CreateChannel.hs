@@ -52,16 +52,18 @@ import Network.AWS.Response
 -- | Placeholder documentation for CreateChannel
 --
 -- /See:/ 'createChannel' smart constructor.
-data CreateChannel = CreateChannel'
-  { _ccRequestId          :: !(Maybe Text)
-  , _ccInputSpecification :: !(Maybe InputSpecification)
-  , _ccInputAttachments   :: !(Maybe [InputAttachment])
-  , _ccReserved           :: !(Maybe Text)
-  , _ccDestinations       :: !(Maybe [OutputDestination])
-  , _ccName               :: !(Maybe Text)
-  , _ccEncoderSettings    :: !(Maybe EncoderSettings)
-  , _ccRoleARN            :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateChannel =
+  CreateChannel'
+    { _ccRequestId          :: !(Maybe Text)
+    , _ccInputSpecification :: !(Maybe InputSpecification)
+    , _ccInputAttachments   :: !(Maybe [InputAttachment])
+    , _ccReserved           :: !(Maybe Text)
+    , _ccDestinations       :: !(Maybe [OutputDestination])
+    , _ccName               :: !(Maybe Text)
+    , _ccEncoderSettings    :: !(Maybe EncoderSettings)
+    , _ccRoleARN            :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateChannel' with the minimum fields required to make a request.
@@ -172,10 +174,12 @@ instance ToQuery CreateChannel where
 -- | Placeholder documentation for CreateChannelResponse
 --
 -- /See:/ 'createChannelResponse' smart constructor.
-data CreateChannelResponse = CreateChannelResponse'
-  { _ccrsChannel        :: !(Maybe Channel)
-  , _ccrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateChannelResponse =
+  CreateChannelResponse'
+    { _ccrsChannel        :: !(Maybe Channel)
+    , _ccrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateChannelResponse' with the minimum fields required to make a request.

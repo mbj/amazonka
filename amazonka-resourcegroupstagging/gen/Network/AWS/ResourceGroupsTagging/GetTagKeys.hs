@@ -49,9 +49,11 @@ import Network.AWS.ResourceGroupsTagging.Types.Product
 import Network.AWS.Response
 
 -- | /See:/ 'getTagKeys' smart constructor.
-newtype GetTagKeys = GetTagKeys'
-  { _gtkPaginationToken :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetTagKeys =
+  GetTagKeys'
+    { _gtkPaginationToken :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetTagKeys' with the minimum fields required to make a request.
@@ -114,11 +116,13 @@ instance ToQuery GetTagKeys where
         toQuery = const mempty
 
 -- | /See:/ 'getTagKeysResponse' smart constructor.
-data GetTagKeysResponse = GetTagKeysResponse'
-  { _gtkrsPaginationToken :: !(Maybe Text)
-  , _gtkrsTagKeys         :: !(Maybe [Text])
-  , _gtkrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetTagKeysResponse =
+  GetTagKeysResponse'
+    { _gtkrsPaginationToken :: !(Maybe Text)
+    , _gtkrsTagKeys         :: !(Maybe [Text])
+    , _gtkrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetTagKeysResponse' with the minimum fields required to make a request.

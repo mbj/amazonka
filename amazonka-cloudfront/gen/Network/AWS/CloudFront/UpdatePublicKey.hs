@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updatePublicKey' smart constructor.
-data UpdatePublicKey = UpdatePublicKey'
-  { _upkIfMatch         :: !(Maybe Text)
-  , _upkPublicKeyConfig :: !PublicKeyConfig
-  , _upkId              :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdatePublicKey =
+  UpdatePublicKey'
+    { _upkIfMatch         :: !(Maybe Text)
+    , _upkPublicKeyConfig :: !PublicKeyConfig
+    , _upkId              :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdatePublicKey' with the minimum fields required to make a request.
@@ -122,11 +124,13 @@ instance ToQuery UpdatePublicKey where
         toQuery = const mempty
 
 -- | /See:/ 'updatePublicKeyResponse' smart constructor.
-data UpdatePublicKeyResponse = UpdatePublicKeyResponse'
-  { _upkrsETag           :: !(Maybe Text)
-  , _upkrsPublicKey      :: !(Maybe PublicKey)
-  , _upkrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdatePublicKeyResponse =
+  UpdatePublicKeyResponse'
+    { _upkrsETag           :: !(Maybe Text)
+    , _upkrsPublicKey      :: !(Maybe PublicKey)
+    , _upkrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdatePublicKeyResponse' with the minimum fields required to make a request.

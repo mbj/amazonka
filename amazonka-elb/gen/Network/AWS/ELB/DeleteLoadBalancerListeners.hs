@@ -49,10 +49,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteLoadBalancerListeners' smart constructor.
-data DeleteLoadBalancerListeners = DeleteLoadBalancerListeners'
-  { _dlblLoadBalancerName  :: !Text
-  , _dlblLoadBalancerPorts :: ![Int]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteLoadBalancerListeners =
+  DeleteLoadBalancerListeners'
+    { _dlblLoadBalancerName  :: !Text
+    , _dlblLoadBalancerPorts :: ![Int]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteLoadBalancerListeners' with the minimum fields required to make a request.
@@ -116,9 +118,11 @@ instance ToQuery DeleteLoadBalancerListeners where
 --
 --
 -- /See:/ 'deleteLoadBalancerListenersResponse' smart constructor.
-newtype DeleteLoadBalancerListenersResponse = DeleteLoadBalancerListenersResponse'
-  { _dlblrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteLoadBalancerListenersResponse =
+  DeleteLoadBalancerListenersResponse'
+    { _dlblrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteLoadBalancerListenersResponse' with the minimum fields required to make a request.

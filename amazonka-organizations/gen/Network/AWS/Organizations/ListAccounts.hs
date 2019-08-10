@@ -52,10 +52,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listAccounts' smart constructor.
-data ListAccounts = ListAccounts'
-  { _laNextToken  :: !(Maybe Text)
-  , _laMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAccounts =
+  ListAccounts'
+    { _laNextToken  :: !(Maybe Text)
+    , _laMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAccounts' with the minimum fields required to make a request.
@@ -123,11 +125,13 @@ instance ToQuery ListAccounts where
         toQuery = const mempty
 
 -- | /See:/ 'listAccountsResponse' smart constructor.
-data ListAccountsResponse = ListAccountsResponse'
-  { _larsAccounts       :: !(Maybe [Account])
-  , _larsNextToken      :: !(Maybe Text)
-  , _larsResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data ListAccountsResponse =
+  ListAccountsResponse'
+    { _larsAccounts       :: !(Maybe [Account])
+    , _larsNextToken      :: !(Maybe Text)
+    , _larsResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAccountsResponse' with the minimum fields required to make a request.

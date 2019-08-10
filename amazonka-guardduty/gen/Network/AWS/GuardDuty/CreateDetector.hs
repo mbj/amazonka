@@ -45,9 +45,11 @@ import Network.AWS.Response
 -- | CreateDetector request body.
 --
 -- /See:/ 'createDetector' smart constructor.
-newtype CreateDetector = CreateDetector'
-  { _cdEnable :: Maybe Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateDetector =
+  CreateDetector'
+    { _cdEnable :: Maybe Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDetector' with the minimum fields required to make a request.
@@ -95,10 +97,12 @@ instance ToQuery CreateDetector where
         toQuery = const mempty
 
 -- | /See:/ 'createDetectorResponse' smart constructor.
-data CreateDetectorResponse = CreateDetectorResponse'
-  { _cdrsDetectorId     :: !(Maybe Text)
-  , _cdrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDetectorResponse =
+  CreateDetectorResponse'
+    { _cdrsDetectorId     :: !(Maybe Text)
+    , _cdrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDetectorResponse' with the minimum fields required to make a request.

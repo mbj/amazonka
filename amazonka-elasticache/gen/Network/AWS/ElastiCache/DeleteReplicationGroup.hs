@@ -53,11 +53,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteReplicationGroup' smart constructor.
-data DeleteReplicationGroup = DeleteReplicationGroup'
-  { _drgFinalSnapshotIdentifier :: !(Maybe Text)
-  , _drgRetainPrimaryCluster    :: !(Maybe Bool)
-  , _drgReplicationGroupId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteReplicationGroup =
+  DeleteReplicationGroup'
+    { _drgFinalSnapshotIdentifier :: !(Maybe Text)
+    , _drgRetainPrimaryCluster    :: !(Maybe Bool)
+    , _drgReplicationGroupId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteReplicationGroup' with the minimum fields required to make a request.
@@ -124,10 +126,12 @@ instance ToQuery DeleteReplicationGroup where
                "ReplicationGroupId" =: _drgReplicationGroupId]
 
 -- | /See:/ 'deleteReplicationGroupResponse' smart constructor.
-data DeleteReplicationGroupResponse = DeleteReplicationGroupResponse'
-  { _delrsReplicationGroup :: !(Maybe ReplicationGroup)
-  , _delrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteReplicationGroupResponse =
+  DeleteReplicationGroupResponse'
+    { _delrsReplicationGroup :: !(Maybe ReplicationGroup)
+    , _delrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteReplicationGroupResponse' with the minimum fields required to make a request.

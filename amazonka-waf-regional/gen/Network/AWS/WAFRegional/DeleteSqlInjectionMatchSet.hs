@@ -62,10 +62,12 @@ import Network.AWS.WAFRegional.Types.Product
 --
 --
 -- /See:/ 'deleteSqlInjectionMatchSet' smart constructor.
-data DeleteSqlInjectionMatchSet = DeleteSqlInjectionMatchSet'
-  { _dsimsSqlInjectionMatchSetId :: !Text
-  , _dsimsChangeToken            :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteSqlInjectionMatchSet =
+  DeleteSqlInjectionMatchSet'
+    { _dsimsSqlInjectionMatchSetId :: !Text
+    , _dsimsChangeToken            :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteSqlInjectionMatchSet' with the minimum fields required to make a request.
@@ -138,10 +140,12 @@ instance ToQuery DeleteSqlInjectionMatchSet where
 --
 --
 -- /See:/ 'deleteSqlInjectionMatchSetResponse' smart constructor.
-data DeleteSqlInjectionMatchSetResponse = DeleteSqlInjectionMatchSetResponse'
-  { _dsimsrsChangeToken    :: !(Maybe Text)
-  , _dsimsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteSqlInjectionMatchSetResponse =
+  DeleteSqlInjectionMatchSetResponse'
+    { _dsimsrsChangeToken    :: !(Maybe Text)
+    , _dsimsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteSqlInjectionMatchSetResponse' with the minimum fields required to make a request.

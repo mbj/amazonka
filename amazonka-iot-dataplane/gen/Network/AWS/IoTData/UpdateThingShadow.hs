@@ -52,10 +52,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateThingShadow' smart constructor.
-data UpdateThingShadow = UpdateThingShadow'
-  { _utsThingName :: !Text
-  , _utsPayload   :: !ByteString
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data UpdateThingShadow =
+  UpdateThingShadow'
+    { _utsThingName :: !Text
+    , _utsPayload   :: !ByteString
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateThingShadow' with the minimum fields required to make a request.
@@ -112,10 +114,12 @@ instance ToQuery UpdateThingShadow where
 --
 --
 -- /See:/ 'updateThingShadowResponse' smart constructor.
-data UpdateThingShadowResponse = UpdateThingShadowResponse'
-  { _utsrsPayload        :: !(Maybe ByteString)
-  , _utsrsResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data UpdateThingShadowResponse =
+  UpdateThingShadowResponse'
+    { _utsrsPayload        :: !(Maybe ByteString)
+    , _utsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateThingShadowResponse' with the minimum fields required to make a request.

@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeStream' smart constructor.
-newtype DescribeStream = DescribeStream'
-  { _dStreamId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeStream =
+  DescribeStream'
+    { _dStreamId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeStream' with the minimum fields required to make a request.
@@ -89,10 +91,12 @@ instance ToQuery DescribeStream where
         toQuery = const mempty
 
 -- | /See:/ 'describeStreamResponse' smart constructor.
-data DescribeStreamResponse = DescribeStreamResponse'
-  { _dssrsStreamInfo     :: !(Maybe StreamInfo)
-  , _dssrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeStreamResponse =
+  DescribeStreamResponse'
+    { _dssrsStreamInfo     :: !(Maybe StreamInfo)
+    , _dssrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeStreamResponse' with the minimum fields required to make a request.

@@ -87,10 +87,12 @@ instance ToQuery PeerVPC where
         toQuery = const mempty
 
 -- | /See:/ 'peerVPCResponse' smart constructor.
-data PeerVPCResponse = PeerVPCResponse'
-  { _pvrsOperation      :: !(Maybe Operation)
-  , _pvrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PeerVPCResponse =
+  PeerVPCResponse'
+    { _pvrsOperation      :: !(Maybe Operation)
+    , _pvrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PeerVPCResponse' with the minimum fields required to make a request.

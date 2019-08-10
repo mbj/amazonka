@@ -26,18 +26,20 @@ import Network.AWS.StorageGateway.Types.Sum
 --
 --
 -- /See:/ 'cachediSCSIVolume' smart constructor.
-data CachediSCSIVolume = CachediSCSIVolume'
-  { _cscsivVolumeiSCSIAttributes :: !(Maybe VolumeiSCSIAttributes)
-  , _cscsivVolumeStatus          :: !(Maybe Text)
-  , _cscsivSourceSnapshotId      :: !(Maybe Text)
-  , _cscsivVolumeARN             :: !(Maybe Text)
-  , _cscsivVolumeProgress        :: !(Maybe Double)
-  , _cscsivVolumeSizeInBytes     :: !(Maybe Integer)
-  , _cscsivVolumeUsedInBytes     :: !(Maybe Integer)
-  , _cscsivCreatedDate           :: !(Maybe POSIX)
-  , _cscsivVolumeId              :: !(Maybe Text)
-  , _cscsivVolumeType            :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CachediSCSIVolume =
+  CachediSCSIVolume'
+    { _cscsivVolumeiSCSIAttributes :: !(Maybe VolumeiSCSIAttributes)
+    , _cscsivVolumeStatus          :: !(Maybe Text)
+    , _cscsivSourceSnapshotId      :: !(Maybe Text)
+    , _cscsivVolumeARN             :: !(Maybe Text)
+    , _cscsivVolumeProgress        :: !(Maybe Double)
+    , _cscsivVolumeSizeInBytes     :: !(Maybe Integer)
+    , _cscsivVolumeUsedInBytes     :: !(Maybe Integer)
+    , _cscsivCreatedDate           :: !(Maybe POSIX)
+    , _cscsivVolumeId              :: !(Maybe Text)
+    , _cscsivVolumeType            :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CachediSCSIVolume' with the minimum fields required to make a request.
@@ -145,12 +147,14 @@ instance NFData CachediSCSIVolume where
 --
 --
 -- /See:/ 'chapInfo' smart constructor.
-data ChapInfo = ChapInfo'
-  { _ciTargetARN                     :: !(Maybe Text)
-  , _ciSecretToAuthenticateInitiator :: !(Maybe Text)
-  , _ciInitiatorName                 :: !(Maybe Text)
-  , _ciSecretToAuthenticateTarget    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ChapInfo =
+  ChapInfo'
+    { _ciTargetARN                     :: !(Maybe Text)
+    , _ciSecretToAuthenticateInitiator :: !(Maybe Text)
+    , _ciInitiatorName                 :: !(Maybe Text)
+    , _ciSecretToAuthenticateTarget    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ChapInfo' with the minimum fields required to make a request.
@@ -210,12 +214,14 @@ instance NFData ChapInfo where
 --
 --
 -- /See:/ 'deviceiSCSIAttributes' smart constructor.
-data DeviceiSCSIAttributes = DeviceiSCSIAttributes'
-  { _dscsiaTargetARN            :: !(Maybe Text)
-  , _dscsiaChapEnabled          :: !(Maybe Bool)
-  , _dscsiaNetworkInterfaceId   :: !(Maybe Text)
-  , _dscsiaNetworkInterfacePort :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeviceiSCSIAttributes =
+  DeviceiSCSIAttributes'
+    { _dscsiaTargetARN            :: !(Maybe Text)
+    , _dscsiaChapEnabled          :: !(Maybe Bool)
+    , _dscsiaNetworkInterfaceId   :: !(Maybe Text)
+    , _dscsiaNetworkInterfacePort :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeviceiSCSIAttributes' with the minimum fields required to make a request.
@@ -270,15 +276,17 @@ instance Hashable DeviceiSCSIAttributes where
 instance NFData DeviceiSCSIAttributes where
 
 -- | /See:/ 'disk' smart constructor.
-data Disk = Disk'
-  { _dDiskAllocationResource :: !(Maybe Text)
-  , _dDiskAllocationType     :: !(Maybe Text)
-  , _dDiskNode               :: !(Maybe Text)
-  , _dDiskPath               :: !(Maybe Text)
-  , _dDiskSizeInBytes        :: !(Maybe Integer)
-  , _dDiskStatus             :: !(Maybe Text)
-  , _dDiskId                 :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Disk =
+  Disk'
+    { _dDiskAllocationResource :: !(Maybe Text)
+    , _dDiskAllocationType     :: !(Maybe Text)
+    , _dDiskNode               :: !(Maybe Text)
+    , _dDiskPath               :: !(Maybe Text)
+    , _dDiskSizeInBytes        :: !(Maybe Integer)
+    , _dDiskStatus             :: !(Maybe Text)
+    , _dDiskId                 :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Disk' with the minimum fields required to make a request.
@@ -362,12 +370,14 @@ instance NFData Disk where
 --
 --
 -- /See:/ 'fileShareInfo' smart constructor.
-data FileShareInfo = FileShareInfo'
-  { _fsiFileShareStatus :: !(Maybe Text)
-  , _fsiGatewayARN      :: !(Maybe Text)
-  , _fsiFileShareId     :: !(Maybe Text)
-  , _fsiFileShareARN    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FileShareInfo =
+  FileShareInfo'
+    { _fsiFileShareStatus :: !(Maybe Text)
+    , _fsiGatewayARN      :: !(Maybe Text)
+    , _fsiFileShareId     :: !(Maybe Text)
+    , _fsiFileShareARN    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FileShareInfo' with the minimum fields required to make a request.
@@ -426,13 +436,15 @@ instance NFData FileShareInfo where
 --
 --
 -- /See:/ 'gatewayInfo' smart constructor.
-data GatewayInfo = GatewayInfo'
-  { _giGatewayARN              :: !(Maybe Text)
-  , _giGatewayOperationalState :: !(Maybe Text)
-  , _giGatewayName             :: !(Maybe Text)
-  , _giGatewayId               :: !(Maybe Text)
-  , _giGatewayType             :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GatewayInfo =
+  GatewayInfo'
+    { _giGatewayARN              :: !(Maybe Text)
+    , _giGatewayOperationalState :: !(Maybe Text)
+    , _giGatewayName             :: !(Maybe Text)
+    , _giGatewayId               :: !(Maybe Text)
+    , _giGatewayType             :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GatewayInfo' with the minimum fields required to make a request.
@@ -500,12 +512,14 @@ instance NFData GatewayInfo where
 --
 --
 -- /See:/ 'nFSFileShareDefaults' smart constructor.
-data NFSFileShareDefaults = NFSFileShareDefaults'
-  { _nfsfsdFileMode      :: !(Maybe Text)
-  , _nfsfsdOwnerId       :: !(Maybe Nat)
-  , _nfsfsdDirectoryMode :: !(Maybe Text)
-  , _nfsfsdGroupId       :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NFSFileShareDefaults =
+  NFSFileShareDefaults'
+    { _nfsfsdFileMode      :: !(Maybe Text)
+    , _nfsfsdOwnerId       :: !(Maybe Nat)
+    , _nfsfsdDirectoryMode :: !(Maybe Text)
+    , _nfsfsdGroupId       :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NFSFileShareDefaults' with the minimum fields required to make a request.
@@ -573,25 +587,27 @@ instance ToJSON NFSFileShareDefaults where
 --
 --
 -- /See:/ 'nFSFileShareInfo' smart constructor.
-data NFSFileShareInfo = NFSFileShareInfo'
-  { _nfsfsiFileShareStatus      :: !(Maybe Text)
-  , _nfsfsiKMSKey               :: !(Maybe Text)
-  , _nfsfsiGatewayARN           :: !(Maybe Text)
-  , _nfsfsiPath                 :: !(Maybe Text)
-  , _nfsfsiObjectACL            :: !(Maybe ObjectACL)
-  , _nfsfsiKMSEncrypted         :: !(Maybe Bool)
-  , _nfsfsiFileShareId          :: !(Maybe Text)
-  , _nfsfsiFileShareARN         :: !(Maybe Text)
-  , _nfsfsiDefaultStorageClass  :: !(Maybe Text)
-  , _nfsfsiRole                 :: !(Maybe Text)
-  , _nfsfsiSquash               :: !(Maybe Text)
-  , _nfsfsiRequesterPays        :: !(Maybe Bool)
-  , _nfsfsiNFSFileShareDefaults :: !(Maybe NFSFileShareDefaults)
-  , _nfsfsiLocationARN          :: !(Maybe Text)
-  , _nfsfsiClientList           :: !(Maybe (List1 Text))
-  , _nfsfsiGuessMIMETypeEnabled :: !(Maybe Bool)
-  , _nfsfsiReadOnly             :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NFSFileShareInfo =
+  NFSFileShareInfo'
+    { _nfsfsiFileShareStatus      :: !(Maybe Text)
+    , _nfsfsiKMSKey               :: !(Maybe Text)
+    , _nfsfsiGatewayARN           :: !(Maybe Text)
+    , _nfsfsiPath                 :: !(Maybe Text)
+    , _nfsfsiObjectACL            :: !(Maybe ObjectACL)
+    , _nfsfsiKMSEncrypted         :: !(Maybe Bool)
+    , _nfsfsiFileShareId          :: !(Maybe Text)
+    , _nfsfsiFileShareARN         :: !(Maybe Text)
+    , _nfsfsiDefaultStorageClass  :: !(Maybe Text)
+    , _nfsfsiRole                 :: !(Maybe Text)
+    , _nfsfsiSquash               :: !(Maybe Text)
+    , _nfsfsiRequesterPays        :: !(Maybe Bool)
+    , _nfsfsiNFSFileShareDefaults :: !(Maybe NFSFileShareDefaults)
+    , _nfsfsiLocationARN          :: !(Maybe Text)
+    , _nfsfsiClientList           :: !(Maybe (List1 Text))
+    , _nfsfsiGuessMIMETypeEnabled :: !(Maybe Bool)
+    , _nfsfsiReadOnly             :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NFSFileShareInfo' with the minimum fields required to make a request.
@@ -754,11 +770,13 @@ instance NFData NFSFileShareInfo where
 --
 --
 -- /See:/ 'networkInterface' smart constructor.
-data NetworkInterface = NetworkInterface'
-  { _niIPv6Address :: !(Maybe Text)
-  , _niMACAddress  :: !(Maybe Text)
-  , _niIPv4Address :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NetworkInterface =
+  NetworkInterface'
+    { _niIPv6Address :: !(Maybe Text)
+    , _niMACAddress  :: !(Maybe Text)
+    , _niIPv4Address :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NetworkInterface' with the minimum fields required to make a request.
@@ -809,20 +827,22 @@ instance NFData NetworkInterface where
 --
 --
 -- /See:/ 'storediSCSIVolume' smart constructor.
-data StorediSCSIVolume = StorediSCSIVolume'
-  { _sscsivVolumeiSCSIAttributes :: !(Maybe VolumeiSCSIAttributes)
-  , _sscsivVolumeStatus          :: !(Maybe Text)
-  , _sscsivSourceSnapshotId      :: !(Maybe Text)
-  , _sscsivPreservedExistingData :: !(Maybe Bool)
-  , _sscsivVolumeARN             :: !(Maybe Text)
-  , _sscsivVolumeProgress        :: !(Maybe Double)
-  , _sscsivVolumeSizeInBytes     :: !(Maybe Integer)
-  , _sscsivVolumeUsedInBytes     :: !(Maybe Integer)
-  , _sscsivCreatedDate           :: !(Maybe POSIX)
-  , _sscsivVolumeId              :: !(Maybe Text)
-  , _sscsivVolumeDiskId          :: !(Maybe Text)
-  , _sscsivVolumeType            :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StorediSCSIVolume =
+  StorediSCSIVolume'
+    { _sscsivVolumeiSCSIAttributes :: !(Maybe VolumeiSCSIAttributes)
+    , _sscsivVolumeStatus          :: !(Maybe Text)
+    , _sscsivSourceSnapshotId      :: !(Maybe Text)
+    , _sscsivPreservedExistingData :: !(Maybe Bool)
+    , _sscsivVolumeARN             :: !(Maybe Text)
+    , _sscsivVolumeProgress        :: !(Maybe Double)
+    , _sscsivVolumeSizeInBytes     :: !(Maybe Integer)
+    , _sscsivVolumeUsedInBytes     :: !(Maybe Integer)
+    , _sscsivCreatedDate           :: !(Maybe POSIX)
+    , _sscsivVolumeId              :: !(Maybe Text)
+    , _sscsivVolumeDiskId          :: !(Maybe Text)
+    , _sscsivVolumeType            :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StorediSCSIVolume' with the minimum fields required to make a request.
@@ -942,10 +962,12 @@ instance Hashable StorediSCSIVolume where
 instance NFData StorediSCSIVolume where
 
 -- | /See:/ 'tag' smart constructor.
-data Tag = Tag'
-  { _tagKey   :: !Text
-  , _tagValue :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Tag =
+  Tag'
+    { _tagKey   :: !Text
+    , _tagValue :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Tag' with the minimum fields required to make a request.
@@ -991,16 +1013,18 @@ instance ToJSON Tag where
 --
 --
 -- /See:/ 'tape' smart constructor.
-data Tape = Tape'
-  { _tTapeBarcode     :: !(Maybe Text)
-  , _tTapeStatus      :: !(Maybe Text)
-  , _tTapeARN         :: !(Maybe Text)
-  , _tProgress        :: !(Maybe Double)
-  , _tTapeSizeInBytes :: !(Maybe Integer)
-  , _tVTLDevice       :: !(Maybe Text)
-  , _tTapeUsedInBytes :: !(Maybe Integer)
-  , _tTapeCreatedDate :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Tape =
+  Tape'
+    { _tTapeBarcode     :: !(Maybe Text)
+    , _tTapeStatus      :: !(Maybe Text)
+    , _tTapeARN         :: !(Maybe Text)
+    , _tProgress        :: !(Maybe Double)
+    , _tTapeSizeInBytes :: !(Maybe Integer)
+    , _tVTLDevice       :: !(Maybe Text)
+    , _tTapeUsedInBytes :: !(Maybe Integer)
+    , _tTapeCreatedDate :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Tape' with the minimum fields required to make a request.
@@ -1091,16 +1115,18 @@ instance NFData Tape where
 --
 --
 -- /See:/ 'tapeArchive' smart constructor.
-data TapeArchive = TapeArchive'
-  { _taTapeBarcode     :: !(Maybe Text)
-  , _taTapeStatus      :: !(Maybe Text)
-  , _taTapeARN         :: !(Maybe Text)
-  , _taTapeSizeInBytes :: !(Maybe Integer)
-  , _taCompletionTime  :: !(Maybe POSIX)
-  , _taTapeUsedInBytes :: !(Maybe Integer)
-  , _taTapeCreatedDate :: !(Maybe POSIX)
-  , _taRetrievedTo     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TapeArchive =
+  TapeArchive'
+    { _taTapeBarcode     :: !(Maybe Text)
+    , _taTapeStatus      :: !(Maybe Text)
+    , _taTapeARN         :: !(Maybe Text)
+    , _taTapeSizeInBytes :: !(Maybe Integer)
+    , _taCompletionTime  :: !(Maybe POSIX)
+    , _taTapeUsedInBytes :: !(Maybe Integer)
+    , _taTapeCreatedDate :: !(Maybe POSIX)
+    , _taRetrievedTo     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TapeArchive' with the minimum fields required to make a request.
@@ -1191,13 +1217,15 @@ instance NFData TapeArchive where
 --
 --
 -- /See:/ 'tapeInfo' smart constructor.
-data TapeInfo = TapeInfo'
-  { _tiTapeBarcode     :: !(Maybe Text)
-  , _tiTapeStatus      :: !(Maybe Text)
-  , _tiTapeARN         :: !(Maybe Text)
-  , _tiGatewayARN      :: !(Maybe Text)
-  , _tiTapeSizeInBytes :: !(Maybe Integer)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TapeInfo =
+  TapeInfo'
+    { _tiTapeBarcode     :: !(Maybe Text)
+    , _tiTapeStatus      :: !(Maybe Text)
+    , _tiTapeARN         :: !(Maybe Text)
+    , _tiGatewayARN      :: !(Maybe Text)
+    , _tiTapeSizeInBytes :: !(Maybe Integer)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TapeInfo' with the minimum fields required to make a request.
@@ -1264,12 +1292,14 @@ instance NFData TapeInfo where
 --
 --
 -- /See:/ 'tapeRecoveryPointInfo' smart constructor.
-data TapeRecoveryPointInfo = TapeRecoveryPointInfo'
-  { _trpiTapeStatus            :: !(Maybe Text)
-  , _trpiTapeRecoveryPointTime :: !(Maybe POSIX)
-  , _trpiTapeARN               :: !(Maybe Text)
-  , _trpiTapeSizeInBytes       :: !(Maybe Integer)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TapeRecoveryPointInfo =
+  TapeRecoveryPointInfo'
+    { _trpiTapeStatus            :: !(Maybe Text)
+    , _trpiTapeRecoveryPointTime :: !(Maybe POSIX)
+    , _trpiTapeARN               :: !(Maybe Text)
+    , _trpiTapeSizeInBytes       :: !(Maybe Integer)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TapeRecoveryPointInfo' with the minimum fields required to make a request.
@@ -1329,13 +1359,15 @@ instance NFData TapeRecoveryPointInfo where
 --
 --
 -- /See:/ 'vTLDevice' smart constructor.
-data VTLDevice = VTLDevice'
-  { _vtldDeviceiSCSIAttributes      :: !(Maybe DeviceiSCSIAttributes)
-  , _vtldVTLDeviceVendor            :: !(Maybe Text)
-  , _vtldVTLDeviceARN               :: !(Maybe Text)
-  , _vtldVTLDeviceType              :: !(Maybe Text)
-  , _vtldVTLDeviceProductIdentifier :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VTLDevice =
+  VTLDevice'
+    { _vtldDeviceiSCSIAttributes      :: !(Maybe DeviceiSCSIAttributes)
+    , _vtldVTLDeviceVendor            :: !(Maybe Text)
+    , _vtldVTLDeviceARN               :: !(Maybe Text)
+    , _vtldVTLDeviceType              :: !(Maybe Text)
+    , _vtldVTLDeviceProductIdentifier :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VTLDevice' with the minimum fields required to make a request.
@@ -1403,14 +1435,16 @@ instance NFData VTLDevice where
 --
 --
 -- /See:/ 'volumeInfo' smart constructor.
-data VolumeInfo = VolumeInfo'
-  { _viGatewayARN        :: !(Maybe Text)
-  , _viVolumeARN         :: !(Maybe Text)
-  , _viVolumeSizeInBytes :: !(Maybe Integer)
-  , _viVolumeId          :: !(Maybe Text)
-  , _viGatewayId         :: !(Maybe Text)
-  , _viVolumeType        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VolumeInfo =
+  VolumeInfo'
+    { _viGatewayARN        :: !(Maybe Text)
+    , _viVolumeARN         :: !(Maybe Text)
+    , _viVolumeSizeInBytes :: !(Maybe Integer)
+    , _viVolumeId          :: !(Maybe Text)
+    , _viGatewayId         :: !(Maybe Text)
+    , _viVolumeType        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VolumeInfo' with the minimum fields required to make a request.
@@ -1481,12 +1515,14 @@ instance Hashable VolumeInfo where
 instance NFData VolumeInfo where
 
 -- | /See:/ 'volumeRecoveryPointInfo' smart constructor.
-data VolumeRecoveryPointInfo = VolumeRecoveryPointInfo'
-  { _vrpiVolumeRecoveryPointTime :: !(Maybe Text)
-  , _vrpiVolumeARN               :: !(Maybe Text)
-  , _vrpiVolumeSizeInBytes       :: !(Maybe Integer)
-  , _vrpiVolumeUsageInBytes      :: !(Maybe Integer)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VolumeRecoveryPointInfo =
+  VolumeRecoveryPointInfo'
+    { _vrpiVolumeRecoveryPointTime :: !(Maybe Text)
+    , _vrpiVolumeARN               :: !(Maybe Text)
+    , _vrpiVolumeSizeInBytes       :: !(Maybe Integer)
+    , _vrpiVolumeUsageInBytes      :: !(Maybe Integer)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VolumeRecoveryPointInfo' with the minimum fields required to make a request.
@@ -1546,13 +1582,15 @@ instance NFData VolumeRecoveryPointInfo where
 --
 --
 -- /See:/ 'volumeiSCSIAttributes' smart constructor.
-data VolumeiSCSIAttributes = VolumeiSCSIAttributes'
-  { _vscsiaLunNumber            :: !(Maybe Nat)
-  , _vscsiaTargetARN            :: !(Maybe Text)
-  , _vscsiaChapEnabled          :: !(Maybe Bool)
-  , _vscsiaNetworkInterfaceId   :: !(Maybe Text)
-  , _vscsiaNetworkInterfacePort :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VolumeiSCSIAttributes =
+  VolumeiSCSIAttributes'
+    { _vscsiaLunNumber            :: !(Maybe Nat)
+    , _vscsiaTargetARN            :: !(Maybe Text)
+    , _vscsiaChapEnabled          :: !(Maybe Bool)
+    , _vscsiaNetworkInterfaceId   :: !(Maybe Text)
+    , _vscsiaNetworkInterfacePort :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VolumeiSCSIAttributes' with the minimum fields required to make a request.

@@ -46,10 +46,12 @@ import Network.AWS.ServiceCatalog.Types
 import Network.AWS.ServiceCatalog.Types.Product
 
 -- | /See:/ 'createTagOption' smart constructor.
-data CreateTagOption = CreateTagOption'
-  { _ctoKey   :: !Text
-  , _ctoValue :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateTagOption =
+  CreateTagOption'
+    { _ctoKey   :: !Text
+    , _ctoValue :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateTagOption' with the minimum fields required to make a request.
@@ -112,10 +114,12 @@ instance ToQuery CreateTagOption where
         toQuery = const mempty
 
 -- | /See:/ 'createTagOptionResponse' smart constructor.
-data CreateTagOptionResponse = CreateTagOptionResponse'
-  { _ctorsTagOptionDetail :: !(Maybe TagOptionDetail)
-  , _ctorsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateTagOptionResponse =
+  CreateTagOptionResponse'
+    { _ctorsTagOptionDetail :: !(Maybe TagOptionDetail)
+    , _ctorsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateTagOptionResponse' with the minimum fields required to make a request.

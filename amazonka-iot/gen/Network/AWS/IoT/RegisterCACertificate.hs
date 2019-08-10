@@ -54,13 +54,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'registerCACertificate' smart constructor.
-data RegisterCACertificate = RegisterCACertificate'
-  { _rcacSetAsActive             :: !(Maybe Bool)
-  , _rcacAllowAutoRegistration   :: !(Maybe Bool)
-  , _rcacRegistrationConfig      :: !(Maybe RegistrationConfig)
-  , _rcacCaCertificate           :: !Text
-  , _rcacVerificationCertificate :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RegisterCACertificate =
+  RegisterCACertificate'
+    { _rcacSetAsActive             :: !(Maybe Bool)
+    , _rcacAllowAutoRegistration   :: !(Maybe Bool)
+    , _rcacRegistrationConfig      :: !(Maybe RegistrationConfig)
+    , _rcacCaCertificate           :: !Text
+    , _rcacVerificationCertificate :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterCACertificate' with the minimum fields required to make a request.
@@ -154,11 +156,13 @@ instance ToQuery RegisterCACertificate where
 --
 --
 -- /See:/ 'registerCACertificateResponse' smart constructor.
-data RegisterCACertificateResponse = RegisterCACertificateResponse'
-  { _rcacrsCertificateARN :: !(Maybe Text)
-  , _rcacrsCertificateId  :: !(Maybe Text)
-  , _rcacrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RegisterCACertificateResponse =
+  RegisterCACertificateResponse'
+    { _rcacrsCertificateARN :: !(Maybe Text)
+    , _rcacrsCertificateId  :: !(Maybe Text)
+    , _rcacrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterCACertificateResponse' with the minimum fields required to make a request.

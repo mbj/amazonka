@@ -49,12 +49,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'adminListUserAuthEvents' smart constructor.
-data AdminListUserAuthEvents = AdminListUserAuthEvents'
-  { _aluaeNextToken  :: !(Maybe Text)
-  , _aluaeMaxResults :: !(Maybe Nat)
-  , _aluaeUserPoolId :: !Text
-  , _aluaeUsername   :: !(Sensitive Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data AdminListUserAuthEvents =
+  AdminListUserAuthEvents'
+    { _aluaeNextToken  :: !(Maybe Text)
+    , _aluaeMaxResults :: !(Maybe Nat)
+    , _aluaeUserPoolId :: !Text
+    , _aluaeUsername   :: !(Sensitive Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AdminListUserAuthEvents' with the minimum fields required to make a request.
@@ -139,11 +141,13 @@ instance ToQuery AdminListUserAuthEvents where
         toQuery = const mempty
 
 -- | /See:/ 'adminListUserAuthEventsResponse' smart constructor.
-data AdminListUserAuthEventsResponse = AdminListUserAuthEventsResponse'
-  { _aluaersNextToken      :: !(Maybe Text)
-  , _aluaersAuthEvents     :: !(Maybe [AuthEventType])
-  , _aluaersResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AdminListUserAuthEventsResponse =
+  AdminListUserAuthEventsResponse'
+    { _aluaersNextToken      :: !(Maybe Text)
+    , _aluaersAuthEvents     :: !(Maybe [AuthEventType])
+    , _aluaersResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AdminListUserAuthEventsResponse' with the minimum fields required to make a request.

@@ -49,11 +49,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateMLModel' smart constructor.
-data UpdateMLModel = UpdateMLModel'
-  { _umlmMLModelName    :: !(Maybe Text)
-  , _umlmScoreThreshold :: !(Maybe Double)
-  , _umlmMLModelId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateMLModel =
+  UpdateMLModel'
+    { _umlmMLModelName    :: !(Maybe Text)
+    , _umlmScoreThreshold :: !(Maybe Double)
+    , _umlmMLModelId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateMLModel' with the minimum fields required to make a request.
@@ -131,10 +133,12 @@ instance ToQuery UpdateMLModel where
 --
 --
 -- /See:/ 'updateMLModelResponse' smart constructor.
-data UpdateMLModelResponse = UpdateMLModelResponse'
-  { _umlmrsMLModelId      :: !(Maybe Text)
-  , _umlmrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateMLModelResponse =
+  UpdateMLModelResponse'
+    { _umlmrsMLModelId      :: !(Maybe Text)
+    , _umlmrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateMLModelResponse' with the minimum fields required to make a request.

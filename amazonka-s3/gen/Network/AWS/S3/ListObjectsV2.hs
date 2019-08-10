@@ -65,17 +65,19 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'listObjectsV2' smart constructor.
-data ListObjectsV2 = ListObjectsV2'
-  { _lovStartAfter        :: !(Maybe Text)
-  , _lovContinuationToken :: !(Maybe Text)
-  , _lovFetchOwner        :: !(Maybe Bool)
-  , _lovPrefix            :: !(Maybe Text)
-  , _lovEncodingType      :: !(Maybe EncodingType)
-  , _lovRequestPayer      :: !(Maybe RequestPayer)
-  , _lovMaxKeys           :: !(Maybe Int)
-  , _lovDelimiter         :: !(Maybe Delimiter)
-  , _lovBucket            :: !BucketName
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListObjectsV2 =
+  ListObjectsV2'
+    { _lovStartAfter        :: !(Maybe Text)
+    , _lovContinuationToken :: !(Maybe Text)
+    , _lovFetchOwner        :: !(Maybe Bool)
+    , _lovPrefix            :: !(Maybe Text)
+    , _lovEncodingType      :: !(Maybe EncodingType)
+    , _lovRequestPayer      :: !(Maybe RequestPayer)
+    , _lovMaxKeys           :: !(Maybe Int)
+    , _lovDelimiter         :: !(Maybe Delimiter)
+    , _lovBucket            :: !BucketName
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListObjectsV2' with the minimum fields required to make a request.
@@ -206,21 +208,23 @@ instance ToQuery ListObjectsV2 where
                "delimiter" =: _lovDelimiter, "list-type=2"]
 
 -- | /See:/ 'listObjectsV2Response' smart constructor.
-data ListObjectsV2Response = ListObjectsV2Response'
-  { _lovrsStartAfter            :: !(Maybe Text)
-  , _lovrsKeyCount              :: !(Maybe Int)
-  , _lovrsContents              :: !(Maybe [Object])
-  , _lovrsContinuationToken     :: !(Maybe Text)
-  , _lovrsPrefix                :: !(Maybe Text)
-  , _lovrsCommonPrefixes        :: !(Maybe [CommonPrefix])
-  , _lovrsEncodingType          :: !(Maybe EncodingType)
-  , _lovrsName                  :: !(Maybe BucketName)
-  , _lovrsNextContinuationToken :: !(Maybe Text)
-  , _lovrsMaxKeys               :: !(Maybe Int)
-  , _lovrsIsTruncated           :: !(Maybe Bool)
-  , _lovrsDelimiter             :: !(Maybe Delimiter)
-  , _lovrsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListObjectsV2Response =
+  ListObjectsV2Response'
+    { _lovrsStartAfter            :: !(Maybe Text)
+    , _lovrsKeyCount              :: !(Maybe Int)
+    , _lovrsContents              :: !(Maybe [Object])
+    , _lovrsContinuationToken     :: !(Maybe Text)
+    , _lovrsPrefix                :: !(Maybe Text)
+    , _lovrsCommonPrefixes        :: !(Maybe [CommonPrefix])
+    , _lovrsEncodingType          :: !(Maybe EncodingType)
+    , _lovrsName                  :: !(Maybe BucketName)
+    , _lovrsNextContinuationToken :: !(Maybe Text)
+    , _lovrsMaxKeys               :: !(Maybe Int)
+    , _lovrsIsTruncated           :: !(Maybe Bool)
+    , _lovrsDelimiter             :: !(Maybe Delimiter)
+    , _lovrsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListObjectsV2Response' with the minimum fields required to make a request.

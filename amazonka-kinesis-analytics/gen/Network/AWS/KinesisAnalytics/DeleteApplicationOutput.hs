@@ -52,11 +52,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteApplicationOutput' smart constructor.
-data DeleteApplicationOutput = DeleteApplicationOutput'
-  { _daoApplicationName             :: !Text
-  , _daoCurrentApplicationVersionId :: !Nat
-  , _daoOutputId                    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteApplicationOutput =
+  DeleteApplicationOutput'
+    { _daoApplicationName             :: !Text
+    , _daoCurrentApplicationVersionId :: !Nat
+    , _daoOutputId                    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteApplicationOutput' with the minimum fields required to make a request.
@@ -138,9 +140,11 @@ instance ToQuery DeleteApplicationOutput where
 --
 --
 -- /See:/ 'deleteApplicationOutputResponse' smart constructor.
-newtype DeleteApplicationOutputResponse = DeleteApplicationOutputResponse'
-  { _daorsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteApplicationOutputResponse =
+  DeleteApplicationOutputResponse'
+    { _daorsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteApplicationOutputResponse' with the minimum fields required to make a request.

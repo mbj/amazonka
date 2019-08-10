@@ -54,11 +54,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateGatewayResponse' smart constructor.
-data UpdateGatewayResponse = UpdateGatewayResponse'
-  { _ugPatchOperations :: !(Maybe [PatchOperation])
-  , _ugRestAPIId       :: !Text
-  , _ugResponseType    :: !GatewayResponseType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateGatewayResponse =
+  UpdateGatewayResponse'
+    { _ugPatchOperations :: !(Maybe [PatchOperation])
+    , _ugRestAPIId       :: !Text
+    , _ugResponseType    :: !GatewayResponseType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateGatewayResponse' with the minimum fields required to make a request.

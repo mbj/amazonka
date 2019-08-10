@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'disableVPCClassicLinkDNSSupport' smart constructor.
-newtype DisableVPCClassicLinkDNSSupport = DisableVPCClassicLinkDNSSupport'
-  { _dvcldsVPCId :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DisableVPCClassicLinkDNSSupport =
+  DisableVPCClassicLinkDNSSupport'
+    { _dvcldsVPCId :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisableVPCClassicLinkDNSSupport' with the minimum fields required to make a request.
@@ -106,10 +108,12 @@ instance ToQuery DisableVPCClassicLinkDNSSupport
 --
 --
 -- /See:/ 'disableVPCClassicLinkDNSSupportResponse' smart constructor.
-data DisableVPCClassicLinkDNSSupportResponse = DisableVPCClassicLinkDNSSupportResponse'
-  { _dvcldsrsReturn         :: !(Maybe Bool)
-  , _dvcldsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DisableVPCClassicLinkDNSSupportResponse =
+  DisableVPCClassicLinkDNSSupportResponse'
+    { _dvcldsrsReturn         :: !(Maybe Bool)
+    , _dvcldsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisableVPCClassicLinkDNSSupportResponse' with the minimum fields required to make a request.

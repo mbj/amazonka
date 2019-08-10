@@ -26,10 +26,12 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'action' smart constructor.
-data Action = Action'
-  { _aType           :: !ActionTypeEnum
-  , _aTargetGroupARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Action =
+  Action'
+    { _aType           :: !ActionTypeEnum
+    , _aTargetGroupARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Action' with the minimum fields required to make a request.
@@ -75,11 +77,13 @@ instance ToQuery Action where
 --
 --
 -- /See:/ 'availabilityZone' smart constructor.
-data AvailabilityZone = AvailabilityZone'
-  { _azSubnetId              :: !(Maybe Text)
-  , _azZoneName              :: !(Maybe Text)
-  , _azLoadBalancerAddresses :: !(Maybe [LoadBalancerAddress])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AvailabilityZone =
+  AvailabilityZone'
+    { _azSubnetId              :: !(Maybe Text)
+    , _azZoneName              :: !(Maybe Text)
+    , _azLoadBalancerAddresses :: !(Maybe [LoadBalancerAddress])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AvailabilityZone' with the minimum fields required to make a request.
@@ -129,10 +133,12 @@ instance NFData AvailabilityZone where
 --
 --
 -- /See:/ 'certificate' smart constructor.
-data Certificate = Certificate'
-  { _cCertificateARN :: !(Maybe Text)
-  , _cIsDefault      :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Certificate =
+  Certificate'
+    { _cCertificateARN :: !(Maybe Text)
+    , _cIsDefault      :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Certificate' with the minimum fields required to make a request.
@@ -175,10 +181,12 @@ instance ToQuery Certificate where
 --
 --
 -- /See:/ 'cipher' smart constructor.
-data Cipher = Cipher'
-  { _cPriority :: !(Maybe Int)
-  , _cName     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Cipher =
+  Cipher'
+    { _cPriority :: !(Maybe Int)
+    , _cName     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Cipher' with the minimum fields required to make a request.
@@ -214,10 +222,12 @@ instance NFData Cipher where
 --
 --
 -- /See:/ 'limit' smart constructor.
-data Limit = Limit'
-  { _lMax  :: !(Maybe Text)
-  , _lName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Limit =
+  Limit'
+    { _lMax  :: !(Maybe Text)
+    , _lName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Limit' with the minimum fields required to make a request.
@@ -253,15 +263,17 @@ instance NFData Limit where
 --
 --
 -- /See:/ 'listener' smart constructor.
-data Listener = Listener'
-  { _lSSLPolicy       :: !(Maybe Text)
-  , _lListenerARN     :: !(Maybe Text)
-  , _lProtocol        :: !(Maybe ProtocolEnum)
-  , _lDefaultActions  :: !(Maybe [Action])
-  , _lCertificates    :: !(Maybe [Certificate])
-  , _lLoadBalancerARN :: !(Maybe Text)
-  , _lPort            :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Listener =
+  Listener'
+    { _lSSLPolicy       :: !(Maybe Text)
+    , _lListenerARN     :: !(Maybe Text)
+    , _lProtocol        :: !(Maybe ProtocolEnum)
+    , _lDefaultActions  :: !(Maybe [Action])
+    , _lCertificates    :: !(Maybe [Certificate])
+    , _lLoadBalancerARN :: !(Maybe Text)
+    , _lPort            :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Listener' with the minimum fields required to make a request.
@@ -346,20 +358,22 @@ instance NFData Listener where
 --
 --
 -- /See:/ 'loadBalancer' smart constructor.
-data LoadBalancer = LoadBalancer'
-  { _lbState                 :: !(Maybe LoadBalancerState)
-  , _lbSecurityGroups        :: !(Maybe [Text])
-  , _lbLoadBalancerName      :: !(Maybe Text)
-  , _lbCreatedTime           :: !(Maybe ISO8601)
-  , _lbVPCId                 :: !(Maybe Text)
-  , _lbCanonicalHostedZoneId :: !(Maybe Text)
-  , _lbAvailabilityZones     :: !(Maybe [AvailabilityZone])
-  , _lbLoadBalancerARN       :: !(Maybe Text)
-  , _lbIPAddressType         :: !(Maybe IPAddressType)
-  , _lbScheme                :: !(Maybe LoadBalancerSchemeEnum)
-  , _lbType                  :: !(Maybe LoadBalancerTypeEnum)
-  , _lbDNSName               :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LoadBalancer =
+  LoadBalancer'
+    { _lbState                 :: !(Maybe LoadBalancerState)
+    , _lbSecurityGroups        :: !(Maybe [Text])
+    , _lbLoadBalancerName      :: !(Maybe Text)
+    , _lbCreatedTime           :: !(Maybe ISO8601)
+    , _lbVPCId                 :: !(Maybe Text)
+    , _lbCanonicalHostedZoneId :: !(Maybe Text)
+    , _lbAvailabilityZones     :: !(Maybe [AvailabilityZone])
+    , _lbLoadBalancerARN       :: !(Maybe Text)
+    , _lbIPAddressType         :: !(Maybe IPAddressType)
+    , _lbScheme                :: !(Maybe LoadBalancerSchemeEnum)
+    , _lbType                  :: !(Maybe LoadBalancerTypeEnum)
+    , _lbDNSName               :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LoadBalancer' with the minimum fields required to make a request.
@@ -484,10 +498,12 @@ instance NFData LoadBalancer where
 --
 --
 -- /See:/ 'loadBalancerAddress' smart constructor.
-data LoadBalancerAddress = LoadBalancerAddress'
-  { _lbaIPAddress    :: !(Maybe Text)
-  , _lbaAllocationId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LoadBalancerAddress =
+  LoadBalancerAddress'
+    { _lbaIPAddress    :: !(Maybe Text)
+    , _lbaAllocationId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LoadBalancerAddress' with the minimum fields required to make a request.
@@ -525,10 +541,12 @@ instance NFData LoadBalancerAddress where
 --
 --
 -- /See:/ 'loadBalancerAttribute' smart constructor.
-data LoadBalancerAttribute = LoadBalancerAttribute'
-  { _lbaValue :: !(Maybe Text)
-  , _lbaKey   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LoadBalancerAttribute =
+  LoadBalancerAttribute'
+    { _lbaValue :: !(Maybe Text)
+    , _lbaKey   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LoadBalancerAttribute' with the minimum fields required to make a request.
@@ -570,10 +588,12 @@ instance ToQuery LoadBalancerAttribute where
 --
 --
 -- /See:/ 'loadBalancerState' smart constructor.
-data LoadBalancerState = LoadBalancerState'
-  { _lbsReason :: !(Maybe Text)
-  , _lbsCode   :: !(Maybe LoadBalancerStateEnum)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LoadBalancerState =
+  LoadBalancerState'
+    { _lbsReason :: !(Maybe Text)
+    , _lbsCode   :: !(Maybe LoadBalancerStateEnum)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LoadBalancerState' with the minimum fields required to make a request.
@@ -611,9 +631,11 @@ instance NFData LoadBalancerState where
 --
 --
 -- /See:/ 'matcher' smart constructor.
-newtype Matcher = Matcher'
-  { _mHTTPCode :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype Matcher =
+  Matcher'
+    { _mHTTPCode :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Matcher' with the minimum fields required to make a request.
@@ -647,13 +669,15 @@ instance ToQuery Matcher where
 --
 --
 -- /See:/ 'rule' smart constructor.
-data Rule = Rule'
-  { _rPriority   :: !(Maybe Text)
-  , _rActions    :: !(Maybe [Action])
-  , _rConditions :: !(Maybe [RuleCondition])
-  , _rRuleARN    :: !(Maybe Text)
-  , _rIsDefault  :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Rule =
+  Rule'
+    { _rPriority   :: !(Maybe Text)
+    , _rActions    :: !(Maybe [Action])
+    , _rConditions :: !(Maybe [RuleCondition])
+    , _rRuleARN    :: !(Maybe Text)
+    , _rIsDefault  :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Rule' with the minimum fields required to make a request.
@@ -722,10 +746,12 @@ instance NFData Rule where
 --
 --
 -- /See:/ 'ruleCondition' smart constructor.
-data RuleCondition = RuleCondition'
-  { _rcField  :: !(Maybe Text)
-  , _rcValues :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RuleCondition =
+  RuleCondition'
+    { _rcField  :: !(Maybe Text)
+    , _rcValues :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RuleCondition' with the minimum fields required to make a request.
@@ -771,10 +797,12 @@ instance ToQuery RuleCondition where
 --
 --
 -- /See:/ 'rulePriorityPair' smart constructor.
-data RulePriorityPair = RulePriorityPair'
-  { _rppPriority :: !(Maybe Nat)
-  , _rppRuleARN  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RulePriorityPair =
+  RulePriorityPair'
+    { _rppPriority :: !(Maybe Nat)
+    , _rppRuleARN  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RulePriorityPair' with the minimum fields required to make a request.
@@ -813,11 +841,13 @@ instance ToQuery RulePriorityPair where
 --
 --
 -- /See:/ 'sslPolicy' smart constructor.
-data SSLPolicy = SSLPolicy'
-  { _spCiphers      :: !(Maybe [Cipher])
-  , _spName         :: !(Maybe Text)
-  , _spSSLProtocols :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SSLPolicy =
+  SSLPolicy'
+    { _spCiphers      :: !(Maybe [Cipher])
+    , _spName         :: !(Maybe Text)
+    , _spSSLProtocols :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SSLPolicy' with the minimum fields required to make a request.
@@ -867,10 +897,12 @@ instance NFData SSLPolicy where
 --
 --
 -- /See:/ 'subnetMapping' smart constructor.
-data SubnetMapping = SubnetMapping'
-  { _smAllocationId :: !(Maybe Text)
-  , _smSubnetId     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SubnetMapping =
+  SubnetMapping'
+    { _smAllocationId :: !(Maybe Text)
+    , _smSubnetId     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SubnetMapping' with the minimum fields required to make a request.
@@ -909,10 +941,12 @@ instance ToQuery SubnetMapping where
 --
 --
 -- /See:/ 'tag' smart constructor.
-data Tag = Tag'
-  { _tagValue :: !(Maybe Text)
-  , _tagKey   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Tag =
+  Tag'
+    { _tagValue :: !(Maybe Text)
+    , _tagKey   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Tag' with the minimum fields required to make a request.
@@ -953,10 +987,12 @@ instance ToQuery Tag where
 --
 --
 -- /See:/ 'tagDescription' smart constructor.
-data TagDescription = TagDescription'
-  { _tdResourceARN :: !(Maybe Text)
-  , _tdTags        :: !(Maybe (List1 Tag))
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TagDescription =
+  TagDescription'
+    { _tdResourceARN :: !(Maybe Text)
+    , _tdTags        :: !(Maybe (List1 Tag))
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TagDescription' with the minimum fields required to make a request.
@@ -995,11 +1031,13 @@ instance NFData TagDescription where
 --
 --
 -- /See:/ 'targetDescription' smart constructor.
-data TargetDescription = TargetDescription'
-  { _tdAvailabilityZone :: !(Maybe Text)
-  , _tdPort             :: !(Maybe Nat)
-  , _tdId               :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TargetDescription =
+  TargetDescription'
+    { _tdAvailabilityZone :: !(Maybe Text)
+    , _tdPort             :: !(Maybe Nat)
+    , _tdId               :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TargetDescription' with the minimum fields required to make a request.
@@ -1052,23 +1090,25 @@ instance ToQuery TargetDescription where
 --
 --
 -- /See:/ 'targetGroup' smart constructor.
-data TargetGroup = TargetGroup'
-  { _tgMatcher                    :: !(Maybe Matcher)
-  , _tgHealthCheckPath            :: !(Maybe Text)
-  , _tgUnhealthyThresholdCount    :: !(Maybe Nat)
-  , _tgVPCId                      :: !(Maybe Text)
-  , _tgTargetGroupARN             :: !(Maybe Text)
-  , _tgProtocol                   :: !(Maybe ProtocolEnum)
-  , _tgHealthCheckIntervalSeconds :: !(Maybe Nat)
-  , _tgTargetType                 :: !(Maybe TargetTypeEnum)
-  , _tgHealthyThresholdCount      :: !(Maybe Nat)
-  , _tgHealthCheckProtocol        :: !(Maybe ProtocolEnum)
-  , _tgLoadBalancerARNs           :: !(Maybe [Text])
-  , _tgHealthCheckTimeoutSeconds  :: !(Maybe Nat)
-  , _tgHealthCheckPort            :: !(Maybe Text)
-  , _tgTargetGroupName            :: !(Maybe Text)
-  , _tgPort                       :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TargetGroup =
+  TargetGroup'
+    { _tgMatcher                    :: !(Maybe Matcher)
+    , _tgHealthCheckPath            :: !(Maybe Text)
+    , _tgUnhealthyThresholdCount    :: !(Maybe Nat)
+    , _tgVPCId                      :: !(Maybe Text)
+    , _tgTargetGroupARN             :: !(Maybe Text)
+    , _tgProtocol                   :: !(Maybe ProtocolEnum)
+    , _tgHealthCheckIntervalSeconds :: !(Maybe Nat)
+    , _tgTargetType                 :: !(Maybe TargetTypeEnum)
+    , _tgHealthyThresholdCount      :: !(Maybe Nat)
+    , _tgHealthCheckProtocol        :: !(Maybe ProtocolEnum)
+    , _tgLoadBalancerARNs           :: !(Maybe [Text])
+    , _tgHealthCheckTimeoutSeconds  :: !(Maybe Nat)
+    , _tgHealthCheckPort            :: !(Maybe Text)
+    , _tgTargetGroupName            :: !(Maybe Text)
+    , _tgPort                       :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TargetGroup' with the minimum fields required to make a request.
@@ -1215,10 +1255,12 @@ instance NFData TargetGroup where
 --
 --
 -- /See:/ 'targetGroupAttribute' smart constructor.
-data TargetGroupAttribute = TargetGroupAttribute'
-  { _tgaValue :: !(Maybe Text)
-  , _tgaKey   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TargetGroupAttribute =
+  TargetGroupAttribute'
+    { _tgaValue :: !(Maybe Text)
+    , _tgaKey   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TargetGroupAttribute' with the minimum fields required to make a request.
@@ -1260,11 +1302,13 @@ instance ToQuery TargetGroupAttribute where
 --
 --
 -- /See:/ 'targetHealth' smart constructor.
-data TargetHealth = TargetHealth'
-  { _thState       :: !(Maybe TargetHealthStateEnum)
-  , _thReason      :: !(Maybe TargetHealthReasonEnum)
-  , _thDescription :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TargetHealth =
+  TargetHealth'
+    { _thState       :: !(Maybe TargetHealthStateEnum)
+    , _thReason      :: !(Maybe TargetHealthReasonEnum)
+    , _thDescription :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TargetHealth' with the minimum fields required to make a request.
@@ -1310,11 +1354,13 @@ instance NFData TargetHealth where
 --
 --
 -- /See:/ 'targetHealthDescription' smart constructor.
-data TargetHealthDescription = TargetHealthDescription'
-  { _thdTargetHealth    :: !(Maybe TargetHealth)
-  , _thdHealthCheckPort :: !(Maybe Text)
-  , _thdTarget          :: !(Maybe TargetDescription)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TargetHealthDescription =
+  TargetHealthDescription'
+    { _thdTargetHealth    :: !(Maybe TargetHealth)
+    , _thdHealthCheckPort :: !(Maybe Text)
+    , _thdTarget          :: !(Maybe TargetDescription)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TargetHealthDescription' with the minimum fields required to make a request.

@@ -46,9 +46,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeEnvironmentStatus' smart constructor.
-newtype DescribeEnvironmentStatus = DescribeEnvironmentStatus'
-  { _desEnvironmentId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeEnvironmentStatus =
+  DescribeEnvironmentStatus'
+    { _desEnvironmentId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEnvironmentStatus' with the minimum fields required to make a request.
@@ -105,11 +107,13 @@ instance ToQuery DescribeEnvironmentStatus where
         toQuery = const mempty
 
 -- | /See:/ 'describeEnvironmentStatusResponse' smart constructor.
-data DescribeEnvironmentStatusResponse = DescribeEnvironmentStatusResponse'
-  { _desrsStatus         :: !(Maybe EnvironmentStatus)
-  , _desrsMessage        :: !(Maybe Text)
-  , _desrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeEnvironmentStatusResponse =
+  DescribeEnvironmentStatusResponse'
+    { _desrsStatus         :: !(Maybe EnvironmentStatus)
+    , _desrsMessage        :: !(Maybe Text)
+    , _desrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEnvironmentStatusResponse' with the minimum fields required to make a request.

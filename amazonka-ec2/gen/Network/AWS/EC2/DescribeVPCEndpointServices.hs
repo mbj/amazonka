@@ -55,13 +55,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeVPCEndpointServices' smart constructor.
-data DescribeVPCEndpointServices = DescribeVPCEndpointServices'
-  { _dvesFilters      :: !(Maybe [Filter])
-  , _dvesServiceNames :: !(Maybe [Text])
-  , _dvesNextToken    :: !(Maybe Text)
-  , _dvesDryRun       :: !(Maybe Bool)
-  , _dvesMaxResults   :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeVPCEndpointServices =
+  DescribeVPCEndpointServices'
+    { _dvesFilters      :: !(Maybe [Filter])
+    , _dvesServiceNames :: !(Maybe [Text])
+    , _dvesNextToken    :: !(Maybe Text)
+    , _dvesDryRun       :: !(Maybe Bool)
+    , _dvesMaxResults   :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeVPCEndpointServices' with the minimum fields required to make a request.
@@ -153,12 +155,14 @@ instance ToQuery DescribeVPCEndpointServices where
 --
 --
 -- /See:/ 'describeVPCEndpointServicesResponse' smart constructor.
-data DescribeVPCEndpointServicesResponse = DescribeVPCEndpointServicesResponse'
-  { _dvesrsServiceDetails :: !(Maybe [ServiceDetail])
-  , _dvesrsServiceNames   :: !(Maybe [Text])
-  , _dvesrsNextToken      :: !(Maybe Text)
-  , _dvesrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeVPCEndpointServicesResponse =
+  DescribeVPCEndpointServicesResponse'
+    { _dvesrsServiceDetails :: !(Maybe [ServiceDetail])
+    , _dvesrsServiceNames   :: !(Maybe [Text])
+    , _dvesrsNextToken      :: !(Maybe Text)
+    , _dvesrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeVPCEndpointServicesResponse' with the minimum fields required to make a request.

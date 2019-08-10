@@ -51,11 +51,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'resetClusterParameterGroup' smart constructor.
-data ResetClusterParameterGroup = ResetClusterParameterGroup'
-  { _rcpgResetAllParameters :: !(Maybe Bool)
-  , _rcpgParameters         :: !(Maybe [Parameter])
-  , _rcpgParameterGroupName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResetClusterParameterGroup =
+  ResetClusterParameterGroup'
+    { _rcpgResetAllParameters :: !(Maybe Bool)
+    , _rcpgParameters         :: !(Maybe [Parameter])
+    , _rcpgParameterGroupName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResetClusterParameterGroup' with the minimum fields required to make a request.

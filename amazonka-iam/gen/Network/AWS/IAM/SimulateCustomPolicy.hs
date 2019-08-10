@@ -66,18 +66,20 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'simulateCustomPolicy' smart constructor.
-data SimulateCustomPolicy = SimulateCustomPolicy'
-  { _scpResourcePolicy         :: !(Maybe Text)
-  , _scpCallerARN              :: !(Maybe Text)
-  , _scpResourceHandlingOption :: !(Maybe Text)
-  , _scpResourceARNs           :: !(Maybe [Text])
-  , _scpMarker                 :: !(Maybe Text)
-  , _scpMaxItems               :: !(Maybe Nat)
-  , _scpContextEntries         :: !(Maybe [ContextEntry])
-  , _scpResourceOwner          :: !(Maybe Text)
-  , _scpPolicyInputList        :: ![Text]
-  , _scpActionNames            :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SimulateCustomPolicy =
+  SimulateCustomPolicy'
+    { _scpResourcePolicy         :: !(Maybe Text)
+    , _scpCallerARN              :: !(Maybe Text)
+    , _scpResourceHandlingOption :: !(Maybe Text)
+    , _scpResourceARNs           :: !(Maybe [Text])
+    , _scpMarker                 :: !(Maybe Text)
+    , _scpMaxItems               :: !(Maybe Nat)
+    , _scpContextEntries         :: !(Maybe [ContextEntry])
+    , _scpResourceOwner          :: !(Maybe Text)
+    , _scpPolicyInputList        :: ![Text]
+    , _scpActionNames            :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SimulateCustomPolicy' with the minimum fields required to make a request.

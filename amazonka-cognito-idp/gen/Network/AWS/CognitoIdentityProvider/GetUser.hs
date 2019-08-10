@@ -53,9 +53,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getUser' smart constructor.
-newtype GetUser = GetUser'
-  { _guAccessToken :: Sensitive Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+newtype GetUser =
+  GetUser'
+    { _guAccessToken :: Sensitive Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetUser' with the minimum fields required to make a request.
@@ -117,14 +119,16 @@ instance ToQuery GetUser where
 --
 --
 -- /See:/ 'getUserResponse' smart constructor.
-data GetUserResponse = GetUserResponse'
-  { _gursUserMFASettingList  :: !(Maybe [Text])
-  , _gursMFAOptions          :: !(Maybe [MFAOptionType])
-  , _gursPreferredMFASetting :: !(Maybe Text)
-  , _gursResponseStatus      :: !Int
-  , _gursUsername            :: !(Sensitive Text)
-  , _gursUserAttributes      :: ![AttributeType]
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data GetUserResponse =
+  GetUserResponse'
+    { _gursUserMFASettingList  :: !(Maybe [Text])
+    , _gursMFAOptions          :: !(Maybe [MFAOptionType])
+    , _gursPreferredMFASetting :: !(Maybe Text)
+    , _gursResponseStatus      :: !Int
+    , _gursUsername            :: !(Sensitive Text)
+    , _gursUserAttributes      :: ![AttributeType]
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetUserResponse' with the minimum fields required to make a request.

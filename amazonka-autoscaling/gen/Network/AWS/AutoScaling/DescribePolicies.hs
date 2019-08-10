@@ -53,13 +53,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describePolicies' smart constructor.
-data DescribePolicies = DescribePolicies'
-  { _dpsPolicyNames          :: !(Maybe [Text])
-  , _dpsNextToken            :: !(Maybe Text)
-  , _dpsAutoScalingGroupName :: !(Maybe Text)
-  , _dpsMaxRecords           :: !(Maybe Int)
-  , _dpsPolicyTypes          :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribePolicies =
+  DescribePolicies'
+    { _dpsPolicyNames          :: !(Maybe [Text])
+    , _dpsNextToken            :: !(Maybe Text)
+    , _dpsAutoScalingGroupName :: !(Maybe Text)
+    , _dpsMaxRecords           :: !(Maybe Int)
+    , _dpsPolicyTypes          :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribePolicies' with the minimum fields required to make a request.
@@ -150,11 +152,13 @@ instance ToQuery DescribePolicies where
                  toQuery (toQueryList "member" <$> _dpsPolicyTypes)]
 
 -- | /See:/ 'describePoliciesResponse' smart constructor.
-data DescribePoliciesResponse = DescribePoliciesResponse'
-  { _dprsNextToken       :: !(Maybe Text)
-  , _dprsScalingPolicies :: !(Maybe [ScalingPolicy])
-  , _dprsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribePoliciesResponse =
+  DescribePoliciesResponse'
+    { _dprsNextToken       :: !(Maybe Text)
+    , _dprsScalingPolicies :: !(Maybe [ScalingPolicy])
+    , _dprsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribePoliciesResponse' with the minimum fields required to make a request.

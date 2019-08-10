@@ -51,13 +51,15 @@ import Network.AWS.WorkDocs.Types
 import Network.AWS.WorkDocs.Types.Product
 
 -- | /See:/ 'getDocumentPath' smart constructor.
-data GetDocumentPath = GetDocumentPath'
-  { _gdpAuthenticationToken :: !(Maybe (Sensitive Text))
-  , _gdpMarker              :: !(Maybe Text)
-  , _gdpLimit               :: !(Maybe Nat)
-  , _gdpFields              :: !(Maybe Text)
-  , _gdpDocumentId          :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data GetDocumentPath =
+  GetDocumentPath'
+    { _gdpAuthenticationToken :: !(Maybe (Sensitive Text))
+    , _gdpMarker              :: !(Maybe Text)
+    , _gdpLimit               :: !(Maybe Nat)
+    , _gdpFields              :: !(Maybe Text)
+    , _gdpDocumentId          :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDocumentPath' with the minimum fields required to make a request.
@@ -138,10 +140,12 @@ instance ToQuery GetDocumentPath where
                "fields" =: _gdpFields]
 
 -- | /See:/ 'getDocumentPathResponse' smart constructor.
-data GetDocumentPathResponse = GetDocumentPathResponse'
-  { _gdprsPath           :: !(Maybe ResourcePath)
-  , _gdprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDocumentPathResponse =
+  GetDocumentPathResponse'
+    { _gdprsPath           :: !(Maybe ResourcePath)
+    , _gdprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDocumentPathResponse' with the minimum fields required to make a request.

@@ -60,20 +60,22 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createFleet' smart constructor.
-data CreateFleet = CreateFleet'
-  { _cfClientToken :: !(Maybe Text)
-  , _cfSpotOptions :: !(Maybe SpotOptionsRequest)
-  , _cfExcessCapacityTerminationPolicy :: !(Maybe FleetExcessCapacityTerminationPolicy)
-  , _cfTagSpecifications :: !(Maybe [TagSpecification])
-  , _cfValidUntil :: !(Maybe ISO8601)
-  , _cfTerminateInstancesWithExpiration :: !(Maybe Bool)
-  , _cfType :: !(Maybe FleetType)
-  , _cfValidFrom :: !(Maybe ISO8601)
-  , _cfReplaceUnhealthyInstances :: !(Maybe Bool)
-  , _cfDryRun :: !(Maybe Bool)
-  , _cfLaunchTemplateConfigs :: ![FleetLaunchTemplateConfigRequest]
-  , _cfTargetCapacitySpecification :: !TargetCapacitySpecificationRequest
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateFleet =
+  CreateFleet'
+    { _cfClientToken :: !(Maybe Text)
+    , _cfSpotOptions :: !(Maybe SpotOptionsRequest)
+    , _cfExcessCapacityTerminationPolicy :: !(Maybe FleetExcessCapacityTerminationPolicy)
+    , _cfTagSpecifications :: !(Maybe [TagSpecification])
+    , _cfValidUntil :: !(Maybe ISO8601)
+    , _cfTerminateInstancesWithExpiration :: !(Maybe Bool)
+    , _cfType :: !(Maybe FleetType)
+    , _cfValidFrom :: !(Maybe ISO8601)
+    , _cfReplaceUnhealthyInstances :: !(Maybe Bool)
+    , _cfDryRun :: !(Maybe Bool)
+    , _cfLaunchTemplateConfigs :: ![FleetLaunchTemplateConfigRequest]
+    , _cfTargetCapacitySpecification :: !TargetCapacitySpecificationRequest
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateFleet' with the minimum fields required to make a request.
@@ -215,10 +217,12 @@ instance ToQuery CreateFleet where
                  _cfTargetCapacitySpecification]
 
 -- | /See:/ 'createFleetResponse' smart constructor.
-data CreateFleetResponse = CreateFleetResponse'
-  { _cfrsFleetId        :: !(Maybe Text)
-  , _cfrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateFleetResponse =
+  CreateFleetResponse'
+    { _cfrsFleetId        :: !(Maybe Text)
+    , _cfrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateFleetResponse' with the minimum fields required to make a request.

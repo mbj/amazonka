@@ -47,11 +47,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createSubnetGroup' smart constructor.
-data CreateSubnetGroup = CreateSubnetGroup'
-  { _csgDescription     :: !(Maybe Text)
-  , _csgSubnetGroupName :: !Text
-  , _csgSubnetIds       :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateSubnetGroup =
+  CreateSubnetGroup'
+    { _csgDescription     :: !(Maybe Text)
+    , _csgSubnetGroupName :: !Text
+    , _csgSubnetIds       :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateSubnetGroup' with the minimum fields required to make a request.
@@ -123,10 +125,12 @@ instance ToQuery CreateSubnetGroup where
         toQuery = const mempty
 
 -- | /See:/ 'createSubnetGroupResponse' smart constructor.
-data CreateSubnetGroupResponse = CreateSubnetGroupResponse'
-  { _csgrsSubnetGroup    :: !(Maybe SubnetGroup)
-  , _csgrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateSubnetGroupResponse =
+  CreateSubnetGroupResponse'
+    { _csgrsSubnetGroup    :: !(Maybe SubnetGroup)
+    , _csgrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateSubnetGroupResponse' with the minimum fields required to make a request.

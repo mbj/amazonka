@@ -52,9 +52,11 @@ import Network.AWS.StepFunctions.Types
 import Network.AWS.StepFunctions.Types.Product
 
 -- | /See:/ 'describeExecution' smart constructor.
-newtype DescribeExecution = DescribeExecution'
-  { _deExecutionARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeExecution =
+  DescribeExecution'
+    { _deExecutionARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeExecution' with the minimum fields required to make a request.
@@ -115,17 +117,19 @@ instance ToQuery DescribeExecution where
         toQuery = const mempty
 
 -- | /See:/ 'describeExecutionResponse' smart constructor.
-data DescribeExecutionResponse = DescribeExecutionResponse'
-  { _dersStopDate        :: !(Maybe POSIX)
-  , _dersName            :: !(Maybe Text)
-  , _dersOutput          :: !(Maybe Text)
-  , _dersResponseStatus  :: !Int
-  , _dersExecutionARN    :: !Text
-  , _dersStateMachineARN :: !Text
-  , _dersStatus          :: !ExecutionStatus
-  , _dersStartDate       :: !POSIX
-  , _dersInput           :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeExecutionResponse =
+  DescribeExecutionResponse'
+    { _dersStopDate        :: !(Maybe POSIX)
+    , _dersName            :: !(Maybe Text)
+    , _dersOutput          :: !(Maybe Text)
+    , _dersResponseStatus  :: !Int
+    , _dersExecutionARN    :: !Text
+    , _dersStateMachineARN :: !Text
+    , _dersStatus          :: !ExecutionStatus
+    , _dersStartDate       :: !POSIX
+    , _dersInput           :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeExecutionResponse' with the minimum fields required to make a request.

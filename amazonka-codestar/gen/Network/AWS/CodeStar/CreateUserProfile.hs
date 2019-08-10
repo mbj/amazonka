@@ -53,12 +53,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createUserProfile' smart constructor.
-data CreateUserProfile = CreateUserProfile'
-  { _cupSshPublicKey :: !(Maybe Text)
-  , _cupUserARN      :: !Text
-  , _cupDisplayName  :: !Text
-  , _cupEmailAddress :: !(Sensitive Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data CreateUserProfile =
+  CreateUserProfile'
+    { _cupSshPublicKey :: !(Maybe Text)
+    , _cupUserARN      :: !Text
+    , _cupDisplayName  :: !Text
+    , _cupEmailAddress :: !(Sensitive Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateUserProfile' with the minimum fields required to make a request.
@@ -147,15 +149,17 @@ instance ToQuery CreateUserProfile where
         toQuery = const mempty
 
 -- | /See:/ 'createUserProfileResponse' smart constructor.
-data CreateUserProfileResponse = CreateUserProfileResponse'
-  { _cuprsLastModifiedTimestamp :: !(Maybe POSIX)
-  , _cuprsSshPublicKey          :: !(Maybe Text)
-  , _cuprsEmailAddress          :: !(Maybe (Sensitive Text))
-  , _cuprsDisplayName           :: !(Maybe Text)
-  , _cuprsCreatedTimestamp      :: !(Maybe POSIX)
-  , _cuprsResponseStatus        :: !Int
-  , _cuprsUserARN               :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data CreateUserProfileResponse =
+  CreateUserProfileResponse'
+    { _cuprsLastModifiedTimestamp :: !(Maybe POSIX)
+    , _cuprsSshPublicKey          :: !(Maybe Text)
+    , _cuprsEmailAddress          :: !(Maybe (Sensitive Text))
+    , _cuprsDisplayName           :: !(Maybe Text)
+    , _cuprsCreatedTimestamp      :: !(Maybe POSIX)
+    , _cuprsResponseStatus        :: !Int
+    , _cuprsUserARN               :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateUserProfileResponse' with the minimum fields required to make a request.

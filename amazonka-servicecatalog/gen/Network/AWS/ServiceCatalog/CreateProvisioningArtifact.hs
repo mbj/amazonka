@@ -52,12 +52,14 @@ import Network.AWS.ServiceCatalog.Types
 import Network.AWS.ServiceCatalog.Types.Product
 
 -- | /See:/ 'createProvisioningArtifact' smart constructor.
-data CreateProvisioningArtifact = CreateProvisioningArtifact'
-  { _cpaAcceptLanguage   :: !(Maybe Text)
-  , _cpaProductId        :: !Text
-  , _cpaParameters       :: !ProvisioningArtifactProperties
-  , _cpaIdempotencyToken :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateProvisioningArtifact =
+  CreateProvisioningArtifact'
+    { _cpaAcceptLanguage   :: !(Maybe Text)
+    , _cpaProductId        :: !Text
+    , _cpaParameters       :: !ProvisioningArtifactProperties
+    , _cpaIdempotencyToken :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateProvisioningArtifact' with the minimum fields required to make a request.
@@ -143,12 +145,14 @@ instance ToQuery CreateProvisioningArtifact where
         toQuery = const mempty
 
 -- | /See:/ 'createProvisioningArtifactResponse' smart constructor.
-data CreateProvisioningArtifactResponse = CreateProvisioningArtifactResponse'
-  { _cparsStatus                     :: !(Maybe RequestStatus)
-  , _cparsInfo                       :: !(Maybe (Map Text Text))
-  , _cparsProvisioningArtifactDetail :: !(Maybe ProvisioningArtifactDetail)
-  , _cparsResponseStatus             :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateProvisioningArtifactResponse =
+  CreateProvisioningArtifactResponse'
+    { _cparsStatus                     :: !(Maybe RequestStatus)
+    , _cparsInfo                       :: !(Maybe (Map Text Text))
+    , _cparsProvisioningArtifactDetail :: !(Maybe ProvisioningArtifactDetail)
+    , _cparsResponseStatus             :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateProvisioningArtifactResponse' with the minimum fields required to make a request.

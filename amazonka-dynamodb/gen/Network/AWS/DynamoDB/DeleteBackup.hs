@@ -47,9 +47,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteBackup' smart constructor.
-newtype DeleteBackup = DeleteBackup'
-  { _dbBackupARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteBackup =
+  DeleteBackup'
+    { _dbBackupARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteBackup' with the minimum fields required to make a request.
@@ -101,10 +103,12 @@ instance ToQuery DeleteBackup where
         toQuery = const mempty
 
 -- | /See:/ 'deleteBackupResponse' smart constructor.
-data DeleteBackupResponse = DeleteBackupResponse'
-  { _dbrsBackupDescription :: !(Maybe BackupDescription)
-  , _dbrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteBackupResponse =
+  DeleteBackupResponse'
+    { _dbrsBackupDescription :: !(Maybe BackupDescription)
+    , _dbrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteBackupResponse' with the minimum fields required to make a request.

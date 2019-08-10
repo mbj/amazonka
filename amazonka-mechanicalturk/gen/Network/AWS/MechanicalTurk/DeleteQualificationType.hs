@@ -46,9 +46,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteQualificationType' smart constructor.
-newtype DeleteQualificationType = DeleteQualificationType'
-  { _dqtQualificationTypeId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteQualificationType =
+  DeleteQualificationType'
+    { _dqtQualificationTypeId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteQualificationType' with the minimum fields required to make a request.
@@ -105,9 +107,11 @@ instance ToQuery DeleteQualificationType where
         toQuery = const mempty
 
 -- | /See:/ 'deleteQualificationTypeResponse' smart constructor.
-newtype DeleteQualificationTypeResponse = DeleteQualificationTypeResponse'
-  { _dqtrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteQualificationTypeResponse =
+  DeleteQualificationTypeResponse'
+    { _dqtrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteQualificationTypeResponse' with the minimum fields required to make a request.

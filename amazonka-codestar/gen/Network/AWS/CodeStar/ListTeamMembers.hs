@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listTeamMembers' smart constructor.
-data ListTeamMembers = ListTeamMembers'
-  { _ltmNextToken  :: !(Maybe Text)
-  , _ltmMaxResults :: !(Maybe Nat)
-  , _ltmProjectId  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTeamMembers =
+  ListTeamMembers'
+    { _ltmNextToken  :: !(Maybe Text)
+    , _ltmMaxResults :: !(Maybe Nat)
+    , _ltmProjectId  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTeamMembers' with the minimum fields required to make a request.
@@ -125,11 +127,13 @@ instance ToQuery ListTeamMembers where
         toQuery = const mempty
 
 -- | /See:/ 'listTeamMembersResponse' smart constructor.
-data ListTeamMembersResponse = ListTeamMembersResponse'
-  { _ltmrsNextToken      :: !(Maybe Text)
-  , _ltmrsResponseStatus :: !Int
-  , _ltmrsTeamMembers    :: ![TeamMember]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTeamMembersResponse =
+  ListTeamMembersResponse'
+    { _ltmrsNextToken      :: !(Maybe Text)
+    , _ltmrsResponseStatus :: !Int
+    , _ltmrsTeamMembers    :: ![TeamMember]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTeamMembersResponse' with the minimum fields required to make a request.

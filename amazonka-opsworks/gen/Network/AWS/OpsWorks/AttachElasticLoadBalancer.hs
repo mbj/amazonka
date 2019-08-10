@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'attachElasticLoadBalancer' smart constructor.
-data AttachElasticLoadBalancer = AttachElasticLoadBalancer'
-  { _aelbElasticLoadBalancerName :: !Text
-  , _aelbLayerId                 :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AttachElasticLoadBalancer =
+  AttachElasticLoadBalancer'
+    { _aelbElasticLoadBalancerName :: !Text
+    , _aelbLayerId                 :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttachElasticLoadBalancer' with the minimum fields required to make a request.

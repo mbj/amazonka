@@ -46,13 +46,15 @@ import Network.AWS.WorkDocs.Types
 import Network.AWS.WorkDocs.Types.Product
 
 -- | /See:/ 'updateFolder' smart constructor.
-data UpdateFolder = UpdateFolder'
-  { _ufParentFolderId      :: !(Maybe Text)
-  , _ufAuthenticationToken :: !(Maybe (Sensitive Text))
-  , _ufName                :: !(Maybe Text)
-  , _ufResourceState       :: !(Maybe ResourceStateType)
-  , _ufFolderId            :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data UpdateFolder =
+  UpdateFolder'
+    { _ufParentFolderId      :: !(Maybe Text)
+    , _ufAuthenticationToken :: !(Maybe (Sensitive Text))
+    , _ufName                :: !(Maybe Text)
+    , _ufResourceState       :: !(Maybe ResourceStateType)
+    , _ufFolderId            :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateFolder' with the minimum fields required to make a request.

@@ -48,10 +48,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'attachInstancesToLoadBalancer' smart constructor.
-data AttachInstancesToLoadBalancer = AttachInstancesToLoadBalancer'
-  { _aitlbLoadBalancerName :: !Text
-  , _aitlbInstanceNames    :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AttachInstancesToLoadBalancer =
+  AttachInstancesToLoadBalancer'
+    { _aitlbLoadBalancerName :: !Text
+    , _aitlbInstanceNames    :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttachInstancesToLoadBalancer' with the minimum fields required to make a request.
@@ -118,10 +120,12 @@ instance ToQuery AttachInstancesToLoadBalancer where
         toQuery = const mempty
 
 -- | /See:/ 'attachInstancesToLoadBalancerResponse' smart constructor.
-data AttachInstancesToLoadBalancerResponse = AttachInstancesToLoadBalancerResponse'
-  { _aitlbrsOperations     :: !(Maybe [Operation])
-  , _aitlbrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AttachInstancesToLoadBalancerResponse =
+  AttachInstancesToLoadBalancerResponse'
+    { _aitlbrsOperations     :: !(Maybe [Operation])
+    , _aitlbrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttachInstancesToLoadBalancerResponse' with the minimum fields required to make a request.

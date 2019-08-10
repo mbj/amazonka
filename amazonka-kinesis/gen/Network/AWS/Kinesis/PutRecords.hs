@@ -72,10 +72,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'putRecords' smart constructor.
-data PutRecords = PutRecords'
-  { _pRecordEntries :: !(List1 PutRecordsRequestEntry)
-  , _pStreamName    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutRecords =
+  PutRecords'
+    { _pRecordEntries :: !(List1 PutRecordsRequestEntry)
+    , _pStreamName    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutRecords' with the minimum fields required to make a request.
@@ -145,12 +147,14 @@ instance ToQuery PutRecords where
 --
 --
 -- /See:/ 'putRecordsResponse' smart constructor.
-data PutRecordsResponse = PutRecordsResponse'
-  { _prsEncryptionType    :: !(Maybe EncryptionType)
-  , _prsFailedRecordCount :: !(Maybe Nat)
-  , _prsResponseStatus    :: !Int
-  , _prsRecords           :: !(List1 PutRecordsResultEntry)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutRecordsResponse =
+  PutRecordsResponse'
+    { _prsEncryptionType    :: !(Maybe EncryptionType)
+    , _prsFailedRecordCount :: !(Maybe Nat)
+    , _prsResponseStatus    :: !Int
+    , _prsRecords           :: !(List1 PutRecordsResultEntry)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutRecordsResponse' with the minimum fields required to make a request.

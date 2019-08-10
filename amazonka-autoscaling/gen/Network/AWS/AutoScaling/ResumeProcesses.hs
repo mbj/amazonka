@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'resumeProcesses' smart constructor.
-data ResumeProcesses = ResumeProcesses'
-  { _rpScalingProcesses     :: !(Maybe [Text])
-  , _rpAutoScalingGroupName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResumeProcesses =
+  ResumeProcesses'
+    { _rpScalingProcesses     :: !(Maybe [Text])
+    , _rpAutoScalingGroupName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResumeProcesses' with the minimum fields required to make a request.

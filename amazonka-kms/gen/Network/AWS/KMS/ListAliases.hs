@@ -53,10 +53,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listAliases' smart constructor.
-data ListAliases = ListAliases'
-  { _laMarker :: !(Maybe Text)
-  , _laLimit  :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAliases =
+  ListAliases'
+    { _laMarker :: !(Maybe Text)
+    , _laLimit  :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAliases' with the minimum fields required to make a request.
@@ -124,12 +126,14 @@ instance ToQuery ListAliases where
         toQuery = const mempty
 
 -- | /See:/ 'listAliasesResponse' smart constructor.
-data ListAliasesResponse = ListAliasesResponse'
-  { _larsTruncated      :: !(Maybe Bool)
-  , _larsAliases        :: !(Maybe [AliasListEntry])
-  , _larsNextMarker     :: !(Maybe Text)
-  , _larsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAliasesResponse =
+  ListAliasesResponse'
+    { _larsTruncated      :: !(Maybe Bool)
+    , _larsAliases        :: !(Maybe [AliasListEntry])
+    , _larsNextMarker     :: !(Maybe Text)
+    , _larsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAliasesResponse' with the minimum fields required to make a request.

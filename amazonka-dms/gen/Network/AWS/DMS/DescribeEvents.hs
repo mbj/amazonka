@@ -61,17 +61,19 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeEvents' smart constructor.
-data DescribeEvents = DescribeEvents'
-  { _deStartTime        :: !(Maybe POSIX)
-  , _deSourceType       :: !(Maybe SourceType)
-  , _deFilters          :: !(Maybe [Filter])
-  , _deSourceIdentifier :: !(Maybe Text)
-  , _deEventCategories  :: !(Maybe [Text])
-  , _deMarker           :: !(Maybe Text)
-  , _deMaxRecords       :: !(Maybe Int)
-  , _deEndTime          :: !(Maybe POSIX)
-  , _deDuration         :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeEvents =
+  DescribeEvents'
+    { _deStartTime        :: !(Maybe POSIX)
+    , _deSourceType       :: !(Maybe SourceType)
+    , _deFilters          :: !(Maybe [Filter])
+    , _deSourceIdentifier :: !(Maybe Text)
+    , _deEventCategories  :: !(Maybe [Text])
+    , _deMarker           :: !(Maybe Text)
+    , _deMaxRecords       :: !(Maybe Int)
+    , _deEndTime          :: !(Maybe POSIX)
+    , _deDuration         :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEvents' with the minimum fields required to make a request.
@@ -202,11 +204,13 @@ instance ToQuery DescribeEvents where
 --
 --
 -- /See:/ 'describeEventsResponse' smart constructor.
-data DescribeEventsResponse = DescribeEventsResponse'
-  { _deersEvents         :: !(Maybe [Event])
-  , _deersMarker         :: !(Maybe Text)
-  , _deersResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeEventsResponse =
+  DescribeEventsResponse'
+    { _deersEvents         :: !(Maybe [Event])
+    , _deersMarker         :: !(Maybe Text)
+    , _deersResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEventsResponse' with the minimum fields required to make a request.

@@ -51,11 +51,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createSpotDatafeedSubscription' smart constructor.
-data CreateSpotDatafeedSubscription = CreateSpotDatafeedSubscription'
-  { _csdsPrefix :: !(Maybe Text)
-  , _csdsDryRun :: !(Maybe Bool)
-  , _csdsBucket :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateSpotDatafeedSubscription =
+  CreateSpotDatafeedSubscription'
+    { _csdsPrefix :: !(Maybe Text)
+    , _csdsDryRun :: !(Maybe Bool)
+    , _csdsBucket :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateSpotDatafeedSubscription' with the minimum fields required to make a request.
@@ -125,10 +127,12 @@ instance ToQuery CreateSpotDatafeedSubscription where
 --
 --
 -- /See:/ 'createSpotDatafeedSubscriptionResponse' smart constructor.
-data CreateSpotDatafeedSubscriptionResponse = CreateSpotDatafeedSubscriptionResponse'
-  { _csdsrsSpotDatafeedSubscription :: !(Maybe SpotDatafeedSubscription)
-  , _csdsrsResponseStatus           :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateSpotDatafeedSubscriptionResponse =
+  CreateSpotDatafeedSubscriptionResponse'
+    { _csdsrsSpotDatafeedSubscription :: !(Maybe SpotDatafeedSubscription)
+    , _csdsrsResponseStatus           :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateSpotDatafeedSubscriptionResponse' with the minimum fields required to make a request.

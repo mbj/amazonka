@@ -51,11 +51,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteNetworkInterfacePermission' smart constructor.
-data DeleteNetworkInterfacePermission = DeleteNetworkInterfacePermission'
-  { _dnipForce                        :: !(Maybe Bool)
-  , _dnipDryRun                       :: !(Maybe Bool)
-  , _dnipNetworkInterfacePermissionId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteNetworkInterfacePermission =
+  DeleteNetworkInterfacePermission'
+    { _dnipForce                        :: !(Maybe Bool)
+    , _dnipDryRun                       :: !(Maybe Bool)
+    , _dnipNetworkInterfacePermissionId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteNetworkInterfacePermission' with the minimum fields required to make a request.
@@ -131,10 +133,12 @@ instance ToQuery DeleteNetworkInterfacePermission
 --
 --
 -- /See:/ 'deleteNetworkInterfacePermissionResponse' smart constructor.
-data DeleteNetworkInterfacePermissionResponse = DeleteNetworkInterfacePermissionResponse'
-  { _dniprsReturn         :: !(Maybe Bool)
-  , _dniprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteNetworkInterfacePermissionResponse =
+  DeleteNetworkInterfacePermissionResponse'
+    { _dniprsReturn         :: !(Maybe Bool)
+    , _dniprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteNetworkInterfacePermissionResponse' with the minimum fields required to make a request.

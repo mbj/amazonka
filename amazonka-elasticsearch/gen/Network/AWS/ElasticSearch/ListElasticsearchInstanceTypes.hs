@@ -56,12 +56,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listElasticsearchInstanceTypes' smart constructor.
-data ListElasticsearchInstanceTypes = ListElasticsearchInstanceTypes'
-  { _leitNextToken            :: !(Maybe Text)
-  , _leitDomainName           :: !(Maybe Text)
-  , _leitMaxResults           :: !(Maybe Int)
-  , _leitElasticsearchVersion :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListElasticsearchInstanceTypes =
+  ListElasticsearchInstanceTypes'
+    { _leitNextToken            :: !(Maybe Text)
+    , _leitDomainName           :: !(Maybe Text)
+    , _leitMaxResults           :: !(Maybe Int)
+    , _leitElasticsearchVersion :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListElasticsearchInstanceTypes' with the minimum fields required to make a request.
@@ -152,11 +154,13 @@ instance ToQuery ListElasticsearchInstanceTypes where
 --
 --
 -- /See:/ 'listElasticsearchInstanceTypesResponse' smart constructor.
-data ListElasticsearchInstanceTypesResponse = ListElasticsearchInstanceTypesResponse'
-  { _leitrsElasticsearchInstanceTypes :: !(Maybe [ESPartitionInstanceType])
-  , _leitrsNextToken                  :: !(Maybe Text)
-  , _leitrsResponseStatus             :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListElasticsearchInstanceTypesResponse =
+  ListElasticsearchInstanceTypesResponse'
+    { _leitrsElasticsearchInstanceTypes :: !(Maybe [ESPartitionInstanceType])
+    , _leitrsNextToken                  :: !(Maybe Text)
+    , _leitrsResponseStatus             :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListElasticsearchInstanceTypesResponse' with the minimum fields required to make a request.

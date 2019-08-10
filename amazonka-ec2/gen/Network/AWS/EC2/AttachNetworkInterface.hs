@@ -52,12 +52,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'attachNetworkInterface' smart constructor.
-data AttachNetworkInterface = AttachNetworkInterface'
-  { _aniDryRun             :: !(Maybe Bool)
-  , _aniDeviceIndex        :: !Int
-  , _aniInstanceId         :: !Text
-  , _aniNetworkInterfaceId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AttachNetworkInterface =
+  AttachNetworkInterface'
+    { _aniDryRun             :: !(Maybe Bool)
+    , _aniDeviceIndex        :: !Int
+    , _aniInstanceId         :: !Text
+    , _aniNetworkInterfaceId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttachNetworkInterface' with the minimum fields required to make a request.
@@ -137,10 +139,12 @@ instance ToQuery AttachNetworkInterface where
 --
 --
 -- /See:/ 'attachNetworkInterfaceResponse' smart constructor.
-data AttachNetworkInterfaceResponse = AttachNetworkInterfaceResponse'
-  { _anirsAttachmentId   :: !(Maybe Text)
-  , _anirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AttachNetworkInterfaceResponse =
+  AttachNetworkInterfaceResponse'
+    { _anirsAttachmentId   :: !(Maybe Text)
+    , _anirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttachNetworkInterfaceResponse' with the minimum fields required to make a request.

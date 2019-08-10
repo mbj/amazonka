@@ -89,19 +89,21 @@ import Network.AWS.SWF.Types
 import Network.AWS.SWF.Types.Product
 
 -- | /See:/ 'startWorkflowExecution' smart constructor.
-data StartWorkflowExecution = StartWorkflowExecution'
-  { _sTagList                      :: !(Maybe [Text])
-  , _sTaskStartToCloseTimeout      :: !(Maybe Text)
-  , _sLambdaRole                   :: !(Maybe Text)
-  , _sInput                        :: !(Maybe Text)
-  , _sExecutionStartToCloseTimeout :: !(Maybe Text)
-  , _sTaskList                     :: !(Maybe TaskList)
-  , _sTaskPriority                 :: !(Maybe Text)
-  , _sChildPolicy                  :: !(Maybe ChildPolicy)
-  , _sDomain                       :: !Text
-  , _sWorkflowId                   :: !Text
-  , _sWorkflowType                 :: !WorkflowType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartWorkflowExecution =
+  StartWorkflowExecution'
+    { _sTagList                      :: !(Maybe [Text])
+    , _sTaskStartToCloseTimeout      :: !(Maybe Text)
+    , _sLambdaRole                   :: !(Maybe Text)
+    , _sInput                        :: !(Maybe Text)
+    , _sExecutionStartToCloseTimeout :: !(Maybe Text)
+    , _sTaskList                     :: !(Maybe TaskList)
+    , _sTaskPriority                 :: !(Maybe Text)
+    , _sChildPolicy                  :: !(Maybe ChildPolicy)
+    , _sDomain                       :: !Text
+    , _sWorkflowId                   :: !Text
+    , _sWorkflowType                 :: !WorkflowType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartWorkflowExecution' with the minimum fields required to make a request.
@@ -247,10 +249,12 @@ instance ToQuery StartWorkflowExecution where
 --
 --
 -- /See:/ 'startWorkflowExecutionResponse' smart constructor.
-data StartWorkflowExecutionResponse = StartWorkflowExecutionResponse'
-  { _swersRunId          :: !(Maybe Text)
-  , _swersResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartWorkflowExecutionResponse =
+  StartWorkflowExecutionResponse'
+    { _swersRunId          :: !(Maybe Text)
+    , _swersResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartWorkflowExecutionResponse' with the minimum fields required to make a request.

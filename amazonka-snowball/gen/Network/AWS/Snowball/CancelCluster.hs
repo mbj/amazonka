@@ -44,9 +44,11 @@ import Network.AWS.Snowball.Types
 import Network.AWS.Snowball.Types.Product
 
 -- | /See:/ 'cancelCluster' smart constructor.
-newtype CancelCluster = CancelCluster'
-  { _ccClusterId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CancelCluster =
+  CancelCluster'
+    { _ccClusterId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CancelCluster' with the minimum fields required to make a request.
@@ -98,9 +100,11 @@ instance ToQuery CancelCluster where
         toQuery = const mempty
 
 -- | /See:/ 'cancelClusterResponse' smart constructor.
-newtype CancelClusterResponse = CancelClusterResponse'
-  { _ccrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CancelClusterResponse =
+  CancelClusterResponse'
+    { _ccrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CancelClusterResponse' with the minimum fields required to make a request.

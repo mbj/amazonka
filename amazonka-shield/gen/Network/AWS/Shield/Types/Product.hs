@@ -26,16 +26,18 @@ import Network.AWS.Shield.Types.Sum
 --
 --
 -- /See:/ 'attackDetail' smart constructor.
-data AttackDetail = AttackDetail'
-  { _adAttackId         :: !(Maybe Text)
-  , _adStartTime        :: !(Maybe POSIX)
-  , _adSubResources     :: !(Maybe [SubResourceSummary])
-  , _adMitigations      :: !(Maybe [Mitigation])
-  , _adAttackProperties :: !(Maybe [AttackProperty])
-  , _adAttackCounters   :: !(Maybe [SummarizedCounter])
-  , _adResourceARN      :: !(Maybe Text)
-  , _adEndTime          :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AttackDetail =
+  AttackDetail'
+    { _adAttackId         :: !(Maybe Text)
+    , _adStartTime        :: !(Maybe POSIX)
+    , _adSubResources     :: !(Maybe [SubResourceSummary])
+    , _adMitigations      :: !(Maybe [Mitigation])
+    , _adAttackProperties :: !(Maybe [AttackProperty])
+    , _adAttackCounters   :: !(Maybe [SummarizedCounter])
+    , _adResourceARN      :: !(Maybe Text)
+    , _adEndTime          :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttackDetail' with the minimum fields required to make a request.
@@ -126,13 +128,15 @@ instance NFData AttackDetail where
 --
 --
 -- /See:/ 'attackProperty' smart constructor.
-data AttackProperty = AttackProperty'
-  { _apAttackLayer              :: !(Maybe AttackLayer)
-  , _apTopContributors          :: !(Maybe [Contributor])
-  , _apAttackPropertyIdentifier :: !(Maybe AttackPropertyIdentifier)
-  , _apTotal                    :: !(Maybe Integer)
-  , _apUnit                     :: !(Maybe Unit)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AttackProperty =
+  AttackProperty'
+    { _apAttackLayer              :: !(Maybe AttackLayer)
+    , _apTopContributors          :: !(Maybe [Contributor])
+    , _apAttackPropertyIdentifier :: !(Maybe AttackPropertyIdentifier)
+    , _apTotal                    :: !(Maybe Integer)
+    , _apUnit                     :: !(Maybe Unit)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttackProperty' with the minimum fields required to make a request.
@@ -200,13 +204,15 @@ instance NFData AttackProperty where
 --
 --
 -- /See:/ 'attackSummary' smart constructor.
-data AttackSummary = AttackSummary'
-  { _asAttackVectors :: !(Maybe [AttackVectorDescription])
-  , _asAttackId      :: !(Maybe Text)
-  , _asStartTime     :: !(Maybe POSIX)
-  , _asResourceARN   :: !(Maybe Text)
-  , _asEndTime       :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AttackSummary =
+  AttackSummary'
+    { _asAttackVectors :: !(Maybe [AttackVectorDescription])
+    , _asAttackId      :: !(Maybe Text)
+    , _asStartTime     :: !(Maybe POSIX)
+    , _asResourceARN   :: !(Maybe Text)
+    , _asEndTime       :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttackSummary' with the minimum fields required to make a request.
@@ -274,9 +280,11 @@ instance NFData AttackSummary where
 --
 --
 -- /See:/ 'attackVectorDescription' smart constructor.
-newtype AttackVectorDescription = AttackVectorDescription'
-  { _avdVectorType :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AttackVectorDescription =
+  AttackVectorDescription'
+    { _avdVectorType :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttackVectorDescription' with the minimum fields required to make a request.
@@ -310,10 +318,12 @@ instance NFData AttackVectorDescription where
 --
 --
 -- /See:/ 'contributor' smart constructor.
-data Contributor = Contributor'
-  { _cValue :: !(Maybe Integer)
-  , _cName  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Contributor =
+  Contributor'
+    { _cValue :: !(Maybe Integer)
+    , _cName  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Contributor' with the minimum fields required to make a request.
@@ -351,9 +361,11 @@ instance NFData Contributor where
 --
 --
 -- /See:/ 'mitigation' smart constructor.
-newtype Mitigation = Mitigation'
-  { _mMitigationName :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype Mitigation =
+  Mitigation'
+    { _mMitigationName :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Mitigation' with the minimum fields required to make a request.
@@ -384,11 +396,13 @@ instance NFData Mitigation where
 --
 --
 -- /See:/ 'protection' smart constructor.
-data Protection = Protection'
-  { _pResourceARN :: !(Maybe Text)
-  , _pName        :: !(Maybe Text)
-  , _pId          :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Protection =
+  Protection'
+    { _pResourceARN :: !(Maybe Text)
+    , _pName        :: !(Maybe Text)
+    , _pId          :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Protection' with the minimum fields required to make a request.
@@ -435,12 +449,14 @@ instance NFData Protection where
 --
 --
 -- /See:/ 'subResourceSummary' smart constructor.
-data SubResourceSummary = SubResourceSummary'
-  { _srsCounters      :: !(Maybe [SummarizedCounter])
-  , _srsAttackVectors :: !(Maybe [SummarizedAttackVector])
-  , _srsId            :: !(Maybe Text)
-  , _srsType          :: !(Maybe SubResourceType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SubResourceSummary =
+  SubResourceSummary'
+    { _srsCounters      :: !(Maybe [SummarizedCounter])
+    , _srsAttackVectors :: !(Maybe [SummarizedAttackVector])
+    , _srsId            :: !(Maybe Text)
+    , _srsType          :: !(Maybe SubResourceType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SubResourceSummary' with the minimum fields required to make a request.
@@ -500,10 +516,12 @@ instance NFData SubResourceSummary where
 --
 --
 -- /See:/ 'subscription' smart constructor.
-data Subscription = Subscription'
-  { _sTimeCommitmentInSeconds :: !(Maybe Nat)
-  , _sStartTime               :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Subscription =
+  Subscription'
+    { _sTimeCommitmentInSeconds :: !(Maybe Nat)
+    , _sStartTime               :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Subscription' with the minimum fields required to make a request.
@@ -544,10 +562,12 @@ instance NFData Subscription where
 --
 --
 -- /See:/ 'summarizedAttackVector' smart constructor.
-data SummarizedAttackVector = SummarizedAttackVector'
-  { _savVectorCounters :: !(Maybe [SummarizedCounter])
-  , _savVectorType     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SummarizedAttackVector =
+  SummarizedAttackVector'
+    { _savVectorCounters :: !(Maybe [SummarizedCounter])
+    , _savVectorType     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SummarizedAttackVector' with the minimum fields required to make a request.
@@ -590,14 +610,16 @@ instance NFData SummarizedAttackVector where
 --
 --
 -- /See:/ 'summarizedCounter' smart constructor.
-data SummarizedCounter = SummarizedCounter'
-  { _scMax     :: !(Maybe Double)
-  , _scAverage :: !(Maybe Double)
-  , _scN       :: !(Maybe Int)
-  , _scName    :: !(Maybe Text)
-  , _scSum     :: !(Maybe Double)
-  , _scUnit    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SummarizedCounter =
+  SummarizedCounter'
+    { _scMax     :: !(Maybe Double)
+    , _scAverage :: !(Maybe Double)
+    , _scN       :: !(Maybe Int)
+    , _scName    :: !(Maybe Text)
+    , _scSum     :: !(Maybe Double)
+    , _scUnit    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SummarizedCounter' with the minimum fields required to make a request.
@@ -671,10 +693,12 @@ instance NFData SummarizedCounter where
 --
 --
 -- /See:/ 'timeRange' smart constructor.
-data TimeRange = TimeRange'
-  { _trFromInclusive :: !(Maybe POSIX)
-  , _trToExclusive   :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TimeRange =
+  TimeRange'
+    { _trFromInclusive :: !(Maybe POSIX)
+    , _trToExclusive   :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TimeRange' with the minimum fields required to make a request.

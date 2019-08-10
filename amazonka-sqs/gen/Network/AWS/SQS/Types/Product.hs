@@ -26,12 +26,14 @@ import Network.AWS.SQS.Types.Sum
 --
 --
 -- /See:/ 'batchResultErrorEntry' smart constructor.
-data BatchResultErrorEntry = BatchResultErrorEntry'
-  { _breeMessage     :: !(Maybe Text)
-  , _breeId          :: !Text
-  , _breeSenderFault :: !Bool
-  , _breeCode        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchResultErrorEntry =
+  BatchResultErrorEntry'
+    { _breeMessage     :: !(Maybe Text)
+    , _breeId          :: !Text
+    , _breeSenderFault :: !Bool
+    , _breeCode        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchResultErrorEntry' with the minimum fields required to make a request.
@@ -99,11 +101,13 @@ instance NFData BatchResultErrorEntry where
 --
 --
 -- /See:/ 'changeMessageVisibilityBatchRequestEntry' smart constructor.
-data ChangeMessageVisibilityBatchRequestEntry = ChangeMessageVisibilityBatchRequestEntry'
-  { _cVisibilityTimeout :: !(Maybe Int)
-  , _cId                :: !Text
-  , _cReceiptHandle     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ChangeMessageVisibilityBatchRequestEntry =
+  ChangeMessageVisibilityBatchRequestEntry'
+    { _cVisibilityTimeout :: !(Maybe Int)
+    , _cId                :: !Text
+    , _cReceiptHandle     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ChangeMessageVisibilityBatchRequestEntry' with the minimum fields required to make a request.
@@ -160,9 +164,11 @@ instance ToQuery
 --
 --
 -- /See:/ 'changeMessageVisibilityBatchResultEntry' smart constructor.
-newtype ChangeMessageVisibilityBatchResultEntry = ChangeMessageVisibilityBatchResultEntry'
-  { _cmvbreId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ChangeMessageVisibilityBatchResultEntry =
+  ChangeMessageVisibilityBatchResultEntry'
+    { _cmvbreId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ChangeMessageVisibilityBatchResultEntry' with the minimum fields required to make a request.
@@ -201,10 +207,12 @@ instance NFData
 --
 --
 -- /See:/ 'deleteMessageBatchRequestEntry' smart constructor.
-data DeleteMessageBatchRequestEntry = DeleteMessageBatchRequestEntry'
-  { _dmbreId            :: !Text
-  , _dmbreReceiptHandle :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteMessageBatchRequestEntry =
+  DeleteMessageBatchRequestEntry'
+    { _dmbreId            :: !Text
+    , _dmbreReceiptHandle :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteMessageBatchRequestEntry' with the minimum fields required to make a request.
@@ -247,9 +255,11 @@ instance ToQuery DeleteMessageBatchRequestEntry where
 --
 --
 -- /See:/ 'deleteMessageBatchResultEntry' smart constructor.
-newtype DeleteMessageBatchResultEntry = DeleteMessageBatchResultEntry'
-  { _dId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteMessageBatchResultEntry =
+  DeleteMessageBatchResultEntry'
+    { _dId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteMessageBatchResultEntry' with the minimum fields required to make a request.
@@ -281,15 +291,17 @@ instance NFData DeleteMessageBatchResultEntry where
 --
 --
 -- /See:/ 'message' smart constructor.
-data Message = Message'
-  { _mMessageAttributes      :: !(Maybe (Map Text MessageAttributeValue))
-  , _mMD5OfBody              :: !(Maybe Text)
-  , _mBody                   :: !(Maybe Text)
-  , _mAttributes             :: !(Maybe (Map MessageAttribute Text))
-  , _mReceiptHandle          :: !(Maybe Text)
-  , _mMessageId              :: !(Maybe Text)
-  , _mMD5OfMessageAttributes :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Message =
+  Message'
+    { _mMessageAttributes      :: !(Maybe (Map Text MessageAttributeValue))
+    , _mMD5OfBody              :: !(Maybe Text)
+    , _mBody                   :: !(Maybe Text)
+    , _mAttributes             :: !(Maybe (Map MessageAttribute Text))
+    , _mReceiptHandle          :: !(Maybe Text)
+    , _mMessageId              :: !(Maybe Text)
+    , _mMD5OfMessageAttributes :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Message' with the minimum fields required to make a request.
@@ -374,13 +386,15 @@ instance NFData Message where
 --
 --
 -- /See:/ 'messageAttributeValue' smart constructor.
-data MessageAttributeValue = MessageAttributeValue'
-  { _mavBinaryValue      :: !(Maybe Base64)
-  , _mavStringListValues :: !(Maybe [Text])
-  , _mavStringValue      :: !(Maybe Text)
-  , _mavBinaryListValues :: !(Maybe [Base64])
-  , _mavDataType         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MessageAttributeValue =
+  MessageAttributeValue'
+    { _mavBinaryValue      :: !(Maybe Base64)
+    , _mavStringListValues :: !(Maybe [Text])
+    , _mavStringValue      :: !(Maybe Text)
+    , _mavBinaryListValues :: !(Maybe [Base64])
+    , _mavDataType         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MessageAttributeValue' with the minimum fields required to make a request.
@@ -465,14 +479,16 @@ instance ToQuery MessageAttributeValue where
 --
 --
 -- /See:/ 'sendMessageBatchRequestEntry' smart constructor.
-data SendMessageBatchRequestEntry = SendMessageBatchRequestEntry'
-  { _sMessageAttributes      :: !(Maybe (Map Text MessageAttributeValue))
-  , _sDelaySeconds           :: !(Maybe Int)
-  , _sMessageDeduplicationId :: !(Maybe Text)
-  , _sMessageGroupId         :: !(Maybe Text)
-  , _sId                     :: !Text
-  , _sMessageBody            :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SendMessageBatchRequestEntry =
+  SendMessageBatchRequestEntry'
+    { _sMessageAttributes      :: !(Maybe (Map Text MessageAttributeValue))
+    , _sDelaySeconds           :: !(Maybe Int)
+    , _sMessageDeduplicationId :: !(Maybe Text)
+    , _sMessageGroupId         :: !(Maybe Text)
+    , _sId                     :: !Text
+    , _sMessageBody            :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SendMessageBatchRequestEntry' with the minimum fields required to make a request.
@@ -549,13 +565,15 @@ instance ToQuery SendMessageBatchRequestEntry where
 --
 --
 -- /See:/ 'sendMessageBatchResultEntry' smart constructor.
-data SendMessageBatchResultEntry = SendMessageBatchResultEntry'
-  { _smbreSequenceNumber         :: !(Maybe Text)
-  , _smbreMD5OfMessageAttributes :: !(Maybe Text)
-  , _smbreId                     :: !Text
-  , _smbreMessageId              :: !Text
-  , _smbreMD5OfMessageBody       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SendMessageBatchResultEntry =
+  SendMessageBatchResultEntry'
+    { _smbreSequenceNumber         :: !(Maybe Text)
+    , _smbreMD5OfMessageAttributes :: !(Maybe Text)
+    , _smbreId                     :: !Text
+    , _smbreMessageId              :: !Text
+    , _smbreMD5OfMessageBody       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SendMessageBatchResultEntry' with the minimum fields required to make a request.

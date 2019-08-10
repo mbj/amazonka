@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getContainerPolicy' smart constructor.
-newtype GetContainerPolicy = GetContainerPolicy'
-  { _gContainerName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetContainerPolicy =
+  GetContainerPolicy'
+    { _gContainerName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetContainerPolicy' with the minimum fields required to make a request.
@@ -103,10 +105,12 @@ instance ToQuery GetContainerPolicy where
         toQuery = const mempty
 
 -- | /See:/ 'getContainerPolicyResponse' smart constructor.
-data GetContainerPolicyResponse = GetContainerPolicyResponse'
-  { _gcprsResponseStatus :: !Int
-  , _gcprsPolicy         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetContainerPolicyResponse =
+  GetContainerPolicyResponse'
+    { _gcprsResponseStatus :: !Int
+    , _gcprsPolicy         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetContainerPolicyResponse' with the minimum fields required to make a request.

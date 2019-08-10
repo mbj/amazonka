@@ -51,10 +51,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'tagResource' smart constructor.
-data TagResource = TagResource'
-  { _trResourceARN :: !Text
-  , _trTags        :: !(List1 Tag)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TagResource =
+  TagResource'
+    { _trResourceARN :: !Text
+    , _trTags        :: !(List1 Tag)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TagResource' with the minimum fields required to make a request.
@@ -119,9 +121,11 @@ instance ToQuery TagResource where
 --
 --
 -- /See:/ 'tagResourceResponse' smart constructor.
-newtype TagResourceResponse = TagResourceResponse'
-  { _trrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype TagResourceResponse =
+  TagResourceResponse'
+    { _trrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TagResourceResponse' with the minimum fields required to make a request.

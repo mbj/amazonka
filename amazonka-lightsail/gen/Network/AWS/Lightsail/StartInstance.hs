@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'startInstance' smart constructor.
-newtype StartInstance = StartInstance'
-  { _sInstanceName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StartInstance =
+  StartInstance'
+    { _sInstanceName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartInstance' with the minimum fields required to make a request.
@@ -100,10 +102,12 @@ instance ToQuery StartInstance where
         toQuery = const mempty
 
 -- | /See:/ 'startInstanceResponse' smart constructor.
-data StartInstanceResponse = StartInstanceResponse'
-  { _srsOperations     :: !(Maybe [Operation])
-  , _srsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartInstanceResponse =
+  StartInstanceResponse'
+    { _srsOperations     :: !(Maybe [Operation])
+    , _srsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartInstanceResponse' with the minimum fields required to make a request.

@@ -58,12 +58,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getFaceSearch' smart constructor.
-data GetFaceSearch = GetFaceSearch'
-  { _gfsNextToken  :: !(Maybe Text)
-  , _gfsMaxResults :: !(Maybe Nat)
-  , _gfsSortBy     :: !(Maybe FaceSearchSortBy)
-  , _gfsJobId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetFaceSearch =
+  GetFaceSearch'
+    { _gfsNextToken  :: !(Maybe Text)
+    , _gfsMaxResults :: !(Maybe Nat)
+    , _gfsSortBy     :: !(Maybe FaceSearchSortBy)
+    , _gfsJobId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetFaceSearch' with the minimum fields required to make a request.
@@ -147,14 +149,16 @@ instance ToQuery GetFaceSearch where
         toQuery = const mempty
 
 -- | /See:/ 'getFaceSearchResponse' smart constructor.
-data GetFaceSearchResponse = GetFaceSearchResponse'
-  { _gfsrsNextToken      :: !(Maybe Text)
-  , _gfsrsVideoMetadata  :: !(Maybe VideoMetadata)
-  , _gfsrsStatusMessage  :: !(Maybe Text)
-  , _gfsrsJobStatus      :: !(Maybe VideoJobStatus)
-  , _gfsrsPersons        :: !(Maybe [PersonMatch])
-  , _gfsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetFaceSearchResponse =
+  GetFaceSearchResponse'
+    { _gfsrsNextToken      :: !(Maybe Text)
+    , _gfsrsVideoMetadata  :: !(Maybe VideoMetadata)
+    , _gfsrsStatusMessage  :: !(Maybe Text)
+    , _gfsrsJobStatus      :: !(Maybe VideoJobStatus)
+    , _gfsrsPersons        :: !(Maybe [PersonMatch])
+    , _gfsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetFaceSearchResponse' with the minimum fields required to make a request.

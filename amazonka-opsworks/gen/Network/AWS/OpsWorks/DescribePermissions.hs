@@ -48,10 +48,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describePermissions' smart constructor.
-data DescribePermissions = DescribePermissions'
-  { _dpIAMUserARN :: !(Maybe Text)
-  , _dpStackId    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribePermissions =
+  DescribePermissions'
+    { _dpIAMUserARN :: !(Maybe Text)
+    , _dpStackId    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribePermissions' with the minimum fields required to make a request.
@@ -118,10 +120,12 @@ instance ToQuery DescribePermissions where
 --
 --
 -- /See:/ 'describePermissionsResponse' smart constructor.
-data DescribePermissionsResponse = DescribePermissionsResponse'
-  { _dprsPermissions    :: !(Maybe [Permission])
-  , _dprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribePermissionsResponse =
+  DescribePermissionsResponse'
+    { _dprsPermissions    :: !(Maybe [Permission])
+    , _dprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribePermissionsResponse' with the minimum fields required to make a request.

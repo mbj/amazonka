@@ -51,12 +51,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'completeLayerUpload' smart constructor.
-data CompleteLayerUpload = CompleteLayerUpload'
-  { _cluRegistryId     :: !(Maybe Text)
-  , _cluRepositoryName :: !Text
-  , _cluUploadId       :: !Text
-  , _cluLayerDigests   :: !(List1 Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CompleteLayerUpload =
+  CompleteLayerUpload'
+    { _cluRegistryId     :: !(Maybe Text)
+    , _cluRepositoryName :: !Text
+    , _cluUploadId       :: !Text
+    , _cluLayerDigests   :: !(List1 Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CompleteLayerUpload' with the minimum fields required to make a request.
@@ -143,13 +145,15 @@ instance ToQuery CompleteLayerUpload where
         toQuery = const mempty
 
 -- | /See:/ 'completeLayerUploadResponse' smart constructor.
-data CompleteLayerUploadResponse = CompleteLayerUploadResponse'
-  { _clursRegistryId     :: !(Maybe Text)
-  , _clursLayerDigest    :: !(Maybe Text)
-  , _clursRepositoryName :: !(Maybe Text)
-  , _clursUploadId       :: !(Maybe Text)
-  , _clursResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CompleteLayerUploadResponse =
+  CompleteLayerUploadResponse'
+    { _clursRegistryId     :: !(Maybe Text)
+    , _clursLayerDigest    :: !(Maybe Text)
+    , _clursRepositoryName :: !(Maybe Text)
+    , _clursUploadId       :: !(Maybe Text)
+    , _clursResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CompleteLayerUploadResponse' with the minimum fields required to make a request.

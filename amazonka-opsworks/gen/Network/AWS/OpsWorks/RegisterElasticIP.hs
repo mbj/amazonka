@@ -48,10 +48,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'registerElasticIP' smart constructor.
-data RegisterElasticIP = RegisterElasticIP'
-  { _reiElasticIP :: !Text
-  , _reiStackId   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RegisterElasticIP =
+  RegisterElasticIP'
+    { _reiElasticIP :: !Text
+    , _reiStackId   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterElasticIP' with the minimum fields required to make a request.
@@ -118,10 +120,12 @@ instance ToQuery RegisterElasticIP where
 --
 --
 -- /See:/ 'registerElasticIPResponse' smart constructor.
-data RegisterElasticIPResponse = RegisterElasticIPResponse'
-  { _reirsElasticIP      :: !(Maybe Text)
-  , _reirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RegisterElasticIPResponse =
+  RegisterElasticIPResponse'
+    { _reirsElasticIP      :: !(Maybe Text)
+    , _reirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterElasticIPResponse' with the minimum fields required to make a request.

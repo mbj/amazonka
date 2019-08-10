@@ -50,15 +50,17 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createSoftwareUpdateJob' smart constructor.
-data CreateSoftwareUpdateJob = CreateSoftwareUpdateJob'
-  { _csujUpdateAgentLogLevel          :: !(Maybe UpdateAgentLogLevel)
-  , _csujAmznClientToken              :: !(Maybe Text)
-  , _csujSoftwareToUpdate             :: !(Maybe SoftwareToUpdate)
-  , _csujUpdateTargetsOperatingSystem :: !(Maybe UpdateTargetsOperatingSystem)
-  , _csujS3URLSignerRole              :: !(Maybe Text)
-  , _csujUpdateTargets                :: !(Maybe [Text])
-  , _csujUpdateTargetsArchitecture    :: !(Maybe UpdateTargetsArchitecture)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateSoftwareUpdateJob =
+  CreateSoftwareUpdateJob'
+    { _csujUpdateAgentLogLevel          :: !(Maybe UpdateAgentLogLevel)
+    , _csujAmznClientToken              :: !(Maybe Text)
+    , _csujSoftwareToUpdate             :: !(Maybe SoftwareToUpdate)
+    , _csujUpdateTargetsOperatingSystem :: !(Maybe UpdateTargetsOperatingSystem)
+    , _csujS3URLSignerRole              :: !(Maybe Text)
+    , _csujUpdateTargets                :: !(Maybe [Text])
+    , _csujUpdateTargetsArchitecture    :: !(Maybe UpdateTargetsArchitecture)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateSoftwareUpdateJob' with the minimum fields required to make a request.
@@ -163,11 +165,13 @@ instance ToQuery CreateSoftwareUpdateJob where
         toQuery = const mempty
 
 -- | /See:/ 'createSoftwareUpdateJobResponse' smart constructor.
-data CreateSoftwareUpdateJobResponse = CreateSoftwareUpdateJobResponse'
-  { _csujrsIotJobARN      :: !(Maybe Text)
-  , _csujrsIotJobId       :: !(Maybe Text)
-  , _csujrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateSoftwareUpdateJobResponse =
+  CreateSoftwareUpdateJobResponse'
+    { _csujrsIotJobARN      :: !(Maybe Text)
+    , _csujrsIotJobId       :: !(Maybe Text)
+    , _csujrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateSoftwareUpdateJobResponse' with the minimum fields required to make a request.

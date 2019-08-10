@@ -26,11 +26,13 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'addAttributesActivity' smart constructor.
-data AddAttributesActivity = AddAttributesActivity'
-  { _aaaNext       :: !(Maybe Text)
-  , _aaaName       :: !Text
-  , _aaaAttributes :: !(Map Text Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddAttributesActivity =
+  AddAttributesActivity'
+    { _aaaNext       :: !(Maybe Text)
+    , _aaaName       :: !Text
+    , _aaaAttributes :: !(Map Text Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddAttributesActivity' with the minimum fields required to make a request.
@@ -86,11 +88,13 @@ instance ToJSON AddAttributesActivity where
 --
 --
 -- /See:/ 'batchPutMessageErrorEntry' smart constructor.
-data BatchPutMessageErrorEntry = BatchPutMessageErrorEntry'
-  { _bpmeeErrorCode    :: !(Maybe Text)
-  , _bpmeeErrorMessage :: !(Maybe Text)
-  , _bpmeeMessageId    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchPutMessageErrorEntry =
+  BatchPutMessageErrorEntry'
+    { _bpmeeErrorCode    :: !(Maybe Text)
+    , _bpmeeErrorMessage :: !(Maybe Text)
+    , _bpmeeMessageId    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchPutMessageErrorEntry' with the minimum fields required to make a request.
@@ -141,14 +145,16 @@ instance NFData BatchPutMessageErrorEntry where
 --
 --
 -- /See:/ 'channel' smart constructor.
-data Channel = Channel'
-  { _cCreationTime    :: !(Maybe POSIX)
-  , _cStatus          :: !(Maybe ChannelStatus)
-  , _cArn             :: !(Maybe Text)
-  , _cRetentionPeriod :: !(Maybe RetentionPeriod)
-  , _cName            :: !(Maybe Text)
-  , _cLastUpdateTime  :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Channel =
+  Channel'
+    { _cCreationTime    :: !(Maybe POSIX)
+    , _cStatus          :: !(Maybe ChannelStatus)
+    , _cArn             :: !(Maybe Text)
+    , _cRetentionPeriod :: !(Maybe RetentionPeriod)
+    , _cName            :: !(Maybe Text)
+    , _cLastUpdateTime  :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Channel' with the minimum fields required to make a request.
@@ -223,11 +229,13 @@ instance NFData Channel where
 --
 --
 -- /See:/ 'channelActivity' smart constructor.
-data ChannelActivity = ChannelActivity'
-  { _caNext        :: !(Maybe Text)
-  , _caName        :: !Text
-  , _caChannelName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ChannelActivity =
+  ChannelActivity'
+    { _caNext        :: !(Maybe Text)
+    , _caName        :: !Text
+    , _caChannelName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ChannelActivity' with the minimum fields required to make a request.
@@ -284,12 +292,14 @@ instance ToJSON ChannelActivity where
 --
 --
 -- /See:/ 'channelSummary' smart constructor.
-data ChannelSummary = ChannelSummary'
-  { _csCreationTime   :: !(Maybe POSIX)
-  , _csStatus         :: !(Maybe ChannelStatus)
-  , _csChannelName    :: !(Maybe Text)
-  , _csLastUpdateTime :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ChannelSummary =
+  ChannelSummary'
+    { _csCreationTime   :: !(Maybe POSIX)
+    , _csStatus         :: !(Maybe ChannelStatus)
+    , _csChannelName    :: !(Maybe Text)
+    , _csLastUpdateTime :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ChannelSummary' with the minimum fields required to make a request.
@@ -348,15 +358,17 @@ instance NFData ChannelSummary where
 --
 --
 -- /See:/ 'dataset' smart constructor.
-data Dataset = Dataset'
-  { _dCreationTime   :: !(Maybe POSIX)
-  , _dStatus         :: !(Maybe DatasetStatus)
-  , _dArn            :: !(Maybe Text)
-  , _dActions        :: !(Maybe (List1 DatasetAction))
-  , _dTriggers       :: !(Maybe [DatasetTrigger])
-  , _dName           :: !(Maybe Text)
-  , _dLastUpdateTime :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Dataset =
+  Dataset'
+    { _dCreationTime   :: !(Maybe POSIX)
+    , _dStatus         :: !(Maybe DatasetStatus)
+    , _dArn            :: !(Maybe Text)
+    , _dActions        :: !(Maybe (List1 DatasetAction))
+    , _dTriggers       :: !(Maybe [DatasetTrigger])
+    , _dName           :: !(Maybe Text)
+    , _dLastUpdateTime :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Dataset' with the minimum fields required to make a request.
@@ -439,10 +451,12 @@ instance NFData Dataset where
 --
 --
 -- /See:/ 'datasetAction' smart constructor.
-data DatasetAction = DatasetAction'
-  { _daQueryAction :: !(Maybe SqlQueryDatasetAction)
-  , _daActionName  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DatasetAction =
+  DatasetAction'
+    { _daQueryAction :: !(Maybe SqlQueryDatasetAction)
+    , _daActionName  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DatasetAction' with the minimum fields required to make a request.
@@ -489,10 +503,12 @@ instance ToJSON DatasetAction where
 --
 --
 -- /See:/ 'datasetContentStatus' smart constructor.
-data DatasetContentStatus = DatasetContentStatus'
-  { _dcsState  :: !(Maybe DatasetContentState)
-  , _dcsReason :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DatasetContentStatus =
+  DatasetContentStatus'
+    { _dcsState  :: !(Maybe DatasetContentState)
+    , _dcsReason :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DatasetContentStatus' with the minimum fields required to make a request.
@@ -532,10 +548,12 @@ instance NFData DatasetContentStatus where
 --
 --
 -- /See:/ 'datasetEntry' smart constructor.
-data DatasetEntry = DatasetEntry'
-  { _deEntryName :: !(Maybe Text)
-  , _deDataURI   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DatasetEntry =
+  DatasetEntry'
+    { _deEntryName :: !(Maybe Text)
+    , _deDataURI   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DatasetEntry' with the minimum fields required to make a request.
@@ -574,12 +592,14 @@ instance NFData DatasetEntry where
 --
 --
 -- /See:/ 'datasetSummary' smart constructor.
-data DatasetSummary = DatasetSummary'
-  { _dssCreationTime   :: !(Maybe POSIX)
-  , _dssStatus         :: !(Maybe DatasetStatus)
-  , _dssDatasetName    :: !(Maybe Text)
-  , _dssLastUpdateTime :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DatasetSummary =
+  DatasetSummary'
+    { _dssCreationTime   :: !(Maybe POSIX)
+    , _dssStatus         :: !(Maybe DatasetStatus)
+    , _dssDatasetName    :: !(Maybe Text)
+    , _dssLastUpdateTime :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DatasetSummary' with the minimum fields required to make a request.
@@ -638,9 +658,11 @@ instance NFData DatasetSummary where
 --
 --
 -- /See:/ 'datasetTrigger' smart constructor.
-newtype DatasetTrigger = DatasetTrigger'
-  { _dtSchedule :: Maybe Schedule
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DatasetTrigger =
+  DatasetTrigger'
+    { _dtSchedule :: Maybe Schedule
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DatasetTrigger' with the minimum fields required to make a request.
@@ -676,14 +698,16 @@ instance ToJSON DatasetTrigger where
 --
 --
 -- /See:/ 'datastore' smart constructor.
-data Datastore = Datastore'
-  { _datCreationTime    :: !(Maybe POSIX)
-  , _datStatus          :: !(Maybe DatastoreStatus)
-  , _datArn             :: !(Maybe Text)
-  , _datRetentionPeriod :: !(Maybe RetentionPeriod)
-  , _datName            :: !(Maybe Text)
-  , _datLastUpdateTime  :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Datastore =
+  Datastore'
+    { _datCreationTime    :: !(Maybe POSIX)
+    , _datStatus          :: !(Maybe DatastoreStatus)
+    , _datArn             :: !(Maybe Text)
+    , _datRetentionPeriod :: !(Maybe RetentionPeriod)
+    , _datName            :: !(Maybe Text)
+    , _datLastUpdateTime  :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Datastore' with the minimum fields required to make a request.
@@ -758,10 +782,12 @@ instance NFData Datastore where
 --
 --
 -- /See:/ 'datastoreActivity' smart constructor.
-data DatastoreActivity = DatastoreActivity'
-  { _daName          :: !Text
-  , _daDatastoreName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DatastoreActivity =
+  DatastoreActivity'
+    { _daName          :: !Text
+    , _daDatastoreName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DatastoreActivity' with the minimum fields required to make a request.
@@ -810,12 +836,14 @@ instance ToJSON DatastoreActivity where
 --
 --
 -- /See:/ 'datastoreSummary' smart constructor.
-data DatastoreSummary = DatastoreSummary'
-  { _dsCreationTime   :: !(Maybe POSIX)
-  , _dsStatus         :: !(Maybe DatastoreStatus)
-  , _dsDatastoreName  :: !(Maybe Text)
-  , _dsLastUpdateTime :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DatastoreSummary =
+  DatastoreSummary'
+    { _dsCreationTime   :: !(Maybe POSIX)
+    , _dsStatus         :: !(Maybe DatastoreStatus)
+    , _dsDatastoreName  :: !(Maybe Text)
+    , _dsLastUpdateTime :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DatastoreSummary' with the minimum fields required to make a request.
@@ -874,13 +902,15 @@ instance NFData DatastoreSummary where
 --
 --
 -- /See:/ 'deviceRegistryEnrichActivity' smart constructor.
-data DeviceRegistryEnrichActivity = DeviceRegistryEnrichActivity'
-  { _dreaNext      :: !(Maybe Text)
-  , _dreaName      :: !Text
-  , _dreaAttribute :: !Text
-  , _dreaThingName :: !Text
-  , _dreaRoleARN   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeviceRegistryEnrichActivity =
+  DeviceRegistryEnrichActivity'
+    { _dreaNext      :: !(Maybe Text)
+    , _dreaName      :: !Text
+    , _dreaAttribute :: !Text
+    , _dreaThingName :: !Text
+    , _dreaRoleARN   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeviceRegistryEnrichActivity' with the minimum fields required to make a request.
@@ -961,13 +991,15 @@ instance ToJSON DeviceRegistryEnrichActivity where
 --
 --
 -- /See:/ 'deviceShadowEnrichActivity' smart constructor.
-data DeviceShadowEnrichActivity = DeviceShadowEnrichActivity'
-  { _dseaNext      :: !(Maybe Text)
-  , _dseaName      :: !Text
-  , _dseaAttribute :: !Text
-  , _dseaThingName :: !Text
-  , _dseaRoleARN   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeviceShadowEnrichActivity =
+  DeviceShadowEnrichActivity'
+    { _dseaNext      :: !(Maybe Text)
+    , _dseaName      :: !Text
+    , _dseaAttribute :: !Text
+    , _dseaThingName :: !Text
+    , _dseaRoleARN   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeviceShadowEnrichActivity' with the minimum fields required to make a request.
@@ -1048,11 +1080,13 @@ instance ToJSON DeviceShadowEnrichActivity where
 --
 --
 -- /See:/ 'filterActivity' smart constructor.
-data FilterActivity = FilterActivity'
-  { _faNext   :: !(Maybe Text)
-  , _faName   :: !Text
-  , _faFilter :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FilterActivity =
+  FilterActivity'
+    { _faNext   :: !(Maybe Text)
+    , _faName   :: !Text
+    , _faFilter :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FilterActivity' with the minimum fields required to make a request.
@@ -1107,12 +1141,14 @@ instance ToJSON FilterActivity where
 --
 --
 -- /See:/ 'lambdaActivity' smart constructor.
-data LambdaActivity = LambdaActivity'
-  { _laNext       :: !(Maybe Text)
-  , _laName       :: !Text
-  , _laLambdaName :: !Text
-  , _laBatchSize  :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LambdaActivity =
+  LambdaActivity'
+    { _laNext       :: !(Maybe Text)
+    , _laName       :: !Text
+    , _laLambdaName :: !Text
+    , _laBatchSize  :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LambdaActivity' with the minimum fields required to make a request.
@@ -1182,11 +1218,13 @@ instance ToJSON LambdaActivity where
 --
 --
 -- /See:/ 'loggingOptions' smart constructor.
-data LoggingOptions = LoggingOptions'
-  { _loRoleARN :: !Text
-  , _loLevel   :: !LoggingLevel
-  , _loEnabled :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LoggingOptions =
+  LoggingOptions'
+    { _loRoleARN :: !Text
+    , _loLevel   :: !LoggingLevel
+    , _loEnabled :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LoggingOptions' with the minimum fields required to make a request.
@@ -1245,12 +1283,14 @@ instance ToJSON LoggingOptions where
 --
 --
 -- /See:/ 'mathActivity' smart constructor.
-data MathActivity = MathActivity'
-  { _maNext      :: !(Maybe Text)
-  , _maName      :: !Text
-  , _maAttribute :: !Text
-  , _maMath      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MathActivity =
+  MathActivity'
+    { _maNext      :: !(Maybe Text)
+    , _maName      :: !Text
+    , _maAttribute :: !Text
+    , _maMath      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MathActivity' with the minimum fields required to make a request.
@@ -1320,10 +1360,12 @@ instance ToJSON MathActivity where
 --
 --
 -- /See:/ 'message' smart constructor.
-data Message = Message'
-  { _mMessageId :: !Text
-  , _mPayload   :: !Base64
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Message =
+  Message'
+    { _mMessageId :: !Text
+    , _mPayload   :: !Base64
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Message' with the minimum fields required to make a request.
@@ -1365,14 +1407,16 @@ instance ToJSON Message where
 --
 --
 -- /See:/ 'pipeline' smart constructor.
-data Pipeline = Pipeline'
-  { _pCreationTime          :: !(Maybe POSIX)
-  , _pArn                   :: !(Maybe Text)
-  , _pActivities            :: !(Maybe (List1 PipelineActivity))
-  , _pName                  :: !(Maybe Text)
-  , _pReprocessingSummaries :: !(Maybe [ReprocessingSummary])
-  , _pLastUpdateTime        :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Pipeline =
+  Pipeline'
+    { _pCreationTime          :: !(Maybe POSIX)
+    , _pArn                   :: !(Maybe Text)
+    , _pActivities            :: !(Maybe (List1 PipelineActivity))
+    , _pName                  :: !(Maybe Text)
+    , _pReprocessingSummaries :: !(Maybe [ReprocessingSummary])
+    , _pLastUpdateTime        :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Pipeline' with the minimum fields required to make a request.
@@ -1447,18 +1491,20 @@ instance NFData Pipeline where
 --
 --
 -- /See:/ 'pipelineActivity' smart constructor.
-data PipelineActivity = PipelineActivity'
-  { _paSelectAttributes     :: !(Maybe SelectAttributesActivity)
-  , _paChannel              :: !(Maybe ChannelActivity)
-  , _paAddAttributes        :: !(Maybe AddAttributesActivity)
-  , _paDeviceRegistryEnrich :: !(Maybe DeviceRegistryEnrichActivity)
-  , _paRemoveAttributes     :: !(Maybe RemoveAttributesActivity)
-  , _paLambda               :: !(Maybe LambdaActivity)
-  , _paDatastore            :: !(Maybe DatastoreActivity)
-  , _paDeviceShadowEnrich   :: !(Maybe DeviceShadowEnrichActivity)
-  , _paFilter               :: !(Maybe FilterActivity)
-  , _paMath                 :: !(Maybe MathActivity)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PipelineActivity =
+  PipelineActivity'
+    { _paSelectAttributes     :: !(Maybe SelectAttributesActivity)
+    , _paChannel              :: !(Maybe ChannelActivity)
+    , _paAddAttributes        :: !(Maybe AddAttributesActivity)
+    , _paDeviceRegistryEnrich :: !(Maybe DeviceRegistryEnrichActivity)
+    , _paRemoveAttributes     :: !(Maybe RemoveAttributesActivity)
+    , _paLambda               :: !(Maybe LambdaActivity)
+    , _paDatastore            :: !(Maybe DatastoreActivity)
+    , _paDeviceShadowEnrich   :: !(Maybe DeviceShadowEnrichActivity)
+    , _paFilter               :: !(Maybe FilterActivity)
+    , _paMath                 :: !(Maybe MathActivity)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PipelineActivity' with the minimum fields required to make a request.
@@ -1581,12 +1627,14 @@ instance ToJSON PipelineActivity where
 --
 --
 -- /See:/ 'pipelineSummary' smart constructor.
-data PipelineSummary = PipelineSummary'
-  { _psCreationTime          :: !(Maybe POSIX)
-  , _psPipelineName          :: !(Maybe Text)
-  , _psReprocessingSummaries :: !(Maybe [ReprocessingSummary])
-  , _psLastUpdateTime        :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PipelineSummary =
+  PipelineSummary'
+    { _psCreationTime          :: !(Maybe POSIX)
+    , _psPipelineName          :: !(Maybe Text)
+    , _psReprocessingSummaries :: !(Maybe [ReprocessingSummary])
+    , _psLastUpdateTime        :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PipelineSummary' with the minimum fields required to make a request.
@@ -1645,11 +1693,13 @@ instance NFData PipelineSummary where
 --
 --
 -- /See:/ 'removeAttributesActivity' smart constructor.
-data RemoveAttributesActivity = RemoveAttributesActivity'
-  { _raaNext       :: !(Maybe Text)
-  , _raaName       :: !Text
-  , _raaAttributes :: !(List1 Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RemoveAttributesActivity =
+  RemoveAttributesActivity'
+    { _raaNext       :: !(Maybe Text)
+    , _raaName       :: !Text
+    , _raaAttributes :: !(List1 Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RemoveAttributesActivity' with the minimum fields required to make a request.
@@ -1709,11 +1759,13 @@ instance ToJSON RemoveAttributesActivity where
 --
 --
 -- /See:/ 'reprocessingSummary' smart constructor.
-data ReprocessingSummary = ReprocessingSummary'
-  { _rsCreationTime :: !(Maybe POSIX)
-  , _rsStatus       :: !(Maybe ReprocessingStatus)
-  , _rsId           :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReprocessingSummary =
+  ReprocessingSummary'
+    { _rsCreationTime :: !(Maybe POSIX)
+    , _rsStatus       :: !(Maybe ReprocessingStatus)
+    , _rsId           :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReprocessingSummary' with the minimum fields required to make a request.
@@ -1761,10 +1813,12 @@ instance NFData ReprocessingSummary where
 --
 --
 -- /See:/ 'retentionPeriod' smart constructor.
-data RetentionPeriod = RetentionPeriod'
-  { _rpUnlimited    :: !(Maybe Bool)
-  , _rpNumberOfDays :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RetentionPeriod =
+  RetentionPeriod'
+    { _rpUnlimited    :: !(Maybe Bool)
+    , _rpNumberOfDays :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RetentionPeriod' with the minimum fields required to make a request.
@@ -1811,9 +1865,11 @@ instance ToJSON RetentionPeriod where
 --
 --
 -- /See:/ 'schedule' smart constructor.
-newtype Schedule = Schedule'
-  { _sExpression :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype Schedule =
+  Schedule'
+    { _sExpression :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Schedule' with the minimum fields required to make a request.
@@ -1849,11 +1905,13 @@ instance ToJSON Schedule where
 --
 --
 -- /See:/ 'selectAttributesActivity' smart constructor.
-data SelectAttributesActivity = SelectAttributesActivity'
-  { _saaNext       :: !(Maybe Text)
-  , _saaName       :: !Text
-  , _saaAttributes :: !(List1 Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SelectAttributesActivity =
+  SelectAttributesActivity'
+    { _saaNext       :: !(Maybe Text)
+    , _saaName       :: !Text
+    , _saaAttributes :: !(List1 Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SelectAttributesActivity' with the minimum fields required to make a request.
@@ -1913,9 +1971,11 @@ instance ToJSON SelectAttributesActivity where
 --
 --
 -- /See:/ 'sqlQueryDatasetAction' smart constructor.
-newtype SqlQueryDatasetAction = SqlQueryDatasetAction'
-  { _sqdaSqlQuery :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype SqlQueryDatasetAction =
+  SqlQueryDatasetAction'
+    { _sqdaSqlQuery :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SqlQueryDatasetAction' with the minimum fields required to make a request.

@@ -48,10 +48,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createWebhook' smart constructor.
-data CreateWebhook = CreateWebhook'
-  { _cwBranchFilter :: !(Maybe Text)
-  , _cwProjectName  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateWebhook =
+  CreateWebhook'
+    { _cwBranchFilter :: !(Maybe Text)
+    , _cwProjectName  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateWebhook' with the minimum fields required to make a request.
@@ -112,10 +114,12 @@ instance ToQuery CreateWebhook where
         toQuery = const mempty
 
 -- | /See:/ 'createWebhookResponse' smart constructor.
-data CreateWebhookResponse = CreateWebhookResponse'
-  { _cwrsWebhook        :: !(Maybe Webhook)
-  , _cwrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateWebhookResponse =
+  CreateWebhookResponse'
+    { _cwrsWebhook        :: !(Maybe Webhook)
+    , _cwrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateWebhookResponse' with the minimum fields required to make a request.

@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listTagsForResource' smart constructor.
-newtype ListTagsForResource = ListTagsForResource'
-  { _ltfrResourceARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ListTagsForResource =
+  ListTagsForResource'
+    { _ltfrResourceARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTagsForResource' with the minimum fields required to make a request.
@@ -111,10 +113,12 @@ instance ToQuery ListTagsForResource where
 --
 --
 -- /See:/ 'listTagsForResourceResponse' smart constructor.
-data ListTagsForResourceResponse = ListTagsForResourceResponse'
-  { _ltfrrsTagList        :: !(Maybe [Tag])
-  , _ltfrrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTagsForResourceResponse =
+  ListTagsForResourceResponse'
+    { _ltfrrsTagList        :: !(Maybe [Tag])
+    , _ltfrrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTagsForResourceResponse' with the minimum fields required to make a request.

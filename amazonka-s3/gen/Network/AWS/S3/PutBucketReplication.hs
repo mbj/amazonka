@@ -42,11 +42,13 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'putBucketReplication' smart constructor.
-data PutBucketReplication = PutBucketReplication'
-  { _pbrContentMD5               :: !(Maybe Text)
-  , _pbrBucket                   :: !BucketName
-  , _pbrReplicationConfiguration :: !ReplicationConfiguration
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutBucketReplication =
+  PutBucketReplication'
+    { _pbrContentMD5               :: !(Maybe Text)
+    , _pbrBucket                   :: !BucketName
+    , _pbrReplicationConfiguration :: !ReplicationConfiguration
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutBucketReplication' with the minimum fields required to make a request.

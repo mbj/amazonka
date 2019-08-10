@@ -52,13 +52,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listShards' smart constructor.
-data ListShards = ListShards'
-  { _lsNextToken               :: !(Maybe Text)
-  , _lsExclusiveStartShardId   :: !(Maybe Text)
-  , _lsStreamCreationTimestamp :: !(Maybe POSIX)
-  , _lsStreamName              :: !(Maybe Text)
-  , _lsMaxResults              :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListShards =
+  ListShards'
+    { _lsNextToken               :: !(Maybe Text)
+    , _lsExclusiveStartShardId   :: !(Maybe Text)
+    , _lsStreamCreationTimestamp :: !(Maybe POSIX)
+    , _lsStreamName              :: !(Maybe Text)
+    , _lsMaxResults              :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListShards' with the minimum fields required to make a request.
@@ -148,11 +150,13 @@ instance ToQuery ListShards where
         toQuery = const mempty
 
 -- | /See:/ 'listShardsResponse' smart constructor.
-data ListShardsResponse = ListShardsResponse'
-  { _lrsNextToken      :: !(Maybe Text)
-  , _lrsShards         :: !(Maybe [Shard])
-  , _lrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListShardsResponse =
+  ListShardsResponse'
+    { _lrsNextToken      :: !(Maybe Text)
+    , _lrsShards         :: !(Maybe [Shard])
+    , _lrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListShardsResponse' with the minimum fields required to make a request.

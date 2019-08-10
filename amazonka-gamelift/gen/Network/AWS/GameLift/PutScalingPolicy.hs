@@ -116,18 +116,20 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'putScalingPolicy' smart constructor.
-data PutScalingPolicy = PutScalingPolicy'
-  { _pspScalingAdjustmentType :: !(Maybe ScalingAdjustmentType)
-  , _pspEvaluationPeriods     :: !(Maybe Nat)
-  , _pspPolicyType            :: !(Maybe PolicyType)
-  , _pspComparisonOperator    :: !(Maybe ComparisonOperatorType)
-  , _pspThreshold             :: !(Maybe Double)
-  , _pspScalingAdjustment     :: !(Maybe Int)
-  , _pspTargetConfiguration   :: !(Maybe TargetConfiguration)
-  , _pspName                  :: !Text
-  , _pspFleetId               :: !Text
-  , _pspMetricName            :: !MetricName
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutScalingPolicy =
+  PutScalingPolicy'
+    { _pspScalingAdjustmentType :: !(Maybe ScalingAdjustmentType)
+    , _pspEvaluationPeriods     :: !(Maybe Nat)
+    , _pspPolicyType            :: !(Maybe PolicyType)
+    , _pspComparisonOperator    :: !(Maybe ComparisonOperatorType)
+    , _pspThreshold             :: !(Maybe Double)
+    , _pspScalingAdjustment     :: !(Maybe Int)
+    , _pspTargetConfiguration   :: !(Maybe TargetConfiguration)
+    , _pspName                  :: !Text
+    , _pspFleetId               :: !Text
+    , _pspMetricName            :: !MetricName
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutScalingPolicy' with the minimum fields required to make a request.
@@ -263,10 +265,12 @@ instance ToQuery PutScalingPolicy where
 --
 --
 -- /See:/ 'putScalingPolicyResponse' smart constructor.
-data PutScalingPolicyResponse = PutScalingPolicyResponse'
-  { _psprsName           :: !(Maybe Text)
-  , _psprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutScalingPolicyResponse =
+  PutScalingPolicyResponse'
+    { _psprsName           :: !(Maybe Text)
+    , _psprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutScalingPolicyResponse' with the minimum fields required to make a request.

@@ -46,11 +46,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listResourceDefinitionVersions' smart constructor.
-data ListResourceDefinitionVersions = ListResourceDefinitionVersions'
-  { _lrdvNextToken            :: !(Maybe Text)
-  , _lrdvMaxResults           :: !(Maybe Text)
-  , _lrdvResourceDefinitionId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListResourceDefinitionVersions =
+  ListResourceDefinitionVersions'
+    { _lrdvNextToken            :: !(Maybe Text)
+    , _lrdvMaxResults           :: !(Maybe Text)
+    , _lrdvResourceDefinitionId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListResourceDefinitionVersions' with the minimum fields required to make a request.
@@ -123,11 +125,13 @@ instance ToQuery ListResourceDefinitionVersions where
                "MaxResults" =: _lrdvMaxResults]
 
 -- | /See:/ 'listResourceDefinitionVersionsResponse' smart constructor.
-data ListResourceDefinitionVersionsResponse = ListResourceDefinitionVersionsResponse'
-  { _lrdvrsVersions       :: !(Maybe [VersionInformation])
-  , _lrdvrsNextToken      :: !(Maybe Text)
-  , _lrdvrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListResourceDefinitionVersionsResponse =
+  ListResourceDefinitionVersionsResponse'
+    { _lrdvrsVersions       :: !(Maybe [VersionInformation])
+    , _lrdvrsNextToken      :: !(Maybe Text)
+    , _lrdvrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListResourceDefinitionVersionsResponse' with the minimum fields required to make a request.

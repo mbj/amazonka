@@ -28,10 +28,12 @@ import Network.AWS.SageMaker.Types.Sum
 --
 --
 -- /See:/ 'algorithmSpecification' smart constructor.
-data AlgorithmSpecification = AlgorithmSpecification'
-  { _asTrainingImage     :: !Text
-  , _asTrainingInputMode :: !TrainingInputMode
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AlgorithmSpecification =
+  AlgorithmSpecification'
+    { _asTrainingImage     :: !Text
+    , _asTrainingInputMode :: !TrainingInputMode
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AlgorithmSpecification' with the minimum fields required to make a request.
@@ -84,13 +86,15 @@ instance ToJSON AlgorithmSpecification where
 --
 --
 -- /See:/ 'channel' smart constructor.
-data Channel = Channel'
-  { _cRecordWrapperType :: !(Maybe RecordWrapper)
-  , _cCompressionType   :: !(Maybe CompressionType)
-  , _cContentType       :: !(Maybe Text)
-  , _cChannelName       :: !Text
-  , _cDataSource        :: !DataSource
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Channel =
+  Channel'
+    { _cRecordWrapperType :: !(Maybe RecordWrapper)
+    , _cCompressionType   :: !(Maybe CompressionType)
+    , _cContentType       :: !(Maybe Text)
+    , _cChannelName       :: !Text
+    , _cDataSource        :: !DataSource
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Channel' with the minimum fields required to make a request.
@@ -170,12 +174,14 @@ instance ToJSON Channel where
 --
 --
 -- /See:/ 'containerDefinition' smart constructor.
-data ContainerDefinition = ContainerDefinition'
-  { _cdModelDataURL      :: !(Maybe Text)
-  , _cdEnvironment       :: !(Maybe (Map Text Text))
-  , _cdContainerHostname :: !(Maybe Text)
-  , _cdImage             :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ContainerDefinition =
+  ContainerDefinition'
+    { _cdModelDataURL      :: !(Maybe Text)
+    , _cdEnvironment       :: !(Maybe (Map Text Text))
+    , _cdContainerHostname :: !(Maybe Text)
+    , _cdImage             :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ContainerDefinition' with the minimum fields required to make a request.
@@ -245,9 +251,11 @@ instance ToJSON ContainerDefinition where
 --
 --
 -- /See:/ 'dataSource' smart constructor.
-newtype DataSource = DataSource'
-  { _dsS3DataSource :: S3DataSource
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DataSource =
+  DataSource'
+    { _dsS3DataSource :: S3DataSource
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DataSource' with the minimum fields required to make a request.
@@ -285,11 +293,13 @@ instance ToJSON DataSource where
 --
 --
 -- /See:/ 'desiredWeightAndCapacity' smart constructor.
-data DesiredWeightAndCapacity = DesiredWeightAndCapacity'
-  { _dwacDesiredInstanceCount :: !(Maybe Nat)
-  , _dwacDesiredWeight        :: !(Maybe Double)
-  , _dwacVariantName          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DesiredWeightAndCapacity =
+  DesiredWeightAndCapacity'
+    { _dwacDesiredInstanceCount :: !(Maybe Nat)
+    , _dwacDesiredWeight        :: !(Maybe Double)
+    , _dwacVariantName          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DesiredWeightAndCapacity' with the minimum fields required to make a request.
@@ -342,11 +352,13 @@ instance ToJSON DesiredWeightAndCapacity where
 --
 --
 -- /See:/ 'endpointConfigSummary' smart constructor.
-data EndpointConfigSummary = EndpointConfigSummary'
-  { _ecsEndpointConfigName :: !Text
-  , _ecsEndpointConfigARN  :: !Text
-  , _ecsCreationTime       :: !POSIX
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EndpointConfigSummary =
+  EndpointConfigSummary'
+    { _ecsEndpointConfigName :: !Text
+    , _ecsEndpointConfigARN  :: !Text
+    , _ecsCreationTime       :: !POSIX
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EndpointConfigSummary' with the minimum fields required to make a request.
@@ -401,13 +413,15 @@ instance NFData EndpointConfigSummary where
 --
 --
 -- /See:/ 'endpointSummary' smart constructor.
-data EndpointSummary = EndpointSummary'
-  { _esEndpointName     :: !Text
-  , _esEndpointARN      :: !Text
-  , _esCreationTime     :: !POSIX
-  , _esLastModifiedTime :: !POSIX
-  , _esEndpointStatus   :: !EndpointStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EndpointSummary =
+  EndpointSummary'
+    { _esEndpointName     :: !Text
+    , _esEndpointARN      :: !Text
+    , _esCreationTime     :: !POSIX
+    , _esLastModifiedTime :: !POSIX
+    , _esEndpointStatus   :: !EndpointStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EndpointSummary' with the minimum fields required to make a request.
@@ -479,9 +493,11 @@ instance NFData EndpointSummary where
 --
 --
 -- /See:/ 'modelArtifacts' smart constructor.
-newtype ModelArtifacts = ModelArtifacts'
-  { _maS3ModelArtifacts :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ModelArtifacts =
+  ModelArtifacts'
+    { _maS3ModelArtifacts :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModelArtifacts' with the minimum fields required to make a request.
@@ -515,11 +531,13 @@ instance NFData ModelArtifacts where
 --
 --
 -- /See:/ 'modelSummary' smart constructor.
-data ModelSummary = ModelSummary'
-  { _msModelName    :: !Text
-  , _msModelARN     :: !Text
-  , _msCreationTime :: !POSIX
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModelSummary =
+  ModelSummary'
+    { _msModelName    :: !Text
+    , _msModelARN     :: !Text
+    , _msCreationTime :: !POSIX
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModelSummary' with the minimum fields required to make a request.
@@ -573,12 +591,14 @@ instance NFData ModelSummary where
 --
 --
 -- /See:/ 'notebookInstanceLifecycleConfigSummary' smart constructor.
-data NotebookInstanceLifecycleConfigSummary = NotebookInstanceLifecycleConfigSummary'
-  { _nilcsCreationTime                        :: !(Maybe POSIX)
-  , _nilcsLastModifiedTime                    :: !(Maybe POSIX)
-  , _nilcsNotebookInstanceLifecycleConfigName :: !Text
-  , _nilcsNotebookInstanceLifecycleConfigARN  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NotebookInstanceLifecycleConfigSummary =
+  NotebookInstanceLifecycleConfigSummary'
+    { _nilcsCreationTime                        :: !(Maybe POSIX)
+    , _nilcsLastModifiedTime                    :: !(Maybe POSIX)
+    , _nilcsNotebookInstanceLifecycleConfigName :: !Text
+    , _nilcsNotebookInstanceLifecycleConfigARN  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NotebookInstanceLifecycleConfigSummary' with the minimum fields required to make a request.
@@ -657,9 +677,11 @@ instance NFData
 --
 --
 -- /See:/ 'notebookInstanceLifecycleHook' smart constructor.
-newtype NotebookInstanceLifecycleHook = NotebookInstanceLifecycleHook'
-  { _nilhContent :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype NotebookInstanceLifecycleHook =
+  NotebookInstanceLifecycleHook'
+    { _nilhContent :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NotebookInstanceLifecycleHook' with the minimum fields required to make a request.
@@ -697,16 +719,18 @@ instance ToJSON NotebookInstanceLifecycleHook where
 --
 --
 -- /See:/ 'notebookInstanceSummary' smart constructor.
-data NotebookInstanceSummary = NotebookInstanceSummary'
-  { _nisCreationTime                        :: !(Maybe POSIX)
-  , _nisURL                                 :: !(Maybe Text)
-  , _nisLastModifiedTime                    :: !(Maybe POSIX)
-  , _nisInstanceType                        :: !(Maybe InstanceType)
-  , _nisNotebookInstanceStatus              :: !(Maybe NotebookInstanceStatus)
-  , _nisNotebookInstanceLifecycleConfigName :: !(Maybe Text)
-  , _nisNotebookInstanceName                :: !Text
-  , _nisNotebookInstanceARN                 :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NotebookInstanceSummary =
+  NotebookInstanceSummary'
+    { _nisCreationTime                        :: !(Maybe POSIX)
+    , _nisURL                                 :: !(Maybe Text)
+    , _nisLastModifiedTime                    :: !(Maybe POSIX)
+    , _nisInstanceType                        :: !(Maybe InstanceType)
+    , _nisNotebookInstanceStatus              :: !(Maybe NotebookInstanceStatus)
+    , _nisNotebookInstanceLifecycleConfigName :: !(Maybe Text)
+    , _nisNotebookInstanceName                :: !Text
+    , _nisNotebookInstanceARN                 :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NotebookInstanceSummary' with the minimum fields required to make a request.
@@ -799,10 +823,12 @@ instance NFData NotebookInstanceSummary where
 --
 --
 -- /See:/ 'outputDataConfig' smart constructor.
-data OutputDataConfig = OutputDataConfig'
-  { _odcKMSKeyId     :: !(Maybe Text)
-  , _odcS3OutputPath :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data OutputDataConfig =
+  OutputDataConfig'
+    { _odcKMSKeyId     :: !(Maybe Text)
+    , _odcS3OutputPath :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OutputDataConfig' with the minimum fields required to make a request.
@@ -850,13 +876,15 @@ instance ToJSON OutputDataConfig where
 --
 --
 -- /See:/ 'productionVariant' smart constructor.
-data ProductionVariant = ProductionVariant'
-  { _pvInitialVariantWeight :: !(Maybe Double)
-  , _pvVariantName          :: !Text
-  , _pvModelName            :: !Text
-  , _pvInitialInstanceCount :: !Nat
-  , _pvInstanceType         :: !ProductionVariantInstanceType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ProductionVariant =
+  ProductionVariant'
+    { _pvInitialVariantWeight :: !(Maybe Double)
+    , _pvVariantName          :: !Text
+    , _pvModelName            :: !Text
+    , _pvInitialInstanceCount :: !Nat
+    , _pvInstanceType         :: !ProductionVariantInstanceType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ProductionVariant' with the minimum fields required to make a request.
@@ -940,13 +968,15 @@ instance ToJSON ProductionVariant where
 --
 --
 -- /See:/ 'productionVariantSummary' smart constructor.
-data ProductionVariantSummary = ProductionVariantSummary'
-  { _pvsDesiredInstanceCount :: !(Maybe Nat)
-  , _pvsDesiredWeight        :: !(Maybe Double)
-  , _pvsCurrentWeight        :: !(Maybe Double)
-  , _pvsCurrentInstanceCount :: !(Maybe Nat)
-  , _pvsVariantName          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ProductionVariantSummary =
+  ProductionVariantSummary'
+    { _pvsDesiredInstanceCount :: !(Maybe Nat)
+    , _pvsDesiredWeight        :: !(Maybe Double)
+    , _pvsCurrentWeight        :: !(Maybe Double)
+    , _pvsCurrentInstanceCount :: !(Maybe Nat)
+    , _pvsVariantName          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ProductionVariantSummary' with the minimum fields required to make a request.
@@ -1015,12 +1045,14 @@ instance NFData ProductionVariantSummary where
 --
 --
 -- /See:/ 'resourceConfig' smart constructor.
-data ResourceConfig = ResourceConfig'
-  { _rcVolumeKMSKeyId :: !(Maybe Text)
-  , _rcInstanceType   :: !TrainingInstanceType
-  , _rcInstanceCount  :: !Nat
-  , _rcVolumeSizeInGB :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResourceConfig =
+  ResourceConfig'
+    { _rcVolumeKMSKeyId :: !(Maybe Text)
+    , _rcInstanceType   :: !TrainingInstanceType
+    , _rcInstanceCount  :: !Nat
+    , _rcVolumeSizeInGB :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResourceConfig' with the minimum fields required to make a request.
@@ -1091,11 +1123,13 @@ instance ToJSON ResourceConfig where
 --
 --
 -- /See:/ 's3DataSource' smart constructor.
-data S3DataSource = S3DataSource'
-  { _sdsS3DataDistributionType :: !(Maybe S3DataDistribution)
-  , _sdsS3DataType             :: !S3DataType
-  , _sdsS3URI                  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data S3DataSource =
+  S3DataSource'
+    { _sdsS3DataDistributionType :: !(Maybe S3DataDistribution)
+    , _sdsS3DataType             :: !S3DataType
+    , _sdsS3URI                  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'S3DataSource' with the minimum fields required to make a request.
@@ -1162,9 +1196,11 @@ instance ToJSON S3DataSource where
 --
 --
 -- /See:/ 'stoppingCondition' smart constructor.
-newtype StoppingCondition = StoppingCondition'
-  { _scMaxRuntimeInSeconds :: Maybe Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StoppingCondition =
+  StoppingCondition'
+    { _scMaxRuntimeInSeconds :: Maybe Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StoppingCondition' with the minimum fields required to make a request.
@@ -1203,10 +1239,12 @@ instance ToJSON StoppingCondition where
 --
 --
 -- /See:/ 'tag' smart constructor.
-data Tag = Tag'
-  { _tagKey   :: !Text
-  , _tagValue :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Tag =
+  Tag'
+    { _tagKey   :: !Text
+    , _tagValue :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Tag' with the minimum fields required to make a request.
@@ -1252,14 +1290,16 @@ instance ToJSON Tag where
 --
 --
 -- /See:/ 'trainingJobSummary' smart constructor.
-data TrainingJobSummary = TrainingJobSummary'
-  { _tjsTrainingEndTime   :: !(Maybe POSIX)
-  , _tjsLastModifiedTime  :: !(Maybe POSIX)
-  , _tjsTrainingJobName   :: !Text
-  , _tjsTrainingJobARN    :: !Text
-  , _tjsCreationTime      :: !POSIX
-  , _tjsTrainingJobStatus :: !TrainingJobStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TrainingJobSummary =
+  TrainingJobSummary'
+    { _tjsTrainingEndTime   :: !(Maybe POSIX)
+    , _tjsLastModifiedTime  :: !(Maybe POSIX)
+    , _tjsTrainingJobName   :: !Text
+    , _tjsTrainingJobARN    :: !Text
+    , _tjsCreationTime      :: !POSIX
+    , _tjsTrainingJobStatus :: !TrainingJobStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TrainingJobSummary' with the minimum fields required to make a request.
@@ -1339,10 +1379,12 @@ instance NFData TrainingJobSummary where
 --
 --
 -- /See:/ 'vpcConfig' smart constructor.
-data VPCConfig = VPCConfig'
-  { _vcSecurityGroupIds :: !(List1 Text)
-  , _vcSubnets          :: !(List1 Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VPCConfig =
+  VPCConfig'
+    { _vcSecurityGroupIds :: !(List1 Text)
+    , _vcSubnets          :: !(List1 Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VPCConfig' with the minimum fields required to make a request.

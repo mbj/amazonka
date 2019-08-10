@@ -45,10 +45,12 @@ import Network.AWS.Response
 -- | ArchiveFindings request body.
 --
 -- /See:/ 'archiveFindings' smart constructor.
-data ArchiveFindings = ArchiveFindings'
-  { _afFindingIds :: !(Maybe [Text])
-  , _afDetectorId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ArchiveFindings =
+  ArchiveFindings'
+    { _afFindingIds :: !(Maybe [Text])
+    , _afDetectorId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ArchiveFindings' with the minimum fields required to make a request.
@@ -107,9 +109,11 @@ instance ToQuery ArchiveFindings where
         toQuery = const mempty
 
 -- | /See:/ 'archiveFindingsResponse' smart constructor.
-newtype ArchiveFindingsResponse = ArchiveFindingsResponse'
-  { _afrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ArchiveFindingsResponse =
+  ArchiveFindingsResponse'
+    { _afrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ArchiveFindingsResponse' with the minimum fields required to make a request.

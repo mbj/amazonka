@@ -52,16 +52,18 @@ import Network.AWS.WorkDocs.Types
 import Network.AWS.WorkDocs.Types.Product
 
 -- | /See:/ 'createComment' smart constructor.
-data CreateComment = CreateComment'
-  { _ccNotifyCollaborators :: !(Maybe Bool)
-  , _ccAuthenticationToken :: !(Maybe (Sensitive Text))
-  , _ccVisibility          :: !(Maybe CommentVisibilityType)
-  , _ccThreadId            :: !(Maybe Text)
-  , _ccParentId            :: !(Maybe Text)
-  , _ccDocumentId          :: !Text
-  , _ccVersionId           :: !Text
-  , _ccText                :: !(Sensitive Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data CreateComment =
+  CreateComment'
+    { _ccNotifyCollaborators :: !(Maybe Bool)
+    , _ccAuthenticationToken :: !(Maybe (Sensitive Text))
+    , _ccVisibility          :: !(Maybe CommentVisibilityType)
+    , _ccThreadId            :: !(Maybe Text)
+    , _ccParentId            :: !(Maybe Text)
+    , _ccDocumentId          :: !Text
+    , _ccVersionId           :: !Text
+    , _ccText                :: !(Sensitive Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateComment' with the minimum fields required to make a request.
@@ -174,10 +176,12 @@ instance ToQuery CreateComment where
         toQuery = const mempty
 
 -- | /See:/ 'createCommentResponse' smart constructor.
-data CreateCommentResponse = CreateCommentResponse'
-  { _ccrsComment        :: !(Maybe Comment)
-  , _ccrsResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data CreateCommentResponse =
+  CreateCommentResponse'
+    { _ccrsComment        :: !(Maybe Comment)
+    , _ccrsResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateCommentResponse' with the minimum fields required to make a request.

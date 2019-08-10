@@ -47,10 +47,12 @@ import Network.AWS.Response
 -- | Connectivity information.
 --
 -- /See:/ 'updateConnectivityInfo' smart constructor.
-data UpdateConnectivityInfo = UpdateConnectivityInfo'
-  { _uciConnectivityInfo :: !(Maybe [ConnectivityInfo])
-  , _uciThingName        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateConnectivityInfo =
+  UpdateConnectivityInfo'
+    { _uciConnectivityInfo :: !(Maybe [ConnectivityInfo])
+    , _uciThingName        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateConnectivityInfo' with the minimum fields required to make a request.
@@ -114,11 +116,13 @@ instance ToQuery UpdateConnectivityInfo where
         toQuery = const mempty
 
 -- | /See:/ 'updateConnectivityInfoResponse' smart constructor.
-data UpdateConnectivityInfoResponse = UpdateConnectivityInfoResponse'
-  { _ucirsVersion        :: !(Maybe Text)
-  , _ucirsMessage        :: !(Maybe Text)
-  , _ucirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateConnectivityInfoResponse =
+  UpdateConnectivityInfoResponse'
+    { _ucirsVersion        :: !(Maybe Text)
+    , _ucirsMessage        :: !(Maybe Text)
+    , _ucirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateConnectivityInfoResponse' with the minimum fields required to make a request.

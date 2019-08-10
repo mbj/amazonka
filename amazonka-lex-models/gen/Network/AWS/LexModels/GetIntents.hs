@@ -59,11 +59,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getIntents' smart constructor.
-data GetIntents = GetIntents'
-  { _giNameContains :: !(Maybe Text)
-  , _giNextToken    :: !(Maybe Text)
-  , _giMaxResults   :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetIntents =
+  GetIntents'
+    { _giNameContains :: !(Maybe Text)
+    , _giNextToken    :: !(Maybe Text)
+    , _giMaxResults   :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetIntents' with the minimum fields required to make a request.
@@ -133,11 +135,13 @@ instance ToQuery GetIntents where
                "maxResults" =: _giMaxResults]
 
 -- | /See:/ 'getIntentsResponse' smart constructor.
-data GetIntentsResponse = GetIntentsResponse'
-  { _gisrsIntents        :: !(Maybe [IntentMetadata])
-  , _gisrsNextToken      :: !(Maybe Text)
-  , _gisrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetIntentsResponse =
+  GetIntentsResponse'
+    { _gisrsIntents        :: !(Maybe [IntentMetadata])
+    , _gisrsNextToken      :: !(Maybe Text)
+    , _gisrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetIntentsResponse' with the minimum fields required to make a request.

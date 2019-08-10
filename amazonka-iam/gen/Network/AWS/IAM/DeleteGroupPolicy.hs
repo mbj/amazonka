@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteGroupPolicy' smart constructor.
-data DeleteGroupPolicy = DeleteGroupPolicy'
-  { _dGroupName  :: !Text
-  , _dPolicyName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteGroupPolicy =
+  DeleteGroupPolicy'
+    { _dGroupName  :: !Text
+    , _dPolicyName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteGroupPolicy' with the minimum fields required to make a request.

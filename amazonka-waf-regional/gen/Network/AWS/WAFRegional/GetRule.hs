@@ -45,9 +45,11 @@ import Network.AWS.WAFRegional.Types
 import Network.AWS.WAFRegional.Types.Product
 
 -- | /See:/ 'getRule' smart constructor.
-newtype GetRule = GetRule'
-  { _grRuleId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetRule =
+  GetRule'
+    { _grRuleId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetRule' with the minimum fields required to make a request.
@@ -98,10 +100,12 @@ instance ToQuery GetRule where
         toQuery = const mempty
 
 -- | /See:/ 'getRuleResponse' smart constructor.
-data GetRuleResponse = GetRuleResponse'
-  { _grrsRule           :: !(Maybe Rule)
-  , _grrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetRuleResponse =
+  GetRuleResponse'
+    { _grrsRule           :: !(Maybe Rule)
+    , _grrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetRuleResponse' with the minimum fields required to make a request.

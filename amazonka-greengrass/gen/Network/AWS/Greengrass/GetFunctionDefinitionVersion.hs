@@ -48,10 +48,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getFunctionDefinitionVersion' smart constructor.
-data GetFunctionDefinitionVersion = GetFunctionDefinitionVersion'
-  { _gfdvFunctionDefinitionId        :: !Text
-  , _gfdvFunctionDefinitionVersionId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetFunctionDefinitionVersion =
+  GetFunctionDefinitionVersion'
+    { _gfdvFunctionDefinitionId        :: !Text
+    , _gfdvFunctionDefinitionVersionId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetFunctionDefinitionVersion' with the minimum fields required to make a request.
@@ -117,14 +119,16 @@ instance ToQuery GetFunctionDefinitionVersion where
         toQuery = const mempty
 
 -- | /See:/ 'getFunctionDefinitionVersionResponse' smart constructor.
-data GetFunctionDefinitionVersionResponse = GetFunctionDefinitionVersionResponse'
-  { _gfdvrsDefinition        :: !(Maybe FunctionDefinitionVersion)
-  , _gfdvrsARN               :: !(Maybe Text)
-  , _gfdvrsCreationTimestamp :: !(Maybe Text)
-  , _gfdvrsVersion           :: !(Maybe Text)
-  , _gfdvrsId                :: !(Maybe Text)
-  , _gfdvrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetFunctionDefinitionVersionResponse =
+  GetFunctionDefinitionVersionResponse'
+    { _gfdvrsDefinition        :: !(Maybe FunctionDefinitionVersion)
+    , _gfdvrsARN               :: !(Maybe Text)
+    , _gfdvrsCreationTimestamp :: !(Maybe Text)
+    , _gfdvrsVersion           :: !(Maybe Text)
+    , _gfdvrsId                :: !(Maybe Text)
+    , _gfdvrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetFunctionDefinitionVersionResponse' with the minimum fields required to make a request.

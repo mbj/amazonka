@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeAggregationAuthorizations' smart constructor.
-data DescribeAggregationAuthorizations = DescribeAggregationAuthorizations'
-  { _daaNextToken :: !(Maybe Text)
-  , _daaLimit     :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAggregationAuthorizations =
+  DescribeAggregationAuthorizations'
+    { _daaNextToken :: !(Maybe Text)
+    , _daaLimit     :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAggregationAuthorizations' with the minimum fields required to make a request.
@@ -122,11 +124,13 @@ instance ToQuery DescribeAggregationAuthorizations
         toQuery = const mempty
 
 -- | /See:/ 'describeAggregationAuthorizationsResponse' smart constructor.
-data DescribeAggregationAuthorizationsResponse = DescribeAggregationAuthorizationsResponse'
-  { _daarsAggregationAuthorizations :: !(Maybe [AggregationAuthorization])
-  , _daarsNextToken                 :: !(Maybe Text)
-  , _daarsResponseStatus            :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAggregationAuthorizationsResponse =
+  DescribeAggregationAuthorizationsResponse'
+    { _daarsAggregationAuthorizations :: !(Maybe [AggregationAuthorization])
+    , _daarsNextToken                 :: !(Maybe Text)
+    , _daarsResponseStatus            :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAggregationAuthorizationsResponse' with the minimum fields required to make a request.

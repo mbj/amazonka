@@ -52,12 +52,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listAssessmentRuns' smart constructor.
-data ListAssessmentRuns = ListAssessmentRuns'
-  { _larNextToken              :: !(Maybe Text)
-  , _larFilter                 :: !(Maybe AssessmentRunFilter)
-  , _larAssessmentTemplateARNs :: !(Maybe [Text])
-  , _larMaxResults             :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAssessmentRuns =
+  ListAssessmentRuns'
+    { _larNextToken              :: !(Maybe Text)
+    , _larFilter                 :: !(Maybe AssessmentRunFilter)
+    , _larAssessmentTemplateARNs :: !(Maybe [Text])
+    , _larMaxResults             :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAssessmentRuns' with the minimum fields required to make a request.
@@ -147,11 +149,13 @@ instance ToQuery ListAssessmentRuns where
         toQuery = const mempty
 
 -- | /See:/ 'listAssessmentRunsResponse' smart constructor.
-data ListAssessmentRunsResponse = ListAssessmentRunsResponse'
-  { _larrsNextToken         :: !(Maybe Text)
-  , _larrsResponseStatus    :: !Int
-  , _larrsAssessmentRunARNs :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAssessmentRunsResponse =
+  ListAssessmentRunsResponse'
+    { _larrsNextToken         :: !(Maybe Text)
+    , _larrsResponseStatus    :: !Int
+    , _larrsAssessmentRunARNs :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAssessmentRunsResponse' with the minimum fields required to make a request.

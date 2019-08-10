@@ -51,9 +51,11 @@ import Network.AWS.SQS.Types.Product
 --
 --
 -- /See:/ 'listDeadLetterSourceQueues' smart constructor.
-newtype ListDeadLetterSourceQueues = ListDeadLetterSourceQueues'
-  { _ldlsqQueueURL :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ListDeadLetterSourceQueues =
+  ListDeadLetterSourceQueues'
+    { _ldlsqQueueURL :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDeadLetterSourceQueues' with the minimum fields required to make a request.
@@ -106,10 +108,12 @@ instance ToQuery ListDeadLetterSourceQueues where
 --
 --
 -- /See:/ 'listDeadLetterSourceQueuesResponse' smart constructor.
-data ListDeadLetterSourceQueuesResponse = ListDeadLetterSourceQueuesResponse'
-  { _ldlsqrsResponseStatus :: !Int
-  , _ldlsqrsQueueURLs      :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListDeadLetterSourceQueuesResponse =
+  ListDeadLetterSourceQueuesResponse'
+    { _ldlsqrsResponseStatus :: !Int
+    , _ldlsqrsQueueURLs      :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDeadLetterSourceQueuesResponse' with the minimum fields required to make a request.

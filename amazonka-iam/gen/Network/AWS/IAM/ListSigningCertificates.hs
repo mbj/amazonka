@@ -56,11 +56,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listSigningCertificates' smart constructor.
-data ListSigningCertificates = ListSigningCertificates'
-  { _lUserName :: !(Maybe Text)
-  , _lMarker   :: !(Maybe Text)
-  , _lMaxItems :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListSigningCertificates =
+  ListSigningCertificates'
+    { _lUserName :: !(Maybe Text)
+    , _lMarker   :: !(Maybe Text)
+    , _lMaxItems :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListSigningCertificates' with the minimum fields required to make a request.
@@ -135,12 +137,14 @@ instance ToQuery ListSigningCertificates where
 --
 --
 -- /See:/ 'listSigningCertificatesResponse' smart constructor.
-data ListSigningCertificatesResponse = ListSigningCertificatesResponse'
-  { _lrsMarker         :: !(Maybe Text)
-  , _lrsIsTruncated    :: !(Maybe Bool)
-  , _lrsResponseStatus :: !Int
-  , _lrsCertificates   :: ![SigningCertificate]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListSigningCertificatesResponse =
+  ListSigningCertificatesResponse'
+    { _lrsMarker         :: !(Maybe Text)
+    , _lrsIsTruncated    :: !(Maybe Bool)
+    , _lrsResponseStatus :: !Int
+    , _lrsCertificates   :: ![SigningCertificate]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListSigningCertificatesResponse' with the minimum fields required to make a request.

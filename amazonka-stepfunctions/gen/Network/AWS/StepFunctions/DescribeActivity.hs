@@ -47,9 +47,11 @@ import Network.AWS.StepFunctions.Types
 import Network.AWS.StepFunctions.Types.Product
 
 -- | /See:/ 'describeActivity' smart constructor.
-newtype DescribeActivity = DescribeActivity'
-  { _dActivityARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeActivity =
+  DescribeActivity'
+    { _dActivityARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeActivity' with the minimum fields required to make a request.
@@ -104,12 +106,14 @@ instance ToQuery DescribeActivity where
         toQuery = const mempty
 
 -- | /See:/ 'describeActivityResponse' smart constructor.
-data DescribeActivityResponse = DescribeActivityResponse'
-  { _desrsResponseStatus :: !Int
-  , _desrsActivityARN    :: !Text
-  , _desrsName           :: !Text
-  , _desrsCreationDate   :: !POSIX
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeActivityResponse =
+  DescribeActivityResponse'
+    { _desrsResponseStatus :: !Int
+    , _desrsActivityARN    :: !Text
+    , _desrsName           :: !Text
+    , _desrsCreationDate   :: !POSIX
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeActivityResponse' with the minimum fields required to make a request.

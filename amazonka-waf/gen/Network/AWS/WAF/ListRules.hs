@@ -50,10 +50,12 @@ import Network.AWS.WAF.Types
 import Network.AWS.WAF.Types.Product
 
 -- | /See:/ 'listRules' smart constructor.
-data ListRules = ListRules'
-  { _lrNextMarker :: !(Maybe Text)
-  , _lrLimit      :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListRules =
+  ListRules'
+    { _lrNextMarker :: !(Maybe Text)
+    , _lrLimit      :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListRules' with the minimum fields required to make a request.
@@ -120,11 +122,13 @@ instance ToQuery ListRules where
         toQuery = const mempty
 
 -- | /See:/ 'listRulesResponse' smart constructor.
-data ListRulesResponse = ListRulesResponse'
-  { _lrrsRules          :: !(Maybe [RuleSummary])
-  , _lrrsNextMarker     :: !(Maybe Text)
-  , _lrrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListRulesResponse =
+  ListRulesResponse'
+    { _lrrsRules          :: !(Maybe [RuleSummary])
+    , _lrrsNextMarker     :: !(Maybe Text)
+    , _lrrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListRulesResponse' with the minimum fields required to make a request.

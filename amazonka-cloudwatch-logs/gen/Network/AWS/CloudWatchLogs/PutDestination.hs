@@ -49,11 +49,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putDestination' smart constructor.
-data PutDestination = PutDestination'
-  { _pdDestinationName :: !Text
-  , _pdTargetARN       :: !Text
-  , _pdRoleARN         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutDestination =
+  PutDestination'
+    { _pdDestinationName :: !Text
+    , _pdTargetARN       :: !Text
+    , _pdRoleARN         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutDestination' with the minimum fields required to make a request.
@@ -127,10 +129,12 @@ instance ToQuery PutDestination where
         toQuery = const mempty
 
 -- | /See:/ 'putDestinationResponse' smart constructor.
-data PutDestinationResponse = PutDestinationResponse'
-  { _pdrsDestination    :: !(Maybe Destination)
-  , _pdrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutDestinationResponse =
+  PutDestinationResponse'
+    { _pdrsDestination    :: !(Maybe Destination)
+    , _pdrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutDestinationResponse' with the minimum fields required to make a request.

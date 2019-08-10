@@ -78,18 +78,20 @@ import Network.AWS.SageMaker.Types
 import Network.AWS.SageMaker.Types.Product
 
 -- | /See:/ 'createTrainingJob' smart constructor.
-data CreateTrainingJob = CreateTrainingJob'
-  { _ctjHyperParameters        :: !(Maybe (Map Text Text))
-  , _ctjVPCConfig              :: !(Maybe VPCConfig)
-  , _ctjTags                   :: !(Maybe [Tag])
-  , _ctjTrainingJobName        :: !Text
-  , _ctjAlgorithmSpecification :: !AlgorithmSpecification
-  , _ctjRoleARN                :: !Text
-  , _ctjInputDataConfig        :: !(List1 Channel)
-  , _ctjOutputDataConfig       :: !OutputDataConfig
-  , _ctjResourceConfig         :: !ResourceConfig
-  , _ctjStoppingCondition      :: !StoppingCondition
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateTrainingJob =
+  CreateTrainingJob'
+    { _ctjHyperParameters        :: !(Maybe (Map Text Text))
+    , _ctjVPCConfig              :: !(Maybe VPCConfig)
+    , _ctjTags                   :: !(Maybe [Tag])
+    , _ctjTrainingJobName        :: !Text
+    , _ctjAlgorithmSpecification :: !AlgorithmSpecification
+    , _ctjRoleARN                :: !Text
+    , _ctjInputDataConfig        :: !(List1 Channel)
+    , _ctjOutputDataConfig       :: !OutputDataConfig
+    , _ctjResourceConfig         :: !ResourceConfig
+    , _ctjStoppingCondition      :: !StoppingCondition
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateTrainingJob' with the minimum fields required to make a request.
@@ -225,10 +227,12 @@ instance ToQuery CreateTrainingJob where
         toQuery = const mempty
 
 -- | /See:/ 'createTrainingJobResponse' smart constructor.
-data CreateTrainingJobResponse = CreateTrainingJobResponse'
-  { _ctjrsResponseStatus :: !Int
-  , _ctjrsTrainingJobARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateTrainingJobResponse =
+  CreateTrainingJobResponse'
+    { _ctjrsResponseStatus :: !Int
+    , _ctjrsTrainingJobARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateTrainingJobResponse' with the minimum fields required to make a request.

@@ -50,10 +50,12 @@ import Network.AWS.SMS.Types
 import Network.AWS.SMS.Types.Product
 
 -- | /See:/ 'getServers' smart constructor.
-data GetServers = GetServers'
-  { _gsNextToken  :: !(Maybe Text)
-  , _gsMaxResults :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetServers =
+  GetServers'
+    { _gsNextToken  :: !(Maybe Text)
+    , _gsMaxResults :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetServers' with the minimum fields required to make a request.
@@ -124,13 +126,15 @@ instance ToQuery GetServers where
         toQuery = const mempty
 
 -- | /See:/ 'getServersResponse' smart constructor.
-data GetServersResponse = GetServersResponse'
-  { _gsrsServerCatalogStatus :: !(Maybe ServerCatalogStatus)
-  , _gsrsLastModifiedOn      :: !(Maybe POSIX)
-  , _gsrsNextToken           :: !(Maybe Text)
-  , _gsrsServerList          :: !(Maybe [Server])
-  , _gsrsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetServersResponse =
+  GetServersResponse'
+    { _gsrsServerCatalogStatus :: !(Maybe ServerCatalogStatus)
+    , _gsrsLastModifiedOn      :: !(Maybe POSIX)
+    , _gsrsNextToken           :: !(Maybe Text)
+    , _gsrsServerList          :: !(Maybe [Server])
+    , _gsrsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetServersResponse' with the minimum fields required to make a request.

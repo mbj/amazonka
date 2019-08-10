@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getConnectivityInfo' smart constructor.
-newtype GetConnectivityInfo = GetConnectivityInfo'
-  { _gciThingName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetConnectivityInfo =
+  GetConnectivityInfo'
+    { _gciThingName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetConnectivityInfo' with the minimum fields required to make a request.
@@ -98,11 +100,13 @@ instance ToQuery GetConnectivityInfo where
         toQuery = const mempty
 
 -- | /See:/ 'getConnectivityInfoResponse' smart constructor.
-data GetConnectivityInfoResponse = GetConnectivityInfoResponse'
-  { _gcirsMessage          :: !(Maybe Text)
-  , _gcirsConnectivityInfo :: !(Maybe [ConnectivityInfo])
-  , _gcirsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetConnectivityInfoResponse =
+  GetConnectivityInfoResponse'
+    { _gcirsMessage          :: !(Maybe Text)
+    , _gcirsConnectivityInfo :: !(Maybe [ConnectivityInfo])
+    , _gcirsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetConnectivityInfoResponse' with the minimum fields required to make a request.

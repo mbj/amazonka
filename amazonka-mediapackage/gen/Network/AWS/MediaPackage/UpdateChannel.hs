@@ -49,10 +49,12 @@ import Network.AWS.Response
 -- | Configuration parameters used to update the Channel.
 --
 -- /See:/ 'updateChannel' smart constructor.
-data UpdateChannel = UpdateChannel'
-  { _ucDescription :: !(Maybe Text)
-  , _ucId          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateChannel =
+  UpdateChannel'
+    { _ucDescription :: !(Maybe Text)
+    , _ucId          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateChannel' with the minimum fields required to make a request.
@@ -112,13 +114,15 @@ instance ToQuery UpdateChannel where
         toQuery = const mempty
 
 -- | /See:/ 'updateChannelResponse' smart constructor.
-data UpdateChannelResponse = UpdateChannelResponse'
-  { _ucrsHlsIngest      :: !(Maybe HlsIngest)
-  , _ucrsARN            :: !(Maybe Text)
-  , _ucrsId             :: !(Maybe Text)
-  , _ucrsDescription    :: !(Maybe Text)
-  , _ucrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateChannelResponse =
+  UpdateChannelResponse'
+    { _ucrsHlsIngest      :: !(Maybe HlsIngest)
+    , _ucrsARN            :: !(Maybe Text)
+    , _ucrsId             :: !(Maybe Text)
+    , _ucrsDescription    :: !(Maybe Text)
+    , _ucrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateChannelResponse' with the minimum fields required to make a request.

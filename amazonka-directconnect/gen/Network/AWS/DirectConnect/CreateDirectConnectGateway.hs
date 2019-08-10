@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createDirectConnectGateway' smart constructor.
-data CreateDirectConnectGateway = CreateDirectConnectGateway'
-  { _cdcgAmazonSideASN            :: !(Maybe Integer)
-  , _cdcgDirectConnectGatewayName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDirectConnectGateway =
+  CreateDirectConnectGateway'
+    { _cdcgAmazonSideASN            :: !(Maybe Integer)
+    , _cdcgDirectConnectGatewayName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDirectConnectGateway' with the minimum fields required to make a request.
@@ -126,10 +128,12 @@ instance ToQuery CreateDirectConnectGateway where
 --
 --
 -- /See:/ 'createDirectConnectGatewayResponse' smart constructor.
-data CreateDirectConnectGatewayResponse = CreateDirectConnectGatewayResponse'
-  { _cdcgrsDirectConnectGateway :: !(Maybe DirectConnectGateway)
-  , _cdcgrsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDirectConnectGatewayResponse =
+  CreateDirectConnectGatewayResponse'
+    { _cdcgrsDirectConnectGateway :: !(Maybe DirectConnectGateway)
+    , _cdcgrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDirectConnectGatewayResponse' with the minimum fields required to make a request.

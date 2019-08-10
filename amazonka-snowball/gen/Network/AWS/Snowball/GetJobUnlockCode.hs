@@ -49,9 +49,11 @@ import Network.AWS.Snowball.Types
 import Network.AWS.Snowball.Types.Product
 
 -- | /See:/ 'getJobUnlockCode' smart constructor.
-newtype GetJobUnlockCode = GetJobUnlockCode'
-  { _gjucJobId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetJobUnlockCode =
+  GetJobUnlockCode'
+    { _gjucJobId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetJobUnlockCode' with the minimum fields required to make a request.
@@ -103,10 +105,12 @@ instance ToQuery GetJobUnlockCode where
         toQuery = const mempty
 
 -- | /See:/ 'getJobUnlockCodeResponse' smart constructor.
-data GetJobUnlockCodeResponse = GetJobUnlockCodeResponse'
-  { _gjucrsUnlockCode     :: !(Maybe Text)
-  , _gjucrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetJobUnlockCodeResponse =
+  GetJobUnlockCodeResponse'
+    { _gjucrsUnlockCode     :: !(Maybe Text)
+    , _gjucrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetJobUnlockCodeResponse' with the minimum fields required to make a request.

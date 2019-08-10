@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'stopThingRegistrationTask' smart constructor.
-newtype StopThingRegistrationTask = StopThingRegistrationTask'
-  { _strtTaskId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StopThingRegistrationTask =
+  StopThingRegistrationTask'
+    { _strtTaskId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopThingRegistrationTask' with the minimum fields required to make a request.
@@ -95,9 +97,11 @@ instance ToQuery StopThingRegistrationTask where
         toQuery = const mempty
 
 -- | /See:/ 'stopThingRegistrationTaskResponse' smart constructor.
-newtype StopThingRegistrationTaskResponse = StopThingRegistrationTaskResponse'
-  { _srsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StopThingRegistrationTaskResponse =
+  StopThingRegistrationTaskResponse'
+    { _srsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopThingRegistrationTaskResponse' with the minimum fields required to make a request.

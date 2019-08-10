@@ -46,10 +46,12 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'describeDocument' smart constructor.
-data DescribeDocument = DescribeDocument'
-  { _ddDocumentVersion :: !(Maybe Text)
-  , _ddName            :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDocument =
+  DescribeDocument'
+    { _ddDocumentVersion :: !(Maybe Text)
+    , _ddName            :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDocument' with the minimum fields required to make a request.
@@ -110,10 +112,12 @@ instance ToQuery DescribeDocument where
         toQuery = const mempty
 
 -- | /See:/ 'describeDocumentResponse' smart constructor.
-data DescribeDocumentResponse = DescribeDocumentResponse'
-  { _desrsDocument       :: !(Maybe DocumentDescription)
-  , _desrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDocumentResponse =
+  DescribeDocumentResponse'
+    { _desrsDocument       :: !(Maybe DocumentDescription)
+    , _desrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDocumentResponse' with the minimum fields required to make a request.

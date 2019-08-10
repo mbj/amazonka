@@ -46,10 +46,12 @@ import Network.AWS.XRay.Types
 import Network.AWS.XRay.Types.Product
 
 -- | /See:/ 'putEncryptionConfig' smart constructor.
-data PutEncryptionConfig = PutEncryptionConfig'
-  { _pecKeyId :: !(Maybe Text)
-  , _pecType  :: !EncryptionType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutEncryptionConfig =
+  PutEncryptionConfig'
+    { _pecKeyId :: !(Maybe Text)
+    , _pecType  :: !EncryptionType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutEncryptionConfig' with the minimum fields required to make a request.
@@ -105,10 +107,12 @@ instance ToQuery PutEncryptionConfig where
         toQuery = const mempty
 
 -- | /See:/ 'putEncryptionConfigResponse' smart constructor.
-data PutEncryptionConfigResponse = PutEncryptionConfigResponse'
-  { _pecrsEncryptionConfig :: !(Maybe EncryptionConfig)
-  , _pecrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutEncryptionConfigResponse =
+  PutEncryptionConfigResponse'
+    { _pecrsEncryptionConfig :: !(Maybe EncryptionConfig)
+    , _pecrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutEncryptionConfigResponse' with the minimum fields required to make a request.

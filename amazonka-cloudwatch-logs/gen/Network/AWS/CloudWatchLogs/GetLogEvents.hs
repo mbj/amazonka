@@ -55,15 +55,17 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getLogEvents' smart constructor.
-data GetLogEvents = GetLogEvents'
-  { _gleStartTime     :: !(Maybe Nat)
-  , _gleStartFromHead :: !(Maybe Bool)
-  , _gleNextToken     :: !(Maybe Text)
-  , _gleEndTime       :: !(Maybe Nat)
-  , _gleLimit         :: !(Maybe Nat)
-  , _gleLogGroupName  :: !Text
-  , _gleLogStreamName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetLogEvents =
+  GetLogEvents'
+    { _gleStartTime     :: !(Maybe Nat)
+    , _gleStartFromHead :: !(Maybe Bool)
+    , _gleNextToken     :: !(Maybe Text)
+    , _gleEndTime       :: !(Maybe Nat)
+    , _gleLimit         :: !(Maybe Nat)
+    , _gleLogGroupName  :: !Text
+    , _gleLogStreamName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetLogEvents' with the minimum fields required to make a request.
@@ -171,12 +173,14 @@ instance ToQuery GetLogEvents where
         toQuery = const mempty
 
 -- | /See:/ 'getLogEventsResponse' smart constructor.
-data GetLogEventsResponse = GetLogEventsResponse'
-  { _glersNextBackwardToken :: !(Maybe Text)
-  , _glersNextForwardToken  :: !(Maybe Text)
-  , _glersEvents            :: !(Maybe [OutputLogEvent])
-  , _glersResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetLogEventsResponse =
+  GetLogEventsResponse'
+    { _glersNextBackwardToken :: !(Maybe Text)
+    , _glersNextForwardToken  :: !(Maybe Text)
+    , _glersEvents            :: !(Maybe [OutputLogEvent])
+    , _glersResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetLogEventsResponse' with the minimum fields required to make a request.

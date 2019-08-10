@@ -48,11 +48,13 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'describeEffectivePatchesForPatchBaseline' smart constructor.
-data DescribeEffectivePatchesForPatchBaseline = DescribeEffectivePatchesForPatchBaseline'
-  { _depfpbNextToken  :: !(Maybe Text)
-  , _depfpbMaxResults :: !(Maybe Nat)
-  , _depfpbBaselineId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeEffectivePatchesForPatchBaseline =
+  DescribeEffectivePatchesForPatchBaseline'
+    { _depfpbNextToken  :: !(Maybe Text)
+    , _depfpbMaxResults :: !(Maybe Nat)
+    , _depfpbBaselineId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEffectivePatchesForPatchBaseline' with the minimum fields required to make a request.
@@ -142,11 +144,13 @@ instance ToQuery
         toQuery = const mempty
 
 -- | /See:/ 'describeEffectivePatchesForPatchBaselineResponse' smart constructor.
-data DescribeEffectivePatchesForPatchBaselineResponse = DescribeEffectivePatchesForPatchBaselineResponse'
-  { _depfpbrsEffectivePatches :: !(Maybe [EffectivePatch])
-  , _depfpbrsNextToken        :: !(Maybe Text)
-  , _depfpbrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeEffectivePatchesForPatchBaselineResponse =
+  DescribeEffectivePatchesForPatchBaselineResponse'
+    { _depfpbrsEffectivePatches :: !(Maybe [EffectivePatch])
+    , _depfpbrsNextToken        :: !(Maybe Text)
+    , _depfpbrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEffectivePatchesForPatchBaselineResponse' with the minimum fields required to make a request.

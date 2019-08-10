@@ -51,9 +51,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createDistribution' smart constructor.
-newtype CreateDistribution = CreateDistribution'
-  { _cdDistributionConfig :: DistributionConfig
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateDistribution =
+  CreateDistribution'
+    { _cdDistributionConfig :: DistributionConfig
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDistribution' with the minimum fields required to make a request.
@@ -109,12 +111,14 @@ instance ToQuery CreateDistribution where
 --
 --
 -- /See:/ 'createDistributionResponse' smart constructor.
-data CreateDistributionResponse = CreateDistributionResponse'
-  { _cdrsETag           :: !(Maybe Text)
-  , _cdrsDistribution   :: !(Maybe Distribution)
-  , _cdrsLocation       :: !(Maybe Text)
-  , _cdrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDistributionResponse =
+  CreateDistributionResponse'
+    { _cdrsETag           :: !(Maybe Text)
+    , _cdrsDistribution   :: !(Maybe Distribution)
+    , _cdrsLocation       :: !(Maybe Text)
+    , _cdrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDistributionResponse' with the minimum fields required to make a request.

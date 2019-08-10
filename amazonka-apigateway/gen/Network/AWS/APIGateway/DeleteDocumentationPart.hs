@@ -45,10 +45,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteDocumentationPart' smart constructor.
-data DeleteDocumentationPart = DeleteDocumentationPart'
-  { _ddpRestAPIId           :: !Text
-  , _ddpDocumentationPartId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteDocumentationPart =
+  DeleteDocumentationPart'
+    { _ddpRestAPIId           :: !Text
+    , _ddpDocumentationPartId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteDocumentationPart' with the minimum fields required to make a request.

@@ -46,9 +46,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeApplicationState' smart constructor.
-newtype DescribeApplicationState = DescribeApplicationState'
-  { _dasApplicationId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeApplicationState =
+  DescribeApplicationState'
+    { _dasApplicationId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeApplicationState' with the minimum fields required to make a request.
@@ -106,11 +108,13 @@ instance ToQuery DescribeApplicationState where
         toQuery = const mempty
 
 -- | /See:/ 'describeApplicationStateResponse' smart constructor.
-data DescribeApplicationStateResponse = DescribeApplicationStateResponse'
-  { _dasrsLastUpdatedTime   :: !(Maybe POSIX)
-  , _dasrsApplicationStatus :: !(Maybe ApplicationStatus)
-  , _dasrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeApplicationStateResponse =
+  DescribeApplicationStateResponse'
+    { _dasrsLastUpdatedTime   :: !(Maybe POSIX)
+    , _dasrsApplicationStatus :: !(Maybe ApplicationStatus)
+    , _dasrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeApplicationStateResponse' with the minimum fields required to make a request.

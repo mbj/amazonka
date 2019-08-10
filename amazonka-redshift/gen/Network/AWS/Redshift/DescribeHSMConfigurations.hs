@@ -61,13 +61,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeHSMConfigurations' smart constructor.
-data DescribeHSMConfigurations = DescribeHSMConfigurations'
-  { _dhsmcTagValues                  :: !(Maybe [Text])
-  , _dhsmcHSMConfigurationIdentifier :: !(Maybe Text)
-  , _dhsmcTagKeys                    :: !(Maybe [Text])
-  , _dhsmcMarker                     :: !(Maybe Text)
-  , _dhsmcMaxRecords                 :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeHSMConfigurations =
+  DescribeHSMConfigurations'
+    { _dhsmcTagValues                  :: !(Maybe [Text])
+    , _dhsmcHSMConfigurationIdentifier :: !(Maybe Text)
+    , _dhsmcTagKeys                    :: !(Maybe [Text])
+    , _dhsmcMarker                     :: !(Maybe Text)
+    , _dhsmcMaxRecords                 :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeHSMConfigurations' with the minimum fields required to make a request.
@@ -165,11 +167,13 @@ instance ToQuery DescribeHSMConfigurations where
 --
 --
 -- /See:/ 'describeHSMConfigurationsResponse' smart constructor.
-data DescribeHSMConfigurationsResponse = DescribeHSMConfigurationsResponse'
-  { _dhcrsMarker            :: !(Maybe Text)
-  , _dhcrsHSMConfigurations :: !(Maybe [HSMConfiguration])
-  , _dhcrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeHSMConfigurationsResponse =
+  DescribeHSMConfigurationsResponse'
+    { _dhcrsMarker            :: !(Maybe Text)
+    , _dhcrsHSMConfigurations :: !(Maybe [HSMConfiguration])
+    , _dhcrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeHSMConfigurationsResponse' with the minimum fields required to make a request.

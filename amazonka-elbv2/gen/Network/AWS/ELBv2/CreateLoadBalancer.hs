@@ -62,16 +62,18 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createLoadBalancer' smart constructor.
-data CreateLoadBalancer = CreateLoadBalancer'
-  { _clbSubnetMappings :: !(Maybe [SubnetMapping])
-  , _clbSecurityGroups :: !(Maybe [Text])
-  , _clbSubnets        :: !(Maybe [Text])
-  , _clbIPAddressType  :: !(Maybe IPAddressType)
-  , _clbScheme         :: !(Maybe LoadBalancerSchemeEnum)
-  , _clbType           :: !(Maybe LoadBalancerTypeEnum)
-  , _clbTags           :: !(Maybe (List1 Tag))
-  , _clbName           :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateLoadBalancer =
+  CreateLoadBalancer'
+    { _clbSubnetMappings :: !(Maybe [SubnetMapping])
+    , _clbSecurityGroups :: !(Maybe [Text])
+    , _clbSubnets        :: !(Maybe [Text])
+    , _clbIPAddressType  :: !(Maybe IPAddressType)
+    , _clbScheme         :: !(Maybe LoadBalancerSchemeEnum)
+    , _clbType           :: !(Maybe LoadBalancerTypeEnum)
+    , _clbTags           :: !(Maybe (List1 Tag))
+    , _clbName           :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateLoadBalancer' with the minimum fields required to make a request.
@@ -183,10 +185,12 @@ instance ToQuery CreateLoadBalancer where
                "Name" =: _clbName]
 
 -- | /See:/ 'createLoadBalancerResponse' smart constructor.
-data CreateLoadBalancerResponse = CreateLoadBalancerResponse'
-  { _clbrsLoadBalancers  :: !(Maybe [LoadBalancer])
-  , _clbrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateLoadBalancerResponse =
+  CreateLoadBalancerResponse'
+    { _clbrsLoadBalancers  :: !(Maybe [LoadBalancer])
+    , _clbrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateLoadBalancerResponse' with the minimum fields required to make a request.

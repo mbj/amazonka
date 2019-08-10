@@ -52,10 +52,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeConditionalForwarders' smart constructor.
-data DescribeConditionalForwarders = DescribeConditionalForwarders'
-  { _dcfRemoteDomainNames :: !(Maybe [Text])
-  , _dcfDirectoryId       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeConditionalForwarders =
+  DescribeConditionalForwarders'
+    { _dcfRemoteDomainNames :: !(Maybe [Text])
+    , _dcfDirectoryId       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeConditionalForwarders' with the minimum fields required to make a request.
@@ -126,10 +128,12 @@ instance ToQuery DescribeConditionalForwarders where
 --
 --
 -- /See:/ 'describeConditionalForwardersResponse' smart constructor.
-data DescribeConditionalForwardersResponse = DescribeConditionalForwardersResponse'
-  { _dcfrsConditionalForwarders :: !(Maybe [ConditionalForwarder])
-  , _dcfrsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeConditionalForwardersResponse =
+  DescribeConditionalForwardersResponse'
+    { _dcfrsConditionalForwarders :: !(Maybe [ConditionalForwarder])
+    , _dcfrsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeConditionalForwardersResponse' with the minimum fields required to make a request.

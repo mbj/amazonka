@@ -47,9 +47,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createFieldLevelEncryptionConfig' smart constructor.
-newtype CreateFieldLevelEncryptionConfig = CreateFieldLevelEncryptionConfig'
-  { _cflecFieldLevelEncryptionConfig :: FieldLevelEncryptionConfig
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateFieldLevelEncryptionConfig =
+  CreateFieldLevelEncryptionConfig'
+    { _cflecFieldLevelEncryptionConfig :: FieldLevelEncryptionConfig
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateFieldLevelEncryptionConfig' with the minimum fields required to make a request.
@@ -109,12 +111,14 @@ instance ToQuery CreateFieldLevelEncryptionConfig
         toQuery = const mempty
 
 -- | /See:/ 'createFieldLevelEncryptionConfigResponse' smart constructor.
-data CreateFieldLevelEncryptionConfigResponse = CreateFieldLevelEncryptionConfigResponse'
-  { _cflecrsETag                 :: !(Maybe Text)
-  , _cflecrsLocation             :: !(Maybe Text)
-  , _cflecrsFieldLevelEncryption :: !(Maybe FieldLevelEncryption)
-  , _cflecrsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateFieldLevelEncryptionConfigResponse =
+  CreateFieldLevelEncryptionConfigResponse'
+    { _cflecrsETag                 :: !(Maybe Text)
+    , _cflecrsLocation             :: !(Maybe Text)
+    , _cflecrsFieldLevelEncryption :: !(Maybe FieldLevelEncryption)
+    , _cflecrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateFieldLevelEncryptionConfigResponse' with the minimum fields required to make a request.

@@ -54,10 +54,12 @@ import Network.AWS.Route53Domains.Types.Product
 --
 --
 -- /See:/ 'listDomains' smart constructor.
-data ListDomains = ListDomains'
-  { _ldMarker   :: !(Maybe Text)
-  , _ldMaxItems :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListDomains =
+  ListDomains'
+    { _ldMarker   :: !(Maybe Text)
+    , _ldMaxItems :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDomains' with the minimum fields required to make a request.
@@ -129,11 +131,13 @@ instance ToQuery ListDomains where
 --
 --
 -- /See:/ 'listDomainsResponse' smart constructor.
-data ListDomainsResponse = ListDomainsResponse'
-  { _ldrsNextPageMarker :: !(Maybe Text)
-  , _ldrsResponseStatus :: !Int
-  , _ldrsDomains        :: ![DomainSummary]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListDomainsResponse =
+  ListDomainsResponse'
+    { _ldrsNextPageMarker :: !(Maybe Text)
+    , _ldrsResponseStatus :: !Int
+    , _ldrsDomains        :: ![DomainSummary]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDomainsResponse' with the minimum fields required to make a request.

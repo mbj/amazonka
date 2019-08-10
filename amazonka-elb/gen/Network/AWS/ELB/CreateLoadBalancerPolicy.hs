@@ -53,12 +53,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createLoadBalancerPolicy' smart constructor.
-data CreateLoadBalancerPolicy = CreateLoadBalancerPolicy'
-  { _clbpPolicyAttributes :: !(Maybe [PolicyAttribute])
-  , _clbpLoadBalancerName :: !Text
-  , _clbpPolicyName       :: !Text
-  , _clbpPolicyTypeName   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateLoadBalancerPolicy =
+  CreateLoadBalancerPolicy'
+    { _clbpPolicyAttributes :: !(Maybe [PolicyAttribute])
+    , _clbpLoadBalancerName :: !Text
+    , _clbpPolicyName       :: !Text
+    , _clbpPolicyTypeName   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateLoadBalancerPolicy' with the minimum fields required to make a request.
@@ -140,9 +142,11 @@ instance ToQuery CreateLoadBalancerPolicy where
 --
 --
 -- /See:/ 'createLoadBalancerPolicyResponse' smart constructor.
-newtype CreateLoadBalancerPolicyResponse = CreateLoadBalancerPolicyResponse'
-  { _clbprsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateLoadBalancerPolicyResponse =
+  CreateLoadBalancerPolicyResponse'
+    { _clbprsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateLoadBalancerPolicyResponse' with the minimum fields required to make a request.

@@ -70,11 +70,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createVPCPeeringConnection' smart constructor.
-data CreateVPCPeeringConnection = CreateVPCPeeringConnection'
-  { _cvpcFleetId             :: !Text
-  , _cvpcPeerVPCAWSAccountId :: !Text
-  , _cvpcPeerVPCId           :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateVPCPeeringConnection =
+  CreateVPCPeeringConnection'
+    { _cvpcFleetId             :: !Text
+    , _cvpcPeerVPCAWSAccountId :: !Text
+    , _cvpcPeerVPCId           :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateVPCPeeringConnection' with the minimum fields required to make a request.
@@ -151,9 +153,11 @@ instance ToQuery CreateVPCPeeringConnection where
         toQuery = const mempty
 
 -- | /See:/ 'createVPCPeeringConnectionResponse' smart constructor.
-newtype CreateVPCPeeringConnectionResponse = CreateVPCPeeringConnectionResponse'
-  { _cvpcrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateVPCPeeringConnectionResponse =
+  CreateVPCPeeringConnectionResponse'
+    { _cvpcrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateVPCPeeringConnectionResponse' with the minimum fields required to make a request.

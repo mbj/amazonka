@@ -95,11 +95,13 @@ instance ToQuery DescribeMetricCollectionTypes where
                   "Version" =: ("2011-01-01" :: ByteString)])
 
 -- | /See:/ 'describeMetricCollectionTypesResponse' smart constructor.
-data DescribeMetricCollectionTypesResponse = DescribeMetricCollectionTypesResponse'
-  { _dmctrsMetrics        :: !(Maybe [MetricCollectionType])
-  , _dmctrsGranularities  :: !(Maybe [MetricGranularityType])
-  , _dmctrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeMetricCollectionTypesResponse =
+  DescribeMetricCollectionTypesResponse'
+    { _dmctrsMetrics        :: !(Maybe [MetricCollectionType])
+    , _dmctrsGranularities  :: !(Maybe [MetricGranularityType])
+    , _dmctrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeMetricCollectionTypesResponse' with the minimum fields required to make a request.

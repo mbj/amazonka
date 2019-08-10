@@ -48,11 +48,13 @@ import Network.AWS.ServiceCatalog.Types
 import Network.AWS.ServiceCatalog.Types.Product
 
 -- | /See:/ 'deleteProvisioningArtifact' smart constructor.
-data DeleteProvisioningArtifact = DeleteProvisioningArtifact'
-  { _dpapAcceptLanguage         :: !(Maybe Text)
-  , _dpapProductId              :: !Text
-  , _dpapProvisioningArtifactId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteProvisioningArtifact =
+  DeleteProvisioningArtifact'
+    { _dpapAcceptLanguage         :: !(Maybe Text)
+    , _dpapProductId              :: !Text
+    , _dpapProvisioningArtifactId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteProvisioningArtifact' with the minimum fields required to make a request.
@@ -129,9 +131,11 @@ instance ToQuery DeleteProvisioningArtifact where
         toQuery = const mempty
 
 -- | /See:/ 'deleteProvisioningArtifactResponse' smart constructor.
-newtype DeleteProvisioningArtifactResponse = DeleteProvisioningArtifactResponse'
-  { _dparsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteProvisioningArtifactResponse =
+  DeleteProvisioningArtifactResponse'
+    { _dparsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteProvisioningArtifactResponse' with the minimum fields required to make a request.

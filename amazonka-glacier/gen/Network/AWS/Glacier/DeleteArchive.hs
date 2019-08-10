@@ -60,11 +60,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteArchive' smart constructor.
-data DeleteArchive = DeleteArchive'
-  { _daAccountId :: !Text
-  , _daVaultName :: !Text
-  , _daArchiveId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteArchive =
+  DeleteArchive'
+    { _daAccountId :: !Text
+    , _daVaultName :: !Text
+    , _daArchiveId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteArchive' with the minimum fields required to make a request.

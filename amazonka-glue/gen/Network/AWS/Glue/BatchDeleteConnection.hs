@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'batchDeleteConnection' smart constructor.
-data BatchDeleteConnection = BatchDeleteConnection'
-  { _bdcCatalogId          :: !(Maybe Text)
-  , _bdcConnectionNameList :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchDeleteConnection =
+  BatchDeleteConnection'
+    { _bdcCatalogId          :: !(Maybe Text)
+    , _bdcConnectionNameList :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchDeleteConnection' with the minimum fields required to make a request.
@@ -115,11 +117,13 @@ instance ToQuery BatchDeleteConnection where
         toQuery = const mempty
 
 -- | /See:/ 'batchDeleteConnectionResponse' smart constructor.
-data BatchDeleteConnectionResponse = BatchDeleteConnectionResponse'
-  { _bdcrsSucceeded      :: !(Maybe [Text])
-  , _bdcrsErrors         :: !(Maybe (Map Text ErrorDetail))
-  , _bdcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchDeleteConnectionResponse =
+  BatchDeleteConnectionResponse'
+    { _bdcrsSucceeded      :: !(Maybe [Text])
+    , _bdcrsErrors         :: !(Maybe (Map Text ErrorDetail))
+    , _bdcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchDeleteConnectionResponse' with the minimum fields required to make a request.

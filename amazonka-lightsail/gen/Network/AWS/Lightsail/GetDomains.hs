@@ -49,9 +49,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getDomains' smart constructor.
-newtype GetDomains = GetDomains'
-  { _gdPageToken :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetDomains =
+  GetDomains'
+    { _gdPageToken :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDomains' with the minimum fields required to make a request.
@@ -111,11 +113,13 @@ instance ToQuery GetDomains where
         toQuery = const mempty
 
 -- | /See:/ 'getDomainsResponse' smart constructor.
-data GetDomainsResponse = GetDomainsResponse'
-  { _ggrsNextPageToken  :: !(Maybe Text)
-  , _ggrsDomains        :: !(Maybe [Domain])
-  , _ggrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDomainsResponse =
+  GetDomainsResponse'
+    { _ggrsNextPageToken  :: !(Maybe Text)
+    , _ggrsDomains        :: !(Maybe [Domain])
+    , _ggrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDomainsResponse' with the minimum fields required to make a request.

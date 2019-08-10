@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getRole' smart constructor.
-newtype GetRole = GetRole'
-  { _grRoleName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetRole =
+  GetRole'
+    { _grRoleName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetRole' with the minimum fields required to make a request.
@@ -96,10 +98,12 @@ instance ToQuery GetRole where
 --
 --
 -- /See:/ 'getRoleResponse' smart constructor.
-data GetRoleResponse = GetRoleResponse'
-  { _grrsResponseStatus :: !Int
-  , _grrsRole           :: !Role
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetRoleResponse =
+  GetRoleResponse'
+    { _grrsResponseStatus :: !Int
+    , _grrsRole           :: !Role
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetRoleResponse' with the minimum fields required to make a request.

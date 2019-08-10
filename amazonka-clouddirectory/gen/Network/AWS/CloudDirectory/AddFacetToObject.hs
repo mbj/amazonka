@@ -47,12 +47,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'addFacetToObject' smart constructor.
-data AddFacetToObject = AddFacetToObject'
-  { _aftoObjectAttributeList :: !(Maybe [AttributeKeyAndValue])
-  , _aftoDirectoryARN        :: !Text
-  , _aftoSchemaFacet         :: !SchemaFacet
-  , _aftoObjectReference     :: !ObjectReference
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddFacetToObject =
+  AddFacetToObject'
+    { _aftoObjectAttributeList :: !(Maybe [AttributeKeyAndValue])
+    , _aftoDirectoryARN        :: !Text
+    , _aftoSchemaFacet         :: !SchemaFacet
+    , _aftoObjectReference     :: !ObjectReference
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddFacetToObject' with the minimum fields required to make a request.
@@ -131,9 +133,11 @@ instance ToQuery AddFacetToObject where
         toQuery = const mempty
 
 -- | /See:/ 'addFacetToObjectResponse' smart constructor.
-newtype AddFacetToObjectResponse = AddFacetToObjectResponse'
-  { _aftorsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AddFacetToObjectResponse =
+  AddFacetToObjectResponse'
+    { _aftorsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddFacetToObjectResponse' with the minimum fields required to make a request.

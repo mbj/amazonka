@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listProgressUpdateStreams' smart constructor.
-data ListProgressUpdateStreams = ListProgressUpdateStreams'
-  { _lpusNextToken  :: !(Maybe Text)
-  , _lpusMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListProgressUpdateStreams =
+  ListProgressUpdateStreams'
+    { _lpusNextToken  :: !(Maybe Text)
+    , _lpusMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListProgressUpdateStreams' with the minimum fields required to make a request.
@@ -115,11 +117,13 @@ instance ToQuery ListProgressUpdateStreams where
         toQuery = const mempty
 
 -- | /See:/ 'listProgressUpdateStreamsResponse' smart constructor.
-data ListProgressUpdateStreamsResponse = ListProgressUpdateStreamsResponse'
-  { _lpusrsProgressUpdateStreamSummaryList :: !(Maybe [ProgressUpdateStreamSummary])
-  , _lpusrsNextToken :: !(Maybe Text)
-  , _lpusrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListProgressUpdateStreamsResponse =
+  ListProgressUpdateStreamsResponse'
+    { _lpusrsProgressUpdateStreamSummaryList :: !(Maybe [ProgressUpdateStreamSummary])
+    , _lpusrsNextToken :: !(Maybe Text)
+    , _lpusrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListProgressUpdateStreamsResponse' with the minimum fields required to make a request.

@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listTagsForCertificate' smart constructor.
-newtype ListTagsForCertificate = ListTagsForCertificate'
-  { _ltfcCertificateARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ListTagsForCertificate =
+  ListTagsForCertificate'
+    { _ltfcCertificateARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTagsForCertificate' with the minimum fields required to make a request.
@@ -103,10 +105,12 @@ instance ToQuery ListTagsForCertificate where
         toQuery = const mempty
 
 -- | /See:/ 'listTagsForCertificateResponse' smart constructor.
-data ListTagsForCertificateResponse = ListTagsForCertificateResponse'
-  { _ltfcrsTags           :: !(Maybe (List1 Tag))
-  , _ltfcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTagsForCertificateResponse =
+  ListTagsForCertificateResponse'
+    { _ltfcrsTags           :: !(Maybe (List1 Tag))
+    , _ltfcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTagsForCertificateResponse' with the minimum fields required to make a request.

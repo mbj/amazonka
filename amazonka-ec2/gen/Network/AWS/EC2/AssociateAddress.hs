@@ -63,15 +63,17 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'associateAddress' smart constructor.
-data AssociateAddress = AssociateAddress'
-  { _aasInstanceId         :: !(Maybe Text)
-  , _aasAllocationId       :: !(Maybe Text)
-  , _aasNetworkInterfaceId :: !(Maybe Text)
-  , _aasAllowReassociation :: !(Maybe Bool)
-  , _aasPrivateIPAddress   :: !(Maybe Text)
-  , _aasPublicIP           :: !(Maybe Text)
-  , _aasDryRun             :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssociateAddress =
+  AssociateAddress'
+    { _aasInstanceId         :: !(Maybe Text)
+    , _aasAllocationId       :: !(Maybe Text)
+    , _aasNetworkInterfaceId :: !(Maybe Text)
+    , _aasAllowReassociation :: !(Maybe Bool)
+    , _aasPrivateIPAddress   :: !(Maybe Text)
+    , _aasPublicIP           :: !(Maybe Text)
+    , _aasDryRun             :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateAddress' with the minimum fields required to make a request.
@@ -169,10 +171,12 @@ instance ToQuery AssociateAddress where
 --
 --
 -- /See:/ 'associateAddressResponse' smart constructor.
-data AssociateAddressResponse = AssociateAddressResponse'
-  { _arsAssociationId  :: !(Maybe Text)
-  , _arsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssociateAddressResponse =
+  AssociateAddressResponse'
+    { _arsAssociationId  :: !(Maybe Text)
+    , _arsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateAddressResponse' with the minimum fields required to make a request.

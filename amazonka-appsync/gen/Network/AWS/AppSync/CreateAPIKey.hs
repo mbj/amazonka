@@ -47,11 +47,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createAPIKey' smart constructor.
-data CreateAPIKey = CreateAPIKey'
-  { _cakExpires     :: !(Maybe Integer)
-  , _cakDescription :: !(Maybe Text)
-  , _cakApiId       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateAPIKey =
+  CreateAPIKey'
+    { _cakExpires     :: !(Maybe Integer)
+    , _cakDescription :: !(Maybe Text)
+    , _cakApiId       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateAPIKey' with the minimum fields required to make a request.
@@ -118,10 +120,12 @@ instance ToQuery CreateAPIKey where
         toQuery = const mempty
 
 -- | /See:/ 'createAPIKeyResponse' smart constructor.
-data CreateAPIKeyResponse = CreateAPIKeyResponse'
-  { _cakrsApiKey         :: !(Maybe APIKey)
-  , _cakrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateAPIKeyResponse =
+  CreateAPIKeyResponse'
+    { _cakrsApiKey         :: !(Maybe APIKey)
+    , _cakrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateAPIKeyResponse' with the minimum fields required to make a request.

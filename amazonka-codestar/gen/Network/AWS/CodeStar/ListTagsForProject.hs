@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listTagsForProject' smart constructor.
-data ListTagsForProject = ListTagsForProject'
-  { _ltfpNextToken  :: !(Maybe Text)
-  , _ltfpMaxResults :: !(Maybe Nat)
-  , _ltfpId         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTagsForProject =
+  ListTagsForProject'
+    { _ltfpNextToken  :: !(Maybe Text)
+    , _ltfpMaxResults :: !(Maybe Nat)
+    , _ltfpId         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTagsForProject' with the minimum fields required to make a request.
@@ -124,11 +126,13 @@ instance ToQuery ListTagsForProject where
         toQuery = const mempty
 
 -- | /See:/ 'listTagsForProjectResponse' smart constructor.
-data ListTagsForProjectResponse = ListTagsForProjectResponse'
-  { _ltfprsNextToken      :: !(Maybe Text)
-  , _ltfprsTags           :: !(Maybe (Map Text Text))
-  , _ltfprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTagsForProjectResponse =
+  ListTagsForProjectResponse'
+    { _ltfprsNextToken      :: !(Maybe Text)
+    , _ltfprsTags           :: !(Maybe (Map Text Text))
+    , _ltfprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTagsForProjectResponse' with the minimum fields required to make a request.

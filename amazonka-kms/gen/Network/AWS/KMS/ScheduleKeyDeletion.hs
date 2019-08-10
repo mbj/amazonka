@@ -53,10 +53,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'scheduleKeyDeletion' smart constructor.
-data ScheduleKeyDeletion = ScheduleKeyDeletion'
-  { _skdPendingWindowInDays :: !(Maybe Nat)
-  , _skdKeyId               :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ScheduleKeyDeletion =
+  ScheduleKeyDeletion'
+    { _skdPendingWindowInDays :: !(Maybe Nat)
+    , _skdKeyId               :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ScheduleKeyDeletion' with the minimum fields required to make a request.
@@ -120,11 +122,13 @@ instance ToQuery ScheduleKeyDeletion where
         toQuery = const mempty
 
 -- | /See:/ 'scheduleKeyDeletionResponse' smart constructor.
-data ScheduleKeyDeletionResponse = ScheduleKeyDeletionResponse'
-  { _skdrsKeyId          :: !(Maybe Text)
-  , _skdrsDeletionDate   :: !(Maybe POSIX)
-  , _skdrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ScheduleKeyDeletionResponse =
+  ScheduleKeyDeletionResponse'
+    { _skdrsKeyId          :: !(Maybe Text)
+    , _skdrsDeletionDate   :: !(Maybe POSIX)
+    , _skdrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ScheduleKeyDeletionResponse' with the minimum fields required to make a request.

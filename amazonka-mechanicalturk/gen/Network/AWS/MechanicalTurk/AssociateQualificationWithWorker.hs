@@ -49,12 +49,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'associateQualificationWithWorker' smart constructor.
-data AssociateQualificationWithWorker = AssociateQualificationWithWorker'
-  { _aqwwIntegerValue        :: !(Maybe Int)
-  , _aqwwSendNotification    :: !(Maybe Bool)
-  , _aqwwQualificationTypeId :: !Text
-  , _aqwwWorkerId            :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssociateQualificationWithWorker =
+  AssociateQualificationWithWorker'
+    { _aqwwIntegerValue        :: !(Maybe Int)
+    , _aqwwSendNotification    :: !(Maybe Bool)
+    , _aqwwQualificationTypeId :: !Text
+    , _aqwwWorkerId            :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateQualificationWithWorker' with the minimum fields required to make a request.
@@ -145,9 +147,11 @@ instance ToQuery AssociateQualificationWithWorker
         toQuery = const mempty
 
 -- | /See:/ 'associateQualificationWithWorkerResponse' smart constructor.
-newtype AssociateQualificationWithWorkerResponse = AssociateQualificationWithWorkerResponse'
-  { _aqwwrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AssociateQualificationWithWorkerResponse =
+  AssociateQualificationWithWorkerResponse'
+    { _aqwwrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateQualificationWithWorkerResponse' with the minimum fields required to make a request.

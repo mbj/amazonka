@@ -91,10 +91,12 @@ instance ToQuery ListVerifiedEmailAddresses where
 --
 --
 -- /See:/ 'listVerifiedEmailAddressesResponse' smart constructor.
-data ListVerifiedEmailAddressesResponse = ListVerifiedEmailAddressesResponse'
-  { _lvearsVerifiedEmailAddresses :: !(Maybe [Text])
-  , _lvearsResponseStatus         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListVerifiedEmailAddressesResponse =
+  ListVerifiedEmailAddressesResponse'
+    { _lvearsVerifiedEmailAddresses :: !(Maybe [Text])
+    , _lvearsResponseStatus         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListVerifiedEmailAddressesResponse' with the minimum fields required to make a request.

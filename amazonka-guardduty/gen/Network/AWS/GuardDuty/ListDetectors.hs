@@ -48,10 +48,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listDetectors' smart constructor.
-data ListDetectors = ListDetectors'
-  { _ldNextToken  :: !(Maybe Text)
-  , _ldMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListDetectors =
+  ListDetectors'
+    { _ldNextToken  :: !(Maybe Text)
+    , _ldMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDetectors' with the minimum fields required to make a request.
@@ -113,11 +115,13 @@ instance ToQuery ListDetectors where
                "maxResults" =: _ldMaxResults]
 
 -- | /See:/ 'listDetectorsResponse' smart constructor.
-data ListDetectorsResponse = ListDetectorsResponse'
-  { _ldrsNextToken      :: !(Maybe Text)
-  , _ldrsDetectorIds    :: !(Maybe [Text])
-  , _ldrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListDetectorsResponse =
+  ListDetectorsResponse'
+    { _ldrsNextToken      :: !(Maybe Text)
+    , _ldrsDetectorIds    :: !(Maybe [Text])
+    , _ldrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDetectorsResponse' with the minimum fields required to make a request.

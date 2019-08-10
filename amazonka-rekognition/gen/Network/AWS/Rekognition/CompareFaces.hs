@@ -65,11 +65,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'compareFaces' smart constructor.
-data CompareFaces = CompareFaces'
-  { _cfSimilarityThreshold :: !(Maybe Double)
-  , _cfSourceImage         :: !Image
-  , _cfTargetImage         :: !Image
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CompareFaces =
+  CompareFaces'
+    { _cfSimilarityThreshold :: !(Maybe Double)
+    , _cfSourceImage         :: !Image
+    , _cfTargetImage         :: !Image
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CompareFaces' with the minimum fields required to make a request.
@@ -148,14 +150,16 @@ instance ToQuery CompareFaces where
         toQuery = const mempty
 
 -- | /See:/ 'compareFacesResponse' smart constructor.
-data CompareFacesResponse = CompareFacesResponse'
-  { _cfrsFaceMatches                      :: !(Maybe [CompareFacesMatch])
-  , _cfrsUnmatchedFaces                   :: !(Maybe [ComparedFace])
-  , _cfrsTargetImageOrientationCorrection :: !(Maybe OrientationCorrection)
-  , _cfrsSourceImageOrientationCorrection :: !(Maybe OrientationCorrection)
-  , _cfrsSourceImageFace                  :: !(Maybe ComparedSourceImageFace)
-  , _cfrsResponseStatus                   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CompareFacesResponse =
+  CompareFacesResponse'
+    { _cfrsFaceMatches                      :: !(Maybe [CompareFacesMatch])
+    , _cfrsUnmatchedFaces                   :: !(Maybe [ComparedFace])
+    , _cfrsTargetImageOrientationCorrection :: !(Maybe OrientationCorrection)
+    , _cfrsSourceImageOrientationCorrection :: !(Maybe OrientationCorrection)
+    , _cfrsSourceImageFace                  :: !(Maybe ComparedSourceImageFace)
+    , _cfrsResponseStatus                   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CompareFacesResponse' with the minimum fields required to make a request.

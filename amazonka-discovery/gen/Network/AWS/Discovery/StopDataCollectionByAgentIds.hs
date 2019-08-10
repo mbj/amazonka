@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'stopDataCollectionByAgentIds' smart constructor.
-newtype StopDataCollectionByAgentIds = StopDataCollectionByAgentIds'
-  { _sdcbaiAgentIds :: [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StopDataCollectionByAgentIds =
+  StopDataCollectionByAgentIds'
+    { _sdcbaiAgentIds :: [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopDataCollectionByAgentIds' with the minimum fields required to make a request.
@@ -103,10 +105,12 @@ instance ToQuery StopDataCollectionByAgentIds where
         toQuery = const mempty
 
 -- | /See:/ 'stopDataCollectionByAgentIdsResponse' smart constructor.
-data StopDataCollectionByAgentIdsResponse = StopDataCollectionByAgentIdsResponse'
-  { _sdcbairsAgentsConfigurationStatus :: !(Maybe [AgentConfigurationStatus])
-  , _sdcbairsResponseStatus            :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StopDataCollectionByAgentIdsResponse =
+  StopDataCollectionByAgentIdsResponse'
+    { _sdcbairsAgentsConfigurationStatus :: !(Maybe [AgentConfigurationStatus])
+    , _sdcbairsResponseStatus            :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopDataCollectionByAgentIdsResponse' with the minimum fields required to make a request.

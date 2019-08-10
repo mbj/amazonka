@@ -100,11 +100,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeFleetUtilization' smart constructor.
-data DescribeFleetUtilization = DescribeFleetUtilization'
-  { _dfuNextToken :: !(Maybe Text)
-  , _dfuLimit     :: !(Maybe Nat)
-  , _dfuFleetIds  :: !(Maybe (List1 Text))
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeFleetUtilization =
+  DescribeFleetUtilization'
+    { _dfuNextToken :: !(Maybe Text)
+    , _dfuLimit     :: !(Maybe Nat)
+    , _dfuFleetIds  :: !(Maybe (List1 Text))
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeFleetUtilization' with the minimum fields required to make a request.
@@ -179,11 +181,13 @@ instance ToQuery DescribeFleetUtilization where
 --
 --
 -- /See:/ 'describeFleetUtilizationResponse' smart constructor.
-data DescribeFleetUtilizationResponse = DescribeFleetUtilizationResponse'
-  { _dfursNextToken        :: !(Maybe Text)
-  , _dfursFleetUtilization :: !(Maybe [FleetUtilization])
-  , _dfursResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeFleetUtilizationResponse =
+  DescribeFleetUtilizationResponse'
+    { _dfursNextToken        :: !(Maybe Text)
+    , _dfursFleetUtilization :: !(Maybe [FleetUtilization])
+    , _dfursResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeFleetUtilizationResponse' with the minimum fields required to make a request.

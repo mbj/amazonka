@@ -50,10 +50,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getCrawlers' smart constructor.
-data GetCrawlers = GetCrawlers'
-  { _gNextToken  :: !(Maybe Text)
-  , _gMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetCrawlers =
+  GetCrawlers'
+    { _gNextToken  :: !(Maybe Text)
+    , _gMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetCrawlers' with the minimum fields required to make a request.
@@ -120,11 +122,13 @@ instance ToQuery GetCrawlers where
         toQuery = const mempty
 
 -- | /See:/ 'getCrawlersResponse' smart constructor.
-data GetCrawlersResponse = GetCrawlersResponse'
-  { _grsNextToken      :: !(Maybe Text)
-  , _grsCrawlers       :: !(Maybe [Crawler])
-  , _grsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetCrawlersResponse =
+  GetCrawlersResponse'
+    { _grsNextToken      :: !(Maybe Text)
+    , _grsCrawlers       :: !(Maybe [Crawler])
+    , _grsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetCrawlersResponse' with the minimum fields required to make a request.

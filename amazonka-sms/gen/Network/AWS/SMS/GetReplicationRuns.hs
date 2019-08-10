@@ -50,11 +50,13 @@ import Network.AWS.SMS.Types
 import Network.AWS.SMS.Types.Product
 
 -- | /See:/ 'getReplicationRuns' smart constructor.
-data GetReplicationRuns = GetReplicationRuns'
-  { _grrNextToken        :: !(Maybe Text)
-  , _grrMaxResults       :: !(Maybe Int)
-  , _grrReplicationJobId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetReplicationRuns =
+  GetReplicationRuns'
+    { _grrNextToken        :: !(Maybe Text)
+    , _grrMaxResults       :: !(Maybe Int)
+    , _grrReplicationJobId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetReplicationRuns' with the minimum fields required to make a request.
@@ -137,12 +139,14 @@ instance ToQuery GetReplicationRuns where
         toQuery = const mempty
 
 -- | /See:/ 'getReplicationRunsResponse' smart constructor.
-data GetReplicationRunsResponse = GetReplicationRunsResponse'
-  { _grrrsReplicationJob     :: !(Maybe ReplicationJob)
-  , _grrrsNextToken          :: !(Maybe Text)
-  , _grrrsReplicationRunList :: !(Maybe [ReplicationRun])
-  , _grrrsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetReplicationRunsResponse =
+  GetReplicationRunsResponse'
+    { _grrrsReplicationJob     :: !(Maybe ReplicationJob)
+    , _grrrsNextToken          :: !(Maybe Text)
+    , _grrrsReplicationRunList :: !(Maybe [ReplicationRun])
+    , _grrrsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetReplicationRunsResponse' with the minimum fields required to make a request.

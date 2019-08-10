@@ -53,12 +53,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describePendingMaintenanceActions' smart constructor.
-data DescribePendingMaintenanceActions = DescribePendingMaintenanceActions'
-  { _dpmaFilters            :: !(Maybe [Filter])
-  , _dpmaMarker             :: !(Maybe Text)
-  , _dpmaMaxRecords         :: !(Maybe Int)
-  , _dpmaResourceIdentifier :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribePendingMaintenanceActions =
+  DescribePendingMaintenanceActions'
+    { _dpmaFilters            :: !(Maybe [Filter])
+    , _dpmaMarker             :: !(Maybe Text)
+    , _dpmaMaxRecords         :: !(Maybe Int)
+    , _dpmaResourceIdentifier :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribePendingMaintenanceActions' with the minimum fields required to make a request.
@@ -147,11 +149,13 @@ instance ToQuery DescribePendingMaintenanceActions
 --
 --
 -- /See:/ 'describePendingMaintenanceActionsResponse' smart constructor.
-data DescribePendingMaintenanceActionsResponse = DescribePendingMaintenanceActionsResponse'
-  { _dpmarsPendingMaintenanceActions :: !(Maybe [ResourcePendingMaintenanceActions])
-  , _dpmarsMarker :: !(Maybe Text)
-  , _dpmarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribePendingMaintenanceActionsResponse =
+  DescribePendingMaintenanceActionsResponse'
+    { _dpmarsPendingMaintenanceActions :: !(Maybe [ResourcePendingMaintenanceActions])
+    , _dpmarsMarker :: !(Maybe Text)
+    , _dpmarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribePendingMaintenanceActionsResponse' with the minimum fields required to make a request.

@@ -64,11 +64,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeGameSessionQueues' smart constructor.
-data DescribeGameSessionQueues = DescribeGameSessionQueues'
-  { _dgsqNextToken :: !(Maybe Text)
-  , _dgsqNames     :: !(Maybe [Text])
-  , _dgsqLimit     :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeGameSessionQueues =
+  DescribeGameSessionQueues'
+    { _dgsqNextToken :: !(Maybe Text)
+    , _dgsqNames     :: !(Maybe [Text])
+    , _dgsqLimit     :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeGameSessionQueues' with the minimum fields required to make a request.
@@ -143,11 +145,13 @@ instance ToQuery DescribeGameSessionQueues where
 --
 --
 -- /See:/ 'describeGameSessionQueuesResponse' smart constructor.
-data DescribeGameSessionQueuesResponse = DescribeGameSessionQueuesResponse'
-  { _drsNextToken         :: !(Maybe Text)
-  , _drsGameSessionQueues :: !(Maybe [GameSessionQueue])
-  , _drsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeGameSessionQueuesResponse =
+  DescribeGameSessionQueuesResponse'
+    { _drsNextToken         :: !(Maybe Text)
+    , _drsGameSessionQueues :: !(Maybe [GameSessionQueue])
+    , _drsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeGameSessionQueuesResponse' with the minimum fields required to make a request.

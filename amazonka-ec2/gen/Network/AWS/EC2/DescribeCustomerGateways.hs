@@ -53,11 +53,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeCustomerGateways' smart constructor.
-data DescribeCustomerGateways = DescribeCustomerGateways'
-  { _dcgCustomerGatewayIds :: !(Maybe [Text])
-  , _dcgFilters            :: !(Maybe [Filter])
-  , _dcgDryRun             :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeCustomerGateways =
+  DescribeCustomerGateways'
+    { _dcgCustomerGatewayIds :: !(Maybe [Text])
+    , _dcgFilters            :: !(Maybe [Filter])
+    , _dcgDryRun             :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeCustomerGateways' with the minimum fields required to make a request.
@@ -130,10 +132,12 @@ instance ToQuery DescribeCustomerGateways where
 --
 --
 -- /See:/ 'describeCustomerGatewaysResponse' smart constructor.
-data DescribeCustomerGatewaysResponse = DescribeCustomerGatewaysResponse'
-  { _dcgrsCustomerGateways :: !(Maybe [CustomerGateway])
-  , _dcgrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeCustomerGatewaysResponse =
+  DescribeCustomerGatewaysResponse'
+    { _dcgrsCustomerGateways :: !(Maybe [CustomerGateway])
+    , _dcgrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeCustomerGatewaysResponse' with the minimum fields required to make a request.

@@ -49,12 +49,14 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'describeInstancePatchStatesForPatchGroup' smart constructor.
-data DescribeInstancePatchStatesForPatchGroup = DescribeInstancePatchStatesForPatchGroup'
-  { _dipsfpgFilters    :: !(Maybe [InstancePatchStateFilter])
-  , _dipsfpgNextToken  :: !(Maybe Text)
-  , _dipsfpgMaxResults :: !(Maybe Nat)
-  , _dipsfpgPatchGroup :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeInstancePatchStatesForPatchGroup =
+  DescribeInstancePatchStatesForPatchGroup'
+    { _dipsfpgFilters    :: !(Maybe [InstancePatchStateFilter])
+    , _dipsfpgNextToken  :: !(Maybe Text)
+    , _dipsfpgMaxResults :: !(Maybe Nat)
+    , _dipsfpgPatchGroup :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeInstancePatchStatesForPatchGroup' with the minimum fields required to make a request.
@@ -151,11 +153,13 @@ instance ToQuery
         toQuery = const mempty
 
 -- | /See:/ 'describeInstancePatchStatesForPatchGroupResponse' smart constructor.
-data DescribeInstancePatchStatesForPatchGroupResponse = DescribeInstancePatchStatesForPatchGroupResponse'
-  { _dipsfpgrsNextToken           :: !(Maybe Text)
-  , _dipsfpgrsInstancePatchStates :: !(Maybe (List1 InstancePatchState))
-  , _dipsfpgrsResponseStatus      :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data DescribeInstancePatchStatesForPatchGroupResponse =
+  DescribeInstancePatchStatesForPatchGroupResponse'
+    { _dipsfpgrsNextToken           :: !(Maybe Text)
+    , _dipsfpgrsInstancePatchStates :: !(Maybe (List1 InstancePatchState))
+    , _dipsfpgrsResponseStatus      :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeInstancePatchStatesForPatchGroupResponse' with the minimum fields required to make a request.

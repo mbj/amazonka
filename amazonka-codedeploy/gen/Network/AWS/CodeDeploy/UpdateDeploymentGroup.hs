@@ -64,24 +64,26 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateDeploymentGroup' smart constructor.
-data UpdateDeploymentGroup = UpdateDeploymentGroup'
-  { _udgServiceRoleARN :: !(Maybe Text)
-  , _udgEc2TagSet :: !(Maybe EC2TagSet)
-  , _udgDeploymentConfigName :: !(Maybe Text)
-  , _udgOnPremisesTagSet :: !(Maybe OnPremisesTagSet)
-  , _udgNewDeploymentGroupName :: !(Maybe Text)
-  , _udgEc2TagFilters :: !(Maybe [EC2TagFilter])
-  , _udgBlueGreenDeploymentConfiguration :: !(Maybe BlueGreenDeploymentConfiguration)
-  , _udgLoadBalancerInfo :: !(Maybe LoadBalancerInfo)
-  , _udgOnPremisesInstanceTagFilters :: !(Maybe [TagFilter])
-  , _udgAlarmConfiguration :: !(Maybe AlarmConfiguration)
-  , _udgTriggerConfigurations :: !(Maybe [TriggerConfig])
-  , _udgAutoScalingGroups :: !(Maybe [Text])
-  , _udgDeploymentStyle :: !(Maybe DeploymentStyle)
-  , _udgAutoRollbackConfiguration :: !(Maybe AutoRollbackConfiguration)
-  , _udgApplicationName :: !Text
-  , _udgCurrentDeploymentGroupName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateDeploymentGroup =
+  UpdateDeploymentGroup'
+    { _udgServiceRoleARN :: !(Maybe Text)
+    , _udgEc2TagSet :: !(Maybe EC2TagSet)
+    , _udgDeploymentConfigName :: !(Maybe Text)
+    , _udgOnPremisesTagSet :: !(Maybe OnPremisesTagSet)
+    , _udgNewDeploymentGroupName :: !(Maybe Text)
+    , _udgEc2TagFilters :: !(Maybe [EC2TagFilter])
+    , _udgBlueGreenDeploymentConfiguration :: !(Maybe BlueGreenDeploymentConfiguration)
+    , _udgLoadBalancerInfo :: !(Maybe LoadBalancerInfo)
+    , _udgOnPremisesInstanceTagFilters :: !(Maybe [TagFilter])
+    , _udgAlarmConfiguration :: !(Maybe AlarmConfiguration)
+    , _udgTriggerConfigurations :: !(Maybe [TriggerConfig])
+    , _udgAutoScalingGroups :: !(Maybe [Text])
+    , _udgDeploymentStyle :: !(Maybe DeploymentStyle)
+    , _udgAutoRollbackConfiguration :: !(Maybe AutoRollbackConfiguration)
+    , _udgApplicationName :: !Text
+    , _udgCurrentDeploymentGroupName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateDeploymentGroup' with the minimum fields required to make a request.
@@ -273,10 +275,12 @@ instance ToQuery UpdateDeploymentGroup where
 --
 --
 -- /See:/ 'updateDeploymentGroupResponse' smart constructor.
-data UpdateDeploymentGroupResponse = UpdateDeploymentGroupResponse'
-  { _udgrsHooksNotCleanedUp :: !(Maybe [AutoScalingGroup])
-  , _udgrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateDeploymentGroupResponse =
+  UpdateDeploymentGroupResponse'
+    { _udgrsHooksNotCleanedUp :: !(Maybe [AutoScalingGroup])
+    , _udgrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateDeploymentGroupResponse' with the minimum fields required to make a request.

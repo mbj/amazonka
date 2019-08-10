@@ -56,10 +56,12 @@ import Network.AWS.StorageGateway.Types.Product
 --
 --
 -- /See:/ 'addWorkingStorage' smart constructor.
-data AddWorkingStorage = AddWorkingStorage'
-  { _awsGatewayARN :: !Text
-  , _awsDiskIds    :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddWorkingStorage =
+  AddWorkingStorage'
+    { _awsGatewayARN :: !Text
+    , _awsDiskIds    :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddWorkingStorage' with the minimum fields required to make a request.
@@ -125,10 +127,12 @@ instance ToQuery AddWorkingStorage where
 --
 --
 -- /See:/ 'addWorkingStorageResponse' smart constructor.
-data AddWorkingStorageResponse = AddWorkingStorageResponse'
-  { _awsrsGatewayARN     :: !(Maybe Text)
-  , _awsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddWorkingStorageResponse =
+  AddWorkingStorageResponse'
+    { _awsrsGatewayARN     :: !(Maybe Text)
+    , _awsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddWorkingStorageResponse' with the minimum fields required to make a request.

@@ -94,13 +94,15 @@ import Network.AWS.WAF.Types
 import Network.AWS.WAF.Types.Product
 
 -- | /See:/ 'createRateBasedRule' smart constructor.
-data CreateRateBasedRule = CreateRateBasedRule'
-  { _crbrName        :: !Text
-  , _crbrMetricName  :: !Text
-  , _crbrRateKey     :: !RateKey
-  , _crbrRateLimit   :: !Nat
-  , _crbrChangeToken :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateRateBasedRule =
+  CreateRateBasedRule'
+    { _crbrName        :: !Text
+    , _crbrMetricName  :: !Text
+    , _crbrRateKey     :: !RateKey
+    , _crbrRateLimit   :: !Nat
+    , _crbrChangeToken :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateRateBasedRule' with the minimum fields required to make a request.
@@ -195,11 +197,13 @@ instance ToQuery CreateRateBasedRule where
         toQuery = const mempty
 
 -- | /See:/ 'createRateBasedRuleResponse' smart constructor.
-data CreateRateBasedRuleResponse = CreateRateBasedRuleResponse'
-  { _crbrrsRule           :: !(Maybe RateBasedRule)
-  , _crbrrsChangeToken    :: !(Maybe Text)
-  , _crbrrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateRateBasedRuleResponse =
+  CreateRateBasedRuleResponse'
+    { _crbrrsRule           :: !(Maybe RateBasedRule)
+    , _crbrrsChangeToken    :: !(Maybe Text)
+    , _crbrrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateRateBasedRuleResponse' with the minimum fields required to make a request.

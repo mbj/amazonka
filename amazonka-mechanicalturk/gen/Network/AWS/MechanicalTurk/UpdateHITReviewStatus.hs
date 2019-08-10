@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateHITReviewStatus' smart constructor.
-data UpdateHITReviewStatus = UpdateHITReviewStatus'
-  { _uhitrsRevert :: !(Maybe Bool)
-  , _uhitrsHITId  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateHITReviewStatus =
+  UpdateHITReviewStatus'
+    { _uhitrsRevert :: !(Maybe Bool)
+    , _uhitrsHITId  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateHITReviewStatus' with the minimum fields required to make a request.
@@ -111,9 +113,11 @@ instance ToQuery UpdateHITReviewStatus where
         toQuery = const mempty
 
 -- | /See:/ 'updateHITReviewStatusResponse' smart constructor.
-newtype UpdateHITReviewStatusResponse = UpdateHITReviewStatusResponse'
-  { _uhitrsrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateHITReviewStatusResponse =
+  UpdateHITReviewStatusResponse'
+    { _uhitrsrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateHITReviewStatusResponse' with the minimum fields required to make a request.

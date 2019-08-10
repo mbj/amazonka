@@ -43,10 +43,12 @@ import Network.AWS.WorkDocs.Types
 import Network.AWS.WorkDocs.Types.Product
 
 -- | /See:/ 'deleteNotificationSubscription' smart constructor.
-data DeleteNotificationSubscription = DeleteNotificationSubscription'
-  { _dnsSubscriptionId :: !Text
-  , _dnsOrganizationId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteNotificationSubscription =
+  DeleteNotificationSubscription'
+    { _dnsSubscriptionId :: !Text
+    , _dnsOrganizationId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteNotificationSubscription' with the minimum fields required to make a request.

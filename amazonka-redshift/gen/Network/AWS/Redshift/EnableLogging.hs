@@ -55,11 +55,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'enableLogging' smart constructor.
-data EnableLogging = EnableLogging'
-  { _elS3KeyPrefix       :: !(Maybe Text)
-  , _elClusterIdentifier :: !Text
-  , _elBucketName        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EnableLogging =
+  EnableLogging'
+    { _elS3KeyPrefix       :: !(Maybe Text)
+    , _elClusterIdentifier :: !Text
+    , _elBucketName        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EnableLogging' with the minimum fields required to make a request.

@@ -68,18 +68,20 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'importImage' smart constructor.
-data ImportImage = ImportImage'
-  { _impHypervisor     :: !(Maybe Text)
-  , _impPlatform       :: !(Maybe Text)
-  , _impClientToken    :: !(Maybe Text)
-  , _impLicenseType    :: !(Maybe Text)
-  , _impRoleName       :: !(Maybe Text)
-  , _impArchitecture   :: !(Maybe Text)
-  , _impDescription    :: !(Maybe Text)
-  , _impDryRun         :: !(Maybe Bool)
-  , _impClientData     :: !(Maybe ClientData)
-  , _impDiskContainers :: !(Maybe [ImageDiskContainer])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ImportImage =
+  ImportImage'
+    { _impHypervisor     :: !(Maybe Text)
+    , _impPlatform       :: !(Maybe Text)
+    , _impClientToken    :: !(Maybe Text)
+    , _impLicenseType    :: !(Maybe Text)
+    , _impRoleName       :: !(Maybe Text)
+    , _impArchitecture   :: !(Maybe Text)
+    , _impDescription    :: !(Maybe Text)
+    , _impDryRun         :: !(Maybe Bool)
+    , _impClientData     :: !(Maybe ClientData)
+    , _impDiskContainers :: !(Maybe [ImageDiskContainer])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ImportImage' with the minimum fields required to make a request.
@@ -215,20 +217,22 @@ instance ToQuery ImportImage where
 --
 --
 -- /See:/ 'importImageResponse' smart constructor.
-data ImportImageResponse = ImportImageResponse'
-  { _irsStatus          :: !(Maybe Text)
-  , _irsHypervisor      :: !(Maybe Text)
-  , _irsPlatform        :: !(Maybe Text)
-  , _irsProgress        :: !(Maybe Text)
-  , _irsLicenseType     :: !(Maybe Text)
-  , _irsSnapshotDetails :: !(Maybe [SnapshotDetail])
-  , _irsStatusMessage   :: !(Maybe Text)
-  , _irsImageId         :: !(Maybe Text)
-  , _irsImportTaskId    :: !(Maybe Text)
-  , _irsArchitecture    :: !(Maybe Text)
-  , _irsDescription     :: !(Maybe Text)
-  , _irsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ImportImageResponse =
+  ImportImageResponse'
+    { _irsStatus          :: !(Maybe Text)
+    , _irsHypervisor      :: !(Maybe Text)
+    , _irsPlatform        :: !(Maybe Text)
+    , _irsProgress        :: !(Maybe Text)
+    , _irsLicenseType     :: !(Maybe Text)
+    , _irsSnapshotDetails :: !(Maybe [SnapshotDetail])
+    , _irsStatusMessage   :: !(Maybe Text)
+    , _irsImageId         :: !(Maybe Text)
+    , _irsImportTaskId    :: !(Maybe Text)
+    , _irsArchitecture    :: !(Maybe Text)
+    , _irsDescription     :: !(Maybe Text)
+    , _irsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ImportImageResponse' with the minimum fields required to make a request.

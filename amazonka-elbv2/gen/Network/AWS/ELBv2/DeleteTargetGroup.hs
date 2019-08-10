@@ -46,9 +46,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteTargetGroup' smart constructor.
-newtype DeleteTargetGroup = DeleteTargetGroup'
-  { _dtgTargetGroupARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteTargetGroup =
+  DeleteTargetGroup'
+    { _dtgTargetGroupARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteTargetGroup' with the minimum fields required to make a request.
@@ -93,9 +95,11 @@ instance ToQuery DeleteTargetGroup where
                "TargetGroupArn" =: _dtgTargetGroupARN]
 
 -- | /See:/ 'deleteTargetGroupResponse' smart constructor.
-newtype DeleteTargetGroupResponse = DeleteTargetGroupResponse'
-  { _dtgrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteTargetGroupResponse =
+  DeleteTargetGroupResponse'
+    { _dtgrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteTargetGroupResponse' with the minimum fields required to make a request.

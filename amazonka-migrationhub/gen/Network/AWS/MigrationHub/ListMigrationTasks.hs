@@ -56,11 +56,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listMigrationTasks' smart constructor.
-data ListMigrationTasks = ListMigrationTasks'
-  { _lmtResourceName :: !(Maybe Text)
-  , _lmtNextToken    :: !(Maybe Text)
-  , _lmtMaxResults   :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListMigrationTasks =
+  ListMigrationTasks'
+    { _lmtResourceName :: !(Maybe Text)
+    , _lmtNextToken    :: !(Maybe Text)
+    , _lmtMaxResults   :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListMigrationTasks' with the minimum fields required to make a request.
@@ -134,11 +136,13 @@ instance ToQuery ListMigrationTasks where
         toQuery = const mempty
 
 -- | /See:/ 'listMigrationTasksResponse' smart constructor.
-data ListMigrationTasksResponse = ListMigrationTasksResponse'
-  { _lmtrsMigrationTaskSummaryList :: !(Maybe [MigrationTaskSummary])
-  , _lmtrsNextToken                :: !(Maybe Text)
-  , _lmtrsResponseStatus           :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListMigrationTasksResponse =
+  ListMigrationTasksResponse'
+    { _lmtrsMigrationTaskSummaryList :: !(Maybe [MigrationTaskSummary])
+    , _lmtrsNextToken                :: !(Maybe Text)
+    , _lmtrsResponseStatus           :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListMigrationTasksResponse' with the minimum fields required to make a request.

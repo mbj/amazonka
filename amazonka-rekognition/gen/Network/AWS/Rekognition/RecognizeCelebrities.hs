@@ -59,9 +59,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'recognizeCelebrities' smart constructor.
-newtype RecognizeCelebrities = RecognizeCelebrities'
-  { _rcImage :: Image
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RecognizeCelebrities =
+  RecognizeCelebrities'
+    { _rcImage :: Image
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RecognizeCelebrities' with the minimum fields required to make a request.
@@ -117,12 +119,14 @@ instance ToQuery RecognizeCelebrities where
         toQuery = const mempty
 
 -- | /See:/ 'recognizeCelebritiesResponse' smart constructor.
-data RecognizeCelebritiesResponse = RecognizeCelebritiesResponse'
-  { _rcrsCelebrityFaces        :: !(Maybe [Celebrity])
-  , _rcrsOrientationCorrection :: !(Maybe OrientationCorrection)
-  , _rcrsUnrecognizedFaces     :: !(Maybe [ComparedFace])
-  , _rcrsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RecognizeCelebritiesResponse =
+  RecognizeCelebritiesResponse'
+    { _rcrsCelebrityFaces        :: !(Maybe [Celebrity])
+    , _rcrsOrientationCorrection :: !(Maybe OrientationCorrection)
+    , _rcrsUnrecognizedFaces     :: !(Maybe [ComparedFace])
+    , _rcrsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RecognizeCelebritiesResponse' with the minimum fields required to make a request.

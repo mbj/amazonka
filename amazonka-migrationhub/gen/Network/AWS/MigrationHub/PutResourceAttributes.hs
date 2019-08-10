@@ -53,12 +53,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putResourceAttributes' smart constructor.
-data PutResourceAttributes = PutResourceAttributes'
-  { _praDryRun                :: !(Maybe Bool)
-  , _praProgressUpdateStream  :: !Text
-  , _praMigrationTaskName     :: !Text
-  , _praResourceAttributeList :: !(List1 ResourceAttribute)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutResourceAttributes =
+  PutResourceAttributes'
+    { _praDryRun                :: !(Maybe Bool)
+    , _praProgressUpdateStream  :: !Text
+    , _praMigrationTaskName     :: !Text
+    , _praResourceAttributeList :: !(List1 ResourceAttribute)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutResourceAttributes' with the minimum fields required to make a request.
@@ -145,9 +147,11 @@ instance ToQuery PutResourceAttributes where
         toQuery = const mempty
 
 -- | /See:/ 'putResourceAttributesResponse' smart constructor.
-newtype PutResourceAttributesResponse = PutResourceAttributesResponse'
-  { _prarsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype PutResourceAttributesResponse =
+  PutResourceAttributesResponse'
+    { _prarsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutResourceAttributesResponse' with the minimum fields required to make a request.

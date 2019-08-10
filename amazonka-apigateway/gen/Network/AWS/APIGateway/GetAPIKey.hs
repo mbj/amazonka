@@ -57,10 +57,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getAPIKey' smart constructor.
-data GetAPIKey = GetAPIKey'
-  { _gakIncludeValue :: !(Maybe Bool)
-  , _gakApiKey       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetAPIKey =
+  GetAPIKey'
+    { _gakIncludeValue :: !(Maybe Bool)
+    , _gakApiKey       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetAPIKey' with the minimum fields required to make a request.

@@ -52,11 +52,13 @@ import Network.AWS.Route53.Types.Product
 --
 --
 -- /See:/ 'createTrafficPolicy' smart constructor.
-data CreateTrafficPolicy = CreateTrafficPolicy'
-  { _ctpComment  :: !(Maybe Text)
-  , _ctpName     :: !Text
-  , _ctpDocument :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateTrafficPolicy =
+  CreateTrafficPolicy'
+    { _ctpComment  :: !(Maybe Text)
+    , _ctpName     :: !Text
+    , _ctpDocument :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateTrafficPolicy' with the minimum fields required to make a request.
@@ -129,11 +131,13 @@ instance ToXML CreateTrafficPolicy where
 --
 --
 -- /See:/ 'createTrafficPolicyResponse' smart constructor.
-data CreateTrafficPolicyResponse = CreateTrafficPolicyResponse'
-  { _ctprsResponseStatus :: !Int
-  , _ctprsTrafficPolicy  :: !TrafficPolicy
-  , _ctprsLocation       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateTrafficPolicyResponse =
+  CreateTrafficPolicyResponse'
+    { _ctprsResponseStatus :: !Int
+    , _ctprsTrafficPolicy  :: !TrafficPolicy
+    , _ctprsLocation       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateTrafficPolicyResponse' with the minimum fields required to make a request.

@@ -52,11 +52,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'modifyVolumeAttribute' smart constructor.
-data ModifyVolumeAttribute = ModifyVolumeAttribute'
-  { _mvaAutoEnableIO :: !(Maybe AttributeBooleanValue)
-  , _mvaDryRun       :: !(Maybe Bool)
-  , _mvaVolumeId     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyVolumeAttribute =
+  ModifyVolumeAttribute'
+    { _mvaAutoEnableIO :: !(Maybe AttributeBooleanValue)
+    , _mvaDryRun       :: !(Maybe Bool)
+    , _mvaVolumeId     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyVolumeAttribute' with the minimum fields required to make a request.

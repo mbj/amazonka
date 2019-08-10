@@ -46,9 +46,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'rotateChannelCredentials' smart constructor.
-newtype RotateChannelCredentials = RotateChannelCredentials'
-  { _rccId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RotateChannelCredentials =
+  RotateChannelCredentials'
+    { _rccId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RotateChannelCredentials' with the minimum fields required to make a request.
@@ -101,13 +103,15 @@ instance ToQuery RotateChannelCredentials where
         toQuery = const mempty
 
 -- | /See:/ 'rotateChannelCredentialsResponse' smart constructor.
-data RotateChannelCredentialsResponse = RotateChannelCredentialsResponse'
-  { _rccrsHlsIngest      :: !(Maybe HlsIngest)
-  , _rccrsARN            :: !(Maybe Text)
-  , _rccrsId             :: !(Maybe Text)
-  , _rccrsDescription    :: !(Maybe Text)
-  , _rccrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RotateChannelCredentialsResponse =
+  RotateChannelCredentialsResponse'
+    { _rccrsHlsIngest      :: !(Maybe HlsIngest)
+    , _rccrsARN            :: !(Maybe Text)
+    , _rccrsId             :: !(Maybe Text)
+    , _rccrsDescription    :: !(Maybe Text)
+    , _rccrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RotateChannelCredentialsResponse' with the minimum fields required to make a request.

@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'initiateLayerUpload' smart constructor.
-data InitiateLayerUpload = InitiateLayerUpload'
-  { _iluRegistryId     :: !(Maybe Text)
-  , _iluRepositoryName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InitiateLayerUpload =
+  InitiateLayerUpload'
+    { _iluRegistryId     :: !(Maybe Text)
+    , _iluRepositoryName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InitiateLayerUpload' with the minimum fields required to make a request.
@@ -115,11 +117,13 @@ instance ToQuery InitiateLayerUpload where
         toQuery = const mempty
 
 -- | /See:/ 'initiateLayerUploadResponse' smart constructor.
-data InitiateLayerUploadResponse = InitiateLayerUploadResponse'
-  { _ilursPartSize       :: !(Maybe Nat)
-  , _ilursUploadId       :: !(Maybe Text)
-  , _ilursResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InitiateLayerUploadResponse =
+  InitiateLayerUploadResponse'
+    { _ilursPartSize       :: !(Maybe Nat)
+    , _ilursUploadId       :: !(Maybe Text)
+    , _ilursResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InitiateLayerUploadResponse' with the minimum fields required to make a request.

@@ -52,9 +52,11 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'deleteReceiptRuleSet' smart constructor.
-newtype DeleteReceiptRuleSet = DeleteReceiptRuleSet'
-  { _dRuleSetName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteReceiptRuleSet =
+  DeleteReceiptRuleSet'
+    { _dRuleSetName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteReceiptRuleSet' with the minimum fields required to make a request.
@@ -105,9 +107,11 @@ instance ToQuery DeleteReceiptRuleSet where
 --
 --
 -- /See:/ 'deleteReceiptRuleSetResponse' smart constructor.
-newtype DeleteReceiptRuleSetResponse = DeleteReceiptRuleSetResponse'
-  { _drrsrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteReceiptRuleSetResponse =
+  DeleteReceiptRuleSetResponse'
+    { _drrsrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteReceiptRuleSetResponse' with the minimum fields required to make a request.

@@ -27,12 +27,14 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'accessLog' smart constructor.
-data AccessLog = AccessLog'
-  { _alEmitInterval   :: !(Maybe Int)
-  , _alS3BucketPrefix :: !(Maybe Text)
-  , _alS3BucketName   :: !(Maybe Text)
-  , _alEnabled        :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AccessLog =
+  AccessLog'
+    { _alEmitInterval   :: !(Maybe Int)
+    , _alS3BucketPrefix :: !(Maybe Text)
+    , _alS3BucketName   :: !(Maybe Text)
+    , _alEnabled        :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AccessLog' with the minimum fields required to make a request.
@@ -98,10 +100,12 @@ instance ToQuery AccessLog where
 --
 --
 -- /See:/ 'additionalAttribute' smart constructor.
-data AdditionalAttribute = AdditionalAttribute'
-  { _aaValue :: !(Maybe Text)
-  , _aaKey   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AdditionalAttribute =
+  AdditionalAttribute'
+    { _aaValue :: !(Maybe Text)
+    , _aaKey   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AdditionalAttribute' with the minimum fields required to make a request.
@@ -143,10 +147,12 @@ instance ToQuery AdditionalAttribute where
 --
 --
 -- /See:/ 'appCookieStickinessPolicy' smart constructor.
-data AppCookieStickinessPolicy = AppCookieStickinessPolicy'
-  { _acspPolicyName :: !(Maybe Text)
-  , _acspCookieName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AppCookieStickinessPolicy =
+  AppCookieStickinessPolicy'
+    { _acspPolicyName :: !(Maybe Text)
+    , _acspCookieName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AppCookieStickinessPolicy' with the minimum fields required to make a request.
@@ -185,10 +191,12 @@ instance NFData AppCookieStickinessPolicy where
 --
 --
 -- /See:/ 'backendServerDescription' smart constructor.
-data BackendServerDescription = BackendServerDescription'
-  { _bsdPolicyNames  :: !(Maybe [Text])
-  , _bsdInstancePort :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BackendServerDescription =
+  BackendServerDescription'
+    { _bsdPolicyNames  :: !(Maybe [Text])
+    , _bsdInstancePort :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BackendServerDescription' with the minimum fields required to make a request.
@@ -229,10 +237,12 @@ instance NFData BackendServerDescription where
 --
 --
 -- /See:/ 'connectionDraining' smart constructor.
-data ConnectionDraining = ConnectionDraining'
-  { _cdTimeout :: !(Maybe Int)
-  , _cdEnabled :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ConnectionDraining =
+  ConnectionDraining'
+    { _cdTimeout :: !(Maybe Int)
+    , _cdEnabled :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ConnectionDraining' with the minimum fields required to make a request.
@@ -276,9 +286,11 @@ instance ToQuery ConnectionDraining where
 --
 --
 -- /See:/ 'connectionSettings' smart constructor.
-newtype ConnectionSettings = ConnectionSettings'
-  { _csIdleTimeout :: Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ConnectionSettings =
+  ConnectionSettings'
+    { _csIdleTimeout :: Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ConnectionSettings' with the minimum fields required to make a request.
@@ -314,9 +326,11 @@ instance ToQuery ConnectionSettings where
 --
 --
 -- /See:/ 'crossZoneLoadBalancing' smart constructor.
-newtype CrossZoneLoadBalancing = CrossZoneLoadBalancing'
-  { _czlbEnabled :: Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CrossZoneLoadBalancing =
+  CrossZoneLoadBalancing'
+    { _czlbEnabled :: Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CrossZoneLoadBalancing' with the minimum fields required to make a request.
@@ -352,13 +366,15 @@ instance ToQuery CrossZoneLoadBalancing where
 --
 --
 -- /See:/ 'healthCheck' smart constructor.
-data HealthCheck = HealthCheck'
-  { _hcTarget             :: !Text
-  , _hcInterval           :: !Nat
-  , _hcTimeout            :: !Nat
-  , _hcUnhealthyThreshold :: !Nat
-  , _hcHealthyThreshold   :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data HealthCheck =
+  HealthCheck'
+    { _hcTarget             :: !Text
+    , _hcInterval           :: !Nat
+    , _hcTimeout            :: !Nat
+    , _hcUnhealthyThreshold :: !Nat
+    , _hcHealthyThreshold   :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'HealthCheck' with the minimum fields required to make a request.
@@ -436,9 +452,11 @@ instance ToQuery HealthCheck where
 --
 --
 -- /See:/ 'instance'' smart constructor.
-newtype Instance = Instance'
-  { _iInstanceId :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype Instance =
+  Instance'
+    { _iInstanceId :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Instance' with the minimum fields required to make a request.
@@ -471,12 +489,14 @@ instance ToQuery Instance where
 --
 --
 -- /See:/ 'instanceState' smart constructor.
-data InstanceState = InstanceState'
-  { _isInstanceId  :: !(Maybe Text)
-  , _isState       :: !(Maybe Text)
-  , _isReasonCode  :: !(Maybe Text)
-  , _isDescription :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceState =
+  InstanceState'
+    { _isInstanceId  :: !(Maybe Text)
+    , _isState       :: !(Maybe Text)
+    , _isReasonCode  :: !(Maybe Text)
+    , _isDescription :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceState' with the minimum fields required to make a request.
@@ -533,10 +553,12 @@ instance NFData InstanceState where
 --
 --
 -- /See:/ 'lBCookieStickinessPolicy' smart constructor.
-data LBCookieStickinessPolicy = LBCookieStickinessPolicy'
-  { _lbcspPolicyName             :: !(Maybe Text)
-  , _lbcspCookieExpirationPeriod :: !(Maybe Integer)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LBCookieStickinessPolicy =
+  LBCookieStickinessPolicy'
+    { _lbcspPolicyName             :: !(Maybe Text)
+    , _lbcspCookieExpirationPeriod :: !(Maybe Integer)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LBCookieStickinessPolicy' with the minimum fields required to make a request.
@@ -576,10 +598,12 @@ instance NFData LBCookieStickinessPolicy where
 --
 --
 -- /See:/ 'limit' smart constructor.
-data Limit = Limit'
-  { _lMax  :: !(Maybe Text)
-  , _lName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Limit =
+  Limit'
+    { _lMax  :: !(Maybe Text)
+    , _lName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Limit' with the minimum fields required to make a request.
@@ -617,13 +641,15 @@ instance NFData Limit where
 --
 --
 -- /See:/ 'listener' smart constructor.
-data Listener = Listener'
-  { _lInstanceProtocol :: !(Maybe Text)
-  , _lSSLCertificateId :: !(Maybe Text)
-  , _lProtocol         :: !Text
-  , _lLoadBalancerPort :: !Int
-  , _lInstancePort     :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Listener =
+  Listener'
+    { _lInstanceProtocol :: !(Maybe Text)
+    , _lSSLCertificateId :: !(Maybe Text)
+    , _lProtocol         :: !Text
+    , _lLoadBalancerPort :: !Int
+    , _lInstancePort     :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Listener' with the minimum fields required to make a request.
@@ -701,10 +727,12 @@ instance ToQuery Listener where
 --
 --
 -- /See:/ 'listenerDescription' smart constructor.
-data ListenerDescription = ListenerDescription'
-  { _ldPolicyNames :: !(Maybe [Text])
-  , _ldListener    :: !(Maybe Listener)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListenerDescription =
+  ListenerDescription'
+    { _ldPolicyNames :: !(Maybe [Text])
+    , _ldListener    :: !(Maybe Listener)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListenerDescription' with the minimum fields required to make a request.
@@ -744,13 +772,15 @@ instance NFData ListenerDescription where
 --
 --
 -- /See:/ 'loadBalancerAttributes' smart constructor.
-data LoadBalancerAttributes = LoadBalancerAttributes'
-  { _lbaCrossZoneLoadBalancing :: !(Maybe CrossZoneLoadBalancing)
-  , _lbaAccessLog              :: !(Maybe AccessLog)
-  , _lbaAdditionalAttributes   :: !(Maybe [AdditionalAttribute])
-  , _lbaConnectionSettings     :: !(Maybe ConnectionSettings)
-  , _lbaConnectionDraining     :: !(Maybe ConnectionDraining)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LoadBalancerAttributes =
+  LoadBalancerAttributes'
+    { _lbaCrossZoneLoadBalancing :: !(Maybe CrossZoneLoadBalancing)
+    , _lbaAccessLog              :: !(Maybe AccessLog)
+    , _lbaAdditionalAttributes   :: !(Maybe [AdditionalAttribute])
+    , _lbaConnectionSettings     :: !(Maybe ConnectionSettings)
+    , _lbaConnectionDraining     :: !(Maybe ConnectionDraining)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LoadBalancerAttributes' with the minimum fields required to make a request.
@@ -830,24 +860,26 @@ instance ToQuery LoadBalancerAttributes where
 --
 --
 -- /See:/ 'loadBalancerDescription' smart constructor.
-data LoadBalancerDescription = LoadBalancerDescription'
-  { _lbdSourceSecurityGroup       :: !(Maybe SourceSecurityGroup)
-  , _lbdCanonicalHostedZoneName   :: !(Maybe Text)
-  , _lbdSecurityGroups            :: !(Maybe [Text])
-  , _lbdHealthCheck               :: !(Maybe HealthCheck)
-  , _lbdLoadBalancerName          :: !(Maybe Text)
-  , _lbdCreatedTime               :: !(Maybe ISO8601)
-  , _lbdVPCId                     :: !(Maybe Text)
-  , _lbdSubnets                   :: !(Maybe [Text])
-  , _lbdAvailabilityZones         :: !(Maybe [Text])
-  , _lbdBackendServerDescriptions :: !(Maybe [BackendServerDescription])
-  , _lbdCanonicalHostedZoneNameId :: !(Maybe Text)
-  , _lbdInstances                 :: !(Maybe [Instance])
-  , _lbdScheme                    :: !(Maybe Text)
-  , _lbdListenerDescriptions      :: !(Maybe [ListenerDescription])
-  , _lbdDNSName                   :: !(Maybe Text)
-  , _lbdPolicies                  :: !(Maybe Policies)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LoadBalancerDescription =
+  LoadBalancerDescription'
+    { _lbdSourceSecurityGroup       :: !(Maybe SourceSecurityGroup)
+    , _lbdCanonicalHostedZoneName   :: !(Maybe Text)
+    , _lbdSecurityGroups            :: !(Maybe [Text])
+    , _lbdHealthCheck               :: !(Maybe HealthCheck)
+    , _lbdLoadBalancerName          :: !(Maybe Text)
+    , _lbdCreatedTime               :: !(Maybe ISO8601)
+    , _lbdVPCId                     :: !(Maybe Text)
+    , _lbdSubnets                   :: !(Maybe [Text])
+    , _lbdAvailabilityZones         :: !(Maybe [Text])
+    , _lbdBackendServerDescriptions :: !(Maybe [BackendServerDescription])
+    , _lbdCanonicalHostedZoneNameId :: !(Maybe Text)
+    , _lbdInstances                 :: !(Maybe [Instance])
+    , _lbdScheme                    :: !(Maybe Text)
+    , _lbdListenerDescriptions      :: !(Maybe [ListenerDescription])
+    , _lbdDNSName                   :: !(Maybe Text)
+    , _lbdPolicies                  :: !(Maybe Policies)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LoadBalancerDescription' with the minimum fields required to make a request.
@@ -1013,11 +1045,13 @@ instance NFData LoadBalancerDescription where
 --
 --
 -- /See:/ 'policies' smart constructor.
-data Policies = Policies'
-  { _pOtherPolicies               :: !(Maybe [Text])
-  , _pLBCookieStickinessPolicies  :: !(Maybe [LBCookieStickinessPolicy])
-  , _pAppCookieStickinessPolicies :: !(Maybe [AppCookieStickinessPolicy])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Policies =
+  Policies'
+    { _pOtherPolicies               :: !(Maybe [Text])
+    , _pLBCookieStickinessPolicies  :: !(Maybe [LBCookieStickinessPolicy])
+    , _pAppCookieStickinessPolicies :: !(Maybe [AppCookieStickinessPolicy])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Policies' with the minimum fields required to make a request.
@@ -1072,10 +1106,12 @@ instance NFData Policies where
 --
 --
 -- /See:/ 'policyAttribute' smart constructor.
-data PolicyAttribute = PolicyAttribute'
-  { _paAttributeValue :: !(Maybe Text)
-  , _paAttributeName  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PolicyAttribute =
+  PolicyAttribute'
+    { _paAttributeValue :: !(Maybe Text)
+    , _paAttributeName  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PolicyAttribute' with the minimum fields required to make a request.
@@ -1114,10 +1150,12 @@ instance ToQuery PolicyAttribute where
 --
 --
 -- /See:/ 'policyAttributeDescription' smart constructor.
-data PolicyAttributeDescription = PolicyAttributeDescription'
-  { _padAttributeValue :: !(Maybe Text)
-  , _padAttributeName  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PolicyAttributeDescription =
+  PolicyAttributeDescription'
+    { _padAttributeValue :: !(Maybe Text)
+    , _padAttributeName  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PolicyAttributeDescription' with the minimum fields required to make a request.
@@ -1156,13 +1194,15 @@ instance NFData PolicyAttributeDescription where
 --
 --
 -- /See:/ 'policyAttributeTypeDescription' smart constructor.
-data PolicyAttributeTypeDescription = PolicyAttributeTypeDescription'
-  { _patdAttributeType :: !(Maybe Text)
-  , _patdCardinality   :: !(Maybe Text)
-  , _patdDefaultValue  :: !(Maybe Text)
-  , _patdAttributeName :: !(Maybe Text)
-  , _patdDescription   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PolicyAttributeTypeDescription =
+  PolicyAttributeTypeDescription'
+    { _patdAttributeType :: !(Maybe Text)
+    , _patdCardinality   :: !(Maybe Text)
+    , _patdDefaultValue  :: !(Maybe Text)
+    , _patdAttributeName :: !(Maybe Text)
+    , _patdDescription   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PolicyAttributeTypeDescription' with the minimum fields required to make a request.
@@ -1228,11 +1268,13 @@ instance NFData PolicyAttributeTypeDescription where
 --
 --
 -- /See:/ 'policyDescription' smart constructor.
-data PolicyDescription = PolicyDescription'
-  { _pdPolicyName                  :: !(Maybe Text)
-  , _pdPolicyAttributeDescriptions :: !(Maybe [PolicyAttributeDescription])
-  , _pdPolicyTypeName              :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PolicyDescription =
+  PolicyDescription'
+    { _pdPolicyName                  :: !(Maybe Text)
+    , _pdPolicyAttributeDescriptions :: !(Maybe [PolicyAttributeDescription])
+    , _pdPolicyTypeName              :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PolicyDescription' with the minimum fields required to make a request.
@@ -1283,11 +1325,13 @@ instance NFData PolicyDescription where
 --
 --
 -- /See:/ 'policyTypeDescription' smart constructor.
-data PolicyTypeDescription = PolicyTypeDescription'
-  { _ptdPolicyTypeName :: !(Maybe Text)
-  , _ptdDescription :: !(Maybe Text)
-  , _ptdPolicyAttributeTypeDescriptions :: !(Maybe [PolicyAttributeTypeDescription])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PolicyTypeDescription =
+  PolicyTypeDescription'
+    { _ptdPolicyTypeName :: !(Maybe Text)
+    , _ptdDescription :: !(Maybe Text)
+    , _ptdPolicyAttributeTypeDescriptions :: !(Maybe [PolicyAttributeTypeDescription])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PolicyTypeDescription' with the minimum fields required to make a request.
@@ -1338,10 +1382,12 @@ instance NFData PolicyTypeDescription where
 --
 --
 -- /See:/ 'sourceSecurityGroup' smart constructor.
-data SourceSecurityGroup = SourceSecurityGroup'
-  { _ssgOwnerAlias :: !(Maybe Text)
-  , _ssgGroupName  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SourceSecurityGroup =
+  SourceSecurityGroup'
+    { _ssgOwnerAlias :: !(Maybe Text)
+    , _ssgGroupName  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SourceSecurityGroup' with the minimum fields required to make a request.
@@ -1379,10 +1425,12 @@ instance NFData SourceSecurityGroup where
 --
 --
 -- /See:/ 'tag' smart constructor.
-data Tag = Tag'
-  { _tagValue :: !(Maybe Text)
-  , _tagKey   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Tag =
+  Tag'
+    { _tagValue :: !(Maybe Text)
+    , _tagKey   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Tag' with the minimum fields required to make a request.
@@ -1423,10 +1471,12 @@ instance ToQuery Tag where
 --
 --
 -- /See:/ 'tagDescription' smart constructor.
-data TagDescription = TagDescription'
-  { _tdLoadBalancerName :: !(Maybe Text)
-  , _tdTags             :: !(Maybe (List1 Tag))
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TagDescription =
+  TagDescription'
+    { _tdLoadBalancerName :: !(Maybe Text)
+    , _tdTags             :: !(Maybe (List1 Tag))
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TagDescription' with the minimum fields required to make a request.
@@ -1466,9 +1516,11 @@ instance NFData TagDescription where
 --
 --
 -- /See:/ 'tagKeyOnly' smart constructor.
-newtype TagKeyOnly = TagKeyOnly'
-  { _tkoKey :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype TagKeyOnly =
+  TagKeyOnly'
+    { _tkoKey :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TagKeyOnly' with the minimum fields required to make a request.

@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteFpgaImage' smart constructor.
-data DeleteFpgaImage = DeleteFpgaImage'
-  { _dfiDryRun      :: !(Maybe Bool)
-  , _dfiFpgaImageId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteFpgaImage =
+  DeleteFpgaImage'
+    { _dfiDryRun      :: !(Maybe Bool)
+    , _dfiFpgaImageId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteFpgaImage' with the minimum fields required to make a request.
@@ -102,10 +104,12 @@ instance ToQuery DeleteFpgaImage where
                "FpgaImageId" =: _dfiFpgaImageId]
 
 -- | /See:/ 'deleteFpgaImageResponse' smart constructor.
-data DeleteFpgaImageResponse = DeleteFpgaImageResponse'
-  { _delrsReturn         :: !(Maybe Bool)
-  , _delrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteFpgaImageResponse =
+  DeleteFpgaImageResponse'
+    { _delrsReturn         :: !(Maybe Bool)
+    , _delrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteFpgaImageResponse' with the minimum fields required to make a request.

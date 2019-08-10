@@ -54,13 +54,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getProducts' smart constructor.
-data GetProducts = GetProducts'
-  { _gpFilters       :: !(Maybe [Filter])
-  , _gpFormatVersion :: !(Maybe Text)
-  , _gpNextToken     :: !(Maybe Text)
-  , _gpServiceCode   :: !(Maybe Text)
-  , _gpMaxResults    :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetProducts =
+  GetProducts'
+    { _gpFilters       :: !(Maybe [Filter])
+    , _gpFormatVersion :: !(Maybe Text)
+    , _gpNextToken     :: !(Maybe Text)
+    , _gpServiceCode   :: !(Maybe Text)
+    , _gpMaxResults    :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetProducts' with the minimum fields required to make a request.
@@ -156,12 +158,14 @@ instance ToQuery GetProducts where
         toQuery = const mempty
 
 -- | /See:/ 'getProductsResponse' smart constructor.
-data GetProductsResponse = GetProductsResponse'
-  { _gprsFormatVersion  :: !(Maybe Text)
-  , _gprsNextToken      :: !(Maybe Text)
-  , _gprsPriceList      :: !(Maybe [Text])
-  , _gprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetProductsResponse =
+  GetProductsResponse'
+    { _gprsFormatVersion  :: !(Maybe Text)
+    , _gprsNextToken      :: !(Maybe Text)
+    , _gprsPriceList      :: !(Maybe [Text])
+    , _gprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetProductsResponse' with the minimum fields required to make a request.

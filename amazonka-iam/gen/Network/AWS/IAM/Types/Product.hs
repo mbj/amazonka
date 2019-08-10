@@ -28,13 +28,15 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'accessKeyInfo' smart constructor.
-data AccessKeyInfo = AccessKeyInfo'
-  { _akiCreateDate      :: !(Maybe ISO8601)
-  , _akiUserName        :: !Text
-  , _akiAccessKeyId     :: !AccessKey
-  , _akiStatus          :: !StatusType
-  , _akiSecretAccessKey :: !(Sensitive Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data AccessKeyInfo =
+  AccessKeyInfo'
+    { _akiCreateDate      :: !(Maybe ISO8601)
+    , _akiUserName        :: !Text
+    , _akiAccessKeyId     :: !AccessKey
+    , _akiStatus          :: !StatusType
+    , _akiSecretAccessKey :: !(Sensitive Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AccessKeyInfo' with the minimum fields required to make a request.
@@ -105,11 +107,13 @@ instance NFData AccessKeyInfo where
 --
 --
 -- /See:/ 'accessKeyLastUsed' smart constructor.
-data AccessKeyLastUsed = AccessKeyLastUsed'
-  { _akluLastUsedDate :: !ISO8601
-  , _akluServiceName  :: !Text
-  , _akluRegion       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AccessKeyLastUsed =
+  AccessKeyLastUsed'
+    { _akluLastUsedDate :: !ISO8601
+    , _akluServiceName  :: !Text
+    , _akluRegion       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AccessKeyLastUsed' with the minimum fields required to make a request.
@@ -163,12 +167,14 @@ instance NFData AccessKeyLastUsed where
 --
 --
 -- /See:/ 'accessKeyMetadata' smart constructor.
-data AccessKeyMetadata = AccessKeyMetadata'
-  { _akmStatus      :: !(Maybe StatusType)
-  , _akmCreateDate  :: !(Maybe ISO8601)
-  , _akmUserName    :: !(Maybe Text)
-  , _akmAccessKeyId :: !(Maybe AccessKey)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AccessKeyMetadata =
+  AccessKeyMetadata'
+    { _akmStatus      :: !(Maybe StatusType)
+    , _akmCreateDate  :: !(Maybe ISO8601)
+    , _akmUserName    :: !(Maybe Text)
+    , _akmAccessKeyId :: !(Maybe AccessKey)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AccessKeyMetadata' with the minimum fields required to make a request.
@@ -229,10 +235,12 @@ instance NFData AccessKeyMetadata where
 --
 --
 -- /See:/ 'attachedPolicy' smart constructor.
-data AttachedPolicy = AttachedPolicy'
-  { _apPolicyName :: !(Maybe Text)
-  , _apPolicyARN  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AttachedPolicy =
+  AttachedPolicy'
+    { _apPolicyName :: !(Maybe Text)
+    , _apPolicyARN  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttachedPolicy' with the minimum fields required to make a request.
@@ -272,11 +280,13 @@ instance NFData AttachedPolicy where
 --
 --
 -- /See:/ 'contextEntry' smart constructor.
-data ContextEntry = ContextEntry'
-  { _ceContextKeyValues :: !(Maybe [Text])
-  , _ceContextKeyName   :: !(Maybe Text)
-  , _ceContextKeyType   :: !(Maybe ContextKeyTypeEnum)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ContextEntry =
+  ContextEntry'
+    { _ceContextKeyValues :: !(Maybe [Text])
+    , _ceContextKeyName   :: !(Maybe Text)
+    , _ceContextKeyType   :: !(Maybe ContextKeyTypeEnum)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ContextEntry' with the minimum fields required to make a request.
@@ -330,10 +340,12 @@ instance ToQuery ContextEntry where
 --
 --
 -- /See:/ 'deletionTaskFailureReasonType' smart constructor.
-data DeletionTaskFailureReasonType = DeletionTaskFailureReasonType'
-  { _dtfrtRoleUsageList :: !(Maybe [RoleUsageType])
-  , _dtfrtReason        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeletionTaskFailureReasonType =
+  DeletionTaskFailureReasonType'
+    { _dtfrtRoleUsageList :: !(Maybe [RoleUsageType])
+    , _dtfrtReason        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeletionTaskFailureReasonType' with the minimum fields required to make a request.
@@ -376,16 +388,18 @@ instance NFData DeletionTaskFailureReasonType where
 --
 --
 -- /See:/ 'evaluationResult' smart constructor.
-data EvaluationResult = EvaluationResult'
-  { _erMatchedStatements :: !(Maybe [Statement])
-  , _erEvalDecisionDetails :: !(Maybe (Map Text PolicyEvaluationDecisionType))
-  , _erResourceSpecificResults :: !(Maybe [ResourceSpecificResult])
-  , _erEvalResourceName :: !(Maybe Text)
-  , _erMissingContextValues :: !(Maybe [Text])
-  , _erOrganizationsDecisionDetail :: !(Maybe OrganizationsDecisionDetail)
-  , _erEvalActionName :: !Text
-  , _erEvalDecision :: !PolicyEvaluationDecisionType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EvaluationResult =
+  EvaluationResult'
+    { _erMatchedStatements :: !(Maybe [Statement])
+    , _erEvalDecisionDetails :: !(Maybe (Map Text PolicyEvaluationDecisionType))
+    , _erResourceSpecificResults :: !(Maybe [ResourceSpecificResult])
+    , _erEvalResourceName :: !(Maybe Text)
+    , _erMissingContextValues :: !(Maybe [Text])
+    , _erOrganizationsDecisionDetail :: !(Maybe OrganizationsDecisionDetail)
+    , _erEvalActionName :: !Text
+    , _erEvalDecision :: !PolicyEvaluationDecisionType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EvaluationResult' with the minimum fields required to make a request.
@@ -484,9 +498,11 @@ instance NFData EvaluationResult where
 --
 --
 -- /See:/ 'getContextKeysForPolicyResponse' smart constructor.
-newtype GetContextKeysForPolicyResponse = GetContextKeysForPolicyResponse'
-  { _gckfpContextKeyNames :: Maybe [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetContextKeysForPolicyResponse =
+  GetContextKeysForPolicyResponse'
+    { _gckfpContextKeyNames :: Maybe [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetContextKeysForPolicyResponse' with the minimum fields required to make a request.
@@ -531,13 +547,15 @@ instance NFData GetContextKeysForPolicyResponse where
 --
 --
 -- /See:/ 'group'' smart constructor.
-data Group = Group'
-  { _gPath       :: !Text
-  , _gGroupName  :: !Text
-  , _gGroupId    :: !Text
-  , _gARN        :: !Text
-  , _gCreateDate :: !ISO8601
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Group =
+  Group'
+    { _gPath       :: !Text
+    , _gGroupName  :: !Text
+    , _gGroupId    :: !Text
+    , _gARN        :: !Text
+    , _gCreateDate :: !ISO8601
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Group' with the minimum fields required to make a request.
@@ -609,15 +627,17 @@ instance NFData Group where
 --
 --
 -- /See:/ 'groupDetail' smart constructor.
-data GroupDetail = GroupDetail'
-  { _gdARN                     :: !(Maybe Text)
-  , _gdPath                    :: !(Maybe Text)
-  , _gdCreateDate              :: !(Maybe ISO8601)
-  , _gdGroupId                 :: !(Maybe Text)
-  , _gdGroupPolicyList         :: !(Maybe [PolicyDetail])
-  , _gdGroupName               :: !(Maybe Text)
-  , _gdAttachedManagedPolicies :: !(Maybe [AttachedPolicy])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GroupDetail =
+  GroupDetail'
+    { _gdARN                     :: !(Maybe Text)
+    , _gdPath                    :: !(Maybe Text)
+    , _gdCreateDate              :: !(Maybe ISO8601)
+    , _gdGroupId                 :: !(Maybe Text)
+    , _gdGroupPolicyList         :: !(Maybe [PolicyDetail])
+    , _gdGroupName               :: !(Maybe Text)
+    , _gdAttachedManagedPolicies :: !(Maybe [AttachedPolicy])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GroupDetail' with the minimum fields required to make a request.
@@ -714,14 +734,16 @@ instance NFData GroupDetail where
 --
 --
 -- /See:/ 'instanceProfile' smart constructor.
-data InstanceProfile = InstanceProfile'
-  { _ipPath                :: !Text
-  , _ipInstanceProfileName :: !Text
-  , _ipInstanceProfileId   :: !Text
-  , _ipARN                 :: !Text
-  , _ipCreateDate          :: !ISO8601
-  , _ipRoles               :: ![Role]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceProfile =
+  InstanceProfile'
+    { _ipPath                :: !Text
+    , _ipInstanceProfileName :: !Text
+    , _ipInstanceProfileId   :: !Text
+    , _ipARN                 :: !Text
+    , _ipCreateDate          :: !ISO8601
+    , _ipRoles               :: ![Role]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceProfile' with the minimum fields required to make a request.
@@ -802,11 +824,13 @@ instance NFData InstanceProfile where
 --
 --
 -- /See:/ 'loginProfile' smart constructor.
-data LoginProfile = LoginProfile'
-  { _lpPasswordResetRequired :: !(Maybe Bool)
-  , _lpUserName              :: !Text
-  , _lpCreateDate            :: !ISO8601
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LoginProfile =
+  LoginProfile'
+    { _lpPasswordResetRequired :: !(Maybe Bool)
+    , _lpUserName              :: !Text
+    , _lpCreateDate            :: !ISO8601
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LoginProfile' with the minimum fields required to make a request.
@@ -859,11 +883,13 @@ instance NFData LoginProfile where
 --
 --
 -- /See:/ 'mfaDevice' smart constructor.
-data MFADevice = MFADevice'
-  { _mdUserName     :: !Text
-  , _mdSerialNumber :: !Text
-  , _mdEnableDate   :: !ISO8601
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MFADevice =
+  MFADevice'
+    { _mdUserName     :: !Text
+    , _mdSerialNumber :: !Text
+    , _mdEnableDate   :: !ISO8601
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MFADevice' with the minimum fields required to make a request.
@@ -919,19 +945,21 @@ instance NFData MFADevice where
 --
 --
 -- /See:/ 'managedPolicyDetail' smart constructor.
-data ManagedPolicyDetail = ManagedPolicyDetail'
-  { _mpdPolicyName        :: !(Maybe Text)
-  , _mpdARN               :: !(Maybe Text)
-  , _mpdUpdateDate        :: !(Maybe ISO8601)
-  , _mpdPolicyId          :: !(Maybe Text)
-  , _mpdPath              :: !(Maybe Text)
-  , _mpdPolicyVersionList :: !(Maybe [PolicyVersion])
-  , _mpdCreateDate        :: !(Maybe ISO8601)
-  , _mpdIsAttachable      :: !(Maybe Bool)
-  , _mpdDefaultVersionId  :: !(Maybe Text)
-  , _mpdAttachmentCount   :: !(Maybe Int)
-  , _mpdDescription       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ManagedPolicyDetail =
+  ManagedPolicyDetail'
+    { _mpdPolicyName        :: !(Maybe Text)
+    , _mpdARN               :: !(Maybe Text)
+    , _mpdUpdateDate        :: !(Maybe ISO8601)
+    , _mpdPolicyId          :: !(Maybe Text)
+    , _mpdPath              :: !(Maybe Text)
+    , _mpdPolicyVersionList :: !(Maybe [PolicyVersion])
+    , _mpdCreateDate        :: !(Maybe ISO8601)
+    , _mpdIsAttachable      :: !(Maybe Bool)
+    , _mpdDefaultVersionId  :: !(Maybe Text)
+    , _mpdAttachmentCount   :: !(Maybe Int)
+    , _mpdDescription       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ManagedPolicyDetail' with the minimum fields required to make a request.
@@ -1046,9 +1074,11 @@ instance NFData ManagedPolicyDetail where
 --
 --
 -- /See:/ 'openIdConnectProviderListEntry' smart constructor.
-newtype OpenIdConnectProviderListEntry = OpenIdConnectProviderListEntry'
-  { _oicpleARN :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype OpenIdConnectProviderListEntry =
+  OpenIdConnectProviderListEntry'
+    { _oicpleARN :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OpenIdConnectProviderListEntry' with the minimum fields required to make a request.
@@ -1080,9 +1110,11 @@ instance NFData OpenIdConnectProviderListEntry where
 --
 --
 -- /See:/ 'organizationsDecisionDetail' smart constructor.
-newtype OrganizationsDecisionDetail = OrganizationsDecisionDetail'
-  { _oddAllowedByOrganizations :: Maybe Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype OrganizationsDecisionDetail =
+  OrganizationsDecisionDetail'
+    { _oddAllowedByOrganizations :: Maybe Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OrganizationsDecisionDetail' with the minimum fields required to make a request.
@@ -1116,18 +1148,20 @@ instance NFData OrganizationsDecisionDetail where
 --
 --
 -- /See:/ 'passwordPolicy' smart constructor.
-data PasswordPolicy = PasswordPolicy'
-  { _ppExpirePasswords            :: !(Maybe Bool)
-  , _ppMinimumPasswordLength      :: !(Maybe Nat)
-  , _ppRequireNumbers             :: !(Maybe Bool)
-  , _ppPasswordReusePrevention    :: !(Maybe Nat)
-  , _ppRequireLowercaseCharacters :: !(Maybe Bool)
-  , _ppMaxPasswordAge             :: !(Maybe Nat)
-  , _ppHardExpiry                 :: !(Maybe Bool)
-  , _ppRequireSymbols             :: !(Maybe Bool)
-  , _ppRequireUppercaseCharacters :: !(Maybe Bool)
-  , _ppAllowUsersToChangePassword :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PasswordPolicy =
+  PasswordPolicy'
+    { _ppExpirePasswords            :: !(Maybe Bool)
+    , _ppMinimumPasswordLength      :: !(Maybe Nat)
+    , _ppRequireNumbers             :: !(Maybe Bool)
+    , _ppPasswordReusePrevention    :: !(Maybe Nat)
+    , _ppRequireLowercaseCharacters :: !(Maybe Bool)
+    , _ppMaxPasswordAge             :: !(Maybe Nat)
+    , _ppHardExpiry                 :: !(Maybe Bool)
+    , _ppRequireSymbols             :: !(Maybe Bool)
+    , _ppRequireUppercaseCharacters :: !(Maybe Bool)
+    , _ppAllowUsersToChangePassword :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PasswordPolicy' with the minimum fields required to make a request.
@@ -1237,18 +1271,20 @@ instance NFData PasswordPolicy where
 --
 --
 -- /See:/ 'policy' smart constructor.
-data Policy = Policy'
-  { _pPolicyName       :: !(Maybe Text)
-  , _pARN              :: !(Maybe Text)
-  , _pUpdateDate       :: !(Maybe ISO8601)
-  , _pPolicyId         :: !(Maybe Text)
-  , _pPath             :: !(Maybe Text)
-  , _pCreateDate       :: !(Maybe ISO8601)
-  , _pIsAttachable     :: !(Maybe Bool)
-  , _pDefaultVersionId :: !(Maybe Text)
-  , _pAttachmentCount  :: !(Maybe Int)
-  , _pDescription      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Policy =
+  Policy'
+    { _pPolicyName       :: !(Maybe Text)
+    , _pARN              :: !(Maybe Text)
+    , _pUpdateDate       :: !(Maybe ISO8601)
+    , _pPolicyId         :: !(Maybe Text)
+    , _pPath             :: !(Maybe Text)
+    , _pCreateDate       :: !(Maybe ISO8601)
+    , _pIsAttachable     :: !(Maybe Bool)
+    , _pDefaultVersionId :: !(Maybe Text)
+    , _pAttachmentCount  :: !(Maybe Int)
+    , _pDescription      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Policy' with the minimum fields required to make a request.
@@ -1355,10 +1391,12 @@ instance NFData Policy where
 --
 --
 -- /See:/ 'policyDetail' smart constructor.
-data PolicyDetail = PolicyDetail'
-  { _pdPolicyDocument :: !(Maybe Text)
-  , _pdPolicyName     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PolicyDetail =
+  PolicyDetail'
+    { _pdPolicyDocument :: !(Maybe Text)
+    , _pdPolicyName     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PolicyDetail' with the minimum fields required to make a request.
@@ -1400,10 +1438,12 @@ instance NFData PolicyDetail where
 --
 --
 -- /See:/ 'policyGroup' smart constructor.
-data PolicyGroup = PolicyGroup'
-  { _pgGroupId   :: !(Maybe Text)
-  , _pgGroupName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PolicyGroup =
+  PolicyGroup'
+    { _pgGroupId   :: !(Maybe Text)
+    , _pgGroupName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PolicyGroup' with the minimum fields required to make a request.
@@ -1444,10 +1484,12 @@ instance NFData PolicyGroup where
 --
 --
 -- /See:/ 'policyRole' smart constructor.
-data PolicyRole = PolicyRole'
-  { _prRoleName :: !(Maybe Text)
-  , _prRoleId   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PolicyRole =
+  PolicyRole'
+    { _prRoleName :: !(Maybe Text)
+    , _prRoleId   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PolicyRole' with the minimum fields required to make a request.
@@ -1488,10 +1530,12 @@ instance NFData PolicyRole where
 --
 --
 -- /See:/ 'policyUser' smart constructor.
-data PolicyUser = PolicyUser'
-  { _puUserName :: !(Maybe Text)
-  , _puUserId   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PolicyUser =
+  PolicyUser'
+    { _puUserName :: !(Maybe Text)
+    , _puUserId   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PolicyUser' with the minimum fields required to make a request.
@@ -1532,12 +1576,14 @@ instance NFData PolicyUser where
 --
 --
 -- /See:/ 'policyVersion' smart constructor.
-data PolicyVersion = PolicyVersion'
-  { _pvVersionId        :: !(Maybe Text)
-  , _pvCreateDate       :: !(Maybe ISO8601)
-  , _pvDocument         :: !(Maybe Text)
-  , _pvIsDefaultVersion :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PolicyVersion =
+  PolicyVersion'
+    { _pvVersionId        :: !(Maybe Text)
+    , _pvCreateDate       :: !(Maybe ISO8601)
+    , _pvDocument         :: !(Maybe Text)
+    , _pvIsDefaultVersion :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PolicyVersion' with the minimum fields required to make a request.
@@ -1596,10 +1642,12 @@ instance NFData PolicyVersion where
 --
 --
 -- /See:/ 'position' smart constructor.
-data Position = Position'
-  { _pLine   :: !(Maybe Int)
-  , _pColumn :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Position =
+  Position'
+    { _pLine   :: !(Maybe Int)
+    , _pColumn :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Position' with the minimum fields required to make a request.
@@ -1637,13 +1685,15 @@ instance NFData Position where
 --
 --
 -- /See:/ 'resourceSpecificResult' smart constructor.
-data ResourceSpecificResult = ResourceSpecificResult'
-  { _rsrMatchedStatements    :: !(Maybe [Statement])
-  , _rsrEvalDecisionDetails  :: !(Maybe (Map Text PolicyEvaluationDecisionType))
-  , _rsrMissingContextValues :: !(Maybe [Text])
-  , _rsrEvalResourceName     :: !Text
-  , _rsrEvalResourceDecision :: !PolicyEvaluationDecisionType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResourceSpecificResult =
+  ResourceSpecificResult'
+    { _rsrMatchedStatements :: !(Maybe [Statement])
+    , _rsrEvalDecisionDetails :: !(Maybe (Map Text PolicyEvaluationDecisionType))
+    , _rsrMissingContextValues :: !(Maybe [Text])
+    , _rsrEvalResourceName :: !Text
+    , _rsrEvalResourceDecision :: !PolicyEvaluationDecisionType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResourceSpecificResult' with the minimum fields required to make a request.
@@ -1716,16 +1766,18 @@ instance NFData ResourceSpecificResult where
 --
 --
 -- /See:/ 'role'' smart constructor.
-data Role = Role'
-  { _rMaxSessionDuration       :: !(Maybe Nat)
-  , _rAssumeRolePolicyDocument :: !(Maybe Text)
-  , _rDescription              :: !(Maybe Text)
-  , _rPath                     :: !Text
-  , _rRoleName                 :: !Text
-  , _rRoleId                   :: !Text
-  , _rARN                      :: !Text
-  , _rCreateDate               :: !ISO8601
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Role =
+  Role'
+    { _rMaxSessionDuration       :: !(Maybe Nat)
+    , _rAssumeRolePolicyDocument :: !(Maybe Text)
+    , _rDescription              :: !(Maybe Text)
+    , _rPath                     :: !Text
+    , _rRoleName                 :: !Text
+    , _rRoleId                   :: !Text
+    , _rARN                      :: !Text
+    , _rCreateDate               :: !ISO8601
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Role' with the minimum fields required to make a request.
@@ -1822,17 +1874,19 @@ instance NFData Role where
 --
 --
 -- /See:/ 'roleDetail' smart constructor.
-data RoleDetail = RoleDetail'
-  { _rdAssumeRolePolicyDocument :: !(Maybe Text)
-  , _rdARN                      :: !(Maybe Text)
-  , _rdPath                     :: !(Maybe Text)
-  , _rdInstanceProfileList      :: !(Maybe [InstanceProfile])
-  , _rdCreateDate               :: !(Maybe ISO8601)
-  , _rdRoleName                 :: !(Maybe Text)
-  , _rdRoleId                   :: !(Maybe Text)
-  , _rdRolePolicyList           :: !(Maybe [PolicyDetail])
-  , _rdAttachedManagedPolicies  :: !(Maybe [AttachedPolicy])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RoleDetail =
+  RoleDetail'
+    { _rdAssumeRolePolicyDocument :: !(Maybe Text)
+    , _rdARN                      :: !(Maybe Text)
+    , _rdPath                     :: !(Maybe Text)
+    , _rdInstanceProfileList      :: !(Maybe [InstanceProfile])
+    , _rdCreateDate               :: !(Maybe ISO8601)
+    , _rdRoleName                 :: !(Maybe Text)
+    , _rdRoleId                   :: !(Maybe Text)
+    , _rdRolePolicyList           :: !(Maybe [PolicyDetail])
+    , _rdAttachedManagedPolicies  :: !(Maybe [AttachedPolicy])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RoleDetail' with the minimum fields required to make a request.
@@ -1937,10 +1991,12 @@ instance NFData RoleDetail where
 --
 --
 -- /See:/ 'roleUsageType' smart constructor.
-data RoleUsageType = RoleUsageType'
-  { _rutResources :: !(Maybe [Text])
-  , _rutRegion    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RoleUsageType =
+  RoleUsageType'
+    { _rutResources :: !(Maybe [Text])
+    , _rutRegion    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RoleUsageType' with the minimum fields required to make a request.
@@ -1979,11 +2035,13 @@ instance NFData RoleUsageType where
 --
 --
 -- /See:/ 'sAMLProviderListEntry' smart constructor.
-data SAMLProviderListEntry = SAMLProviderListEntry'
-  { _samlpleARN        :: !(Maybe Text)
-  , _samlpleCreateDate :: !(Maybe ISO8601)
-  , _samlpleValidUntil :: !(Maybe ISO8601)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SAMLProviderListEntry =
+  SAMLProviderListEntry'
+    { _samlpleARN        :: !(Maybe Text)
+    , _samlpleCreateDate :: !(Maybe ISO8601)
+    , _samlpleValidUntil :: !(Maybe ISO8601)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SAMLProviderListEntry' with the minimum fields required to make a request.
@@ -2034,14 +2092,16 @@ instance NFData SAMLProviderListEntry where
 --
 --
 -- /See:/ 'sshPublicKey' smart constructor.
-data SSHPublicKey = SSHPublicKey'
-  { _spkUploadDate       :: !(Maybe ISO8601)
-  , _spkUserName         :: !Text
-  , _spkSSHPublicKeyId   :: !Text
-  , _spkFingerprint      :: !Text
-  , _spkSSHPublicKeyBody :: !Text
-  , _spkStatus           :: !StatusType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SSHPublicKey =
+  SSHPublicKey'
+    { _spkUploadDate       :: !(Maybe ISO8601)
+    , _spkUserName         :: !Text
+    , _spkSSHPublicKeyId   :: !Text
+    , _spkFingerprint      :: !Text
+    , _spkSSHPublicKeyBody :: !Text
+    , _spkStatus           :: !StatusType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SSHPublicKey' with the minimum fields required to make a request.
@@ -2121,12 +2181,14 @@ instance NFData SSHPublicKey where
 --
 --
 -- /See:/ 'sshPublicKeyMetadata' smart constructor.
-data SSHPublicKeyMetadata = SSHPublicKeyMetadata'
-  { _spkmUserName       :: !Text
-  , _spkmSSHPublicKeyId :: !Text
-  , _spkmStatus         :: !StatusType
-  , _spkmUploadDate     :: !ISO8601
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SSHPublicKeyMetadata =
+  SSHPublicKeyMetadata'
+    { _spkmUserName       :: !Text
+    , _spkmSSHPublicKeyId :: !Text
+    , _spkmStatus         :: !StatusType
+    , _spkmUploadDate     :: !ISO8601
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SSHPublicKeyMetadata' with the minimum fields required to make a request.
@@ -2189,11 +2251,13 @@ instance NFData SSHPublicKeyMetadata where
 --
 --
 -- /See:/ 'serverCertificate' smart constructor.
-data ServerCertificate = ServerCertificate'
-  { _sCertificateChain          :: !(Maybe Text)
-  , _sServerCertificateMetadata :: !ServerCertificateMetadata
-  , _sCertificateBody           :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ServerCertificate =
+  ServerCertificate'
+    { _sCertificateChain          :: !(Maybe Text)
+    , _sServerCertificateMetadata :: !ServerCertificateMetadata
+    , _sCertificateBody           :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ServerCertificate' with the minimum fields required to make a request.
@@ -2247,14 +2311,16 @@ instance NFData ServerCertificate where
 --
 --
 -- /See:/ 'serverCertificateMetadata' smart constructor.
-data ServerCertificateMetadata = ServerCertificateMetadata'
-  { _scmUploadDate            :: !(Maybe ISO8601)
-  , _scmExpiration            :: !(Maybe ISO8601)
-  , _scmPath                  :: !Text
-  , _scmServerCertificateName :: !Text
-  , _scmServerCertificateId   :: !Text
-  , _scmARN                   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ServerCertificateMetadata =
+  ServerCertificateMetadata'
+    { _scmUploadDate            :: !(Maybe ISO8601)
+    , _scmExpiration            :: !(Maybe ISO8601)
+    , _scmPath                  :: !Text
+    , _scmServerCertificateName :: !Text
+    , _scmServerCertificateId   :: !Text
+    , _scmARN                   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ServerCertificateMetadata' with the minimum fields required to make a request.
@@ -2331,15 +2397,17 @@ instance NFData ServerCertificateMetadata where
 --
 --
 -- /See:/ 'serviceSpecificCredential' smart constructor.
-data ServiceSpecificCredential = ServiceSpecificCredential'
-  { _sscCreateDate                  :: !ISO8601
-  , _sscServiceName                 :: !Text
-  , _sscServiceUserName             :: !Text
-  , _sscServicePassword             :: !(Sensitive Text)
-  , _sscServiceSpecificCredentialId :: !Text
-  , _sscUserName                    :: !Text
-  , _sscStatus                      :: !StatusType
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data ServiceSpecificCredential =
+  ServiceSpecificCredential'
+    { _sscCreateDate                  :: !ISO8601
+    , _sscServiceName                 :: !Text
+    , _sscServiceUserName             :: !Text
+    , _sscServicePassword             :: !(Sensitive Text)
+    , _sscServiceSpecificCredentialId :: !Text
+    , _sscUserName                    :: !Text
+    , _sscStatus                      :: !StatusType
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ServiceSpecificCredential' with the minimum fields required to make a request.
@@ -2427,14 +2495,16 @@ instance NFData ServiceSpecificCredential where
 --
 --
 -- /See:/ 'serviceSpecificCredentialMetadata' smart constructor.
-data ServiceSpecificCredentialMetadata = ServiceSpecificCredentialMetadata'
-  { _sscmUserName                    :: !Text
-  , _sscmStatus                      :: !StatusType
-  , _sscmServiceUserName             :: !Text
-  , _sscmCreateDate                  :: !ISO8601
-  , _sscmServiceSpecificCredentialId :: !Text
-  , _sscmServiceName                 :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ServiceSpecificCredentialMetadata =
+  ServiceSpecificCredentialMetadata'
+    { _sscmUserName                    :: !Text
+    , _sscmStatus                      :: !StatusType
+    , _sscmServiceUserName             :: !Text
+    , _sscmCreateDate                  :: !ISO8601
+    , _sscmServiceSpecificCredentialId :: !Text
+    , _sscmServiceName                 :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ServiceSpecificCredentialMetadata' with the minimum fields required to make a request.
@@ -2518,13 +2588,15 @@ instance NFData ServiceSpecificCredentialMetadata
 --
 --
 -- /See:/ 'signingCertificate' smart constructor.
-data SigningCertificate = SigningCertificate'
-  { _scUploadDate      :: !(Maybe ISO8601)
-  , _scUserName        :: !Text
-  , _scCertificateId   :: !Text
-  , _scCertificateBody :: !Text
-  , _scStatus          :: !StatusType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SigningCertificate =
+  SigningCertificate'
+    { _scUploadDate      :: !(Maybe ISO8601)
+    , _scUserName        :: !Text
+    , _scCertificateId   :: !Text
+    , _scCertificateBody :: !Text
+    , _scStatus          :: !StatusType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SigningCertificate' with the minimum fields required to make a request.
@@ -2593,11 +2665,13 @@ instance NFData SigningCertificate where
 --
 --
 -- /See:/ 'simulatePolicyResponse' smart constructor.
-data SimulatePolicyResponse = SimulatePolicyResponse'
-  { _spEvaluationResults :: !(Maybe [EvaluationResult])
-  , _spMarker            :: !(Maybe Text)
-  , _spIsTruncated       :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SimulatePolicyResponse =
+  SimulatePolicyResponse'
+    { _spEvaluationResults :: !(Maybe [EvaluationResult])
+    , _spMarker            :: !(Maybe Text)
+    , _spIsTruncated       :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SimulatePolicyResponse' with the minimum fields required to make a request.
@@ -2650,12 +2724,14 @@ instance NFData SimulatePolicyResponse where
 --
 --
 -- /See:/ 'statement' smart constructor.
-data Statement = Statement'
-  { _sSourcePolicyType :: !(Maybe PolicySourceType)
-  , _sSourcePolicyId   :: !(Maybe Text)
-  , _sEndPosition      :: !(Maybe Position)
-  , _sStartPosition    :: !(Maybe Position)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Statement =
+  Statement'
+    { _sSourcePolicyType :: !(Maybe PolicySourceType)
+    , _sSourcePolicyId   :: !(Maybe Text)
+    , _sEndPosition      :: !(Maybe Position)
+    , _sStartPosition    :: !(Maybe Position)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Statement' with the minimum fields required to make a request.
@@ -2723,14 +2799,16 @@ instance NFData Statement where
 --
 --
 -- /See:/ 'user' smart constructor.
-data User = User'
-  { _uPasswordLastUsed :: !(Maybe ISO8601)
-  , _uPath             :: !Text
-  , _uUserName         :: !Text
-  , _uUserId           :: !Text
-  , _uARN              :: !Text
-  , _uCreateDate       :: !ISO8601
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data User =
+  User'
+    { _uPasswordLastUsed :: !(Maybe ISO8601)
+    , _uPath             :: !Text
+    , _uUserName         :: !Text
+    , _uUserId           :: !Text
+    , _uARN              :: !Text
+    , _uCreateDate       :: !ISO8601
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'User' with the minimum fields required to make a request.
@@ -2810,16 +2888,18 @@ instance NFData User where
 --
 --
 -- /See:/ 'userDetail' smart constructor.
-data UserDetail = UserDetail'
-  { _udGroupList               :: !(Maybe [Text])
-  , _udARN                     :: !(Maybe Text)
-  , _udPath                    :: !(Maybe Text)
-  , _udCreateDate              :: !(Maybe ISO8601)
-  , _udUserName                :: !(Maybe Text)
-  , _udUserId                  :: !(Maybe Text)
-  , _udUserPolicyList          :: !(Maybe [PolicyDetail])
-  , _udAttachedManagedPolicies :: !(Maybe [AttachedPolicy])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UserDetail =
+  UserDetail'
+    { _udGroupList               :: !(Maybe [Text])
+    , _udARN                     :: !(Maybe Text)
+    , _udPath                    :: !(Maybe Text)
+    , _udCreateDate              :: !(Maybe ISO8601)
+    , _udUserName                :: !(Maybe Text)
+    , _udUserId                  :: !(Maybe Text)
+    , _udUserPolicyList          :: !(Maybe [PolicyDetail])
+    , _udAttachedManagedPolicies :: !(Maybe [AttachedPolicy])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UserDetail' with the minimum fields required to make a request.
@@ -2914,13 +2994,15 @@ instance NFData UserDetail where
 --
 --
 -- /See:/ 'virtualMFADevice' smart constructor.
-data VirtualMFADevice = VirtualMFADevice'
-  { _vmdQRCodePNG        :: !(Maybe (Sensitive Base64))
-  , _vmdBase32StringSeed :: !(Maybe (Sensitive Base64))
-  , _vmdUser             :: !(Maybe User)
-  , _vmdEnableDate       :: !(Maybe ISO8601)
-  , _vmdSerialNumber     :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data VirtualMFADevice =
+  VirtualMFADevice'
+    { _vmdQRCodePNG        :: !(Maybe (Sensitive Base64))
+    , _vmdBase32StringSeed :: !(Maybe (Sensitive Base64))
+    , _vmdUser             :: !(Maybe User)
+    , _vmdEnableDate       :: !(Maybe ISO8601)
+    , _vmdSerialNumber     :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VirtualMFADevice' with the minimum fields required to make a request.

@@ -43,9 +43,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteEmailChannel' smart constructor.
-newtype DeleteEmailChannel = DeleteEmailChannel'
-  { _decApplicationId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteEmailChannel =
+  DeleteEmailChannel'
+    { _decApplicationId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteEmailChannel' with the minimum fields required to make a request.
@@ -95,10 +97,12 @@ instance ToQuery DeleteEmailChannel where
         toQuery = const mempty
 
 -- | /See:/ 'deleteEmailChannelResponse' smart constructor.
-data DeleteEmailChannelResponse = DeleteEmailChannelResponse'
-  { _decrsResponseStatus       :: !Int
-  , _decrsEmailChannelResponse :: !EmailChannelResponse
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteEmailChannelResponse =
+  DeleteEmailChannelResponse'
+    { _decrsResponseStatus       :: !Int
+    , _decrsEmailChannelResponse :: !EmailChannelResponse
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteEmailChannelResponse' with the minimum fields required to make a request.

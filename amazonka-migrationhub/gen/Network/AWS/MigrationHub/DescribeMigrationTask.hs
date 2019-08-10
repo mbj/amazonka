@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeMigrationTask' smart constructor.
-data DescribeMigrationTask = DescribeMigrationTask'
-  { _dmtProgressUpdateStream :: !Text
-  , _dmtMigrationTaskName    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeMigrationTask =
+  DescribeMigrationTask'
+    { _dmtProgressUpdateStream :: !Text
+    , _dmtMigrationTaskName    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeMigrationTask' with the minimum fields required to make a request.
@@ -117,10 +119,12 @@ instance ToQuery DescribeMigrationTask where
         toQuery = const mempty
 
 -- | /See:/ 'describeMigrationTaskResponse' smart constructor.
-data DescribeMigrationTaskResponse = DescribeMigrationTaskResponse'
-  { _dmtrsMigrationTask  :: !(Maybe MigrationTask)
-  , _dmtrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeMigrationTaskResponse =
+  DescribeMigrationTaskResponse'
+    { _dmtrsMigrationTask  :: !(Maybe MigrationTask)
+    , _dmtrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeMigrationTaskResponse' with the minimum fields required to make a request.

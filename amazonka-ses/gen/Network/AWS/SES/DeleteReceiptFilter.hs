@@ -52,9 +52,11 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'deleteReceiptFilter' smart constructor.
-newtype DeleteReceiptFilter = DeleteReceiptFilter'
-  { _drfFilterName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteReceiptFilter =
+  DeleteReceiptFilter'
+    { _drfFilterName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteReceiptFilter' with the minimum fields required to make a request.
@@ -104,9 +106,11 @@ instance ToQuery DeleteReceiptFilter where
 --
 --
 -- /See:/ 'deleteReceiptFilterResponse' smart constructor.
-newtype DeleteReceiptFilterResponse = DeleteReceiptFilterResponse'
-  { _drfrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteReceiptFilterResponse =
+  DeleteReceiptFilterResponse'
+    { _drfrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteReceiptFilterResponse' with the minimum fields required to make a request.

@@ -53,9 +53,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getIdentityPoolConfiguration' smart constructor.
-newtype GetIdentityPoolConfiguration = GetIdentityPoolConfiguration'
-  { _gipcIdentityPoolId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetIdentityPoolConfiguration =
+  GetIdentityPoolConfiguration'
+    { _gipcIdentityPoolId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetIdentityPoolConfiguration' with the minimum fields required to make a request.
@@ -112,12 +114,14 @@ instance ToQuery GetIdentityPoolConfiguration where
 --
 --
 -- /See:/ 'getIdentityPoolConfigurationResponse' smart constructor.
-data GetIdentityPoolConfigurationResponse = GetIdentityPoolConfigurationResponse'
-  { _gipcrsIdentityPoolId :: !(Maybe Text)
-  , _gipcrsCognitoStreams :: !(Maybe CognitoStreams)
-  , _gipcrsPushSync       :: !(Maybe PushSync)
-  , _gipcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetIdentityPoolConfigurationResponse =
+  GetIdentityPoolConfigurationResponse'
+    { _gipcrsIdentityPoolId :: !(Maybe Text)
+    , _gipcrsCognitoStreams :: !(Maybe CognitoStreams)
+    , _gipcrsPushSync       :: !(Maybe PushSync)
+    , _gipcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetIdentityPoolConfigurationResponse' with the minimum fields required to make a request.

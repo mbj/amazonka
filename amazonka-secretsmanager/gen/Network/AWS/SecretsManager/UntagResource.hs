@@ -63,10 +63,12 @@ import Network.AWS.SecretsManager.Types
 import Network.AWS.SecretsManager.Types.Product
 
 -- | /See:/ 'untagResource' smart constructor.
-data UntagResource = UntagResource'
-  { _urSecretId :: !Text
-  , _urTagKeys  :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UntagResource =
+  UntagResource'
+    { _urSecretId :: !Text
+    , _urTagKeys  :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UntagResource' with the minimum fields required to make a request.

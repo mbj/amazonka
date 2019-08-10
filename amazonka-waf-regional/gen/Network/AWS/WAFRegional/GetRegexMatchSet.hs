@@ -45,9 +45,11 @@ import Network.AWS.WAFRegional.Types
 import Network.AWS.WAFRegional.Types.Product
 
 -- | /See:/ 'getRegexMatchSet' smart constructor.
-newtype GetRegexMatchSet = GetRegexMatchSet'
-  { _grmsRegexMatchSetId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetRegexMatchSet =
+  GetRegexMatchSet'
+    { _grmsRegexMatchSetId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetRegexMatchSet' with the minimum fields required to make a request.
@@ -102,10 +104,12 @@ instance ToQuery GetRegexMatchSet where
         toQuery = const mempty
 
 -- | /See:/ 'getRegexMatchSetResponse' smart constructor.
-data GetRegexMatchSetResponse = GetRegexMatchSetResponse'
-  { _grmsrsRegexMatchSet  :: !(Maybe RegexMatchSet)
-  , _grmsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetRegexMatchSetResponse =
+  GetRegexMatchSetResponse'
+    { _grmsrsRegexMatchSet  :: !(Maybe RegexMatchSet)
+    , _grmsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetRegexMatchSetResponse' with the minimum fields required to make a request.

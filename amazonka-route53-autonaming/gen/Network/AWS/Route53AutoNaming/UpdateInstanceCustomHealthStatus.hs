@@ -42,11 +42,13 @@ import Network.AWS.Route53AutoNaming.Types
 import Network.AWS.Route53AutoNaming.Types.Product
 
 -- | /See:/ 'updateInstanceCustomHealthStatus' smart constructor.
-data UpdateInstanceCustomHealthStatus = UpdateInstanceCustomHealthStatus'
-  { _uichsServiceId  :: !Text
-  , _uichsInstanceId :: !Text
-  , _uichsStatus     :: !CustomHealthStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateInstanceCustomHealthStatus =
+  UpdateInstanceCustomHealthStatus'
+    { _uichsServiceId  :: !Text
+    , _uichsInstanceId :: !Text
+    , _uichsStatus     :: !CustomHealthStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateInstanceCustomHealthStatus' with the minimum fields required to make a request.

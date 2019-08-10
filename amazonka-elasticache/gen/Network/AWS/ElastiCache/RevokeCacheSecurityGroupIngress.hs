@@ -51,11 +51,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'revokeCacheSecurityGroupIngress' smart constructor.
-data RevokeCacheSecurityGroupIngress = RevokeCacheSecurityGroupIngress'
-  { _rcsgiCacheSecurityGroupName  :: !Text
-  , _rcsgiEC2SecurityGroupName    :: !Text
-  , _rcsgiEC2SecurityGroupOwnerId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RevokeCacheSecurityGroupIngress =
+  RevokeCacheSecurityGroupIngress'
+    { _rcsgiCacheSecurityGroupName  :: !Text
+    , _rcsgiEC2SecurityGroupName    :: !Text
+    , _rcsgiEC2SecurityGroupOwnerId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RevokeCacheSecurityGroupIngress' with the minimum fields required to make a request.
@@ -130,10 +132,12 @@ instance ToQuery RevokeCacheSecurityGroupIngress
                  _rcsgiEC2SecurityGroupOwnerId]
 
 -- | /See:/ 'revokeCacheSecurityGroupIngressResponse' smart constructor.
-data RevokeCacheSecurityGroupIngressResponse = RevokeCacheSecurityGroupIngressResponse'
-  { _rcsgirsCacheSecurityGroup :: !(Maybe CacheSecurityGroup)
-  , _rcsgirsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RevokeCacheSecurityGroupIngressResponse =
+  RevokeCacheSecurityGroupIngressResponse'
+    { _rcsgirsCacheSecurityGroup :: !(Maybe CacheSecurityGroup)
+    , _rcsgirsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RevokeCacheSecurityGroupIngressResponse' with the minimum fields required to make a request.

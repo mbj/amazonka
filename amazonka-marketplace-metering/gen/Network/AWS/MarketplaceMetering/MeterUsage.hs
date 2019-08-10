@@ -51,13 +51,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'meterUsage' smart constructor.
-data MeterUsage = MeterUsage'
-  { _muProductCode    :: !Text
-  , _muTimestamp      :: !POSIX
-  , _muUsageDimension :: !Text
-  , _muUsageQuantity  :: !Nat
-  , _muDryRun         :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MeterUsage =
+  MeterUsage'
+    { _muProductCode    :: !Text
+    , _muTimestamp      :: !POSIX
+    , _muUsageDimension :: !Text
+    , _muUsageQuantity  :: !Nat
+    , _muDryRun         :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MeterUsage' with the minimum fields required to make a request.
@@ -149,10 +151,12 @@ instance ToQuery MeterUsage where
         toQuery = const mempty
 
 -- | /See:/ 'meterUsageResponse' smart constructor.
-data MeterUsageResponse = MeterUsageResponse'
-  { _mursMeteringRecordId :: !(Maybe Text)
-  , _mursResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MeterUsageResponse =
+  MeterUsageResponse'
+    { _mursMeteringRecordId :: !(Maybe Text)
+    , _mursResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MeterUsageResponse' with the minimum fields required to make a request.

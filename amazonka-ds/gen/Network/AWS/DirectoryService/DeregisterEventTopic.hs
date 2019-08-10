@@ -49,10 +49,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deregisterEventTopic' smart constructor.
-data DeregisterEventTopic = DeregisterEventTopic'
-  { _detDirectoryId :: !Text
-  , _detTopicName   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeregisterEventTopic =
+  DeregisterEventTopic'
+    { _detDirectoryId :: !Text
+    , _detTopicName   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeregisterEventTopic' with the minimum fields required to make a request.
@@ -121,9 +123,11 @@ instance ToQuery DeregisterEventTopic where
 --
 --
 -- /See:/ 'deregisterEventTopicResponse' smart constructor.
-newtype DeregisterEventTopicResponse = DeregisterEventTopicResponse'
-  { _derrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeregisterEventTopicResponse =
+  DeregisterEventTopicResponse'
+    { _derrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeregisterEventTopicResponse' with the minimum fields required to make a request.

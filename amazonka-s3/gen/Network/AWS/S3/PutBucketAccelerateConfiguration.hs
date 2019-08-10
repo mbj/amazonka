@@ -41,10 +41,12 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'putBucketAccelerateConfiguration' smart constructor.
-data PutBucketAccelerateConfiguration = PutBucketAccelerateConfiguration'
-  { _pbacBucket                  :: !BucketName
-  , _pbacAccelerateConfiguration :: !AccelerateConfiguration
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutBucketAccelerateConfiguration =
+  PutBucketAccelerateConfiguration'
+    { _pbacBucket                  :: !BucketName
+    , _pbacAccelerateConfiguration :: !AccelerateConfiguration
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutBucketAccelerateConfiguration' with the minimum fields required to make a request.

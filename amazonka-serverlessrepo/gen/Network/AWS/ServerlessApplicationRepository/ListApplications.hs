@@ -47,10 +47,12 @@ import Network.AWS.ServerlessApplicationRepository.Types
 import Network.AWS.ServerlessApplicationRepository.Types.Product
 
 -- | /See:/ 'listApplications' smart constructor.
-data ListApplications = ListApplications'
-  { _laNextToken :: !(Maybe Text)
-  , _laMaxItems  :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListApplications =
+  ListApplications'
+    { _laNextToken :: !(Maybe Text)
+    , _laMaxItems  :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListApplications' with the minimum fields required to make a request.
@@ -106,11 +108,13 @@ instance ToQuery ListApplications where
                "maxItems" =: _laMaxItems]
 
 -- | /See:/ 'listApplicationsResponse' smart constructor.
-data ListApplicationsResponse = ListApplicationsResponse'
-  { _larsNextToken      :: !(Maybe Text)
-  , _larsApplications   :: !(Maybe [ApplicationSummary])
-  , _larsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListApplicationsResponse =
+  ListApplicationsResponse'
+    { _larsNextToken      :: !(Maybe Text)
+    , _larsApplications   :: !(Maybe [ApplicationSummary])
+    , _larsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListApplicationsResponse' with the minimum fields required to make a request.

@@ -51,10 +51,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'adminUserGlobalSignOut' smart constructor.
-data AdminUserGlobalSignOut = AdminUserGlobalSignOut'
-  { _augsoUserPoolId :: !Text
-  , _augsoUsername   :: !(Sensitive Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data AdminUserGlobalSignOut =
+  AdminUserGlobalSignOut'
+    { _augsoUserPoolId :: !Text
+    , _augsoUsername   :: !(Sensitive Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AdminUserGlobalSignOut' with the minimum fields required to make a request.
@@ -123,9 +125,11 @@ instance ToQuery AdminUserGlobalSignOut where
 --
 --
 -- /See:/ 'adminUserGlobalSignOutResponse' smart constructor.
-newtype AdminUserGlobalSignOutResponse = AdminUserGlobalSignOutResponse'
-  { _augsorsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AdminUserGlobalSignOutResponse =
+  AdminUserGlobalSignOutResponse'
+    { _augsorsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AdminUserGlobalSignOutResponse' with the minimum fields required to make a request.

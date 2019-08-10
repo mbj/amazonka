@@ -53,13 +53,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getUserDefinedFunctions' smart constructor.
-data GetUserDefinedFunctions = GetUserDefinedFunctions'
-  { _gudfCatalogId    :: !(Maybe Text)
-  , _gudfNextToken    :: !(Maybe Text)
-  , _gudfMaxResults   :: !(Maybe Nat)
-  , _gudfDatabaseName :: !Text
-  , _gudfPattern      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetUserDefinedFunctions =
+  GetUserDefinedFunctions'
+    { _gudfCatalogId    :: !(Maybe Text)
+    , _gudfNextToken    :: !(Maybe Text)
+    , _gudfMaxResults   :: !(Maybe Nat)
+    , _gudfDatabaseName :: !Text
+    , _gudfPattern      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetUserDefinedFunctions' with the minimum fields required to make a request.
@@ -158,11 +160,13 @@ instance ToQuery GetUserDefinedFunctions where
         toQuery = const mempty
 
 -- | /See:/ 'getUserDefinedFunctionsResponse' smart constructor.
-data GetUserDefinedFunctionsResponse = GetUserDefinedFunctionsResponse'
-  { _gudfrsNextToken            :: !(Maybe Text)
-  , _gudfrsUserDefinedFunctions :: !(Maybe [UserDefinedFunction])
-  , _gudfrsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetUserDefinedFunctionsResponse =
+  GetUserDefinedFunctionsResponse'
+    { _gudfrsNextToken            :: !(Maybe Text)
+    , _gudfrsUserDefinedFunctions :: !(Maybe [UserDefinedFunction])
+    , _gudfrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetUserDefinedFunctionsResponse' with the minimum fields required to make a request.

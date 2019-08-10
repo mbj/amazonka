@@ -91,11 +91,13 @@ instance ToQuery GetNotificationChannel where
         toQuery = const mempty
 
 -- | /See:/ 'getNotificationChannelResponse' smart constructor.
-data GetNotificationChannelResponse = GetNotificationChannelResponse'
-  { _gncrsSNSTopicARN    :: !(Maybe Text)
-  , _gncrsSNSRoleName    :: !(Maybe Text)
-  , _gncrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetNotificationChannelResponse =
+  GetNotificationChannelResponse'
+    { _gncrsSNSTopicARN    :: !(Maybe Text)
+    , _gncrsSNSRoleName    :: !(Maybe Text)
+    , _gncrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetNotificationChannelResponse' with the minimum fields required to make a request.

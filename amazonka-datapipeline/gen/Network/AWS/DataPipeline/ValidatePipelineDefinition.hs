@@ -54,12 +54,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'validatePipelineDefinition' smart constructor.
-data ValidatePipelineDefinition = ValidatePipelineDefinition'
-  { _vpdParameterObjects :: !(Maybe [ParameterObject])
-  , _vpdParameterValues  :: !(Maybe [ParameterValue])
-  , _vpdPipelineId       :: !Text
-  , _vpdPipelineObjects  :: ![PipelineObject]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ValidatePipelineDefinition =
+  ValidatePipelineDefinition'
+    { _vpdParameterObjects :: !(Maybe [ParameterObject])
+    , _vpdParameterValues  :: !(Maybe [ParameterValue])
+    , _vpdPipelineId       :: !Text
+    , _vpdPipelineObjects  :: ![PipelineObject]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ValidatePipelineDefinition' with the minimum fields required to make a request.
@@ -148,12 +150,14 @@ instance ToQuery ValidatePipelineDefinition where
 --
 --
 -- /See:/ 'validatePipelineDefinitionResponse' smart constructor.
-data ValidatePipelineDefinitionResponse = ValidatePipelineDefinitionResponse'
-  { _vpdrsValidationErrors   :: !(Maybe [ValidationError])
-  , _vpdrsValidationWarnings :: !(Maybe [ValidationWarning])
-  , _vpdrsResponseStatus     :: !Int
-  , _vpdrsErrored            :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ValidatePipelineDefinitionResponse =
+  ValidatePipelineDefinitionResponse'
+    { _vpdrsValidationErrors   :: !(Maybe [ValidationError])
+    , _vpdrsValidationWarnings :: !(Maybe [ValidationWarning])
+    , _vpdrsResponseStatus     :: !Int
+    , _vpdrsErrored            :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ValidatePipelineDefinitionResponse' with the minimum fields required to make a request.

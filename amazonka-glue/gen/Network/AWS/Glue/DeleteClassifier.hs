@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteClassifier' smart constructor.
-newtype DeleteClassifier = DeleteClassifier'
-  { _delName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteClassifier =
+  DeleteClassifier'
+    { _delName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteClassifier' with the minimum fields required to make a request.
@@ -96,9 +98,11 @@ instance ToQuery DeleteClassifier where
         toQuery = const mempty
 
 -- | /See:/ 'deleteClassifierResponse' smart constructor.
-newtype DeleteClassifierResponse = DeleteClassifierResponse'
-  { _drsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteClassifierResponse =
+  DeleteClassifierResponse'
+    { _drsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteClassifierResponse' with the minimum fields required to make a request.

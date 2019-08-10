@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteVirtualInterface' smart constructor.
-newtype DeleteVirtualInterface = DeleteVirtualInterface'
-  { _delVirtualInterfaceId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteVirtualInterface =
+  DeleteVirtualInterface'
+    { _delVirtualInterfaceId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteVirtualInterface' with the minimum fields required to make a request.
@@ -113,10 +115,12 @@ instance ToQuery DeleteVirtualInterface where
 --
 --
 -- /See:/ 'deleteVirtualInterfaceResponse' smart constructor.
-data DeleteVirtualInterfaceResponse = DeleteVirtualInterfaceResponse'
-  { _dvirsVirtualInterfaceState :: !(Maybe VirtualInterfaceState)
-  , _dvirsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteVirtualInterfaceResponse =
+  DeleteVirtualInterfaceResponse'
+    { _dvirsVirtualInterfaceState :: !(Maybe VirtualInterfaceState)
+    , _dvirsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteVirtualInterfaceResponse' with the minimum fields required to make a request.

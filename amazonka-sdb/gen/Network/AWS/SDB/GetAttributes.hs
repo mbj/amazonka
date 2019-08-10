@@ -50,12 +50,14 @@ import Network.AWS.SDB.Types
 import Network.AWS.SDB.Types.Product
 
 -- | /See:/ 'getAttributes' smart constructor.
-data GetAttributes = GetAttributes'
-  { _gaConsistentRead :: !(Maybe Bool)
-  , _gaAttributeNames :: !(Maybe [Text])
-  , _gaDomainName     :: !Text
-  , _gaItemName       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetAttributes =
+  GetAttributes'
+    { _gaConsistentRead :: !(Maybe Bool)
+    , _gaAttributeNames :: !(Maybe [Text])
+    , _gaDomainName     :: !Text
+    , _gaItemName       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetAttributes' with the minimum fields required to make a request.
@@ -130,10 +132,12 @@ instance ToQuery GetAttributes where
                "ItemName" =: _gaItemName]
 
 -- | /See:/ 'getAttributesResponse' smart constructor.
-data GetAttributesResponse = GetAttributesResponse'
-  { _garsAttributes     :: !(Maybe [Attribute])
-  , _garsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetAttributesResponse =
+  GetAttributesResponse'
+    { _garsAttributes     :: !(Maybe [Attribute])
+    , _garsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetAttributesResponse' with the minimum fields required to make a request.

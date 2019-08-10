@@ -54,13 +54,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getDevicePoolCompatibility' smart constructor.
-data GetDevicePoolCompatibility = GetDevicePoolCompatibility'
-  { _gdpcTest          :: !(Maybe ScheduleRunTest)
-  , _gdpcAppARN        :: !(Maybe Text)
-  , _gdpcConfiguration :: !(Maybe ScheduleRunConfiguration)
-  , _gdpcTestType      :: !(Maybe TestType)
-  , _gdpcDevicePoolARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDevicePoolCompatibility =
+  GetDevicePoolCompatibility'
+    { _gdpcTest          :: !(Maybe ScheduleRunTest)
+    , _gdpcAppARN        :: !(Maybe Text)
+    , _gdpcConfiguration :: !(Maybe ScheduleRunConfiguration)
+    , _gdpcTestType      :: !(Maybe TestType)
+    , _gdpcDevicePoolARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDevicePoolCompatibility' with the minimum fields required to make a request.
@@ -156,11 +158,13 @@ instance ToQuery GetDevicePoolCompatibility where
 --
 --
 -- /See:/ 'getDevicePoolCompatibilityResponse' smart constructor.
-data GetDevicePoolCompatibilityResponse = GetDevicePoolCompatibilityResponse'
-  { _gdpcrsIncompatibleDevices :: !(Maybe [DevicePoolCompatibilityResult])
-  , _gdpcrsCompatibleDevices   :: !(Maybe [DevicePoolCompatibilityResult])
-  , _gdpcrsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDevicePoolCompatibilityResponse =
+  GetDevicePoolCompatibilityResponse'
+    { _gdpcrsIncompatibleDevices :: !(Maybe [DevicePoolCompatibilityResult])
+    , _gdpcrsCompatibleDevices   :: !(Maybe [DevicePoolCompatibilityResult])
+    , _gdpcrsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDevicePoolCompatibilityResponse' with the minimum fields required to make a request.

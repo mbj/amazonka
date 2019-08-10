@@ -69,10 +69,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createPublicVirtualInterface' smart constructor.
-data CreatePublicVirtualInterface = CreatePublicVirtualInterface'
-  { _cpviConnectionId              :: !Text
-  , _cpviNewPublicVirtualInterface :: !NewPublicVirtualInterface
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreatePublicVirtualInterface =
+  CreatePublicVirtualInterface'
+    { _cpviConnectionId              :: !Text
+    , _cpviNewPublicVirtualInterface :: !NewPublicVirtualInterface
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreatePublicVirtualInterface' with the minimum fields required to make a request.

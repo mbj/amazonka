@@ -54,11 +54,13 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'putIdentityPolicy' smart constructor.
-data PutIdentityPolicy = PutIdentityPolicy'
-  { _pipIdentity   :: !Text
-  , _pipPolicyName :: !Text
-  , _pipPolicy     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutIdentityPolicy =
+  PutIdentityPolicy'
+    { _pipIdentity   :: !Text
+    , _pipPolicyName :: !Text
+    , _pipPolicy     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutIdentityPolicy' with the minimum fields required to make a request.
@@ -127,9 +129,11 @@ instance ToQuery PutIdentityPolicy where
 --
 --
 -- /See:/ 'putIdentityPolicyResponse' smart constructor.
-newtype PutIdentityPolicyResponse = PutIdentityPolicyResponse'
-  { _piprsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype PutIdentityPolicyResponse =
+  PutIdentityPolicyResponse'
+    { _piprsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutIdentityPolicyResponse' with the minimum fields required to make a request.

@@ -52,10 +52,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createHSMClientCertificate' smart constructor.
-data CreateHSMClientCertificate = CreateHSMClientCertificate'
-  { _chccTags                           :: !(Maybe [Tag])
-  , _chccHSMClientCertificateIdentifier :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateHSMClientCertificate =
+  CreateHSMClientCertificate'
+    { _chccTags                           :: !(Maybe [Tag])
+    , _chccHSMClientCertificateIdentifier :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateHSMClientCertificate' with the minimum fields required to make a request.
@@ -116,10 +118,12 @@ instance ToQuery CreateHSMClientCertificate where
                  _chccHSMClientCertificateIdentifier]
 
 -- | /See:/ 'createHSMClientCertificateResponse' smart constructor.
-data CreateHSMClientCertificateResponse = CreateHSMClientCertificateResponse'
-  { _chccrsHSMClientCertificate :: !(Maybe HSMClientCertificate)
-  , _chccrsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateHSMClientCertificateResponse =
+  CreateHSMClientCertificateResponse'
+    { _chccrsHSMClientCertificate :: !(Maybe HSMClientCertificate)
+    , _chccrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateHSMClientCertificateResponse' with the minimum fields required to make a request.

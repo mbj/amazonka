@@ -51,11 +51,13 @@ import Network.AWS.Response
 -- | A request to delete the specific dataset.
 --
 -- /See:/ 'deleteDataset' smart constructor.
-data DeleteDataset = DeleteDataset'
-  { _delIdentityPoolId :: !Text
-  , _delIdentityId     :: !Text
-  , _delDatasetName    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteDataset =
+  DeleteDataset'
+    { _delIdentityPoolId :: !Text
+    , _delIdentityId     :: !Text
+    , _delDatasetName    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteDataset' with the minimum fields required to make a request.
@@ -125,10 +127,12 @@ instance ToQuery DeleteDataset where
 -- | Response to a successful DeleteDataset request.
 --
 -- /See:/ 'deleteDatasetResponse' smart constructor.
-data DeleteDatasetResponse = DeleteDatasetResponse'
-  { _drsDataset        :: !(Maybe Dataset)
-  , _drsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteDatasetResponse =
+  DeleteDatasetResponse'
+    { _drsDataset        :: !(Maybe Dataset)
+    , _drsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteDatasetResponse' with the minimum fields required to make a request.

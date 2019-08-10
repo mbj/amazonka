@@ -53,17 +53,19 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'updateAssociation' smart constructor.
-data UpdateAssociation = UpdateAssociation'
-  { _uaScheduleExpression :: !(Maybe Text)
-  , _uaName               :: !(Maybe Text)
-  , _uaOutputLocation     :: !(Maybe InstanceAssociationOutputLocation)
-  , _uaTargets            :: !(Maybe [Target])
-  , _uaParameters         :: !(Maybe (Map Text [Text]))
-  , _uaDocumentVersion    :: !(Maybe Text)
-  , _uaAssociationVersion :: !(Maybe Text)
-  , _uaAssociationName    :: !(Maybe Text)
-  , _uaAssociationId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateAssociation =
+  UpdateAssociation'
+    { _uaScheduleExpression :: !(Maybe Text)
+    , _uaName               :: !(Maybe Text)
+    , _uaOutputLocation     :: !(Maybe InstanceAssociationOutputLocation)
+    , _uaTargets            :: !(Maybe [Target])
+    , _uaParameters         :: !(Maybe (Map Text [Text]))
+    , _uaDocumentVersion    :: !(Maybe Text)
+    , _uaAssociationVersion :: !(Maybe Text)
+    , _uaAssociationName    :: !(Maybe Text)
+    , _uaAssociationId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateAssociation' with the minimum fields required to make a request.
@@ -184,10 +186,12 @@ instance ToQuery UpdateAssociation where
         toQuery = const mempty
 
 -- | /See:/ 'updateAssociationResponse' smart constructor.
-data UpdateAssociationResponse = UpdateAssociationResponse'
-  { _uarsAssociationDescription :: !(Maybe AssociationDescription)
-  , _uarsResponseStatus         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateAssociationResponse =
+  UpdateAssociationResponse'
+    { _uarsAssociationDescription :: !(Maybe AssociationDescription)
+    , _uarsResponseStatus         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateAssociationResponse' with the minimum fields required to make a request.

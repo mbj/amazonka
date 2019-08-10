@@ -47,10 +47,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'abortEnvironmentUpdate' smart constructor.
-data AbortEnvironmentUpdate = AbortEnvironmentUpdate'
-  { _aeuEnvironmentName :: !(Maybe Text)
-  , _aeuEnvironmentId   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AbortEnvironmentUpdate =
+  AbortEnvironmentUpdate'
+    { _aeuEnvironmentName :: !(Maybe Text)
+    , _aeuEnvironmentId   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AbortEnvironmentUpdate' with the minimum fields required to make a request.

@@ -46,9 +46,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createRealtimeEndpoint' smart constructor.
-newtype CreateRealtimeEndpoint = CreateRealtimeEndpoint'
-  { _creMLModelId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateRealtimeEndpoint =
+  CreateRealtimeEndpoint'
+    { _creMLModelId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateRealtimeEndpoint' with the minimum fields required to make a request.
@@ -111,11 +113,13 @@ instance ToQuery CreateRealtimeEndpoint where
 --
 --
 -- /See:/ 'createRealtimeEndpointResponse' smart constructor.
-data CreateRealtimeEndpointResponse = CreateRealtimeEndpointResponse'
-  { _crersRealtimeEndpointInfo :: !(Maybe RealtimeEndpointInfo)
-  , _crersMLModelId            :: !(Maybe Text)
-  , _crersResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateRealtimeEndpointResponse =
+  CreateRealtimeEndpointResponse'
+    { _crersRealtimeEndpointInfo :: !(Maybe RealtimeEndpointInfo)
+    , _crersMLModelId            :: !(Maybe Text)
+    , _crersResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateRealtimeEndpointResponse' with the minimum fields required to make a request.

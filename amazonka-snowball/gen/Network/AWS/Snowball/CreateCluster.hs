@@ -54,18 +54,20 @@ import Network.AWS.Snowball.Types
 import Network.AWS.Snowball.Types.Product
 
 -- | /See:/ 'createCluster' smart constructor.
-data CreateCluster = CreateCluster'
-  { _ccKMSKeyARN           :: !(Maybe Text)
-  , _ccNotification        :: !(Maybe Notification)
-  , _ccForwardingAddressId :: !(Maybe Text)
-  , _ccSnowballType        :: !(Maybe SnowballType)
-  , _ccDescription         :: !(Maybe Text)
-  , _ccJobType             :: !JobType
-  , _ccResources           :: !JobResource
-  , _ccAddressId           :: !Text
-  , _ccRoleARN             :: !Text
-  , _ccShippingOption      :: !ShippingOption
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateCluster =
+  CreateCluster'
+    { _ccKMSKeyARN           :: !(Maybe Text)
+    , _ccNotification        :: !(Maybe Notification)
+    , _ccForwardingAddressId :: !(Maybe Text)
+    , _ccSnowballType        :: !(Maybe SnowballType)
+    , _ccDescription         :: !(Maybe Text)
+    , _ccJobType             :: !JobType
+    , _ccResources           :: !JobResource
+    , _ccAddressId           :: !Text
+    , _ccRoleARN             :: !Text
+    , _ccShippingOption      :: !ShippingOption
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateCluster' with the minimum fields required to make a request.
@@ -199,10 +201,12 @@ instance ToQuery CreateCluster where
         toQuery = const mempty
 
 -- | /See:/ 'createClusterResponse' smart constructor.
-data CreateClusterResponse = CreateClusterResponse'
-  { _crersClusterId      :: !(Maybe Text)
-  , _crersResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateClusterResponse =
+  CreateClusterResponse'
+    { _crersClusterId      :: !(Maybe Text)
+    , _crersResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateClusterResponse' with the minimum fields required to make a request.

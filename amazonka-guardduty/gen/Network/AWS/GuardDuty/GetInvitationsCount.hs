@@ -81,10 +81,12 @@ instance ToQuery GetInvitationsCount where
         toQuery = const mempty
 
 -- | /See:/ 'getInvitationsCountResponse' smart constructor.
-data GetInvitationsCountResponse = GetInvitationsCountResponse'
-  { _gicrsInvitationsCount :: !(Maybe Int)
-  , _gicrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetInvitationsCountResponse =
+  GetInvitationsCountResponse'
+    { _gicrsInvitationsCount :: !(Maybe Int)
+    , _gicrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetInvitationsCountResponse' with the minimum fields required to make a request.

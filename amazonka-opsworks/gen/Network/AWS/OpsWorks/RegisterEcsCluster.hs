@@ -48,10 +48,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'registerEcsCluster' smart constructor.
-data RegisterEcsCluster = RegisterEcsCluster'
-  { _recEcsClusterARN :: !Text
-  , _recStackId       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RegisterEcsCluster =
+  RegisterEcsCluster'
+    { _recEcsClusterARN :: !Text
+    , _recStackId       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterEcsCluster' with the minimum fields required to make a request.
@@ -120,10 +122,12 @@ instance ToQuery RegisterEcsCluster where
 --
 --
 -- /See:/ 'registerEcsClusterResponse' smart constructor.
-data RegisterEcsClusterResponse = RegisterEcsClusterResponse'
-  { _recrsEcsClusterARN  :: !(Maybe Text)
-  , _recrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RegisterEcsClusterResponse =
+  RegisterEcsClusterResponse'
+    { _recrsEcsClusterARN  :: !(Maybe Text)
+    , _recrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterEcsClusterResponse' with the minimum fields required to make a request.

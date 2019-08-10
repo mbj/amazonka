@@ -44,10 +44,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putEventStream' smart constructor.
-data PutEventStream = PutEventStream'
-  { _pesApplicationId    :: !Text
-  , _pesWriteEventStream :: !WriteEventStream
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutEventStream =
+  PutEventStream'
+    { _pesApplicationId    :: !Text
+    , _pesWriteEventStream :: !WriteEventStream
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutEventStream' with the minimum fields required to make a request.
@@ -111,10 +113,12 @@ instance ToQuery PutEventStream where
         toQuery = const mempty
 
 -- | /See:/ 'putEventStreamResponse' smart constructor.
-data PutEventStreamResponse = PutEventStreamResponse'
-  { _pesrsResponseStatus :: !Int
-  , _pesrsEventStream    :: !EventStream
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutEventStreamResponse =
+  PutEventStreamResponse'
+    { _pesrsResponseStatus :: !Int
+    , _pesrsEventStream    :: !EventStream
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutEventStreamResponse' with the minimum fields required to make a request.

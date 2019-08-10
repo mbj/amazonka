@@ -51,13 +51,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putObject' smart constructor.
-data PutObject = PutObject'
-  { _poStorageClass :: !(Maybe StorageClass)
-  , _poCacheControl :: !(Maybe Text)
-  , _poContentType  :: !(Maybe Text)
-  , _poPath         :: !Text
-  , _poBody         :: !HashedBody
-  } deriving (Show, Generic)
+data PutObject =
+  PutObject'
+    { _poStorageClass :: !(Maybe StorageClass)
+    , _poCacheControl :: !(Maybe Text)
+    , _poContentType  :: !(Maybe Text)
+    , _poPath         :: !Text
+    , _poBody         :: !HashedBody
+    }
+  deriving (Show, Generic)
 
 
 -- | Creates a value of 'PutObject' with the minimum fields required to make a request.
@@ -135,12 +137,14 @@ instance ToQuery PutObject where
         toQuery = const mempty
 
 -- | /See:/ 'putObjectResponse' smart constructor.
-data PutObjectResponse = PutObjectResponse'
-  { _porsETag           :: !(Maybe Text)
-  , _porsStorageClass   :: !(Maybe StorageClass)
-  , _porsContentSHA256  :: !(Maybe Text)
-  , _porsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutObjectResponse =
+  PutObjectResponse'
+    { _porsETag           :: !(Maybe Text)
+    , _porsStorageClass   :: !(Maybe StorageClass)
+    , _porsContentSHA256  :: !(Maybe Text)
+    , _porsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutObjectResponse' with the minimum fields required to make a request.

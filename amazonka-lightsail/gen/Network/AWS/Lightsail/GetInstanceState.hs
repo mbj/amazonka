@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getInstanceState' smart constructor.
-newtype GetInstanceState = GetInstanceState'
-  { _gisInstanceName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetInstanceState =
+  GetInstanceState'
+    { _gisInstanceName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetInstanceState' with the minimum fields required to make a request.
@@ -102,10 +104,12 @@ instance ToQuery GetInstanceState where
         toQuery = const mempty
 
 -- | /See:/ 'getInstanceStateResponse' smart constructor.
-data GetInstanceStateResponse = GetInstanceStateResponse'
-  { _gisirsState          :: !(Maybe InstanceState)
-  , _gisirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetInstanceStateResponse =
+  GetInstanceStateResponse'
+    { _gisirsState          :: !(Maybe InstanceState)
+    , _gisirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetInstanceStateResponse' with the minimum fields required to make a request.

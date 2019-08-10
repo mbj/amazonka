@@ -47,10 +47,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'addTagsToOnPremisesInstances' smart constructor.
-data AddTagsToOnPremisesInstances = AddTagsToOnPremisesInstances'
-  { _attopiTags          :: ![Tag]
-  , _attopiInstanceNames :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddTagsToOnPremisesInstances =
+  AddTagsToOnPremisesInstances'
+    { _attopiTags          :: ![Tag]
+    , _attopiInstanceNames :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddTagsToOnPremisesInstances' with the minimum fields required to make a request.

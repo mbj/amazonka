@@ -42,9 +42,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'disableKeyRotation' smart constructor.
-newtype DisableKeyRotation = DisableKeyRotation'
-  { _dkrKeyId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DisableKeyRotation =
+  DisableKeyRotation'
+    { _dkrKeyId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisableKeyRotation' with the minimum fields required to make a request.

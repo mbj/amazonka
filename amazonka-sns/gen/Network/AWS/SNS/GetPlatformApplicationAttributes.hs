@@ -49,9 +49,11 @@ import Network.AWS.SNS.Types.Product
 --
 --
 -- /See:/ 'getPlatformApplicationAttributes' smart constructor.
-newtype GetPlatformApplicationAttributes = GetPlatformApplicationAttributes'
-  { _gpaaPlatformApplicationARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetPlatformApplicationAttributes =
+  GetPlatformApplicationAttributes'
+    { _gpaaPlatformApplicationARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetPlatformApplicationAttributes' with the minimum fields required to make a request.
@@ -114,10 +116,12 @@ instance ToQuery GetPlatformApplicationAttributes
 --
 --
 -- /See:/ 'getPlatformApplicationAttributesResponse' smart constructor.
-data GetPlatformApplicationAttributesResponse = GetPlatformApplicationAttributesResponse'
-  { _gpaarsAttributes     :: !(Maybe (Map Text Text))
-  , _gpaarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetPlatformApplicationAttributesResponse =
+  GetPlatformApplicationAttributesResponse'
+    { _gpaarsAttributes     :: !(Maybe (Map Text Text))
+    , _gpaarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetPlatformApplicationAttributesResponse' with the minimum fields required to make a request.

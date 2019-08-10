@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'cancelSchemaExtension' smart constructor.
-data CancelSchemaExtension = CancelSchemaExtension'
-  { _cseDirectoryId       :: !Text
-  , _cseSchemaExtensionId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CancelSchemaExtension =
+  CancelSchemaExtension'
+    { _cseDirectoryId       :: !Text
+    , _cseSchemaExtensionId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CancelSchemaExtension' with the minimum fields required to make a request.
@@ -115,9 +117,11 @@ instance ToQuery CancelSchemaExtension where
         toQuery = const mempty
 
 -- | /See:/ 'cancelSchemaExtensionResponse' smart constructor.
-newtype CancelSchemaExtensionResponse = CancelSchemaExtensionResponse'
-  { _csersResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CancelSchemaExtensionResponse =
+  CancelSchemaExtensionResponse'
+    { _csersResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CancelSchemaExtensionResponse' with the minimum fields required to make a request.

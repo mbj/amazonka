@@ -46,9 +46,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'enableTopicRule' smart constructor.
-newtype EnableTopicRule = EnableTopicRule'
-  { _etrRuleName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype EnableTopicRule =
+  EnableTopicRule'
+    { _etrRuleName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EnableTopicRule' with the minimum fields required to make a request.

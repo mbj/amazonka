@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'associateDeviceWithRoom' smart constructor.
-data AssociateDeviceWithRoom = AssociateDeviceWithRoom'
-  { _adwrDeviceARN :: !(Maybe Text)
-  , _adwrRoomARN   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssociateDeviceWithRoom =
+  AssociateDeviceWithRoom'
+    { _adwrDeviceARN :: !(Maybe Text)
+    , _adwrRoomARN   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateDeviceWithRoom' with the minimum fields required to make a request.
@@ -110,9 +112,11 @@ instance ToQuery AssociateDeviceWithRoom where
         toQuery = const mempty
 
 -- | /See:/ 'associateDeviceWithRoomResponse' smart constructor.
-newtype AssociateDeviceWithRoomResponse = AssociateDeviceWithRoomResponse'
-  { _adwrrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AssociateDeviceWithRoomResponse =
+  AssociateDeviceWithRoomResponse'
+    { _adwrrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateDeviceWithRoomResponse' with the minimum fields required to make a request.

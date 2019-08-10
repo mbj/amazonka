@@ -57,11 +57,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getFaceDetection' smart constructor.
-data GetFaceDetection = GetFaceDetection'
-  { _gfdNextToken  :: !(Maybe Text)
-  , _gfdMaxResults :: !(Maybe Nat)
-  , _gfdJobId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetFaceDetection =
+  GetFaceDetection'
+    { _gfdNextToken  :: !(Maybe Text)
+    , _gfdMaxResults :: !(Maybe Nat)
+    , _gfdJobId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetFaceDetection' with the minimum fields required to make a request.
@@ -135,14 +137,16 @@ instance ToQuery GetFaceDetection where
         toQuery = const mempty
 
 -- | /See:/ 'getFaceDetectionResponse' smart constructor.
-data GetFaceDetectionResponse = GetFaceDetectionResponse'
-  { _gfdrsNextToken      :: !(Maybe Text)
-  , _gfdrsVideoMetadata  :: !(Maybe VideoMetadata)
-  , _gfdrsStatusMessage  :: !(Maybe Text)
-  , _gfdrsFaces          :: !(Maybe [FaceDetection])
-  , _gfdrsJobStatus      :: !(Maybe VideoJobStatus)
-  , _gfdrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetFaceDetectionResponse =
+  GetFaceDetectionResponse'
+    { _gfdrsNextToken      :: !(Maybe Text)
+    , _gfdrsVideoMetadata  :: !(Maybe VideoMetadata)
+    , _gfdrsStatusMessage  :: !(Maybe Text)
+    , _gfdrsFaces          :: !(Maybe [FaceDetection])
+    , _gfdrsJobStatus      :: !(Maybe VideoJobStatus)
+    , _gfdrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetFaceDetectionResponse' with the minimum fields required to make a request.

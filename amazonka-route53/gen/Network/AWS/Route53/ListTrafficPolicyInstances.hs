@@ -59,12 +59,14 @@ import Network.AWS.Route53.Types.Product
 --
 --
 -- /See:/ 'listTrafficPolicyInstances' smart constructor.
-data ListTrafficPolicyInstances = ListTrafficPolicyInstances'
-  { _ltpiTrafficPolicyInstanceTypeMarker :: !(Maybe RecordType)
-  , _ltpiMaxItems                        :: !(Maybe Text)
-  , _ltpiHostedZoneIdMarker              :: !(Maybe ResourceId)
-  , _ltpiTrafficPolicyInstanceNameMarker :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTrafficPolicyInstances =
+  ListTrafficPolicyInstances'
+    { _ltpiTrafficPolicyInstanceTypeMarker :: !(Maybe RecordType)
+    , _ltpiMaxItems                        :: !(Maybe Text)
+    , _ltpiHostedZoneIdMarker              :: !(Maybe ResourceId)
+    , _ltpiTrafficPolicyInstanceNameMarker :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTrafficPolicyInstances' with the minimum fields required to make a request.
@@ -148,15 +150,17 @@ instance ToQuery ListTrafficPolicyInstances where
 --
 --
 -- /See:/ 'listTrafficPolicyInstancesResponse' smart constructor.
-data ListTrafficPolicyInstancesResponse = ListTrafficPolicyInstancesResponse'
-  { _ltpirsTrafficPolicyInstanceTypeMarker :: !(Maybe RecordType)
-  , _ltpirsHostedZoneIdMarker              :: !(Maybe ResourceId)
-  , _ltpirsTrafficPolicyInstanceNameMarker :: !(Maybe Text)
-  , _ltpirsResponseStatus                  :: !Int
-  , _ltpirsTrafficPolicyInstances          :: ![TrafficPolicyInstance]
-  , _ltpirsIsTruncated                     :: !Bool
-  , _ltpirsMaxItems                        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTrafficPolicyInstancesResponse =
+  ListTrafficPolicyInstancesResponse'
+    { _ltpirsTrafficPolicyInstanceTypeMarker :: !(Maybe RecordType)
+    , _ltpirsHostedZoneIdMarker              :: !(Maybe ResourceId)
+    , _ltpirsTrafficPolicyInstanceNameMarker :: !(Maybe Text)
+    , _ltpirsResponseStatus                  :: !Int
+    , _ltpirsTrafficPolicyInstances          :: ![TrafficPolicyInstance]
+    , _ltpirsIsTruncated                     :: !Bool
+    , _ltpirsMaxItems                        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTrafficPolicyInstancesResponse' with the minimum fields required to make a request.

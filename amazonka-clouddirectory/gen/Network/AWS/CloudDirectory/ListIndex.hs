@@ -54,14 +54,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listIndex' smart constructor.
-data ListIndex = ListIndex'
-  { _liRangesOnIndexedValues :: !(Maybe [ObjectAttributeRange])
-  , _liConsistencyLevel      :: !(Maybe ConsistencyLevel)
-  , _liNextToken             :: !(Maybe Text)
-  , _liMaxResults            :: !(Maybe Nat)
-  , _liDirectoryARN          :: !Text
-  , _liIndexReference        :: !ObjectReference
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListIndex =
+  ListIndex'
+    { _liRangesOnIndexedValues :: !(Maybe [ObjectAttributeRange])
+    , _liConsistencyLevel      :: !(Maybe ConsistencyLevel)
+    , _liNextToken             :: !(Maybe Text)
+    , _liMaxResults            :: !(Maybe Nat)
+    , _liDirectoryARN          :: !Text
+    , _liIndexReference        :: !ObjectReference
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListIndex' with the minimum fields required to make a request.
@@ -165,11 +167,13 @@ instance ToQuery ListIndex where
         toQuery = const mempty
 
 -- | /See:/ 'listIndexResponse' smart constructor.
-data ListIndexResponse = ListIndexResponse'
-  { _lirsIndexAttachments :: !(Maybe [IndexAttachment])
-  , _lirsNextToken        :: !(Maybe Text)
-  , _lirsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListIndexResponse =
+  ListIndexResponse'
+    { _lirsIndexAttachments :: !(Maybe [IndexAttachment])
+    , _lirsNextToken        :: !(Maybe Text)
+    , _lirsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListIndexResponse' with the minimum fields required to make a request.

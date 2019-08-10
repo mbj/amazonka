@@ -56,11 +56,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listAccessKeys' smart constructor.
-data ListAccessKeys = ListAccessKeys'
-  { _lakUserName :: !(Maybe Text)
-  , _lakMarker   :: !(Maybe Text)
-  , _lakMaxItems :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAccessKeys =
+  ListAccessKeys'
+    { _lakUserName :: !(Maybe Text)
+    , _lakMarker   :: !(Maybe Text)
+    , _lakMaxItems :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAccessKeys' with the minimum fields required to make a request.
@@ -134,12 +136,14 @@ instance ToQuery ListAccessKeys where
 --
 --
 -- /See:/ 'listAccessKeysResponse' smart constructor.
-data ListAccessKeysResponse = ListAccessKeysResponse'
-  { _lakrsMarker            :: !(Maybe Text)
-  , _lakrsIsTruncated       :: !(Maybe Bool)
-  , _lakrsResponseStatus    :: !Int
-  , _lakrsAccessKeyMetadata :: ![AccessKeyMetadata]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAccessKeysResponse =
+  ListAccessKeysResponse'
+    { _lakrsMarker            :: !(Maybe Text)
+    , _lakrsIsTruncated       :: !(Maybe Bool)
+    , _lakrsResponseStatus    :: !Int
+    , _lakrsAccessKeyMetadata :: ![AccessKeyMetadata]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAccessKeysResponse' with the minimum fields required to make a request.

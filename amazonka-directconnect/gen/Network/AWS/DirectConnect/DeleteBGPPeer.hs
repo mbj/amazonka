@@ -51,11 +51,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteBGPPeer' smart constructor.
-data DeleteBGPPeer = DeleteBGPPeer'
-  { _dbpCustomerAddress    :: !(Maybe Text)
-  , _dbpAsn                :: !(Maybe Int)
-  , _dbpVirtualInterfaceId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteBGPPeer =
+  DeleteBGPPeer'
+    { _dbpCustomerAddress    :: !(Maybe Text)
+    , _dbpAsn                :: !(Maybe Int)
+    , _dbpVirtualInterfaceId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteBGPPeer' with the minimum fields required to make a request.
@@ -131,10 +133,12 @@ instance ToQuery DeleteBGPPeer where
 --
 --
 -- /See:/ 'deleteBGPPeerResponse' smart constructor.
-data DeleteBGPPeerResponse = DeleteBGPPeerResponse'
-  { _dbprsVirtualInterface :: !(Maybe VirtualInterface)
-  , _dbprsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteBGPPeerResponse =
+  DeleteBGPPeerResponse'
+    { _dbprsVirtualInterface :: !(Maybe VirtualInterface)
+    , _dbprsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteBGPPeerResponse' with the minimum fields required to make a request.

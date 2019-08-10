@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deregisterWebhookWithThirdParty' smart constructor.
-newtype DeregisterWebhookWithThirdParty = DeregisterWebhookWithThirdParty'
-  { _dwwtpWebhookName :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeregisterWebhookWithThirdParty =
+  DeregisterWebhookWithThirdParty'
+    { _dwwtpWebhookName :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeregisterWebhookWithThirdParty' with the minimum fields required to make a request.
@@ -105,9 +107,11 @@ instance ToQuery DeregisterWebhookWithThirdParty
         toQuery = const mempty
 
 -- | /See:/ 'deregisterWebhookWithThirdPartyResponse' smart constructor.
-newtype DeregisterWebhookWithThirdPartyResponse = DeregisterWebhookWithThirdPartyResponse'
-  { _dwwtprsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeregisterWebhookWithThirdPartyResponse =
+  DeregisterWebhookWithThirdPartyResponse'
+    { _dwwtprsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeregisterWebhookWithThirdPartyResponse' with the minimum fields required to make a request.

@@ -50,12 +50,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'setUserPoolMFAConfig' smart constructor.
-data SetUserPoolMFAConfig = SetUserPoolMFAConfig'
-  { _supmcSmsMFAConfiguration           :: !(Maybe SmsMFAConfigType)
-  , _supmcSoftwareTokenMFAConfiguration :: !(Maybe SoftwareTokenMFAConfigType)
-  , _supmcMFAConfiguration              :: !(Maybe UserPoolMFAType)
-  , _supmcUserPoolId                    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SetUserPoolMFAConfig =
+  SetUserPoolMFAConfig'
+    { _supmcSmsMFAConfiguration           :: !(Maybe SmsMFAConfigType)
+    , _supmcSoftwareTokenMFAConfiguration :: !(Maybe SoftwareTokenMFAConfigType)
+    , _supmcMFAConfiguration              :: !(Maybe UserPoolMFAType)
+    , _supmcUserPoolId                    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetUserPoolMFAConfig' with the minimum fields required to make a request.
@@ -142,12 +144,14 @@ instance ToQuery SetUserPoolMFAConfig where
         toQuery = const mempty
 
 -- | /See:/ 'setUserPoolMFAConfigResponse' smart constructor.
-data SetUserPoolMFAConfigResponse = SetUserPoolMFAConfigResponse'
-  { _supmcrsSmsMFAConfiguration           :: !(Maybe SmsMFAConfigType)
-  , _supmcrsSoftwareTokenMFAConfiguration :: !(Maybe SoftwareTokenMFAConfigType)
-  , _supmcrsMFAConfiguration              :: !(Maybe UserPoolMFAType)
-  , _supmcrsResponseStatus                :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SetUserPoolMFAConfigResponse =
+  SetUserPoolMFAConfigResponse'
+    { _supmcrsSmsMFAConfiguration :: !(Maybe SmsMFAConfigType)
+    , _supmcrsSoftwareTokenMFAConfiguration :: !(Maybe SoftwareTokenMFAConfigType)
+    , _supmcrsMFAConfiguration :: !(Maybe UserPoolMFAType)
+    , _supmcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetUserPoolMFAConfigResponse' with the minimum fields required to make a request.

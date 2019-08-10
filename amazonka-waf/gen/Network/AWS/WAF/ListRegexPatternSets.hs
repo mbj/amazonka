@@ -47,10 +47,12 @@ import Network.AWS.WAF.Types
 import Network.AWS.WAF.Types.Product
 
 -- | /See:/ 'listRegexPatternSets' smart constructor.
-data ListRegexPatternSets = ListRegexPatternSets'
-  { _lrpsNextMarker :: !(Maybe Text)
-  , _lrpsLimit      :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListRegexPatternSets =
+  ListRegexPatternSets'
+    { _lrpsNextMarker :: !(Maybe Text)
+    , _lrpsLimit      :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListRegexPatternSets' with the minimum fields required to make a request.
@@ -114,11 +116,13 @@ instance ToQuery ListRegexPatternSets where
         toQuery = const mempty
 
 -- | /See:/ 'listRegexPatternSetsResponse' smart constructor.
-data ListRegexPatternSetsResponse = ListRegexPatternSetsResponse'
-  { _lrpsrsRegexPatternSets :: !(Maybe [RegexPatternSetSummary])
-  , _lrpsrsNextMarker       :: !(Maybe Text)
-  , _lrpsrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListRegexPatternSetsResponse =
+  ListRegexPatternSetsResponse'
+    { _lrpsrsRegexPatternSets :: !(Maybe [RegexPatternSetSummary])
+    , _lrpsrsNextMarker       :: !(Maybe Text)
+    , _lrpsrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListRegexPatternSetsResponse' with the minimum fields required to make a request.

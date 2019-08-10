@@ -54,10 +54,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listPresets' smart constructor.
-data ListPresets = ListPresets'
-  { _lAscending :: !(Maybe Text)
-  , _lPageToken :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListPresets =
+  ListPresets'
+    { _lAscending :: !(Maybe Text)
+    , _lPageToken :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListPresets' with the minimum fields required to make a request.
@@ -119,11 +121,13 @@ instance ToQuery ListPresets where
 --
 --
 -- /See:/ 'listPresetsResponse' smart constructor.
-data ListPresetsResponse = ListPresetsResponse'
-  { _lrsNextPageToken  :: !(Maybe Text)
-  , _lrsPresets        :: !(Maybe [Preset])
-  , _lrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListPresetsResponse =
+  ListPresetsResponse'
+    { _lrsNextPageToken  :: !(Maybe Text)
+    , _lrsPresets        :: !(Maybe [Preset])
+    , _lrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListPresetsResponse' with the minimum fields required to make a request.

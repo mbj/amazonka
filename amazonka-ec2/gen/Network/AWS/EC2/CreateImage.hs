@@ -58,14 +58,16 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createImage' smart constructor.
-data CreateImage = CreateImage'
-  { _ciiNoReboot            :: !(Maybe Bool)
-  , _ciiDescription         :: !(Maybe Text)
-  , _ciiBlockDeviceMappings :: !(Maybe [BlockDeviceMapping])
-  , _ciiDryRun              :: !(Maybe Bool)
-  , _ciiInstanceId          :: !Text
-  , _ciiName                :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateImage =
+  CreateImage'
+    { _ciiNoReboot            :: !(Maybe Bool)
+    , _ciiDescription         :: !(Maybe Text)
+    , _ciiBlockDeviceMappings :: !(Maybe [BlockDeviceMapping])
+    , _ciiDryRun              :: !(Maybe Bool)
+    , _ciiInstanceId          :: !Text
+    , _ciiName                :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateImage' with the minimum fields required to make a request.
@@ -159,10 +161,12 @@ instance ToQuery CreateImage where
 --
 --
 -- /See:/ 'createImageResponse' smart constructor.
-data CreateImageResponse = CreateImageResponse'
-  { _cirsImageId        :: !(Maybe Text)
-  , _cirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateImageResponse =
+  CreateImageResponse'
+    { _cirsImageId        :: !(Maybe Text)
+    , _cirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateImageResponse' with the minimum fields required to make a request.

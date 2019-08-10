@@ -48,10 +48,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateBatchPrediction' smart constructor.
-data UpdateBatchPrediction = UpdateBatchPrediction'
-  { _ubpBatchPredictionId   :: !Text
-  , _ubpBatchPredictionName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateBatchPrediction =
+  UpdateBatchPrediction'
+    { _ubpBatchPredictionId   :: !Text
+    , _ubpBatchPredictionName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateBatchPrediction' with the minimum fields required to make a request.
@@ -125,10 +127,12 @@ instance ToQuery UpdateBatchPrediction where
 --
 --
 -- /See:/ 'updateBatchPredictionResponse' smart constructor.
-data UpdateBatchPredictionResponse = UpdateBatchPredictionResponse'
-  { _ubprsBatchPredictionId :: !(Maybe Text)
-  , _ubprsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateBatchPredictionResponse =
+  UpdateBatchPredictionResponse'
+    { _ubprsBatchPredictionId :: !(Maybe Text)
+    , _ubprsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateBatchPredictionResponse' with the minimum fields required to make a request.

@@ -60,12 +60,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createDBClusterParameterGroup' smart constructor.
-data CreateDBClusterParameterGroup = CreateDBClusterParameterGroup'
-  { _cdcpgTags                        :: !(Maybe [Tag])
-  , _cdcpgDBClusterParameterGroupName :: !Text
-  , _cdcpgDBParameterGroupFamily      :: !Text
-  , _cdcpgDescription                 :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDBClusterParameterGroup =
+  CreateDBClusterParameterGroup'
+    { _cdcpgTags                        :: !(Maybe [Tag])
+    , _cdcpgDBClusterParameterGroupName :: !Text
+    , _cdcpgDBParameterGroupFamily      :: !Text
+    , _cdcpgDescription                 :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDBClusterParameterGroup' with the minimum fields required to make a request.
@@ -147,10 +149,12 @@ instance ToQuery CreateDBClusterParameterGroup where
                "Description" =: _cdcpgDescription]
 
 -- | /See:/ 'createDBClusterParameterGroupResponse' smart constructor.
-data CreateDBClusterParameterGroupResponse = CreateDBClusterParameterGroupResponse'
-  { _cdbcpgrsDBClusterParameterGroup :: !(Maybe DBClusterParameterGroup)
-  , _cdbcpgrsResponseStatus          :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDBClusterParameterGroupResponse =
+  CreateDBClusterParameterGroupResponse'
+    { _cdbcpgrsDBClusterParameterGroup :: !(Maybe DBClusterParameterGroup)
+    , _cdbcpgrsResponseStatus          :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDBClusterParameterGroupResponse' with the minimum fields required to make a request.

@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'disassociateDeviceFromRoom' smart constructor.
-newtype DisassociateDeviceFromRoom = DisassociateDeviceFromRoom'
-  { _ddfrDeviceARN :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DisassociateDeviceFromRoom =
+  DisassociateDeviceFromRoom'
+    { _ddfrDeviceARN :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisassociateDeviceFromRoom' with the minimum fields required to make a request.
@@ -100,9 +102,11 @@ instance ToQuery DisassociateDeviceFromRoom where
         toQuery = const mempty
 
 -- | /See:/ 'disassociateDeviceFromRoomResponse' smart constructor.
-newtype DisassociateDeviceFromRoomResponse = DisassociateDeviceFromRoomResponse'
-  { _ddfrrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DisassociateDeviceFromRoomResponse =
+  DisassociateDeviceFromRoomResponse'
+    { _ddfrrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisassociateDeviceFromRoomResponse' with the minimum fields required to make a request.

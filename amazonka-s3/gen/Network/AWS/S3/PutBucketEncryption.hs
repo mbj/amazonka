@@ -42,11 +42,13 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'putBucketEncryption' smart constructor.
-data PutBucketEncryption = PutBucketEncryption'
-  { _pbeContentMD5                        :: !(Maybe Text)
-  , _pbeBucket                            :: !BucketName
-  , _pbeServerSideEncryptionConfiguration :: !ServerSideEncryptionConfiguration
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data PutBucketEncryption =
+  PutBucketEncryption'
+    { _pbeContentMD5 :: !(Maybe Text)
+    , _pbeBucket :: !BucketName
+    , _pbeServerSideEncryptionConfiguration :: !ServerSideEncryptionConfiguration
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutBucketEncryption' with the minimum fields required to make a request.

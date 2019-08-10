@@ -58,12 +58,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeDBSubnetGroups' smart constructor.
-data DescribeDBSubnetGroups = DescribeDBSubnetGroups'
-  { _ddsgDBSubnetGroupName :: !(Maybe Text)
-  , _ddsgFilters           :: !(Maybe [Filter])
-  , _ddsgMarker            :: !(Maybe Text)
-  , _ddsgMaxRecords        :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDBSubnetGroups =
+  DescribeDBSubnetGroups'
+    { _ddsgDBSubnetGroupName :: !(Maybe Text)
+    , _ddsgFilters           :: !(Maybe [Filter])
+    , _ddsgMarker            :: !(Maybe Text)
+    , _ddsgMaxRecords        :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDBSubnetGroups' with the minimum fields required to make a request.
@@ -151,11 +153,13 @@ instance ToQuery DescribeDBSubnetGroups where
 --
 --
 -- /See:/ 'describeDBSubnetGroupsResponse' smart constructor.
-data DescribeDBSubnetGroupsResponse = DescribeDBSubnetGroupsResponse'
-  { _ddsgrsDBSubnetGroups :: !(Maybe [DBSubnetGroup])
-  , _ddsgrsMarker         :: !(Maybe Text)
-  , _ddsgrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDBSubnetGroupsResponse =
+  DescribeDBSubnetGroupsResponse'
+    { _ddsgrsDBSubnetGroups :: !(Maybe [DBSubnetGroup])
+    , _ddsgrsMarker         :: !(Maybe Text)
+    , _ddsgrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDBSubnetGroupsResponse' with the minimum fields required to make a request.

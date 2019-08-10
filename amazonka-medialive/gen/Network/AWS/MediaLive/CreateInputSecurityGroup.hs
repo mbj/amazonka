@@ -45,9 +45,11 @@ import Network.AWS.Response
 -- | The IPv4 CIDRs to whitelist for this Input Security Group
 --
 -- /See:/ 'createInputSecurityGroup' smart constructor.
-newtype CreateInputSecurityGroup = CreateInputSecurityGroup'
-  { _cisgWhitelistRules :: Maybe [InputWhitelistRuleCidr]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateInputSecurityGroup =
+  CreateInputSecurityGroup'
+    { _cisgWhitelistRules :: Maybe [InputWhitelistRuleCidr]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateInputSecurityGroup' with the minimum fields required to make a request.
@@ -101,10 +103,12 @@ instance ToQuery CreateInputSecurityGroup where
 -- | Placeholder documentation for CreateInputSecurityGroupResponse
 --
 -- /See:/ 'createInputSecurityGroupResponse' smart constructor.
-data CreateInputSecurityGroupResponse = CreateInputSecurityGroupResponse'
-  { _cisgrsSecurityGroup  :: !(Maybe InputSecurityGroup)
-  , _cisgrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateInputSecurityGroupResponse =
+  CreateInputSecurityGroupResponse'
+    { _cisgrsSecurityGroup  :: !(Maybe InputSecurityGroup)
+    , _cisgrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateInputSecurityGroupResponse' with the minimum fields required to make a request.

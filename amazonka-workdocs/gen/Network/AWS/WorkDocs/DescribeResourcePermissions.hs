@@ -50,13 +50,15 @@ import Network.AWS.WorkDocs.Types
 import Network.AWS.WorkDocs.Types.Product
 
 -- | /See:/ 'describeResourcePermissions' smart constructor.
-data DescribeResourcePermissions = DescribeResourcePermissions'
-  { _drpPrincipalId         :: !(Maybe Text)
-  , _drpAuthenticationToken :: !(Maybe (Sensitive Text))
-  , _drpMarker              :: !(Maybe Text)
-  , _drpLimit               :: !(Maybe Nat)
-  , _drpResourceId          :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data DescribeResourcePermissions =
+  DescribeResourcePermissions'
+    { _drpPrincipalId         :: !(Maybe Text)
+    , _drpAuthenticationToken :: !(Maybe (Sensitive Text))
+    , _drpMarker              :: !(Maybe Text)
+    , _drpLimit               :: !(Maybe Nat)
+    , _drpResourceId          :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeResourcePermissions' with the minimum fields required to make a request.
@@ -140,11 +142,13 @@ instance ToQuery DescribeResourcePermissions where
                "marker" =: _drpMarker, "limit" =: _drpLimit]
 
 -- | /See:/ 'describeResourcePermissionsResponse' smart constructor.
-data DescribeResourcePermissionsResponse = DescribeResourcePermissionsResponse'
-  { _drprsPrincipals     :: !(Maybe [Principal])
-  , _drprsMarker         :: !(Maybe Text)
-  , _drprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeResourcePermissionsResponse =
+  DescribeResourcePermissionsResponse'
+    { _drprsPrincipals     :: !(Maybe [Principal])
+    , _drprsMarker         :: !(Maybe Text)
+    , _drprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeResourcePermissionsResponse' with the minimum fields required to make a request.

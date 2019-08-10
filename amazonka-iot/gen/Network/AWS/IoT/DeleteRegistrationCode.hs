@@ -86,9 +86,11 @@ instance ToQuery DeleteRegistrationCode where
 --
 --
 -- /See:/ 'deleteRegistrationCodeResponse' smart constructor.
-newtype DeleteRegistrationCodeResponse = DeleteRegistrationCodeResponse'
-  { _drcrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteRegistrationCodeResponse =
+  DeleteRegistrationCodeResponse'
+    { _drcrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteRegistrationCodeResponse' with the minimum fields required to make a request.

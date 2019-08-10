@@ -26,9 +26,11 @@ import Network.AWS.SecretsManager.Types.Sum
 --
 --
 -- /See:/ 'rotationRulesType' smart constructor.
-newtype RotationRulesType = RotationRulesType'
-  { _rrtAutomaticallyAfterDays :: Maybe Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RotationRulesType =
+  RotationRulesType'
+    { _rrtAutomaticallyAfterDays :: Maybe Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RotationRulesType' with the minimum fields required to make a request.
@@ -68,21 +70,23 @@ instance ToJSON RotationRulesType where
 --
 --
 -- /See:/ 'secretListEntry' smart constructor.
-data SecretListEntry = SecretListEntry'
-  { _sleLastChangedDate        :: !(Maybe POSIX)
-  , _sleARN                    :: !(Maybe Text)
-  , _sleSecretVersionsToStages :: !(Maybe (Map Text (List1 Text)))
-  , _sleRotationRules          :: !(Maybe RotationRulesType)
-  , _sleDeletedDate            :: !(Maybe POSIX)
-  , _sleRotationEnabled        :: !(Maybe Bool)
-  , _sleKMSKeyId               :: !(Maybe Text)
-  , _sleName                   :: !(Maybe Text)
-  , _sleLastRotatedDate        :: !(Maybe POSIX)
-  , _sleLastAccessedDate       :: !(Maybe POSIX)
-  , _sleDescription            :: !(Maybe Text)
-  , _sleRotationLambdaARN      :: !(Maybe Text)
-  , _sleTags                   :: !(Maybe [Tag])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SecretListEntry =
+  SecretListEntry'
+    { _sleLastChangedDate        :: !(Maybe POSIX)
+    , _sleARN                    :: !(Maybe Text)
+    , _sleSecretVersionsToStages :: !(Maybe (Map Text (List1 Text)))
+    , _sleRotationRules          :: !(Maybe RotationRulesType)
+    , _sleDeletedDate            :: !(Maybe POSIX)
+    , _sleRotationEnabled        :: !(Maybe Bool)
+    , _sleKMSKeyId               :: !(Maybe Text)
+    , _sleName                   :: !(Maybe Text)
+    , _sleLastRotatedDate        :: !(Maybe POSIX)
+    , _sleLastAccessedDate       :: !(Maybe POSIX)
+    , _sleDescription            :: !(Maybe Text)
+    , _sleRotationLambdaARN      :: !(Maybe Text)
+    , _sleTags                   :: !(Maybe [Tag])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SecretListEntry' with the minimum fields required to make a request.
@@ -213,12 +217,14 @@ instance NFData SecretListEntry where
 --
 --
 -- /See:/ 'secretVersionsListEntry' smart constructor.
-data SecretVersionsListEntry = SecretVersionsListEntry'
-  { _svleVersionId        :: !(Maybe Text)
-  , _svleVersionStages    :: !(Maybe (List1 Text))
-  , _svleCreatedDate      :: !(Maybe POSIX)
-  , _svleLastAccessedDate :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SecretVersionsListEntry =
+  SecretVersionsListEntry'
+    { _svleVersionId        :: !(Maybe Text)
+    , _svleVersionStages    :: !(Maybe (List1 Text))
+    , _svleCreatedDate      :: !(Maybe POSIX)
+    , _svleLastAccessedDate :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SecretVersionsListEntry' with the minimum fields required to make a request.
@@ -277,10 +283,12 @@ instance NFData SecretVersionsListEntry where
 --
 --
 -- /See:/ 'tag' smart constructor.
-data Tag = Tag'
-  { _tagValue :: !(Maybe Text)
-  , _tagKey   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Tag =
+  Tag'
+    { _tagValue :: !(Maybe Text)
+    , _tagKey   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Tag' with the minimum fields required to make a request.

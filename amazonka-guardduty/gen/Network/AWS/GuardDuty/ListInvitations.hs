@@ -48,10 +48,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listInvitations' smart constructor.
-data ListInvitations = ListInvitations'
-  { _liNextToken  :: !(Maybe Text)
-  , _liMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListInvitations =
+  ListInvitations'
+    { _liNextToken  :: !(Maybe Text)
+    , _liMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListInvitations' with the minimum fields required to make a request.
@@ -114,11 +116,13 @@ instance ToQuery ListInvitations where
                "maxResults" =: _liMaxResults]
 
 -- | /See:/ 'listInvitationsResponse' smart constructor.
-data ListInvitationsResponse = ListInvitationsResponse'
-  { _lirsInvitations    :: !(Maybe [Invitation])
-  , _lirsNextToken      :: !(Maybe Text)
-  , _lirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListInvitationsResponse =
+  ListInvitationsResponse'
+    { _lirsInvitations    :: !(Maybe [Invitation])
+    , _lirsNextToken      :: !(Maybe Text)
+    , _lirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListInvitationsResponse' with the minimum fields required to make a request.

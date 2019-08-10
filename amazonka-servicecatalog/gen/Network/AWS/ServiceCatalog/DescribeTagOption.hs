@@ -45,9 +45,11 @@ import Network.AWS.ServiceCatalog.Types
 import Network.AWS.ServiceCatalog.Types.Product
 
 -- | /See:/ 'describeTagOption' smart constructor.
-newtype DescribeTagOption = DescribeTagOption'
-  { _dtoId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeTagOption =
+  DescribeTagOption'
+    { _dtoId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeTagOption' with the minimum fields required to make a request.
@@ -99,10 +101,12 @@ instance ToQuery DescribeTagOption where
         toQuery = const mempty
 
 -- | /See:/ 'describeTagOptionResponse' smart constructor.
-data DescribeTagOptionResponse = DescribeTagOptionResponse'
-  { _dtorsTagOptionDetail :: !(Maybe TagOptionDetail)
-  , _dtorsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeTagOptionResponse =
+  DescribeTagOptionResponse'
+    { _dtorsTagOptionDetail :: !(Maybe TagOptionDetail)
+    , _dtorsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeTagOptionResponse' with the minimum fields required to make a request.

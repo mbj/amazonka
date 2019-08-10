@@ -67,12 +67,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeFileSystems' smart constructor.
-data DescribeFileSystems = DescribeFileSystems'
-  { _dfsFileSystemId  :: !(Maybe Text)
-  , _dfsCreationToken :: !(Maybe Text)
-  , _dfsMarker        :: !(Maybe Text)
-  , _dfsMaxItems      :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeFileSystems =
+  DescribeFileSystems'
+    { _dfsFileSystemId  :: !(Maybe Text)
+    , _dfsCreationToken :: !(Maybe Text)
+    , _dfsMarker        :: !(Maybe Text)
+    , _dfsMaxItems      :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeFileSystems' with the minimum fields required to make a request.
@@ -150,12 +152,14 @@ instance ToQuery DescribeFileSystems where
                "Marker" =: _dfsMarker, "MaxItems" =: _dfsMaxItems]
 
 -- | /See:/ 'describeFileSystemsResponse' smart constructor.
-data DescribeFileSystemsResponse = DescribeFileSystemsResponse'
-  { _dfsrsFileSystems    :: !(Maybe [FileSystemDescription])
-  , _dfsrsMarker         :: !(Maybe Text)
-  , _dfsrsNextMarker     :: !(Maybe Text)
-  , _dfsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeFileSystemsResponse =
+  DescribeFileSystemsResponse'
+    { _dfsrsFileSystems    :: !(Maybe [FileSystemDescription])
+    , _dfsrsMarker         :: !(Maybe Text)
+    , _dfsrsNextMarker     :: !(Maybe Text)
+    , _dfsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeFileSystemsResponse' with the minimum fields required to make a request.

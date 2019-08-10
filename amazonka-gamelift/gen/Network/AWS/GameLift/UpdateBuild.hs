@@ -65,11 +65,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateBuild' smart constructor.
-data UpdateBuild = UpdateBuild'
-  { _ubName    :: !(Maybe Text)
-  , _ubVersion :: !(Maybe Text)
-  , _ubBuildId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateBuild =
+  UpdateBuild'
+    { _ubName    :: !(Maybe Text)
+    , _ubVersion :: !(Maybe Text)
+    , _ubBuildId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateBuild' with the minimum fields required to make a request.
@@ -141,10 +143,12 @@ instance ToQuery UpdateBuild where
 --
 --
 -- /See:/ 'updateBuildResponse' smart constructor.
-data UpdateBuildResponse = UpdateBuildResponse'
-  { _ubrsBuild          :: !(Maybe Build)
-  , _ubrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateBuildResponse =
+  UpdateBuildResponse'
+    { _ubrsBuild          :: !(Maybe Build)
+    , _ubrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateBuildResponse' with the minimum fields required to make a request.

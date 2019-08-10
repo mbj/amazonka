@@ -87,10 +87,12 @@ instance ToQuery CreateStorageLocation where
 --
 --
 -- /See:/ 'createStorageLocationResponse' smart constructor.
-data CreateStorageLocationResponse = CreateStorageLocationResponse'
-  { _cslrsS3Bucket       :: !(Maybe Text)
-  , _cslrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateStorageLocationResponse =
+  CreateStorageLocationResponse'
+    { _cslrsS3Bucket       :: !(Maybe Text)
+    , _cslrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateStorageLocationResponse' with the minimum fields required to make a request.

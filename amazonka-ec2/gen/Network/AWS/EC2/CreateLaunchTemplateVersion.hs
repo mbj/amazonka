@@ -53,15 +53,17 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createLaunchTemplateVersion' smart constructor.
-data CreateLaunchTemplateVersion = CreateLaunchTemplateVersion'
-  { _cltvLaunchTemplateName :: !(Maybe Text)
-  , _cltvClientToken        :: !(Maybe Text)
-  , _cltvLaunchTemplateId   :: !(Maybe Text)
-  , _cltvVersionDescription :: !(Maybe Text)
-  , _cltvSourceVersion      :: !(Maybe Text)
-  , _cltvDryRun             :: !(Maybe Bool)
-  , _cltvLaunchTemplateData :: !RequestLaunchTemplateData
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateLaunchTemplateVersion =
+  CreateLaunchTemplateVersion'
+    { _cltvLaunchTemplateName :: !(Maybe Text)
+    , _cltvClientToken        :: !(Maybe Text)
+    , _cltvLaunchTemplateId   :: !(Maybe Text)
+    , _cltvVersionDescription :: !(Maybe Text)
+    , _cltvSourceVersion      :: !(Maybe Text)
+    , _cltvDryRun             :: !(Maybe Bool)
+    , _cltvLaunchTemplateData :: !RequestLaunchTemplateData
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateLaunchTemplateVersion' with the minimum fields required to make a request.
@@ -160,10 +162,12 @@ instance ToQuery CreateLaunchTemplateVersion where
                "LaunchTemplateData" =: _cltvLaunchTemplateData]
 
 -- | /See:/ 'createLaunchTemplateVersionResponse' smart constructor.
-data CreateLaunchTemplateVersionResponse = CreateLaunchTemplateVersionResponse'
-  { _cltvrsLaunchTemplateVersion :: !(Maybe LaunchTemplateVersion)
-  , _cltvrsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateLaunchTemplateVersionResponse =
+  CreateLaunchTemplateVersionResponse'
+    { _cltvrsLaunchTemplateVersion :: !(Maybe LaunchTemplateVersion)
+    , _cltvrsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateLaunchTemplateVersionResponse' with the minimum fields required to make a request.

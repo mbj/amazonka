@@ -50,11 +50,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getDocumentationVersions' smart constructor.
-data GetDocumentationVersions = GetDocumentationVersions'
-  { _gdvLimit     :: !(Maybe Int)
-  , _gdvPosition  :: !(Maybe Text)
-  , _gdvRestAPIId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDocumentationVersions =
+  GetDocumentationVersions'
+    { _gdvLimit     :: !(Maybe Int)
+    , _gdvPosition  :: !(Maybe Text)
+    , _gdvRestAPIId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDocumentationVersions' with the minimum fields required to make a request.
@@ -126,11 +128,13 @@ instance ToQuery GetDocumentationVersions where
 -- <http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-documenting-api.html Documenting an API> , 'DocumentationPart' , 'DocumentationVersion'
 --
 -- /See:/ 'getDocumentationVersionsResponse' smart constructor.
-data GetDocumentationVersionsResponse = GetDocumentationVersionsResponse'
-  { _gdvrsItems          :: !(Maybe [DocumentationVersion])
-  , _gdvrsPosition       :: !(Maybe Text)
-  , _gdvrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDocumentationVersionsResponse =
+  GetDocumentationVersionsResponse'
+    { _gdvrsItems          :: !(Maybe [DocumentationVersion])
+    , _gdvrsPosition       :: !(Maybe Text)
+    , _gdvrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDocumentationVersionsResponse' with the minimum fields required to make a request.

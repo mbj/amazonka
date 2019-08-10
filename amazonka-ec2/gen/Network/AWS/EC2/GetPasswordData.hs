@@ -60,10 +60,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getPasswordData' smart constructor.
-data GetPasswordData = GetPasswordData'
-  { _gpdDryRun     :: !(Maybe Bool)
-  , _gpdInstanceId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetPasswordData =
+  GetPasswordData'
+    { _gpdDryRun     :: !(Maybe Bool)
+    , _gpdInstanceId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetPasswordData' with the minimum fields required to make a request.
@@ -122,12 +124,14 @@ instance ToQuery GetPasswordData where
 --
 --
 -- /See:/ 'getPasswordDataResponse' smart constructor.
-data GetPasswordDataResponse = GetPasswordDataResponse'
-  { _gpdrsResponseStatus :: !Int
-  , _gpdrsInstanceId     :: !Text
-  , _gpdrsPasswordData   :: !Text
-  , _gpdrsTimestamp      :: !ISO8601
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetPasswordDataResponse =
+  GetPasswordDataResponse'
+    { _gpdrsResponseStatus :: !Int
+    , _gpdrsInstanceId     :: !Text
+    , _gpdrsPasswordData   :: !Text
+    , _gpdrsTimestamp      :: !ISO8601
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetPasswordDataResponse' with the minimum fields required to make a request.

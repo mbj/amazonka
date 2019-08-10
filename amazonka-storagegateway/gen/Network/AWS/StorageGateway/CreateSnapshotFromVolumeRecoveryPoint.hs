@@ -52,10 +52,12 @@ import Network.AWS.StorageGateway.Types
 import Network.AWS.StorageGateway.Types.Product
 
 -- | /See:/ 'createSnapshotFromVolumeRecoveryPoint' smart constructor.
-data CreateSnapshotFromVolumeRecoveryPoint = CreateSnapshotFromVolumeRecoveryPoint'
-  { _csfvrpVolumeARN           :: !Text
-  , _csfvrpSnapshotDescription :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateSnapshotFromVolumeRecoveryPoint =
+  CreateSnapshotFromVolumeRecoveryPoint'
+    { _csfvrpVolumeARN           :: !Text
+    , _csfvrpSnapshotDescription :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateSnapshotFromVolumeRecoveryPoint' with the minimum fields required to make a request.
@@ -138,12 +140,14 @@ instance ToQuery
         toQuery = const mempty
 
 -- | /See:/ 'createSnapshotFromVolumeRecoveryPointResponse' smart constructor.
-data CreateSnapshotFromVolumeRecoveryPointResponse = CreateSnapshotFromVolumeRecoveryPointResponse'
-  { _csfvrprsVolumeRecoveryPointTime :: !(Maybe Text)
-  , _csfvrprsVolumeARN               :: !(Maybe Text)
-  , _csfvrprsSnapshotId              :: !(Maybe Text)
-  , _csfvrprsResponseStatus          :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateSnapshotFromVolumeRecoveryPointResponse =
+  CreateSnapshotFromVolumeRecoveryPointResponse'
+    { _csfvrprsVolumeRecoveryPointTime :: !(Maybe Text)
+    , _csfvrprsVolumeARN               :: !(Maybe Text)
+    , _csfvrprsSnapshotId              :: !(Maybe Text)
+    , _csfvrprsResponseStatus          :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateSnapshotFromVolumeRecoveryPointResponse' with the minimum fields required to make a request.

@@ -96,10 +96,12 @@ instance ToQuery DescribeAccountAttributes where
 --
 --
 -- /See:/ 'describeAccountAttributesResponse' smart constructor.
-data DescribeAccountAttributesResponse = DescribeAccountAttributesResponse'
-  { _daarsAccountQuotas  :: !(Maybe [AccountQuota])
-  , _daarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAccountAttributesResponse =
+  DescribeAccountAttributesResponse'
+    { _daarsAccountQuotas  :: !(Maybe [AccountQuota])
+    , _daarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAccountAttributesResponse' with the minimum fields required to make a request.

@@ -67,19 +67,21 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeClusterSnapshots' smart constructor.
-data DescribeClusterSnapshots = DescribeClusterSnapshots'
-  { _dSnapshotIdentifier :: !(Maybe Text)
-  , _dTagValues          :: !(Maybe [Text])
-  , _dClusterExists      :: !(Maybe Bool)
-  , _dStartTime          :: !(Maybe ISO8601)
-  , _dTagKeys            :: !(Maybe [Text])
-  , _dClusterIdentifier  :: !(Maybe Text)
-  , _dSnapshotType       :: !(Maybe Text)
-  , _dMarker             :: !(Maybe Text)
-  , _dMaxRecords         :: !(Maybe Int)
-  , _dEndTime            :: !(Maybe ISO8601)
-  , _dOwnerAccount       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeClusterSnapshots =
+  DescribeClusterSnapshots'
+    { _dSnapshotIdentifier :: !(Maybe Text)
+    , _dTagValues          :: !(Maybe [Text])
+    , _dClusterExists      :: !(Maybe Bool)
+    , _dStartTime          :: !(Maybe ISO8601)
+    , _dTagKeys            :: !(Maybe [Text])
+    , _dClusterIdentifier  :: !(Maybe Text)
+    , _dSnapshotType       :: !(Maybe Text)
+    , _dMarker             :: !(Maybe Text)
+    , _dMaxRecords         :: !(Maybe Int)
+    , _dEndTime            :: !(Maybe ISO8601)
+    , _dOwnerAccount       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeClusterSnapshots' with the minimum fields required to make a request.
@@ -223,11 +225,13 @@ instance ToQuery DescribeClusterSnapshots where
 --
 --
 -- /See:/ 'describeClusterSnapshotsResponse' smart constructor.
-data DescribeClusterSnapshotsResponse = DescribeClusterSnapshotsResponse'
-  { _dcssrsSnapshots      :: !(Maybe [Snapshot])
-  , _dcssrsMarker         :: !(Maybe Text)
-  , _dcssrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeClusterSnapshotsResponse =
+  DescribeClusterSnapshotsResponse'
+    { _dcssrsSnapshots      :: !(Maybe [Snapshot])
+    , _dcssrsMarker         :: !(Maybe Text)
+    , _dcssrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeClusterSnapshotsResponse' with the minimum fields required to make a request.

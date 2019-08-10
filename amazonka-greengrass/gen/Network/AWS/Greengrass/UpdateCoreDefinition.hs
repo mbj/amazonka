@@ -43,10 +43,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateCoreDefinition' smart constructor.
-data UpdateCoreDefinition = UpdateCoreDefinition'
-  { _ucdName             :: !(Maybe Text)
-  , _ucdCoreDefinitionId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateCoreDefinition =
+  UpdateCoreDefinition'
+    { _ucdName             :: !(Maybe Text)
+    , _ucdCoreDefinitionId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateCoreDefinition' with the minimum fields required to make a request.
@@ -107,9 +109,11 @@ instance ToQuery UpdateCoreDefinition where
         toQuery = const mempty
 
 -- | /See:/ 'updateCoreDefinitionResponse' smart constructor.
-newtype UpdateCoreDefinitionResponse = UpdateCoreDefinitionResponse'
-  { _ucdrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateCoreDefinitionResponse =
+  UpdateCoreDefinitionResponse'
+    { _ucdrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateCoreDefinitionResponse' with the minimum fields required to make a request.

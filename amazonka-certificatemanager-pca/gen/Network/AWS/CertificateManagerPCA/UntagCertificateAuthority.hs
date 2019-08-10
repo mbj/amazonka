@@ -43,10 +43,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'untagCertificateAuthority' smart constructor.
-data UntagCertificateAuthority = UntagCertificateAuthority'
-  { _uCertificateAuthorityARN :: !Text
-  , _uTags                    :: !(List1 Tag)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UntagCertificateAuthority =
+  UntagCertificateAuthority'
+    { _uCertificateAuthorityARN :: !Text
+    , _uTags                    :: !(List1 Tag)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UntagCertificateAuthority' with the minimum fields required to make a request.

@@ -47,11 +47,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getType' smart constructor.
-data GetType = GetType'
-  { _gtApiId    :: !Text
-  , _gtTypeName :: !Text
-  , _gtFormat   :: !TypeDefinitionFormat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetType =
+  GetType'
+    { _gtApiId    :: !Text
+    , _gtTypeName :: !Text
+    , _gtFormat   :: !TypeDefinitionFormat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetType' with the minimum fields required to make a request.
@@ -115,10 +117,12 @@ instance ToQuery GetType where
           = mconcat ["format" =: _gtFormat]
 
 -- | /See:/ 'getTypeResponse' smart constructor.
-data GetTypeResponse = GetTypeResponse'
-  { _gtrsType           :: !(Maybe Type)
-  , _gtrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetTypeResponse =
+  GetTypeResponse'
+    { _gtrsType           :: !(Maybe Type)
+    , _gtrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetTypeResponse' with the minimum fields required to make a request.

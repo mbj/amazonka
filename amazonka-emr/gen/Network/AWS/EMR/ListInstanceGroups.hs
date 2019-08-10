@@ -54,10 +54,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listInstanceGroups' smart constructor.
-data ListInstanceGroups = ListInstanceGroups'
-  { _ligMarker    :: !(Maybe Text)
-  , _ligClusterId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListInstanceGroups =
+  ListInstanceGroups'
+    { _ligMarker    :: !(Maybe Text)
+    , _ligClusterId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListInstanceGroups' with the minimum fields required to make a request.
@@ -133,11 +135,13 @@ instance ToQuery ListInstanceGroups where
 --
 --
 -- /See:/ 'listInstanceGroupsResponse' smart constructor.
-data ListInstanceGroupsResponse = ListInstanceGroupsResponse'
-  { _ligrsMarker         :: !(Maybe Text)
-  , _ligrsInstanceGroups :: !(Maybe [InstanceGroup])
-  , _ligrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListInstanceGroupsResponse =
+  ListInstanceGroupsResponse'
+    { _ligrsMarker         :: !(Maybe Text)
+    , _ligrsInstanceGroups :: !(Maybe [InstanceGroup])
+    , _ligrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListInstanceGroupsResponse' with the minimum fields required to make a request.

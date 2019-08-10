@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteRetentionPolicy' smart constructor.
-newtype DeleteRetentionPolicy = DeleteRetentionPolicy'
-  { _drpLogGroupName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteRetentionPolicy =
+  DeleteRetentionPolicy'
+    { _drpLogGroupName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteRetentionPolicy' with the minimum fields required to make a request.

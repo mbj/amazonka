@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteSchema' smart constructor.
-newtype DeleteSchema = DeleteSchema'
-  { _dsSchemaARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteSchema =
+  DeleteSchema'
+    { _dsSchemaARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteSchema' with the minimum fields required to make a request.
@@ -93,10 +95,12 @@ instance ToQuery DeleteSchema where
         toQuery = const mempty
 
 -- | /See:/ 'deleteSchemaResponse' smart constructor.
-data DeleteSchemaResponse = DeleteSchemaResponse'
-  { _dsrsSchemaARN      :: !(Maybe Text)
-  , _dsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteSchemaResponse =
+  DeleteSchemaResponse'
+    { _dsrsSchemaARN      :: !(Maybe Text)
+    , _dsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteSchemaResponse' with the minimum fields required to make a request.

@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'rebootNode' smart constructor.
-data RebootNode = RebootNode'
-  { _rnClusterName :: !Text
-  , _rnNodeId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RebootNode =
+  RebootNode'
+    { _rnClusterName :: !Text
+    , _rnNodeId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RebootNode' with the minimum fields required to make a request.
@@ -111,10 +113,12 @@ instance ToQuery RebootNode where
         toQuery = const mempty
 
 -- | /See:/ 'rebootNodeResponse' smart constructor.
-data RebootNodeResponse = RebootNodeResponse'
-  { _rnrsCluster        :: !(Maybe Cluster)
-  , _rnrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RebootNodeResponse =
+  RebootNodeResponse'
+    { _rnrsCluster        :: !(Maybe Cluster)
+    , _rnrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RebootNodeResponse' with the minimum fields required to make a request.

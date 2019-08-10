@@ -51,11 +51,13 @@ import Network.AWS.Transcribe.Types
 import Network.AWS.Transcribe.Types.Product
 
 -- | /See:/ 'createVocabulary' smart constructor.
-data CreateVocabulary = CreateVocabulary'
-  { _cvVocabularyName :: !Text
-  , _cvLanguageCode   :: !LanguageCode
-  , _cvPhrases        :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateVocabulary =
+  CreateVocabulary'
+    { _cvVocabularyName :: !Text
+    , _cvLanguageCode   :: !LanguageCode
+    , _cvPhrases        :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateVocabulary' with the minimum fields required to make a request.
@@ -132,14 +134,16 @@ instance ToQuery CreateVocabulary where
         toQuery = const mempty
 
 -- | /See:/ 'createVocabularyResponse' smart constructor.
-data CreateVocabularyResponse = CreateVocabularyResponse'
-  { _cvrsFailureReason    :: !(Maybe Text)
-  , _cvrsLanguageCode     :: !(Maybe LanguageCode)
-  , _cvrsVocabularyName   :: !(Maybe Text)
-  , _cvrsLastModifiedTime :: !(Maybe POSIX)
-  , _cvrsVocabularyState  :: !(Maybe VocabularyState)
-  , _cvrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateVocabularyResponse =
+  CreateVocabularyResponse'
+    { _cvrsFailureReason    :: !(Maybe Text)
+    , _cvrsLanguageCode     :: !(Maybe LanguageCode)
+    , _cvrsVocabularyName   :: !(Maybe Text)
+    , _cvrsLastModifiedTime :: !(Maybe POSIX)
+    , _cvrsVocabularyState  :: !(Maybe VocabularyState)
+    , _cvrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateVocabularyResponse' with the minimum fields required to make a request.

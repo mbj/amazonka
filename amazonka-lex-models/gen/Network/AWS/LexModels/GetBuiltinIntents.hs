@@ -54,12 +54,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getBuiltinIntents' smart constructor.
-data GetBuiltinIntents = GetBuiltinIntents'
-  { _gbiLocale            :: !(Maybe Locale)
-  , _gbiNextToken         :: !(Maybe Text)
-  , _gbiSignatureContains :: !(Maybe Text)
-  , _gbiMaxResults        :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetBuiltinIntents =
+  GetBuiltinIntents'
+    { _gbiLocale            :: !(Maybe Locale)
+    , _gbiNextToken         :: !(Maybe Text)
+    , _gbiSignatureContains :: !(Maybe Text)
+    , _gbiMaxResults        :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBuiltinIntents' with the minimum fields required to make a request.
@@ -140,11 +142,13 @@ instance ToQuery GetBuiltinIntents where
                "maxResults" =: _gbiMaxResults]
 
 -- | /See:/ 'getBuiltinIntentsResponse' smart constructor.
-data GetBuiltinIntentsResponse = GetBuiltinIntentsResponse'
-  { _grsIntents        :: !(Maybe [BuiltinIntentMetadata])
-  , _grsNextToken      :: !(Maybe Text)
-  , _grsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetBuiltinIntentsResponse =
+  GetBuiltinIntentsResponse'
+    { _grsIntents        :: !(Maybe [BuiltinIntentMetadata])
+    , _grsNextToken      :: !(Maybe Text)
+    , _grsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBuiltinIntentsResponse' with the minimum fields required to make a request.

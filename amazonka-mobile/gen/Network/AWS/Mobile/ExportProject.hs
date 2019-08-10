@@ -51,9 +51,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'exportProject' smart constructor.
-newtype ExportProject = ExportProject'
-  { _epProjectId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ExportProject =
+  ExportProject'
+    { _epProjectId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ExportProject' with the minimum fields required to make a request.
@@ -108,12 +110,14 @@ instance ToQuery ExportProject where
 --
 --
 -- /See:/ 'exportProjectResponse' smart constructor.
-data ExportProjectResponse = ExportProjectResponse'
-  { _eprsShareURL       :: !(Maybe Text)
-  , _eprsDownloadURL    :: !(Maybe Text)
-  , _eprsSnapshotId     :: !(Maybe Text)
-  , _eprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ExportProjectResponse =
+  ExportProjectResponse'
+    { _eprsShareURL       :: !(Maybe Text)
+    , _eprsDownloadURL    :: !(Maybe Text)
+    , _eprsSnapshotId     :: !(Maybe Text)
+    , _eprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ExportProjectResponse' with the minimum fields required to make a request.

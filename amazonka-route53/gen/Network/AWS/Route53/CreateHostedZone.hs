@@ -75,13 +75,15 @@ import Network.AWS.Route53.Types.Product
 --
 --
 -- /See:/ 'createHostedZone' smart constructor.
-data CreateHostedZone = CreateHostedZone'
-  { _chzDelegationSetId  :: !(Maybe ResourceId)
-  , _chzVPC              :: !(Maybe VPC)
-  , _chzHostedZoneConfig :: !(Maybe HostedZoneConfig)
-  , _chzName             :: !Text
-  , _chzCallerReference  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateHostedZone =
+  CreateHostedZone'
+    { _chzDelegationSetId  :: !(Maybe ResourceId)
+    , _chzVPC              :: !(Maybe VPC)
+    , _chzHostedZoneConfig :: !(Maybe HostedZoneConfig)
+    , _chzName             :: !Text
+    , _chzCallerReference  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateHostedZone' with the minimum fields required to make a request.
@@ -176,14 +178,16 @@ instance ToXML CreateHostedZone where
 --
 --
 -- /See:/ 'createHostedZoneResponse' smart constructor.
-data CreateHostedZoneResponse = CreateHostedZoneResponse'
-  { _chzrsVPC            :: !(Maybe VPC)
-  , _chzrsResponseStatus :: !Int
-  , _chzrsHostedZone     :: !HostedZone
-  , _chzrsChangeInfo     :: !ChangeInfo
-  , _chzrsDelegationSet  :: !DelegationSet
-  , _chzrsLocation       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateHostedZoneResponse =
+  CreateHostedZoneResponse'
+    { _chzrsVPC            :: !(Maybe VPC)
+    , _chzrsResponseStatus :: !Int
+    , _chzrsHostedZone     :: !HostedZone
+    , _chzrsChangeInfo     :: !ChangeInfo
+    , _chzrsDelegationSet  :: !DelegationSet
+    , _chzrsLocation       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateHostedZoneResponse' with the minimum fields required to make a request.

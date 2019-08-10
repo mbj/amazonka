@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getContact' smart constructor.
-newtype GetContact = GetContact'
-  { _gcContactARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetContact =
+  GetContact'
+    { _gcContactARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetContact' with the minimum fields required to make a request.
@@ -99,10 +101,12 @@ instance ToQuery GetContact where
         toQuery = const mempty
 
 -- | /See:/ 'getContactResponse' smart constructor.
-data GetContactResponse = GetContactResponse'
-  { _gcrsContact        :: !(Maybe Contact)
-  , _gcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetContactResponse =
+  GetContactResponse'
+    { _gcrsContact        :: !(Maybe Contact)
+    , _gcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetContactResponse' with the minimum fields required to make a request.

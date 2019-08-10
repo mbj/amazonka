@@ -60,9 +60,11 @@ import Network.AWS.SWF.Types
 import Network.AWS.SWF.Types.Product
 
 -- | /See:/ 'describeDomain' smart constructor.
-newtype DescribeDomain = DescribeDomain'
-  { _ddName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeDomain =
+  DescribeDomain'
+    { _ddName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDomain' with the minimum fields required to make a request.
@@ -119,11 +121,13 @@ instance ToQuery DescribeDomain where
 --
 --
 -- /See:/ 'describeDomainResponse' smart constructor.
-data DescribeDomainResponse = DescribeDomainResponse'
-  { _ddrsResponseStatus :: !Int
-  , _ddrsDomainInfo     :: !DomainInfo
-  , _ddrsConfiguration  :: !DomainConfiguration
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDomainResponse =
+  DescribeDomainResponse'
+    { _ddrsResponseStatus :: !Int
+    , _ddrsDomainInfo     :: !DomainInfo
+    , _ddrsConfiguration  :: !DomainConfiguration
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDomainResponse' with the minimum fields required to make a request.

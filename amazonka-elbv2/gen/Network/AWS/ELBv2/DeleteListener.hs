@@ -46,9 +46,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteListener' smart constructor.
-newtype DeleteListener = DeleteListener'
-  { _dlListenerARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteListener =
+  DeleteListener'
+    { _dlListenerARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteListener' with the minimum fields required to make a request.
@@ -92,9 +94,11 @@ instance ToQuery DeleteListener where
                "ListenerArn" =: _dlListenerARN]
 
 -- | /See:/ 'deleteListenerResponse' smart constructor.
-newtype DeleteListenerResponse = DeleteListenerResponse'
-  { _dlrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteListenerResponse =
+  DeleteListenerResponse'
+    { _dlrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteListenerResponse' with the minimum fields required to make a request.

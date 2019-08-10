@@ -51,10 +51,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'batchGetDeploymentGroups' smart constructor.
-data BatchGetDeploymentGroups = BatchGetDeploymentGroups'
-  { _bgdgApplicationName      :: !Text
-  , _bgdgDeploymentGroupNames :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchGetDeploymentGroups =
+  BatchGetDeploymentGroups'
+    { _bgdgApplicationName      :: !Text
+    , _bgdgDeploymentGroupNames :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchGetDeploymentGroups' with the minimum fields required to make a request.
@@ -128,11 +130,13 @@ instance ToQuery BatchGetDeploymentGroups where
 --
 --
 -- /See:/ 'batchGetDeploymentGroupsResponse' smart constructor.
-data BatchGetDeploymentGroupsResponse = BatchGetDeploymentGroupsResponse'
-  { _bgdgrsDeploymentGroupsInfo :: !(Maybe [DeploymentGroupInfo])
-  , _bgdgrsErrorMessage         :: !(Maybe Text)
-  , _bgdgrsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchGetDeploymentGroupsResponse =
+  BatchGetDeploymentGroupsResponse'
+    { _bgdgrsDeploymentGroupsInfo :: !(Maybe [DeploymentGroupInfo])
+    , _bgdgrsErrorMessage         :: !(Maybe Text)
+    , _bgdgrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchGetDeploymentGroupsResponse' with the minimum fields required to make a request.

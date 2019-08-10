@@ -79,9 +79,11 @@ import Network.AWS.SecretsManager.Types
 import Network.AWS.SecretsManager.Types.Product
 
 -- | /See:/ 'cancelRotateSecret' smart constructor.
-newtype CancelRotateSecret = CancelRotateSecret'
-  { _crsSecretId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CancelRotateSecret =
+  CancelRotateSecret'
+    { _crsSecretId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CancelRotateSecret' with the minimum fields required to make a request.
@@ -136,12 +138,14 @@ instance ToQuery CancelRotateSecret where
         toQuery = const mempty
 
 -- | /See:/ 'cancelRotateSecretResponse' smart constructor.
-data CancelRotateSecretResponse = CancelRotateSecretResponse'
-  { _crsrsVersionId      :: !(Maybe Text)
-  , _crsrsARN            :: !(Maybe Text)
-  , _crsrsName           :: !(Maybe Text)
-  , _crsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CancelRotateSecretResponse =
+  CancelRotateSecretResponse'
+    { _crsrsVersionId      :: !(Maybe Text)
+    , _crsrsARN            :: !(Maybe Text)
+    , _crsrsName           :: !(Maybe Text)
+    , _crsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CancelRotateSecretResponse' with the minimum fields required to make a request.

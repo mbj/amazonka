@@ -43,9 +43,11 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'getBucketAccelerateConfiguration' smart constructor.
-newtype GetBucketAccelerateConfiguration = GetBucketAccelerateConfiguration'
-  { _gbacBucket :: BucketName
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetBucketAccelerateConfiguration =
+  GetBucketAccelerateConfiguration'
+    { _gbacBucket :: BucketName
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBucketAccelerateConfiguration' with the minimum fields required to make a request.
@@ -95,10 +97,12 @@ instance ToQuery GetBucketAccelerateConfiguration
         toQuery = const (mconcat ["accelerate"])
 
 -- | /See:/ 'getBucketAccelerateConfigurationResponse' smart constructor.
-data GetBucketAccelerateConfigurationResponse = GetBucketAccelerateConfigurationResponse'
-  { _grsStatus         :: !(Maybe BucketAccelerateStatus)
-  , _grsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetBucketAccelerateConfigurationResponse =
+  GetBucketAccelerateConfigurationResponse'
+    { _grsStatus         :: !(Maybe BucketAccelerateStatus)
+    , _grsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBucketAccelerateConfigurationResponse' with the minimum fields required to make a request.

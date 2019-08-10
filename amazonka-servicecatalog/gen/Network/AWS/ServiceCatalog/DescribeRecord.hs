@@ -52,12 +52,14 @@ import Network.AWS.ServiceCatalog.Types
 import Network.AWS.ServiceCatalog.Types.Product
 
 -- | /See:/ 'describeRecord' smart constructor.
-data DescribeRecord = DescribeRecord'
-  { _drAcceptLanguage :: !(Maybe Text)
-  , _drPageToken      :: !(Maybe Text)
-  , _drPageSize       :: !(Maybe Nat)
-  , _drId             :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeRecord =
+  DescribeRecord'
+    { _drAcceptLanguage :: !(Maybe Text)
+    , _drPageToken      :: !(Maybe Text)
+    , _drPageSize       :: !(Maybe Nat)
+    , _drId             :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeRecord' with the minimum fields required to make a request.
@@ -140,12 +142,14 @@ instance ToQuery DescribeRecord where
         toQuery = const mempty
 
 -- | /See:/ 'describeRecordResponse' smart constructor.
-data DescribeRecordResponse = DescribeRecordResponse'
-  { _drrsRecordDetail   :: !(Maybe RecordDetail)
-  , _drrsNextPageToken  :: !(Maybe Text)
-  , _drrsRecordOutputs  :: !(Maybe [RecordOutput])
-  , _drrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeRecordResponse =
+  DescribeRecordResponse'
+    { _drrsRecordDetail   :: !(Maybe RecordDetail)
+    , _drrsNextPageToken  :: !(Maybe Text)
+    , _drrsRecordOutputs  :: !(Maybe [RecordOutput])
+    , _drrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeRecordResponse' with the minimum fields required to make a request.

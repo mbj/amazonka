@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeStep' smart constructor.
-data DescribeStep = DescribeStep'
-  { _dsClusterId :: !Text
-  , _dsStepId    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeStep =
+  DescribeStep'
+    { _dsClusterId :: !Text
+    , _dsStepId    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeStep' with the minimum fields required to make a request.
@@ -119,10 +121,12 @@ instance ToQuery DescribeStep where
 --
 --
 -- /See:/ 'describeStepResponse' smart constructor.
-data DescribeStepResponse = DescribeStepResponse'
-  { _dsrsStep           :: !(Maybe Step)
-  , _dsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeStepResponse =
+  DescribeStepResponse'
+    { _dsrsStep           :: !(Maybe Step)
+    , _dsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeStepResponse' with the minimum fields required to make a request.

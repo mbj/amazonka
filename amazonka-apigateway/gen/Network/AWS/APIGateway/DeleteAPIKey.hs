@@ -46,9 +46,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteAPIKey' smart constructor.
-newtype DeleteAPIKey = DeleteAPIKey'
-  { _dakApiKey :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteAPIKey =
+  DeleteAPIKey'
+    { _dakApiKey :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteAPIKey' with the minimum fields required to make a request.

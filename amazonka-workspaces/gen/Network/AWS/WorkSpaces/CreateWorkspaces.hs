@@ -48,9 +48,11 @@ import Network.AWS.WorkSpaces.Types
 import Network.AWS.WorkSpaces.Types.Product
 
 -- | /See:/ 'createWorkspaces' smart constructor.
-newtype CreateWorkspaces = CreateWorkspaces'
-  { _cwWorkspaces :: List1 WorkspaceRequest
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateWorkspaces =
+  CreateWorkspaces'
+    { _cwWorkspaces :: List1 WorkspaceRequest
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateWorkspaces' with the minimum fields required to make a request.
@@ -105,11 +107,13 @@ instance ToQuery CreateWorkspaces where
         toQuery = const mempty
 
 -- | /See:/ 'createWorkspacesResponse' smart constructor.
-data CreateWorkspacesResponse = CreateWorkspacesResponse'
-  { _cwrsFailedRequests  :: !(Maybe [FailedCreateWorkspaceRequest])
-  , _cwrsPendingRequests :: !(Maybe [Workspace])
-  , _cwrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateWorkspacesResponse =
+  CreateWorkspacesResponse'
+    { _cwrsFailedRequests  :: !(Maybe [FailedCreateWorkspaceRequest])
+    , _cwrsPendingRequests :: !(Maybe [Workspace])
+    , _cwrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateWorkspacesResponse' with the minimum fields required to make a request.

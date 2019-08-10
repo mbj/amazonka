@@ -48,11 +48,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'setVaultAccessPolicy' smart constructor.
-data SetVaultAccessPolicy = SetVaultAccessPolicy'
-  { _svapPolicy    :: !(Maybe VaultAccessPolicy)
-  , _svapAccountId :: !Text
-  , _svapVaultName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SetVaultAccessPolicy =
+  SetVaultAccessPolicy'
+    { _svapPolicy    :: !(Maybe VaultAccessPolicy)
+    , _svapAccountId :: !Text
+    , _svapVaultName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetVaultAccessPolicy' with the minimum fields required to make a request.

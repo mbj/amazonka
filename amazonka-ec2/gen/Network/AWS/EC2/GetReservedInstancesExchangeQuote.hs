@@ -59,11 +59,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getReservedInstancesExchangeQuote' smart constructor.
-data GetReservedInstancesExchangeQuote = GetReservedInstancesExchangeQuote'
-  { _grieqTargetConfigurations :: !(Maybe [TargetConfigurationRequest])
-  , _grieqDryRun               :: !(Maybe Bool)
-  , _grieqReservedInstanceIds  :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetReservedInstancesExchangeQuote =
+  GetReservedInstancesExchangeQuote'
+    { _grieqTargetConfigurations :: !(Maybe [TargetConfigurationRequest])
+    , _grieqDryRun               :: !(Maybe Bool)
+    , _grieqReservedInstanceIds  :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetReservedInstancesExchangeQuote' with the minimum fields required to make a request.
@@ -154,18 +156,20 @@ instance ToQuery GetReservedInstancesExchangeQuote
 --
 --
 -- /See:/ 'getReservedInstancesExchangeQuoteResponse' smart constructor.
-data GetReservedInstancesExchangeQuoteResponse = GetReservedInstancesExchangeQuoteResponse'
-  { _grieqrsValidationFailureReason :: !(Maybe Text)
-  , _grieqrsTargetConfigurationValueRollup :: !(Maybe ReservationValue)
-  , _grieqrsCurrencyCode :: !(Maybe Text)
-  , _grieqrsTargetConfigurationValueSet :: !(Maybe [TargetReservationValue])
-  , _grieqrsReservedInstanceValueRollup :: !(Maybe ReservationValue)
-  , _grieqrsOutputReservedInstancesWillExpireAt :: !(Maybe ISO8601)
-  , _grieqrsReservedInstanceValueSet :: !(Maybe [ReservedInstanceReservationValue])
-  , _grieqrsIsValidExchange :: !(Maybe Bool)
-  , _grieqrsPaymentDue :: !(Maybe Text)
-  , _grieqrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetReservedInstancesExchangeQuoteResponse =
+  GetReservedInstancesExchangeQuoteResponse'
+    { _grieqrsValidationFailureReason :: !(Maybe Text)
+    , _grieqrsTargetConfigurationValueRollup :: !(Maybe ReservationValue)
+    , _grieqrsCurrencyCode :: !(Maybe Text)
+    , _grieqrsTargetConfigurationValueSet :: !(Maybe [TargetReservationValue])
+    , _grieqrsReservedInstanceValueRollup :: !(Maybe ReservationValue)
+    , _grieqrsOutputReservedInstancesWillExpireAt :: !(Maybe ISO8601)
+    , _grieqrsReservedInstanceValueSet :: !(Maybe [ReservedInstanceReservationValue])
+    , _grieqrsIsValidExchange :: !(Maybe Bool)
+    , _grieqrsPaymentDue :: !(Maybe Text)
+    , _grieqrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetReservedInstancesExchangeQuoteResponse' with the minimum fields required to make a request.

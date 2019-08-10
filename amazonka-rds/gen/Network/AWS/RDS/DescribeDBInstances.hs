@@ -56,12 +56,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeDBInstances' smart constructor.
-data DescribeDBInstances = DescribeDBInstances'
-  { _ddbiFilters              :: !(Maybe [Filter])
-  , _ddbiDBInstanceIdentifier :: !(Maybe Text)
-  , _ddbiMarker               :: !(Maybe Text)
-  , _ddbiMaxRecords           :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDBInstances =
+  DescribeDBInstances'
+    { _ddbiFilters              :: !(Maybe [Filter])
+    , _ddbiDBInstanceIdentifier :: !(Maybe Text)
+    , _ddbiMarker               :: !(Maybe Text)
+    , _ddbiMaxRecords           :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDBInstances' with the minimum fields required to make a request.
@@ -148,11 +150,13 @@ instance ToQuery DescribeDBInstances where
 --
 --
 -- /See:/ 'describeDBInstancesResponse' smart constructor.
-data DescribeDBInstancesResponse = DescribeDBInstancesResponse'
-  { _ddbirsDBInstances    :: !(Maybe [DBInstance])
-  , _ddbirsMarker         :: !(Maybe Text)
-  , _ddbirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDBInstancesResponse =
+  DescribeDBInstancesResponse'
+    { _ddbirsDBInstances    :: !(Maybe [DBInstance])
+    , _ddbirsMarker         :: !(Maybe Text)
+    , _ddbirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDBInstancesResponse' with the minimum fields required to make a request.

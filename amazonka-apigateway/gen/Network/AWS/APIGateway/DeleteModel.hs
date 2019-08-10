@@ -47,10 +47,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteModel' smart constructor.
-data DeleteModel = DeleteModel'
-  { _dRestAPIId :: !Text
-  , _dModelName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteModel =
+  DeleteModel'
+    { _dRestAPIId :: !Text
+    , _dModelName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteModel' with the minimum fields required to make a request.

@@ -58,9 +58,11 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'getCustomVerificationEmailTemplate' smart constructor.
-newtype GetCustomVerificationEmailTemplate = GetCustomVerificationEmailTemplate'
-  { _gcvetTemplateName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetCustomVerificationEmailTemplate =
+  GetCustomVerificationEmailTemplate'
+    { _gcvetTemplateName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetCustomVerificationEmailTemplate' with the minimum fields required to make a request.
@@ -125,15 +127,17 @@ instance ToQuery GetCustomVerificationEmailTemplate
 --
 --
 -- /See:/ 'getCustomVerificationEmailTemplateResponse' smart constructor.
-data GetCustomVerificationEmailTemplateResponse = GetCustomVerificationEmailTemplateResponse'
-  { _gcvetrsFromEmailAddress      :: !(Maybe Text)
-  , _gcvetrsTemplateName          :: !(Maybe Text)
-  , _gcvetrsFailureRedirectionURL :: !(Maybe Text)
-  , _gcvetrsTemplateSubject       :: !(Maybe Text)
-  , _gcvetrsSuccessRedirectionURL :: !(Maybe Text)
-  , _gcvetrsTemplateContent       :: !(Maybe Text)
-  , _gcvetrsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetCustomVerificationEmailTemplateResponse =
+  GetCustomVerificationEmailTemplateResponse'
+    { _gcvetrsFromEmailAddress      :: !(Maybe Text)
+    , _gcvetrsTemplateName          :: !(Maybe Text)
+    , _gcvetrsFailureRedirectionURL :: !(Maybe Text)
+    , _gcvetrsTemplateSubject       :: !(Maybe Text)
+    , _gcvetrsSuccessRedirectionURL :: !(Maybe Text)
+    , _gcvetrsTemplateContent       :: !(Maybe Text)
+    , _gcvetrsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetCustomVerificationEmailTemplateResponse' with the minimum fields required to make a request.

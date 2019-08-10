@@ -47,12 +47,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createFacet' smart constructor.
-data CreateFacet = CreateFacet'
-  { _cfAttributes :: !(Maybe [FacetAttribute])
-  , _cfSchemaARN  :: !Text
-  , _cfName       :: !Text
-  , _cfObjectType :: !ObjectType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateFacet =
+  CreateFacet'
+    { _cfAttributes :: !(Maybe [FacetAttribute])
+    , _cfSchemaARN  :: !Text
+    , _cfName       :: !Text
+    , _cfObjectType :: !ObjectType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateFacet' with the minimum fields required to make a request.
@@ -129,9 +131,11 @@ instance ToQuery CreateFacet where
         toQuery = const mempty
 
 -- | /See:/ 'createFacetResponse' smart constructor.
-newtype CreateFacetResponse = CreateFacetResponse'
-  { _cfrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateFacetResponse =
+  CreateFacetResponse'
+    { _cfrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateFacetResponse' with the minimum fields required to make a request.

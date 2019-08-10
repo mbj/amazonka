@@ -55,14 +55,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeScheduledActions' smart constructor.
-data DescribeScheduledActions = DescribeScheduledActions'
-  { _dsasScalableDimension    :: !(Maybe ScalableDimension)
-  , _dsasResourceId           :: !(Maybe Text)
-  , _dsasNextToken            :: !(Maybe Text)
-  , _dsasScheduledActionNames :: !(Maybe [Text])
-  , _dsasMaxResults           :: !(Maybe Int)
-  , _dsasServiceNamespace     :: !ServiceNamespace
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeScheduledActions =
+  DescribeScheduledActions'
+    { _dsasScalableDimension    :: !(Maybe ScalableDimension)
+    , _dsasResourceId           :: !(Maybe Text)
+    , _dsasNextToken            :: !(Maybe Text)
+    , _dsasScheduledActionNames :: !(Maybe [Text])
+    , _dsasMaxResults           :: !(Maybe Int)
+    , _dsasServiceNamespace     :: !ServiceNamespace
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeScheduledActions' with the minimum fields required to make a request.
@@ -163,11 +165,13 @@ instance ToQuery DescribeScheduledActions where
         toQuery = const mempty
 
 -- | /See:/ 'describeScheduledActionsResponse' smart constructor.
-data DescribeScheduledActionsResponse = DescribeScheduledActionsResponse'
-  { _dsarsNextToken        :: !(Maybe Text)
-  , _dsarsScheduledActions :: !(Maybe [ScheduledAction])
-  , _dsarsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeScheduledActionsResponse =
+  DescribeScheduledActionsResponse'
+    { _dsarsNextToken        :: !(Maybe Text)
+    , _dsarsScheduledActions :: !(Maybe [ScheduledAction])
+    , _dsarsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeScheduledActionsResponse' with the minimum fields required to make a request.

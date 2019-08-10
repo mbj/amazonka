@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeConfigurationRecorderStatus' smart constructor.
-newtype DescribeConfigurationRecorderStatus = DescribeConfigurationRecorderStatus'
-  { _dcrsConfigurationRecorderNames :: Maybe [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeConfigurationRecorderStatus =
+  DescribeConfigurationRecorderStatus'
+    { _dcrsConfigurationRecorderNames :: Maybe [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeConfigurationRecorderStatus' with the minimum fields required to make a request.
@@ -122,10 +124,12 @@ instance ToQuery DescribeConfigurationRecorderStatus
 --
 --
 -- /See:/ 'describeConfigurationRecorderStatusResponse' smart constructor.
-data DescribeConfigurationRecorderStatusResponse = DescribeConfigurationRecorderStatusResponse'
-  { _dcrsrsConfigurationRecordersStatus :: !(Maybe [ConfigurationRecorderStatus])
-  , _dcrsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeConfigurationRecorderStatusResponse =
+  DescribeConfigurationRecorderStatusResponse'
+    { _dcrsrsConfigurationRecordersStatus :: !(Maybe [ConfigurationRecorderStatus])
+    , _dcrsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeConfigurationRecorderStatusResponse' with the minimum fields required to make a request.

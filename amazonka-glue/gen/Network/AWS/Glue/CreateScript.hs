@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createScript' smart constructor.
-data CreateScript = CreateScript'
-  { _csDagEdges :: !(Maybe [CodeGenEdge])
-  , _csLanguage :: !(Maybe Language)
-  , _csDagNodes :: !(Maybe [CodeGenNode])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateScript =
+  CreateScript'
+    { _csDagEdges :: !(Maybe [CodeGenEdge])
+    , _csLanguage :: !(Maybe Language)
+    , _csDagNodes :: !(Maybe [CodeGenNode])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateScript' with the minimum fields required to make a request.
@@ -121,11 +123,13 @@ instance ToQuery CreateScript where
         toQuery = const mempty
 
 -- | /See:/ 'createScriptResponse' smart constructor.
-data CreateScriptResponse = CreateScriptResponse'
-  { _csrsPythonScript   :: !(Maybe Text)
-  , _csrsScalaCode      :: !(Maybe Text)
-  , _csrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateScriptResponse =
+  CreateScriptResponse'
+    { _csrsPythonScript   :: !(Maybe Text)
+    , _csrsScalaCode      :: !(Maybe Text)
+    , _csrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateScriptResponse' with the minimum fields required to make a request.

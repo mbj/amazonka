@@ -26,10 +26,12 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'accountTakeoverActionType' smart constructor.
-data AccountTakeoverActionType = AccountTakeoverActionType'
-  { _atatNotify      :: !Bool
-  , _atatEventAction :: !AccountTakeoverEventActionType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AccountTakeoverActionType =
+  AccountTakeoverActionType'
+    { _atatNotify      :: !Bool
+    , _atatEventAction :: !AccountTakeoverEventActionType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AccountTakeoverActionType' with the minimum fields required to make a request.
@@ -79,11 +81,13 @@ instance ToJSON AccountTakeoverActionType where
 --
 --
 -- /See:/ 'accountTakeoverActionsType' smart constructor.
-data AccountTakeoverActionsType = AccountTakeoverActionsType'
-  { _atatLowAction    :: !(Maybe AccountTakeoverActionType)
-  , _atatHighAction   :: !(Maybe AccountTakeoverActionType)
-  , _atatMediumAction :: !(Maybe AccountTakeoverActionType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AccountTakeoverActionsType =
+  AccountTakeoverActionsType'
+    { _atatLowAction    :: !(Maybe AccountTakeoverActionType)
+    , _atatHighAction   :: !(Maybe AccountTakeoverActionType)
+    , _atatMediumAction :: !(Maybe AccountTakeoverActionType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AccountTakeoverActionsType' with the minimum fields required to make a request.
@@ -142,10 +146,12 @@ instance ToJSON AccountTakeoverActionsType where
 --
 --
 -- /See:/ 'accountTakeoverRiskConfigurationType' smart constructor.
-data AccountTakeoverRiskConfigurationType = AccountTakeoverRiskConfigurationType'
-  { _atrctNotifyConfiguration :: !(Maybe NotifyConfigurationType)
-  , _atrctActions             :: !AccountTakeoverActionsType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AccountTakeoverRiskConfigurationType =
+  AccountTakeoverRiskConfigurationType'
+    { _atrctNotifyConfiguration :: !(Maybe NotifyConfigurationType)
+    , _atrctActions             :: !AccountTakeoverActionsType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AccountTakeoverRiskConfigurationType' with the minimum fields required to make a request.
@@ -201,11 +207,13 @@ instance ToJSON AccountTakeoverRiskConfigurationType
 --
 --
 -- /See:/ 'adminCreateUserConfigType' smart constructor.
-data AdminCreateUserConfigType = AdminCreateUserConfigType'
-  { _acuctAllowAdminCreateUserOnly  :: !(Maybe Bool)
-  , _acuctUnusedAccountValidityDays :: !(Maybe Nat)
-  , _acuctInviteMessageTemplate     :: !(Maybe MessageTemplateType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AdminCreateUserConfigType =
+  AdminCreateUserConfigType'
+    { _acuctAllowAdminCreateUserOnly  :: !(Maybe Bool)
+    , _acuctUnusedAccountValidityDays :: !(Maybe Nat)
+    , _acuctInviteMessageTemplate     :: !(Maybe MessageTemplateType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AdminCreateUserConfigType' with the minimum fields required to make a request.
@@ -268,12 +276,14 @@ instance ToJSON AdminCreateUserConfigType where
 --
 --
 -- /See:/ 'analyticsConfigurationType' smart constructor.
-data AnalyticsConfigurationType = AnalyticsConfigurationType'
-  { _actUserDataShared :: !(Maybe Bool)
-  , _actApplicationId  :: !Text
-  , _actRoleARN        :: !Text
-  , _actExternalId     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AnalyticsConfigurationType =
+  AnalyticsConfigurationType'
+    { _actUserDataShared :: !(Maybe Bool)
+    , _actApplicationId  :: !Text
+    , _actRoleARN        :: !Text
+    , _actExternalId     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AnalyticsConfigurationType' with the minimum fields required to make a request.
@@ -346,9 +356,11 @@ instance ToJSON AnalyticsConfigurationType where
 --
 --
 -- /See:/ 'analyticsMetadataType' smart constructor.
-newtype AnalyticsMetadataType = AnalyticsMetadataType'
-  { _amtAnalyticsEndpointId :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AnalyticsMetadataType =
+  AnalyticsMetadataType'
+    { _amtAnalyticsEndpointId :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AnalyticsMetadataType' with the minimum fields required to make a request.
@@ -382,10 +394,12 @@ instance ToJSON AnalyticsMetadataType where
 --
 --
 -- /See:/ 'attributeType' smart constructor.
-data AttributeType = AttributeType'
-  { _atValue :: !(Maybe (Sensitive Text))
-  , _atName  :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data AttributeType =
+  AttributeType'
+    { _atValue :: !(Maybe (Sensitive Text))
+    , _atName  :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttributeType' with the minimum fields required to make a request.
@@ -431,16 +445,18 @@ instance ToJSON AttributeType where
 --
 --
 -- /See:/ 'authEventType' smart constructor.
-data AuthEventType = AuthEventType'
-  { _aetEventRisk          :: !(Maybe EventRiskType)
-  , _aetEventResponse      :: !(Maybe EventResponseType)
-  , _aetEventContextData   :: !(Maybe EventContextDataType)
-  , _aetChallengeResponses :: !(Maybe [ChallengeResponseType])
-  , _aetEventType          :: !(Maybe EventType)
-  , _aetCreationDate       :: !(Maybe POSIX)
-  , _aetEventFeedback      :: !(Maybe EventFeedbackType)
-  , _aetEventId            :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AuthEventType =
+  AuthEventType'
+    { _aetEventRisk          :: !(Maybe EventRiskType)
+    , _aetEventResponse      :: !(Maybe EventResponseType)
+    , _aetEventContextData   :: !(Maybe EventContextDataType)
+    , _aetChallengeResponses :: !(Maybe [ChallengeResponseType])
+    , _aetEventType          :: !(Maybe EventType)
+    , _aetCreationDate       :: !(Maybe POSIX)
+    , _aetEventFeedback      :: !(Maybe EventFeedbackType)
+    , _aetEventId            :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AuthEventType' with the minimum fields required to make a request.
@@ -531,14 +547,16 @@ instance NFData AuthEventType where
 --
 --
 -- /See:/ 'authenticationResultType' smart constructor.
-data AuthenticationResultType = AuthenticationResultType'
-  { _artAccessToken       :: !(Maybe (Sensitive Text))
-  , _artRefreshToken      :: !(Maybe (Sensitive Text))
-  , _artNewDeviceMetadata :: !(Maybe NewDeviceMetadataType)
-  , _artExpiresIn         :: !(Maybe Int)
-  , _artTokenType         :: !(Maybe Text)
-  , _artIdToken           :: !(Maybe (Sensitive Text))
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data AuthenticationResultType =
+  AuthenticationResultType'
+    { _artAccessToken       :: !(Maybe (Sensitive Text))
+    , _artRefreshToken      :: !(Maybe (Sensitive Text))
+    , _artNewDeviceMetadata :: !(Maybe NewDeviceMetadataType)
+    , _artExpiresIn         :: !(Maybe Int)
+    , _artTokenType         :: !(Maybe Text)
+    , _artIdToken           :: !(Maybe (Sensitive Text))
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AuthenticationResultType' with the minimum fields required to make a request.
@@ -613,10 +631,12 @@ instance NFData AuthenticationResultType where
 --
 --
 -- /See:/ 'challengeResponseType' smart constructor.
-data ChallengeResponseType = ChallengeResponseType'
-  { _crtChallengeName     :: !(Maybe ChallengeName)
-  , _crtChallengeResponse :: !(Maybe ChallengeResponse)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ChallengeResponseType =
+  ChallengeResponseType'
+    { _crtChallengeName     :: !(Maybe ChallengeName)
+    , _crtChallengeResponse :: !(Maybe ChallengeResponse)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ChallengeResponseType' with the minimum fields required to make a request.
@@ -658,11 +678,13 @@ instance NFData ChallengeResponseType where
 --
 --
 -- /See:/ 'codeDeliveryDetailsType' smart constructor.
-data CodeDeliveryDetailsType = CodeDeliveryDetailsType'
-  { _cddtDestination    :: !(Maybe Text)
-  , _cddtDeliveryMedium :: !(Maybe DeliveryMediumType)
-  , _cddtAttributeName  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CodeDeliveryDetailsType =
+  CodeDeliveryDetailsType'
+    { _cddtDestination    :: !(Maybe Text)
+    , _cddtDeliveryMedium :: !(Maybe DeliveryMediumType)
+    , _cddtAttributeName  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CodeDeliveryDetailsType' with the minimum fields required to make a request.
@@ -713,9 +735,11 @@ instance NFData CodeDeliveryDetailsType where
 --
 --
 -- /See:/ 'compromisedCredentialsActionsType' smart constructor.
-newtype CompromisedCredentialsActionsType = CompromisedCredentialsActionsType'
-  { _ccatEventAction :: CompromisedCredentialsEventActionType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CompromisedCredentialsActionsType =
+  CompromisedCredentialsActionsType'
+    { _ccatEventAction :: CompromisedCredentialsEventActionType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CompromisedCredentialsActionsType' with the minimum fields required to make a request.
@@ -760,10 +784,12 @@ instance ToJSON CompromisedCredentialsActionsType
 --
 --
 -- /See:/ 'compromisedCredentialsRiskConfigurationType' smart constructor.
-data CompromisedCredentialsRiskConfigurationType = CompromisedCredentialsRiskConfigurationType'
-  { _ccrctEventFilter :: !(Maybe [EventFilterType])
-  , _ccrctActions     :: !CompromisedCredentialsActionsType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CompromisedCredentialsRiskConfigurationType =
+  CompromisedCredentialsRiskConfigurationType'
+    { _ccrctEventFilter :: !(Maybe [EventFilterType])
+    , _ccrctActions     :: !CompromisedCredentialsActionsType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CompromisedCredentialsRiskConfigurationType' with the minimum fields required to make a request.
@@ -823,13 +849,15 @@ instance ToJSON
 --
 --
 -- /See:/ 'contextDataType' smart constructor.
-data ContextDataType = ContextDataType'
-  { _cdtEncodedData :: !(Maybe Text)
-  , _cdtIPAddress   :: !Text
-  , _cdtServerName  :: !Text
-  , _cdtServerPath  :: !Text
-  , _cdtHTTPHeaders :: ![HTTPHeader]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ContextDataType =
+  ContextDataType'
+    { _cdtEncodedData :: !(Maybe Text)
+    , _cdtIPAddress   :: !Text
+    , _cdtServerName  :: !Text
+    , _cdtServerPath  :: !Text
+    , _cdtHTTPHeaders :: ![HTTPHeader]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ContextDataType' with the minimum fields required to make a request.
@@ -899,10 +927,12 @@ instance ToJSON ContextDataType where
 --
 --
 -- /See:/ 'deviceConfigurationType' smart constructor.
-data DeviceConfigurationType = DeviceConfigurationType'
-  { _dctChallengeRequiredOnNewDevice     :: !(Maybe Bool)
-  , _dctDeviceOnlyRememberedOnUserPrompt :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeviceConfigurationType =
+  DeviceConfigurationType'
+    { _dctChallengeRequiredOnNewDevice     :: !(Maybe Bool)
+    , _dctDeviceOnlyRememberedOnUserPrompt :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeviceConfigurationType' with the minimum fields required to make a request.
@@ -955,10 +985,12 @@ instance ToJSON DeviceConfigurationType where
 --
 --
 -- /See:/ 'deviceSecretVerifierConfigType' smart constructor.
-data DeviceSecretVerifierConfigType = DeviceSecretVerifierConfigType'
-  { _dsvctPasswordVerifier :: !(Maybe Text)
-  , _dsvctSalt             :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeviceSecretVerifierConfigType =
+  DeviceSecretVerifierConfigType'
+    { _dsvctPasswordVerifier :: !(Maybe Text)
+    , _dsvctSalt             :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeviceSecretVerifierConfigType' with the minimum fields required to make a request.
@@ -1000,13 +1032,15 @@ instance ToJSON DeviceSecretVerifierConfigType where
 --
 --
 -- /See:/ 'deviceType' smart constructor.
-data DeviceType = DeviceType'
-  { _dtDeviceLastModifiedDate      :: !(Maybe POSIX)
-  , _dtDeviceCreateDate            :: !(Maybe POSIX)
-  , _dtDeviceAttributes            :: !(Maybe [AttributeType])
-  , _dtDeviceKey                   :: !(Maybe Text)
-  , _dtDeviceLastAuthenticatedDate :: !(Maybe POSIX)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data DeviceType =
+  DeviceType'
+    { _dtDeviceLastModifiedDate      :: !(Maybe POSIX)
+    , _dtDeviceCreateDate            :: !(Maybe POSIX)
+    , _dtDeviceAttributes            :: !(Maybe [AttributeType])
+    , _dtDeviceKey                   :: !(Maybe Text)
+    , _dtDeviceLastAuthenticatedDate :: !(Maybe POSIX)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeviceType' with the minimum fields required to make a request.
@@ -1074,15 +1108,17 @@ instance NFData DeviceType where
 --
 --
 -- /See:/ 'domainDescriptionType' smart constructor.
-data DomainDescriptionType = DomainDescriptionType'
-  { _ddtStatus                 :: !(Maybe DomainStatusType)
-  , _ddtCloudFrontDistribution :: !(Maybe Text)
-  , _ddtUserPoolId             :: !(Maybe Text)
-  , _ddtDomain                 :: !(Maybe Text)
-  , _ddtAWSAccountId           :: !(Maybe Text)
-  , _ddtVersion                :: !(Maybe Text)
-  , _ddtS3Bucket               :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DomainDescriptionType =
+  DomainDescriptionType'
+    { _ddtStatus                 :: !(Maybe DomainStatusType)
+    , _ddtCloudFrontDistribution :: !(Maybe Text)
+    , _ddtUserPoolId             :: !(Maybe Text)
+    , _ddtDomain                 :: !(Maybe Text)
+    , _ddtAWSAccountId           :: !(Maybe Text)
+    , _ddtVersion                :: !(Maybe Text)
+    , _ddtS3Bucket               :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DomainDescriptionType' with the minimum fields required to make a request.
@@ -1165,10 +1201,12 @@ instance NFData DomainDescriptionType where
 --
 --
 -- /See:/ 'emailConfigurationType' smart constructor.
-data EmailConfigurationType = EmailConfigurationType'
-  { _ectSourceARN           :: !(Maybe Text)
-  , _ectReplyToEmailAddress :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EmailConfigurationType =
+  EmailConfigurationType'
+    { _ectSourceARN           :: !(Maybe Text)
+    , _ectReplyToEmailAddress :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EmailConfigurationType' with the minimum fields required to make a request.
@@ -1218,13 +1256,15 @@ instance ToJSON EmailConfigurationType where
 --
 --
 -- /See:/ 'eventContextDataType' smart constructor.
-data EventContextDataType = EventContextDataType'
-  { _ecdtIPAddress  :: !(Maybe Text)
-  , _ecdtCountry    :: !(Maybe Text)
-  , _ecdtCity       :: !(Maybe Text)
-  , _ecdtDeviceName :: !(Maybe Text)
-  , _ecdtTimezone   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EventContextDataType =
+  EventContextDataType'
+    { _ecdtIPAddress  :: !(Maybe Text)
+    , _ecdtCountry    :: !(Maybe Text)
+    , _ecdtCity       :: !(Maybe Text)
+    , _ecdtDeviceName :: !(Maybe Text)
+    , _ecdtTimezone   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EventContextDataType' with the minimum fields required to make a request.
@@ -1291,11 +1331,13 @@ instance NFData EventContextDataType where
 --
 --
 -- /See:/ 'eventFeedbackType' smart constructor.
-data EventFeedbackType = EventFeedbackType'
-  { _eftFeedbackDate  :: !(Maybe POSIX)
-  , _eftFeedbackValue :: !FeedbackValueType
-  , _eftProvider      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EventFeedbackType =
+  EventFeedbackType'
+    { _eftFeedbackDate  :: !(Maybe POSIX)
+    , _eftFeedbackValue :: !FeedbackValueType
+    , _eftProvider      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EventFeedbackType' with the minimum fields required to make a request.
@@ -1348,10 +1390,12 @@ instance NFData EventFeedbackType where
 --
 --
 -- /See:/ 'eventRiskType' smart constructor.
-data EventRiskType = EventRiskType'
-  { _ertRiskLevel    :: !(Maybe RiskLevelType)
-  , _ertRiskDecision :: !(Maybe RiskDecisionType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EventRiskType =
+  EventRiskType'
+    { _ertRiskLevel    :: !(Maybe RiskLevelType)
+    , _ertRiskDecision :: !(Maybe RiskDecisionType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EventRiskType' with the minimum fields required to make a request.
@@ -1391,15 +1435,17 @@ instance NFData EventRiskType where
 --
 --
 -- /See:/ 'groupType' smart constructor.
-data GroupType = GroupType'
-  { _gtLastModifiedDate :: !(Maybe POSIX)
-  , _gtUserPoolId       :: !(Maybe Text)
-  , _gtCreationDate     :: !(Maybe POSIX)
-  , _gtPrecedence       :: !(Maybe Nat)
-  , _gtGroupName        :: !(Maybe Text)
-  , _gtDescription      :: !(Maybe Text)
-  , _gtRoleARN          :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GroupType =
+  GroupType'
+    { _gtLastModifiedDate :: !(Maybe POSIX)
+    , _gtUserPoolId       :: !(Maybe Text)
+    , _gtCreationDate     :: !(Maybe POSIX)
+    , _gtPrecedence       :: !(Maybe Nat)
+    , _gtGroupName        :: !(Maybe Text)
+    , _gtDescription      :: !(Maybe Text)
+    , _gtRoleARN          :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GroupType' with the minimum fields required to make a request.
@@ -1482,10 +1528,12 @@ instance NFData GroupType where
 --
 --
 -- /See:/ 'hTTPHeader' smart constructor.
-data HTTPHeader = HTTPHeader'
-  { _httphHeaderValue :: !(Maybe Text)
-  , _httphHeaderName  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data HTTPHeader =
+  HTTPHeader'
+    { _httphHeaderValue :: !(Maybe Text)
+    , _httphHeaderName  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'HTTPHeader' with the minimum fields required to make a request.
@@ -1525,16 +1573,18 @@ instance ToJSON HTTPHeader where
 --
 --
 -- /See:/ 'identityProviderType' smart constructor.
-data IdentityProviderType = IdentityProviderType'
-  { _iptLastModifiedDate :: !(Maybe POSIX)
-  , _iptUserPoolId       :: !(Maybe Text)
-  , _iptProviderType     :: !(Maybe IdentityProviderTypeType)
-  , _iptCreationDate     :: !(Maybe POSIX)
-  , _iptIdpIdentifiers   :: !(Maybe [Text])
-  , _iptAttributeMapping :: !(Maybe (Map Text Text))
-  , _iptProviderDetails  :: !(Maybe (Map Text Text))
-  , _iptProviderName     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data IdentityProviderType =
+  IdentityProviderType'
+    { _iptLastModifiedDate :: !(Maybe POSIX)
+    , _iptUserPoolId       :: !(Maybe Text)
+    , _iptProviderType     :: !(Maybe IdentityProviderTypeType)
+    , _iptCreationDate     :: !(Maybe POSIX)
+    , _iptIdpIdentifiers   :: !(Maybe [Text])
+    , _iptAttributeMapping :: !(Maybe (Map Text Text))
+    , _iptProviderDetails  :: !(Maybe (Map Text Text))
+    , _iptProviderName     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'IdentityProviderType' with the minimum fields required to make a request.
@@ -1625,18 +1675,20 @@ instance NFData IdentityProviderType where
 --
 --
 -- /See:/ 'lambdaConfigType' smart constructor.
-data LambdaConfigType = LambdaConfigType'
-  { _lctPreAuthentication           :: !(Maybe Text)
-  , _lctCreateAuthChallenge         :: !(Maybe Text)
-  , _lctVerifyAuthChallengeResponse :: !(Maybe Text)
-  , _lctPostAuthentication          :: !(Maybe Text)
-  , _lctCustomMessage               :: !(Maybe Text)
-  , _lctDefineAuthChallenge         :: !(Maybe Text)
-  , _lctPostConfirmation            :: !(Maybe Text)
-  , _lctPreTokenGeneration          :: !(Maybe Text)
-  , _lctUserMigration               :: !(Maybe Text)
-  , _lctPreSignUp                   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LambdaConfigType =
+  LambdaConfigType'
+    { _lctPreAuthentication           :: !(Maybe Text)
+    , _lctCreateAuthChallenge         :: !(Maybe Text)
+    , _lctVerifyAuthChallengeResponse :: !(Maybe Text)
+    , _lctPostAuthentication          :: !(Maybe Text)
+    , _lctCustomMessage               :: !(Maybe Text)
+    , _lctDefineAuthChallenge         :: !(Maybe Text)
+    , _lctPostConfirmation            :: !(Maybe Text)
+    , _lctPreTokenGeneration          :: !(Maybe Text)
+    , _lctUserMigration               :: !(Maybe Text)
+    , _lctPreSignUp                   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LambdaConfigType' with the minimum fields required to make a request.
@@ -1762,10 +1814,12 @@ instance ToJSON LambdaConfigType where
 --
 --
 -- /See:/ 'mfaOptionType' smart constructor.
-data MFAOptionType = MFAOptionType'
-  { _motDeliveryMedium :: !(Maybe DeliveryMediumType)
-  , _motAttributeName  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MFAOptionType =
+  MFAOptionType'
+    { _motDeliveryMedium :: !(Maybe DeliveryMediumType)
+    , _motAttributeName  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MFAOptionType' with the minimum fields required to make a request.
@@ -1812,11 +1866,13 @@ instance ToJSON MFAOptionType where
 --
 --
 -- /See:/ 'messageTemplateType' smart constructor.
-data MessageTemplateType = MessageTemplateType'
-  { _mttEmailSubject :: !(Maybe Text)
-  , _mttSMSMessage   :: !(Maybe Text)
-  , _mttEmailMessage :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MessageTemplateType =
+  MessageTemplateType'
+    { _mttEmailSubject :: !(Maybe Text)
+    , _mttSMSMessage   :: !(Maybe Text)
+    , _mttEmailMessage :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MessageTemplateType' with the minimum fields required to make a request.
@@ -1875,10 +1931,12 @@ instance ToJSON MessageTemplateType where
 --
 --
 -- /See:/ 'newDeviceMetadataType' smart constructor.
-data NewDeviceMetadataType = NewDeviceMetadataType'
-  { _ndmtDeviceGroupKey :: !(Maybe Text)
-  , _ndmtDeviceKey      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NewDeviceMetadataType =
+  NewDeviceMetadataType'
+    { _ndmtDeviceGroupKey :: !(Maybe Text)
+    , _ndmtDeviceKey      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NewDeviceMetadataType' with the minimum fields required to make a request.
@@ -1919,14 +1977,16 @@ instance NFData NewDeviceMetadataType where
 --
 --
 -- /See:/ 'notifyConfigurationType' smart constructor.
-data NotifyConfigurationType = NotifyConfigurationType'
-  { _nctNoActionEmail :: !(Maybe NotifyEmailType)
-  , _nctFrom          :: !(Maybe Text)
-  , _nctReplyTo       :: !(Maybe Text)
-  , _nctBlockEmail    :: !(Maybe NotifyEmailType)
-  , _nctMFAEmail      :: !(Maybe NotifyEmailType)
-  , _nctSourceARN     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NotifyConfigurationType =
+  NotifyConfigurationType'
+    { _nctNoActionEmail :: !(Maybe NotifyEmailType)
+    , _nctFrom          :: !(Maybe Text)
+    , _nctReplyTo       :: !(Maybe Text)
+    , _nctBlockEmail    :: !(Maybe NotifyEmailType)
+    , _nctMFAEmail      :: !(Maybe NotifyEmailType)
+    , _nctSourceARN     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NotifyConfigurationType' with the minimum fields required to make a request.
@@ -2013,11 +2073,13 @@ instance ToJSON NotifyConfigurationType where
 --
 --
 -- /See:/ 'notifyEmailType' smart constructor.
-data NotifyEmailType = NotifyEmailType'
-  { _netTextBody :: !(Maybe Text)
-  , _netHTMLBody :: !(Maybe Text)
-  , _netSubject  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NotifyEmailType =
+  NotifyEmailType'
+    { _netTextBody :: !(Maybe Text)
+    , _netHTMLBody :: !(Maybe Text)
+    , _netSubject  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NotifyEmailType' with the minimum fields required to make a request.
@@ -2074,10 +2136,12 @@ instance ToJSON NotifyEmailType where
 --
 --
 -- /See:/ 'numberAttributeConstraintsType' smart constructor.
-data NumberAttributeConstraintsType = NumberAttributeConstraintsType'
-  { _nactMaxValue :: !(Maybe Text)
-  , _nactMinValue :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NumberAttributeConstraintsType =
+  NumberAttributeConstraintsType'
+    { _nactMaxValue :: !(Maybe Text)
+    , _nactMinValue :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NumberAttributeConstraintsType' with the minimum fields required to make a request.
@@ -2127,13 +2191,15 @@ instance ToJSON NumberAttributeConstraintsType where
 --
 --
 -- /See:/ 'passwordPolicyType' smart constructor.
-data PasswordPolicyType = PasswordPolicyType'
-  { _pptRequireNumbers   :: !(Maybe Bool)
-  , _pptRequireUppercase :: !(Maybe Bool)
-  , _pptRequireLowercase :: !(Maybe Bool)
-  , _pptMinimumLength    :: !(Maybe Nat)
-  , _pptRequireSymbols   :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PasswordPolicyType =
+  PasswordPolicyType'
+    { _pptRequireNumbers   :: !(Maybe Bool)
+    , _pptRequireUppercase :: !(Maybe Bool)
+    , _pptRequireLowercase :: !(Maybe Bool)
+    , _pptMinimumLength    :: !(Maybe Nat)
+    , _pptRequireSymbols   :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PasswordPolicyType' with the minimum fields required to make a request.
@@ -2211,12 +2277,14 @@ instance ToJSON PasswordPolicyType where
 --
 --
 -- /See:/ 'providerDescription' smart constructor.
-data ProviderDescription = ProviderDescription'
-  { _pdLastModifiedDate :: !(Maybe POSIX)
-  , _pdProviderType     :: !(Maybe IdentityProviderTypeType)
-  , _pdCreationDate     :: !(Maybe POSIX)
-  , _pdProviderName     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ProviderDescription =
+  ProviderDescription'
+    { _pdLastModifiedDate :: !(Maybe POSIX)
+    , _pdProviderType     :: !(Maybe IdentityProviderTypeType)
+    , _pdCreationDate     :: !(Maybe POSIX)
+    , _pdProviderName     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ProviderDescription' with the minimum fields required to make a request.
@@ -2275,11 +2343,13 @@ instance NFData ProviderDescription where
 --
 --
 -- /See:/ 'providerUserIdentifierType' smart constructor.
-data ProviderUserIdentifierType = ProviderUserIdentifierType'
-  { _puitProviderAttributeValue :: !(Maybe Text)
-  , _puitProviderAttributeName  :: !(Maybe Text)
-  , _puitProviderName           :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ProviderUserIdentifierType =
+  ProviderUserIdentifierType'
+    { _puitProviderAttributeValue :: !(Maybe Text)
+    , _puitProviderAttributeName  :: !(Maybe Text)
+    , _puitProviderName           :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ProviderUserIdentifierType' with the minimum fields required to make a request.
@@ -2332,10 +2402,12 @@ instance ToJSON ProviderUserIdentifierType where
 --
 --
 -- /See:/ 'resourceServerScopeType' smart constructor.
-data ResourceServerScopeType = ResourceServerScopeType'
-  { _rsstScopeName        :: !Text
-  , _rsstScopeDescription :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResourceServerScopeType =
+  ResourceServerScopeType'
+    { _rsstScopeName        :: !Text
+    , _rsstScopeDescription :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResourceServerScopeType' with the minimum fields required to make a request.
@@ -2385,12 +2457,14 @@ instance ToJSON ResourceServerScopeType where
 --
 --
 -- /See:/ 'resourceServerType' smart constructor.
-data ResourceServerType = ResourceServerType'
-  { _rstUserPoolId :: !(Maybe Text)
-  , _rstIdentifier :: !(Maybe Text)
-  , _rstScopes     :: !(Maybe [ResourceServerScopeType])
-  , _rstName       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResourceServerType =
+  ResourceServerType'
+    { _rstUserPoolId :: !(Maybe Text)
+    , _rstIdentifier :: !(Maybe Text)
+    , _rstScopes     :: !(Maybe [ResourceServerScopeType])
+    , _rstName       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResourceServerType' with the minimum fields required to make a request.
@@ -2449,14 +2523,16 @@ instance NFData ResourceServerType where
 --
 --
 -- /See:/ 'riskConfigurationType' smart constructor.
-data RiskConfigurationType = RiskConfigurationType'
-  { _rctRiskExceptionConfiguration :: !(Maybe RiskExceptionConfigurationType)
-  , _rctClientId :: !(Maybe (Sensitive Text))
-  , _rctAccountTakeoverRiskConfiguration :: !(Maybe AccountTakeoverRiskConfigurationType)
-  , _rctLastModifiedDate :: !(Maybe POSIX)
-  , _rctUserPoolId :: !(Maybe Text)
-  , _rctCompromisedCredentialsRiskConfiguration :: !(Maybe CompromisedCredentialsRiskConfigurationType)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data RiskConfigurationType =
+  RiskConfigurationType'
+    { _rctRiskExceptionConfiguration :: !(Maybe RiskExceptionConfigurationType)
+    , _rctClientId :: !(Maybe (Sensitive Text))
+    , _rctAccountTakeoverRiskConfiguration :: !(Maybe AccountTakeoverRiskConfigurationType)
+    , _rctLastModifiedDate :: !(Maybe POSIX)
+    , _rctUserPoolId :: !(Maybe Text)
+    , _rctCompromisedCredentialsRiskConfiguration :: !(Maybe CompromisedCredentialsRiskConfigurationType)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RiskConfigurationType' with the minimum fields required to make a request.
@@ -2533,10 +2609,12 @@ instance NFData RiskConfigurationType where
 --
 --
 -- /See:/ 'riskExceptionConfigurationType' smart constructor.
-data RiskExceptionConfigurationType = RiskExceptionConfigurationType'
-  { _rectSkippedIPRangeList :: !(Maybe [Text])
-  , _rectBlockedIPRangeList :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RiskExceptionConfigurationType =
+  RiskExceptionConfigurationType'
+    { _rectSkippedIPRangeList :: !(Maybe [Text])
+    , _rectBlockedIPRangeList :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RiskExceptionConfigurationType' with the minimum fields required to make a request.
@@ -2589,10 +2667,12 @@ instance ToJSON RiskExceptionConfigurationType where
 --
 --
 -- /See:/ 'sMSMFASettingsType' smart constructor.
-data SMSMFASettingsType = SMSMFASettingsType'
-  { _smsmstEnabled      :: !(Maybe Bool)
-  , _smsmstPreferredMFA :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SMSMFASettingsType =
+  SMSMFASettingsType'
+    { _smsmstEnabled      :: !(Maybe Bool)
+    , _smsmstPreferredMFA :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SMSMFASettingsType' with the minimum fields required to make a request.
@@ -2632,15 +2712,17 @@ instance ToJSON SMSMFASettingsType where
 --
 --
 -- /See:/ 'schemaAttributeType' smart constructor.
-data SchemaAttributeType = SchemaAttributeType'
-  { _satNumberAttributeConstraints :: !(Maybe NumberAttributeConstraintsType)
-  , _satRequired                   :: !(Maybe Bool)
-  , _satAttributeDataType          :: !(Maybe AttributeDataType)
-  , _satStringAttributeConstraints :: !(Maybe StringAttributeConstraintsType)
-  , _satName                       :: !(Maybe Text)
-  , _satDeveloperOnlyAttribute     :: !(Maybe Bool)
-  , _satMutable                    :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SchemaAttributeType =
+  SchemaAttributeType'
+    { _satNumberAttributeConstraints :: !(Maybe NumberAttributeConstraintsType)
+    , _satRequired                   :: !(Maybe Bool)
+    , _satAttributeDataType          :: !(Maybe AttributeDataType)
+    , _satStringAttributeConstraints :: !(Maybe StringAttributeConstraintsType)
+    , _satName                       :: !(Maybe Text)
+    , _satDeveloperOnlyAttribute     :: !(Maybe Bool)
+    , _satMutable                    :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SchemaAttributeType' with the minimum fields required to make a request.
@@ -2739,10 +2821,12 @@ instance ToJSON SchemaAttributeType where
 --
 --
 -- /See:/ 'smsConfigurationType' smart constructor.
-data SmsConfigurationType = SmsConfigurationType'
-  { _sctExternalId   :: !(Maybe Text)
-  , _sctSNSCallerARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SmsConfigurationType =
+  SmsConfigurationType'
+    { _sctExternalId   :: !(Maybe Text)
+    , _sctSNSCallerARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SmsConfigurationType' with the minimum fields required to make a request.
@@ -2791,10 +2875,12 @@ instance ToJSON SmsConfigurationType where
 --
 --
 -- /See:/ 'smsMFAConfigType' smart constructor.
-data SmsMFAConfigType = SmsMFAConfigType'
-  { _smctSmsAuthenticationMessage :: !(Maybe Text)
-  , _smctSmsConfiguration         :: !(Maybe SmsConfigurationType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SmsMFAConfigType =
+  SmsMFAConfigType'
+    { _smctSmsAuthenticationMessage :: !(Maybe Text)
+    , _smctSmsConfiguration         :: !(Maybe SmsConfigurationType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SmsMFAConfigType' with the minimum fields required to make a request.
@@ -2844,9 +2930,11 @@ instance ToJSON SmsMFAConfigType where
 --
 --
 -- /See:/ 'softwareTokenMFAConfigType' smart constructor.
-newtype SoftwareTokenMFAConfigType = SoftwareTokenMFAConfigType'
-  { _stmctEnabled :: Maybe Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype SoftwareTokenMFAConfigType =
+  SoftwareTokenMFAConfigType'
+    { _stmctEnabled :: Maybe Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SoftwareTokenMFAConfigType' with the minimum fields required to make a request.
@@ -2884,10 +2972,12 @@ instance ToJSON SoftwareTokenMFAConfigType where
 --
 --
 -- /See:/ 'softwareTokenMFASettingsType' smart constructor.
-data SoftwareTokenMFASettingsType = SoftwareTokenMFASettingsType'
-  { _stmstEnabled      :: !(Maybe Bool)
-  , _stmstPreferredMFA :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SoftwareTokenMFASettingsType =
+  SoftwareTokenMFASettingsType'
+    { _stmstEnabled      :: !(Maybe Bool)
+    , _stmstPreferredMFA :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SoftwareTokenMFASettingsType' with the minimum fields required to make a request.
@@ -2928,10 +3018,12 @@ instance ToJSON SoftwareTokenMFASettingsType where
 --
 --
 -- /See:/ 'stringAttributeConstraintsType' smart constructor.
-data StringAttributeConstraintsType = StringAttributeConstraintsType'
-  { _sactMaxLength :: !(Maybe Text)
-  , _sactMinLength :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StringAttributeConstraintsType =
+  StringAttributeConstraintsType'
+    { _sactMaxLength :: !(Maybe Text)
+    , _sactMinLength :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StringAttributeConstraintsType' with the minimum fields required to make a request.
@@ -2981,15 +3073,17 @@ instance ToJSON StringAttributeConstraintsType where
 --
 --
 -- /See:/ 'uICustomizationType' smart constructor.
-data UICustomizationType = UICustomizationType'
-  { _uictClientId         :: !(Maybe (Sensitive Text))
-  , _uictLastModifiedDate :: !(Maybe POSIX)
-  , _uictUserPoolId       :: !(Maybe Text)
-  , _uictCSS              :: !(Maybe Text)
-  , _uictCSSVersion       :: !(Maybe Text)
-  , _uictImageURL         :: !(Maybe Text)
-  , _uictCreationDate     :: !(Maybe POSIX)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data UICustomizationType =
+  UICustomizationType'
+    { _uictClientId         :: !(Maybe (Sensitive Text))
+    , _uictLastModifiedDate :: !(Maybe POSIX)
+    , _uictUserPoolId       :: !(Maybe Text)
+    , _uictCSS              :: !(Maybe Text)
+    , _uictCSSVersion       :: !(Maybe Text)
+    , _uictImageURL         :: !(Maybe Text)
+    , _uictCreationDate     :: !(Maybe POSIX)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UICustomizationType' with the minimum fields required to make a request.
@@ -3072,9 +3166,11 @@ instance NFData UICustomizationType where
 --
 --
 -- /See:/ 'userContextDataType' smart constructor.
-newtype UserContextDataType = UserContextDataType'
-  { _ucdtEncodedData :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UserContextDataType =
+  UserContextDataType'
+    { _ucdtEncodedData :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UserContextDataType' with the minimum fields required to make a request.
@@ -3105,21 +3201,23 @@ instance ToJSON UserContextDataType where
 --
 --
 -- /See:/ 'userImportJobType' smart constructor.
-data UserImportJobType = UserImportJobType'
-  { _uijtStatus                :: !(Maybe UserImportJobStatusType)
-  , _uijtSkippedUsers          :: !(Maybe Integer)
-  , _uijtJobId                 :: !(Maybe Text)
-  , _uijtUserPoolId            :: !(Maybe Text)
-  , _uijtJobName               :: !(Maybe Text)
-  , _uijtPreSignedURL          :: !(Maybe Text)
-  , _uijtFailedUsers           :: !(Maybe Integer)
-  , _uijtStartDate             :: !(Maybe POSIX)
-  , _uijtCompletionMessage     :: !(Maybe Text)
-  , _uijtCreationDate          :: !(Maybe POSIX)
-  , _uijtCompletionDate        :: !(Maybe POSIX)
-  , _uijtCloudWatchLogsRoleARN :: !(Maybe Text)
-  , _uijtImportedUsers         :: !(Maybe Integer)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UserImportJobType =
+  UserImportJobType'
+    { _uijtStatus                :: !(Maybe UserImportJobStatusType)
+    , _uijtSkippedUsers          :: !(Maybe Integer)
+    , _uijtJobId                 :: !(Maybe Text)
+    , _uijtUserPoolId            :: !(Maybe Text)
+    , _uijtJobName               :: !(Maybe Text)
+    , _uijtPreSignedURL          :: !(Maybe Text)
+    , _uijtFailedUsers           :: !(Maybe Integer)
+    , _uijtStartDate             :: !(Maybe POSIX)
+    , _uijtCompletionMessage     :: !(Maybe Text)
+    , _uijtCreationDate          :: !(Maybe POSIX)
+    , _uijtCompletionDate        :: !(Maybe POSIX)
+    , _uijtCloudWatchLogsRoleARN :: !(Maybe Text)
+    , _uijtImportedUsers         :: !(Maybe Integer)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UserImportJobType' with the minimum fields required to make a request.
@@ -3250,9 +3348,11 @@ instance NFData UserImportJobType where
 --
 --
 -- /See:/ 'userPoolAddOnsType' smart constructor.
-newtype UserPoolAddOnsType = UserPoolAddOnsType'
-  { _upaotAdvancedSecurityMode :: AdvancedSecurityModeType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UserPoolAddOnsType =
+  UserPoolAddOnsType'
+    { _upaotAdvancedSecurityMode :: AdvancedSecurityModeType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UserPoolAddOnsType' with the minimum fields required to make a request.
@@ -3295,11 +3395,13 @@ instance ToJSON UserPoolAddOnsType where
 --
 --
 -- /See:/ 'userPoolClientDescription' smart constructor.
-data UserPoolClientDescription = UserPoolClientDescription'
-  { _upcdClientId   :: !(Maybe (Sensitive Text))
-  , _upcdUserPoolId :: !(Maybe Text)
-  , _upcdClientName :: !(Maybe Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data UserPoolClientDescription =
+  UserPoolClientDescription'
+    { _upcdClientId   :: !(Maybe (Sensitive Text))
+    , _upcdUserPoolId :: !(Maybe Text)
+    , _upcdClientName :: !(Maybe Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UserPoolClientDescription' with the minimum fields required to make a request.
@@ -3350,26 +3452,28 @@ instance NFData UserPoolClientDescription where
 --
 --
 -- /See:/ 'userPoolClientType' smart constructor.
-data UserPoolClientType = UserPoolClientType'
-  { _upctRefreshTokenValidity            :: !(Maybe Nat)
-  , _upctClientId                        :: !(Maybe (Sensitive Text))
-  , _upctExplicitAuthFlows               :: !(Maybe [ExplicitAuthFlowsType])
-  , _upctClientSecret                    :: !(Maybe (Sensitive Text))
-  , _upctLastModifiedDate                :: !(Maybe POSIX)
-  , _upctSupportedIdentityProviders      :: !(Maybe [Text])
-  , _upctLogoutURLs                      :: !(Maybe [Text])
-  , _upctAllowedOAuthFlowsUserPoolClient :: !(Maybe Bool)
-  , _upctUserPoolId                      :: !(Maybe Text)
-  , _upctDefaultRedirectURI              :: !(Maybe Text)
-  , _upctWriteAttributes                 :: !(Maybe [Text])
-  , _upctCreationDate                    :: !(Maybe POSIX)
-  , _upctReadAttributes                  :: !(Maybe [Text])
-  , _upctAllowedOAuthScopes              :: !(Maybe [Text])
-  , _upctAllowedOAuthFlows               :: !(Maybe [OAuthFlowType])
-  , _upctAnalyticsConfiguration          :: !(Maybe AnalyticsConfigurationType)
-  , _upctClientName                      :: !(Maybe Text)
-  , _upctCallbackURLs                    :: !(Maybe [Text])
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data UserPoolClientType =
+  UserPoolClientType'
+    { _upctRefreshTokenValidity :: !(Maybe Nat)
+    , _upctClientId :: !(Maybe (Sensitive Text))
+    , _upctExplicitAuthFlows :: !(Maybe [ExplicitAuthFlowsType])
+    , _upctClientSecret :: !(Maybe (Sensitive Text))
+    , _upctLastModifiedDate :: !(Maybe POSIX)
+    , _upctSupportedIdentityProviders :: !(Maybe [Text])
+    , _upctLogoutURLs :: !(Maybe [Text])
+    , _upctAllowedOAuthFlowsUserPoolClient :: !(Maybe Bool)
+    , _upctUserPoolId :: !(Maybe Text)
+    , _upctDefaultRedirectURI :: !(Maybe Text)
+    , _upctWriteAttributes :: !(Maybe [Text])
+    , _upctCreationDate :: !(Maybe POSIX)
+    , _upctReadAttributes :: !(Maybe [Text])
+    , _upctAllowedOAuthScopes :: !(Maybe [Text])
+    , _upctAllowedOAuthFlows :: !(Maybe [OAuthFlowType])
+    , _upctAnalyticsConfiguration :: !(Maybe AnalyticsConfigurationType)
+    , _upctClientName :: !(Maybe Text)
+    , _upctCallbackURLs :: !(Maybe [Text])
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UserPoolClientType' with the minimum fields required to make a request.
@@ -3540,14 +3644,16 @@ instance NFData UserPoolClientType where
 --
 --
 -- /See:/ 'userPoolDescriptionType' smart constructor.
-data UserPoolDescriptionType = UserPoolDescriptionType'
-  { _updtStatus           :: !(Maybe StatusType)
-  , _updtLastModifiedDate :: !(Maybe POSIX)
-  , _updtName             :: !(Maybe Text)
-  , _updtId               :: !(Maybe Text)
-  , _updtCreationDate     :: !(Maybe POSIX)
-  , _updtLambdaConfig     :: !(Maybe LambdaConfigType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UserPoolDescriptionType =
+  UserPoolDescriptionType'
+    { _updtStatus           :: !(Maybe StatusType)
+    , _updtLastModifiedDate :: !(Maybe POSIX)
+    , _updtName             :: !(Maybe Text)
+    , _updtId               :: !(Maybe Text)
+    , _updtCreationDate     :: !(Maybe POSIX)
+    , _updtLambdaConfig     :: !(Maybe LambdaConfigType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UserPoolDescriptionType' with the minimum fields required to make a request.
@@ -3622,9 +3728,11 @@ instance NFData UserPoolDescriptionType where
 --
 --
 -- /See:/ 'userPoolPolicyType' smart constructor.
-newtype UserPoolPolicyType = UserPoolPolicyType'
-  { _upptPasswordPolicy :: Maybe PasswordPolicyType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UserPoolPolicyType =
+  UserPoolPolicyType'
+    { _upptPasswordPolicy :: Maybe PasswordPolicyType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UserPoolPolicyType' with the minimum fields required to make a request.
@@ -3662,35 +3770,37 @@ instance ToJSON UserPoolPolicyType where
 --
 --
 -- /See:/ 'userPoolType' smart constructor.
-data UserPoolType = UserPoolType'
-  { _uptStatus                      :: !(Maybe StatusType)
-  , _uptUserPoolTags                :: !(Maybe (Map Text Text))
-  , _uptEmailConfigurationFailure   :: !(Maybe Text)
-  , _uptLastModifiedDate            :: !(Maybe POSIX)
-  , _uptVerificationMessageTemplate :: !(Maybe VerificationMessageTemplateType)
-  , _uptEstimatedNumberOfUsers      :: !(Maybe Int)
-  , _uptDomain                      :: !(Maybe Text)
-  , _uptEmailVerificationMessage    :: !(Maybe Text)
-  , _uptSmsAuthenticationMessage    :: !(Maybe Text)
-  , _uptUserPoolAddOns              :: !(Maybe UserPoolAddOnsType)
-  , _uptSchemaAttributes            :: !(Maybe (List1 SchemaAttributeType))
-  , _uptEmailVerificationSubject    :: !(Maybe Text)
-  , _uptUsernameAttributes          :: !(Maybe [UsernameAttributeType])
-  , _uptAliasAttributes             :: !(Maybe [AliasAttributeType])
-  , _uptEmailConfiguration          :: !(Maybe EmailConfigurationType)
-  , _uptSmsVerificationMessage      :: !(Maybe Text)
-  , _uptName                        :: !(Maybe Text)
-  , _uptMFAConfiguration            :: !(Maybe UserPoolMFAType)
-  , _uptId                          :: !(Maybe Text)
-  , _uptSmsConfigurationFailure     :: !(Maybe Text)
-  , _uptCreationDate                :: !(Maybe POSIX)
-  , _uptLambdaConfig                :: !(Maybe LambdaConfigType)
-  , _uptSmsConfiguration            :: !(Maybe SmsConfigurationType)
-  , _uptAdminCreateUserConfig       :: !(Maybe AdminCreateUserConfigType)
-  , _uptDeviceConfiguration         :: !(Maybe DeviceConfigurationType)
-  , _uptAutoVerifiedAttributes      :: !(Maybe [VerifiedAttributeType])
-  , _uptPolicies                    :: !(Maybe UserPoolPolicyType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UserPoolType =
+  UserPoolType'
+    { _uptStatus :: !(Maybe StatusType)
+    , _uptUserPoolTags :: !(Maybe (Map Text Text))
+    , _uptEmailConfigurationFailure :: !(Maybe Text)
+    , _uptLastModifiedDate :: !(Maybe POSIX)
+    , _uptVerificationMessageTemplate :: !(Maybe VerificationMessageTemplateType)
+    , _uptEstimatedNumberOfUsers :: !(Maybe Int)
+    , _uptDomain :: !(Maybe Text)
+    , _uptEmailVerificationMessage :: !(Maybe Text)
+    , _uptSmsAuthenticationMessage :: !(Maybe Text)
+    , _uptUserPoolAddOns :: !(Maybe UserPoolAddOnsType)
+    , _uptSchemaAttributes :: !(Maybe (List1 SchemaAttributeType))
+    , _uptEmailVerificationSubject :: !(Maybe Text)
+    , _uptUsernameAttributes :: !(Maybe [UsernameAttributeType])
+    , _uptAliasAttributes :: !(Maybe [AliasAttributeType])
+    , _uptEmailConfiguration :: !(Maybe EmailConfigurationType)
+    , _uptSmsVerificationMessage :: !(Maybe Text)
+    , _uptName :: !(Maybe Text)
+    , _uptMFAConfiguration :: !(Maybe UserPoolMFAType)
+    , _uptId :: !(Maybe Text)
+    , _uptSmsConfigurationFailure :: !(Maybe Text)
+    , _uptCreationDate :: !(Maybe POSIX)
+    , _uptLambdaConfig :: !(Maybe LambdaConfigType)
+    , _uptSmsConfiguration :: !(Maybe SmsConfigurationType)
+    , _uptAdminCreateUserConfig :: !(Maybe AdminCreateUserConfigType)
+    , _uptDeviceConfiguration :: !(Maybe DeviceConfigurationType)
+    , _uptAutoVerifiedAttributes :: !(Maybe [VerifiedAttributeType])
+    , _uptPolicies :: !(Maybe UserPoolPolicyType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UserPoolType' with the minimum fields required to make a request.
@@ -3934,15 +4044,17 @@ instance NFData UserPoolType where
 --
 --
 -- /See:/ 'userType' smart constructor.
-data UserType = UserType'
-  { _utEnabled              :: !(Maybe Bool)
-  , _utUserStatus           :: !(Maybe UserStatusType)
-  , _utUsername             :: !(Maybe (Sensitive Text))
-  , _utUserCreateDate       :: !(Maybe POSIX)
-  , _utAttributes           :: !(Maybe [AttributeType])
-  , _utMFAOptions           :: !(Maybe [MFAOptionType])
-  , _utUserLastModifiedDate :: !(Maybe POSIX)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data UserType =
+  UserType'
+    { _utEnabled              :: !(Maybe Bool)
+    , _utUserStatus           :: !(Maybe UserStatusType)
+    , _utUsername             :: !(Maybe (Sensitive Text))
+    , _utUserCreateDate       :: !(Maybe POSIX)
+    , _utAttributes           :: !(Maybe [AttributeType])
+    , _utMFAOptions           :: !(Maybe [MFAOptionType])
+    , _utUserLastModifiedDate :: !(Maybe POSIX)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UserType' with the minimum fields required to make a request.
@@ -4025,14 +4137,16 @@ instance NFData UserType where
 --
 --
 -- /See:/ 'verificationMessageTemplateType' smart constructor.
-data VerificationMessageTemplateType = VerificationMessageTemplateType'
-  { _vmttDefaultEmailOption :: !(Maybe DefaultEmailOptionType)
-  , _vmttEmailSubject       :: !(Maybe Text)
-  , _vmttEmailSubjectByLink :: !(Maybe Text)
-  , _vmttSmsMessage         :: !(Maybe Text)
-  , _vmttEmailMessageByLink :: !(Maybe Text)
-  , _vmttEmailMessage       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VerificationMessageTemplateType =
+  VerificationMessageTemplateType'
+    { _vmttDefaultEmailOption :: !(Maybe DefaultEmailOptionType)
+    , _vmttEmailSubject       :: !(Maybe Text)
+    , _vmttEmailSubjectByLink :: !(Maybe Text)
+    , _vmttSmsMessage         :: !(Maybe Text)
+    , _vmttEmailMessageByLink :: !(Maybe Text)
+    , _vmttEmailMessage       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VerificationMessageTemplateType' with the minimum fields required to make a request.

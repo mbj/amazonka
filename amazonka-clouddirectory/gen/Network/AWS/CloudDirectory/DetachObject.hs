@@ -47,11 +47,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'detachObject' smart constructor.
-data DetachObject = DetachObject'
-  { _detDirectoryARN    :: !Text
-  , _detParentReference :: !ObjectReference
-  , _detLinkName        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DetachObject =
+  DetachObject'
+    { _detDirectoryARN    :: !Text
+    , _detParentReference :: !ObjectReference
+    , _detLinkName        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DetachObject' with the minimum fields required to make a request.
@@ -123,10 +125,12 @@ instance ToQuery DetachObject where
         toQuery = const mempty
 
 -- | /See:/ 'detachObjectResponse' smart constructor.
-data DetachObjectResponse = DetachObjectResponse'
-  { _detrsDetachedObjectIdentifier :: !(Maybe Text)
-  , _detrsResponseStatus           :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DetachObjectResponse =
+  DetachObjectResponse'
+    { _detrsDetachedObjectIdentifier :: !(Maybe Text)
+    , _detrsResponseStatus           :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DetachObjectResponse' with the minimum fields required to make a request.

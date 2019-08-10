@@ -50,10 +50,12 @@ import Network.AWS.StorageGateway.Types.Product
 --
 --
 -- /See:/ 'removeTagsFromResource' smart constructor.
-data RemoveTagsFromResource = RemoveTagsFromResource'
-  { _rtfrResourceARN :: !Text
-  , _rtfrTagKeys     :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RemoveTagsFromResource =
+  RemoveTagsFromResource'
+    { _rtfrResourceARN :: !Text
+    , _rtfrTagKeys     :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RemoveTagsFromResource' with the minimum fields required to make a request.
@@ -121,10 +123,12 @@ instance ToQuery RemoveTagsFromResource where
 --
 --
 -- /See:/ 'removeTagsFromResourceResponse' smart constructor.
-data RemoveTagsFromResourceResponse = RemoveTagsFromResourceResponse'
-  { _rtfrrsResourceARN    :: !(Maybe Text)
-  , _rtfrrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RemoveTagsFromResourceResponse =
+  RemoveTagsFromResourceResponse'
+    { _rtfrrsResourceARN    :: !(Maybe Text)
+    , _rtfrrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RemoveTagsFromResourceResponse' with the minimum fields required to make a request.

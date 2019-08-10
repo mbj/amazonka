@@ -48,11 +48,13 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'deleteAssociation' smart constructor.
-data DeleteAssociation = DeleteAssociation'
-  { _daaAssociationId :: !(Maybe Text)
-  , _daaInstanceId    :: !(Maybe Text)
-  , _daaName          :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteAssociation =
+  DeleteAssociation'
+    { _daaAssociationId :: !(Maybe Text)
+    , _daaInstanceId    :: !(Maybe Text)
+    , _daaName          :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteAssociation' with the minimum fields required to make a request.
@@ -119,9 +121,11 @@ instance ToQuery DeleteAssociation where
         toQuery = const mempty
 
 -- | /See:/ 'deleteAssociationResponse' smart constructor.
-newtype DeleteAssociationResponse = DeleteAssociationResponse'
-  { _delrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteAssociationResponse =
+  DeleteAssociationResponse'
+    { _delrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteAssociationResponse' with the minimum fields required to make a request.

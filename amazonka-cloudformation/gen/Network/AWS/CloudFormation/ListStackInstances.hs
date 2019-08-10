@@ -50,13 +50,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listStackInstances' smart constructor.
-data ListStackInstances = ListStackInstances'
-  { _lsiStackInstanceRegion  :: !(Maybe Text)
-  , _lsiNextToken            :: !(Maybe Text)
-  , _lsiStackInstanceAccount :: !(Maybe Text)
-  , _lsiMaxResults           :: !(Maybe Nat)
-  , _lsiStackSetName         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListStackInstances =
+  ListStackInstances'
+    { _lsiStackInstanceRegion  :: !(Maybe Text)
+    , _lsiNextToken            :: !(Maybe Text)
+    , _lsiStackInstanceAccount :: !(Maybe Text)
+    , _lsiMaxResults           :: !(Maybe Nat)
+    , _lsiStackSetName         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListStackInstances' with the minimum fields required to make a request.
@@ -140,11 +142,13 @@ instance ToQuery ListStackInstances where
                "StackSetName" =: _lsiStackSetName]
 
 -- | /See:/ 'listStackInstancesResponse' smart constructor.
-data ListStackInstancesResponse = ListStackInstancesResponse'
-  { _lsirsNextToken      :: !(Maybe Text)
-  , _lsirsSummaries      :: !(Maybe [StackInstanceSummary])
-  , _lsirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListStackInstancesResponse =
+  ListStackInstancesResponse'
+    { _lsirsNextToken      :: !(Maybe Text)
+    , _lsirsSummaries      :: !(Maybe [StackInstanceSummary])
+    , _lsirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListStackInstancesResponse' with the minimum fields required to make a request.

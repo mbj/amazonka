@@ -28,10 +28,12 @@ import Network.AWS.SES.Types.Sum
 --
 --
 -- /See:/ 'addHeaderAction' smart constructor.
-data AddHeaderAction = AddHeaderAction'
-  { _ahaHeaderName  :: !Text
-  , _ahaHeaderValue :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddHeaderAction =
+  AddHeaderAction'
+    { _ahaHeaderName  :: !Text
+    , _ahaHeaderValue :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddHeaderAction' with the minimum fields required to make a request.
@@ -78,10 +80,12 @@ instance ToQuery AddHeaderAction where
 --
 --
 -- /See:/ 'body' smart constructor.
-data Body = Body'
-  { _bText :: !(Maybe Content)
-  , _bHTML :: !(Maybe Content)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Body =
+  Body'
+    { _bText :: !(Maybe Content)
+    , _bHTML :: !(Maybe Content)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Body' with the minimum fields required to make a request.
@@ -119,13 +123,15 @@ instance ToQuery Body where
 --
 --
 -- /See:/ 'bounceAction' smart constructor.
-data BounceAction = BounceAction'
-  { _baTopicARN      :: !(Maybe Text)
-  , _baStatusCode    :: !(Maybe Text)
-  , _baSmtpReplyCode :: !Text
-  , _baMessage       :: !Text
-  , _baSender        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BounceAction =
+  BounceAction'
+    { _baTopicARN      :: !(Maybe Text)
+    , _baStatusCode    :: !(Maybe Text)
+    , _baSmtpReplyCode :: !Text
+    , _baMessage       :: !Text
+    , _baSender        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BounceAction' with the minimum fields required to make a request.
@@ -203,12 +209,14 @@ instance ToQuery BounceAction where
 --
 --
 -- /See:/ 'bouncedRecipientInfo' smart constructor.
-data BouncedRecipientInfo = BouncedRecipientInfo'
-  { _briBounceType         :: !(Maybe BounceType)
-  , _briRecipientDsnFields :: !(Maybe RecipientDsnFields)
-  , _briRecipientARN       :: !(Maybe Text)
-  , _briRecipient          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BouncedRecipientInfo =
+  BouncedRecipientInfo'
+    { _briBounceType         :: !(Maybe BounceType)
+    , _briRecipientDsnFields :: !(Maybe RecipientDsnFields)
+    , _briRecipientARN       :: !(Maybe Text)
+    , _briRecipient          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BouncedRecipientInfo' with the minimum fields required to make a request.
@@ -267,11 +275,13 @@ instance ToQuery BouncedRecipientInfo where
 --
 --
 -- /See:/ 'bulkEmailDestination' smart constructor.
-data BulkEmailDestination = BulkEmailDestination'
-  { _bedReplacementTemplateData :: !(Maybe Text)
-  , _bedReplacementTags         :: !(Maybe [MessageTag])
-  , _bedDestination             :: !Destination
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BulkEmailDestination =
+  BulkEmailDestination'
+    { _bedReplacementTemplateData :: !(Maybe Text)
+    , _bedReplacementTags         :: !(Maybe [MessageTag])
+    , _bedDestination             :: !Destination
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BulkEmailDestination' with the minimum fields required to make a request.
@@ -325,11 +335,13 @@ instance ToQuery BulkEmailDestination where
 --
 --
 -- /See:/ 'bulkEmailDestinationStatus' smart constructor.
-data BulkEmailDestinationStatus = BulkEmailDestinationStatus'
-  { _bedsStatus    :: !(Maybe BulkEmailStatus)
-  , _bedsError     :: !(Maybe Text)
-  , _bedsMessageId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BulkEmailDestinationStatus =
+  BulkEmailDestinationStatus'
+    { _bedsStatus    :: !(Maybe BulkEmailStatus)
+    , _bedsError     :: !(Maybe Text)
+    , _bedsMessageId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BulkEmailDestinationStatus' with the minimum fields required to make a request.
@@ -377,9 +389,11 @@ instance NFData BulkEmailDestinationStatus where
 --
 --
 -- /See:/ 'cloudWatchDestination' smart constructor.
-newtype CloudWatchDestination = CloudWatchDestination'
-  { _cwdDimensionConfigurations :: [CloudWatchDimensionConfiguration]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CloudWatchDestination =
+  CloudWatchDestination'
+    { _cwdDimensionConfigurations :: [CloudWatchDimensionConfiguration]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CloudWatchDestination' with the minimum fields required to make a request.
@@ -420,11 +434,13 @@ instance ToQuery CloudWatchDestination where
 --
 --
 -- /See:/ 'cloudWatchDimensionConfiguration' smart constructor.
-data CloudWatchDimensionConfiguration = CloudWatchDimensionConfiguration'
-  { _cwdcDimensionName         :: !Text
-  , _cwdcDimensionValueSource  :: !DimensionValueSource
-  , _cwdcDefaultDimensionValue :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CloudWatchDimensionConfiguration =
+  CloudWatchDimensionConfiguration'
+    { _cwdcDimensionName         :: !Text
+    , _cwdcDimensionValueSource  :: !DimensionValueSource
+    , _cwdcDefaultDimensionValue :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CloudWatchDimensionConfiguration' with the minimum fields required to make a request.
@@ -491,9 +507,11 @@ instance ToQuery CloudWatchDimensionConfiguration
 --
 --
 -- /See:/ 'configurationSet' smart constructor.
-newtype ConfigurationSet = ConfigurationSet'
-  { _csName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ConfigurationSet =
+  ConfigurationSet'
+    { _csName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ConfigurationSet' with the minimum fields required to make a request.
@@ -529,10 +547,12 @@ instance ToQuery ConfigurationSet where
 --
 --
 -- /See:/ 'content' smart constructor.
-data Content = Content'
-  { _cCharset :: !(Maybe Text)
-  , _cData    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Content =
+  Content'
+    { _cCharset :: !(Maybe Text)
+    , _cData    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Content' with the minimum fields required to make a request.
@@ -569,13 +589,15 @@ instance ToQuery Content where
 --
 --
 -- /See:/ 'customVerificationEmailTemplate' smart constructor.
-data CustomVerificationEmailTemplate = CustomVerificationEmailTemplate'
-  { _cvetFromEmailAddress      :: !(Maybe Text)
-  , _cvetTemplateName          :: !(Maybe Text)
-  , _cvetFailureRedirectionURL :: !(Maybe Text)
-  , _cvetTemplateSubject       :: !(Maybe Text)
-  , _cvetSuccessRedirectionURL :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CustomVerificationEmailTemplate =
+  CustomVerificationEmailTemplate'
+    { _cvetFromEmailAddress      :: !(Maybe Text)
+    , _cvetTemplateName          :: !(Maybe Text)
+    , _cvetFailureRedirectionURL :: !(Maybe Text)
+    , _cvetTemplateSubject       :: !(Maybe Text)
+    , _cvetSuccessRedirectionURL :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CustomVerificationEmailTemplate' with the minimum fields required to make a request.
@@ -642,11 +664,13 @@ instance NFData CustomVerificationEmailTemplate where
 --
 --
 -- /See:/ 'destination' smart constructor.
-data Destination = Destination'
-  { _dBCCAddresses :: !(Maybe [Text])
-  , _dCCAddresses  :: !(Maybe [Text])
-  , _dToAddresses  :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Destination =
+  Destination'
+    { _dBCCAddresses :: !(Maybe [Text])
+    , _dCCAddresses  :: !(Maybe [Text])
+    , _dToAddresses  :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Destination' with the minimum fields required to make a request.
@@ -698,14 +722,16 @@ instance ToQuery Destination where
 --
 --
 -- /See:/ 'eventDestination' smart constructor.
-data EventDestination = EventDestination'
-  { _edEnabled                    :: !(Maybe Bool)
-  , _edKinesisFirehoseDestination :: !(Maybe KinesisFirehoseDestination)
-  , _edCloudWatchDestination      :: !(Maybe CloudWatchDestination)
-  , _edSNSDestination             :: !(Maybe SNSDestination)
-  , _edName                       :: !Text
-  , _edMatchingEventTypes         :: ![EventType]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EventDestination =
+  EventDestination'
+    { _edEnabled                    :: !(Maybe Bool)
+    , _edKinesisFirehoseDestination :: !(Maybe KinesisFirehoseDestination)
+    , _edCloudWatchDestination      :: !(Maybe CloudWatchDestination)
+    , _edSNSDestination             :: !(Maybe SNSDestination)
+    , _edName                       :: !Text
+    , _edMatchingEventTypes         :: ![EventType]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EventDestination' with the minimum fields required to make a request.
@@ -796,10 +822,12 @@ instance ToQuery EventDestination where
 --
 --
 -- /See:/ 'extensionField' smart constructor.
-data ExtensionField = ExtensionField'
-  { _efName  :: !Text
-  , _efValue :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ExtensionField =
+  ExtensionField'
+    { _efName  :: !Text
+    , _efValue :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ExtensionField' with the minimum fields required to make a request.
@@ -838,11 +866,13 @@ instance ToQuery ExtensionField where
 --
 --
 -- /See:/ 'identityDkimAttributes' smart constructor.
-data IdentityDkimAttributes = IdentityDkimAttributes'
-  { _idaDkimTokens             :: !(Maybe [Text])
-  , _idaDkimEnabled            :: !Bool
-  , _idaDkimVerificationStatus :: !VerificationStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data IdentityDkimAttributes =
+  IdentityDkimAttributes'
+    { _idaDkimTokens             :: !(Maybe [Text])
+    , _idaDkimEnabled            :: !Bool
+    , _idaDkimVerificationStatus :: !VerificationStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'IdentityDkimAttributes' with the minimum fields required to make a request.
@@ -895,11 +925,13 @@ instance NFData IdentityDkimAttributes where
 --
 --
 -- /See:/ 'identityMailFromDomainAttributes' smart constructor.
-data IdentityMailFromDomainAttributes = IdentityMailFromDomainAttributes'
-  { _imfdaMailFromDomain       :: !Text
-  , _imfdaMailFromDomainStatus :: !CustomMailFromStatus
-  , _imfdaBehaviorOnMXFailure  :: !BehaviorOnMXFailure
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data IdentityMailFromDomainAttributes =
+  IdentityMailFromDomainAttributes'
+    { _imfdaMailFromDomain       :: !Text
+    , _imfdaMailFromDomainStatus :: !CustomMailFromStatus
+    , _imfdaBehaviorOnMXFailure  :: !BehaviorOnMXFailure
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'IdentityMailFromDomainAttributes' with the minimum fields required to make a request.
@@ -955,15 +987,17 @@ instance NFData IdentityMailFromDomainAttributes
 --
 --
 -- /See:/ 'identityNotificationAttributes' smart constructor.
-data IdentityNotificationAttributes = IdentityNotificationAttributes'
-  { _inaHeadersInDeliveryNotificationsEnabled  :: !(Maybe Bool)
-  , _inaHeadersInComplaintNotificationsEnabled :: !(Maybe Bool)
-  , _inaHeadersInBounceNotificationsEnabled    :: !(Maybe Bool)
-  , _inaBounceTopic                            :: !Text
-  , _inaComplaintTopic                         :: !Text
-  , _inaDeliveryTopic                          :: !Text
-  , _inaForwardingEnabled                      :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data IdentityNotificationAttributes =
+  IdentityNotificationAttributes'
+    { _inaHeadersInDeliveryNotificationsEnabled  :: !(Maybe Bool)
+    , _inaHeadersInComplaintNotificationsEnabled :: !(Maybe Bool)
+    , _inaHeadersInBounceNotificationsEnabled    :: !(Maybe Bool)
+    , _inaBounceTopic                            :: !Text
+    , _inaComplaintTopic                         :: !Text
+    , _inaDeliveryTopic                          :: !Text
+    , _inaForwardingEnabled                      :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'IdentityNotificationAttributes' with the minimum fields required to make a request.
@@ -1050,10 +1084,12 @@ instance NFData IdentityNotificationAttributes where
 --
 --
 -- /See:/ 'identityVerificationAttributes' smart constructor.
-data IdentityVerificationAttributes = IdentityVerificationAttributes'
-  { _ivaVerificationToken  :: !(Maybe Text)
-  , _ivaVerificationStatus :: !VerificationStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data IdentityVerificationAttributes =
+  IdentityVerificationAttributes'
+    { _ivaVerificationToken  :: !(Maybe Text)
+    , _ivaVerificationStatus :: !VerificationStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'IdentityVerificationAttributes' with the minimum fields required to make a request.
@@ -1099,10 +1135,12 @@ instance NFData IdentityVerificationAttributes where
 --
 --
 -- /See:/ 'kinesisFirehoseDestination' smart constructor.
-data KinesisFirehoseDestination = KinesisFirehoseDestination'
-  { _kfdIAMRoleARN        :: !Text
-  , _kfdDeliveryStreamARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data KinesisFirehoseDestination =
+  KinesisFirehoseDestination'
+    { _kfdIAMRoleARN        :: !Text
+    , _kfdDeliveryStreamARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'KinesisFirehoseDestination' with the minimum fields required to make a request.
@@ -1153,11 +1191,13 @@ instance ToQuery KinesisFirehoseDestination where
 --
 --
 -- /See:/ 'lambdaAction' smart constructor.
-data LambdaAction = LambdaAction'
-  { _laInvocationType :: !(Maybe InvocationType)
-  , _laTopicARN       :: !(Maybe Text)
-  , _laFunctionARN    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LambdaAction =
+  LambdaAction'
+    { _laInvocationType :: !(Maybe InvocationType)
+    , _laTopicARN       :: !(Maybe Text)
+    , _laFunctionARN    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LambdaAction' with the minimum fields required to make a request.
@@ -1214,10 +1254,12 @@ instance ToQuery LambdaAction where
 --
 --
 -- /See:/ 'message' smart constructor.
-data Message = Message'
-  { _mSubject :: !Content
-  , _mBody    :: !Body
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Message =
+  Message'
+    { _mSubject :: !Content
+    , _mBody    :: !Body
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Message' with the minimum fields required to make a request.
@@ -1257,11 +1299,13 @@ instance ToQuery Message where
 --
 --
 -- /See:/ 'messageDsn' smart constructor.
-data MessageDsn = MessageDsn'
-  { _mdArrivalDate     :: !(Maybe ISO8601)
-  , _mdExtensionFields :: !(Maybe [ExtensionField])
-  , _mdReportingMta    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MessageDsn =
+  MessageDsn'
+    { _mdArrivalDate     :: !(Maybe ISO8601)
+    , _mdExtensionFields :: !(Maybe [ExtensionField])
+    , _mdReportingMta    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MessageDsn' with the minimum fields required to make a request.
@@ -1316,10 +1360,12 @@ instance ToQuery MessageDsn where
 --
 --
 -- /See:/ 'messageTag' smart constructor.
-data MessageTag = MessageTag'
-  { _mtName  :: !Text
-  , _mtValue :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MessageTag =
+  MessageTag'
+    { _mtName  :: !Text
+    , _mtValue :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MessageTag' with the minimum fields required to make a request.
@@ -1357,9 +1403,11 @@ instance ToQuery MessageTag where
 --
 --
 -- /See:/ 'rawMessage' smart constructor.
-newtype RawMessage = RawMessage'
-  { _rmData :: Base64
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RawMessage =
+  RawMessage'
+    { _rmData :: Base64
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RawMessage' with the minimum fields required to make a request.
@@ -1391,15 +1439,17 @@ instance ToQuery RawMessage where
 --
 --
 -- /See:/ 'receiptAction' smart constructor.
-data ReceiptAction = ReceiptAction'
-  { _raAddHeaderAction :: !(Maybe AddHeaderAction)
-  , _raSNSAction       :: !(Maybe SNSAction)
-  , _raWorkmailAction  :: !(Maybe WorkmailAction)
-  , _raBounceAction    :: !(Maybe BounceAction)
-  , _raLambdaAction    :: !(Maybe LambdaAction)
-  , _raStopAction      :: !(Maybe StopAction)
-  , _raS3Action        :: !(Maybe S3Action)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReceiptAction =
+  ReceiptAction'
+    { _raAddHeaderAction :: !(Maybe AddHeaderAction)
+    , _raSNSAction       :: !(Maybe SNSAction)
+    , _raWorkmailAction  :: !(Maybe WorkmailAction)
+    , _raBounceAction    :: !(Maybe BounceAction)
+    , _raLambdaAction    :: !(Maybe LambdaAction)
+    , _raStopAction      :: !(Maybe StopAction)
+    , _raS3Action        :: !(Maybe S3Action)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReceiptAction' with the minimum fields required to make a request.
@@ -1493,10 +1543,12 @@ instance ToQuery ReceiptAction where
 --
 --
 -- /See:/ 'receiptFilter' smart constructor.
-data ReceiptFilter = ReceiptFilter'
-  { _rfName     :: !Text
-  , _rfIPFilter :: !ReceiptIPFilter
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReceiptFilter =
+  ReceiptFilter'
+    { _rfName     :: !Text
+    , _rfIPFilter :: !ReceiptIPFilter
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReceiptFilter' with the minimum fields required to make a request.
@@ -1543,10 +1595,12 @@ instance ToQuery ReceiptFilter where
 --
 --
 -- /See:/ 'receiptIPFilter' smart constructor.
-data ReceiptIPFilter = ReceiptIPFilter'
-  { _rifPolicy :: !ReceiptFilterPolicy
-  , _rifCidr   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReceiptIPFilter =
+  ReceiptIPFilter'
+    { _rifPolicy :: !ReceiptFilterPolicy
+    , _rifCidr   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReceiptIPFilter' with the minimum fields required to make a request.
@@ -1595,14 +1649,16 @@ instance ToQuery ReceiptIPFilter where
 --
 --
 -- /See:/ 'receiptRule' smart constructor.
-data ReceiptRule = ReceiptRule'
-  { _rrScanEnabled :: !(Maybe Bool)
-  , _rrEnabled     :: !(Maybe Bool)
-  , _rrActions     :: !(Maybe [ReceiptAction])
-  , _rrRecipients  :: !(Maybe [Text])
-  , _rrTLSPolicy   :: !(Maybe TLSPolicy)
-  , _rrName        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReceiptRule =
+  ReceiptRule'
+    { _rrScanEnabled :: !(Maybe Bool)
+    , _rrEnabled     :: !(Maybe Bool)
+    , _rrActions     :: !(Maybe [ReceiptAction])
+    , _rrRecipients  :: !(Maybe [Text])
+    , _rrTLSPolicy   :: !(Maybe TLSPolicy)
+    , _rrName        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReceiptRule' with the minimum fields required to make a request.
@@ -1694,10 +1750,12 @@ instance ToQuery ReceiptRule where
 --
 --
 -- /See:/ 'receiptRuleSetMetadata' smart constructor.
-data ReceiptRuleSetMetadata = ReceiptRuleSetMetadata'
-  { _rrsmName             :: !(Maybe Text)
-  , _rrsmCreatedTimestamp :: !(Maybe ISO8601)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReceiptRuleSetMetadata =
+  ReceiptRuleSetMetadata'
+    { _rrsmName             :: !(Maybe Text)
+    , _rrsmCreatedTimestamp :: !(Maybe ISO8601)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReceiptRuleSetMetadata' with the minimum fields required to make a request.
@@ -1737,15 +1795,17 @@ instance NFData ReceiptRuleSetMetadata where
 --
 --
 -- /See:/ 'recipientDsnFields' smart constructor.
-data RecipientDsnFields = RecipientDsnFields'
-  { _rdfDiagnosticCode  :: !(Maybe Text)
-  , _rdfRemoteMta       :: !(Maybe Text)
-  , _rdfFinalRecipient  :: !(Maybe Text)
-  , _rdfExtensionFields :: !(Maybe [ExtensionField])
-  , _rdfLastAttemptDate :: !(Maybe ISO8601)
-  , _rdfAction          :: !DsnAction
-  , _rdfStatus          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RecipientDsnFields =
+  RecipientDsnFields'
+    { _rdfDiagnosticCode  :: !(Maybe Text)
+    , _rdfRemoteMta       :: !(Maybe Text)
+    , _rdfFinalRecipient  :: !(Maybe Text)
+    , _rdfExtensionFields :: !(Maybe [ExtensionField])
+    , _rdfLastAttemptDate :: !(Maybe ISO8601)
+    , _rdfAction          :: !DsnAction
+    , _rdfStatus          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RecipientDsnFields' with the minimum fields required to make a request.
@@ -1830,11 +1890,13 @@ instance ToQuery RecipientDsnFields where
 --
 --
 -- /See:/ 'reputationOptions' smart constructor.
-data ReputationOptions = ReputationOptions'
-  { _roLastFreshStart           :: !(Maybe ISO8601)
-  , _roReputationMetricsEnabled :: !(Maybe Bool)
-  , _roSendingEnabled           :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReputationOptions =
+  ReputationOptions'
+    { _roLastFreshStart           :: !(Maybe ISO8601)
+    , _roReputationMetricsEnabled :: !(Maybe Bool)
+    , _roSendingEnabled           :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReputationOptions' with the minimum fields required to make a request.
@@ -1888,12 +1950,14 @@ instance NFData ReputationOptions where
 --
 --
 -- /See:/ 's3Action' smart constructor.
-data S3Action = S3Action'
-  { _s3KMSKeyARN       :: !(Maybe Text)
-  , _s3TopicARN        :: !(Maybe Text)
-  , _s3ObjectKeyPrefix :: !(Maybe Text)
-  , _s3BucketName      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data S3Action =
+  S3Action'
+    { _s3KMSKeyARN       :: !(Maybe Text)
+    , _s3TopicARN        :: !(Maybe Text)
+    , _s3ObjectKeyPrefix :: !(Maybe Text)
+    , _s3BucketName      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'S3Action' with the minimum fields required to make a request.
@@ -1965,10 +2029,12 @@ instance ToQuery S3Action where
 --
 --
 -- /See:/ 'snsAction' smart constructor.
-data SNSAction = SNSAction'
-  { _saEncoding :: !(Maybe SNSActionEncoding)
-  , _saTopicARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SNSAction =
+  SNSAction'
+    { _saEncoding :: !(Maybe SNSActionEncoding)
+    , _saTopicARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SNSAction' with the minimum fields required to make a request.
@@ -2015,9 +2081,11 @@ instance ToQuery SNSAction where
 --
 --
 -- /See:/ 'snsDestination' smart constructor.
-newtype SNSDestination = SNSDestination'
-  { _sdTopicARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype SNSDestination =
+  SNSDestination'
+    { _sdTopicARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SNSDestination' with the minimum fields required to make a request.
@@ -2051,13 +2119,15 @@ instance ToQuery SNSDestination where
 --
 --
 -- /See:/ 'sendDataPoint' smart constructor.
-data SendDataPoint = SendDataPoint'
-  { _sdpRejects          :: !(Maybe Integer)
-  , _sdpComplaints       :: !(Maybe Integer)
-  , _sdpDeliveryAttempts :: !(Maybe Integer)
-  , _sdpBounces          :: !(Maybe Integer)
-  , _sdpTimestamp        :: !(Maybe ISO8601)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SendDataPoint =
+  SendDataPoint'
+    { _sdpRejects          :: !(Maybe Integer)
+    , _sdpComplaints       :: !(Maybe Integer)
+    , _sdpDeliveryAttempts :: !(Maybe Integer)
+    , _sdpBounces          :: !(Maybe Integer)
+    , _sdpTimestamp        :: !(Maybe ISO8601)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SendDataPoint' with the minimum fields required to make a request.
@@ -2124,10 +2194,12 @@ instance NFData SendDataPoint where
 --
 --
 -- /See:/ 'stopAction' smart constructor.
-data StopAction = StopAction'
-  { _sTopicARN :: !(Maybe Text)
-  , _sScope    :: !StopScope
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StopAction =
+  StopAction'
+    { _sTopicARN :: !(Maybe Text)
+    , _sScope    :: !StopScope
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopAction' with the minimum fields required to make a request.
@@ -2170,12 +2242,14 @@ instance ToQuery StopAction where
 --
 --
 -- /See:/ 'template' smart constructor.
-data Template = Template'
-  { _tTextPart     :: !(Maybe Text)
-  , _tSubjectPart  :: !(Maybe Text)
-  , _tHTMLPart     :: !(Maybe Text)
-  , _tTemplateName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Template =
+  Template'
+    { _tTextPart     :: !(Maybe Text)
+    , _tSubjectPart  :: !(Maybe Text)
+    , _tHTMLPart     :: !(Maybe Text)
+    , _tTemplateName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Template' with the minimum fields required to make a request.
@@ -2241,10 +2315,12 @@ instance ToQuery Template where
 --
 --
 -- /See:/ 'templateMetadata' smart constructor.
-data TemplateMetadata = TemplateMetadata'
-  { _tmName             :: !(Maybe Text)
-  , _tmCreatedTimestamp :: !(Maybe ISO8601)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TemplateMetadata =
+  TemplateMetadata'
+    { _tmName             :: !(Maybe Text)
+    , _tmCreatedTimestamp :: !(Maybe ISO8601)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TemplateMetadata' with the minimum fields required to make a request.
@@ -2284,9 +2360,11 @@ instance NFData TemplateMetadata where
 --
 --
 -- /See:/ 'trackingOptions' smart constructor.
-newtype TrackingOptions = TrackingOptions'
-  { _toCustomRedirectDomain :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype TrackingOptions =
+  TrackingOptions'
+    { _toCustomRedirectDomain :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TrackingOptions' with the minimum fields required to make a request.
@@ -2323,10 +2401,12 @@ instance ToQuery TrackingOptions where
 --
 --
 -- /See:/ 'workmailAction' smart constructor.
-data WorkmailAction = WorkmailAction'
-  { _waTopicARN        :: !(Maybe Text)
-  , _waOrganizationARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data WorkmailAction =
+  WorkmailAction'
+    { _waTopicARN        :: !(Maybe Text)
+    , _waOrganizationARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'WorkmailAction' with the minimum fields required to make a request.

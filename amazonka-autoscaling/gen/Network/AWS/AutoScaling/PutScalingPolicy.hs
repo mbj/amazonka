@@ -59,20 +59,22 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putScalingPolicy' smart constructor.
-data PutScalingPolicy = PutScalingPolicy'
-  { _pspMinAdjustmentStep           :: !(Maybe Int)
-  , _pspEstimatedInstanceWarmup     :: !(Maybe Int)
-  , _pspPolicyType                  :: !(Maybe Text)
-  , _pspStepAdjustments             :: !(Maybe [StepAdjustment])
-  , _pspTargetTrackingConfiguration :: !(Maybe TargetTrackingConfiguration)
-  , _pspAdjustmentType              :: !(Maybe Text)
-  , _pspScalingAdjustment           :: !(Maybe Int)
-  , _pspCooldown                    :: !(Maybe Int)
-  , _pspMetricAggregationType       :: !(Maybe Text)
-  , _pspMinAdjustmentMagnitude      :: !(Maybe Int)
-  , _pspAutoScalingGroupName        :: !Text
-  , _pspPolicyName                  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutScalingPolicy =
+  PutScalingPolicy'
+    { _pspMinAdjustmentStep           :: !(Maybe Int)
+    , _pspEstimatedInstanceWarmup     :: !(Maybe Int)
+    , _pspPolicyType                  :: !(Maybe Text)
+    , _pspStepAdjustments             :: !(Maybe [StepAdjustment])
+    , _pspTargetTrackingConfiguration :: !(Maybe TargetTrackingConfiguration)
+    , _pspAdjustmentType              :: !(Maybe Text)
+    , _pspScalingAdjustment           :: !(Maybe Int)
+    , _pspCooldown                    :: !(Maybe Int)
+    , _pspMetricAggregationType       :: !(Maybe Text)
+    , _pspMinAdjustmentMagnitude      :: !(Maybe Int)
+    , _pspAutoScalingGroupName        :: !Text
+    , _pspPolicyName                  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutScalingPolicy' with the minimum fields required to make a request.
@@ -221,11 +223,13 @@ instance ToQuery PutScalingPolicy where
 --
 --
 -- /See:/ 'putScalingPolicyResponse' smart constructor.
-data PutScalingPolicyResponse = PutScalingPolicyResponse'
-  { _psprsPolicyARN      :: !(Maybe Text)
-  , _psprsAlarms         :: !(Maybe [Alarm])
-  , _psprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutScalingPolicyResponse =
+  PutScalingPolicyResponse'
+    { _psprsPolicyARN      :: !(Maybe Text)
+    , _psprsAlarms         :: !(Maybe [Alarm])
+    , _psprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutScalingPolicyResponse' with the minimum fields required to make a request.

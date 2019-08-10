@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'cancelPipelineReprocessing' smart constructor.
-data CancelPipelineReprocessing = CancelPipelineReprocessing'
-  { _cprPipelineName   :: !Text
-  , _cprReprocessingId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CancelPipelineReprocessing =
+  CancelPipelineReprocessing'
+    { _cprPipelineName   :: !Text
+    , _cprReprocessingId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CancelPipelineReprocessing' with the minimum fields required to make a request.
@@ -102,9 +104,11 @@ instance ToQuery CancelPipelineReprocessing where
         toQuery = const mempty
 
 -- | /See:/ 'cancelPipelineReprocessingResponse' smart constructor.
-newtype CancelPipelineReprocessingResponse = CancelPipelineReprocessingResponse'
-  { _cprrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CancelPipelineReprocessingResponse =
+  CancelPipelineReprocessingResponse'
+    { _cprrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CancelPipelineReprocessingResponse' with the minimum fields required to make a request.

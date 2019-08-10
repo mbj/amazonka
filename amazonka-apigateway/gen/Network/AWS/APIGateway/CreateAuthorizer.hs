@@ -67,18 +67,20 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createAuthorizer' smart constructor.
-data CreateAuthorizer = CreateAuthorizer'
-  { _caAuthorizerURI                :: !(Maybe Text)
-  , _caIdentityValidationExpression :: !(Maybe Text)
-  , _caProviderARNs                 :: !(Maybe [Text])
-  , _caAuthorizerResultTtlInSeconds :: !(Maybe Int)
-  , _caAuthType                     :: !(Maybe Text)
-  , _caIdentitySource               :: !(Maybe Text)
-  , _caAuthorizerCredentials        :: !(Maybe Text)
-  , _caRestAPIId                    :: !Text
-  , _caName                         :: !Text
-  , _caType                         :: !AuthorizerType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateAuthorizer =
+  CreateAuthorizer'
+    { _caAuthorizerURI                :: !(Maybe Text)
+    , _caIdentityValidationExpression :: !(Maybe Text)
+    , _caProviderARNs                 :: !(Maybe [Text])
+    , _caAuthorizerResultTtlInSeconds :: !(Maybe Int)
+    , _caAuthType                     :: !(Maybe Text)
+    , _caIdentitySource               :: !(Maybe Text)
+    , _caAuthorizerCredentials        :: !(Maybe Text)
+    , _caRestAPIId                    :: !Text
+    , _caName                         :: !Text
+    , _caType                         :: !AuthorizerType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateAuthorizer' with the minimum fields required to make a request.

@@ -50,9 +50,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'resolveCustomer' smart constructor.
-newtype ResolveCustomer = ResolveCustomer'
-  { _rcRegistrationToken :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ResolveCustomer =
+  ResolveCustomer'
+    { _rcRegistrationToken :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResolveCustomer' with the minimum fields required to make a request.
@@ -113,11 +115,13 @@ instance ToQuery ResolveCustomer where
 --
 --
 -- /See:/ 'resolveCustomerResponse' smart constructor.
-data ResolveCustomerResponse = ResolveCustomerResponse'
-  { _rcrsCustomerIdentifier :: !(Maybe Text)
-  , _rcrsProductCode        :: !(Maybe Text)
-  , _rcrsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResolveCustomerResponse =
+  ResolveCustomerResponse'
+    { _rcrsCustomerIdentifier :: !(Maybe Text)
+    , _rcrsProductCode        :: !(Maybe Text)
+    , _rcrsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResolveCustomerResponse' with the minimum fields required to make a request.

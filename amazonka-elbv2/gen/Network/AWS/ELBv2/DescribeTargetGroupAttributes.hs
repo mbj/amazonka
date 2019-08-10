@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeTargetGroupAttributes' smart constructor.
-newtype DescribeTargetGroupAttributes = DescribeTargetGroupAttributes'
-  { _dtgaTargetGroupARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeTargetGroupAttributes =
+  DescribeTargetGroupAttributes'
+    { _dtgaTargetGroupARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeTargetGroupAttributes' with the minimum fields required to make a request.
@@ -100,10 +102,12 @@ instance ToQuery DescribeTargetGroupAttributes where
                "TargetGroupArn" =: _dtgaTargetGroupARN]
 
 -- | /See:/ 'describeTargetGroupAttributesResponse' smart constructor.
-data DescribeTargetGroupAttributesResponse = DescribeTargetGroupAttributesResponse'
-  { _dtgarsAttributes     :: !(Maybe [TargetGroupAttribute])
-  , _dtgarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeTargetGroupAttributesResponse =
+  DescribeTargetGroupAttributesResponse'
+    { _dtgarsAttributes     :: !(Maybe [TargetGroupAttribute])
+    , _dtgarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeTargetGroupAttributesResponse' with the minimum fields required to make a request.

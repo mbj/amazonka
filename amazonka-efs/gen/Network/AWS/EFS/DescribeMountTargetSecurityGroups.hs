@@ -57,9 +57,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeMountTargetSecurityGroups' smart constructor.
-newtype DescribeMountTargetSecurityGroups = DescribeMountTargetSecurityGroups'
-  { _dmtsgMountTargetId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeMountTargetSecurityGroups =
+  DescribeMountTargetSecurityGroups'
+    { _dmtsgMountTargetId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeMountTargetSecurityGroups' with the minimum fields required to make a request.
@@ -112,10 +114,12 @@ instance ToQuery DescribeMountTargetSecurityGroups
         toQuery = const mempty
 
 -- | /See:/ 'describeMountTargetSecurityGroupsResponse' smart constructor.
-data DescribeMountTargetSecurityGroupsResponse = DescribeMountTargetSecurityGroupsResponse'
-  { _dmtsgrsResponseStatus :: !Int
-  , _dmtsgrsSecurityGroups :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeMountTargetSecurityGroupsResponse =
+  DescribeMountTargetSecurityGroupsResponse'
+    { _dmtsgrsResponseStatus :: !Int
+    , _dmtsgrsSecurityGroups :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeMountTargetSecurityGroupsResponse' with the minimum fields required to make a request.

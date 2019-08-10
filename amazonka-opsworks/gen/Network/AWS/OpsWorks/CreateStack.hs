@@ -65,27 +65,29 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createStack' smart constructor.
-data CreateStack = CreateStack'
-  { _csDefaultRootDeviceType :: !(Maybe RootDeviceType)
-  , _csVPCId :: !(Maybe Text)
-  , _csChefConfiguration :: !(Maybe ChefConfiguration)
-  , _csAgentVersion :: !(Maybe Text)
-  , _csDefaultSSHKeyName :: !(Maybe Text)
-  , _csCustomJSON :: !(Maybe Text)
-  , _csCustomCookbooksSource :: !(Maybe Source)
-  , _csDefaultAvailabilityZone :: !(Maybe Text)
-  , _csAttributes :: !(Maybe (Map StackAttributesKeys (Maybe Text)))
-  , _csDefaultOS :: !(Maybe Text)
-  , _csUseOpsworksSecurityGroups :: !(Maybe Bool)
-  , _csUseCustomCookbooks :: !(Maybe Bool)
-  , _csDefaultSubnetId :: !(Maybe Text)
-  , _csConfigurationManager :: !(Maybe StackConfigurationManager)
-  , _csHostnameTheme :: !(Maybe Text)
-  , _csName :: !Text
-  , _csRegion :: !Text
-  , _csServiceRoleARN :: !Text
-  , _csDefaultInstanceProfileARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateStack =
+  CreateStack'
+    { _csDefaultRootDeviceType :: !(Maybe RootDeviceType)
+    , _csVPCId :: !(Maybe Text)
+    , _csChefConfiguration :: !(Maybe ChefConfiguration)
+    , _csAgentVersion :: !(Maybe Text)
+    , _csDefaultSSHKeyName :: !(Maybe Text)
+    , _csCustomJSON :: !(Maybe Text)
+    , _csCustomCookbooksSource :: !(Maybe Source)
+    , _csDefaultAvailabilityZone :: !(Maybe Text)
+    , _csAttributes :: !(Maybe (Map StackAttributesKeys (Maybe Text)))
+    , _csDefaultOS :: !(Maybe Text)
+    , _csUseOpsworksSecurityGroups :: !(Maybe Bool)
+    , _csUseCustomCookbooks :: !(Maybe Bool)
+    , _csDefaultSubnetId :: !(Maybe Text)
+    , _csConfigurationManager :: !(Maybe StackConfigurationManager)
+    , _csHostnameTheme :: !(Maybe Text)
+    , _csName :: !Text
+    , _csRegion :: !Text
+    , _csServiceRoleARN :: !Text
+    , _csDefaultInstanceProfileARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateStack' with the minimum fields required to make a request.
@@ -299,10 +301,12 @@ instance ToQuery CreateStack where
 --
 --
 -- /See:/ 'createStackResponse' smart constructor.
-data CreateStackResponse = CreateStackResponse'
-  { _crsStackId        :: !(Maybe Text)
-  , _crsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateStackResponse =
+  CreateStackResponse'
+    { _crsStackId        :: !(Maybe Text)
+    , _crsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateStackResponse' with the minimum fields required to make a request.

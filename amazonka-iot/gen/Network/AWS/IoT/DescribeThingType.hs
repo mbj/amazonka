@@ -53,9 +53,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeThingType' smart constructor.
-newtype DescribeThingType = DescribeThingType'
-  { _dThingTypeName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeThingType =
+  DescribeThingType'
+    { _dThingTypeName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeThingType' with the minimum fields required to make a request.
@@ -107,14 +109,16 @@ instance ToQuery DescribeThingType where
 --
 --
 -- /See:/ 'describeThingTypeResponse' smart constructor.
-data DescribeThingTypeResponse = DescribeThingTypeResponse'
-  { _desrsThingTypeProperties :: !(Maybe ThingTypeProperties)
-  , _desrsThingTypeName       :: !(Maybe Text)
-  , _desrsThingTypeId         :: !(Maybe Text)
-  , _desrsThingTypeMetadata   :: !(Maybe ThingTypeMetadata)
-  , _desrsThingTypeARN        :: !(Maybe Text)
-  , _desrsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeThingTypeResponse =
+  DescribeThingTypeResponse'
+    { _desrsThingTypeProperties :: !(Maybe ThingTypeProperties)
+    , _desrsThingTypeName       :: !(Maybe Text)
+    , _desrsThingTypeId         :: !(Maybe Text)
+    , _desrsThingTypeMetadata   :: !(Maybe ThingTypeMetadata)
+    , _desrsThingTypeARN        :: !(Maybe Text)
+    , _desrsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeThingTypeResponse' with the minimum fields required to make a request.

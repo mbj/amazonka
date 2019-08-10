@@ -59,10 +59,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getAuthorizer' smart constructor.
-data GetAuthorizer = GetAuthorizer'
-  { _gaaRestAPIId    :: !Text
-  , _gaaAuthorizerId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetAuthorizer =
+  GetAuthorizer'
+    { _gaaRestAPIId    :: !Text
+    , _gaaAuthorizerId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetAuthorizer' with the minimum fields required to make a request.

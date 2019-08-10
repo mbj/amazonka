@@ -64,10 +64,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createVault' smart constructor.
-data CreateVault = CreateVault'
-  { _cvAccountId :: !Text
-  , _cvVaultName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateVault =
+  CreateVault'
+    { _cvAccountId :: !Text
+    , _cvVaultName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateVault' with the minimum fields required to make a request.
@@ -126,10 +128,12 @@ instance ToQuery CreateVault where
 --
 --
 -- /See:/ 'createVaultResponse' smart constructor.
-data CreateVaultResponse = CreateVaultResponse'
-  { _cvrsLocation       :: !(Maybe Text)
-  , _cvrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateVaultResponse =
+  CreateVaultResponse'
+    { _cvrsLocation       :: !(Maybe Text)
+    , _cvrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateVaultResponse' with the minimum fields required to make a request.

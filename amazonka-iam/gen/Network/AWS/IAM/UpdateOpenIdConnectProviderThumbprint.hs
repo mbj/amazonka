@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateOpenIdConnectProviderThumbprint' smart constructor.
-data UpdateOpenIdConnectProviderThumbprint = UpdateOpenIdConnectProviderThumbprint'
-  { _uoicptOpenIdConnectProviderARN :: !Text
-  , _uoicptThumbprintList           :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateOpenIdConnectProviderThumbprint =
+  UpdateOpenIdConnectProviderThumbprint'
+    { _uoicptOpenIdConnectProviderARN :: !Text
+    , _uoicptThumbprintList           :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateOpenIdConnectProviderThumbprint' with the minimum fields required to make a request.

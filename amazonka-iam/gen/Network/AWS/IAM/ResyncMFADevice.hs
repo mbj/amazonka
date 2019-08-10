@@ -47,12 +47,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'resyncMFADevice' smart constructor.
-data ResyncMFADevice = ResyncMFADevice'
-  { _rmdUserName            :: !Text
-  , _rmdSerialNumber        :: !Text
-  , _rmdAuthenticationCode1 :: !Text
-  , _rmdAuthenticationCode2 :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResyncMFADevice =
+  ResyncMFADevice'
+    { _rmdUserName            :: !Text
+    , _rmdSerialNumber        :: !Text
+    , _rmdAuthenticationCode1 :: !Text
+    , _rmdAuthenticationCode2 :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResyncMFADevice' with the minimum fields required to make a request.

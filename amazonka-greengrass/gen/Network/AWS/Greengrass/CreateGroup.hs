@@ -51,11 +51,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createGroup' smart constructor.
-data CreateGroup = CreateGroup'
-  { _cgAmznClientToken :: !(Maybe Text)
-  , _cgInitialVersion  :: !(Maybe GroupVersion)
-  , _cgName            :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateGroup =
+  CreateGroup'
+    { _cgAmznClientToken :: !(Maybe Text)
+    , _cgInitialVersion  :: !(Maybe GroupVersion)
+    , _cgName            :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateGroup' with the minimum fields required to make a request.
@@ -129,16 +131,18 @@ instance ToQuery CreateGroup where
         toQuery = const mempty
 
 -- | /See:/ 'createGroupResponse' smart constructor.
-data CreateGroupResponse = CreateGroupResponse'
-  { _cgrsLatestVersionARN     :: !(Maybe Text)
-  , _cgrsARN                  :: !(Maybe Text)
-  , _cgrsName                 :: !(Maybe Text)
-  , _cgrsCreationTimestamp    :: !(Maybe Text)
-  , _cgrsId                   :: !(Maybe Text)
-  , _cgrsLatestVersion        :: !(Maybe Text)
-  , _cgrsLastUpdatedTimestamp :: !(Maybe Text)
-  , _cgrsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateGroupResponse =
+  CreateGroupResponse'
+    { _cgrsLatestVersionARN     :: !(Maybe Text)
+    , _cgrsARN                  :: !(Maybe Text)
+    , _cgrsName                 :: !(Maybe Text)
+    , _cgrsCreationTimestamp    :: !(Maybe Text)
+    , _cgrsId                   :: !(Maybe Text)
+    , _cgrsLatestVersion        :: !(Maybe Text)
+    , _cgrsLastUpdatedTimestamp :: !(Maybe Text)
+    , _cgrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateGroupResponse' with the minimum fields required to make a request.

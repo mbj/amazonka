@@ -48,11 +48,13 @@ import Network.AWS.WorkDocs.Types
 import Network.AWS.WorkDocs.Types.Product
 
 -- | /See:/ 'getDocument' smart constructor.
-data GetDocument = GetDocument'
-  { _gdAuthenticationToken   :: !(Maybe (Sensitive Text))
-  , _gdIncludeCustomMetadata :: !(Maybe Bool)
-  , _gdDocumentId            :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data GetDocument =
+  GetDocument'
+    { _gdAuthenticationToken   :: !(Maybe (Sensitive Text))
+    , _gdIncludeCustomMetadata :: !(Maybe Bool)
+    , _gdDocumentId            :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDocument' with the minimum fields required to make a request.
@@ -119,11 +121,13 @@ instance ToQuery GetDocument where
               ["includeCustomMetadata" =: _gdIncludeCustomMetadata]
 
 -- | /See:/ 'getDocumentResponse' smart constructor.
-data GetDocumentResponse = GetDocumentResponse'
-  { _gdrsCustomMetadata :: !(Maybe (Map Text Text))
-  , _gdrsMetadata       :: !(Maybe DocumentMetadata)
-  , _gdrsResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data GetDocumentResponse =
+  GetDocumentResponse'
+    { _gdrsCustomMetadata :: !(Maybe (Map Text Text))
+    , _gdrsMetadata       :: !(Maybe DocumentMetadata)
+    , _gdrsResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDocumentResponse' with the minimum fields required to make a request.

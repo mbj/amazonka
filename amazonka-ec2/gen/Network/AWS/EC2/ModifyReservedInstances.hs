@@ -53,11 +53,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'modifyReservedInstances' smart constructor.
-data ModifyReservedInstances = ModifyReservedInstances'
-  { _mriClientToken          :: !(Maybe Text)
-  , _mriReservedInstancesIds :: ![Text]
-  , _mriTargetConfigurations :: ![ReservedInstancesConfiguration]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyReservedInstances =
+  ModifyReservedInstances'
+    { _mriClientToken          :: !(Maybe Text)
+    , _mriReservedInstancesIds :: ![Text]
+    , _mriTargetConfigurations :: ![ReservedInstancesConfiguration]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyReservedInstances' with the minimum fields required to make a request.
@@ -130,10 +132,12 @@ instance ToQuery ModifyReservedInstances where
 --
 --
 -- /See:/ 'modifyReservedInstancesResponse' smart constructor.
-data ModifyReservedInstancesResponse = ModifyReservedInstancesResponse'
-  { _mrirsReservedInstancesModificationId :: !(Maybe Text)
-  , _mrirsResponseStatus                  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyReservedInstancesResponse =
+  ModifyReservedInstancesResponse'
+    { _mrirsReservedInstancesModificationId :: !(Maybe Text)
+    , _mrirsResponseStatus                  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyReservedInstancesResponse' with the minimum fields required to make a request.

@@ -46,11 +46,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'setUserMFAPreference' smart constructor.
-data SetUserMFAPreference = SetUserMFAPreference'
-  { _sumpSMSMFASettings           :: !(Maybe SMSMFASettingsType)
-  , _sumpSoftwareTokenMFASettings :: !(Maybe SoftwareTokenMFASettingsType)
-  , _sumpAccessToken              :: !(Sensitive Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data SetUserMFAPreference =
+  SetUserMFAPreference'
+    { _sumpSMSMFASettings           :: !(Maybe SMSMFASettingsType)
+    , _sumpSoftwareTokenMFASettings :: !(Maybe SoftwareTokenMFASettingsType)
+    , _sumpAccessToken              :: !(Sensitive Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetUserMFAPreference' with the minimum fields required to make a request.
@@ -125,9 +127,11 @@ instance ToQuery SetUserMFAPreference where
         toQuery = const mempty
 
 -- | /See:/ 'setUserMFAPreferenceResponse' smart constructor.
-newtype SetUserMFAPreferenceResponse = SetUserMFAPreferenceResponse'
-  { _sumprsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype SetUserMFAPreferenceResponse =
+  SetUserMFAPreferenceResponse'
+    { _sumprsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetUserMFAPreferenceResponse' with the minimum fields required to make a request.

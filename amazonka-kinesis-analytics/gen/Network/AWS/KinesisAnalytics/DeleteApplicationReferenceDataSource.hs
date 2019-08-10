@@ -50,11 +50,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteApplicationReferenceDataSource' smart constructor.
-data DeleteApplicationReferenceDataSource = DeleteApplicationReferenceDataSource'
-  { _dardsApplicationName             :: !Text
-  , _dardsCurrentApplicationVersionId :: !Nat
-  , _dardsReferenceId                 :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteApplicationReferenceDataSource =
+  DeleteApplicationReferenceDataSource'
+    { _dardsApplicationName             :: !Text
+    , _dardsCurrentApplicationVersionId :: !Nat
+    , _dardsReferenceId                 :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteApplicationReferenceDataSource' with the minimum fields required to make a request.
@@ -142,9 +144,11 @@ instance ToQuery DeleteApplicationReferenceDataSource
         toQuery = const mempty
 
 -- | /See:/ 'deleteApplicationReferenceDataSourceResponse' smart constructor.
-newtype DeleteApplicationReferenceDataSourceResponse = DeleteApplicationReferenceDataSourceResponse'
-  { _dardsrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteApplicationReferenceDataSourceResponse =
+  DeleteApplicationReferenceDataSourceResponse'
+    { _dardsrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteApplicationReferenceDataSourceResponse' with the minimum fields required to make a request.

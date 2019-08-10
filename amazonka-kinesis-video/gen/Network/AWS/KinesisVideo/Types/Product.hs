@@ -26,17 +26,19 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'streamInfo' smart constructor.
-data StreamInfo = StreamInfo'
-  { _siCreationTime         :: !(Maybe POSIX)
-  , _siStatus               :: !(Maybe StreamStatus)
-  , _siMediaType            :: !(Maybe Text)
-  , _siDataRetentionInHours :: !(Maybe Nat)
-  , _siStreamARN            :: !(Maybe Text)
-  , _siKMSKeyId             :: !(Maybe Text)
-  , _siDeviceName           :: !(Maybe Text)
-  , _siVersion              :: !(Maybe Text)
-  , _siStreamName           :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StreamInfo =
+  StreamInfo'
+    { _siCreationTime         :: !(Maybe POSIX)
+    , _siStatus               :: !(Maybe StreamStatus)
+    , _siMediaType            :: !(Maybe Text)
+    , _siDataRetentionInHours :: !(Maybe Nat)
+    , _siStreamARN            :: !(Maybe Text)
+    , _siKMSKeyId             :: !(Maybe Text)
+    , _siDeviceName           :: !(Maybe Text)
+    , _siVersion              :: !(Maybe Text)
+    , _siStreamName           :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StreamInfo' with the minimum fields required to make a request.
@@ -135,10 +137,12 @@ instance NFData StreamInfo where
 --
 --
 -- /See:/ 'streamNameCondition' smart constructor.
-data StreamNameCondition = StreamNameCondition'
-  { _sncComparisonOperator :: !(Maybe ComparisonOperator)
-  , _sncComparisonValue    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StreamNameCondition =
+  StreamNameCondition'
+    { _sncComparisonOperator :: !(Maybe ComparisonOperator)
+    , _sncComparisonValue    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StreamNameCondition' with the minimum fields required to make a request.

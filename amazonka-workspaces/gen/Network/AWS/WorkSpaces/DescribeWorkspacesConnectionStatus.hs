@@ -47,10 +47,12 @@ import Network.AWS.WorkSpaces.Types
 import Network.AWS.WorkSpaces.Types.Product
 
 -- | /See:/ 'describeWorkspacesConnectionStatus' smart constructor.
-data DescribeWorkspacesConnectionStatus = DescribeWorkspacesConnectionStatus'
-  { _dwcsWorkspaceIds :: !(Maybe (List1 Text))
-  , _dwcsNextToken    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeWorkspacesConnectionStatus =
+  DescribeWorkspacesConnectionStatus'
+    { _dwcsWorkspaceIds :: !(Maybe (List1 Text))
+    , _dwcsNextToken    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeWorkspacesConnectionStatus' with the minimum fields required to make a request.
@@ -123,11 +125,13 @@ instance ToQuery DescribeWorkspacesConnectionStatus
         toQuery = const mempty
 
 -- | /See:/ 'describeWorkspacesConnectionStatusResponse' smart constructor.
-data DescribeWorkspacesConnectionStatusResponse = DescribeWorkspacesConnectionStatusResponse'
-  { _dwcsrsNextToken                  :: !(Maybe Text)
-  , _dwcsrsWorkspacesConnectionStatus :: !(Maybe [WorkspaceConnectionStatus])
-  , _dwcsrsResponseStatus             :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeWorkspacesConnectionStatusResponse =
+  DescribeWorkspacesConnectionStatusResponse'
+    { _dwcsrsNextToken                  :: !(Maybe Text)
+    , _dwcsrsWorkspacesConnectionStatus :: !(Maybe [WorkspaceConnectionStatus])
+    , _dwcsrsResponseStatus             :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeWorkspacesConnectionStatusResponse' with the minimum fields required to make a request.

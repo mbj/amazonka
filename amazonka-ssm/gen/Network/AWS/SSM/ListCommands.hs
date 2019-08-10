@@ -53,13 +53,15 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'listCommands' smart constructor.
-data ListCommands = ListCommands'
-  { _lcInstanceId :: !(Maybe Text)
-  , _lcFilters    :: !(Maybe (List1 CommandFilter))
-  , _lcNextToken  :: !(Maybe Text)
-  , _lcCommandId  :: !(Maybe Text)
-  , _lcMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListCommands =
+  ListCommands'
+    { _lcInstanceId :: !(Maybe Text)
+    , _lcFilters    :: !(Maybe (List1 CommandFilter))
+    , _lcNextToken  :: !(Maybe Text)
+    , _lcCommandId  :: !(Maybe Text)
+    , _lcMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListCommands' with the minimum fields required to make a request.
@@ -154,11 +156,13 @@ instance ToQuery ListCommands where
         toQuery = const mempty
 
 -- | /See:/ 'listCommandsResponse' smart constructor.
-data ListCommandsResponse = ListCommandsResponse'
-  { _lcrsCommands       :: !(Maybe [Command])
-  , _lcrsNextToken      :: !(Maybe Text)
-  , _lcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListCommandsResponse =
+  ListCommandsResponse'
+    { _lcrsCommands       :: !(Maybe [Command])
+    , _lcrsNextToken      :: !(Maybe Text)
+    , _lcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListCommandsResponse' with the minimum fields required to make a request.

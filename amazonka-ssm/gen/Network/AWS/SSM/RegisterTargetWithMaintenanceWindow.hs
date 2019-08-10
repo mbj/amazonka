@@ -51,15 +51,17 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'registerTargetWithMaintenanceWindow' smart constructor.
-data RegisterTargetWithMaintenanceWindow = RegisterTargetWithMaintenanceWindow'
-  { _rClientToken      :: !(Maybe Text)
-  , _rOwnerInformation :: !(Maybe (Sensitive Text))
-  , _rName             :: !(Maybe Text)
-  , _rDescription      :: !(Maybe (Sensitive Text))
-  , _rWindowId         :: !Text
-  , _rResourceType     :: !MaintenanceWindowResourceType
-  , _rTargets          :: ![Target]
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data RegisterTargetWithMaintenanceWindow =
+  RegisterTargetWithMaintenanceWindow'
+    { _rClientToken      :: !(Maybe Text)
+    , _rOwnerInformation :: !(Maybe (Sensitive Text))
+    , _rName             :: !(Maybe Text)
+    , _rDescription      :: !(Maybe (Sensitive Text))
+    , _rWindowId         :: !Text
+    , _rResourceType     :: !MaintenanceWindowResourceType
+    , _rTargets          :: ![Target]
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterTargetWithMaintenanceWindow' with the minimum fields required to make a request.
@@ -175,10 +177,12 @@ instance ToQuery RegisterTargetWithMaintenanceWindow
         toQuery = const mempty
 
 -- | /See:/ 'registerTargetWithMaintenanceWindowResponse' smart constructor.
-data RegisterTargetWithMaintenanceWindowResponse = RegisterTargetWithMaintenanceWindowResponse'
-  { _rrsWindowTargetId :: !(Maybe Text)
-  , _rrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RegisterTargetWithMaintenanceWindowResponse =
+  RegisterTargetWithMaintenanceWindowResponse'
+    { _rrsWindowTargetId :: !(Maybe Text)
+    , _rrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterTargetWithMaintenanceWindowResponse' with the minimum fields required to make a request.

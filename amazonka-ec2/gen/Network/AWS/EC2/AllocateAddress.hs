@@ -59,11 +59,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'allocateAddress' smart constructor.
-data AllocateAddress = AllocateAddress'
-  { _aaDomain  :: !(Maybe DomainType)
-  , _aaAddress :: !(Maybe Text)
-  , _aaDryRun  :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AllocateAddress =
+  AllocateAddress'
+    { _aaDomain  :: !(Maybe DomainType)
+    , _aaAddress :: !(Maybe Text)
+    , _aaDryRun  :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AllocateAddress' with the minimum fields required to make a request.
@@ -128,12 +130,14 @@ instance ToQuery AllocateAddress where
 --
 --
 -- /See:/ 'allocateAddressResponse' smart constructor.
-data AllocateAddressResponse = AllocateAddressResponse'
-  { _aarsAllocationId   :: !(Maybe Text)
-  , _aarsDomain         :: !(Maybe DomainType)
-  , _aarsPublicIP       :: !(Maybe Text)
-  , _aarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AllocateAddressResponse =
+  AllocateAddressResponse'
+    { _aarsAllocationId   :: !(Maybe Text)
+    , _aarsDomain         :: !(Maybe DomainType)
+    , _aarsPublicIP       :: !(Maybe Text)
+    , _aarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AllocateAddressResponse' with the minimum fields required to make a request.

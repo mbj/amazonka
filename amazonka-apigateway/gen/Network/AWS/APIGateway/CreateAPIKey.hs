@@ -63,15 +63,17 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createAPIKey' smart constructor.
-data CreateAPIKey = CreateAPIKey'
-  { _cakEnabled            :: !(Maybe Bool)
-  , _cakValue              :: !(Maybe Text)
-  , _cakCustomerId         :: !(Maybe Text)
-  , _cakGenerateDistinctId :: !(Maybe Bool)
-  , _cakName               :: !(Maybe Text)
-  , _cakStageKeys          :: !(Maybe [StageKey])
-  , _cakDescription        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateAPIKey =
+  CreateAPIKey'
+    { _cakEnabled            :: !(Maybe Bool)
+    , _cakValue              :: !(Maybe Text)
+    , _cakCustomerId         :: !(Maybe Text)
+    , _cakGenerateDistinctId :: !(Maybe Bool)
+    , _cakName               :: !(Maybe Text)
+    , _cakStageKeys          :: !(Maybe [StageKey])
+    , _cakDescription        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateAPIKey' with the minimum fields required to make a request.

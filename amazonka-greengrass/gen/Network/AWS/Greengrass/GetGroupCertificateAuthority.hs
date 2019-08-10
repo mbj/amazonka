@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getGroupCertificateAuthority' smart constructor.
-data GetGroupCertificateAuthority = GetGroupCertificateAuthority'
-  { _ggcaCertificateAuthorityId :: !Text
-  , _ggcaGroupId                :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetGroupCertificateAuthority =
+  GetGroupCertificateAuthority'
+    { _ggcaCertificateAuthorityId :: !Text
+    , _ggcaGroupId                :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetGroupCertificateAuthority' with the minimum fields required to make a request.
@@ -114,12 +116,14 @@ instance ToQuery GetGroupCertificateAuthority where
         toQuery = const mempty
 
 -- | /See:/ 'getGroupCertificateAuthorityResponse' smart constructor.
-data GetGroupCertificateAuthorityResponse = GetGroupCertificateAuthorityResponse'
-  { _ggcarsPemEncodedCertificate        :: !(Maybe Text)
-  , _ggcarsGroupCertificateAuthorityARN :: !(Maybe Text)
-  , _ggcarsGroupCertificateAuthorityId  :: !(Maybe Text)
-  , _ggcarsResponseStatus               :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetGroupCertificateAuthorityResponse =
+  GetGroupCertificateAuthorityResponse'
+    { _ggcarsPemEncodedCertificate        :: !(Maybe Text)
+    , _ggcarsGroupCertificateAuthorityARN :: !(Maybe Text)
+    , _ggcarsGroupCertificateAuthorityId  :: !(Maybe Text)
+    , _ggcarsResponseStatus               :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetGroupCertificateAuthorityResponse' with the minimum fields required to make a request.

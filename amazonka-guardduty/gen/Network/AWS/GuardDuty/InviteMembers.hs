@@ -48,12 +48,14 @@ import Network.AWS.Response
 -- | InviteMembers request body.
 --
 -- /See:/ 'inviteMembers' smart constructor.
-data InviteMembers = InviteMembers'
-  { _imAccountIds               :: !(Maybe [Text])
-  , _imDisableEmailNotification :: !(Maybe Bool)
-  , _imMessage                  :: !(Maybe Text)
-  , _imDetectorId               :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InviteMembers =
+  InviteMembers'
+    { _imAccountIds               :: !(Maybe [Text])
+    , _imDisableEmailNotification :: !(Maybe Bool)
+    , _imMessage                  :: !(Maybe Text)
+    , _imDetectorId               :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InviteMembers' with the minimum fields required to make a request.
@@ -134,10 +136,12 @@ instance ToQuery InviteMembers where
         toQuery = const mempty
 
 -- | /See:/ 'inviteMembersResponse' smart constructor.
-data InviteMembersResponse = InviteMembersResponse'
-  { _imrsUnprocessedAccounts :: !(Maybe [UnprocessedAccount])
-  , _imrsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InviteMembersResponse =
+  InviteMembersResponse'
+    { _imrsUnprocessedAccounts :: !(Maybe [UnprocessedAccount])
+    , _imrsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InviteMembersResponse' with the minimum fields required to make a request.

@@ -49,11 +49,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createThingGroup' smart constructor.
-data CreateThingGroup = CreateThingGroup'
-  { _ctgParentGroupName      :: !(Maybe Text)
-  , _ctgThingGroupProperties :: !(Maybe ThingGroupProperties)
-  , _ctgThingGroupName       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateThingGroup =
+  CreateThingGroup'
+    { _ctgParentGroupName      :: !(Maybe Text)
+    , _ctgThingGroupProperties :: !(Maybe ThingGroupProperties)
+    , _ctgThingGroupName       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateThingGroup' with the minimum fields required to make a request.
@@ -122,12 +124,14 @@ instance ToQuery CreateThingGroup where
         toQuery = const mempty
 
 -- | /See:/ 'createThingGroupResponse' smart constructor.
-data CreateThingGroupResponse = CreateThingGroupResponse'
-  { _ctgrsThingGroupARN  :: !(Maybe Text)
-  , _ctgrsThingGroupId   :: !(Maybe Text)
-  , _ctgrsThingGroupName :: !(Maybe Text)
-  , _ctgrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateThingGroupResponse =
+  CreateThingGroupResponse'
+    { _ctgrsThingGroupARN  :: !(Maybe Text)
+    , _ctgrsThingGroupId   :: !(Maybe Text)
+    , _ctgrsThingGroupName :: !(Maybe Text)
+    , _ctgrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateThingGroupResponse' with the minimum fields required to make a request.

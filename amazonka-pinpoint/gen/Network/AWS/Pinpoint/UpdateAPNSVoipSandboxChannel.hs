@@ -44,10 +44,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateAPNSVoipSandboxChannel' smart constructor.
-data UpdateAPNSVoipSandboxChannel = UpdateAPNSVoipSandboxChannel'
-  { _uavscApplicationId                 :: !Text
-  , _uavscAPNSVoipSandboxChannelRequest :: !APNSVoipSandboxChannelRequest
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateAPNSVoipSandboxChannel =
+  UpdateAPNSVoipSandboxChannel'
+    { _uavscApplicationId                 :: !Text
+    , _uavscAPNSVoipSandboxChannelRequest :: !APNSVoipSandboxChannelRequest
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateAPNSVoipSandboxChannel' with the minimum fields required to make a request.
@@ -116,10 +118,12 @@ instance ToQuery UpdateAPNSVoipSandboxChannel where
         toQuery = const mempty
 
 -- | /See:/ 'updateAPNSVoipSandboxChannelResponse' smart constructor.
-data UpdateAPNSVoipSandboxChannelResponse = UpdateAPNSVoipSandboxChannelResponse'
-  { _uavscrsResponseStatus                 :: !Int
-  , _uavscrsAPNSVoipSandboxChannelResponse :: !APNSVoipSandboxChannelResponse
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateAPNSVoipSandboxChannelResponse =
+  UpdateAPNSVoipSandboxChannelResponse'
+    { _uavscrsResponseStatus                 :: !Int
+    , _uavscrsAPNSVoipSandboxChannelResponse :: !APNSVoipSandboxChannelResponse
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateAPNSVoipSandboxChannelResponse' with the minimum fields required to make a request.

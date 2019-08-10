@@ -60,14 +60,16 @@ import Network.AWS.Route53AutoNaming.Types
 import Network.AWS.Route53AutoNaming.Types.Product
 
 -- | /See:/ 'createService' smart constructor.
-data CreateService = CreateService'
-  { _csHealthCheckConfig       :: !(Maybe HealthCheckConfig)
-  , _csCreatorRequestId        :: !(Maybe Text)
-  , _csHealthCheckCustomConfig :: !(Maybe HealthCheckCustomConfig)
-  , _csDescription             :: !(Maybe Text)
-  , _csName                    :: !Text
-  , _csDNSConfig               :: !DNSConfig
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateService =
+  CreateService'
+    { _csHealthCheckConfig       :: !(Maybe HealthCheckConfig)
+    , _csCreatorRequestId        :: !(Maybe Text)
+    , _csHealthCheckCustomConfig :: !(Maybe HealthCheckCustomConfig)
+    , _csDescription             :: !(Maybe Text)
+    , _csName                    :: !Text
+    , _csDNSConfig               :: !DNSConfig
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateService' with the minimum fields required to make a request.
@@ -166,10 +168,12 @@ instance ToQuery CreateService where
         toQuery = const mempty
 
 -- | /See:/ 'createServiceResponse' smart constructor.
-data CreateServiceResponse = CreateServiceResponse'
-  { _csrsService        :: !(Maybe ServiceInfo)
-  , _csrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateServiceResponse =
+  CreateServiceResponse'
+    { _csrsService        :: !(Maybe ServiceInfo)
+    , _csrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateServiceResponse' with the minimum fields required to make a request.

@@ -49,10 +49,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateBudget' smart constructor.
-data UpdateBudget = UpdateBudget'
-  { _ubAccountId :: !Text
-  , _ubNewBudget :: !Budget
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateBudget =
+  UpdateBudget'
+    { _ubAccountId :: !Text
+    , _ubNewBudget :: !Budget
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateBudget' with the minimum fields required to make a request.
@@ -118,9 +120,11 @@ instance ToQuery UpdateBudget where
 --
 --
 -- /See:/ 'updateBudgetResponse' smart constructor.
-newtype UpdateBudgetResponse = UpdateBudgetResponse'
-  { _ubrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateBudgetResponse =
+  UpdateBudgetResponse'
+    { _ubrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateBudgetResponse' with the minimum fields required to make a request.

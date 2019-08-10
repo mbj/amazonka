@@ -52,10 +52,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listNamedQueries' smart constructor.
-data ListNamedQueries = ListNamedQueries'
-  { _lnqNextToken  :: !(Maybe Text)
-  , _lnqMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListNamedQueries =
+  ListNamedQueries'
+    { _lnqNextToken  :: !(Maybe Text)
+    , _lnqMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListNamedQueries' with the minimum fields required to make a request.
@@ -123,11 +125,13 @@ instance ToQuery ListNamedQueries where
         toQuery = const mempty
 
 -- | /See:/ 'listNamedQueriesResponse' smart constructor.
-data ListNamedQueriesResponse = ListNamedQueriesResponse'
-  { _lnqrsNextToken      :: !(Maybe Text)
-  , _lnqrsNamedQueryIds  :: !(Maybe (List1 Text))
-  , _lnqrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListNamedQueriesResponse =
+  ListNamedQueriesResponse'
+    { _lnqrsNextToken      :: !(Maybe Text)
+    , _lnqrsNamedQueryIds  :: !(Maybe (List1 Text))
+    , _lnqrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListNamedQueriesResponse' with the minimum fields required to make a request.

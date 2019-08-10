@@ -67,19 +67,21 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'updatePatchBaseline' smart constructor.
-data UpdatePatchBaseline = UpdatePatchBaseline'
-  { _upbReplace                          :: !(Maybe Bool)
-  , _upbApprovalRules                    :: !(Maybe PatchRuleGroup)
-  , _upbGlobalFilters                    :: !(Maybe PatchFilterGroup)
-  , _upbApprovedPatchesComplianceLevel   :: !(Maybe PatchComplianceLevel)
-  , _upbApprovedPatches                  :: !(Maybe [Text])
-  , _upbApprovedPatchesEnableNonSecurity :: !(Maybe Bool)
-  , _upbRejectedPatches                  :: !(Maybe [Text])
-  , _upbSources                          :: !(Maybe [PatchSource])
-  , _upbName                             :: !(Maybe Text)
-  , _upbDescription                      :: !(Maybe Text)
-  , _upbBaselineId                       :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data UpdatePatchBaseline =
+  UpdatePatchBaseline'
+    { _upbReplace                          :: !(Maybe Bool)
+    , _upbApprovalRules                    :: !(Maybe PatchRuleGroup)
+    , _upbGlobalFilters                    :: !(Maybe PatchFilterGroup)
+    , _upbApprovedPatchesComplianceLevel   :: !(Maybe PatchComplianceLevel)
+    , _upbApprovedPatches                  :: !(Maybe [Text])
+    , _upbApprovedPatchesEnableNonSecurity :: !(Maybe Bool)
+    , _upbRejectedPatches                  :: !(Maybe [Text])
+    , _upbSources                          :: !(Maybe [PatchSource])
+    , _upbName                             :: !(Maybe Text)
+    , _upbDescription                      :: !(Maybe Text)
+    , _upbBaselineId                       :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdatePatchBaseline' with the minimum fields required to make a request.
@@ -230,22 +232,24 @@ instance ToQuery UpdatePatchBaseline where
         toQuery = const mempty
 
 -- | /See:/ 'updatePatchBaselineResponse' smart constructor.
-data UpdatePatchBaselineResponse = UpdatePatchBaselineResponse'
-  { _upbrsApprovalRules                    :: !(Maybe PatchRuleGroup)
-  , _upbrsOperatingSystem                  :: !(Maybe OperatingSystem)
-  , _upbrsGlobalFilters                    :: !(Maybe PatchFilterGroup)
-  , _upbrsApprovedPatchesComplianceLevel   :: !(Maybe PatchComplianceLevel)
-  , _upbrsApprovedPatches                  :: !(Maybe [Text])
-  , _upbrsApprovedPatchesEnableNonSecurity :: !(Maybe Bool)
-  , _upbrsRejectedPatches                  :: !(Maybe [Text])
-  , _upbrsSources                          :: !(Maybe [PatchSource])
-  , _upbrsCreatedDate                      :: !(Maybe POSIX)
-  , _upbrsName                             :: !(Maybe Text)
-  , _upbrsModifiedDate                     :: !(Maybe POSIX)
-  , _upbrsDescription                      :: !(Maybe Text)
-  , _upbrsBaselineId                       :: !(Maybe Text)
-  , _upbrsResponseStatus                   :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data UpdatePatchBaselineResponse =
+  UpdatePatchBaselineResponse'
+    { _upbrsApprovalRules                    :: !(Maybe PatchRuleGroup)
+    , _upbrsOperatingSystem                  :: !(Maybe OperatingSystem)
+    , _upbrsGlobalFilters                    :: !(Maybe PatchFilterGroup)
+    , _upbrsApprovedPatchesComplianceLevel   :: !(Maybe PatchComplianceLevel)
+    , _upbrsApprovedPatches                  :: !(Maybe [Text])
+    , _upbrsApprovedPatchesEnableNonSecurity :: !(Maybe Bool)
+    , _upbrsRejectedPatches                  :: !(Maybe [Text])
+    , _upbrsSources                          :: !(Maybe [PatchSource])
+    , _upbrsCreatedDate                      :: !(Maybe POSIX)
+    , _upbrsName                             :: !(Maybe Text)
+    , _upbrsModifiedDate                     :: !(Maybe POSIX)
+    , _upbrsDescription                      :: !(Maybe Text)
+    , _upbrsBaselineId                       :: !(Maybe Text)
+    , _upbrsResponseStatus                   :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdatePatchBaselineResponse' with the minimum fields required to make a request.

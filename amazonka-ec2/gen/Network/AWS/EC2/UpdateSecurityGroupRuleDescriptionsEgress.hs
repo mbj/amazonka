@@ -54,12 +54,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateSecurityGroupRuleDescriptionsEgress' smart constructor.
-data UpdateSecurityGroupRuleDescriptionsEgress = UpdateSecurityGroupRuleDescriptionsEgress'
-  { _usgrdeGroupId       :: !(Maybe Text)
-  , _usgrdeGroupName     :: !(Maybe Text)
-  , _usgrdeDryRun        :: !(Maybe Bool)
-  , _usgrdeIPPermissions :: ![IPPermission]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateSecurityGroupRuleDescriptionsEgress =
+  UpdateSecurityGroupRuleDescriptionsEgress'
+    { _usgrdeGroupId       :: !(Maybe Text)
+    , _usgrdeGroupName     :: !(Maybe Text)
+    , _usgrdeDryRun        :: !(Maybe Bool)
+    , _usgrdeIPPermissions :: ![IPPermission]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateSecurityGroupRuleDescriptionsEgress' with the minimum fields required to make a request.
@@ -150,10 +152,12 @@ instance ToQuery
 --
 --
 -- /See:/ 'updateSecurityGroupRuleDescriptionsEgressResponse' smart constructor.
-data UpdateSecurityGroupRuleDescriptionsEgressResponse = UpdateSecurityGroupRuleDescriptionsEgressResponse'
-  { _usgrdersReturn         :: !(Maybe Bool)
-  , _usgrdersResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateSecurityGroupRuleDescriptionsEgressResponse =
+  UpdateSecurityGroupRuleDescriptionsEgressResponse'
+    { _usgrdersReturn         :: !(Maybe Bool)
+    , _usgrdersResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateSecurityGroupRuleDescriptionsEgressResponse' with the minimum fields required to make a request.

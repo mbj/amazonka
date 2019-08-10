@@ -52,10 +52,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'cancelSpotInstanceRequests' smart constructor.
-data CancelSpotInstanceRequests = CancelSpotInstanceRequests'
-  { _csirDryRun                 :: !(Maybe Bool)
-  , _csirSpotInstanceRequestIds :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CancelSpotInstanceRequests =
+  CancelSpotInstanceRequests'
+    { _csirDryRun                 :: !(Maybe Bool)
+    , _csirSpotInstanceRequestIds :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CancelSpotInstanceRequests' with the minimum fields required to make a request.
@@ -117,10 +119,12 @@ instance ToQuery CancelSpotInstanceRequests where
 --
 --
 -- /See:/ 'cancelSpotInstanceRequestsResponse' smart constructor.
-data CancelSpotInstanceRequestsResponse = CancelSpotInstanceRequestsResponse'
-  { _csirrsCancelledSpotInstanceRequests :: !(Maybe [CancelledSpotInstanceRequest])
-  , _csirrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CancelSpotInstanceRequestsResponse =
+  CancelSpotInstanceRequestsResponse'
+    { _csirrsCancelledSpotInstanceRequests :: !(Maybe [CancelledSpotInstanceRequest])
+    , _csirrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CancelSpotInstanceRequestsResponse' with the minimum fields required to make a request.

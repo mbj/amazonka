@@ -56,12 +56,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listTopicRules' smart constructor.
-data ListTopicRules = ListTopicRules'
-  { _ltrRuleDisabled :: !(Maybe Bool)
-  , _ltrTopic        :: !(Maybe Text)
-  , _ltrNextToken    :: !(Maybe Text)
-  , _ltrMaxResults   :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTopicRules =
+  ListTopicRules'
+    { _ltrRuleDisabled :: !(Maybe Bool)
+    , _ltrTopic        :: !(Maybe Text)
+    , _ltrNextToken    :: !(Maybe Text)
+    , _ltrMaxResults   :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTopicRules' with the minimum fields required to make a request.
@@ -141,11 +143,13 @@ instance ToQuery ListTopicRules where
 --
 --
 -- /See:/ 'listTopicRulesResponse' smart constructor.
-data ListTopicRulesResponse = ListTopicRulesResponse'
-  { _ltrrsRules          :: !(Maybe [TopicRuleListItem])
-  , _ltrrsNextToken      :: !(Maybe Text)
-  , _ltrrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTopicRulesResponse =
+  ListTopicRulesResponse'
+    { _ltrrsRules          :: !(Maybe [TopicRuleListItem])
+    , _ltrrsNextToken      :: !(Maybe Text)
+    , _ltrrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTopicRulesResponse' with the minimum fields required to make a request.

@@ -50,12 +50,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getMergeConflicts' smart constructor.
-data GetMergeConflicts = GetMergeConflicts'
-  { _gmcRepositoryName             :: !Text
-  , _gmcDestinationCommitSpecifier :: !Text
-  , _gmcSourceCommitSpecifier      :: !Text
-  , _gmcMergeOption                :: !MergeOptionTypeEnum
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetMergeConflicts =
+  GetMergeConflicts'
+    { _gmcRepositoryName             :: !Text
+    , _gmcDestinationCommitSpecifier :: !Text
+    , _gmcSourceCommitSpecifier      :: !Text
+    , _gmcMergeOption                :: !MergeOptionTypeEnum
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetMergeConflicts' with the minimum fields required to make a request.
@@ -145,12 +147,14 @@ instance ToQuery GetMergeConflicts where
         toQuery = const mempty
 
 -- | /See:/ 'getMergeConflictsResponse' smart constructor.
-data GetMergeConflictsResponse = GetMergeConflictsResponse'
-  { _gmcrsResponseStatus      :: !Int
-  , _gmcrsMergeable           :: !Bool
-  , _gmcrsDestinationCommitId :: !Text
-  , _gmcrsSourceCommitId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetMergeConflictsResponse =
+  GetMergeConflictsResponse'
+    { _gmcrsResponseStatus      :: !Int
+    , _gmcrsMergeable           :: !Bool
+    , _gmcrsDestinationCommitId :: !Text
+    , _gmcrsSourceCommitId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetMergeConflictsResponse' with the minimum fields required to make a request.

@@ -48,13 +48,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateRoom' smart constructor.
-data UpdateRoom = UpdateRoom'
-  { _urProfileARN         :: !(Maybe Text)
-  , _urProviderCalendarId :: !(Maybe Text)
-  , _urRoomARN            :: !(Maybe Text)
-  , _urRoomName           :: !(Maybe Text)
-  , _urDescription        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateRoom =
+  UpdateRoom'
+    { _urProfileARN         :: !(Maybe Text)
+    , _urProviderCalendarId :: !(Maybe Text)
+    , _urRoomARN            :: !(Maybe Text)
+    , _urRoomName           :: !(Maybe Text)
+    , _urDescription        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateRoom' with the minimum fields required to make a request.
@@ -140,9 +142,11 @@ instance ToQuery UpdateRoom where
         toQuery = const mempty
 
 -- | /See:/ 'updateRoomResponse' smart constructor.
-newtype UpdateRoomResponse = UpdateRoomResponse'
-  { _urrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateRoomResponse =
+  UpdateRoomResponse'
+    { _urrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateRoomResponse' with the minimum fields required to make a request.

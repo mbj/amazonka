@@ -26,10 +26,12 @@ import Network.AWS.SWF.Types.Sum
 --
 --
 -- /See:/ 'activityTaskCancelRequestedEventAttributes' smart constructor.
-data ActivityTaskCancelRequestedEventAttributes = ActivityTaskCancelRequestedEventAttributes'
-  { _atcreaDecisionTaskCompletedEventId :: !Integer
-  , _atcreaActivityId                   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ActivityTaskCancelRequestedEventAttributes =
+  ActivityTaskCancelRequestedEventAttributes'
+    { _atcreaDecisionTaskCompletedEventId :: !Integer
+    , _atcreaActivityId                   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ActivityTaskCancelRequestedEventAttributes' with the minimum fields required to make a request.
@@ -82,12 +84,14 @@ instance NFData
 --
 --
 -- /See:/ 'activityTaskCanceledEventAttributes' smart constructor.
-data ActivityTaskCanceledEventAttributes = ActivityTaskCanceledEventAttributes'
-  { _aLatestCancelRequestedEventId :: !(Maybe Integer)
-  , _aDetails                      :: !(Maybe Text)
-  , _aScheduledEventId             :: !Integer
-  , _aStartedEventId               :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ActivityTaskCanceledEventAttributes =
+  ActivityTaskCanceledEventAttributes'
+    { _aLatestCancelRequestedEventId :: !(Maybe Integer)
+    , _aDetails                      :: !(Maybe Text)
+    , _aScheduledEventId             :: !Integer
+    , _aStartedEventId               :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ActivityTaskCanceledEventAttributes' with the minimum fields required to make a request.
@@ -152,11 +156,13 @@ instance NFData ActivityTaskCanceledEventAttributes
 --
 --
 -- /See:/ 'activityTaskCompletedEventAttributes' smart constructor.
-data ActivityTaskCompletedEventAttributes = ActivityTaskCompletedEventAttributes'
-  { _atceaResult           :: !(Maybe Text)
-  , _atceaScheduledEventId :: !Integer
-  , _atceaStartedEventId   :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ActivityTaskCompletedEventAttributes =
+  ActivityTaskCompletedEventAttributes'
+    { _atceaResult           :: !(Maybe Text)
+    , _atceaScheduledEventId :: !Integer
+    , _atceaStartedEventId   :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ActivityTaskCompletedEventAttributes' with the minimum fields required to make a request.
@@ -214,12 +220,14 @@ instance NFData ActivityTaskCompletedEventAttributes
 --
 --
 -- /See:/ 'activityTaskFailedEventAttributes' smart constructor.
-data ActivityTaskFailedEventAttributes = ActivityTaskFailedEventAttributes'
-  { _atfeaReason           :: !(Maybe Text)
-  , _atfeaDetails          :: !(Maybe Text)
-  , _atfeaScheduledEventId :: !Integer
-  , _atfeaStartedEventId   :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ActivityTaskFailedEventAttributes =
+  ActivityTaskFailedEventAttributes'
+    { _atfeaReason           :: !(Maybe Text)
+    , _atfeaDetails          :: !(Maybe Text)
+    , _atfeaScheduledEventId :: !Integer
+    , _atfeaStartedEventId   :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ActivityTaskFailedEventAttributes' with the minimum fields required to make a request.
@@ -283,19 +291,21 @@ instance NFData ActivityTaskFailedEventAttributes
 --
 --
 -- /See:/ 'activityTaskScheduledEventAttributes' smart constructor.
-data ActivityTaskScheduledEventAttributes = ActivityTaskScheduledEventAttributes'
-  { _atseaControl                      :: !(Maybe Text)
-  , _atseaHeartbeatTimeout             :: !(Maybe Text)
-  , _atseaScheduleToCloseTimeout       :: !(Maybe Text)
-  , _atseaInput                        :: !(Maybe Text)
-  , _atseaTaskPriority                 :: !(Maybe Text)
-  , _atseaScheduleToStartTimeout       :: !(Maybe Text)
-  , _atseaStartToCloseTimeout          :: !(Maybe Text)
-  , _atseaActivityType                 :: !ActivityType
-  , _atseaActivityId                   :: !Text
-  , _atseaTaskList                     :: !TaskList
-  , _atseaDecisionTaskCompletedEventId :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ActivityTaskScheduledEventAttributes =
+  ActivityTaskScheduledEventAttributes'
+    { _atseaControl                      :: !(Maybe Text)
+    , _atseaHeartbeatTimeout             :: !(Maybe Text)
+    , _atseaScheduleToCloseTimeout       :: !(Maybe Text)
+    , _atseaInput                        :: !(Maybe Text)
+    , _atseaTaskPriority                 :: !(Maybe Text)
+    , _atseaScheduleToStartTimeout       :: !(Maybe Text)
+    , _atseaStartToCloseTimeout          :: !(Maybe Text)
+    , _atseaActivityType                 :: !ActivityType
+    , _atseaActivityId                   :: !Text
+    , _atseaTaskList                     :: !TaskList
+    , _atseaDecisionTaskCompletedEventId :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ActivityTaskScheduledEventAttributes' with the minimum fields required to make a request.
@@ -419,10 +429,12 @@ instance NFData ActivityTaskScheduledEventAttributes
 --
 --
 -- /See:/ 'activityTaskStartedEventAttributes' smart constructor.
-data ActivityTaskStartedEventAttributes = ActivityTaskStartedEventAttributes'
-  { _atseaIdentity         :: !(Maybe Text)
-  , _atseaScheduledEventId :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ActivityTaskStartedEventAttributes =
+  ActivityTaskStartedEventAttributes'
+    { _atseaIdentity         :: !(Maybe Text)
+    , _atseaScheduledEventId :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ActivityTaskStartedEventAttributes' with the minimum fields required to make a request.
@@ -467,12 +479,14 @@ instance NFData ActivityTaskStartedEventAttributes
 --
 --
 -- /See:/ 'activityTaskTimedOutEventAttributes' smart constructor.
-data ActivityTaskTimedOutEventAttributes = ActivityTaskTimedOutEventAttributes'
-  { _attoeaDetails          :: !(Maybe Text)
-  , _attoeaTimeoutType      :: !ActivityTaskTimeoutType
-  , _attoeaScheduledEventId :: !Integer
-  , _attoeaStartedEventId   :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ActivityTaskTimedOutEventAttributes =
+  ActivityTaskTimedOutEventAttributes'
+    { _attoeaDetails          :: !(Maybe Text)
+    , _attoeaTimeoutType      :: !ActivityTaskTimeoutType
+    , _attoeaScheduledEventId :: !Integer
+    , _attoeaStartedEventId   :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ActivityTaskTimedOutEventAttributes' with the minimum fields required to make a request.
@@ -537,10 +551,12 @@ instance NFData ActivityTaskTimedOutEventAttributes
 --
 --
 -- /See:/ 'activityType' smart constructor.
-data ActivityType = ActivityType'
-  { _atName    :: !Text
-  , _atVersion :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ActivityType =
+  ActivityType'
+    { _atName    :: !Text
+    , _atVersion :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ActivityType' with the minimum fields required to make a request.
@@ -588,14 +604,16 @@ instance ToJSON ActivityType where
 --
 --
 -- /See:/ 'activityTypeConfiguration' smart constructor.
-data ActivityTypeConfiguration = ActivityTypeConfiguration'
-  { _atcDefaultTaskScheduleToStartTimeout :: !(Maybe Text)
-  , _atcDefaultTaskList                   :: !(Maybe TaskList)
-  , _atcDefaultTaskPriority               :: !(Maybe Text)
-  , _atcDefaultTaskHeartbeatTimeout       :: !(Maybe Text)
-  , _atcDefaultTaskScheduleToCloseTimeout :: !(Maybe Text)
-  , _atcDefaultTaskStartToCloseTimeout    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ActivityTypeConfiguration =
+  ActivityTypeConfiguration'
+    { _atcDefaultTaskScheduleToStartTimeout :: !(Maybe Text)
+    , _atcDefaultTaskList                   :: !(Maybe TaskList)
+    , _atcDefaultTaskPriority               :: !(Maybe Text)
+    , _atcDefaultTaskHeartbeatTimeout       :: !(Maybe Text)
+    , _atcDefaultTaskScheduleToCloseTimeout :: !(Maybe Text)
+    , _atcDefaultTaskStartToCloseTimeout    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ActivityTypeConfiguration' with the minimum fields required to make a request.
@@ -671,13 +689,15 @@ instance NFData ActivityTypeConfiguration where
 --
 --
 -- /See:/ 'activityTypeInfo' smart constructor.
-data ActivityTypeInfo = ActivityTypeInfo'
-  { _atiDeprecationDate :: !(Maybe POSIX)
-  , _atiDescription     :: !(Maybe Text)
-  , _atiActivityType    :: !ActivityType
-  , _atiStatus          :: !RegistrationStatus
-  , _atiCreationDate    :: !POSIX
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ActivityTypeInfo =
+  ActivityTypeInfo'
+    { _atiDeprecationDate :: !(Maybe POSIX)
+    , _atiDescription     :: !(Maybe Text)
+    , _atiActivityType    :: !ActivityType
+    , _atiStatus          :: !RegistrationStatus
+    , _atiCreationDate    :: !POSIX
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ActivityTypeInfo' with the minimum fields required to make a request.
@@ -761,9 +781,11 @@ instance NFData ActivityTypeInfo where
 --
 --
 -- /See:/ 'cancelTimerDecisionAttributes' smart constructor.
-newtype CancelTimerDecisionAttributes = CancelTimerDecisionAttributes'
-  { _ctdaTimerId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CancelTimerDecisionAttributes =
+  CancelTimerDecisionAttributes'
+    { _ctdaTimerId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CancelTimerDecisionAttributes' with the minimum fields required to make a request.
@@ -796,11 +818,13 @@ instance ToJSON CancelTimerDecisionAttributes where
 --
 --
 -- /See:/ 'cancelTimerFailedEventAttributes' smart constructor.
-data CancelTimerFailedEventAttributes = CancelTimerFailedEventAttributes'
-  { _ctfeaTimerId                      :: !Text
-  , _ctfeaCause                        :: !CancelTimerFailedCause
-  , _ctfeaDecisionTaskCompletedEventId :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CancelTimerFailedEventAttributes =
+  CancelTimerFailedEventAttributes'
+    { _ctfeaTimerId                      :: !Text
+    , _ctfeaCause                        :: !CancelTimerFailedCause
+    , _ctfeaDecisionTaskCompletedEventId :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CancelTimerFailedEventAttributes' with the minimum fields required to make a request.
@@ -871,9 +895,11 @@ instance NFData CancelTimerFailedEventAttributes
 --
 --
 -- /See:/ 'cancelWorkflowExecutionDecisionAttributes' smart constructor.
-newtype CancelWorkflowExecutionDecisionAttributes = CancelWorkflowExecutionDecisionAttributes'
-  { _cwedaDetails :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CancelWorkflowExecutionDecisionAttributes =
+  CancelWorkflowExecutionDecisionAttributes'
+    { _cwedaDetails :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CancelWorkflowExecutionDecisionAttributes' with the minimum fields required to make a request.
@@ -911,10 +937,12 @@ instance ToJSON
 --
 --
 -- /See:/ 'cancelWorkflowExecutionFailedEventAttributes' smart constructor.
-data CancelWorkflowExecutionFailedEventAttributes = CancelWorkflowExecutionFailedEventAttributes'
-  { _cCause                        :: !CancelWorkflowExecutionFailedCause
-  , _cDecisionTaskCompletedEventId :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CancelWorkflowExecutionFailedEventAttributes =
+  CancelWorkflowExecutionFailedEventAttributes'
+    { _cCause                        :: !CancelWorkflowExecutionFailedCause
+    , _cDecisionTaskCompletedEventId :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CancelWorkflowExecutionFailedEventAttributes' with the minimum fields required to make a request.
@@ -967,13 +995,15 @@ instance NFData
 --
 --
 -- /See:/ 'childWorkflowExecutionCanceledEventAttributes' smart constructor.
-data ChildWorkflowExecutionCanceledEventAttributes = ChildWorkflowExecutionCanceledEventAttributes'
-  { _cDetails           :: !(Maybe Text)
-  , _cWorkflowExecution :: !WorkflowExecution
-  , _cWorkflowType      :: !WorkflowType
-  , _cInitiatedEventId  :: !Integer
-  , _cStartedEventId    :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ChildWorkflowExecutionCanceledEventAttributes =
+  ChildWorkflowExecutionCanceledEventAttributes'
+    { _cDetails           :: !(Maybe Text)
+    , _cWorkflowExecution :: !WorkflowExecution
+    , _cWorkflowType      :: !WorkflowType
+    , _cInitiatedEventId  :: !Integer
+    , _cStartedEventId    :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ChildWorkflowExecutionCanceledEventAttributes' with the minimum fields required to make a request.
@@ -1051,13 +1081,15 @@ instance NFData
 --
 --
 -- /See:/ 'childWorkflowExecutionCompletedEventAttributes' smart constructor.
-data ChildWorkflowExecutionCompletedEventAttributes = ChildWorkflowExecutionCompletedEventAttributes'
-  { _cweceaResult            :: !(Maybe Text)
-  , _cweceaWorkflowExecution :: !WorkflowExecution
-  , _cweceaWorkflowType      :: !WorkflowType
-  , _cweceaInitiatedEventId  :: !Integer
-  , _cweceaStartedEventId    :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ChildWorkflowExecutionCompletedEventAttributes =
+  ChildWorkflowExecutionCompletedEventAttributes'
+    { _cweceaResult            :: !(Maybe Text)
+    , _cweceaWorkflowExecution :: !WorkflowExecution
+    , _cweceaWorkflowType      :: !WorkflowType
+    , _cweceaInitiatedEventId  :: !Integer
+    , _cweceaStartedEventId    :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ChildWorkflowExecutionCompletedEventAttributes' with the minimum fields required to make a request.
@@ -1135,14 +1167,16 @@ instance NFData
 --
 --
 -- /See:/ 'childWorkflowExecutionFailedEventAttributes' smart constructor.
-data ChildWorkflowExecutionFailedEventAttributes = ChildWorkflowExecutionFailedEventAttributes'
-  { _cwefeaReason            :: !(Maybe Text)
-  , _cwefeaDetails           :: !(Maybe Text)
-  , _cwefeaWorkflowExecution :: !WorkflowExecution
-  , _cwefeaWorkflowType      :: !WorkflowType
-  , _cwefeaInitiatedEventId  :: !Integer
-  , _cwefeaStartedEventId    :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ChildWorkflowExecutionFailedEventAttributes =
+  ChildWorkflowExecutionFailedEventAttributes'
+    { _cwefeaReason            :: !(Maybe Text)
+    , _cwefeaDetails           :: !(Maybe Text)
+    , _cwefeaWorkflowExecution :: !WorkflowExecution
+    , _cwefeaWorkflowType      :: !WorkflowType
+    , _cwefeaInitiatedEventId  :: !Integer
+    , _cwefeaStartedEventId    :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ChildWorkflowExecutionFailedEventAttributes' with the minimum fields required to make a request.
@@ -1228,11 +1262,13 @@ instance NFData
 --
 --
 -- /See:/ 'childWorkflowExecutionStartedEventAttributes' smart constructor.
-data ChildWorkflowExecutionStartedEventAttributes = ChildWorkflowExecutionStartedEventAttributes'
-  { _cweseaWorkflowExecution :: !WorkflowExecution
-  , _cweseaWorkflowType      :: !WorkflowType
-  , _cweseaInitiatedEventId  :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ChildWorkflowExecutionStartedEventAttributes =
+  ChildWorkflowExecutionStartedEventAttributes'
+    { _cweseaWorkflowExecution :: !WorkflowExecution
+    , _cweseaWorkflowType      :: !WorkflowType
+    , _cweseaInitiatedEventId  :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ChildWorkflowExecutionStartedEventAttributes' with the minimum fields required to make a request.
@@ -1293,12 +1329,14 @@ instance NFData
 --
 --
 -- /See:/ 'childWorkflowExecutionTerminatedEventAttributes' smart constructor.
-data ChildWorkflowExecutionTerminatedEventAttributes = ChildWorkflowExecutionTerminatedEventAttributes'
-  { _cweteaWorkflowExecution :: !WorkflowExecution
-  , _cweteaWorkflowType      :: !WorkflowType
-  , _cweteaInitiatedEventId  :: !Integer
-  , _cweteaStartedEventId    :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ChildWorkflowExecutionTerminatedEventAttributes =
+  ChildWorkflowExecutionTerminatedEventAttributes'
+    { _cweteaWorkflowExecution :: !WorkflowExecution
+    , _cweteaWorkflowType      :: !WorkflowType
+    , _cweteaInitiatedEventId  :: !Integer
+    , _cweteaStartedEventId    :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ChildWorkflowExecutionTerminatedEventAttributes' with the minimum fields required to make a request.
@@ -1368,13 +1406,15 @@ instance NFData
 --
 --
 -- /See:/ 'childWorkflowExecutionTimedOutEventAttributes' smart constructor.
-data ChildWorkflowExecutionTimedOutEventAttributes = ChildWorkflowExecutionTimedOutEventAttributes'
-  { _cwetoeaWorkflowExecution :: !WorkflowExecution
-  , _cwetoeaWorkflowType      :: !WorkflowType
-  , _cwetoeaTimeoutType       :: !WorkflowExecutionTimeoutType
-  , _cwetoeaInitiatedEventId  :: !Integer
-  , _cwetoeaStartedEventId    :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ChildWorkflowExecutionTimedOutEventAttributes =
+  ChildWorkflowExecutionTimedOutEventAttributes'
+    { _cwetoeaWorkflowExecution :: !WorkflowExecution
+    , _cwetoeaWorkflowType      :: !WorkflowType
+    , _cwetoeaTimeoutType       :: !WorkflowExecutionTimeoutType
+    , _cwetoeaInitiatedEventId  :: !Integer
+    , _cwetoeaStartedEventId    :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ChildWorkflowExecutionTimedOutEventAttributes' with the minimum fields required to make a request.
@@ -1453,9 +1493,11 @@ instance NFData
 --
 --
 -- /See:/ 'closeStatusFilter' smart constructor.
-newtype CloseStatusFilter = CloseStatusFilter'
-  { _csfStatus :: CloseStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CloseStatusFilter =
+  CloseStatusFilter'
+    { _csfStatus :: CloseStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CloseStatusFilter' with the minimum fields required to make a request.
@@ -1500,9 +1542,11 @@ instance ToJSON CloseStatusFilter where
 --
 --
 -- /See:/ 'completeWorkflowExecutionDecisionAttributes' smart constructor.
-newtype CompleteWorkflowExecutionDecisionAttributes = CompleteWorkflowExecutionDecisionAttributes'
-  { _cwedaResult :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CompleteWorkflowExecutionDecisionAttributes =
+  CompleteWorkflowExecutionDecisionAttributes'
+    { _cwedaResult :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CompleteWorkflowExecutionDecisionAttributes' with the minimum fields required to make a request.
@@ -1540,10 +1584,12 @@ instance ToJSON
 --
 --
 -- /See:/ 'completeWorkflowExecutionFailedEventAttributes' smart constructor.
-data CompleteWorkflowExecutionFailedEventAttributes = CompleteWorkflowExecutionFailedEventAttributes'
-  { _cwefeaCause                        :: !CompleteWorkflowExecutionFailedCause
-  , _cwefeaDecisionTaskCompletedEventId :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CompleteWorkflowExecutionFailedEventAttributes =
+  CompleteWorkflowExecutionFailedEventAttributes'
+    { _cwefeaCause :: !CompleteWorkflowExecutionFailedCause
+    , _cwefeaDecisionTaskCompletedEventId :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CompleteWorkflowExecutionFailedEventAttributes' with the minimum fields required to make a request.
@@ -1618,17 +1664,19 @@ instance NFData
 --
 --
 -- /See:/ 'continueAsNewWorkflowExecutionDecisionAttributes' smart constructor.
-data ContinueAsNewWorkflowExecutionDecisionAttributes = ContinueAsNewWorkflowExecutionDecisionAttributes'
-  { _canwedaTagList                      :: !(Maybe [Text])
-  , _canwedaTaskStartToCloseTimeout      :: !(Maybe Text)
-  , _canwedaLambdaRole                   :: !(Maybe Text)
-  , _canwedaInput                        :: !(Maybe Text)
-  , _canwedaWorkflowTypeVersion          :: !(Maybe Text)
-  , _canwedaExecutionStartToCloseTimeout :: !(Maybe Text)
-  , _canwedaTaskList                     :: !(Maybe TaskList)
-  , _canwedaTaskPriority                 :: !(Maybe Text)
-  , _canwedaChildPolicy                  :: !(Maybe ChildPolicy)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ContinueAsNewWorkflowExecutionDecisionAttributes =
+  ContinueAsNewWorkflowExecutionDecisionAttributes'
+    { _canwedaTagList                      :: !(Maybe [Text])
+    , _canwedaTaskStartToCloseTimeout      :: !(Maybe Text)
+    , _canwedaLambdaRole                   :: !(Maybe Text)
+    , _canwedaInput                        :: !(Maybe Text)
+    , _canwedaWorkflowTypeVersion          :: !(Maybe Text)
+    , _canwedaExecutionStartToCloseTimeout :: !(Maybe Text)
+    , _canwedaTaskList                     :: !(Maybe TaskList)
+    , _canwedaTaskPriority                 :: !(Maybe Text)
+    , _canwedaChildPolicy                  :: !(Maybe ChildPolicy)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ContinueAsNewWorkflowExecutionDecisionAttributes' with the minimum fields required to make a request.
@@ -1737,10 +1785,12 @@ instance ToJSON
 --
 --
 -- /See:/ 'continueAsNewWorkflowExecutionFailedEventAttributes' smart constructor.
-data ContinueAsNewWorkflowExecutionFailedEventAttributes = ContinueAsNewWorkflowExecutionFailedEventAttributes'
-  { _canwefeaCause :: !ContinueAsNewWorkflowExecutionFailedCause
-  , _canwefeaDecisionTaskCompletedEventId :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ContinueAsNewWorkflowExecutionFailedEventAttributes =
+  ContinueAsNewWorkflowExecutionFailedEventAttributes'
+    { _canwefeaCause :: !ContinueAsNewWorkflowExecutionFailedCause
+    , _canwefeaDecisionTaskCompletedEventId :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ContinueAsNewWorkflowExecutionFailedEventAttributes' with the minimum fields required to make a request.
@@ -1894,22 +1944,24 @@ instance NFData
 --
 --
 -- /See:/ 'decision' smart constructor.
-data Decision = Decision'
-  { _dRequestCancelExternalWorkflowExecutionDecisionAttributes :: !(Maybe RequestCancelExternalWorkflowExecutionDecisionAttributes)
-  , _dScheduleActivityTaskDecisionAttributes :: !(Maybe ScheduleActivityTaskDecisionAttributes)
-  , _dSignalExternalWorkflowExecutionDecisionAttributes :: !(Maybe SignalExternalWorkflowExecutionDecisionAttributes)
-  , _dStartTimerDecisionAttributes :: !(Maybe StartTimerDecisionAttributes)
-  , _dRecordMarkerDecisionAttributes :: !(Maybe RecordMarkerDecisionAttributes)
-  , _dFailWorkflowExecutionDecisionAttributes :: !(Maybe FailWorkflowExecutionDecisionAttributes)
-  , _dStartChildWorkflowExecutionDecisionAttributes :: !(Maybe StartChildWorkflowExecutionDecisionAttributes)
-  , _dCompleteWorkflowExecutionDecisionAttributes :: !(Maybe CompleteWorkflowExecutionDecisionAttributes)
-  , _dScheduleLambdaFunctionDecisionAttributes :: !(Maybe ScheduleLambdaFunctionDecisionAttributes)
-  , _dRequestCancelActivityTaskDecisionAttributes :: !(Maybe RequestCancelActivityTaskDecisionAttributes)
-  , _dCancelWorkflowExecutionDecisionAttributes :: !(Maybe CancelWorkflowExecutionDecisionAttributes)
-  , _dCancelTimerDecisionAttributes :: !(Maybe CancelTimerDecisionAttributes)
-  , _dContinueAsNewWorkflowExecutionDecisionAttributes :: !(Maybe ContinueAsNewWorkflowExecutionDecisionAttributes)
-  , _dDecisionType :: !DecisionType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Decision =
+  Decision'
+    { _dRequestCancelExternalWorkflowExecutionDecisionAttributes :: !(Maybe RequestCancelExternalWorkflowExecutionDecisionAttributes)
+    , _dScheduleActivityTaskDecisionAttributes :: !(Maybe ScheduleActivityTaskDecisionAttributes)
+    , _dSignalExternalWorkflowExecutionDecisionAttributes :: !(Maybe SignalExternalWorkflowExecutionDecisionAttributes)
+    , _dStartTimerDecisionAttributes :: !(Maybe StartTimerDecisionAttributes)
+    , _dRecordMarkerDecisionAttributes :: !(Maybe RecordMarkerDecisionAttributes)
+    , _dFailWorkflowExecutionDecisionAttributes :: !(Maybe FailWorkflowExecutionDecisionAttributes)
+    , _dStartChildWorkflowExecutionDecisionAttributes :: !(Maybe StartChildWorkflowExecutionDecisionAttributes)
+    , _dCompleteWorkflowExecutionDecisionAttributes :: !(Maybe CompleteWorkflowExecutionDecisionAttributes)
+    , _dScheduleLambdaFunctionDecisionAttributes :: !(Maybe ScheduleLambdaFunctionDecisionAttributes)
+    , _dRequestCancelActivityTaskDecisionAttributes :: !(Maybe RequestCancelActivityTaskDecisionAttributes)
+    , _dCancelWorkflowExecutionDecisionAttributes :: !(Maybe CancelWorkflowExecutionDecisionAttributes)
+    , _dCancelTimerDecisionAttributes :: !(Maybe CancelTimerDecisionAttributes)
+    , _dContinueAsNewWorkflowExecutionDecisionAttributes :: !(Maybe ContinueAsNewWorkflowExecutionDecisionAttributes)
+    , _dDecisionType :: !DecisionType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Decision' with the minimum fields required to make a request.
@@ -2068,11 +2120,13 @@ instance ToJSON Decision where
 --
 --
 -- /See:/ 'decisionTaskCompletedEventAttributes' smart constructor.
-data DecisionTaskCompletedEventAttributes = DecisionTaskCompletedEventAttributes'
-  { _dtceaExecutionContext :: !(Maybe Text)
-  , _dtceaScheduledEventId :: !Integer
-  , _dtceaStartedEventId   :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DecisionTaskCompletedEventAttributes =
+  DecisionTaskCompletedEventAttributes'
+    { _dtceaExecutionContext :: !(Maybe Text)
+    , _dtceaScheduledEventId :: !Integer
+    , _dtceaStartedEventId   :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DecisionTaskCompletedEventAttributes' with the minimum fields required to make a request.
@@ -2131,11 +2185,13 @@ instance NFData DecisionTaskCompletedEventAttributes
 --
 --
 -- /See:/ 'decisionTaskScheduledEventAttributes' smart constructor.
-data DecisionTaskScheduledEventAttributes = DecisionTaskScheduledEventAttributes'
-  { _dtseaTaskPriority        :: !(Maybe Text)
-  , _dtseaStartToCloseTimeout :: !(Maybe Text)
-  , _dtseaTaskList            :: !TaskList
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DecisionTaskScheduledEventAttributes =
+  DecisionTaskScheduledEventAttributes'
+    { _dtseaTaskPriority        :: !(Maybe Text)
+    , _dtseaStartToCloseTimeout :: !(Maybe Text)
+    , _dtseaTaskList            :: !TaskList
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DecisionTaskScheduledEventAttributes' with the minimum fields required to make a request.
@@ -2193,10 +2249,12 @@ instance NFData DecisionTaskScheduledEventAttributes
 --
 --
 -- /See:/ 'decisionTaskStartedEventAttributes' smart constructor.
-data DecisionTaskStartedEventAttributes = DecisionTaskStartedEventAttributes'
-  { _dtseaIdentity         :: !(Maybe Text)
-  , _dtseaScheduledEventId :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DecisionTaskStartedEventAttributes =
+  DecisionTaskStartedEventAttributes'
+    { _dtseaIdentity         :: !(Maybe Text)
+    , _dtseaScheduledEventId :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DecisionTaskStartedEventAttributes' with the minimum fields required to make a request.
@@ -2241,11 +2299,13 @@ instance NFData DecisionTaskStartedEventAttributes
 --
 --
 -- /See:/ 'decisionTaskTimedOutEventAttributes' smart constructor.
-data DecisionTaskTimedOutEventAttributes = DecisionTaskTimedOutEventAttributes'
-  { _dttoeaTimeoutType      :: !DecisionTaskTimeoutType
-  , _dttoeaScheduledEventId :: !Integer
-  , _dttoeaStartedEventId   :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DecisionTaskTimedOutEventAttributes =
+  DecisionTaskTimedOutEventAttributes'
+    { _dttoeaTimeoutType      :: !DecisionTaskTimeoutType
+    , _dttoeaScheduledEventId :: !Integer
+    , _dttoeaStartedEventId   :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DecisionTaskTimedOutEventAttributes' with the minimum fields required to make a request.
@@ -2302,9 +2362,11 @@ instance NFData DecisionTaskTimedOutEventAttributes
 --
 --
 -- /See:/ 'domainConfiguration' smart constructor.
-newtype DomainConfiguration = DomainConfiguration'
-  { _dcWorkflowExecutionRetentionPeriodInDays :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DomainConfiguration =
+  DomainConfiguration'
+    { _dcWorkflowExecutionRetentionPeriodInDays :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DomainConfiguration' with the minimum fields required to make a request.
@@ -2342,11 +2404,13 @@ instance NFData DomainConfiguration where
 --
 --
 -- /See:/ 'domainInfo' smart constructor.
-data DomainInfo = DomainInfo'
-  { _diDescription :: !(Maybe Text)
-  , _diName        :: !Text
-  , _diStatus      :: !RegistrationStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DomainInfo =
+  DomainInfo'
+    { _diDescription :: !(Maybe Text)
+    , _diName        :: !Text
+    , _diStatus      :: !RegistrationStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DomainInfo' with the minimum fields required to make a request.
@@ -2395,10 +2459,12 @@ instance NFData DomainInfo where
 --
 --
 -- /See:/ 'executionTimeFilter' smart constructor.
-data ExecutionTimeFilter = ExecutionTimeFilter'
-  { _etfLatestDate :: !(Maybe POSIX)
-  , _etfOldestDate :: !POSIX
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ExecutionTimeFilter =
+  ExecutionTimeFilter'
+    { _etfLatestDate :: !(Maybe POSIX)
+    , _etfOldestDate :: !POSIX
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ExecutionTimeFilter' with the minimum fields required to make a request.
@@ -2440,10 +2506,12 @@ instance ToJSON ExecutionTimeFilter where
 --
 --
 -- /See:/ 'externalWorkflowExecutionCancelRequestedEventAttributes' smart constructor.
-data ExternalWorkflowExecutionCancelRequestedEventAttributes = ExternalWorkflowExecutionCancelRequestedEventAttributes'
-  { _ewecreaWorkflowExecution :: !WorkflowExecution
-  , _ewecreaInitiatedEventId  :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ExternalWorkflowExecutionCancelRequestedEventAttributes =
+  ExternalWorkflowExecutionCancelRequestedEventAttributes'
+    { _ewecreaWorkflowExecution :: !WorkflowExecution
+    , _ewecreaInitiatedEventId  :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ExternalWorkflowExecutionCancelRequestedEventAttributes' with the minimum fields required to make a request.
@@ -2497,10 +2565,12 @@ instance NFData
 --
 --
 -- /See:/ 'externalWorkflowExecutionSignaledEventAttributes' smart constructor.
-data ExternalWorkflowExecutionSignaledEventAttributes = ExternalWorkflowExecutionSignaledEventAttributes'
-  { _eweseaWorkflowExecution :: !WorkflowExecution
-  , _eweseaInitiatedEventId  :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ExternalWorkflowExecutionSignaledEventAttributes =
+  ExternalWorkflowExecutionSignaledEventAttributes'
+    { _eweseaWorkflowExecution :: !WorkflowExecution
+    , _eweseaInitiatedEventId  :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ExternalWorkflowExecutionSignaledEventAttributes' with the minimum fields required to make a request.
@@ -2567,10 +2637,12 @@ instance NFData
 --
 --
 -- /See:/ 'failWorkflowExecutionDecisionAttributes' smart constructor.
-data FailWorkflowExecutionDecisionAttributes = FailWorkflowExecutionDecisionAttributes'
-  { _fwedaReason  :: !(Maybe Text)
-  , _fwedaDetails :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FailWorkflowExecutionDecisionAttributes =
+  FailWorkflowExecutionDecisionAttributes'
+    { _fwedaReason  :: !(Maybe Text)
+    , _fwedaDetails :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FailWorkflowExecutionDecisionAttributes' with the minimum fields required to make a request.
@@ -2617,10 +2689,12 @@ instance ToJSON
 --
 --
 -- /See:/ 'failWorkflowExecutionFailedEventAttributes' smart constructor.
-data FailWorkflowExecutionFailedEventAttributes = FailWorkflowExecutionFailedEventAttributes'
-  { _fwefeaCause                        :: !FailWorkflowExecutionFailedCause
-  , _fwefeaDecisionTaskCompletedEventId :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FailWorkflowExecutionFailedEventAttributes =
+  FailWorkflowExecutionFailedEventAttributes'
+    { _fwefeaCause                        :: !FailWorkflowExecutionFailedCause
+    , _fwefeaDecisionTaskCompletedEventId :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FailWorkflowExecutionFailedEventAttributes' with the minimum fields required to make a request.
@@ -2771,65 +2845,67 @@ instance NFData
 --
 --
 -- /See:/ 'historyEvent' smart constructor.
-data HistoryEvent = HistoryEvent'
-  { _heWorkflowExecutionCancelRequestedEventAttributes :: !(Maybe WorkflowExecutionCancelRequestedEventAttributes)
-  , _heRecordMarkerFailedEventAttributes :: !(Maybe RecordMarkerFailedEventAttributes)
-  , _heRequestCancelExternalWorkflowExecutionInitiatedEventAttributes :: !(Maybe RequestCancelExternalWorkflowExecutionInitiatedEventAttributes)
-  , _heLambdaFunctionStartedEventAttributes :: !(Maybe LambdaFunctionStartedEventAttributes)
-  , _heDecisionTaskScheduledEventAttributes :: !(Maybe DecisionTaskScheduledEventAttributes)
-  , _heWorkflowExecutionCompletedEventAttributes :: !(Maybe WorkflowExecutionCompletedEventAttributes)
-  , _heStartTimerFailedEventAttributes :: !(Maybe StartTimerFailedEventAttributes)
-  , _heActivityTaskScheduledEventAttributes :: !(Maybe ActivityTaskScheduledEventAttributes)
-  , _heScheduleActivityTaskFailedEventAttributes :: !(Maybe ScheduleActivityTaskFailedEventAttributes)
-  , _heChildWorkflowExecutionCompletedEventAttributes :: !(Maybe ChildWorkflowExecutionCompletedEventAttributes)
-  , _heMarkerRecordedEventAttributes :: !(Maybe MarkerRecordedEventAttributes)
-  , _heScheduleLambdaFunctionFailedEventAttributes :: !(Maybe ScheduleLambdaFunctionFailedEventAttributes)
-  , _heCompleteWorkflowExecutionFailedEventAttributes :: !(Maybe CompleteWorkflowExecutionFailedEventAttributes)
-  , _heLambdaFunctionCompletedEventAttributes :: !(Maybe LambdaFunctionCompletedEventAttributes)
-  , _heRequestCancelExternalWorkflowExecutionFailedEventAttributes :: !(Maybe RequestCancelExternalWorkflowExecutionFailedEventAttributes)
-  , _heTimerCanceledEventAttributes :: !(Maybe TimerCanceledEventAttributes)
-  , _heWorkflowExecutionStartedEventAttributes :: !(Maybe WorkflowExecutionStartedEventAttributes)
-  , _heActivityTaskCompletedEventAttributes :: !(Maybe ActivityTaskCompletedEventAttributes)
-  , _heDecisionTaskTimedOutEventAttributes :: !(Maybe DecisionTaskTimedOutEventAttributes)
-  , _heCancelTimerFailedEventAttributes :: !(Maybe CancelTimerFailedEventAttributes)
-  , _heChildWorkflowExecutionStartedEventAttributes :: !(Maybe ChildWorkflowExecutionStartedEventAttributes)
-  , _heActivityTaskCanceledEventAttributes :: !(Maybe ActivityTaskCanceledEventAttributes)
-  , _heActivityTaskTimedOutEventAttributes :: !(Maybe ActivityTaskTimedOutEventAttributes)
-  , _heDecisionTaskStartedEventAttributes :: !(Maybe DecisionTaskStartedEventAttributes)
-  , _heWorkflowExecutionTerminatedEventAttributes :: !(Maybe WorkflowExecutionTerminatedEventAttributes)
-  , _heChildWorkflowExecutionCanceledEventAttributes :: !(Maybe ChildWorkflowExecutionCanceledEventAttributes)
-  , _heRequestCancelActivityTaskFailedEventAttributes :: !(Maybe RequestCancelActivityTaskFailedEventAttributes)
-  , _heLambdaFunctionScheduledEventAttributes :: !(Maybe LambdaFunctionScheduledEventAttributes)
-  , _heChildWorkflowExecutionTimedOutEventAttributes :: !(Maybe ChildWorkflowExecutionTimedOutEventAttributes)
-  , _heCancelWorkflowExecutionFailedEventAttributes :: !(Maybe CancelWorkflowExecutionFailedEventAttributes)
-  , _heStartChildWorkflowExecutionInitiatedEventAttributes :: !(Maybe StartChildWorkflowExecutionInitiatedEventAttributes)
-  , _heSignalExternalWorkflowExecutionFailedEventAttributes :: !(Maybe SignalExternalWorkflowExecutionFailedEventAttributes)
-  , _heActivityTaskStartedEventAttributes :: !(Maybe ActivityTaskStartedEventAttributes)
-  , _heStartLambdaFunctionFailedEventAttributes :: !(Maybe StartLambdaFunctionFailedEventAttributes)
-  , _heChildWorkflowExecutionTerminatedEventAttributes :: !(Maybe ChildWorkflowExecutionTerminatedEventAttributes)
-  , _heLambdaFunctionFailedEventAttributes :: !(Maybe LambdaFunctionFailedEventAttributes)
-  , _heWorkflowExecutionCanceledEventAttributes :: !(Maybe WorkflowExecutionCanceledEventAttributes)
-  , _heTimerStartedEventAttributes :: !(Maybe TimerStartedEventAttributes)
-  , _heActivityTaskCancelRequestedEventAttributes :: !(Maybe ActivityTaskCancelRequestedEventAttributes)
-  , _heWorkflowExecutionTimedOutEventAttributes :: !(Maybe WorkflowExecutionTimedOutEventAttributes)
-  , _heWorkflowExecutionSignaledEventAttributes :: !(Maybe WorkflowExecutionSignaledEventAttributes)
-  , _heTimerFiredEventAttributes :: !(Maybe TimerFiredEventAttributes)
-  , _heActivityTaskFailedEventAttributes :: !(Maybe ActivityTaskFailedEventAttributes)
-  , _heExternalWorkflowExecutionSignaledEventAttributes :: !(Maybe ExternalWorkflowExecutionSignaledEventAttributes)
-  , _heDecisionTaskCompletedEventAttributes :: !(Maybe DecisionTaskCompletedEventAttributes)
-  , _heStartChildWorkflowExecutionFailedEventAttributes :: !(Maybe StartChildWorkflowExecutionFailedEventAttributes)
-  , _heChildWorkflowExecutionFailedEventAttributes :: !(Maybe ChildWorkflowExecutionFailedEventAttributes)
-  , _heFailWorkflowExecutionFailedEventAttributes :: !(Maybe FailWorkflowExecutionFailedEventAttributes)
-  , _heContinueAsNewWorkflowExecutionFailedEventAttributes :: !(Maybe ContinueAsNewWorkflowExecutionFailedEventAttributes)
-  , _heSignalExternalWorkflowExecutionInitiatedEventAttributes :: !(Maybe SignalExternalWorkflowExecutionInitiatedEventAttributes)
-  , _heLambdaFunctionTimedOutEventAttributes :: !(Maybe LambdaFunctionTimedOutEventAttributes)
-  , _heWorkflowExecutionFailedEventAttributes :: !(Maybe WorkflowExecutionFailedEventAttributes)
-  , _heWorkflowExecutionContinuedAsNewEventAttributes :: !(Maybe WorkflowExecutionContinuedAsNewEventAttributes)
-  , _heExternalWorkflowExecutionCancelRequestedEventAttributes :: !(Maybe ExternalWorkflowExecutionCancelRequestedEventAttributes)
-  , _heEventTimestamp :: !POSIX
-  , _heEventType :: !EventType
-  , _heEventId :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data HistoryEvent =
+  HistoryEvent'
+    { _heWorkflowExecutionCancelRequestedEventAttributes :: !(Maybe WorkflowExecutionCancelRequestedEventAttributes)
+    , _heRecordMarkerFailedEventAttributes :: !(Maybe RecordMarkerFailedEventAttributes)
+    , _heRequestCancelExternalWorkflowExecutionInitiatedEventAttributes :: !(Maybe RequestCancelExternalWorkflowExecutionInitiatedEventAttributes)
+    , _heLambdaFunctionStartedEventAttributes :: !(Maybe LambdaFunctionStartedEventAttributes)
+    , _heDecisionTaskScheduledEventAttributes :: !(Maybe DecisionTaskScheduledEventAttributes)
+    , _heWorkflowExecutionCompletedEventAttributes :: !(Maybe WorkflowExecutionCompletedEventAttributes)
+    , _heStartTimerFailedEventAttributes :: !(Maybe StartTimerFailedEventAttributes)
+    , _heActivityTaskScheduledEventAttributes :: !(Maybe ActivityTaskScheduledEventAttributes)
+    , _heScheduleActivityTaskFailedEventAttributes :: !(Maybe ScheduleActivityTaskFailedEventAttributes)
+    , _heChildWorkflowExecutionCompletedEventAttributes :: !(Maybe ChildWorkflowExecutionCompletedEventAttributes)
+    , _heMarkerRecordedEventAttributes :: !(Maybe MarkerRecordedEventAttributes)
+    , _heScheduleLambdaFunctionFailedEventAttributes :: !(Maybe ScheduleLambdaFunctionFailedEventAttributes)
+    , _heCompleteWorkflowExecutionFailedEventAttributes :: !(Maybe CompleteWorkflowExecutionFailedEventAttributes)
+    , _heLambdaFunctionCompletedEventAttributes :: !(Maybe LambdaFunctionCompletedEventAttributes)
+    , _heRequestCancelExternalWorkflowExecutionFailedEventAttributes :: !(Maybe RequestCancelExternalWorkflowExecutionFailedEventAttributes)
+    , _heTimerCanceledEventAttributes :: !(Maybe TimerCanceledEventAttributes)
+    , _heWorkflowExecutionStartedEventAttributes :: !(Maybe WorkflowExecutionStartedEventAttributes)
+    , _heActivityTaskCompletedEventAttributes :: !(Maybe ActivityTaskCompletedEventAttributes)
+    , _heDecisionTaskTimedOutEventAttributes :: !(Maybe DecisionTaskTimedOutEventAttributes)
+    , _heCancelTimerFailedEventAttributes :: !(Maybe CancelTimerFailedEventAttributes)
+    , _heChildWorkflowExecutionStartedEventAttributes :: !(Maybe ChildWorkflowExecutionStartedEventAttributes)
+    , _heActivityTaskCanceledEventAttributes :: !(Maybe ActivityTaskCanceledEventAttributes)
+    , _heActivityTaskTimedOutEventAttributes :: !(Maybe ActivityTaskTimedOutEventAttributes)
+    , _heDecisionTaskStartedEventAttributes :: !(Maybe DecisionTaskStartedEventAttributes)
+    , _heWorkflowExecutionTerminatedEventAttributes :: !(Maybe WorkflowExecutionTerminatedEventAttributes)
+    , _heChildWorkflowExecutionCanceledEventAttributes :: !(Maybe ChildWorkflowExecutionCanceledEventAttributes)
+    , _heRequestCancelActivityTaskFailedEventAttributes :: !(Maybe RequestCancelActivityTaskFailedEventAttributes)
+    , _heLambdaFunctionScheduledEventAttributes :: !(Maybe LambdaFunctionScheduledEventAttributes)
+    , _heChildWorkflowExecutionTimedOutEventAttributes :: !(Maybe ChildWorkflowExecutionTimedOutEventAttributes)
+    , _heCancelWorkflowExecutionFailedEventAttributes :: !(Maybe CancelWorkflowExecutionFailedEventAttributes)
+    , _heStartChildWorkflowExecutionInitiatedEventAttributes :: !(Maybe StartChildWorkflowExecutionInitiatedEventAttributes)
+    , _heSignalExternalWorkflowExecutionFailedEventAttributes :: !(Maybe SignalExternalWorkflowExecutionFailedEventAttributes)
+    , _heActivityTaskStartedEventAttributes :: !(Maybe ActivityTaskStartedEventAttributes)
+    , _heStartLambdaFunctionFailedEventAttributes :: !(Maybe StartLambdaFunctionFailedEventAttributes)
+    , _heChildWorkflowExecutionTerminatedEventAttributes :: !(Maybe ChildWorkflowExecutionTerminatedEventAttributes)
+    , _heLambdaFunctionFailedEventAttributes :: !(Maybe LambdaFunctionFailedEventAttributes)
+    , _heWorkflowExecutionCanceledEventAttributes :: !(Maybe WorkflowExecutionCanceledEventAttributes)
+    , _heTimerStartedEventAttributes :: !(Maybe TimerStartedEventAttributes)
+    , _heActivityTaskCancelRequestedEventAttributes :: !(Maybe ActivityTaskCancelRequestedEventAttributes)
+    , _heWorkflowExecutionTimedOutEventAttributes :: !(Maybe WorkflowExecutionTimedOutEventAttributes)
+    , _heWorkflowExecutionSignaledEventAttributes :: !(Maybe WorkflowExecutionSignaledEventAttributes)
+    , _heTimerFiredEventAttributes :: !(Maybe TimerFiredEventAttributes)
+    , _heActivityTaskFailedEventAttributes :: !(Maybe ActivityTaskFailedEventAttributes)
+    , _heExternalWorkflowExecutionSignaledEventAttributes :: !(Maybe ExternalWorkflowExecutionSignaledEventAttributes)
+    , _heDecisionTaskCompletedEventAttributes :: !(Maybe DecisionTaskCompletedEventAttributes)
+    , _heStartChildWorkflowExecutionFailedEventAttributes :: !(Maybe StartChildWorkflowExecutionFailedEventAttributes)
+    , _heChildWorkflowExecutionFailedEventAttributes :: !(Maybe ChildWorkflowExecutionFailedEventAttributes)
+    , _heFailWorkflowExecutionFailedEventAttributes :: !(Maybe FailWorkflowExecutionFailedEventAttributes)
+    , _heContinueAsNewWorkflowExecutionFailedEventAttributes :: !(Maybe ContinueAsNewWorkflowExecutionFailedEventAttributes)
+    , _heSignalExternalWorkflowExecutionInitiatedEventAttributes :: !(Maybe SignalExternalWorkflowExecutionInitiatedEventAttributes)
+    , _heLambdaFunctionTimedOutEventAttributes :: !(Maybe LambdaFunctionTimedOutEventAttributes)
+    , _heWorkflowExecutionFailedEventAttributes :: !(Maybe WorkflowExecutionFailedEventAttributes)
+    , _heWorkflowExecutionContinuedAsNewEventAttributes :: !(Maybe WorkflowExecutionContinuedAsNewEventAttributes)
+    , _heExternalWorkflowExecutionCancelRequestedEventAttributes :: !(Maybe ExternalWorkflowExecutionCancelRequestedEventAttributes)
+    , _heEventTimestamp :: !POSIX
+    , _heEventType :: !EventType
+    , _heEventId :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'HistoryEvent' with the minimum fields required to make a request.
@@ -3365,11 +3441,13 @@ instance NFData HistoryEvent where
 --
 --
 -- /See:/ 'lambdaFunctionCompletedEventAttributes' smart constructor.
-data LambdaFunctionCompletedEventAttributes = LambdaFunctionCompletedEventAttributes'
-  { _lfceaResult           :: !(Maybe Text)
-  , _lfceaScheduledEventId :: !Integer
-  , _lfceaStartedEventId   :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LambdaFunctionCompletedEventAttributes =
+  LambdaFunctionCompletedEventAttributes'
+    { _lfceaResult           :: !(Maybe Text)
+    , _lfceaScheduledEventId :: !Integer
+    , _lfceaStartedEventId   :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LambdaFunctionCompletedEventAttributes' with the minimum fields required to make a request.
@@ -3428,12 +3506,14 @@ instance NFData
 --
 --
 -- /See:/ 'lambdaFunctionFailedEventAttributes' smart constructor.
-data LambdaFunctionFailedEventAttributes = LambdaFunctionFailedEventAttributes'
-  { _lffeaReason           :: !(Maybe Text)
-  , _lffeaDetails          :: !(Maybe Text)
-  , _lffeaScheduledEventId :: !Integer
-  , _lffeaStartedEventId   :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LambdaFunctionFailedEventAttributes =
+  LambdaFunctionFailedEventAttributes'
+    { _lffeaReason           :: !(Maybe Text)
+    , _lffeaDetails          :: !(Maybe Text)
+    , _lffeaScheduledEventId :: !Integer
+    , _lffeaStartedEventId   :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LambdaFunctionFailedEventAttributes' with the minimum fields required to make a request.
@@ -3497,14 +3577,16 @@ instance NFData LambdaFunctionFailedEventAttributes
 --
 --
 -- /See:/ 'lambdaFunctionScheduledEventAttributes' smart constructor.
-data LambdaFunctionScheduledEventAttributes = LambdaFunctionScheduledEventAttributes'
-  { _lfseaControl                      :: !(Maybe Text)
-  , _lfseaInput                        :: !(Maybe Text)
-  , _lfseaStartToCloseTimeout          :: !(Maybe Text)
-  , _lfseaId                           :: !Text
-  , _lfseaName                         :: !Text
-  , _lfseaDecisionTaskCompletedEventId :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LambdaFunctionScheduledEventAttributes =
+  LambdaFunctionScheduledEventAttributes'
+    { _lfseaControl                      :: !(Maybe Text)
+    , _lfseaInput                        :: !(Maybe Text)
+    , _lfseaStartToCloseTimeout          :: !(Maybe Text)
+    , _lfseaId                           :: !Text
+    , _lfseaName                         :: !Text
+    , _lfseaDecisionTaskCompletedEventId :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LambdaFunctionScheduledEventAttributes' with the minimum fields required to make a request.
@@ -3588,9 +3670,11 @@ instance NFData
 --
 --
 -- /See:/ 'lambdaFunctionStartedEventAttributes' smart constructor.
-newtype LambdaFunctionStartedEventAttributes = LambdaFunctionStartedEventAttributes'
-  { _lfseaScheduledEventId :: Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype LambdaFunctionStartedEventAttributes =
+  LambdaFunctionStartedEventAttributes'
+    { _lfseaScheduledEventId :: Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LambdaFunctionStartedEventAttributes' with the minimum fields required to make a request.
@@ -3631,11 +3715,13 @@ instance NFData LambdaFunctionStartedEventAttributes
 --
 --
 -- /See:/ 'lambdaFunctionTimedOutEventAttributes' smart constructor.
-data LambdaFunctionTimedOutEventAttributes = LambdaFunctionTimedOutEventAttributes'
-  { _lftoeaTimeoutType      :: !(Maybe LambdaFunctionTimeoutType)
-  , _lftoeaScheduledEventId :: !Integer
-  , _lftoeaStartedEventId   :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LambdaFunctionTimedOutEventAttributes =
+  LambdaFunctionTimedOutEventAttributes'
+    { _lftoeaTimeoutType      :: !(Maybe LambdaFunctionTimeoutType)
+    , _lftoeaScheduledEventId :: !Integer
+    , _lftoeaStartedEventId   :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LambdaFunctionTimedOutEventAttributes' with the minimum fields required to make a request.
@@ -3693,11 +3779,13 @@ instance NFData LambdaFunctionTimedOutEventAttributes
 --
 --
 -- /See:/ 'markerRecordedEventAttributes' smart constructor.
-data MarkerRecordedEventAttributes = MarkerRecordedEventAttributes'
-  { _mreaDetails                      :: !(Maybe Text)
-  , _mreaMarkerName                   :: !Text
-  , _mreaDecisionTaskCompletedEventId :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MarkerRecordedEventAttributes =
+  MarkerRecordedEventAttributes'
+    { _mreaDetails                      :: !(Maybe Text)
+    , _mreaMarkerName                   :: !Text
+    , _mreaDecisionTaskCompletedEventId :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MarkerRecordedEventAttributes' with the minimum fields required to make a request.
@@ -3750,10 +3838,12 @@ instance NFData MarkerRecordedEventAttributes where
 --
 --
 -- /See:/ 'pendingTaskCount' smart constructor.
-data PendingTaskCount = PendingTaskCount'
-  { _ptcTruncated :: !(Maybe Bool)
-  , _ptcCount     :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PendingTaskCount =
+  PendingTaskCount'
+    { _ptcTruncated :: !(Maybe Bool)
+    , _ptcCount     :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PendingTaskCount' with the minimum fields required to make a request.
@@ -3808,10 +3898,12 @@ instance NFData PendingTaskCount where
 --
 --
 -- /See:/ 'recordMarkerDecisionAttributes' smart constructor.
-data RecordMarkerDecisionAttributes = RecordMarkerDecisionAttributes'
-  { _rmdaDetails    :: !(Maybe Text)
-  , _rmdaMarkerName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RecordMarkerDecisionAttributes =
+  RecordMarkerDecisionAttributes'
+    { _rmdaDetails    :: !(Maybe Text)
+    , _rmdaMarkerName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RecordMarkerDecisionAttributes' with the minimum fields required to make a request.
@@ -3854,11 +3946,13 @@ instance ToJSON RecordMarkerDecisionAttributes where
 --
 --
 -- /See:/ 'recordMarkerFailedEventAttributes' smart constructor.
-data RecordMarkerFailedEventAttributes = RecordMarkerFailedEventAttributes'
-  { _rmfeaMarkerName                   :: !Text
-  , _rmfeaCause                        :: !RecordMarkerFailedCause
-  , _rmfeaDecisionTaskCompletedEventId :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RecordMarkerFailedEventAttributes =
+  RecordMarkerFailedEventAttributes'
+    { _rmfeaMarkerName                   :: !Text
+    , _rmfeaCause                        :: !RecordMarkerFailedCause
+    , _rmfeaDecisionTaskCompletedEventId :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RecordMarkerFailedEventAttributes' with the minimum fields required to make a request.
@@ -3929,9 +4023,11 @@ instance NFData RecordMarkerFailedEventAttributes
 --
 --
 -- /See:/ 'requestCancelActivityTaskDecisionAttributes' smart constructor.
-newtype RequestCancelActivityTaskDecisionAttributes = RequestCancelActivityTaskDecisionAttributes'
-  { _rcatdaActivityId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RequestCancelActivityTaskDecisionAttributes =
+  RequestCancelActivityTaskDecisionAttributes'
+    { _rcatdaActivityId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RequestCancelActivityTaskDecisionAttributes' with the minimum fields required to make a request.
@@ -3973,11 +4069,13 @@ instance ToJSON
 --
 --
 -- /See:/ 'requestCancelActivityTaskFailedEventAttributes' smart constructor.
-data RequestCancelActivityTaskFailedEventAttributes = RequestCancelActivityTaskFailedEventAttributes'
-  { _rcatfeaActivityId :: !Text
-  , _rcatfeaCause :: !RequestCancelActivityTaskFailedCause
-  , _rcatfeaDecisionTaskCompletedEventId :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RequestCancelActivityTaskFailedEventAttributes =
+  RequestCancelActivityTaskFailedEventAttributes'
+    { _rcatfeaActivityId :: !Text
+    , _rcatfeaCause :: !RequestCancelActivityTaskFailedCause
+    , _rcatfeaDecisionTaskCompletedEventId :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RequestCancelActivityTaskFailedEventAttributes' with the minimum fields required to make a request.
@@ -4052,11 +4150,13 @@ instance NFData
 --
 --
 -- /See:/ 'requestCancelExternalWorkflowExecutionDecisionAttributes' smart constructor.
-data RequestCancelExternalWorkflowExecutionDecisionAttributes = RequestCancelExternalWorkflowExecutionDecisionAttributes'
-  { _rcewedaControl    :: !(Maybe Text)
-  , _rcewedaRunId      :: !(Maybe Text)
-  , _rcewedaWorkflowId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RequestCancelExternalWorkflowExecutionDecisionAttributes =
+  RequestCancelExternalWorkflowExecutionDecisionAttributes'
+    { _rcewedaControl    :: !(Maybe Text)
+    , _rcewedaRunId      :: !(Maybe Text)
+    , _rcewedaWorkflowId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RequestCancelExternalWorkflowExecutionDecisionAttributes' with the minimum fields required to make a request.
@@ -4115,14 +4215,16 @@ instance ToJSON
 --
 --
 -- /See:/ 'requestCancelExternalWorkflowExecutionFailedEventAttributes' smart constructor.
-data RequestCancelExternalWorkflowExecutionFailedEventAttributes = RequestCancelExternalWorkflowExecutionFailedEventAttributes'
-  { _rcewefeaControl :: !(Maybe Text)
-  , _rcewefeaRunId :: !(Maybe Text)
-  , _rcewefeaWorkflowId :: !Text
-  , _rcewefeaCause :: !RequestCancelExternalWorkflowExecutionFailedCause
-  , _rcewefeaInitiatedEventId :: !Integer
-  , _rcewefeaDecisionTaskCompletedEventId :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RequestCancelExternalWorkflowExecutionFailedEventAttributes =
+  RequestCancelExternalWorkflowExecutionFailedEventAttributes'
+    { _rcewefeaControl :: !(Maybe Text)
+    , _rcewefeaRunId :: !(Maybe Text)
+    , _rcewefeaWorkflowId :: !Text
+    , _rcewefeaCause :: !RequestCancelExternalWorkflowExecutionFailedCause
+    , _rcewefeaInitiatedEventId :: !Integer
+    , _rcewefeaDecisionTaskCompletedEventId :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RequestCancelExternalWorkflowExecutionFailedEventAttributes' with the minimum fields required to make a request.
@@ -4209,12 +4311,14 @@ instance NFData
 --
 --
 -- /See:/ 'requestCancelExternalWorkflowExecutionInitiatedEventAttributes' smart constructor.
-data RequestCancelExternalWorkflowExecutionInitiatedEventAttributes = RequestCancelExternalWorkflowExecutionInitiatedEventAttributes'
-  { _rceweieaControl                      :: !(Maybe Text)
-  , _rceweieaRunId                        :: !(Maybe Text)
-  , _rceweieaWorkflowId                   :: !Text
-  , _rceweieaDecisionTaskCompletedEventId :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RequestCancelExternalWorkflowExecutionInitiatedEventAttributes =
+  RequestCancelExternalWorkflowExecutionInitiatedEventAttributes'
+    { _rceweieaControl                      :: !(Maybe Text)
+    , _rceweieaRunId                        :: !(Maybe Text)
+    , _rceweieaWorkflowId                   :: !Text
+    , _rceweieaDecisionTaskCompletedEventId :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RequestCancelExternalWorkflowExecutionInitiatedEventAttributes' with the minimum fields required to make a request.
@@ -4305,18 +4409,20 @@ instance NFData
 --
 --
 -- /See:/ 'scheduleActivityTaskDecisionAttributes' smart constructor.
-data ScheduleActivityTaskDecisionAttributes = ScheduleActivityTaskDecisionAttributes'
-  { _satdaControl                :: !(Maybe Text)
-  , _satdaHeartbeatTimeout       :: !(Maybe Text)
-  , _satdaScheduleToCloseTimeout :: !(Maybe Text)
-  , _satdaInput                  :: !(Maybe Text)
-  , _satdaTaskList               :: !(Maybe TaskList)
-  , _satdaTaskPriority           :: !(Maybe Text)
-  , _satdaScheduleToStartTimeout :: !(Maybe Text)
-  , _satdaStartToCloseTimeout    :: !(Maybe Text)
-  , _satdaActivityType           :: !ActivityType
-  , _satdaActivityId             :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ScheduleActivityTaskDecisionAttributes =
+  ScheduleActivityTaskDecisionAttributes'
+    { _satdaControl                :: !(Maybe Text)
+    , _satdaHeartbeatTimeout       :: !(Maybe Text)
+    , _satdaScheduleToCloseTimeout :: !(Maybe Text)
+    , _satdaInput                  :: !(Maybe Text)
+    , _satdaTaskList               :: !(Maybe TaskList)
+    , _satdaTaskPriority           :: !(Maybe Text)
+    , _satdaScheduleToStartTimeout :: !(Maybe Text)
+    , _satdaStartToCloseTimeout    :: !(Maybe Text)
+    , _satdaActivityType           :: !ActivityType
+    , _satdaActivityId             :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ScheduleActivityTaskDecisionAttributes' with the minimum fields required to make a request.
@@ -4434,12 +4540,14 @@ instance ToJSON
 --
 --
 -- /See:/ 'scheduleActivityTaskFailedEventAttributes' smart constructor.
-data ScheduleActivityTaskFailedEventAttributes = ScheduleActivityTaskFailedEventAttributes'
-  { _satfeaActivityType                 :: !ActivityType
-  , _satfeaActivityId                   :: !Text
-  , _satfeaCause                        :: !ScheduleActivityTaskFailedCause
-  , _satfeaDecisionTaskCompletedEventId :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ScheduleActivityTaskFailedEventAttributes =
+  ScheduleActivityTaskFailedEventAttributes'
+    { _satfeaActivityType                 :: !ActivityType
+    , _satfeaActivityId                   :: !Text
+    , _satfeaCause                        :: !ScheduleActivityTaskFailedCause
+    , _satfeaDecisionTaskCompletedEventId :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ScheduleActivityTaskFailedEventAttributes' with the minimum fields required to make a request.
@@ -4509,13 +4617,15 @@ instance NFData
 --
 --
 -- /See:/ 'scheduleLambdaFunctionDecisionAttributes' smart constructor.
-data ScheduleLambdaFunctionDecisionAttributes = ScheduleLambdaFunctionDecisionAttributes'
-  { _slfdaControl             :: !(Maybe Text)
-  , _slfdaInput               :: !(Maybe Text)
-  , _slfdaStartToCloseTimeout :: !(Maybe Text)
-  , _slfdaId                  :: !Text
-  , _slfdaName                :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ScheduleLambdaFunctionDecisionAttributes =
+  ScheduleLambdaFunctionDecisionAttributes'
+    { _slfdaControl             :: !(Maybe Text)
+    , _slfdaInput               :: !(Maybe Text)
+    , _slfdaStartToCloseTimeout :: !(Maybe Text)
+    , _slfdaId                  :: !Text
+    , _slfdaName                :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ScheduleLambdaFunctionDecisionAttributes' with the minimum fields required to make a request.
@@ -4591,12 +4701,14 @@ instance ToJSON
 --
 --
 -- /See:/ 'scheduleLambdaFunctionFailedEventAttributes' smart constructor.
-data ScheduleLambdaFunctionFailedEventAttributes = ScheduleLambdaFunctionFailedEventAttributes'
-  { _slffeaId                           :: !Text
-  , _slffeaName                         :: !Text
-  , _slffeaCause                        :: !ScheduleLambdaFunctionFailedCause
-  , _slffeaDecisionTaskCompletedEventId :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ScheduleLambdaFunctionFailedEventAttributes =
+  ScheduleLambdaFunctionFailedEventAttributes'
+    { _slffeaId                           :: !Text
+    , _slffeaName                         :: !Text
+    , _slffeaCause                        :: !ScheduleLambdaFunctionFailedCause
+    , _slffeaDecisionTaskCompletedEventId :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ScheduleLambdaFunctionFailedEventAttributes' with the minimum fields required to make a request.
@@ -4679,13 +4791,15 @@ instance NFData
 --
 --
 -- /See:/ 'signalExternalWorkflowExecutionDecisionAttributes' smart constructor.
-data SignalExternalWorkflowExecutionDecisionAttributes = SignalExternalWorkflowExecutionDecisionAttributes'
-  { _sewedaControl    :: !(Maybe Text)
-  , _sewedaInput      :: !(Maybe Text)
-  , _sewedaRunId      :: !(Maybe Text)
-  , _sewedaWorkflowId :: !Text
-  , _sewedaSignalName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SignalExternalWorkflowExecutionDecisionAttributes =
+  SignalExternalWorkflowExecutionDecisionAttributes'
+    { _sewedaControl    :: !(Maybe Text)
+    , _sewedaInput      :: !(Maybe Text)
+    , _sewedaRunId      :: !(Maybe Text)
+    , _sewedaWorkflowId :: !Text
+    , _sewedaSignalName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SignalExternalWorkflowExecutionDecisionAttributes' with the minimum fields required to make a request.
@@ -4761,14 +4875,16 @@ instance ToJSON
 --
 --
 -- /See:/ 'signalExternalWorkflowExecutionFailedEventAttributes' smart constructor.
-data SignalExternalWorkflowExecutionFailedEventAttributes = SignalExternalWorkflowExecutionFailedEventAttributes'
-  { _sewefeaControl :: !(Maybe Text)
-  , _sewefeaRunId :: !(Maybe Text)
-  , _sewefeaWorkflowId :: !Text
-  , _sewefeaCause :: !SignalExternalWorkflowExecutionFailedCause
-  , _sewefeaInitiatedEventId :: !Integer
-  , _sewefeaDecisionTaskCompletedEventId :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SignalExternalWorkflowExecutionFailedEventAttributes =
+  SignalExternalWorkflowExecutionFailedEventAttributes'
+    { _sewefeaControl :: !(Maybe Text)
+    , _sewefeaRunId :: !(Maybe Text)
+    , _sewefeaWorkflowId :: !Text
+    , _sewefeaCause :: !SignalExternalWorkflowExecutionFailedCause
+    , _sewefeaInitiatedEventId :: !Integer
+    , _sewefeaDecisionTaskCompletedEventId :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SignalExternalWorkflowExecutionFailedEventAttributes' with the minimum fields required to make a request.
@@ -4855,14 +4971,16 @@ instance NFData
 --
 --
 -- /See:/ 'signalExternalWorkflowExecutionInitiatedEventAttributes' smart constructor.
-data SignalExternalWorkflowExecutionInitiatedEventAttributes = SignalExternalWorkflowExecutionInitiatedEventAttributes'
-  { _seweieaControl                      :: !(Maybe Text)
-  , _seweieaInput                        :: !(Maybe Text)
-  , _seweieaRunId                        :: !(Maybe Text)
-  , _seweieaWorkflowId                   :: !Text
-  , _seweieaSignalName                   :: !Text
-  , _seweieaDecisionTaskCompletedEventId :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SignalExternalWorkflowExecutionInitiatedEventAttributes =
+  SignalExternalWorkflowExecutionInitiatedEventAttributes'
+    { _seweieaControl                      :: !(Maybe Text)
+    , _seweieaInput                        :: !(Maybe Text)
+    , _seweieaRunId                        :: !(Maybe Text)
+    , _seweieaWorkflowId                   :: !Text
+    , _seweieaSignalName                   :: !Text
+    , _seweieaDecisionTaskCompletedEventId :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SignalExternalWorkflowExecutionInitiatedEventAttributes' with the minimum fields required to make a request.
@@ -4972,19 +5090,21 @@ instance NFData
 --
 --
 -- /See:/ 'startChildWorkflowExecutionDecisionAttributes' smart constructor.
-data StartChildWorkflowExecutionDecisionAttributes = StartChildWorkflowExecutionDecisionAttributes'
-  { _scwedaControl                      :: !(Maybe Text)
-  , _scwedaTagList                      :: !(Maybe [Text])
-  , _scwedaTaskStartToCloseTimeout      :: !(Maybe Text)
-  , _scwedaLambdaRole                   :: !(Maybe Text)
-  , _scwedaInput                        :: !(Maybe Text)
-  , _scwedaExecutionStartToCloseTimeout :: !(Maybe Text)
-  , _scwedaTaskList                     :: !(Maybe TaskList)
-  , _scwedaTaskPriority                 :: !(Maybe Text)
-  , _scwedaChildPolicy                  :: !(Maybe ChildPolicy)
-  , _scwedaWorkflowType                 :: !WorkflowType
-  , _scwedaWorkflowId                   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartChildWorkflowExecutionDecisionAttributes =
+  StartChildWorkflowExecutionDecisionAttributes'
+    { _scwedaControl                      :: !(Maybe Text)
+    , _scwedaTagList                      :: !(Maybe [Text])
+    , _scwedaTaskStartToCloseTimeout      :: !(Maybe Text)
+    , _scwedaLambdaRole                   :: !(Maybe Text)
+    , _scwedaInput                        :: !(Maybe Text)
+    , _scwedaExecutionStartToCloseTimeout :: !(Maybe Text)
+    , _scwedaTaskList                     :: !(Maybe TaskList)
+    , _scwedaTaskPriority                 :: !(Maybe Text)
+    , _scwedaChildPolicy                  :: !(Maybe ChildPolicy)
+    , _scwedaWorkflowType                 :: !WorkflowType
+    , _scwedaWorkflowId                   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartChildWorkflowExecutionDecisionAttributes' with the minimum fields required to make a request.
@@ -5110,14 +5230,16 @@ instance ToJSON
 --
 --
 -- /See:/ 'startChildWorkflowExecutionFailedEventAttributes' smart constructor.
-data StartChildWorkflowExecutionFailedEventAttributes = StartChildWorkflowExecutionFailedEventAttributes'
-  { _scwefeaControl :: !(Maybe Text)
-  , _scwefeaWorkflowType :: !WorkflowType
-  , _scwefeaCause :: !StartChildWorkflowExecutionFailedCause
-  , _scwefeaWorkflowId :: !Text
-  , _scwefeaInitiatedEventId :: !Integer
-  , _scwefeaDecisionTaskCompletedEventId :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartChildWorkflowExecutionFailedEventAttributes =
+  StartChildWorkflowExecutionFailedEventAttributes'
+    { _scwefeaControl :: !(Maybe Text)
+    , _scwefeaWorkflowType :: !WorkflowType
+    , _scwefeaCause :: !StartChildWorkflowExecutionFailedCause
+    , _scwefeaWorkflowId :: !Text
+    , _scwefeaInitiatedEventId :: !Integer
+    , _scwefeaDecisionTaskCompletedEventId :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartChildWorkflowExecutionFailedEventAttributes' with the minimum fields required to make a request.
@@ -5204,20 +5326,22 @@ instance NFData
 --
 --
 -- /See:/ 'startChildWorkflowExecutionInitiatedEventAttributes' smart constructor.
-data StartChildWorkflowExecutionInitiatedEventAttributes = StartChildWorkflowExecutionInitiatedEventAttributes'
-  { _scweieaControl                      :: !(Maybe Text)
-  , _scweieaTagList                      :: !(Maybe [Text])
-  , _scweieaTaskStartToCloseTimeout      :: !(Maybe Text)
-  , _scweieaLambdaRole                   :: !(Maybe Text)
-  , _scweieaInput                        :: !(Maybe Text)
-  , _scweieaExecutionStartToCloseTimeout :: !(Maybe Text)
-  , _scweieaTaskPriority                 :: !(Maybe Text)
-  , _scweieaWorkflowId                   :: !Text
-  , _scweieaWorkflowType                 :: !WorkflowType
-  , _scweieaTaskList                     :: !TaskList
-  , _scweieaDecisionTaskCompletedEventId :: !Integer
-  , _scweieaChildPolicy                  :: !ChildPolicy
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartChildWorkflowExecutionInitiatedEventAttributes =
+  StartChildWorkflowExecutionInitiatedEventAttributes'
+    { _scweieaControl                      :: !(Maybe Text)
+    , _scweieaTagList                      :: !(Maybe [Text])
+    , _scweieaTaskStartToCloseTimeout      :: !(Maybe Text)
+    , _scweieaLambdaRole                   :: !(Maybe Text)
+    , _scweieaInput                        :: !(Maybe Text)
+    , _scweieaExecutionStartToCloseTimeout :: !(Maybe Text)
+    , _scweieaTaskPriority                 :: !(Maybe Text)
+    , _scweieaWorkflowId                   :: !Text
+    , _scweieaWorkflowType                 :: !WorkflowType
+    , _scweieaTaskList                     :: !TaskList
+    , _scweieaDecisionTaskCompletedEventId :: !Integer
+    , _scweieaChildPolicy                  :: !ChildPolicy
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartChildWorkflowExecutionInitiatedEventAttributes' with the minimum fields required to make a request.
@@ -5353,11 +5477,13 @@ instance NFData
 --
 --
 -- /See:/ 'startLambdaFunctionFailedEventAttributes' smart constructor.
-data StartLambdaFunctionFailedEventAttributes = StartLambdaFunctionFailedEventAttributes'
-  { _sScheduledEventId :: !(Maybe Integer)
-  , _sCause            :: !(Maybe StartLambdaFunctionFailedCause)
-  , _sMessage          :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartLambdaFunctionFailedEventAttributes =
+  StartLambdaFunctionFailedEventAttributes'
+    { _sScheduledEventId :: !(Maybe Integer)
+    , _sCause            :: !(Maybe StartLambdaFunctionFailedCause)
+    , _sMessage          :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartLambdaFunctionFailedEventAttributes' with the minimum fields required to make a request.
@@ -5426,11 +5552,13 @@ instance NFData
 --
 --
 -- /See:/ 'startTimerDecisionAttributes' smart constructor.
-data StartTimerDecisionAttributes = StartTimerDecisionAttributes'
-  { _stdaControl            :: !(Maybe Text)
-  , _stdaTimerId            :: !Text
-  , _stdaStartToFireTimeout :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartTimerDecisionAttributes =
+  StartTimerDecisionAttributes'
+    { _stdaControl            :: !(Maybe Text)
+    , _stdaTimerId            :: !Text
+    , _stdaStartToFireTimeout :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartTimerDecisionAttributes' with the minimum fields required to make a request.
@@ -5484,11 +5612,13 @@ instance ToJSON StartTimerDecisionAttributes where
 --
 --
 -- /See:/ 'startTimerFailedEventAttributes' smart constructor.
-data StartTimerFailedEventAttributes = StartTimerFailedEventAttributes'
-  { _stfeaTimerId                      :: !Text
-  , _stfeaCause                        :: !StartTimerFailedCause
-  , _stfeaDecisionTaskCompletedEventId :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartTimerFailedEventAttributes =
+  StartTimerFailedEventAttributes'
+    { _stfeaTimerId                      :: !Text
+    , _stfeaCause                        :: !StartTimerFailedCause
+    , _stfeaDecisionTaskCompletedEventId :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartTimerFailedEventAttributes' with the minimum fields required to make a request.
@@ -5544,9 +5674,11 @@ instance NFData StartTimerFailedEventAttributes where
 --
 --
 -- /See:/ 'tagFilter' smart constructor.
-newtype TagFilter = TagFilter'
-  { _tfTag :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype TagFilter =
+  TagFilter'
+    { _tfTag :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TagFilter' with the minimum fields required to make a request.
@@ -5577,9 +5709,11 @@ instance ToJSON TagFilter where
 --
 --
 -- /See:/ 'taskList' smart constructor.
-newtype TaskList = TaskList'
-  { _tlName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype TaskList =
+  TaskList'
+    { _tlName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TaskList' with the minimum fields required to make a request.
@@ -5615,11 +5749,13 @@ instance ToJSON TaskList where
 --
 --
 -- /See:/ 'timerCanceledEventAttributes' smart constructor.
-data TimerCanceledEventAttributes = TimerCanceledEventAttributes'
-  { _tceaTimerId                      :: !Text
-  , _tceaStartedEventId               :: !Integer
-  , _tceaDecisionTaskCompletedEventId :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TimerCanceledEventAttributes =
+  TimerCanceledEventAttributes'
+    { _tceaTimerId                      :: !Text
+    , _tceaStartedEventId               :: !Integer
+    , _tceaDecisionTaskCompletedEventId :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TimerCanceledEventAttributes' with the minimum fields required to make a request.
@@ -5673,10 +5809,12 @@ instance NFData TimerCanceledEventAttributes where
 --
 --
 -- /See:/ 'timerFiredEventAttributes' smart constructor.
-data TimerFiredEventAttributes = TimerFiredEventAttributes'
-  { _tfeaTimerId        :: !Text
-  , _tfeaStartedEventId :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TimerFiredEventAttributes =
+  TimerFiredEventAttributes'
+    { _tfeaTimerId        :: !Text
+    , _tfeaStartedEventId :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TimerFiredEventAttributes' with the minimum fields required to make a request.
@@ -5719,12 +5857,14 @@ instance NFData TimerFiredEventAttributes where
 --
 --
 -- /See:/ 'timerStartedEventAttributes' smart constructor.
-data TimerStartedEventAttributes = TimerStartedEventAttributes'
-  { _tseaControl                      :: !(Maybe Text)
-  , _tseaTimerId                      :: !Text
-  , _tseaStartToFireTimeout           :: !Text
-  , _tseaDecisionTaskCompletedEventId :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TimerStartedEventAttributes =
+  TimerStartedEventAttributes'
+    { _tseaControl                      :: !(Maybe Text)
+    , _tseaTimerId                      :: !Text
+    , _tseaStartToFireTimeout           :: !Text
+    , _tseaDecisionTaskCompletedEventId :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TimerStartedEventAttributes' with the minimum fields required to make a request.
@@ -5786,10 +5926,12 @@ instance NFData TimerStartedEventAttributes where
 --
 --
 -- /See:/ 'workflowExecution' smart constructor.
-data WorkflowExecution = WorkflowExecution'
-  { _weWorkflowId :: !Text
-  , _weRunId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data WorkflowExecution =
+  WorkflowExecution'
+    { _weWorkflowId :: !Text
+    , _weRunId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'WorkflowExecution' with the minimum fields required to make a request.
@@ -5838,11 +5980,13 @@ instance ToJSON WorkflowExecution where
 --
 --
 -- /See:/ 'workflowExecutionCancelRequestedEventAttributes' smart constructor.
-data WorkflowExecutionCancelRequestedEventAttributes = WorkflowExecutionCancelRequestedEventAttributes'
-  { _wecreaExternalWorkflowExecution :: !(Maybe WorkflowExecution)
-  , _wecreaExternalInitiatedEventId :: !(Maybe Integer)
-  , _wecreaCause :: !(Maybe WorkflowExecutionCancelRequestedCause)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data WorkflowExecutionCancelRequestedEventAttributes =
+  WorkflowExecutionCancelRequestedEventAttributes'
+    { _wecreaExternalWorkflowExecution :: !(Maybe WorkflowExecution)
+    , _wecreaExternalInitiatedEventId :: !(Maybe Integer)
+    , _wecreaCause :: !(Maybe WorkflowExecutionCancelRequestedCause)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'WorkflowExecutionCancelRequestedEventAttributes' with the minimum fields required to make a request.
@@ -5901,10 +6045,12 @@ instance NFData
 --
 --
 -- /See:/ 'workflowExecutionCanceledEventAttributes' smart constructor.
-data WorkflowExecutionCanceledEventAttributes = WorkflowExecutionCanceledEventAttributes'
-  { _wDetails                      :: !(Maybe Text)
-  , _wDecisionTaskCompletedEventId :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data WorkflowExecutionCanceledEventAttributes =
+  WorkflowExecutionCanceledEventAttributes'
+    { _wDetails                      :: !(Maybe Text)
+    , _wDecisionTaskCompletedEventId :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'WorkflowExecutionCanceledEventAttributes' with the minimum fields required to make a request.
@@ -5956,10 +6102,12 @@ instance NFData
 --
 --
 -- /See:/ 'workflowExecutionCompletedEventAttributes' smart constructor.
-data WorkflowExecutionCompletedEventAttributes = WorkflowExecutionCompletedEventAttributes'
-  { _weceaResult                       :: !(Maybe Text)
-  , _weceaDecisionTaskCompletedEventId :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data WorkflowExecutionCompletedEventAttributes =
+  WorkflowExecutionCompletedEventAttributes'
+    { _weceaResult                       :: !(Maybe Text)
+    , _weceaDecisionTaskCompletedEventId :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'WorkflowExecutionCompletedEventAttributes' with the minimum fields required to make a request.
@@ -6011,14 +6159,16 @@ instance NFData
 --
 --
 -- /See:/ 'workflowExecutionConfiguration' smart constructor.
-data WorkflowExecutionConfiguration = WorkflowExecutionConfiguration'
-  { _wecLambdaRole                   :: !(Maybe Text)
-  , _wecTaskPriority                 :: !(Maybe Text)
-  , _wecTaskStartToCloseTimeout      :: !Text
-  , _wecExecutionStartToCloseTimeout :: !Text
-  , _wecTaskList                     :: !TaskList
-  , _wecChildPolicy                  :: !ChildPolicy
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data WorkflowExecutionConfiguration =
+  WorkflowExecutionConfiguration'
+    { _wecLambdaRole                   :: !(Maybe Text)
+    , _wecTaskPriority                 :: !(Maybe Text)
+    , _wecTaskStartToCloseTimeout      :: !Text
+    , _wecExecutionStartToCloseTimeout :: !Text
+    , _wecTaskList                     :: !TaskList
+    , _wecChildPolicy                  :: !ChildPolicy
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'WorkflowExecutionConfiguration' with the minimum fields required to make a request.
@@ -6099,19 +6249,21 @@ instance NFData WorkflowExecutionConfiguration where
 --
 --
 -- /See:/ 'workflowExecutionContinuedAsNewEventAttributes' smart constructor.
-data WorkflowExecutionContinuedAsNewEventAttributes = WorkflowExecutionContinuedAsNewEventAttributes'
-  { _wecaneaTagList                      :: !(Maybe [Text])
-  , _wecaneaTaskStartToCloseTimeout      :: !(Maybe Text)
-  , _wecaneaLambdaRole                   :: !(Maybe Text)
-  , _wecaneaInput                        :: !(Maybe Text)
-  , _wecaneaExecutionStartToCloseTimeout :: !(Maybe Text)
-  , _wecaneaTaskPriority                 :: !(Maybe Text)
-  , _wecaneaDecisionTaskCompletedEventId :: !Integer
-  , _wecaneaNewExecutionRunId            :: !Text
-  , _wecaneaTaskList                     :: !TaskList
-  , _wecaneaChildPolicy                  :: !ChildPolicy
-  , _wecaneaWorkflowType                 :: !WorkflowType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data WorkflowExecutionContinuedAsNewEventAttributes =
+  WorkflowExecutionContinuedAsNewEventAttributes'
+    { _wecaneaTagList                      :: !(Maybe [Text])
+    , _wecaneaTaskStartToCloseTimeout      :: !(Maybe Text)
+    , _wecaneaLambdaRole                   :: !(Maybe Text)
+    , _wecaneaInput                        :: !(Maybe Text)
+    , _wecaneaExecutionStartToCloseTimeout :: !(Maybe Text)
+    , _wecaneaTaskPriority                 :: !(Maybe Text)
+    , _wecaneaDecisionTaskCompletedEventId :: !Integer
+    , _wecaneaNewExecutionRunId            :: !Text
+    , _wecaneaTaskList                     :: !TaskList
+    , _wecaneaChildPolicy                  :: !ChildPolicy
+    , _wecaneaWorkflowType                 :: !WorkflowType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'WorkflowExecutionContinuedAsNewEventAttributes' with the minimum fields required to make a request.
@@ -6239,10 +6391,12 @@ instance NFData
 --
 --
 -- /See:/ 'workflowExecutionCount' smart constructor.
-data WorkflowExecutionCount = WorkflowExecutionCount'
-  { _wecTruncated :: !(Maybe Bool)
-  , _wecCount     :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data WorkflowExecutionCount =
+  WorkflowExecutionCount'
+    { _wecTruncated :: !(Maybe Bool)
+    , _wecCount     :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'WorkflowExecutionCount' with the minimum fields required to make a request.
@@ -6283,11 +6437,13 @@ instance NFData WorkflowExecutionCount where
 --
 --
 -- /See:/ 'workflowExecutionFailedEventAttributes' smart constructor.
-data WorkflowExecutionFailedEventAttributes = WorkflowExecutionFailedEventAttributes'
-  { _wefeaReason                       :: !(Maybe Text)
-  , _wefeaDetails                      :: !(Maybe Text)
-  , _wefeaDecisionTaskCompletedEventId :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data WorkflowExecutionFailedEventAttributes =
+  WorkflowExecutionFailedEventAttributes'
+    { _wefeaReason                       :: !(Maybe Text)
+    , _wefeaDetails                      :: !(Maybe Text)
+    , _wefeaDecisionTaskCompletedEventId :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'WorkflowExecutionFailedEventAttributes' with the minimum fields required to make a request.
@@ -6345,9 +6501,11 @@ instance NFData
 --
 --
 -- /See:/ 'workflowExecutionFilter' smart constructor.
-newtype WorkflowExecutionFilter = WorkflowExecutionFilter'
-  { _wefWorkflowId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype WorkflowExecutionFilter =
+  WorkflowExecutionFilter'
+    { _wefWorkflowId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'WorkflowExecutionFilter' with the minimum fields required to make a request.
@@ -6380,17 +6538,19 @@ instance ToJSON WorkflowExecutionFilter where
 --
 --
 -- /See:/ 'workflowExecutionInfo' smart constructor.
-data WorkflowExecutionInfo = WorkflowExecutionInfo'
-  { _weiParent          :: !(Maybe WorkflowExecution)
-  , _weiTagList         :: !(Maybe [Text])
-  , _weiCloseStatus     :: !(Maybe CloseStatus)
-  , _weiCloseTimestamp  :: !(Maybe POSIX)
-  , _weiCancelRequested :: !(Maybe Bool)
-  , _weiExecution       :: !WorkflowExecution
-  , _weiWorkflowType    :: !WorkflowType
-  , _weiStartTimestamp  :: !POSIX
-  , _weiExecutionStatus :: !ExecutionStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data WorkflowExecutionInfo =
+  WorkflowExecutionInfo'
+    { _weiParent          :: !(Maybe WorkflowExecution)
+    , _weiTagList         :: !(Maybe [Text])
+    , _weiCloseStatus     :: !(Maybe CloseStatus)
+    , _weiCloseTimestamp  :: !(Maybe POSIX)
+    , _weiCancelRequested :: !(Maybe Bool)
+    , _weiExecution       :: !WorkflowExecution
+    , _weiWorkflowType    :: !WorkflowType
+    , _weiStartTimestamp  :: !POSIX
+    , _weiExecutionStatus :: !ExecutionStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'WorkflowExecutionInfo' with the minimum fields required to make a request.
@@ -6493,10 +6653,12 @@ instance NFData WorkflowExecutionInfo where
 --
 --
 -- /See:/ 'workflowExecutionInfos' smart constructor.
-data WorkflowExecutionInfos = WorkflowExecutionInfos'
-  { _weiNextPageToken  :: !(Maybe Text)
-  , _weiExecutionInfos :: ![WorkflowExecutionInfo]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data WorkflowExecutionInfos =
+  WorkflowExecutionInfos'
+    { _weiNextPageToken  :: !(Maybe Text)
+    , _weiExecutionInfos :: ![WorkflowExecutionInfo]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'WorkflowExecutionInfos' with the minimum fields required to make a request.
@@ -6538,13 +6700,15 @@ instance NFData WorkflowExecutionInfos where
 --
 --
 -- /See:/ 'workflowExecutionOpenCounts' smart constructor.
-data WorkflowExecutionOpenCounts = WorkflowExecutionOpenCounts'
-  { _weocOpenLambdaFunctions         :: !(Maybe Nat)
-  , _weocOpenActivityTasks           :: !Nat
-  , _weocOpenDecisionTasks           :: !Nat
-  , _weocOpenTimers                  :: !Nat
-  , _weocOpenChildWorkflowExecutions :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data WorkflowExecutionOpenCounts =
+  WorkflowExecutionOpenCounts'
+    { _weocOpenLambdaFunctions         :: !(Maybe Nat)
+    , _weocOpenActivityTasks           :: !Nat
+    , _weocOpenDecisionTasks           :: !Nat
+    , _weocOpenTimers                  :: !Nat
+    , _weocOpenChildWorkflowExecutions :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'WorkflowExecutionOpenCounts' with the minimum fields required to make a request.
@@ -6616,12 +6780,14 @@ instance NFData WorkflowExecutionOpenCounts where
 --
 --
 -- /See:/ 'workflowExecutionSignaledEventAttributes' smart constructor.
-data WorkflowExecutionSignaledEventAttributes = WorkflowExecutionSignaledEventAttributes'
-  { _wExternalWorkflowExecution :: !(Maybe WorkflowExecution)
-  , _wExternalInitiatedEventId  :: !(Maybe Integer)
-  , _wInput                     :: !(Maybe Text)
-  , _wSignalName                :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data WorkflowExecutionSignaledEventAttributes =
+  WorkflowExecutionSignaledEventAttributes'
+    { _wExternalWorkflowExecution :: !(Maybe WorkflowExecution)
+    , _wExternalInitiatedEventId  :: !(Maybe Integer)
+    , _wInput                     :: !(Maybe Text)
+    , _wSignalName                :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'WorkflowExecutionSignaledEventAttributes' with the minimum fields required to make a request.
@@ -6689,20 +6855,22 @@ instance NFData
 --
 --
 -- /See:/ 'workflowExecutionStartedEventAttributes' smart constructor.
-data WorkflowExecutionStartedEventAttributes = WorkflowExecutionStartedEventAttributes'
-  { _weseaParentInitiatedEventId       :: !(Maybe Integer)
-  , _weseaTagList                      :: !(Maybe [Text])
-  , _weseaTaskStartToCloseTimeout      :: !(Maybe Text)
-  , _weseaLambdaRole                   :: !(Maybe Text)
-  , _weseaInput                        :: !(Maybe Text)
-  , _weseaExecutionStartToCloseTimeout :: !(Maybe Text)
-  , _weseaTaskPriority                 :: !(Maybe Text)
-  , _weseaParentWorkflowExecution      :: !(Maybe WorkflowExecution)
-  , _weseaContinuedExecutionRunId      :: !(Maybe Text)
-  , _weseaChildPolicy                  :: !ChildPolicy
-  , _weseaTaskList                     :: !TaskList
-  , _weseaWorkflowType                 :: !WorkflowType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data WorkflowExecutionStartedEventAttributes =
+  WorkflowExecutionStartedEventAttributes'
+    { _weseaParentInitiatedEventId       :: !(Maybe Integer)
+    , _weseaTagList                      :: !(Maybe [Text])
+    , _weseaTaskStartToCloseTimeout      :: !(Maybe Text)
+    , _weseaLambdaRole                   :: !(Maybe Text)
+    , _weseaInput                        :: !(Maybe Text)
+    , _weseaExecutionStartToCloseTimeout :: !(Maybe Text)
+    , _weseaTaskPriority                 :: !(Maybe Text)
+    , _weseaParentWorkflowExecution      :: !(Maybe WorkflowExecution)
+    , _weseaContinuedExecutionRunId      :: !(Maybe Text)
+    , _weseaChildPolicy                  :: !ChildPolicy
+    , _weseaTaskList                     :: !TaskList
+    , _weseaWorkflowType                 :: !WorkflowType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'WorkflowExecutionStartedEventAttributes' with the minimum fields required to make a request.
@@ -6836,12 +7004,14 @@ instance NFData
 --
 --
 -- /See:/ 'workflowExecutionTerminatedEventAttributes' smart constructor.
-data WorkflowExecutionTerminatedEventAttributes = WorkflowExecutionTerminatedEventAttributes'
-  { _weteaCause       :: !(Maybe WorkflowExecutionTerminatedCause)
-  , _weteaReason      :: !(Maybe Text)
-  , _weteaDetails     :: !(Maybe Text)
-  , _weteaChildPolicy :: !ChildPolicy
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data WorkflowExecutionTerminatedEventAttributes =
+  WorkflowExecutionTerminatedEventAttributes'
+    { _weteaCause       :: !(Maybe WorkflowExecutionTerminatedCause)
+    , _weteaReason      :: !(Maybe Text)
+    , _weteaDetails     :: !(Maybe Text)
+    , _weteaChildPolicy :: !ChildPolicy
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'WorkflowExecutionTerminatedEventAttributes' with the minimum fields required to make a request.
@@ -6908,10 +7078,12 @@ instance NFData
 --
 --
 -- /See:/ 'workflowExecutionTimedOutEventAttributes' smart constructor.
-data WorkflowExecutionTimedOutEventAttributes = WorkflowExecutionTimedOutEventAttributes'
-  { _wetoeaTimeoutType :: !WorkflowExecutionTimeoutType
-  , _wetoeaChildPolicy :: !ChildPolicy
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data WorkflowExecutionTimedOutEventAttributes =
+  WorkflowExecutionTimedOutEventAttributes'
+    { _wetoeaTimeoutType :: !WorkflowExecutionTimeoutType
+    , _wetoeaChildPolicy :: !ChildPolicy
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'WorkflowExecutionTimedOutEventAttributes' with the minimum fields required to make a request.
@@ -6961,10 +7133,12 @@ instance NFData
 --
 --
 -- /See:/ 'workflowType' smart constructor.
-data WorkflowType = WorkflowType'
-  { _wtName    :: !Text
-  , _wtVersion :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data WorkflowType =
+  WorkflowType'
+    { _wtName    :: !Text
+    , _wtVersion :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'WorkflowType' with the minimum fields required to make a request.
@@ -7012,14 +7186,16 @@ instance ToJSON WorkflowType where
 --
 --
 -- /See:/ 'workflowTypeConfiguration' smart constructor.
-data WorkflowTypeConfiguration = WorkflowTypeConfiguration'
-  { _wtcDefaultLambdaRole                   :: !(Maybe Text)
-  , _wtcDefaultChildPolicy                  :: !(Maybe ChildPolicy)
-  , _wtcDefaultTaskList                     :: !(Maybe TaskList)
-  , _wtcDefaultTaskPriority                 :: !(Maybe Text)
-  , _wtcDefaultExecutionStartToCloseTimeout :: !(Maybe Text)
-  , _wtcDefaultTaskStartToCloseTimeout      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data WorkflowTypeConfiguration =
+  WorkflowTypeConfiguration'
+    { _wtcDefaultLambdaRole                   :: !(Maybe Text)
+    , _wtcDefaultChildPolicy                  :: !(Maybe ChildPolicy)
+    , _wtcDefaultTaskList                     :: !(Maybe TaskList)
+    , _wtcDefaultTaskPriority                 :: !(Maybe Text)
+    , _wtcDefaultExecutionStartToCloseTimeout :: !(Maybe Text)
+    , _wtcDefaultTaskStartToCloseTimeout      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'WorkflowTypeConfiguration' with the minimum fields required to make a request.
@@ -7095,10 +7271,12 @@ instance NFData WorkflowTypeConfiguration where
 --
 --
 -- /See:/ 'workflowTypeFilter' smart constructor.
-data WorkflowTypeFilter = WorkflowTypeFilter'
-  { _wtfVersion :: !(Maybe Text)
-  , _wtfName    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data WorkflowTypeFilter =
+  WorkflowTypeFilter'
+    { _wtfVersion :: !(Maybe Text)
+    , _wtfName    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'WorkflowTypeFilter' with the minimum fields required to make a request.
@@ -7139,13 +7317,15 @@ instance ToJSON WorkflowTypeFilter where
 --
 --
 -- /See:/ 'workflowTypeInfo' smart constructor.
-data WorkflowTypeInfo = WorkflowTypeInfo'
-  { _wtiDeprecationDate :: !(Maybe POSIX)
-  , _wtiDescription     :: !(Maybe Text)
-  , _wtiWorkflowType    :: !WorkflowType
-  , _wtiStatus          :: !RegistrationStatus
-  , _wtiCreationDate    :: !POSIX
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data WorkflowTypeInfo =
+  WorkflowTypeInfo'
+    { _wtiDeprecationDate :: !(Maybe POSIX)
+    , _wtiDescription     :: !(Maybe Text)
+    , _wtiWorkflowType    :: !WorkflowType
+    , _wtiStatus          :: !RegistrationStatus
+    , _wtiCreationDate    :: !POSIX
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'WorkflowTypeInfo' with the minimum fields required to make a request.

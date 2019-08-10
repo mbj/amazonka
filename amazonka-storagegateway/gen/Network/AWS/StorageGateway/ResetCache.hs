@@ -47,9 +47,11 @@ import Network.AWS.StorageGateway.Types
 import Network.AWS.StorageGateway.Types.Product
 
 -- | /See:/ 'resetCache' smart constructor.
-newtype ResetCache = ResetCache'
-  { _rcGatewayARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ResetCache =
+  ResetCache'
+    { _rcGatewayARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResetCache' with the minimum fields required to make a request.
@@ -101,10 +103,12 @@ instance ToQuery ResetCache where
         toQuery = const mempty
 
 -- | /See:/ 'resetCacheResponse' smart constructor.
-data ResetCacheResponse = ResetCacheResponse'
-  { _rrsGatewayARN     :: !(Maybe Text)
-  , _rrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResetCacheResponse =
+  ResetCacheResponse'
+    { _rrsGatewayARN     :: !(Maybe Text)
+    , _rrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResetCacheResponse' with the minimum fields required to make a request.

@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'batchDetectKeyPhrases' smart constructor.
-data BatchDetectKeyPhrases = BatchDetectKeyPhrases'
-  { _bdkpTextList     :: ![Text]
-  , _bdkpLanguageCode :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchDetectKeyPhrases =
+  BatchDetectKeyPhrases'
+    { _bdkpTextList     :: ![Text]
+    , _bdkpLanguageCode :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchDetectKeyPhrases' with the minimum fields required to make a request.
@@ -116,11 +118,13 @@ instance ToQuery BatchDetectKeyPhrases where
         toQuery = const mempty
 
 -- | /See:/ 'batchDetectKeyPhrasesResponse' smart constructor.
-data BatchDetectKeyPhrasesResponse = BatchDetectKeyPhrasesResponse'
-  { _bdkprsResponseStatus :: !Int
-  , _bdkprsResultList     :: ![BatchDetectKeyPhrasesItemResult]
-  , _bdkprsErrorList      :: ![BatchItemError]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchDetectKeyPhrasesResponse =
+  BatchDetectKeyPhrasesResponse'
+    { _bdkprsResponseStatus :: !Int
+    , _bdkprsResultList     :: ![BatchDetectKeyPhrasesItemResult]
+    , _bdkprsErrorList      :: ![BatchItemError]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchDetectKeyPhrasesResponse' with the minimum fields required to make a request.

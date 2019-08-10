@@ -50,10 +50,12 @@ import Network.AWS.Route53Domains.Types.Product
 --
 --
 -- /See:/ 'checkDomainAvailability' smart constructor.
-data CheckDomainAvailability = CheckDomainAvailability'
-  { _cdaIdNLangCode :: !(Maybe Text)
-  , _cdaDomainName  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CheckDomainAvailability =
+  CheckDomainAvailability'
+    { _cdaIdNLangCode :: !(Maybe Text)
+    , _cdaDomainName  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CheckDomainAvailability' with the minimum fields required to make a request.
@@ -121,10 +123,12 @@ instance ToQuery CheckDomainAvailability where
 --
 --
 -- /See:/ 'checkDomainAvailabilityResponse' smart constructor.
-data CheckDomainAvailabilityResponse = CheckDomainAvailabilityResponse'
-  { _cdarsResponseStatus :: !Int
-  , _cdarsAvailability   :: !DomainAvailability
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CheckDomainAvailabilityResponse =
+  CheckDomainAvailabilityResponse'
+    { _cdarsResponseStatus :: !Int
+    , _cdarsAvailability   :: !DomainAvailability
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CheckDomainAvailabilityResponse' with the minimum fields required to make a request.

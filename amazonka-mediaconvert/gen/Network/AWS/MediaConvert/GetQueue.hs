@@ -43,9 +43,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getQueue' smart constructor.
-newtype GetQueue = GetQueue'
-  { _gqName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetQueue =
+  GetQueue'
+    { _gqName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetQueue' with the minimum fields required to make a request.
@@ -91,10 +93,12 @@ instance ToQuery GetQueue where
         toQuery = const mempty
 
 -- | /See:/ 'getQueueResponse' smart constructor.
-data GetQueueResponse = GetQueueResponse'
-  { _gqrsQueue          :: !(Maybe Queue)
-  , _gqrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetQueueResponse =
+  GetQueueResponse'
+    { _gqrsQueue          :: !(Maybe Queue)
+    , _gqrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetQueueResponse' with the minimum fields required to make a request.

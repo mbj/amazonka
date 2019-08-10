@@ -55,11 +55,13 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'sendCustomVerificationEmail' smart constructor.
-data SendCustomVerificationEmail = SendCustomVerificationEmail'
-  { _scveConfigurationSetName :: !(Maybe Text)
-  , _scveEmailAddress         :: !Text
-  , _scveTemplateName         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SendCustomVerificationEmail =
+  SendCustomVerificationEmail'
+    { _scveConfigurationSetName :: !(Maybe Text)
+    , _scveEmailAddress         :: !Text
+    , _scveTemplateName         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SendCustomVerificationEmail' with the minimum fields required to make a request.
@@ -131,10 +133,12 @@ instance ToQuery SendCustomVerificationEmail where
 --
 --
 -- /See:/ 'sendCustomVerificationEmailResponse' smart constructor.
-data SendCustomVerificationEmailResponse = SendCustomVerificationEmailResponse'
-  { _scversMessageId      :: !(Maybe Text)
-  , _scversResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SendCustomVerificationEmailResponse =
+  SendCustomVerificationEmailResponse'
+    { _scversMessageId      :: !(Maybe Text)
+    , _scversResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SendCustomVerificationEmailResponse' with the minimum fields required to make a request.

@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteDomain' smart constructor.
-newtype DeleteDomain = DeleteDomain'
-  { _dddDomainName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteDomain =
+  DeleteDomain'
+    { _dddDomainName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteDomain' with the minimum fields required to make a request.
@@ -100,10 +102,12 @@ instance ToQuery DeleteDomain where
 --
 --
 -- /See:/ 'deleteDomainResponse' smart constructor.
-data DeleteDomainResponse = DeleteDomainResponse'
-  { _ddrsDomainStatus   :: !(Maybe DomainStatus)
-  , _ddrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteDomainResponse =
+  DeleteDomainResponse'
+    { _ddrsDomainStatus   :: !(Maybe DomainStatus)
+    , _ddrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteDomainResponse' with the minimum fields required to make a request.

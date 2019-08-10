@@ -49,10 +49,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'attachLoadBalancerTargetGroups' smart constructor.
-data AttachLoadBalancerTargetGroups = AttachLoadBalancerTargetGroups'
-  { _albtgAutoScalingGroupName :: !Text
-  , _albtgTargetGroupARNs      :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AttachLoadBalancerTargetGroups =
+  AttachLoadBalancerTargetGroups'
+    { _albtgAutoScalingGroupName :: !Text
+    , _albtgTargetGroupARNs      :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttachLoadBalancerTargetGroups' with the minimum fields required to make a request.
@@ -115,9 +117,11 @@ instance ToQuery AttachLoadBalancerTargetGroups where
                  toQueryList "member" _albtgTargetGroupARNs]
 
 -- | /See:/ 'attachLoadBalancerTargetGroupsResponse' smart constructor.
-newtype AttachLoadBalancerTargetGroupsResponse = AttachLoadBalancerTargetGroupsResponse'
-  { _albtgrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AttachLoadBalancerTargetGroupsResponse =
+  AttachLoadBalancerTargetGroupsResponse'
+    { _albtgrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttachLoadBalancerTargetGroupsResponse' with the minimum fields required to make a request.

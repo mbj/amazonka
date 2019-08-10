@@ -49,13 +49,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createIndex' smart constructor.
-data CreateIndex = CreateIndex'
-  { _ciParentReference             :: !(Maybe ObjectReference)
-  , _ciLinkName                    :: !(Maybe Text)
-  , _ciDirectoryARN                :: !Text
-  , _ciOrderedIndexedAttributeList :: ![AttributeKey]
-  , _ciIsUnique                    :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateIndex =
+  CreateIndex'
+    { _ciParentReference             :: !(Maybe ObjectReference)
+    , _ciLinkName                    :: !(Maybe Text)
+    , _ciDirectoryARN                :: !Text
+    , _ciOrderedIndexedAttributeList :: ![AttributeKey]
+    , _ciIsUnique                    :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateIndex' with the minimum fields required to make a request.
@@ -141,10 +143,12 @@ instance ToQuery CreateIndex where
         toQuery = const mempty
 
 -- | /See:/ 'createIndexResponse' smart constructor.
-data CreateIndexResponse = CreateIndexResponse'
-  { _cirsObjectIdentifier :: !(Maybe Text)
-  , _cirsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateIndexResponse =
+  CreateIndexResponse'
+    { _cirsObjectIdentifier :: !(Maybe Text)
+    , _cirsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateIndexResponse' with the minimum fields required to make a request.

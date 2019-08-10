@@ -26,9 +26,11 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'alarm' smart constructor.
-newtype Alarm = Alarm'
-  { _aName :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype Alarm =
+  Alarm'
+    { _aName :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Alarm' with the minimum fields required to make a request.
@@ -63,11 +65,13 @@ instance ToJSON Alarm where
 --
 --
 -- /See:/ 'alarmConfiguration' smart constructor.
-data AlarmConfiguration = AlarmConfiguration'
-  { _acIgnorePollAlarmFailure :: !(Maybe Bool)
-  , _acEnabled                :: !(Maybe Bool)
-  , _acAlarms                 :: !(Maybe [Alarm])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AlarmConfiguration =
+  AlarmConfiguration'
+    { _acIgnorePollAlarmFailure :: !(Maybe Bool)
+    , _acEnabled                :: !(Maybe Bool)
+    , _acAlarms                 :: !(Maybe [Alarm])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AlarmConfiguration' with the minimum fields required to make a request.
@@ -128,14 +132,16 @@ instance ToJSON AlarmConfiguration where
 --
 --
 -- /See:/ 'applicationInfo' smart constructor.
-data ApplicationInfo = ApplicationInfo'
-  { _aiLinkedToGitHub    :: !(Maybe Bool)
-  , _aiComputePlatform   :: !(Maybe ComputePlatform)
-  , _aiApplicationId     :: !(Maybe Text)
-  , _aiApplicationName   :: !(Maybe Text)
-  , _aiGitHubAccountName :: !(Maybe Text)
-  , _aiCreateTime        :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ApplicationInfo =
+  ApplicationInfo'
+    { _aiLinkedToGitHub    :: !(Maybe Bool)
+    , _aiComputePlatform   :: !(Maybe ComputePlatform)
+    , _aiApplicationId     :: !(Maybe Text)
+    , _aiApplicationName   :: !(Maybe Text)
+    , _aiGitHubAccountName :: !(Maybe Text)
+    , _aiCreateTime        :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ApplicationInfo' with the minimum fields required to make a request.
@@ -211,10 +217,12 @@ instance NFData ApplicationInfo where
 --
 --
 -- /See:/ 'autoRollbackConfiguration' smart constructor.
-data AutoRollbackConfiguration = AutoRollbackConfiguration'
-  { _arcEnabled :: !(Maybe Bool)
-  , _arcEvents  :: !(Maybe [AutoRollbackEvent])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AutoRollbackConfiguration =
+  AutoRollbackConfiguration'
+    { _arcEnabled :: !(Maybe Bool)
+    , _arcEvents  :: !(Maybe [AutoRollbackEvent])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AutoRollbackConfiguration' with the minimum fields required to make a request.
@@ -261,10 +269,12 @@ instance ToJSON AutoRollbackConfiguration where
 --
 --
 -- /See:/ 'autoScalingGroup' smart constructor.
-data AutoScalingGroup = AutoScalingGroup'
-  { _asgHook :: !(Maybe Text)
-  , _asgName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AutoScalingGroup =
+  AutoScalingGroup'
+    { _asgHook :: !(Maybe Text)
+    , _asgName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AutoScalingGroup' with the minimum fields required to make a request.
@@ -303,11 +313,13 @@ instance NFData AutoScalingGroup where
 --
 --
 -- /See:/ 'blueGreenDeploymentConfiguration' smart constructor.
-data BlueGreenDeploymentConfiguration = BlueGreenDeploymentConfiguration'
-  { _bgdcDeploymentReadyOption :: !(Maybe DeploymentReadyOption)
-  , _bgdcGreenFleetProvisioningOption :: !(Maybe GreenFleetProvisioningOption)
-  , _bgdcTerminateBlueInstancesOnDeploymentSuccess :: !(Maybe BlueInstanceTerminationOption)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BlueGreenDeploymentConfiguration =
+  BlueGreenDeploymentConfiguration'
+    { _bgdcDeploymentReadyOption :: !(Maybe DeploymentReadyOption)
+    , _bgdcGreenFleetProvisioningOption :: !(Maybe GreenFleetProvisioningOption)
+    , _bgdcTerminateBlueInstancesOnDeploymentSuccess :: !(Maybe BlueInstanceTerminationOption)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BlueGreenDeploymentConfiguration' with the minimum fields required to make a request.
@@ -375,10 +387,12 @@ instance ToJSON BlueGreenDeploymentConfiguration
 --
 --
 -- /See:/ 'blueInstanceTerminationOption' smart constructor.
-data BlueInstanceTerminationOption = BlueInstanceTerminationOption'
-  { _bitoAction                       :: !(Maybe InstanceAction)
-  , _bitoTerminationWaitTimeInMinutes :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BlueInstanceTerminationOption =
+  BlueInstanceTerminationOption'
+    { _bitoAction                       :: !(Maybe InstanceAction)
+    , _bitoTerminationWaitTimeInMinutes :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BlueInstanceTerminationOption' with the minimum fields required to make a request.
@@ -428,14 +442,16 @@ instance ToJSON BlueInstanceTerminationOption where
 --
 --
 -- /See:/ 'deploymentConfigInfo' smart constructor.
-data DeploymentConfigInfo = DeploymentConfigInfo'
-  { _dciDeploymentConfigName :: !(Maybe Text)
-  , _dciComputePlatform      :: !(Maybe ComputePlatform)
-  , _dciMinimumHealthyHosts  :: !(Maybe MinimumHealthyHosts)
-  , _dciTrafficRoutingConfig :: !(Maybe TrafficRoutingConfig)
-  , _dciDeploymentConfigId   :: !(Maybe Text)
-  , _dciCreateTime           :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeploymentConfigInfo =
+  DeploymentConfigInfo'
+    { _dciDeploymentConfigName :: !(Maybe Text)
+    , _dciComputePlatform      :: !(Maybe ComputePlatform)
+    , _dciMinimumHealthyHosts  :: !(Maybe MinimumHealthyHosts)
+    , _dciTrafficRoutingConfig :: !(Maybe TrafficRoutingConfig)
+    , _dciDeploymentConfigId   :: !(Maybe Text)
+    , _dciCreateTime           :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeploymentConfigInfo' with the minimum fields required to make a request.
@@ -511,28 +527,30 @@ instance NFData DeploymentConfigInfo where
 --
 --
 -- /See:/ 'deploymentGroupInfo' smart constructor.
-data DeploymentGroupInfo = DeploymentGroupInfo'
-  { _dgiServiceRoleARN :: !(Maybe Text)
-  , _dgiEc2TagSet :: !(Maybe EC2TagSet)
-  , _dgiDeploymentConfigName :: !(Maybe Text)
-  , _dgiLastAttemptedDeployment :: !(Maybe LastDeploymentInfo)
-  , _dgiOnPremisesTagSet :: !(Maybe OnPremisesTagSet)
-  , _dgiComputePlatform :: !(Maybe ComputePlatform)
-  , _dgiTargetRevision :: !(Maybe RevisionLocation)
-  , _dgiEc2TagFilters :: !(Maybe [EC2TagFilter])
-  , _dgiBlueGreenDeploymentConfiguration :: !(Maybe BlueGreenDeploymentConfiguration)
-  , _dgiLoadBalancerInfo :: !(Maybe LoadBalancerInfo)
-  , _dgiOnPremisesInstanceTagFilters :: !(Maybe [TagFilter])
-  , _dgiLastSuccessfulDeployment :: !(Maybe LastDeploymentInfo)
-  , _dgiApplicationName :: !(Maybe Text)
-  , _dgiAlarmConfiguration :: !(Maybe AlarmConfiguration)
-  , _dgiTriggerConfigurations :: !(Maybe [TriggerConfig])
-  , _dgiDeploymentGroupId :: !(Maybe Text)
-  , _dgiAutoScalingGroups :: !(Maybe [AutoScalingGroup])
-  , _dgiDeploymentStyle :: !(Maybe DeploymentStyle)
-  , _dgiAutoRollbackConfiguration :: !(Maybe AutoRollbackConfiguration)
-  , _dgiDeploymentGroupName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeploymentGroupInfo =
+  DeploymentGroupInfo'
+    { _dgiServiceRoleARN :: !(Maybe Text)
+    , _dgiEc2TagSet :: !(Maybe EC2TagSet)
+    , _dgiDeploymentConfigName :: !(Maybe Text)
+    , _dgiLastAttemptedDeployment :: !(Maybe LastDeploymentInfo)
+    , _dgiOnPremisesTagSet :: !(Maybe OnPremisesTagSet)
+    , _dgiComputePlatform :: !(Maybe ComputePlatform)
+    , _dgiTargetRevision :: !(Maybe RevisionLocation)
+    , _dgiEc2TagFilters :: !(Maybe [EC2TagFilter])
+    , _dgiBlueGreenDeploymentConfiguration :: !(Maybe BlueGreenDeploymentConfiguration)
+    , _dgiLoadBalancerInfo :: !(Maybe LoadBalancerInfo)
+    , _dgiOnPremisesInstanceTagFilters :: !(Maybe [TagFilter])
+    , _dgiLastSuccessfulDeployment :: !(Maybe LastDeploymentInfo)
+    , _dgiApplicationName :: !(Maybe Text)
+    , _dgiAlarmConfiguration :: !(Maybe AlarmConfiguration)
+    , _dgiTriggerConfigurations :: !(Maybe [TriggerConfig])
+    , _dgiDeploymentGroupId :: !(Maybe Text)
+    , _dgiAutoScalingGroups :: !(Maybe [AutoScalingGroup])
+    , _dgiDeploymentStyle :: !(Maybe DeploymentStyle)
+    , _dgiAutoRollbackConfiguration :: !(Maybe AutoRollbackConfiguration)
+    , _dgiDeploymentGroupName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeploymentGroupInfo' with the minimum fields required to make a request.
@@ -719,35 +737,37 @@ instance NFData DeploymentGroupInfo where
 --
 --
 -- /See:/ 'deploymentInfo' smart constructor.
-data DeploymentInfo = DeploymentInfo'
-  { _diCreator :: !(Maybe DeploymentCreator)
-  , _diStatus :: !(Maybe DeploymentStatus)
-  , _diDeploymentId :: !(Maybe Text)
-  , _diDeploymentConfigName :: !(Maybe Text)
-  , _diComputePlatform :: !(Maybe ComputePlatform)
-  , _diPreviousRevision :: !(Maybe RevisionLocation)
-  , _diInstanceTerminationWaitTimeStarted :: !(Maybe Bool)
-  , _diDeploymentStatusMessages :: !(Maybe [Text])
-  , _diStartTime :: !(Maybe POSIX)
-  , _diCompleteTime :: !(Maybe POSIX)
-  , _diBlueGreenDeploymentConfiguration :: !(Maybe BlueGreenDeploymentConfiguration)
-  , _diErrorInformation :: !(Maybe ErrorInformation)
-  , _diLoadBalancerInfo :: !(Maybe LoadBalancerInfo)
-  , _diAdditionalDeploymentStatusInfo :: !(Maybe Text)
-  , _diDeploymentOverview :: !(Maybe DeploymentOverview)
-  , _diFileExistsBehavior :: !(Maybe FileExistsBehavior)
-  , _diApplicationName :: !(Maybe Text)
-  , _diRollbackInfo :: !(Maybe RollbackInfo)
-  , _diTargetInstances :: !(Maybe TargetInstances)
-  , _diRevision :: !(Maybe RevisionLocation)
-  , _diDescription :: !(Maybe Text)
-  , _diDeploymentStyle :: !(Maybe DeploymentStyle)
-  , _diCreateTime :: !(Maybe POSIX)
-  , _diAutoRollbackConfiguration :: !(Maybe AutoRollbackConfiguration)
-  , _diUpdateOutdatedInstancesOnly :: !(Maybe Bool)
-  , _diDeploymentGroupName :: !(Maybe Text)
-  , _diIgnoreApplicationStopFailures :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeploymentInfo =
+  DeploymentInfo'
+    { _diCreator :: !(Maybe DeploymentCreator)
+    , _diStatus :: !(Maybe DeploymentStatus)
+    , _diDeploymentId :: !(Maybe Text)
+    , _diDeploymentConfigName :: !(Maybe Text)
+    , _diComputePlatform :: !(Maybe ComputePlatform)
+    , _diPreviousRevision :: !(Maybe RevisionLocation)
+    , _diInstanceTerminationWaitTimeStarted :: !(Maybe Bool)
+    , _diDeploymentStatusMessages :: !(Maybe [Text])
+    , _diStartTime :: !(Maybe POSIX)
+    , _diCompleteTime :: !(Maybe POSIX)
+    , _diBlueGreenDeploymentConfiguration :: !(Maybe BlueGreenDeploymentConfiguration)
+    , _diErrorInformation :: !(Maybe ErrorInformation)
+    , _diLoadBalancerInfo :: !(Maybe LoadBalancerInfo)
+    , _diAdditionalDeploymentStatusInfo :: !(Maybe Text)
+    , _diDeploymentOverview :: !(Maybe DeploymentOverview)
+    , _diFileExistsBehavior :: !(Maybe FileExistsBehavior)
+    , _diApplicationName :: !(Maybe Text)
+    , _diRollbackInfo :: !(Maybe RollbackInfo)
+    , _diTargetInstances :: !(Maybe TargetInstances)
+    , _diRevision :: !(Maybe RevisionLocation)
+    , _diDescription :: !(Maybe Text)
+    , _diDeploymentStyle :: !(Maybe DeploymentStyle)
+    , _diCreateTime :: !(Maybe POSIX)
+    , _diAutoRollbackConfiguration :: !(Maybe AutoRollbackConfiguration)
+    , _diUpdateOutdatedInstancesOnly :: !(Maybe Bool)
+    , _diDeploymentGroupName :: !(Maybe Text)
+    , _diIgnoreApplicationStopFailures :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeploymentInfo' with the minimum fields required to make a request.
@@ -990,14 +1010,16 @@ instance NFData DeploymentInfo where
 --
 --
 -- /See:/ 'deploymentOverview' smart constructor.
-data DeploymentOverview = DeploymentOverview'
-  { _doPending    :: !(Maybe Integer)
-  , _doSkipped    :: !(Maybe Integer)
-  , _doInProgress :: !(Maybe Integer)
-  , _doSucceeded  :: !(Maybe Integer)
-  , _doReady      :: !(Maybe Integer)
-  , _doFailed     :: !(Maybe Integer)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeploymentOverview =
+  DeploymentOverview'
+    { _doPending    :: !(Maybe Integer)
+    , _doSkipped    :: !(Maybe Integer)
+    , _doInProgress :: !(Maybe Integer)
+    , _doSucceeded  :: !(Maybe Integer)
+    , _doReady      :: !(Maybe Integer)
+    , _doFailed     :: !(Maybe Integer)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeploymentOverview' with the minimum fields required to make a request.
@@ -1072,10 +1094,12 @@ instance NFData DeploymentOverview where
 --
 --
 -- /See:/ 'deploymentReadyOption' smart constructor.
-data DeploymentReadyOption = DeploymentReadyOption'
-  { _droActionOnTimeout   :: !(Maybe DeploymentReadyAction)
-  , _droWaitTimeInMinutes :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeploymentReadyOption =
+  DeploymentReadyOption'
+    { _droActionOnTimeout   :: !(Maybe DeploymentReadyAction)
+    , _droWaitTimeInMinutes :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeploymentReadyOption' with the minimum fields required to make a request.
@@ -1124,10 +1148,12 @@ instance ToJSON DeploymentReadyOption where
 --
 --
 -- /See:/ 'deploymentStyle' smart constructor.
-data DeploymentStyle = DeploymentStyle'
-  { _dsDeploymentOption :: !(Maybe DeploymentOption)
-  , _dsDeploymentType   :: !(Maybe DeploymentType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeploymentStyle =
+  DeploymentStyle'
+    { _dsDeploymentOption :: !(Maybe DeploymentOption)
+    , _dsDeploymentType   :: !(Maybe DeploymentType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeploymentStyle' with the minimum fields required to make a request.
@@ -1175,12 +1201,14 @@ instance ToJSON DeploymentStyle where
 --
 --
 -- /See:/ 'diagnostics' smart constructor.
-data Diagnostics = Diagnostics'
-  { _dLogTail    :: !(Maybe Text)
-  , _dErrorCode  :: !(Maybe LifecycleErrorCode)
-  , _dScriptName :: !(Maybe Text)
-  , _dMessage    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Diagnostics =
+  Diagnostics'
+    { _dLogTail    :: !(Maybe Text)
+    , _dErrorCode  :: !(Maybe LifecycleErrorCode)
+    , _dScriptName :: !(Maybe Text)
+    , _dMessage    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Diagnostics' with the minimum fields required to make a request.
@@ -1239,11 +1267,13 @@ instance NFData Diagnostics where
 --
 --
 -- /See:/ 'ec2TagFilter' smart constructor.
-data EC2TagFilter = EC2TagFilter'
-  { _etfValue :: !(Maybe Text)
-  , _etfKey   :: !(Maybe Text)
-  , _etfType  :: !(Maybe EC2TagFilterType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EC2TagFilter =
+  EC2TagFilter'
+    { _etfValue :: !(Maybe Text)
+    , _etfKey   :: !(Maybe Text)
+    , _etfType  :: !(Maybe EC2TagFilterType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EC2TagFilter' with the minimum fields required to make a request.
@@ -1296,9 +1326,11 @@ instance ToJSON EC2TagFilter where
 --
 --
 -- /See:/ 'ec2TagSet' smart constructor.
-newtype EC2TagSet = EC2TagSet'
-  { _etsEc2TagSetList :: Maybe [[EC2TagFilter]]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype EC2TagSet =
+  EC2TagSet'
+    { _etsEc2TagSetList :: Maybe [[EC2TagFilter]]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EC2TagSet' with the minimum fields required to make a request.
@@ -1336,9 +1368,11 @@ instance ToJSON EC2TagSet where
 --
 --
 -- /See:/ 'eLBInfo' smart constructor.
-newtype ELBInfo = ELBInfo'
-  { _elbiName :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ELBInfo =
+  ELBInfo'
+    { _elbiName :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ELBInfo' with the minimum fields required to make a request.
@@ -1373,10 +1407,12 @@ instance ToJSON ELBInfo where
 --
 --
 -- /See:/ 'errorInformation' smart constructor.
-data ErrorInformation = ErrorInformation'
-  { _eiCode    :: !(Maybe DeployErrorCode)
-  , _eiMessage :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ErrorInformation =
+  ErrorInformation'
+    { _eiCode    :: !(Maybe DeployErrorCode)
+    , _eiMessage :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ErrorInformation' with the minimum fields required to make a request.
@@ -1415,13 +1451,15 @@ instance NFData ErrorInformation where
 --
 --
 -- /See:/ 'genericRevisionInfo' smart constructor.
-data GenericRevisionInfo = GenericRevisionInfo'
-  { _griRegisterTime     :: !(Maybe POSIX)
-  , _griFirstUsedTime    :: !(Maybe POSIX)
-  , _griDeploymentGroups :: !(Maybe [Text])
-  , _griLastUsedTime     :: !(Maybe POSIX)
-  , _griDescription      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GenericRevisionInfo =
+  GenericRevisionInfo'
+    { _griRegisterTime     :: !(Maybe POSIX)
+    , _griFirstUsedTime    :: !(Maybe POSIX)
+    , _griDeploymentGroups :: !(Maybe [Text])
+    , _griLastUsedTime     :: !(Maybe POSIX)
+    , _griDescription      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GenericRevisionInfo' with the minimum fields required to make a request.
@@ -1488,10 +1526,12 @@ instance NFData GenericRevisionInfo where
 --
 --
 -- /See:/ 'gitHubLocation' smart constructor.
-data GitHubLocation = GitHubLocation'
-  { _ghlCommitId   :: !(Maybe Text)
-  , _ghlRepository :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GitHubLocation =
+  GitHubLocation'
+    { _ghlCommitId   :: !(Maybe Text)
+    , _ghlRepository :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GitHubLocation' with the minimum fields required to make a request.
@@ -1538,9 +1578,11 @@ instance ToJSON GitHubLocation where
 --
 --
 -- /See:/ 'greenFleetProvisioningOption' smart constructor.
-newtype GreenFleetProvisioningOption = GreenFleetProvisioningOption'
-  { _gfpoAction :: Maybe GreenFleetProvisioningAction
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GreenFleetProvisioningOption =
+  GreenFleetProvisioningOption'
+    { _gfpoAction :: Maybe GreenFleetProvisioningAction
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GreenFleetProvisioningOption' with the minimum fields required to make a request.
@@ -1577,15 +1619,17 @@ instance ToJSON GreenFleetProvisioningOption where
 --
 --
 -- /See:/ 'instanceInfo' smart constructor.
-data InstanceInfo = InstanceInfo'
-  { _iiRegisterTime   :: !(Maybe POSIX)
-  , _iiInstanceARN    :: !(Maybe Text)
-  , _iiDeregisterTime :: !(Maybe POSIX)
-  , _iiIamUserARN     :: !(Maybe Text)
-  , _iiInstanceName   :: !(Maybe Text)
-  , _iiIamSessionARN  :: !(Maybe Text)
-  , _iiTags           :: !(Maybe [Tag])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceInfo =
+  InstanceInfo'
+    { _iiRegisterTime   :: !(Maybe POSIX)
+    , _iiInstanceARN    :: !(Maybe Text)
+    , _iiDeregisterTime :: !(Maybe POSIX)
+    , _iiIamUserARN     :: !(Maybe Text)
+    , _iiInstanceName   :: !(Maybe Text)
+    , _iiIamSessionARN  :: !(Maybe Text)
+    , _iiTags           :: !(Maybe [Tag])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceInfo' with the minimum fields required to make a request.
@@ -1668,14 +1712,16 @@ instance NFData InstanceInfo where
 --
 --
 -- /See:/ 'instanceSummary' smart constructor.
-data InstanceSummary = InstanceSummary'
-  { _isInstanceId      :: !(Maybe Text)
-  , _isStatus          :: !(Maybe InstanceStatus)
-  , _isDeploymentId    :: !(Maybe Text)
-  , _isLastUpdatedAt   :: !(Maybe POSIX)
-  , _isLifecycleEvents :: !(Maybe [LifecycleEvent])
-  , _isInstanceType    :: !(Maybe InstanceType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceSummary =
+  InstanceSummary'
+    { _isInstanceId      :: !(Maybe Text)
+    , _isStatus          :: !(Maybe InstanceStatus)
+    , _isDeploymentId    :: !(Maybe Text)
+    , _isLastUpdatedAt   :: !(Maybe POSIX)
+    , _isLifecycleEvents :: !(Maybe [LifecycleEvent])
+    , _isInstanceType    :: !(Maybe InstanceType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceSummary' with the minimum fields required to make a request.
@@ -1750,12 +1796,14 @@ instance NFData InstanceSummary where
 --
 --
 -- /See:/ 'lastDeploymentInfo' smart constructor.
-data LastDeploymentInfo = LastDeploymentInfo'
-  { _ldiStatus       :: !(Maybe DeploymentStatus)
-  , _ldiDeploymentId :: !(Maybe Text)
-  , _ldiEndTime      :: !(Maybe POSIX)
-  , _ldiCreateTime   :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LastDeploymentInfo =
+  LastDeploymentInfo'
+    { _ldiStatus       :: !(Maybe DeploymentStatus)
+    , _ldiDeploymentId :: !(Maybe Text)
+    , _ldiEndTime      :: !(Maybe POSIX)
+    , _ldiCreateTime   :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LastDeploymentInfo' with the minimum fields required to make a request.
@@ -1814,13 +1862,15 @@ instance NFData LastDeploymentInfo where
 --
 --
 -- /See:/ 'lifecycleEvent' smart constructor.
-data LifecycleEvent = LifecycleEvent'
-  { _leStatus             :: !(Maybe LifecycleEventStatus)
-  , _leLifecycleEventName :: !(Maybe Text)
-  , _leStartTime          :: !(Maybe POSIX)
-  , _leDiagnostics        :: !(Maybe Diagnostics)
-  , _leEndTime            :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LifecycleEvent =
+  LifecycleEvent'
+    { _leStatus             :: !(Maybe LifecycleEventStatus)
+    , _leLifecycleEventName :: !(Maybe Text)
+    , _leStartTime          :: !(Maybe POSIX)
+    , _leDiagnostics        :: !(Maybe Diagnostics)
+    , _leEndTime            :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LifecycleEvent' with the minimum fields required to make a request.
@@ -1887,10 +1937,12 @@ instance NFData LifecycleEvent where
 --
 --
 -- /See:/ 'loadBalancerInfo' smart constructor.
-data LoadBalancerInfo = LoadBalancerInfo'
-  { _lbiElbInfoList         :: !(Maybe [ELBInfo])
-  , _lbiTargetGroupInfoList :: !(Maybe [TargetGroupInfo])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LoadBalancerInfo =
+  LoadBalancerInfo'
+    { _lbiElbInfoList         :: !(Maybe [ELBInfo])
+    , _lbiTargetGroupInfoList :: !(Maybe [TargetGroupInfo])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LoadBalancerInfo' with the minimum fields required to make a request.
@@ -1940,10 +1992,12 @@ instance ToJSON LoadBalancerInfo where
 --
 --
 -- /See:/ 'minimumHealthyHosts' smart constructor.
-data MinimumHealthyHosts = MinimumHealthyHosts'
-  { _mhhValue :: !(Maybe Int)
-  , _mhhType  :: !(Maybe MinimumHealthyHostsType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MinimumHealthyHosts =
+  MinimumHealthyHosts'
+    { _mhhValue :: !(Maybe Int)
+    , _mhhType  :: !(Maybe MinimumHealthyHostsType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MinimumHealthyHosts' with the minimum fields required to make a request.
@@ -1990,9 +2044,11 @@ instance ToJSON MinimumHealthyHosts where
 --
 --
 -- /See:/ 'onPremisesTagSet' smart constructor.
-newtype OnPremisesTagSet = OnPremisesTagSet'
-  { _optsOnPremisesTagSetList :: Maybe [[TagFilter]]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype OnPremisesTagSet =
+  OnPremisesTagSet'
+    { _optsOnPremisesTagSetList :: Maybe [[TagFilter]]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OnPremisesTagSet' with the minimum fields required to make a request.
@@ -2032,10 +2088,12 @@ instance ToJSON OnPremisesTagSet where
 --
 --
 -- /See:/ 'rawString' smart constructor.
-data RawString = RawString'
-  { _rsContent :: !(Maybe Text)
-  , _rsSha256  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RawString =
+  RawString'
+    { _rsContent :: !(Maybe Text)
+    , _rsSha256  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RawString' with the minimum fields required to make a request.
@@ -2081,10 +2139,12 @@ instance ToJSON RawString where
 --
 --
 -- /See:/ 'revisionInfo' smart constructor.
-data RevisionInfo = RevisionInfo'
-  { _riGenericRevisionInfo :: !(Maybe GenericRevisionInfo)
-  , _riRevisionLocation    :: !(Maybe RevisionLocation)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RevisionInfo =
+  RevisionInfo'
+    { _riGenericRevisionInfo :: !(Maybe GenericRevisionInfo)
+    , _riRevisionLocation    :: !(Maybe RevisionLocation)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RevisionInfo' with the minimum fields required to make a request.
@@ -2126,12 +2186,14 @@ instance NFData RevisionInfo where
 --
 --
 -- /See:/ 'revisionLocation' smart constructor.
-data RevisionLocation = RevisionLocation'
-  { _rlString         :: !(Maybe RawString)
-  , _rlRevisionType   :: !(Maybe RevisionLocationType)
-  , _rlS3Location     :: !(Maybe S3Location)
-  , _rlGitHubLocation :: !(Maybe GitHubLocation)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RevisionLocation =
+  RevisionLocation'
+    { _rlString         :: !(Maybe RawString)
+    , _rlRevisionType   :: !(Maybe RevisionLocationType)
+    , _rlS3Location     :: !(Maybe S3Location)
+    , _rlGitHubLocation :: !(Maybe GitHubLocation)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RevisionLocation' with the minimum fields required to make a request.
@@ -2199,11 +2261,13 @@ instance ToJSON RevisionLocation where
 --
 --
 -- /See:/ 'rollbackInfo' smart constructor.
-data RollbackInfo = RollbackInfo'
-  { _riRollbackTriggeringDeploymentId :: !(Maybe Text)
-  , _riRollbackMessage                :: !(Maybe Text)
-  , _riRollbackDeploymentId           :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RollbackInfo =
+  RollbackInfo'
+    { _riRollbackTriggeringDeploymentId :: !(Maybe Text)
+    , _riRollbackMessage                :: !(Maybe Text)
+    , _riRollbackDeploymentId           :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RollbackInfo' with the minimum fields required to make a request.
@@ -2255,13 +2319,15 @@ instance NFData RollbackInfo where
 --
 --
 -- /See:/ 's3Location' smart constructor.
-data S3Location = S3Location'
-  { _slBundleType :: !(Maybe BundleType)
-  , _slETag       :: !(Maybe Text)
-  , _slBucket     :: !(Maybe Text)
-  , _slKey        :: !(Maybe Text)
-  , _slVersion    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data S3Location =
+  S3Location'
+    { _slBundleType :: !(Maybe BundleType)
+    , _slETag       :: !(Maybe Text)
+    , _slBucket     :: !(Maybe Text)
+    , _slKey        :: !(Maybe Text)
+    , _slVersion    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'S3Location' with the minimum fields required to make a request.
@@ -2337,10 +2403,12 @@ instance ToJSON S3Location where
 --
 --
 -- /See:/ 'tag' smart constructor.
-data Tag = Tag'
-  { _tagValue :: !(Maybe Text)
-  , _tagKey   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Tag =
+  Tag'
+    { _tagValue :: !(Maybe Text)
+    , _tagKey   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Tag' with the minimum fields required to make a request.
@@ -2383,11 +2451,13 @@ instance ToJSON Tag where
 --
 --
 -- /See:/ 'tagFilter' smart constructor.
-data TagFilter = TagFilter'
-  { _tfValue :: !(Maybe Text)
-  , _tfKey   :: !(Maybe Text)
-  , _tfType  :: !(Maybe TagFilterType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TagFilter =
+  TagFilter'
+    { _tfValue :: !(Maybe Text)
+    , _tfKey   :: !(Maybe Text)
+    , _tfType  :: !(Maybe TagFilterType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TagFilter' with the minimum fields required to make a request.
@@ -2439,9 +2509,11 @@ instance ToJSON TagFilter where
 --
 --
 -- /See:/ 'targetGroupInfo' smart constructor.
-newtype TargetGroupInfo = TargetGroupInfo'
-  { _tgiName :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype TargetGroupInfo =
+  TargetGroupInfo'
+    { _tgiName :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TargetGroupInfo' with the minimum fields required to make a request.
@@ -2476,11 +2548,13 @@ instance ToJSON TargetGroupInfo where
 --
 --
 -- /See:/ 'targetInstances' smart constructor.
-data TargetInstances = TargetInstances'
-  { _tiEc2TagSet         :: !(Maybe EC2TagSet)
-  , _tiTagFilters        :: !(Maybe [EC2TagFilter])
-  , _tiAutoScalingGroups :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TargetInstances =
+  TargetInstances'
+    { _tiEc2TagSet         :: !(Maybe EC2TagSet)
+    , _tiTagFilters        :: !(Maybe [EC2TagFilter])
+    , _tiAutoScalingGroups :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TargetInstances' with the minimum fields required to make a request.
@@ -2540,10 +2614,12 @@ instance ToJSON TargetInstances where
 --
 --
 -- /See:/ 'timeBasedCanary' smart constructor.
-data TimeBasedCanary = TimeBasedCanary'
-  { _tbcCanaryInterval   :: !(Maybe Int)
-  , _tbcCanaryPercentage :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TimeBasedCanary =
+  TimeBasedCanary'
+    { _tbcCanaryInterval   :: !(Maybe Int)
+    , _tbcCanaryPercentage :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TimeBasedCanary' with the minimum fields required to make a request.
@@ -2592,10 +2668,12 @@ instance ToJSON TimeBasedCanary where
 --
 --
 -- /See:/ 'timeBasedLinear' smart constructor.
-data TimeBasedLinear = TimeBasedLinear'
-  { _tblLinearInterval   :: !(Maybe Int)
-  , _tblLinearPercentage :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TimeBasedLinear =
+  TimeBasedLinear'
+    { _tblLinearInterval   :: !(Maybe Int)
+    , _tblLinearPercentage :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TimeBasedLinear' with the minimum fields required to make a request.
@@ -2644,10 +2722,12 @@ instance ToJSON TimeBasedLinear where
 --
 --
 -- /See:/ 'timeRange' smart constructor.
-data TimeRange = TimeRange'
-  { _trStart :: !(Maybe POSIX)
-  , _trEnd   :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TimeRange =
+  TimeRange'
+    { _trStart :: !(Maybe POSIX)
+    , _trEnd   :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TimeRange' with the minimum fields required to make a request.
@@ -2685,11 +2765,13 @@ instance ToJSON TimeRange where
 --
 --
 -- /See:/ 'trafficRoutingConfig' smart constructor.
-data TrafficRoutingConfig = TrafficRoutingConfig'
-  { _trcTimeBasedCanary :: !(Maybe TimeBasedCanary)
-  , _trcTimeBasedLinear :: !(Maybe TimeBasedLinear)
-  , _trcType            :: !(Maybe TrafficRoutingType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TrafficRoutingConfig =
+  TrafficRoutingConfig'
+    { _trcTimeBasedCanary :: !(Maybe TimeBasedCanary)
+    , _trcTimeBasedLinear :: !(Maybe TimeBasedLinear)
+    , _trcType            :: !(Maybe TrafficRoutingType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TrafficRoutingConfig' with the minimum fields required to make a request.
@@ -2749,11 +2831,13 @@ instance ToJSON TrafficRoutingConfig where
 --
 --
 -- /See:/ 'triggerConfig' smart constructor.
-data TriggerConfig = TriggerConfig'
-  { _tcTriggerName      :: !(Maybe Text)
-  , _tcTriggerEvents    :: !(Maybe [TriggerEventType])
-  , _tcTriggerTargetARN :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TriggerConfig =
+  TriggerConfig'
+    { _tcTriggerName      :: !(Maybe Text)
+    , _tcTriggerEvents    :: !(Maybe [TriggerEventType])
+    , _tcTriggerTargetARN :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TriggerConfig' with the minimum fields required to make a request.

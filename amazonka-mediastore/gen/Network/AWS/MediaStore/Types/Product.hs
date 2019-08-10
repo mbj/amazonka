@@ -26,13 +26,15 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'corsRule' smart constructor.
-data CORSRule = CORSRule'
-  { _crAllowedMethods :: !(Maybe [MethodName])
-  , _crMaxAgeSeconds  :: !(Maybe Nat)
-  , _crAllowedHeaders :: !(Maybe [Text])
-  , _crAllowedOrigins :: !(Maybe [Text])
-  , _crExposeHeaders  :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CORSRule =
+  CORSRule'
+    { _crAllowedMethods :: !(Maybe [MethodName])
+    , _crMaxAgeSeconds  :: !(Maybe Nat)
+    , _crAllowedHeaders :: !(Maybe [Text])
+    , _crAllowedOrigins :: !(Maybe [Text])
+    , _crExposeHeaders  :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CORSRule' with the minimum fields required to make a request.
@@ -110,13 +112,15 @@ instance ToJSON CORSRule where
 --
 --
 -- /See:/ 'container' smart constructor.
-data Container = Container'
-  { _cCreationTime :: !(Maybe POSIX)
-  , _cStatus       :: !(Maybe ContainerStatus)
-  , _cARN          :: !(Maybe Text)
-  , _cName         :: !(Maybe Text)
-  , _cEndpoint     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Container =
+  Container'
+    { _cCreationTime :: !(Maybe POSIX)
+    , _cStatus       :: !(Maybe ContainerStatus)
+    , _cARN          :: !(Maybe Text)
+    , _cName         :: !(Maybe Text)
+    , _cEndpoint     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Container' with the minimum fields required to make a request.

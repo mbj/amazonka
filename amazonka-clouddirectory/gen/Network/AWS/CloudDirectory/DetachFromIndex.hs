@@ -47,11 +47,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'detachFromIndex' smart constructor.
-data DetachFromIndex = DetachFromIndex'
-  { _dfiDirectoryARN    :: !Text
-  , _dfiIndexReference  :: !ObjectReference
-  , _dfiTargetReference :: !ObjectReference
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DetachFromIndex =
+  DetachFromIndex'
+    { _dfiDirectoryARN    :: !Text
+    , _dfiIndexReference  :: !ObjectReference
+    , _dfiTargetReference :: !ObjectReference
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DetachFromIndex' with the minimum fields required to make a request.
@@ -123,10 +125,12 @@ instance ToQuery DetachFromIndex where
         toQuery = const mempty
 
 -- | /See:/ 'detachFromIndexResponse' smart constructor.
-data DetachFromIndexResponse = DetachFromIndexResponse'
-  { _dfirsDetachedObjectIdentifier :: !(Maybe Text)
-  , _dfirsResponseStatus           :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DetachFromIndexResponse =
+  DetachFromIndexResponse'
+    { _dfirsDetachedObjectIdentifier :: !(Maybe Text)
+    , _dfirsResponseStatus           :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DetachFromIndexResponse' with the minimum fields required to make a request.

@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'assignVolume' smart constructor.
-data AssignVolume = AssignVolume'
-  { _avInstanceId :: !(Maybe Text)
-  , _avVolumeId   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssignVolume =
+  AssignVolume'
+    { _avInstanceId :: !(Maybe Text)
+    , _avVolumeId   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssignVolume' with the minimum fields required to make a request.

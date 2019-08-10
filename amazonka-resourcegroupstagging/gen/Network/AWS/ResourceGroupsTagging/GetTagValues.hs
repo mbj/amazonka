@@ -50,10 +50,12 @@ import Network.AWS.ResourceGroupsTagging.Types.Product
 import Network.AWS.Response
 
 -- | /See:/ 'getTagValues' smart constructor.
-data GetTagValues = GetTagValues'
-  { _gtvPaginationToken :: !(Maybe Text)
-  , _gtvKey             :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetTagValues =
+  GetTagValues'
+    { _gtvPaginationToken :: !(Maybe Text)
+    , _gtvKey             :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetTagValues' with the minimum fields required to make a request.
@@ -125,11 +127,13 @@ instance ToQuery GetTagValues where
         toQuery = const mempty
 
 -- | /See:/ 'getTagValuesResponse' smart constructor.
-data GetTagValuesResponse = GetTagValuesResponse'
-  { _gtvrsPaginationToken :: !(Maybe Text)
-  , _gtvrsTagValues       :: !(Maybe [Text])
-  , _gtvrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetTagValuesResponse =
+  GetTagValuesResponse'
+    { _gtvrsPaginationToken :: !(Maybe Text)
+    , _gtvrsTagValues       :: !(Maybe [Text])
+    , _gtvrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetTagValuesResponse' with the minimum fields required to make a request.

@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'detachElasticLoadBalancer' smart constructor.
-data DetachElasticLoadBalancer = DetachElasticLoadBalancer'
-  { _delbElasticLoadBalancerName :: !Text
-  , _delbLayerId                 :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DetachElasticLoadBalancer =
+  DetachElasticLoadBalancer'
+    { _delbElasticLoadBalancerName :: !Text
+    , _delbLayerId                 :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DetachElasticLoadBalancer' with the minimum fields required to make a request.

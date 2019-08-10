@@ -54,14 +54,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listObjectAttributes' smart constructor.
-data ListObjectAttributes = ListObjectAttributes'
-  { _loaFacetFilter      :: !(Maybe SchemaFacet)
-  , _loaConsistencyLevel :: !(Maybe ConsistencyLevel)
-  , _loaNextToken        :: !(Maybe Text)
-  , _loaMaxResults       :: !(Maybe Nat)
-  , _loaDirectoryARN     :: !Text
-  , _loaObjectReference  :: !ObjectReference
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListObjectAttributes =
+  ListObjectAttributes'
+    { _loaFacetFilter      :: !(Maybe SchemaFacet)
+    , _loaConsistencyLevel :: !(Maybe ConsistencyLevel)
+    , _loaNextToken        :: !(Maybe Text)
+    , _loaMaxResults       :: !(Maybe Nat)
+    , _loaDirectoryARN     :: !Text
+    , _loaObjectReference  :: !ObjectReference
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListObjectAttributes' with the minimum fields required to make a request.
@@ -165,11 +167,13 @@ instance ToQuery ListObjectAttributes where
         toQuery = const mempty
 
 -- | /See:/ 'listObjectAttributesResponse' smart constructor.
-data ListObjectAttributesResponse = ListObjectAttributesResponse'
-  { _loarsNextToken      :: !(Maybe Text)
-  , _loarsAttributes     :: !(Maybe [AttributeKeyAndValue])
-  , _loarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListObjectAttributesResponse =
+  ListObjectAttributesResponse'
+    { _loarsNextToken      :: !(Maybe Text)
+    , _loarsAttributes     :: !(Maybe [AttributeKeyAndValue])
+    , _loarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListObjectAttributesResponse' with the minimum fields required to make a request.

@@ -49,9 +49,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getGroup' smart constructor.
-newtype GetGroup = GetGroup'
-  { _ggGroupId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetGroup =
+  GetGroup'
+    { _ggGroupId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetGroup' with the minimum fields required to make a request.
@@ -103,16 +105,18 @@ instance ToQuery GetGroup where
         toQuery = const mempty
 
 -- | /See:/ 'getGroupResponse' smart constructor.
-data GetGroupResponse = GetGroupResponse'
-  { _ggrsLatestVersionARN     :: !(Maybe Text)
-  , _ggrsARN                  :: !(Maybe Text)
-  , _ggrsName                 :: !(Maybe Text)
-  , _ggrsCreationTimestamp    :: !(Maybe Text)
-  , _ggrsId                   :: !(Maybe Text)
-  , _ggrsLatestVersion        :: !(Maybe Text)
-  , _ggrsLastUpdatedTimestamp :: !(Maybe Text)
-  , _ggrsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetGroupResponse =
+  GetGroupResponse'
+    { _ggrsLatestVersionARN     :: !(Maybe Text)
+    , _ggrsARN                  :: !(Maybe Text)
+    , _ggrsName                 :: !(Maybe Text)
+    , _ggrsCreationTimestamp    :: !(Maybe Text)
+    , _ggrsId                   :: !(Maybe Text)
+    , _ggrsLatestVersion        :: !(Maybe Text)
+    , _ggrsLastUpdatedTimestamp :: !(Maybe Text)
+    , _ggrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetGroupResponse' with the minimum fields required to make a request.

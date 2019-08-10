@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteAnalysisScheme' smart constructor.
-data DeleteAnalysisScheme = DeleteAnalysisScheme'
-  { _dasDomainName         :: !Text
-  , _dasAnalysisSchemeName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteAnalysisScheme =
+  DeleteAnalysisScheme'
+    { _dasDomainName         :: !Text
+    , _dasAnalysisSchemeName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteAnalysisScheme' with the minimum fields required to make a request.
@@ -115,10 +117,12 @@ instance ToQuery DeleteAnalysisScheme where
 --
 --
 -- /See:/ 'deleteAnalysisSchemeResponse' smart constructor.
-data DeleteAnalysisSchemeResponse = DeleteAnalysisSchemeResponse'
-  { _dasarsResponseStatus :: !Int
-  , _dasarsAnalysisScheme :: !AnalysisSchemeStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteAnalysisSchemeResponse =
+  DeleteAnalysisSchemeResponse'
+    { _dasarsResponseStatus :: !Int
+    , _dasarsAnalysisScheme :: !AnalysisSchemeStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteAnalysisSchemeResponse' with the minimum fields required to make a request.

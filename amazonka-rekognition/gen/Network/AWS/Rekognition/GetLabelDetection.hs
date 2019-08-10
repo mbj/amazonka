@@ -60,12 +60,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getLabelDetection' smart constructor.
-data GetLabelDetection = GetLabelDetection'
-  { _gldNextToken  :: !(Maybe Text)
-  , _gldMaxResults :: !(Maybe Nat)
-  , _gldSortBy     :: !(Maybe LabelDetectionSortBy)
-  , _gldJobId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetLabelDetection =
+  GetLabelDetection'
+    { _gldNextToken  :: !(Maybe Text)
+    , _gldMaxResults :: !(Maybe Nat)
+    , _gldSortBy     :: !(Maybe LabelDetectionSortBy)
+    , _gldJobId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetLabelDetection' with the minimum fields required to make a request.
@@ -150,14 +152,16 @@ instance ToQuery GetLabelDetection where
         toQuery = const mempty
 
 -- | /See:/ 'getLabelDetectionResponse' smart constructor.
-data GetLabelDetectionResponse = GetLabelDetectionResponse'
-  { _gldrsNextToken      :: !(Maybe Text)
-  , _gldrsVideoMetadata  :: !(Maybe VideoMetadata)
-  , _gldrsStatusMessage  :: !(Maybe Text)
-  , _gldrsLabels         :: !(Maybe [LabelDetection])
-  , _gldrsJobStatus      :: !(Maybe VideoJobStatus)
-  , _gldrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetLabelDetectionResponse =
+  GetLabelDetectionResponse'
+    { _gldrsNextToken      :: !(Maybe Text)
+    , _gldrsVideoMetadata  :: !(Maybe VideoMetadata)
+    , _gldrsStatusMessage  :: !(Maybe Text)
+    , _gldrsLabels         :: !(Maybe [LabelDetection])
+    , _gldrsJobStatus      :: !(Maybe VideoJobStatus)
+    , _gldrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetLabelDetectionResponse' with the minimum fields required to make a request.

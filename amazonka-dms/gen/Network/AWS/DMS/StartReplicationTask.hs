@@ -55,13 +55,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'startReplicationTask' smart constructor.
-data StartReplicationTask = StartReplicationTask'
-  { _srtCdcStartPosition         :: !(Maybe Text)
-  , _srtCdcStopPosition          :: !(Maybe Text)
-  , _srtCdcStartTime             :: !(Maybe POSIX)
-  , _srtReplicationTaskARN       :: !Text
-  , _srtStartReplicationTaskType :: !StartReplicationTaskTypeValue
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartReplicationTask =
+  StartReplicationTask'
+    { _srtCdcStartPosition         :: !(Maybe Text)
+    , _srtCdcStopPosition          :: !(Maybe Text)
+    , _srtCdcStartTime             :: !(Maybe POSIX)
+    , _srtReplicationTaskARN       :: !Text
+    , _srtStartReplicationTaskType :: !StartReplicationTaskTypeValue
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartReplicationTask' with the minimum fields required to make a request.
@@ -159,10 +161,12 @@ instance ToQuery StartReplicationTask where
 --
 --
 -- /See:/ 'startReplicationTaskResponse' smart constructor.
-data StartReplicationTaskResponse = StartReplicationTaskResponse'
-  { _srtrsReplicationTask :: !(Maybe ReplicationTask)
-  , _srtrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartReplicationTaskResponse =
+  StartReplicationTaskResponse'
+    { _srtrsReplicationTask :: !(Maybe ReplicationTask)
+    , _srtrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartReplicationTaskResponse' with the minimum fields required to make a request.

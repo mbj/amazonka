@@ -85,12 +85,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeScalingPolicies' smart constructor.
-data DescribeScalingPolicies = DescribeScalingPolicies'
-  { _dNextToken    :: !(Maybe Text)
-  , _dStatusFilter :: !(Maybe ScalingStatusType)
-  , _dLimit        :: !(Maybe Nat)
-  , _dFleetId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeScalingPolicies =
+  DescribeScalingPolicies'
+    { _dNextToken    :: !(Maybe Text)
+    , _dStatusFilter :: !(Maybe ScalingStatusType)
+    , _dLimit        :: !(Maybe Nat)
+    , _dFleetId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeScalingPolicies' with the minimum fields required to make a request.
@@ -177,11 +179,13 @@ instance ToQuery DescribeScalingPolicies where
 --
 --
 -- /See:/ 'describeScalingPoliciesResponse' smart constructor.
-data DescribeScalingPoliciesResponse = DescribeScalingPoliciesResponse'
-  { _dsprsNextToken       :: !(Maybe Text)
-  , _dsprsScalingPolicies :: !(Maybe [ScalingPolicy])
-  , _dsprsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeScalingPoliciesResponse =
+  DescribeScalingPoliciesResponse'
+    { _dsprsNextToken       :: !(Maybe Text)
+    , _dsprsScalingPolicies :: !(Maybe [ScalingPolicy])
+    , _dsprsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeScalingPoliciesResponse' with the minimum fields required to make a request.

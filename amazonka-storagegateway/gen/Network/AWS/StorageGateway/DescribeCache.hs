@@ -53,9 +53,11 @@ import Network.AWS.StorageGateway.Types
 import Network.AWS.StorageGateway.Types.Product
 
 -- | /See:/ 'describeCache' smart constructor.
-newtype DescribeCache = DescribeCache'
-  { _dcGatewayARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeCache =
+  DescribeCache'
+    { _dcGatewayARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeCache' with the minimum fields required to make a request.
@@ -114,16 +116,18 @@ instance ToQuery DescribeCache where
         toQuery = const mempty
 
 -- | /See:/ 'describeCacheResponse' smart constructor.
-data DescribeCacheResponse = DescribeCacheResponse'
-  { _dcrsGatewayARN            :: !(Maybe Text)
-  , _dcrsDiskIds               :: !(Maybe [Text])
-  , _dcrsCacheUsedPercentage   :: !(Maybe Double)
-  , _dcrsCacheHitPercentage    :: !(Maybe Double)
-  , _dcrsCacheMissPercentage   :: !(Maybe Double)
-  , _dcrsCacheAllocatedInBytes :: !(Maybe Integer)
-  , _dcrsCacheDirtyPercentage  :: !(Maybe Double)
-  , _dcrsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeCacheResponse =
+  DescribeCacheResponse'
+    { _dcrsGatewayARN            :: !(Maybe Text)
+    , _dcrsDiskIds               :: !(Maybe [Text])
+    , _dcrsCacheUsedPercentage   :: !(Maybe Double)
+    , _dcrsCacheHitPercentage    :: !(Maybe Double)
+    , _dcrsCacheMissPercentage   :: !(Maybe Double)
+    , _dcrsCacheAllocatedInBytes :: !(Maybe Integer)
+    , _dcrsCacheDirtyPercentage  :: !(Maybe Double)
+    , _dcrsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeCacheResponse' with the minimum fields required to make a request.

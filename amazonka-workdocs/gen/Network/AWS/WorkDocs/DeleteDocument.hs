@@ -43,10 +43,12 @@ import Network.AWS.WorkDocs.Types
 import Network.AWS.WorkDocs.Types.Product
 
 -- | /See:/ 'deleteDocument' smart constructor.
-data DeleteDocument = DeleteDocument'
-  { _ddAuthenticationToken :: !(Maybe (Sensitive Text))
-  , _ddDocumentId          :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data DeleteDocument =
+  DeleteDocument'
+    { _ddAuthenticationToken :: !(Maybe (Sensitive Text))
+    , _ddDocumentId          :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteDocument' with the minimum fields required to make a request.

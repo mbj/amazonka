@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateHITTypeOfHIT' smart constructor.
-data UpdateHITTypeOfHIT = UpdateHITTypeOfHIT'
-  { _uhittohitHITId     :: !Text
-  , _uhittohitHITTypeId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateHITTypeOfHIT =
+  UpdateHITTypeOfHIT'
+    { _uhittohitHITId     :: !Text
+    , _uhittohitHITTypeId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateHITTypeOfHIT' with the minimum fields required to make a request.
@@ -112,9 +114,11 @@ instance ToQuery UpdateHITTypeOfHIT where
         toQuery = const mempty
 
 -- | /See:/ 'updateHITTypeOfHITResponse' smart constructor.
-newtype UpdateHITTypeOfHITResponse = UpdateHITTypeOfHITResponse'
-  { _uhittohitrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateHITTypeOfHITResponse =
+  UpdateHITTypeOfHITResponse'
+    { _uhittohitrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateHITTypeOfHITResponse' with the minimum fields required to make a request.

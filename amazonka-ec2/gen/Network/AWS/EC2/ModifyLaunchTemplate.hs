@@ -49,13 +49,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'modifyLaunchTemplate' smart constructor.
-data ModifyLaunchTemplate = ModifyLaunchTemplate'
-  { _mltLaunchTemplateName :: !(Maybe Text)
-  , _mltClientToken        :: !(Maybe Text)
-  , _mltLaunchTemplateId   :: !(Maybe Text)
-  , _mltDefaultVersion     :: !(Maybe Text)
-  , _mltDryRun             :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyLaunchTemplate =
+  ModifyLaunchTemplate'
+    { _mltLaunchTemplateName :: !(Maybe Text)
+    , _mltClientToken        :: !(Maybe Text)
+    , _mltLaunchTemplateId   :: !(Maybe Text)
+    , _mltDefaultVersion     :: !(Maybe Text)
+    , _mltDryRun             :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyLaunchTemplate' with the minimum fields required to make a request.
@@ -135,10 +137,12 @@ instance ToQuery ModifyLaunchTemplate where
                "DryRun" =: _mltDryRun]
 
 -- | /See:/ 'modifyLaunchTemplateResponse' smart constructor.
-data ModifyLaunchTemplateResponse = ModifyLaunchTemplateResponse'
-  { _mltrsLaunchTemplate :: !(Maybe LaunchTemplate)
-  , _mltrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyLaunchTemplateResponse =
+  ModifyLaunchTemplateResponse'
+    { _mltrsLaunchTemplate :: !(Maybe LaunchTemplate)
+    , _mltrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyLaunchTemplateResponse' with the minimum fields required to make a request.

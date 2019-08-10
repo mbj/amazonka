@@ -50,9 +50,11 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'deleteCustomVerificationEmailTemplate' smart constructor.
-newtype DeleteCustomVerificationEmailTemplate = DeleteCustomVerificationEmailTemplate'
-  { _dcvetTemplateName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteCustomVerificationEmailTemplate =
+  DeleteCustomVerificationEmailTemplate'
+    { _dcvetTemplateName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteCustomVerificationEmailTemplate' with the minimum fields required to make a request.

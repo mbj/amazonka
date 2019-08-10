@@ -49,9 +49,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getInstanceSnapshots' smart constructor.
-newtype GetInstanceSnapshots = GetInstanceSnapshots'
-  { _gisPageToken :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetInstanceSnapshots =
+  GetInstanceSnapshots'
+    { _gisPageToken :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetInstanceSnapshots' with the minimum fields required to make a request.
@@ -113,11 +115,13 @@ instance ToQuery GetInstanceSnapshots where
         toQuery = const mempty
 
 -- | /See:/ 'getInstanceSnapshotsResponse' smart constructor.
-data GetInstanceSnapshotsResponse = GetInstanceSnapshotsResponse'
-  { _gissrsNextPageToken     :: !(Maybe Text)
-  , _gissrsInstanceSnapshots :: !(Maybe [InstanceSnapshot])
-  , _gissrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetInstanceSnapshotsResponse =
+  GetInstanceSnapshotsResponse'
+    { _gissrsNextPageToken     :: !(Maybe Text)
+    , _gissrsInstanceSnapshots :: !(Maybe [InstanceSnapshot])
+    , _gissrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetInstanceSnapshotsResponse' with the minimum fields required to make a request.

@@ -67,27 +67,29 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createUserPool' smart constructor.
-data CreateUserPool = CreateUserPool'
-  { _cupUserPoolTags                :: !(Maybe (Map Text Text))
-  , _cupVerificationMessageTemplate :: !(Maybe VerificationMessageTemplateType)
-  , _cupEmailVerificationMessage    :: !(Maybe Text)
-  , _cupSmsAuthenticationMessage    :: !(Maybe Text)
-  , _cupUserPoolAddOns              :: !(Maybe UserPoolAddOnsType)
-  , _cupEmailVerificationSubject    :: !(Maybe Text)
-  , _cupUsernameAttributes          :: !(Maybe [UsernameAttributeType])
-  , _cupAliasAttributes             :: !(Maybe [AliasAttributeType])
-  , _cupSchema                      :: !(Maybe (List1 SchemaAttributeType))
-  , _cupEmailConfiguration          :: !(Maybe EmailConfigurationType)
-  , _cupSmsVerificationMessage      :: !(Maybe Text)
-  , _cupMFAConfiguration            :: !(Maybe UserPoolMFAType)
-  , _cupLambdaConfig                :: !(Maybe LambdaConfigType)
-  , _cupSmsConfiguration            :: !(Maybe SmsConfigurationType)
-  , _cupAdminCreateUserConfig       :: !(Maybe AdminCreateUserConfigType)
-  , _cupDeviceConfiguration         :: !(Maybe DeviceConfigurationType)
-  , _cupAutoVerifiedAttributes      :: !(Maybe [VerifiedAttributeType])
-  , _cupPolicies                    :: !(Maybe UserPoolPolicyType)
-  , _cupPoolName                    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateUserPool =
+  CreateUserPool'
+    { _cupUserPoolTags :: !(Maybe (Map Text Text))
+    , _cupVerificationMessageTemplate :: !(Maybe VerificationMessageTemplateType)
+    , _cupEmailVerificationMessage :: !(Maybe Text)
+    , _cupSmsAuthenticationMessage :: !(Maybe Text)
+    , _cupUserPoolAddOns :: !(Maybe UserPoolAddOnsType)
+    , _cupEmailVerificationSubject :: !(Maybe Text)
+    , _cupUsernameAttributes :: !(Maybe [UsernameAttributeType])
+    , _cupAliasAttributes :: !(Maybe [AliasAttributeType])
+    , _cupSchema :: !(Maybe (List1 SchemaAttributeType))
+    , _cupEmailConfiguration :: !(Maybe EmailConfigurationType)
+    , _cupSmsVerificationMessage :: !(Maybe Text)
+    , _cupMFAConfiguration :: !(Maybe UserPoolMFAType)
+    , _cupLambdaConfig :: !(Maybe LambdaConfigType)
+    , _cupSmsConfiguration :: !(Maybe SmsConfigurationType)
+    , _cupAdminCreateUserConfig :: !(Maybe AdminCreateUserConfigType)
+    , _cupDeviceConfiguration :: !(Maybe DeviceConfigurationType)
+    , _cupAutoVerifiedAttributes :: !(Maybe [VerifiedAttributeType])
+    , _cupPolicies :: !(Maybe UserPoolPolicyType)
+    , _cupPoolName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateUserPool' with the minimum fields required to make a request.
@@ -300,10 +302,12 @@ instance ToQuery CreateUserPool where
 --
 --
 -- /See:/ 'createUserPoolResponse' smart constructor.
-data CreateUserPoolResponse = CreateUserPoolResponse'
-  { _cuprsUserPool       :: !(Maybe UserPoolType)
-  , _cuprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateUserPoolResponse =
+  CreateUserPoolResponse'
+    { _cuprsUserPool       :: !(Maybe UserPoolType)
+    , _cuprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateUserPoolResponse' with the minimum fields required to make a request.

@@ -42,9 +42,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createDatasetContent' smart constructor.
-newtype CreateDatasetContent = CreateDatasetContent'
-  { _cdcDatasetName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateDatasetContent =
+  CreateDatasetContent'
+    { _cdcDatasetName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDatasetContent' with the minimum fields required to make a request.

@@ -49,10 +49,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeNodeAssociationStatus' smart constructor.
-data DescribeNodeAssociationStatus = DescribeNodeAssociationStatus'
-  { _dnasNodeAssociationStatusToken :: !Text
-  , _dnasServerName                 :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeNodeAssociationStatus =
+  DescribeNodeAssociationStatus'
+    { _dnasNodeAssociationStatusToken :: !Text
+    , _dnasServerName                 :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeNodeAssociationStatus' with the minimum fields required to make a request.
@@ -125,11 +127,13 @@ instance ToQuery DescribeNodeAssociationStatus where
         toQuery = const mempty
 
 -- | /See:/ 'describeNodeAssociationStatusResponse' smart constructor.
-data DescribeNodeAssociationStatusResponse = DescribeNodeAssociationStatusResponse'
-  { _dnasrsEngineAttributes      :: !(Maybe [EngineAttribute])
-  , _dnasrsResponseStatus        :: !Int
-  , _dnasrsNodeAssociationStatus :: !NodeAssociationStatus
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data DescribeNodeAssociationStatusResponse =
+  DescribeNodeAssociationStatusResponse'
+    { _dnasrsEngineAttributes      :: !(Maybe [EngineAttribute])
+    , _dnasrsResponseStatus        :: !Int
+    , _dnasrsNodeAssociationStatus :: !NodeAssociationStatus
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeNodeAssociationStatusResponse' with the minimum fields required to make a request.

@@ -51,11 +51,13 @@ import Network.AWS.ResourceGroups.Types.Product
 import Network.AWS.Response
 
 -- | /See:/ 'listGroupResources' smart constructor.
-data ListGroupResources = ListGroupResources'
-  { _lgrNextToken  :: !(Maybe Text)
-  , _lgrMaxResults :: !(Maybe Nat)
-  , _lgrGroupName  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListGroupResources =
+  ListGroupResources'
+    { _lgrNextToken  :: !(Maybe Text)
+    , _lgrMaxResults :: !(Maybe Nat)
+    , _lgrGroupName  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListGroupResources' with the minimum fields required to make a request.
@@ -129,11 +131,13 @@ instance ToQuery ListGroupResources where
                "maxResults" =: _lgrMaxResults]
 
 -- | /See:/ 'listGroupResourcesResponse' smart constructor.
-data ListGroupResourcesResponse = ListGroupResourcesResponse'
-  { _lgrrsNextToken           :: !(Maybe Text)
-  , _lgrrsResourceIdentifiers :: !(Maybe [ResourceIdentifier])
-  , _lgrrsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListGroupResourcesResponse =
+  ListGroupResourcesResponse'
+    { _lgrrsNextToken           :: !(Maybe Text)
+    , _lgrrsResourceIdentifiers :: !(Maybe [ResourceIdentifier])
+    , _lgrrsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListGroupResourcesResponse' with the minimum fields required to make a request.

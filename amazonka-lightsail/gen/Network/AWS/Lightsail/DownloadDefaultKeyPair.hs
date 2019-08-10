@@ -92,11 +92,13 @@ instance ToQuery DownloadDefaultKeyPair where
         toQuery = const mempty
 
 -- | /See:/ 'downloadDefaultKeyPairResponse' smart constructor.
-data DownloadDefaultKeyPairResponse = DownloadDefaultKeyPairResponse'
-  { _ddkprsPublicKeyBase64  :: !(Maybe Text)
-  , _ddkprsPrivateKeyBase64 :: !(Maybe Text)
-  , _ddkprsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DownloadDefaultKeyPairResponse =
+  DownloadDefaultKeyPairResponse'
+    { _ddkprsPublicKeyBase64  :: !(Maybe Text)
+    , _ddkprsPrivateKeyBase64 :: !(Maybe Text)
+    , _ddkprsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DownloadDefaultKeyPairResponse' with the minimum fields required to make a request.

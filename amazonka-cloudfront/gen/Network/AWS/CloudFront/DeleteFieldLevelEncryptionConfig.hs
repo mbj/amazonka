@@ -43,10 +43,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteFieldLevelEncryptionConfig' smart constructor.
-data DeleteFieldLevelEncryptionConfig = DeleteFieldLevelEncryptionConfig'
-  { _dflecIfMatch :: !(Maybe Text)
-  , _dflecId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteFieldLevelEncryptionConfig =
+  DeleteFieldLevelEncryptionConfig'
+    { _dflecIfMatch :: !(Maybe Text)
+    , _dflecId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteFieldLevelEncryptionConfig' with the minimum fields required to make a request.

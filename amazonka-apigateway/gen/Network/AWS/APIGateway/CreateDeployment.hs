@@ -58,16 +58,18 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createDeployment' smart constructor.
-data CreateDeployment = CreateDeployment'
-  { _cdStageDescription    :: !(Maybe Text)
-  , _cdVariables           :: !(Maybe (Map Text Text))
-  , _cdCacheClusterSize    :: !(Maybe CacheClusterSize)
-  , _cdCanarySettings      :: !(Maybe DeploymentCanarySettings)
-  , _cdCacheClusterEnabled :: !(Maybe Bool)
-  , _cdStageName           :: !(Maybe Text)
-  , _cdDescription         :: !(Maybe Text)
-  , _cdRestAPIId           :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDeployment =
+  CreateDeployment'
+    { _cdStageDescription    :: !(Maybe Text)
+    , _cdVariables           :: !(Maybe (Map Text Text))
+    , _cdCacheClusterSize    :: !(Maybe CacheClusterSize)
+    , _cdCanarySettings      :: !(Maybe DeploymentCanarySettings)
+    , _cdCacheClusterEnabled :: !(Maybe Bool)
+    , _cdStageName           :: !(Maybe Text)
+    , _cdDescription         :: !(Maybe Text)
+    , _cdRestAPIId           :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDeployment' with the minimum fields required to make a request.

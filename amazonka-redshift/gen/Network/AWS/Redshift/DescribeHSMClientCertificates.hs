@@ -61,13 +61,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeHSMClientCertificates' smart constructor.
-data DescribeHSMClientCertificates = DescribeHSMClientCertificates'
-  { _dhccTagValues                      :: !(Maybe [Text])
-  , _dhccTagKeys                        :: !(Maybe [Text])
-  , _dhccHSMClientCertificateIdentifier :: !(Maybe Text)
-  , _dhccMarker                         :: !(Maybe Text)
-  , _dhccMaxRecords                     :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeHSMClientCertificates =
+  DescribeHSMClientCertificates'
+    { _dhccTagValues                      :: !(Maybe [Text])
+    , _dhccTagKeys                        :: !(Maybe [Text])
+    , _dhccHSMClientCertificateIdentifier :: !(Maybe Text)
+    , _dhccMarker                         :: !(Maybe Text)
+    , _dhccMaxRecords                     :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeHSMClientCertificates' with the minimum fields required to make a request.
@@ -168,11 +170,13 @@ instance ToQuery DescribeHSMClientCertificates where
 --
 --
 -- /See:/ 'describeHSMClientCertificatesResponse' smart constructor.
-data DescribeHSMClientCertificatesResponse = DescribeHSMClientCertificatesResponse'
-  { _dhccrsMarker                :: !(Maybe Text)
-  , _dhccrsHSMClientCertificates :: !(Maybe [HSMClientCertificate])
-  , _dhccrsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeHSMClientCertificatesResponse =
+  DescribeHSMClientCertificatesResponse'
+    { _dhccrsMarker                :: !(Maybe Text)
+    , _dhccrsHSMClientCertificates :: !(Maybe [HSMClientCertificate])
+    , _dhccrsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeHSMClientCertificatesResponse' with the minimum fields required to make a request.

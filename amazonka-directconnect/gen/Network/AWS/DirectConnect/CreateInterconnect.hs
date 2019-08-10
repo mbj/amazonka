@@ -65,12 +65,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createInterconnect' smart constructor.
-data CreateInterconnect = CreateInterconnect'
-  { _ciLagId            :: !(Maybe Text)
-  , _ciInterconnectName :: !Text
-  , _ciBandwidth        :: !Text
-  , _ciLocation         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateInterconnect =
+  CreateInterconnect'
+    { _ciLagId            :: !(Maybe Text)
+    , _ciInterconnectName :: !Text
+    , _ciBandwidth        :: !Text
+    , _ciLocation         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateInterconnect' with the minimum fields required to make a request.

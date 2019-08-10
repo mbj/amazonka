@@ -55,9 +55,11 @@ import Network.AWS.Route53.Types.Product
 --
 --
 -- /See:/ 'getChange' smart constructor.
-newtype GetChange = GetChange'
-  { _gcId :: ResourceId
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetChange =
+  GetChange'
+    { _gcId :: ResourceId
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetChange' with the minimum fields required to make a request.
@@ -103,10 +105,12 @@ instance ToQuery GetChange where
 --
 --
 -- /See:/ 'getChangeResponse' smart constructor.
-data GetChangeResponse = GetChangeResponse'
-  { _gcrsResponseStatus :: !Int
-  , _gcrsChangeInfo     :: !ChangeInfo
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetChangeResponse =
+  GetChangeResponse'
+    { _gcrsResponseStatus :: !Int
+    , _gcrsChangeInfo     :: !ChangeInfo
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetChangeResponse' with the minimum fields required to make a request.

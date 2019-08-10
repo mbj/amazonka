@@ -49,13 +49,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateVPCEConfiguration' smart constructor.
-data UpdateVPCEConfiguration = UpdateVPCEConfiguration'
-  { _uvecVpceServiceName              :: !(Maybe Text)
-  , _uvecVpceConfigurationName        :: !(Maybe Text)
-  , _uvecServiceDNSName               :: !(Maybe Text)
-  , _uvecVpceConfigurationDescription :: !(Maybe Text)
-  , _uvecArn                          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateVPCEConfiguration =
+  UpdateVPCEConfiguration'
+    { _uvecVpceServiceName              :: !(Maybe Text)
+    , _uvecVpceConfigurationName        :: !(Maybe Text)
+    , _uvecServiceDNSName               :: !(Maybe Text)
+    , _uvecVpceConfigurationDescription :: !(Maybe Text)
+    , _uvecArn                          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateVPCEConfiguration' with the minimum fields required to make a request.
@@ -147,10 +149,12 @@ instance ToQuery UpdateVPCEConfiguration where
         toQuery = const mempty
 
 -- | /See:/ 'updateVPCEConfigurationResponse' smart constructor.
-data UpdateVPCEConfigurationResponse = UpdateVPCEConfigurationResponse'
-  { _uvecrsVpceConfiguration :: !(Maybe VPCEConfiguration)
-  , _uvecrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateVPCEConfigurationResponse =
+  UpdateVPCEConfigurationResponse'
+    { _uvecrsVpceConfiguration :: !(Maybe VPCEConfiguration)
+    , _uvecrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateVPCEConfigurationResponse' with the minimum fields required to make a request.

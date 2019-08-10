@@ -49,12 +49,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'putJobSuccessResult' smart constructor.
-data PutJobSuccessResult = PutJobSuccessResult'
-  { _pjsrContinuationToken :: !(Maybe Text)
-  , _pjsrExecutionDetails  :: !(Maybe ExecutionDetails)
-  , _pjsrCurrentRevision   :: !(Maybe CurrentRevision)
-  , _pjsrJobId             :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutJobSuccessResult =
+  PutJobSuccessResult'
+    { _pjsrContinuationToken :: !(Maybe Text)
+    , _pjsrExecutionDetails  :: !(Maybe ExecutionDetails)
+    , _pjsrCurrentRevision   :: !(Maybe CurrentRevision)
+    , _pjsrJobId             :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutJobSuccessResult' with the minimum fields required to make a request.

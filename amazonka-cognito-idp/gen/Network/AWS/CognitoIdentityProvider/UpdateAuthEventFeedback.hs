@@ -48,13 +48,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateAuthEventFeedback' smart constructor.
-data UpdateAuthEventFeedback = UpdateAuthEventFeedback'
-  { _uaefUserPoolId    :: !Text
-  , _uaefUsername      :: !(Sensitive Text)
-  , _uaefEventId       :: !Text
-  , _uaefFeedbackToken :: !(Sensitive Text)
-  , _uaefFeedbackValue :: !FeedbackValueType
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data UpdateAuthEventFeedback =
+  UpdateAuthEventFeedback'
+    { _uaefUserPoolId    :: !Text
+    , _uaefUsername      :: !(Sensitive Text)
+    , _uaefEventId       :: !Text
+    , _uaefFeedbackToken :: !(Sensitive Text)
+    , _uaefFeedbackValue :: !FeedbackValueType
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateAuthEventFeedback' with the minimum fields required to make a request.
@@ -148,9 +150,11 @@ instance ToQuery UpdateAuthEventFeedback where
         toQuery = const mempty
 
 -- | /See:/ 'updateAuthEventFeedbackResponse' smart constructor.
-newtype UpdateAuthEventFeedbackResponse = UpdateAuthEventFeedbackResponse'
-  { _uaefrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateAuthEventFeedbackResponse =
+  UpdateAuthEventFeedbackResponse'
+    { _uaefrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateAuthEventFeedbackResponse' with the minimum fields required to make a request.

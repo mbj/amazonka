@@ -58,10 +58,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listElasticsearchVersions' smart constructor.
-data ListElasticsearchVersions = ListElasticsearchVersions'
-  { _levNextToken  :: !(Maybe Text)
-  , _levMaxResults :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListElasticsearchVersions =
+  ListElasticsearchVersions'
+    { _levNextToken  :: !(Maybe Text)
+    , _levMaxResults :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListElasticsearchVersions' with the minimum fields required to make a request.
@@ -125,11 +127,13 @@ instance ToQuery ListElasticsearchVersions where
 --
 --
 -- /See:/ 'listElasticsearchVersionsResponse' smart constructor.
-data ListElasticsearchVersionsResponse = ListElasticsearchVersionsResponse'
-  { _levrsNextToken             :: !(Maybe Text)
-  , _levrsElasticsearchVersions :: !(Maybe [Text])
-  , _levrsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListElasticsearchVersionsResponse =
+  ListElasticsearchVersionsResponse'
+    { _levrsNextToken             :: !(Maybe Text)
+    , _levrsElasticsearchVersions :: !(Maybe [Text])
+    , _levrsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListElasticsearchVersionsResponse' with the minimum fields required to make a request.

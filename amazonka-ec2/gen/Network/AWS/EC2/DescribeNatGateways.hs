@@ -56,12 +56,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeNatGateways' smart constructor.
-data DescribeNatGateways = DescribeNatGateways'
-  { _dngNatGatewayIds :: !(Maybe [Text])
-  , _dngNextToken     :: !(Maybe Text)
-  , _dngFilter        :: !(Maybe [Filter])
-  , _dngMaxResults    :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeNatGateways =
+  DescribeNatGateways'
+    { _dngNatGatewayIds :: !(Maybe [Text])
+    , _dngNextToken     :: !(Maybe Text)
+    , _dngFilter        :: !(Maybe [Filter])
+    , _dngMaxResults    :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeNatGateways' with the minimum fields required to make a request.
@@ -148,11 +150,13 @@ instance ToQuery DescribeNatGateways where
 --
 --
 -- /See:/ 'describeNatGatewaysResponse' smart constructor.
-data DescribeNatGatewaysResponse = DescribeNatGatewaysResponse'
-  { _dngrsNatGateways    :: !(Maybe [NatGateway])
-  , _dngrsNextToken      :: !(Maybe Text)
-  , _dngrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeNatGatewaysResponse =
+  DescribeNatGatewaysResponse'
+    { _dngrsNatGateways    :: !(Maybe [NatGateway])
+    , _dngrsNextToken      :: !(Maybe Text)
+    , _dngrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeNatGatewaysResponse' with the minimum fields required to make a request.

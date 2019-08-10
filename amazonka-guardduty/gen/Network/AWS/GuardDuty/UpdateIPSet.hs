@@ -48,13 +48,15 @@ import Network.AWS.Response
 -- | UpdateIPSet request body.
 --
 -- /See:/ 'updateIPSet' smart constructor.
-data UpdateIPSet = UpdateIPSet'
-  { _uisLocation   :: !(Maybe Text)
-  , _uisActivate   :: !(Maybe Bool)
-  , _uisName       :: !(Maybe Text)
-  , _uisDetectorId :: !Text
-  , _uisIPSetId    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateIPSet =
+  UpdateIPSet'
+    { _uisLocation   :: !(Maybe Text)
+    , _uisActivate   :: !(Maybe Bool)
+    , _uisName       :: !(Maybe Text)
+    , _uisDetectorId :: !Text
+    , _uisIPSetId    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateIPSet' with the minimum fields required to make a request.
@@ -141,9 +143,11 @@ instance ToQuery UpdateIPSet where
         toQuery = const mempty
 
 -- | /See:/ 'updateIPSetResponse' smart constructor.
-newtype UpdateIPSetResponse = UpdateIPSetResponse'
-  { _uisrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateIPSetResponse =
+  UpdateIPSetResponse'
+    { _uisrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateIPSetResponse' with the minimum fields required to make a request.

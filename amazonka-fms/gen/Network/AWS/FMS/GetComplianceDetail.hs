@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getComplianceDetail' smart constructor.
-data GetComplianceDetail = GetComplianceDetail'
-  { _gcdPolicyId      :: !Text
-  , _gcdMemberAccount :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetComplianceDetail =
+  GetComplianceDetail'
+    { _gcdPolicyId      :: !Text
+    , _gcdMemberAccount :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetComplianceDetail' with the minimum fields required to make a request.
@@ -115,10 +117,12 @@ instance ToQuery GetComplianceDetail where
         toQuery = const mempty
 
 -- | /See:/ 'getComplianceDetailResponse' smart constructor.
-data GetComplianceDetailResponse = GetComplianceDetailResponse'
-  { _gcdrsPolicyComplianceDetail :: !(Maybe PolicyComplianceDetail)
-  , _gcdrsResponseStatus         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetComplianceDetailResponse =
+  GetComplianceDetailResponse'
+    { _gcdrsPolicyComplianceDetail :: !(Maybe PolicyComplianceDetail)
+    , _gcdrsResponseStatus         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetComplianceDetailResponse' with the minimum fields required to make a request.

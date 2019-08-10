@@ -50,10 +50,12 @@ import Network.AWS.StorageGateway.Types.Product
 --
 --
 -- /See:/ 'deleteFileShare' smart constructor.
-data DeleteFileShare = DeleteFileShare'
-  { _dfsForceDelete  :: !(Maybe Bool)
-  , _dfsFileShareARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteFileShare =
+  DeleteFileShare'
+    { _dfsForceDelete  :: !(Maybe Bool)
+    , _dfsFileShareARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteFileShare' with the minimum fields required to make a request.
@@ -120,10 +122,12 @@ instance ToQuery DeleteFileShare where
 --
 --
 -- /See:/ 'deleteFileShareResponse' smart constructor.
-data DeleteFileShareResponse = DeleteFileShareResponse'
-  { _dfsrsFileShareARN   :: !(Maybe Text)
-  , _dfsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteFileShareResponse =
+  DeleteFileShareResponse'
+    { _dfsrsFileShareARN   :: !(Maybe Text)
+    , _dfsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteFileShareResponse' with the minimum fields required to make a request.

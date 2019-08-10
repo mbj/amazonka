@@ -60,25 +60,27 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateLayer' smart constructor.
-data UpdateLayer = UpdateLayer'
-  { _ulCustomInstanceProfileARN :: !(Maybe Text)
-  , _ulCustomSecurityGroupIds :: !(Maybe [Text])
-  , _ulInstallUpdatesOnBoot :: !(Maybe Bool)
-  , _ulCloudWatchLogsConfiguration :: !(Maybe CloudWatchLogsConfiguration)
-  , _ulLifecycleEventConfiguration :: !(Maybe LifecycleEventConfiguration)
-  , _ulShortname :: !(Maybe Text)
-  , _ulCustomRecipes :: !(Maybe Recipes)
-  , _ulCustomJSON :: !(Maybe Text)
-  , _ulVolumeConfigurations :: !(Maybe [VolumeConfiguration])
-  , _ulEnableAutoHealing :: !(Maybe Bool)
-  , _ulPackages :: !(Maybe [Text])
-  , _ulAttributes :: !(Maybe (Map LayerAttributesKeys (Maybe Text)))
-  , _ulName :: !(Maybe Text)
-  , _ulAutoAssignPublicIPs :: !(Maybe Bool)
-  , _ulUseEBSOptimizedInstances :: !(Maybe Bool)
-  , _ulAutoAssignElasticIPs :: !(Maybe Bool)
-  , _ulLayerId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateLayer =
+  UpdateLayer'
+    { _ulCustomInstanceProfileARN :: !(Maybe Text)
+    , _ulCustomSecurityGroupIds :: !(Maybe [Text])
+    , _ulInstallUpdatesOnBoot :: !(Maybe Bool)
+    , _ulCloudWatchLogsConfiguration :: !(Maybe CloudWatchLogsConfiguration)
+    , _ulLifecycleEventConfiguration :: !(Maybe LifecycleEventConfiguration)
+    , _ulShortname :: !(Maybe Text)
+    , _ulCustomRecipes :: !(Maybe Recipes)
+    , _ulCustomJSON :: !(Maybe Text)
+    , _ulVolumeConfigurations :: !(Maybe [VolumeConfiguration])
+    , _ulEnableAutoHealing :: !(Maybe Bool)
+    , _ulPackages :: !(Maybe [Text])
+    , _ulAttributes :: !(Maybe (Map LayerAttributesKeys (Maybe Text)))
+    , _ulName :: !(Maybe Text)
+    , _ulAutoAssignPublicIPs :: !(Maybe Bool)
+    , _ulUseEBSOptimizedInstances :: !(Maybe Bool)
+    , _ulAutoAssignElasticIPs :: !(Maybe Bool)
+    , _ulLayerId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateLayer' with the minimum fields required to make a request.

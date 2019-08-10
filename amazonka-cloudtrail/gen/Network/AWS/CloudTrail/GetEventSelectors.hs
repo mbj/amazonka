@@ -56,9 +56,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getEventSelectors' smart constructor.
-newtype GetEventSelectors = GetEventSelectors'
-  { _gesTrailName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetEventSelectors =
+  GetEventSelectors'
+    { _gesTrailName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetEventSelectors' with the minimum fields required to make a request.
@@ -113,11 +115,13 @@ instance ToQuery GetEventSelectors where
         toQuery = const mempty
 
 -- | /See:/ 'getEventSelectorsResponse' smart constructor.
-data GetEventSelectorsResponse = GetEventSelectorsResponse'
-  { _gesrsTrailARN       :: !(Maybe Text)
-  , _gesrsEventSelectors :: !(Maybe [EventSelector])
-  , _gesrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetEventSelectorsResponse =
+  GetEventSelectorsResponse'
+    { _gesrsTrailARN       :: !(Maybe Text)
+    , _gesrsEventSelectors :: !(Maybe [EventSelector])
+    , _gesrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetEventSelectorsResponse' with the minimum fields required to make a request.

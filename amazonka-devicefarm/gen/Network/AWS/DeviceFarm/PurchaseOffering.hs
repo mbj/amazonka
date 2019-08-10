@@ -51,11 +51,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'purchaseOffering' smart constructor.
-data PurchaseOffering = PurchaseOffering'
-  { _poQuantity            :: !(Maybe Int)
-  , _poOfferingId          :: !(Maybe Text)
-  , _poOfferingPromotionId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PurchaseOffering =
+  PurchaseOffering'
+    { _poQuantity            :: !(Maybe Int)
+    , _poOfferingId          :: !(Maybe Text)
+    , _poOfferingPromotionId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PurchaseOffering' with the minimum fields required to make a request.
@@ -133,10 +135,12 @@ instance ToQuery PurchaseOffering where
 --
 --
 -- /See:/ 'purchaseOfferingResponse' smart constructor.
-data PurchaseOfferingResponse = PurchaseOfferingResponse'
-  { _porsOfferingTransaction :: !(Maybe OfferingTransaction)
-  , _porsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PurchaseOfferingResponse =
+  PurchaseOfferingResponse'
+    { _porsOfferingTransaction :: !(Maybe OfferingTransaction)
+    , _porsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PurchaseOfferingResponse' with the minimum fields required to make a request.

@@ -84,20 +84,22 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createMatchmakingConfiguration' smart constructor.
-data CreateMatchmakingConfiguration = CreateMatchmakingConfiguration'
-  { _cmcGameProperties           :: !(Maybe [GameProperty])
-  , _cmcAcceptanceTimeoutSeconds :: !(Maybe Nat)
-  , _cmcNotificationTarget       :: !(Maybe Text)
-  , _cmcCustomEventData          :: !(Maybe Text)
-  , _cmcGameSessionData          :: !(Maybe Text)
-  , _cmcDescription              :: !(Maybe Text)
-  , _cmcAdditionalPlayerCount    :: !(Maybe Nat)
-  , _cmcName                     :: !Text
-  , _cmcGameSessionQueueARNs     :: ![Text]
-  , _cmcRequestTimeoutSeconds    :: !Nat
-  , _cmcAcceptanceRequired       :: !Bool
-  , _cmcRuleSetName              :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateMatchmakingConfiguration =
+  CreateMatchmakingConfiguration'
+    { _cmcGameProperties           :: !(Maybe [GameProperty])
+    , _cmcAcceptanceTimeoutSeconds :: !(Maybe Nat)
+    , _cmcNotificationTarget       :: !(Maybe Text)
+    , _cmcCustomEventData          :: !(Maybe Text)
+    , _cmcGameSessionData          :: !(Maybe Text)
+    , _cmcDescription              :: !(Maybe Text)
+    , _cmcAdditionalPlayerCount    :: !(Maybe Nat)
+    , _cmcName                     :: !Text
+    , _cmcGameSessionQueueARNs     :: ![Text]
+    , _cmcRequestTimeoutSeconds    :: !Nat
+    , _cmcAcceptanceRequired       :: !Bool
+    , _cmcRuleSetName              :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateMatchmakingConfiguration' with the minimum fields required to make a request.
@@ -259,10 +261,12 @@ instance ToQuery CreateMatchmakingConfiguration where
 --
 --
 -- /See:/ 'createMatchmakingConfigurationResponse' smart constructor.
-data CreateMatchmakingConfigurationResponse = CreateMatchmakingConfigurationResponse'
-  { _cmcrsConfiguration  :: !(Maybe MatchmakingConfiguration)
-  , _cmcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateMatchmakingConfigurationResponse =
+  CreateMatchmakingConfigurationResponse'
+    { _cmcrsConfiguration  :: !(Maybe MatchmakingConfiguration)
+    , _cmcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateMatchmakingConfigurationResponse' with the minimum fields required to make a request.

@@ -48,10 +48,12 @@ import Network.AWS.SMS.Types
 import Network.AWS.SMS.Types.Product
 
 -- | /See:/ 'getConnectors' smart constructor.
-data GetConnectors = GetConnectors'
-  { _gcNextToken  :: !(Maybe Text)
-  , _gcMaxResults :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetConnectors =
+  GetConnectors'
+    { _gcNextToken  :: !(Maybe Text)
+    , _gcMaxResults :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetConnectors' with the minimum fields required to make a request.
@@ -120,11 +122,13 @@ instance ToQuery GetConnectors where
         toQuery = const mempty
 
 -- | /See:/ 'getConnectorsResponse' smart constructor.
-data GetConnectorsResponse = GetConnectorsResponse'
-  { _gcrsConnectorList  :: !(Maybe [Connector])
-  , _gcrsNextToken      :: !(Maybe Text)
-  , _gcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetConnectorsResponse =
+  GetConnectorsResponse'
+    { _gcrsConnectorList  :: !(Maybe [Connector])
+    , _gcrsNextToken      :: !(Maybe Text)
+    , _gcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetConnectorsResponse' with the minimum fields required to make a request.

@@ -49,9 +49,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getActiveNames' smart constructor.
-newtype GetActiveNames = GetActiveNames'
-  { _ganPageToken :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetActiveNames =
+  GetActiveNames'
+    { _ganPageToken :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetActiveNames' with the minimum fields required to make a request.
@@ -111,11 +113,13 @@ instance ToQuery GetActiveNames where
         toQuery = const mempty
 
 -- | /See:/ 'getActiveNamesResponse' smart constructor.
-data GetActiveNamesResponse = GetActiveNamesResponse'
-  { _ganrsNextPageToken  :: !(Maybe Text)
-  , _ganrsActiveNames    :: !(Maybe [Text])
-  , _ganrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetActiveNamesResponse =
+  GetActiveNamesResponse'
+    { _ganrsNextPageToken  :: !(Maybe Text)
+    , _ganrsActiveNames    :: !(Maybe [Text])
+    , _ganrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetActiveNamesResponse' with the minimum fields required to make a request.

@@ -54,18 +54,20 @@ import Network.AWS.S3.Types.Product
 -- | <https://docs.aws.amazon.com/AmazonS3/latest/API/RESTObjectSELECTContent.html S3Select API Documentation>
 --
 -- /See:/ 'selectObjectContent' smart constructor.
-data SelectObjectContent = SelectObjectContent'
-  { _socSSECustomerAlgorithm :: !(Maybe Text)
-  , _socSSECustomerKey       :: !(Maybe (Sensitive Text))
-  , _socRequestProgress      :: !(Maybe RequestProgress)
-  , _socSSECustomerKeyMD5    :: !(Maybe Text)
-  , _socBucket               :: !BucketName
-  , _socKey                  :: !ObjectKey
-  , _socExpression           :: !Text
-  , _socExpressionType       :: !ExpressionType
-  , _socInputSerialization   :: !InputSerialization
-  , _socOutputSerialization  :: !OutputSerialization
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data SelectObjectContent =
+  SelectObjectContent'
+    { _socSSECustomerAlgorithm :: !(Maybe Text)
+    , _socSSECustomerKey       :: !(Maybe (Sensitive Text))
+    , _socRequestProgress      :: !(Maybe RequestProgress)
+    , _socSSECustomerKeyMD5    :: !(Maybe Text)
+    , _socBucket               :: !BucketName
+    , _socKey                  :: !ObjectKey
+    , _socExpression           :: !Text
+    , _socExpressionType       :: !ExpressionType
+    , _socInputSerialization   :: !InputSerialization
+    , _socOutputSerialization  :: !OutputSerialization
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SelectObjectContent' with the minimum fields required to make a request.
@@ -200,10 +202,12 @@ instance ToXML SelectObjectContent where
                "OutputSerialization" @= _socOutputSerialization]
 
 -- | /See:/ 'selectObjectContentResponse' smart constructor.
-data SelectObjectContentResponse = SelectObjectContentResponse'
-  { _socrsPayload        :: !(Maybe SelectObjectContentEventStream)
-  , _socrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SelectObjectContentResponse =
+  SelectObjectContentResponse'
+    { _socrsPayload        :: !(Maybe SelectObjectContentEventStream)
+    , _socrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SelectObjectContentResponse' with the minimum fields required to make a request.

@@ -43,10 +43,12 @@ import Network.AWS.WorkDocs.Types
 import Network.AWS.WorkDocs.Types.Product
 
 -- | /See:/ 'removeAllResourcePermissions' smart constructor.
-data RemoveAllResourcePermissions = RemoveAllResourcePermissions'
-  { _rarpAuthenticationToken :: !(Maybe (Sensitive Text))
-  , _rarpResourceId          :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data RemoveAllResourcePermissions =
+  RemoveAllResourcePermissions'
+    { _rarpAuthenticationToken :: !(Maybe (Sensitive Text))
+    , _rarpResourceId          :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RemoveAllResourcePermissions' with the minimum fields required to make a request.

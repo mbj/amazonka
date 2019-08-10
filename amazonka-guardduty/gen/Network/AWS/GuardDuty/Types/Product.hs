@@ -24,13 +24,15 @@ import Network.AWS.Prelude
 -- | Information about the AWS_API_CALL action described in this finding.
 --
 -- /See:/ 'awsAPICallAction' smart constructor.
-data AWSAPICallAction = AWSAPICallAction'
-  { _aacaRemoteIPDetails :: !(Maybe RemoteIPDetails)
-  , _aacaCallerType      :: !(Maybe Text)
-  , _aacaDomainDetails   :: !(Maybe DomainDetails)
-  , _aacaServiceName     :: !(Maybe Text)
-  , _aacaAPI             :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AWSAPICallAction =
+  AWSAPICallAction'
+    { _aacaRemoteIPDetails :: !(Maybe RemoteIPDetails)
+    , _aacaCallerType      :: !(Maybe Text)
+    , _aacaDomainDetails   :: !(Maybe DomainDetails)
+    , _aacaServiceName     :: !(Maybe Text)
+    , _aacaAPI             :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AWSAPICallAction' with the minimum fields required to make a request.
@@ -95,12 +97,14 @@ instance NFData AWSAPICallAction where
 -- | The IAM access key details (IAM user information) of a user that engaged in the activity that prompted GuardDuty to generate a finding.
 --
 -- /See:/ 'accessKeyDetails' smart constructor.
-data AccessKeyDetails = AccessKeyDetails'
-  { _akdPrincipalId :: !(Maybe Text)
-  , _akdUserName    :: !(Maybe Text)
-  , _akdAccessKeyId :: !(Maybe Text)
-  , _akdUserType    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AccessKeyDetails =
+  AccessKeyDetails'
+    { _akdPrincipalId :: !(Maybe Text)
+    , _akdUserName    :: !(Maybe Text)
+    , _akdAccessKeyId :: !(Maybe Text)
+    , _akdUserType    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AccessKeyDetails' with the minimum fields required to make a request.
@@ -157,10 +161,12 @@ instance NFData AccessKeyDetails where
 -- | An object containing the member's accountId and email address.
 --
 -- /See:/ 'accountDetail' smart constructor.
-data AccountDetail = AccountDetail'
-  { _adEmail     :: !Text
-  , _adAccountId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AccountDetail =
+  AccountDetail'
+    { _adEmail     :: !Text
+    , _adAccountId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AccountDetail' with the minimum fields required to make a request.
@@ -200,13 +206,15 @@ instance ToJSON AccountDetail where
 -- | Information about the activity described in a finding.
 --
 -- /See:/ 'action' smart constructor.
-data Action = Action'
-  { _aNetworkConnectionAction :: !(Maybe NetworkConnectionAction)
-  , _aPortProbeAction         :: !(Maybe PortProbeAction)
-  , _aActionType              :: !(Maybe Text)
-  , _aDNSRequestAction        :: !(Maybe DNSRequestAction)
-  , _aAWSAPICallAction        :: !(Maybe AWSAPICallAction)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Action =
+  Action'
+    { _aNetworkConnectionAction :: !(Maybe NetworkConnectionAction)
+    , _aPortProbeAction         :: !(Maybe PortProbeAction)
+    , _aActionType              :: !(Maybe Text)
+    , _aDNSRequestAction        :: !(Maybe DNSRequestAction)
+    , _aAWSAPICallAction        :: !(Maybe AWSAPICallAction)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Action' with the minimum fields required to make a request.
@@ -272,9 +280,11 @@ instance NFData Action where
 -- | City information of the remote IP address.
 --
 -- /See:/ 'city' smart constructor.
-newtype City = City'
-  { _cCityName :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype City =
+  City'
+    { _cCityName :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'City' with the minimum fields required to make a request.
@@ -303,14 +313,16 @@ instance NFData City where
 -- | Finding attribute (for example, accountId) for which conditions and values must be specified when querying findings.
 --
 -- /See:/ 'condition' smart constructor.
-data Condition = Condition'
-  { _cEQ  :: !(Maybe [Text])
-  , _cLte :: !(Maybe Int)
-  , _cGT  :: !(Maybe Int)
-  , _cNeq :: !(Maybe [Text])
-  , _cLT  :: !(Maybe Int)
-  , _cGte :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Condition =
+  Condition'
+    { _cEQ  :: !(Maybe [Text])
+    , _cLte :: !(Maybe Int)
+    , _cGT  :: !(Maybe Int)
+    , _cNeq :: !(Maybe [Text])
+    , _cLT  :: !(Maybe Int)
+    , _cGte :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Condition' with the minimum fields required to make a request.
@@ -391,10 +403,12 @@ instance ToJSON Condition where
 -- | Country information of the remote IP address.
 --
 -- /See:/ 'country' smart constructor.
-data Country = Country'
-  { _cCountryName :: !(Maybe Text)
-  , _cCountryCode :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Country =
+  Country'
+    { _cCountryName :: !(Maybe Text)
+    , _cCountryCode :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Country' with the minimum fields required to make a request.
@@ -431,9 +445,11 @@ instance NFData Country where
 -- | Information about the DNS_REQUEST action described in this finding.
 --
 -- /See:/ 'dnsRequestAction' smart constructor.
-newtype DNSRequestAction = DNSRequestAction'
-  { _draDomain :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DNSRequestAction =
+  DNSRequestAction'
+    { _draDomain :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DNSRequestAction' with the minimum fields required to make a request.
@@ -486,23 +502,25 @@ instance NFData DomainDetails where
 -- | Representation of a abnormal or suspicious activity.
 --
 -- /See:/ 'finding' smart constructor.
-data Finding = Finding'
-  { _fService       :: !(Maybe ServiceInfo)
-  , _fConfidence    :: !(Maybe Double)
-  , _fPartition     :: !(Maybe Text)
-  , _fTitle         :: !(Maybe Text)
-  , _fDescription   :: !(Maybe Text)
-  , _fAccountId     :: !Text
-  , _fSchemaVersion :: !Text
-  , _fCreatedAt     :: !Text
-  , _fResource      :: !Resource
-  , _fSeverity      :: !Double
-  , _fUpdatedAt     :: !Text
-  , _fType          :: !Text
-  , _fRegion        :: !Text
-  , _fId            :: !Text
-  , _fARN           :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Finding =
+  Finding'
+    { _fService       :: !(Maybe ServiceInfo)
+    , _fConfidence    :: !(Maybe Double)
+    , _fPartition     :: !(Maybe Text)
+    , _fTitle         :: !(Maybe Text)
+    , _fDescription   :: !(Maybe Text)
+    , _fAccountId     :: !Text
+    , _fSchemaVersion :: !Text
+    , _fCreatedAt     :: !Text
+    , _fResource      :: !Resource
+    , _fSeverity      :: !Double
+    , _fUpdatedAt     :: !Text
+    , _fType          :: !Text
+    , _fRegion        :: !Text
+    , _fId            :: !Text
+    , _fARN           :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Finding' with the minimum fields required to make a request.
@@ -657,9 +675,11 @@ instance NFData Finding where
 -- | Represents the criteria used for querying findings.
 --
 -- /See:/ 'findingCriteria' smart constructor.
-newtype FindingCriteria = FindingCriteria'
-  { _fcCriterion :: Maybe (Map Text Condition)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype FindingCriteria =
+  FindingCriteria'
+    { _fcCriterion :: Maybe (Map Text Condition)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FindingCriteria' with the minimum fields required to make a request.
@@ -694,9 +714,11 @@ instance ToJSON FindingCriteria where
 -- | Finding statistics object.
 --
 -- /See:/ 'findingStatistics' smart constructor.
-newtype FindingStatistics = FindingStatistics'
-  { _fsCountBySeverity :: Maybe (Map Text Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype FindingStatistics =
+  FindingStatistics'
+    { _fsCountBySeverity :: Maybe (Map Text Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FindingStatistics' with the minimum fields required to make a request.
@@ -727,10 +749,12 @@ instance NFData FindingStatistics where
 -- | Location information of the remote IP address.
 --
 -- /See:/ 'geoLocation' smart constructor.
-data GeoLocation = GeoLocation'
-  { _glLat :: !(Maybe Double)
-  , _glLon :: !(Maybe Double)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GeoLocation =
+  GeoLocation'
+    { _glLat :: !(Maybe Double)
+    , _glLon :: !(Maybe Double)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GeoLocation' with the minimum fields required to make a request.
@@ -766,10 +790,12 @@ instance NFData GeoLocation where
 -- | The profile information of the EC2 instance.
 --
 -- /See:/ 'iamInstanceProfile' smart constructor.
-data IAMInstanceProfile = IAMInstanceProfile'
-  { _iapARN :: !(Maybe Text)
-  , _iapId  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data IAMInstanceProfile =
+  IAMInstanceProfile'
+    { _iapARN :: !(Maybe Text)
+    , _iapId  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'IAMInstanceProfile' with the minimum fields required to make a request.
@@ -806,20 +832,22 @@ instance NFData IAMInstanceProfile where
 -- | The information about the EC2 instance associated with the activity that prompted GuardDuty to generate a finding.
 --
 -- /See:/ 'instanceDetails' smart constructor.
-data InstanceDetails = InstanceDetails'
-  { _idInstanceId         :: !(Maybe Text)
-  , _idPlatform           :: !(Maybe Text)
-  , _idLaunchTime         :: !(Maybe Text)
-  , _idNetworkInterfaces  :: !(Maybe [NetworkInterface])
-  , _idInstanceType       :: !(Maybe Text)
-  , _idAvailabilityZone   :: !(Maybe Text)
-  , _idIAMInstanceProfile :: !(Maybe IAMInstanceProfile)
-  , _idImageId            :: !(Maybe Text)
-  , _idProductCodes       :: !(Maybe [ProductCode])
-  , _idInstanceState      :: !(Maybe Text)
-  , _idTags               :: !(Maybe [Tag])
-  , _idImageDescription   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceDetails =
+  InstanceDetails'
+    { _idInstanceId         :: !(Maybe Text)
+    , _idPlatform           :: !(Maybe Text)
+    , _idLaunchTime         :: !(Maybe Text)
+    , _idNetworkInterfaces  :: !(Maybe [NetworkInterface])
+    , _idInstanceType       :: !(Maybe Text)
+    , _idAvailabilityZone   :: !(Maybe Text)
+    , _idIAMInstanceProfile :: !(Maybe IAMInstanceProfile)
+    , _idImageId            :: !(Maybe Text)
+    , _idProductCodes       :: !(Maybe [ProductCode])
+    , _idInstanceState      :: !(Maybe Text)
+    , _idTags               :: !(Maybe [Tag])
+    , _idImageDescription   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceDetails' with the minimum fields required to make a request.
@@ -940,12 +968,14 @@ instance NFData InstanceDetails where
 -- | Invitation from an AWS account to become the current account's master.
 --
 -- /See:/ 'invitation' smart constructor.
-data Invitation = Invitation'
-  { _iInvitedAt          :: !(Maybe Text)
-  , _iRelationshipStatus :: !(Maybe Text)
-  , _iInvitationId       :: !(Maybe Text)
-  , _iAccountId          :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Invitation =
+  Invitation'
+    { _iInvitedAt          :: !(Maybe Text)
+    , _iRelationshipStatus :: !(Maybe Text)
+    , _iInvitationId       :: !(Maybe Text)
+    , _iAccountId          :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Invitation' with the minimum fields required to make a request.
@@ -1002,10 +1032,12 @@ instance NFData Invitation where
 -- | Local port information of the connection.
 --
 -- /See:/ 'localPortDetails' smart constructor.
-data LocalPortDetails = LocalPortDetails'
-  { _lpdPortName :: !(Maybe Text)
-  , _lpdPort     :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LocalPortDetails =
+  LocalPortDetails'
+    { _lpdPortName :: !(Maybe Text)
+    , _lpdPort     :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LocalPortDetails' with the minimum fields required to make a request.
@@ -1043,12 +1075,14 @@ instance NFData LocalPortDetails where
 -- | Contains details about the master account.
 --
 -- /See:/ 'master' smart constructor.
-data Master = Master'
-  { _masInvitedAt          :: !(Maybe Text)
-  , _masRelationshipStatus :: !(Maybe Text)
-  , _masInvitationId       :: !(Maybe Text)
-  , _masAccountId          :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Master =
+  Master'
+    { _masInvitedAt          :: !(Maybe Text)
+    , _masRelationshipStatus :: !(Maybe Text)
+    , _masInvitationId       :: !(Maybe Text)
+    , _masAccountId          :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Master' with the minimum fields required to make a request.
@@ -1105,15 +1139,17 @@ instance NFData Master where
 -- | Contains details about the member account.
 --
 -- /See:/ 'member' smart constructor.
-data Member = Member'
-  { _mInvitedAt          :: !(Maybe Text)
-  , _mDetectorId         :: !(Maybe Text)
-  , _mEmail              :: !Text
-  , _mAccountId          :: !Text
-  , _mMasterId           :: !Text
-  , _mUpdatedAt          :: !Text
-  , _mRelationshipStatus :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Member =
+  Member'
+    { _mInvitedAt          :: !(Maybe Text)
+    , _mDetectorId         :: !(Maybe Text)
+    , _mEmail              :: !Text
+    , _mAccountId          :: !Text
+    , _mMasterId           :: !Text
+    , _mUpdatedAt          :: !Text
+    , _mRelationshipStatus :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Member' with the minimum fields required to make a request.
@@ -1199,14 +1235,16 @@ instance NFData Member where
 -- | Information about the NETWORK_CONNECTION action described in this finding.
 --
 -- /See:/ 'networkConnectionAction' smart constructor.
-data NetworkConnectionAction = NetworkConnectionAction'
-  { _ncaRemoteIPDetails     :: !(Maybe RemoteIPDetails)
-  , _ncaProtocol            :: !(Maybe Text)
-  , _ncaRemotePortDetails   :: !(Maybe RemotePortDetails)
-  , _ncaBlocked             :: !(Maybe Bool)
-  , _ncaConnectionDirection :: !(Maybe Text)
-  , _ncaLocalPortDetails    :: !(Maybe LocalPortDetails)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NetworkConnectionAction =
+  NetworkConnectionAction'
+    { _ncaRemoteIPDetails     :: !(Maybe RemoteIPDetails)
+    , _ncaProtocol            :: !(Maybe Text)
+    , _ncaRemotePortDetails   :: !(Maybe RemotePortDetails)
+    , _ncaBlocked             :: !(Maybe Bool)
+    , _ncaConnectionDirection :: !(Maybe Text)
+    , _ncaLocalPortDetails    :: !(Maybe LocalPortDetails)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NetworkConnectionAction' with the minimum fields required to make a request.
@@ -1279,18 +1317,20 @@ instance NFData NetworkConnectionAction where
 -- | The network interface information of the EC2 instance.
 --
 -- /See:/ 'networkInterface' smart constructor.
-data NetworkInterface = NetworkInterface'
-  { _niPrivateIPAddresses :: !(Maybe [PrivateIPAddressDetails])
-  , _niPublicDNSName      :: !(Maybe Text)
-  , _niSecurityGroups     :: !(Maybe [SecurityGroup])
-  , _niVPCId              :: !(Maybe Text)
-  , _niNetworkInterfaceId :: !(Maybe Text)
-  , _niSubnetId           :: !(Maybe Text)
-  , _niPrivateIPAddress   :: !(Maybe Text)
-  , _niPublicIP           :: !(Maybe Text)
-  , _niPrivateDNSName     :: !(Maybe Text)
-  , _niIPv6Addresses      :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NetworkInterface =
+  NetworkInterface'
+    { _niPrivateIPAddresses :: !(Maybe [PrivateIPAddressDetails])
+    , _niPublicDNSName      :: !(Maybe Text)
+    , _niSecurityGroups     :: !(Maybe [SecurityGroup])
+    , _niVPCId              :: !(Maybe Text)
+    , _niNetworkInterfaceId :: !(Maybe Text)
+    , _niSubnetId           :: !(Maybe Text)
+    , _niPrivateIPAddress   :: !(Maybe Text)
+    , _niPublicIP           :: !(Maybe Text)
+    , _niPrivateDNSName     :: !(Maybe Text)
+    , _niIPv6Addresses      :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NetworkInterface' with the minimum fields required to make a request.
@@ -1396,12 +1436,14 @@ instance NFData NetworkInterface where
 -- | ISP Organization information of the remote IP address.
 --
 -- /See:/ 'organization' smart constructor.
-data Organization = Organization'
-  { _oOrg    :: !(Maybe Text)
-  , _oASNOrg :: !(Maybe Text)
-  , _oASN    :: !(Maybe Text)
-  , _oIsp    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Organization =
+  Organization'
+    { _oOrg    :: !(Maybe Text)
+    , _oASNOrg :: !(Maybe Text)
+    , _oASN    :: !(Maybe Text)
+    , _oIsp    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Organization' with the minimum fields required to make a request.
@@ -1453,10 +1495,12 @@ instance NFData Organization where
 -- | Information about the PORT_PROBE action described in this finding.
 --
 -- /See:/ 'portProbeAction' smart constructor.
-data PortProbeAction = PortProbeAction'
-  { _ppaPortProbeDetails :: !(Maybe [PortProbeDetail])
-  , _ppaBlocked          :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PortProbeAction =
+  PortProbeAction'
+    { _ppaPortProbeDetails :: !(Maybe [PortProbeDetail])
+    , _ppaBlocked          :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PortProbeAction' with the minimum fields required to make a request.
@@ -1495,10 +1539,12 @@ instance NFData PortProbeAction where
 -- | Details about the port probe finding.
 --
 -- /See:/ 'portProbeDetail' smart constructor.
-data PortProbeDetail = PortProbeDetail'
-  { _ppdRemoteIPDetails  :: !(Maybe RemoteIPDetails)
-  , _ppdLocalPortDetails :: !(Maybe LocalPortDetails)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PortProbeDetail =
+  PortProbeDetail'
+    { _ppdRemoteIPDetails  :: !(Maybe RemoteIPDetails)
+    , _ppdLocalPortDetails :: !(Maybe LocalPortDetails)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PortProbeDetail' with the minimum fields required to make a request.
@@ -1538,10 +1584,12 @@ instance NFData PortProbeDetail where
 -- | Other private IP address information of the EC2 instance.
 --
 -- /See:/ 'privateIPAddressDetails' smart constructor.
-data PrivateIPAddressDetails = PrivateIPAddressDetails'
-  { _piadPrivateIPAddress :: !(Maybe Text)
-  , _piadPrivateDNSName   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PrivateIPAddressDetails =
+  PrivateIPAddressDetails'
+    { _piadPrivateIPAddress :: !(Maybe Text)
+    , _piadPrivateDNSName   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PrivateIPAddressDetails' with the minimum fields required to make a request.
@@ -1581,10 +1629,12 @@ instance NFData PrivateIPAddressDetails where
 -- | The product code of the EC2 instance.
 --
 -- /See:/ 'productCode' smart constructor.
-data ProductCode = ProductCode'
-  { _pcProductType :: !(Maybe Text)
-  , _pcCode        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ProductCode =
+  ProductCode'
+    { _pcProductType :: !(Maybe Text)
+    , _pcCode        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ProductCode' with the minimum fields required to make a request.
@@ -1621,13 +1671,15 @@ instance NFData ProductCode where
 -- | Remote IP information of the connection.
 --
 -- /See:/ 'remoteIPDetails' smart constructor.
-data RemoteIPDetails = RemoteIPDetails'
-  { _ridCountry      :: !(Maybe Country)
-  , _ridCity         :: !(Maybe City)
-  , _ridIPAddressV4  :: !(Maybe Text)
-  , _ridGeoLocation  :: !(Maybe GeoLocation)
-  , _ridOrganization :: !(Maybe Organization)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RemoteIPDetails =
+  RemoteIPDetails'
+    { _ridCountry      :: !(Maybe Country)
+    , _ridCity         :: !(Maybe City)
+    , _ridIPAddressV4  :: !(Maybe Text)
+    , _ridGeoLocation  :: !(Maybe GeoLocation)
+    , _ridOrganization :: !(Maybe Organization)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RemoteIPDetails' with the minimum fields required to make a request.
@@ -1692,10 +1744,12 @@ instance NFData RemoteIPDetails where
 -- | Remote port information of the connection.
 --
 -- /See:/ 'remotePortDetails' smart constructor.
-data RemotePortDetails = RemotePortDetails'
-  { _rpdPortName :: !(Maybe Text)
-  , _rpdPort     :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RemotePortDetails =
+  RemotePortDetails'
+    { _rpdPortName :: !(Maybe Text)
+    , _rpdPort     :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RemotePortDetails' with the minimum fields required to make a request.
@@ -1733,11 +1787,13 @@ instance NFData RemotePortDetails where
 -- | The AWS resource associated with the activity that prompted GuardDuty to generate a finding.
 --
 -- /See:/ 'resource' smart constructor.
-data Resource = Resource'
-  { _rResourceType     :: !(Maybe Text)
-  , _rInstanceDetails  :: !(Maybe InstanceDetails)
-  , _rAccessKeyDetails :: !(Maybe AccessKeyDetails)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Resource =
+  Resource'
+    { _rResourceType     :: !(Maybe Text)
+    , _rInstanceDetails  :: !(Maybe InstanceDetails)
+    , _rAccessKeyDetails :: !(Maybe AccessKeyDetails)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Resource' with the minimum fields required to make a request.
@@ -1786,10 +1842,12 @@ instance NFData Resource where
 -- | Security groups associated with the EC2 instance.
 --
 -- /See:/ 'securityGroup' smart constructor.
-data SecurityGroup = SecurityGroup'
-  { _sgGroupId   :: !(Maybe Text)
-  , _sgGroupName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SecurityGroup =
+  SecurityGroup'
+    { _sgGroupId   :: !(Maybe Text)
+    , _sgGroupName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SecurityGroup' with the minimum fields required to make a request.
@@ -1826,17 +1884,19 @@ instance NFData SecurityGroup where
 -- | Additional information assigned to the generated finding by GuardDuty.
 --
 -- /See:/ 'serviceInfo' smart constructor.
-data ServiceInfo = ServiceInfo'
-  { _siCount          :: !(Maybe Int)
-  , _siEventFirstSeen :: !(Maybe Text)
-  , _siAction         :: !(Maybe Action)
-  , _siDetectorId     :: !(Maybe Text)
-  , _siServiceName    :: !(Maybe Text)
-  , _siUserFeedback   :: !(Maybe Text)
-  , _siEventLastSeen  :: !(Maybe Text)
-  , _siResourceRole   :: !(Maybe Text)
-  , _siArchived       :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ServiceInfo =
+  ServiceInfo'
+    { _siCount          :: !(Maybe Int)
+    , _siEventFirstSeen :: !(Maybe Text)
+    , _siAction         :: !(Maybe Action)
+    , _siDetectorId     :: !(Maybe Text)
+    , _siServiceName    :: !(Maybe Text)
+    , _siUserFeedback   :: !(Maybe Text)
+    , _siEventLastSeen  :: !(Maybe Text)
+    , _siResourceRole   :: !(Maybe Text)
+    , _siArchived       :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ServiceInfo' with the minimum fields required to make a request.
@@ -1933,10 +1993,12 @@ instance NFData ServiceInfo where
 -- | Represents the criteria used for sorting findings.
 --
 -- /See:/ 'sortCriteria' smart constructor.
-data SortCriteria = SortCriteria'
-  { _scOrderBy       :: !(Maybe OrderBy)
-  , _scAttributeName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SortCriteria =
+  SortCriteria'
+    { _scOrderBy       :: !(Maybe OrderBy)
+    , _scAttributeName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SortCriteria' with the minimum fields required to make a request.
@@ -1973,10 +2035,12 @@ instance ToJSON SortCriteria where
 -- | A tag of the EC2 instance.
 --
 -- /See:/ 'tag' smart constructor.
-data Tag = Tag'
-  { _tagValue :: !(Maybe Text)
-  , _tagKey   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Tag =
+  Tag'
+    { _tagValue :: !(Maybe Text)
+    , _tagKey   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Tag' with the minimum fields required to make a request.
@@ -2011,10 +2075,12 @@ instance NFData Tag where
 -- | An object containing the unprocessed account and a result string explaining why it was unprocessed.
 --
 -- /See:/ 'unprocessedAccount' smart constructor.
-data UnprocessedAccount = UnprocessedAccount'
-  { _uaAccountId :: !Text
-  , _uaResult    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UnprocessedAccount =
+  UnprocessedAccount'
+    { _uaAccountId :: !Text
+    , _uaResult    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UnprocessedAccount' with the minimum fields required to make a request.

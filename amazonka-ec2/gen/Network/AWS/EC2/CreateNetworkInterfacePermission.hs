@@ -55,13 +55,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createNetworkInterfacePermission' smart constructor.
-data CreateNetworkInterfacePermission = CreateNetworkInterfacePermission'
-  { _cnipAWSAccountId       :: !(Maybe Text)
-  , _cnipAWSService         :: !(Maybe Text)
-  , _cnipDryRun             :: !(Maybe Bool)
-  , _cnipNetworkInterfaceId :: !Text
-  , _cnipPermission         :: !InterfacePermissionType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateNetworkInterfacePermission =
+  CreateNetworkInterfacePermission'
+    { _cnipAWSAccountId       :: !(Maybe Text)
+    , _cnipAWSService         :: !(Maybe Text)
+    , _cnipDryRun             :: !(Maybe Bool)
+    , _cnipNetworkInterfaceId :: !Text
+    , _cnipPermission         :: !InterfacePermissionType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateNetworkInterfacePermission' with the minimum fields required to make a request.
@@ -155,10 +157,12 @@ instance ToQuery CreateNetworkInterfacePermission
 --
 --
 -- /See:/ 'createNetworkInterfacePermissionResponse' smart constructor.
-data CreateNetworkInterfacePermissionResponse = CreateNetworkInterfacePermissionResponse'
-  { _cniprsInterfacePermission :: !(Maybe NetworkInterfacePermission)
-  , _cniprsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateNetworkInterfacePermissionResponse =
+  CreateNetworkInterfacePermissionResponse'
+    { _cniprsInterfacePermission :: !(Maybe NetworkInterfacePermission)
+    , _cniprsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateNetworkInterfacePermissionResponse' with the minimum fields required to make a request.

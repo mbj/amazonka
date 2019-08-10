@@ -52,12 +52,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'revokeClusterSecurityGroupIngress' smart constructor.
-data RevokeClusterSecurityGroupIngress = RevokeClusterSecurityGroupIngress'
-  { _rcsgiEC2SecurityGroupOwnerId  :: !(Maybe Text)
-  , _rcsgiEC2SecurityGroupName     :: !(Maybe Text)
-  , _rcsgiCIdRIP                   :: !(Maybe Text)
-  , _rcsgiClusterSecurityGroupName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RevokeClusterSecurityGroupIngress =
+  RevokeClusterSecurityGroupIngress'
+    { _rcsgiEC2SecurityGroupOwnerId  :: !(Maybe Text)
+    , _rcsgiEC2SecurityGroupName     :: !(Maybe Text)
+    , _rcsgiCIdRIP                   :: !(Maybe Text)
+    , _rcsgiClusterSecurityGroupName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RevokeClusterSecurityGroupIngress' with the minimum fields required to make a request.
@@ -141,10 +143,12 @@ instance ToQuery RevokeClusterSecurityGroupIngress
                  _rcsgiClusterSecurityGroupName]
 
 -- | /See:/ 'revokeClusterSecurityGroupIngressResponse' smart constructor.
-data RevokeClusterSecurityGroupIngressResponse = RevokeClusterSecurityGroupIngressResponse'
-  { _rcsgirsClusterSecurityGroup :: !(Maybe ClusterSecurityGroup)
-  , _rcsgirsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RevokeClusterSecurityGroupIngressResponse =
+  RevokeClusterSecurityGroupIngressResponse'
+    { _rcsgirsClusterSecurityGroup :: !(Maybe ClusterSecurityGroup)
+    , _rcsgirsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RevokeClusterSecurityGroupIngressResponse' with the minimum fields required to make a request.

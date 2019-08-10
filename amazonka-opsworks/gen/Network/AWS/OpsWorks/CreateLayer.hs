@@ -64,26 +64,28 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createLayer' smart constructor.
-data CreateLayer = CreateLayer'
-  { _clCustomInstanceProfileARN :: !(Maybe Text)
-  , _clCustomSecurityGroupIds :: !(Maybe [Text])
-  , _clInstallUpdatesOnBoot :: !(Maybe Bool)
-  , _clCloudWatchLogsConfiguration :: !(Maybe CloudWatchLogsConfiguration)
-  , _clLifecycleEventConfiguration :: !(Maybe LifecycleEventConfiguration)
-  , _clCustomRecipes :: !(Maybe Recipes)
-  , _clCustomJSON :: !(Maybe Text)
-  , _clVolumeConfigurations :: !(Maybe [VolumeConfiguration])
-  , _clEnableAutoHealing :: !(Maybe Bool)
-  , _clPackages :: !(Maybe [Text])
-  , _clAttributes :: !(Maybe (Map LayerAttributesKeys (Maybe Text)))
-  , _clAutoAssignPublicIPs :: !(Maybe Bool)
-  , _clUseEBSOptimizedInstances :: !(Maybe Bool)
-  , _clAutoAssignElasticIPs :: !(Maybe Bool)
-  , _clStackId :: !Text
-  , _clType :: !LayerType
-  , _clName :: !Text
-  , _clShortname :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateLayer =
+  CreateLayer'
+    { _clCustomInstanceProfileARN :: !(Maybe Text)
+    , _clCustomSecurityGroupIds :: !(Maybe [Text])
+    , _clInstallUpdatesOnBoot :: !(Maybe Bool)
+    , _clCloudWatchLogsConfiguration :: !(Maybe CloudWatchLogsConfiguration)
+    , _clLifecycleEventConfiguration :: !(Maybe LifecycleEventConfiguration)
+    , _clCustomRecipes :: !(Maybe Recipes)
+    , _clCustomJSON :: !(Maybe Text)
+    , _clVolumeConfigurations :: !(Maybe [VolumeConfiguration])
+    , _clEnableAutoHealing :: !(Maybe Bool)
+    , _clPackages :: !(Maybe [Text])
+    , _clAttributes :: !(Maybe (Map LayerAttributesKeys (Maybe Text)))
+    , _clAutoAssignPublicIPs :: !(Maybe Bool)
+    , _clUseEBSOptimizedInstances :: !(Maybe Bool)
+    , _clAutoAssignElasticIPs :: !(Maybe Bool)
+    , _clStackId :: !Text
+    , _clType :: !LayerType
+    , _clName :: !Text
+    , _clShortname :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateLayer' with the minimum fields required to make a request.
@@ -290,10 +292,12 @@ instance ToQuery CreateLayer where
 --
 --
 -- /See:/ 'createLayerResponse' smart constructor.
-data CreateLayerResponse = CreateLayerResponse'
-  { _clrsLayerId        :: !(Maybe Text)
-  , _clrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateLayerResponse =
+  CreateLayerResponse'
+    { _clrsLayerId        :: !(Maybe Text)
+    , _clrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateLayerResponse' with the minimum fields required to make a request.

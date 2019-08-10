@@ -50,11 +50,13 @@ import Network.AWS.Route53.Types
 import Network.AWS.Route53.Types.Product
 
 -- | /See:/ 'listQueryLoggingConfigs' smart constructor.
-data ListQueryLoggingConfigs = ListQueryLoggingConfigs'
-  { _lqlcHostedZoneId :: !(Maybe ResourceId)
-  , _lqlcNextToken    :: !(Maybe Text)
-  , _lqlcMaxResults   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListQueryLoggingConfigs =
+  ListQueryLoggingConfigs'
+    { _lqlcHostedZoneId :: !(Maybe ResourceId)
+    , _lqlcNextToken    :: !(Maybe Text)
+    , _lqlcMaxResults   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListQueryLoggingConfigs' with the minimum fields required to make a request.
@@ -118,11 +120,13 @@ instance ToQuery ListQueryLoggingConfigs where
                "maxresults" =: _lqlcMaxResults]
 
 -- | /See:/ 'listQueryLoggingConfigsResponse' smart constructor.
-data ListQueryLoggingConfigsResponse = ListQueryLoggingConfigsResponse'
-  { _lqlcrsNextToken           :: !(Maybe Text)
-  , _lqlcrsResponseStatus      :: !Int
-  , _lqlcrsQueryLoggingConfigs :: ![QueryLoggingConfig]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListQueryLoggingConfigsResponse =
+  ListQueryLoggingConfigsResponse'
+    { _lqlcrsNextToken           :: !(Maybe Text)
+    , _lqlcrsResponseStatus      :: !Int
+    , _lqlcrsQueryLoggingConfigs :: ![QueryLoggingConfig]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListQueryLoggingConfigsResponse' with the minimum fields required to make a request.

@@ -54,11 +54,13 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'setIdentityNotificationTopic' smart constructor.
-data SetIdentityNotificationTopic = SetIdentityNotificationTopic'
-  { _sintSNSTopic         :: !(Maybe Text)
-  , _sintIdentity         :: !Text
-  , _sintNotificationType :: !NotificationType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SetIdentityNotificationTopic =
+  SetIdentityNotificationTopic'
+    { _sintSNSTopic         :: !(Maybe Text)
+    , _sintIdentity         :: !Text
+    , _sintNotificationType :: !NotificationType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetIdentityNotificationTopic' with the minimum fields required to make a request.
@@ -131,9 +133,11 @@ instance ToQuery SetIdentityNotificationTopic where
 --
 --
 -- /See:/ 'setIdentityNotificationTopicResponse' smart constructor.
-newtype SetIdentityNotificationTopicResponse = SetIdentityNotificationTopicResponse'
-  { _sintrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype SetIdentityNotificationTopicResponse =
+  SetIdentityNotificationTopicResponse'
+    { _sintrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetIdentityNotificationTopicResponse' with the minimum fields required to make a request.

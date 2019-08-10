@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'purchaseProvisionedCapacity' smart constructor.
-newtype PurchaseProvisionedCapacity = PurchaseProvisionedCapacity'
-  { _ppcAccountId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype PurchaseProvisionedCapacity =
+  PurchaseProvisionedCapacity'
+    { _ppcAccountId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PurchaseProvisionedCapacity' with the minimum fields required to make a request.
@@ -95,10 +97,12 @@ instance ToQuery PurchaseProvisionedCapacity where
         toQuery = const mempty
 
 -- | /See:/ 'purchaseProvisionedCapacityResponse' smart constructor.
-data PurchaseProvisionedCapacityResponse = PurchaseProvisionedCapacityResponse'
-  { _ppcrsCapacityId     :: !(Maybe Text)
-  , _ppcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PurchaseProvisionedCapacityResponse =
+  PurchaseProvisionedCapacityResponse'
+    { _ppcrsCapacityId     :: !(Maybe Text)
+    , _ppcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PurchaseProvisionedCapacityResponse' with the minimum fields required to make a request.

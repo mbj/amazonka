@@ -55,11 +55,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listPrincipalThings' smart constructor.
-data ListPrincipalThings = ListPrincipalThings'
-  { _lptNextToken  :: !(Maybe Text)
-  , _lptMaxResults :: !(Maybe Nat)
-  , _lptPrincipal  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListPrincipalThings =
+  ListPrincipalThings'
+    { _lptNextToken  :: !(Maybe Text)
+    , _lptMaxResults :: !(Maybe Nat)
+    , _lptPrincipal  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListPrincipalThings' with the minimum fields required to make a request.
@@ -134,11 +136,13 @@ instance ToQuery ListPrincipalThings where
 --
 --
 -- /See:/ 'listPrincipalThingsResponse' smart constructor.
-data ListPrincipalThingsResponse = ListPrincipalThingsResponse'
-  { _lptrsNextToken      :: !(Maybe Text)
-  , _lptrsThings         :: !(Maybe [Text])
-  , _lptrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListPrincipalThingsResponse =
+  ListPrincipalThingsResponse'
+    { _lptrsNextToken      :: !(Maybe Text)
+    , _lptrsThings         :: !(Maybe [Text])
+    , _lptrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListPrincipalThingsResponse' with the minimum fields required to make a request.

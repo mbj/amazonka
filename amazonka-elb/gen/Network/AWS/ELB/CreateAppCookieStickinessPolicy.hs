@@ -56,11 +56,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createAppCookieStickinessPolicy' smart constructor.
-data CreateAppCookieStickinessPolicy = CreateAppCookieStickinessPolicy'
-  { _cacspLoadBalancerName :: !Text
-  , _cacspPolicyName       :: !Text
-  , _cacspCookieName       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateAppCookieStickinessPolicy =
+  CreateAppCookieStickinessPolicy'
+    { _cacspLoadBalancerName :: !Text
+    , _cacspPolicyName       :: !Text
+    , _cacspCookieName       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateAppCookieStickinessPolicy' with the minimum fields required to make a request.
@@ -137,9 +139,11 @@ instance ToQuery CreateAppCookieStickinessPolicy
 --
 --
 -- /See:/ 'createAppCookieStickinessPolicyResponse' smart constructor.
-newtype CreateAppCookieStickinessPolicyResponse = CreateAppCookieStickinessPolicyResponse'
-  { _cacsprsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateAppCookieStickinessPolicyResponse =
+  CreateAppCookieStickinessPolicyResponse'
+    { _cacsprsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateAppCookieStickinessPolicyResponse' with the minimum fields required to make a request.

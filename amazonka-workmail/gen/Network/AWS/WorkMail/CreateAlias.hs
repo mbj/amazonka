@@ -46,11 +46,13 @@ import Network.AWS.WorkMail.Types
 import Network.AWS.WorkMail.Types.Product
 
 -- | /See:/ 'createAlias' smart constructor.
-data CreateAlias = CreateAlias'
-  { _caOrganizationId :: !Text
-  , _caEntityId       :: !Text
-  , _caAlias          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateAlias =
+  CreateAlias'
+    { _caOrganizationId :: !Text
+    , _caEntityId       :: !Text
+    , _caAlias          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateAlias' with the minimum fields required to make a request.
@@ -123,9 +125,11 @@ instance ToQuery CreateAlias where
         toQuery = const mempty
 
 -- | /See:/ 'createAliasResponse' smart constructor.
-newtype CreateAliasResponse = CreateAliasResponse'
-  { _carsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateAliasResponse =
+  CreateAliasResponse'
+    { _carsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateAliasResponse' with the minimum fields required to make a request.

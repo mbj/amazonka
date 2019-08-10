@@ -26,18 +26,20 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'columnInfo' smart constructor.
-data ColumnInfo = ColumnInfo'
-  { _ciScale         :: !(Maybe Int)
-  , _ciPrecision     :: !(Maybe Int)
-  , _ciSchemaName    :: !(Maybe Text)
-  , _ciCatalogName   :: !(Maybe Text)
-  , _ciCaseSensitive :: !(Maybe Bool)
-  , _ciLabel         :: !(Maybe Text)
-  , _ciTableName     :: !(Maybe Text)
-  , _ciNullable      :: !(Maybe ColumnNullable)
-  , _ciName          :: !Text
-  , _ciType          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ColumnInfo =
+  ColumnInfo'
+    { _ciScale         :: !(Maybe Int)
+    , _ciPrecision     :: !(Maybe Int)
+    , _ciSchemaName    :: !(Maybe Text)
+    , _ciCatalogName   :: !(Maybe Text)
+    , _ciCaseSensitive :: !(Maybe Bool)
+    , _ciLabel         :: !(Maybe Text)
+    , _ciTableName     :: !(Maybe Text)
+    , _ciNullable      :: !(Maybe ColumnNullable)
+    , _ciName          :: !Text
+    , _ciType          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ColumnInfo' with the minimum fields required to make a request.
@@ -146,9 +148,11 @@ instance NFData ColumnInfo where
 --
 --
 -- /See:/ 'datum' smart constructor.
-newtype Datum = Datum'
-  { _dVarCharValue :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype Datum =
+  Datum'
+    { _dVarCharValue :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Datum' with the minimum fields required to make a request.
@@ -179,10 +183,12 @@ instance NFData Datum where
 --
 --
 -- /See:/ 'encryptionConfiguration' smart constructor.
-data EncryptionConfiguration = EncryptionConfiguration'
-  { _ecKMSKey           :: !(Maybe Text)
-  , _ecEncryptionOption :: !EncryptionOption
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EncryptionConfiguration =
+  EncryptionConfiguration'
+    { _ecKMSKey           :: !(Maybe Text)
+    , _ecEncryptionOption :: !EncryptionOption
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EncryptionConfiguration' with the minimum fields required to make a request.
@@ -231,13 +237,15 @@ instance ToJSON EncryptionConfiguration where
 --
 --
 -- /See:/ 'namedQuery' smart constructor.
-data NamedQuery = NamedQuery'
-  { _nqNamedQueryId :: !(Maybe Text)
-  , _nqDescription  :: !(Maybe Text)
-  , _nqName         :: !Text
-  , _nqDatabase     :: !Text
-  , _nqQueryString  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NamedQuery =
+  NamedQuery'
+    { _nqNamedQueryId :: !(Maybe Text)
+    , _nqDescription  :: !(Maybe Text)
+    , _nqName         :: !Text
+    , _nqDatabase     :: !Text
+    , _nqQueryString  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NamedQuery' with the minimum fields required to make a request.
@@ -307,14 +315,16 @@ instance NFData NamedQuery where
 --
 --
 -- /See:/ 'queryExecution' smart constructor.
-data QueryExecution = QueryExecution'
-  { _qeStatus                :: !(Maybe QueryExecutionStatus)
-  , _qeQueryExecutionContext :: !(Maybe QueryExecutionContext)
-  , _qeResultConfiguration   :: !(Maybe ResultConfiguration)
-  , _qeQuery                 :: !(Maybe Text)
-  , _qeStatistics            :: !(Maybe QueryExecutionStatistics)
-  , _qeQueryExecutionId      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data QueryExecution =
+  QueryExecution'
+    { _qeStatus                :: !(Maybe QueryExecutionStatus)
+    , _qeQueryExecutionContext :: !(Maybe QueryExecutionContext)
+    , _qeResultConfiguration   :: !(Maybe ResultConfiguration)
+    , _qeQuery                 :: !(Maybe Text)
+    , _qeStatistics            :: !(Maybe QueryExecutionStatistics)
+    , _qeQueryExecutionId      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'QueryExecution' with the minimum fields required to make a request.
@@ -389,9 +399,11 @@ instance NFData QueryExecution where
 --
 --
 -- /See:/ 'queryExecutionContext' smart constructor.
-newtype QueryExecutionContext = QueryExecutionContext'
-  { _qecDatabase :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype QueryExecutionContext =
+  QueryExecutionContext'
+    { _qecDatabase :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'QueryExecutionContext' with the minimum fields required to make a request.
@@ -428,10 +440,12 @@ instance ToJSON QueryExecutionContext where
 --
 --
 -- /See:/ 'queryExecutionStatistics' smart constructor.
-data QueryExecutionStatistics = QueryExecutionStatistics'
-  { _qesEngineExecutionTimeInMillis :: !(Maybe Integer)
-  , _qesDataScannedInBytes          :: !(Maybe Integer)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data QueryExecutionStatistics =
+  QueryExecutionStatistics'
+    { _qesEngineExecutionTimeInMillis :: !(Maybe Integer)
+    , _qesDataScannedInBytes          :: !(Maybe Integer)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'QueryExecutionStatistics' with the minimum fields required to make a request.
@@ -475,12 +489,14 @@ instance NFData QueryExecutionStatistics where
 --
 --
 -- /See:/ 'queryExecutionStatus' smart constructor.
-data QueryExecutionStatus = QueryExecutionStatus'
-  { _qesState              :: !(Maybe QueryExecutionState)
-  , _qesStateChangeReason  :: !(Maybe Text)
-  , _qesSubmissionDateTime :: !(Maybe POSIX)
-  , _qesCompletionDateTime :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data QueryExecutionStatus =
+  QueryExecutionStatus'
+    { _qesState              :: !(Maybe QueryExecutionState)
+    , _qesStateChangeReason  :: !(Maybe Text)
+    , _qesSubmissionDateTime :: !(Maybe POSIX)
+    , _qesCompletionDateTime :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'QueryExecutionStatus' with the minimum fields required to make a request.
@@ -539,10 +555,12 @@ instance NFData QueryExecutionStatus where
 --
 --
 -- /See:/ 'resultConfiguration' smart constructor.
-data ResultConfiguration = ResultConfiguration'
-  { _rcEncryptionConfiguration :: !(Maybe EncryptionConfiguration)
-  , _rcOutputLocation          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResultConfiguration =
+  ResultConfiguration'
+    { _rcEncryptionConfiguration :: !(Maybe EncryptionConfiguration)
+    , _rcOutputLocation          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResultConfiguration' with the minimum fields required to make a request.
@@ -593,10 +611,12 @@ instance ToJSON ResultConfiguration where
 --
 --
 -- /See:/ 'resultSet' smart constructor.
-data ResultSet = ResultSet'
-  { _rsRows              :: !(Maybe [Row])
-  , _rsResultSetMetadata :: !(Maybe ResultSetMetadata)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResultSet =
+  ResultSet'
+    { _rsRows              :: !(Maybe [Row])
+    , _rsResultSetMetadata :: !(Maybe ResultSetMetadata)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResultSet' with the minimum fields required to make a request.
@@ -636,9 +656,11 @@ instance NFData ResultSet where
 --
 --
 -- /See:/ 'resultSetMetadata' smart constructor.
-newtype ResultSetMetadata = ResultSetMetadata'
-  { _rsmColumnInfo :: Maybe [ColumnInfo]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ResultSetMetadata =
+  ResultSetMetadata'
+    { _rsmColumnInfo :: Maybe [ColumnInfo]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResultSetMetadata' with the minimum fields required to make a request.
@@ -671,9 +693,11 @@ instance NFData ResultSetMetadata where
 --
 --
 -- /See:/ 'row' smart constructor.
-newtype Row = Row'
-  { _rowData :: Maybe [Datum]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype Row =
+  Row'
+    { _rowData :: Maybe [Datum]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Row' with the minimum fields required to make a request.
@@ -704,11 +728,13 @@ instance NFData Row where
 --
 --
 -- /See:/ 'unprocessedNamedQueryId' smart constructor.
-data UnprocessedNamedQueryId = UnprocessedNamedQueryId'
-  { _unqiNamedQueryId :: !(Maybe Text)
-  , _unqiErrorCode    :: !(Maybe Text)
-  , _unqiErrorMessage :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UnprocessedNamedQueryId =
+  UnprocessedNamedQueryId'
+    { _unqiNamedQueryId :: !(Maybe Text)
+    , _unqiErrorCode    :: !(Maybe Text)
+    , _unqiErrorMessage :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UnprocessedNamedQueryId' with the minimum fields required to make a request.
@@ -759,11 +785,13 @@ instance NFData UnprocessedNamedQueryId where
 --
 --
 -- /See:/ 'unprocessedQueryExecutionId' smart constructor.
-data UnprocessedQueryExecutionId = UnprocessedQueryExecutionId'
-  { _uqeiErrorCode        :: !(Maybe Text)
-  , _uqeiQueryExecutionId :: !(Maybe Text)
-  , _uqeiErrorMessage     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UnprocessedQueryExecutionId =
+  UnprocessedQueryExecutionId'
+    { _uqeiErrorCode        :: !(Maybe Text)
+    , _uqeiQueryExecutionId :: !(Maybe Text)
+    , _uqeiErrorMessage     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UnprocessedQueryExecutionId' with the minimum fields required to make a request.

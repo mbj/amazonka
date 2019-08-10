@@ -50,9 +50,11 @@ import Network.AWS.SageMaker.Types
 import Network.AWS.SageMaker.Types.Product
 
 -- | /See:/ 'describeModel' smart constructor.
-newtype DescribeModel = DescribeModel'
-  { _dModelName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeModel =
+  DescribeModel'
+    { _dModelName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeModel' with the minimum fields required to make a request.
@@ -109,15 +111,17 @@ instance ToQuery DescribeModel where
         toQuery = const mempty
 
 -- | /See:/ 'describeModelResponse' smart constructor.
-data DescribeModelResponse = DescribeModelResponse'
-  { _dmrsVPCConfig        :: !(Maybe VPCConfig)
-  , _dmrsResponseStatus   :: !Int
-  , _dmrsModelName        :: !Text
-  , _dmrsPrimaryContainer :: !ContainerDefinition
-  , _dmrsExecutionRoleARN :: !Text
-  , _dmrsCreationTime     :: !POSIX
-  , _dmrsModelARN         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeModelResponse =
+  DescribeModelResponse'
+    { _dmrsVPCConfig        :: !(Maybe VPCConfig)
+    , _dmrsResponseStatus   :: !Int
+    , _dmrsModelName        :: !Text
+    , _dmrsPrimaryContainer :: !ContainerDefinition
+    , _dmrsExecutionRoleARN :: !Text
+    , _dmrsCreationTime     :: !POSIX
+    , _dmrsModelARN         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeModelResponse' with the minimum fields required to make a request.

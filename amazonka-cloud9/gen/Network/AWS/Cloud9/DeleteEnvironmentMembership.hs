@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteEnvironmentMembership' smart constructor.
-data DeleteEnvironmentMembership = DeleteEnvironmentMembership'
-  { _demEnvironmentId :: !Text
-  , _demUserARN       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteEnvironmentMembership =
+  DeleteEnvironmentMembership'
+    { _demEnvironmentId :: !Text
+    , _demUserARN       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteEnvironmentMembership' with the minimum fields required to make a request.
@@ -113,9 +115,11 @@ instance ToQuery DeleteEnvironmentMembership where
         toQuery = const mempty
 
 -- | /See:/ 'deleteEnvironmentMembershipResponse' smart constructor.
-newtype DeleteEnvironmentMembershipResponse = DeleteEnvironmentMembershipResponse'
-  { _demrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteEnvironmentMembershipResponse =
+  DeleteEnvironmentMembershipResponse'
+    { _demrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteEnvironmentMembershipResponse' with the minimum fields required to make a request.

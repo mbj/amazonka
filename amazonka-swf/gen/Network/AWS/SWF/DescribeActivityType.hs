@@ -67,10 +67,12 @@ import Network.AWS.SWF.Types
 import Network.AWS.SWF.Types.Product
 
 -- | /See:/ 'describeActivityType' smart constructor.
-data DescribeActivityType = DescribeActivityType'
-  { _datDomain       :: !Text
-  , _datActivityType :: !ActivityType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeActivityType =
+  DescribeActivityType'
+    { _datDomain       :: !Text
+    , _datActivityType :: !ActivityType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeActivityType' with the minimum fields required to make a request.
@@ -140,11 +142,13 @@ instance ToQuery DescribeActivityType where
 --
 --
 -- /See:/ 'describeActivityTypeResponse' smart constructor.
-data DescribeActivityTypeResponse = DescribeActivityTypeResponse'
-  { _datrsResponseStatus :: !Int
-  , _datrsTypeInfo       :: !ActivityTypeInfo
-  , _datrsConfiguration  :: !ActivityTypeConfiguration
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeActivityTypeResponse =
+  DescribeActivityTypeResponse'
+    { _datrsResponseStatus :: !Int
+    , _datrsTypeInfo       :: !ActivityTypeInfo
+    , _datrsConfiguration  :: !ActivityTypeConfiguration
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeActivityTypeResponse' with the minimum fields required to make a request.

@@ -47,9 +47,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getUserPoolMFAConfig' smart constructor.
-newtype GetUserPoolMFAConfig = GetUserPoolMFAConfig'
-  { _gupmcUserPoolId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetUserPoolMFAConfig =
+  GetUserPoolMFAConfig'
+    { _gupmcUserPoolId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetUserPoolMFAConfig' with the minimum fields required to make a request.
@@ -107,12 +109,14 @@ instance ToQuery GetUserPoolMFAConfig where
         toQuery = const mempty
 
 -- | /See:/ 'getUserPoolMFAConfigResponse' smart constructor.
-data GetUserPoolMFAConfigResponse = GetUserPoolMFAConfigResponse'
-  { _gupmcrsSmsMFAConfiguration           :: !(Maybe SmsMFAConfigType)
-  , _gupmcrsSoftwareTokenMFAConfiguration :: !(Maybe SoftwareTokenMFAConfigType)
-  , _gupmcrsMFAConfiguration              :: !(Maybe UserPoolMFAType)
-  , _gupmcrsResponseStatus                :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetUserPoolMFAConfigResponse =
+  GetUserPoolMFAConfigResponse'
+    { _gupmcrsSmsMFAConfiguration :: !(Maybe SmsMFAConfigType)
+    , _gupmcrsSoftwareTokenMFAConfiguration :: !(Maybe SoftwareTokenMFAConfigType)
+    , _gupmcrsMFAConfiguration :: !(Maybe UserPoolMFAType)
+    , _gupmcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetUserPoolMFAConfigResponse' with the minimum fields required to make a request.

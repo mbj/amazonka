@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'batchWrite' smart constructor.
-data BatchWrite = BatchWrite'
-  { _bwDirectoryARN :: !Text
-  , _bwOperations   :: ![BatchWriteOperation]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchWrite =
+  BatchWrite'
+    { _bwDirectoryARN :: !Text
+    , _bwOperations   :: ![BatchWriteOperation]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchWrite' with the minimum fields required to make a request.
@@ -105,10 +107,12 @@ instance ToQuery BatchWrite where
         toQuery = const mempty
 
 -- | /See:/ 'batchWriteResponse' smart constructor.
-data BatchWriteResponse = BatchWriteResponse'
-  { _bwrsResponses      :: !(Maybe [BatchWriteOperationResponse])
-  , _bwrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchWriteResponse =
+  BatchWriteResponse'
+    { _bwrsResponses      :: !(Maybe [BatchWriteOperationResponse])
+    , _bwrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchWriteResponse' with the minimum fields required to make a request.

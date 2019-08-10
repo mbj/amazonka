@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putWebhook' smart constructor.
-newtype PutWebhook = PutWebhook'
-  { _pwWebhook :: WebhookDefinition
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype PutWebhook =
+  PutWebhook'
+    { _pwWebhook :: WebhookDefinition
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutWebhook' with the minimum fields required to make a request.
@@ -98,10 +100,12 @@ instance ToQuery PutWebhook where
         toQuery = const mempty
 
 -- | /See:/ 'putWebhookResponse' smart constructor.
-data PutWebhookResponse = PutWebhookResponse'
-  { _pwrsWebhook        :: !(Maybe ListWebhookItem)
-  , _pwrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutWebhookResponse =
+  PutWebhookResponse'
+    { _pwrsWebhook        :: !(Maybe ListWebhookItem)
+    , _pwrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutWebhookResponse' with the minimum fields required to make a request.

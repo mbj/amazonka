@@ -51,12 +51,14 @@ import Network.AWS.SQS.Types.Product
 --
 --
 -- /See:/ 'addPermission' smart constructor.
-data AddPermission = AddPermission'
-  { _apQueueURL      :: !Text
-  , _apLabel         :: !Text
-  , _apAWSAccountIds :: ![Text]
-  , _apActions       :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddPermission =
+  AddPermission'
+    { _apQueueURL      :: !Text
+    , _apLabel         :: !Text
+    , _apAWSAccountIds :: ![Text]
+    , _apActions       :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddPermission' with the minimum fields required to make a request.

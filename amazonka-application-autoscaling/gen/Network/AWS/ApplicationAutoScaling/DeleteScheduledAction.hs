@@ -47,12 +47,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteScheduledAction' smart constructor.
-data DeleteScheduledAction = DeleteScheduledAction'
-  { _dsaScalableDimension   :: !(Maybe ScalableDimension)
-  , _dsaServiceNamespace    :: !ServiceNamespace
-  , _dsaScheduledActionName :: !Text
-  , _dsaResourceId          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteScheduledAction =
+  DeleteScheduledAction'
+    { _dsaScalableDimension   :: !(Maybe ScalableDimension)
+    , _dsaServiceNamespace    :: !ServiceNamespace
+    , _dsaScheduledActionName :: !Text
+    , _dsaResourceId          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteScheduledAction' with the minimum fields required to make a request.
@@ -137,9 +139,11 @@ instance ToQuery DeleteScheduledAction where
         toQuery = const mempty
 
 -- | /See:/ 'deleteScheduledActionResponse' smart constructor.
-newtype DeleteScheduledActionResponse = DeleteScheduledActionResponse'
-  { _delrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteScheduledActionResponse =
+  DeleteScheduledActionResponse'
+    { _delrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteScheduledActionResponse' with the minimum fields required to make a request.

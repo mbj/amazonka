@@ -56,11 +56,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateTagsForResource' smart constructor.
-data UpdateTagsForResource = UpdateTagsForResource'
-  { _utfrTagsToRemove :: !(Maybe [Text])
-  , _utfrTagsToAdd    :: !(Maybe [Tag])
-  , _utfrResourceARN  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateTagsForResource =
+  UpdateTagsForResource'
+    { _utfrTagsToRemove :: !(Maybe [Text])
+    , _utfrTagsToAdd    :: !(Maybe [Tag])
+    , _utfrResourceARN  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateTagsForResource' with the minimum fields required to make a request.

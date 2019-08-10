@@ -62,11 +62,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'setVaultNotifications' smart constructor.
-data SetVaultNotifications = SetVaultNotifications'
-  { _svnVaultNotificationConfig :: !(Maybe VaultNotificationConfig)
-  , _svnAccountId               :: !Text
-  , _svnVaultName               :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SetVaultNotifications =
+  SetVaultNotifications'
+    { _svnVaultNotificationConfig :: !(Maybe VaultNotificationConfig)
+    , _svnAccountId               :: !Text
+    , _svnVaultName               :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetVaultNotifications' with the minimum fields required to make a request.

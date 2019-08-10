@@ -43,12 +43,14 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'putBucketPolicy' smart constructor.
-data PutBucketPolicy = PutBucketPolicy'
-  { _pbpConfirmRemoveSelfBucketAccess :: !(Maybe Bool)
-  , _pbpContentMD5                    :: !(Maybe Text)
-  , _pbpBucket                        :: !BucketName
-  , _pbpPolicy                        :: !ByteString
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data PutBucketPolicy =
+  PutBucketPolicy'
+    { _pbpConfirmRemoveSelfBucketAccess :: !(Maybe Bool)
+    , _pbpContentMD5                    :: !(Maybe Text)
+    , _pbpBucket                        :: !BucketName
+    , _pbpPolicy                        :: !ByteString
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutBucketPolicy' with the minimum fields required to make a request.

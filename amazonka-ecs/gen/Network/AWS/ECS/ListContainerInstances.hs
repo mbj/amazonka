@@ -53,13 +53,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listContainerInstances' smart constructor.
-data ListContainerInstances = ListContainerInstances'
-  { _lciStatus     :: !(Maybe ContainerInstanceStatus)
-  , _lciCluster    :: !(Maybe Text)
-  , _lciNextToken  :: !(Maybe Text)
-  , _lciFilter     :: !(Maybe Text)
-  , _lciMaxResults :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListContainerInstances =
+  ListContainerInstances'
+    { _lciStatus     :: !(Maybe ContainerInstanceStatus)
+    , _lciCluster    :: !(Maybe Text)
+    , _lciNextToken  :: !(Maybe Text)
+    , _lciFilter     :: !(Maybe Text)
+    , _lciMaxResults :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListContainerInstances' with the minimum fields required to make a request.
@@ -157,11 +159,13 @@ instance ToQuery ListContainerInstances where
         toQuery = const mempty
 
 -- | /See:/ 'listContainerInstancesResponse' smart constructor.
-data ListContainerInstancesResponse = ListContainerInstancesResponse'
-  { _lcirsContainerInstanceARNs :: !(Maybe [Text])
-  , _lcirsNextToken             :: !(Maybe Text)
-  , _lcirsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListContainerInstancesResponse =
+  ListContainerInstancesResponse'
+    { _lcirsContainerInstanceARNs :: !(Maybe [Text])
+    , _lcirsNextToken             :: !(Maybe Text)
+    , _lcirsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListContainerInstancesResponse' with the minimum fields required to make a request.

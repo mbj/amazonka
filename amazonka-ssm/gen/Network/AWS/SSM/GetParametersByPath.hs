@@ -56,14 +56,16 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'getParametersByPath' smart constructor.
-data GetParametersByPath = GetParametersByPath'
-  { _gpbpWithDecryption   :: !(Maybe Bool)
-  , _gpbpParameterFilters :: !(Maybe [ParameterStringFilter])
-  , _gpbpNextToken        :: !(Maybe Text)
-  , _gpbpRecursive        :: !(Maybe Bool)
-  , _gpbpMaxResults       :: !(Maybe Nat)
-  , _gpbpPath             :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetParametersByPath =
+  GetParametersByPath'
+    { _gpbpWithDecryption   :: !(Maybe Bool)
+    , _gpbpParameterFilters :: !(Maybe [ParameterStringFilter])
+    , _gpbpNextToken        :: !(Maybe Text)
+    , _gpbpRecursive        :: !(Maybe Bool)
+    , _gpbpMaxResults       :: !(Maybe Nat)
+    , _gpbpPath             :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetParametersByPath' with the minimum fields required to make a request.
@@ -169,11 +171,13 @@ instance ToQuery GetParametersByPath where
         toQuery = const mempty
 
 -- | /See:/ 'getParametersByPathResponse' smart constructor.
-data GetParametersByPathResponse = GetParametersByPathResponse'
-  { _gpbprsNextToken      :: !(Maybe Text)
-  , _gpbprsParameters     :: !(Maybe [Parameter])
-  , _gpbprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetParametersByPathResponse =
+  GetParametersByPathResponse'
+    { _gpbprsNextToken      :: !(Maybe Text)
+    , _gpbprsParameters     :: !(Maybe [Parameter])
+    , _gpbprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetParametersByPathResponse' with the minimum fields required to make a request.

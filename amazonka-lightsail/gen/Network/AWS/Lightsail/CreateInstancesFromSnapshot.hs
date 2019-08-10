@@ -51,15 +51,17 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createInstancesFromSnapshot' smart constructor.
-data CreateInstancesFromSnapshot = CreateInstancesFromSnapshot'
-  { _cifsUserData             :: !(Maybe Text)
-  , _cifsKeyPairName          :: !(Maybe Text)
-  , _cifsAttachedDiskMapping  :: !(Maybe (Map Text [DiskMap]))
-  , _cifsInstanceNames        :: ![Text]
-  , _cifsAvailabilityZone     :: !Text
-  , _cifsInstanceSnapshotName :: !Text
-  , _cifsBundleId             :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateInstancesFromSnapshot =
+  CreateInstancesFromSnapshot'
+    { _cifsUserData             :: !(Maybe Text)
+    , _cifsKeyPairName          :: !(Maybe Text)
+    , _cifsAttachedDiskMapping  :: !(Maybe (Map Text [DiskMap]))
+    , _cifsInstanceNames        :: ![Text]
+    , _cifsAvailabilityZone     :: !Text
+    , _cifsInstanceSnapshotName :: !Text
+    , _cifsBundleId             :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateInstancesFromSnapshot' with the minimum fields required to make a request.
@@ -171,10 +173,12 @@ instance ToQuery CreateInstancesFromSnapshot where
         toQuery = const mempty
 
 -- | /See:/ 'createInstancesFromSnapshotResponse' smart constructor.
-data CreateInstancesFromSnapshotResponse = CreateInstancesFromSnapshotResponse'
-  { _cifsrsOperations     :: !(Maybe [Operation])
-  , _cifsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateInstancesFromSnapshotResponse =
+  CreateInstancesFromSnapshotResponse'
+    { _cifsrsOperations     :: !(Maybe [Operation])
+    , _cifsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateInstancesFromSnapshotResponse' with the minimum fields required to make a request.

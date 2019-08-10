@@ -73,11 +73,13 @@ import Network.AWS.WAFRegional.Types
 import Network.AWS.WAFRegional.Types.Product
 
 -- | /See:/ 'updateByteMatchSet' smart constructor.
-data UpdateByteMatchSet = UpdateByteMatchSet'
-  { _ubmsByteMatchSetId :: !Text
-  , _ubmsChangeToken    :: !Text
-  , _ubmsUpdates        :: !(List1 ByteMatchSetUpdate)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateByteMatchSet =
+  UpdateByteMatchSet'
+    { _ubmsByteMatchSetId :: !Text
+    , _ubmsChangeToken    :: !Text
+    , _ubmsUpdates        :: !(List1 ByteMatchSetUpdate)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateByteMatchSet' with the minimum fields required to make a request.
@@ -153,10 +155,12 @@ instance ToQuery UpdateByteMatchSet where
         toQuery = const mempty
 
 -- | /See:/ 'updateByteMatchSetResponse' smart constructor.
-data UpdateByteMatchSetResponse = UpdateByteMatchSetResponse'
-  { _ubmsrsChangeToken    :: !(Maybe Text)
-  , _ubmsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateByteMatchSetResponse =
+  UpdateByteMatchSetResponse'
+    { _ubmsrsChangeToken    :: !(Maybe Text)
+    , _ubmsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateByteMatchSetResponse' with the minimum fields required to make a request.

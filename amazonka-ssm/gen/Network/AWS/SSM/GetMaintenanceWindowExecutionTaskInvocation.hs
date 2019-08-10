@@ -58,11 +58,13 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'getMaintenanceWindowExecutionTaskInvocation' smart constructor.
-data GetMaintenanceWindowExecutionTaskInvocation = GetMaintenanceWindowExecutionTaskInvocation'
-  { _gmwetiWindowExecutionId :: !Text
-  , _gmwetiTaskId            :: !Text
-  , _gmwetiInvocationId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetMaintenanceWindowExecutionTaskInvocation =
+  GetMaintenanceWindowExecutionTaskInvocation'
+    { _gmwetiWindowExecutionId :: !Text
+    , _gmwetiTaskId            :: !Text
+    , _gmwetiInvocationId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetMaintenanceWindowExecutionTaskInvocation' with the minimum fields required to make a request.
@@ -166,21 +168,23 @@ instance ToQuery
         toQuery = const mempty
 
 -- | /See:/ 'getMaintenanceWindowExecutionTaskInvocationResponse' smart constructor.
-data GetMaintenanceWindowExecutionTaskInvocationResponse = GetMaintenanceWindowExecutionTaskInvocationResponse'
-  { _gmwetirsStatus            :: !(Maybe MaintenanceWindowExecutionStatus)
-  , _gmwetirsExecutionId       :: !(Maybe Text)
-  , _gmwetirsTaskExecutionId   :: !(Maybe Text)
-  , _gmwetirsStartTime         :: !(Maybe POSIX)
-  , _gmwetirsInvocationId      :: !(Maybe Text)
-  , _gmwetirsOwnerInformation  :: !(Maybe (Sensitive Text))
-  , _gmwetirsTaskType          :: !(Maybe MaintenanceWindowTaskType)
-  , _gmwetirsWindowTargetId    :: !(Maybe Text)
-  , _gmwetirsWindowExecutionId :: !(Maybe Text)
-  , _gmwetirsStatusDetails     :: !(Maybe Text)
-  , _gmwetirsEndTime           :: !(Maybe POSIX)
-  , _gmwetirsParameters        :: !(Maybe (Sensitive Text))
-  , _gmwetirsResponseStatus    :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data GetMaintenanceWindowExecutionTaskInvocationResponse =
+  GetMaintenanceWindowExecutionTaskInvocationResponse'
+    { _gmwetirsStatus            :: !(Maybe MaintenanceWindowExecutionStatus)
+    , _gmwetirsExecutionId       :: !(Maybe Text)
+    , _gmwetirsTaskExecutionId   :: !(Maybe Text)
+    , _gmwetirsStartTime         :: !(Maybe POSIX)
+    , _gmwetirsInvocationId      :: !(Maybe Text)
+    , _gmwetirsOwnerInformation  :: !(Maybe (Sensitive Text))
+    , _gmwetirsTaskType          :: !(Maybe MaintenanceWindowTaskType)
+    , _gmwetirsWindowTargetId    :: !(Maybe Text)
+    , _gmwetirsWindowExecutionId :: !(Maybe Text)
+    , _gmwetirsStatusDetails     :: !(Maybe Text)
+    , _gmwetirsEndTime           :: !(Maybe POSIX)
+    , _gmwetirsParameters        :: !(Maybe (Sensitive Text))
+    , _gmwetirsResponseStatus    :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetMaintenanceWindowExecutionTaskInvocationResponse' with the minimum fields required to make a request.

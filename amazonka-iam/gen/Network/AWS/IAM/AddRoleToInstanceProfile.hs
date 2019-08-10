@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'addRoleToInstanceProfile' smart constructor.
-data AddRoleToInstanceProfile = AddRoleToInstanceProfile'
-  { _artipInstanceProfileName :: !Text
-  , _artipRoleName            :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddRoleToInstanceProfile =
+  AddRoleToInstanceProfile'
+    { _artipInstanceProfileName :: !Text
+    , _artipRoleName            :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddRoleToInstanceProfile' with the minimum fields required to make a request.

@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'sendTestEventNotification' smart constructor.
-data SendTestEventNotification = SendTestEventNotification'
-  { _stenNotification  :: !NotificationSpecification
-  , _stenTestEventType :: !EventType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SendTestEventNotification =
+  SendTestEventNotification'
+    { _stenNotification  :: !NotificationSpecification
+    , _stenTestEventType :: !EventType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SendTestEventNotification' with the minimum fields required to make a request.
@@ -113,9 +115,11 @@ instance ToQuery SendTestEventNotification where
         toQuery = const mempty
 
 -- | /See:/ 'sendTestEventNotificationResponse' smart constructor.
-newtype SendTestEventNotificationResponse = SendTestEventNotificationResponse'
-  { _stenrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype SendTestEventNotificationResponse =
+  SendTestEventNotificationResponse'
+    { _stenrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SendTestEventNotificationResponse' with the minimum fields required to make a request.

@@ -47,9 +47,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeIndex' smart constructor.
-newtype DescribeIndex = DescribeIndex'
-  { _diIndexName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeIndex =
+  DescribeIndex'
+    { _diIndexName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeIndex' with the minimum fields required to make a request.
@@ -93,12 +95,14 @@ instance ToQuery DescribeIndex where
         toQuery = const mempty
 
 -- | /See:/ 'describeIndexResponse' smart constructor.
-data DescribeIndexResponse = DescribeIndexResponse'
-  { _dirsIndexStatus    :: !(Maybe IndexStatus)
-  , _dirsSchema         :: !(Maybe Text)
-  , _dirsIndexName      :: !(Maybe Text)
-  , _dirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeIndexResponse =
+  DescribeIndexResponse'
+    { _dirsIndexStatus    :: !(Maybe IndexStatus)
+    , _dirsSchema         :: !(Maybe Text)
+    , _dirsIndexName      :: !(Maybe Text)
+    , _dirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeIndexResponse' with the minimum fields required to make a request.

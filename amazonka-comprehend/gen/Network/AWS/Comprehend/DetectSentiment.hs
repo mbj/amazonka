@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'detectSentiment' smart constructor.
-data DetectSentiment = DetectSentiment'
-  { _dsText         :: !Text
-  , _dsLanguageCode :: !LanguageCode
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DetectSentiment =
+  DetectSentiment'
+    { _dsText         :: !Text
+    , _dsLanguageCode :: !LanguageCode
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DetectSentiment' with the minimum fields required to make a request.
@@ -114,11 +116,13 @@ instance ToQuery DetectSentiment where
         toQuery = const mempty
 
 -- | /See:/ 'detectSentimentResponse' smart constructor.
-data DetectSentimentResponse = DetectSentimentResponse'
-  { _dsrsSentiment      :: !(Maybe SentimentType)
-  , _dsrsSentimentScore :: !(Maybe SentimentScore)
-  , _dsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DetectSentimentResponse =
+  DetectSentimentResponse'
+    { _dsrsSentiment      :: !(Maybe SentimentType)
+    , _dsrsSentimentScore :: !(Maybe SentimentScore)
+    , _dsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DetectSentimentResponse' with the minimum fields required to make a request.

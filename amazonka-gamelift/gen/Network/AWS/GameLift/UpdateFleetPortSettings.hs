@@ -99,11 +99,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateFleetPortSettings' smart constructor.
-data UpdateFleetPortSettings = UpdateFleetPortSettings'
-  { _ufpsInboundPermissionRevocations    :: !(Maybe [IPPermission])
-  , _ufpsInboundPermissionAuthorizations :: !(Maybe [IPPermission])
-  , _ufpsFleetId                         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateFleetPortSettings =
+  UpdateFleetPortSettings'
+    { _ufpsInboundPermissionRevocations    :: !(Maybe [IPPermission])
+    , _ufpsInboundPermissionAuthorizations :: !(Maybe [IPPermission])
+    , _ufpsFleetId                         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateFleetPortSettings' with the minimum fields required to make a request.
@@ -182,10 +184,12 @@ instance ToQuery UpdateFleetPortSettings where
 --
 --
 -- /See:/ 'updateFleetPortSettingsResponse' smart constructor.
-data UpdateFleetPortSettingsResponse = UpdateFleetPortSettingsResponse'
-  { _ufpsrsFleetId        :: !(Maybe Text)
-  , _ufpsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateFleetPortSettingsResponse =
+  UpdateFleetPortSettingsResponse'
+    { _ufpsrsFleetId        :: !(Maybe Text)
+    , _ufpsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateFleetPortSettingsResponse' with the minimum fields required to make a request.

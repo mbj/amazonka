@@ -52,10 +52,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getUsagePlanKey' smart constructor.
-data GetUsagePlanKey = GetUsagePlanKey'
-  { _gUsagePlanId :: !Text
-  , _gKeyId       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetUsagePlanKey =
+  GetUsagePlanKey'
+    { _gUsagePlanId :: !Text
+    , _gKeyId       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetUsagePlanKey' with the minimum fields required to make a request.

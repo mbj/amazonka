@@ -52,12 +52,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createDevicePool' smart constructor.
-data CreateDevicePool = CreateDevicePool'
-  { _cdpDescription :: !(Maybe Text)
-  , _cdpProjectARN  :: !Text
-  , _cdpName        :: !Text
-  , _cdpRules       :: ![Rule]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDevicePool =
+  CreateDevicePool'
+    { _cdpDescription :: !(Maybe Text)
+    , _cdpProjectARN  :: !Text
+    , _cdpName        :: !Text
+    , _cdpRules       :: ![Rule]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDevicePool' with the minimum fields required to make a request.
@@ -143,10 +145,12 @@ instance ToQuery CreateDevicePool where
 --
 --
 -- /See:/ 'createDevicePoolResponse' smart constructor.
-data CreateDevicePoolResponse = CreateDevicePoolResponse'
-  { _cdprsDevicePool     :: !(Maybe DevicePool)
-  , _cdprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDevicePoolResponse =
+  CreateDevicePoolResponse'
+    { _cdprsDevicePool     :: !(Maybe DevicePool)
+    , _cdprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDevicePoolResponse' with the minimum fields required to make a request.

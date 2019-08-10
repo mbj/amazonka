@@ -49,11 +49,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putLifecyclePolicy' smart constructor.
-data PutLifecyclePolicy = PutLifecyclePolicy'
-  { _plpRegistryId          :: !(Maybe Text)
-  , _plpRepositoryName      :: !Text
-  , _plpLifecyclePolicyText :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutLifecyclePolicy =
+  PutLifecyclePolicy'
+    { _plpRegistryId          :: !(Maybe Text)
+    , _plpRepositoryName      :: !Text
+    , _plpLifecyclePolicyText :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutLifecyclePolicy' with the minimum fields required to make a request.
@@ -132,12 +134,14 @@ instance ToQuery PutLifecyclePolicy where
         toQuery = const mempty
 
 -- | /See:/ 'putLifecyclePolicyResponse' smart constructor.
-data PutLifecyclePolicyResponse = PutLifecyclePolicyResponse'
-  { _plprsRegistryId          :: !(Maybe Text)
-  , _plprsLifecyclePolicyText :: !(Maybe Text)
-  , _plprsRepositoryName      :: !(Maybe Text)
-  , _plprsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutLifecyclePolicyResponse =
+  PutLifecyclePolicyResponse'
+    { _plprsRegistryId          :: !(Maybe Text)
+    , _plprsLifecyclePolicyText :: !(Maybe Text)
+    , _plprsRepositoryName      :: !(Maybe Text)
+    , _plprsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutLifecyclePolicyResponse' with the minimum fields required to make a request.

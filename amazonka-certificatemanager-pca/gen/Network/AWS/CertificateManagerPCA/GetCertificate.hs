@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getCertificate' smart constructor.
-data GetCertificate = GetCertificate'
-  { _gcCertificateAuthorityARN :: !Text
-  , _gcCertificateARN          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetCertificate =
+  GetCertificate'
+    { _gcCertificateAuthorityARN :: !Text
+    , _gcCertificateARN          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetCertificate' with the minimum fields required to make a request.
@@ -118,11 +120,13 @@ instance ToQuery GetCertificate where
         toQuery = const mempty
 
 -- | /See:/ 'getCertificateResponse' smart constructor.
-data GetCertificateResponse = GetCertificateResponse'
-  { _gcrsCertificate      :: !(Maybe Text)
-  , _gcrsCertificateChain :: !(Maybe Text)
-  , _gcrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetCertificateResponse =
+  GetCertificateResponse'
+    { _gcrsCertificate      :: !(Maybe Text)
+    , _gcrsCertificateChain :: !(Maybe Text)
+    , _gcrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetCertificateResponse' with the minimum fields required to make a request.

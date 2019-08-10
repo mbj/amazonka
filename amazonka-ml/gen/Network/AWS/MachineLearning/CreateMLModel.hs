@@ -59,15 +59,17 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createMLModel' smart constructor.
-data CreateMLModel = CreateMLModel'
-  { _cmlmRecipe               :: !(Maybe Text)
-  , _cmlmRecipeURI            :: !(Maybe Text)
-  , _cmlmMLModelName          :: !(Maybe Text)
-  , _cmlmParameters           :: !(Maybe (Map Text Text))
-  , _cmlmMLModelId            :: !Text
-  , _cmlmMLModelType          :: !MLModelType
-  , _cmlmTrainingDataSourceId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateMLModel =
+  CreateMLModel'
+    { _cmlmRecipe               :: !(Maybe Text)
+    , _cmlmRecipeURI            :: !(Maybe Text)
+    , _cmlmMLModelName          :: !(Maybe Text)
+    , _cmlmParameters           :: !(Maybe (Map Text Text))
+    , _cmlmMLModelId            :: !Text
+    , _cmlmMLModelType          :: !MLModelType
+    , _cmlmTrainingDataSourceId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateMLModel' with the minimum fields required to make a request.
@@ -181,10 +183,12 @@ instance ToQuery CreateMLModel where
 --
 --
 -- /See:/ 'createMLModelResponse' smart constructor.
-data CreateMLModelResponse = CreateMLModelResponse'
-  { _cmlmrsMLModelId      :: !(Maybe Text)
-  , _cmlmrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateMLModelResponse =
+  CreateMLModelResponse'
+    { _cmlmrsMLModelId      :: !(Maybe Text)
+    , _cmlmrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateMLModelResponse' with the minimum fields required to make a request.

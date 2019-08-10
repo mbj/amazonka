@@ -52,11 +52,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listHITsForQualificationType' smart constructor.
-data ListHITsForQualificationType = ListHITsForQualificationType'
-  { _lhitfqtNextToken           :: !(Maybe Text)
-  , _lhitfqtMaxResults          :: !(Maybe Nat)
-  , _lhitfqtQualificationTypeId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListHITsForQualificationType =
+  ListHITsForQualificationType'
+    { _lhitfqtNextToken           :: !(Maybe Text)
+    , _lhitfqtMaxResults          :: !(Maybe Nat)
+    , _lhitfqtQualificationTypeId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListHITsForQualificationType' with the minimum fields required to make a request.
@@ -143,12 +145,14 @@ instance ToQuery ListHITsForQualificationType where
         toQuery = const mempty
 
 -- | /See:/ 'listHITsForQualificationTypeResponse' smart constructor.
-data ListHITsForQualificationTypeResponse = ListHITsForQualificationTypeResponse'
-  { _lhitfqtrsNextToken      :: !(Maybe Text)
-  , _lhitfqtrsNumResults     :: !(Maybe Int)
-  , _lhitfqtrsHITs           :: !(Maybe [HIT])
-  , _lhitfqtrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListHITsForQualificationTypeResponse =
+  ListHITsForQualificationTypeResponse'
+    { _lhitfqtrsNextToken      :: !(Maybe Text)
+    , _lhitfqtrsNumResults     :: !(Maybe Int)
+    , _lhitfqtrsHITs           :: !(Maybe [HIT])
+    , _lhitfqtrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListHITsForQualificationTypeResponse' with the minimum fields required to make a request.

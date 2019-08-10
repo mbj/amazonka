@@ -54,13 +54,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeImportImageTasks' smart constructor.
-data DescribeImportImageTasks = DescribeImportImageTasks'
-  { _diitFilters       :: !(Maybe [Filter])
-  , _diitImportTaskIds :: !(Maybe [Text])
-  , _diitNextToken     :: !(Maybe Text)
-  , _diitDryRun        :: !(Maybe Bool)
-  , _diitMaxResults    :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeImportImageTasks =
+  DescribeImportImageTasks'
+    { _diitFilters       :: !(Maybe [Filter])
+    , _diitImportTaskIds :: !(Maybe [Text])
+    , _diitNextToken     :: !(Maybe Text)
+    , _diitDryRun        :: !(Maybe Bool)
+    , _diitMaxResults    :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeImportImageTasks' with the minimum fields required to make a request.
@@ -149,11 +151,13 @@ instance ToQuery DescribeImportImageTasks where
 --
 --
 -- /See:/ 'describeImportImageTasksResponse' smart constructor.
-data DescribeImportImageTasksResponse = DescribeImportImageTasksResponse'
-  { _diitrsNextToken        :: !(Maybe Text)
-  , _diitrsImportImageTasks :: !(Maybe [ImportImageTask])
-  , _diitrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeImportImageTasksResponse =
+  DescribeImportImageTasksResponse'
+    { _diitrsNextToken        :: !(Maybe Text)
+    , _diitrsImportImageTasks :: !(Maybe [ImportImageTask])
+    , _diitrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeImportImageTasksResponse' with the minimum fields required to make a request.

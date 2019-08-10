@@ -50,10 +50,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateContinuousBackups' smart constructor.
-data UpdateContinuousBackups = UpdateContinuousBackups'
-  { _ucbTableName                        :: !Text
-  , _ucbPointInTimeRecoverySpecification :: !PointInTimeRecoverySpecification
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateContinuousBackups =
+  UpdateContinuousBackups'
+    { _ucbTableName                        :: !Text
+    , _ucbPointInTimeRecoverySpecification :: !PointInTimeRecoverySpecification
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateContinuousBackups' with the minimum fields required to make a request.
@@ -123,10 +125,12 @@ instance ToQuery UpdateContinuousBackups where
         toQuery = const mempty
 
 -- | /See:/ 'updateContinuousBackupsResponse' smart constructor.
-data UpdateContinuousBackupsResponse = UpdateContinuousBackupsResponse'
-  { _ucbrsContinuousBackupsDescription :: !(Maybe ContinuousBackupsDescription)
-  , _ucbrsResponseStatus               :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateContinuousBackupsResponse =
+  UpdateContinuousBackupsResponse'
+    { _ucbrsContinuousBackupsDescription :: !(Maybe ContinuousBackupsDescription)
+    , _ucbrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateContinuousBackupsResponse' with the minimum fields required to make a request.

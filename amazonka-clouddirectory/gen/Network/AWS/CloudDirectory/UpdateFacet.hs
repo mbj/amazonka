@@ -55,12 +55,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateFacet' smart constructor.
-data UpdateFacet = UpdateFacet'
-  { _ufObjectType       :: !(Maybe ObjectType)
-  , _ufAttributeUpdates :: !(Maybe [FacetAttributeUpdate])
-  , _ufSchemaARN        :: !Text
-  , _ufName             :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateFacet =
+  UpdateFacet'
+    { _ufObjectType       :: !(Maybe ObjectType)
+    , _ufAttributeUpdates :: !(Maybe [FacetAttributeUpdate])
+    , _ufSchemaARN        :: !Text
+    , _ufName             :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateFacet' with the minimum fields required to make a request.
@@ -135,9 +137,11 @@ instance ToQuery UpdateFacet where
         toQuery = const mempty
 
 -- | /See:/ 'updateFacetResponse' smart constructor.
-newtype UpdateFacetResponse = UpdateFacetResponse'
-  { _ufrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateFacetResponse =
+  UpdateFacetResponse'
+    { _ufrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateFacetResponse' with the minimum fields required to make a request.

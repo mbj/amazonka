@@ -47,11 +47,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'batchDeleteTable' smart constructor.
-data BatchDeleteTable = BatchDeleteTable'
-  { _bdtCatalogId      :: !(Maybe Text)
-  , _bdtDatabaseName   :: !Text
-  , _bdtTablesToDelete :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchDeleteTable =
+  BatchDeleteTable'
+    { _bdtCatalogId      :: !(Maybe Text)
+    , _bdtDatabaseName   :: !Text
+    , _bdtTablesToDelete :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchDeleteTable' with the minimum fields required to make a request.
@@ -123,10 +125,12 @@ instance ToQuery BatchDeleteTable where
         toQuery = const mempty
 
 -- | /See:/ 'batchDeleteTableResponse' smart constructor.
-data BatchDeleteTableResponse = BatchDeleteTableResponse'
-  { _bdtrsErrors         :: !(Maybe [TableError])
-  , _bdtrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchDeleteTableResponse =
+  BatchDeleteTableResponse'
+    { _bdtrsErrors         :: !(Maybe [TableError])
+    , _bdtrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchDeleteTableResponse' with the minimum fields required to make a request.

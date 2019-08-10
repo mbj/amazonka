@@ -51,11 +51,13 @@ import Network.AWS.StorageGateway.Types.Product
 --
 --
 -- /See:/ 'createTapeWithBarcode' smart constructor.
-data CreateTapeWithBarcode = CreateTapeWithBarcode'
-  { _ctwbGatewayARN      :: !Text
-  , _ctwbTapeSizeInBytes :: !Integer
-  , _ctwbTapeBarcode     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateTapeWithBarcode =
+  CreateTapeWithBarcode'
+    { _ctwbGatewayARN      :: !Text
+    , _ctwbTapeSizeInBytes :: !Integer
+    , _ctwbTapeBarcode     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateTapeWithBarcode' with the minimum fields required to make a request.
@@ -135,10 +137,12 @@ instance ToQuery CreateTapeWithBarcode where
 --
 --
 -- /See:/ 'createTapeWithBarcodeResponse' smart constructor.
-data CreateTapeWithBarcodeResponse = CreateTapeWithBarcodeResponse'
-  { _ctwbrsTapeARN        :: !(Maybe Text)
-  , _ctwbrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateTapeWithBarcodeResponse =
+  CreateTapeWithBarcodeResponse'
+    { _ctwbrsTapeARN        :: !(Maybe Text)
+    , _ctwbrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateTapeWithBarcodeResponse' with the minimum fields required to make a request.

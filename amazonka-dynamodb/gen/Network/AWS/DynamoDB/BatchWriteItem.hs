@@ -85,11 +85,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'batchWriteItem' smart constructor.
-data BatchWriteItem = BatchWriteItem'
-  { _bwiReturnConsumedCapacity      :: !(Maybe ReturnConsumedCapacity)
-  , _bwiReturnItemCollectionMetrics :: !(Maybe ReturnItemCollectionMetrics)
-  , _bwiRequestItems                :: !(Map Text (List1 WriteRequest))
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchWriteItem =
+  BatchWriteItem'
+    { _bwiReturnConsumedCapacity      :: !(Maybe ReturnConsumedCapacity)
+    , _bwiReturnItemCollectionMetrics :: !(Maybe ReturnItemCollectionMetrics)
+    , _bwiRequestItems                :: !(Map Text (List1 WriteRequest))
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchWriteItem' with the minimum fields required to make a request.
@@ -169,12 +171,14 @@ instance ToQuery BatchWriteItem where
 --
 --
 -- /See:/ 'batchWriteItemResponse' smart constructor.
-data BatchWriteItemResponse = BatchWriteItemResponse'
-  { _bwirsItemCollectionMetrics :: !(Maybe (Map Text [ItemCollectionMetrics]))
-  , _bwirsConsumedCapacity      :: !(Maybe [ConsumedCapacity])
-  , _bwirsUnprocessedItems      :: !(Maybe (Map Text (List1 WriteRequest)))
-  , _bwirsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchWriteItemResponse =
+  BatchWriteItemResponse'
+    { _bwirsItemCollectionMetrics :: !(Maybe (Map Text [ItemCollectionMetrics]))
+    , _bwirsConsumedCapacity      :: !(Maybe [ConsumedCapacity])
+    , _bwirsUnprocessedItems      :: !(Maybe (Map Text (List1 WriteRequest)))
+    , _bwirsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchWriteItemResponse' with the minimum fields required to make a request.

@@ -61,10 +61,12 @@ import Network.AWS.SWF.Types
 import Network.AWS.SWF.Types.Product
 
 -- | /See:/ 'respondActivityTaskCompleted' smart constructor.
-data RespondActivityTaskCompleted = RespondActivityTaskCompleted'
-  { _ratcResult    :: !(Maybe Text)
-  , _ratcTaskToken :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RespondActivityTaskCompleted =
+  RespondActivityTaskCompleted'
+    { _ratcResult    :: !(Maybe Text)
+    , _ratcTaskToken :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RespondActivityTaskCompleted' with the minimum fields required to make a request.

@@ -48,10 +48,12 @@ import Network.AWS.SES.Types
 import Network.AWS.SES.Types.Product
 
 -- | /See:/ 'testRenderTemplate' smart constructor.
-data TestRenderTemplate = TestRenderTemplate'
-  { _trtTemplateName :: !Text
-  , _trtTemplateData :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TestRenderTemplate =
+  TestRenderTemplate'
+    { _trtTemplateName :: !Text
+    , _trtTemplateData :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TestRenderTemplate' with the minimum fields required to make a request.
@@ -107,10 +109,12 @@ instance ToQuery TestRenderTemplate where
                "TemplateData" =: _trtTemplateData]
 
 -- | /See:/ 'testRenderTemplateResponse' smart constructor.
-data TestRenderTemplateResponse = TestRenderTemplateResponse'
-  { _trtrsRenderedTemplate :: !(Maybe Text)
-  , _trtrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TestRenderTemplateResponse =
+  TestRenderTemplateResponse'
+    { _trtrsRenderedTemplate :: !(Maybe Text)
+    , _trtrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TestRenderTemplateResponse' with the minimum fields required to make a request.

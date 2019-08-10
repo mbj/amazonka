@@ -45,10 +45,12 @@ import Network.AWS.WorkMail.Types
 import Network.AWS.WorkMail.Types.Product
 
 -- | /See:/ 'deregisterFromWorkMail' smart constructor.
-data DeregisterFromWorkMail = DeregisterFromWorkMail'
-  { _dfwmOrganizationId :: !Text
-  , _dfwmEntityId       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeregisterFromWorkMail =
+  DeregisterFromWorkMail'
+    { _dfwmOrganizationId :: !Text
+    , _dfwmEntityId       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeregisterFromWorkMail' with the minimum fields required to make a request.
@@ -113,9 +115,11 @@ instance ToQuery DeregisterFromWorkMail where
         toQuery = const mempty
 
 -- | /See:/ 'deregisterFromWorkMailResponse' smart constructor.
-newtype DeregisterFromWorkMailResponse = DeregisterFromWorkMailResponse'
-  { _dfwmrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeregisterFromWorkMailResponse =
+  DeregisterFromWorkMailResponse'
+    { _dfwmrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeregisterFromWorkMailResponse' with the minimum fields required to make a request.

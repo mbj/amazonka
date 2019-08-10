@@ -50,11 +50,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'startLifecyclePolicyPreview' smart constructor.
-data StartLifecyclePolicyPreview = StartLifecyclePolicyPreview'
-  { _slppRegistryId          :: !(Maybe Text)
-  , _slppLifecyclePolicyText :: !(Maybe Text)
-  , _slppRepositoryName      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartLifecyclePolicyPreview =
+  StartLifecyclePolicyPreview'
+    { _slppRegistryId          :: !(Maybe Text)
+    , _slppLifecyclePolicyText :: !(Maybe Text)
+    , _slppRepositoryName      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartLifecyclePolicyPreview' with the minimum fields required to make a request.
@@ -132,13 +134,15 @@ instance ToQuery StartLifecyclePolicyPreview where
         toQuery = const mempty
 
 -- | /See:/ 'startLifecyclePolicyPreviewResponse' smart constructor.
-data StartLifecyclePolicyPreviewResponse = StartLifecyclePolicyPreviewResponse'
-  { _slpprsStatus              :: !(Maybe LifecyclePolicyPreviewStatus)
-  , _slpprsRegistryId          :: !(Maybe Text)
-  , _slpprsLifecyclePolicyText :: !(Maybe Text)
-  , _slpprsRepositoryName      :: !(Maybe Text)
-  , _slpprsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartLifecyclePolicyPreviewResponse =
+  StartLifecyclePolicyPreviewResponse'
+    { _slpprsStatus              :: !(Maybe LifecyclePolicyPreviewStatus)
+    , _slpprsRegistryId          :: !(Maybe Text)
+    , _slpprsLifecyclePolicyText :: !(Maybe Text)
+    , _slpprsRepositoryName      :: !(Maybe Text)
+    , _slpprsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartLifecyclePolicyPreviewResponse' with the minimum fields required to make a request.

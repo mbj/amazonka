@@ -44,11 +44,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'subscribeToEvent' smart constructor.
-data SubscribeToEvent = SubscribeToEvent'
-  { _steResourceARN :: !Text
-  , _steEvent       :: !InspectorEvent
-  , _steTopicARN    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SubscribeToEvent =
+  SubscribeToEvent'
+    { _steResourceARN :: !Text
+    , _steEvent       :: !InspectorEvent
+    , _steTopicARN    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SubscribeToEvent' with the minimum fields required to make a request.

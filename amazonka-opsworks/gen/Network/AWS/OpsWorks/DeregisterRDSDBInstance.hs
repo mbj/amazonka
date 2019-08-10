@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deregisterRDSDBInstance' smart constructor.
-newtype DeregisterRDSDBInstance = DeregisterRDSDBInstance'
-  { _drdiRDSDBInstanceARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeregisterRDSDBInstance =
+  DeregisterRDSDBInstance'
+    { _drdiRDSDBInstanceARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeregisterRDSDBInstance' with the minimum fields required to make a request.

@@ -62,12 +62,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listEventSourceMappings' smart constructor.
-data ListEventSourceMappings = ListEventSourceMappings'
-  { _lesmEventSourceARN :: !(Maybe Text)
-  , _lesmMarker         :: !(Maybe Text)
-  , _lesmMaxItems       :: !(Maybe Nat)
-  , _lesmFunctionName   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListEventSourceMappings =
+  ListEventSourceMappings'
+    { _lesmEventSourceARN :: !(Maybe Text)
+    , _lesmMarker         :: !(Maybe Text)
+    , _lesmMaxItems       :: !(Maybe Nat)
+    , _lesmFunctionName   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListEventSourceMappings' with the minimum fields required to make a request.
@@ -149,11 +151,13 @@ instance ToQuery ListEventSourceMappings where
 --
 --
 -- /See:/ 'listEventSourceMappingsResponse' smart constructor.
-data ListEventSourceMappingsResponse = ListEventSourceMappingsResponse'
-  { _lesmrsEventSourceMappings :: !(Maybe [EventSourceMappingConfiguration])
-  , _lesmrsNextMarker          :: !(Maybe Text)
-  , _lesmrsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListEventSourceMappingsResponse =
+  ListEventSourceMappingsResponse'
+    { _lesmrsEventSourceMappings :: !(Maybe [EventSourceMappingConfiguration])
+    , _lesmrsNextMarker          :: !(Maybe Text)
+    , _lesmrsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListEventSourceMappingsResponse' with the minimum fields required to make a request.

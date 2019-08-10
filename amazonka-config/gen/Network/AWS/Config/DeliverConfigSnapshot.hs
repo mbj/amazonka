@@ -57,9 +57,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deliverConfigSnapshot' smart constructor.
-newtype DeliverConfigSnapshot = DeliverConfigSnapshot'
-  { _dcsDeliveryChannelName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeliverConfigSnapshot =
+  DeliverConfigSnapshot'
+    { _dcsDeliveryChannelName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeliverConfigSnapshot' with the minimum fields required to make a request.
@@ -120,10 +122,12 @@ instance ToQuery DeliverConfigSnapshot where
 --
 --
 -- /See:/ 'deliverConfigSnapshotResponse' smart constructor.
-data DeliverConfigSnapshotResponse = DeliverConfigSnapshotResponse'
-  { _dcsrsConfigSnapshotId :: !(Maybe Text)
-  , _dcsrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeliverConfigSnapshotResponse =
+  DeliverConfigSnapshotResponse'
+    { _dcsrsConfigSnapshotId :: !(Maybe Text)
+    , _dcsrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeliverConfigSnapshotResponse' with the minimum fields required to make a request.

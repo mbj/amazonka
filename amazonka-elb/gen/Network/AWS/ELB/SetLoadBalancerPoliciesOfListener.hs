@@ -54,11 +54,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'setLoadBalancerPoliciesOfListener' smart constructor.
-data SetLoadBalancerPoliciesOfListener = SetLoadBalancerPoliciesOfListener'
-  { _slbpolLoadBalancerName :: !Text
-  , _slbpolLoadBalancerPort :: !Int
-  , _slbpolPolicyNames      :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SetLoadBalancerPoliciesOfListener =
+  SetLoadBalancerPoliciesOfListener'
+    { _slbpolLoadBalancerName :: !Text
+    , _slbpolLoadBalancerPort :: !Int
+    , _slbpolPolicyNames      :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetLoadBalancerPoliciesOfListener' with the minimum fields required to make a request.
@@ -137,9 +139,11 @@ instance ToQuery SetLoadBalancerPoliciesOfListener
 --
 --
 -- /See:/ 'setLoadBalancerPoliciesOfListenerResponse' smart constructor.
-newtype SetLoadBalancerPoliciesOfListenerResponse = SetLoadBalancerPoliciesOfListenerResponse'
-  { _slbpolrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype SetLoadBalancerPoliciesOfListenerResponse =
+  SetLoadBalancerPoliciesOfListenerResponse'
+    { _slbpolrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetLoadBalancerPoliciesOfListenerResponse' with the minimum fields required to make a request.

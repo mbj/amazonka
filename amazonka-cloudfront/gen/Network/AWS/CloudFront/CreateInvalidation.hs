@@ -51,10 +51,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createInvalidation' smart constructor.
-data CreateInvalidation = CreateInvalidation'
-  { _ciDistributionId    :: !Text
-  , _ciInvalidationBatch :: !InvalidationBatch
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateInvalidation =
+  CreateInvalidation'
+    { _ciDistributionId    :: !Text
+    , _ciInvalidationBatch :: !InvalidationBatch
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateInvalidation' with the minimum fields required to make a request.
@@ -122,11 +124,13 @@ instance ToQuery CreateInvalidation where
 --
 --
 -- /See:/ 'createInvalidationResponse' smart constructor.
-data CreateInvalidationResponse = CreateInvalidationResponse'
-  { _cirsInvalidation   :: !(Maybe Invalidation)
-  , _cirsLocation       :: !(Maybe Text)
-  , _cirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateInvalidationResponse =
+  CreateInvalidationResponse'
+    { _cirsInvalidation   :: !(Maybe Invalidation)
+    , _cirsLocation       :: !(Maybe Text)
+    , _cirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateInvalidationResponse' with the minimum fields required to make a request.

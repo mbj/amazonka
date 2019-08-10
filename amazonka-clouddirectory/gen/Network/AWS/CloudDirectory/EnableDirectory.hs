@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'enableDirectory' smart constructor.
-newtype EnableDirectory = EnableDirectory'
-  { _edDirectoryARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype EnableDirectory =
+  EnableDirectory'
+    { _edDirectoryARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EnableDirectory' with the minimum fields required to make a request.
@@ -95,10 +97,12 @@ instance ToQuery EnableDirectory where
         toQuery = const mempty
 
 -- | /See:/ 'enableDirectoryResponse' smart constructor.
-data EnableDirectoryResponse = EnableDirectoryResponse'
-  { _edrsResponseStatus :: !Int
-  , _edrsDirectoryARN   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EnableDirectoryResponse =
+  EnableDirectoryResponse'
+    { _edrsResponseStatus :: !Int
+    , _edrsDirectoryARN   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EnableDirectoryResponse' with the minimum fields required to make a request.

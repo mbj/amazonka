@@ -47,9 +47,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeLoadBasedAutoScaling' smart constructor.
-newtype DescribeLoadBasedAutoScaling = DescribeLoadBasedAutoScaling'
-  { _dlbasLayerIds :: [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeLoadBasedAutoScaling =
+  DescribeLoadBasedAutoScaling'
+    { _dlbasLayerIds :: [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeLoadBasedAutoScaling' with the minimum fields required to make a request.
@@ -110,10 +112,12 @@ instance ToQuery DescribeLoadBasedAutoScaling where
 --
 --
 -- /See:/ 'describeLoadBasedAutoScalingResponse' smart constructor.
-data DescribeLoadBasedAutoScalingResponse = DescribeLoadBasedAutoScalingResponse'
-  { _dlbasrsLoadBasedAutoScalingConfigurations :: !(Maybe [LoadBasedAutoScalingConfiguration])
-  , _dlbasrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeLoadBasedAutoScalingResponse =
+  DescribeLoadBasedAutoScalingResponse'
+    { _dlbasrsLoadBasedAutoScalingConfigurations :: !(Maybe [LoadBasedAutoScalingConfiguration])
+    , _dlbasrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeLoadBasedAutoScalingResponse' with the minimum fields required to make a request.

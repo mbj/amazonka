@@ -53,10 +53,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'modifyDBClusterParameterGroup' smart constructor.
-data ModifyDBClusterParameterGroup = ModifyDBClusterParameterGroup'
-  { _mdcpgDBClusterParameterGroupName :: !Text
-  , _mdcpgParameters                  :: ![Parameter]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyDBClusterParameterGroup =
+  ModifyDBClusterParameterGroup'
+    { _mdcpgDBClusterParameterGroupName :: !Text
+    , _mdcpgParameters                  :: ![Parameter]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyDBClusterParameterGroup' with the minimum fields required to make a request.

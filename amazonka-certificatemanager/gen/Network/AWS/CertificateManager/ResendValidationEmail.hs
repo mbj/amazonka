@@ -44,11 +44,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'resendValidationEmail' smart constructor.
-data ResendValidationEmail = ResendValidationEmail'
-  { _rveCertificateARN   :: !Text
-  , _rveDomain           :: !Text
-  , _rveValidationDomain :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResendValidationEmail =
+  ResendValidationEmail'
+    { _rveCertificateARN   :: !Text
+    , _rveDomain           :: !Text
+    , _rveValidationDomain :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResendValidationEmail' with the minimum fields required to make a request.

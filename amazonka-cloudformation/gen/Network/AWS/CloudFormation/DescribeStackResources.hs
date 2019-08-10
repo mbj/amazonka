@@ -55,11 +55,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeStackResources' smart constructor.
-data DescribeStackResources = DescribeStackResources'
-  { _dsrLogicalResourceId  :: !(Maybe Text)
-  , _dsrPhysicalResourceId :: !(Maybe Text)
-  , _dsrStackName          :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeStackResources =
+  DescribeStackResources'
+    { _dsrLogicalResourceId  :: !(Maybe Text)
+    , _dsrPhysicalResourceId :: !(Maybe Text)
+    , _dsrStackName          :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeStackResources' with the minimum fields required to make a request.
@@ -130,10 +132,12 @@ instance ToQuery DescribeStackResources where
 --
 --
 -- /See:/ 'describeStackResourcesResponse' smart constructor.
-data DescribeStackResourcesResponse = DescribeStackResourcesResponse'
-  { _dsrsrsStackResources :: !(Maybe [StackResource])
-  , _dsrsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeStackResourcesResponse =
+  DescribeStackResourcesResponse'
+    { _dsrsrsStackResources :: !(Maybe [StackResource])
+    , _dsrsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeStackResourcesResponse' with the minimum fields required to make a request.

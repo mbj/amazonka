@@ -68,14 +68,16 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeInstanceStatus' smart constructor.
-data DescribeInstanceStatus = DescribeInstanceStatus'
-  { _disIncludeAllInstances :: !(Maybe Bool)
-  , _disFilters             :: !(Maybe [Filter])
-  , _disNextToken           :: !(Maybe Text)
-  , _disInstanceIds         :: !(Maybe [Text])
-  , _disDryRun              :: !(Maybe Bool)
-  , _disMaxResults          :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeInstanceStatus =
+  DescribeInstanceStatus'
+    { _disIncludeAllInstances :: !(Maybe Bool)
+    , _disFilters             :: !(Maybe [Filter])
+    , _disNextToken           :: !(Maybe Text)
+    , _disInstanceIds         :: !(Maybe [Text])
+    , _disDryRun              :: !(Maybe Bool)
+    , _disMaxResults          :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeInstanceStatus' with the minimum fields required to make a request.
@@ -179,11 +181,13 @@ instance ToQuery DescribeInstanceStatus where
 --
 --
 -- /See:/ 'describeInstanceStatusResponse' smart constructor.
-data DescribeInstanceStatusResponse = DescribeInstanceStatusResponse'
-  { _disrsInstanceStatuses :: !(Maybe [InstanceStatus])
-  , _disrsNextToken        :: !(Maybe Text)
-  , _disrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeInstanceStatusResponse =
+  DescribeInstanceStatusResponse'
+    { _disrsInstanceStatuses :: !(Maybe [InstanceStatus])
+    , _disrsNextToken        :: !(Maybe Text)
+    , _disrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeInstanceStatusResponse' with the minimum fields required to make a request.

@@ -51,11 +51,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'acceptReservedInstancesExchangeQuote' smart constructor.
-data AcceptReservedInstancesExchangeQuote = AcceptReservedInstancesExchangeQuote'
-  { _arieqTargetConfigurations :: !(Maybe [TargetConfigurationRequest])
-  , _arieqDryRun               :: !(Maybe Bool)
-  , _arieqReservedInstanceIds  :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AcceptReservedInstancesExchangeQuote =
+  AcceptReservedInstancesExchangeQuote'
+    { _arieqTargetConfigurations :: !(Maybe [TargetConfigurationRequest])
+    , _arieqDryRun               :: !(Maybe Bool)
+    , _arieqReservedInstanceIds  :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AcceptReservedInstancesExchangeQuote' with the minimum fields required to make a request.
@@ -137,10 +139,12 @@ instance ToQuery AcceptReservedInstancesExchangeQuote
 --
 --
 -- /See:/ 'acceptReservedInstancesExchangeQuoteResponse' smart constructor.
-data AcceptReservedInstancesExchangeQuoteResponse = AcceptReservedInstancesExchangeQuoteResponse'
-  { _arieqrsExchangeId     :: !(Maybe Text)
-  , _arieqrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AcceptReservedInstancesExchangeQuoteResponse =
+  AcceptReservedInstancesExchangeQuoteResponse'
+    { _arieqrsExchangeId     :: !(Maybe Text)
+    , _arieqrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AcceptReservedInstancesExchangeQuoteResponse' with the minimum fields required to make a request.

@@ -51,11 +51,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeLogGroups' smart constructor.
-data DescribeLogGroups = DescribeLogGroups'
-  { _dlgLogGroupNamePrefix :: !(Maybe Text)
-  , _dlgNextToken          :: !(Maybe Text)
-  , _dlgLimit              :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeLogGroups =
+  DescribeLogGroups'
+    { _dlgLogGroupNamePrefix :: !(Maybe Text)
+    , _dlgNextToken          :: !(Maybe Text)
+    , _dlgLimit              :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeLogGroups' with the minimum fields required to make a request.
@@ -136,11 +138,13 @@ instance ToQuery DescribeLogGroups where
         toQuery = const mempty
 
 -- | /See:/ 'describeLogGroupsResponse' smart constructor.
-data DescribeLogGroupsResponse = DescribeLogGroupsResponse'
-  { _dlgrsLogGroups      :: !(Maybe [LogGroup])
-  , _dlgrsNextToken      :: !(Maybe Text)
-  , _dlgrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeLogGroupsResponse =
+  DescribeLogGroupsResponse'
+    { _dlgrsLogGroups      :: !(Maybe [LogGroup])
+    , _dlgrsNextToken      :: !(Maybe Text)
+    , _dlgrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeLogGroupsResponse' with the minimum fields required to make a request.

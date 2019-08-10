@@ -57,17 +57,19 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateElasticsearchDomainConfig' smart constructor.
-data UpdateElasticsearchDomainConfig = UpdateElasticsearchDomainConfig'
-  { _uedcEBSOptions :: !(Maybe EBSOptions)
-  , _uedcAccessPolicies :: !(Maybe Text)
-  , _uedcLogPublishingOptions :: !(Maybe (Map LogType LogPublishingOption))
-  , _uedcElasticsearchClusterConfig :: !(Maybe ElasticsearchClusterConfig)
-  , _uedcSnapshotOptions :: !(Maybe SnapshotOptions)
-  , _uedcCognitoOptions :: !(Maybe CognitoOptions)
-  , _uedcVPCOptions :: !(Maybe VPCOptions)
-  , _uedcAdvancedOptions :: !(Maybe (Map Text Text))
-  , _uedcDomainName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateElasticsearchDomainConfig =
+  UpdateElasticsearchDomainConfig'
+    { _uedcEBSOptions :: !(Maybe EBSOptions)
+    , _uedcAccessPolicies :: !(Maybe Text)
+    , _uedcLogPublishingOptions :: !(Maybe (Map LogType LogPublishingOption))
+    , _uedcElasticsearchClusterConfig :: !(Maybe ElasticsearchClusterConfig)
+    , _uedcSnapshotOptions :: !(Maybe SnapshotOptions)
+    , _uedcCognitoOptions :: !(Maybe CognitoOptions)
+    , _uedcVPCOptions :: !(Maybe VPCOptions)
+    , _uedcAdvancedOptions :: !(Maybe (Map Text Text))
+    , _uedcDomainName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateElasticsearchDomainConfig' with the minimum fields required to make a request.
@@ -194,10 +196,12 @@ instance ToQuery UpdateElasticsearchDomainConfig
 --
 --
 -- /See:/ 'updateElasticsearchDomainConfigResponse' smart constructor.
-data UpdateElasticsearchDomainConfigResponse = UpdateElasticsearchDomainConfigResponse'
-  { _uedcrsResponseStatus :: !Int
-  , _uedcrsDomainConfig   :: !ElasticsearchDomainConfig
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateElasticsearchDomainConfigResponse =
+  UpdateElasticsearchDomainConfigResponse'
+    { _uedcrsResponseStatus :: !Int
+    , _uedcrsDomainConfig   :: !ElasticsearchDomainConfig
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateElasticsearchDomainConfigResponse' with the minimum fields required to make a request.

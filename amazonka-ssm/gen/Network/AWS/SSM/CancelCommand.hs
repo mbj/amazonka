@@ -49,10 +49,12 @@ import Network.AWS.SSM.Types.Product
 --
 --
 -- /See:/ 'cancelCommand' smart constructor.
-data CancelCommand = CancelCommand'
-  { _ccInstanceIds :: !(Maybe [Text])
-  , _ccCommandId   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CancelCommand =
+  CancelCommand'
+    { _ccInstanceIds :: !(Maybe [Text])
+    , _ccCommandId   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CancelCommand' with the minimum fields required to make a request.
@@ -116,9 +118,11 @@ instance ToQuery CancelCommand where
 --
 --
 -- /See:/ 'cancelCommandResponse' smart constructor.
-newtype CancelCommandResponse = CancelCommandResponse'
-  { _ccrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CancelCommandResponse =
+  CancelCommandResponse'
+    { _ccrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CancelCommandResponse' with the minimum fields required to make a request.

@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listComplianceStatus' smart constructor.
-data ListComplianceStatus = ListComplianceStatus'
-  { _lcsNextToken  :: !(Maybe Text)
-  , _lcsMaxResults :: !(Maybe Nat)
-  , _lcsPolicyId   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListComplianceStatus =
+  ListComplianceStatus'
+    { _lcsNextToken  :: !(Maybe Text)
+    , _lcsMaxResults :: !(Maybe Nat)
+    , _lcsPolicyId   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListComplianceStatus' with the minimum fields required to make a request.
@@ -128,11 +130,13 @@ instance ToQuery ListComplianceStatus where
         toQuery = const mempty
 
 -- | /See:/ 'listComplianceStatusResponse' smart constructor.
-data ListComplianceStatusResponse = ListComplianceStatusResponse'
-  { _lcsrsNextToken                  :: !(Maybe Text)
-  , _lcsrsPolicyComplianceStatusList :: !(Maybe [PolicyComplianceStatus])
-  , _lcsrsResponseStatus             :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListComplianceStatusResponse =
+  ListComplianceStatusResponse'
+    { _lcsrsNextToken                  :: !(Maybe Text)
+    , _lcsrsPolicyComplianceStatusList :: !(Maybe [PolicyComplianceStatus])
+    , _lcsrsResponseStatus             :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListComplianceStatusResponse' with the minimum fields required to make a request.

@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'refreshSchemas' smart constructor.
-data RefreshSchemas = RefreshSchemas'
-  { _rsEndpointARN            :: !Text
-  , _rsReplicationInstanceARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RefreshSchemas =
+  RefreshSchemas'
+    { _rsEndpointARN            :: !Text
+    , _rsReplicationInstanceARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RefreshSchemas' with the minimum fields required to make a request.
@@ -125,10 +127,12 @@ instance ToQuery RefreshSchemas where
 --
 --
 -- /See:/ 'refreshSchemasResponse' smart constructor.
-data RefreshSchemasResponse = RefreshSchemasResponse'
-  { _rsrsRefreshSchemasStatus :: !(Maybe RefreshSchemasStatus)
-  , _rsrsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RefreshSchemasResponse =
+  RefreshSchemasResponse'
+    { _rsrsRefreshSchemasStatus :: !(Maybe RefreshSchemasStatus)
+    , _rsrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RefreshSchemasResponse' with the minimum fields required to make a request.

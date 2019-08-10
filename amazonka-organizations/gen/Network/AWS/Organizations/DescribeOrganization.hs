@@ -91,10 +91,12 @@ instance ToQuery DescribeOrganization where
         toQuery = const mempty
 
 -- | /See:/ 'describeOrganizationResponse' smart constructor.
-data DescribeOrganizationResponse = DescribeOrganizationResponse'
-  { _dorsOrganization   :: !(Maybe Organization)
-  , _dorsResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data DescribeOrganizationResponse =
+  DescribeOrganizationResponse'
+    { _dorsOrganization   :: !(Maybe Organization)
+    , _dorsResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeOrganizationResponse' with the minimum fields required to make a request.

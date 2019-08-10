@@ -57,13 +57,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listDeployments' smart constructor.
-data ListDeployments = ListDeployments'
-  { _ldCreateTimeRange     :: !(Maybe TimeRange)
-  , _ldNextToken           :: !(Maybe Text)
-  , _ldIncludeOnlyStatuses :: !(Maybe [DeploymentStatus])
-  , _ldApplicationName     :: !(Maybe Text)
-  , _ldDeploymentGroupName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListDeployments =
+  ListDeployments'
+    { _ldCreateTimeRange     :: !(Maybe TimeRange)
+    , _ldNextToken           :: !(Maybe Text)
+    , _ldIncludeOnlyStatuses :: !(Maybe [DeploymentStatus])
+    , _ldApplicationName     :: !(Maybe Text)
+    , _ldDeploymentGroupName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDeployments' with the minimum fields required to make a request.
@@ -166,11 +168,13 @@ instance ToQuery ListDeployments where
 --
 --
 -- /See:/ 'listDeploymentsResponse' smart constructor.
-data ListDeploymentsResponse = ListDeploymentsResponse'
-  { _ldrsNextToken      :: !(Maybe Text)
-  , _ldrsDeployments    :: !(Maybe [Text])
-  , _ldrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListDeploymentsResponse =
+  ListDeploymentsResponse'
+    { _ldrsNextToken      :: !(Maybe Text)
+    , _ldrsDeployments    :: !(Maybe [Text])
+    , _ldrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDeploymentsResponse' with the minimum fields required to make a request.

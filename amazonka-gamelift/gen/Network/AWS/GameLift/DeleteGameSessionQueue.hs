@@ -60,9 +60,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteGameSessionQueue' smart constructor.
-newtype DeleteGameSessionQueue = DeleteGameSessionQueue'
-  { _dgsqName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteGameSessionQueue =
+  DeleteGameSessionQueue'
+    { _dgsqName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteGameSessionQueue' with the minimum fields required to make a request.
@@ -114,9 +116,11 @@ instance ToQuery DeleteGameSessionQueue where
         toQuery = const mempty
 
 -- | /See:/ 'deleteGameSessionQueueResponse' smart constructor.
-newtype DeleteGameSessionQueueResponse = DeleteGameSessionQueueResponse'
-  { _dgsqrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteGameSessionQueueResponse =
+  DeleteGameSessionQueueResponse'
+    { _dgsqrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteGameSessionQueueResponse' with the minimum fields required to make a request.

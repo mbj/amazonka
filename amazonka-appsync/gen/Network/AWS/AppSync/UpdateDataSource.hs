@@ -52,16 +52,18 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateDataSource' smart constructor.
-data UpdateDataSource = UpdateDataSource'
-  { _udsServiceRoleARN      :: !(Maybe Text)
-  , _udsDynamodbConfig      :: !(Maybe DynamodbDataSourceConfig)
-  , _udsLambdaConfig        :: !(Maybe LambdaDataSourceConfig)
-  , _udsDescription         :: !(Maybe Text)
-  , _udsElasticsearchConfig :: !(Maybe ElasticsearchDataSourceConfig)
-  , _udsApiId               :: !Text
-  , _udsName                :: !Text
-  , _udsType                :: !DataSourceType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateDataSource =
+  UpdateDataSource'
+    { _udsServiceRoleARN      :: !(Maybe Text)
+    , _udsDynamodbConfig      :: !(Maybe DynamodbDataSourceConfig)
+    , _udsLambdaConfig        :: !(Maybe LambdaDataSourceConfig)
+    , _udsDescription         :: !(Maybe Text)
+    , _udsElasticsearchConfig :: !(Maybe ElasticsearchDataSourceConfig)
+    , _udsApiId               :: !Text
+    , _udsName                :: !Text
+    , _udsType                :: !DataSourceType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateDataSource' with the minimum fields required to make a request.
@@ -175,10 +177,12 @@ instance ToQuery UpdateDataSource where
         toQuery = const mempty
 
 -- | /See:/ 'updateDataSourceResponse' smart constructor.
-data UpdateDataSourceResponse = UpdateDataSourceResponse'
-  { _udsrsDataSource     :: !(Maybe DataSource)
-  , _udsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateDataSourceResponse =
+  UpdateDataSourceResponse'
+    { _udsrsDataSource     :: !(Maybe DataSource)
+    , _udsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateDataSourceResponse' with the minimum fields required to make a request.

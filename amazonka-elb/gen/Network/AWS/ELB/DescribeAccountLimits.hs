@@ -49,10 +49,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeAccountLimits' smart constructor.
-data DescribeAccountLimits = DescribeAccountLimits'
-  { _dalMarker   :: !(Maybe Text)
-  , _dalPageSize :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAccountLimits =
+  DescribeAccountLimits'
+    { _dalMarker   :: !(Maybe Text)
+    , _dalPageSize :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAccountLimits' with the minimum fields required to make a request.
@@ -107,11 +109,13 @@ instance ToQuery DescribeAccountLimits where
                "Marker" =: _dalMarker, "PageSize" =: _dalPageSize]
 
 -- | /See:/ 'describeAccountLimitsResponse' smart constructor.
-data DescribeAccountLimitsResponse = DescribeAccountLimitsResponse'
-  { _dalrsLimits         :: !(Maybe [Limit])
-  , _dalrsNextMarker     :: !(Maybe Text)
-  , _dalrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAccountLimitsResponse =
+  DescribeAccountLimitsResponse'
+    { _dalrsLimits         :: !(Maybe [Limit])
+    , _dalrsNextMarker     :: !(Maybe Text)
+    , _dalrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAccountLimitsResponse' with the minimum fields required to make a request.

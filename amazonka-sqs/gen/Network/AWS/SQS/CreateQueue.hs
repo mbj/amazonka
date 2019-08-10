@@ -68,10 +68,12 @@ import Network.AWS.SQS.Types.Product
 --
 --
 -- /See:/ 'createQueue' smart constructor.
-data CreateQueue = CreateQueue'
-  { _cqAttributes :: !(Maybe (Map QueueAttributeName Text))
-  , _cqQueueName  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateQueue =
+  CreateQueue'
+    { _cqAttributes :: !(Maybe (Map QueueAttributeName Text))
+    , _cqQueueName  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateQueue' with the minimum fields required to make a request.
@@ -130,10 +132,12 @@ instance ToQuery CreateQueue where
 --
 --
 -- /See:/ 'createQueueResponse' smart constructor.
-data CreateQueueResponse = CreateQueueResponse'
-  { _cqrsQueueURL       :: !(Maybe Text)
-  , _cqrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateQueueResponse =
+  CreateQueueResponse'
+    { _cqrsQueueURL       :: !(Maybe Text)
+    , _cqrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateQueueResponse' with the minimum fields required to make a request.

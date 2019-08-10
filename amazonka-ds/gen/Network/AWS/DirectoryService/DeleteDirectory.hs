@@ -51,9 +51,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteDirectory' smart constructor.
-newtype DeleteDirectory = DeleteDirectory'
-  { _dddDirectoryId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteDirectory =
+  DeleteDirectory'
+    { _dddDirectoryId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteDirectory' with the minimum fields required to make a request.
@@ -111,10 +113,12 @@ instance ToQuery DeleteDirectory where
 --
 --
 -- /See:/ 'deleteDirectoryResponse' smart constructor.
-data DeleteDirectoryResponse = DeleteDirectoryResponse'
-  { _delrsDirectoryId    :: !(Maybe Text)
-  , _delrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteDirectoryResponse =
+  DeleteDirectoryResponse'
+    { _delrsDirectoryId    :: !(Maybe Text)
+    , _delrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteDirectoryResponse' with the minimum fields required to make a request.

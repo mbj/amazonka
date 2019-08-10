@@ -46,11 +46,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateNotificationSettings' smart constructor.
-data UpdateNotificationSettings = UpdateNotificationSettings'
-  { _unsNotification :: !(Maybe NotificationSpecification)
-  , _unsActive       :: !(Maybe Bool)
-  , _unsHITTypeId    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateNotificationSettings =
+  UpdateNotificationSettings'
+    { _unsNotification :: !(Maybe NotificationSpecification)
+    , _unsActive       :: !(Maybe Bool)
+    , _unsHITTypeId    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateNotificationSettings' with the minimum fields required to make a request.
@@ -124,9 +126,11 @@ instance ToQuery UpdateNotificationSettings where
         toQuery = const mempty
 
 -- | /See:/ 'updateNotificationSettingsResponse' smart constructor.
-newtype UpdateNotificationSettingsResponse = UpdateNotificationSettingsResponse'
-  { _unsrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateNotificationSettingsResponse =
+  UpdateNotificationSettingsResponse'
+    { _unsrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateNotificationSettingsResponse' with the minimum fields required to make a request.

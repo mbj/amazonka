@@ -46,10 +46,12 @@ import Network.AWS.WorkDocs.Types
 import Network.AWS.WorkDocs.Types.Product
 
 -- | /See:/ 'activateUser' smart constructor.
-data ActivateUser = ActivateUser'
-  { _auAuthenticationToken :: !(Maybe (Sensitive Text))
-  , _auUserId              :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data ActivateUser =
+  ActivateUser'
+    { _auAuthenticationToken :: !(Maybe (Sensitive Text))
+    , _auUserId              :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ActivateUser' with the minimum fields required to make a request.
@@ -106,10 +108,12 @@ instance ToQuery ActivateUser where
         toQuery = const mempty
 
 -- | /See:/ 'activateUserResponse' smart constructor.
-data ActivateUserResponse = ActivateUserResponse'
-  { _aursUser           :: !(Maybe User)
-  , _aursResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ActivateUserResponse =
+  ActivateUserResponse'
+    { _aursUser           :: !(Maybe User)
+    , _aursResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ActivateUserResponse' with the minimum fields required to make a request.

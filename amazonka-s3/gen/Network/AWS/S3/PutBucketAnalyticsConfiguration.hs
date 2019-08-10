@@ -42,11 +42,13 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'putBucketAnalyticsConfiguration' smart constructor.
-data PutBucketAnalyticsConfiguration = PutBucketAnalyticsConfiguration'
-  { _pBucket                 :: !BucketName
-  , _pId                     :: !Text
-  , _pAnalyticsConfiguration :: !AnalyticsConfiguration
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutBucketAnalyticsConfiguration =
+  PutBucketAnalyticsConfiguration'
+    { _pBucket                 :: !BucketName
+    , _pId                     :: !Text
+    , _pAnalyticsConfiguration :: !AnalyticsConfiguration
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutBucketAnalyticsConfiguration' with the minimum fields required to make a request.

@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listThingRegistrationTasks' smart constructor.
-data ListThingRegistrationTasks = ListThingRegistrationTasks'
-  { _ltrtStatus     :: !(Maybe TaskStatus)
-  , _ltrtNextToken  :: !(Maybe Text)
-  , _ltrtMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListThingRegistrationTasks =
+  ListThingRegistrationTasks'
+    { _ltrtStatus     :: !(Maybe TaskStatus)
+    , _ltrtNextToken  :: !(Maybe Text)
+    , _ltrtMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListThingRegistrationTasks' with the minimum fields required to make a request.
@@ -112,11 +114,13 @@ instance ToQuery ListThingRegistrationTasks where
                "maxResults" =: _ltrtMaxResults]
 
 -- | /See:/ 'listThingRegistrationTasksResponse' smart constructor.
-data ListThingRegistrationTasksResponse = ListThingRegistrationTasksResponse'
-  { _ltrtrsNextToken      :: !(Maybe Text)
-  , _ltrtrsTaskIds        :: !(Maybe [Text])
-  , _ltrtrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListThingRegistrationTasksResponse =
+  ListThingRegistrationTasksResponse'
+    { _ltrtrsNextToken      :: !(Maybe Text)
+    , _ltrtrsTaskIds        :: !(Maybe [Text])
+    , _ltrtrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListThingRegistrationTasksResponse' with the minimum fields required to make a request.

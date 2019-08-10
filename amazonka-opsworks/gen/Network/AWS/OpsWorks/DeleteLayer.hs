@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteLayer' smart constructor.
-newtype DeleteLayer = DeleteLayer'
-  { _dlLayerId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteLayer =
+  DeleteLayer'
+    { _dlLayerId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteLayer' with the minimum fields required to make a request.

@@ -58,12 +58,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeEventSubscriptions' smart constructor.
-data DescribeEventSubscriptions = DescribeEventSubscriptions'
-  { _dessSubscriptionName :: !(Maybe Text)
-  , _dessFilters          :: !(Maybe [Filter])
-  , _dessMarker           :: !(Maybe Text)
-  , _dessMaxRecords       :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeEventSubscriptions =
+  DescribeEventSubscriptions'
+    { _dessSubscriptionName :: !(Maybe Text)
+    , _dessFilters          :: !(Maybe [Filter])
+    , _dessMarker           :: !(Maybe Text)
+    , _dessMaxRecords       :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEventSubscriptions' with the minimum fields required to make a request.
@@ -157,11 +159,13 @@ instance ToQuery DescribeEventSubscriptions where
 --
 --
 -- /See:/ 'describeEventSubscriptionsResponse' smart constructor.
-data DescribeEventSubscriptionsResponse = DescribeEventSubscriptionsResponse'
-  { _desrsEventSubscriptionsList :: !(Maybe [EventSubscription])
-  , _desrsMarker                 :: !(Maybe Text)
-  , _desrsResponseStatus         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeEventSubscriptionsResponse =
+  DescribeEventSubscriptionsResponse'
+    { _desrsEventSubscriptionsList :: !(Maybe [EventSubscription])
+    , _desrsMarker                 :: !(Maybe Text)
+    , _desrsResponseStatus         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEventSubscriptionsResponse' with the minimum fields required to make a request.

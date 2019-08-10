@@ -55,9 +55,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeThing' smart constructor.
-newtype DescribeThing = DescribeThing'
-  { _dThingName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeThing =
+  DescribeThing'
+    { _dThingName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeThing' with the minimum fields required to make a request.
@@ -109,16 +111,18 @@ instance ToQuery DescribeThing where
 --
 --
 -- /See:/ 'describeThingResponse' smart constructor.
-data DescribeThingResponse = DescribeThingResponse'
-  { _dtrsDefaultClientId :: !(Maybe Text)
-  , _dtrsThingTypeName   :: !(Maybe Text)
-  , _dtrsThingARN        :: !(Maybe Text)
-  , _dtrsAttributes      :: !(Maybe (Map Text Text))
-  , _dtrsVersion         :: !(Maybe Integer)
-  , _dtrsThingName       :: !(Maybe Text)
-  , _dtrsThingId         :: !(Maybe Text)
-  , _dtrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeThingResponse =
+  DescribeThingResponse'
+    { _dtrsDefaultClientId :: !(Maybe Text)
+    , _dtrsThingTypeName   :: !(Maybe Text)
+    , _dtrsThingARN        :: !(Maybe Text)
+    , _dtrsAttributes      :: !(Maybe (Map Text Text))
+    , _dtrsVersion         :: !(Maybe Integer)
+    , _dtrsThingName       :: !(Maybe Text)
+    , _dtrsThingId         :: !(Maybe Text)
+    , _dtrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeThingResponse' with the minimum fields required to make a request.

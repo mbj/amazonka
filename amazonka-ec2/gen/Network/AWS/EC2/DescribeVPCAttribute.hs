@@ -53,11 +53,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeVPCAttribute' smart constructor.
-data DescribeVPCAttribute = DescribeVPCAttribute'
-  { _dvpcaDryRun    :: !(Maybe Bool)
-  , _dvpcaAttribute :: !VPCAttributeName
-  , _dvpcaVPCId     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeVPCAttribute =
+  DescribeVPCAttribute'
+    { _dvpcaDryRun    :: !(Maybe Bool)
+    , _dvpcaAttribute :: !VPCAttributeName
+    , _dvpcaVPCId     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeVPCAttribute' with the minimum fields required to make a request.
@@ -130,12 +132,14 @@ instance ToQuery DescribeVPCAttribute where
 --
 --
 -- /See:/ 'describeVPCAttributeResponse' smart constructor.
-data DescribeVPCAttributeResponse = DescribeVPCAttributeResponse'
-  { _dvpcarsEnableDNSHostnames :: !(Maybe AttributeBooleanValue)
-  , _dvpcarsEnableDNSSupport   :: !(Maybe AttributeBooleanValue)
-  , _dvpcarsVPCId              :: !(Maybe Text)
-  , _dvpcarsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeVPCAttributeResponse =
+  DescribeVPCAttributeResponse'
+    { _dvpcarsEnableDNSHostnames :: !(Maybe AttributeBooleanValue)
+    , _dvpcarsEnableDNSSupport   :: !(Maybe AttributeBooleanValue)
+    , _dvpcarsVPCId              :: !(Maybe Text)
+    , _dvpcarsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeVPCAttributeResponse' with the minimum fields required to make a request.

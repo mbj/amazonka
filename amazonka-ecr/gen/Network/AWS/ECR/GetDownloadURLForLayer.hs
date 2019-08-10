@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getDownloadURLForLayer' smart constructor.
-data GetDownloadURLForLayer = GetDownloadURLForLayer'
-  { _gduflRegistryId     :: !(Maybe Text)
-  , _gduflRepositoryName :: !Text
-  , _gduflLayerDigest    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDownloadURLForLayer =
+  GetDownloadURLForLayer'
+    { _gduflRegistryId     :: !(Maybe Text)
+    , _gduflRepositoryName :: !Text
+    , _gduflLayerDigest    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDownloadURLForLayer' with the minimum fields required to make a request.
@@ -128,11 +130,13 @@ instance ToQuery GetDownloadURLForLayer where
         toQuery = const mempty
 
 -- | /See:/ 'getDownloadURLForLayerResponse' smart constructor.
-data GetDownloadURLForLayerResponse = GetDownloadURLForLayerResponse'
-  { _gduflrsLayerDigest    :: !(Maybe Text)
-  , _gduflrsDownloadURL    :: !(Maybe Text)
-  , _gduflrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDownloadURLForLayerResponse =
+  GetDownloadURLForLayerResponse'
+    { _gduflrsLayerDigest    :: !(Maybe Text)
+    , _gduflrsDownloadURL    :: !(Maybe Text)
+    , _gduflrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDownloadURLForLayerResponse' with the minimum fields required to make a request.

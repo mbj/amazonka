@@ -48,10 +48,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteAuthorizer' smart constructor.
-data DeleteAuthorizer = DeleteAuthorizer'
-  { _daRestAPIId    :: !Text
-  , _daAuthorizerId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteAuthorizer =
+  DeleteAuthorizer'
+    { _daRestAPIId    :: !Text
+    , _daAuthorizerId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteAuthorizer' with the minimum fields required to make a request.

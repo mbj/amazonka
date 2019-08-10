@@ -55,13 +55,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'uploadServerCertificate' smart constructor.
-data UploadServerCertificate = UploadServerCertificate'
-  { _uscPath                  :: !(Maybe Text)
-  , _uscCertificateChain      :: !(Maybe Text)
-  , _uscServerCertificateName :: !Text
-  , _uscCertificateBody       :: !Text
-  , _uscPrivateKey            :: !(Sensitive Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data UploadServerCertificate =
+  UploadServerCertificate'
+    { _uscPath                  :: !(Maybe Text)
+    , _uscCertificateChain      :: !(Maybe Text)
+    , _uscServerCertificateName :: !Text
+    , _uscCertificateBody       :: !Text
+    , _uscPrivateKey            :: !(Sensitive Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UploadServerCertificate' with the minimum fields required to make a request.
@@ -150,10 +152,12 @@ instance ToQuery UploadServerCertificate where
 --
 --
 -- /See:/ 'uploadServerCertificateResponse' smart constructor.
-data UploadServerCertificateResponse = UploadServerCertificateResponse'
-  { _ursServerCertificateMetadata :: !(Maybe ServerCertificateMetadata)
-  , _ursResponseStatus            :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UploadServerCertificateResponse =
+  UploadServerCertificateResponse'
+    { _ursServerCertificateMetadata :: !(Maybe ServerCertificateMetadata)
+    , _ursResponseStatus            :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UploadServerCertificateResponse' with the minimum fields required to make a request.

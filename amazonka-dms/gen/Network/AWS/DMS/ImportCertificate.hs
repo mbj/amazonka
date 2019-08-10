@@ -48,12 +48,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'importCertificate' smart constructor.
-data ImportCertificate = ImportCertificate'
-  { _icCertificatePem        :: !(Maybe Text)
-  , _icCertificateWallet     :: !(Maybe Base64)
-  , _icTags                  :: !(Maybe [Tag])
-  , _icCertificateIdentifier :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ImportCertificate =
+  ImportCertificate'
+    { _icCertificatePem        :: !(Maybe Text)
+    , _icCertificateWallet     :: !(Maybe Base64)
+    , _icTags                  :: !(Maybe [Tag])
+    , _icCertificateIdentifier :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ImportCertificate' with the minimum fields required to make a request.
@@ -136,10 +138,12 @@ instance ToQuery ImportCertificate where
         toQuery = const mempty
 
 -- | /See:/ 'importCertificateResponse' smart constructor.
-data ImportCertificateResponse = ImportCertificateResponse'
-  { _icrsCertificate    :: !(Maybe Certificate)
-  , _icrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ImportCertificateResponse =
+  ImportCertificateResponse'
+    { _icrsCertificate    :: !(Maybe Certificate)
+    , _icrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ImportCertificateResponse' with the minimum fields required to make a request.

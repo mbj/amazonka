@@ -50,11 +50,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listRetirableGrants' smart constructor.
-data ListRetirableGrants = ListRetirableGrants'
-  { _lrgMarker            :: !(Maybe Text)
-  , _lrgLimit             :: !(Maybe Nat)
-  , _lrgRetiringPrincipal :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListRetirableGrants =
+  ListRetirableGrants'
+    { _lrgMarker            :: !(Maybe Text)
+    , _lrgLimit             :: !(Maybe Nat)
+    , _lrgRetiringPrincipal :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListRetirableGrants' with the minimum fields required to make a request.

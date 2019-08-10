@@ -52,12 +52,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'startExportTask' smart constructor.
-data StartExportTask = StartExportTask'
-  { _setExportDataFormat :: !(Maybe [ExportDataFormat])
-  , _setStartTime        :: !(Maybe POSIX)
-  , _setFilters          :: !(Maybe [ExportFilter])
-  , _setEndTime          :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartExportTask =
+  StartExportTask'
+    { _setExportDataFormat :: !(Maybe [ExportDataFormat])
+    , _setStartTime        :: !(Maybe POSIX)
+    , _setFilters          :: !(Maybe [ExportFilter])
+    , _setEndTime          :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartExportTask' with the minimum fields required to make a request.
@@ -137,10 +139,12 @@ instance ToQuery StartExportTask where
         toQuery = const mempty
 
 -- | /See:/ 'startExportTaskResponse' smart constructor.
-data StartExportTaskResponse = StartExportTaskResponse'
-  { _setrsExportId       :: !(Maybe Text)
-  , _setrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartExportTaskResponse =
+  StartExportTaskResponse'
+    { _setrsExportId       :: !(Maybe Text)
+    , _setrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartExportTaskResponse' with the minimum fields required to make a request.

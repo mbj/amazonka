@@ -54,10 +54,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeLunaClient' smart constructor.
-data DescribeLunaClient = DescribeLunaClient'
-  { _dlcClientARN              :: !(Maybe Text)
-  , _dlcCertificateFingerprint :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeLunaClient =
+  DescribeLunaClient'
+    { _dlcClientARN              :: !(Maybe Text)
+    , _dlcCertificateFingerprint :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeLunaClient' with the minimum fields required to make a request.
@@ -126,14 +128,16 @@ instance ToQuery DescribeLunaClient where
         toQuery = const mempty
 
 -- | /See:/ 'describeLunaClientResponse' smart constructor.
-data DescribeLunaClientResponse = DescribeLunaClientResponse'
-  { _drsClientARN              :: !(Maybe Text)
-  , _drsLastModifiedTimestamp  :: !(Maybe Text)
-  , _drsCertificateFingerprint :: !(Maybe Text)
-  , _drsCertificate            :: !(Maybe Text)
-  , _drsLabel                  :: !(Maybe Text)
-  , _drsResponseStatus         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeLunaClientResponse =
+  DescribeLunaClientResponse'
+    { _drsClientARN              :: !(Maybe Text)
+    , _drsLastModifiedTimestamp  :: !(Maybe Text)
+    , _drsCertificateFingerprint :: !(Maybe Text)
+    , _drsCertificate            :: !(Maybe Text)
+    , _drsLabel                  :: !(Maybe Text)
+    , _drsResponseStatus         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeLunaClientResponse' with the minimum fields required to make a request.

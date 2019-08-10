@@ -50,11 +50,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'startStreamEncryption' smart constructor.
-data StartStreamEncryption = StartStreamEncryption'
-  { _sStreamName     :: !Text
-  , _sEncryptionType :: !EncryptionType
-  , _sKeyId          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartStreamEncryption =
+  StartStreamEncryption'
+    { _sStreamName     :: !Text
+    , _sEncryptionType :: !EncryptionType
+    , _sKeyId          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartStreamEncryption' with the minimum fields required to make a request.

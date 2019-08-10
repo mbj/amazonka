@@ -55,11 +55,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeCacheParameterGroups' smart constructor.
-data DescribeCacheParameterGroups = DescribeCacheParameterGroups'
-  { _dcpgCacheParameterGroupName :: !(Maybe Text)
-  , _dcpgMarker                  :: !(Maybe Text)
-  , _dcpgMaxRecords              :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeCacheParameterGroups =
+  DescribeCacheParameterGroups'
+    { _dcpgCacheParameterGroupName :: !(Maybe Text)
+    , _dcpgMarker                  :: !(Maybe Text)
+    , _dcpgMaxRecords              :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeCacheParameterGroups' with the minimum fields required to make a request.
@@ -141,11 +143,13 @@ instance ToQuery DescribeCacheParameterGroups where
 --
 --
 -- /See:/ 'describeCacheParameterGroupsResponse' smart constructor.
-data DescribeCacheParameterGroupsResponse = DescribeCacheParameterGroupsResponse'
-  { _dcpgrsCacheParameterGroups :: !(Maybe [CacheParameterGroup])
-  , _dcpgrsMarker               :: !(Maybe Text)
-  , _dcpgrsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeCacheParameterGroupsResponse =
+  DescribeCacheParameterGroupsResponse'
+    { _dcpgrsCacheParameterGroups :: !(Maybe [CacheParameterGroup])
+    , _dcpgrsMarker               :: !(Maybe Text)
+    , _dcpgrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeCacheParameterGroupsResponse' with the minimum fields required to make a request.

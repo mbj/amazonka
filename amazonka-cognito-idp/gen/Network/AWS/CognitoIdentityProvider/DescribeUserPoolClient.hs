@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeUserPoolClient' smart constructor.
-data DescribeUserPoolClient = DescribeUserPoolClient'
-  { _dupcuUserPoolId :: !Text
-  , _dupcuClientId   :: !(Sensitive Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data DescribeUserPoolClient =
+  DescribeUserPoolClient'
+    { _dupcuUserPoolId :: !Text
+    , _dupcuClientId   :: !(Sensitive Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeUserPoolClient' with the minimum fields required to make a request.
@@ -122,10 +124,12 @@ instance ToQuery DescribeUserPoolClient where
 --
 --
 -- /See:/ 'describeUserPoolClientResponse' smart constructor.
-data DescribeUserPoolClientResponse = DescribeUserPoolClientResponse'
-  { _dupcrsUserPoolClient :: !(Maybe UserPoolClientType)
-  , _dupcrsResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data DescribeUserPoolClientResponse =
+  DescribeUserPoolClientResponse'
+    { _dupcrsUserPoolClient :: !(Maybe UserPoolClientType)
+    , _dupcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeUserPoolClientResponse' with the minimum fields required to make a request.

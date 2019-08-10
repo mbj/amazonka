@@ -53,13 +53,15 @@ import Network.AWS.ResourceGroupsTagging.Types.Product
 import Network.AWS.Response
 
 -- | /See:/ 'getResources' smart constructor.
-data GetResources = GetResources'
-  { _grPaginationToken     :: !(Maybe Text)
-  , _grResourcesPerPage    :: !(Maybe Int)
-  , _grResourceTypeFilters :: !(Maybe [Text])
-  , _grTagFilters          :: !(Maybe [TagFilter])
-  , _grTagsPerPage         :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetResources =
+  GetResources'
+    { _grPaginationToken     :: !(Maybe Text)
+    , _grResourcesPerPage    :: !(Maybe Int)
+    , _grResourceTypeFilters :: !(Maybe [Text])
+    , _grTagFilters          :: !(Maybe [TagFilter])
+    , _grTagsPerPage         :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetResources' with the minimum fields required to make a request.
@@ -158,11 +160,13 @@ instance ToQuery GetResources where
         toQuery = const mempty
 
 -- | /See:/ 'getResourcesResponse' smart constructor.
-data GetResourcesResponse = GetResourcesResponse'
-  { _grrsPaginationToken        :: !(Maybe Text)
-  , _grrsResourceTagMappingList :: !(Maybe [ResourceTagMapping])
-  , _grrsResponseStatus         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetResourcesResponse =
+  GetResourcesResponse'
+    { _grrsPaginationToken        :: !(Maybe Text)
+    , _grrsResourceTagMappingList :: !(Maybe [ResourceTagMapping])
+    , _grrsResponseStatus         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetResourcesResponse' with the minimum fields required to make a request.

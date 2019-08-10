@@ -92,10 +92,12 @@ instance ToQuery DescribeLocations where
 --
 --
 -- /See:/ 'describeLocationsResponse' smart constructor.
-data DescribeLocationsResponse = DescribeLocationsResponse'
-  { _dlsrsLocations      :: !(Maybe [Location])
-  , _dlsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeLocationsResponse =
+  DescribeLocationsResponse'
+    { _dlsrsLocations      :: !(Maybe [Location])
+    , _dlsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeLocationsResponse' with the minimum fields required to make a request.

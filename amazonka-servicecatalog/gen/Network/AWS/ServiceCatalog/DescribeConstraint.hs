@@ -48,10 +48,12 @@ import Network.AWS.ServiceCatalog.Types
 import Network.AWS.ServiceCatalog.Types.Product
 
 -- | /See:/ 'describeConstraint' smart constructor.
-data DescribeConstraint = DescribeConstraint'
-  { _dAcceptLanguage :: !(Maybe Text)
-  , _dId             :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeConstraint =
+  DescribeConstraint'
+    { _dAcceptLanguage :: !(Maybe Text)
+    , _dId             :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeConstraint' with the minimum fields required to make a request.
@@ -116,12 +118,14 @@ instance ToQuery DescribeConstraint where
         toQuery = const mempty
 
 -- | /See:/ 'describeConstraintResponse' smart constructor.
-data DescribeConstraintResponse = DescribeConstraintResponse'
-  { _desrsStatus               :: !(Maybe RequestStatus)
-  , _desrsConstraintDetail     :: !(Maybe ConstraintDetail)
-  , _desrsConstraintParameters :: !(Maybe Text)
-  , _desrsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeConstraintResponse =
+  DescribeConstraintResponse'
+    { _desrsStatus               :: !(Maybe RequestStatus)
+    , _desrsConstraintDetail     :: !(Maybe ConstraintDetail)
+    , _desrsConstraintParameters :: !(Maybe Text)
+    , _desrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeConstraintResponse' with the minimum fields required to make a request.

@@ -71,11 +71,13 @@ import Network.AWS.SecretsManager.Types
 import Network.AWS.SecretsManager.Types.Product
 
 -- | /See:/ 'getSecretValue' smart constructor.
-data GetSecretValue = GetSecretValue'
-  { _gsvVersionId    :: !(Maybe Text)
-  , _gsvVersionStage :: !(Maybe Text)
-  , _gsvSecretId     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetSecretValue =
+  GetSecretValue'
+    { _gsvVersionId    :: !(Maybe Text)
+    , _gsvVersionStage :: !(Maybe Text)
+    , _gsvSecretId     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetSecretValue' with the minimum fields required to make a request.
@@ -153,16 +155,18 @@ instance ToQuery GetSecretValue where
         toQuery = const mempty
 
 -- | /See:/ 'getSecretValueResponse' smart constructor.
-data GetSecretValueResponse = GetSecretValueResponse'
-  { _gsvrsVersionId      :: !(Maybe Text)
-  , _gsvrsARN            :: !(Maybe Text)
-  , _gsvrsVersionStages  :: !(Maybe (List1 Text))
-  , _gsvrsSecretBinary   :: !(Maybe (Sensitive Base64))
-  , _gsvrsCreatedDate    :: !(Maybe POSIX)
-  , _gsvrsName           :: !(Maybe Text)
-  , _gsvrsSecretString   :: !(Maybe (Sensitive Text))
-  , _gsvrsResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data GetSecretValueResponse =
+  GetSecretValueResponse'
+    { _gsvrsVersionId      :: !(Maybe Text)
+    , _gsvrsARN            :: !(Maybe Text)
+    , _gsvrsVersionStages  :: !(Maybe (List1 Text))
+    , _gsvrsSecretBinary   :: !(Maybe (Sensitive Base64))
+    , _gsvrsCreatedDate    :: !(Maybe POSIX)
+    , _gsvrsName           :: !(Maybe Text)
+    , _gsvrsSecretString   :: !(Maybe (Sensitive Text))
+    , _gsvrsResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetSecretValueResponse' with the minimum fields required to make a request.

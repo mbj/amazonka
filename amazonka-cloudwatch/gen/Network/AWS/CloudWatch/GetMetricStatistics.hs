@@ -84,17 +84,19 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getMetricStatistics' smart constructor.
-data GetMetricStatistics = GetMetricStatistics'
-  { _gmsExtendedStatistics :: !(Maybe (List1 Text))
-  , _gmsStatistics         :: !(Maybe (List1 Statistic))
-  , _gmsDimensions         :: !(Maybe [Dimension])
-  , _gmsUnit               :: !(Maybe StandardUnit)
-  , _gmsNamespace          :: !Text
-  , _gmsMetricName         :: !Text
-  , _gmsStartTime          :: !ISO8601
-  , _gmsEndTime            :: !ISO8601
-  , _gmsPeriod             :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetMetricStatistics =
+  GetMetricStatistics'
+    { _gmsExtendedStatistics :: !(Maybe (List1 Text))
+    , _gmsStatistics         :: !(Maybe (List1 Statistic))
+    , _gmsDimensions         :: !(Maybe [Dimension])
+    , _gmsUnit               :: !(Maybe StandardUnit)
+    , _gmsNamespace          :: !Text
+    , _gmsMetricName         :: !Text
+    , _gmsStartTime          :: !ISO8601
+    , _gmsEndTime            :: !ISO8601
+    , _gmsPeriod             :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetMetricStatistics' with the minimum fields required to make a request.
@@ -216,11 +218,13 @@ instance ToQuery GetMetricStatistics where
                "EndTime" =: _gmsEndTime, "Period" =: _gmsPeriod]
 
 -- | /See:/ 'getMetricStatisticsResponse' smart constructor.
-data GetMetricStatisticsResponse = GetMetricStatisticsResponse'
-  { _gmsrsDatapoints     :: !(Maybe [Datapoint])
-  , _gmsrsLabel          :: !(Maybe Text)
-  , _gmsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetMetricStatisticsResponse =
+  GetMetricStatisticsResponse'
+    { _gmsrsDatapoints     :: !(Maybe [Datapoint])
+    , _gmsrsLabel          :: !(Maybe Text)
+    , _gmsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetMetricStatisticsResponse' with the minimum fields required to make a request.

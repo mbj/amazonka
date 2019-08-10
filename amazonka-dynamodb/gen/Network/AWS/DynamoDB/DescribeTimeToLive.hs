@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeTimeToLive' smart constructor.
-newtype DescribeTimeToLive = DescribeTimeToLive'
-  { _dttlTableName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeTimeToLive =
+  DescribeTimeToLive'
+    { _dttlTableName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeTimeToLive' with the minimum fields required to make a request.
@@ -103,10 +105,12 @@ instance ToQuery DescribeTimeToLive where
         toQuery = const mempty
 
 -- | /See:/ 'describeTimeToLiveResponse' smart constructor.
-data DescribeTimeToLiveResponse = DescribeTimeToLiveResponse'
-  { _dttlrsTimeToLiveDescription :: !(Maybe TimeToLiveDescription)
-  , _dttlrsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeTimeToLiveResponse =
+  DescribeTimeToLiveResponse'
+    { _dttlrsTimeToLiveDescription :: !(Maybe TimeToLiveDescription)
+    , _dttlrsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeTimeToLiveResponse' with the minimum fields required to make a request.

@@ -71,16 +71,18 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putLifecycleHook' smart constructor.
-data PutLifecycleHook = PutLifecycleHook'
-  { _plhDefaultResult         :: !(Maybe Text)
-  , _plhHeartbeatTimeout      :: !(Maybe Int)
-  , _plhNotificationMetadata  :: !(Maybe Text)
-  , _plhNotificationTargetARN :: !(Maybe Text)
-  , _plhLifecycleTransition   :: !(Maybe Text)
-  , _plhRoleARN               :: !(Maybe Text)
-  , _plhLifecycleHookName     :: !Text
-  , _plhAutoScalingGroupName  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutLifecycleHook =
+  PutLifecycleHook'
+    { _plhDefaultResult         :: !(Maybe Text)
+    , _plhHeartbeatTimeout      :: !(Maybe Int)
+    , _plhNotificationMetadata  :: !(Maybe Text)
+    , _plhNotificationTargetARN :: !(Maybe Text)
+    , _plhLifecycleTransition   :: !(Maybe Text)
+    , _plhRoleARN               :: !(Maybe Text)
+    , _plhLifecycleHookName     :: !Text
+    , _plhAutoScalingGroupName  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutLifecycleHook' with the minimum fields required to make a request.
@@ -184,9 +186,11 @@ instance ToQuery PutLifecycleHook where
                "AutoScalingGroupName" =: _plhAutoScalingGroupName]
 
 -- | /See:/ 'putLifecycleHookResponse' smart constructor.
-newtype PutLifecycleHookResponse = PutLifecycleHookResponse'
-  { _plhrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype PutLifecycleHookResponse =
+  PutLifecycleHookResponse'
+    { _plhrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutLifecycleHookResponse' with the minimum fields required to make a request.

@@ -53,9 +53,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeLoadBalancerPolicyTypes' smart constructor.
-newtype DescribeLoadBalancerPolicyTypes = DescribeLoadBalancerPolicyTypes'
-  { _dlbptPolicyTypeNames :: Maybe [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeLoadBalancerPolicyTypes =
+  DescribeLoadBalancerPolicyTypes'
+    { _dlbptPolicyTypeNames :: Maybe [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeLoadBalancerPolicyTypes' with the minimum fields required to make a request.
@@ -115,10 +117,12 @@ instance ToQuery DescribeLoadBalancerPolicyTypes
 --
 --
 -- /See:/ 'describeLoadBalancerPolicyTypesResponse' smart constructor.
-data DescribeLoadBalancerPolicyTypesResponse = DescribeLoadBalancerPolicyTypesResponse'
-  { _dlbptrsPolicyTypeDescriptions :: !(Maybe [PolicyTypeDescription])
-  , _dlbptrsResponseStatus         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeLoadBalancerPolicyTypesResponse =
+  DescribeLoadBalancerPolicyTypesResponse'
+    { _dlbptrsPolicyTypeDescriptions :: !(Maybe [PolicyTypeDescription])
+    , _dlbptrsResponseStatus         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeLoadBalancerPolicyTypesResponse' with the minimum fields required to make a request.

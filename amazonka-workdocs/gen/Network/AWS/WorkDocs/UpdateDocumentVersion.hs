@@ -47,12 +47,14 @@ import Network.AWS.WorkDocs.Types
 import Network.AWS.WorkDocs.Types.Product
 
 -- | /See:/ 'updateDocumentVersion' smart constructor.
-data UpdateDocumentVersion = UpdateDocumentVersion'
-  { _udvAuthenticationToken :: !(Maybe (Sensitive Text))
-  , _udvVersionStatus       :: !(Maybe DocumentVersionStatus)
-  , _udvDocumentId          :: !Text
-  , _udvVersionId           :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data UpdateDocumentVersion =
+  UpdateDocumentVersion'
+    { _udvAuthenticationToken :: !(Maybe (Sensitive Text))
+    , _udvVersionStatus       :: !(Maybe DocumentVersionStatus)
+    , _udvDocumentId          :: !Text
+    , _udvVersionId           :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateDocumentVersion' with the minimum fields required to make a request.

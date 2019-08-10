@@ -46,11 +46,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateClassifier' smart constructor.
-data UpdateClassifier = UpdateClassifier'
-  { _ucGrokClassifier :: !(Maybe UpdateGrokClassifierRequest)
-  , _ucXMLClassifier  :: !(Maybe UpdateXMLClassifierRequest)
-  , _ucJSONClassifier :: !(Maybe UpdateJSONClassifierRequest)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateClassifier =
+  UpdateClassifier'
+    { _ucGrokClassifier :: !(Maybe UpdateGrokClassifierRequest)
+    , _ucXMLClassifier  :: !(Maybe UpdateXMLClassifierRequest)
+    , _ucJSONClassifier :: !(Maybe UpdateJSONClassifierRequest)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateClassifier' with the minimum fields required to make a request.
@@ -120,9 +122,11 @@ instance ToQuery UpdateClassifier where
         toQuery = const mempty
 
 -- | /See:/ 'updateClassifierResponse' smart constructor.
-newtype UpdateClassifierResponse = UpdateClassifierResponse'
-  { _ursResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateClassifierResponse =
+  UpdateClassifierResponse'
+    { _ursResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateClassifierResponse' with the minimum fields required to make a request.

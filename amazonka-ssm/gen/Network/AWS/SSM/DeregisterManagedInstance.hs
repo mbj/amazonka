@@ -44,9 +44,11 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'deregisterManagedInstance' smart constructor.
-newtype DeregisterManagedInstance = DeregisterManagedInstance'
-  { _dmiInstanceId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeregisterManagedInstance =
+  DeregisterManagedInstance'
+    { _dmiInstanceId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeregisterManagedInstance' with the minimum fields required to make a request.
@@ -101,9 +103,11 @@ instance ToQuery DeregisterManagedInstance where
         toQuery = const mempty
 
 -- | /See:/ 'deregisterManagedInstanceResponse' smart constructor.
-newtype DeregisterManagedInstanceResponse = DeregisterManagedInstanceResponse'
-  { _dmirsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeregisterManagedInstanceResponse =
+  DeregisterManagedInstanceResponse'
+    { _dmirsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeregisterManagedInstanceResponse' with the minimum fields required to make a request.

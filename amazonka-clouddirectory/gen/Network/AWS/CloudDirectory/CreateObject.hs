@@ -49,13 +49,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createObject' smart constructor.
-data CreateObject = CreateObject'
-  { _coParentReference     :: !(Maybe ObjectReference)
-  , _coObjectAttributeList :: !(Maybe [AttributeKeyAndValue])
-  , _coLinkName            :: !(Maybe Text)
-  , _coDirectoryARN        :: !Text
-  , _coSchemaFacets        :: ![SchemaFacet]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateObject =
+  CreateObject'
+    { _coParentReference     :: !(Maybe ObjectReference)
+    , _coObjectAttributeList :: !(Maybe [AttributeKeyAndValue])
+    , _coLinkName            :: !(Maybe Text)
+    , _coDirectoryARN        :: !Text
+    , _coSchemaFacets        :: ![SchemaFacet]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateObject' with the minimum fields required to make a request.
@@ -139,10 +141,12 @@ instance ToQuery CreateObject where
         toQuery = const mempty
 
 -- | /See:/ 'createObjectResponse' smart constructor.
-data CreateObjectResponse = CreateObjectResponse'
-  { _corsObjectIdentifier :: !(Maybe Text)
-  , _corsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateObjectResponse =
+  CreateObjectResponse'
+    { _corsObjectIdentifier :: !(Maybe Text)
+    , _corsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateObjectResponse' with the minimum fields required to make a request.

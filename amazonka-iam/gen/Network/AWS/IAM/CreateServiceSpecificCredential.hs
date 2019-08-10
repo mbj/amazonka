@@ -54,10 +54,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createServiceSpecificCredential' smart constructor.
-data CreateServiceSpecificCredential = CreateServiceSpecificCredential'
-  { _csscUserName    :: !Text
-  , _csscServiceName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateServiceSpecificCredential =
+  CreateServiceSpecificCredential'
+    { _csscUserName    :: !Text
+    , _csscServiceName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateServiceSpecificCredential' with the minimum fields required to make a request.
@@ -120,10 +122,12 @@ instance ToQuery CreateServiceSpecificCredential
                "ServiceName" =: _csscServiceName]
 
 -- | /See:/ 'createServiceSpecificCredentialResponse' smart constructor.
-data CreateServiceSpecificCredentialResponse = CreateServiceSpecificCredentialResponse'
-  { _csscrsServiceSpecificCredential :: !(Maybe ServiceSpecificCredential)
-  , _csscrsResponseStatus            :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data CreateServiceSpecificCredentialResponse =
+  CreateServiceSpecificCredentialResponse'
+    { _csscrsServiceSpecificCredential :: !(Maybe ServiceSpecificCredential)
+    , _csscrsResponseStatus            :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateServiceSpecificCredentialResponse' with the minimum fields required to make a request.

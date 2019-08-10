@@ -57,14 +57,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'notifyMigrationTaskState' smart constructor.
-data NotifyMigrationTaskState = NotifyMigrationTaskState'
-  { _nmtsDryRun               :: !(Maybe Bool)
-  , _nmtsProgressUpdateStream :: !Text
-  , _nmtsMigrationTaskName    :: !Text
-  , _nmtsTask                 :: !Task
-  , _nmtsUpdateDateTime       :: !POSIX
-  , _nmtsNextUpdateSeconds    :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NotifyMigrationTaskState =
+  NotifyMigrationTaskState'
+    { _nmtsDryRun               :: !(Maybe Bool)
+    , _nmtsProgressUpdateStream :: !Text
+    , _nmtsMigrationTaskName    :: !Text
+    , _nmtsTask                 :: !Task
+    , _nmtsUpdateDateTime       :: !POSIX
+    , _nmtsNextUpdateSeconds    :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NotifyMigrationTaskState' with the minimum fields required to make a request.
@@ -169,9 +171,11 @@ instance ToQuery NotifyMigrationTaskState where
         toQuery = const mempty
 
 -- | /See:/ 'notifyMigrationTaskStateResponse' smart constructor.
-newtype NotifyMigrationTaskStateResponse = NotifyMigrationTaskStateResponse'
-  { _nmtsrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype NotifyMigrationTaskStateResponse =
+  NotifyMigrationTaskStateResponse'
+    { _nmtsrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NotifyMigrationTaskStateResponse' with the minimum fields required to make a request.

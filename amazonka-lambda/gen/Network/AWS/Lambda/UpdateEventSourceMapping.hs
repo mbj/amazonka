@@ -64,12 +64,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateEventSourceMapping' smart constructor.
-data UpdateEventSourceMapping = UpdateEventSourceMapping'
-  { _uesmEnabled      :: !(Maybe Bool)
-  , _uesmBatchSize    :: !(Maybe Nat)
-  , _uesmFunctionName :: !(Maybe Text)
-  , _uesmUUId         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateEventSourceMapping =
+  UpdateEventSourceMapping'
+    { _uesmEnabled      :: !(Maybe Bool)
+    , _uesmBatchSize    :: !(Maybe Nat)
+    , _uesmFunctionName :: !(Maybe Text)
+    , _uesmUUId         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateEventSourceMapping' with the minimum fields required to make a request.

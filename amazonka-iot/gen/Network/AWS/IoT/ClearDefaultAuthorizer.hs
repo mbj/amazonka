@@ -78,9 +78,11 @@ instance ToQuery ClearDefaultAuthorizer where
         toQuery = const mempty
 
 -- | /See:/ 'clearDefaultAuthorizerResponse' smart constructor.
-newtype ClearDefaultAuthorizerResponse = ClearDefaultAuthorizerResponse'
-  { _cdarsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ClearDefaultAuthorizerResponse =
+  ClearDefaultAuthorizerResponse'
+    { _cdarsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ClearDefaultAuthorizerResponse' with the minimum fields required to make a request.

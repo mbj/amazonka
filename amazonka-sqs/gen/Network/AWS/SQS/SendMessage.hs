@@ -63,14 +63,16 @@ import Network.AWS.SQS.Types.Product
 --
 --
 -- /See:/ 'sendMessage' smart constructor.
-data SendMessage = SendMessage'
-  { _smMessageAttributes      :: !(Maybe (Map Text MessageAttributeValue))
-  , _smDelaySeconds           :: !(Maybe Int)
-  , _smMessageDeduplicationId :: !(Maybe Text)
-  , _smMessageGroupId         :: !(Maybe Text)
-  , _smQueueURL               :: !Text
-  , _smMessageBody            :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SendMessage =
+  SendMessage'
+    { _smMessageAttributes      :: !(Maybe (Map Text MessageAttributeValue))
+    , _smDelaySeconds           :: !(Maybe Int)
+    , _smMessageDeduplicationId :: !(Maybe Text)
+    , _smMessageGroupId         :: !(Maybe Text)
+    , _smQueueURL               :: !Text
+    , _smMessageBody            :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SendMessage' with the minimum fields required to make a request.
@@ -169,13 +171,15 @@ instance ToQuery SendMessage where
 --
 --
 -- /See:/ 'sendMessageResponse' smart constructor.
-data SendMessageResponse = SendMessageResponse'
-  { _smrsSequenceNumber         :: !(Maybe Text)
-  , _smrsMessageId              :: !(Maybe Text)
-  , _smrsMD5OfMessageBody       :: !(Maybe Text)
-  , _smrsMD5OfMessageAttributes :: !(Maybe Text)
-  , _smrsResponseStatus         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SendMessageResponse =
+  SendMessageResponse'
+    { _smrsSequenceNumber         :: !(Maybe Text)
+    , _smrsMessageId              :: !(Maybe Text)
+    , _smrsMD5OfMessageBody       :: !(Maybe Text)
+    , _smrsMD5OfMessageAttributes :: !(Maybe Text)
+    , _smrsResponseStatus         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SendMessageResponse' with the minimum fields required to make a request.

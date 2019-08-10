@@ -52,10 +52,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getGroupPolicy' smart constructor.
-data GetGroupPolicy = GetGroupPolicy'
-  { _ggpGroupName  :: !Text
-  , _ggpPolicyName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetGroupPolicy =
+  GetGroupPolicy'
+    { _ggpGroupName  :: !Text
+    , _ggpPolicyName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetGroupPolicy' with the minimum fields required to make a request.
@@ -115,12 +117,14 @@ instance ToQuery GetGroupPolicy where
 --
 --
 -- /See:/ 'getGroupPolicyResponse' smart constructor.
-data GetGroupPolicyResponse = GetGroupPolicyResponse'
-  { _ggprsResponseStatus :: !Int
-  , _ggprsGroupName      :: !Text
-  , _ggprsPolicyName     :: !Text
-  , _ggprsPolicyDocument :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetGroupPolicyResponse =
+  GetGroupPolicyResponse'
+    { _ggprsResponseStatus :: !Int
+    , _ggprsGroupName      :: !Text
+    , _ggprsPolicyName     :: !Text
+    , _ggprsPolicyDocument :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetGroupPolicyResponse' with the minimum fields required to make a request.

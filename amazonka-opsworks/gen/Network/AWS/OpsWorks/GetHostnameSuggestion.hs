@@ -48,9 +48,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getHostnameSuggestion' smart constructor.
-newtype GetHostnameSuggestion = GetHostnameSuggestion'
-  { _ghsLayerId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetHostnameSuggestion =
+  GetHostnameSuggestion'
+    { _ghsLayerId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetHostnameSuggestion' with the minimum fields required to make a request.
@@ -110,11 +112,13 @@ instance ToQuery GetHostnameSuggestion where
 --
 --
 -- /See:/ 'getHostnameSuggestionResponse' smart constructor.
-data GetHostnameSuggestionResponse = GetHostnameSuggestionResponse'
-  { _ghsrsHostname       :: !(Maybe Text)
-  , _ghsrsLayerId        :: !(Maybe Text)
-  , _ghsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetHostnameSuggestionResponse =
+  GetHostnameSuggestionResponse'
+    { _ghsrsHostname       :: !(Maybe Text)
+    , _ghsrsLayerId        :: !(Maybe Text)
+    , _ghsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetHostnameSuggestionResponse' with the minimum fields required to make a request.

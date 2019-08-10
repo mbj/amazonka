@@ -62,11 +62,13 @@ import Network.AWS.StorageGateway.Types.Product
 --
 --
 -- /See:/ 'listTapes' smart constructor.
-data ListTapes = ListTapes'
-  { _ltMarker   :: !(Maybe Text)
-  , _ltLimit    :: !(Maybe Nat)
-  , _ltTapeARNs :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTapes =
+  ListTapes'
+    { _ltMarker   :: !(Maybe Text)
+    , _ltLimit    :: !(Maybe Nat)
+    , _ltTapeARNs :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTapes' with the minimum fields required to make a request.
@@ -144,11 +146,13 @@ instance ToQuery ListTapes where
 --
 --
 -- /See:/ 'listTapesResponse' smart constructor.
-data ListTapesResponse = ListTapesResponse'
-  { _ltrsMarker         :: !(Maybe Text)
-  , _ltrsTapeInfos      :: !(Maybe [TapeInfo])
-  , _ltrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTapesResponse =
+  ListTapesResponse'
+    { _ltrsMarker         :: !(Maybe Text)
+    , _ltrsTapeInfos      :: !(Maybe [TapeInfo])
+    , _ltrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTapesResponse' with the minimum fields required to make a request.

@@ -42,9 +42,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteCertificate' smart constructor.
-newtype DeleteCertificate = DeleteCertificate'
-  { _dcCertificateARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteCertificate =
+  DeleteCertificate'
+    { _dcCertificateARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteCertificate' with the minimum fields required to make a request.

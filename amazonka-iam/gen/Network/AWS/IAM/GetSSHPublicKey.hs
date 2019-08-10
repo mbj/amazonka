@@ -49,11 +49,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getSSHPublicKey' smart constructor.
-data GetSSHPublicKey = GetSSHPublicKey'
-  { _gspkUserName       :: !Text
-  , _gspkSSHPublicKeyId :: !Text
-  , _gspkEncoding       :: !EncodingType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetSSHPublicKey =
+  GetSSHPublicKey'
+    { _gspkUserName       :: !Text
+    , _gspkSSHPublicKeyId :: !Text
+    , _gspkEncoding       :: !EncodingType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetSSHPublicKey' with the minimum fields required to make a request.
@@ -123,10 +125,12 @@ instance ToQuery GetSSHPublicKey where
 --
 --
 -- /See:/ 'getSSHPublicKeyResponse' smart constructor.
-data GetSSHPublicKeyResponse = GetSSHPublicKeyResponse'
-  { _gspkrsSSHPublicKey   :: !(Maybe SSHPublicKey)
-  , _gspkrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetSSHPublicKeyResponse =
+  GetSSHPublicKeyResponse'
+    { _gspkrsSSHPublicKey   :: !(Maybe SSHPublicKey)
+    , _gspkrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetSSHPublicKeyResponse' with the minimum fields required to make a request.

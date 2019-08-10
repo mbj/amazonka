@@ -51,11 +51,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'applyPendingMaintenanceAction' smart constructor.
-data ApplyPendingMaintenanceAction = ApplyPendingMaintenanceAction'
-  { _apmaResourceIdentifier :: !Text
-  , _apmaApplyAction        :: !Text
-  , _apmaOptInType          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ApplyPendingMaintenanceAction =
+  ApplyPendingMaintenanceAction'
+    { _apmaResourceIdentifier :: !Text
+    , _apmaApplyAction        :: !Text
+    , _apmaOptInType          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ApplyPendingMaintenanceAction' with the minimum fields required to make a request.
@@ -127,10 +129,12 @@ instance ToQuery ApplyPendingMaintenanceAction where
                "OptInType" =: _apmaOptInType]
 
 -- | /See:/ 'applyPendingMaintenanceActionResponse' smart constructor.
-data ApplyPendingMaintenanceActionResponse = ApplyPendingMaintenanceActionResponse'
-  { _apmarsResourcePendingMaintenanceActions :: !(Maybe ResourcePendingMaintenanceActions)
-  , _apmarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ApplyPendingMaintenanceActionResponse =
+  ApplyPendingMaintenanceActionResponse'
+    { _apmarsResourcePendingMaintenanceActions :: !(Maybe ResourcePendingMaintenanceActions)
+    , _apmarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ApplyPendingMaintenanceActionResponse' with the minimum fields required to make a request.

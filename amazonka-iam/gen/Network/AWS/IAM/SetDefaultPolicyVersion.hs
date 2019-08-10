@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'setDefaultPolicyVersion' smart constructor.
-data SetDefaultPolicyVersion = SetDefaultPolicyVersion'
-  { _sdpvPolicyARN :: !Text
-  , _sdpvVersionId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SetDefaultPolicyVersion =
+  SetDefaultPolicyVersion'
+    { _sdpvPolicyARN :: !Text
+    , _sdpvVersionId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetDefaultPolicyVersion' with the minimum fields required to make a request.

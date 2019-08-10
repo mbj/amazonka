@@ -49,12 +49,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteRoute' smart constructor.
-data DeleteRoute = DeleteRoute'
-  { _drDestinationIPv6CidrBlock :: !(Maybe Text)
-  , _drDryRun                   :: !(Maybe Bool)
-  , _drDestinationCidrBlock     :: !(Maybe Text)
-  , _drRouteTableId             :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteRoute =
+  DeleteRoute'
+    { _drDestinationIPv6CidrBlock :: !(Maybe Text)
+    , _drDryRun                   :: !(Maybe Bool)
+    , _drDestinationCidrBlock     :: !(Maybe Text)
+    , _drRouteTableId             :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteRoute' with the minimum fields required to make a request.

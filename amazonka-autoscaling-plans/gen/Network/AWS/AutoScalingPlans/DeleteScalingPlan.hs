@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteScalingPlan' smart constructor.
-data DeleteScalingPlan = DeleteScalingPlan'
-  { _dspScalingPlanName    :: !Text
-  , _dspScalingPlanVersion :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteScalingPlan =
+  DeleteScalingPlan'
+    { _dspScalingPlanName    :: !Text
+    , _dspScalingPlanVersion :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteScalingPlan' with the minimum fields required to make a request.
@@ -114,9 +116,11 @@ instance ToQuery DeleteScalingPlan where
         toQuery = const mempty
 
 -- | /See:/ 'deleteScalingPlanResponse' smart constructor.
-newtype DeleteScalingPlanResponse = DeleteScalingPlanResponse'
-  { _dsprsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteScalingPlanResponse =
+  DeleteScalingPlanResponse'
+    { _dsprsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteScalingPlanResponse' with the minimum fields required to make a request.

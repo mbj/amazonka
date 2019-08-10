@@ -52,10 +52,12 @@ import Network.AWS.StorageGateway.Types.Product
 --
 --
 -- /See:/ 'retrieveTapeRecoveryPoint' smart constructor.
-data RetrieveTapeRecoveryPoint = RetrieveTapeRecoveryPoint'
-  { _rtrpTapeARN    :: !Text
-  , _rtrpGatewayARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RetrieveTapeRecoveryPoint =
+  RetrieveTapeRecoveryPoint'
+    { _rtrpTapeARN    :: !Text
+    , _rtrpGatewayARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RetrieveTapeRecoveryPoint' with the minimum fields required to make a request.
@@ -124,10 +126,12 @@ instance ToQuery RetrieveTapeRecoveryPoint where
 --
 --
 -- /See:/ 'retrieveTapeRecoveryPointResponse' smart constructor.
-data RetrieveTapeRecoveryPointResponse = RetrieveTapeRecoveryPointResponse'
-  { _rtrprsTapeARN        :: !(Maybe Text)
-  , _rtrprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RetrieveTapeRecoveryPointResponse =
+  RetrieveTapeRecoveryPointResponse'
+    { _rtrprsTapeARN        :: !(Maybe Text)
+    , _rtrprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RetrieveTapeRecoveryPointResponse' with the minimum fields required to make a request.

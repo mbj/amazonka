@@ -48,12 +48,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createResourceServer' smart constructor.
-data CreateResourceServer = CreateResourceServer'
-  { _crsScopes     :: !(Maybe [ResourceServerScopeType])
-  , _crsUserPoolId :: !Text
-  , _crsIdentifier :: !Text
-  , _crsName       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateResourceServer =
+  CreateResourceServer'
+    { _crsScopes     :: !(Maybe [ResourceServerScopeType])
+    , _crsUserPoolId :: !Text
+    , _crsIdentifier :: !Text
+    , _crsName       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateResourceServer' with the minimum fields required to make a request.
@@ -137,10 +139,12 @@ instance ToQuery CreateResourceServer where
         toQuery = const mempty
 
 -- | /See:/ 'createResourceServerResponse' smart constructor.
-data CreateResourceServerResponse = CreateResourceServerResponse'
-  { _crsrsResponseStatus :: !Int
-  , _crsrsResourceServer :: !ResourceServerType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateResourceServerResponse =
+  CreateResourceServerResponse'
+    { _crsrsResponseStatus :: !Int
+    , _crsrsResourceServer :: !ResourceServerType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateResourceServerResponse' with the minimum fields required to make a request.

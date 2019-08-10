@@ -57,12 +57,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listCreatedArtifacts' smart constructor.
-data ListCreatedArtifacts = ListCreatedArtifacts'
-  { _lcaNextToken            :: !(Maybe Text)
-  , _lcaMaxResults           :: !(Maybe Nat)
-  , _lcaProgressUpdateStream :: !Text
-  , _lcaMigrationTaskName    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListCreatedArtifacts =
+  ListCreatedArtifacts'
+    { _lcaNextToken            :: !(Maybe Text)
+    , _lcaMaxResults           :: !(Maybe Nat)
+    , _lcaProgressUpdateStream :: !Text
+    , _lcaMigrationTaskName    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListCreatedArtifacts' with the minimum fields required to make a request.
@@ -148,11 +150,13 @@ instance ToQuery ListCreatedArtifacts where
         toQuery = const mempty
 
 -- | /See:/ 'listCreatedArtifactsResponse' smart constructor.
-data ListCreatedArtifactsResponse = ListCreatedArtifactsResponse'
-  { _lcarsNextToken           :: !(Maybe Text)
-  , _lcarsCreatedArtifactList :: !(Maybe [CreatedArtifact])
-  , _lcarsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListCreatedArtifactsResponse =
+  ListCreatedArtifactsResponse'
+    { _lcarsNextToken           :: !(Maybe Text)
+    , _lcarsCreatedArtifactList :: !(Maybe [CreatedArtifact])
+    , _lcarsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListCreatedArtifactsResponse' with the minimum fields required to make a request.

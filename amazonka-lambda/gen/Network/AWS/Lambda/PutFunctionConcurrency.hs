@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putFunctionConcurrency' smart constructor.
-data PutFunctionConcurrency = PutFunctionConcurrency'
-  { _pfcFunctionName                 :: !Text
-  , _pfcReservedConcurrentExecutions :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutFunctionConcurrency =
+  PutFunctionConcurrency'
+    { _pfcFunctionName                 :: !Text
+    , _pfcReservedConcurrentExecutions :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutFunctionConcurrency' with the minimum fields required to make a request.

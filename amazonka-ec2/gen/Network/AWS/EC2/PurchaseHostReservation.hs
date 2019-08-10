@@ -53,13 +53,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'purchaseHostReservation' smart constructor.
-data PurchaseHostReservation = PurchaseHostReservation'
-  { _phrCurrencyCode :: !(Maybe CurrencyCodeValues)
-  , _phrClientToken  :: !(Maybe Text)
-  , _phrLimitPrice   :: !(Maybe Text)
-  , _phrHostIdSet    :: ![Text]
-  , _phrOfferingId   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PurchaseHostReservation =
+  PurchaseHostReservation'
+    { _phrCurrencyCode :: !(Maybe CurrencyCodeValues)
+    , _phrClientToken  :: !(Maybe Text)
+    , _phrLimitPrice   :: !(Maybe Text)
+    , _phrHostIdSet    :: ![Text]
+    , _phrOfferingId   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PurchaseHostReservation' with the minimum fields required to make a request.
@@ -147,14 +149,16 @@ instance ToQuery PurchaseHostReservation where
                "OfferingId" =: _phrOfferingId]
 
 -- | /See:/ 'purchaseHostReservationResponse' smart constructor.
-data PurchaseHostReservationResponse = PurchaseHostReservationResponse'
-  { _phrrsCurrencyCode      :: !(Maybe CurrencyCodeValues)
-  , _phrrsClientToken       :: !(Maybe Text)
-  , _phrrsTotalHourlyPrice  :: !(Maybe Text)
-  , _phrrsTotalUpfrontPrice :: !(Maybe Text)
-  , _phrrsPurchase          :: !(Maybe [Purchase])
-  , _phrrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PurchaseHostReservationResponse =
+  PurchaseHostReservationResponse'
+    { _phrrsCurrencyCode      :: !(Maybe CurrencyCodeValues)
+    , _phrrsClientToken       :: !(Maybe Text)
+    , _phrrsTotalHourlyPrice  :: !(Maybe Text)
+    , _phrrsTotalUpfrontPrice :: !(Maybe Text)
+    , _phrrsPurchase          :: !(Maybe [Purchase])
+    , _phrrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PurchaseHostReservationResponse' with the minimum fields required to make a request.

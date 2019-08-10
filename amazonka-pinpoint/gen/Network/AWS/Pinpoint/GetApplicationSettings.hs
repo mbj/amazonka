@@ -43,9 +43,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getApplicationSettings' smart constructor.
-newtype GetApplicationSettings = GetApplicationSettings'
-  { _gasApplicationId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetApplicationSettings =
+  GetApplicationSettings'
+    { _gasApplicationId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetApplicationSettings' with the minimum fields required to make a request.
@@ -94,10 +96,12 @@ instance ToQuery GetApplicationSettings where
         toQuery = const mempty
 
 -- | /See:/ 'getApplicationSettingsResponse' smart constructor.
-data GetApplicationSettingsResponse = GetApplicationSettingsResponse'
-  { _gassrsResponseStatus              :: !Int
-  , _gassrsApplicationSettingsResource :: !ApplicationSettingsResource
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetApplicationSettingsResponse =
+  GetApplicationSettingsResponse'
+    { _gassrsResponseStatus              :: !Int
+    , _gassrsApplicationSettingsResource :: !ApplicationSettingsResource
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetApplicationSettingsResponse' with the minimum fields required to make a request.

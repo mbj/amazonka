@@ -53,9 +53,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getPipelineState' smart constructor.
-newtype GetPipelineState = GetPipelineState'
-  { _gpsName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetPipelineState =
+  GetPipelineState'
+    { _gpsName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetPipelineState' with the minimum fields required to make a request.
@@ -115,14 +117,16 @@ instance ToQuery GetPipelineState where
 --
 --
 -- /See:/ 'getPipelineStateResponse' smart constructor.
-data GetPipelineStateResponse = GetPipelineStateResponse'
-  { _gpsrsPipelineName    :: !(Maybe Text)
-  , _gpsrsCreated         :: !(Maybe POSIX)
-  , _gpsrsStageStates     :: !(Maybe [StageState])
-  , _gpsrsPipelineVersion :: !(Maybe Nat)
-  , _gpsrsUpdated         :: !(Maybe POSIX)
-  , _gpsrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetPipelineStateResponse =
+  GetPipelineStateResponse'
+    { _gpsrsPipelineName    :: !(Maybe Text)
+    , _gpsrsCreated         :: !(Maybe POSIX)
+    , _gpsrsStageStates     :: !(Maybe [StageState])
+    , _gpsrsPipelineVersion :: !(Maybe Nat)
+    , _gpsrsUpdated         :: !(Maybe POSIX)
+    , _gpsrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetPipelineStateResponse' with the minimum fields required to make a request.

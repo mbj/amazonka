@@ -52,12 +52,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'startPersonTracking' smart constructor.
-data StartPersonTracking = StartPersonTracking'
-  { _sptJobTag              :: !(Maybe Text)
-  , _sptNotificationChannel :: !(Maybe NotificationChannel)
-  , _sptClientRequestToken  :: !(Maybe Text)
-  , _sptVideo               :: !Video
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartPersonTracking =
+  StartPersonTracking'
+    { _sptJobTag              :: !(Maybe Text)
+    , _sptNotificationChannel :: !(Maybe NotificationChannel)
+    , _sptClientRequestToken  :: !(Maybe Text)
+    , _sptVideo               :: !Video
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartPersonTracking' with the minimum fields required to make a request.
@@ -140,10 +142,12 @@ instance ToQuery StartPersonTracking where
         toQuery = const mempty
 
 -- | /See:/ 'startPersonTrackingResponse' smart constructor.
-data StartPersonTrackingResponse = StartPersonTrackingResponse'
-  { _sptrsJobId          :: !(Maybe Text)
-  , _sptrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartPersonTrackingResponse =
+  StartPersonTrackingResponse'
+    { _sptrsJobId          :: !(Maybe Text)
+    , _sptrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartPersonTrackingResponse' with the minimum fields required to make a request.

@@ -48,17 +48,19 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'putBucketACL' smart constructor.
-data PutBucketACL = PutBucketACL'
-  { _pbaGrantReadACP        :: !(Maybe Text)
-  , _pbaGrantWriteACP       :: !(Maybe Text)
-  , _pbaGrantRead           :: !(Maybe Text)
-  , _pbaGrantFullControl    :: !(Maybe Text)
-  , _pbaContentMD5          :: !(Maybe Text)
-  , _pbaAccessControlPolicy :: !(Maybe AccessControlPolicy)
-  , _pbaGrantWrite          :: !(Maybe Text)
-  , _pbaACL                 :: !(Maybe BucketCannedACL)
-  , _pbaBucket              :: !BucketName
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutBucketACL =
+  PutBucketACL'
+    { _pbaGrantReadACP        :: !(Maybe Text)
+    , _pbaGrantWriteACP       :: !(Maybe Text)
+    , _pbaGrantRead           :: !(Maybe Text)
+    , _pbaGrantFullControl    :: !(Maybe Text)
+    , _pbaContentMD5          :: !(Maybe Text)
+    , _pbaAccessControlPolicy :: !(Maybe AccessControlPolicy)
+    , _pbaGrantWrite          :: !(Maybe Text)
+    , _pbaACL                 :: !(Maybe BucketCannedACL)
+    , _pbaBucket              :: !BucketName
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutBucketACL' with the minimum fields required to make a request.

@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteInterconnect' smart constructor.
-newtype DeleteInterconnect = DeleteInterconnect'
-  { _dInterconnectId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteInterconnect =
+  DeleteInterconnect'
+    { _dInterconnectId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteInterconnect' with the minimum fields required to make a request.
@@ -110,10 +112,12 @@ instance ToQuery DeleteInterconnect where
 --
 --
 -- /See:/ 'deleteInterconnectResponse' smart constructor.
-data DeleteInterconnectResponse = DeleteInterconnectResponse'
-  { _drsInterconnectState :: !(Maybe InterconnectState)
-  , _drsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteInterconnectResponse =
+  DeleteInterconnectResponse'
+    { _drsInterconnectState :: !(Maybe InterconnectState)
+    , _drsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteInterconnectResponse' with the minimum fields required to make a request.

@@ -58,15 +58,17 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putScalingPolicy' smart constructor.
-data PutScalingPolicy = PutScalingPolicy'
-  { _pspPolicyType :: !(Maybe PolicyType)
-  , _pspTargetTrackingScalingPolicyConfiguration :: !(Maybe TargetTrackingScalingPolicyConfiguration)
-  , _pspStepScalingPolicyConfiguration :: !(Maybe StepScalingPolicyConfiguration)
-  , _pspPolicyName :: !Text
-  , _pspServiceNamespace :: !ServiceNamespace
-  , _pspResourceId :: !Text
-  , _pspScalableDimension :: !ScalableDimension
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutScalingPolicy =
+  PutScalingPolicy'
+    { _pspPolicyType :: !(Maybe PolicyType)
+    , _pspTargetTrackingScalingPolicyConfiguration :: !(Maybe TargetTrackingScalingPolicyConfiguration)
+    , _pspStepScalingPolicyConfiguration :: !(Maybe StepScalingPolicyConfiguration)
+    , _pspPolicyName :: !Text
+    , _pspServiceNamespace :: !ServiceNamespace
+    , _pspResourceId :: !Text
+    , _pspScalableDimension :: !ScalableDimension
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutScalingPolicy' with the minimum fields required to make a request.
@@ -177,11 +179,13 @@ instance ToQuery PutScalingPolicy where
         toQuery = const mempty
 
 -- | /See:/ 'putScalingPolicyResponse' smart constructor.
-data PutScalingPolicyResponse = PutScalingPolicyResponse'
-  { _psprsAlarms         :: !(Maybe [Alarm])
-  , _psprsResponseStatus :: !Int
-  , _psprsPolicyARN      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutScalingPolicyResponse =
+  PutScalingPolicyResponse'
+    { _psprsAlarms         :: !(Maybe [Alarm])
+    , _psprsResponseStatus :: !Int
+    , _psprsPolicyARN      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutScalingPolicyResponse' with the minimum fields required to make a request.

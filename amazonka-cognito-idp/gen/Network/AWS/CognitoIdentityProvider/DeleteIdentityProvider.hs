@@ -43,10 +43,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteIdentityProvider' smart constructor.
-data DeleteIdentityProvider = DeleteIdentityProvider'
-  { _delUserPoolId   :: !Text
-  , _delProviderName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteIdentityProvider =
+  DeleteIdentityProvider'
+    { _delUserPoolId   :: !Text
+    , _delProviderName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteIdentityProvider' with the minimum fields required to make a request.

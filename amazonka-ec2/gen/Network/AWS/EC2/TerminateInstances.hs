@@ -60,10 +60,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'terminateInstances' smart constructor.
-data TerminateInstances = TerminateInstances'
-  { _tiDryRun      :: !(Maybe Bool)
-  , _tiInstanceIds :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TerminateInstances =
+  TerminateInstances'
+    { _tiDryRun      :: !(Maybe Bool)
+    , _tiInstanceIds :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TerminateInstances' with the minimum fields required to make a request.
@@ -122,10 +124,12 @@ instance ToQuery TerminateInstances where
 --
 --
 -- /See:/ 'terminateInstancesResponse' smart constructor.
-data TerminateInstancesResponse = TerminateInstancesResponse'
-  { _tirsTerminatingInstances :: !(Maybe [InstanceStateChange])
-  , _tirsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TerminateInstancesResponse =
+  TerminateInstancesResponse'
+    { _tirsTerminatingInstances :: !(Maybe [InstanceStateChange])
+    , _tirsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TerminateInstancesResponse' with the minimum fields required to make a request.

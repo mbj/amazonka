@@ -52,10 +52,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getObject' smart constructor.
-data GetObject = GetObject'
-  { _goRange :: !(Maybe Text)
-  , _goPath  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetObject =
+  GetObject'
+    { _goRange :: !(Maybe Text)
+    , _goPath  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetObject' with the minimum fields required to make a request.
@@ -109,16 +111,18 @@ instance ToQuery GetObject where
         toQuery = const mempty
 
 -- | /See:/ 'getObjectResponse' smart constructor.
-data GetObjectResponse = GetObjectResponse'
-  { _gorsETag          :: !(Maybe Text)
-  , _gorsContentLength :: !(Maybe Nat)
-  , _gorsCacheControl  :: !(Maybe Text)
-  , _gorsLastModified  :: !(Maybe POSIX)
-  , _gorsContentRange  :: !(Maybe Text)
-  , _gorsContentType   :: !(Maybe Text)
-  , _gorsStatusCode    :: !Int
-  , _gorsBody          :: !RsBody
-  } deriving (Show, Generic)
+data GetObjectResponse =
+  GetObjectResponse'
+    { _gorsETag          :: !(Maybe Text)
+    , _gorsContentLength :: !(Maybe Nat)
+    , _gorsCacheControl  :: !(Maybe Text)
+    , _gorsLastModified  :: !(Maybe POSIX)
+    , _gorsContentRange  :: !(Maybe Text)
+    , _gorsContentType   :: !(Maybe Text)
+    , _gorsStatusCode    :: !Int
+    , _gorsBody          :: !RsBody
+    }
+  deriving (Show, Generic)
 
 
 -- | Creates a value of 'GetObjectResponse' with the minimum fields required to make a request.

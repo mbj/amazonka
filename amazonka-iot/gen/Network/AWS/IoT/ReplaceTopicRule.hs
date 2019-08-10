@@ -47,10 +47,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'replaceTopicRule' smart constructor.
-data ReplaceTopicRule = ReplaceTopicRule'
-  { _rtrRuleName         :: !Text
-  , _rtrTopicRulePayload :: !TopicRulePayload
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReplaceTopicRule =
+  ReplaceTopicRule'
+    { _rtrRuleName         :: !Text
+    , _rtrTopicRulePayload :: !TopicRulePayload
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReplaceTopicRule' with the minimum fields required to make a request.

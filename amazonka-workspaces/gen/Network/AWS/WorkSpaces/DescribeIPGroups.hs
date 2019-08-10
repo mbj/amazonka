@@ -48,11 +48,13 @@ import Network.AWS.WorkSpaces.Types
 import Network.AWS.WorkSpaces.Types.Product
 
 -- | /See:/ 'describeIPGroups' smart constructor.
-data DescribeIPGroups = DescribeIPGroups'
-  { _dipgGroupIds   :: !(Maybe [Text])
-  , _dipgNextToken  :: !(Maybe Text)
-  , _dipgMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeIPGroups =
+  DescribeIPGroups'
+    { _dipgGroupIds   :: !(Maybe [Text])
+    , _dipgNextToken  :: !(Maybe Text)
+    , _dipgMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeIPGroups' with the minimum fields required to make a request.
@@ -124,11 +126,13 @@ instance ToQuery DescribeIPGroups where
         toQuery = const mempty
 
 -- | /See:/ 'describeIPGroupsResponse' smart constructor.
-data DescribeIPGroupsResponse = DescribeIPGroupsResponse'
-  { _digsrsResult         :: !(Maybe [WorkspacesIPGroup])
-  , _digsrsNextToken      :: !(Maybe Text)
-  , _digsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeIPGroupsResponse =
+  DescribeIPGroupsResponse'
+    { _digsrsResult         :: !(Maybe [WorkspacesIPGroup])
+    , _digsrsNextToken      :: !(Maybe Text)
+    , _digsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeIPGroupsResponse' with the minimum fields required to make a request.

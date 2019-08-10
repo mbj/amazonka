@@ -90,12 +90,14 @@ instance ToQuery GetCallerIdentity where
 --
 --
 -- /See:/ 'getCallerIdentityResponse' smart constructor.
-data GetCallerIdentityResponse = GetCallerIdentityResponse'
-  { _gcirsARN            :: !(Maybe Text)
-  , _gcirsAccount        :: !(Maybe Text)
-  , _gcirsUserId         :: !(Maybe Text)
-  , _gcirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetCallerIdentityResponse =
+  GetCallerIdentityResponse'
+    { _gcirsARN            :: !(Maybe Text)
+    , _gcirsAccount        :: !(Maybe Text)
+    , _gcirsUserId         :: !(Maybe Text)
+    , _gcirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetCallerIdentityResponse' with the minimum fields required to make a request.

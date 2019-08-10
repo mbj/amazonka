@@ -55,9 +55,11 @@ import Network.AWS.Response
 -- | Placeholder documentation for DescribeChannelRequest
 --
 -- /See:/ 'describeChannel' smart constructor.
-newtype DescribeChannel = DescribeChannel'
-  { _dChannelId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeChannel =
+  DescribeChannel'
+    { _dChannelId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeChannel' with the minimum fields required to make a request.
@@ -115,20 +117,22 @@ instance ToQuery DescribeChannel where
 -- | Placeholder documentation for DescribeChannelResponse
 --
 -- /See:/ 'describeChannelResponse' smart constructor.
-data DescribeChannelResponse = DescribeChannelResponse'
-  { _dcrsState                 :: !(Maybe ChannelState)
-  , _dcrsARN                   :: !(Maybe Text)
-  , _dcrsPipelinesRunningCount :: !(Maybe Int)
-  , _dcrsInputSpecification    :: !(Maybe InputSpecification)
-  , _dcrsInputAttachments      :: !(Maybe [InputAttachment])
-  , _dcrsDestinations          :: !(Maybe [OutputDestination])
-  , _dcrsName                  :: !(Maybe Text)
-  , _dcrsId                    :: !(Maybe Text)
-  , _dcrsEgressEndpoints       :: !(Maybe [ChannelEgressEndpoint])
-  , _dcrsEncoderSettings       :: !(Maybe EncoderSettings)
-  , _dcrsRoleARN               :: !(Maybe Text)
-  , _dcrsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeChannelResponse =
+  DescribeChannelResponse'
+    { _dcrsState                 :: !(Maybe ChannelState)
+    , _dcrsARN                   :: !(Maybe Text)
+    , _dcrsPipelinesRunningCount :: !(Maybe Int)
+    , _dcrsInputSpecification    :: !(Maybe InputSpecification)
+    , _dcrsInputAttachments      :: !(Maybe [InputAttachment])
+    , _dcrsDestinations          :: !(Maybe [OutputDestination])
+    , _dcrsName                  :: !(Maybe Text)
+    , _dcrsId                    :: !(Maybe Text)
+    , _dcrsEgressEndpoints       :: !(Maybe [ChannelEgressEndpoint])
+    , _dcrsEncoderSettings       :: !(Maybe EncoderSettings)
+    , _dcrsRoleARN               :: !(Maybe Text)
+    , _dcrsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeChannelResponse' with the minimum fields required to make a request.

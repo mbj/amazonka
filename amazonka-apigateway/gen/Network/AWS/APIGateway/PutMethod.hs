@@ -68,19 +68,21 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'putMethod' smart constructor.
-data PutMethod = PutMethod'
-  { _putAuthorizationScopes :: !(Maybe [Text])
-  , _putRequestValidatorId  :: !(Maybe Text)
-  , _putRequestModels       :: !(Maybe (Map Text Text))
-  , _putRequestParameters   :: !(Maybe (Map Text Bool))
-  , _putAuthorizerId        :: !(Maybe Text)
-  , _putOperationName       :: !(Maybe Text)
-  , _putApiKeyRequired      :: !(Maybe Bool)
-  , _putRestAPIId           :: !Text
-  , _putResourceId          :: !Text
-  , _putHttpMethod          :: !Text
-  , _putAuthorizationType   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutMethod =
+  PutMethod'
+    { _putAuthorizationScopes :: !(Maybe [Text])
+    , _putRequestValidatorId  :: !(Maybe Text)
+    , _putRequestModels       :: !(Maybe (Map Text Text))
+    , _putRequestParameters   :: !(Maybe (Map Text Bool))
+    , _putAuthorizerId        :: !(Maybe Text)
+    , _putOperationName       :: !(Maybe Text)
+    , _putApiKeyRequired      :: !(Maybe Bool)
+    , _putRestAPIId           :: !Text
+    , _putResourceId          :: !Text
+    , _putHttpMethod          :: !Text
+    , _putAuthorizationType   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutMethod' with the minimum fields required to make a request.

@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getLaunchTemplateData' smart constructor.
-data GetLaunchTemplateData = GetLaunchTemplateData'
-  { _gltdDryRun     :: !(Maybe Bool)
-  , _gltdInstanceId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetLaunchTemplateData =
+  GetLaunchTemplateData'
+    { _gltdDryRun     :: !(Maybe Bool)
+    , _gltdInstanceId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetLaunchTemplateData' with the minimum fields required to make a request.
@@ -103,10 +105,12 @@ instance ToQuery GetLaunchTemplateData where
                "InstanceId" =: _gltdInstanceId]
 
 -- | /See:/ 'getLaunchTemplateDataResponse' smart constructor.
-data GetLaunchTemplateDataResponse = GetLaunchTemplateDataResponse'
-  { _gltdrsLaunchTemplateData :: !(Maybe ResponseLaunchTemplateData)
-  , _gltdrsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetLaunchTemplateDataResponse =
+  GetLaunchTemplateDataResponse'
+    { _gltdrsLaunchTemplateData :: !(Maybe ResponseLaunchTemplateData)
+    , _gltdrsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetLaunchTemplateDataResponse' with the minimum fields required to make a request.

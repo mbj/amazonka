@@ -58,10 +58,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'addJobFlowSteps' smart constructor.
-data AddJobFlowSteps = AddJobFlowSteps'
-  { _ajfsJobFlowId :: !Text
-  , _ajfsSteps     :: ![StepConfig]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddJobFlowSteps =
+  AddJobFlowSteps'
+    { _ajfsJobFlowId :: !Text
+    , _ajfsSteps     :: ![StepConfig]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddJobFlowSteps' with the minimum fields required to make a request.
@@ -126,10 +128,12 @@ instance ToQuery AddJobFlowSteps where
 --
 --
 -- /See:/ 'addJobFlowStepsResponse' smart constructor.
-data AddJobFlowStepsResponse = AddJobFlowStepsResponse'
-  { _ajfsrsStepIds        :: !(Maybe [Text])
-  , _ajfsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddJobFlowStepsResponse =
+  AddJobFlowStepsResponse'
+    { _ajfsrsStepIds        :: !(Maybe [Text])
+    , _ajfsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddJobFlowStepsResponse' with the minimum fields required to make a request.

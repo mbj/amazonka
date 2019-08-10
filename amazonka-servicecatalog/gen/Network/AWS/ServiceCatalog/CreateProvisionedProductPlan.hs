@@ -63,19 +63,21 @@ import Network.AWS.ServiceCatalog.Types
 import Network.AWS.ServiceCatalog.Types.Product
 
 -- | /See:/ 'createProvisionedProductPlan' smart constructor.
-data CreateProvisionedProductPlan = CreateProvisionedProductPlan'
-  { _cpppNotificationARNs       :: !(Maybe [Text])
-  , _cpppAcceptLanguage         :: !(Maybe Text)
-  , _cpppPathId                 :: !(Maybe Text)
-  , _cpppProvisioningParameters :: !(Maybe [UpdateProvisioningParameter])
-  , _cpppTags                   :: !(Maybe [Tag])
-  , _cpppPlanName               :: !Text
-  , _cpppPlanType               :: !ProvisionedProductPlanType
-  , _cpppProductId              :: !Text
-  , _cpppProvisionedProductName :: !Text
-  , _cpppProvisioningArtifactId :: !Text
-  , _cpppIdempotencyToken       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateProvisionedProductPlan =
+  CreateProvisionedProductPlan'
+    { _cpppNotificationARNs       :: !(Maybe [Text])
+    , _cpppAcceptLanguage         :: !(Maybe Text)
+    , _cpppPathId                 :: !(Maybe Text)
+    , _cpppProvisioningParameters :: !(Maybe [UpdateProvisioningParameter])
+    , _cpppTags                   :: !(Maybe [Tag])
+    , _cpppPlanName               :: !Text
+    , _cpppPlanType               :: !ProvisionedProductPlanType
+    , _cpppProductId              :: !Text
+    , _cpppProvisionedProductName :: !Text
+    , _cpppProvisioningArtifactId :: !Text
+    , _cpppIdempotencyToken       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateProvisionedProductPlan' with the minimum fields required to make a request.
@@ -229,14 +231,16 @@ instance ToQuery CreateProvisionedProductPlan where
         toQuery = const mempty
 
 -- | /See:/ 'createProvisionedProductPlanResponse' smart constructor.
-data CreateProvisionedProductPlanResponse = CreateProvisionedProductPlanResponse'
-  { _cppprsProvisionedProductName :: !(Maybe Text)
-  , _cppprsProvisionProductId     :: !(Maybe Text)
-  , _cppprsProvisioningArtifactId :: !(Maybe Text)
-  , _cppprsPlanId                 :: !(Maybe Text)
-  , _cppprsPlanName               :: !(Maybe Text)
-  , _cppprsResponseStatus         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateProvisionedProductPlanResponse =
+  CreateProvisionedProductPlanResponse'
+    { _cppprsProvisionedProductName :: !(Maybe Text)
+    , _cppprsProvisionProductId     :: !(Maybe Text)
+    , _cppprsProvisioningArtifactId :: !(Maybe Text)
+    , _cppprsPlanId                 :: !(Maybe Text)
+    , _cppprsPlanName               :: !(Maybe Text)
+    , _cppprsResponseStatus         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateProvisionedProductPlanResponse' with the minimum fields required to make a request.

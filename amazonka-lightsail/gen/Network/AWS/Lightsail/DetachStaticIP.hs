@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'detachStaticIP' smart constructor.
-newtype DetachStaticIP = DetachStaticIP'
-  { _dsiStaticIPName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DetachStaticIP =
+  DetachStaticIP'
+    { _dsiStaticIPName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DetachStaticIP' with the minimum fields required to make a request.
@@ -102,10 +104,12 @@ instance ToQuery DetachStaticIP where
         toQuery = const mempty
 
 -- | /See:/ 'detachStaticIPResponse' smart constructor.
-data DetachStaticIPResponse = DetachStaticIPResponse'
-  { _dsirsOperations     :: !(Maybe [Operation])
-  , _dsirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DetachStaticIPResponse =
+  DetachStaticIPResponse'
+    { _dsirsOperations     :: !(Maybe [Operation])
+    , _dsirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DetachStaticIPResponse' with the minimum fields required to make a request.

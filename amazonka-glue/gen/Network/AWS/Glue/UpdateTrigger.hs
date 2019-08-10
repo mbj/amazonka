@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateTrigger' smart constructor.
-data UpdateTrigger = UpdateTrigger'
-  { _utName          :: !Text
-  , _utTriggerUpdate :: !TriggerUpdate
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateTrigger =
+  UpdateTrigger'
+    { _utName          :: !Text
+    , _utTriggerUpdate :: !TriggerUpdate
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateTrigger' with the minimum fields required to make a request.
@@ -111,10 +113,12 @@ instance ToQuery UpdateTrigger where
         toQuery = const mempty
 
 -- | /See:/ 'updateTriggerResponse' smart constructor.
-data UpdateTriggerResponse = UpdateTriggerResponse'
-  { _updrsTrigger        :: !(Maybe Trigger)
-  , _updrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateTriggerResponse =
+  UpdateTriggerResponse'
+    { _updrsTrigger        :: !(Maybe Trigger)
+    , _updrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateTriggerResponse' with the minimum fields required to make a request.

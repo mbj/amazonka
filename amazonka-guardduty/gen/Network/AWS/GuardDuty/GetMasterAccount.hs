@@ -43,9 +43,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getMasterAccount' smart constructor.
-newtype GetMasterAccount = GetMasterAccount'
-  { _gmaDetectorId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetMasterAccount =
+  GetMasterAccount'
+    { _gmaDetectorId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetMasterAccount' with the minimum fields required to make a request.
@@ -93,10 +95,12 @@ instance ToQuery GetMasterAccount where
         toQuery = const mempty
 
 -- | /See:/ 'getMasterAccountResponse' smart constructor.
-data GetMasterAccountResponse = GetMasterAccountResponse'
-  { _gmarsMaster         :: !(Maybe Master)
-  , _gmarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetMasterAccountResponse =
+  GetMasterAccountResponse'
+    { _gmarsMaster         :: !(Maybe Master)
+    , _gmarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetMasterAccountResponse' with the minimum fields required to make a request.

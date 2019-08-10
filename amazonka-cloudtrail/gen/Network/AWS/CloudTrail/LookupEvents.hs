@@ -77,13 +77,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'lookupEvents' smart constructor.
-data LookupEvents = LookupEvents'
-  { _leStartTime        :: !(Maybe POSIX)
-  , _leLookupAttributes :: !(Maybe [LookupAttribute])
-  , _leNextToken        :: !(Maybe Text)
-  , _leEndTime          :: !(Maybe POSIX)
-  , _leMaxResults       :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LookupEvents =
+  LookupEvents'
+    { _leStartTime        :: !(Maybe POSIX)
+    , _leLookupAttributes :: !(Maybe [LookupAttribute])
+    , _leNextToken        :: !(Maybe Text)
+    , _leEndTime          :: !(Maybe POSIX)
+    , _leMaxResults       :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LookupEvents' with the minimum fields required to make a request.
@@ -183,11 +185,13 @@ instance ToQuery LookupEvents where
 --
 --
 -- /See:/ 'lookupEventsResponse' smart constructor.
-data LookupEventsResponse = LookupEventsResponse'
-  { _lersNextToken      :: !(Maybe Text)
-  , _lersEvents         :: !(Maybe [Event])
-  , _lersResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LookupEventsResponse =
+  LookupEventsResponse'
+    { _lersNextToken      :: !(Maybe Text)
+    , _lersEvents         :: !(Maybe [Event])
+    , _lersResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LookupEventsResponse' with the minimum fields required to make a request.

@@ -55,10 +55,12 @@ import Network.AWS.SDB.Types
 import Network.AWS.SDB.Types.Product
 
 -- | /See:/ 'batchPutAttributes' smart constructor.
-data BatchPutAttributes = BatchPutAttributes'
-  { _bpaDomainName :: !Text
-  , _bpaItems      :: ![ReplaceableItem]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchPutAttributes =
+  BatchPutAttributes'
+    { _bpaDomainName :: !Text
+    , _bpaItems      :: ![ReplaceableItem]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchPutAttributes' with the minimum fields required to make a request.

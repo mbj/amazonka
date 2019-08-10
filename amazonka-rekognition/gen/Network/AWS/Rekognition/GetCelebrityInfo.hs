@@ -48,9 +48,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getCelebrityInfo' smart constructor.
-newtype GetCelebrityInfo = GetCelebrityInfo'
-  { _gciId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetCelebrityInfo =
+  GetCelebrityInfo'
+    { _gciId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetCelebrityInfo' with the minimum fields required to make a request.
@@ -103,11 +105,13 @@ instance ToQuery GetCelebrityInfo where
         toQuery = const mempty
 
 -- | /See:/ 'getCelebrityInfoResponse' smart constructor.
-data GetCelebrityInfoResponse = GetCelebrityInfoResponse'
-  { _gcirsURLs           :: !(Maybe [Text])
-  , _gcirsName           :: !(Maybe Text)
-  , _gcirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetCelebrityInfoResponse =
+  GetCelebrityInfoResponse'
+    { _gcirsURLs           :: !(Maybe [Text])
+    , _gcirsName           :: !(Maybe Text)
+    , _gcirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetCelebrityInfoResponse' with the minimum fields required to make a request.

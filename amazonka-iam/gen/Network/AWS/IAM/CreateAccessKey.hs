@@ -51,9 +51,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createAccessKey' smart constructor.
-newtype CreateAccessKey = CreateAccessKey'
-  { _cakUserName :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateAccessKey =
+  CreateAccessKey'
+    { _cakUserName :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateAccessKey' with the minimum fields required to make a request.
@@ -101,10 +103,12 @@ instance ToQuery CreateAccessKey where
 --
 --
 -- /See:/ 'createAccessKeyResponse' smart constructor.
-data CreateAccessKeyResponse = CreateAccessKeyResponse'
-  { _cakrsResponseStatus :: !Int
-  , _cakrsAccessKey      :: !AccessKeyInfo
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data CreateAccessKeyResponse =
+  CreateAccessKeyResponse'
+    { _cakrsResponseStatus :: !Int
+    , _cakrsAccessKey      :: !AccessKeyInfo
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateAccessKeyResponse' with the minimum fields required to make a request.

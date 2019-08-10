@@ -48,9 +48,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getLoadBalancers' smart constructor.
-newtype GetLoadBalancers = GetLoadBalancers'
-  { _glbPageToken :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetLoadBalancers =
+  GetLoadBalancers'
+    { _glbPageToken :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetLoadBalancers' with the minimum fields required to make a request.
@@ -104,11 +106,13 @@ instance ToQuery GetLoadBalancers where
         toQuery = const mempty
 
 -- | /See:/ 'getLoadBalancersResponse' smart constructor.
-data GetLoadBalancersResponse = GetLoadBalancersResponse'
-  { _glbsrsNextPageToken  :: !(Maybe Text)
-  , _glbsrsLoadBalancers  :: !(Maybe [LoadBalancer])
-  , _glbsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetLoadBalancersResponse =
+  GetLoadBalancersResponse'
+    { _glbsrsNextPageToken  :: !(Maybe Text)
+    , _glbsrsLoadBalancers  :: !(Maybe [LoadBalancer])
+    , _glbsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetLoadBalancersResponse' with the minimum fields required to make a request.

@@ -51,9 +51,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeContinuousBackups' smart constructor.
-newtype DescribeContinuousBackups = DescribeContinuousBackups'
-  { _dcbTableName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeContinuousBackups =
+  DescribeContinuousBackups'
+    { _dcbTableName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeContinuousBackups' with the minimum fields required to make a request.
@@ -109,10 +111,12 @@ instance ToQuery DescribeContinuousBackups where
         toQuery = const mempty
 
 -- | /See:/ 'describeContinuousBackupsResponse' smart constructor.
-data DescribeContinuousBackupsResponse = DescribeContinuousBackupsResponse'
-  { _dcbrsContinuousBackupsDescription :: !(Maybe ContinuousBackupsDescription)
-  , _dcbrsResponseStatus               :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeContinuousBackupsResponse =
+  DescribeContinuousBackupsResponse'
+    { _dcbrsContinuousBackupsDescription :: !(Maybe ContinuousBackupsDescription)
+    , _dcbrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeContinuousBackupsResponse' with the minimum fields required to make a request.

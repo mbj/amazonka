@@ -56,13 +56,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeDBClusterBacktracks' smart constructor.
-data DescribeDBClusterBacktracks = DescribeDBClusterBacktracks'
-  { _ddcbBacktrackIdentifier :: !(Maybe Text)
-  , _ddcbFilters             :: !(Maybe [Filter])
-  , _ddcbMarker              :: !(Maybe Text)
-  , _ddcbMaxRecords          :: !(Maybe Int)
-  , _ddcbDBClusterIdentifier :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDBClusterBacktracks =
+  DescribeDBClusterBacktracks'
+    { _ddcbBacktrackIdentifier :: !(Maybe Text)
+    , _ddcbFilters             :: !(Maybe [Filter])
+    , _ddcbMarker              :: !(Maybe Text)
+    , _ddcbMaxRecords          :: !(Maybe Int)
+    , _ddcbDBClusterIdentifier :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDBClusterBacktracks' with the minimum fields required to make a request.
@@ -153,11 +155,13 @@ instance ToQuery DescribeDBClusterBacktracks where
 --
 --
 -- /See:/ 'describeDBClusterBacktracksResponse' smart constructor.
-data DescribeDBClusterBacktracksResponse = DescribeDBClusterBacktracksResponse'
-  { _ddcbrsMarker              :: !(Maybe Text)
-  , _ddcbrsDBClusterBacktracks :: !(Maybe [DBClusterBacktrack])
-  , _ddcbrsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDBClusterBacktracksResponse =
+  DescribeDBClusterBacktracksResponse'
+    { _ddcbrsMarker              :: !(Maybe Text)
+    , _ddcbrsDBClusterBacktracks :: !(Maybe [DBClusterBacktrack])
+    , _ddcbrsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDBClusterBacktracksResponse' with the minimum fields required to make a request.

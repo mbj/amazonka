@@ -50,9 +50,11 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'createAssociationBatch' smart constructor.
-newtype CreateAssociationBatch = CreateAssociationBatch'
-  { _cabEntries :: List1 CreateAssociationBatchRequestEntry
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateAssociationBatch =
+  CreateAssociationBatch'
+    { _cabEntries :: List1 CreateAssociationBatchRequestEntry
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateAssociationBatch' with the minimum fields required to make a request.
@@ -108,11 +110,13 @@ instance ToQuery CreateAssociationBatch where
         toQuery = const mempty
 
 -- | /See:/ 'createAssociationBatchResponse' smart constructor.
-data CreateAssociationBatchResponse = CreateAssociationBatchResponse'
-  { _cabrsSuccessful     :: !(Maybe [AssociationDescription])
-  , _cabrsFailed         :: !(Maybe [FailedCreateAssociation])
-  , _cabrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateAssociationBatchResponse =
+  CreateAssociationBatchResponse'
+    { _cabrsSuccessful     :: !(Maybe [AssociationDescription])
+    , _cabrsFailed         :: !(Maybe [FailedCreateAssociation])
+    , _cabrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateAssociationBatchResponse' with the minimum fields required to make a request.

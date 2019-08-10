@@ -53,9 +53,11 @@ import Network.AWS.StorageGateway.Types.Product
 --
 --
 -- /See:/ 'disableGateway' smart constructor.
-newtype DisableGateway = DisableGateway'
-  { _dGatewayARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DisableGateway =
+  DisableGateway'
+    { _dGatewayARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisableGateway' with the minimum fields required to make a request.
@@ -112,10 +114,12 @@ instance ToQuery DisableGateway where
 --
 --
 -- /See:/ 'disableGatewayResponse' smart constructor.
-data DisableGatewayResponse = DisableGatewayResponse'
-  { _disrsGatewayARN     :: !(Maybe Text)
-  , _disrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DisableGatewayResponse =
+  DisableGatewayResponse'
+    { _disrsGatewayARN     :: !(Maybe Text)
+    , _disrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisableGatewayResponse' with the minimum fields required to make a request.

@@ -73,19 +73,21 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'sendBulkTemplatedEmail' smart constructor.
-data SendBulkTemplatedEmail = SendBulkTemplatedEmail'
-  { _sbteReturnPath           :: !(Maybe Text)
-  , _sbteConfigurationSetName :: !(Maybe Text)
-  , _sbteSourceARN            :: !(Maybe Text)
-  , _sbteDefaultTags          :: !(Maybe [MessageTag])
-  , _sbteReturnPathARN        :: !(Maybe Text)
-  , _sbteTemplateARN          :: !(Maybe Text)
-  , _sbteDefaultTemplateData  :: !(Maybe Text)
-  , _sbteReplyToAddresses     :: !(Maybe [Text])
-  , _sbteSource               :: !Text
-  , _sbteTemplate             :: !Text
-  , _sbteDestinations         :: ![BulkEmailDestination]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SendBulkTemplatedEmail =
+  SendBulkTemplatedEmail'
+    { _sbteReturnPath           :: !(Maybe Text)
+    , _sbteConfigurationSetName :: !(Maybe Text)
+    , _sbteSourceARN            :: !(Maybe Text)
+    , _sbteDefaultTags          :: !(Maybe [MessageTag])
+    , _sbteReturnPathARN        :: !(Maybe Text)
+    , _sbteTemplateARN          :: !(Maybe Text)
+    , _sbteDefaultTemplateData  :: !(Maybe Text)
+    , _sbteReplyToAddresses     :: !(Maybe [Text])
+    , _sbteSource               :: !Text
+    , _sbteTemplate             :: !Text
+    , _sbteDestinations         :: ![BulkEmailDestination]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SendBulkTemplatedEmail' with the minimum fields required to make a request.
@@ -221,10 +223,12 @@ instance ToQuery SendBulkTemplatedEmail where
                  toQueryList "member" _sbteDestinations]
 
 -- | /See:/ 'sendBulkTemplatedEmailResponse' smart constructor.
-data SendBulkTemplatedEmailResponse = SendBulkTemplatedEmailResponse'
-  { _sbtersResponseStatus :: !Int
-  , _sbtersStatus         :: ![BulkEmailDestinationStatus]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SendBulkTemplatedEmailResponse =
+  SendBulkTemplatedEmailResponse'
+    { _sbtersResponseStatus :: !Int
+    , _sbtersStatus         :: ![BulkEmailDestinationStatus]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SendBulkTemplatedEmailResponse' with the minimum fields required to make a request.

@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteJob' smart constructor.
-newtype DeleteJob = DeleteJob'
-  { _djJobName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteJob =
+  DeleteJob'
+    { _djJobName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteJob' with the minimum fields required to make a request.
@@ -98,10 +100,12 @@ instance ToQuery DeleteJob where
         toQuery = const mempty
 
 -- | /See:/ 'deleteJobResponse' smart constructor.
-data DeleteJobResponse = DeleteJobResponse'
-  { _djrsJobName        :: !(Maybe Text)
-  , _djrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteJobResponse =
+  DeleteJobResponse'
+    { _djrsJobName        :: !(Maybe Text)
+    , _djrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteJobResponse' with the minimum fields required to make a request.

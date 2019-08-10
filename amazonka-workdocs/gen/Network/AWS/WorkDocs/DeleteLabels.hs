@@ -47,12 +47,14 @@ import Network.AWS.WorkDocs.Types
 import Network.AWS.WorkDocs.Types.Product
 
 -- | /See:/ 'deleteLabels' smart constructor.
-data DeleteLabels = DeleteLabels'
-  { _dlDeleteAll           :: !(Maybe Bool)
-  , _dlAuthenticationToken :: !(Maybe (Sensitive Text))
-  , _dlLabels              :: !(Maybe [Text])
-  , _dlResourceId          :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data DeleteLabels =
+  DeleteLabels'
+    { _dlDeleteAll           :: !(Maybe Bool)
+    , _dlAuthenticationToken :: !(Maybe (Sensitive Text))
+    , _dlLabels              :: !(Maybe [Text])
+    , _dlResourceId          :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteLabels' with the minimum fields required to make a request.
@@ -126,9 +128,11 @@ instance ToQuery DeleteLabels where
                  toQuery (toQueryList "member" <$> _dlLabels)]
 
 -- | /See:/ 'deleteLabelsResponse' smart constructor.
-newtype DeleteLabelsResponse = DeleteLabelsResponse'
-  { _dlrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteLabelsResponse =
+  DeleteLabelsResponse'
+    { _dlrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteLabelsResponse' with the minimum fields required to make a request.

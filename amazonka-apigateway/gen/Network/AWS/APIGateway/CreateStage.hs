@@ -71,18 +71,20 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createStage' smart constructor.
-data CreateStage = CreateStage'
-  { _cVariables            :: !(Maybe (Map Text Text))
-  , _cDocumentationVersion :: !(Maybe Text)
-  , _cCacheClusterSize     :: !(Maybe CacheClusterSize)
-  , _cCanarySettings       :: !(Maybe CanarySettings)
-  , _cCacheClusterEnabled  :: !(Maybe Bool)
-  , _cDescription          :: !(Maybe Text)
-  , _cTags                 :: !(Maybe (Map Text Text))
-  , _cRestAPIId            :: !Text
-  , _cStageName            :: !Text
-  , _cDeploymentId         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateStage =
+  CreateStage'
+    { _cVariables            :: !(Maybe (Map Text Text))
+    , _cDocumentationVersion :: !(Maybe Text)
+    , _cCacheClusterSize     :: !(Maybe CacheClusterSize)
+    , _cCanarySettings       :: !(Maybe CanarySettings)
+    , _cCacheClusterEnabled  :: !(Maybe Bool)
+    , _cDescription          :: !(Maybe Text)
+    , _cTags                 :: !(Maybe (Map Text Text))
+    , _cRestAPIId            :: !Text
+    , _cStageName            :: !Text
+    , _cDeploymentId         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateStage' with the minimum fields required to make a request.

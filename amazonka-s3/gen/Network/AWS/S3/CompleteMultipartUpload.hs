@@ -55,13 +55,15 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'completeMultipartUpload' smart constructor.
-data CompleteMultipartUpload = CompleteMultipartUpload'
-  { _cRequestPayer    :: !(Maybe RequestPayer)
-  , _cMultipartUpload :: !(Maybe CompletedMultipartUpload)
-  , _cBucket          :: !BucketName
-  , _cKey             :: !ObjectKey
-  , _cUploadId        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CompleteMultipartUpload =
+  CompleteMultipartUpload'
+    { _cRequestPayer    :: !(Maybe RequestPayer)
+    , _cMultipartUpload :: !(Maybe CompletedMultipartUpload)
+    , _cBucket          :: !BucketName
+    , _cKey             :: !ObjectKey
+    , _cUploadId        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CompleteMultipartUpload' with the minimum fields required to make a request.
@@ -155,18 +157,20 @@ instance ToQuery CompleteMultipartUpload where
           = mconcat ["uploadId" =: _cUploadId]
 
 -- | /See:/ 'completeMultipartUploadResponse' smart constructor.
-data CompleteMultipartUploadResponse = CompleteMultipartUploadResponse'
-  { _crsRequestCharged       :: !(Maybe RequestCharged)
-  , _crsETag                 :: !(Maybe ETag)
-  , _crsVersionId            :: !(Maybe ObjectVersionId)
-  , _crsLocation             :: !(Maybe Text)
-  , _crsExpiration           :: !(Maybe Text)
-  , _crsBucket               :: !(Maybe BucketName)
-  , _crsKey                  :: !(Maybe ObjectKey)
-  , _crsSSEKMSKeyId          :: !(Maybe (Sensitive Text))
-  , _crsServerSideEncryption :: !(Maybe ServerSideEncryption)
-  , _crsResponseStatus       :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data CompleteMultipartUploadResponse =
+  CompleteMultipartUploadResponse'
+    { _crsRequestCharged       :: !(Maybe RequestCharged)
+    , _crsETag                 :: !(Maybe ETag)
+    , _crsVersionId            :: !(Maybe ObjectVersionId)
+    , _crsLocation             :: !(Maybe Text)
+    , _crsExpiration           :: !(Maybe Text)
+    , _crsBucket               :: !(Maybe BucketName)
+    , _crsKey                  :: !(Maybe ObjectKey)
+    , _crsSSEKMSKeyId          :: !(Maybe (Sensitive Text))
+    , _crsServerSideEncryption :: !(Maybe ServerSideEncryption)
+    , _crsResponseStatus       :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CompleteMultipartUploadResponse' with the minimum fields required to make a request.

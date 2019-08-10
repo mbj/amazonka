@@ -26,10 +26,12 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'accessPoliciesStatus' smart constructor.
-data AccessPoliciesStatus = AccessPoliciesStatus'
-  { _apsOptions :: !Text
-  , _apsStatus  :: !OptionStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AccessPoliciesStatus =
+  AccessPoliciesStatus'
+    { _apsOptions :: !Text
+    , _apsStatus  :: !OptionStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AccessPoliciesStatus' with the minimum fields required to make a request.
@@ -71,10 +73,12 @@ instance NFData AccessPoliciesStatus where
 --
 --
 -- /See:/ 'additionalLimit' smart constructor.
-data AdditionalLimit = AdditionalLimit'
-  { _alLimitName   :: !(Maybe Text)
-  , _alLimitValues :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AdditionalLimit =
+  AdditionalLimit'
+    { _alLimitName   :: !(Maybe Text)
+    , _alLimitValues :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AdditionalLimit' with the minimum fields required to make a request.
@@ -119,10 +123,12 @@ instance NFData AdditionalLimit where
 --
 --
 -- /See:/ 'advancedOptionsStatus' smart constructor.
-data AdvancedOptionsStatus = AdvancedOptionsStatus'
-  { _aosOptions :: !(Map Text Text)
-  , _aosStatus  :: !OptionStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AdvancedOptionsStatus =
+  AdvancedOptionsStatus'
+    { _aosOptions :: !(Map Text Text)
+    , _aosStatus  :: !OptionStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AdvancedOptionsStatus' with the minimum fields required to make a request.
@@ -163,12 +169,14 @@ instance NFData AdvancedOptionsStatus where
 --
 --
 -- /See:/ 'cognitoOptions' smart constructor.
-data CognitoOptions = CognitoOptions'
-  { _coIdentityPoolId :: !(Maybe Text)
-  , _coEnabled        :: !(Maybe Bool)
-  , _coUserPoolId     :: !(Maybe Text)
-  , _coRoleARN        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CognitoOptions =
+  CognitoOptions'
+    { _coIdentityPoolId :: !(Maybe Text)
+    , _coEnabled        :: !(Maybe Bool)
+    , _coUserPoolId     :: !(Maybe Text)
+    , _coRoleARN        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CognitoOptions' with the minimum fields required to make a request.
@@ -236,10 +244,12 @@ instance ToJSON CognitoOptions where
 --
 --
 -- /See:/ 'cognitoOptionsStatus' smart constructor.
-data CognitoOptionsStatus = CognitoOptionsStatus'
-  { _cosOptions :: !CognitoOptions
-  , _cosStatus  :: !OptionStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CognitoOptionsStatus =
+  CognitoOptionsStatus'
+    { _cosOptions :: !CognitoOptions
+    , _cosStatus  :: !OptionStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CognitoOptionsStatus' with the minimum fields required to make a request.
@@ -277,9 +287,11 @@ instance Hashable CognitoOptionsStatus where
 instance NFData CognitoOptionsStatus where
 
 -- | /See:/ 'domainInfo' smart constructor.
-newtype DomainInfo = DomainInfo'
-  { _diDomainName :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DomainInfo =
+  DomainInfo'
+    { _diDomainName :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DomainInfo' with the minimum fields required to make a request.
@@ -310,12 +322,14 @@ instance NFData DomainInfo where
 --
 --
 -- /See:/ 'ebsOptions' smart constructor.
-data EBSOptions = EBSOptions'
-  { _eoVolumeSize :: !(Maybe Int)
-  , _eoIOPS       :: !(Maybe Int)
-  , _eoVolumeType :: !(Maybe VolumeType)
-  , _eoEBSEnabled :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EBSOptions =
+  EBSOptions'
+    { _eoVolumeSize :: !(Maybe Int)
+    , _eoIOPS       :: !(Maybe Int)
+    , _eoVolumeType :: !(Maybe VolumeType)
+    , _eoEBSEnabled :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EBSOptions' with the minimum fields required to make a request.
@@ -383,10 +397,12 @@ instance ToJSON EBSOptions where
 --
 --
 -- /See:/ 'ebsOptionsStatus' smart constructor.
-data EBSOptionsStatus = EBSOptionsStatus'
-  { _eosOptions :: !EBSOptions
-  , _eosStatus  :: !OptionStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EBSOptionsStatus =
+  EBSOptionsStatus'
+    { _eosOptions :: !EBSOptions
+    , _eosStatus  :: !OptionStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EBSOptionsStatus' with the minimum fields required to make a request.
@@ -428,14 +444,16 @@ instance NFData EBSOptionsStatus where
 --
 --
 -- /See:/ 'elasticsearchClusterConfig' smart constructor.
-data ElasticsearchClusterConfig = ElasticsearchClusterConfig'
-  { _eccDedicatedMasterCount   :: !(Maybe Int)
-  , _eccDedicatedMasterType    :: !(Maybe ESPartitionInstanceType)
-  , _eccDedicatedMasterEnabled :: !(Maybe Bool)
-  , _eccInstanceCount          :: !(Maybe Int)
-  , _eccZoneAwarenessEnabled   :: !(Maybe Bool)
-  , _eccInstanceType           :: !(Maybe ESPartitionInstanceType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ElasticsearchClusterConfig =
+  ElasticsearchClusterConfig'
+    { _eccDedicatedMasterCount   :: !(Maybe Int)
+    , _eccDedicatedMasterType    :: !(Maybe ESPartitionInstanceType)
+    , _eccDedicatedMasterEnabled :: !(Maybe Bool)
+    , _eccInstanceCount          :: !(Maybe Int)
+    , _eccZoneAwarenessEnabled   :: !(Maybe Bool)
+    , _eccInstanceType           :: !(Maybe ESPartitionInstanceType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ElasticsearchClusterConfig' with the minimum fields required to make a request.
@@ -526,10 +544,12 @@ instance ToJSON ElasticsearchClusterConfig where
 --
 --
 -- /See:/ 'elasticsearchClusterConfigStatus' smart constructor.
-data ElasticsearchClusterConfigStatus = ElasticsearchClusterConfigStatus'
-  { _eccsOptions :: !ElasticsearchClusterConfig
-  , _eccsStatus  :: !OptionStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ElasticsearchClusterConfigStatus =
+  ElasticsearchClusterConfigStatus'
+    { _eccsOptions :: !ElasticsearchClusterConfig
+    , _eccsStatus  :: !OptionStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ElasticsearchClusterConfigStatus' with the minimum fields required to make a request.
@@ -575,18 +595,20 @@ instance NFData ElasticsearchClusterConfigStatus
 --
 --
 -- /See:/ 'elasticsearchDomainConfig' smart constructor.
-data ElasticsearchDomainConfig = ElasticsearchDomainConfig'
-  { _edcEBSOptions                 :: !(Maybe EBSOptionsStatus)
-  , _edcAccessPolicies             :: !(Maybe AccessPoliciesStatus)
-  , _edcLogPublishingOptions       :: !(Maybe LogPublishingOptionsStatus)
-  , _edcElasticsearchClusterConfig :: !(Maybe ElasticsearchClusterConfigStatus)
-  , _edcSnapshotOptions            :: !(Maybe SnapshotOptionsStatus)
-  , _edcCognitoOptions             :: !(Maybe CognitoOptionsStatus)
-  , _edcEncryptionAtRestOptions    :: !(Maybe EncryptionAtRestOptionsStatus)
-  , _edcVPCOptions                 :: !(Maybe VPCDerivedInfoStatus)
-  , _edcAdvancedOptions            :: !(Maybe AdvancedOptionsStatus)
-  , _edcElasticsearchVersion       :: !(Maybe ElasticsearchVersionStatus)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ElasticsearchDomainConfig =
+  ElasticsearchDomainConfig'
+    { _edcEBSOptions :: !(Maybe EBSOptionsStatus)
+    , _edcAccessPolicies :: !(Maybe AccessPoliciesStatus)
+    , _edcLogPublishingOptions :: !(Maybe LogPublishingOptionsStatus)
+    , _edcElasticsearchClusterConfig :: !(Maybe ElasticsearchClusterConfigStatus)
+    , _edcSnapshotOptions :: !(Maybe SnapshotOptionsStatus)
+    , _edcCognitoOptions :: !(Maybe CognitoOptionsStatus)
+    , _edcEncryptionAtRestOptions :: !(Maybe EncryptionAtRestOptionsStatus)
+    , _edcVPCOptions :: !(Maybe VPCDerivedInfoStatus)
+    , _edcAdvancedOptions :: !(Maybe AdvancedOptionsStatus)
+    , _edcElasticsearchVersion :: !(Maybe ElasticsearchVersionStatus)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ElasticsearchDomainConfig' with the minimum fields required to make a request.
@@ -693,26 +715,28 @@ instance NFData ElasticsearchDomainConfig where
 --
 --
 -- /See:/ 'elasticsearchDomainStatus' smart constructor.
-data ElasticsearchDomainStatus = ElasticsearchDomainStatus'
-  { _edsEBSOptions                 :: !(Maybe EBSOptions)
-  , _edsAccessPolicies             :: !(Maybe Text)
-  , _edsLogPublishingOptions       :: !(Maybe (Map LogType LogPublishingOption))
-  , _edsCreated                    :: !(Maybe Bool)
-  , _edsSnapshotOptions            :: !(Maybe SnapshotOptions)
-  , _edsCognitoOptions             :: !(Maybe CognitoOptions)
-  , _edsEncryptionAtRestOptions    :: !(Maybe EncryptionAtRestOptions)
-  , _edsDeleted                    :: !(Maybe Bool)
-  , _edsVPCOptions                 :: !(Maybe VPCDerivedInfo)
-  , _edsEndpoints                  :: !(Maybe (Map Text Text))
-  , _edsProcessing                 :: !(Maybe Bool)
-  , _edsEndpoint                   :: !(Maybe Text)
-  , _edsAdvancedOptions            :: !(Maybe (Map Text Text))
-  , _edsElasticsearchVersion       :: !(Maybe Text)
-  , _edsDomainId                   :: !Text
-  , _edsDomainName                 :: !Text
-  , _edsARN                        :: !Text
-  , _edsElasticsearchClusterConfig :: !ElasticsearchClusterConfig
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ElasticsearchDomainStatus =
+  ElasticsearchDomainStatus'
+    { _edsEBSOptions :: !(Maybe EBSOptions)
+    , _edsAccessPolicies :: !(Maybe Text)
+    , _edsLogPublishingOptions :: !(Maybe (Map LogType LogPublishingOption))
+    , _edsCreated :: !(Maybe Bool)
+    , _edsSnapshotOptions :: !(Maybe SnapshotOptions)
+    , _edsCognitoOptions :: !(Maybe CognitoOptions)
+    , _edsEncryptionAtRestOptions :: !(Maybe EncryptionAtRestOptions)
+    , _edsDeleted :: !(Maybe Bool)
+    , _edsVPCOptions :: !(Maybe VPCDerivedInfo)
+    , _edsEndpoints :: !(Maybe (Map Text Text))
+    , _edsProcessing :: !(Maybe Bool)
+    , _edsEndpoint :: !(Maybe Text)
+    , _edsAdvancedOptions :: !(Maybe (Map Text Text))
+    , _edsElasticsearchVersion :: !(Maybe Text)
+    , _edsDomainId :: !Text
+    , _edsDomainName :: !Text
+    , _edsARN :: !Text
+    , _edsElasticsearchClusterConfig :: !ElasticsearchClusterConfig
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ElasticsearchDomainStatus' with the minimum fields required to make a request.
@@ -887,10 +911,12 @@ instance NFData ElasticsearchDomainStatus where
 --
 --
 -- /See:/ 'elasticsearchVersionStatus' smart constructor.
-data ElasticsearchVersionStatus = ElasticsearchVersionStatus'
-  { _evsOptions :: !Text
-  , _evsStatus  :: !OptionStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ElasticsearchVersionStatus =
+  ElasticsearchVersionStatus'
+    { _evsOptions :: !Text
+    , _evsStatus  :: !OptionStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ElasticsearchVersionStatus' with the minimum fields required to make a request.
@@ -932,10 +958,12 @@ instance NFData ElasticsearchVersionStatus where
 --
 --
 -- /See:/ 'encryptionAtRestOptions' smart constructor.
-data EncryptionAtRestOptions = EncryptionAtRestOptions'
-  { _earoEnabled  :: !(Maybe Bool)
-  , _earoKMSKeyId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EncryptionAtRestOptions =
+  EncryptionAtRestOptions'
+    { _earoEnabled  :: !(Maybe Bool)
+    , _earoKMSKeyId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EncryptionAtRestOptions' with the minimum fields required to make a request.
@@ -982,10 +1010,12 @@ instance ToJSON EncryptionAtRestOptions where
 --
 --
 -- /See:/ 'encryptionAtRestOptionsStatus' smart constructor.
-data EncryptionAtRestOptionsStatus = EncryptionAtRestOptionsStatus'
-  { _earosOptions :: !EncryptionAtRestOptions
-  , _earosStatus  :: !OptionStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EncryptionAtRestOptionsStatus =
+  EncryptionAtRestOptionsStatus'
+    { _earosOptions :: !EncryptionAtRestOptions
+    , _earosStatus  :: !OptionStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EncryptionAtRestOptionsStatus' with the minimum fields required to make a request.
@@ -1028,10 +1058,12 @@ instance NFData EncryptionAtRestOptionsStatus where
 --
 --
 -- /See:/ 'instanceCountLimits' smart constructor.
-data InstanceCountLimits = InstanceCountLimits'
-  { _iclMaximumInstanceCount :: !(Maybe Int)
-  , _iclMinimumInstanceCount :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceCountLimits =
+  InstanceCountLimits'
+    { _iclMaximumInstanceCount :: !(Maybe Int)
+    , _iclMinimumInstanceCount :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceCountLimits' with the minimum fields required to make a request.
@@ -1073,9 +1105,11 @@ instance NFData InstanceCountLimits where
 --
 --
 -- /See:/ 'instanceLimits' smart constructor.
-newtype InstanceLimits = InstanceLimits'
-  { _ilInstanceCountLimits :: Maybe InstanceCountLimits
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype InstanceLimits =
+  InstanceLimits'
+    { _ilInstanceCountLimits :: Maybe InstanceCountLimits
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceLimits' with the minimum fields required to make a request.
@@ -1108,11 +1142,13 @@ instance NFData InstanceLimits where
 --
 --
 -- /See:/ 'limits' smart constructor.
-data Limits = Limits'
-  { _lInstanceLimits   :: !(Maybe InstanceLimits)
-  , _lAdditionalLimits :: !(Maybe [AdditionalLimit])
-  , _lStorageTypes     :: !(Maybe [StorageType])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Limits =
+  Limits'
+    { _lInstanceLimits   :: !(Maybe InstanceLimits)
+    , _lAdditionalLimits :: !(Maybe [AdditionalLimit])
+    , _lStorageTypes     :: !(Maybe [StorageType])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Limits' with the minimum fields required to make a request.
@@ -1167,10 +1203,12 @@ instance NFData Limits where
 --
 --
 -- /See:/ 'logPublishingOption' smart constructor.
-data LogPublishingOption = LogPublishingOption'
-  { _lpoEnabled                   :: !(Maybe Bool)
-  , _lpoCloudWatchLogsLogGroupARN :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LogPublishingOption =
+  LogPublishingOption'
+    { _lpoEnabled                   :: !(Maybe Bool)
+    , _lpoCloudWatchLogsLogGroupARN :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LogPublishingOption' with the minimum fields required to make a request.
@@ -1220,10 +1258,12 @@ instance ToJSON LogPublishingOption where
 --
 --
 -- /See:/ 'logPublishingOptionsStatus' smart constructor.
-data LogPublishingOptionsStatus = LogPublishingOptionsStatus'
-  { _lposStatus  :: !(Maybe OptionStatus)
-  , _lposOptions :: !(Maybe (Map LogType LogPublishingOption))
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LogPublishingOptionsStatus =
+  LogPublishingOptionsStatus'
+    { _lposStatus  :: !(Maybe OptionStatus)
+    , _lposOptions :: !(Maybe (Map LogType LogPublishingOption))
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LogPublishingOptionsStatus' with the minimum fields required to make a request.
@@ -1263,13 +1303,15 @@ instance NFData LogPublishingOptionsStatus where
 --
 --
 -- /See:/ 'optionStatus' smart constructor.
-data OptionStatus = OptionStatus'
-  { _osPendingDeletion :: !(Maybe Bool)
-  , _osUpdateVersion   :: !(Maybe Nat)
-  , _osCreationDate    :: !POSIX
-  , _osUpdateDate      :: !POSIX
-  , _osState           :: !OptionState
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data OptionStatus =
+  OptionStatus'
+    { _osPendingDeletion :: !(Maybe Bool)
+    , _osUpdateVersion   :: !(Maybe Nat)
+    , _osCreationDate    :: !POSIX
+    , _osUpdateDate      :: !POSIX
+    , _osState           :: !OptionState
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OptionStatus' with the minimum fields required to make a request.
@@ -1339,10 +1381,12 @@ instance NFData OptionStatus where
 --
 --
 -- /See:/ 'recurringCharge' smart constructor.
-data RecurringCharge = RecurringCharge'
-  { _rcRecurringChargeFrequency :: !(Maybe Text)
-  , _rcRecurringChargeAmount    :: !(Maybe Double)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RecurringCharge =
+  RecurringCharge'
+    { _rcRecurringChargeFrequency :: !(Maybe Text)
+    , _rcRecurringChargeAmount    :: !(Maybe Double)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RecurringCharge' with the minimum fields required to make a request.
@@ -1384,21 +1428,23 @@ instance NFData RecurringCharge where
 --
 --
 -- /See:/ 'reservedElasticsearchInstance' smart constructor.
-data ReservedElasticsearchInstance = ReservedElasticsearchInstance'
-  { _reiState :: !(Maybe Text)
-  , _reiCurrencyCode :: !(Maybe Text)
-  , _reiStartTime :: !(Maybe POSIX)
-  , _reiReservedElasticsearchInstanceOfferingId :: !(Maybe Text)
-  , _reiReservedElasticsearchInstanceId :: !(Maybe Text)
-  , _reiElasticsearchInstanceCount :: !(Maybe Int)
-  , _reiReservationName :: !(Maybe Text)
-  , _reiElasticsearchInstanceType :: !(Maybe ESPartitionInstanceType)
-  , _reiRecurringCharges :: !(Maybe [RecurringCharge])
-  , _reiUsagePrice :: !(Maybe Double)
-  , _reiFixedPrice :: !(Maybe Double)
-  , _reiDuration :: !(Maybe Int)
-  , _reiPaymentOption :: !(Maybe ReservedElasticsearchInstancePaymentOption)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReservedElasticsearchInstance =
+  ReservedElasticsearchInstance'
+    { _reiState :: !(Maybe Text)
+    , _reiCurrencyCode :: !(Maybe Text)
+    , _reiStartTime :: !(Maybe POSIX)
+    , _reiReservedElasticsearchInstanceOfferingId :: !(Maybe Text)
+    , _reiReservedElasticsearchInstanceId :: !(Maybe Text)
+    , _reiElasticsearchInstanceCount :: !(Maybe Int)
+    , _reiReservationName :: !(Maybe Text)
+    , _reiElasticsearchInstanceType :: !(Maybe ESPartitionInstanceType)
+    , _reiRecurringCharges :: !(Maybe [RecurringCharge])
+    , _reiUsagePrice :: !(Maybe Double)
+    , _reiFixedPrice :: !(Maybe Double)
+    , _reiDuration :: !(Maybe Int)
+    , _reiPaymentOption :: !(Maybe ReservedElasticsearchInstancePaymentOption)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReservedElasticsearchInstance' with the minimum fields required to make a request.
@@ -1529,16 +1575,18 @@ instance NFData ReservedElasticsearchInstance where
 --
 --
 -- /See:/ 'reservedElasticsearchInstanceOffering' smart constructor.
-data ReservedElasticsearchInstanceOffering = ReservedElasticsearchInstanceOffering'
-  { _reioCurrencyCode :: !(Maybe Text)
-  , _reioReservedElasticsearchInstanceOfferingId :: !(Maybe Text)
-  , _reioElasticsearchInstanceType :: !(Maybe ESPartitionInstanceType)
-  , _reioRecurringCharges :: !(Maybe [RecurringCharge])
-  , _reioUsagePrice :: !(Maybe Double)
-  , _reioFixedPrice :: !(Maybe Double)
-  , _reioDuration :: !(Maybe Int)
-  , _reioPaymentOption :: !(Maybe ReservedElasticsearchInstancePaymentOption)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReservedElasticsearchInstanceOffering =
+  ReservedElasticsearchInstanceOffering'
+    { _reioCurrencyCode :: !(Maybe Text)
+    , _reioReservedElasticsearchInstanceOfferingId :: !(Maybe Text)
+    , _reioElasticsearchInstanceType :: !(Maybe ESPartitionInstanceType)
+    , _reioRecurringCharges :: !(Maybe [RecurringCharge])
+    , _reioUsagePrice :: !(Maybe Double)
+    , _reioFixedPrice :: !(Maybe Double)
+    , _reioDuration :: !(Maybe Int)
+    , _reioPaymentOption :: !(Maybe ReservedElasticsearchInstancePaymentOption)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReservedElasticsearchInstanceOffering' with the minimum fields required to make a request.
@@ -1635,9 +1683,11 @@ instance NFData ReservedElasticsearchInstanceOffering
 --
 --
 -- /See:/ 'snapshotOptions' smart constructor.
-newtype SnapshotOptions = SnapshotOptions'
-  { _soAutomatedSnapshotStartHour :: Maybe Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype SnapshotOptions =
+  SnapshotOptions'
+    { _soAutomatedSnapshotStartHour :: Maybe Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SnapshotOptions' with the minimum fields required to make a request.
@@ -1677,10 +1727,12 @@ instance ToJSON SnapshotOptions where
 --
 --
 -- /See:/ 'snapshotOptionsStatus' smart constructor.
-data SnapshotOptionsStatus = SnapshotOptionsStatus'
-  { _sosOptions :: !SnapshotOptions
-  , _sosStatus  :: !OptionStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SnapshotOptionsStatus =
+  SnapshotOptionsStatus'
+    { _sosOptions :: !SnapshotOptions
+    , _sosStatus  :: !OptionStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SnapshotOptionsStatus' with the minimum fields required to make a request.
@@ -1722,11 +1774,13 @@ instance NFData SnapshotOptionsStatus where
 --
 --
 -- /See:/ 'storageType' smart constructor.
-data StorageType = StorageType'
-  { _stStorageTypeLimits  :: !(Maybe [StorageTypeLimit])
-  , _stStorageSubTypeName :: !(Maybe Text)
-  , _stStorageTypeName    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StorageType =
+  StorageType'
+    { _stStorageTypeLimits  :: !(Maybe [StorageTypeLimit])
+    , _stStorageSubTypeName :: !(Maybe Text)
+    , _stStorageTypeName    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StorageType' with the minimum fields required to make a request.
@@ -1778,10 +1832,12 @@ instance NFData StorageType where
 --
 --
 -- /See:/ 'storageTypeLimit' smart constructor.
-data StorageTypeLimit = StorageTypeLimit'
-  { _stlLimitName   :: !(Maybe Text)
-  , _stlLimitValues :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StorageTypeLimit =
+  StorageTypeLimit'
+    { _stlLimitName   :: !(Maybe Text)
+    , _stlLimitValues :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StorageTypeLimit' with the minimum fields required to make a request.
@@ -1822,10 +1878,12 @@ instance NFData StorageTypeLimit where
 --
 --
 -- /See:/ 'tag' smart constructor.
-data Tag = Tag'
-  { _tagKey   :: !Text
-  , _tagValue :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Tag =
+  Tag'
+    { _tagKey   :: !Text
+    , _tagValue :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Tag' with the minimum fields required to make a request.
@@ -1871,12 +1929,14 @@ instance ToJSON Tag where
 --
 --
 -- /See:/ 'vpcDerivedInfo' smart constructor.
-data VPCDerivedInfo = VPCDerivedInfo'
-  { _vdiSecurityGroupIds  :: !(Maybe [Text])
-  , _vdiSubnetIds         :: !(Maybe [Text])
-  , _vdiVPCId             :: !(Maybe Text)
-  , _vdiAvailabilityZones :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VPCDerivedInfo =
+  VPCDerivedInfo'
+    { _vdiSecurityGroupIds  :: !(Maybe [Text])
+    , _vdiSubnetIds         :: !(Maybe [Text])
+    , _vdiVPCId             :: !(Maybe Text)
+    , _vdiAvailabilityZones :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VPCDerivedInfo' with the minimum fields required to make a request.
@@ -1936,10 +1996,12 @@ instance NFData VPCDerivedInfo where
 --
 --
 -- /See:/ 'vpcDerivedInfoStatus' smart constructor.
-data VPCDerivedInfoStatus = VPCDerivedInfoStatus'
-  { _vdisOptions :: !VPCDerivedInfo
-  , _vdisStatus  :: !OptionStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VPCDerivedInfoStatus =
+  VPCDerivedInfoStatus'
+    { _vdisOptions :: !VPCDerivedInfo
+    , _vdisStatus  :: !OptionStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VPCDerivedInfoStatus' with the minimum fields required to make a request.
@@ -1981,10 +2043,12 @@ instance NFData VPCDerivedInfoStatus where
 --
 --
 -- /See:/ 'vpcOptions' smart constructor.
-data VPCOptions = VPCOptions'
-  { _voSecurityGroupIds :: !(Maybe [Text])
-  , _voSubnetIds        :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VPCOptions =
+  VPCOptions'
+    { _voSecurityGroupIds :: !(Maybe [Text])
+    , _voSubnetIds        :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VPCOptions' with the minimum fields required to make a request.

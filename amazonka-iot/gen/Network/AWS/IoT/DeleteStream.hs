@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteStream' smart constructor.
-newtype DeleteStream = DeleteStream'
-  { _dsStreamId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteStream =
+  DeleteStream'
+    { _dsStreamId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteStream' with the minimum fields required to make a request.
@@ -87,9 +89,11 @@ instance ToQuery DeleteStream where
         toQuery = const mempty
 
 -- | /See:/ 'deleteStreamResponse' smart constructor.
-newtype DeleteStreamResponse = DeleteStreamResponse'
-  { _dsrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteStreamResponse =
+  DeleteStreamResponse'
+    { _dsrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteStreamResponse' with the minimum fields required to make a request.

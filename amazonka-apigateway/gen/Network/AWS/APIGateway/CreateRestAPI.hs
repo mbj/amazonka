@@ -66,17 +66,19 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createRestAPI' smart constructor.
-data CreateRestAPI = CreateRestAPI'
-  { _craMinimumCompressionSize :: !(Maybe Int)
-  , _craBinaryMediaTypes       :: !(Maybe [Text])
-  , _craVersion                :: !(Maybe Text)
-  , _craApiKeySource           :: !(Maybe APIKeySourceType)
-  , _craCloneFrom              :: !(Maybe Text)
-  , _craPolicy                 :: !(Maybe Text)
-  , _craEndpointConfiguration  :: !(Maybe EndpointConfiguration)
-  , _craDescription            :: !(Maybe Text)
-  , _craName                   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateRestAPI =
+  CreateRestAPI'
+    { _craMinimumCompressionSize :: !(Maybe Int)
+    , _craBinaryMediaTypes       :: !(Maybe [Text])
+    , _craVersion                :: !(Maybe Text)
+    , _craApiKeySource           :: !(Maybe APIKeySourceType)
+    , _craCloneFrom              :: !(Maybe Text)
+    , _craPolicy                 :: !(Maybe Text)
+    , _craEndpointConfiguration  :: !(Maybe EndpointConfiguration)
+    , _craDescription            :: !(Maybe Text)
+    , _craName                   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateRestAPI' with the minimum fields required to make a request.

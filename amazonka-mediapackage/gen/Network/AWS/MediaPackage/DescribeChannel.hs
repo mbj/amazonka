@@ -46,9 +46,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeChannel' smart constructor.
-newtype DescribeChannel = DescribeChannel'
-  { _dId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeChannel =
+  DescribeChannel'
+    { _dId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeChannel' with the minimum fields required to make a request.
@@ -97,13 +99,15 @@ instance ToQuery DescribeChannel where
         toQuery = const mempty
 
 -- | /See:/ 'describeChannelResponse' smart constructor.
-data DescribeChannelResponse = DescribeChannelResponse'
-  { _dcrsHlsIngest      :: !(Maybe HlsIngest)
-  , _dcrsARN            :: !(Maybe Text)
-  , _dcrsId             :: !(Maybe Text)
-  , _dcrsDescription    :: !(Maybe Text)
-  , _dcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeChannelResponse =
+  DescribeChannelResponse'
+    { _dcrsHlsIngest      :: !(Maybe HlsIngest)
+    , _dcrsARN            :: !(Maybe Text)
+    , _dcrsId             :: !(Maybe Text)
+    , _dcrsDescription    :: !(Maybe Text)
+    , _dcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeChannelResponse' with the minimum fields required to make a request.

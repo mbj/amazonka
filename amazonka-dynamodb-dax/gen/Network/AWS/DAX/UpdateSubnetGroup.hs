@@ -47,11 +47,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateSubnetGroup' smart constructor.
-data UpdateSubnetGroup = UpdateSubnetGroup'
-  { _usgSubnetIds       :: !(Maybe [Text])
-  , _usgDescription     :: !(Maybe Text)
-  , _usgSubnetGroupName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateSubnetGroup =
+  UpdateSubnetGroup'
+    { _usgSubnetIds       :: !(Maybe [Text])
+    , _usgDescription     :: !(Maybe Text)
+    , _usgSubnetGroupName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateSubnetGroup' with the minimum fields required to make a request.
@@ -123,10 +125,12 @@ instance ToQuery UpdateSubnetGroup where
         toQuery = const mempty
 
 -- | /See:/ 'updateSubnetGroupResponse' smart constructor.
-data UpdateSubnetGroupResponse = UpdateSubnetGroupResponse'
-  { _usgrsSubnetGroup    :: !(Maybe SubnetGroup)
-  , _usgrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateSubnetGroupResponse =
+  UpdateSubnetGroupResponse'
+    { _usgrsSubnetGroup    :: !(Maybe SubnetGroup)
+    , _usgrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateSubnetGroupResponse' with the minimum fields required to make a request.

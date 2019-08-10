@@ -49,12 +49,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listFragments' smart constructor.
-data ListFragments = ListFragments'
-  { _lfFragmentSelector :: !(Maybe FragmentSelector)
-  , _lfNextToken        :: !(Maybe Text)
-  , _lfMaxResults       :: !(Maybe Nat)
-  , _lfStreamName       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListFragments =
+  ListFragments'
+    { _lfFragmentSelector :: !(Maybe FragmentSelector)
+    , _lfNextToken        :: !(Maybe Text)
+    , _lfMaxResults       :: !(Maybe Nat)
+    , _lfStreamName       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListFragments' with the minimum fields required to make a request.
@@ -130,11 +132,13 @@ instance ToQuery ListFragments where
         toQuery = const mempty
 
 -- | /See:/ 'listFragmentsResponse' smart constructor.
-data ListFragmentsResponse = ListFragmentsResponse'
-  { _lfrsNextToken      :: !(Maybe Text)
-  , _lfrsFragments      :: !(Maybe [Fragment])
-  , _lfrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListFragmentsResponse =
+  ListFragmentsResponse'
+    { _lfrsNextToken      :: !(Maybe Text)
+    , _lfrsFragments      :: !(Maybe [Fragment])
+    , _lfrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListFragmentsResponse' with the minimum fields required to make a request.

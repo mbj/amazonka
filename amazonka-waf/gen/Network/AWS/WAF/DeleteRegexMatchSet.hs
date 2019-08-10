@@ -58,10 +58,12 @@ import Network.AWS.WAF.Types
 import Network.AWS.WAF.Types.Product
 
 -- | /See:/ 'deleteRegexMatchSet' smart constructor.
-data DeleteRegexMatchSet = DeleteRegexMatchSet'
-  { _drmsRegexMatchSetId :: !Text
-  , _drmsChangeToken     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteRegexMatchSet =
+  DeleteRegexMatchSet'
+    { _drmsRegexMatchSetId :: !Text
+    , _drmsChangeToken     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteRegexMatchSet' with the minimum fields required to make a request.
@@ -126,10 +128,12 @@ instance ToQuery DeleteRegexMatchSet where
         toQuery = const mempty
 
 -- | /See:/ 'deleteRegexMatchSetResponse' smart constructor.
-data DeleteRegexMatchSetResponse = DeleteRegexMatchSetResponse'
-  { _drmsrsChangeToken    :: !(Maybe Text)
-  , _drmsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteRegexMatchSetResponse =
+  DeleteRegexMatchSetResponse'
+    { _drmsrsChangeToken    :: !(Maybe Text)
+    , _drmsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteRegexMatchSetResponse' with the minimum fields required to make a request.

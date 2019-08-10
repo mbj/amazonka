@@ -53,10 +53,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'assignInstance' smart constructor.
-data AssignInstance = AssignInstance'
-  { _aiInstanceId :: !Text
-  , _aiLayerIds   :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssignInstance =
+  AssignInstance'
+    { _aiInstanceId :: !Text
+    , _aiLayerIds   :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssignInstance' with the minimum fields required to make a request.

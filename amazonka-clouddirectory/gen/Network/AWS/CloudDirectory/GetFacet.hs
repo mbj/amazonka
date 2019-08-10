@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getFacet' smart constructor.
-data GetFacet = GetFacet'
-  { _gfSchemaARN :: !Text
-  , _gfName      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetFacet =
+  GetFacet'
+    { _gfSchemaARN :: !Text
+    , _gfName      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetFacet' with the minimum fields required to make a request.
@@ -104,10 +106,12 @@ instance ToQuery GetFacet where
         toQuery = const mempty
 
 -- | /See:/ 'getFacetResponse' smart constructor.
-data GetFacetResponse = GetFacetResponse'
-  { _gfrsFacet          :: !(Maybe Facet)
-  , _gfrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetFacetResponse =
+  GetFacetResponse'
+    { _gfrsFacet          :: !(Maybe Facet)
+    , _gfrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetFacetResponse' with the minimum fields required to make a request.

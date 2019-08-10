@@ -66,18 +66,20 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteItem' smart constructor.
-data DeleteItem = DeleteItem'
-  { _diExpressionAttributeNames    :: !(Maybe (Map Text Text))
-  , _diReturnValues                :: !(Maybe ReturnValue)
-  , _diExpressionAttributeValues   :: !(Maybe (Map Text AttributeValue))
-  , _diReturnConsumedCapacity      :: !(Maybe ReturnConsumedCapacity)
-  , _diReturnItemCollectionMetrics :: !(Maybe ReturnItemCollectionMetrics)
-  , _diConditionExpression         :: !(Maybe Text)
-  , _diConditionalOperator         :: !(Maybe ConditionalOperator)
-  , _diExpected                    :: !(Maybe (Map Text ExpectedAttributeValue))
-  , _diTableName                   :: !Text
-  , _diKey                         :: !(Map Text AttributeValue)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteItem =
+  DeleteItem'
+    { _diExpressionAttributeNames :: !(Maybe (Map Text Text))
+    , _diReturnValues :: !(Maybe ReturnValue)
+    , _diExpressionAttributeValues :: !(Maybe (Map Text AttributeValue))
+    , _diReturnConsumedCapacity :: !(Maybe ReturnConsumedCapacity)
+    , _diReturnItemCollectionMetrics :: !(Maybe ReturnItemCollectionMetrics)
+    , _diConditionExpression :: !(Maybe Text)
+    , _diConditionalOperator :: !(Maybe ConditionalOperator)
+    , _diExpected :: !(Maybe (Map Text ExpectedAttributeValue))
+    , _diTableName :: !Text
+    , _diKey :: !(Map Text AttributeValue)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteItem' with the minimum fields required to make a request.
@@ -218,12 +220,14 @@ instance ToQuery DeleteItem where
 --
 --
 -- /See:/ 'deleteItemResponse' smart constructor.
-data DeleteItemResponse = DeleteItemResponse'
-  { _dirsItemCollectionMetrics :: !(Maybe ItemCollectionMetrics)
-  , _dirsConsumedCapacity      :: !(Maybe ConsumedCapacity)
-  , _dirsAttributes            :: !(Maybe (Map Text AttributeValue))
-  , _dirsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteItemResponse =
+  DeleteItemResponse'
+    { _dirsItemCollectionMetrics :: !(Maybe ItemCollectionMetrics)
+    , _dirsConsumedCapacity      :: !(Maybe ConsumedCapacity)
+    , _dirsAttributes            :: !(Maybe (Map Text AttributeValue))
+    , _dirsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteItemResponse' with the minimum fields required to make a request.

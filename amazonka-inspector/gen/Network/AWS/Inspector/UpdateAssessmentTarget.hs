@@ -44,11 +44,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateAssessmentTarget' smart constructor.
-data UpdateAssessmentTarget = UpdateAssessmentTarget'
-  { _uatAssessmentTargetARN  :: !Text
-  , _uatAssessmentTargetName :: !Text
-  , _uatResourceGroupARN     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateAssessmentTarget =
+  UpdateAssessmentTarget'
+    { _uatAssessmentTargetARN  :: !Text
+    , _uatAssessmentTargetName :: !Text
+    , _uatResourceGroupARN     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateAssessmentTarget' with the minimum fields required to make a request.

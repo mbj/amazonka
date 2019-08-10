@@ -48,11 +48,13 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'describeInstancePatchStates' smart constructor.
-data DescribeInstancePatchStates = DescribeInstancePatchStates'
-  { _dipsNextToken   :: !(Maybe Text)
-  , _dipsMaxResults  :: !(Maybe Nat)
-  , _dipsInstanceIds :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeInstancePatchStates =
+  DescribeInstancePatchStates'
+    { _dipsNextToken   :: !(Maybe Text)
+    , _dipsMaxResults  :: !(Maybe Nat)
+    , _dipsInstanceIds :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeInstancePatchStates' with the minimum fields required to make a request.
@@ -127,11 +129,13 @@ instance ToQuery DescribeInstancePatchStates where
         toQuery = const mempty
 
 -- | /See:/ 'describeInstancePatchStatesResponse' smart constructor.
-data DescribeInstancePatchStatesResponse = DescribeInstancePatchStatesResponse'
-  { _dipsrsNextToken           :: !(Maybe Text)
-  , _dipsrsInstancePatchStates :: !(Maybe [InstancePatchState])
-  , _dipsrsResponseStatus      :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data DescribeInstancePatchStatesResponse =
+  DescribeInstancePatchStatesResponse'
+    { _dipsrsNextToken           :: !(Maybe Text)
+    , _dipsrsInstancePatchStates :: !(Maybe [InstancePatchState])
+    , _dipsrsResponseStatus      :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeInstancePatchStatesResponse' with the minimum fields required to make a request.

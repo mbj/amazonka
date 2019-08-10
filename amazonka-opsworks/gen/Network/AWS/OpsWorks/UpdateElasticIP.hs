@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateElasticIP' smart constructor.
-data UpdateElasticIP = UpdateElasticIP'
-  { _ueiName      :: !(Maybe Text)
-  , _ueiElasticIP :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateElasticIP =
+  UpdateElasticIP'
+    { _ueiName      :: !(Maybe Text)
+    , _ueiElasticIP :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateElasticIP' with the minimum fields required to make a request.

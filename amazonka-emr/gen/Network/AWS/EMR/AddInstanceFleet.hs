@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'addInstanceFleet' smart constructor.
-data AddInstanceFleet = AddInstanceFleet'
-  { _aifClusterId     :: !Text
-  , _aifInstanceFleet :: !InstanceFleetConfig
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddInstanceFleet =
+  AddInstanceFleet'
+    { _aifClusterId     :: !Text
+    , _aifInstanceFleet :: !InstanceFleetConfig
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddInstanceFleet' with the minimum fields required to make a request.
@@ -114,11 +116,13 @@ instance ToQuery AddInstanceFleet where
         toQuery = const mempty
 
 -- | /See:/ 'addInstanceFleetResponse' smart constructor.
-data AddInstanceFleetResponse = AddInstanceFleetResponse'
-  { _aifrsClusterId       :: !(Maybe Text)
-  , _aifrsInstanceFleetId :: !(Maybe Text)
-  , _aifrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddInstanceFleetResponse =
+  AddInstanceFleetResponse'
+    { _aifrsClusterId       :: !(Maybe Text)
+    , _aifrsInstanceFleetId :: !(Maybe Text)
+    , _aifrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddInstanceFleetResponse' with the minimum fields required to make a request.

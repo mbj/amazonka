@@ -74,16 +74,18 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createConfigurationTemplate' smart constructor.
-data CreateConfigurationTemplate = CreateConfigurationTemplate'
-  { _cctOptionSettings      :: !(Maybe [ConfigurationOptionSetting])
-  , _cctPlatformARN         :: !(Maybe Text)
-  , _cctSourceConfiguration :: !(Maybe SourceConfiguration)
-  , _cctSolutionStackName   :: !(Maybe Text)
-  , _cctEnvironmentId       :: !(Maybe Text)
-  , _cctDescription         :: !(Maybe Text)
-  , _cctApplicationName     :: !Text
-  , _cctTemplateName        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateConfigurationTemplate =
+  CreateConfigurationTemplate'
+    { _cctOptionSettings      :: !(Maybe [ConfigurationOptionSetting])
+    , _cctPlatformARN         :: !(Maybe Text)
+    , _cctSourceConfiguration :: !(Maybe SourceConfiguration)
+    , _cctSolutionStackName   :: !(Maybe Text)
+    , _cctEnvironmentId       :: !(Maybe Text)
+    , _cctDescription         :: !(Maybe Text)
+    , _cctApplicationName     :: !Text
+    , _cctTemplateName        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateConfigurationTemplate' with the minimum fields required to make a request.

@@ -46,11 +46,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateProject' smart constructor.
-data UpdateProject = UpdateProject'
-  { _upName        :: !(Maybe (Sensitive Text))
-  , _upDescription :: !(Maybe (Sensitive Text))
-  , _upId          :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data UpdateProject =
+  UpdateProject'
+    { _upName        :: !(Maybe (Sensitive Text))
+    , _upDescription :: !(Maybe (Sensitive Text))
+    , _upId          :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateProject' with the minimum fields required to make a request.
@@ -117,9 +119,11 @@ instance ToQuery UpdateProject where
         toQuery = const mempty
 
 -- | /See:/ 'updateProjectResponse' smart constructor.
-newtype UpdateProjectResponse = UpdateProjectResponse'
-  { _uprsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateProjectResponse =
+  UpdateProjectResponse'
+    { _uprsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateProjectResponse' with the minimum fields required to make a request.

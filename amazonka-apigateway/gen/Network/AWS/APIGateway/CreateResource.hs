@@ -54,11 +54,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createResource' smart constructor.
-data CreateResource = CreateResource'
-  { _crRestAPIId :: !Text
-  , _crParentId  :: !Text
-  , _crPathPart  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateResource =
+  CreateResource'
+    { _crRestAPIId :: !Text
+    , _crParentId  :: !Text
+    , _crPathPart  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateResource' with the minimum fields required to make a request.

@@ -50,11 +50,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateDeviceStatus' smart constructor.
-data UpdateDeviceStatus = UpdateDeviceStatus'
-  { _udsDeviceRememberedStatus :: !(Maybe DeviceRememberedStatusType)
-  , _udsAccessToken            :: !(Sensitive Text)
-  , _udsDeviceKey              :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data UpdateDeviceStatus =
+  UpdateDeviceStatus'
+    { _udsDeviceRememberedStatus :: !(Maybe DeviceRememberedStatusType)
+    , _udsAccessToken            :: !(Sensitive Text)
+    , _udsDeviceKey              :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateDeviceStatus' with the minimum fields required to make a request.
@@ -133,9 +135,11 @@ instance ToQuery UpdateDeviceStatus where
 --
 --
 -- /See:/ 'updateDeviceStatusResponse' smart constructor.
-newtype UpdateDeviceStatusResponse = UpdateDeviceStatusResponse'
-  { _udsrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateDeviceStatusResponse =
+  UpdateDeviceStatusResponse'
+    { _udsrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateDeviceStatusResponse' with the minimum fields required to make a request.

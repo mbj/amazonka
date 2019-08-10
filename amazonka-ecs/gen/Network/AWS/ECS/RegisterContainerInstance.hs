@@ -51,15 +51,17 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'registerContainerInstance' smart constructor.
-data RegisterContainerInstance = RegisterContainerInstance'
-  { _rciInstanceIdentityDocumentSignature :: !(Maybe Text)
-  , _rciCluster                           :: !(Maybe Text)
-  , _rciInstanceIdentityDocument          :: !(Maybe Text)
-  , _rciContainerInstanceARN              :: !(Maybe Text)
-  , _rciVersionInfo                       :: !(Maybe VersionInfo)
-  , _rciAttributes                        :: !(Maybe [Attribute])
-  , _rciTotalResources                    :: !(Maybe [Resource])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RegisterContainerInstance =
+  RegisterContainerInstance'
+    { _rciInstanceIdentityDocumentSignature :: !(Maybe Text)
+    , _rciCluster                           :: !(Maybe Text)
+    , _rciInstanceIdentityDocument          :: !(Maybe Text)
+    , _rciContainerInstanceARN              :: !(Maybe Text)
+    , _rciVersionInfo                       :: !(Maybe VersionInfo)
+    , _rciAttributes                        :: !(Maybe [Attribute])
+    , _rciTotalResources                    :: !(Maybe [Resource])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterContainerInstance' with the minimum fields required to make a request.
@@ -167,10 +169,12 @@ instance ToQuery RegisterContainerInstance where
         toQuery = const mempty
 
 -- | /See:/ 'registerContainerInstanceResponse' smart constructor.
-data RegisterContainerInstanceResponse = RegisterContainerInstanceResponse'
-  { _rcirsContainerInstance :: !(Maybe ContainerInstance)
-  , _rcirsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RegisterContainerInstanceResponse =
+  RegisterContainerInstanceResponse'
+    { _rcirsContainerInstance :: !(Maybe ContainerInstance)
+    , _rcirsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterContainerInstanceResponse' with the minimum fields required to make a request.

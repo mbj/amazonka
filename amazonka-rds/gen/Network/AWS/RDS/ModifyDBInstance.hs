@@ -84,44 +84,46 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'modifyDBInstance' smart constructor.
-data ModifyDBInstance = ModifyDBInstance'
-  { _mdiEngineVersion :: !(Maybe Text)
-  , _mdiDBSecurityGroups :: !(Maybe [Text])
-  , _mdiDBPortNumber :: !(Maybe Int)
-  , _mdiMasterUserPassword :: !(Maybe Text)
-  , _mdiPubliclyAccessible :: !(Maybe Bool)
-  , _mdiAutoMinorVersionUpgrade :: !(Maybe Bool)
-  , _mdiDBSubnetGroupName :: !(Maybe Text)
-  , _mdiMonitoringRoleARN :: !(Maybe Text)
-  , _mdiIOPS :: !(Maybe Int)
-  , _mdiAllowMajorVersionUpgrade :: !(Maybe Bool)
-  , _mdiNewDBInstanceIdentifier :: !(Maybe Text)
-  , _mdiDomain :: !(Maybe Text)
-  , _mdiMonitoringInterval :: !(Maybe Int)
-  , _mdiCloudwatchLogsExportConfiguration :: !(Maybe CloudwatchLogsExportConfiguration)
-  , _mdiTDECredentialPassword :: !(Maybe Text)
-  , _mdiDBInstanceClass :: !(Maybe Text)
-  , _mdiPromotionTier :: !(Maybe Int)
-  , _mdiLicenseModel :: !(Maybe Text)
-  , _mdiPreferredMaintenanceWindow :: !(Maybe Text)
-  , _mdiCACertificateIdentifier :: !(Maybe Text)
-  , _mdiEnablePerformanceInsights :: !(Maybe Bool)
-  , _mdiDBParameterGroupName :: !(Maybe Text)
-  , _mdiPreferredBackupWindow :: !(Maybe Text)
-  , _mdiBackupRetentionPeriod :: !(Maybe Int)
-  , _mdiPerformanceInsightsKMSKeyId :: !(Maybe Text)
-  , _mdiVPCSecurityGroupIds :: !(Maybe [Text])
-  , _mdiMultiAZ :: !(Maybe Bool)
-  , _mdiAllocatedStorage :: !(Maybe Int)
-  , _mdiApplyImmediately :: !(Maybe Bool)
-  , _mdiOptionGroupName :: !(Maybe Text)
-  , _mdiCopyTagsToSnapshot :: !(Maybe Bool)
-  , _mdiTDECredentialARN :: !(Maybe Text)
-  , _mdiDomainIAMRoleName :: !(Maybe Text)
-  , _mdiEnableIAMDatabaseAuthentication :: !(Maybe Bool)
-  , _mdiStorageType :: !(Maybe Text)
-  , _mdiDBInstanceIdentifier :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyDBInstance =
+  ModifyDBInstance'
+    { _mdiEngineVersion :: !(Maybe Text)
+    , _mdiDBSecurityGroups :: !(Maybe [Text])
+    , _mdiDBPortNumber :: !(Maybe Int)
+    , _mdiMasterUserPassword :: !(Maybe Text)
+    , _mdiPubliclyAccessible :: !(Maybe Bool)
+    , _mdiAutoMinorVersionUpgrade :: !(Maybe Bool)
+    , _mdiDBSubnetGroupName :: !(Maybe Text)
+    , _mdiMonitoringRoleARN :: !(Maybe Text)
+    , _mdiIOPS :: !(Maybe Int)
+    , _mdiAllowMajorVersionUpgrade :: !(Maybe Bool)
+    , _mdiNewDBInstanceIdentifier :: !(Maybe Text)
+    , _mdiDomain :: !(Maybe Text)
+    , _mdiMonitoringInterval :: !(Maybe Int)
+    , _mdiCloudwatchLogsExportConfiguration :: !(Maybe CloudwatchLogsExportConfiguration)
+    , _mdiTDECredentialPassword :: !(Maybe Text)
+    , _mdiDBInstanceClass :: !(Maybe Text)
+    , _mdiPromotionTier :: !(Maybe Int)
+    , _mdiLicenseModel :: !(Maybe Text)
+    , _mdiPreferredMaintenanceWindow :: !(Maybe Text)
+    , _mdiCACertificateIdentifier :: !(Maybe Text)
+    , _mdiEnablePerformanceInsights :: !(Maybe Bool)
+    , _mdiDBParameterGroupName :: !(Maybe Text)
+    , _mdiPreferredBackupWindow :: !(Maybe Text)
+    , _mdiBackupRetentionPeriod :: !(Maybe Int)
+    , _mdiPerformanceInsightsKMSKeyId :: !(Maybe Text)
+    , _mdiVPCSecurityGroupIds :: !(Maybe [Text])
+    , _mdiMultiAZ :: !(Maybe Bool)
+    , _mdiAllocatedStorage :: !(Maybe Int)
+    , _mdiApplyImmediately :: !(Maybe Bool)
+    , _mdiOptionGroupName :: !(Maybe Text)
+    , _mdiCopyTagsToSnapshot :: !(Maybe Bool)
+    , _mdiTDECredentialARN :: !(Maybe Text)
+    , _mdiDomainIAMRoleName :: !(Maybe Text)
+    , _mdiEnableIAMDatabaseAuthentication :: !(Maybe Bool)
+    , _mdiStorageType :: !(Maybe Text)
+    , _mdiDBInstanceIdentifier :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyDBInstance' with the minimum fields required to make a request.
@@ -464,10 +466,12 @@ instance ToQuery ModifyDBInstance where
                "DBInstanceIdentifier" =: _mdiDBInstanceIdentifier]
 
 -- | /See:/ 'modifyDBInstanceResponse' smart constructor.
-data ModifyDBInstanceResponse = ModifyDBInstanceResponse'
-  { _mdirsDBInstance     :: !(Maybe DBInstance)
-  , _mdirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyDBInstanceResponse =
+  ModifyDBInstanceResponse'
+    { _mdirsDBInstance     :: !(Maybe DBInstance)
+    , _mdirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyDBInstanceResponse' with the minimum fields required to make a request.

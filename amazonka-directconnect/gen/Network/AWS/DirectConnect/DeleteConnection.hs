@@ -61,9 +61,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteConnection' smart constructor.
-newtype DeleteConnection = DeleteConnection'
-  { _dcConnectionId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteConnection =
+  DeleteConnection'
+    { _dcConnectionId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteConnection' with the minimum fields required to make a request.

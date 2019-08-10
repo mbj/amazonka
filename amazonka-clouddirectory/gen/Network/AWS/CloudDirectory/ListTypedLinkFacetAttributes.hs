@@ -52,12 +52,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listTypedLinkFacetAttributes' smart constructor.
-data ListTypedLinkFacetAttributes = ListTypedLinkFacetAttributes'
-  { _ltlfaNextToken  :: !(Maybe Text)
-  , _ltlfaMaxResults :: !(Maybe Nat)
-  , _ltlfaSchemaARN  :: !Text
-  , _ltlfaName       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTypedLinkFacetAttributes =
+  ListTypedLinkFacetAttributes'
+    { _ltlfaNextToken  :: !(Maybe Text)
+    , _ltlfaMaxResults :: !(Maybe Nat)
+    , _ltlfaSchemaARN  :: !Text
+    , _ltlfaName       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTypedLinkFacetAttributes' with the minimum fields required to make a request.
@@ -145,11 +147,13 @@ instance ToQuery ListTypedLinkFacetAttributes where
         toQuery = const mempty
 
 -- | /See:/ 'listTypedLinkFacetAttributesResponse' smart constructor.
-data ListTypedLinkFacetAttributesResponse = ListTypedLinkFacetAttributesResponse'
-  { _ltlfarsNextToken      :: !(Maybe Text)
-  , _ltlfarsAttributes     :: !(Maybe [TypedLinkAttributeDefinition])
-  , _ltlfarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTypedLinkFacetAttributesResponse =
+  ListTypedLinkFacetAttributesResponse'
+    { _ltlfarsNextToken      :: !(Maybe Text)
+    , _ltlfarsAttributes     :: !(Maybe [TypedLinkAttributeDefinition])
+    , _ltlfarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTypedLinkFacetAttributesResponse' with the minimum fields required to make a request.

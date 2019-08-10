@@ -69,11 +69,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getDiscoveredResourceCounts' smart constructor.
-data GetDiscoveredResourceCounts = GetDiscoveredResourceCounts'
-  { _gdrcNextToken     :: !(Maybe Text)
-  , _gdrcLimit         :: !(Maybe Nat)
-  , _gdrcResourceTypes :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDiscoveredResourceCounts =
+  GetDiscoveredResourceCounts'
+    { _gdrcNextToken     :: !(Maybe Text)
+    , _gdrcLimit         :: !(Maybe Nat)
+    , _gdrcResourceTypes :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDiscoveredResourceCounts' with the minimum fields required to make a request.
@@ -149,12 +151,14 @@ instance ToQuery GetDiscoveredResourceCounts where
         toQuery = const mempty
 
 -- | /See:/ 'getDiscoveredResourceCountsResponse' smart constructor.
-data GetDiscoveredResourceCountsResponse = GetDiscoveredResourceCountsResponse'
-  { _gdrcrsTotalDiscoveredResources :: !(Maybe Integer)
-  , _gdrcrsNextToken                :: !(Maybe Text)
-  , _gdrcrsResourceCounts           :: !(Maybe [ResourceCount])
-  , _gdrcrsResponseStatus           :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDiscoveredResourceCountsResponse =
+  GetDiscoveredResourceCountsResponse'
+    { _gdrcrsTotalDiscoveredResources :: !(Maybe Integer)
+    , _gdrcrsNextToken                :: !(Maybe Text)
+    , _gdrcrsResourceCounts           :: !(Maybe [ResourceCount])
+    , _gdrcrsResponseStatus           :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDiscoveredResourceCountsResponse' with the minimum fields required to make a request.

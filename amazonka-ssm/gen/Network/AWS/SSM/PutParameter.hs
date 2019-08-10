@@ -51,15 +51,17 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'putParameter' smart constructor.
-data PutParameter = PutParameter'
-  { _ppKeyId          :: !(Maybe Text)
-  , _ppAllowedPattern :: !(Maybe Text)
-  , _ppOverwrite      :: !(Maybe Bool)
-  , _ppDescription    :: !(Maybe Text)
-  , _ppName           :: !Text
-  , _ppValue          :: !Text
-  , _ppType           :: !ParameterType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutParameter =
+  PutParameter'
+    { _ppKeyId          :: !(Maybe Text)
+    , _ppAllowedPattern :: !(Maybe Text)
+    , _ppOverwrite      :: !(Maybe Bool)
+    , _ppDescription    :: !(Maybe Text)
+    , _ppName           :: !Text
+    , _ppValue          :: !Text
+    , _ppType           :: !ParameterType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutParameter' with the minimum fields required to make a request.
@@ -164,10 +166,12 @@ instance ToQuery PutParameter where
         toQuery = const mempty
 
 -- | /See:/ 'putParameterResponse' smart constructor.
-data PutParameterResponse = PutParameterResponse'
-  { _pprsVersion        :: !(Maybe Integer)
-  , _pprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutParameterResponse =
+  PutParameterResponse'
+    { _pprsVersion        :: !(Maybe Integer)
+    , _pprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutParameterResponse' with the minimum fields required to make a request.

@@ -50,11 +50,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'verifyUserAttribute' smart constructor.
-data VerifyUserAttribute = VerifyUserAttribute'
-  { _vuaAccessToken   :: !(Sensitive Text)
-  , _vuaAttributeName :: !Text
-  , _vuaCode          :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data VerifyUserAttribute =
+  VerifyUserAttribute'
+    { _vuaAccessToken   :: !(Sensitive Text)
+    , _vuaAttributeName :: !Text
+    , _vuaCode          :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VerifyUserAttribute' with the minimum fields required to make a request.
@@ -133,9 +135,11 @@ instance ToQuery VerifyUserAttribute where
 --
 --
 -- /See:/ 'verifyUserAttributeResponse' smart constructor.
-newtype VerifyUserAttributeResponse = VerifyUserAttributeResponse'
-  { _vuarsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype VerifyUserAttributeResponse =
+  VerifyUserAttributeResponse'
+    { _vuarsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VerifyUserAttributeResponse' with the minimum fields required to make a request.

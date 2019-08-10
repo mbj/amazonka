@@ -46,11 +46,13 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'getObjectTorrent' smart constructor.
-data GetObjectTorrent = GetObjectTorrent'
-  { _gotRequestPayer :: !(Maybe RequestPayer)
-  , _gotBucket       :: !BucketName
-  , _gotKey          :: !ObjectKey
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetObjectTorrent =
+  GetObjectTorrent'
+    { _gotRequestPayer :: !(Maybe RequestPayer)
+    , _gotBucket       :: !BucketName
+    , _gotKey          :: !ObjectKey
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetObjectTorrent' with the minimum fields required to make a request.
@@ -110,11 +112,13 @@ instance ToQuery GetObjectTorrent where
         toQuery = const (mconcat ["torrent"])
 
 -- | /See:/ 'getObjectTorrentResponse' smart constructor.
-data GetObjectTorrentResponse = GetObjectTorrentResponse'
-  { _getrsRequestCharged :: !(Maybe RequestCharged)
-  , _getrsResponseStatus :: !Int
-  , _getrsBody           :: !RsBody
-  } deriving (Show, Generic)
+data GetObjectTorrentResponse =
+  GetObjectTorrentResponse'
+    { _getrsRequestCharged :: !(Maybe RequestCharged)
+    , _getrsResponseStatus :: !Int
+    , _getrsBody           :: !RsBody
+    }
+  deriving (Show, Generic)
 
 
 -- | Creates a value of 'GetObjectTorrentResponse' with the minimum fields required to make a request.

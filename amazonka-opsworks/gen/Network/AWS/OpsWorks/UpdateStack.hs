@@ -61,26 +61,28 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateStack' smart constructor.
-data UpdateStack = UpdateStack'
-  { _usDefaultInstanceProfileARN :: !(Maybe Text)
-  , _usServiceRoleARN :: !(Maybe Text)
-  , _usDefaultRootDeviceType :: !(Maybe RootDeviceType)
-  , _usChefConfiguration :: !(Maybe ChefConfiguration)
-  , _usAgentVersion :: !(Maybe Text)
-  , _usDefaultSSHKeyName :: !(Maybe Text)
-  , _usCustomJSON :: !(Maybe Text)
-  , _usCustomCookbooksSource :: !(Maybe Source)
-  , _usDefaultAvailabilityZone :: !(Maybe Text)
-  , _usAttributes :: !(Maybe (Map StackAttributesKeys (Maybe Text)))
-  , _usName :: !(Maybe Text)
-  , _usDefaultOS :: !(Maybe Text)
-  , _usUseOpsworksSecurityGroups :: !(Maybe Bool)
-  , _usUseCustomCookbooks :: !(Maybe Bool)
-  , _usDefaultSubnetId :: !(Maybe Text)
-  , _usConfigurationManager :: !(Maybe StackConfigurationManager)
-  , _usHostnameTheme :: !(Maybe Text)
-  , _usStackId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateStack =
+  UpdateStack'
+    { _usDefaultInstanceProfileARN :: !(Maybe Text)
+    , _usServiceRoleARN :: !(Maybe Text)
+    , _usDefaultRootDeviceType :: !(Maybe RootDeviceType)
+    , _usChefConfiguration :: !(Maybe ChefConfiguration)
+    , _usAgentVersion :: !(Maybe Text)
+    , _usDefaultSSHKeyName :: !(Maybe Text)
+    , _usCustomJSON :: !(Maybe Text)
+    , _usCustomCookbooksSource :: !(Maybe Source)
+    , _usDefaultAvailabilityZone :: !(Maybe Text)
+    , _usAttributes :: !(Maybe (Map StackAttributesKeys (Maybe Text)))
+    , _usName :: !(Maybe Text)
+    , _usDefaultOS :: !(Maybe Text)
+    , _usUseOpsworksSecurityGroups :: !(Maybe Bool)
+    , _usUseCustomCookbooks :: !(Maybe Bool)
+    , _usDefaultSubnetId :: !(Maybe Text)
+    , _usConfigurationManager :: !(Maybe StackConfigurationManager)
+    , _usHostnameTheme :: !(Maybe Text)
+    , _usStackId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateStack' with the minimum fields required to make a request.

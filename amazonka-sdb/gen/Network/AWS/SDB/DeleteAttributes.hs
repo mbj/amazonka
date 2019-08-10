@@ -49,12 +49,14 @@ import Network.AWS.SDB.Types
 import Network.AWS.SDB.Types.Product
 
 -- | /See:/ 'deleteAttributes' smart constructor.
-data DeleteAttributes = DeleteAttributes'
-  { _daAttributes :: !(Maybe [Attribute])
-  , _daExpected   :: !(Maybe UpdateCondition)
-  , _daDomainName :: !Text
-  , _daItemName   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteAttributes =
+  DeleteAttributes'
+    { _daAttributes :: !(Maybe [Attribute])
+    , _daExpected   :: !(Maybe UpdateCondition)
+    , _daDomainName :: !Text
+    , _daItemName   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteAttributes' with the minimum fields required to make a request.

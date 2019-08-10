@@ -45,9 +45,11 @@ import Network.AWS.WAF.Types
 import Network.AWS.WAF.Types.Product
 
 -- | /See:/ 'getRateBasedRule' smart constructor.
-newtype GetRateBasedRule = GetRateBasedRule'
-  { _grbrRuleId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetRateBasedRule =
+  GetRateBasedRule'
+    { _grbrRuleId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetRateBasedRule' with the minimum fields required to make a request.
@@ -98,10 +100,12 @@ instance ToQuery GetRateBasedRule where
         toQuery = const mempty
 
 -- | /See:/ 'getRateBasedRuleResponse' smart constructor.
-data GetRateBasedRuleResponse = GetRateBasedRuleResponse'
-  { _grbrrsRule           :: !(Maybe RateBasedRule)
-  , _grbrrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetRateBasedRuleResponse =
+  GetRateBasedRuleResponse'
+    { _grbrrsRule           :: !(Maybe RateBasedRule)
+    , _grbrrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetRateBasedRuleResponse' with the minimum fields required to make a request.

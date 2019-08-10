@@ -72,14 +72,16 @@ import Network.AWS.StorageGateway.Types.Product
 --
 --
 -- /See:/ 'createStorediSCSIVolume' smart constructor.
-data CreateStorediSCSIVolume = CreateStorediSCSIVolume'
-  { _csscsivSnapshotId           :: !(Maybe Text)
-  , _csscsivGatewayARN           :: !Text
-  , _csscsivDiskId               :: !Text
-  , _csscsivPreserveExistingData :: !Bool
-  , _csscsivTargetName           :: !Text
-  , _csscsivNetworkInterfaceId   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateStorediSCSIVolume =
+  CreateStorediSCSIVolume'
+    { _csscsivSnapshotId           :: !(Maybe Text)
+    , _csscsivGatewayARN           :: !Text
+    , _csscsivDiskId               :: !Text
+    , _csscsivPreserveExistingData :: !Bool
+    , _csscsivTargetName           :: !Text
+    , _csscsivNetworkInterfaceId   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateStorediSCSIVolume' with the minimum fields required to make a request.
@@ -191,12 +193,14 @@ instance ToQuery CreateStorediSCSIVolume where
 --
 --
 -- /See:/ 'createStorediSCSIVolumeResponse' smart constructor.
-data CreateStorediSCSIVolumeResponse = CreateStorediSCSIVolumeResponse'
-  { _csscsivrsTargetARN         :: !(Maybe Text)
-  , _csscsivrsVolumeARN         :: !(Maybe Text)
-  , _csscsivrsVolumeSizeInBytes :: !(Maybe Integer)
-  , _csscsivrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateStorediSCSIVolumeResponse =
+  CreateStorediSCSIVolumeResponse'
+    { _csscsivrsTargetARN         :: !(Maybe Text)
+    , _csscsivrsVolumeARN         :: !(Maybe Text)
+    , _csscsivrsVolumeSizeInBytes :: !(Maybe Integer)
+    , _csscsivrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateStorediSCSIVolumeResponse' with the minimum fields required to make a request.

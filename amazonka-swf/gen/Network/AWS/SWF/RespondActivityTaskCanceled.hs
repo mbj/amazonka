@@ -63,10 +63,12 @@ import Network.AWS.SWF.Types
 import Network.AWS.SWF.Types.Product
 
 -- | /See:/ 'respondActivityTaskCanceled' smart constructor.
-data RespondActivityTaskCanceled = RespondActivityTaskCanceled'
-  { _rDetails   :: !(Maybe Text)
-  , _rTaskToken :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RespondActivityTaskCanceled =
+  RespondActivityTaskCanceled'
+    { _rDetails   :: !(Maybe Text)
+    , _rTaskToken :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RespondActivityTaskCanceled' with the minimum fields required to make a request.

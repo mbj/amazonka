@@ -45,10 +45,12 @@ import Network.AWS.ServiceCatalog.Types
 import Network.AWS.ServiceCatalog.Types.Product
 
 -- | /See:/ 'acceptPortfolioShare' smart constructor.
-data AcceptPortfolioShare = AcceptPortfolioShare'
-  { _apsAcceptLanguage :: !(Maybe Text)
-  , _apsPortfolioId    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AcceptPortfolioShare =
+  AcceptPortfolioShare'
+    { _apsAcceptLanguage :: !(Maybe Text)
+    , _apsPortfolioId    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AcceptPortfolioShare' with the minimum fields required to make a request.
@@ -112,9 +114,11 @@ instance ToQuery AcceptPortfolioShare where
         toQuery = const mempty
 
 -- | /See:/ 'acceptPortfolioShareResponse' smart constructor.
-newtype AcceptPortfolioShareResponse = AcceptPortfolioShareResponse'
-  { _apsrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AcceptPortfolioShareResponse =
+  AcceptPortfolioShareResponse'
+    { _apsrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AcceptPortfolioShareResponse' with the minimum fields required to make a request.

@@ -51,11 +51,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createFunctionDefinition' smart constructor.
-data CreateFunctionDefinition = CreateFunctionDefinition'
-  { _cfdAmznClientToken :: !(Maybe Text)
-  , _cfdInitialVersion  :: !(Maybe FunctionDefinitionVersion)
-  , _cfdName            :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateFunctionDefinition =
+  CreateFunctionDefinition'
+    { _cfdAmznClientToken :: !(Maybe Text)
+    , _cfdInitialVersion  :: !(Maybe FunctionDefinitionVersion)
+    , _cfdName            :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateFunctionDefinition' with the minimum fields required to make a request.
@@ -130,16 +132,18 @@ instance ToQuery CreateFunctionDefinition where
         toQuery = const mempty
 
 -- | /See:/ 'createFunctionDefinitionResponse' smart constructor.
-data CreateFunctionDefinitionResponse = CreateFunctionDefinitionResponse'
-  { _cfdrsLatestVersionARN     :: !(Maybe Text)
-  , _cfdrsARN                  :: !(Maybe Text)
-  , _cfdrsName                 :: !(Maybe Text)
-  , _cfdrsCreationTimestamp    :: !(Maybe Text)
-  , _cfdrsId                   :: !(Maybe Text)
-  , _cfdrsLatestVersion        :: !(Maybe Text)
-  , _cfdrsLastUpdatedTimestamp :: !(Maybe Text)
-  , _cfdrsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateFunctionDefinitionResponse =
+  CreateFunctionDefinitionResponse'
+    { _cfdrsLatestVersionARN     :: !(Maybe Text)
+    , _cfdrsARN                  :: !(Maybe Text)
+    , _cfdrsName                 :: !(Maybe Text)
+    , _cfdrsCreationTimestamp    :: !(Maybe Text)
+    , _cfdrsId                   :: !(Maybe Text)
+    , _cfdrsLatestVersion        :: !(Maybe Text)
+    , _cfdrsLastUpdatedTimestamp :: !(Maybe Text)
+    , _cfdrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateFunctionDefinitionResponse' with the minimum fields required to make a request.

@@ -26,13 +26,15 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'fragment' smart constructor.
-data Fragment = Fragment'
-  { _fFragmentLengthInMilliseconds :: !(Maybe Integer)
-  , _fServerTimestamp              :: !(Maybe POSIX)
-  , _fFragmentSizeInBytes          :: !(Maybe Integer)
-  , _fFragmentNumber               :: !(Maybe Text)
-  , _fProducerTimestamp            :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Fragment =
+  Fragment'
+    { _fFragmentLengthInMilliseconds :: !(Maybe Integer)
+    , _fServerTimestamp              :: !(Maybe POSIX)
+    , _fFragmentSizeInBytes          :: !(Maybe Integer)
+    , _fFragmentNumber               :: !(Maybe Text)
+    , _fProducerTimestamp            :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Fragment' with the minimum fields required to make a request.
@@ -100,10 +102,12 @@ instance NFData Fragment where
 --
 --
 -- /See:/ 'fragmentSelector' smart constructor.
-data FragmentSelector = FragmentSelector'
-  { _fsFragmentSelectorType :: !FragmentSelectorType
-  , _fsTimestampRange       :: !TimestampRange
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FragmentSelector =
+  FragmentSelector'
+    { _fsFragmentSelectorType :: !FragmentSelectorType
+    , _fsTimestampRange       :: !TimestampRange
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FragmentSelector' with the minimum fields required to make a request.
@@ -149,10 +153,12 @@ instance ToJSON FragmentSelector where
 --
 --
 -- /See:/ 'timestampRange' smart constructor.
-data TimestampRange = TimestampRange'
-  { _trStartTimestamp :: !POSIX
-  , _trEndTimestamp   :: !POSIX
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TimestampRange =
+  TimestampRange'
+    { _trStartTimestamp :: !POSIX
+    , _trEndTimestamp   :: !POSIX
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TimestampRange' with the minimum fields required to make a request.

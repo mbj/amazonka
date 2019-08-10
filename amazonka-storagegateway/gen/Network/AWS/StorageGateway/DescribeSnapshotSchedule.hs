@@ -53,9 +53,11 @@ import Network.AWS.StorageGateway.Types.Product
 --
 --
 -- /See:/ 'describeSnapshotSchedule' smart constructor.
-newtype DescribeSnapshotSchedule = DescribeSnapshotSchedule'
-  { _dssVolumeARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeSnapshotSchedule =
+  DescribeSnapshotSchedule'
+    { _dssVolumeARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeSnapshotSchedule' with the minimum fields required to make a request.
@@ -114,14 +116,16 @@ instance ToQuery DescribeSnapshotSchedule where
         toQuery = const mempty
 
 -- | /See:/ 'describeSnapshotScheduleResponse' smart constructor.
-data DescribeSnapshotScheduleResponse = DescribeSnapshotScheduleResponse'
-  { _dssrsStartAt           :: !(Maybe Nat)
-  , _dssrsVolumeARN         :: !(Maybe Text)
-  , _dssrsRecurrenceInHours :: !(Maybe Nat)
-  , _dssrsTimezone          :: !(Maybe Text)
-  , _dssrsDescription       :: !(Maybe Text)
-  , _dssrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeSnapshotScheduleResponse =
+  DescribeSnapshotScheduleResponse'
+    { _dssrsStartAt           :: !(Maybe Nat)
+    , _dssrsVolumeARN         :: !(Maybe Text)
+    , _dssrsRecurrenceInHours :: !(Maybe Nat)
+    , _dssrsTimezone          :: !(Maybe Text)
+    , _dssrsDescription       :: !(Maybe Text)
+    , _dssrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeSnapshotScheduleResponse' with the minimum fields required to make a request.

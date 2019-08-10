@@ -66,11 +66,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateContainerInstancesState' smart constructor.
-data UpdateContainerInstancesState = UpdateContainerInstancesState'
-  { _ucisCluster            :: !(Maybe Text)
-  , _ucisContainerInstances :: ![Text]
-  , _ucisStatus             :: !ContainerInstanceStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateContainerInstancesState =
+  UpdateContainerInstancesState'
+    { _ucisCluster            :: !(Maybe Text)
+    , _ucisContainerInstances :: ![Text]
+    , _ucisStatus             :: !ContainerInstanceStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateContainerInstancesState' with the minimum fields required to make a request.
@@ -149,11 +151,13 @@ instance ToQuery UpdateContainerInstancesState where
         toQuery = const mempty
 
 -- | /See:/ 'updateContainerInstancesStateResponse' smart constructor.
-data UpdateContainerInstancesStateResponse = UpdateContainerInstancesStateResponse'
-  { _ucisrsFailures           :: !(Maybe [Failure])
-  , _ucisrsContainerInstances :: !(Maybe [ContainerInstance])
-  , _ucisrsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateContainerInstancesStateResponse =
+  UpdateContainerInstancesStateResponse'
+    { _ucisrsFailures           :: !(Maybe [Failure])
+    , _ucisrsContainerInstances :: !(Maybe [ContainerInstance])
+    , _ucisrsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateContainerInstancesStateResponse' with the minimum fields required to make a request.

@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createImageBuilderStreamingURL' smart constructor.
-data CreateImageBuilderStreamingURL = CreateImageBuilderStreamingURL'
-  { _cibsuValidity :: !(Maybe Integer)
-  , _cibsuName     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateImageBuilderStreamingURL =
+  CreateImageBuilderStreamingURL'
+    { _cibsuValidity :: !(Maybe Integer)
+    , _cibsuName     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateImageBuilderStreamingURL' with the minimum fields required to make a request.
@@ -118,11 +120,13 @@ instance ToQuery CreateImageBuilderStreamingURL where
         toQuery = const mempty
 
 -- | /See:/ 'createImageBuilderStreamingURLResponse' smart constructor.
-data CreateImageBuilderStreamingURLResponse = CreateImageBuilderStreamingURLResponse'
-  { _cibsursStreamingURL   :: !(Maybe Text)
-  , _cibsursExpires        :: !(Maybe POSIX)
-  , _cibsursResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateImageBuilderStreamingURLResponse =
+  CreateImageBuilderStreamingURLResponse'
+    { _cibsursStreamingURL   :: !(Maybe Text)
+    , _cibsursExpires        :: !(Maybe POSIX)
+    , _cibsursResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateImageBuilderStreamingURLResponse' with the minimum fields required to make a request.

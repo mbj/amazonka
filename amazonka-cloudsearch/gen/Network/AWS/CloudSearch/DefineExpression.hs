@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'defineExpression' smart constructor.
-data DefineExpression = DefineExpression'
-  { _dDomainName :: !Text
-  , _dExpression :: !Expression
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DefineExpression =
+  DefineExpression'
+    { _dDomainName :: !Text
+    , _dExpression :: !Expression
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DefineExpression' with the minimum fields required to make a request.
@@ -111,10 +113,12 @@ instance ToQuery DefineExpression where
 --
 --
 -- /See:/ 'defineExpressionResponse' smart constructor.
-data DefineExpressionResponse = DefineExpressionResponse'
-  { _dersResponseStatus :: !Int
-  , _dersExpression     :: !ExpressionStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DefineExpressionResponse =
+  DefineExpressionResponse'
+    { _dersResponseStatus :: !Int
+    , _dersExpression     :: !ExpressionStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DefineExpressionResponse' with the minimum fields required to make a request.

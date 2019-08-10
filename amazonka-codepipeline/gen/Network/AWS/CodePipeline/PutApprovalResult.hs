@@ -53,13 +53,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'putApprovalResult' smart constructor.
-data PutApprovalResult = PutApprovalResult'
-  { _parPipelineName :: !Text
-  , _parStageName    :: !Text
-  , _parActionName   :: !Text
-  , _parResult       :: !ApprovalResult
-  , _parToken        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutApprovalResult =
+  PutApprovalResult'
+    { _parPipelineName :: !Text
+    , _parStageName    :: !Text
+    , _parActionName   :: !Text
+    , _parResult       :: !ApprovalResult
+    , _parToken        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutApprovalResult' with the minimum fields required to make a request.
@@ -156,10 +158,12 @@ instance ToQuery PutApprovalResult where
 --
 --
 -- /See:/ 'putApprovalResultResponse' smart constructor.
-data PutApprovalResultResponse = PutApprovalResultResponse'
-  { _parrsApprovedAt     :: !(Maybe POSIX)
-  , _parrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutApprovalResultResponse =
+  PutApprovalResultResponse'
+    { _parrsApprovedAt     :: !(Maybe POSIX)
+    , _parrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutApprovalResultResponse' with the minimum fields required to make a request.

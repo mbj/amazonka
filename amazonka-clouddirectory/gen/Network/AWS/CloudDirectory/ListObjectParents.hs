@@ -50,13 +50,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listObjectParents' smart constructor.
-data ListObjectParents = ListObjectParents'
-  { _lopConsistencyLevel :: !(Maybe ConsistencyLevel)
-  , _lopNextToken        :: !(Maybe Text)
-  , _lopMaxResults       :: !(Maybe Nat)
-  , _lopDirectoryARN     :: !Text
-  , _lopObjectReference  :: !ObjectReference
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListObjectParents =
+  ListObjectParents'
+    { _lopConsistencyLevel :: !(Maybe ConsistencyLevel)
+    , _lopNextToken        :: !(Maybe Text)
+    , _lopMaxResults       :: !(Maybe Nat)
+    , _lopDirectoryARN     :: !Text
+    , _lopObjectReference  :: !ObjectReference
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListObjectParents' with the minimum fields required to make a request.
@@ -143,11 +145,13 @@ instance ToQuery ListObjectParents where
         toQuery = const mempty
 
 -- | /See:/ 'listObjectParentsResponse' smart constructor.
-data ListObjectParentsResponse = ListObjectParentsResponse'
-  { _lrsNextToken      :: !(Maybe Text)
-  , _lrsParents        :: !(Maybe (Map Text Text))
-  , _lrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListObjectParentsResponse =
+  ListObjectParentsResponse'
+    { _lrsNextToken      :: !(Maybe Text)
+    , _lrsParents        :: !(Maybe (Map Text Text))
+    , _lrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListObjectParentsResponse' with the minimum fields required to make a request.

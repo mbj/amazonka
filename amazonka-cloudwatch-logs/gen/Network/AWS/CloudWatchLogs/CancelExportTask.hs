@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'cancelExportTask' smart constructor.
-newtype CancelExportTask = CancelExportTask'
-  { _cetTaskId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CancelExportTask =
+  CancelExportTask'
+    { _cetTaskId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CancelExportTask' with the minimum fields required to make a request.

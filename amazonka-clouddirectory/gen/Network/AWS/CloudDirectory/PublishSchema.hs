@@ -48,12 +48,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'publishSchema' smart constructor.
-data PublishSchema = PublishSchema'
-  { _psMinorVersion         :: !(Maybe Text)
-  , _psName                 :: !(Maybe Text)
-  , _psDevelopmentSchemaARN :: !Text
-  , _psVersion              :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PublishSchema =
+  PublishSchema'
+    { _psMinorVersion         :: !(Maybe Text)
+    , _psName                 :: !(Maybe Text)
+    , _psDevelopmentSchemaARN :: !Text
+    , _psVersion              :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PublishSchema' with the minimum fields required to make a request.
@@ -131,10 +133,12 @@ instance ToQuery PublishSchema where
         toQuery = const mempty
 
 -- | /See:/ 'publishSchemaResponse' smart constructor.
-data PublishSchemaResponse = PublishSchemaResponse'
-  { _psrsPublishedSchemaARN :: !(Maybe Text)
-  , _psrsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PublishSchemaResponse =
+  PublishSchemaResponse'
+    { _psrsPublishedSchemaARN :: !(Maybe Text)
+    , _psrsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PublishSchemaResponse' with the minimum fields required to make a request.

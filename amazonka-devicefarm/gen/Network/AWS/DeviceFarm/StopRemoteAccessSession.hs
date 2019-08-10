@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'stopRemoteAccessSession' smart constructor.
-newtype StopRemoteAccessSession = StopRemoteAccessSession'
-  { _srasArn :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StopRemoteAccessSession =
+  StopRemoteAccessSession'
+    { _srasArn :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopRemoteAccessSession' with the minimum fields required to make a request.
@@ -109,10 +111,12 @@ instance ToQuery StopRemoteAccessSession where
 --
 --
 -- /See:/ 'stopRemoteAccessSessionResponse' smart constructor.
-data StopRemoteAccessSessionResponse = StopRemoteAccessSessionResponse'
-  { _srasrsRemoteAccessSession :: !(Maybe RemoteAccessSession)
-  , _srasrsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StopRemoteAccessSessionResponse =
+  StopRemoteAccessSessionResponse'
+    { _srasrsRemoteAccessSession :: !(Maybe RemoteAccessSession)
+    , _srasrsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopRemoteAccessSessionResponse' with the minimum fields required to make a request.

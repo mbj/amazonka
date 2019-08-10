@@ -46,11 +46,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listFunctionDefinitionVersions' smart constructor.
-data ListFunctionDefinitionVersions = ListFunctionDefinitionVersions'
-  { _lfdvNextToken            :: !(Maybe Text)
-  , _lfdvMaxResults           :: !(Maybe Text)
-  , _lfdvFunctionDefinitionId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListFunctionDefinitionVersions =
+  ListFunctionDefinitionVersions'
+    { _lfdvNextToken            :: !(Maybe Text)
+    , _lfdvMaxResults           :: !(Maybe Text)
+    , _lfdvFunctionDefinitionId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListFunctionDefinitionVersions' with the minimum fields required to make a request.
@@ -123,11 +125,13 @@ instance ToQuery ListFunctionDefinitionVersions where
                "MaxResults" =: _lfdvMaxResults]
 
 -- | /See:/ 'listFunctionDefinitionVersionsResponse' smart constructor.
-data ListFunctionDefinitionVersionsResponse = ListFunctionDefinitionVersionsResponse'
-  { _lfdvrsVersions       :: !(Maybe [VersionInformation])
-  , _lfdvrsNextToken      :: !(Maybe Text)
-  , _lfdvrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListFunctionDefinitionVersionsResponse =
+  ListFunctionDefinitionVersionsResponse'
+    { _lfdvrsVersions       :: !(Maybe [VersionInformation])
+    , _lfdvrsNextToken      :: !(Maybe Text)
+    , _lfdvrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListFunctionDefinitionVersionsResponse' with the minimum fields required to make a request.

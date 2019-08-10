@@ -58,20 +58,22 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createApp' smart constructor.
-data CreateApp = CreateApp'
-  { _caSSLConfiguration :: !(Maybe SSLConfiguration)
-  , _caEnvironment      :: !(Maybe [EnvironmentVariable])
-  , _caEnableSSL        :: !(Maybe Bool)
-  , _caShortname        :: !(Maybe Text)
-  , _caDataSources      :: !(Maybe [DataSource])
-  , _caAppSource        :: !(Maybe Source)
-  , _caAttributes       :: !(Maybe (Map AppAttributesKeys Text))
-  , _caDomains          :: !(Maybe [Text])
-  , _caDescription      :: !(Maybe Text)
-  , _caStackId          :: !Text
-  , _caName             :: !Text
-  , _caType             :: !AppType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateApp =
+  CreateApp'
+    { _caSSLConfiguration :: !(Maybe SSLConfiguration)
+    , _caEnvironment      :: !(Maybe [EnvironmentVariable])
+    , _caEnableSSL        :: !(Maybe Bool)
+    , _caShortname        :: !(Maybe Text)
+    , _caDataSources      :: !(Maybe [DataSource])
+    , _caAppSource        :: !(Maybe Source)
+    , _caAttributes       :: !(Maybe (Map AppAttributesKeys Text))
+    , _caDomains          :: !(Maybe [Text])
+    , _caDescription      :: !(Maybe Text)
+    , _caStackId          :: !Text
+    , _caName             :: !Text
+    , _caType             :: !AppType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateApp' with the minimum fields required to make a request.
@@ -220,10 +222,12 @@ instance ToQuery CreateApp where
 --
 --
 -- /See:/ 'createAppResponse' smart constructor.
-data CreateAppResponse = CreateAppResponse'
-  { _carsAppId          :: !(Maybe Text)
-  , _carsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateAppResponse =
+  CreateAppResponse'
+    { _carsAppId          :: !(Maybe Text)
+    , _carsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateAppResponse' with the minimum fields required to make a request.

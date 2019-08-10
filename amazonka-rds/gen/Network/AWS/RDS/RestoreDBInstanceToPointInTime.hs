@@ -75,33 +75,35 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'restoreDBInstanceToPointInTime' smart constructor.
-data RestoreDBInstanceToPointInTime = RestoreDBInstanceToPointInTime'
-  { _rditpitUseLatestRestorableTime         :: !(Maybe Bool)
-  , _rditpitPubliclyAccessible              :: !(Maybe Bool)
-  , _rditpitAutoMinorVersionUpgrade         :: !(Maybe Bool)
-  , _rditpitDBSubnetGroupName               :: !(Maybe Text)
-  , _rditpitRestoreTime                     :: !(Maybe ISO8601)
-  , _rditpitIOPS                            :: !(Maybe Int)
-  , _rditpitDomain                          :: !(Maybe Text)
-  , _rditpitEngine                          :: !(Maybe Text)
-  , _rditpitTDECredentialPassword           :: !(Maybe Text)
-  , _rditpitDBInstanceClass                 :: !(Maybe Text)
-  , _rditpitLicenseModel                    :: !(Maybe Text)
-  , _rditpitAvailabilityZone                :: !(Maybe Text)
-  , _rditpitMultiAZ                         :: !(Maybe Bool)
-  , _rditpitOptionGroupName                 :: !(Maybe Text)
-  , _rditpitCopyTagsToSnapshot              :: !(Maybe Bool)
-  , _rditpitTDECredentialARN                :: !(Maybe Text)
-  , _rditpitDomainIAMRoleName               :: !(Maybe Text)
-  , _rditpitTags                            :: !(Maybe [Tag])
-  , _rditpitPort                            :: !(Maybe Int)
-  , _rditpitEnableIAMDatabaseAuthentication :: !(Maybe Bool)
-  , _rditpitStorageType                     :: !(Maybe Text)
-  , _rditpitEnableCloudwatchLogsExports     :: !(Maybe [Text])
-  , _rditpitDBName                          :: !(Maybe Text)
-  , _rditpitSourceDBInstanceIdentifier      :: !Text
-  , _rditpitTargetDBInstanceIdentifier      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RestoreDBInstanceToPointInTime =
+  RestoreDBInstanceToPointInTime'
+    { _rditpitUseLatestRestorableTime         :: !(Maybe Bool)
+    , _rditpitPubliclyAccessible              :: !(Maybe Bool)
+    , _rditpitAutoMinorVersionUpgrade         :: !(Maybe Bool)
+    , _rditpitDBSubnetGroupName               :: !(Maybe Text)
+    , _rditpitRestoreTime                     :: !(Maybe ISO8601)
+    , _rditpitIOPS                            :: !(Maybe Int)
+    , _rditpitDomain                          :: !(Maybe Text)
+    , _rditpitEngine                          :: !(Maybe Text)
+    , _rditpitTDECredentialPassword           :: !(Maybe Text)
+    , _rditpitDBInstanceClass                 :: !(Maybe Text)
+    , _rditpitLicenseModel                    :: !(Maybe Text)
+    , _rditpitAvailabilityZone                :: !(Maybe Text)
+    , _rditpitMultiAZ                         :: !(Maybe Bool)
+    , _rditpitOptionGroupName                 :: !(Maybe Text)
+    , _rditpitCopyTagsToSnapshot              :: !(Maybe Bool)
+    , _rditpitTDECredentialARN                :: !(Maybe Text)
+    , _rditpitDomainIAMRoleName               :: !(Maybe Text)
+    , _rditpitTags                            :: !(Maybe [Tag])
+    , _rditpitPort                            :: !(Maybe Int)
+    , _rditpitEnableIAMDatabaseAuthentication :: !(Maybe Bool)
+    , _rditpitStorageType                     :: !(Maybe Text)
+    , _rditpitEnableCloudwatchLogsExports     :: !(Maybe [Text])
+    , _rditpitDBName                          :: !(Maybe Text)
+    , _rditpitSourceDBInstanceIdentifier      :: !Text
+    , _rditpitTargetDBInstanceIdentifier      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RestoreDBInstanceToPointInTime' with the minimum fields required to make a request.
@@ -357,10 +359,12 @@ instance ToQuery RestoreDBInstanceToPointInTime where
                  _rditpitTargetDBInstanceIdentifier]
 
 -- | /See:/ 'restoreDBInstanceToPointInTimeResponse' smart constructor.
-data RestoreDBInstanceToPointInTimeResponse = RestoreDBInstanceToPointInTimeResponse'
-  { _rditpitrsDBInstance     :: !(Maybe DBInstance)
-  , _rditpitrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RestoreDBInstanceToPointInTimeResponse =
+  RestoreDBInstanceToPointInTimeResponse'
+    { _rditpitrsDBInstance     :: !(Maybe DBInstance)
+    , _rditpitrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RestoreDBInstanceToPointInTimeResponse' with the minimum fields required to make a request.

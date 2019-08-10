@@ -47,12 +47,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateUserDefinedFunction' smart constructor.
-data UpdateUserDefinedFunction = UpdateUserDefinedFunction'
-  { _uudfCatalogId     :: !(Maybe Text)
-  , _uudfDatabaseName  :: !Text
-  , _uudfFunctionName  :: !Text
-  , _uudfFunctionInput :: !UserDefinedFunctionInput
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateUserDefinedFunction =
+  UpdateUserDefinedFunction'
+    { _uudfCatalogId     :: !(Maybe Text)
+    , _uudfDatabaseName  :: !Text
+    , _uudfFunctionName  :: !Text
+    , _uudfFunctionInput :: !UserDefinedFunctionInput
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateUserDefinedFunction' with the minimum fields required to make a request.
@@ -135,9 +137,11 @@ instance ToQuery UpdateUserDefinedFunction where
         toQuery = const mempty
 
 -- | /See:/ 'updateUserDefinedFunctionResponse' smart constructor.
-newtype UpdateUserDefinedFunctionResponse = UpdateUserDefinedFunctionResponse'
-  { _uudfrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateUserDefinedFunctionResponse =
+  UpdateUserDefinedFunctionResponse'
+    { _uudfrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateUserDefinedFunctionResponse' with the minimum fields required to make a request.

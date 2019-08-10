@@ -55,11 +55,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeReplicationSubnetGroups' smart constructor.
-data DescribeReplicationSubnetGroups = DescribeReplicationSubnetGroups'
-  { _drsgFilters    :: !(Maybe [Filter])
-  , _drsgMarker     :: !(Maybe Text)
-  , _drsgMaxRecords :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeReplicationSubnetGroups =
+  DescribeReplicationSubnetGroups'
+    { _drsgFilters    :: !(Maybe [Filter])
+    , _drsgMarker     :: !(Maybe Text)
+    , _drsgMaxRecords :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeReplicationSubnetGroups' with the minimum fields required to make a request.
@@ -148,11 +150,13 @@ instance ToQuery DescribeReplicationSubnetGroups
 --
 --
 -- /See:/ 'describeReplicationSubnetGroupsResponse' smart constructor.
-data DescribeReplicationSubnetGroupsResponse = DescribeReplicationSubnetGroupsResponse'
-  { _drsgsrsMarker                  :: !(Maybe Text)
-  , _drsgsrsReplicationSubnetGroups :: !(Maybe [ReplicationSubnetGroup])
-  , _drsgsrsResponseStatus          :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeReplicationSubnetGroupsResponse =
+  DescribeReplicationSubnetGroupsResponse'
+    { _drsgsrsMarker                  :: !(Maybe Text)
+    , _drsgsrsReplicationSubnetGroups :: !(Maybe [ReplicationSubnetGroup])
+    , _drsgsrsResponseStatus          :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeReplicationSubnetGroupsResponse' with the minimum fields required to make a request.

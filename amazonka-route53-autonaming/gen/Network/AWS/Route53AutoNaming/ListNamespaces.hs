@@ -51,11 +51,13 @@ import Network.AWS.Route53AutoNaming.Types
 import Network.AWS.Route53AutoNaming.Types.Product
 
 -- | /See:/ 'listNamespaces' smart constructor.
-data ListNamespaces = ListNamespaces'
-  { _lnFilters    :: !(Maybe [NamespaceFilter])
-  , _lnNextToken  :: !(Maybe Text)
-  , _lnMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListNamespaces =
+  ListNamespaces'
+    { _lnFilters    :: !(Maybe [NamespaceFilter])
+    , _lnNextToken  :: !(Maybe Text)
+    , _lnMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListNamespaces' with the minimum fields required to make a request.
@@ -133,11 +135,13 @@ instance ToQuery ListNamespaces where
         toQuery = const mempty
 
 -- | /See:/ 'listNamespacesResponse' smart constructor.
-data ListNamespacesResponse = ListNamespacesResponse'
-  { _lnrsNamespaces     :: !(Maybe [NamespaceSummary])
-  , _lnrsNextToken      :: !(Maybe Text)
-  , _lnrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListNamespacesResponse =
+  ListNamespacesResponse'
+    { _lnrsNamespaces     :: !(Maybe [NamespaceSummary])
+    , _lnrsNextToken      :: !(Maybe Text)
+    , _lnrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListNamespacesResponse' with the minimum fields required to make a request.

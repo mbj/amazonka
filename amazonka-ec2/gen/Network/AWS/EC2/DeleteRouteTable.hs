@@ -47,10 +47,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteRouteTable' smart constructor.
-data DeleteRouteTable = DeleteRouteTable'
-  { _drtrDryRun       :: !(Maybe Bool)
-  , _drtrRouteTableId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteRouteTable =
+  DeleteRouteTable'
+    { _drtrDryRun       :: !(Maybe Bool)
+    , _drtrRouteTableId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteRouteTable' with the minimum fields required to make a request.

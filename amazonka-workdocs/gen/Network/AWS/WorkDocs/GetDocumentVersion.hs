@@ -50,13 +50,15 @@ import Network.AWS.WorkDocs.Types
 import Network.AWS.WorkDocs.Types.Product
 
 -- | /See:/ 'getDocumentVersion' smart constructor.
-data GetDocumentVersion = GetDocumentVersion'
-  { _gdvAuthenticationToken   :: !(Maybe (Sensitive Text))
-  , _gdvIncludeCustomMetadata :: !(Maybe Bool)
-  , _gdvFields                :: !(Maybe Text)
-  , _gdvDocumentId            :: !Text
-  , _gdvVersionId             :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data GetDocumentVersion =
+  GetDocumentVersion'
+    { _gdvAuthenticationToken   :: !(Maybe (Sensitive Text))
+    , _gdvIncludeCustomMetadata :: !(Maybe Bool)
+    , _gdvFields                :: !(Maybe Text)
+    , _gdvDocumentId            :: !Text
+    , _gdvVersionId             :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDocumentVersion' with the minimum fields required to make a request.
@@ -143,11 +145,13 @@ instance ToQuery GetDocumentVersion where
                "fields" =: _gdvFields]
 
 -- | /See:/ 'getDocumentVersionResponse' smart constructor.
-data GetDocumentVersionResponse = GetDocumentVersionResponse'
-  { _gdvrsCustomMetadata :: !(Maybe (Map Text Text))
-  , _gdvrsMetadata       :: !(Maybe DocumentVersionMetadata)
-  , _gdvrsResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data GetDocumentVersionResponse =
+  GetDocumentVersionResponse'
+    { _gdvrsCustomMetadata :: !(Maybe (Map Text Text))
+    , _gdvrsMetadata       :: !(Maybe DocumentVersionMetadata)
+    , _gdvrsResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDocumentVersionResponse' with the minimum fields required to make a request.

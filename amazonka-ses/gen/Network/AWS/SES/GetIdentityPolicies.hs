@@ -54,10 +54,12 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'getIdentityPolicies' smart constructor.
-data GetIdentityPolicies = GetIdentityPolicies'
-  { _gipIdentity    :: !Text
-  , _gipPolicyNames :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetIdentityPolicies =
+  GetIdentityPolicies'
+    { _gipIdentity    :: !Text
+    , _gipPolicyNames :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetIdentityPolicies' with the minimum fields required to make a request.
@@ -118,10 +120,12 @@ instance ToQuery GetIdentityPolicies where
 --
 --
 -- /See:/ 'getIdentityPoliciesResponse' smart constructor.
-data GetIdentityPoliciesResponse = GetIdentityPoliciesResponse'
-  { _giprsResponseStatus :: !Int
-  , _giprsPolicies       :: !(Map Text Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetIdentityPoliciesResponse =
+  GetIdentityPoliciesResponse'
+    { _giprsResponseStatus :: !Int
+    , _giprsPolicies       :: !(Map Text Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetIdentityPoliciesResponse' with the minimum fields required to make a request.

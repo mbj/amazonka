@@ -43,10 +43,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'setTagsForResource' smart constructor.
-data SetTagsForResource = SetTagsForResource'
-  { _stfrTags        :: !(Maybe [Tag])
-  , _stfrResourceARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SetTagsForResource =
+  SetTagsForResource'
+    { _stfrTags        :: !(Maybe [Tag])
+    , _stfrResourceARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetTagsForResource' with the minimum fields required to make a request.

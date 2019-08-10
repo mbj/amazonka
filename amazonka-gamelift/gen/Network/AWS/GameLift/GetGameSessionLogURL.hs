@@ -75,9 +75,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getGameSessionLogURL' smart constructor.
-newtype GetGameSessionLogURL = GetGameSessionLogURL'
-  { _ggsluGameSessionId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetGameSessionLogURL =
+  GetGameSessionLogURL'
+    { _ggsluGameSessionId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetGameSessionLogURL' with the minimum fields required to make a request.
@@ -136,10 +138,12 @@ instance ToQuery GetGameSessionLogURL where
 --
 --
 -- /See:/ 'getGameSessionLogURLResponse' smart constructor.
-data GetGameSessionLogURLResponse = GetGameSessionLogURLResponse'
-  { _ggslursPreSignedURL   :: !(Maybe Text)
-  , _ggslursResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetGameSessionLogURLResponse =
+  GetGameSessionLogURLResponse'
+    { _ggslursPreSignedURL   :: !(Maybe Text)
+    , _ggslursResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetGameSessionLogURLResponse' with the minimum fields required to make a request.

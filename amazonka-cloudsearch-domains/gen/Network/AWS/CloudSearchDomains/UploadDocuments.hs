@@ -57,10 +57,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'uploadDocuments' smart constructor.
-data UploadDocuments = UploadDocuments'
-  { _udContentType :: !ContentType
-  , _udDocuments   :: !HashedBody
-  } deriving (Show, Generic)
+data UploadDocuments =
+  UploadDocuments'
+    { _udContentType :: !ContentType
+    , _udDocuments   :: !HashedBody
+    }
+  deriving (Show, Generic)
 
 
 -- | Creates a value of 'UploadDocuments' with the minimum fields required to make a request.
@@ -116,13 +118,15 @@ instance ToQuery UploadDocuments where
 --
 --
 -- /See:/ 'uploadDocumentsResponse' smart constructor.
-data UploadDocumentsResponse = UploadDocumentsResponse'
-  { _udrsStatus         :: !(Maybe Text)
-  , _udrsAdds           :: !(Maybe Integer)
-  , _udrsWarnings       :: !(Maybe [DocumentServiceWarning])
-  , _udrsDeletes        :: !(Maybe Integer)
-  , _udrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UploadDocumentsResponse =
+  UploadDocumentsResponse'
+    { _udrsStatus         :: !(Maybe Text)
+    , _udrsAdds           :: !(Maybe Integer)
+    , _udrsWarnings       :: !(Maybe [DocumentServiceWarning])
+    , _udrsDeletes        :: !(Maybe Integer)
+    , _udrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UploadDocumentsResponse' with the minimum fields required to make a request.

@@ -52,11 +52,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'disassociateAddress' smart constructor.
-data DisassociateAddress = DisassociateAddress'
-  { _dasAssociationId :: !(Maybe Text)
-  , _dasPublicIP      :: !(Maybe Text)
-  , _dasDryRun        :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DisassociateAddress =
+  DisassociateAddress'
+    { _dasAssociationId :: !(Maybe Text)
+    , _dasPublicIP      :: !(Maybe Text)
+    , _dasDryRun        :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisassociateAddress' with the minimum fields required to make a request.

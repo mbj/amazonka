@@ -49,10 +49,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeCertificateAuthorityAuditReport' smart constructor.
-data DescribeCertificateAuthorityAuditReport = DescribeCertificateAuthorityAuditReport'
-  { _dcaarCertificateAuthorityARN :: !Text
-  , _dcaarAuditReportId           :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeCertificateAuthorityAuditReport =
+  DescribeCertificateAuthorityAuditReport'
+    { _dcaarCertificateAuthorityARN :: !Text
+    , _dcaarAuditReportId           :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeCertificateAuthorityAuditReport' with the minimum fields required to make a request.
@@ -138,13 +140,15 @@ instance ToQuery
         toQuery = const mempty
 
 -- | /See:/ 'describeCertificateAuthorityAuditReportResponse' smart constructor.
-data DescribeCertificateAuthorityAuditReportResponse = DescribeCertificateAuthorityAuditReportResponse'
-  { _dcaarrsS3Key             :: !(Maybe Text)
-  , _dcaarrsCreatedAt         :: !(Maybe POSIX)
-  , _dcaarrsAuditReportStatus :: !(Maybe AuditReportStatus)
-  , _dcaarrsS3BucketName      :: !(Maybe Text)
-  , _dcaarrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeCertificateAuthorityAuditReportResponse =
+  DescribeCertificateAuthorityAuditReportResponse'
+    { _dcaarrsS3Key             :: !(Maybe Text)
+    , _dcaarrsCreatedAt         :: !(Maybe POSIX)
+    , _dcaarrsAuditReportStatus :: !(Maybe AuditReportStatus)
+    , _dcaarrsS3BucketName      :: !(Maybe Text)
+    , _dcaarrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeCertificateAuthorityAuditReportResponse' with the minimum fields required to make a request.

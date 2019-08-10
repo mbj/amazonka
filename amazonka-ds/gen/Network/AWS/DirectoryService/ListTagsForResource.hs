@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listTagsForResource' smart constructor.
-data ListTagsForResource = ListTagsForResource'
-  { _ltfrNextToken  :: !(Maybe Text)
-  , _ltfrLimit      :: !(Maybe Nat)
-  , _ltfrResourceId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTagsForResource =
+  ListTagsForResource'
+    { _ltfrNextToken  :: !(Maybe Text)
+    , _ltfrLimit      :: !(Maybe Nat)
+    , _ltfrResourceId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTagsForResource' with the minimum fields required to make a request.
@@ -127,11 +129,13 @@ instance ToQuery ListTagsForResource where
         toQuery = const mempty
 
 -- | /See:/ 'listTagsForResourceResponse' smart constructor.
-data ListTagsForResourceResponse = ListTagsForResourceResponse'
-  { _ltfrrsNextToken      :: !(Maybe Text)
-  , _ltfrrsTags           :: !(Maybe [Tag])
-  , _ltfrrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTagsForResourceResponse =
+  ListTagsForResourceResponse'
+    { _ltfrrsNextToken      :: !(Maybe Text)
+    , _ltfrrsTags           :: !(Maybe [Tag])
+    , _ltfrrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTagsForResourceResponse' with the minimum fields required to make a request.

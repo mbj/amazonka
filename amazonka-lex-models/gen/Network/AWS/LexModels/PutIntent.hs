@@ -102,21 +102,23 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putIntent' smart constructor.
-data PutIntent = PutIntent'
-  { _piFulfillmentActivity   :: !(Maybe FulfillmentActivity)
-  , _piSlots                 :: !(Maybe [Slot])
-  , _piRejectionStatement    :: !(Maybe Statement)
-  , _piChecksum              :: !(Maybe Text)
-  , _piConclusionStatement   :: !(Maybe Statement)
-  , _piSampleUtterances      :: !(Maybe [Text])
-  , _piParentIntentSignature :: !(Maybe Text)
-  , _piFollowUpPrompt        :: !(Maybe FollowUpPrompt)
-  , _piConfirmationPrompt    :: !(Maybe Prompt)
-  , _piCreateVersion         :: !(Maybe Bool)
-  , _piDialogCodeHook        :: !(Maybe CodeHook)
-  , _piDescription           :: !(Maybe Text)
-  , _piName                  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutIntent =
+  PutIntent'
+    { _piFulfillmentActivity   :: !(Maybe FulfillmentActivity)
+    , _piSlots                 :: !(Maybe [Slot])
+    , _piRejectionStatement    :: !(Maybe Statement)
+    , _piChecksum              :: !(Maybe Text)
+    , _piConclusionStatement   :: !(Maybe Statement)
+    , _piSampleUtterances      :: !(Maybe [Text])
+    , _piParentIntentSignature :: !(Maybe Text)
+    , _piFollowUpPrompt        :: !(Maybe FollowUpPrompt)
+    , _piConfirmationPrompt    :: !(Maybe Prompt)
+    , _piCreateVersion         :: !(Maybe Bool)
+    , _piDialogCodeHook        :: !(Maybe CodeHook)
+    , _piDescription           :: !(Maybe Text)
+    , _piName                  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutIntent' with the minimum fields required to make a request.
@@ -286,25 +288,27 @@ instance ToQuery PutIntent where
         toQuery = const mempty
 
 -- | /See:/ 'putIntentResponse' smart constructor.
-data PutIntentResponse = PutIntentResponse'
-  { _pirsFulfillmentActivity   :: !(Maybe FulfillmentActivity)
-  , _pirsSlots                 :: !(Maybe [Slot])
-  , _pirsRejectionStatement    :: !(Maybe Statement)
-  , _pirsChecksum              :: !(Maybe Text)
-  , _pirsConclusionStatement   :: !(Maybe Statement)
-  , _pirsSampleUtterances      :: !(Maybe [Text])
-  , _pirsParentIntentSignature :: !(Maybe Text)
-  , _pirsCreatedDate           :: !(Maybe POSIX)
-  , _pirsName                  :: !(Maybe Text)
-  , _pirsVersion               :: !(Maybe Text)
-  , _pirsFollowUpPrompt        :: !(Maybe FollowUpPrompt)
-  , _pirsLastUpdatedDate       :: !(Maybe POSIX)
-  , _pirsConfirmationPrompt    :: !(Maybe Prompt)
-  , _pirsCreateVersion         :: !(Maybe Bool)
-  , _pirsDialogCodeHook        :: !(Maybe CodeHook)
-  , _pirsDescription           :: !(Maybe Text)
-  , _pirsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutIntentResponse =
+  PutIntentResponse'
+    { _pirsFulfillmentActivity   :: !(Maybe FulfillmentActivity)
+    , _pirsSlots                 :: !(Maybe [Slot])
+    , _pirsRejectionStatement    :: !(Maybe Statement)
+    , _pirsChecksum              :: !(Maybe Text)
+    , _pirsConclusionStatement   :: !(Maybe Statement)
+    , _pirsSampleUtterances      :: !(Maybe [Text])
+    , _pirsParentIntentSignature :: !(Maybe Text)
+    , _pirsCreatedDate           :: !(Maybe POSIX)
+    , _pirsName                  :: !(Maybe Text)
+    , _pirsVersion               :: !(Maybe Text)
+    , _pirsFollowUpPrompt        :: !(Maybe FollowUpPrompt)
+    , _pirsLastUpdatedDate       :: !(Maybe POSIX)
+    , _pirsConfirmationPrompt    :: !(Maybe Prompt)
+    , _pirsCreateVersion         :: !(Maybe Bool)
+    , _pirsDialogCodeHook        :: !(Maybe CodeHook)
+    , _pirsDescription           :: !(Maybe Text)
+    , _pirsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutIntentResponse' with the minimum fields required to make a request.

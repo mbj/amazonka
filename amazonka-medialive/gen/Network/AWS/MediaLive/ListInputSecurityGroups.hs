@@ -50,10 +50,12 @@ import Network.AWS.Response
 -- | Placeholder documentation for ListInputSecurityGroupsRequest
 --
 -- /See:/ 'listInputSecurityGroups' smart constructor.
-data ListInputSecurityGroups = ListInputSecurityGroups'
-  { _lisgNextToken  :: !(Maybe Text)
-  , _lisgMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListInputSecurityGroups =
+  ListInputSecurityGroups'
+    { _lisgNextToken  :: !(Maybe Text)
+    , _lisgMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListInputSecurityGroups' with the minimum fields required to make a request.
@@ -119,11 +121,13 @@ instance ToQuery ListInputSecurityGroups where
 -- | Placeholder documentation for ListInputSecurityGroupsResponse
 --
 -- /See:/ 'listInputSecurityGroupsResponse' smart constructor.
-data ListInputSecurityGroupsResponse = ListInputSecurityGroupsResponse'
-  { _lisgrsNextToken           :: !(Maybe Text)
-  , _lisgrsInputSecurityGroups :: !(Maybe [InputSecurityGroup])
-  , _lisgrsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListInputSecurityGroupsResponse =
+  ListInputSecurityGroupsResponse'
+    { _lisgrsNextToken           :: !(Maybe Text)
+    , _lisgrsInputSecurityGroups :: !(Maybe [InputSecurityGroup])
+    , _lisgrsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListInputSecurityGroupsResponse' with the minimum fields required to make a request.

@@ -56,13 +56,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'discoverInputSchema' smart constructor.
-data DiscoverInputSchema = DiscoverInputSchema'
-  { _disInputStartingPositionConfiguration :: !(Maybe InputStartingPositionConfiguration)
-  , _disInputProcessingConfiguration :: !(Maybe InputProcessingConfiguration)
-  , _disS3Configuration :: !(Maybe S3Configuration)
-  , _disResourceARN :: !(Maybe Text)
-  , _disRoleARN :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DiscoverInputSchema =
+  DiscoverInputSchema'
+    { _disInputStartingPositionConfiguration :: !(Maybe InputStartingPositionConfiguration)
+    , _disInputProcessingConfiguration :: !(Maybe InputProcessingConfiguration)
+    , _disS3Configuration :: !(Maybe S3Configuration)
+    , _disResourceARN :: !(Maybe Text)
+    , _disRoleARN :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DiscoverInputSchema' with the minimum fields required to make a request.
@@ -161,13 +163,15 @@ instance ToQuery DiscoverInputSchema where
 --
 --
 -- /See:/ 'discoverInputSchemaResponse' smart constructor.
-data DiscoverInputSchemaResponse = DiscoverInputSchemaResponse'
-  { _disrsRawInputRecords       :: !(Maybe [Text])
-  , _disrsInputSchema           :: !(Maybe SourceSchema)
-  , _disrsProcessedInputRecords :: !(Maybe [Text])
-  , _disrsParsedInputRecords    :: !(Maybe [[Text]])
-  , _disrsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DiscoverInputSchemaResponse =
+  DiscoverInputSchemaResponse'
+    { _disrsRawInputRecords       :: !(Maybe [Text])
+    , _disrsInputSchema           :: !(Maybe SourceSchema)
+    , _disrsProcessedInputRecords :: !(Maybe [Text])
+    , _disrsParsedInputRecords    :: !(Maybe [[Text]])
+    , _disrsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DiscoverInputSchemaResponse' with the minimum fields required to make a request.

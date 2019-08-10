@@ -51,10 +51,12 @@ import Network.AWS.Route53.Types.Product
 --
 --
 -- /See:/ 'deleteVPCAssociationAuthorization' smart constructor.
-data DeleteVPCAssociationAuthorization = DeleteVPCAssociationAuthorization'
-  { _dvaaHostedZoneId :: !ResourceId
-  , _dvaaVPC          :: !VPC
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteVPCAssociationAuthorization =
+  DeleteVPCAssociationAuthorization'
+    { _dvaaHostedZoneId :: !ResourceId
+    , _dvaaVPC          :: !VPC
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteVPCAssociationAuthorization' with the minimum fields required to make a request.
@@ -129,9 +131,11 @@ instance ToXML DeleteVPCAssociationAuthorization
 --
 --
 -- /See:/ 'deleteVPCAssociationAuthorizationResponse' smart constructor.
-newtype DeleteVPCAssociationAuthorizationResponse = DeleteVPCAssociationAuthorizationResponse'
-  { _dvaarsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteVPCAssociationAuthorizationResponse =
+  DeleteVPCAssociationAuthorizationResponse'
+    { _dvaarsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteVPCAssociationAuthorizationResponse' with the minimum fields required to make a request.

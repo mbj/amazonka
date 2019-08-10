@@ -46,9 +46,11 @@ import Network.AWS.SES.Types
 import Network.AWS.SES.Types.Product
 
 -- | /See:/ 'updateTemplate' smart constructor.
-newtype UpdateTemplate = UpdateTemplate'
-  { _utTemplate :: Template
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateTemplate =
+  UpdateTemplate'
+    { _utTemplate :: Template
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateTemplate' with the minimum fields required to make a request.
@@ -92,9 +94,11 @@ instance ToQuery UpdateTemplate where
                "Template" =: _utTemplate]
 
 -- | /See:/ 'updateTemplateResponse' smart constructor.
-newtype UpdateTemplateResponse = UpdateTemplateResponse'
-  { _utrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateTemplateResponse =
+  UpdateTemplateResponse'
+    { _utrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateTemplateResponse' with the minimum fields required to make a request.

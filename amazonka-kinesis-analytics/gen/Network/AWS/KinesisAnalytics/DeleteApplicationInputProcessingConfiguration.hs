@@ -46,11 +46,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteApplicationInputProcessingConfiguration' smart constructor.
-data DeleteApplicationInputProcessingConfiguration = DeleteApplicationInputProcessingConfiguration'
-  { _daipcApplicationName             :: !Text
-  , _daipcCurrentApplicationVersionId :: !Nat
-  , _daipcInputId                     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteApplicationInputProcessingConfiguration =
+  DeleteApplicationInputProcessingConfiguration'
+    { _daipcApplicationName             :: !Text
+    , _daipcCurrentApplicationVersionId :: !Nat
+    , _daipcInputId                     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteApplicationInputProcessingConfiguration' with the minimum fields required to make a request.
@@ -144,9 +146,11 @@ instance ToQuery
         toQuery = const mempty
 
 -- | /See:/ 'deleteApplicationInputProcessingConfigurationResponse' smart constructor.
-newtype DeleteApplicationInputProcessingConfigurationResponse = DeleteApplicationInputProcessingConfigurationResponse'
-  { _daipcrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteApplicationInputProcessingConfigurationResponse =
+  DeleteApplicationInputProcessingConfigurationResponse'
+    { _daipcrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteApplicationInputProcessingConfigurationResponse' with the minimum fields required to make a request.

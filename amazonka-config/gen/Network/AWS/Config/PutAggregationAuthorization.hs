@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putAggregationAuthorization' smart constructor.
-data PutAggregationAuthorization = PutAggregationAuthorization'
-  { _paaAuthorizedAccountId :: !Text
-  , _paaAuthorizedAWSRegion :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutAggregationAuthorization =
+  PutAggregationAuthorization'
+    { _paaAuthorizedAccountId :: !Text
+    , _paaAuthorizedAWSRegion :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutAggregationAuthorization' with the minimum fields required to make a request.
@@ -119,10 +121,12 @@ instance ToQuery PutAggregationAuthorization where
         toQuery = const mempty
 
 -- | /See:/ 'putAggregationAuthorizationResponse' smart constructor.
-data PutAggregationAuthorizationResponse = PutAggregationAuthorizationResponse'
-  { _paarsAggregationAuthorization :: !(Maybe AggregationAuthorization)
-  , _paarsResponseStatus           :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutAggregationAuthorizationResponse =
+  PutAggregationAuthorizationResponse'
+    { _paarsAggregationAuthorization :: !(Maybe AggregationAuthorization)
+    , _paarsResponseStatus           :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutAggregationAuthorizationResponse' with the minimum fields required to make a request.

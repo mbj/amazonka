@@ -48,11 +48,13 @@ import Network.AWS.WorkDocs.Types
 import Network.AWS.WorkDocs.Types.Product
 
 -- | /See:/ 'describeRootFolders' smart constructor.
-data DescribeRootFolders = DescribeRootFolders'
-  { _drfMarker              :: !(Maybe Text)
-  , _drfLimit               :: !(Maybe Nat)
-  , _drfAuthenticationToken :: !(Sensitive Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data DescribeRootFolders =
+  DescribeRootFolders'
+    { _drfMarker              :: !(Maybe Text)
+    , _drfLimit               :: !(Maybe Nat)
+    , _drfAuthenticationToken :: !(Sensitive Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeRootFolders' with the minimum fields required to make a request.
@@ -118,11 +120,13 @@ instance ToQuery DescribeRootFolders where
               ["marker" =: _drfMarker, "limit" =: _drfLimit]
 
 -- | /See:/ 'describeRootFoldersResponse' smart constructor.
-data DescribeRootFoldersResponse = DescribeRootFoldersResponse'
-  { _drfrsFolders        :: !(Maybe [FolderMetadata])
-  , _drfrsMarker         :: !(Maybe Text)
-  , _drfrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeRootFoldersResponse =
+  DescribeRootFoldersResponse'
+    { _drfrsFolders        :: !(Maybe [FolderMetadata])
+    , _drfrsMarker         :: !(Maybe Text)
+    , _drfrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeRootFoldersResponse' with the minimum fields required to make a request.

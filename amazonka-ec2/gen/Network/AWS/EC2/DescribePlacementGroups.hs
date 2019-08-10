@@ -51,11 +51,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describePlacementGroups' smart constructor.
-data DescribePlacementGroups = DescribePlacementGroups'
-  { _dpgsFilters    :: !(Maybe [Filter])
-  , _dpgsGroupNames :: !(Maybe [Text])
-  , _dpgsDryRun     :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribePlacementGroups =
+  DescribePlacementGroups'
+    { _dpgsFilters    :: !(Maybe [Filter])
+    , _dpgsGroupNames :: !(Maybe [Text])
+    , _dpgsDryRun     :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribePlacementGroups' with the minimum fields required to make a request.
@@ -124,10 +126,12 @@ instance ToQuery DescribePlacementGroups where
 --
 --
 -- /See:/ 'describePlacementGroupsResponse' smart constructor.
-data DescribePlacementGroupsResponse = DescribePlacementGroupsResponse'
-  { _dpgrsPlacementGroups :: !(Maybe [PlacementGroup])
-  , _dpgrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribePlacementGroupsResponse =
+  DescribePlacementGroupsResponse'
+    { _dpgrsPlacementGroups :: !(Maybe [PlacementGroup])
+    , _dpgrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribePlacementGroupsResponse' with the minimum fields required to make a request.

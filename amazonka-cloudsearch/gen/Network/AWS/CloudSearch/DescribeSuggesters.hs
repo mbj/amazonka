@@ -51,11 +51,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeSuggesters' smart constructor.
-data DescribeSuggesters = DescribeSuggesters'
-  { _dssDeployed       :: !(Maybe Bool)
-  , _dssSuggesterNames :: !(Maybe [Text])
-  , _dssDomainName     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeSuggesters =
+  DescribeSuggesters'
+    { _dssDeployed       :: !(Maybe Bool)
+    , _dssSuggesterNames :: !(Maybe [Text])
+    , _dssDomainName     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeSuggesters' with the minimum fields required to make a request.
@@ -128,10 +130,12 @@ instance ToQuery DescribeSuggesters where
 --
 --
 -- /See:/ 'describeSuggestersResponse' smart constructor.
-data DescribeSuggestersResponse = DescribeSuggestersResponse'
-  { _dssrsResponseStatus :: !Int
-  , _dssrsSuggesters     :: ![SuggesterStatus]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeSuggestersResponse =
+  DescribeSuggestersResponse'
+    { _dssrsResponseStatus :: !Int
+    , _dssrsSuggesters     :: ![SuggesterStatus]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeSuggestersResponse' with the minimum fields required to make a request.

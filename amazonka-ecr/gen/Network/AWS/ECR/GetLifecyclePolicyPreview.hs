@@ -56,14 +56,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getLifecyclePolicyPreview' smart constructor.
-data GetLifecyclePolicyPreview = GetLifecyclePolicyPreview'
-  { _glppRegistryId     :: !(Maybe Text)
-  , _glppImageIds       :: !(Maybe [ImageIdentifier])
-  , _glppNextToken      :: !(Maybe Text)
-  , _glppFilter         :: !(Maybe LifecyclePolicyPreviewFilter)
-  , _glppMaxResults     :: !(Maybe Nat)
-  , _glppRepositoryName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetLifecyclePolicyPreview =
+  GetLifecyclePolicyPreview'
+    { _glppRegistryId     :: !(Maybe Text)
+    , _glppImageIds       :: !(Maybe [ImageIdentifier])
+    , _glppNextToken      :: !(Maybe Text)
+    , _glppFilter         :: !(Maybe LifecyclePolicyPreviewFilter)
+    , _glppMaxResults     :: !(Maybe Nat)
+    , _glppRepositoryName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetLifecyclePolicyPreview' with the minimum fields required to make a request.
@@ -167,16 +169,18 @@ instance ToQuery GetLifecyclePolicyPreview where
         toQuery = const mempty
 
 -- | /See:/ 'getLifecyclePolicyPreviewResponse' smart constructor.
-data GetLifecyclePolicyPreviewResponse = GetLifecyclePolicyPreviewResponse'
-  { _glpprsSummary             :: !(Maybe LifecyclePolicyPreviewSummary)
-  , _glpprsStatus              :: !(Maybe LifecyclePolicyPreviewStatus)
-  , _glpprsRegistryId          :: !(Maybe Text)
-  , _glpprsLifecyclePolicyText :: !(Maybe Text)
-  , _glpprsNextToken           :: !(Maybe Text)
-  , _glpprsRepositoryName      :: !(Maybe Text)
-  , _glpprsPreviewResults      :: !(Maybe [LifecyclePolicyPreviewResult])
-  , _glpprsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetLifecyclePolicyPreviewResponse =
+  GetLifecyclePolicyPreviewResponse'
+    { _glpprsSummary             :: !(Maybe LifecyclePolicyPreviewSummary)
+    , _glpprsStatus              :: !(Maybe LifecyclePolicyPreviewStatus)
+    , _glpprsRegistryId          :: !(Maybe Text)
+    , _glpprsLifecyclePolicyText :: !(Maybe Text)
+    , _glpprsNextToken           :: !(Maybe Text)
+    , _glpprsRepositoryName      :: !(Maybe Text)
+    , _glpprsPreviewResults      :: !(Maybe [LifecyclePolicyPreviewResult])
+    , _glpprsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetLifecyclePolicyPreviewResponse' with the minimum fields required to make a request.

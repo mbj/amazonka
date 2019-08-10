@@ -43,9 +43,11 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'getBucketEncryption' smart constructor.
-newtype GetBucketEncryption = GetBucketEncryption'
-  { _gbeBucket :: BucketName
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetBucketEncryption =
+  GetBucketEncryption'
+    { _gbeBucket :: BucketName
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBucketEncryption' with the minimum fields required to make a request.
@@ -88,10 +90,12 @@ instance ToQuery GetBucketEncryption where
         toQuery = const (mconcat ["encryption"])
 
 -- | /See:/ 'getBucketEncryptionResponse' smart constructor.
-data GetBucketEncryptionResponse = GetBucketEncryptionResponse'
-  { _gbersServerSideEncryptionConfiguration :: !(Maybe ServerSideEncryptionConfiguration)
-  , _gbersResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data GetBucketEncryptionResponse =
+  GetBucketEncryptionResponse'
+    { _gbersServerSideEncryptionConfiguration :: !(Maybe ServerSideEncryptionConfiguration)
+    , _gbersResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBucketEncryptionResponse' with the minimum fields required to make a request.

@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'addSourceIdentifierToSubscription' smart constructor.
-data AddSourceIdentifierToSubscription = AddSourceIdentifierToSubscription'
-  { _asitsSubscriptionName :: !Text
-  , _asitsSourceIdentifier :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddSourceIdentifierToSubscription =
+  AddSourceIdentifierToSubscription'
+    { _asitsSubscriptionName :: !Text
+    , _asitsSourceIdentifier :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddSourceIdentifierToSubscription' with the minimum fields required to make a request.
@@ -119,10 +121,12 @@ instance ToQuery AddSourceIdentifierToSubscription
                "SourceIdentifier" =: _asitsSourceIdentifier]
 
 -- | /See:/ 'addSourceIdentifierToSubscriptionResponse' smart constructor.
-data AddSourceIdentifierToSubscriptionResponse = AddSourceIdentifierToSubscriptionResponse'
-  { _asitsrsEventSubscription :: !(Maybe EventSubscription)
-  , _asitsrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddSourceIdentifierToSubscriptionResponse =
+  AddSourceIdentifierToSubscriptionResponse'
+    { _asitsrsEventSubscription :: !(Maybe EventSubscription)
+    , _asitsrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddSourceIdentifierToSubscriptionResponse' with the minimum fields required to make a request.

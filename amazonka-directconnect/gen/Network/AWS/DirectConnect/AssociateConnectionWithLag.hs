@@ -64,10 +64,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'associateConnectionWithLag' smart constructor.
-data AssociateConnectionWithLag = AssociateConnectionWithLag'
-  { _acwlConnectionId :: !Text
-  , _acwlLagId        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssociateConnectionWithLag =
+  AssociateConnectionWithLag'
+    { _acwlConnectionId :: !Text
+    , _acwlLagId        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateConnectionWithLag' with the minimum fields required to make a request.

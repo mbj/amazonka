@@ -90,10 +90,12 @@ instance ToQuery GetSendStatistics where
 --
 --
 -- /See:/ 'getSendStatisticsResponse' smart constructor.
-data GetSendStatisticsResponse = GetSendStatisticsResponse'
-  { _gssrsSendDataPoints :: !(Maybe [SendDataPoint])
-  , _gssrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetSendStatisticsResponse =
+  GetSendStatisticsResponse'
+    { _gssrsSendDataPoints :: !(Maybe [SendDataPoint])
+    , _gssrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetSendStatisticsResponse' with the minimum fields required to make a request.

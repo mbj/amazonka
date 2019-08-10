@@ -26,16 +26,18 @@ import Network.AWS.WorkDocs.Types.Sum
 --
 --
 -- /See:/ 'activity' smart constructor.
-data Activity = Activity'
-  { _aResourceMetadata :: !(Maybe ResourceMetadata)
-  , _aInitiator        :: !(Maybe UserMetadata)
-  , _aParticipants     :: !(Maybe Participants)
-  , _aOriginalParent   :: !(Maybe ResourceMetadata)
-  , _aType             :: !(Maybe ActivityType)
-  , _aCommentMetadata  :: !(Maybe CommentMetadata)
-  , _aTimeStamp        :: !(Maybe POSIX)
-  , _aOrganizationId   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Activity =
+  Activity'
+    { _aResourceMetadata :: !(Maybe ResourceMetadata)
+    , _aInitiator        :: !(Maybe UserMetadata)
+    , _aParticipants     :: !(Maybe Participants)
+    , _aOriginalParent   :: !(Maybe ResourceMetadata)
+    , _aType             :: !(Maybe ActivityType)
+    , _aCommentMetadata  :: !(Maybe CommentMetadata)
+    , _aTimeStamp        :: !(Maybe POSIX)
+    , _aOrganizationId   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Activity' with the minimum fields required to make a request.
@@ -126,17 +128,19 @@ instance NFData Activity where
 --
 --
 -- /See:/ 'comment' smart constructor.
-data Comment = Comment'
-  { _cStatus           :: !(Maybe CommentStatusType)
-  , _cText             :: !(Maybe (Sensitive Text))
-  , _cVisibility       :: !(Maybe CommentVisibilityType)
-  , _cThreadId         :: !(Maybe Text)
-  , _cContributor      :: !(Maybe User)
-  , _cCreatedTimestamp :: !(Maybe POSIX)
-  , _cRecipientId      :: !(Maybe Text)
-  , _cParentId         :: !(Maybe Text)
-  , _cCommentId        :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data Comment =
+  Comment'
+    { _cStatus           :: !(Maybe CommentStatusType)
+    , _cText             :: !(Maybe (Sensitive Text))
+    , _cVisibility       :: !(Maybe CommentVisibilityType)
+    , _cThreadId         :: !(Maybe Text)
+    , _cContributor      :: !(Maybe User)
+    , _cCreatedTimestamp :: !(Maybe POSIX)
+    , _cRecipientId      :: !(Maybe Text)
+    , _cParentId         :: !(Maybe Text)
+    , _cCommentId        :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Comment' with the minimum fields required to make a request.
@@ -236,13 +240,15 @@ instance NFData Comment where
 --
 --
 -- /See:/ 'commentMetadata' smart constructor.
-data CommentMetadata = CommentMetadata'
-  { _cmCommentStatus    :: !(Maybe CommentStatusType)
-  , _cmContributor      :: !(Maybe User)
-  , _cmCommentId        :: !(Maybe Text)
-  , _cmCreatedTimestamp :: !(Maybe POSIX)
-  , _cmRecipientId      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CommentMetadata =
+  CommentMetadata'
+    { _cmCommentStatus    :: !(Maybe CommentStatusType)
+    , _cmContributor      :: !(Maybe User)
+    , _cmCommentId        :: !(Maybe Text)
+    , _cmCreatedTimestamp :: !(Maybe POSIX)
+    , _cmRecipientId      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CommentMetadata' with the minimum fields required to make a request.
@@ -309,16 +315,18 @@ instance NFData CommentMetadata where
 --
 --
 -- /See:/ 'documentMetadata' smart constructor.
-data DocumentMetadata = DocumentMetadata'
-  { _dmLatestVersionMetadata :: !(Maybe DocumentVersionMetadata)
-  , _dmParentFolderId        :: !(Maybe Text)
-  , _dmModifiedTimestamp     :: !(Maybe POSIX)
-  , _dmId                    :: !(Maybe Text)
-  , _dmLabels                :: !(Maybe [Text])
-  , _dmResourceState         :: !(Maybe ResourceStateType)
-  , _dmCreatedTimestamp      :: !(Maybe POSIX)
-  , _dmCreatorId             :: !(Maybe Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data DocumentMetadata =
+  DocumentMetadata'
+    { _dmLatestVersionMetadata :: !(Maybe DocumentVersionMetadata)
+    , _dmParentFolderId        :: !(Maybe Text)
+    , _dmModifiedTimestamp     :: !(Maybe POSIX)
+    , _dmId                    :: !(Maybe Text)
+    , _dmLabels                :: !(Maybe [Text])
+    , _dmResourceState         :: !(Maybe ResourceStateType)
+    , _dmCreatedTimestamp      :: !(Maybe POSIX)
+    , _dmCreatorId             :: !(Maybe Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DocumentMetadata' with the minimum fields required to make a request.
@@ -410,21 +418,23 @@ instance NFData DocumentMetadata where
 --
 --
 -- /See:/ 'documentVersionMetadata' smart constructor.
-data DocumentVersionMetadata = DocumentVersionMetadata'
-  { _dvmThumbnail :: !(Maybe (Map DocumentThumbnailType (Sensitive Text)))
-  , _dvmStatus :: !(Maybe DocumentStatusType)
-  , _dvmSignature :: !(Maybe Text)
-  , _dvmContentCreatedTimestamp :: !(Maybe POSIX)
-  , _dvmSize :: !(Maybe Integer)
-  , _dvmName :: !(Maybe Text)
-  , _dvmModifiedTimestamp :: !(Maybe POSIX)
-  , _dvmSource :: !(Maybe (Map DocumentSourceType (Sensitive Text)))
-  , _dvmId :: !(Maybe Text)
-  , _dvmCreatedTimestamp :: !(Maybe POSIX)
-  , _dvmContentModifiedTimestamp :: !(Maybe POSIX)
-  , _dvmCreatorId :: !(Maybe Text)
-  , _dvmContentType :: !(Maybe Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data DocumentVersionMetadata =
+  DocumentVersionMetadata'
+    { _dvmThumbnail :: !(Maybe (Map DocumentThumbnailType (Sensitive Text)))
+    , _dvmStatus :: !(Maybe DocumentStatusType)
+    , _dvmSignature :: !(Maybe Text)
+    , _dvmContentCreatedTimestamp :: !(Maybe POSIX)
+    , _dvmSize :: !(Maybe Integer)
+    , _dvmName :: !(Maybe Text)
+    , _dvmModifiedTimestamp :: !(Maybe POSIX)
+    , _dvmSource :: !(Maybe (Map DocumentSourceType (Sensitive Text)))
+    , _dvmId :: !(Maybe Text)
+    , _dvmCreatedTimestamp :: !(Maybe POSIX)
+    , _dvmContentModifiedTimestamp :: !(Maybe POSIX)
+    , _dvmCreatorId :: !(Maybe Text)
+    , _dvmContentType :: !(Maybe Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DocumentVersionMetadata' with the minimum fields required to make a request.
@@ -555,19 +565,21 @@ instance NFData DocumentVersionMetadata where
 --
 --
 -- /See:/ 'folderMetadata' smart constructor.
-data FolderMetadata = FolderMetadata'
-  { _fmSignature         :: !(Maybe Text)
-  , _fmParentFolderId    :: !(Maybe Text)
-  , _fmSize              :: !(Maybe Integer)
-  , _fmLatestVersionSize :: !(Maybe Integer)
-  , _fmName              :: !(Maybe Text)
-  , _fmModifiedTimestamp :: !(Maybe POSIX)
-  , _fmId                :: !(Maybe Text)
-  , _fmLabels            :: !(Maybe [Text])
-  , _fmResourceState     :: !(Maybe ResourceStateType)
-  , _fmCreatedTimestamp  :: !(Maybe POSIX)
-  , _fmCreatorId         :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FolderMetadata =
+  FolderMetadata'
+    { _fmSignature         :: !(Maybe Text)
+    , _fmParentFolderId    :: !(Maybe Text)
+    , _fmSize              :: !(Maybe Integer)
+    , _fmLatestVersionSize :: !(Maybe Integer)
+    , _fmName              :: !(Maybe Text)
+    , _fmModifiedTimestamp :: !(Maybe POSIX)
+    , _fmId                :: !(Maybe Text)
+    , _fmLabels            :: !(Maybe [Text])
+    , _fmResourceState     :: !(Maybe ResourceStateType)
+    , _fmCreatedTimestamp  :: !(Maybe POSIX)
+    , _fmCreatorId         :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FolderMetadata' with the minimum fields required to make a request.
@@ -682,10 +694,12 @@ instance NFData FolderMetadata where
 --
 --
 -- /See:/ 'groupMetadata' smart constructor.
-data GroupMetadata = GroupMetadata'
-  { _gmName :: !(Maybe Text)
-  , _gmId   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GroupMetadata =
+  GroupMetadata'
+    { _gmName :: !(Maybe Text)
+    , _gmId   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GroupMetadata' with the minimum fields required to make a request.
@@ -723,10 +737,12 @@ instance NFData GroupMetadata where
 --
 --
 -- /See:/ 'notificationOptions' smart constructor.
-data NotificationOptions = NotificationOptions'
-  { _noEmailMessage :: !(Maybe (Sensitive Text))
-  , _noSendEmail    :: !(Maybe Bool)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data NotificationOptions =
+  NotificationOptions'
+    { _noEmailMessage :: !(Maybe (Sensitive Text))
+    , _noSendEmail    :: !(Maybe Bool)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NotificationOptions' with the minimum fields required to make a request.
@@ -766,10 +782,12 @@ instance ToJSON NotificationOptions where
 --
 --
 -- /See:/ 'participants' smart constructor.
-data Participants = Participants'
-  { _pGroups :: !(Maybe [GroupMetadata])
-  , _pUsers  :: !(Maybe [UserMetadata])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Participants =
+  Participants'
+    { _pGroups :: !(Maybe [GroupMetadata])
+    , _pUsers  :: !(Maybe [UserMetadata])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Participants' with the minimum fields required to make a request.
@@ -809,10 +827,12 @@ instance NFData Participants where
 --
 --
 -- /See:/ 'permissionInfo' smart constructor.
-data PermissionInfo = PermissionInfo'
-  { _piRole :: !(Maybe RoleType)
-  , _piType :: !(Maybe RolePermissionType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PermissionInfo =
+  PermissionInfo'
+    { _piRole :: !(Maybe RoleType)
+    , _piType :: !(Maybe RolePermissionType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PermissionInfo' with the minimum fields required to make a request.
@@ -851,11 +871,13 @@ instance NFData PermissionInfo where
 --
 --
 -- /See:/ 'principal' smart constructor.
-data Principal = Principal'
-  { _pRoles :: !(Maybe [PermissionInfo])
-  , _pId    :: !(Maybe Text)
-  , _pType  :: !(Maybe PrincipalType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Principal =
+  Principal'
+    { _pRoles :: !(Maybe [PermissionInfo])
+    , _pId    :: !(Maybe Text)
+    , _pType  :: !(Maybe PrincipalType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Principal' with the minimum fields required to make a request.
@@ -901,15 +923,17 @@ instance NFData Principal where
 --
 --
 -- /See:/ 'resourceMetadata' smart constructor.
-data ResourceMetadata = ResourceMetadata'
-  { _rmVersionId    :: !(Maybe Text)
-  , _rmOwner        :: !(Maybe UserMetadata)
-  , _rmName         :: !(Maybe Text)
-  , _rmId           :: !(Maybe Text)
-  , _rmType         :: !(Maybe ResourceType)
-  , _rmOriginalName :: !(Maybe Text)
-  , _rmParentId     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResourceMetadata =
+  ResourceMetadata'
+    { _rmVersionId    :: !(Maybe Text)
+    , _rmOwner        :: !(Maybe UserMetadata)
+    , _rmName         :: !(Maybe Text)
+    , _rmId           :: !(Maybe Text)
+    , _rmType         :: !(Maybe ResourceType)
+    , _rmOriginalName :: !(Maybe Text)
+    , _rmParentId     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResourceMetadata' with the minimum fields required to make a request.
@@ -992,9 +1016,11 @@ instance NFData ResourceMetadata where
 --
 --
 -- /See:/ 'resourcePath' smart constructor.
-newtype ResourcePath = ResourcePath'
-  { _rpComponents :: Maybe [ResourcePathComponent]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ResourcePath =
+  ResourcePath'
+    { _rpComponents :: Maybe [ResourcePathComponent]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResourcePath' with the minimum fields required to make a request.
@@ -1026,10 +1052,12 @@ instance NFData ResourcePath where
 --
 --
 -- /See:/ 'resourcePathComponent' smart constructor.
-data ResourcePathComponent = ResourcePathComponent'
-  { _rpcName :: !(Maybe Text)
-  , _rpcId   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResourcePathComponent =
+  ResourcePathComponent'
+    { _rpcName :: !(Maybe Text)
+    , _rpcId   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResourcePathComponent' with the minimum fields required to make a request.
@@ -1069,11 +1097,13 @@ instance NFData ResourcePathComponent where
 --
 --
 -- /See:/ 'sharePrincipal' smart constructor.
-data SharePrincipal = SharePrincipal'
-  { _spId   :: !Text
-  , _spType :: !PrincipalType
-  , _spRole :: !RoleType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SharePrincipal =
+  SharePrincipal'
+    { _spId   :: !Text
+    , _spType :: !PrincipalType
+    , _spRole :: !RoleType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SharePrincipal' with the minimum fields required to make a request.
@@ -1122,13 +1152,15 @@ instance ToJSON SharePrincipal where
 --
 --
 -- /See:/ 'shareResult' smart constructor.
-data ShareResult = ShareResult'
-  { _srStatus        :: !(Maybe ShareStatusType)
-  , _srPrincipalId   :: !(Maybe Text)
-  , _srRole          :: !(Maybe RoleType)
-  , _srStatusMessage :: !(Maybe (Sensitive Text))
-  , _srShareId       :: !(Maybe Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data ShareResult =
+  ShareResult'
+    { _srStatus        :: !(Maybe ShareStatusType)
+    , _srPrincipalId   :: !(Maybe Text)
+    , _srRole          :: !(Maybe RoleType)
+    , _srStatusMessage :: !(Maybe (Sensitive Text))
+    , _srShareId       :: !(Maybe Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ShareResult' with the minimum fields required to make a request.
@@ -1195,10 +1227,12 @@ instance NFData ShareResult where
 --
 --
 -- /See:/ 'storageRuleType' smart constructor.
-data StorageRuleType = StorageRuleType'
-  { _srtStorageAllocatedInBytes :: !(Maybe Nat)
-  , _srtStorageType             :: !(Maybe StorageType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StorageRuleType =
+  StorageRuleType'
+    { _srtStorageAllocatedInBytes :: !(Maybe Nat)
+    , _srtStorageType             :: !(Maybe StorageType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StorageRuleType' with the minimum fields required to make a request.
@@ -1248,11 +1282,13 @@ instance ToJSON StorageRuleType where
 --
 --
 -- /See:/ 'subscription' smart constructor.
-data Subscription = Subscription'
-  { _sProtocol       :: !(Maybe SubscriptionProtocolType)
-  , _sEndPoint       :: !(Maybe Text)
-  , _sSubscriptionId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Subscription =
+  Subscription'
+    { _sProtocol       :: !(Maybe SubscriptionProtocolType)
+    , _sEndPoint       :: !(Maybe Text)
+    , _sSubscriptionId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Subscription' with the minimum fields required to make a request.
@@ -1300,10 +1336,12 @@ instance NFData Subscription where
 --
 --
 -- /See:/ 'uploadMetadata' smart constructor.
-data UploadMetadata = UploadMetadata'
-  { _umUploadURL     :: !(Maybe (Sensitive Text))
-  , _umSignedHeaders :: !(Maybe (Map Text Text))
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data UploadMetadata =
+  UploadMetadata'
+    { _umUploadURL     :: !(Maybe (Sensitive Text))
+    , _umSignedHeaders :: !(Maybe (Map Text Text))
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UploadMetadata' with the minimum fields required to make a request.
@@ -1344,23 +1382,25 @@ instance NFData UploadMetadata where
 --
 --
 -- /See:/ 'user' smart constructor.
-data User = User'
-  { _uGivenName          :: !(Maybe Text)
-  , _uStatus             :: !(Maybe UserStatusType)
-  , _uLocale             :: !(Maybe LocaleType)
-  , _uUsername           :: !(Maybe Text)
-  , _uStorage            :: !(Maybe UserStorageMetadata)
-  , _uModifiedTimestamp  :: !(Maybe POSIX)
-  , _uEmailAddress       :: !(Maybe Text)
-  , _uId                 :: !(Maybe Text)
-  , _uRootFolderId       :: !(Maybe Text)
-  , _uType               :: !(Maybe UserType)
-  , _uSurname            :: !(Maybe Text)
-  , _uTimeZoneId         :: !(Maybe Text)
-  , _uCreatedTimestamp   :: !(Maybe POSIX)
-  , _uOrganizationId     :: !(Maybe Text)
-  , _uRecycleBinFolderId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data User =
+  User'
+    { _uGivenName          :: !(Maybe Text)
+    , _uStatus             :: !(Maybe UserStatusType)
+    , _uLocale             :: !(Maybe LocaleType)
+    , _uUsername           :: !(Maybe Text)
+    , _uStorage            :: !(Maybe UserStorageMetadata)
+    , _uModifiedTimestamp  :: !(Maybe POSIX)
+    , _uEmailAddress       :: !(Maybe Text)
+    , _uId                 :: !(Maybe Text)
+    , _uRootFolderId       :: !(Maybe Text)
+    , _uType               :: !(Maybe UserType)
+    , _uSurname            :: !(Maybe Text)
+    , _uTimeZoneId         :: !(Maybe Text)
+    , _uCreatedTimestamp   :: !(Maybe POSIX)
+    , _uOrganizationId     :: !(Maybe Text)
+    , _uRecycleBinFolderId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'User' with the minimum fields required to make a request.
@@ -1507,13 +1547,15 @@ instance NFData User where
 --
 --
 -- /See:/ 'userMetadata' smart constructor.
-data UserMetadata = UserMetadata'
-  { _umGivenName    :: !(Maybe Text)
-  , _umUsername     :: !(Maybe Text)
-  , _umEmailAddress :: !(Maybe Text)
-  , _umId           :: !(Maybe Text)
-  , _umSurname      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UserMetadata =
+  UserMetadata'
+    { _umGivenName    :: !(Maybe Text)
+    , _umUsername     :: !(Maybe Text)
+    , _umEmailAddress :: !(Maybe Text)
+    , _umId           :: !(Maybe Text)
+    , _umSurname      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UserMetadata' with the minimum fields required to make a request.
@@ -1580,10 +1622,12 @@ instance NFData UserMetadata where
 --
 --
 -- /See:/ 'userStorageMetadata' smart constructor.
-data UserStorageMetadata = UserStorageMetadata'
-  { _usmStorageUtilizedInBytes :: !(Maybe Integer)
-  , _usmStorageRule            :: !(Maybe StorageRuleType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UserStorageMetadata =
+  UserStorageMetadata'
+    { _usmStorageUtilizedInBytes :: !(Maybe Integer)
+    , _usmStorageRule            :: !(Maybe StorageRuleType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UserStorageMetadata' with the minimum fields required to make a request.

@@ -55,17 +55,19 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'modifyTargetGroup' smart constructor.
-data ModifyTargetGroup = ModifyTargetGroup'
-  { _mtgMatcher                    :: !(Maybe Matcher)
-  , _mtgHealthCheckPath            :: !(Maybe Text)
-  , _mtgUnhealthyThresholdCount    :: !(Maybe Nat)
-  , _mtgHealthCheckIntervalSeconds :: !(Maybe Nat)
-  , _mtgHealthyThresholdCount      :: !(Maybe Nat)
-  , _mtgHealthCheckProtocol        :: !(Maybe ProtocolEnum)
-  , _mtgHealthCheckTimeoutSeconds  :: !(Maybe Nat)
-  , _mtgHealthCheckPort            :: !(Maybe Text)
-  , _mtgTargetGroupARN             :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyTargetGroup =
+  ModifyTargetGroup'
+    { _mtgMatcher                    :: !(Maybe Matcher)
+    , _mtgHealthCheckPath            :: !(Maybe Text)
+    , _mtgUnhealthyThresholdCount    :: !(Maybe Nat)
+    , _mtgHealthCheckIntervalSeconds :: !(Maybe Nat)
+    , _mtgHealthyThresholdCount      :: !(Maybe Nat)
+    , _mtgHealthCheckProtocol        :: !(Maybe ProtocolEnum)
+    , _mtgHealthCheckTimeoutSeconds  :: !(Maybe Nat)
+    , _mtgHealthCheckPort            :: !(Maybe Text)
+    , _mtgTargetGroupARN             :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyTargetGroup' with the minimum fields required to make a request.
@@ -182,10 +184,12 @@ instance ToQuery ModifyTargetGroup where
                "TargetGroupArn" =: _mtgTargetGroupARN]
 
 -- | /See:/ 'modifyTargetGroupResponse' smart constructor.
-data ModifyTargetGroupResponse = ModifyTargetGroupResponse'
-  { _mtgrsTargetGroups   :: !(Maybe [TargetGroup])
-  , _mtgrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyTargetGroupResponse =
+  ModifyTargetGroupResponse'
+    { _mtgrsTargetGroups   :: !(Maybe [TargetGroup])
+    , _mtgrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyTargetGroupResponse' with the minimum fields required to make a request.

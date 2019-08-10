@@ -47,11 +47,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putConfigurationAggregator' smart constructor.
-data PutConfigurationAggregator = PutConfigurationAggregator'
-  { _pcaOrganizationAggregationSource :: !(Maybe OrganizationAggregationSource)
-  , _pcaAccountAggregationSources     :: !(Maybe [AccountAggregationSource])
-  , _pcaConfigurationAggregatorName   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutConfigurationAggregator =
+  PutConfigurationAggregator'
+    { _pcaOrganizationAggregationSource :: !(Maybe OrganizationAggregationSource)
+    , _pcaAccountAggregationSources :: !(Maybe [AccountAggregationSource])
+    , _pcaConfigurationAggregatorName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutConfigurationAggregator' with the minimum fields required to make a request.
@@ -130,10 +132,12 @@ instance ToQuery PutConfigurationAggregator where
         toQuery = const mempty
 
 -- | /See:/ 'putConfigurationAggregatorResponse' smart constructor.
-data PutConfigurationAggregatorResponse = PutConfigurationAggregatorResponse'
-  { _pcarsConfigurationAggregator :: !(Maybe ConfigurationAggregator)
-  , _pcarsResponseStatus          :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutConfigurationAggregatorResponse =
+  PutConfigurationAggregatorResponse'
+    { _pcarsConfigurationAggregator :: !(Maybe ConfigurationAggregator)
+    , _pcarsResponseStatus          :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutConfigurationAggregatorResponse' with the minimum fields required to make a request.

@@ -67,9 +67,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeAlias' smart constructor.
-newtype DescribeAlias = DescribeAlias'
-  { _dAliasId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeAlias =
+  DescribeAlias'
+    { _dAliasId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAlias' with the minimum fields required to make a request.
@@ -124,10 +126,12 @@ instance ToQuery DescribeAlias where
 --
 --
 -- /See:/ 'describeAliasResponse' smart constructor.
-data DescribeAliasResponse = DescribeAliasResponse'
-  { _darsAlias          :: !(Maybe Alias)
-  , _darsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAliasResponse =
+  DescribeAliasResponse'
+    { _darsAlias          :: !(Maybe Alias)
+    , _darsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAliasResponse' with the minimum fields required to make a request.

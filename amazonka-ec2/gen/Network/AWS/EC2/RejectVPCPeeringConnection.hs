@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'rejectVPCPeeringConnection' smart constructor.
-data RejectVPCPeeringConnection = RejectVPCPeeringConnection'
-  { _rvpcDryRun                 :: !(Maybe Bool)
-  , _rvpcVPCPeeringConnectionId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RejectVPCPeeringConnection =
+  RejectVPCPeeringConnection'
+    { _rvpcDryRun                 :: !(Maybe Bool)
+    , _rvpcVPCPeeringConnectionId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RejectVPCPeeringConnection' with the minimum fields required to make a request.
@@ -116,10 +118,12 @@ instance ToQuery RejectVPCPeeringConnection where
 --
 --
 -- /See:/ 'rejectVPCPeeringConnectionResponse' smart constructor.
-data RejectVPCPeeringConnectionResponse = RejectVPCPeeringConnectionResponse'
-  { _rvpcrsReturn         :: !(Maybe Bool)
-  , _rvpcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RejectVPCPeeringConnectionResponse =
+  RejectVPCPeeringConnectionResponse'
+    { _rvpcrsReturn         :: !(Maybe Bool)
+    , _rvpcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RejectVPCPeeringConnectionResponse' with the minimum fields required to make a request.

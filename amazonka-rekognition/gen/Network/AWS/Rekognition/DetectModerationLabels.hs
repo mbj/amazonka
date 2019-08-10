@@ -50,10 +50,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'detectModerationLabels' smart constructor.
-data DetectModerationLabels = DetectModerationLabels'
-  { _dmlMinConfidence :: !(Maybe Double)
-  , _dmlImage         :: !Image
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DetectModerationLabels =
+  DetectModerationLabels'
+    { _dmlMinConfidence :: !(Maybe Double)
+    , _dmlImage         :: !Image
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DetectModerationLabels' with the minimum fields required to make a request.
@@ -117,10 +119,12 @@ instance ToQuery DetectModerationLabels where
         toQuery = const mempty
 
 -- | /See:/ 'detectModerationLabelsResponse' smart constructor.
-data DetectModerationLabelsResponse = DetectModerationLabelsResponse'
-  { _dmlrsModerationLabels :: !(Maybe [ModerationLabel])
-  , _dmlrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DetectModerationLabelsResponse =
+  DetectModerationLabelsResponse'
+    { _dmlrsModerationLabels :: !(Maybe [ModerationLabel])
+    , _dmlrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DetectModerationLabelsResponse' with the minimum fields required to make a request.

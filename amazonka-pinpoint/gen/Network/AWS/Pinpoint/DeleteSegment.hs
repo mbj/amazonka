@@ -44,10 +44,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteSegment' smart constructor.
-data DeleteSegment = DeleteSegment'
-  { _dsSegmentId     :: !Text
-  , _dsApplicationId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteSegment =
+  DeleteSegment'
+    { _dsSegmentId     :: !Text
+    , _dsApplicationId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteSegment' with the minimum fields required to make a request.
@@ -104,10 +106,12 @@ instance ToQuery DeleteSegment where
         toQuery = const mempty
 
 -- | /See:/ 'deleteSegmentResponse' smart constructor.
-data DeleteSegmentResponse = DeleteSegmentResponse'
-  { _dsrsResponseStatus  :: !Int
-  , _dsrsSegmentResponse :: !SegmentResponse
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteSegmentResponse =
+  DeleteSegmentResponse'
+    { _dsrsResponseStatus  :: !Int
+    , _dsrsSegmentResponse :: !SegmentResponse
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteSegmentResponse' with the minimum fields required to make a request.

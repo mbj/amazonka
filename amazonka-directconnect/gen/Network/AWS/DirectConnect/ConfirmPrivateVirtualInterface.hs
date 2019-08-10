@@ -53,11 +53,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'confirmPrivateVirtualInterface' smart constructor.
-data ConfirmPrivateVirtualInterface = ConfirmPrivateVirtualInterface'
-  { _cpviVirtualGatewayId       :: !(Maybe Text)
-  , _cpviDirectConnectGatewayId :: !(Maybe Text)
-  , _cpviVirtualInterfaceId     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ConfirmPrivateVirtualInterface =
+  ConfirmPrivateVirtualInterface'
+    { _cpviVirtualGatewayId       :: !(Maybe Text)
+    , _cpviDirectConnectGatewayId :: !(Maybe Text)
+    , _cpviVirtualInterfaceId     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ConfirmPrivateVirtualInterface' with the minimum fields required to make a request.
@@ -141,10 +143,12 @@ instance ToQuery ConfirmPrivateVirtualInterface where
 --
 --
 -- /See:/ 'confirmPrivateVirtualInterfaceResponse' smart constructor.
-data ConfirmPrivateVirtualInterfaceResponse = ConfirmPrivateVirtualInterfaceResponse'
-  { _cpvirsVirtualInterfaceState :: !(Maybe VirtualInterfaceState)
-  , _cpvirsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ConfirmPrivateVirtualInterfaceResponse =
+  ConfirmPrivateVirtualInterfaceResponse'
+    { _cpvirsVirtualInterfaceState :: !(Maybe VirtualInterfaceState)
+    , _cpvirsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ConfirmPrivateVirtualInterfaceResponse' with the minimum fields required to make a request.

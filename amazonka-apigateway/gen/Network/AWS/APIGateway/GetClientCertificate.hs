@@ -52,9 +52,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getClientCertificate' smart constructor.
-newtype GetClientCertificate = GetClientCertificate'
-  { _gccClientCertificateId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetClientCertificate =
+  GetClientCertificate'
+    { _gccClientCertificateId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetClientCertificate' with the minimum fields required to make a request.

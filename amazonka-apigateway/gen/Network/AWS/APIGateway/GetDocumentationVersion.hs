@@ -49,10 +49,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getDocumentationVersion' smart constructor.
-data GetDocumentationVersion = GetDocumentationVersion'
-  { _gdvdRestAPIId            :: !Text
-  , _gdvdDocumentationVersion :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDocumentationVersion =
+  GetDocumentationVersion'
+    { _gdvdRestAPIId            :: !Text
+    , _gdvdDocumentationVersion :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDocumentationVersion' with the minimum fields required to make a request.

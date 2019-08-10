@@ -48,12 +48,14 @@ import Network.AWS.WorkDocs.Types
 import Network.AWS.WorkDocs.Types.Product
 
 -- | /See:/ 'addResourcePermissions' smart constructor.
-data AddResourcePermissions = AddResourcePermissions'
-  { _arpNotificationOptions :: !(Maybe NotificationOptions)
-  , _arpAuthenticationToken :: !(Maybe (Sensitive Text))
-  , _arpResourceId          :: !Text
-  , _arpPrincipals          :: ![SharePrincipal]
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data AddResourcePermissions =
+  AddResourcePermissions'
+    { _arpNotificationOptions :: !(Maybe NotificationOptions)
+    , _arpAuthenticationToken :: !(Maybe (Sensitive Text))
+    , _arpResourceId          :: !Text
+    , _arpPrincipals          :: ![SharePrincipal]
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddResourcePermissions' with the minimum fields required to make a request.
@@ -135,10 +137,12 @@ instance ToQuery AddResourcePermissions where
         toQuery = const mempty
 
 -- | /See:/ 'addResourcePermissionsResponse' smart constructor.
-data AddResourcePermissionsResponse = AddResourcePermissionsResponse'
-  { _arprsShareResults   :: !(Maybe [ShareResult])
-  , _arprsResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data AddResourcePermissionsResponse =
+  AddResourcePermissionsResponse'
+    { _arprsShareResults   :: !(Maybe [ShareResult])
+    , _arprsResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddResourcePermissionsResponse' with the minimum fields required to make a request.

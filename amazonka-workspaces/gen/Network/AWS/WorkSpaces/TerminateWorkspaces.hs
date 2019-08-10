@@ -51,9 +51,11 @@ import Network.AWS.WorkSpaces.Types
 import Network.AWS.WorkSpaces.Types.Product
 
 -- | /See:/ 'terminateWorkspaces' smart constructor.
-newtype TerminateWorkspaces = TerminateWorkspaces'
-  { _twTerminateWorkspaceRequests :: List1 TerminateRequest
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype TerminateWorkspaces =
+  TerminateWorkspaces'
+    { _twTerminateWorkspaceRequests :: List1 TerminateRequest
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TerminateWorkspaces' with the minimum fields required to make a request.
@@ -113,10 +115,12 @@ instance ToQuery TerminateWorkspaces where
         toQuery = const mempty
 
 -- | /See:/ 'terminateWorkspacesResponse' smart constructor.
-data TerminateWorkspacesResponse = TerminateWorkspacesResponse'
-  { _twrsFailedRequests :: !(Maybe [FailedWorkspaceChangeRequest])
-  , _twrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TerminateWorkspacesResponse =
+  TerminateWorkspacesResponse'
+    { _twrsFailedRequests :: !(Maybe [FailedWorkspaceChangeRequest])
+    , _twrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TerminateWorkspacesResponse' with the minimum fields required to make a request.

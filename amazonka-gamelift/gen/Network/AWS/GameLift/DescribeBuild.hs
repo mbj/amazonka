@@ -63,9 +63,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeBuild' smart constructor.
-newtype DescribeBuild = DescribeBuild'
-  { _dBuildId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeBuild =
+  DescribeBuild'
+    { _dBuildId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeBuild' with the minimum fields required to make a request.
@@ -120,10 +122,12 @@ instance ToQuery DescribeBuild where
 --
 --
 -- /See:/ 'describeBuildResponse' smart constructor.
-data DescribeBuildResponse = DescribeBuildResponse'
-  { _dbrsBuild          :: !(Maybe Build)
-  , _dbrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeBuildResponse =
+  DescribeBuildResponse'
+    { _dbrsBuild          :: !(Maybe Build)
+    , _dbrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeBuildResponse' with the minimum fields required to make a request.

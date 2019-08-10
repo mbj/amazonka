@@ -46,11 +46,13 @@ import Network.AWS.WorkMail.Types
 import Network.AWS.WorkMail.Types.Product
 
 -- | /See:/ 'associateDelegateToResource' smart constructor.
-data AssociateDelegateToResource = AssociateDelegateToResource'
-  { _adtrOrganizationId :: !Text
-  , _adtrResourceId     :: !Text
-  , _adtrEntityId       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssociateDelegateToResource =
+  AssociateDelegateToResource'
+    { _adtrOrganizationId :: !Text
+    , _adtrResourceId     :: !Text
+    , _adtrEntityId       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateDelegateToResource' with the minimum fields required to make a request.
@@ -126,9 +128,11 @@ instance ToQuery AssociateDelegateToResource where
         toQuery = const mempty
 
 -- | /See:/ 'associateDelegateToResourceResponse' smart constructor.
-newtype AssociateDelegateToResourceResponse = AssociateDelegateToResourceResponse'
-  { _adtrrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AssociateDelegateToResourceResponse =
+  AssociateDelegateToResourceResponse'
+    { _adtrrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateDelegateToResourceResponse' with the minimum fields required to make a request.

@@ -58,10 +58,12 @@ import Network.AWS.WAFRegional.Types
 import Network.AWS.WAFRegional.Types.Product
 
 -- | /See:/ 'deleteGeoMatchSet' smart constructor.
-data DeleteGeoMatchSet = DeleteGeoMatchSet'
-  { _dgmsGeoMatchSetId :: !Text
-  , _dgmsChangeToken   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteGeoMatchSet =
+  DeleteGeoMatchSet'
+    { _dgmsGeoMatchSetId :: !Text
+    , _dgmsChangeToken   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteGeoMatchSet' with the minimum fields required to make a request.
@@ -125,10 +127,12 @@ instance ToQuery DeleteGeoMatchSet where
         toQuery = const mempty
 
 -- | /See:/ 'deleteGeoMatchSetResponse' smart constructor.
-data DeleteGeoMatchSetResponse = DeleteGeoMatchSetResponse'
-  { _dgmsrsChangeToken    :: !(Maybe Text)
-  , _dgmsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteGeoMatchSetResponse =
+  DeleteGeoMatchSetResponse'
+    { _dgmsrsChangeToken    :: !(Maybe Text)
+    , _dgmsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteGeoMatchSetResponse' with the minimum fields required to make a request.

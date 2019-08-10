@@ -52,12 +52,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listAssessmentTemplates' smart constructor.
-data ListAssessmentTemplates = ListAssessmentTemplates'
-  { _latNextToken            :: !(Maybe Text)
-  , _latFilter               :: !(Maybe AssessmentTemplateFilter)
-  , _latMaxResults           :: !(Maybe Int)
-  , _latAssessmentTargetARNs :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAssessmentTemplates =
+  ListAssessmentTemplates'
+    { _latNextToken            :: !(Maybe Text)
+    , _latFilter               :: !(Maybe AssessmentTemplateFilter)
+    , _latMaxResults           :: !(Maybe Int)
+    , _latAssessmentTargetARNs :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAssessmentTemplates' with the minimum fields required to make a request.
@@ -147,11 +149,13 @@ instance ToQuery ListAssessmentTemplates where
         toQuery = const mempty
 
 -- | /See:/ 'listAssessmentTemplatesResponse' smart constructor.
-data ListAssessmentTemplatesResponse = ListAssessmentTemplatesResponse'
-  { _latrsNextToken              :: !(Maybe Text)
-  , _latrsResponseStatus         :: !Int
-  , _latrsAssessmentTemplateARNs :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAssessmentTemplatesResponse =
+  ListAssessmentTemplatesResponse'
+    { _latrsNextToken              :: !(Maybe Text)
+    , _latrsResponseStatus         :: !Int
+    , _latrsAssessmentTemplateARNs :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAssessmentTemplatesResponse' with the minimum fields required to make a request.

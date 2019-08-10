@@ -26,14 +26,16 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'environment' smart constructor.
-data Environment = Environment'
-  { _eArn         :: !(Maybe Text)
-  , _eOwnerARN    :: !(Maybe Text)
-  , _eName        :: !(Maybe Text)
-  , _eId          :: !(Maybe Text)
-  , _eType        :: !(Maybe EnvironmentType)
-  , _eDescription :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Environment =
+  Environment'
+    { _eArn         :: !(Maybe Text)
+    , _eOwnerARN    :: !(Maybe Text)
+    , _eName        :: !(Maybe Text)
+    , _eId          :: !(Maybe Text)
+    , _eType        :: !(Maybe EnvironmentType)
+    , _eDescription :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Environment' with the minimum fields required to make a request.
@@ -108,13 +110,15 @@ instance NFData Environment where
 --
 --
 -- /See:/ 'environmentMember' smart constructor.
-data EnvironmentMember = EnvironmentMember'
-  { _emLastAccess    :: !(Maybe POSIX)
-  , _emUserId        :: !(Maybe Text)
-  , _emUserARN       :: !(Maybe Text)
-  , _emPermissions   :: !(Maybe Permissions)
-  , _emEnvironmentId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EnvironmentMember =
+  EnvironmentMember'
+    { _emLastAccess    :: !(Maybe POSIX)
+    , _emUserId        :: !(Maybe Text)
+    , _emUserARN       :: !(Maybe Text)
+    , _emPermissions   :: !(Maybe Permissions)
+    , _emEnvironmentId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EnvironmentMember' with the minimum fields required to make a request.

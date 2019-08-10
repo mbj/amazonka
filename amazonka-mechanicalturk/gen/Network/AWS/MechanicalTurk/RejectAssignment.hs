@@ -49,10 +49,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'rejectAssignment' smart constructor.
-data RejectAssignment = RejectAssignment'
-  { _raAssignmentId      :: !Text
-  , _raRequesterFeedback :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RejectAssignment =
+  RejectAssignment'
+    { _raAssignmentId      :: !Text
+    , _raRequesterFeedback :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RejectAssignment' with the minimum fields required to make a request.
@@ -117,9 +119,11 @@ instance ToQuery RejectAssignment where
         toQuery = const mempty
 
 -- | /See:/ 'rejectAssignmentResponse' smart constructor.
-newtype RejectAssignmentResponse = RejectAssignmentResponse'
-  { _rarsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RejectAssignmentResponse =
+  RejectAssignmentResponse'
+    { _rarsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RejectAssignmentResponse' with the minimum fields required to make a request.

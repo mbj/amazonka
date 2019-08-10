@@ -43,10 +43,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'attachPolicy' smart constructor.
-data AttachPolicy = AttachPolicy'
-  { _apPolicyName :: !Text
-  , _apTarget     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AttachPolicy =
+  AttachPolicy'
+    { _apPolicyName :: !Text
+    , _apTarget     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttachPolicy' with the minimum fields required to make a request.

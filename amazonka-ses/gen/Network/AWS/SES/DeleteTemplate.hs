@@ -50,9 +50,11 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'deleteTemplate' smart constructor.
-newtype DeleteTemplate = DeleteTemplate'
-  { _dtTemplateName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteTemplate =
+  DeleteTemplate'
+    { _dtTemplateName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteTemplate' with the minimum fields required to make a request.
@@ -97,9 +99,11 @@ instance ToQuery DeleteTemplate where
                "TemplateName" =: _dtTemplateName]
 
 -- | /See:/ 'deleteTemplateResponse' smart constructor.
-newtype DeleteTemplateResponse = DeleteTemplateResponse'
-  { _dtrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteTemplateResponse =
+  DeleteTemplateResponse'
+    { _dtrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteTemplateResponse' with the minimum fields required to make a request.

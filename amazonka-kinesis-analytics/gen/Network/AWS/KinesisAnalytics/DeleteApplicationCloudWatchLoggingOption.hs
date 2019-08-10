@@ -46,11 +46,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteApplicationCloudWatchLoggingOption' smart constructor.
-data DeleteApplicationCloudWatchLoggingOption = DeleteApplicationCloudWatchLoggingOption'
-  { _dacwloApplicationName             :: !Text
-  , _dacwloCurrentApplicationVersionId :: !Nat
-  , _dacwloCloudWatchLoggingOptionId   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteApplicationCloudWatchLoggingOption =
+  DeleteApplicationCloudWatchLoggingOption'
+    { _dacwloApplicationName             :: !Text
+    , _dacwloCurrentApplicationVersionId :: !Nat
+    , _dacwloCloudWatchLoggingOptionId   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteApplicationCloudWatchLoggingOption' with the minimum fields required to make a request.
@@ -144,9 +146,11 @@ instance ToQuery
         toQuery = const mempty
 
 -- | /See:/ 'deleteApplicationCloudWatchLoggingOptionResponse' smart constructor.
-newtype DeleteApplicationCloudWatchLoggingOptionResponse = DeleteApplicationCloudWatchLoggingOptionResponse'
-  { _dacwlorsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteApplicationCloudWatchLoggingOptionResponse =
+  DeleteApplicationCloudWatchLoggingOptionResponse'
+    { _dacwlorsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteApplicationCloudWatchLoggingOptionResponse' with the minimum fields required to make a request.

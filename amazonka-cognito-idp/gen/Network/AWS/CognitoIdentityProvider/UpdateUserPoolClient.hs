@@ -63,23 +63,25 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateUserPoolClient' smart constructor.
-data UpdateUserPoolClient = UpdateUserPoolClient'
-  { _uupcRefreshTokenValidity            :: !(Maybe Nat)
-  , _uupcExplicitAuthFlows               :: !(Maybe [ExplicitAuthFlowsType])
-  , _uupcSupportedIdentityProviders      :: !(Maybe [Text])
-  , _uupcLogoutURLs                      :: !(Maybe [Text])
-  , _uupcAllowedOAuthFlowsUserPoolClient :: !(Maybe Bool)
-  , _uupcDefaultRedirectURI              :: !(Maybe Text)
-  , _uupcWriteAttributes                 :: !(Maybe [Text])
-  , _uupcReadAttributes                  :: !(Maybe [Text])
-  , _uupcAllowedOAuthScopes              :: !(Maybe [Text])
-  , _uupcAllowedOAuthFlows               :: !(Maybe [OAuthFlowType])
-  , _uupcAnalyticsConfiguration          :: !(Maybe AnalyticsConfigurationType)
-  , _uupcClientName                      :: !(Maybe Text)
-  , _uupcCallbackURLs                    :: !(Maybe [Text])
-  , _uupcUserPoolId                      :: !Text
-  , _uupcClientId                        :: !(Sensitive Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data UpdateUserPoolClient =
+  UpdateUserPoolClient'
+    { _uupcRefreshTokenValidity :: !(Maybe Nat)
+    , _uupcExplicitAuthFlows :: !(Maybe [ExplicitAuthFlowsType])
+    , _uupcSupportedIdentityProviders :: !(Maybe [Text])
+    , _uupcLogoutURLs :: !(Maybe [Text])
+    , _uupcAllowedOAuthFlowsUserPoolClient :: !(Maybe Bool)
+    , _uupcDefaultRedirectURI :: !(Maybe Text)
+    , _uupcWriteAttributes :: !(Maybe [Text])
+    , _uupcReadAttributes :: !(Maybe [Text])
+    , _uupcAllowedOAuthScopes :: !(Maybe [Text])
+    , _uupcAllowedOAuthFlows :: !(Maybe [OAuthFlowType])
+    , _uupcAnalyticsConfiguration :: !(Maybe AnalyticsConfigurationType)
+    , _uupcClientName :: !(Maybe Text)
+    , _uupcCallbackURLs :: !(Maybe [Text])
+    , _uupcUserPoolId :: !Text
+    , _uupcClientId :: !(Sensitive Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateUserPoolClient' with the minimum fields required to make a request.
@@ -260,10 +262,12 @@ instance ToQuery UpdateUserPoolClient where
 --
 --
 -- /See:/ 'updateUserPoolClientResponse' smart constructor.
-data UpdateUserPoolClientResponse = UpdateUserPoolClientResponse'
-  { _uupcrsUserPoolClient :: !(Maybe UserPoolClientType)
-  , _uupcrsResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data UpdateUserPoolClientResponse =
+  UpdateUserPoolClientResponse'
+    { _uupcrsUserPoolClient :: !(Maybe UserPoolClientType)
+    , _uupcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateUserPoolClientResponse' with the minimum fields required to make a request.

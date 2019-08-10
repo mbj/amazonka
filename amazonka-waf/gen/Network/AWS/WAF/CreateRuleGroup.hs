@@ -60,11 +60,13 @@ import Network.AWS.WAF.Types
 import Network.AWS.WAF.Types.Product
 
 -- | /See:/ 'createRuleGroup' smart constructor.
-data CreateRuleGroup = CreateRuleGroup'
-  { _crgName        :: !Text
-  , _crgMetricName  :: !Text
-  , _crgChangeToken :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateRuleGroup =
+  CreateRuleGroup'
+    { _crgName        :: !Text
+    , _crgMetricName  :: !Text
+    , _crgChangeToken :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateRuleGroup' with the minimum fields required to make a request.
@@ -139,11 +141,13 @@ instance ToQuery CreateRuleGroup where
         toQuery = const mempty
 
 -- | /See:/ 'createRuleGroupResponse' smart constructor.
-data CreateRuleGroupResponse = CreateRuleGroupResponse'
-  { _crgrsChangeToken    :: !(Maybe Text)
-  , _crgrsRuleGroup      :: !(Maybe RuleGroup)
-  , _crgrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateRuleGroupResponse =
+  CreateRuleGroupResponse'
+    { _crgrsChangeToken    :: !(Maybe Text)
+    , _crgrsRuleGroup      :: !(Maybe RuleGroup)
+    , _crgrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateRuleGroupResponse' with the minimum fields required to make a request.

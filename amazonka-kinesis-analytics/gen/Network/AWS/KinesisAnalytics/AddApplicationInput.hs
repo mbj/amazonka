@@ -56,11 +56,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'addApplicationInput' smart constructor.
-data AddApplicationInput = AddApplicationInput'
-  { _aaiApplicationName             :: !Text
-  , _aaiCurrentApplicationVersionId :: !Nat
-  , _aaiInput                       :: !Input
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddApplicationInput =
+  AddApplicationInput'
+    { _aaiApplicationName             :: !Text
+    , _aaiCurrentApplicationVersionId :: !Nat
+    , _aaiInput                       :: !Input
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddApplicationInput' with the minimum fields required to make a request.
@@ -141,9 +143,11 @@ instance ToQuery AddApplicationInput where
 --
 --
 -- /See:/ 'addApplicationInputResponse' smart constructor.
-newtype AddApplicationInputResponse = AddApplicationInputResponse'
-  { _aairsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AddApplicationInputResponse =
+  AddApplicationInputResponse'
+    { _aairsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddApplicationInputResponse' with the minimum fields required to make a request.

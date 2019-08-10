@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'associateIAMInstanceProfile' smart constructor.
-data AssociateIAMInstanceProfile = AssociateIAMInstanceProfile'
-  { _aiapIAMInstanceProfile :: !IAMInstanceProfileSpecification
-  , _aiapInstanceId         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssociateIAMInstanceProfile =
+  AssociateIAMInstanceProfile'
+    { _aiapIAMInstanceProfile :: !IAMInstanceProfileSpecification
+    , _aiapInstanceId         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateIAMInstanceProfile' with the minimum fields required to make a request.
@@ -109,10 +111,12 @@ instance ToQuery AssociateIAMInstanceProfile where
                "InstanceId" =: _aiapInstanceId]
 
 -- | /See:/ 'associateIAMInstanceProfileResponse' smart constructor.
-data AssociateIAMInstanceProfileResponse = AssociateIAMInstanceProfileResponse'
-  { _aiaprsIAMInstanceProfileAssociation :: !(Maybe IAMInstanceProfileAssociation)
-  , _aiaprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssociateIAMInstanceProfileResponse =
+  AssociateIAMInstanceProfileResponse'
+    { _aiaprsIAMInstanceProfileAssociation :: !(Maybe IAMInstanceProfileAssociation)
+    , _aiaprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateIAMInstanceProfileResponse' with the minimum fields required to make a request.

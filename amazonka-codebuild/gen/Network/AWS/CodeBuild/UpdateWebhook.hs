@@ -47,11 +47,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateWebhook' smart constructor.
-data UpdateWebhook = UpdateWebhook'
-  { _uwBranchFilter :: !(Maybe Text)
-  , _uwRotateSecret :: !(Maybe Bool)
-  , _uwProjectName  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateWebhook =
+  UpdateWebhook'
+    { _uwBranchFilter :: !(Maybe Text)
+    , _uwRotateSecret :: !(Maybe Bool)
+    , _uwProjectName  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateWebhook' with the minimum fields required to make a request.
@@ -123,10 +125,12 @@ instance ToQuery UpdateWebhook where
         toQuery = const mempty
 
 -- | /See:/ 'updateWebhookResponse' smart constructor.
-data UpdateWebhookResponse = UpdateWebhookResponse'
-  { _uwrsWebhook        :: !(Maybe Webhook)
-  , _uwrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateWebhookResponse =
+  UpdateWebhookResponse'
+    { _uwrsWebhook        :: !(Maybe Webhook)
+    , _uwrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateWebhookResponse' with the minimum fields required to make a request.

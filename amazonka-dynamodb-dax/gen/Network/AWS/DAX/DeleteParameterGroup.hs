@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteParameterGroup' smart constructor.
-newtype DeleteParameterGroup = DeleteParameterGroup'
-  { _dpgParameterGroupName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteParameterGroup =
+  DeleteParameterGroup'
+    { _dpgParameterGroupName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteParameterGroup' with the minimum fields required to make a request.
@@ -103,10 +105,12 @@ instance ToQuery DeleteParameterGroup where
         toQuery = const mempty
 
 -- | /See:/ 'deleteParameterGroupResponse' smart constructor.
-data DeleteParameterGroupResponse = DeleteParameterGroupResponse'
-  { _dpgrsDeletionMessage :: !(Maybe Text)
-  , _dpgrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteParameterGroupResponse =
+  DeleteParameterGroupResponse'
+    { _dpgrsDeletionMessage :: !(Maybe Text)
+    , _dpgrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteParameterGroupResponse' with the minimum fields required to make a request.

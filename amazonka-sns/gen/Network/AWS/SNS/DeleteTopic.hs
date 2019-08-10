@@ -42,9 +42,11 @@ import Network.AWS.SNS.Types
 import Network.AWS.SNS.Types.Product
 
 -- | /See:/ 'deleteTopic' smart constructor.
-newtype DeleteTopic = DeleteTopic'
-  { _dtTopicARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteTopic =
+  DeleteTopic'
+    { _dtTopicARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteTopic' with the minimum fields required to make a request.

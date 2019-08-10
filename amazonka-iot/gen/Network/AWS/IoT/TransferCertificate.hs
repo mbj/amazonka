@@ -59,11 +59,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'transferCertificate' smart constructor.
-data TransferCertificate = TransferCertificate'
-  { _tcTransferMessage  :: !(Maybe Text)
-  , _tcCertificateId    :: !Text
-  , _tcTargetAWSAccount :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TransferCertificate =
+  TransferCertificate'
+    { _tcTransferMessage  :: !(Maybe Text)
+    , _tcCertificateId    :: !Text
+    , _tcTargetAWSAccount :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TransferCertificate' with the minimum fields required to make a request.
@@ -137,10 +139,12 @@ instance ToQuery TransferCertificate where
 --
 --
 -- /See:/ 'transferCertificateResponse' smart constructor.
-data TransferCertificateResponse = TransferCertificateResponse'
-  { _tcrsTransferredCertificateARN :: !(Maybe Text)
-  , _tcrsResponseStatus            :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TransferCertificateResponse =
+  TransferCertificateResponse'
+    { _tcrsTransferredCertificateARN :: !(Maybe Text)
+    , _tcrsResponseStatus            :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TransferCertificateResponse' with the minimum fields required to make a request.

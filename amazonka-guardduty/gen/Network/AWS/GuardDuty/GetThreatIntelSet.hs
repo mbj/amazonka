@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getThreatIntelSet' smart constructor.
-data GetThreatIntelSet = GetThreatIntelSet'
-  { _gtisThreatIntelSetId :: !Text
-  , _gtisDetectorId       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetThreatIntelSet =
+  GetThreatIntelSet'
+    { _gtisThreatIntelSetId :: !Text
+    , _gtisDetectorId       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetThreatIntelSet' with the minimum fields required to make a request.
@@ -110,13 +112,15 @@ instance ToQuery GetThreatIntelSet where
         toQuery = const mempty
 
 -- | /See:/ 'getThreatIntelSetResponse' smart constructor.
-data GetThreatIntelSetResponse = GetThreatIntelSetResponse'
-  { _gtisrsStatus         :: !(Maybe ThreatIntelSetStatus)
-  , _gtisrsLocation       :: !(Maybe Text)
-  , _gtisrsFormat         :: !(Maybe ThreatIntelSetFormat)
-  , _gtisrsName           :: !(Maybe Text)
-  , _gtisrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetThreatIntelSetResponse =
+  GetThreatIntelSetResponse'
+    { _gtisrsStatus         :: !(Maybe ThreatIntelSetStatus)
+    , _gtisrsLocation       :: !(Maybe Text)
+    , _gtisrsFormat         :: !(Maybe ThreatIntelSetFormat)
+    , _gtisrsName           :: !(Maybe Text)
+    , _gtisrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetThreatIntelSetResponse' with the minimum fields required to make a request.

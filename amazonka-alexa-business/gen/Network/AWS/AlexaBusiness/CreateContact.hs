@@ -49,13 +49,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createContact' smart constructor.
-data CreateContact = CreateContact'
-  { _ccLastName           :: !(Maybe Text)
-  , _ccDisplayName        :: !(Maybe Text)
-  , _ccClientRequestToken :: !(Maybe Text)
-  , _ccFirstName          :: !Text
-  , _ccPhoneNumber        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateContact =
+  CreateContact'
+    { _ccLastName           :: !(Maybe Text)
+    , _ccDisplayName        :: !(Maybe Text)
+    , _ccClientRequestToken :: !(Maybe Text)
+    , _ccFirstName          :: !Text
+    , _ccPhoneNumber        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateContact' with the minimum fields required to make a request.
@@ -144,10 +146,12 @@ instance ToQuery CreateContact where
         toQuery = const mempty
 
 -- | /See:/ 'createContactResponse' smart constructor.
-data CreateContactResponse = CreateContactResponse'
-  { _ccrsContactARN     :: !(Maybe Text)
-  , _ccrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateContactResponse =
+  CreateContactResponse'
+    { _ccrsContactARN     :: !(Maybe Text)
+    , _ccrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateContactResponse' with the minimum fields required to make a request.

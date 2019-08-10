@@ -65,24 +65,26 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'modifyInstanceAttribute' smart constructor.
-data ModifyInstanceAttribute = ModifyInstanceAttribute'
-  { _mGroups :: !(Maybe [Text])
-  , _mAttribute :: !(Maybe InstanceAttributeName)
-  , _mEnaSupport :: !(Maybe AttributeBooleanValue)
-  , _mSourceDestCheck :: !(Maybe AttributeBooleanValue)
-  , _mDisableAPITermination :: !(Maybe AttributeBooleanValue)
-  , _mKernel :: !(Maybe AttributeValue)
-  , _mRAMDisk :: !(Maybe AttributeValue)
-  , _mValue :: !(Maybe Text)
-  , _mInstanceType :: !(Maybe AttributeValue)
-  , _mSRIOVNetSupport :: !(Maybe AttributeValue)
-  , _mEBSOptimized :: !(Maybe AttributeBooleanValue)
-  , _mUserData :: !(Maybe BlobAttributeValue)
-  , _mInstanceInitiatedShutdownBehavior :: !(Maybe AttributeValue)
-  , _mBlockDeviceMappings :: !(Maybe [InstanceBlockDeviceMappingSpecification])
-  , _mDryRun :: !(Maybe Bool)
-  , _mInstanceId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyInstanceAttribute =
+  ModifyInstanceAttribute'
+    { _mGroups :: !(Maybe [Text])
+    , _mAttribute :: !(Maybe InstanceAttributeName)
+    , _mEnaSupport :: !(Maybe AttributeBooleanValue)
+    , _mSourceDestCheck :: !(Maybe AttributeBooleanValue)
+    , _mDisableAPITermination :: !(Maybe AttributeBooleanValue)
+    , _mKernel :: !(Maybe AttributeValue)
+    , _mRAMDisk :: !(Maybe AttributeValue)
+    , _mValue :: !(Maybe Text)
+    , _mInstanceType :: !(Maybe AttributeValue)
+    , _mSRIOVNetSupport :: !(Maybe AttributeValue)
+    , _mEBSOptimized :: !(Maybe AttributeBooleanValue)
+    , _mUserData :: !(Maybe BlobAttributeValue)
+    , _mInstanceInitiatedShutdownBehavior :: !(Maybe AttributeValue)
+    , _mBlockDeviceMappings :: !(Maybe [InstanceBlockDeviceMappingSpecification])
+    , _mDryRun :: !(Maybe Bool)
+    , _mInstanceId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyInstanceAttribute' with the minimum fields required to make a request.

@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateSchema' smart constructor.
-data UpdateSchema = UpdateSchema'
-  { _usSchemaARN :: !Text
-  , _usName      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateSchema =
+  UpdateSchema'
+    { _usSchemaARN :: !Text
+    , _usName      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateSchema' with the minimum fields required to make a request.
@@ -105,10 +107,12 @@ instance ToQuery UpdateSchema where
         toQuery = const mempty
 
 -- | /See:/ 'updateSchemaResponse' smart constructor.
-data UpdateSchemaResponse = UpdateSchemaResponse'
-  { _usrsSchemaARN      :: !(Maybe Text)
-  , _usrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateSchemaResponse =
+  UpdateSchemaResponse'
+    { _usrsSchemaARN      :: !(Maybe Text)
+    , _usrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateSchemaResponse' with the minimum fields required to make a request.

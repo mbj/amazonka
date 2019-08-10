@@ -62,11 +62,13 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'getCommandInvocation' smart constructor.
-data GetCommandInvocation = GetCommandInvocation'
-  { _gciPluginName :: !(Maybe Text)
-  , _gciCommandId  :: !Text
-  , _gciInstanceId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetCommandInvocation =
+  GetCommandInvocation'
+    { _gciPluginName :: !(Maybe Text)
+    , _gciCommandId  :: !Text
+    , _gciInstanceId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetCommandInvocation' with the minimum fields required to make a request.
@@ -155,25 +157,27 @@ instance ToQuery GetCommandInvocation where
         toQuery = const mempty
 
 -- | /See:/ 'getCommandInvocationResponse' smart constructor.
-data GetCommandInvocationResponse = GetCommandInvocationResponse'
-  { _gcirsInstanceId             :: !(Maybe Text)
-  , _gcirsStatus                 :: !(Maybe CommandInvocationStatus)
-  , _gcirsStandardErrorContent   :: !(Maybe Text)
-  , _gcirsExecutionElapsedTime   :: !(Maybe Text)
-  , _gcirsDocumentName           :: !(Maybe Text)
-  , _gcirsStandardErrorURL       :: !(Maybe Text)
-  , _gcirsExecutionStartDateTime :: !(Maybe Text)
-  , _gcirsResponseCode           :: !(Maybe Int)
-  , _gcirsStatusDetails          :: !(Maybe Text)
-  , _gcirsExecutionEndDateTime   :: !(Maybe Text)
-  , _gcirsStandardOutputURL      :: !(Maybe Text)
-  , _gcirsCommandId              :: !(Maybe Text)
-  , _gcirsDocumentVersion        :: !(Maybe Text)
-  , _gcirsStandardOutputContent  :: !(Maybe Text)
-  , _gcirsComment                :: !(Maybe Text)
-  , _gcirsPluginName             :: !(Maybe Text)
-  , _gcirsResponseStatus         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetCommandInvocationResponse =
+  GetCommandInvocationResponse'
+    { _gcirsInstanceId             :: !(Maybe Text)
+    , _gcirsStatus                 :: !(Maybe CommandInvocationStatus)
+    , _gcirsStandardErrorContent   :: !(Maybe Text)
+    , _gcirsExecutionElapsedTime   :: !(Maybe Text)
+    , _gcirsDocumentName           :: !(Maybe Text)
+    , _gcirsStandardErrorURL       :: !(Maybe Text)
+    , _gcirsExecutionStartDateTime :: !(Maybe Text)
+    , _gcirsResponseCode           :: !(Maybe Int)
+    , _gcirsStatusDetails          :: !(Maybe Text)
+    , _gcirsExecutionEndDateTime   :: !(Maybe Text)
+    , _gcirsStandardOutputURL      :: !(Maybe Text)
+    , _gcirsCommandId              :: !(Maybe Text)
+    , _gcirsDocumentVersion        :: !(Maybe Text)
+    , _gcirsStandardOutputContent  :: !(Maybe Text)
+    , _gcirsComment                :: !(Maybe Text)
+    , _gcirsPluginName             :: !(Maybe Text)
+    , _gcirsResponseStatus         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetCommandInvocationResponse' with the minimum fields required to make a request.

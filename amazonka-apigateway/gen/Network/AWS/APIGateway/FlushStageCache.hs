@@ -47,10 +47,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'flushStageCache' smart constructor.
-data FlushStageCache = FlushStageCache'
-  { _fscRestAPIId :: !Text
-  , _fscStageName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FlushStageCache =
+  FlushStageCache'
+    { _fscRestAPIId :: !Text
+    , _fscStageName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FlushStageCache' with the minimum fields required to make a request.

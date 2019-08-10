@@ -49,10 +49,12 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'listResourceDataSync' smart constructor.
-data ListResourceDataSync = ListResourceDataSync'
-  { _lrdsNextToken  :: !(Maybe Text)
-  , _lrdsMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListResourceDataSync =
+  ListResourceDataSync'
+    { _lrdsNextToken  :: !(Maybe Text)
+    , _lrdsMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListResourceDataSync' with the minimum fields required to make a request.
@@ -115,11 +117,13 @@ instance ToQuery ListResourceDataSync where
         toQuery = const mempty
 
 -- | /See:/ 'listResourceDataSyncResponse' smart constructor.
-data ListResourceDataSyncResponse = ListResourceDataSyncResponse'
-  { _lrdsrsResourceDataSyncItems :: !(Maybe [ResourceDataSyncItem])
-  , _lrdsrsNextToken             :: !(Maybe Text)
-  , _lrdsrsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListResourceDataSyncResponse =
+  ListResourceDataSyncResponse'
+    { _lrdsrsResourceDataSyncItems :: !(Maybe [ResourceDataSyncItem])
+    , _lrdsrsNextToken             :: !(Maybe Text)
+    , _lrdsrsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListResourceDataSyncResponse' with the minimum fields required to make a request.

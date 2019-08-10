@@ -57,11 +57,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'associateNode' smart constructor.
-data AssociateNode = AssociateNode'
-  { _anServerName       :: !Text
-  , _anNodeName         :: !Text
-  , _anEngineAttributes :: ![EngineAttribute]
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data AssociateNode =
+  AssociateNode'
+    { _anServerName       :: !Text
+    , _anNodeName         :: !Text
+    , _anEngineAttributes :: ![EngineAttribute]
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateNode' with the minimum fields required to make a request.
@@ -136,10 +138,12 @@ instance ToQuery AssociateNode where
         toQuery = const mempty
 
 -- | /See:/ 'associateNodeResponse' smart constructor.
-data AssociateNodeResponse = AssociateNodeResponse'
-  { _anrsNodeAssociationStatusToken :: !(Maybe Text)
-  , _anrsResponseStatus             :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssociateNodeResponse =
+  AssociateNodeResponse'
+    { _anrsNodeAssociationStatusToken :: !(Maybe Text)
+    , _anrsResponseStatus             :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateNodeResponse' with the minimum fields required to make a request.

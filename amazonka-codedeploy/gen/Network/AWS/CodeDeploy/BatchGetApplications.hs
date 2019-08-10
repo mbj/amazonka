@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'batchGetApplications' smart constructor.
-newtype BatchGetApplications = BatchGetApplications'
-  { _bgaApplicationNames :: [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype BatchGetApplications =
+  BatchGetApplications'
+    { _bgaApplicationNames :: [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchGetApplications' with the minimum fields required to make a request.
@@ -110,10 +112,12 @@ instance ToQuery BatchGetApplications where
 --
 --
 -- /See:/ 'batchGetApplicationsResponse' smart constructor.
-data BatchGetApplicationsResponse = BatchGetApplicationsResponse'
-  { _bgarsApplicationsInfo :: !(Maybe [ApplicationInfo])
-  , _bgarsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchGetApplicationsResponse =
+  BatchGetApplicationsResponse'
+    { _bgarsApplicationsInfo :: !(Maybe [ApplicationInfo])
+    , _bgarsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchGetApplicationsResponse' with the minimum fields required to make a request.

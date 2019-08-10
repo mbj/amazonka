@@ -53,10 +53,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteVault' smart constructor.
-data DeleteVault = DeleteVault'
-  { _dAccountId :: !Text
-  , _dVaultName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteVault =
+  DeleteVault'
+    { _dAccountId :: !Text
+    , _dVaultName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteVault' with the minimum fields required to make a request.

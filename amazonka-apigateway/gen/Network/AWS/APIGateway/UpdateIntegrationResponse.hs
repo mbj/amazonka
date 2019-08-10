@@ -56,13 +56,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateIntegrationResponse' smart constructor.
-data UpdateIntegrationResponse = UpdateIntegrationResponse'
-  { _uiPatchOperations :: !(Maybe [PatchOperation])
-  , _uiRestAPIId       :: !Text
-  , _uiResourceId      :: !Text
-  , _uiHttpMethod      :: !Text
-  , _uiStatusCode      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateIntegrationResponse =
+  UpdateIntegrationResponse'
+    { _uiPatchOperations :: !(Maybe [PatchOperation])
+    , _uiRestAPIId       :: !Text
+    , _uiResourceId      :: !Text
+    , _uiHttpMethod      :: !Text
+    , _uiStatusCode      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateIntegrationResponse' with the minimum fields required to make a request.

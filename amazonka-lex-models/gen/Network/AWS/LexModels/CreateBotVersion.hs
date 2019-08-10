@@ -64,10 +64,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createBotVersion' smart constructor.
-data CreateBotVersion = CreateBotVersion'
-  { _cbvChecksum :: !(Maybe Text)
-  , _cbvName     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateBotVersion =
+  CreateBotVersion'
+    { _cbvChecksum :: !(Maybe Text)
+    , _cbvName     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateBotVersion' with the minimum fields required to make a request.
@@ -139,24 +141,26 @@ instance ToQuery CreateBotVersion where
         toQuery = const mempty
 
 -- | /See:/ 'createBotVersionResponse' smart constructor.
-data CreateBotVersionResponse = CreateBotVersionResponse'
-  { _cbvrsFailureReason           :: !(Maybe Text)
-  , _cbvrsStatus                  :: !(Maybe LexStatus)
-  , _cbvrsAbortStatement          :: !(Maybe Statement)
-  , _cbvrsIntents                 :: !(Maybe [Intent])
-  , _cbvrsChecksum                :: !(Maybe Text)
-  , _cbvrsLocale                  :: !(Maybe Locale)
-  , _cbvrsCreatedDate             :: !(Maybe POSIX)
-  , _cbvrsName                    :: !(Maybe Text)
-  , _cbvrsVersion                 :: !(Maybe Text)
-  , _cbvrsIdleSessionTTLInSeconds :: !(Maybe Nat)
-  , _cbvrsClarificationPrompt     :: !(Maybe Prompt)
-  , _cbvrsVoiceId                 :: !(Maybe Text)
-  , _cbvrsLastUpdatedDate         :: !(Maybe POSIX)
-  , _cbvrsChildDirected           :: !(Maybe Bool)
-  , _cbvrsDescription             :: !(Maybe Text)
-  , _cbvrsResponseStatus          :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateBotVersionResponse =
+  CreateBotVersionResponse'
+    { _cbvrsFailureReason           :: !(Maybe Text)
+    , _cbvrsStatus                  :: !(Maybe LexStatus)
+    , _cbvrsAbortStatement          :: !(Maybe Statement)
+    , _cbvrsIntents                 :: !(Maybe [Intent])
+    , _cbvrsChecksum                :: !(Maybe Text)
+    , _cbvrsLocale                  :: !(Maybe Locale)
+    , _cbvrsCreatedDate             :: !(Maybe POSIX)
+    , _cbvrsName                    :: !(Maybe Text)
+    , _cbvrsVersion                 :: !(Maybe Text)
+    , _cbvrsIdleSessionTTLInSeconds :: !(Maybe Nat)
+    , _cbvrsClarificationPrompt     :: !(Maybe Prompt)
+    , _cbvrsVoiceId                 :: !(Maybe Text)
+    , _cbvrsLastUpdatedDate         :: !(Maybe POSIX)
+    , _cbvrsChildDirected           :: !(Maybe Bool)
+    , _cbvrsDescription             :: !(Maybe Text)
+    , _cbvrsResponseStatus          :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateBotVersionResponse' with the minimum fields required to make a request.

@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'removeSourceIdentifierFromSubscription' smart constructor.
-data RemoveSourceIdentifierFromSubscription = RemoveSourceIdentifierFromSubscription'
-  { _rsifsSubscriptionName :: !Text
-  , _rsifsSourceIdentifier :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RemoveSourceIdentifierFromSubscription =
+  RemoveSourceIdentifierFromSubscription'
+    { _rsifsSubscriptionName :: !Text
+    , _rsifsSourceIdentifier :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RemoveSourceIdentifierFromSubscription' with the minimum fields required to make a request.
@@ -126,10 +128,12 @@ instance ToQuery
                "SourceIdentifier" =: _rsifsSourceIdentifier]
 
 -- | /See:/ 'removeSourceIdentifierFromSubscriptionResponse' smart constructor.
-data RemoveSourceIdentifierFromSubscriptionResponse = RemoveSourceIdentifierFromSubscriptionResponse'
-  { _rsifsrsEventSubscription :: !(Maybe EventSubscription)
-  , _rsifsrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RemoveSourceIdentifierFromSubscriptionResponse =
+  RemoveSourceIdentifierFromSubscriptionResponse'
+    { _rsifsrsEventSubscription :: !(Maybe EventSubscription)
+    , _rsifsrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RemoveSourceIdentifierFromSubscriptionResponse' with the minimum fields required to make a request.

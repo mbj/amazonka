@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteAddressBook' smart constructor.
-newtype DeleteAddressBook = DeleteAddressBook'
-  { _dabAddressBookARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteAddressBook =
+  DeleteAddressBook'
+    { _dabAddressBookARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteAddressBook' with the minimum fields required to make a request.
@@ -99,9 +101,11 @@ instance ToQuery DeleteAddressBook where
         toQuery = const mempty
 
 -- | /See:/ 'deleteAddressBookResponse' smart constructor.
-newtype DeleteAddressBookResponse = DeleteAddressBookResponse'
-  { _dabrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteAddressBookResponse =
+  DeleteAddressBookResponse'
+    { _dabrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteAddressBookResponse' with the minimum fields required to make a request.

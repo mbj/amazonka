@@ -42,9 +42,11 @@ import Network.AWS.SMS.Types
 import Network.AWS.SMS.Types.Product
 
 -- | /See:/ 'deleteReplicationJob' smart constructor.
-newtype DeleteReplicationJob = DeleteReplicationJob'
-  { _drjReplicationJobId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteReplicationJob =
+  DeleteReplicationJob'
+    { _drjReplicationJobId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteReplicationJob' with the minimum fields required to make a request.
@@ -100,9 +102,11 @@ instance ToQuery DeleteReplicationJob where
         toQuery = const mempty
 
 -- | /See:/ 'deleteReplicationJobResponse' smart constructor.
-newtype DeleteReplicationJobResponse = DeleteReplicationJobResponse'
-  { _drjrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteReplicationJobResponse =
+  DeleteReplicationJobResponse'
+    { _drjrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteReplicationJobResponse' with the minimum fields required to make a request.

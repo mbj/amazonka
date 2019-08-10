@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeSecurityGroupReferences' smart constructor.
-data DescribeSecurityGroupReferences = DescribeSecurityGroupReferences'
-  { _dsgrDryRun  :: !(Maybe Bool)
-  , _dsgrGroupId :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeSecurityGroupReferences =
+  DescribeSecurityGroupReferences'
+    { _dsgrDryRun  :: !(Maybe Bool)
+    , _dsgrGroupId :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeSecurityGroupReferences' with the minimum fields required to make a request.
@@ -110,10 +112,12 @@ instance ToQuery DescribeSecurityGroupReferences
                toQueryList "GroupId" _dsgrGroupId]
 
 -- | /See:/ 'describeSecurityGroupReferencesResponse' smart constructor.
-data DescribeSecurityGroupReferencesResponse = DescribeSecurityGroupReferencesResponse'
-  { _dsgrrsSecurityGroupReferenceSet :: !(Maybe [SecurityGroupReference])
-  , _dsgrrsResponseStatus            :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeSecurityGroupReferencesResponse =
+  DescribeSecurityGroupReferencesResponse'
+    { _dsgrrsSecurityGroupReferenceSet :: !(Maybe [SecurityGroupReference])
+    , _dsgrrsResponseStatus            :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeSecurityGroupReferencesResponse' with the minimum fields required to make a request.

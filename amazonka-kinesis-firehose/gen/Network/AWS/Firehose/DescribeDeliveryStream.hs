@@ -47,11 +47,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeDeliveryStream' smart constructor.
-data DescribeDeliveryStream = DescribeDeliveryStream'
-  { _ddsExclusiveStartDestinationId :: !(Maybe Text)
-  , _ddsLimit                       :: !(Maybe Nat)
-  , _ddsDeliveryStreamName          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDeliveryStream =
+  DescribeDeliveryStream'
+    { _ddsExclusiveStartDestinationId :: !(Maybe Text)
+    , _ddsLimit                       :: !(Maybe Nat)
+    , _ddsDeliveryStreamName          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDeliveryStream' with the minimum fields required to make a request.
@@ -128,10 +130,12 @@ instance ToQuery DescribeDeliveryStream where
         toQuery = const mempty
 
 -- | /See:/ 'describeDeliveryStreamResponse' smart constructor.
-data DescribeDeliveryStreamResponse = DescribeDeliveryStreamResponse'
-  { _ddsrsResponseStatus            :: !Int
-  , _ddsrsDeliveryStreamDescription :: !DeliveryStreamDescription
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data DescribeDeliveryStreamResponse =
+  DescribeDeliveryStreamResponse'
+    { _ddsrsResponseStatus            :: !Int
+    , _ddsrsDeliveryStreamDescription :: !DeliveryStreamDescription
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDeliveryStreamResponse' with the minimum fields required to make a request.

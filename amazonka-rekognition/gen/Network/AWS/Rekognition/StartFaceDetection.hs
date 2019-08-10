@@ -51,13 +51,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'startFaceDetection' smart constructor.
-data StartFaceDetection = StartFaceDetection'
-  { _sfdJobTag              :: !(Maybe Text)
-  , _sfdNotificationChannel :: !(Maybe NotificationChannel)
-  , _sfdClientRequestToken  :: !(Maybe Text)
-  , _sfdFaceAttributes      :: !(Maybe FaceAttributes)
-  , _sfdVideo               :: !Video
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartFaceDetection =
+  StartFaceDetection'
+    { _sfdJobTag              :: !(Maybe Text)
+    , _sfdNotificationChannel :: !(Maybe NotificationChannel)
+    , _sfdClientRequestToken  :: !(Maybe Text)
+    , _sfdFaceAttributes      :: !(Maybe FaceAttributes)
+    , _sfdVideo               :: !Video
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartFaceDetection' with the minimum fields required to make a request.
@@ -148,10 +150,12 @@ instance ToQuery StartFaceDetection where
         toQuery = const mempty
 
 -- | /See:/ 'startFaceDetectionResponse' smart constructor.
-data StartFaceDetectionResponse = StartFaceDetectionResponse'
-  { _sfdrsJobId          :: !(Maybe Text)
-  , _sfdrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartFaceDetectionResponse =
+  StartFaceDetectionResponse'
+    { _sfdrsJobId          :: !(Maybe Text)
+    , _sfdrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartFaceDetectionResponse' with the minimum fields required to make a request.

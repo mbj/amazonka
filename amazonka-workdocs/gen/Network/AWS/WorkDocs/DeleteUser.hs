@@ -43,10 +43,12 @@ import Network.AWS.WorkDocs.Types
 import Network.AWS.WorkDocs.Types.Product
 
 -- | /See:/ 'deleteUser' smart constructor.
-data DeleteUser = DeleteUser'
-  { _duuAuthenticationToken :: !(Maybe (Sensitive Text))
-  , _duuUserId              :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data DeleteUser =
+  DeleteUser'
+    { _duuAuthenticationToken :: !(Maybe (Sensitive Text))
+    , _duuUserId              :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteUser' with the minimum fields required to make a request.

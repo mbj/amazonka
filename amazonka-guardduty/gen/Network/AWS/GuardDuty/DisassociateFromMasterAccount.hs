@@ -42,9 +42,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'disassociateFromMasterAccount' smart constructor.
-newtype DisassociateFromMasterAccount = DisassociateFromMasterAccount'
-  { _dfmaDetectorId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DisassociateFromMasterAccount =
+  DisassociateFromMasterAccount'
+    { _dfmaDetectorId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisassociateFromMasterAccount' with the minimum fields required to make a request.
@@ -99,9 +101,11 @@ instance ToQuery DisassociateFromMasterAccount where
         toQuery = const mempty
 
 -- | /See:/ 'disassociateFromMasterAccountResponse' smart constructor.
-newtype DisassociateFromMasterAccountResponse = DisassociateFromMasterAccountResponse'
-  { _dfmarsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DisassociateFromMasterAccountResponse =
+  DisassociateFromMasterAccountResponse'
+    { _dfmarsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisassociateFromMasterAccountResponse' with the minimum fields required to make a request.

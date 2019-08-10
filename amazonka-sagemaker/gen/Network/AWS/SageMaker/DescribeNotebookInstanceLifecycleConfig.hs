@@ -52,9 +52,11 @@ import Network.AWS.SageMaker.Types
 import Network.AWS.SageMaker.Types.Product
 
 -- | /See:/ 'describeNotebookInstanceLifecycleConfig' smart constructor.
-newtype DescribeNotebookInstanceLifecycleConfig = DescribeNotebookInstanceLifecycleConfig'
-  { _dNotebookInstanceLifecycleConfigName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeNotebookInstanceLifecycleConfig =
+  DescribeNotebookInstanceLifecycleConfig'
+    { _dNotebookInstanceLifecycleConfigName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeNotebookInstanceLifecycleConfig' with the minimum fields required to make a request.
@@ -135,15 +137,17 @@ instance ToQuery
         toQuery = const mempty
 
 -- | /See:/ 'describeNotebookInstanceLifecycleConfigResponse' smart constructor.
-data DescribeNotebookInstanceLifecycleConfigResponse = DescribeNotebookInstanceLifecycleConfigResponse'
-  { _dnilcrsCreationTime :: !(Maybe POSIX)
-  , _dnilcrsOnCreate :: !(Maybe [NotebookInstanceLifecycleHook])
-  , _dnilcrsLastModifiedTime :: !(Maybe POSIX)
-  , _dnilcrsNotebookInstanceLifecycleConfigARN :: !(Maybe Text)
-  , _dnilcrsOnStart :: !(Maybe [NotebookInstanceLifecycleHook])
-  , _dnilcrsNotebookInstanceLifecycleConfigName :: !(Maybe Text)
-  , _dnilcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeNotebookInstanceLifecycleConfigResponse =
+  DescribeNotebookInstanceLifecycleConfigResponse'
+    { _dnilcrsCreationTime :: !(Maybe POSIX)
+    , _dnilcrsOnCreate :: !(Maybe [NotebookInstanceLifecycleHook])
+    , _dnilcrsLastModifiedTime :: !(Maybe POSIX)
+    , _dnilcrsNotebookInstanceLifecycleConfigARN :: !(Maybe Text)
+    , _dnilcrsOnStart :: !(Maybe [NotebookInstanceLifecycleHook])
+    , _dnilcrsNotebookInstanceLifecycleConfigName :: !(Maybe Text)
+    , _dnilcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeNotebookInstanceLifecycleConfigResponse' with the minimum fields required to make a request.

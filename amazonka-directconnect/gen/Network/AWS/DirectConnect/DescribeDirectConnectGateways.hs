@@ -52,11 +52,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeDirectConnectGateways' smart constructor.
-data DescribeDirectConnectGateways = DescribeDirectConnectGateways'
-  { _ddcgDirectConnectGatewayId :: !(Maybe Text)
-  , _ddcgNextToken              :: !(Maybe Text)
-  , _ddcgMaxResults             :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDirectConnectGateways =
+  DescribeDirectConnectGateways'
+    { _ddcgDirectConnectGatewayId :: !(Maybe Text)
+    , _ddcgNextToken              :: !(Maybe Text)
+    , _ddcgMaxResults             :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDirectConnectGateways' with the minimum fields required to make a request.
@@ -138,11 +140,13 @@ instance ToQuery DescribeDirectConnectGateways where
 --
 --
 -- /See:/ 'describeDirectConnectGatewaysResponse' smart constructor.
-data DescribeDirectConnectGatewaysResponse = DescribeDirectConnectGatewaysResponse'
-  { _ddcgrsDirectConnectGateways :: !(Maybe [DirectConnectGateway])
-  , _ddcgrsNextToken             :: !(Maybe Text)
-  , _ddcgrsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDirectConnectGatewaysResponse =
+  DescribeDirectConnectGatewaysResponse'
+    { _ddcgrsDirectConnectGateways :: !(Maybe [DirectConnectGateway])
+    , _ddcgrsNextToken             :: !(Maybe Text)
+    , _ddcgrsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDirectConnectGatewaysResponse' with the minimum fields required to make a request.

@@ -42,11 +42,13 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'putBucketMetricsConfiguration' smart constructor.
-data PutBucketMetricsConfiguration = PutBucketMetricsConfiguration'
-  { _pbmcBucket               :: !BucketName
-  , _pbmcId                   :: !Text
-  , _pbmcMetricsConfiguration :: !MetricsConfiguration
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutBucketMetricsConfiguration =
+  PutBucketMetricsConfiguration'
+    { _pbmcBucket               :: !BucketName
+    , _pbmcId                   :: !Text
+    , _pbmcMetricsConfiguration :: !MetricsConfiguration
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutBucketMetricsConfiguration' with the minimum fields required to make a request.

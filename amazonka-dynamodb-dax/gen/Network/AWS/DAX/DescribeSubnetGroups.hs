@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeSubnetGroups' smart constructor.
-data DescribeSubnetGroups = DescribeSubnetGroups'
-  { _dsgSubnetGroupNames :: !(Maybe [Text])
-  , _dsgNextToken        :: !(Maybe Text)
-  , _dsgMaxResults       :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeSubnetGroups =
+  DescribeSubnetGroups'
+    { _dsgSubnetGroupNames :: !(Maybe [Text])
+    , _dsgNextToken        :: !(Maybe Text)
+    , _dsgMaxResults       :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeSubnetGroups' with the minimum fields required to make a request.
@@ -126,11 +128,13 @@ instance ToQuery DescribeSubnetGroups where
         toQuery = const mempty
 
 -- | /See:/ 'describeSubnetGroupsResponse' smart constructor.
-data DescribeSubnetGroupsResponse = DescribeSubnetGroupsResponse'
-  { _dsgsrsSubnetGroups   :: !(Maybe [SubnetGroup])
-  , _dsgsrsNextToken      :: !(Maybe Text)
-  , _dsgsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeSubnetGroupsResponse =
+  DescribeSubnetGroupsResponse'
+    { _dsgsrsSubnetGroups   :: !(Maybe [SubnetGroup])
+    , _dsgsrsNextToken      :: !(Maybe Text)
+    , _dsgsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeSubnetGroupsResponse' with the minimum fields required to make a request.

@@ -59,14 +59,16 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createPreset' smart constructor.
-data CreatePreset = CreatePreset'
-  { _cpVideo       :: !(Maybe VideoParameters)
-  , _cpThumbnails  :: !(Maybe Thumbnails)
-  , _cpDescription :: !(Maybe Text)
-  , _cpAudio       :: !(Maybe AudioParameters)
-  , _cpName        :: !Text
-  , _cpContainer   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreatePreset =
+  CreatePreset'
+    { _cpVideo       :: !(Maybe VideoParameters)
+    , _cpThumbnails  :: !(Maybe Thumbnails)
+    , _cpDescription :: !(Maybe Text)
+    , _cpAudio       :: !(Maybe AudioParameters)
+    , _cpName        :: !Text
+    , _cpContainer   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreatePreset' with the minimum fields required to make a request.
@@ -161,11 +163,13 @@ instance ToQuery CreatePreset where
 --
 --
 -- /See:/ 'createPresetResponse' smart constructor.
-data CreatePresetResponse = CreatePresetResponse'
-  { _cprsWarning        :: !(Maybe Text)
-  , _cprsPreset         :: !(Maybe Preset)
-  , _cprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreatePresetResponse =
+  CreatePresetResponse'
+    { _cprsWarning        :: !(Maybe Text)
+    , _cprsPreset         :: !(Maybe Preset)
+    , _cprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreatePresetResponse' with the minimum fields required to make a request.

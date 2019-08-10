@@ -44,10 +44,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createGroupCertificateAuthority' smart constructor.
-data CreateGroupCertificateAuthority = CreateGroupCertificateAuthority'
-  { _cgcaAmznClientToken :: !(Maybe Text)
-  , _cgcaGroupId         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateGroupCertificateAuthority =
+  CreateGroupCertificateAuthority'
+    { _cgcaAmznClientToken :: !(Maybe Text)
+    , _cgcaGroupId         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateGroupCertificateAuthority' with the minimum fields required to make a request.
@@ -112,10 +114,12 @@ instance ToQuery CreateGroupCertificateAuthority
         toQuery = const mempty
 
 -- | /See:/ 'createGroupCertificateAuthorityResponse' smart constructor.
-data CreateGroupCertificateAuthorityResponse = CreateGroupCertificateAuthorityResponse'
-  { _cgcarsGroupCertificateAuthorityARN :: !(Maybe Text)
-  , _cgcarsResponseStatus               :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateGroupCertificateAuthorityResponse =
+  CreateGroupCertificateAuthorityResponse'
+    { _cgcarsGroupCertificateAuthorityARN :: !(Maybe Text)
+    , _cgcarsResponseStatus               :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateGroupCertificateAuthorityResponse' with the minimum fields required to make a request.

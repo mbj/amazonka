@@ -52,12 +52,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeEventAggregates' smart constructor.
-data DescribeEventAggregates = DescribeEventAggregates'
-  { _deaNextToken      :: !(Maybe Text)
-  , _deaFilter         :: !(Maybe EventFilter)
-  , _deaMaxResults     :: !(Maybe Nat)
-  , _deaAggregateField :: !EventAggregateField
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeEventAggregates =
+  DescribeEventAggregates'
+    { _deaNextToken      :: !(Maybe Text)
+    , _deaFilter         :: !(Maybe EventFilter)
+    , _deaMaxResults     :: !(Maybe Nat)
+    , _deaAggregateField :: !EventAggregateField
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEventAggregates' with the minimum fields required to make a request.
@@ -148,11 +150,13 @@ instance ToQuery DescribeEventAggregates where
         toQuery = const mempty
 
 -- | /See:/ 'describeEventAggregatesResponse' smart constructor.
-data DescribeEventAggregatesResponse = DescribeEventAggregatesResponse'
-  { _drsNextToken       :: !(Maybe Text)
-  , _drsEventAggregates :: !(Maybe [EventAggregate])
-  , _drsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeEventAggregatesResponse =
+  DescribeEventAggregatesResponse'
+    { _drsNextToken       :: !(Maybe Text)
+    , _drsEventAggregates :: !(Maybe [EventAggregate])
+    , _drsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEventAggregatesResponse' with the minimum fields required to make a request.

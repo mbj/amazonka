@@ -56,20 +56,22 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateProject' smart constructor.
-data UpdateProject = UpdateProject'
-  { _upArtifacts        :: !(Maybe ProjectArtifacts)
-  , _upEnvironment      :: !(Maybe ProjectEnvironment)
-  , _upBadgeEnabled     :: !(Maybe Bool)
-  , _upCache            :: !(Maybe ProjectCache)
-  , _upVpcConfig        :: !(Maybe VPCConfig)
-  , _upSource           :: !(Maybe ProjectSource)
-  , _upEncryptionKey    :: !(Maybe Text)
-  , _upDescription      :: !(Maybe Text)
-  , _upServiceRole      :: !(Maybe Text)
-  , _upTags             :: !(Maybe [Tag])
-  , _upTimeoutInMinutes :: !(Maybe Nat)
-  , _upName             :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateProject =
+  UpdateProject'
+    { _upArtifacts        :: !(Maybe ProjectArtifacts)
+    , _upEnvironment      :: !(Maybe ProjectEnvironment)
+    , _upBadgeEnabled     :: !(Maybe Bool)
+    , _upCache            :: !(Maybe ProjectCache)
+    , _upVpcConfig        :: !(Maybe VPCConfig)
+    , _upSource           :: !(Maybe ProjectSource)
+    , _upEncryptionKey    :: !(Maybe Text)
+    , _upDescription      :: !(Maybe Text)
+    , _upServiceRole      :: !(Maybe Text)
+    , _upTags             :: !(Maybe [Tag])
+    , _upTimeoutInMinutes :: !(Maybe Nat)
+    , _upName             :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateProject' with the minimum fields required to make a request.
@@ -213,10 +215,12 @@ instance ToQuery UpdateProject where
         toQuery = const mempty
 
 -- | /See:/ 'updateProjectResponse' smart constructor.
-data UpdateProjectResponse = UpdateProjectResponse'
-  { _uprsProject        :: !(Maybe Project)
-  , _uprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateProjectResponse =
+  UpdateProjectResponse'
+    { _uprsProject        :: !(Maybe Project)
+    , _uprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateProjectResponse' with the minimum fields required to make a request.

@@ -53,12 +53,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeFlowLogs' smart constructor.
-data DescribeFlowLogs = DescribeFlowLogs'
-  { _dNextToken  :: !(Maybe Text)
-  , _dFlowLogIds :: !(Maybe [Text])
-  , _dFilter     :: !(Maybe [Filter])
-  , _dMaxResults :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeFlowLogs =
+  DescribeFlowLogs'
+    { _dNextToken  :: !(Maybe Text)
+    , _dFlowLogIds :: !(Maybe [Text])
+    , _dFilter     :: !(Maybe [Filter])
+    , _dMaxResults :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeFlowLogs' with the minimum fields required to make a request.
@@ -136,11 +138,13 @@ instance ToQuery DescribeFlowLogs where
 --
 --
 -- /See:/ 'describeFlowLogsResponse' smart constructor.
-data DescribeFlowLogsResponse = DescribeFlowLogsResponse'
-  { _dflsrsNextToken      :: !(Maybe Text)
-  , _dflsrsFlowLogs       :: !(Maybe [FlowLog])
-  , _dflsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeFlowLogsResponse =
+  DescribeFlowLogsResponse'
+    { _dflsrsNextToken      :: !(Maybe Text)
+    , _dflsrsFlowLogs       :: !(Maybe [FlowLog])
+    , _dflsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeFlowLogsResponse' with the minimum fields required to make a request.

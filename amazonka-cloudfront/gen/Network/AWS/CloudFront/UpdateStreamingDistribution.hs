@@ -52,11 +52,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateStreamingDistribution' smart constructor.
-data UpdateStreamingDistribution = UpdateStreamingDistribution'
-  { _usdIfMatch                     :: !(Maybe Text)
-  , _usdStreamingDistributionConfig :: !StreamingDistributionConfig
-  , _usdId                          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateStreamingDistribution =
+  UpdateStreamingDistribution'
+    { _usdIfMatch                     :: !(Maybe Text)
+    , _usdStreamingDistributionConfig :: !StreamingDistributionConfig
+    , _usdId                          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateStreamingDistribution' with the minimum fields required to make a request.
@@ -132,11 +134,13 @@ instance ToQuery UpdateStreamingDistribution where
 --
 --
 -- /See:/ 'updateStreamingDistributionResponse' smart constructor.
-data UpdateStreamingDistributionResponse = UpdateStreamingDistributionResponse'
-  { _usdrsETag                  :: !(Maybe Text)
-  , _usdrsStreamingDistribution :: !(Maybe StreamingDistribution)
-  , _usdrsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateStreamingDistributionResponse =
+  UpdateStreamingDistributionResponse'
+    { _usdrsETag                  :: !(Maybe Text)
+    , _usdrsStreamingDistribution :: !(Maybe StreamingDistribution)
+    , _usdrsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateStreamingDistributionResponse' with the minimum fields required to make a request.

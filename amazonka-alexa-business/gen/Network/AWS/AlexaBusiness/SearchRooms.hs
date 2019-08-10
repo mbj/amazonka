@@ -53,12 +53,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'searchRooms' smart constructor.
-data SearchRooms = SearchRooms'
-  { _srFilters      :: !(Maybe [Filter])
-  , _srSortCriteria :: !(Maybe [Sort])
-  , _srNextToken    :: !(Maybe Text)
-  , _srMaxResults   :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SearchRooms =
+  SearchRooms'
+    { _srFilters      :: !(Maybe [Filter])
+    , _srSortCriteria :: !(Maybe [Sort])
+    , _srNextToken    :: !(Maybe Text)
+    , _srMaxResults   :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SearchRooms' with the minimum fields required to make a request.
@@ -146,12 +148,14 @@ instance ToQuery SearchRooms where
         toQuery = const mempty
 
 -- | /See:/ 'searchRoomsResponse' smart constructor.
-data SearchRoomsResponse = SearchRoomsResponse'
-  { _srrsRooms          :: !(Maybe [RoomData])
-  , _srrsNextToken      :: !(Maybe Text)
-  , _srrsTotalCount     :: !(Maybe Int)
-  , _srrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SearchRoomsResponse =
+  SearchRoomsResponse'
+    { _srrsRooms          :: !(Maybe [RoomData])
+    , _srrsNextToken      :: !(Maybe Text)
+    , _srrsTotalCount     :: !(Maybe Int)
+    , _srrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SearchRoomsResponse' with the minimum fields required to make a request.

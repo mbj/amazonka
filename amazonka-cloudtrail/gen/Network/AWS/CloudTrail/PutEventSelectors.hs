@@ -65,10 +65,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putEventSelectors' smart constructor.
-data PutEventSelectors = PutEventSelectors'
-  { _pesTrailName      :: !Text
-  , _pesEventSelectors :: ![EventSelector]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutEventSelectors =
+  PutEventSelectors'
+    { _pesTrailName      :: !Text
+    , _pesEventSelectors :: ![EventSelector]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutEventSelectors' with the minimum fields required to make a request.
@@ -132,11 +134,13 @@ instance ToQuery PutEventSelectors where
         toQuery = const mempty
 
 -- | /See:/ 'putEventSelectorsResponse' smart constructor.
-data PutEventSelectorsResponse = PutEventSelectorsResponse'
-  { _pesrsTrailARN       :: !(Maybe Text)
-  , _pesrsEventSelectors :: !(Maybe [EventSelector])
-  , _pesrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutEventSelectorsResponse =
+  PutEventSelectorsResponse'
+    { _pesrsTrailARN       :: !(Maybe Text)
+    , _pesrsEventSelectors :: !(Maybe [EventSelector])
+    , _pesrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutEventSelectorsResponse' with the minimum fields required to make a request.

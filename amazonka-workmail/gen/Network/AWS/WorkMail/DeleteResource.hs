@@ -45,10 +45,12 @@ import Network.AWS.WorkMail.Types
 import Network.AWS.WorkMail.Types.Product
 
 -- | /See:/ 'deleteResource' smart constructor.
-data DeleteResource = DeleteResource'
-  { _dOrganizationId :: !Text
-  , _dResourceId     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteResource =
+  DeleteResource'
+    { _dOrganizationId :: !Text
+    , _dResourceId     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteResource' with the minimum fields required to make a request.
@@ -110,9 +112,11 @@ instance ToQuery DeleteResource where
         toQuery = const mempty
 
 -- | /See:/ 'deleteResourceResponse' smart constructor.
-newtype DeleteResourceResponse = DeleteResourceResponse'
-  { _drsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteResourceResponse =
+  DeleteResourceResponse'
+    { _drsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteResourceResponse' with the minimum fields required to make a request.

@@ -48,12 +48,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'copyImage' smart constructor.
-data CopyImage = CopyImage'
-  { _ciDestinationImageDescription :: !(Maybe Text)
-  , _ciSourceImageName             :: !Text
-  , _ciDestinationImageName        :: !Text
-  , _ciDestinationRegion           :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CopyImage =
+  CopyImage'
+    { _ciDestinationImageDescription :: !(Maybe Text)
+    , _ciSourceImageName             :: !Text
+    , _ciDestinationImageName        :: !Text
+    , _ciDestinationRegion           :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CopyImage' with the minimum fields required to make a request.
@@ -138,10 +140,12 @@ instance ToQuery CopyImage where
         toQuery = const mempty
 
 -- | /See:/ 'copyImageResponse' smart constructor.
-data CopyImageResponse = CopyImageResponse'
-  { _cirsDestinationImageName :: !(Maybe Text)
-  , _cirsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CopyImageResponse =
+  CopyImageResponse'
+    { _cirsDestinationImageName :: !(Maybe Text)
+    , _cirsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CopyImageResponse' with the minimum fields required to make a request.

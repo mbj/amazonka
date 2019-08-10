@@ -49,10 +49,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteThing' smart constructor.
-data DeleteThing = DeleteThing'
-  { _dtExpectedVersion :: !(Maybe Integer)
-  , _dtThingName       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteThing =
+  DeleteThing'
+    { _dtExpectedVersion :: !(Maybe Integer)
+    , _dtThingName       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteThing' with the minimum fields required to make a request.
@@ -105,9 +107,11 @@ instance ToQuery DeleteThing where
 --
 --
 -- /See:/ 'deleteThingResponse' smart constructor.
-newtype DeleteThingResponse = DeleteThingResponse'
-  { _ddrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteThingResponse =
+  DeleteThingResponse'
+    { _ddrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteThingResponse' with the minimum fields required to make a request.

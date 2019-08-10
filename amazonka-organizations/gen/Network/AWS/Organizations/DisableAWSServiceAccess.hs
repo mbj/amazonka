@@ -52,9 +52,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'disableAWSServiceAccess' smart constructor.
-newtype DisableAWSServiceAccess = DisableAWSServiceAccess'
-  { _dasaServicePrincipal :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DisableAWSServiceAccess =
+  DisableAWSServiceAccess'
+    { _dasaServicePrincipal :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisableAWSServiceAccess' with the minimum fields required to make a request.

@@ -47,9 +47,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteDiskSnapshot' smart constructor.
-newtype DeleteDiskSnapshot = DeleteDiskSnapshot'
-  { _ddsDiskSnapshotName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteDiskSnapshot =
+  DeleteDiskSnapshot'
+    { _ddsDiskSnapshotName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteDiskSnapshot' with the minimum fields required to make a request.
@@ -106,10 +108,12 @@ instance ToQuery DeleteDiskSnapshot where
         toQuery = const mempty
 
 -- | /See:/ 'deleteDiskSnapshotResponse' smart constructor.
-data DeleteDiskSnapshotResponse = DeleteDiskSnapshotResponse'
-  { _ddsrsOperations     :: !(Maybe [Operation])
-  , _ddsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteDiskSnapshotResponse =
+  DeleteDiskSnapshotResponse'
+    { _ddsrsOperations     :: !(Maybe [Operation])
+    , _ddsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteDiskSnapshotResponse' with the minimum fields required to make a request.

@@ -50,9 +50,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getCloudFrontOriginAccessIdentityConfig' smart constructor.
-newtype GetCloudFrontOriginAccessIdentityConfig = GetCloudFrontOriginAccessIdentityConfig'
-  { _gcfoaicId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetCloudFrontOriginAccessIdentityConfig =
+  GetCloudFrontOriginAccessIdentityConfig'
+    { _gcfoaicId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetCloudFrontOriginAccessIdentityConfig' with the minimum fields required to make a request.
@@ -115,11 +117,13 @@ instance ToQuery
 --
 --
 -- /See:/ 'getCloudFrontOriginAccessIdentityConfigResponse' smart constructor.
-data GetCloudFrontOriginAccessIdentityConfigResponse = GetCloudFrontOriginAccessIdentityConfigResponse'
-  { _gcfoaicrsCloudFrontOriginAccessIdentityConfig :: !(Maybe CloudFrontOriginAccessIdentityConfig)
-  , _gcfoaicrsETag :: !(Maybe Text)
-  , _gcfoaicrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetCloudFrontOriginAccessIdentityConfigResponse =
+  GetCloudFrontOriginAccessIdentityConfigResponse'
+    { _gcfoaicrsCloudFrontOriginAccessIdentityConfig :: !(Maybe CloudFrontOriginAccessIdentityConfig)
+    , _gcfoaicrsETag :: !(Maybe Text)
+    , _gcfoaicrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetCloudFrontOriginAccessIdentityConfigResponse' with the minimum fields required to make a request.

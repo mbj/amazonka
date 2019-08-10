@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'associateSkillGroupWithRoom' smart constructor.
-data AssociateSkillGroupWithRoom = AssociateSkillGroupWithRoom'
-  { _asgwrSkillGroupARN :: !(Maybe Text)
-  , _asgwrRoomARN       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssociateSkillGroupWithRoom =
+  AssociateSkillGroupWithRoom'
+    { _asgwrSkillGroupARN :: !(Maybe Text)
+    , _asgwrRoomARN       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateSkillGroupWithRoom' with the minimum fields required to make a request.
@@ -111,9 +113,11 @@ instance ToQuery AssociateSkillGroupWithRoom where
         toQuery = const mempty
 
 -- | /See:/ 'associateSkillGroupWithRoomResponse' smart constructor.
-newtype AssociateSkillGroupWithRoomResponse = AssociateSkillGroupWithRoomResponse'
-  { _asgwrrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AssociateSkillGroupWithRoomResponse =
+  AssociateSkillGroupWithRoomResponse'
+    { _asgwrrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateSkillGroupWithRoomResponse' with the minimum fields required to make a request.

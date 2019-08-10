@@ -24,10 +24,12 @@ import Network.AWS.Prelude
 -- | A discrete item that contains the description and URL of an artifact (such as a PDF).
 --
 -- /See:/ 'artifact' smart constructor.
-data Artifact = Artifact'
-  { _aURL         :: !(Maybe Text)
-  , _aDescription :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Artifact =
+  Artifact'
+    { _aURL         :: !(Maybe Text)
+    , _aDescription :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Artifact' with the minimum fields required to make a request.
@@ -62,12 +64,14 @@ instance NFData Artifact where
 -- | Representation of a job returned by the ListJobs operation.
 --
 -- /See:/ 'job' smart constructor.
-data Job = Job'
-  { _jobJobType      :: !JobType
-  , _jobJobId        :: !Text
-  , _jobIsCanceled   :: !Bool
-  , _jobCreationDate :: !ISO8601
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Job =
+  Job'
+    { _jobJobType      :: !JobType
+    , _jobJobId        :: !Text
+    , _jobIsCanceled   :: !Bool
+    , _jobCreationDate :: !ISO8601
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Job' with the minimum fields required to make a request.

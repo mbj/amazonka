@@ -46,9 +46,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteCORSPolicy' smart constructor.
-newtype DeleteCORSPolicy = DeleteCORSPolicy'
-  { _dcpContainerName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteCORSPolicy =
+  DeleteCORSPolicy'
+    { _dcpContainerName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteCORSPolicy' with the minimum fields required to make a request.
@@ -102,9 +104,11 @@ instance ToQuery DeleteCORSPolicy where
         toQuery = const mempty
 
 -- | /See:/ 'deleteCORSPolicyResponse' smart constructor.
-newtype DeleteCORSPolicyResponse = DeleteCORSPolicyResponse'
-  { _dcorsprsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteCORSPolicyResponse =
+  DeleteCORSPolicyResponse'
+    { _dcorsprsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteCORSPolicyResponse' with the minimum fields required to make a request.

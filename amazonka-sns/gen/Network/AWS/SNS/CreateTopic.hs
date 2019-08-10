@@ -49,9 +49,11 @@ import Network.AWS.SNS.Types.Product
 --
 --
 -- /See:/ 'createTopic' smart constructor.
-newtype CreateTopic = CreateTopic'
-  { _ctName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateTopic =
+  CreateTopic'
+    { _ctName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateTopic' with the minimum fields required to make a request.
@@ -100,10 +102,12 @@ instance ToQuery CreateTopic where
 --
 --
 -- /See:/ 'createTopicResponse' smart constructor.
-data CreateTopicResponse = CreateTopicResponse'
-  { _ctrsTopicARN       :: !(Maybe Text)
-  , _ctrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateTopicResponse =
+  CreateTopicResponse'
+    { _ctrsTopicARN       :: !(Maybe Text)
+    , _ctrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateTopicResponse' with the minimum fields required to make a request.

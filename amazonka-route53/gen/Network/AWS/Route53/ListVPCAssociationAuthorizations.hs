@@ -55,11 +55,13 @@ import Network.AWS.Route53.Types.Product
 --
 --
 -- /See:/ 'listVPCAssociationAuthorizations' smart constructor.
-data ListVPCAssociationAuthorizations = ListVPCAssociationAuthorizations'
-  { _lvaaNextToken    :: !(Maybe Text)
-  , _lvaaMaxResults   :: !(Maybe Text)
-  , _lvaaHostedZoneId :: !ResourceId
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListVPCAssociationAuthorizations =
+  ListVPCAssociationAuthorizations'
+    { _lvaaNextToken    :: !(Maybe Text)
+    , _lvaaMaxResults   :: !(Maybe Text)
+    , _lvaaHostedZoneId :: !ResourceId
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListVPCAssociationAuthorizations' with the minimum fields required to make a request.
@@ -137,12 +139,14 @@ instance ToQuery ListVPCAssociationAuthorizations
 --
 --
 -- /See:/ 'listVPCAssociationAuthorizationsResponse' smart constructor.
-data ListVPCAssociationAuthorizationsResponse = ListVPCAssociationAuthorizationsResponse'
-  { _lvaarsNextToken      :: !(Maybe Text)
-  , _lvaarsResponseStatus :: !Int
-  , _lvaarsHostedZoneId   :: !ResourceId
-  , _lvaarsVPCs           :: !(List1 VPC)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListVPCAssociationAuthorizationsResponse =
+  ListVPCAssociationAuthorizationsResponse'
+    { _lvaarsNextToken      :: !(Maybe Text)
+    , _lvaarsResponseStatus :: !Int
+    , _lvaarsHostedZoneId   :: !ResourceId
+    , _lvaarsVPCs           :: !(List1 VPC)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListVPCAssociationAuthorizationsResponse' with the minimum fields required to make a request.

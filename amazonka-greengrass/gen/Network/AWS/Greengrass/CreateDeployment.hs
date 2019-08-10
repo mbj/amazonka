@@ -48,13 +48,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createDeployment' smart constructor.
-data CreateDeployment = CreateDeployment'
-  { _cdDeploymentId    :: !(Maybe Text)
-  , _cdAmznClientToken :: !(Maybe Text)
-  , _cdDeploymentType  :: !(Maybe DeploymentType)
-  , _cdGroupVersionId  :: !(Maybe Text)
-  , _cdGroupId         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDeployment =
+  CreateDeployment'
+    { _cdDeploymentId    :: !(Maybe Text)
+    , _cdAmznClientToken :: !(Maybe Text)
+    , _cdDeploymentType  :: !(Maybe DeploymentType)
+    , _cdGroupVersionId  :: !(Maybe Text)
+    , _cdGroupId         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDeployment' with the minimum fields required to make a request.
@@ -142,11 +144,13 @@ instance ToQuery CreateDeployment where
         toQuery = const mempty
 
 -- | /See:/ 'createDeploymentResponse' smart constructor.
-data CreateDeploymentResponse = CreateDeploymentResponse'
-  { _cdrsDeploymentId   :: !(Maybe Text)
-  , _cdrsDeploymentARN  :: !(Maybe Text)
-  , _cdrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDeploymentResponse =
+  CreateDeploymentResponse'
+    { _cdrsDeploymentId   :: !(Maybe Text)
+    , _cdrsDeploymentARN  :: !(Maybe Text)
+    , _cdrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDeploymentResponse' with the minimum fields required to make a request.

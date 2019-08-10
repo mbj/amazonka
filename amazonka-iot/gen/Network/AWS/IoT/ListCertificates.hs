@@ -57,11 +57,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listCertificates' smart constructor.
-data ListCertificates = ListCertificates'
-  { _lcMarker         :: !(Maybe Text)
-  , _lcAscendingOrder :: !(Maybe Bool)
-  , _lcPageSize       :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListCertificates =
+  ListCertificates'
+    { _lcMarker         :: !(Maybe Text)
+    , _lcAscendingOrder :: !(Maybe Bool)
+    , _lcPageSize       :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListCertificates' with the minimum fields required to make a request.
@@ -132,11 +134,13 @@ instance ToQuery ListCertificates where
 --
 --
 -- /See:/ 'listCertificatesResponse' smart constructor.
-data ListCertificatesResponse = ListCertificatesResponse'
-  { _lcrsCertificates   :: !(Maybe [Certificate])
-  , _lcrsNextMarker     :: !(Maybe Text)
-  , _lcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListCertificatesResponse =
+  ListCertificatesResponse'
+    { _lcrsCertificates   :: !(Maybe [Certificate])
+    , _lcrsNextMarker     :: !(Maybe Text)
+    , _lcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListCertificatesResponse' with the minimum fields required to make a request.

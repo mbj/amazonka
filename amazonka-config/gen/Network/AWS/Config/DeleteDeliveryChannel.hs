@@ -48,9 +48,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteDeliveryChannel' smart constructor.
-newtype DeleteDeliveryChannel = DeleteDeliveryChannel'
-  { _ddcDeliveryChannelName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteDeliveryChannel =
+  DeleteDeliveryChannel'
+    { _ddcDeliveryChannelName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteDeliveryChannel' with the minimum fields required to make a request.

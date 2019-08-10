@@ -52,11 +52,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeVPCClassicLinkDNSSupport' smart constructor.
-data DescribeVPCClassicLinkDNSSupport = DescribeVPCClassicLinkDNSSupport'
-  { _dvcldsNextToken  :: !(Maybe Text)
-  , _dvcldsVPCIds     :: !(Maybe [Text])
-  , _dvcldsMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeVPCClassicLinkDNSSupport =
+  DescribeVPCClassicLinkDNSSupport'
+    { _dvcldsNextToken  :: !(Maybe Text)
+    , _dvcldsVPCIds     :: !(Maybe [Text])
+    , _dvcldsMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeVPCClassicLinkDNSSupport' with the minimum fields required to make a request.
@@ -134,11 +136,13 @@ instance ToQuery DescribeVPCClassicLinkDNSSupport
 --
 --
 -- /See:/ 'describeVPCClassicLinkDNSSupportResponse' smart constructor.
-data DescribeVPCClassicLinkDNSSupportResponse = DescribeVPCClassicLinkDNSSupportResponse'
-  { _dvpccldnssrsVPCs           :: !(Maybe [ClassicLinkDNSSupport])
-  , _dvpccldnssrsNextToken      :: !(Maybe Text)
-  , _dvpccldnssrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeVPCClassicLinkDNSSupportResponse =
+  DescribeVPCClassicLinkDNSSupportResponse'
+    { _dvpccldnssrsVPCs           :: !(Maybe [ClassicLinkDNSSupport])
+    , _dvpccldnssrsNextToken      :: !(Maybe Text)
+    , _dvpccldnssrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeVPCClassicLinkDNSSupportResponse' with the minimum fields required to make a request.

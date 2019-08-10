@@ -54,11 +54,13 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'setReceiptRulePosition' smart constructor.
-data SetReceiptRulePosition = SetReceiptRulePosition'
-  { _srrpAfter       :: !(Maybe Text)
-  , _srrpRuleSetName :: !Text
-  , _srrpRuleName    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SetReceiptRulePosition =
+  SetReceiptRulePosition'
+    { _srrpAfter       :: !(Maybe Text)
+    , _srrpRuleSetName :: !Text
+    , _srrpRuleName    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetReceiptRulePosition' with the minimum fields required to make a request.
@@ -129,9 +131,11 @@ instance ToQuery SetReceiptRulePosition where
 --
 --
 -- /See:/ 'setReceiptRulePositionResponse' smart constructor.
-newtype SetReceiptRulePositionResponse = SetReceiptRulePositionResponse'
-  { _srrprsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype SetReceiptRulePositionResponse =
+  SetReceiptRulePositionResponse'
+    { _srrprsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetReceiptRulePositionResponse' with the minimum fields required to make a request.

@@ -54,9 +54,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getOfferingStatus' smart constructor.
-newtype GetOfferingStatus = GetOfferingStatus'
-  { _gosNextToken :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetOfferingStatus =
+  GetOfferingStatus'
+    { _gosNextToken :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetOfferingStatus' with the minimum fields required to make a request.
@@ -123,12 +125,14 @@ instance ToQuery GetOfferingStatus where
 --
 --
 -- /See:/ 'getOfferingStatusResponse' smart constructor.
-data GetOfferingStatusResponse = GetOfferingStatusResponse'
-  { _gosrsNextPeriod     :: !(Maybe (Map Text OfferingStatus))
-  , _gosrsCurrent        :: !(Maybe (Map Text OfferingStatus))
-  , _gosrsNextToken      :: !(Maybe Text)
-  , _gosrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetOfferingStatusResponse =
+  GetOfferingStatusResponse'
+    { _gosrsNextPeriod     :: !(Maybe (Map Text OfferingStatus))
+    , _gosrsCurrent        :: !(Maybe (Map Text OfferingStatus))
+    , _gosrsNextToken      :: !(Maybe Text)
+    , _gosrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetOfferingStatusResponse' with the minimum fields required to make a request.

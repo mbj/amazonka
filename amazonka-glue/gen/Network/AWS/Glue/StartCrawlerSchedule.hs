@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'startCrawlerSchedule' smart constructor.
-newtype StartCrawlerSchedule = StartCrawlerSchedule'
-  { _scsCrawlerName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StartCrawlerSchedule =
+  StartCrawlerSchedule'
+    { _scsCrawlerName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartCrawlerSchedule' with the minimum fields required to make a request.
@@ -100,9 +102,11 @@ instance ToQuery StartCrawlerSchedule where
         toQuery = const mempty
 
 -- | /See:/ 'startCrawlerScheduleResponse' smart constructor.
-newtype StartCrawlerScheduleResponse = StartCrawlerScheduleResponse'
-  { _scsrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StartCrawlerScheduleResponse =
+  StartCrawlerScheduleResponse'
+    { _scsrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartCrawlerScheduleResponse' with the minimum fields required to make a request.

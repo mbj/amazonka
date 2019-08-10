@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteInstanceProfile' smart constructor.
-newtype DeleteInstanceProfile = DeleteInstanceProfile'
-  { _dipArn :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteInstanceProfile =
+  DeleteInstanceProfile'
+    { _dipArn :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteInstanceProfile' with the minimum fields required to make a request.
@@ -99,9 +101,11 @@ instance ToQuery DeleteInstanceProfile where
         toQuery = const mempty
 
 -- | /See:/ 'deleteInstanceProfileResponse' smart constructor.
-newtype DeleteInstanceProfileResponse = DeleteInstanceProfileResponse'
-  { _diprsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteInstanceProfileResponse =
+  DeleteInstanceProfileResponse'
+    { _diprsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteInstanceProfileResponse' with the minimum fields required to make a request.

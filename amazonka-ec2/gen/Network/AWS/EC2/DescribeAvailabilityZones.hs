@@ -53,11 +53,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeAvailabilityZones' smart constructor.
-data DescribeAvailabilityZones = DescribeAvailabilityZones'
-  { _dazZoneNames :: !(Maybe [Text])
-  , _dazFilters   :: !(Maybe [Filter])
-  , _dazDryRun    :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAvailabilityZones =
+  DescribeAvailabilityZones'
+    { _dazZoneNames :: !(Maybe [Text])
+    , _dazFilters   :: !(Maybe [Filter])
+    , _dazDryRun    :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAvailabilityZones' with the minimum fields required to make a request.
@@ -125,10 +127,12 @@ instance ToQuery DescribeAvailabilityZones where
 --
 --
 -- /See:/ 'describeAvailabilityZonesResponse' smart constructor.
-data DescribeAvailabilityZonesResponse = DescribeAvailabilityZonesResponse'
-  { _dazrsAvailabilityZones :: !(Maybe [AvailabilityZone])
-  , _dazrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAvailabilityZonesResponse =
+  DescribeAvailabilityZonesResponse'
+    { _dazrsAvailabilityZones :: !(Maybe [AvailabilityZone])
+    , _dazrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAvailabilityZonesResponse' with the minimum fields required to make a request.

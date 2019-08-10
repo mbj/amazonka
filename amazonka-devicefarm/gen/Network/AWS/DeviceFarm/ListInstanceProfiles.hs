@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listInstanceProfiles' smart constructor.
-data ListInstanceProfiles = ListInstanceProfiles'
-  { _lipNextToken  :: !(Maybe Text)
-  , _lipMaxResults :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListInstanceProfiles =
+  ListInstanceProfiles'
+    { _lipNextToken  :: !(Maybe Text)
+    , _lipMaxResults :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListInstanceProfiles' with the minimum fields required to make a request.
@@ -114,11 +116,13 @@ instance ToQuery ListInstanceProfiles where
         toQuery = const mempty
 
 -- | /See:/ 'listInstanceProfilesResponse' smart constructor.
-data ListInstanceProfilesResponse = ListInstanceProfilesResponse'
-  { _liprsNextToken        :: !(Maybe Text)
-  , _liprsInstanceProfiles :: !(Maybe [InstanceProfile])
-  , _liprsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListInstanceProfilesResponse =
+  ListInstanceProfilesResponse'
+    { _liprsNextToken        :: !(Maybe Text)
+    , _liprsInstanceProfiles :: !(Maybe [InstanceProfile])
+    , _liprsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListInstanceProfilesResponse' with the minimum fields required to make a request.

@@ -51,11 +51,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'evaluateExpression' smart constructor.
-data EvaluateExpression = EvaluateExpression'
-  { _eePipelineId :: !Text
-  , _eeObjectId   :: !Text
-  , _eeExpression :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EvaluateExpression =
+  EvaluateExpression'
+    { _eePipelineId :: !Text
+    , _eeObjectId   :: !Text
+    , _eeExpression :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EvaluateExpression' with the minimum fields required to make a request.
@@ -135,10 +137,12 @@ instance ToQuery EvaluateExpression where
 --
 --
 -- /See:/ 'evaluateExpressionResponse' smart constructor.
-data EvaluateExpressionResponse = EvaluateExpressionResponse'
-  { _eersResponseStatus      :: !Int
-  , _eersEvaluatedExpression :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EvaluateExpressionResponse =
+  EvaluateExpressionResponse'
+    { _eersResponseStatus      :: !Int
+    , _eersEvaluatedExpression :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EvaluateExpressionResponse' with the minimum fields required to make a request.

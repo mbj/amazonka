@@ -26,11 +26,13 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'action' smart constructor.
-data Action = Action'
-  { _aArguments :: !(Maybe (Map Text Text))
-  , _aJobName   :: !(Maybe Text)
-  , _aTimeout   :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Action =
+  Action'
+    { _aArguments :: !(Maybe (Map Text Text))
+    , _aJobName   :: !(Maybe Text)
+    , _aTimeout   :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Action' with the minimum fields required to make a request.
@@ -85,11 +87,13 @@ instance ToJSON Action where
 --
 --
 -- /See:/ 'batchStopJobRunError' smart constructor.
-data BatchStopJobRunError = BatchStopJobRunError'
-  { _bsjreJobName     :: !(Maybe Text)
-  , _bsjreJobRunId    :: !(Maybe Text)
-  , _bsjreErrorDetail :: !(Maybe ErrorDetail)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchStopJobRunError =
+  BatchStopJobRunError'
+    { _bsjreJobName     :: !(Maybe Text)
+    , _bsjreJobRunId    :: !(Maybe Text)
+    , _bsjreErrorDetail :: !(Maybe ErrorDetail)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchStopJobRunError' with the minimum fields required to make a request.
@@ -140,10 +144,12 @@ instance NFData BatchStopJobRunError where
 --
 --
 -- /See:/ 'batchStopJobRunSuccessfulSubmission' smart constructor.
-data BatchStopJobRunSuccessfulSubmission = BatchStopJobRunSuccessfulSubmission'
-  { _bsjrssJobName  :: !(Maybe Text)
-  , _bsjrssJobRunId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchStopJobRunSuccessfulSubmission =
+  BatchStopJobRunSuccessfulSubmission'
+    { _bsjrssJobName  :: !(Maybe Text)
+    , _bsjrssJobRunId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchStopJobRunSuccessfulSubmission' with the minimum fields required to make a request.
@@ -187,10 +193,12 @@ instance NFData BatchStopJobRunSuccessfulSubmission
 --
 --
 -- /See:/ 'catalogEntry' smart constructor.
-data CatalogEntry = CatalogEntry'
-  { _ceDatabaseName :: !Text
-  , _ceTableName    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CatalogEntry =
+  CatalogEntry'
+    { _ceDatabaseName :: !Text
+    , _ceTableName    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CatalogEntry' with the minimum fields required to make a request.
@@ -232,11 +240,13 @@ instance ToJSON CatalogEntry where
 --
 --
 -- /See:/ 'catalogImportStatus' smart constructor.
-data CatalogImportStatus = CatalogImportStatus'
-  { _cisImportedBy      :: !(Maybe Text)
-  , _cisImportTime      :: !(Maybe POSIX)
-  , _cisImportCompleted :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CatalogImportStatus =
+  CatalogImportStatus'
+    { _cisImportedBy      :: !(Maybe Text)
+    , _cisImportTime      :: !(Maybe POSIX)
+    , _cisImportCompleted :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CatalogImportStatus' with the minimum fields required to make a request.
@@ -289,11 +299,13 @@ instance NFData CatalogImportStatus where
 --
 --
 -- /See:/ 'classifier' smart constructor.
-data Classifier = Classifier'
-  { _cGrokClassifier :: !(Maybe GrokClassifier)
-  , _cXMLClassifier  :: !(Maybe XMLClassifier)
-  , _cJSONClassifier :: !(Maybe JSONClassifier)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Classifier =
+  Classifier'
+    { _cGrokClassifier :: !(Maybe GrokClassifier)
+    , _cXMLClassifier  :: !(Maybe XMLClassifier)
+    , _cJSONClassifier :: !(Maybe JSONClassifier)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Classifier' with the minimum fields required to make a request.
@@ -344,11 +356,13 @@ instance NFData Classifier where
 --
 --
 -- /See:/ 'codeGenEdge' smart constructor.
-data CodeGenEdge = CodeGenEdge'
-  { _cgeTargetParameter :: !(Maybe Text)
-  , _cgeSource          :: !Text
-  , _cgeTarget          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CodeGenEdge =
+  CodeGenEdge'
+    { _cgeTargetParameter :: !(Maybe Text)
+    , _cgeSource          :: !Text
+    , _cgeTarget          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CodeGenEdge' with the minimum fields required to make a request.
@@ -409,12 +423,14 @@ instance ToJSON CodeGenEdge where
 --
 --
 -- /See:/ 'codeGenNode' smart constructor.
-data CodeGenNode = CodeGenNode'
-  { _cgnLineNumber :: !(Maybe Int)
-  , _cgnId         :: !Text
-  , _cgnNodeType   :: !Text
-  , _cgnArgs       :: ![CodeGenNodeArg]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CodeGenNode =
+  CodeGenNode'
+    { _cgnLineNumber :: !(Maybe Int)
+    , _cgnId         :: !Text
+    , _cgnNodeType   :: !Text
+    , _cgnArgs       :: ![CodeGenNodeArg]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CodeGenNode' with the minimum fields required to make a request.
@@ -484,11 +500,13 @@ instance ToJSON CodeGenNode where
 --
 --
 -- /See:/ 'codeGenNodeArg' smart constructor.
-data CodeGenNodeArg = CodeGenNodeArg'
-  { _cgnaParam :: !(Maybe Bool)
-  , _cgnaName  :: !Text
-  , _cgnaValue :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CodeGenNodeArg =
+  CodeGenNodeArg'
+    { _cgnaParam :: !(Maybe Bool)
+    , _cgnaName  :: !Text
+    , _cgnaValue :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CodeGenNodeArg' with the minimum fields required to make a request.
@@ -545,11 +563,13 @@ instance ToJSON CodeGenNodeArg where
 --
 --
 -- /See:/ 'column' smart constructor.
-data Column = Column'
-  { _cType    :: !(Maybe Text)
-  , _cComment :: !(Maybe Text)
-  , _cName    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Column =
+  Column'
+    { _cType    :: !(Maybe Text)
+    , _cComment :: !(Maybe Text)
+    , _cName    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Column' with the minimum fields required to make a request.
@@ -604,11 +624,13 @@ instance ToJSON Column where
 --
 --
 -- /See:/ 'condition' smart constructor.
-data Condition = Condition'
-  { _cState           :: !(Maybe JobRunState)
-  , _cJobName         :: !(Maybe Text)
-  , _cLogicalOperator :: !(Maybe LogicalOperator)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Condition =
+  Condition'
+    { _cState           :: !(Maybe JobRunState)
+    , _cJobName         :: !(Maybe Text)
+    , _cLogicalOperator :: !(Maybe LogicalOperator)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Condition' with the minimum fields required to make a request.
@@ -664,17 +686,19 @@ instance ToJSON Condition where
 --
 --
 -- /See:/ 'connection' smart constructor.
-data Connection = Connection'
-  { _conCreationTime :: !(Maybe POSIX)
-  , _conLastUpdatedBy :: !(Maybe Text)
-  , _conConnectionProperties :: !(Maybe (Map ConnectionPropertyKey Text))
-  , _conLastUpdatedTime :: !(Maybe POSIX)
-  , _conMatchCriteria :: !(Maybe [Text])
-  , _conPhysicalConnectionRequirements :: !(Maybe PhysicalConnectionRequirements)
-  , _conName :: !(Maybe Text)
-  , _conDescription :: !(Maybe Text)
-  , _conConnectionType :: !(Maybe ConnectionType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Connection =
+  Connection'
+    { _conCreationTime :: !(Maybe POSIX)
+    , _conLastUpdatedBy :: !(Maybe Text)
+    , _conConnectionProperties :: !(Maybe (Map ConnectionPropertyKey Text))
+    , _conLastUpdatedTime :: !(Maybe POSIX)
+    , _conMatchCriteria :: !(Maybe [Text])
+    , _conPhysicalConnectionRequirements :: !(Maybe PhysicalConnectionRequirements)
+    , _conName :: !(Maybe Text)
+    , _conDescription :: !(Maybe Text)
+    , _conConnectionType :: !(Maybe ConnectionType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Connection' with the minimum fields required to make a request.
@@ -773,14 +797,16 @@ instance NFData Connection where
 --
 --
 -- /See:/ 'connectionInput' smart constructor.
-data ConnectionInput = ConnectionInput'
-  { _ciMatchCriteria                  :: !(Maybe [Text])
-  , _ciPhysicalConnectionRequirements :: !(Maybe PhysicalConnectionRequirements)
-  , _ciDescription                    :: !(Maybe Text)
-  , _ciName                           :: !Text
-  , _ciConnectionType                 :: !ConnectionType
-  , _ciConnectionProperties           :: !(Map ConnectionPropertyKey Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ConnectionInput =
+  ConnectionInput'
+    { _ciMatchCriteria :: !(Maybe [Text])
+    , _ciPhysicalConnectionRequirements :: !(Maybe PhysicalConnectionRequirements)
+    , _ciDescription :: !(Maybe Text)
+    , _ciName :: !Text
+    , _ciConnectionType :: !ConnectionType
+    , _ciConnectionProperties :: !(Map ConnectionPropertyKey Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ConnectionInput' with the minimum fields required to make a request.
@@ -859,9 +885,11 @@ instance ToJSON ConnectionInput where
 --
 --
 -- /See:/ 'connectionsList' smart constructor.
-newtype ConnectionsList = ConnectionsList'
-  { _clConnections :: Maybe [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ConnectionsList =
+  ConnectionsList'
+    { _clConnections :: Maybe [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ConnectionsList' with the minimum fields required to make a request.
@@ -899,24 +927,26 @@ instance ToJSON ConnectionsList where
 --
 --
 -- /See:/ 'crawler' smart constructor.
-data Crawler = Crawler'
-  { _craCreationTime       :: !(Maybe POSIX)
-  , _craState              :: !(Maybe CrawlerState)
-  , _craSchemaChangePolicy :: !(Maybe SchemaChangePolicy)
-  , _craLastUpdated        :: !(Maybe POSIX)
-  , _craSchedule           :: !(Maybe Schedule)
-  , _craLastCrawl          :: !(Maybe LastCrawlInfo)
-  , _craCrawlElapsedTime   :: !(Maybe Integer)
-  , _craClassifiers        :: !(Maybe [Text])
-  , _craRole               :: !(Maybe Text)
-  , _craName               :: !(Maybe Text)
-  , _craTargets            :: !(Maybe CrawlerTargets)
-  , _craVersion            :: !(Maybe Integer)
-  , _craDatabaseName       :: !(Maybe Text)
-  , _craConfiguration      :: !(Maybe Text)
-  , _craTablePrefix        :: !(Maybe Text)
-  , _craDescription        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Crawler =
+  Crawler'
+    { _craCreationTime       :: !(Maybe POSIX)
+    , _craState              :: !(Maybe CrawlerState)
+    , _craSchemaChangePolicy :: !(Maybe SchemaChangePolicy)
+    , _craLastUpdated        :: !(Maybe POSIX)
+    , _craSchedule           :: !(Maybe Schedule)
+    , _craLastCrawl          :: !(Maybe LastCrawlInfo)
+    , _craCrawlElapsedTime   :: !(Maybe Integer)
+    , _craClassifiers        :: !(Maybe [Text])
+    , _craRole               :: !(Maybe Text)
+    , _craName               :: !(Maybe Text)
+    , _craTargets            :: !(Maybe CrawlerTargets)
+    , _craVersion            :: !(Maybe Integer)
+    , _craDatabaseName       :: !(Maybe Text)
+    , _craConfiguration      :: !(Maybe Text)
+    , _craTablePrefix        :: !(Maybe Text)
+    , _craDescription        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Crawler' with the minimum fields required to make a request.
@@ -1071,16 +1101,18 @@ instance NFData Crawler where
 --
 --
 -- /See:/ 'crawlerMetrics' smart constructor.
-data CrawlerMetrics = CrawlerMetrics'
-  { _cmLastRuntimeSeconds   :: !(Maybe Double)
-  , _cmTablesCreated        :: !(Maybe Nat)
-  , _cmStillEstimating      :: !(Maybe Bool)
-  , _cmMedianRuntimeSeconds :: !(Maybe Double)
-  , _cmTimeLeftSeconds      :: !(Maybe Double)
-  , _cmTablesDeleted        :: !(Maybe Nat)
-  , _cmTablesUpdated        :: !(Maybe Nat)
-  , _cmCrawlerName          :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CrawlerMetrics =
+  CrawlerMetrics'
+    { _cmLastRuntimeSeconds   :: !(Maybe Double)
+    , _cmTablesCreated        :: !(Maybe Nat)
+    , _cmStillEstimating      :: !(Maybe Bool)
+    , _cmMedianRuntimeSeconds :: !(Maybe Double)
+    , _cmTimeLeftSeconds      :: !(Maybe Double)
+    , _cmTablesDeleted        :: !(Maybe Nat)
+    , _cmTablesUpdated        :: !(Maybe Nat)
+    , _cmCrawlerName          :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CrawlerMetrics' with the minimum fields required to make a request.
@@ -1172,10 +1204,12 @@ instance NFData CrawlerMetrics where
 --
 --
 -- /See:/ 'crawlerTargets' smart constructor.
-data CrawlerTargets = CrawlerTargets'
-  { _ctS3Targets   :: !(Maybe [S3Target])
-  , _ctJdbcTargets :: !(Maybe [JdbcTarget])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CrawlerTargets =
+  CrawlerTargets'
+    { _ctS3Targets   :: !(Maybe [S3Target])
+    , _ctJdbcTargets :: !(Maybe [JdbcTarget])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CrawlerTargets' with the minimum fields required to make a request.
@@ -1223,12 +1257,14 @@ instance ToJSON CrawlerTargets where
 --
 --
 -- /See:/ 'createGrokClassifierRequest' smart constructor.
-data CreateGrokClassifierRequest = CreateGrokClassifierRequest'
-  { _cgcrCustomPatterns :: !(Maybe Text)
-  , _cgcrClassification :: !Text
-  , _cgcrName           :: !Text
-  , _cgcrGrokPattern    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateGrokClassifierRequest =
+  CreateGrokClassifierRequest'
+    { _cgcrCustomPatterns :: !(Maybe Text)
+    , _cgcrClassification :: !Text
+    , _cgcrName           :: !Text
+    , _cgcrGrokPattern    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateGrokClassifierRequest' with the minimum fields required to make a request.
@@ -1290,10 +1326,12 @@ instance ToJSON CreateGrokClassifierRequest where
 --
 --
 -- /See:/ 'createJSONClassifierRequest' smart constructor.
-data CreateJSONClassifierRequest = CreateJSONClassifierRequest'
-  { _cjcrName     :: !Text
-  , _cjcrJSONPath :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateJSONClassifierRequest =
+  CreateJSONClassifierRequest'
+    { _cjcrName     :: !Text
+    , _cjcrJSONPath :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateJSONClassifierRequest' with the minimum fields required to make a request.
@@ -1335,11 +1373,13 @@ instance ToJSON CreateJSONClassifierRequest where
 --
 --
 -- /See:/ 'createXMLClassifierRequest' smart constructor.
-data CreateXMLClassifierRequest = CreateXMLClassifierRequest'
-  { _cxcrRowTag         :: !(Maybe Text)
-  , _cxcrClassification :: !Text
-  , _cxcrName           :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateXMLClassifierRequest =
+  CreateXMLClassifierRequest'
+    { _cxcrRowTag         :: !(Maybe Text)
+    , _cxcrClassification :: !Text
+    , _cxcrName           :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateXMLClassifierRequest' with the minimum fields required to make a request.
@@ -1392,13 +1432,15 @@ instance ToJSON CreateXMLClassifierRequest where
 --
 --
 -- /See:/ 'database' smart constructor.
-data Database = Database'
-  { _dLocationURI :: !(Maybe Text)
-  , _dParameters  :: !(Maybe (Map Text Text))
-  , _dDescription :: !(Maybe Text)
-  , _dCreateTime  :: !(Maybe POSIX)
-  , _dName        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Database =
+  Database'
+    { _dLocationURI :: !(Maybe Text)
+    , _dParameters  :: !(Maybe (Map Text Text))
+    , _dDescription :: !(Maybe Text)
+    , _dCreateTime  :: !(Maybe POSIX)
+    , _dName        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Database' with the minimum fields required to make a request.
@@ -1467,12 +1509,14 @@ instance NFData Database where
 --
 --
 -- /See:/ 'databaseInput' smart constructor.
-data DatabaseInput = DatabaseInput'
-  { _diLocationURI :: !(Maybe Text)
-  , _diParameters  :: !(Maybe (Map Text Text))
-  , _diDescription :: !(Maybe Text)
-  , _diName        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DatabaseInput =
+  DatabaseInput'
+    { _diLocationURI :: !(Maybe Text)
+    , _diParameters  :: !(Maybe (Map Text Text))
+    , _diDescription :: !(Maybe Text)
+    , _diName        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DatabaseInput' with the minimum fields required to make a request.
@@ -1532,27 +1576,29 @@ instance ToJSON DatabaseInput where
 --
 --
 -- /See:/ 'devEndpoint' smart constructor.
-data DevEndpoint = DevEndpoint'
-  { _deStatus                             :: !(Maybe Text)
-  , _deFailureReason                      :: !(Maybe Text)
-  , _deEndpointName                       :: !(Maybe Text)
-  , _deExtraPythonLibsS3Path              :: !(Maybe Text)
-  , _deLastUpdateStatus                   :: !(Maybe Text)
-  , _deSecurityGroupIds                   :: !(Maybe [Text])
-  , _deLastModifiedTimestamp              :: !(Maybe POSIX)
-  , _deVPCId                              :: !(Maybe Text)
-  , _dePrivateAddress                     :: !(Maybe Text)
-  , _dePublicKey                          :: !(Maybe Text)
-  , _deSubnetId                           :: !(Maybe Text)
-  , _deNumberOfNodes                      :: !(Maybe Int)
-  , _dePublicAddress                      :: !(Maybe Text)
-  , _deAvailabilityZone                   :: !(Maybe Text)
-  , _deZeppelinRemoteSparkInterpreterPort :: !(Maybe Int)
-  , _deExtraJARsS3Path                    :: !(Maybe Text)
-  , _deCreatedTimestamp                   :: !(Maybe POSIX)
-  , _deYarnEndpointAddress                :: !(Maybe Text)
-  , _deRoleARN                            :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DevEndpoint =
+  DevEndpoint'
+    { _deStatus                             :: !(Maybe Text)
+    , _deFailureReason                      :: !(Maybe Text)
+    , _deEndpointName                       :: !(Maybe Text)
+    , _deExtraPythonLibsS3Path              :: !(Maybe Text)
+    , _deLastUpdateStatus                   :: !(Maybe Text)
+    , _deSecurityGroupIds                   :: !(Maybe [Text])
+    , _deLastModifiedTimestamp              :: !(Maybe POSIX)
+    , _deVPCId                              :: !(Maybe Text)
+    , _dePrivateAddress                     :: !(Maybe Text)
+    , _dePublicKey                          :: !(Maybe Text)
+    , _deSubnetId                           :: !(Maybe Text)
+    , _deNumberOfNodes                      :: !(Maybe Int)
+    , _dePublicAddress                      :: !(Maybe Text)
+    , _deAvailabilityZone                   :: !(Maybe Text)
+    , _deZeppelinRemoteSparkInterpreterPort :: !(Maybe Int)
+    , _deExtraJARsS3Path                    :: !(Maybe Text)
+    , _deCreatedTimestamp                   :: !(Maybe POSIX)
+    , _deYarnEndpointAddress                :: !(Maybe Text)
+    , _deRoleARN                            :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DevEndpoint' with the minimum fields required to make a request.
@@ -1731,10 +1777,12 @@ instance NFData DevEndpoint where
 --
 --
 -- /See:/ 'devEndpointCustomLibraries' smart constructor.
-data DevEndpointCustomLibraries = DevEndpointCustomLibraries'
-  { _declExtraPythonLibsS3Path :: !(Maybe Text)
-  , _declExtraJARsS3Path       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DevEndpointCustomLibraries =
+  DevEndpointCustomLibraries'
+    { _declExtraPythonLibsS3Path :: !(Maybe Text)
+    , _declExtraJARsS3Path       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DevEndpointCustomLibraries' with the minimum fields required to make a request.
@@ -1776,10 +1824,12 @@ instance ToJSON DevEndpointCustomLibraries where
 --
 --
 -- /See:/ 'errorDetail' smart constructor.
-data ErrorDetail = ErrorDetail'
-  { _edErrorCode    :: !(Maybe Text)
-  , _edErrorMessage :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ErrorDetail =
+  ErrorDetail'
+    { _edErrorCode    :: !(Maybe Text)
+    , _edErrorMessage :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ErrorDetail' with the minimum fields required to make a request.
@@ -1818,9 +1868,11 @@ instance NFData ErrorDetail where
 --
 --
 -- /See:/ 'executionProperty' smart constructor.
-newtype ExecutionProperty = ExecutionProperty'
-  { _epMaxConcurrentRuns :: Maybe Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ExecutionProperty =
+  ExecutionProperty'
+    { _epMaxConcurrentRuns :: Maybe Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ExecutionProperty' with the minimum fields required to make a request.
@@ -1858,10 +1910,12 @@ instance ToJSON ExecutionProperty where
 --
 --
 -- /See:/ 'getConnectionsFilter' smart constructor.
-data GetConnectionsFilter = GetConnectionsFilter'
-  { _gcfMatchCriteria  :: !(Maybe [Text])
-  , _gcfConnectionType :: !(Maybe ConnectionType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetConnectionsFilter =
+  GetConnectionsFilter'
+    { _gcfMatchCriteria  :: !(Maybe [Text])
+    , _gcfConnectionType :: !(Maybe ConnectionType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetConnectionsFilter' with the minimum fields required to make a request.
@@ -1902,15 +1956,17 @@ instance ToJSON GetConnectionsFilter where
 --
 --
 -- /See:/ 'grokClassifier' smart constructor.
-data GrokClassifier = GrokClassifier'
-  { _gcCreationTime   :: !(Maybe POSIX)
-  , _gcLastUpdated    :: !(Maybe POSIX)
-  , _gcVersion        :: !(Maybe Integer)
-  , _gcCustomPatterns :: !(Maybe Text)
-  , _gcName           :: !Text
-  , _gcClassification :: !Text
-  , _gcGrokPattern    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GrokClassifier =
+  GrokClassifier'
+    { _gcCreationTime   :: !(Maybe POSIX)
+    , _gcLastUpdated    :: !(Maybe POSIX)
+    , _gcVersion        :: !(Maybe Integer)
+    , _gcCustomPatterns :: !(Maybe Text)
+    , _gcName           :: !Text
+    , _gcClassification :: !Text
+    , _gcGrokPattern    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GrokClassifier' with the minimum fields required to make a request.
@@ -1996,13 +2052,15 @@ instance NFData GrokClassifier where
 --
 --
 -- /See:/ 'jsonClassifier' smart constructor.
-data JSONClassifier = JSONClassifier'
-  { _jcCreationTime :: !(Maybe POSIX)
-  , _jcLastUpdated  :: !(Maybe POSIX)
-  , _jcVersion      :: !(Maybe Integer)
-  , _jcName         :: !Text
-  , _jcJSONPath     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data JSONClassifier =
+  JSONClassifier'
+    { _jcCreationTime :: !(Maybe POSIX)
+    , _jcLastUpdated  :: !(Maybe POSIX)
+    , _jcVersion      :: !(Maybe Integer)
+    , _jcName         :: !Text
+    , _jcJSONPath     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'JSONClassifier' with the minimum fields required to make a request.
@@ -2071,11 +2129,13 @@ instance NFData JSONClassifier where
 --
 --
 -- /See:/ 'jdbcTarget' smart constructor.
-data JdbcTarget = JdbcTarget'
-  { _jtPath           :: !(Maybe Text)
-  , _jtConnectionName :: !(Maybe Text)
-  , _jtExclusions     :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data JdbcTarget =
+  JdbcTarget'
+    { _jtPath           :: !(Maybe Text)
+    , _jtConnectionName :: !(Maybe Text)
+    , _jtExclusions     :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'JdbcTarget' with the minimum fields required to make a request.
@@ -2131,21 +2191,23 @@ instance ToJSON JdbcTarget where
 --
 --
 -- /See:/ 'job' smart constructor.
-data Job = Job'
-  { _jCommand           :: !(Maybe JobCommand)
-  , _jLastModifiedOn    :: !(Maybe POSIX)
-  , _jConnections       :: !(Maybe ConnectionsList)
-  , _jRole              :: !(Maybe Text)
-  , _jName              :: !(Maybe Text)
-  , _jLogURI            :: !(Maybe Text)
-  , _jMaxRetries        :: !(Maybe Int)
-  , _jExecutionProperty :: !(Maybe ExecutionProperty)
-  , _jAllocatedCapacity :: !(Maybe Int)
-  , _jTimeout           :: !(Maybe Nat)
-  , _jDefaultArguments  :: !(Maybe (Map Text Text))
-  , _jDescription       :: !(Maybe Text)
-  , _jCreatedOn         :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Job =
+  Job'
+    { _jCommand           :: !(Maybe JobCommand)
+    , _jLastModifiedOn    :: !(Maybe POSIX)
+    , _jConnections       :: !(Maybe ConnectionsList)
+    , _jRole              :: !(Maybe Text)
+    , _jName              :: !(Maybe Text)
+    , _jLogURI            :: !(Maybe Text)
+    , _jMaxRetries        :: !(Maybe Int)
+    , _jExecutionProperty :: !(Maybe ExecutionProperty)
+    , _jAllocatedCapacity :: !(Maybe Int)
+    , _jTimeout           :: !(Maybe Nat)
+    , _jDefaultArguments  :: !(Maybe (Map Text Text))
+    , _jDescription       :: !(Maybe Text)
+    , _jCreatedOn         :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Job' with the minimum fields required to make a request.
@@ -2276,13 +2338,15 @@ instance NFData Job where
 --
 --
 -- /See:/ 'jobBookmarkEntry' smart constructor.
-data JobBookmarkEntry = JobBookmarkEntry'
-  { _jbeJobName     :: !(Maybe Text)
-  , _jbeRun         :: !(Maybe Int)
-  , _jbeVersion     :: !(Maybe Int)
-  , _jbeAttempt     :: !(Maybe Int)
-  , _jbeJobBookmark :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data JobBookmarkEntry =
+  JobBookmarkEntry'
+    { _jbeJobName     :: !(Maybe Text)
+    , _jbeRun         :: !(Maybe Int)
+    , _jbeVersion     :: !(Maybe Int)
+    , _jbeAttempt     :: !(Maybe Int)
+    , _jbeJobBookmark :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'JobBookmarkEntry' with the minimum fields required to make a request.
@@ -2349,10 +2413,12 @@ instance NFData JobBookmarkEntry where
 --
 --
 -- /See:/ 'jobCommand' smart constructor.
-data JobCommand = JobCommand'
-  { _jobScriptLocation :: !(Maybe Text)
-  , _jobName           :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data JobCommand =
+  JobCommand'
+    { _jobScriptLocation :: !(Maybe Text)
+    , _jobName           :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'JobCommand' with the minimum fields required to make a request.
@@ -2398,23 +2464,25 @@ instance ToJSON JobCommand where
 --
 --
 -- /See:/ 'jobRun' smart constructor.
-data JobRun = JobRun'
-  { _jrCompletedOn       :: !(Maybe POSIX)
-  , _jrTriggerName       :: !(Maybe Text)
-  , _jrLastModifiedOn    :: !(Maybe POSIX)
-  , _jrArguments         :: !(Maybe (Map Text Text))
-  , _jrJobName           :: !(Maybe Text)
-  , _jrStartedOn         :: !(Maybe POSIX)
-  , _jrJobRunState       :: !(Maybe JobRunState)
-  , _jrExecutionTime     :: !(Maybe Int)
-  , _jrPredecessorRuns   :: !(Maybe [Predecessor])
-  , _jrPreviousRunId     :: !(Maybe Text)
-  , _jrId                :: !(Maybe Text)
-  , _jrAttempt           :: !(Maybe Int)
-  , _jrAllocatedCapacity :: !(Maybe Int)
-  , _jrTimeout           :: !(Maybe Nat)
-  , _jrErrorMessage      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data JobRun =
+  JobRun'
+    { _jrCompletedOn       :: !(Maybe POSIX)
+    , _jrTriggerName       :: !(Maybe Text)
+    , _jrLastModifiedOn    :: !(Maybe POSIX)
+    , _jrArguments         :: !(Maybe (Map Text Text))
+    , _jrJobName           :: !(Maybe Text)
+    , _jrStartedOn         :: !(Maybe POSIX)
+    , _jrJobRunState       :: !(Maybe JobRunState)
+    , _jrExecutionTime     :: !(Maybe Int)
+    , _jrPredecessorRuns   :: !(Maybe [Predecessor])
+    , _jrPreviousRunId     :: !(Maybe Text)
+    , _jrId                :: !(Maybe Text)
+    , _jrAttempt           :: !(Maybe Int)
+    , _jrAllocatedCapacity :: !(Maybe Int)
+    , _jrTimeout           :: !(Maybe Nat)
+    , _jrErrorMessage      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'JobRun' with the minimum fields required to make a request.
@@ -2561,18 +2629,20 @@ instance NFData JobRun where
 --
 --
 -- /See:/ 'jobUpdate' smart constructor.
-data JobUpdate = JobUpdate'
-  { _juCommand           :: !(Maybe JobCommand)
-  , _juConnections       :: !(Maybe ConnectionsList)
-  , _juRole              :: !(Maybe Text)
-  , _juLogURI            :: !(Maybe Text)
-  , _juMaxRetries        :: !(Maybe Int)
-  , _juExecutionProperty :: !(Maybe ExecutionProperty)
-  , _juAllocatedCapacity :: !(Maybe Int)
-  , _juTimeout           :: !(Maybe Nat)
-  , _juDefaultArguments  :: !(Maybe (Map Text Text))
-  , _juDescription       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data JobUpdate =
+  JobUpdate'
+    { _juCommand           :: !(Maybe JobCommand)
+    , _juConnections       :: !(Maybe ConnectionsList)
+    , _juRole              :: !(Maybe Text)
+    , _juLogURI            :: !(Maybe Text)
+    , _juMaxRetries        :: !(Maybe Int)
+    , _juExecutionProperty :: !(Maybe ExecutionProperty)
+    , _juAllocatedCapacity :: !(Maybe Int)
+    , _juTimeout           :: !(Maybe Nat)
+    , _juDefaultArguments  :: !(Maybe (Map Text Text))
+    , _juDescription       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'JobUpdate' with the minimum fields required to make a request.
@@ -2678,14 +2748,16 @@ instance ToJSON JobUpdate where
 --
 --
 -- /See:/ 'lastCrawlInfo' smart constructor.
-data LastCrawlInfo = LastCrawlInfo'
-  { _lciStatus        :: !(Maybe LastCrawlStatus)
-  , _lciStartTime     :: !(Maybe POSIX)
-  , _lciLogStream     :: !(Maybe Text)
-  , _lciLogGroup      :: !(Maybe Text)
-  , _lciMessagePrefix :: !(Maybe Text)
-  , _lciErrorMessage  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LastCrawlInfo =
+  LastCrawlInfo'
+    { _lciStatus        :: !(Maybe LastCrawlStatus)
+    , _lciStartTime     :: !(Maybe POSIX)
+    , _lciLogStream     :: !(Maybe Text)
+    , _lciLogGroup      :: !(Maybe Text)
+    , _lciMessagePrefix :: !(Maybe Text)
+    , _lciErrorMessage  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LastCrawlInfo' with the minimum fields required to make a request.
@@ -2760,10 +2832,12 @@ instance NFData LastCrawlInfo where
 --
 --
 -- /See:/ 'location' smart constructor.
-data Location = Location'
-  { _lJdbc :: !(Maybe [CodeGenNodeArg])
-  , _lS3   :: !(Maybe [CodeGenNodeArg])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Location =
+  Location'
+    { _lJdbc :: !(Maybe [CodeGenNodeArg])
+    , _lS3   :: !(Maybe [CodeGenNodeArg])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Location' with the minimum fields required to make a request.
@@ -2801,14 +2875,16 @@ instance ToJSON Location where
 --
 --
 -- /See:/ 'mappingEntry' smart constructor.
-data MappingEntry = MappingEntry'
-  { _meTargetTable :: !(Maybe Text)
-  , _meSourceType  :: !(Maybe Text)
-  , _meSourceTable :: !(Maybe Text)
-  , _meTargetType  :: !(Maybe Text)
-  , _meTargetPath  :: !(Maybe Text)
-  , _meSourcePath  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MappingEntry =
+  MappingEntry'
+    { _meTargetTable :: !(Maybe Text)
+    , _meSourceType  :: !(Maybe Text)
+    , _meSourceTable :: !(Maybe Text)
+    , _meTargetType  :: !(Maybe Text)
+    , _meTargetPath  :: !(Maybe Text)
+    , _meSourcePath  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MappingEntry' with the minimum fields required to make a request.
@@ -2894,10 +2970,12 @@ instance ToJSON MappingEntry where
 --
 --
 -- /See:/ 'order' smart constructor.
-data Order = Order'
-  { _oColumn    :: !Text
-  , _oSortOrder :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Order =
+  Order'
+    { _oColumn    :: !Text
+    , _oSortOrder :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Order' with the minimum fields required to make a request.
@@ -2945,16 +3023,18 @@ instance ToJSON Order where
 --
 --
 -- /See:/ 'partition' smart constructor.
-data Partition = Partition'
-  { _pCreationTime      :: !(Maybe POSIX)
-  , _pValues            :: !(Maybe [Text])
-  , _pLastAnalyzedTime  :: !(Maybe POSIX)
-  , _pStorageDescriptor :: !(Maybe StorageDescriptor)
-  , _pDatabaseName      :: !(Maybe Text)
-  , _pParameters        :: !(Maybe (Map Text Text))
-  , _pLastAccessTime    :: !(Maybe POSIX)
-  , _pTableName         :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Partition =
+  Partition'
+    { _pCreationTime      :: !(Maybe POSIX)
+    , _pValues            :: !(Maybe [Text])
+    , _pLastAnalyzedTime  :: !(Maybe POSIX)
+    , _pStorageDescriptor :: !(Maybe StorageDescriptor)
+    , _pDatabaseName      :: !(Maybe Text)
+    , _pParameters        :: !(Maybe (Map Text Text))
+    , _pLastAccessTime    :: !(Maybe POSIX)
+    , _pTableName         :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Partition' with the minimum fields required to make a request.
@@ -3046,10 +3126,12 @@ instance NFData Partition where
 --
 --
 -- /See:/ 'partitionError' smart constructor.
-data PartitionError = PartitionError'
-  { _pePartitionValues :: !(Maybe [Text])
-  , _peErrorDetail     :: !(Maybe ErrorDetail)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PartitionError =
+  PartitionError'
+    { _pePartitionValues :: !(Maybe [Text])
+    , _peErrorDetail     :: !(Maybe ErrorDetail)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PartitionError' with the minimum fields required to make a request.
@@ -3090,13 +3172,15 @@ instance NFData PartitionError where
 --
 --
 -- /See:/ 'partitionInput' smart constructor.
-data PartitionInput = PartitionInput'
-  { _piValues            :: !(Maybe [Text])
-  , _piLastAnalyzedTime  :: !(Maybe POSIX)
-  , _piStorageDescriptor :: !(Maybe StorageDescriptor)
-  , _piParameters        :: !(Maybe (Map Text Text))
-  , _piLastAccessTime    :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PartitionInput =
+  PartitionInput'
+    { _piValues            :: !(Maybe [Text])
+    , _piLastAnalyzedTime  :: !(Maybe POSIX)
+    , _piStorageDescriptor :: !(Maybe StorageDescriptor)
+    , _piParameters        :: !(Maybe (Map Text Text))
+    , _piLastAccessTime    :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PartitionInput' with the minimum fields required to make a request.
@@ -3163,9 +3247,11 @@ instance ToJSON PartitionInput where
 --
 --
 -- /See:/ 'partitionValueList' smart constructor.
-newtype PartitionValueList = PartitionValueList'
-  { _pvlValues :: [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype PartitionValueList =
+  PartitionValueList'
+    { _pvlValues :: [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PartitionValueList' with the minimum fields required to make a request.
@@ -3201,11 +3287,13 @@ instance ToJSON PartitionValueList where
 --
 --
 -- /See:/ 'physicalConnectionRequirements' smart constructor.
-data PhysicalConnectionRequirements = PhysicalConnectionRequirements'
-  { _pcrSecurityGroupIdList :: !(Maybe [Text])
-  , _pcrSubnetId            :: !(Maybe Text)
-  , _pcrAvailabilityZone    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PhysicalConnectionRequirements =
+  PhysicalConnectionRequirements'
+    { _pcrSecurityGroupIdList :: !(Maybe [Text])
+    , _pcrSubnetId            :: !(Maybe Text)
+    , _pcrAvailabilityZone    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PhysicalConnectionRequirements' with the minimum fields required to make a request.
@@ -3268,10 +3356,12 @@ instance ToJSON PhysicalConnectionRequirements where
 --
 --
 -- /See:/ 'predecessor' smart constructor.
-data Predecessor = Predecessor'
-  { _pJobName :: !(Maybe Text)
-  , _pRunId   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Predecessor =
+  Predecessor'
+    { _pJobName :: !(Maybe Text)
+    , _pRunId   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Predecessor' with the minimum fields required to make a request.
@@ -3310,10 +3400,12 @@ instance NFData Predecessor where
 --
 --
 -- /See:/ 'predicate' smart constructor.
-data Predicate = Predicate'
-  { _pLogical    :: !(Maybe Logical)
-  , _pConditions :: !(Maybe [Condition])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Predicate =
+  Predicate'
+    { _pLogical    :: !(Maybe Logical)
+    , _pConditions :: !(Maybe [Condition])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Predicate' with the minimum fields required to make a request.
@@ -3360,10 +3452,12 @@ instance ToJSON Predicate where
 --
 --
 -- /See:/ 'resourceURI' smart constructor.
-data ResourceURI = ResourceURI'
-  { _ruResourceType :: !(Maybe ResourceType)
-  , _ruURI          :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResourceURI =
+  ResourceURI'
+    { _ruResourceType :: !(Maybe ResourceType)
+    , _ruURI          :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResourceURI' with the minimum fields required to make a request.
@@ -3409,10 +3503,12 @@ instance ToJSON ResourceURI where
 --
 --
 -- /See:/ 's3Target' smart constructor.
-data S3Target = S3Target'
-  { _stPath       :: !(Maybe Text)
-  , _stExclusions :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data S3Target =
+  S3Target'
+    { _stPath       :: !(Maybe Text)
+    , _stExclusions :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'S3Target' with the minimum fields required to make a request.
@@ -3458,10 +3554,12 @@ instance ToJSON S3Target where
 --
 --
 -- /See:/ 'schedule' smart constructor.
-data Schedule = Schedule'
-  { _sState              :: !(Maybe ScheduleState)
-  , _sScheduleExpression :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Schedule =
+  Schedule'
+    { _sState              :: !(Maybe ScheduleState)
+    , _sScheduleExpression :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Schedule' with the minimum fields required to make a request.
@@ -3500,10 +3598,12 @@ instance NFData Schedule where
 --
 --
 -- /See:/ 'schemaChangePolicy' smart constructor.
-data SchemaChangePolicy = SchemaChangePolicy'
-  { _scpDeleteBehavior :: !(Maybe DeleteBehavior)
-  , _scpUpdateBehavior :: !(Maybe UpdateBehavior)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SchemaChangePolicy =
+  SchemaChangePolicy'
+    { _scpDeleteBehavior :: !(Maybe DeleteBehavior)
+    , _scpUpdateBehavior :: !(Maybe UpdateBehavior)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SchemaChangePolicy' with the minimum fields required to make a request.
@@ -3552,10 +3652,12 @@ instance ToJSON SchemaChangePolicy where
 --
 --
 -- /See:/ 'segment' smart constructor.
-data Segment = Segment'
-  { _sSegmentNumber :: !Nat
-  , _sTotalSegments :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Segment =
+  Segment'
+    { _sSegmentNumber :: !Nat
+    , _sTotalSegments :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Segment' with the minimum fields required to make a request.
@@ -3600,11 +3702,13 @@ instance ToJSON Segment where
 --
 --
 -- /See:/ 'serDeInfo' smart constructor.
-data SerDeInfo = SerDeInfo'
-  { _sdiSerializationLibrary :: !(Maybe Text)
-  , _sdiName                 :: !(Maybe Text)
-  , _sdiParameters           :: !(Maybe (Map Text Text))
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SerDeInfo =
+  SerDeInfo'
+    { _sdiSerializationLibrary :: !(Maybe Text)
+    , _sdiName                 :: !(Maybe Text)
+    , _sdiParameters           :: !(Maybe (Map Text Text))
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SerDeInfo' with the minimum fields required to make a request.
@@ -3664,11 +3768,13 @@ instance ToJSON SerDeInfo where
 --
 --
 -- /See:/ 'skewedInfo' smart constructor.
-data SkewedInfo = SkewedInfo'
-  { _siSkewedColumnValueLocationMaps :: !(Maybe (Map Text Text))
-  , _siSkewedColumnValues            :: !(Maybe [Text])
-  , _siSkewedColumnNames             :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SkewedInfo =
+  SkewedInfo'
+    { _siSkewedColumnValueLocationMaps :: !(Maybe (Map Text Text))
+    , _siSkewedColumnValues            :: !(Maybe [Text])
+    , _siSkewedColumnNames             :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SkewedInfo' with the minimum fields required to make a request.
@@ -3729,20 +3835,22 @@ instance ToJSON SkewedInfo where
 --
 --
 -- /See:/ 'storageDescriptor' smart constructor.
-data StorageDescriptor = StorageDescriptor'
-  { _sdSortColumns            :: !(Maybe [Order])
-  , _sdCompressed             :: !(Maybe Bool)
-  , _sdLocation               :: !(Maybe Text)
-  , _sdBucketColumns          :: !(Maybe [Text])
-  , _sdSerdeInfo              :: !(Maybe SerDeInfo)
-  , _sdOutputFormat           :: !(Maybe Text)
-  , _sdNumberOfBuckets        :: !(Maybe Int)
-  , _sdStoredAsSubDirectories :: !(Maybe Bool)
-  , _sdParameters             :: !(Maybe (Map Text Text))
-  , _sdInputFormat            :: !(Maybe Text)
-  , _sdSkewedInfo             :: !(Maybe SkewedInfo)
-  , _sdColumns                :: !(Maybe [Column])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StorageDescriptor =
+  StorageDescriptor'
+    { _sdSortColumns            :: !(Maybe [Order])
+    , _sdCompressed             :: !(Maybe Bool)
+    , _sdLocation               :: !(Maybe Text)
+    , _sdBucketColumns          :: !(Maybe [Text])
+    , _sdSerdeInfo              :: !(Maybe SerDeInfo)
+    , _sdOutputFormat           :: !(Maybe Text)
+    , _sdNumberOfBuckets        :: !(Maybe Int)
+    , _sdStoredAsSubDirectories :: !(Maybe Bool)
+    , _sdParameters             :: !(Maybe (Map Text Text))
+    , _sdInputFormat            :: !(Maybe Text)
+    , _sdSkewedInfo             :: !(Maybe SkewedInfo)
+    , _sdColumns                :: !(Maybe [Column])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StorageDescriptor' with the minimum fields required to make a request.
@@ -3884,24 +3992,26 @@ instance ToJSON StorageDescriptor where
 --
 --
 -- /See:/ 'table' smart constructor.
-data Table = Table'
-  { _tRetention         :: !(Maybe Nat)
-  , _tCreatedBy         :: !(Maybe Text)
-  , _tTableType         :: !(Maybe Text)
-  , _tOwner             :: !(Maybe Text)
-  , _tViewOriginalText  :: !(Maybe Text)
-  , _tUpdateTime        :: !(Maybe POSIX)
-  , _tViewExpandedText  :: !(Maybe Text)
-  , _tLastAnalyzedTime  :: !(Maybe POSIX)
-  , _tStorageDescriptor :: !(Maybe StorageDescriptor)
-  , _tDatabaseName      :: !(Maybe Text)
-  , _tParameters        :: !(Maybe (Map Text Text))
-  , _tLastAccessTime    :: !(Maybe POSIX)
-  , _tDescription       :: !(Maybe Text)
-  , _tPartitionKeys     :: !(Maybe [Column])
-  , _tCreateTime        :: !(Maybe POSIX)
-  , _tName              :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Table =
+  Table'
+    { _tRetention         :: !(Maybe Nat)
+    , _tCreatedBy         :: !(Maybe Text)
+    , _tTableType         :: !(Maybe Text)
+    , _tOwner             :: !(Maybe Text)
+    , _tViewOriginalText  :: !(Maybe Text)
+    , _tUpdateTime        :: !(Maybe POSIX)
+    , _tViewExpandedText  :: !(Maybe Text)
+    , _tLastAnalyzedTime  :: !(Maybe POSIX)
+    , _tStorageDescriptor :: !(Maybe StorageDescriptor)
+    , _tDatabaseName      :: !(Maybe Text)
+    , _tParameters        :: !(Maybe (Map Text Text))
+    , _tLastAccessTime    :: !(Maybe POSIX)
+    , _tDescription       :: !(Maybe Text)
+    , _tPartitionKeys     :: !(Maybe [Column])
+    , _tCreateTime        :: !(Maybe POSIX)
+    , _tName              :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Table' with the minimum fields required to make a request.
@@ -4057,10 +4167,12 @@ instance NFData Table where
 --
 --
 -- /See:/ 'tableError' smart constructor.
-data TableError = TableError'
-  { _teTableName   :: !(Maybe Text)
-  , _teErrorDetail :: !(Maybe ErrorDetail)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TableError =
+  TableError'
+    { _teTableName   :: !(Maybe Text)
+    , _teErrorDetail :: !(Maybe ErrorDetail)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TableError' with the minimum fields required to make a request.
@@ -4099,20 +4211,22 @@ instance NFData TableError where
 --
 --
 -- /See:/ 'tableInput' smart constructor.
-data TableInput = TableInput'
-  { _tiRetention         :: !(Maybe Nat)
-  , _tiTableType         :: !(Maybe Text)
-  , _tiOwner             :: !(Maybe Text)
-  , _tiViewOriginalText  :: !(Maybe Text)
-  , _tiViewExpandedText  :: !(Maybe Text)
-  , _tiLastAnalyzedTime  :: !(Maybe POSIX)
-  , _tiStorageDescriptor :: !(Maybe StorageDescriptor)
-  , _tiParameters        :: !(Maybe (Map Text Text))
-  , _tiLastAccessTime    :: !(Maybe POSIX)
-  , _tiDescription       :: !(Maybe Text)
-  , _tiPartitionKeys     :: !(Maybe [Column])
-  , _tiName              :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TableInput =
+  TableInput'
+    { _tiRetention         :: !(Maybe Nat)
+    , _tiTableType         :: !(Maybe Text)
+    , _tiOwner             :: !(Maybe Text)
+    , _tiViewOriginalText  :: !(Maybe Text)
+    , _tiViewExpandedText  :: !(Maybe Text)
+    , _tiLastAnalyzedTime  :: !(Maybe POSIX)
+    , _tiStorageDescriptor :: !(Maybe StorageDescriptor)
+    , _tiParameters        :: !(Maybe (Map Text Text))
+    , _tiLastAccessTime    :: !(Maybe POSIX)
+    , _tiDescription       :: !(Maybe Text)
+    , _tiPartitionKeys     :: !(Maybe [Column])
+    , _tiName              :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TableInput' with the minimum fields required to make a request.
@@ -4236,10 +4350,12 @@ instance ToJSON TableInput where
 --
 --
 -- /See:/ 'tableVersion' smart constructor.
-data TableVersion = TableVersion'
-  { _tvVersionId :: !(Maybe Text)
-  , _tvTable     :: !(Maybe Table)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TableVersion =
+  TableVersion'
+    { _tvVersionId :: !(Maybe Text)
+    , _tvTable     :: !(Maybe Table)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TableVersion' with the minimum fields required to make a request.
@@ -4278,11 +4394,13 @@ instance NFData TableVersion where
 --
 --
 -- /See:/ 'tableVersionError' smart constructor.
-data TableVersionError = TableVersionError'
-  { _tveVersionId   :: !(Maybe Text)
-  , _tveTableName   :: !(Maybe Text)
-  , _tveErrorDetail :: !(Maybe ErrorDetail)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TableVersionError =
+  TableVersionError'
+    { _tveVersionId   :: !(Maybe Text)
+    , _tveTableName   :: !(Maybe Text)
+    , _tveErrorDetail :: !(Maybe ErrorDetail)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TableVersionError' with the minimum fields required to make a request.
@@ -4333,16 +4451,18 @@ instance NFData TableVersionError where
 --
 --
 -- /See:/ 'trigger' smart constructor.
-data Trigger = Trigger'
-  { _triState       :: !(Maybe TriggerState)
-  , _triActions     :: !(Maybe [Action])
-  , _triSchedule    :: !(Maybe Text)
-  , _triPredicate   :: !(Maybe Predicate)
-  , _triName        :: !(Maybe Text)
-  , _triId          :: !(Maybe Text)
-  , _triType        :: !(Maybe TriggerType)
-  , _triDescription :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Trigger =
+  Trigger'
+    { _triState       :: !(Maybe TriggerState)
+    , _triActions     :: !(Maybe [Action])
+    , _triSchedule    :: !(Maybe Text)
+    , _triPredicate   :: !(Maybe Predicate)
+    , _triName        :: !(Maybe Text)
+    , _triId          :: !(Maybe Text)
+    , _triType        :: !(Maybe TriggerType)
+    , _triDescription :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Trigger' with the minimum fields required to make a request.
@@ -4433,13 +4553,15 @@ instance NFData Trigger where
 --
 --
 -- /See:/ 'triggerUpdate' smart constructor.
-data TriggerUpdate = TriggerUpdate'
-  { _tuActions     :: !(Maybe [Action])
-  , _tuSchedule    :: !(Maybe Text)
-  , _tuPredicate   :: !(Maybe Predicate)
-  , _tuName        :: !(Maybe Text)
-  , _tuDescription :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TriggerUpdate =
+  TriggerUpdate'
+    { _tuActions     :: !(Maybe [Action])
+    , _tuSchedule    :: !(Maybe Text)
+    , _tuPredicate   :: !(Maybe Predicate)
+    , _tuName        :: !(Maybe Text)
+    , _tuDescription :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TriggerUpdate' with the minimum fields required to make a request.
@@ -4506,12 +4628,14 @@ instance ToJSON TriggerUpdate where
 --
 --
 -- /See:/ 'updateGrokClassifierRequest' smart constructor.
-data UpdateGrokClassifierRequest = UpdateGrokClassifierRequest'
-  { _ugcrClassification :: !(Maybe Text)
-  , _ugcrCustomPatterns :: !(Maybe Text)
-  , _ugcrGrokPattern    :: !(Maybe Text)
-  , _ugcrName           :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateGrokClassifierRequest =
+  UpdateGrokClassifierRequest'
+    { _ugcrClassification :: !(Maybe Text)
+    , _ugcrCustomPatterns :: !(Maybe Text)
+    , _ugcrGrokPattern    :: !(Maybe Text)
+    , _ugcrName           :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateGrokClassifierRequest' with the minimum fields required to make a request.
@@ -4571,10 +4695,12 @@ instance ToJSON UpdateGrokClassifierRequest where
 --
 --
 -- /See:/ 'updateJSONClassifierRequest' smart constructor.
-data UpdateJSONClassifierRequest = UpdateJSONClassifierRequest'
-  { _ujcrJSONPath :: !(Maybe Text)
-  , _ujcrName     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateJSONClassifierRequest =
+  UpdateJSONClassifierRequest'
+    { _ujcrJSONPath :: !(Maybe Text)
+    , _ujcrName     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateJSONClassifierRequest' with the minimum fields required to make a request.
@@ -4615,11 +4741,13 @@ instance ToJSON UpdateJSONClassifierRequest where
 --
 --
 -- /See:/ 'updateXMLClassifierRequest' smart constructor.
-data UpdateXMLClassifierRequest = UpdateXMLClassifierRequest'
-  { _uxcrClassification :: !(Maybe Text)
-  , _uxcrRowTag         :: !(Maybe Text)
-  , _uxcrName           :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateXMLClassifierRequest =
+  UpdateXMLClassifierRequest'
+    { _uxcrClassification :: !(Maybe Text)
+    , _uxcrRowTag         :: !(Maybe Text)
+    , _uxcrName           :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateXMLClassifierRequest' with the minimum fields required to make a request.
@@ -4668,14 +4796,16 @@ instance ToJSON UpdateXMLClassifierRequest where
 --
 --
 -- /See:/ 'userDefinedFunction' smart constructor.
-data UserDefinedFunction = UserDefinedFunction'
-  { _udfOwnerName    :: !(Maybe Text)
-  , _udfResourceURIs :: !(Maybe [ResourceURI])
-  , _udfFunctionName :: !(Maybe Text)
-  , _udfOwnerType    :: !(Maybe PrincipalType)
-  , _udfCreateTime   :: !(Maybe POSIX)
-  , _udfClassName    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UserDefinedFunction =
+  UserDefinedFunction'
+    { _udfOwnerName    :: !(Maybe Text)
+    , _udfResourceURIs :: !(Maybe [ResourceURI])
+    , _udfFunctionName :: !(Maybe Text)
+    , _udfOwnerType    :: !(Maybe PrincipalType)
+    , _udfCreateTime   :: !(Maybe POSIX)
+    , _udfClassName    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UserDefinedFunction' with the minimum fields required to make a request.
@@ -4751,13 +4881,15 @@ instance NFData UserDefinedFunction where
 --
 --
 -- /See:/ 'userDefinedFunctionInput' smart constructor.
-data UserDefinedFunctionInput = UserDefinedFunctionInput'
-  { _udfiOwnerName    :: !(Maybe Text)
-  , _udfiResourceURIs :: !(Maybe [ResourceURI])
-  , _udfiFunctionName :: !(Maybe Text)
-  , _udfiOwnerType    :: !(Maybe PrincipalType)
-  , _udfiClassName    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UserDefinedFunctionInput =
+  UserDefinedFunctionInput'
+    { _udfiOwnerName    :: !(Maybe Text)
+    , _udfiResourceURIs :: !(Maybe [ResourceURI])
+    , _udfiFunctionName :: !(Maybe Text)
+    , _udfiOwnerType    :: !(Maybe PrincipalType)
+    , _udfiClassName    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UserDefinedFunctionInput' with the minimum fields required to make a request.
@@ -4824,14 +4956,16 @@ instance ToJSON UserDefinedFunctionInput where
 --
 --
 -- /See:/ 'xmlClassifier' smart constructor.
-data XMLClassifier = XMLClassifier'
-  { _xcCreationTime   :: !(Maybe POSIX)
-  , _xcLastUpdated    :: !(Maybe POSIX)
-  , _xcVersion        :: !(Maybe Integer)
-  , _xcRowTag         :: !(Maybe Text)
-  , _xcName           :: !Text
-  , _xcClassification :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data XMLClassifier =
+  XMLClassifier'
+    { _xcCreationTime   :: !(Maybe POSIX)
+    , _xcLastUpdated    :: !(Maybe POSIX)
+    , _xcVersion        :: !(Maybe Integer)
+    , _xcRowTag         :: !(Maybe Text)
+    , _xcName           :: !Text
+    , _xcClassification :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'XMLClassifier' with the minimum fields required to make a request.

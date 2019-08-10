@@ -44,11 +44,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateCertificateAuthority' smart constructor.
-data UpdateCertificateAuthority = UpdateCertificateAuthority'
-  { _ucaStatus                  :: !(Maybe CertificateAuthorityStatus)
-  , _ucaRevocationConfiguration :: !(Maybe RevocationConfiguration)
-  , _ucaCertificateAuthorityARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateCertificateAuthority =
+  UpdateCertificateAuthority'
+    { _ucaStatus                  :: !(Maybe CertificateAuthorityStatus)
+    , _ucaRevocationConfiguration :: !(Maybe RevocationConfiguration)
+    , _ucaCertificateAuthorityARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateCertificateAuthority' with the minimum fields required to make a request.

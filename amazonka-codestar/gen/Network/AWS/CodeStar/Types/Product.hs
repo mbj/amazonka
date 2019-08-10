@@ -26,10 +26,12 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'projectSummary' smart constructor.
-data ProjectSummary = ProjectSummary'
-  { _psProjectARN :: !(Maybe Text)
-  , _psProjectId  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ProjectSummary =
+  ProjectSummary'
+    { _psProjectARN :: !(Maybe Text)
+    , _psProjectId  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ProjectSummary' with the minimum fields required to make a request.
@@ -69,9 +71,11 @@ instance NFData ProjectSummary where
 --
 --
 -- /See:/ 'resource' smart constructor.
-newtype Resource = Resource'
-  { _rId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype Resource =
+  Resource'
+    { _rId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Resource' with the minimum fields required to make a request.
@@ -103,11 +107,13 @@ instance NFData Resource where
 --
 --
 -- /See:/ 'teamMember' smart constructor.
-data TeamMember = TeamMember'
-  { _tmRemoteAccessAllowed :: !(Maybe Bool)
-  , _tmUserARN             :: !Text
-  , _tmProjectRole         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TeamMember =
+  TeamMember'
+    { _tmRemoteAccessAllowed :: !(Maybe Bool)
+    , _tmUserARN             :: !Text
+    , _tmProjectRole         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TeamMember' with the minimum fields required to make a request.
@@ -160,12 +166,14 @@ instance NFData TeamMember where
 --
 --
 -- /See:/ 'userProfileSummary' smart constructor.
-data UserProfileSummary = UserProfileSummary'
-  { _upsSshPublicKey :: !(Maybe Text)
-  , _upsUserARN      :: !(Maybe Text)
-  , _upsEmailAddress :: !(Maybe (Sensitive Text))
-  , _upsDisplayName  :: !(Maybe Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data UserProfileSummary =
+  UserProfileSummary'
+    { _upsSshPublicKey :: !(Maybe Text)
+    , _upsUserARN      :: !(Maybe Text)
+    , _upsEmailAddress :: !(Maybe (Sensitive Text))
+    , _upsDisplayName  :: !(Maybe Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UserProfileSummary' with the minimum fields required to make a request.

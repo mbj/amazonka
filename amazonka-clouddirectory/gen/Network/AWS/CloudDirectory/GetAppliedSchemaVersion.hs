@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getAppliedSchemaVersion' smart constructor.
-newtype GetAppliedSchemaVersion = GetAppliedSchemaVersion'
-  { _gasvSchemaARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetAppliedSchemaVersion =
+  GetAppliedSchemaVersion'
+    { _gasvSchemaARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetAppliedSchemaVersion' with the minimum fields required to make a request.
@@ -97,10 +99,12 @@ instance ToQuery GetAppliedSchemaVersion where
         toQuery = const mempty
 
 -- | /See:/ 'getAppliedSchemaVersionResponse' smart constructor.
-data GetAppliedSchemaVersionResponse = GetAppliedSchemaVersionResponse'
-  { _gasvrsAppliedSchemaARN :: !(Maybe Text)
-  , _gasvrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetAppliedSchemaVersionResponse =
+  GetAppliedSchemaVersionResponse'
+    { _gasvrsAppliedSchemaARN :: !(Maybe Text)
+    , _gasvrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetAppliedSchemaVersionResponse' with the minimum fields required to make a request.

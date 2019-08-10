@@ -63,24 +63,26 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateUserPool' smart constructor.
-data UpdateUserPool = UpdateUserPool'
-  { _uupUserPoolTags                :: !(Maybe (Map Text Text))
-  , _uupVerificationMessageTemplate :: !(Maybe VerificationMessageTemplateType)
-  , _uupEmailVerificationMessage    :: !(Maybe Text)
-  , _uupSmsAuthenticationMessage    :: !(Maybe Text)
-  , _uupUserPoolAddOns              :: !(Maybe UserPoolAddOnsType)
-  , _uupEmailVerificationSubject    :: !(Maybe Text)
-  , _uupEmailConfiguration          :: !(Maybe EmailConfigurationType)
-  , _uupSmsVerificationMessage      :: !(Maybe Text)
-  , _uupMFAConfiguration            :: !(Maybe UserPoolMFAType)
-  , _uupLambdaConfig                :: !(Maybe LambdaConfigType)
-  , _uupSmsConfiguration            :: !(Maybe SmsConfigurationType)
-  , _uupAdminCreateUserConfig       :: !(Maybe AdminCreateUserConfigType)
-  , _uupDeviceConfiguration         :: !(Maybe DeviceConfigurationType)
-  , _uupAutoVerifiedAttributes      :: !(Maybe [VerifiedAttributeType])
-  , _uupPolicies                    :: !(Maybe UserPoolPolicyType)
-  , _uupUserPoolId                  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateUserPool =
+  UpdateUserPool'
+    { _uupUserPoolTags :: !(Maybe (Map Text Text))
+    , _uupVerificationMessageTemplate :: !(Maybe VerificationMessageTemplateType)
+    , _uupEmailVerificationMessage :: !(Maybe Text)
+    , _uupSmsAuthenticationMessage :: !(Maybe Text)
+    , _uupUserPoolAddOns :: !(Maybe UserPoolAddOnsType)
+    , _uupEmailVerificationSubject :: !(Maybe Text)
+    , _uupEmailConfiguration :: !(Maybe EmailConfigurationType)
+    , _uupSmsVerificationMessage :: !(Maybe Text)
+    , _uupMFAConfiguration :: !(Maybe UserPoolMFAType)
+    , _uupLambdaConfig :: !(Maybe LambdaConfigType)
+    , _uupSmsConfiguration :: !(Maybe SmsConfigurationType)
+    , _uupAdminCreateUserConfig :: !(Maybe AdminCreateUserConfigType)
+    , _uupDeviceConfiguration :: !(Maybe DeviceConfigurationType)
+    , _uupAutoVerifiedAttributes :: !(Maybe [VerifiedAttributeType])
+    , _uupPolicies :: !(Maybe UserPoolPolicyType)
+    , _uupUserPoolId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateUserPool' with the minimum fields required to make a request.
@@ -268,9 +270,11 @@ instance ToQuery UpdateUserPool where
 --
 --
 -- /See:/ 'updateUserPoolResponse' smart constructor.
-newtype UpdateUserPoolResponse = UpdateUserPoolResponse'
-  { _uuprsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateUserPoolResponse =
+  UpdateUserPoolResponse'
+    { _uuprsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateUserPoolResponse' with the minimum fields required to make a request.

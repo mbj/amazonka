@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listDeviceInstances' smart constructor.
-data ListDeviceInstances = ListDeviceInstances'
-  { _ldiNextToken  :: !(Maybe Text)
-  , _ldiMaxResults :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListDeviceInstances =
+  ListDeviceInstances'
+    { _ldiNextToken  :: !(Maybe Text)
+    , _ldiMaxResults :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDeviceInstances' with the minimum fields required to make a request.
@@ -114,11 +116,13 @@ instance ToQuery ListDeviceInstances where
         toQuery = const mempty
 
 -- | /See:/ 'listDeviceInstancesResponse' smart constructor.
-data ListDeviceInstancesResponse = ListDeviceInstancesResponse'
-  { _ldirsNextToken       :: !(Maybe Text)
-  , _ldirsDeviceInstances :: !(Maybe [DeviceInstance])
-  , _ldirsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListDeviceInstancesResponse =
+  ListDeviceInstancesResponse'
+    { _ldirsNextToken       :: !(Maybe Text)
+    , _ldirsDeviceInstances :: !(Maybe [DeviceInstance])
+    , _ldirsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDeviceInstancesResponse' with the minimum fields required to make a request.

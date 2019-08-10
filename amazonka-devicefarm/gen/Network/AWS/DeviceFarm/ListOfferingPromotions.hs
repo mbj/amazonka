@@ -46,9 +46,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listOfferingPromotions' smart constructor.
-newtype ListOfferingPromotions = ListOfferingPromotions'
-  { _lopNextToken :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ListOfferingPromotions =
+  ListOfferingPromotions'
+    { _lopNextToken :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListOfferingPromotions' with the minimum fields required to make a request.
@@ -103,11 +105,13 @@ instance ToQuery ListOfferingPromotions where
         toQuery = const mempty
 
 -- | /See:/ 'listOfferingPromotionsResponse' smart constructor.
-data ListOfferingPromotionsResponse = ListOfferingPromotionsResponse'
-  { _loprsNextToken          :: !(Maybe Text)
-  , _loprsOfferingPromotions :: !(Maybe [OfferingPromotion])
-  , _loprsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListOfferingPromotionsResponse =
+  ListOfferingPromotionsResponse'
+    { _loprsNextToken          :: !(Maybe Text)
+    , _loprsOfferingPromotions :: !(Maybe [OfferingPromotion])
+    , _loprsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListOfferingPromotionsResponse' with the minimum fields required to make a request.

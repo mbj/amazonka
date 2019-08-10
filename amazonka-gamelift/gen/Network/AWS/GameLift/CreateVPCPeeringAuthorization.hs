@@ -74,10 +74,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createVPCPeeringAuthorization' smart constructor.
-data CreateVPCPeeringAuthorization = CreateVPCPeeringAuthorization'
-  { _cvpaGameLiftAWSAccountId :: !Text
-  , _cvpaPeerVPCId            :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateVPCPeeringAuthorization =
+  CreateVPCPeeringAuthorization'
+    { _cvpaGameLiftAWSAccountId :: !Text
+    , _cvpaPeerVPCId            :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateVPCPeeringAuthorization' with the minimum fields required to make a request.
@@ -153,10 +155,12 @@ instance ToQuery CreateVPCPeeringAuthorization where
 --
 --
 -- /See:/ 'createVPCPeeringAuthorizationResponse' smart constructor.
-data CreateVPCPeeringAuthorizationResponse = CreateVPCPeeringAuthorizationResponse'
-  { _cvparsVPCPeeringAuthorization :: !(Maybe VPCPeeringAuthorization)
-  , _cvparsResponseStatus          :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateVPCPeeringAuthorizationResponse =
+  CreateVPCPeeringAuthorizationResponse'
+    { _cvparsVPCPeeringAuthorization :: !(Maybe VPCPeeringAuthorization)
+    , _cvparsResponseStatus          :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateVPCPeeringAuthorizationResponse' with the minimum fields required to make a request.

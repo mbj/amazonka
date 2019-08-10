@@ -50,12 +50,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updatePolicy' smart constructor.
-data UpdatePolicy = UpdatePolicy'
-  { _upContent     :: !(Maybe Text)
-  , _upName        :: !(Maybe Text)
-  , _upDescription :: !(Maybe Text)
-  , _upPolicyId    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdatePolicy =
+  UpdatePolicy'
+    { _upContent     :: !(Maybe Text)
+    , _upName        :: !(Maybe Text)
+    , _upDescription :: !(Maybe Text)
+    , _upPolicyId    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdatePolicy' with the minimum fields required to make a request.
@@ -136,10 +138,12 @@ instance ToQuery UpdatePolicy where
         toQuery = const mempty
 
 -- | /See:/ 'updatePolicyResponse' smart constructor.
-data UpdatePolicyResponse = UpdatePolicyResponse'
-  { _uprsPolicy         :: !(Maybe Policy)
-  , _uprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdatePolicyResponse =
+  UpdatePolicyResponse'
+    { _uprsPolicy         :: !(Maybe Policy)
+    , _uprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdatePolicyResponse' with the minimum fields required to make a request.

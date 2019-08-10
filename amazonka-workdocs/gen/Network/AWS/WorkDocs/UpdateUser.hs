@@ -53,17 +53,19 @@ import Network.AWS.WorkDocs.Types
 import Network.AWS.WorkDocs.Types.Product
 
 -- | /See:/ 'updateUser' smart constructor.
-data UpdateUser = UpdateUser'
-  { _uuGivenName                :: !(Maybe Text)
-  , _uuGrantPoweruserPrivileges :: !(Maybe BooleanEnumType)
-  , _uuLocale                   :: !(Maybe LocaleType)
-  , _uuAuthenticationToken      :: !(Maybe (Sensitive Text))
-  , _uuStorageRule              :: !(Maybe StorageRuleType)
-  , _uuType                     :: !(Maybe UserType)
-  , _uuSurname                  :: !(Maybe Text)
-  , _uuTimeZoneId               :: !(Maybe Text)
-  , _uuUserId                   :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data UpdateUser =
+  UpdateUser'
+    { _uuGivenName                :: !(Maybe Text)
+    , _uuGrantPoweruserPrivileges :: !(Maybe BooleanEnumType)
+    , _uuLocale                   :: !(Maybe LocaleType)
+    , _uuAuthenticationToken      :: !(Maybe (Sensitive Text))
+    , _uuStorageRule              :: !(Maybe StorageRuleType)
+    , _uuType                     :: !(Maybe UserType)
+    , _uuSurname                  :: !(Maybe Text)
+    , _uuTimeZoneId               :: !(Maybe Text)
+    , _uuUserId                   :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateUser' with the minimum fields required to make a request.
@@ -181,10 +183,12 @@ instance ToQuery UpdateUser where
         toQuery = const mempty
 
 -- | /See:/ 'updateUserResponse' smart constructor.
-data UpdateUserResponse = UpdateUserResponse'
-  { _uursUser           :: !(Maybe User)
-  , _uursResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateUserResponse =
+  UpdateUserResponse'
+    { _uursUser           :: !(Maybe User)
+    , _uursResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateUserResponse' with the minimum fields required to make a request.

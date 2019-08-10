@@ -26,15 +26,17 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'account' smart constructor.
-data Account = Account'
-  { _aStatus          :: !(Maybe AccountStatus)
-  , _aJoinedMethod    :: !(Maybe AccountJoinedMethod)
-  , _aEmail           :: !(Maybe (Sensitive Text))
-  , _aARN             :: !(Maybe Text)
-  , _aJoinedTimestamp :: !(Maybe POSIX)
-  , _aName            :: !(Maybe (Sensitive Text))
-  , _aId              :: !(Maybe Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data Account =
+  Account'
+    { _aStatus          :: !(Maybe AccountStatus)
+    , _aJoinedMethod    :: !(Maybe AccountJoinedMethod)
+    , _aEmail           :: !(Maybe (Sensitive Text))
+    , _aARN             :: !(Maybe Text)
+    , _aJoinedTimestamp :: !(Maybe POSIX)
+    , _aName            :: !(Maybe (Sensitive Text))
+    , _aId              :: !(Maybe Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Account' with the minimum fields required to make a request.
@@ -117,10 +119,12 @@ instance NFData Account where
 --
 --
 -- /See:/ 'child' smart constructor.
-data Child = Child'
-  { _cId   :: !(Maybe Text)
-  , _cType :: !(Maybe ChildType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Child =
+  Child'
+    { _cId   :: !(Maybe Text)
+    , _cType :: !(Maybe ChildType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Child' with the minimum fields required to make a request.
@@ -157,15 +161,17 @@ instance NFData Child where
 --
 --
 -- /See:/ 'createAccountStatus' smart constructor.
-data CreateAccountStatus = CreateAccountStatus'
-  { _casFailureReason      :: !(Maybe CreateAccountFailureReason)
-  , _casState              :: !(Maybe CreateAccountState)
-  , _casCompletedTimestamp :: !(Maybe POSIX)
-  , _casAccountName        :: !(Maybe (Sensitive Text))
-  , _casAccountId          :: !(Maybe Text)
-  , _casId                 :: !(Maybe Text)
-  , _casRequestedTimestamp :: !(Maybe POSIX)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data CreateAccountStatus =
+  CreateAccountStatus'
+    { _casFailureReason      :: !(Maybe CreateAccountFailureReason)
+    , _casState              :: !(Maybe CreateAccountState)
+    , _casCompletedTimestamp :: !(Maybe POSIX)
+    , _casAccountName        :: !(Maybe (Sensitive Text))
+    , _casAccountId          :: !(Maybe Text)
+    , _casId                 :: !(Maybe Text)
+    , _casRequestedTimestamp :: !(Maybe POSIX)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateAccountStatus' with the minimum fields required to make a request.
@@ -248,10 +254,12 @@ instance NFData CreateAccountStatus where
 --
 --
 -- /See:/ 'enabledServicePrincipal' smart constructor.
-data EnabledServicePrincipal = EnabledServicePrincipal'
-  { _espServicePrincipal :: !(Maybe Text)
-  , _espDateEnabled      :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EnabledServicePrincipal =
+  EnabledServicePrincipal'
+    { _espServicePrincipal :: !(Maybe Text)
+    , _espDateEnabled      :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EnabledServicePrincipal' with the minimum fields required to make a request.
@@ -294,16 +302,18 @@ instance NFData EnabledServicePrincipal where
 --
 --
 -- /See:/ 'handshake' smart constructor.
-data Handshake = Handshake'
-  { _hState               :: !(Maybe HandshakeState)
-  , _hARN                 :: !(Maybe Text)
-  , _hAction              :: !(Maybe ActionType)
-  , _hResources           :: !(Maybe [HandshakeResource])
-  , _hId                  :: !(Maybe Text)
-  , _hExpirationTimestamp :: !(Maybe POSIX)
-  , _hParties             :: !(Maybe [HandshakeParty])
-  , _hRequestedTimestamp  :: !(Maybe POSIX)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data Handshake =
+  Handshake'
+    { _hState               :: !(Maybe HandshakeState)
+    , _hARN                 :: !(Maybe Text)
+    , _hAction              :: !(Maybe ActionType)
+    , _hResources           :: !(Maybe [HandshakeResource])
+    , _hId                  :: !(Maybe Text)
+    , _hExpirationTimestamp :: !(Maybe POSIX)
+    , _hParties             :: !(Maybe [HandshakeParty])
+    , _hRequestedTimestamp  :: !(Maybe POSIX)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Handshake' with the minimum fields required to make a request.
@@ -394,10 +404,12 @@ instance NFData Handshake where
 --
 --
 -- /See:/ 'handshakeFilter' smart constructor.
-data HandshakeFilter = HandshakeFilter'
-  { _hfParentHandshakeId :: !(Maybe Text)
-  , _hfActionType        :: !(Maybe ActionType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data HandshakeFilter =
+  HandshakeFilter'
+    { _hfParentHandshakeId :: !(Maybe Text)
+    , _hfActionType        :: !(Maybe ActionType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'HandshakeFilter' with the minimum fields required to make a request.
@@ -437,10 +449,12 @@ instance ToJSON HandshakeFilter where
 --
 --
 -- /See:/ 'handshakeParty' smart constructor.
-data HandshakeParty = HandshakeParty'
-  { _hpId   :: !(Sensitive Text)
-  , _hpType :: !HandshakePartyType
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data HandshakeParty =
+  HandshakeParty'
+    { _hpId   :: !(Sensitive Text)
+    , _hpType :: !HandshakePartyType
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'HandshakeParty' with the minimum fields required to make a request.
@@ -487,11 +501,13 @@ instance ToJSON HandshakeParty where
 --
 --
 -- /See:/ 'handshakeResource' smart constructor.
-data HandshakeResource = HandshakeResource'
-  { _hrValue     :: !(Maybe (Sensitive Text))
-  , _hrResources :: !(Maybe [HandshakeResource])
-  , _hrType      :: !(Maybe HandshakeResourceType)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data HandshakeResource =
+  HandshakeResource'
+    { _hrValue     :: !(Maybe (Sensitive Text))
+    , _hrResources :: !(Maybe [HandshakeResource])
+    , _hrType      :: !(Maybe HandshakeResourceType)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'HandshakeResource' with the minimum fields required to make a request.
@@ -539,15 +555,17 @@ instance NFData HandshakeResource where
 --
 --
 -- /See:/ 'organization' smart constructor.
-data Organization = Organization'
-  { _oARN                  :: !(Maybe Text)
-  , _oMasterAccountId      :: !(Maybe Text)
-  , _oMasterAccountARN     :: !(Maybe Text)
-  , _oMasterAccountEmail   :: !(Maybe (Sensitive Text))
-  , _oAvailablePolicyTypes :: !(Maybe [PolicyTypeSummary])
-  , _oId                   :: !(Maybe Text)
-  , _oFeatureSet           :: !(Maybe OrganizationFeatureSet)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data Organization =
+  Organization'
+    { _oARN                  :: !(Maybe Text)
+    , _oMasterAccountId      :: !(Maybe Text)
+    , _oMasterAccountARN     :: !(Maybe Text)
+    , _oMasterAccountEmail   :: !(Maybe (Sensitive Text))
+    , _oAvailablePolicyTypes :: !(Maybe [PolicyTypeSummary])
+    , _oId                   :: !(Maybe Text)
+    , _oFeatureSet           :: !(Maybe OrganizationFeatureSet)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Organization' with the minimum fields required to make a request.
@@ -630,11 +648,13 @@ instance NFData Organization where
 --
 --
 -- /See:/ 'organizationalUnit' smart constructor.
-data OrganizationalUnit = OrganizationalUnit'
-  { _ouARN  :: !(Maybe Text)
-  , _ouName :: !(Maybe Text)
-  , _ouId   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data OrganizationalUnit =
+  OrganizationalUnit'
+    { _ouARN  :: !(Maybe Text)
+    , _ouName :: !(Maybe Text)
+    , _ouId   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OrganizationalUnit' with the minimum fields required to make a request.
@@ -680,10 +700,12 @@ instance NFData OrganizationalUnit where
 --
 --
 -- /See:/ 'parent' smart constructor.
-data Parent = Parent'
-  { _pId   :: !(Maybe Text)
-  , _pType :: !(Maybe ParentType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Parent =
+  Parent'
+    { _pId   :: !(Maybe Text)
+    , _pType :: !(Maybe ParentType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Parent' with the minimum fields required to make a request.
@@ -720,10 +742,12 @@ instance NFData Parent where
 --
 --
 -- /See:/ 'policy' smart constructor.
-data Policy = Policy'
-  { _pContent       :: !(Maybe Text)
-  , _pPolicySummary :: !(Maybe PolicySummary)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Policy =
+  Policy'
+    { _pContent       :: !(Maybe Text)
+    , _pPolicySummary :: !(Maybe PolicySummary)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Policy' with the minimum fields required to make a request.
@@ -762,14 +786,16 @@ instance NFData Policy where
 --
 --
 -- /See:/ 'policySummary' smart constructor.
-data PolicySummary = PolicySummary'
-  { _psARN         :: !(Maybe Text)
-  , _psName        :: !(Maybe Text)
-  , _psId          :: !(Maybe Text)
-  , _psAWSManaged  :: !(Maybe Bool)
-  , _psType        :: !(Maybe PolicyType)
-  , _psDescription :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PolicySummary =
+  PolicySummary'
+    { _psARN         :: !(Maybe Text)
+    , _psName        :: !(Maybe Text)
+    , _psId          :: !(Maybe Text)
+    , _psAWSManaged  :: !(Maybe Bool)
+    , _psType        :: !(Maybe PolicyType)
+    , _psDescription :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PolicySummary' with the minimum fields required to make a request.
@@ -843,12 +869,14 @@ instance NFData PolicySummary where
 --
 --
 -- /See:/ 'policyTargetSummary' smart constructor.
-data PolicyTargetSummary = PolicyTargetSummary'
-  { _polTargetId :: !(Maybe Text)
-  , _polARN      :: !(Maybe Text)
-  , _polName     :: !(Maybe Text)
-  , _polType     :: !(Maybe TargetType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PolicyTargetSummary =
+  PolicyTargetSummary'
+    { _polTargetId :: !(Maybe Text)
+    , _polARN      :: !(Maybe Text)
+    , _polName     :: !(Maybe Text)
+    , _polType     :: !(Maybe TargetType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PolicyTargetSummary' with the minimum fields required to make a request.
@@ -907,10 +935,12 @@ instance NFData PolicyTargetSummary where
 --
 --
 -- /See:/ 'policyTypeSummary' smart constructor.
-data PolicyTypeSummary = PolicyTypeSummary'
-  { _ptsStatus :: !(Maybe PolicyTypeStatus)
-  , _ptsType   :: !(Maybe PolicyType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PolicyTypeSummary =
+  PolicyTypeSummary'
+    { _ptsStatus :: !(Maybe PolicyTypeStatus)
+    , _ptsType   :: !(Maybe PolicyType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PolicyTypeSummary' with the minimum fields required to make a request.
@@ -950,12 +980,14 @@ instance NFData PolicyTypeSummary where
 --
 --
 -- /See:/ 'root' smart constructor.
-data Root = Root'
-  { _rARN         :: !(Maybe Text)
-  , _rName        :: !(Maybe Text)
-  , _rId          :: !(Maybe Text)
-  , _rPolicyTypes :: !(Maybe [PolicyTypeSummary])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Root =
+  Root'
+    { _rARN         :: !(Maybe Text)
+    , _rName        :: !(Maybe Text)
+    , _rId          :: !(Maybe Text)
+    , _rPolicyTypes :: !(Maybe [PolicyTypeSummary])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Root' with the minimum fields required to make a request.

@@ -45,9 +45,11 @@ import Network.AWS.WorkSpaces.Types
 import Network.AWS.WorkSpaces.Types.Product
 
 -- | /See:/ 'describeTags' smart constructor.
-newtype DescribeTags = DescribeTags'
-  { _dtResourceId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeTags =
+  DescribeTags'
+    { _dtResourceId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeTags' with the minimum fields required to make a request.
@@ -99,10 +101,12 @@ instance ToQuery DescribeTags where
         toQuery = const mempty
 
 -- | /See:/ 'describeTagsResponse' smart constructor.
-data DescribeTagsResponse = DescribeTagsResponse'
-  { _dtrsTagList        :: !(Maybe [Tag])
-  , _dtrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeTagsResponse =
+  DescribeTagsResponse'
+    { _dtrsTagList        :: !(Maybe [Tag])
+    , _dtrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeTagsResponse' with the minimum fields required to make a request.

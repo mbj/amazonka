@@ -51,14 +51,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeSessions' smart constructor.
-data DescribeSessions = DescribeSessions'
-  { _dsUserId             :: !(Maybe Text)
-  , _dsNextToken          :: !(Maybe Text)
-  , _dsLimit              :: !(Maybe Int)
-  , _dsAuthenticationType :: !(Maybe AuthenticationType)
-  , _dsStackName          :: !Text
-  , _dsFleetName          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeSessions =
+  DescribeSessions'
+    { _dsUserId             :: !(Maybe Text)
+    , _dsNextToken          :: !(Maybe Text)
+    , _dsLimit              :: !(Maybe Int)
+    , _dsAuthenticationType :: !(Maybe AuthenticationType)
+    , _dsStackName          :: !Text
+    , _dsFleetName          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeSessions' with the minimum fields required to make a request.
@@ -157,11 +159,13 @@ instance ToQuery DescribeSessions where
         toQuery = const mempty
 
 -- | /See:/ 'describeSessionsResponse' smart constructor.
-data DescribeSessionsResponse = DescribeSessionsResponse'
-  { _dssrsNextToken      :: !(Maybe Text)
-  , _dssrsSessions       :: !(Maybe [Session])
-  , _dssrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeSessionsResponse =
+  DescribeSessionsResponse'
+    { _dssrsNextToken      :: !(Maybe Text)
+    , _dssrsSessions       :: !(Maybe [Session])
+    , _dssrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeSessionsResponse' with the minimum fields required to make a request.

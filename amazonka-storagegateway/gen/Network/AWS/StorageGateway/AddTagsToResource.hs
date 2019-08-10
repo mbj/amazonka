@@ -64,10 +64,12 @@ import Network.AWS.StorageGateway.Types.Product
 --
 --
 -- /See:/ 'addTagsToResource' smart constructor.
-data AddTagsToResource = AddTagsToResource'
-  { _attrResourceARN :: !Text
-  , _attrTags        :: ![Tag]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddTagsToResource =
+  AddTagsToResource'
+    { _attrResourceARN :: !Text
+    , _attrTags        :: ![Tag]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddTagsToResource' with the minimum fields required to make a request.
@@ -133,10 +135,12 @@ instance ToQuery AddTagsToResource where
 --
 --
 -- /See:/ 'addTagsToResourceResponse' smart constructor.
-data AddTagsToResourceResponse = AddTagsToResourceResponse'
-  { _attrrsResourceARN    :: !(Maybe Text)
-  , _attrrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddTagsToResourceResponse =
+  AddTagsToResourceResponse'
+    { _attrrsResourceARN    :: !(Maybe Text)
+    , _attrrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddTagsToResourceResponse' with the minimum fields required to make a request.

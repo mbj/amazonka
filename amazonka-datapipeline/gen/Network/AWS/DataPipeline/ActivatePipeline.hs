@@ -54,11 +54,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'activatePipeline' smart constructor.
-data ActivatePipeline = ActivatePipeline'
-  { _apStartTimestamp  :: !(Maybe POSIX)
-  , _apParameterValues :: !(Maybe [ParameterValue])
-  , _apPipelineId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ActivatePipeline =
+  ActivatePipeline'
+    { _apStartTimestamp  :: !(Maybe POSIX)
+    , _apParameterValues :: !(Maybe [ParameterValue])
+    , _apPipelineId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ActivatePipeline' with the minimum fields required to make a request.
@@ -133,9 +135,11 @@ instance ToQuery ActivatePipeline where
 --
 --
 -- /See:/ 'activatePipelineResponse' smart constructor.
-newtype ActivatePipelineResponse = ActivatePipelineResponse'
-  { _aprsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ActivatePipelineResponse =
+  ActivatePipelineResponse'
+    { _aprsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ActivatePipelineResponse' with the minimum fields required to make a request.

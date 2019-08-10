@@ -55,13 +55,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeTargetGroups' smart constructor.
-data DescribeTargetGroups = DescribeTargetGroups'
-  { _dtgTargetGroupARNs :: !(Maybe [Text])
-  , _dtgNames           :: !(Maybe [Text])
-  , _dtgLoadBalancerARN :: !(Maybe Text)
-  , _dtgMarker          :: !(Maybe Text)
-  , _dtgPageSize        :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeTargetGroups =
+  DescribeTargetGroups'
+    { _dtgTargetGroupARNs :: !(Maybe [Text])
+    , _dtgNames           :: !(Maybe [Text])
+    , _dtgLoadBalancerARN :: !(Maybe Text)
+    , _dtgMarker          :: !(Maybe Text)
+    , _dtgPageSize        :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeTargetGroups' with the minimum fields required to make a request.
@@ -153,11 +155,13 @@ instance ToQuery DescribeTargetGroups where
                "Marker" =: _dtgMarker, "PageSize" =: _dtgPageSize]
 
 -- | /See:/ 'describeTargetGroupsResponse' smart constructor.
-data DescribeTargetGroupsResponse = DescribeTargetGroupsResponse'
-  { _dtgsrsNextMarker     :: !(Maybe Text)
-  , _dtgsrsTargetGroups   :: !(Maybe [TargetGroup])
-  , _dtgsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeTargetGroupsResponse =
+  DescribeTargetGroupsResponse'
+    { _dtgsrsNextMarker     :: !(Maybe Text)
+    , _dtgsrsTargetGroups   :: !(Maybe [TargetGroup])
+    , _dtgsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeTargetGroupsResponse' with the minimum fields required to make a request.

@@ -54,18 +54,20 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createQualificationType' smart constructor.
-data CreateQualificationType = CreateQualificationType'
-  { _cqtTestDurationInSeconds   :: !(Maybe Integer)
-  , _cqtAnswerKey               :: !(Maybe Text)
-  , _cqtTest                    :: !(Maybe Text)
-  , _cqtKeywords                :: !(Maybe Text)
-  , _cqtAutoGranted             :: !(Maybe Bool)
-  , _cqtAutoGrantedValue        :: !(Maybe Int)
-  , _cqtRetryDelayInSeconds     :: !(Maybe Integer)
-  , _cqtName                    :: !Text
-  , _cqtDescription             :: !Text
-  , _cqtQualificationTypeStatus :: !QualificationTypeStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateQualificationType =
+  CreateQualificationType'
+    { _cqtTestDurationInSeconds   :: !(Maybe Integer)
+    , _cqtAnswerKey               :: !(Maybe Text)
+    , _cqtTest                    :: !(Maybe Text)
+    , _cqtKeywords                :: !(Maybe Text)
+    , _cqtAutoGranted             :: !(Maybe Bool)
+    , _cqtAutoGrantedValue        :: !(Maybe Int)
+    , _cqtRetryDelayInSeconds     :: !(Maybe Integer)
+    , _cqtName                    :: !Text
+    , _cqtDescription             :: !Text
+    , _cqtQualificationTypeStatus :: !QualificationTypeStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateQualificationType' with the minimum fields required to make a request.
@@ -201,10 +203,12 @@ instance ToQuery CreateQualificationType where
         toQuery = const mempty
 
 -- | /See:/ 'createQualificationTypeResponse' smart constructor.
-data CreateQualificationTypeResponse = CreateQualificationTypeResponse'
-  { _cqtrsQualificationType :: !(Maybe QualificationType)
-  , _cqtrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateQualificationTypeResponse =
+  CreateQualificationTypeResponse'
+    { _cqtrsQualificationType :: !(Maybe QualificationType)
+    , _cqtrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateQualificationTypeResponse' with the minimum fields required to make a request.

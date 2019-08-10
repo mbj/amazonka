@@ -74,11 +74,13 @@ import Network.AWS.WAFRegional.Types
 import Network.AWS.WAFRegional.Types.Product
 
 -- | /See:/ 'createRule' smart constructor.
-data CreateRule = CreateRule'
-  { _crName        :: !Text
-  , _crMetricName  :: !Text
-  , _crChangeToken :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateRule =
+  CreateRule'
+    { _crName        :: !Text
+    , _crMetricName  :: !Text
+    , _crChangeToken :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateRule' with the minimum fields required to make a request.
@@ -154,11 +156,13 @@ instance ToQuery CreateRule where
         toQuery = const mempty
 
 -- | /See:/ 'createRuleResponse' smart constructor.
-data CreateRuleResponse = CreateRuleResponse'
-  { _crrsRule           :: !(Maybe Rule)
-  , _crrsChangeToken    :: !(Maybe Text)
-  , _crrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateRuleResponse =
+  CreateRuleResponse'
+    { _crrsRule           :: !(Maybe Rule)
+    , _crrsChangeToken    :: !(Maybe Text)
+    , _crrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateRuleResponse' with the minimum fields required to make a request.

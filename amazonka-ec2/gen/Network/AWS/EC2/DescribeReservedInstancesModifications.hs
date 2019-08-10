@@ -57,11 +57,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeReservedInstancesModifications' smart constructor.
-data DescribeReservedInstancesModifications = DescribeReservedInstancesModifications'
-  { _drimFilters                          :: !(Maybe [Filter])
-  , _drimReservedInstancesModificationIds :: !(Maybe [Text])
-  , _drimNextToken                        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeReservedInstancesModifications =
+  DescribeReservedInstancesModifications'
+    { _drimFilters                          :: !(Maybe [Filter])
+    , _drimReservedInstancesModificationIds :: !(Maybe [Text])
+    , _drimNextToken                        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeReservedInstancesModifications' with the minimum fields required to make a request.
@@ -158,11 +160,13 @@ instance ToQuery
 --
 --
 -- /See:/ 'describeReservedInstancesModificationsResponse' smart constructor.
-data DescribeReservedInstancesModificationsResponse = DescribeReservedInstancesModificationsResponse'
-  { _drimrsNextToken :: !(Maybe Text)
-  , _drimrsReservedInstancesModifications :: !(Maybe [ReservedInstancesModification])
-  , _drimrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeReservedInstancesModificationsResponse =
+  DescribeReservedInstancesModificationsResponse'
+    { _drimrsNextToken :: !(Maybe Text)
+    , _drimrsReservedInstancesModifications :: !(Maybe [ReservedInstancesModification])
+    , _drimrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeReservedInstancesModificationsResponse' with the minimum fields required to make a request.

@@ -51,9 +51,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'stopReplicationTask' smart constructor.
-newtype StopReplicationTask = StopReplicationTask'
-  { _sReplicationTaskARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StopReplicationTask =
+  StopReplicationTask'
+    { _sReplicationTaskARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopReplicationTask' with the minimum fields required to make a request.
@@ -114,10 +116,12 @@ instance ToQuery StopReplicationTask where
 --
 --
 -- /See:/ 'stopReplicationTaskResponse' smart constructor.
-data StopReplicationTaskResponse = StopReplicationTaskResponse'
-  { _srsReplicationTask :: !(Maybe ReplicationTask)
-  , _srsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StopReplicationTaskResponse =
+  StopReplicationTaskResponse'
+    { _srsReplicationTask :: !(Maybe ReplicationTask)
+    , _srsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopReplicationTaskResponse' with the minimum fields required to make a request.

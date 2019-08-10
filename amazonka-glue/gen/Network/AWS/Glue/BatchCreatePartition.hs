@@ -48,12 +48,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'batchCreatePartition' smart constructor.
-data BatchCreatePartition = BatchCreatePartition'
-  { _bcpCatalogId          :: !(Maybe Text)
-  , _bcpDatabaseName       :: !Text
-  , _bcpTableName          :: !Text
-  , _bcpPartitionInputList :: ![PartitionInput]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchCreatePartition =
+  BatchCreatePartition'
+    { _bcpCatalogId          :: !(Maybe Text)
+    , _bcpDatabaseName       :: !Text
+    , _bcpTableName          :: !Text
+    , _bcpPartitionInputList :: ![PartitionInput]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchCreatePartition' with the minimum fields required to make a request.
@@ -136,10 +138,12 @@ instance ToQuery BatchCreatePartition where
         toQuery = const mempty
 
 -- | /See:/ 'batchCreatePartitionResponse' smart constructor.
-data BatchCreatePartitionResponse = BatchCreatePartitionResponse'
-  { _bcprsErrors         :: !(Maybe [PartitionError])
-  , _bcprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchCreatePartitionResponse =
+  BatchCreatePartitionResponse'
+    { _bcprsErrors         :: !(Maybe [PartitionError])
+    , _bcprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchCreatePartitionResponse' with the minimum fields required to make a request.

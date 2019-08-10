@@ -42,9 +42,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'removePermission' smart constructor.
-newtype RemovePermission = RemovePermission'
-  { _rpStatementId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RemovePermission =
+  RemovePermission'
+    { _rpStatementId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RemovePermission' with the minimum fields required to make a request.

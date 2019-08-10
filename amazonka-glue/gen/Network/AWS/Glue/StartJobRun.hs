@@ -49,13 +49,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'startJobRun' smart constructor.
-data StartJobRun = StartJobRun'
-  { _sjrArguments         :: !(Maybe (Map Text Text))
-  , _sjrAllocatedCapacity :: !(Maybe Int)
-  , _sjrTimeout           :: !(Maybe Nat)
-  , _sjrJobRunId          :: !(Maybe Text)
-  , _sjrJobName           :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartJobRun =
+  StartJobRun'
+    { _sjrArguments         :: !(Maybe (Map Text Text))
+    , _sjrAllocatedCapacity :: !(Maybe Int)
+    , _sjrTimeout           :: !(Maybe Nat)
+    , _sjrJobRunId          :: !(Maybe Text)
+    , _sjrJobName           :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartJobRun' with the minimum fields required to make a request.
@@ -143,10 +145,12 @@ instance ToQuery StartJobRun where
         toQuery = const mempty
 
 -- | /See:/ 'startJobRunResponse' smart constructor.
-data StartJobRunResponse = StartJobRunResponse'
-  { _sjrrsJobRunId       :: !(Maybe Text)
-  , _sjrrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartJobRunResponse =
+  StartJobRunResponse'
+    { _sjrrsJobRunId       :: !(Maybe Text)
+    , _sjrrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartJobRunResponse' with the minimum fields required to make a request.

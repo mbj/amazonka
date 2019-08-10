@@ -56,12 +56,14 @@ import Network.AWS.Support.Types.Product
 --
 --
 -- /See:/ 'addCommunicationToCase' smart constructor.
-data AddCommunicationToCase = AddCommunicationToCase'
-  { _actcCaseId            :: !(Maybe Text)
-  , _actcCcEmailAddresses  :: !(Maybe [Text])
-  , _actcAttachmentSetId   :: !(Maybe Text)
-  , _actcCommunicationBody :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddCommunicationToCase =
+  AddCommunicationToCase'
+    { _actcCaseId            :: !(Maybe Text)
+    , _actcCcEmailAddresses  :: !(Maybe [Text])
+    , _actcAttachmentSetId   :: !(Maybe Text)
+    , _actcCommunicationBody :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddCommunicationToCase' with the minimum fields required to make a request.
@@ -148,10 +150,12 @@ instance ToQuery AddCommunicationToCase where
 --
 --
 -- /See:/ 'addCommunicationToCaseResponse' smart constructor.
-data AddCommunicationToCaseResponse = AddCommunicationToCaseResponse'
-  { _actcrsResult         :: !(Maybe Bool)
-  , _actcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddCommunicationToCaseResponse =
+  AddCommunicationToCaseResponse'
+    { _actcrsResult         :: !(Maybe Bool)
+    , _actcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddCommunicationToCaseResponse' with the minimum fields required to make a request.

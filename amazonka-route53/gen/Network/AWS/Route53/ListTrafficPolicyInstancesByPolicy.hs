@@ -61,14 +61,16 @@ import Network.AWS.Route53.Types.Product
 --
 --
 -- /See:/ 'listTrafficPolicyInstancesByPolicy' smart constructor.
-data ListTrafficPolicyInstancesByPolicy = ListTrafficPolicyInstancesByPolicy'
-  { _ltpibpTrafficPolicyInstanceTypeMarker :: !(Maybe RecordType)
-  , _ltpibpMaxItems                        :: !(Maybe Text)
-  , _ltpibpHostedZoneIdMarker              :: !(Maybe ResourceId)
-  , _ltpibpTrafficPolicyInstanceNameMarker :: !(Maybe Text)
-  , _ltpibpTrafficPolicyId                 :: !Text
-  , _ltpibpTrafficPolicyVersion            :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTrafficPolicyInstancesByPolicy =
+  ListTrafficPolicyInstancesByPolicy'
+    { _ltpibpTrafficPolicyInstanceTypeMarker :: !(Maybe RecordType)
+    , _ltpibpMaxItems                        :: !(Maybe Text)
+    , _ltpibpHostedZoneIdMarker              :: !(Maybe ResourceId)
+    , _ltpibpTrafficPolicyInstanceNameMarker :: !(Maybe Text)
+    , _ltpibpTrafficPolicyId                 :: !Text
+    , _ltpibpTrafficPolicyVersion            :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTrafficPolicyInstancesByPolicy' with the minimum fields required to make a request.
@@ -179,15 +181,17 @@ instance ToQuery ListTrafficPolicyInstancesByPolicy
 --
 --
 -- /See:/ 'listTrafficPolicyInstancesByPolicyResponse' smart constructor.
-data ListTrafficPolicyInstancesByPolicyResponse = ListTrafficPolicyInstancesByPolicyResponse'
-  { _ltpibprsTrafficPolicyInstanceTypeMarker :: !(Maybe RecordType)
-  , _ltpibprsHostedZoneIdMarker              :: !(Maybe ResourceId)
-  , _ltpibprsTrafficPolicyInstanceNameMarker :: !(Maybe Text)
-  , _ltpibprsResponseStatus                  :: !Int
-  , _ltpibprsTrafficPolicyInstances          :: ![TrafficPolicyInstance]
-  , _ltpibprsIsTruncated                     :: !Bool
-  , _ltpibprsMaxItems                        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTrafficPolicyInstancesByPolicyResponse =
+  ListTrafficPolicyInstancesByPolicyResponse'
+    { _ltpibprsTrafficPolicyInstanceTypeMarker :: !(Maybe RecordType)
+    , _ltpibprsHostedZoneIdMarker              :: !(Maybe ResourceId)
+    , _ltpibprsTrafficPolicyInstanceNameMarker :: !(Maybe Text)
+    , _ltpibprsResponseStatus                  :: !Int
+    , _ltpibprsTrafficPolicyInstances          :: ![TrafficPolicyInstance]
+    , _ltpibprsIsTruncated                     :: !Bool
+    , _ltpibprsMaxItems                        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTrafficPolicyInstancesByPolicyResponse' with the minimum fields required to make a request.

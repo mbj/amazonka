@@ -50,14 +50,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createStack' smart constructor.
-data CreateStack = CreateStack'
-  { _csFeedbackURL       :: !(Maybe Text)
-  , _csStorageConnectors :: !(Maybe [StorageConnector])
-  , _csDisplayName       :: !(Maybe Text)
-  , _csDescription       :: !(Maybe Text)
-  , _csRedirectURL       :: !(Maybe Text)
-  , _csName              :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateStack =
+  CreateStack'
+    { _csFeedbackURL       :: !(Maybe Text)
+    , _csStorageConnectors :: !(Maybe [StorageConnector])
+    , _csDisplayName       :: !(Maybe Text)
+    , _csDescription       :: !(Maybe Text)
+    , _csRedirectURL       :: !(Maybe Text)
+    , _csName              :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateStack' with the minimum fields required to make a request.
@@ -154,10 +156,12 @@ instance ToQuery CreateStack where
         toQuery = const mempty
 
 -- | /See:/ 'createStackResponse' smart constructor.
-data CreateStackResponse = CreateStackResponse'
-  { _csrsStack          :: !(Maybe Stack)
-  , _csrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateStackResponse =
+  CreateStackResponse'
+    { _csrsStack          :: !(Maybe Stack)
+    , _csrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateStackResponse' with the minimum fields required to make a request.

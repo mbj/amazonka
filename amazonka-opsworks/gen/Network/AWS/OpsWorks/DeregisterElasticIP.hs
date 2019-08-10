@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deregisterElasticIP' smart constructor.
-newtype DeregisterElasticIP = DeregisterElasticIP'
-  { _deipElasticIP :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeregisterElasticIP =
+  DeregisterElasticIP'
+    { _deipElasticIP :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeregisterElasticIP' with the minimum fields required to make a request.

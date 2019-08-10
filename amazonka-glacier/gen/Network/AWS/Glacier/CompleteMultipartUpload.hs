@@ -64,13 +64,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'completeMultipartUpload' smart constructor.
-data CompleteMultipartUpload = CompleteMultipartUpload'
-  { _cmuChecksum    :: !(Maybe Text)
-  , _cmuArchiveSize :: !(Maybe Text)
-  , _cmuAccountId   :: !Text
-  , _cmuVaultName   :: !Text
-  , _cmuUploadId    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CompleteMultipartUpload =
+  CompleteMultipartUpload'
+    { _cmuChecksum    :: !(Maybe Text)
+    , _cmuArchiveSize :: !(Maybe Text)
+    , _cmuAccountId   :: !Text
+    , _cmuVaultName   :: !Text
+    , _cmuUploadId    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CompleteMultipartUpload' with the minimum fields required to make a request.

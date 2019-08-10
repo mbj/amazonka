@@ -51,11 +51,13 @@ import Network.AWS.WorkMail.Types
 import Network.AWS.WorkMail.Types.Product
 
 -- | /See:/ 'listResources' smart constructor.
-data ListResources = ListResources'
-  { _lrNextToken      :: !(Maybe Text)
-  , _lrMaxResults     :: !(Maybe Nat)
-  , _lrOrganizationId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListResources =
+  ListResources'
+    { _lrNextToken      :: !(Maybe Text)
+    , _lrMaxResults     :: !(Maybe Nat)
+    , _lrOrganizationId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListResources' with the minimum fields required to make a request.
@@ -136,11 +138,13 @@ instance ToQuery ListResources where
         toQuery = const mempty
 
 -- | /See:/ 'listResourcesResponse' smart constructor.
-data ListResourcesResponse = ListResourcesResponse'
-  { _lrrsResources      :: !(Maybe [Resource])
-  , _lrrsNextToken      :: !(Maybe Text)
-  , _lrrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListResourcesResponse =
+  ListResourcesResponse'
+    { _lrrsResources      :: !(Maybe [Resource])
+    , _lrrsNextToken      :: !(Maybe Text)
+    , _lrrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListResourcesResponse' with the minimum fields required to make a request.

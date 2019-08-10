@@ -52,11 +52,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'importAPIKeys' smart constructor.
-data ImportAPIKeys = ImportAPIKeys'
-  { _iakFailOnWarnings :: !(Maybe Bool)
-  , _iakBody           :: !ByteString
-  , _iakFormat         :: !APIKeysFormat
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data ImportAPIKeys =
+  ImportAPIKeys'
+    { _iakFailOnWarnings :: !(Maybe Bool)
+    , _iakBody           :: !ByteString
+    , _iakFormat         :: !APIKeysFormat
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ImportAPIKeys' with the minimum fields required to make a request.
@@ -127,11 +129,13 @@ instance ToQuery ImportAPIKeys where
 --
 --
 -- /See:/ 'importAPIKeysResponse' smart constructor.
-data ImportAPIKeysResponse = ImportAPIKeysResponse'
-  { _iakrsIds            :: !(Maybe [Text])
-  , _iakrsWarnings       :: !(Maybe [Text])
-  , _iakrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ImportAPIKeysResponse =
+  ImportAPIKeysResponse'
+    { _iakrsIds            :: !(Maybe [Text])
+    , _iakrsWarnings       :: !(Maybe [Text])
+    , _iakrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ImportAPIKeysResponse' with the minimum fields required to make a request.

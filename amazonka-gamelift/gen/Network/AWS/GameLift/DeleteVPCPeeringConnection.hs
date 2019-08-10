@@ -67,10 +67,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteVPCPeeringConnection' smart constructor.
-data DeleteVPCPeeringConnection = DeleteVPCPeeringConnection'
-  { _dvpcFleetId                :: !Text
-  , _dvpcVPCPeeringConnectionId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteVPCPeeringConnection =
+  DeleteVPCPeeringConnection'
+    { _dvpcFleetId                :: !Text
+    , _dvpcVPCPeeringConnectionId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteVPCPeeringConnection' with the minimum fields required to make a request.
@@ -139,9 +141,11 @@ instance ToQuery DeleteVPCPeeringConnection where
         toQuery = const mempty
 
 -- | /See:/ 'deleteVPCPeeringConnectionResponse' smart constructor.
-newtype DeleteVPCPeeringConnectionResponse = DeleteVPCPeeringConnectionResponse'
-  { _dvpcrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteVPCPeeringConnectionResponse =
+  DeleteVPCPeeringConnectionResponse'
+    { _dvpcrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteVPCPeeringConnectionResponse' with the minimum fields required to make a request.

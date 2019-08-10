@@ -60,10 +60,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'adminGetUser' smart constructor.
-data AdminGetUser = AdminGetUser'
-  { _aguUserPoolId :: !Text
-  , _aguUsername   :: !(Sensitive Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data AdminGetUser =
+  AdminGetUser'
+    { _aguUserPoolId :: !Text
+    , _aguUsername   :: !(Sensitive Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AdminGetUser' with the minimum fields required to make a request.
@@ -139,18 +141,20 @@ instance ToQuery AdminGetUser where
 --
 --
 -- /See:/ 'adminGetUserResponse' smart constructor.
-data AdminGetUserResponse = AdminGetUserResponse'
-  { _agursEnabled              :: !(Maybe Bool)
-  , _agursUserStatus           :: !(Maybe UserStatusType)
-  , _agursUserAttributes       :: !(Maybe [AttributeType])
-  , _agursUserCreateDate       :: !(Maybe POSIX)
-  , _agursUserMFASettingList   :: !(Maybe [Text])
-  , _agursMFAOptions           :: !(Maybe [MFAOptionType])
-  , _agursUserLastModifiedDate :: !(Maybe POSIX)
-  , _agursPreferredMFASetting  :: !(Maybe Text)
-  , _agursResponseStatus       :: !Int
-  , _agursUsername             :: !(Sensitive Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data AdminGetUserResponse =
+  AdminGetUserResponse'
+    { _agursEnabled              :: !(Maybe Bool)
+    , _agursUserStatus           :: !(Maybe UserStatusType)
+    , _agursUserAttributes       :: !(Maybe [AttributeType])
+    , _agursUserCreateDate       :: !(Maybe POSIX)
+    , _agursUserMFASettingList   :: !(Maybe [Text])
+    , _agursMFAOptions           :: !(Maybe [MFAOptionType])
+    , _agursUserLastModifiedDate :: !(Maybe POSIX)
+    , _agursPreferredMFASetting  :: !(Maybe Text)
+    , _agursResponseStatus       :: !Int
+    , _agursUsername             :: !(Sensitive Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AdminGetUserResponse' with the minimum fields required to make a request.

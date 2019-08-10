@@ -56,12 +56,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeEcsClusters' smart constructor.
-data DescribeEcsClusters = DescribeEcsClusters'
-  { _decNextToken      :: !(Maybe Text)
-  , _decStackId        :: !(Maybe Text)
-  , _decMaxResults     :: !(Maybe Int)
-  , _decEcsClusterARNs :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeEcsClusters =
+  DescribeEcsClusters'
+    { _decNextToken      :: !(Maybe Text)
+    , _decStackId        :: !(Maybe Text)
+    , _decMaxResults     :: !(Maybe Int)
+    , _decEcsClusterARNs :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEcsClusters' with the minimum fields required to make a request.
@@ -155,11 +157,13 @@ instance ToQuery DescribeEcsClusters where
 --
 --
 -- /See:/ 'describeEcsClustersResponse' smart constructor.
-data DescribeEcsClustersResponse = DescribeEcsClustersResponse'
-  { _decrsNextToken      :: !(Maybe Text)
-  , _decrsEcsClusters    :: !(Maybe [EcsCluster])
-  , _decrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeEcsClustersResponse =
+  DescribeEcsClustersResponse'
+    { _decrsNextToken      :: !(Maybe Text)
+    , _decrsEcsClusters    :: !(Maybe [EcsCluster])
+    , _decrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEcsClustersResponse' with the minimum fields required to make a request.

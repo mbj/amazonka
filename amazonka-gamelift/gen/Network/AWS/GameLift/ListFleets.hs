@@ -100,11 +100,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listFleets' smart constructor.
-data ListFleets = ListFleets'
-  { _lfBuildId   :: !(Maybe Text)
-  , _lfNextToken :: !(Maybe Text)
-  , _lfLimit     :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListFleets =
+  ListFleets'
+    { _lfBuildId   :: !(Maybe Text)
+    , _lfNextToken :: !(Maybe Text)
+    , _lfLimit     :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListFleets' with the minimum fields required to make a request.
@@ -176,11 +178,13 @@ instance ToQuery ListFleets where
 --
 --
 -- /See:/ 'listFleetsResponse' smart constructor.
-data ListFleetsResponse = ListFleetsResponse'
-  { _lfrsNextToken      :: !(Maybe Text)
-  , _lfrsFleetIds       :: !(Maybe (List1 Text))
-  , _lfrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListFleetsResponse =
+  ListFleetsResponse'
+    { _lfrsNextToken      :: !(Maybe Text)
+    , _lfrsFleetIds       :: !(Maybe (List1 Text))
+    , _lfrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListFleetsResponse' with the minimum fields required to make a request.

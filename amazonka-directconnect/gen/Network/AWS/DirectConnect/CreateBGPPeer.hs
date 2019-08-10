@@ -56,10 +56,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createBGPPeer' smart constructor.
-data CreateBGPPeer = CreateBGPPeer'
-  { _cbpNewBGPPeer         :: !(Maybe NewBGPPeer)
-  , _cbpVirtualInterfaceId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateBGPPeer =
+  CreateBGPPeer'
+    { _cbpNewBGPPeer         :: !(Maybe NewBGPPeer)
+    , _cbpVirtualInterfaceId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateBGPPeer' with the minimum fields required to make a request.
@@ -124,10 +126,12 @@ instance ToQuery CreateBGPPeer where
 --
 --
 -- /See:/ 'createBGPPeerResponse' smart constructor.
-data CreateBGPPeerResponse = CreateBGPPeerResponse'
-  { _cbprsVirtualInterface :: !(Maybe VirtualInterface)
-  , _cbprsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateBGPPeerResponse =
+  CreateBGPPeerResponse'
+    { _cbprsVirtualInterface :: !(Maybe VirtualInterface)
+    , _cbprsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateBGPPeerResponse' with the minimum fields required to make a request.

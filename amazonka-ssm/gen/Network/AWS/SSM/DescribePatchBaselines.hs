@@ -48,11 +48,13 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'describePatchBaselines' smart constructor.
-data DescribePatchBaselines = DescribePatchBaselines'
-  { _dpbFilters    :: !(Maybe [PatchOrchestratorFilter])
-  , _dpbNextToken  :: !(Maybe Text)
-  , _dpbMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribePatchBaselines =
+  DescribePatchBaselines'
+    { _dpbFilters    :: !(Maybe [PatchOrchestratorFilter])
+    , _dpbNextToken  :: !(Maybe Text)
+    , _dpbMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribePatchBaselines' with the minimum fields required to make a request.
@@ -123,11 +125,13 @@ instance ToQuery DescribePatchBaselines where
         toQuery = const mempty
 
 -- | /See:/ 'describePatchBaselinesResponse' smart constructor.
-data DescribePatchBaselinesResponse = DescribePatchBaselinesResponse'
-  { _dpbsrsBaselineIdentities :: !(Maybe [PatchBaselineIdentity])
-  , _dpbsrsNextToken          :: !(Maybe Text)
-  , _dpbsrsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribePatchBaselinesResponse =
+  DescribePatchBaselinesResponse'
+    { _dpbsrsBaselineIdentities :: !(Maybe [PatchBaselineIdentity])
+    , _dpbsrsNextToken          :: !(Maybe Text)
+    , _dpbsrsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribePatchBaselinesResponse' with the minimum fields required to make a request.

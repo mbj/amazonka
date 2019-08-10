@@ -52,11 +52,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'adminSetUserSettings' smart constructor.
-data AdminSetUserSettings = AdminSetUserSettings'
-  { _asusUserPoolId :: !Text
-  , _asusUsername   :: !(Sensitive Text)
-  , _asusMFAOptions :: ![MFAOptionType]
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data AdminSetUserSettings =
+  AdminSetUserSettings'
+    { _asusUserPoolId :: !Text
+    , _asusUsername   :: !(Sensitive Text)
+    , _asusMFAOptions :: ![MFAOptionType]
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AdminSetUserSettings' with the minimum fields required to make a request.
@@ -135,9 +137,11 @@ instance ToQuery AdminSetUserSettings where
 --
 --
 -- /See:/ 'adminSetUserSettingsResponse' smart constructor.
-newtype AdminSetUserSettingsResponse = AdminSetUserSettingsResponse'
-  { _asusrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AdminSetUserSettingsResponse =
+  AdminSetUserSettingsResponse'
+    { _asusrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AdminSetUserSettingsResponse' with the minimum fields required to make a request.

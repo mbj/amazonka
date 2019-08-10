@@ -42,9 +42,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteCoreDefinition' smart constructor.
-newtype DeleteCoreDefinition = DeleteCoreDefinition'
-  { _dcdCoreDefinitionId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteCoreDefinition =
+  DeleteCoreDefinition'
+    { _dcdCoreDefinitionId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteCoreDefinition' with the minimum fields required to make a request.
@@ -94,9 +96,11 @@ instance ToQuery DeleteCoreDefinition where
         toQuery = const mempty
 
 -- | /See:/ 'deleteCoreDefinitionResponse' smart constructor.
-newtype DeleteCoreDefinitionResponse = DeleteCoreDefinitionResponse'
-  { _dcdrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteCoreDefinitionResponse =
+  DeleteCoreDefinitionResponse'
+    { _dcdrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteCoreDefinitionResponse' with the minimum fields required to make a request.

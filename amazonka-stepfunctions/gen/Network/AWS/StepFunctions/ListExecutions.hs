@@ -54,12 +54,14 @@ import Network.AWS.StepFunctions.Types
 import Network.AWS.StepFunctions.Types.Product
 
 -- | /See:/ 'listExecutions' smart constructor.
-data ListExecutions = ListExecutions'
-  { _leStatusFilter    :: !(Maybe ExecutionStatus)
-  , _leNextToken       :: !(Maybe Text)
-  , _leMaxResults      :: !(Maybe Nat)
-  , _leStateMachineARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListExecutions =
+  ListExecutions'
+    { _leStatusFilter    :: !(Maybe ExecutionStatus)
+    , _leNextToken       :: !(Maybe Text)
+    , _leMaxResults      :: !(Maybe Nat)
+    , _leStateMachineARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListExecutions' with the minimum fields required to make a request.
@@ -147,11 +149,13 @@ instance ToQuery ListExecutions where
         toQuery = const mempty
 
 -- | /See:/ 'listExecutionsResponse' smart constructor.
-data ListExecutionsResponse = ListExecutionsResponse'
-  { _lersNextToken      :: !(Maybe Text)
-  , _lersResponseStatus :: !Int
-  , _lersExecutions     :: ![ExecutionListItem]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListExecutionsResponse =
+  ListExecutionsResponse'
+    { _lersNextToken      :: !(Maybe Text)
+    , _lersResponseStatus :: !Int
+    , _lersExecutions     :: ![ExecutionListItem]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListExecutionsResponse' with the minimum fields required to make a request.

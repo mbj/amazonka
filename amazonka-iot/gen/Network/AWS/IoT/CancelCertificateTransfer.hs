@@ -50,9 +50,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'cancelCertificateTransfer' smart constructor.
-newtype CancelCertificateTransfer = CancelCertificateTransfer'
-  { _cctCertificateId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CancelCertificateTransfer =
+  CancelCertificateTransfer'
+    { _cctCertificateId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CancelCertificateTransfer' with the minimum fields required to make a request.

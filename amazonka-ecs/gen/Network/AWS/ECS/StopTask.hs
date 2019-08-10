@@ -49,11 +49,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'stopTask' smart constructor.
-data StopTask = StopTask'
-  { _stCluster :: !(Maybe Text)
-  , _stReason  :: !(Maybe Text)
-  , _stTask    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StopTask =
+  StopTask'
+    { _stCluster :: !(Maybe Text)
+    , _stReason  :: !(Maybe Text)
+    , _stTask    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopTask' with the minimum fields required to make a request.
@@ -122,10 +124,12 @@ instance ToQuery StopTask where
         toQuery = const mempty
 
 -- | /See:/ 'stopTaskResponse' smart constructor.
-data StopTaskResponse = StopTaskResponse'
-  { _srsTask           :: !(Maybe Task)
-  , _srsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StopTaskResponse =
+  StopTaskResponse'
+    { _srsTask           :: !(Maybe Task)
+    , _srsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopTaskResponse' with the minimum fields required to make a request.

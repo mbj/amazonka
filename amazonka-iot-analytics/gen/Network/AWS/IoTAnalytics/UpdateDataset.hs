@@ -44,11 +44,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateDataset' smart constructor.
-data UpdateDataset = UpdateDataset'
-  { _udTriggers    :: !(Maybe [DatasetTrigger])
-  , _udDatasetName :: !Text
-  , _udActions     :: !(List1 DatasetAction)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateDataset =
+  UpdateDataset'
+    { _udTriggers    :: !(Maybe [DatasetTrigger])
+    , _udDatasetName :: !Text
+    , _udActions     :: !(List1 DatasetAction)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateDataset' with the minimum fields required to make a request.

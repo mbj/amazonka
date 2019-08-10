@@ -67,11 +67,13 @@ import Network.AWS.WAF.Types
 import Network.AWS.WAF.Types.Product
 
 -- | /See:/ 'updateRuleGroup' smart constructor.
-data UpdateRuleGroup = UpdateRuleGroup'
-  { _urgRuleGroupId :: !Text
-  , _urgUpdates     :: !(List1 RuleGroupUpdate)
-  , _urgChangeToken :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateRuleGroup =
+  UpdateRuleGroup'
+    { _urgRuleGroupId :: !Text
+    , _urgUpdates     :: !(List1 RuleGroupUpdate)
+    , _urgChangeToken :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateRuleGroup' with the minimum fields required to make a request.
@@ -145,10 +147,12 @@ instance ToQuery UpdateRuleGroup where
         toQuery = const mempty
 
 -- | /See:/ 'updateRuleGroupResponse' smart constructor.
-data UpdateRuleGroupResponse = UpdateRuleGroupResponse'
-  { _urgrsChangeToken    :: !(Maybe Text)
-  , _urgrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateRuleGroupResponse =
+  UpdateRuleGroupResponse'
+    { _urgrsChangeToken    :: !(Maybe Text)
+    , _urgrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateRuleGroupResponse' with the minimum fields required to make a request.

@@ -49,10 +49,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteConditionalForwarder' smart constructor.
-data DeleteConditionalForwarder = DeleteConditionalForwarder'
-  { _delDirectoryId      :: !Text
-  , _delRemoteDomainName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteConditionalForwarder =
+  DeleteConditionalForwarder'
+    { _delDirectoryId      :: !Text
+    , _delRemoteDomainName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteConditionalForwarder' with the minimum fields required to make a request.
@@ -121,9 +123,11 @@ instance ToQuery DeleteConditionalForwarder where
 --
 --
 -- /See:/ 'deleteConditionalForwarderResponse' smart constructor.
-newtype DeleteConditionalForwarderResponse = DeleteConditionalForwarderResponse'
-  { _drsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteConditionalForwarderResponse =
+  DeleteConditionalForwarderResponse'
+    { _drsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteConditionalForwarderResponse' with the minimum fields required to make a request.

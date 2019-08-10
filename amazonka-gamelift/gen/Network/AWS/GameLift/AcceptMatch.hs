@@ -70,11 +70,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'acceptMatch' smart constructor.
-data AcceptMatch = AcceptMatch'
-  { _amTicketId       :: !Text
-  , _amPlayerIds      :: ![Text]
-  , _amAcceptanceType :: !AcceptanceType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AcceptMatch =
+  AcceptMatch'
+    { _amTicketId       :: !Text
+    , _amPlayerIds      :: ![Text]
+    , _amAcceptanceType :: !AcceptanceType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AcceptMatch' with the minimum fields required to make a request.
@@ -146,9 +148,11 @@ instance ToQuery AcceptMatch where
         toQuery = const mempty
 
 -- | /See:/ 'acceptMatchResponse' smart constructor.
-newtype AcceptMatchResponse = AcceptMatchResponse'
-  { _amrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AcceptMatchResponse =
+  AcceptMatchResponse'
+    { _amrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AcceptMatchResponse' with the minimum fields required to make a request.

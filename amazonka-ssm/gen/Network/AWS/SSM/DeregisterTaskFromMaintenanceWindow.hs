@@ -47,10 +47,12 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'deregisterTaskFromMaintenanceWindow' smart constructor.
-data DeregisterTaskFromMaintenanceWindow = DeregisterTaskFromMaintenanceWindow'
-  { _derWindowId     :: !Text
-  , _derWindowTaskId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeregisterTaskFromMaintenanceWindow =
+  DeregisterTaskFromMaintenanceWindow'
+    { _derWindowId     :: !Text
+    , _derWindowTaskId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeregisterTaskFromMaintenanceWindow' with the minimum fields required to make a request.
@@ -125,11 +127,13 @@ instance ToQuery DeregisterTaskFromMaintenanceWindow
         toQuery = const mempty
 
 -- | /See:/ 'deregisterTaskFromMaintenanceWindowResponse' smart constructor.
-data DeregisterTaskFromMaintenanceWindowResponse = DeregisterTaskFromMaintenanceWindowResponse'
-  { _derrsWindowTaskId   :: !(Maybe Text)
-  , _derrsWindowId       :: !(Maybe Text)
-  , _derrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeregisterTaskFromMaintenanceWindowResponse =
+  DeregisterTaskFromMaintenanceWindowResponse'
+    { _derrsWindowTaskId   :: !(Maybe Text)
+    , _derrsWindowId       :: !(Maybe Text)
+    , _derrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeregisterTaskFromMaintenanceWindowResponse' with the minimum fields required to make a request.

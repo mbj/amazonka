@@ -51,9 +51,11 @@ import Network.AWS.SNS.Types.Product
 --
 --
 -- /See:/ 'checkIfPhoneNumberIsOptedOut' smart constructor.
-newtype CheckIfPhoneNumberIsOptedOut = CheckIfPhoneNumberIsOptedOut'
-  { _cipniooPhoneNumber :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CheckIfPhoneNumberIsOptedOut =
+  CheckIfPhoneNumberIsOptedOut'
+    { _cipniooPhoneNumber :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CheckIfPhoneNumberIsOptedOut' with the minimum fields required to make a request.
@@ -107,10 +109,12 @@ instance ToQuery CheckIfPhoneNumberIsOptedOut where
 --
 --
 -- /See:/ 'checkIfPhoneNumberIsOptedOutResponse' smart constructor.
-data CheckIfPhoneNumberIsOptedOutResponse = CheckIfPhoneNumberIsOptedOutResponse'
-  { _cipnioorsIsOptedOut     :: !(Maybe Bool)
-  , _cipnioorsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CheckIfPhoneNumberIsOptedOutResponse =
+  CheckIfPhoneNumberIsOptedOutResponse'
+    { _cipnioorsIsOptedOut     :: !(Maybe Bool)
+    , _cipnioorsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CheckIfPhoneNumberIsOptedOutResponse' with the minimum fields required to make a request.

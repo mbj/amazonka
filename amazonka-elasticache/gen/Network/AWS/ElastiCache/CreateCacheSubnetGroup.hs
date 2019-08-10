@@ -53,11 +53,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createCacheSubnetGroup' smart constructor.
-data CreateCacheSubnetGroup = CreateCacheSubnetGroup'
-  { _ccsgCacheSubnetGroupName        :: !Text
-  , _ccsgCacheSubnetGroupDescription :: !Text
-  , _ccsgSubnetIds                   :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateCacheSubnetGroup =
+  CreateCacheSubnetGroup'
+    { _ccsgCacheSubnetGroupName        :: !Text
+    , _ccsgCacheSubnetGroupDescription :: !Text
+    , _ccsgSubnetIds                   :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateCacheSubnetGroup' with the minimum fields required to make a request.
@@ -126,10 +128,12 @@ instance ToQuery CreateCacheSubnetGroup where
                  toQueryList "SubnetIdentifier" _ccsgSubnetIds]
 
 -- | /See:/ 'createCacheSubnetGroupResponse' smart constructor.
-data CreateCacheSubnetGroupResponse = CreateCacheSubnetGroupResponse'
-  { _crsCacheSubnetGroup :: !(Maybe CacheSubnetGroup)
-  , _crsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateCacheSubnetGroupResponse =
+  CreateCacheSubnetGroupResponse'
+    { _crsCacheSubnetGroup :: !(Maybe CacheSubnetGroup)
+    , _crsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateCacheSubnetGroupResponse' with the minimum fields required to make a request.

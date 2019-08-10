@@ -59,12 +59,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeTableStatistics' smart constructor.
-data DescribeTableStatistics = DescribeTableStatistics'
-  { _dtsFilters            :: !(Maybe [Filter])
-  , _dtsMarker             :: !(Maybe Text)
-  , _dtsMaxRecords         :: !(Maybe Int)
-  , _dtsReplicationTaskARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeTableStatistics =
+  DescribeTableStatistics'
+    { _dtsFilters            :: !(Maybe [Filter])
+    , _dtsMarker             :: !(Maybe Text)
+    , _dtsMaxRecords         :: !(Maybe Int)
+    , _dtsReplicationTaskARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeTableStatistics' with the minimum fields required to make a request.
@@ -160,12 +162,14 @@ instance ToQuery DescribeTableStatistics where
 --
 --
 -- /See:/ 'describeTableStatisticsResponse' smart constructor.
-data DescribeTableStatisticsResponse = DescribeTableStatisticsResponse'
-  { _dtsrsReplicationTaskARN :: !(Maybe Text)
-  , _dtsrsMarker             :: !(Maybe Text)
-  , _dtsrsTableStatistics    :: !(Maybe [TableStatistics])
-  , _dtsrsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeTableStatisticsResponse =
+  DescribeTableStatisticsResponse'
+    { _dtsrsReplicationTaskARN :: !(Maybe Text)
+    , _dtsrsMarker             :: !(Maybe Text)
+    , _dtsrsTableStatistics    :: !(Maybe [TableStatistics])
+    , _dtsrsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeTableStatisticsResponse' with the minimum fields required to make a request.

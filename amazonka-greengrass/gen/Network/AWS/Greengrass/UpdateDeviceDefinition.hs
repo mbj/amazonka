@@ -43,10 +43,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateDeviceDefinition' smart constructor.
-data UpdateDeviceDefinition = UpdateDeviceDefinition'
-  { _uddName               :: !(Maybe Text)
-  , _uddDeviceDefinitionId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateDeviceDefinition =
+  UpdateDeviceDefinition'
+    { _uddName               :: !(Maybe Text)
+    , _uddDeviceDefinitionId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateDeviceDefinition' with the minimum fields required to make a request.
@@ -107,9 +109,11 @@ instance ToQuery UpdateDeviceDefinition where
         toQuery = const mempty
 
 -- | /See:/ 'updateDeviceDefinitionResponse' smart constructor.
-newtype UpdateDeviceDefinitionResponse = UpdateDeviceDefinitionResponse'
-  { _uddrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateDeviceDefinitionResponse =
+  UpdateDeviceDefinitionResponse'
+    { _uddrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateDeviceDefinitionResponse' with the minimum fields required to make a request.

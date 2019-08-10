@@ -47,10 +47,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteBasePathMapping' smart constructor.
-data DeleteBasePathMapping = DeleteBasePathMapping'
-  { _dbpmDomainName :: !Text
-  , _dbpmBasePath   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteBasePathMapping =
+  DeleteBasePathMapping'
+    { _dbpmDomainName :: !Text
+    , _dbpmBasePath   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteBasePathMapping' with the minimum fields required to make a request.

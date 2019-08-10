@@ -64,14 +64,16 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getClusterCredentials' smart constructor.
-data GetClusterCredentials = GetClusterCredentials'
-  { _gccDBGroups          :: !(Maybe [Text])
-  , _gccDurationSeconds   :: !(Maybe Int)
-  , _gccAutoCreate        :: !(Maybe Bool)
-  , _gccDBName            :: !(Maybe Text)
-  , _gccDBUser            :: !Text
-  , _gccClusterIdentifier :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetClusterCredentials =
+  GetClusterCredentials'
+    { _gccDBGroups          :: !(Maybe [Text])
+    , _gccDurationSeconds   :: !(Maybe Int)
+    , _gccAutoCreate        :: !(Maybe Bool)
+    , _gccDBName            :: !(Maybe Text)
+    , _gccDBUser            :: !Text
+    , _gccClusterIdentifier :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetClusterCredentials' with the minimum fields required to make a request.
@@ -167,12 +169,14 @@ instance ToQuery GetClusterCredentials where
 --
 --
 -- /See:/ 'getClusterCredentialsResponse' smart constructor.
-data GetClusterCredentialsResponse = GetClusterCredentialsResponse'
-  { _gccrsDBUser         :: !(Maybe Text)
-  , _gccrsExpiration     :: !(Maybe ISO8601)
-  , _gccrsDBPassword     :: !(Maybe (Sensitive Text))
-  , _gccrsResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data GetClusterCredentialsResponse =
+  GetClusterCredentialsResponse'
+    { _gccrsDBUser         :: !(Maybe Text)
+    , _gccrsExpiration     :: !(Maybe ISO8601)
+    , _gccrsDBPassword     :: !(Maybe (Sensitive Text))
+    , _gccrsResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetClusterCredentialsResponse' with the minimum fields required to make a request.

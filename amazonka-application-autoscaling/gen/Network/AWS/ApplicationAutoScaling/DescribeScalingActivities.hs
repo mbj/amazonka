@@ -57,13 +57,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeScalingActivities' smart constructor.
-data DescribeScalingActivities = DescribeScalingActivities'
-  { _desScalableDimension :: !(Maybe ScalableDimension)
-  , _desResourceId        :: !(Maybe Text)
-  , _desNextToken         :: !(Maybe Text)
-  , _desMaxResults        :: !(Maybe Int)
-  , _desServiceNamespace  :: !ServiceNamespace
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeScalingActivities =
+  DescribeScalingActivities'
+    { _desScalableDimension :: !(Maybe ScalableDimension)
+    , _desResourceId        :: !(Maybe Text)
+    , _desNextToken         :: !(Maybe Text)
+    , _desMaxResults        :: !(Maybe Int)
+    , _desServiceNamespace  :: !ServiceNamespace
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeScalingActivities' with the minimum fields required to make a request.
@@ -162,11 +164,13 @@ instance ToQuery DescribeScalingActivities where
         toQuery = const mempty
 
 -- | /See:/ 'describeScalingActivitiesResponse' smart constructor.
-data DescribeScalingActivitiesResponse = DescribeScalingActivitiesResponse'
-  { _dsasrsScalingActivities :: !(Maybe [ScalingActivity])
-  , _dsasrsNextToken         :: !(Maybe Text)
-  , _dsasrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeScalingActivitiesResponse =
+  DescribeScalingActivitiesResponse'
+    { _dsasrsScalingActivities :: !(Maybe [ScalingActivity])
+    , _dsasrsNextToken         :: !(Maybe Text)
+    , _dsasrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeScalingActivitiesResponse' with the minimum fields required to make a request.

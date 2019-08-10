@@ -56,19 +56,21 @@ import Network.AWS.ServiceCatalog.Types
 import Network.AWS.ServiceCatalog.Types.Product
 
 -- | /See:/ 'updateProduct' smart constructor.
-data UpdateProduct = UpdateProduct'
-  { _upRemoveTags         :: !(Maybe [Text])
-  , _upOwner              :: !(Maybe Text)
-  , _upSupportURL         :: !(Maybe Text)
-  , _upDistributor        :: !(Maybe Text)
-  , _upName               :: !(Maybe Text)
-  , _upAcceptLanguage     :: !(Maybe Text)
-  , _upAddTags            :: !(Maybe [Tag])
-  , _upSupportEmail       :: !(Maybe Text)
-  , _upDescription        :: !(Maybe Text)
-  , _upSupportDescription :: !(Maybe Text)
-  , _upId                 :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateProduct =
+  UpdateProduct'
+    { _upRemoveTags         :: !(Maybe [Text])
+    , _upOwner              :: !(Maybe Text)
+    , _upSupportURL         :: !(Maybe Text)
+    , _upDistributor        :: !(Maybe Text)
+    , _upName               :: !(Maybe Text)
+    , _upAcceptLanguage     :: !(Maybe Text)
+    , _upAddTags            :: !(Maybe [Tag])
+    , _upSupportEmail       :: !(Maybe Text)
+    , _upDescription        :: !(Maybe Text)
+    , _upSupportDescription :: !(Maybe Text)
+    , _upId                 :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateProduct' with the minimum fields required to make a request.
@@ -207,11 +209,13 @@ instance ToQuery UpdateProduct where
         toQuery = const mempty
 
 -- | /See:/ 'updateProductResponse' smart constructor.
-data UpdateProductResponse = UpdateProductResponse'
-  { _ursProductViewDetail :: !(Maybe ProductViewDetail)
-  , _ursTags              :: !(Maybe [Tag])
-  , _ursResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateProductResponse =
+  UpdateProductResponse'
+    { _ursProductViewDetail :: !(Maybe ProductViewDetail)
+    , _ursTags              :: !(Maybe [Tag])
+    , _ursResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateProductResponse' with the minimum fields required to make a request.

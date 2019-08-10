@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeAgentVersions' smart constructor.
-data DescribeAgentVersions = DescribeAgentVersions'
-  { _davConfigurationManager :: !(Maybe StackConfigurationManager)
-  , _davStackId              :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAgentVersions =
+  DescribeAgentVersions'
+    { _davConfigurationManager :: !(Maybe StackConfigurationManager)
+    , _davStackId              :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAgentVersions' with the minimum fields required to make a request.
@@ -118,10 +120,12 @@ instance ToQuery DescribeAgentVersions where
 --
 --
 -- /See:/ 'describeAgentVersionsResponse' smart constructor.
-data DescribeAgentVersionsResponse = DescribeAgentVersionsResponse'
-  { _davrsAgentVersions  :: !(Maybe [AgentVersion])
-  , _davrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAgentVersionsResponse =
+  DescribeAgentVersionsResponse'
+    { _davrsAgentVersions  :: !(Maybe [AgentVersion])
+    , _davrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAgentVersionsResponse' with the minimum fields required to make a request.

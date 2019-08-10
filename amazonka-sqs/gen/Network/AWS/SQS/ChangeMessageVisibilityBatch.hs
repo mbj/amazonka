@@ -53,10 +53,12 @@ import Network.AWS.SQS.Types.Product
 --
 --
 -- /See:/ 'changeMessageVisibilityBatch' smart constructor.
-data ChangeMessageVisibilityBatch = ChangeMessageVisibilityBatch'
-  { _cmvbQueueURL :: !Text
-  , _cmvbEntries  :: ![ChangeMessageVisibilityBatchRequestEntry]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ChangeMessageVisibilityBatch =
+  ChangeMessageVisibilityBatch'
+    { _cmvbQueueURL :: !Text
+    , _cmvbEntries  :: ![ChangeMessageVisibilityBatchRequestEntry]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ChangeMessageVisibilityBatch' with the minimum fields required to make a request.
@@ -124,11 +126,13 @@ instance ToQuery ChangeMessageVisibilityBatch where
 --
 --
 -- /See:/ 'changeMessageVisibilityBatchResponse' smart constructor.
-data ChangeMessageVisibilityBatchResponse = ChangeMessageVisibilityBatchResponse'
-  { _cmvbrsResponseStatus :: !Int
-  , _cmvbrsSuccessful     :: ![ChangeMessageVisibilityBatchResultEntry]
-  , _cmvbrsFailed         :: ![BatchResultErrorEntry]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ChangeMessageVisibilityBatchResponse =
+  ChangeMessageVisibilityBatchResponse'
+    { _cmvbrsResponseStatus :: !Int
+    , _cmvbrsSuccessful     :: ![ChangeMessageVisibilityBatchResultEntry]
+    , _cmvbrsFailed         :: ![BatchResultErrorEntry]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ChangeMessageVisibilityBatchResponse' with the minimum fields required to make a request.

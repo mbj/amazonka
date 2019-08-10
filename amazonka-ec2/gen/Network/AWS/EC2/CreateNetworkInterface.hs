@@ -59,17 +59,19 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createNetworkInterface' smart constructor.
-data CreateNetworkInterface = CreateNetworkInterface'
-  { _cniGroups :: !(Maybe [Text])
-  , _cniPrivateIPAddresses :: !(Maybe [PrivateIPAddressSpecification])
-  , _cniIPv6AddressCount :: !(Maybe Int)
-  , _cniPrivateIPAddress :: !(Maybe Text)
-  , _cniSecondaryPrivateIPAddressCount :: !(Maybe Int)
-  , _cniDescription :: !(Maybe Text)
-  , _cniDryRun :: !(Maybe Bool)
-  , _cniIPv6Addresses :: !(Maybe [InstanceIPv6Address])
-  , _cniSubnetId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateNetworkInterface =
+  CreateNetworkInterface'
+    { _cniGroups :: !(Maybe [Text])
+    , _cniPrivateIPAddresses :: !(Maybe [PrivateIPAddressSpecification])
+    , _cniIPv6AddressCount :: !(Maybe Int)
+    , _cniPrivateIPAddress :: !(Maybe Text)
+    , _cniSecondaryPrivateIPAddressCount :: !(Maybe Int)
+    , _cniDescription :: !(Maybe Text)
+    , _cniDryRun :: !(Maybe Bool)
+    , _cniIPv6Addresses :: !(Maybe [InstanceIPv6Address])
+    , _cniSubnetId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateNetworkInterface' with the minimum fields required to make a request.
@@ -192,10 +194,12 @@ instance ToQuery CreateNetworkInterface where
 --
 --
 -- /See:/ 'createNetworkInterfaceResponse' smart constructor.
-data CreateNetworkInterfaceResponse = CreateNetworkInterfaceResponse'
-  { _cnirsNetworkInterface :: !(Maybe NetworkInterface)
-  , _cnirsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateNetworkInterfaceResponse =
+  CreateNetworkInterfaceResponse'
+    { _cnirsNetworkInterface :: !(Maybe NetworkInterface)
+    , _cnirsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateNetworkInterfaceResponse' with the minimum fields required to make a request.

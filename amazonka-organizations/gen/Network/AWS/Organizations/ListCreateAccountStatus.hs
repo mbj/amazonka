@@ -53,11 +53,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listCreateAccountStatus' smart constructor.
-data ListCreateAccountStatus = ListCreateAccountStatus'
-  { _lcasStates     :: !(Maybe [CreateAccountState])
-  , _lcasNextToken  :: !(Maybe Text)
-  , _lcasMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListCreateAccountStatus =
+  ListCreateAccountStatus'
+    { _lcasStates     :: !(Maybe [CreateAccountState])
+    , _lcasNextToken  :: !(Maybe Text)
+    , _lcasMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListCreateAccountStatus' with the minimum fields required to make a request.
@@ -136,11 +138,13 @@ instance ToQuery ListCreateAccountStatus where
         toQuery = const mempty
 
 -- | /See:/ 'listCreateAccountStatusResponse' smart constructor.
-data ListCreateAccountStatusResponse = ListCreateAccountStatusResponse'
-  { _lcasrsCreateAccountStatuses :: !(Maybe [CreateAccountStatus])
-  , _lcasrsNextToken             :: !(Maybe Text)
-  , _lcasrsResponseStatus        :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data ListCreateAccountStatusResponse =
+  ListCreateAccountStatusResponse'
+    { _lcasrsCreateAccountStatuses :: !(Maybe [CreateAccountStatus])
+    , _lcasrsNextToken             :: !(Maybe Text)
+    , _lcasrsResponseStatus        :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListCreateAccountStatusResponse' with the minimum fields required to make a request.

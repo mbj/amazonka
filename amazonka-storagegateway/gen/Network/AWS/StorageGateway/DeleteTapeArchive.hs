@@ -49,9 +49,11 @@ import Network.AWS.StorageGateway.Types.Product
 --
 --
 -- /See:/ 'deleteTapeArchive' smart constructor.
-newtype DeleteTapeArchive = DeleteTapeArchive'
-  { _dtaTapeARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteTapeArchive =
+  DeleteTapeArchive'
+    { _dtaTapeARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteTapeArchive' with the minimum fields required to make a request.
@@ -108,10 +110,12 @@ instance ToQuery DeleteTapeArchive where
 --
 --
 -- /See:/ 'deleteTapeArchiveResponse' smart constructor.
-data DeleteTapeArchiveResponse = DeleteTapeArchiveResponse'
-  { _dtatrsTapeARN        :: !(Maybe Text)
-  , _dtatrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteTapeArchiveResponse =
+  DeleteTapeArchiveResponse'
+    { _dtatrsTapeARN        :: !(Maybe Text)
+    , _dtatrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteTapeArchiveResponse' with the minimum fields required to make a request.

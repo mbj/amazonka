@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateMyUserProfile' smart constructor.
-newtype UpdateMyUserProfile = UpdateMyUserProfile'
-  { _umupSSHPublicKey :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateMyUserProfile =
+  UpdateMyUserProfile'
+    { _umupSSHPublicKey :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateMyUserProfile' with the minimum fields required to make a request.

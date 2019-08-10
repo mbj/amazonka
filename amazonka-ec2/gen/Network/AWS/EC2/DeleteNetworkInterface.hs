@@ -47,10 +47,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteNetworkInterface' smart constructor.
-data DeleteNetworkInterface = DeleteNetworkInterface'
-  { _dninDryRun             :: !(Maybe Bool)
-  , _dninNetworkInterfaceId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteNetworkInterface =
+  DeleteNetworkInterface'
+    { _dninDryRun             :: !(Maybe Bool)
+    , _dninNetworkInterfaceId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteNetworkInterface' with the minimum fields required to make a request.

@@ -89,10 +89,12 @@ instance ToQuery GetSubscriptionState where
         toQuery = const mempty
 
 -- | /See:/ 'getSubscriptionStateResponse' smart constructor.
-data GetSubscriptionStateResponse = GetSubscriptionStateResponse'
-  { _gssrsResponseStatus    :: !Int
-  , _gssrsSubscriptionState :: !SubscriptionState
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetSubscriptionStateResponse =
+  GetSubscriptionStateResponse'
+    { _gssrsResponseStatus    :: !Int
+    , _gssrsSubscriptionState :: !SubscriptionState
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetSubscriptionStateResponse' with the minimum fields required to make a request.

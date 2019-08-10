@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listItems' smart constructor.
-data ListItems = ListItems'
-  { _liPath       :: !(Maybe Text)
-  , _liNextToken  :: !(Maybe Text)
-  , _liMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListItems =
+  ListItems'
+    { _liPath       :: !(Maybe Text)
+    , _liNextToken  :: !(Maybe Text)
+    , _liMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListItems' with the minimum fields required to make a request.
@@ -110,11 +112,13 @@ instance ToQuery ListItems where
                "MaxResults" =: _liMaxResults]
 
 -- | /See:/ 'listItemsResponse' smart constructor.
-data ListItemsResponse = ListItemsResponse'
-  { _lirsItems          :: !(Maybe [Item])
-  , _lirsNextToken      :: !(Maybe Text)
-  , _lirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListItemsResponse =
+  ListItemsResponse'
+    { _lirsItems          :: !(Maybe [Item])
+    , _lirsNextToken      :: !(Maybe Text)
+    , _lirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListItemsResponse' with the minimum fields required to make a request.

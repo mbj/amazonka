@@ -46,11 +46,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateSigningCertificate' smart constructor.
-data UpdateSigningCertificate = UpdateSigningCertificate'
-  { _uscUserName      :: !(Maybe Text)
-  , _uscCertificateId :: !Text
-  , _uscStatus        :: !StatusType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateSigningCertificate =
+  UpdateSigningCertificate'
+    { _uscUserName      :: !(Maybe Text)
+    , _uscCertificateId :: !Text
+    , _uscStatus        :: !StatusType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateSigningCertificate' with the minimum fields required to make a request.

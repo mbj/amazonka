@@ -54,12 +54,14 @@ import Network.AWS.StepFunctions.Types
 import Network.AWS.StepFunctions.Types.Product
 
 -- | /See:/ 'getExecutionHistory' smart constructor.
-data GetExecutionHistory = GetExecutionHistory'
-  { _gehReverseOrder :: !(Maybe Bool)
-  , _gehNextToken    :: !(Maybe Text)
-  , _gehMaxResults   :: !(Maybe Nat)
-  , _gehExecutionARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetExecutionHistory =
+  GetExecutionHistory'
+    { _gehReverseOrder :: !(Maybe Bool)
+    , _gehNextToken    :: !(Maybe Text)
+    , _gehMaxResults   :: !(Maybe Nat)
+    , _gehExecutionARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetExecutionHistory' with the minimum fields required to make a request.
@@ -149,11 +151,13 @@ instance ToQuery GetExecutionHistory where
         toQuery = const mempty
 
 -- | /See:/ 'getExecutionHistoryResponse' smart constructor.
-data GetExecutionHistoryResponse = GetExecutionHistoryResponse'
-  { _gehrsNextToken      :: !(Maybe Text)
-  , _gehrsResponseStatus :: !Int
-  , _gehrsEvents         :: ![HistoryEvent]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetExecutionHistoryResponse =
+  GetExecutionHistoryResponse'
+    { _gehrsNextToken      :: !(Maybe Text)
+    , _gehrsResponseStatus :: !Int
+    , _gehrsEvents         :: ![HistoryEvent]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetExecutionHistoryResponse' with the minimum fields required to make a request.

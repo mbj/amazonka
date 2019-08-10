@@ -44,9 +44,11 @@ import Network.AWS.StepFunctions.Types
 import Network.AWS.StepFunctions.Types.Product
 
 -- | /See:/ 'sendTaskHeartbeat' smart constructor.
-newtype SendTaskHeartbeat = SendTaskHeartbeat'
-  { _sthTaskToken :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype SendTaskHeartbeat =
+  SendTaskHeartbeat'
+    { _sthTaskToken :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SendTaskHeartbeat' with the minimum fields required to make a request.
@@ -97,9 +99,11 @@ instance ToQuery SendTaskHeartbeat where
         toQuery = const mempty
 
 -- | /See:/ 'sendTaskHeartbeatResponse' smart constructor.
-newtype SendTaskHeartbeatResponse = SendTaskHeartbeatResponse'
-  { _sthrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype SendTaskHeartbeatResponse =
+  SendTaskHeartbeatResponse'
+    { _sthrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SendTaskHeartbeatResponse' with the minimum fields required to make a request.

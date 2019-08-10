@@ -51,11 +51,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateProject' smart constructor.
-data UpdateProject = UpdateProject'
-  { _upName                     :: !(Maybe Text)
-  , _upDefaultJobTimeoutMinutes :: !(Maybe Int)
-  , _upArn                      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateProject =
+  UpdateProject'
+    { _upName                     :: !(Maybe Text)
+    , _upDefaultJobTimeoutMinutes :: !(Maybe Int)
+    , _upArn                      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateProject' with the minimum fields required to make a request.
@@ -129,10 +131,12 @@ instance ToQuery UpdateProject where
 --
 --
 -- /See:/ 'updateProjectResponse' smart constructor.
-data UpdateProjectResponse = UpdateProjectResponse'
-  { _uprsProject        :: !(Maybe Project)
-  , _uprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateProjectResponse =
+  UpdateProjectResponse'
+    { _uprsProject        :: !(Maybe Project)
+    , _uprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateProjectResponse' with the minimum fields required to make a request.

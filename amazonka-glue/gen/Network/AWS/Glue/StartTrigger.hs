@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'startTrigger' smart constructor.
-newtype StartTrigger = StartTrigger'
-  { _staName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StartTrigger =
+  StartTrigger'
+    { _staName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartTrigger' with the minimum fields required to make a request.
@@ -98,10 +100,12 @@ instance ToQuery StartTrigger where
         toQuery = const mempty
 
 -- | /See:/ 'startTriggerResponse' smart constructor.
-data StartTriggerResponse = StartTriggerResponse'
-  { _starsName           :: !(Maybe Text)
-  , _starsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartTriggerResponse =
+  StartTriggerResponse'
+    { _starsName           :: !(Maybe Text)
+    , _starsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartTriggerResponse' with the minimum fields required to make a request.

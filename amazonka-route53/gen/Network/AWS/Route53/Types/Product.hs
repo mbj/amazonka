@@ -27,10 +27,12 @@ import Network.AWS.Route53.Types.Sum
 --
 --
 -- /See:/ 'accountLimit' smart constructor.
-data AccountLimit = AccountLimit'
-  { _alType  :: !AccountLimitType
-  , _alValue :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AccountLimit =
+  AccountLimit'
+    { _alType  :: !AccountLimitType
+    , _alValue :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AccountLimit' with the minimum fields required to make a request.
@@ -69,10 +71,12 @@ instance NFData AccountLimit where
 --
 --
 -- /See:/ 'alarmIdentifier' smart constructor.
-data AlarmIdentifier = AlarmIdentifier'
-  { _aiRegion :: !CloudWatchRegion
-  , _aiName   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AlarmIdentifier =
+  AlarmIdentifier'
+    { _aiRegion :: !CloudWatchRegion
+    , _aiName   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AlarmIdentifier' with the minimum fields required to make a request.
@@ -126,11 +130,13 @@ instance ToXML AlarmIdentifier where
 --
 --
 -- /See:/ 'aliasTarget' smart constructor.
-data AliasTarget = AliasTarget'
-  { _atHostedZoneId         :: !ResourceId
-  , _atDNSName              :: !Text
-  , _atEvaluateTargetHealth :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AliasTarget =
+  AliasTarget'
+    { _atHostedZoneId         :: !ResourceId
+    , _atDNSName              :: !Text
+    , _atEvaluateTargetHealth :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AliasTarget' with the minimum fields required to make a request.
@@ -189,10 +195,12 @@ instance ToXML AliasTarget where
 --
 --
 -- /See:/ 'change' smart constructor.
-data Change = Change'
-  { _cAction            :: !ChangeAction
-  , _cResourceRecordSet :: !ResourceRecordSet
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Change =
+  Change'
+    { _cAction            :: !ChangeAction
+    , _cResourceRecordSet :: !ResourceRecordSet
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Change' with the minimum fields required to make a request.
@@ -233,10 +241,12 @@ instance ToXML Change where
 --
 --
 -- /See:/ 'changeBatch' smart constructor.
-data ChangeBatch = ChangeBatch'
-  { _cbComment :: !(Maybe Text)
-  , _cbChanges :: !(List1 Change)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ChangeBatch =
+  ChangeBatch'
+    { _cbComment :: !(Maybe Text)
+    , _cbChanges :: !(List1 Change)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ChangeBatch' with the minimum fields required to make a request.
@@ -276,12 +286,14 @@ instance ToXML ChangeBatch where
 --
 --
 -- /See:/ 'changeInfo' smart constructor.
-data ChangeInfo = ChangeInfo'
-  { _ciComment     :: !(Maybe Text)
-  , _ciId          :: !ResourceId
-  , _ciStatus      :: !ChangeStatus
-  , _ciSubmittedAt :: !ISO8601
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ChangeInfo =
+  ChangeInfo'
+    { _ciComment     :: !(Maybe Text)
+    , _ciId          :: !ResourceId
+    , _ciStatus      :: !ChangeStatus
+    , _ciSubmittedAt :: !ISO8601
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ChangeInfo' with the minimum fields required to make a request.
@@ -340,16 +352,18 @@ instance NFData ChangeInfo where
 --
 --
 -- /See:/ 'cloudWatchAlarmConfiguration' smart constructor.
-data CloudWatchAlarmConfiguration = CloudWatchAlarmConfiguration'
-  { _cwacDimensions         :: !(Maybe [Dimension])
-  , _cwacEvaluationPeriods  :: !Nat
-  , _cwacThreshold          :: !Double
-  , _cwacComparisonOperator :: !ComparisonOperator
-  , _cwacPeriod             :: !Nat
-  , _cwacMetricName         :: !Text
-  , _cwacNamespace          :: !Text
-  , _cwacStatistic          :: !Statistic
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CloudWatchAlarmConfiguration =
+  CloudWatchAlarmConfiguration'
+    { _cwacDimensions         :: !(Maybe [Dimension])
+    , _cwacEvaluationPeriods  :: !Nat
+    , _cwacThreshold          :: !Double
+    , _cwacComparisonOperator :: !ComparisonOperator
+    , _cwacPeriod             :: !Nat
+    , _cwacMetricName         :: !Text
+    , _cwacNamespace          :: !Text
+    , _cwacStatistic          :: !Statistic
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CloudWatchAlarmConfiguration' with the minimum fields required to make a request.
@@ -447,11 +461,13 @@ instance NFData CloudWatchAlarmConfiguration where
 --
 --
 -- /See:/ 'delegationSet' smart constructor.
-data DelegationSet = DelegationSet'
-  { _dsId              :: !(Maybe ResourceId)
-  , _dsCallerReference :: !(Maybe Text)
-  , _dsNameServers     :: !(List1 Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DelegationSet =
+  DelegationSet'
+    { _dsId              :: !(Maybe ResourceId)
+    , _dsCallerReference :: !(Maybe Text)
+    , _dsNameServers     :: !(List1 Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DelegationSet' with the minimum fields required to make a request.
@@ -502,10 +518,12 @@ instance NFData DelegationSet where
 --
 --
 -- /See:/ 'dimension' smart constructor.
-data Dimension = Dimension'
-  { _dName  :: !Text
-  , _dValue :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Dimension =
+  Dimension'
+    { _dName  :: !Text
+    , _dValue :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Dimension' with the minimum fields required to make a request.
@@ -543,11 +561,13 @@ instance NFData Dimension where
 --
 --
 -- /See:/ 'geoLocation' smart constructor.
-data GeoLocation = GeoLocation'
-  { _glSubdivisionCode :: !(Maybe Text)
-  , _glCountryCode     :: !(Maybe Text)
-  , _glContinentCode   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GeoLocation =
+  GeoLocation'
+    { _glSubdivisionCode :: !(Maybe Text)
+    , _glCountryCode     :: !(Maybe Text)
+    , _glContinentCode   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GeoLocation' with the minimum fields required to make a request.
@@ -603,14 +623,16 @@ instance ToXML GeoLocation where
 --
 --
 -- /See:/ 'geoLocationDetails' smart constructor.
-data GeoLocationDetails = GeoLocationDetails'
-  { _gldSubdivisionName :: !(Maybe Text)
-  , _gldSubdivisionCode :: !(Maybe Text)
-  , _gldCountryName     :: !(Maybe Text)
-  , _gldCountryCode     :: !(Maybe Text)
-  , _gldContinentCode   :: !(Maybe Text)
-  , _gldContinentName   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GeoLocationDetails =
+  GeoLocationDetails'
+    { _gldSubdivisionName :: !(Maybe Text)
+    , _gldSubdivisionCode :: !(Maybe Text)
+    , _gldCountryName     :: !(Maybe Text)
+    , _gldCountryCode     :: !(Maybe Text)
+    , _gldContinentCode   :: !(Maybe Text)
+    , _gldContinentName   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GeoLocationDetails' with the minimum fields required to make a request.
@@ -684,14 +706,16 @@ instance NFData GeoLocationDetails where
 --
 --
 -- /See:/ 'healthCheck' smart constructor.
-data HealthCheck = HealthCheck'
-  { _hcLinkedService                :: !(Maybe LinkedService)
-  , _hcCloudWatchAlarmConfiguration :: !(Maybe CloudWatchAlarmConfiguration)
-  , _hcId                           :: !Text
-  , _hcCallerReference              :: !Text
-  , _hcHealthCheckConfig            :: !HealthCheckConfig
-  , _hcHealthCheckVersion           :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data HealthCheck =
+  HealthCheck'
+    { _hcLinkedService                :: !(Maybe LinkedService)
+    , _hcCloudWatchAlarmConfiguration :: !(Maybe CloudWatchAlarmConfiguration)
+    , _hcId                           :: !Text
+    , _hcCallerReference              :: !Text
+    , _hcHealthCheckConfig            :: !HealthCheckConfig
+    , _hcHealthCheckVersion           :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'HealthCheck' with the minimum fields required to make a request.
@@ -769,24 +793,26 @@ instance NFData HealthCheck where
 --
 --
 -- /See:/ 'healthCheckConfig' smart constructor.
-data HealthCheckConfig = HealthCheckConfig'
-  { _hccFailureThreshold             :: !(Maybe Nat)
-  , _hccIPAddress                    :: !(Maybe Text)
-  , _hccEnableSNI                    :: !(Maybe Bool)
-  , _hccSearchString                 :: !(Maybe Text)
-  , _hccHealthThreshold              :: !(Maybe Nat)
-  , _hccRegions                      :: !(Maybe (List1 HealthCheckRegion))
-  , _hccResourcePath                 :: !(Maybe Text)
-  , _hccInsufficientDataHealthStatus :: !(Maybe InsufficientDataHealthStatus)
-  , _hccAlarmIdentifier              :: !(Maybe AlarmIdentifier)
-  , _hccMeasureLatency               :: !(Maybe Bool)
-  , _hccInverted                     :: !(Maybe Bool)
-  , _hccFullyQualifiedDomainName     :: !(Maybe Text)
-  , _hccChildHealthChecks            :: !(Maybe [Text])
-  , _hccRequestInterval              :: !(Maybe Nat)
-  , _hccPort                         :: !(Maybe Nat)
-  , _hccType                         :: !HealthCheckType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data HealthCheckConfig =
+  HealthCheckConfig'
+    { _hccFailureThreshold             :: !(Maybe Nat)
+    , _hccIPAddress                    :: !(Maybe Text)
+    , _hccEnableSNI                    :: !(Maybe Bool)
+    , _hccSearchString                 :: !(Maybe Text)
+    , _hccHealthThreshold              :: !(Maybe Nat)
+    , _hccRegions                      :: !(Maybe (List1 HealthCheckRegion))
+    , _hccResourcePath                 :: !(Maybe Text)
+    , _hccInsufficientDataHealthStatus :: !(Maybe InsufficientDataHealthStatus)
+    , _hccAlarmIdentifier              :: !(Maybe AlarmIdentifier)
+    , _hccMeasureLatency               :: !(Maybe Bool)
+    , _hccInverted                     :: !(Maybe Bool)
+    , _hccFullyQualifiedDomainName     :: !(Maybe Text)
+    , _hccChildHealthChecks            :: !(Maybe [Text])
+    , _hccRequestInterval              :: !(Maybe Nat)
+    , _hccPort                         :: !(Maybe Nat)
+    , _hccType                         :: !HealthCheckType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'HealthCheckConfig' with the minimum fields required to make a request.
@@ -969,11 +995,13 @@ instance ToXML HealthCheckConfig where
 --
 --
 -- /See:/ 'healthCheckObservation' smart constructor.
-data HealthCheckObservation = HealthCheckObservation'
-  { _hcoIPAddress    :: !(Maybe Text)
-  , _hcoStatusReport :: !(Maybe StatusReport)
-  , _hcoRegion       :: !(Maybe HealthCheckRegion)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data HealthCheckObservation =
+  HealthCheckObservation'
+    { _hcoIPAddress    :: !(Maybe Text)
+    , _hcoStatusReport :: !(Maybe StatusReport)
+    , _hcoRegion       :: !(Maybe HealthCheckRegion)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'HealthCheckObservation' with the minimum fields required to make a request.
@@ -1019,14 +1047,16 @@ instance NFData HealthCheckObservation where
 --
 --
 -- /See:/ 'hostedZone' smart constructor.
-data HostedZone = HostedZone'
-  { _hzLinkedService          :: !(Maybe LinkedService)
-  , _hzConfig                 :: !(Maybe HostedZoneConfig)
-  , _hzResourceRecordSetCount :: !(Maybe Integer)
-  , _hzId                     :: !ResourceId
-  , _hzName                   :: !Text
-  , _hzCallerReference        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data HostedZone =
+  HostedZone'
+    { _hzLinkedService          :: !(Maybe LinkedService)
+    , _hzConfig                 :: !(Maybe HostedZoneConfig)
+    , _hzResourceRecordSetCount :: !(Maybe Integer)
+    , _hzId                     :: !ResourceId
+    , _hzName                   :: !Text
+    , _hzCallerReference        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'HostedZone' with the minimum fields required to make a request.
@@ -1102,10 +1132,12 @@ instance NFData HostedZone where
 --
 --
 -- /See:/ 'hostedZoneConfig' smart constructor.
-data HostedZoneConfig = HostedZoneConfig'
-  { _hzcPrivateZone :: !(Maybe Bool)
-  , _hzcComment     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data HostedZoneConfig =
+  HostedZoneConfig'
+    { _hzcPrivateZone :: !(Maybe Bool)
+    , _hzcComment     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'HostedZoneConfig' with the minimum fields required to make a request.
@@ -1149,10 +1181,12 @@ instance ToXML HostedZoneConfig where
 --
 --
 -- /See:/ 'hostedZoneLimit' smart constructor.
-data HostedZoneLimit = HostedZoneLimit'
-  { _hzlType  :: !HostedZoneLimitType
-  , _hzlValue :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data HostedZoneLimit =
+  HostedZoneLimit'
+    { _hzlType  :: !HostedZoneLimitType
+    , _hzlValue :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'HostedZoneLimit' with the minimum fields required to make a request.
@@ -1192,10 +1226,12 @@ instance NFData HostedZoneLimit where
 --
 --
 -- /See:/ 'linkedService' smart constructor.
-data LinkedService = LinkedService'
-  { _lsServicePrincipal :: !(Maybe Text)
-  , _lsDescription      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LinkedService =
+  LinkedService'
+    { _lsServicePrincipal :: !(Maybe Text)
+    , _lsDescription      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LinkedService' with the minimum fields required to make a request.
@@ -1233,11 +1269,13 @@ instance NFData LinkedService where
 --
 --
 -- /See:/ 'queryLoggingConfig' smart constructor.
-data QueryLoggingConfig = QueryLoggingConfig'
-  { _qlcId                        :: !Text
-  , _qlcHostedZoneId              :: !ResourceId
-  , _qlcCloudWatchLogsLogGroupARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data QueryLoggingConfig =
+  QueryLoggingConfig'
+    { _qlcId                        :: !Text
+    , _qlcHostedZoneId              :: !ResourceId
+    , _qlcCloudWatchLogsLogGroupARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'QueryLoggingConfig' with the minimum fields required to make a request.
@@ -1289,9 +1327,11 @@ instance NFData QueryLoggingConfig where
 --
 --
 -- /See:/ 'resourceRecord' smart constructor.
-newtype ResourceRecord = ResourceRecord'
-  { _rrValue :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ResourceRecord =
+  ResourceRecord'
+    { _rrValue :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResourceRecord' with the minimum fields required to make a request.
@@ -1325,21 +1365,23 @@ instance ToXML ResourceRecord where
 --
 --
 -- /See:/ 'resourceRecordSet' smart constructor.
-data ResourceRecordSet = ResourceRecordSet'
-  { _rrsTTL                     :: !(Maybe Nat)
-  , _rrsResourceRecords         :: !(Maybe (List1 ResourceRecord))
-  , _rrsAliasTarget             :: !(Maybe AliasTarget)
-  , _rrsWeight                  :: !(Maybe Nat)
-  , _rrsTrafficPolicyInstanceId :: !(Maybe Text)
-  , _rrsSetIdentifier           :: !(Maybe Text)
-  , _rrsFailover                :: !(Maybe Failover)
-  , _rrsHealthCheckId           :: !(Maybe Text)
-  , _rrsRegion                  :: !(Maybe Region)
-  , _rrsGeoLocation             :: !(Maybe GeoLocation)
-  , _rrsMultiValueAnswer        :: !(Maybe Bool)
-  , _rrsName                    :: !Text
-  , _rrsType                    :: !RecordType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResourceRecordSet =
+  ResourceRecordSet'
+    { _rrsTTL                     :: !(Maybe Nat)
+    , _rrsResourceRecords         :: !(Maybe (List1 ResourceRecord))
+    , _rrsAliasTarget             :: !(Maybe AliasTarget)
+    , _rrsWeight                  :: !(Maybe Nat)
+    , _rrsTrafficPolicyInstanceId :: !(Maybe Text)
+    , _rrsSetIdentifier           :: !(Maybe Text)
+    , _rrsFailover                :: !(Maybe Failover)
+    , _rrsHealthCheckId           :: !(Maybe Text)
+    , _rrsRegion                  :: !(Maybe Region)
+    , _rrsGeoLocation             :: !(Maybe GeoLocation)
+    , _rrsMultiValueAnswer        :: !(Maybe Bool)
+    , _rrsName                    :: !Text
+    , _rrsType                    :: !RecordType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResourceRecordSet' with the minimum fields required to make a request.
@@ -1491,11 +1533,13 @@ instance ToXML ResourceRecordSet where
 --
 --
 -- /See:/ 'resourceTagSet' smart constructor.
-data ResourceTagSet = ResourceTagSet'
-  { _rtsResourceId   :: !(Maybe Text)
-  , _rtsResourceType :: !(Maybe TagResourceType)
-  , _rtsTags         :: !(Maybe (List1 Tag))
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResourceTagSet =
+  ResourceTagSet'
+    { _rtsResourceId   :: !(Maybe Text)
+    , _rtsResourceType :: !(Maybe TagResourceType)
+    , _rtsTags         :: !(Maybe (List1 Tag))
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResourceTagSet' with the minimum fields required to make a request.
@@ -1542,10 +1586,12 @@ instance NFData ResourceTagSet where
 --
 --
 -- /See:/ 'reusableDelegationSetLimit' smart constructor.
-data ReusableDelegationSetLimit = ReusableDelegationSetLimit'
-  { _rdslType  :: !ReusableDelegationSetLimitType
-  , _rdslValue :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReusableDelegationSetLimit =
+  ReusableDelegationSetLimit'
+    { _rdslType  :: !ReusableDelegationSetLimitType
+    , _rdslValue :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReusableDelegationSetLimit' with the minimum fields required to make a request.
@@ -1585,10 +1631,12 @@ instance NFData ReusableDelegationSetLimit where
 --
 --
 -- /See:/ 'statusReport' smart constructor.
-data StatusReport = StatusReport'
-  { _srStatus      :: !(Maybe Text)
-  , _srCheckedTime :: !(Maybe ISO8601)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StatusReport =
+  StatusReport'
+    { _srStatus      :: !(Maybe Text)
+    , _srCheckedTime :: !(Maybe ISO8601)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StatusReport' with the minimum fields required to make a request.
@@ -1625,10 +1673,12 @@ instance NFData StatusReport where
 --
 --
 -- /See:/ 'tag' smart constructor.
-data Tag = Tag'
-  { _tagValue :: !(Maybe Text)
-  , _tagKey   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Tag =
+  Tag'
+    { _tagValue :: !(Maybe Text)
+    , _tagKey   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Tag' with the minimum fields required to make a request.
@@ -1668,14 +1718,16 @@ instance ToXML Tag where
 --
 --
 -- /See:/ 'trafficPolicy' smart constructor.
-data TrafficPolicy = TrafficPolicy'
-  { _tpComment  :: !(Maybe Text)
-  , _tpId       :: !Text
-  , _tpVersion  :: !Nat
-  , _tpName     :: !Text
-  , _tpType     :: !RecordType
-  , _tpDocument :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TrafficPolicy =
+  TrafficPolicy'
+    { _tpComment  :: !(Maybe Text)
+    , _tpId       :: !Text
+    , _tpVersion  :: !Nat
+    , _tpName     :: !Text
+    , _tpType     :: !RecordType
+    , _tpDocument :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TrafficPolicy' with the minimum fields required to make a request.
@@ -1753,17 +1805,19 @@ instance NFData TrafficPolicy where
 --
 --
 -- /See:/ 'trafficPolicyInstance' smart constructor.
-data TrafficPolicyInstance = TrafficPolicyInstance'
-  { _tpiId                   :: !Text
-  , _tpiHostedZoneId         :: !ResourceId
-  , _tpiName                 :: !Text
-  , _tpiTTL                  :: !Nat
-  , _tpiState                :: !Text
-  , _tpiMessage              :: !Text
-  , _tpiTrafficPolicyId      :: !Text
-  , _tpiTrafficPolicyVersion :: !Nat
-  , _tpiTrafficPolicyType    :: !RecordType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TrafficPolicyInstance =
+  TrafficPolicyInstance'
+    { _tpiId                   :: !Text
+    , _tpiHostedZoneId         :: !ResourceId
+    , _tpiName                 :: !Text
+    , _tpiTTL                  :: !Nat
+    , _tpiState                :: !Text
+    , _tpiMessage              :: !Text
+    , _tpiTrafficPolicyId      :: !Text
+    , _tpiTrafficPolicyVersion :: !Nat
+    , _tpiTrafficPolicyType    :: !RecordType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TrafficPolicyInstance' with the minimum fields required to make a request.
@@ -1869,13 +1923,15 @@ instance NFData TrafficPolicyInstance where
 --
 --
 -- /See:/ 'trafficPolicySummary' smart constructor.
-data TrafficPolicySummary = TrafficPolicySummary'
-  { _tpsId                 :: !Text
-  , _tpsName               :: !Text
-  , _tpsType               :: !RecordType
-  , _tpsLatestVersion      :: !Nat
-  , _tpsTrafficPolicyCount :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TrafficPolicySummary =
+  TrafficPolicySummary'
+    { _tpsId                 :: !Text
+    , _tpsName               :: !Text
+    , _tpsType               :: !RecordType
+    , _tpsLatestVersion      :: !Nat
+    , _tpsTrafficPolicyCount :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TrafficPolicySummary' with the minimum fields required to make a request.
@@ -1944,10 +2000,12 @@ instance NFData TrafficPolicySummary where
 --
 --
 -- /See:/ 'vpc' smart constructor.
-data VPC = VPC'
-  { _vpcVPCRegion :: !(Maybe VPCRegion)
-  , _vpcVPCId     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VPC =
+  VPC'
+    { _vpcVPCRegion :: !(Maybe VPCRegion)
+    , _vpcVPCId     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VPC' with the minimum fields required to make a request.

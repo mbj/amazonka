@@ -43,9 +43,11 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'getBucketLogging' smart constructor.
-newtype GetBucketLogging = GetBucketLogging'
-  { _gBucket :: BucketName
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetBucketLogging =
+  GetBucketLogging'
+    { _gBucket :: BucketName
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBucketLogging' with the minimum fields required to make a request.
@@ -87,10 +89,12 @@ instance ToQuery GetBucketLogging where
         toQuery = const (mconcat ["logging"])
 
 -- | /See:/ 'getBucketLoggingResponse' smart constructor.
-data GetBucketLoggingResponse = GetBucketLoggingResponse'
-  { _gblrsLoggingEnabled :: !(Maybe LoggingEnabled)
-  , _gblrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetBucketLoggingResponse =
+  GetBucketLoggingResponse'
+    { _gblrsLoggingEnabled :: !(Maybe LoggingEnabled)
+    , _gblrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBucketLoggingResponse' with the minimum fields required to make a request.

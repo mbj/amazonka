@@ -48,10 +48,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getGroupVersion' smart constructor.
-data GetGroupVersion = GetGroupVersion'
-  { _ggvGroupVersionId :: !Text
-  , _ggvGroupId        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetGroupVersion =
+  GetGroupVersion'
+    { _ggvGroupVersionId :: !Text
+    , _ggvGroupId        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetGroupVersion' with the minimum fields required to make a request.
@@ -112,14 +114,16 @@ instance ToQuery GetGroupVersion where
         toQuery = const mempty
 
 -- | /See:/ 'getGroupVersionResponse' smart constructor.
-data GetGroupVersionResponse = GetGroupVersionResponse'
-  { _ggvrsDefinition        :: !(Maybe GroupVersion)
-  , _ggvrsARN               :: !(Maybe Text)
-  , _ggvrsCreationTimestamp :: !(Maybe Text)
-  , _ggvrsVersion           :: !(Maybe Text)
-  , _ggvrsId                :: !(Maybe Text)
-  , _ggvrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetGroupVersionResponse =
+  GetGroupVersionResponse'
+    { _ggvrsDefinition        :: !(Maybe GroupVersion)
+    , _ggvrsARN               :: !(Maybe Text)
+    , _ggvrsCreationTimestamp :: !(Maybe Text)
+    , _ggvrsVersion           :: !(Maybe Text)
+    , _ggvrsId                :: !(Maybe Text)
+    , _ggvrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetGroupVersionResponse' with the minimum fields required to make a request.

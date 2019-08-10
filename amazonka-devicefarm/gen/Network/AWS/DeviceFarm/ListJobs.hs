@@ -54,10 +54,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listJobs' smart constructor.
-data ListJobs = ListJobs'
-  { _ljNextToken :: !(Maybe Text)
-  , _ljArn       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListJobs =
+  ListJobs'
+    { _ljNextToken :: !(Maybe Text)
+    , _ljArn       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListJobs' with the minimum fields required to make a request.
@@ -129,11 +131,13 @@ instance ToQuery ListJobs where
 --
 --
 -- /See:/ 'listJobsResponse' smart constructor.
-data ListJobsResponse = ListJobsResponse'
-  { _ljrsJobs           :: !(Maybe [Job])
-  , _ljrsNextToken      :: !(Maybe Text)
-  , _ljrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListJobsResponse =
+  ListJobsResponse'
+    { _ljrsJobs           :: !(Maybe [Job])
+    , _ljrsNextToken      :: !(Maybe Text)
+    , _ljrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListJobsResponse' with the minimum fields required to make a request.

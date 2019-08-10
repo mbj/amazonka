@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getInstanceProfile' smart constructor.
-newtype GetInstanceProfile = GetInstanceProfile'
-  { _gipInstanceProfileName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetInstanceProfile =
+  GetInstanceProfile'
+    { _gipInstanceProfileName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetInstanceProfile' with the minimum fields required to make a request.
@@ -98,10 +100,12 @@ instance ToQuery GetInstanceProfile where
 --
 --
 -- /See:/ 'getInstanceProfileResponse' smart constructor.
-data GetInstanceProfileResponse = GetInstanceProfileResponse'
-  { _giprsResponseStatus  :: !Int
-  , _giprsInstanceProfile :: !InstanceProfile
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetInstanceProfileResponse =
+  GetInstanceProfileResponse'
+    { _giprsResponseStatus  :: !Int
+    , _giprsInstanceProfile :: !InstanceProfile
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetInstanceProfileResponse' with the minimum fields required to make a request.

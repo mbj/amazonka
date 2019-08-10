@@ -47,10 +47,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deletePlacementGroup' smart constructor.
-data DeletePlacementGroup = DeletePlacementGroup'
-  { _dpgDryRun    :: !(Maybe Bool)
-  , _dpgGroupName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeletePlacementGroup =
+  DeletePlacementGroup'
+    { _dpgDryRun    :: !(Maybe Bool)
+    , _dpgGroupName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeletePlacementGroup' with the minimum fields required to make a request.

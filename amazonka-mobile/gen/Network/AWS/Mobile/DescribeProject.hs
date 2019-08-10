@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeProject' smart constructor.
-data DescribeProject = DescribeProject'
-  { _dSyncFromResources :: !(Maybe Bool)
-  , _dProjectId         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeProject =
+  DescribeProject'
+    { _dSyncFromResources :: !(Maybe Bool)
+    , _dProjectId         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeProject' with the minimum fields required to make a request.
@@ -112,10 +114,12 @@ instance ToQuery DescribeProject where
 --
 --
 -- /See:/ 'describeProjectResponse' smart constructor.
-data DescribeProjectResponse = DescribeProjectResponse'
-  { _drsDetails        :: !(Maybe ProjectDetails)
-  , _drsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeProjectResponse =
+  DescribeProjectResponse'
+    { _drsDetails        :: !(Maybe ProjectDetails)
+    , _drsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeProjectResponse' with the minimum fields required to make a request.

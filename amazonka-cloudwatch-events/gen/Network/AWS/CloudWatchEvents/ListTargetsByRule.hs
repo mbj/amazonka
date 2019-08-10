@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listTargetsByRule' smart constructor.
-data ListTargetsByRule = ListTargetsByRule'
-  { _ltbrNextToken :: !(Maybe Text)
-  , _ltbrLimit     :: !(Maybe Nat)
-  , _ltbrRule      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTargetsByRule =
+  ListTargetsByRule'
+    { _ltbrNextToken :: !(Maybe Text)
+    , _ltbrLimit     :: !(Maybe Nat)
+    , _ltbrRule      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTargetsByRule' with the minimum fields required to make a request.
@@ -122,11 +124,13 @@ instance ToQuery ListTargetsByRule where
         toQuery = const mempty
 
 -- | /See:/ 'listTargetsByRuleResponse' smart constructor.
-data ListTargetsByRuleResponse = ListTargetsByRuleResponse'
-  { _ltbrrsNextToken      :: !(Maybe Text)
-  , _ltbrrsTargets        :: !(Maybe (List1 Target))
-  , _ltbrrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTargetsByRuleResponse =
+  ListTargetsByRuleResponse'
+    { _ltbrrsNextToken      :: !(Maybe Text)
+    , _ltbrrsTargets        :: !(Maybe (List1 Target))
+    , _ltbrrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTargetsByRuleResponse' with the minimum fields required to make a request.

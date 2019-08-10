@@ -57,10 +57,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'startApplication' smart constructor.
-data StartApplication = StartApplication'
-  { _saApplicationName     :: !Text
-  , _saInputConfigurations :: ![InputConfiguration]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartApplication =
+  StartApplication'
+    { _saApplicationName     :: !Text
+    , _saInputConfigurations :: ![InputConfiguration]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartApplication' with the minimum fields required to make a request.
@@ -127,9 +129,11 @@ instance ToQuery StartApplication where
 --
 --
 -- /See:/ 'startApplicationResponse' smart constructor.
-newtype StartApplicationResponse = StartApplicationResponse'
-  { _sarsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StartApplicationResponse =
+  StartApplicationResponse'
+    { _sarsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartApplicationResponse' with the minimum fields required to make a request.

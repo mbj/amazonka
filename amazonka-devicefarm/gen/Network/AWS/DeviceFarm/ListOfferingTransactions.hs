@@ -53,9 +53,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listOfferingTransactions' smart constructor.
-newtype ListOfferingTransactions = ListOfferingTransactions'
-  { _lotNextToken :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ListOfferingTransactions =
+  ListOfferingTransactions'
+    { _lotNextToken :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListOfferingTransactions' with the minimum fields required to make a request.
@@ -121,11 +123,13 @@ instance ToQuery ListOfferingTransactions where
 --
 --
 -- /See:/ 'listOfferingTransactionsResponse' smart constructor.
-data ListOfferingTransactionsResponse = ListOfferingTransactionsResponse'
-  { _lotrsOfferingTransactions :: !(Maybe [OfferingTransaction])
-  , _lotrsNextToken            :: !(Maybe Text)
-  , _lotrsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListOfferingTransactionsResponse =
+  ListOfferingTransactionsResponse'
+    { _lotrsOfferingTransactions :: !(Maybe [OfferingTransaction])
+    , _lotrsNextToken            :: !(Maybe Text)
+    , _lotrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListOfferingTransactionsResponse' with the minimum fields required to make a request.

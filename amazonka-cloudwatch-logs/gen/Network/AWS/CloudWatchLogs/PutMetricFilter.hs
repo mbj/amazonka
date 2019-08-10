@@ -47,12 +47,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putMetricFilter' smart constructor.
-data PutMetricFilter = PutMetricFilter'
-  { _pmfLogGroupName          :: !Text
-  , _pmfFilterName            :: !Text
-  , _pmfFilterPattern         :: !Text
-  , _pmfMetricTransformations :: !(List1 MetricTransformation)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutMetricFilter =
+  PutMetricFilter'
+    { _pmfLogGroupName          :: !Text
+    , _pmfFilterName            :: !Text
+    , _pmfFilterPattern         :: !Text
+    , _pmfMetricTransformations :: !(List1 MetricTransformation)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutMetricFilter' with the minimum fields required to make a request.

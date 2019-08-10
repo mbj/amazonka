@@ -73,11 +73,13 @@ import Network.AWS.WAFRegional.Types.Product
 --
 --
 -- /See:/ 'updateSqlInjectionMatchSet' smart constructor.
-data UpdateSqlInjectionMatchSet = UpdateSqlInjectionMatchSet'
-  { _usimsSqlInjectionMatchSetId :: !Text
-  , _usimsChangeToken            :: !Text
-  , _usimsUpdates                :: !(List1 SqlInjectionMatchSetUpdate)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateSqlInjectionMatchSet =
+  UpdateSqlInjectionMatchSet'
+    { _usimsSqlInjectionMatchSetId :: !Text
+    , _usimsChangeToken            :: !Text
+    , _usimsUpdates                :: !(List1 SqlInjectionMatchSetUpdate)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateSqlInjectionMatchSet' with the minimum fields required to make a request.
@@ -159,10 +161,12 @@ instance ToQuery UpdateSqlInjectionMatchSet where
 --
 --
 -- /See:/ 'updateSqlInjectionMatchSetResponse' smart constructor.
-data UpdateSqlInjectionMatchSetResponse = UpdateSqlInjectionMatchSetResponse'
-  { _usimsrsChangeToken    :: !(Maybe Text)
-  , _usimsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateSqlInjectionMatchSetResponse =
+  UpdateSqlInjectionMatchSetResponse'
+    { _usimsrsChangeToken    :: !(Maybe Text)
+    , _usimsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateSqlInjectionMatchSetResponse' with the minimum fields required to make a request.

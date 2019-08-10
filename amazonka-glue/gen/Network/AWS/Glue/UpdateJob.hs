@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateJob' smart constructor.
-data UpdateJob = UpdateJob'
-  { _ujJobName   :: !Text
-  , _ujJobUpdate :: !JobUpdate
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateJob =
+  UpdateJob'
+    { _ujJobName   :: !Text
+    , _ujJobUpdate :: !JobUpdate
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateJob' with the minimum fields required to make a request.
@@ -111,10 +113,12 @@ instance ToQuery UpdateJob where
         toQuery = const mempty
 
 -- | /See:/ 'updateJobResponse' smart constructor.
-data UpdateJobResponse = UpdateJobResponse'
-  { _ujrsJobName        :: !(Maybe Text)
-  , _ujrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateJobResponse =
+  UpdateJobResponse'
+    { _ujrsJobName        :: !(Maybe Text)
+    , _ujrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateJobResponse' with the minimum fields required to make a request.

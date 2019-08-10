@@ -53,12 +53,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'registerCertificate' smart constructor.
-data RegisterCertificate = RegisterCertificate'
-  { _rcStatus           :: !(Maybe CertificateStatus)
-  , _rcCaCertificatePem :: !(Maybe Text)
-  , _rcSetAsActive      :: !(Maybe Bool)
-  , _rcCertificatePem   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RegisterCertificate =
+  RegisterCertificate'
+    { _rcStatus           :: !(Maybe CertificateStatus)
+    , _rcCaCertificatePem :: !(Maybe Text)
+    , _rcSetAsActive      :: !(Maybe Bool)
+    , _rcCertificatePem   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterCertificate' with the minimum fields required to make a request.
@@ -138,11 +140,13 @@ instance ToQuery RegisterCertificate where
 --
 --
 -- /See:/ 'registerCertificateResponse' smart constructor.
-data RegisterCertificateResponse = RegisterCertificateResponse'
-  { _rcrsCertificateARN :: !(Maybe Text)
-  , _rcrsCertificateId  :: !(Maybe Text)
-  , _rcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RegisterCertificateResponse =
+  RegisterCertificateResponse'
+    { _rcrsCertificateARN :: !(Maybe Text)
+    , _rcrsCertificateId  :: !(Maybe Text)
+    , _rcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterCertificateResponse' with the minimum fields required to make a request.

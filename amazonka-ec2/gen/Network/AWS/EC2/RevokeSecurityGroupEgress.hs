@@ -58,17 +58,19 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'revokeSecurityGroupEgress' smart constructor.
-data RevokeSecurityGroupEgress = RevokeSecurityGroupEgress'
-  { _rsgeFromPort                   :: !(Maybe Int)
-  , _rsgeIPPermissions              :: !(Maybe [IPPermission])
-  , _rsgeIPProtocol                 :: !(Maybe Text)
-  , _rsgeToPort                     :: !(Maybe Int)
-  , _rsgeCidrIP                     :: !(Maybe Text)
-  , _rsgeSourceSecurityGroupOwnerId :: !(Maybe Text)
-  , _rsgeSourceSecurityGroupName    :: !(Maybe Text)
-  , _rsgeDryRun                     :: !(Maybe Bool)
-  , _rsgeGroupId                    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RevokeSecurityGroupEgress =
+  RevokeSecurityGroupEgress'
+    { _rsgeFromPort                   :: !(Maybe Int)
+    , _rsgeIPPermissions              :: !(Maybe [IPPermission])
+    , _rsgeIPProtocol                 :: !(Maybe Text)
+    , _rsgeToPort                     :: !(Maybe Int)
+    , _rsgeCidrIP                     :: !(Maybe Text)
+    , _rsgeSourceSecurityGroupOwnerId :: !(Maybe Text)
+    , _rsgeSourceSecurityGroupName    :: !(Maybe Text)
+    , _rsgeDryRun                     :: !(Maybe Bool)
+    , _rsgeGroupId                    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RevokeSecurityGroupEgress' with the minimum fields required to make a request.

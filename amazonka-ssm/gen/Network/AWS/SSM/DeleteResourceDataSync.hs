@@ -44,9 +44,11 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'deleteResourceDataSync' smart constructor.
-newtype DeleteResourceDataSync = DeleteResourceDataSync'
-  { _drdsSyncName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteResourceDataSync =
+  DeleteResourceDataSync'
+    { _drdsSyncName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteResourceDataSync' with the minimum fields required to make a request.
@@ -100,9 +102,11 @@ instance ToQuery DeleteResourceDataSync where
         toQuery = const mempty
 
 -- | /See:/ 'deleteResourceDataSyncResponse' smart constructor.
-newtype DeleteResourceDataSyncResponse = DeleteResourceDataSyncResponse'
-  { _drdsrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteResourceDataSyncResponse =
+  DeleteResourceDataSyncResponse'
+    { _drdsrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteResourceDataSyncResponse' with the minimum fields required to make a request.

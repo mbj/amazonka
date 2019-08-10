@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createAdditionalAssignmentsForHIT' smart constructor.
-data CreateAdditionalAssignmentsForHIT = CreateAdditionalAssignmentsForHIT'
-  { _caafhitUniqueRequestToken            :: !(Maybe Text)
-  , _caafhitHITId                         :: !Text
-  , _caafhitNumberOfAdditionalAssignments :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateAdditionalAssignmentsForHIT =
+  CreateAdditionalAssignmentsForHIT'
+    { _caafhitUniqueRequestToken            :: !(Maybe Text)
+    , _caafhitHITId                         :: !Text
+    , _caafhitNumberOfAdditionalAssignments :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateAdditionalAssignmentsForHIT' with the minimum fields required to make a request.
@@ -137,9 +139,11 @@ instance ToQuery CreateAdditionalAssignmentsForHIT
         toQuery = const mempty
 
 -- | /See:/ 'createAdditionalAssignmentsForHITResponse' smart constructor.
-newtype CreateAdditionalAssignmentsForHITResponse = CreateAdditionalAssignmentsForHITResponse'
-  { _caafhitrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateAdditionalAssignmentsForHITResponse =
+  CreateAdditionalAssignmentsForHITResponse'
+    { _caafhitrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateAdditionalAssignmentsForHITResponse' with the minimum fields required to make a request.

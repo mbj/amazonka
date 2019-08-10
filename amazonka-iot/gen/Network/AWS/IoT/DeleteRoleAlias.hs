@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteRoleAlias' smart constructor.
-newtype DeleteRoleAlias = DeleteRoleAlias'
-  { _dRoleAlias :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteRoleAlias =
+  DeleteRoleAlias'
+    { _dRoleAlias :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteRoleAlias' with the minimum fields required to make a request.
@@ -87,9 +89,11 @@ instance ToQuery DeleteRoleAlias where
         toQuery = const mempty
 
 -- | /See:/ 'deleteRoleAliasResponse' smart constructor.
-newtype DeleteRoleAliasResponse = DeleteRoleAliasResponse'
-  { _drsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteRoleAliasResponse =
+  DeleteRoleAliasResponse'
+    { _drsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteRoleAliasResponse' with the minimum fields required to make a request.

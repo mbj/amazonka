@@ -54,13 +54,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listQualificationTypes' smart constructor.
-data ListQualificationTypes = ListQualificationTypes'
-  { _lqtMustBeOwnedByCaller :: !(Maybe Bool)
-  , _lqtNextToken           :: !(Maybe Text)
-  , _lqtQuery               :: !(Maybe Text)
-  , _lqtMaxResults          :: !(Maybe Nat)
-  , _lqtMustBeRequestable   :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListQualificationTypes =
+  ListQualificationTypes'
+    { _lqtMustBeOwnedByCaller :: !(Maybe Bool)
+    , _lqtNextToken           :: !(Maybe Text)
+    , _lqtQuery               :: !(Maybe Text)
+    , _lqtMaxResults          :: !(Maybe Nat)
+    , _lqtMustBeRequestable   :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListQualificationTypes' with the minimum fields required to make a request.
@@ -161,12 +163,14 @@ instance ToQuery ListQualificationTypes where
         toQuery = const mempty
 
 -- | /See:/ 'listQualificationTypesResponse' smart constructor.
-data ListQualificationTypesResponse = ListQualificationTypesResponse'
-  { _lqtrsQualificationTypes :: !(Maybe [QualificationType])
-  , _lqtrsNextToken          :: !(Maybe Text)
-  , _lqtrsNumResults         :: !(Maybe Int)
-  , _lqtrsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListQualificationTypesResponse =
+  ListQualificationTypesResponse'
+    { _lqtrsQualificationTypes :: !(Maybe [QualificationType])
+    , _lqtrsNextToken          :: !(Maybe Text)
+    , _lqtrsNumResults         :: !(Maybe Int)
+    , _lqtrsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListQualificationTypesResponse' with the minimum fields required to make a request.

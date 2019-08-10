@@ -50,13 +50,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateAuthorizer' smart constructor.
-data UpdateAuthorizer = UpdateAuthorizer'
-  { _uaStatus                 :: !(Maybe AuthorizerStatus)
-  , _uaAuthorizerFunctionARN  :: !(Maybe Text)
-  , _uaTokenSigningPublicKeys :: !(Maybe (Map Text Text))
-  , _uaTokenKeyName           :: !(Maybe Text)
-  , _uaAuthorizerName         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateAuthorizer =
+  UpdateAuthorizer'
+    { _uaStatus                 :: !(Maybe AuthorizerStatus)
+    , _uaAuthorizerFunctionARN  :: !(Maybe Text)
+    , _uaTokenSigningPublicKeys :: !(Maybe (Map Text Text))
+    , _uaTokenKeyName           :: !(Maybe Text)
+    , _uaAuthorizerName         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateAuthorizer' with the minimum fields required to make a request.
@@ -141,11 +143,13 @@ instance ToQuery UpdateAuthorizer where
         toQuery = const mempty
 
 -- | /See:/ 'updateAuthorizerResponse' smart constructor.
-data UpdateAuthorizerResponse = UpdateAuthorizerResponse'
-  { _uarsAuthorizerName :: !(Maybe Text)
-  , _uarsAuthorizerARN  :: !(Maybe Text)
-  , _uarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateAuthorizerResponse =
+  UpdateAuthorizerResponse'
+    { _uarsAuthorizerName :: !(Maybe Text)
+    , _uarsAuthorizerARN  :: !(Maybe Text)
+    , _uarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateAuthorizerResponse' with the minimum fields required to make a request.

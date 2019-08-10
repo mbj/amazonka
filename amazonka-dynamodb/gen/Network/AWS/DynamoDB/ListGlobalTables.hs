@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listGlobalTables' smart constructor.
-data ListGlobalTables = ListGlobalTables'
-  { _lgtRegionName                    :: !(Maybe Text)
-  , _lgtExclusiveStartGlobalTableName :: !(Maybe Text)
-  , _lgtLimit                         :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListGlobalTables =
+  ListGlobalTables'
+    { _lgtRegionName                    :: !(Maybe Text)
+    , _lgtExclusiveStartGlobalTableName :: !(Maybe Text)
+    , _lgtLimit                         :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListGlobalTables' with the minimum fields required to make a request.
@@ -126,11 +128,13 @@ instance ToQuery ListGlobalTables where
         toQuery = const mempty
 
 -- | /See:/ 'listGlobalTablesResponse' smart constructor.
-data ListGlobalTablesResponse = ListGlobalTablesResponse'
-  { _lgtrsLastEvaluatedGlobalTableName :: !(Maybe Text)
-  , _lgtrsGlobalTables                 :: !(Maybe [GlobalTable])
-  , _lgtrsResponseStatus               :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListGlobalTablesResponse =
+  ListGlobalTablesResponse'
+    { _lgtrsLastEvaluatedGlobalTableName :: !(Maybe Text)
+    , _lgtrsGlobalTables                 :: !(Maybe [GlobalTable])
+    , _lgtrsResponseStatus               :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListGlobalTablesResponse' with the minimum fields required to make a request.

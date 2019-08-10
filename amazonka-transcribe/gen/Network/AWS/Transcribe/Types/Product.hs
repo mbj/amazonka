@@ -26,9 +26,11 @@ import Network.AWS.Transcribe.Types.Sum
 --
 --
 -- /See:/ 'media' smart constructor.
-newtype Media = Media'
-  { _mMediaFileURI :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype Media =
+  Media'
+    { _mMediaFileURI :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Media' with the minimum fields required to make a request.
@@ -64,11 +66,13 @@ instance ToJSON Media where
 --
 --
 -- /See:/ 'settings' smart constructor.
-data Settings = Settings'
-  { _sVocabularyName    :: !(Maybe Text)
-  , _sMaxSpeakerLabels  :: !(Maybe Nat)
-  , _sShowSpeakerLabels :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Settings =
+  Settings'
+    { _sVocabularyName    :: !(Maybe Text)
+    , _sMaxSpeakerLabels  :: !(Maybe Nat)
+    , _sShowSpeakerLabels :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Settings' with the minimum fields required to make a request.
@@ -128,9 +132,11 @@ instance ToJSON Settings where
 --
 --
 -- /See:/ 'transcript' smart constructor.
-newtype Transcript = Transcript'
-  { _tTranscriptFileURI :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype Transcript =
+  Transcript'
+    { _tTranscriptFileURI :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Transcript' with the minimum fields required to make a request.
@@ -161,19 +167,21 @@ instance NFData Transcript where
 --
 --
 -- /See:/ 'transcriptionJob' smart constructor.
-data TranscriptionJob = TranscriptionJob'
-  { _tjCreationTime           :: !(Maybe POSIX)
-  , _tjFailureReason          :: !(Maybe Text)
-  , _tjLanguageCode           :: !(Maybe LanguageCode)
-  , _tjSettings               :: !(Maybe Settings)
-  , _tjCompletionTime         :: !(Maybe POSIX)
-  , _tjMedia                  :: !(Maybe Media)
-  , _tjMediaFormat            :: !(Maybe MediaFormat)
-  , _tjTranscriptionJobStatus :: !(Maybe TranscriptionJobStatus)
-  , _tjTranscriptionJobName   :: !(Maybe Text)
-  , _tjTranscript             :: !(Maybe Transcript)
-  , _tjMediaSampleRateHertz   :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TranscriptionJob =
+  TranscriptionJob'
+    { _tjCreationTime           :: !(Maybe POSIX)
+    , _tjFailureReason          :: !(Maybe Text)
+    , _tjLanguageCode           :: !(Maybe LanguageCode)
+    , _tjSettings               :: !(Maybe Settings)
+    , _tjCompletionTime         :: !(Maybe POSIX)
+    , _tjMedia                  :: !(Maybe Media)
+    , _tjMediaFormat            :: !(Maybe MediaFormat)
+    , _tjTranscriptionJobStatus :: !(Maybe TranscriptionJobStatus)
+    , _tjTranscriptionJobName   :: !(Maybe Text)
+    , _tjTranscript             :: !(Maybe Transcript)
+    , _tjMediaSampleRateHertz   :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TranscriptionJob' with the minimum fields required to make a request.
@@ -288,14 +296,16 @@ instance NFData TranscriptionJob where
 --
 --
 -- /See:/ 'transcriptionJobSummary' smart constructor.
-data TranscriptionJobSummary = TranscriptionJobSummary'
-  { _tjsCreationTime           :: !(Maybe POSIX)
-  , _tjsFailureReason          :: !(Maybe Text)
-  , _tjsLanguageCode           :: !(Maybe LanguageCode)
-  , _tjsCompletionTime         :: !(Maybe POSIX)
-  , _tjsTranscriptionJobStatus :: !(Maybe TranscriptionJobStatus)
-  , _tjsTranscriptionJobName   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TranscriptionJobSummary =
+  TranscriptionJobSummary'
+    { _tjsCreationTime           :: !(Maybe POSIX)
+    , _tjsFailureReason          :: !(Maybe Text)
+    , _tjsLanguageCode           :: !(Maybe LanguageCode)
+    , _tjsCompletionTime         :: !(Maybe POSIX)
+    , _tjsTranscriptionJobStatus :: !(Maybe TranscriptionJobStatus)
+    , _tjsTranscriptionJobName   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TranscriptionJobSummary' with the minimum fields required to make a request.
@@ -370,12 +380,14 @@ instance NFData TranscriptionJobSummary where
 --
 --
 -- /See:/ 'vocabularyInfo' smart constructor.
-data VocabularyInfo = VocabularyInfo'
-  { _viLanguageCode     :: !(Maybe LanguageCode)
-  , _viVocabularyName   :: !(Maybe Text)
-  , _viLastModifiedTime :: !(Maybe POSIX)
-  , _viVocabularyState  :: !(Maybe VocabularyState)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VocabularyInfo =
+  VocabularyInfo'
+    { _viLanguageCode     :: !(Maybe LanguageCode)
+    , _viVocabularyName   :: !(Maybe Text)
+    , _viLastModifiedTime :: !(Maybe POSIX)
+    , _viVocabularyState  :: !(Maybe VocabularyState)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VocabularyInfo' with the minimum fields required to make a request.

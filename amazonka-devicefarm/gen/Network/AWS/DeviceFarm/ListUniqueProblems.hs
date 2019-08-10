@@ -54,10 +54,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listUniqueProblems' smart constructor.
-data ListUniqueProblems = ListUniqueProblems'
-  { _lupNextToken :: !(Maybe Text)
-  , _lupArn       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListUniqueProblems =
+  ListUniqueProblems'
+    { _lupNextToken :: !(Maybe Text)
+    , _lupArn       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListUniqueProblems' with the minimum fields required to make a request.
@@ -133,11 +135,13 @@ instance ToQuery ListUniqueProblems where
 --
 --
 -- /See:/ 'listUniqueProblemsResponse' smart constructor.
-data ListUniqueProblemsResponse = ListUniqueProblemsResponse'
-  { _luprsNextToken      :: !(Maybe Text)
-  , _luprsUniqueProblems :: !(Maybe (Map ExecutionResult [UniqueProblem]))
-  , _luprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListUniqueProblemsResponse =
+  ListUniqueProblemsResponse'
+    { _luprsNextToken      :: !(Maybe Text)
+    , _luprsUniqueProblems :: !(Maybe (Map ExecutionResult [UniqueProblem]))
+    , _luprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListUniqueProblemsResponse' with the minimum fields required to make a request.

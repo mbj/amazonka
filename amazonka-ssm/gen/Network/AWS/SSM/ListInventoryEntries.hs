@@ -54,13 +54,15 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'listInventoryEntries' smart constructor.
-data ListInventoryEntries = ListInventoryEntries'
-  { _lieFilters    :: !(Maybe (List1 InventoryFilter))
-  , _lieNextToken  :: !(Maybe Text)
-  , _lieMaxResults :: !(Maybe Nat)
-  , _lieInstanceId :: !Text
-  , _lieTypeName   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListInventoryEntries =
+  ListInventoryEntries'
+    { _lieFilters    :: !(Maybe (List1 InventoryFilter))
+    , _lieNextToken  :: !(Maybe Text)
+    , _lieMaxResults :: !(Maybe Nat)
+    , _lieInstanceId :: !Text
+    , _lieTypeName   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListInventoryEntries' with the minimum fields required to make a request.
@@ -155,15 +157,17 @@ instance ToQuery ListInventoryEntries where
         toQuery = const mempty
 
 -- | /See:/ 'listInventoryEntriesResponse' smart constructor.
-data ListInventoryEntriesResponse = ListInventoryEntriesResponse'
-  { _liersInstanceId     :: !(Maybe Text)
-  , _liersTypeName       :: !(Maybe Text)
-  , _liersEntries        :: !(Maybe [Map Text Text])
-  , _liersSchemaVersion  :: !(Maybe Text)
-  , _liersCaptureTime    :: !(Maybe Text)
-  , _liersNextToken      :: !(Maybe Text)
-  , _liersResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListInventoryEntriesResponse =
+  ListInventoryEntriesResponse'
+    { _liersInstanceId     :: !(Maybe Text)
+    , _liersTypeName       :: !(Maybe Text)
+    , _liersEntries        :: !(Maybe [Map Text Text])
+    , _liersSchemaVersion  :: !(Maybe Text)
+    , _liersCaptureTime    :: !(Maybe Text)
+    , _liersNextToken      :: !(Maybe Text)
+    , _liersResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListInventoryEntriesResponse' with the minimum fields required to make a request.

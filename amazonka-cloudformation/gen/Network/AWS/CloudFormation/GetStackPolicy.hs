@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getStackPolicy' smart constructor.
-newtype GetStackPolicy = GetStackPolicy'
-  { _gspStackName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetStackPolicy =
+  GetStackPolicy'
+    { _gspStackName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetStackPolicy' with the minimum fields required to make a request.
@@ -100,10 +102,12 @@ instance ToQuery GetStackPolicy where
 --
 --
 -- /See:/ 'getStackPolicyResponse' smart constructor.
-data GetStackPolicyResponse = GetStackPolicyResponse'
-  { _gsprsStackPolicyBody :: !(Maybe Text)
-  , _gsprsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetStackPolicyResponse =
+  GetStackPolicyResponse'
+    { _gsprsStackPolicyBody :: !(Maybe Text)
+    , _gsprsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetStackPolicyResponse' with the minimum fields required to make a request.

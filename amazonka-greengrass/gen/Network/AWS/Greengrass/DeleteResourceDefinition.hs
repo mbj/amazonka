@@ -42,9 +42,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteResourceDefinition' smart constructor.
-newtype DeleteResourceDefinition = DeleteResourceDefinition'
-  { _drdResourceDefinitionId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteResourceDefinition =
+  DeleteResourceDefinition'
+    { _drdResourceDefinitionId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteResourceDefinition' with the minimum fields required to make a request.
@@ -94,9 +96,11 @@ instance ToQuery DeleteResourceDefinition where
         toQuery = const mempty
 
 -- | /See:/ 'deleteResourceDefinitionResponse' smart constructor.
-newtype DeleteResourceDefinitionResponse = DeleteResourceDefinitionResponse'
-  { _drdrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteResourceDefinitionResponse =
+  DeleteResourceDefinitionResponse'
+    { _drdrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteResourceDefinitionResponse' with the minimum fields required to make a request.

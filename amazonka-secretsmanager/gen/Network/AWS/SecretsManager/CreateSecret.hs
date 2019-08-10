@@ -87,15 +87,17 @@ import Network.AWS.SecretsManager.Types
 import Network.AWS.SecretsManager.Types.Product
 
 -- | /See:/ 'createSecret' smart constructor.
-data CreateSecret = CreateSecret'
-  { _csSecretBinary       :: !(Maybe (Sensitive Base64))
-  , _csKMSKeyId           :: !(Maybe Text)
-  , _csSecretString       :: !(Maybe (Sensitive Text))
-  , _csClientRequestToken :: !(Maybe Text)
-  , _csDescription        :: !(Maybe Text)
-  , _csTags               :: !(Maybe [Tag])
-  , _csName               :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data CreateSecret =
+  CreateSecret'
+    { _csSecretBinary       :: !(Maybe (Sensitive Base64))
+    , _csKMSKeyId           :: !(Maybe Text)
+    , _csSecretString       :: !(Maybe (Sensitive Text))
+    , _csClientRequestToken :: !(Maybe Text)
+    , _csDescription        :: !(Maybe Text)
+    , _csTags               :: !(Maybe [Tag])
+    , _csName               :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateSecret' with the minimum fields required to make a request.
@@ -200,12 +202,14 @@ instance ToQuery CreateSecret where
         toQuery = const mempty
 
 -- | /See:/ 'createSecretResponse' smart constructor.
-data CreateSecretResponse = CreateSecretResponse'
-  { _csrsVersionId      :: !(Maybe Text)
-  , _csrsARN            :: !(Maybe Text)
-  , _csrsName           :: !(Maybe Text)
-  , _csrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateSecretResponse =
+  CreateSecretResponse'
+    { _csrsVersionId      :: !(Maybe Text)
+    , _csrsARN            :: !(Maybe Text)
+    , _csrsName           :: !(Maybe Text)
+    , _csrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateSecretResponse' with the minimum fields required to make a request.

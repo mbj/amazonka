@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listV2LoggingLevels' smart constructor.
-data ListV2LoggingLevels = ListV2LoggingLevels'
-  { _lvllTargetType :: !(Maybe LogTargetType)
-  , _lvllNextToken  :: !(Maybe Text)
-  , _lvllMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListV2LoggingLevels =
+  ListV2LoggingLevels'
+    { _lvllTargetType :: !(Maybe LogTargetType)
+    , _lvllNextToken  :: !(Maybe Text)
+    , _lvllMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListV2LoggingLevels' with the minimum fields required to make a request.
@@ -116,11 +118,13 @@ instance ToQuery ListV2LoggingLevels where
                "maxResults" =: _lvllMaxResults]
 
 -- | /See:/ 'listV2LoggingLevelsResponse' smart constructor.
-data ListV2LoggingLevelsResponse = ListV2LoggingLevelsResponse'
-  { _lvllrsLogTargetConfigurations :: !(Maybe [LogTargetConfiguration])
-  , _lvllrsNextToken               :: !(Maybe Text)
-  , _lvllrsResponseStatus          :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListV2LoggingLevelsResponse =
+  ListV2LoggingLevelsResponse'
+    { _lvllrsLogTargetConfigurations :: !(Maybe [LogTargetConfiguration])
+    , _lvllrsNextToken               :: !(Maybe Text)
+    , _lvllrsResponseStatus          :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListV2LoggingLevelsResponse' with the minimum fields required to make a request.

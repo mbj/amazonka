@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listResourceServers' smart constructor.
-data ListResourceServers = ListResourceServers'
-  { _lrsNextToken  :: !(Maybe Text)
-  , _lrsMaxResults :: !(Maybe Nat)
-  , _lrsUserPoolId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListResourceServers =
+  ListResourceServers'
+    { _lrsNextToken  :: !(Maybe Text)
+    , _lrsMaxResults :: !(Maybe Nat)
+    , _lrsUserPoolId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListResourceServers' with the minimum fields required to make a request.
@@ -127,11 +129,13 @@ instance ToQuery ListResourceServers where
         toQuery = const mempty
 
 -- | /See:/ 'listResourceServersResponse' smart constructor.
-data ListResourceServersResponse = ListResourceServersResponse'
-  { _lrsrsNextToken       :: !(Maybe Text)
-  , _lrsrsResponseStatus  :: !Int
-  , _lrsrsResourceServers :: ![ResourceServerType]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListResourceServersResponse =
+  ListResourceServersResponse'
+    { _lrsrsNextToken       :: !(Maybe Text)
+    , _lrsrsResponseStatus  :: !Int
+    , _lrsrsResourceServers :: ![ResourceServerType]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListResourceServersResponse' with the minimum fields required to make a request.

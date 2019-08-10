@@ -60,10 +60,12 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'listCustomVerificationEmailTemplates' smart constructor.
-data ListCustomVerificationEmailTemplates = ListCustomVerificationEmailTemplates'
-  { _lcvetNextToken  :: !(Maybe Text)
-  , _lcvetMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListCustomVerificationEmailTemplates =
+  ListCustomVerificationEmailTemplates'
+    { _lcvetNextToken  :: !(Maybe Text)
+    , _lcvetMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListCustomVerificationEmailTemplates' with the minimum fields required to make a request.
@@ -147,11 +149,13 @@ instance ToQuery ListCustomVerificationEmailTemplates
 --
 --
 -- /See:/ 'listCustomVerificationEmailTemplatesResponse' smart constructor.
-data ListCustomVerificationEmailTemplatesResponse = ListCustomVerificationEmailTemplatesResponse'
-  { _lcvetrsNextToken :: !(Maybe Text)
-  , _lcvetrsCustomVerificationEmailTemplates :: !(Maybe [CustomVerificationEmailTemplate])
-  , _lcvetrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListCustomVerificationEmailTemplatesResponse =
+  ListCustomVerificationEmailTemplatesResponse'
+    { _lcvetrsNextToken :: !(Maybe Text)
+    , _lcvetrsCustomVerificationEmailTemplates :: !(Maybe [CustomVerificationEmailTemplate])
+    , _lcvetrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListCustomVerificationEmailTemplatesResponse' with the minimum fields required to make a request.

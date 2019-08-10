@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'startNextPendingJobExecution' smart constructor.
-data StartNextPendingJobExecution = StartNextPendingJobExecution'
-  { _snpjeStatusDetails :: !(Maybe (Map Text Text))
-  , _snpjeThingName     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartNextPendingJobExecution =
+  StartNextPendingJobExecution'
+    { _snpjeStatusDetails :: !(Maybe (Map Text Text))
+    , _snpjeThingName     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartNextPendingJobExecution' with the minimum fields required to make a request.
@@ -108,10 +110,12 @@ instance ToQuery StartNextPendingJobExecution where
         toQuery = const mempty
 
 -- | /See:/ 'startNextPendingJobExecutionResponse' smart constructor.
-data StartNextPendingJobExecutionResponse = StartNextPendingJobExecutionResponse'
-  { _snpjersExecution      :: !(Maybe JobExecution)
-  , _snpjersResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartNextPendingJobExecutionResponse =
+  StartNextPendingJobExecutionResponse'
+    { _snpjersExecution      :: !(Maybe JobExecution)
+    , _snpjersResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartNextPendingJobExecutionResponse' with the minimum fields required to make a request.

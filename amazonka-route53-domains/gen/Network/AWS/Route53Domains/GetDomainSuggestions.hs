@@ -47,11 +47,13 @@ import Network.AWS.Route53Domains.Types
 import Network.AWS.Route53Domains.Types.Product
 
 -- | /See:/ 'getDomainSuggestions' smart constructor.
-data GetDomainSuggestions = GetDomainSuggestions'
-  { _gdsDomainName      :: !Text
-  , _gdsSuggestionCount :: !Int
-  , _gdsOnlyAvailable   :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDomainSuggestions =
+  GetDomainSuggestions'
+    { _gdsDomainName      :: !Text
+    , _gdsSuggestionCount :: !Int
+    , _gdsOnlyAvailable   :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDomainSuggestions' with the minimum fields required to make a request.
@@ -128,10 +130,12 @@ instance ToQuery GetDomainSuggestions where
         toQuery = const mempty
 
 -- | /See:/ 'getDomainSuggestionsResponse' smart constructor.
-data GetDomainSuggestionsResponse = GetDomainSuggestionsResponse'
-  { _gdsrsSuggestionsList :: !(Maybe [DomainSuggestion])
-  , _gdsrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDomainSuggestionsResponse =
+  GetDomainSuggestionsResponse'
+    { _gdsrsSuggestionsList :: !(Maybe [DomainSuggestion])
+    , _gdsrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDomainSuggestionsResponse' with the minimum fields required to make a request.

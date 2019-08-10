@@ -42,9 +42,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'disableAlarmActions' smart constructor.
-newtype DisableAlarmActions = DisableAlarmActions'
-  { _daaAlarmNames :: [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DisableAlarmActions =
+  DisableAlarmActions'
+    { _daaAlarmNames :: [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisableAlarmActions' with the minimum fields required to make a request.

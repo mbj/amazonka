@@ -52,10 +52,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'modifyClusterParameterGroup' smart constructor.
-data ModifyClusterParameterGroup = ModifyClusterParameterGroup'
-  { _mcpgParameterGroupName :: !Text
-  , _mcpgParameters         :: ![Parameter]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyClusterParameterGroup =
+  ModifyClusterParameterGroup'
+    { _mcpgParameterGroupName :: !Text
+    , _mcpgParameters         :: ![Parameter]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyClusterParameterGroup' with the minimum fields required to make a request.

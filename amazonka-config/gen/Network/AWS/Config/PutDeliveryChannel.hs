@@ -50,9 +50,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'putDeliveryChannel' smart constructor.
-newtype PutDeliveryChannel = PutDeliveryChannel'
-  { _pdcDeliveryChannel :: DeliveryChannel
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype PutDeliveryChannel =
+  PutDeliveryChannel'
+    { _pdcDeliveryChannel :: DeliveryChannel
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutDeliveryChannel' with the minimum fields required to make a request.

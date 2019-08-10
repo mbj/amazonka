@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putSchemaFromJSON' smart constructor.
-data PutSchemaFromJSON = PutSchemaFromJSON'
-  { _psfjSchemaARN :: !Text
-  , _psfjDocument  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutSchemaFromJSON =
+  PutSchemaFromJSON'
+    { _psfjSchemaARN :: !Text
+    , _psfjDocument  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutSchemaFromJSON' with the minimum fields required to make a request.
@@ -106,10 +108,12 @@ instance ToQuery PutSchemaFromJSON where
         toQuery = const mempty
 
 -- | /See:/ 'putSchemaFromJSONResponse' smart constructor.
-data PutSchemaFromJSONResponse = PutSchemaFromJSONResponse'
-  { _psfjrsARN            :: !(Maybe Text)
-  , _psfjrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutSchemaFromJSONResponse =
+  PutSchemaFromJSONResponse'
+    { _psfjrsARN            :: !(Maybe Text)
+    , _psfjrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutSchemaFromJSONResponse' with the minimum fields required to make a request.

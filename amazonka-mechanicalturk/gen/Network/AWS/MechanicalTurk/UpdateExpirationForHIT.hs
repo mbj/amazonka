@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateExpirationForHIT' smart constructor.
-data UpdateExpirationForHIT = UpdateExpirationForHIT'
-  { _uefhitHITId    :: !Text
-  , _uefhitExpireAt :: !POSIX
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateExpirationForHIT =
+  UpdateExpirationForHIT'
+    { _uefhitHITId    :: !Text
+    , _uefhitExpireAt :: !POSIX
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateExpirationForHIT' with the minimum fields required to make a request.
@@ -113,9 +115,11 @@ instance ToQuery UpdateExpirationForHIT where
         toQuery = const mempty
 
 -- | /See:/ 'updateExpirationForHITResponse' smart constructor.
-newtype UpdateExpirationForHITResponse = UpdateExpirationForHITResponse'
-  { _uefhitrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateExpirationForHITResponse =
+  UpdateExpirationForHITResponse'
+    { _uefhitrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateExpirationForHITResponse' with the minimum fields required to make a request.

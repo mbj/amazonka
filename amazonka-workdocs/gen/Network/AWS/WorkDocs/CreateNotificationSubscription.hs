@@ -50,12 +50,14 @@ import Network.AWS.WorkDocs.Types
 import Network.AWS.WorkDocs.Types.Product
 
 -- | /See:/ 'createNotificationSubscription' smart constructor.
-data CreateNotificationSubscription = CreateNotificationSubscription'
-  { _cnsOrganizationId   :: !Text
-  , _cnsEndpoint         :: !Text
-  , _cnsProtocol         :: !SubscriptionProtocolType
-  , _cnsSubscriptionType :: !SubscriptionType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateNotificationSubscription =
+  CreateNotificationSubscription'
+    { _cnsOrganizationId   :: !Text
+    , _cnsEndpoint         :: !Text
+    , _cnsProtocol         :: !SubscriptionProtocolType
+    , _cnsSubscriptionType :: !SubscriptionType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateNotificationSubscription' with the minimum fields required to make a request.
@@ -142,10 +144,12 @@ instance ToQuery CreateNotificationSubscription where
         toQuery = const mempty
 
 -- | /See:/ 'createNotificationSubscriptionResponse' smart constructor.
-data CreateNotificationSubscriptionResponse = CreateNotificationSubscriptionResponse'
-  { _cnsrsSubscription   :: !(Maybe Subscription)
-  , _cnsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateNotificationSubscriptionResponse =
+  CreateNotificationSubscriptionResponse'
+    { _cnsrsSubscription   :: !(Maybe Subscription)
+    , _cnsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateNotificationSubscriptionResponse' with the minimum fields required to make a request.

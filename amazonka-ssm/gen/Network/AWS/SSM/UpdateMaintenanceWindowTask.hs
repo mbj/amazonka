@@ -86,22 +86,24 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'updateMaintenanceWindowTask' smart constructor.
-data UpdateMaintenanceWindowTask = UpdateMaintenanceWindowTask'
-  { _umwtServiceRoleARN :: !(Maybe Text)
-  , _umwtReplace :: !(Maybe Bool)
-  , _umwtTaskParameters :: !(Maybe (Sensitive (Map Text (Sensitive MaintenanceWindowTaskParameterValueExpression))))
-  , _umwtPriority :: !(Maybe Nat)
-  , _umwtTaskARN :: !(Maybe Text)
-  , _umwtMaxErrors :: !(Maybe Text)
-  , _umwtTaskInvocationParameters :: !(Maybe MaintenanceWindowTaskInvocationParameters)
-  , _umwtName :: !(Maybe Text)
-  , _umwtTargets :: !(Maybe [Target])
-  , _umwtLoggingInfo :: !(Maybe LoggingInfo)
-  , _umwtDescription :: !(Maybe (Sensitive Text))
-  , _umwtMaxConcurrency :: !(Maybe Text)
-  , _umwtWindowId :: !Text
-  , _umwtWindowTaskId :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data UpdateMaintenanceWindowTask =
+  UpdateMaintenanceWindowTask'
+    { _umwtServiceRoleARN :: !(Maybe Text)
+    , _umwtReplace :: !(Maybe Bool)
+    , _umwtTaskParameters :: !(Maybe (Sensitive (Map Text (Sensitive MaintenanceWindowTaskParameterValueExpression))))
+    , _umwtPriority :: !(Maybe Nat)
+    , _umwtTaskARN :: !(Maybe Text)
+    , _umwtMaxErrors :: !(Maybe Text)
+    , _umwtTaskInvocationParameters :: !(Maybe MaintenanceWindowTaskInvocationParameters)
+    , _umwtName :: !(Maybe Text)
+    , _umwtTargets :: !(Maybe [Target])
+    , _umwtLoggingInfo :: !(Maybe LoggingInfo)
+    , _umwtDescription :: !(Maybe (Sensitive Text))
+    , _umwtMaxConcurrency :: !(Maybe Text)
+    , _umwtWindowId :: !Text
+    , _umwtWindowTaskId :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateMaintenanceWindowTask' with the minimum fields required to make a request.
@@ -277,22 +279,24 @@ instance ToQuery UpdateMaintenanceWindowTask where
         toQuery = const mempty
 
 -- | /See:/ 'updateMaintenanceWindowTaskResponse' smart constructor.
-data UpdateMaintenanceWindowTaskResponse = UpdateMaintenanceWindowTaskResponse'
-  { _umwtrsServiceRoleARN :: !(Maybe Text)
-  , _umwtrsWindowTaskId :: !(Maybe Text)
-  , _umwtrsTaskParameters :: !(Maybe (Sensitive (Map Text (Sensitive MaintenanceWindowTaskParameterValueExpression))))
-  , _umwtrsPriority :: !(Maybe Nat)
-  , _umwtrsTaskARN :: !(Maybe Text)
-  , _umwtrsMaxErrors :: !(Maybe Text)
-  , _umwtrsTaskInvocationParameters :: !(Maybe MaintenanceWindowTaskInvocationParameters)
-  , _umwtrsName :: !(Maybe Text)
-  , _umwtrsTargets :: !(Maybe [Target])
-  , _umwtrsLoggingInfo :: !(Maybe LoggingInfo)
-  , _umwtrsDescription :: !(Maybe (Sensitive Text))
-  , _umwtrsMaxConcurrency :: !(Maybe Text)
-  , _umwtrsWindowId :: !(Maybe Text)
-  , _umwtrsResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data UpdateMaintenanceWindowTaskResponse =
+  UpdateMaintenanceWindowTaskResponse'
+    { _umwtrsServiceRoleARN :: !(Maybe Text)
+    , _umwtrsWindowTaskId :: !(Maybe Text)
+    , _umwtrsTaskParameters :: !(Maybe (Sensitive (Map Text (Sensitive MaintenanceWindowTaskParameterValueExpression))))
+    , _umwtrsPriority :: !(Maybe Nat)
+    , _umwtrsTaskARN :: !(Maybe Text)
+    , _umwtrsMaxErrors :: !(Maybe Text)
+    , _umwtrsTaskInvocationParameters :: !(Maybe MaintenanceWindowTaskInvocationParameters)
+    , _umwtrsName :: !(Maybe Text)
+    , _umwtrsTargets :: !(Maybe [Target])
+    , _umwtrsLoggingInfo :: !(Maybe LoggingInfo)
+    , _umwtrsDescription :: !(Maybe (Sensitive Text))
+    , _umwtrsMaxConcurrency :: !(Maybe Text)
+    , _umwtrsWindowId :: !(Maybe Text)
+    , _umwtrsResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateMaintenanceWindowTaskResponse' with the minimum fields required to make a request.

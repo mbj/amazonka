@@ -62,12 +62,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createAccount' smart constructor.
-data CreateAccount = CreateAccount'
-  { _caIAMUserAccessToBilling :: !(Maybe IAMUserAccessToBilling)
-  , _caRoleName               :: !(Maybe Text)
-  , _caEmail                  :: !(Sensitive Text)
-  , _caAccountName            :: !(Sensitive Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data CreateAccount =
+  CreateAccount'
+    { _caIAMUserAccessToBilling :: !(Maybe IAMUserAccessToBilling)
+    , _caRoleName               :: !(Maybe Text)
+    , _caEmail                  :: !(Sensitive Text)
+    , _caAccountName            :: !(Sensitive Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateAccount' with the minimum fields required to make a request.
@@ -151,10 +153,12 @@ instance ToQuery CreateAccount where
         toQuery = const mempty
 
 -- | /See:/ 'createAccountResponse' smart constructor.
-data CreateAccountResponse = CreateAccountResponse'
-  { _carsCreateAccountStatus :: !(Maybe CreateAccountStatus)
-  , _carsResponseStatus      :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data CreateAccountResponse =
+  CreateAccountResponse'
+    { _carsCreateAccountStatus :: !(Maybe CreateAccountStatus)
+    , _carsResponseStatus      :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateAccountResponse' with the minimum fields required to make a request.

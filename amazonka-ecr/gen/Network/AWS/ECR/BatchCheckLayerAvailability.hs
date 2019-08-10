@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'batchCheckLayerAvailability' smart constructor.
-data BatchCheckLayerAvailability = BatchCheckLayerAvailability'
-  { _bclaRegistryId     :: !(Maybe Text)
-  , _bclaRepositoryName :: !Text
-  , _bclaLayerDigests   :: !(List1 Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchCheckLayerAvailability =
+  BatchCheckLayerAvailability'
+    { _bclaRegistryId     :: !(Maybe Text)
+    , _bclaRepositoryName :: !Text
+    , _bclaLayerDigests   :: !(List1 Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchCheckLayerAvailability' with the minimum fields required to make a request.
@@ -129,11 +131,13 @@ instance ToQuery BatchCheckLayerAvailability where
         toQuery = const mempty
 
 -- | /See:/ 'batchCheckLayerAvailabilityResponse' smart constructor.
-data BatchCheckLayerAvailabilityResponse = BatchCheckLayerAvailabilityResponse'
-  { _bclarsFailures       :: !(Maybe [LayerFailure])
-  , _bclarsLayers         :: !(Maybe [Layer])
-  , _bclarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchCheckLayerAvailabilityResponse =
+  BatchCheckLayerAvailabilityResponse'
+    { _bclarsFailures       :: !(Maybe [LayerFailure])
+    , _bclarsLayers         :: !(Maybe [Layer])
+    , _bclarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchCheckLayerAvailabilityResponse' with the minimum fields required to make a request.

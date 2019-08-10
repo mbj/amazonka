@@ -48,11 +48,13 @@ import Network.AWS.WorkDocs.Types
 import Network.AWS.WorkDocs.Types.Product
 
 -- | /See:/ 'getFolder' smart constructor.
-data GetFolder = GetFolder'
-  { _gfAuthenticationToken   :: !(Maybe (Sensitive Text))
-  , _gfIncludeCustomMetadata :: !(Maybe Bool)
-  , _gfFolderId              :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data GetFolder =
+  GetFolder'
+    { _gfAuthenticationToken   :: !(Maybe (Sensitive Text))
+    , _gfIncludeCustomMetadata :: !(Maybe Bool)
+    , _gfFolderId              :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetFolder' with the minimum fields required to make a request.
@@ -119,11 +121,13 @@ instance ToQuery GetFolder where
               ["includeCustomMetadata" =: _gfIncludeCustomMetadata]
 
 -- | /See:/ 'getFolderResponse' smart constructor.
-data GetFolderResponse = GetFolderResponse'
-  { _gfrsCustomMetadata :: !(Maybe (Map Text Text))
-  , _gfrsMetadata       :: !(Maybe FolderMetadata)
-  , _gfrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetFolderResponse =
+  GetFolderResponse'
+    { _gfrsCustomMetadata :: !(Maybe (Map Text Text))
+    , _gfrsMetadata       :: !(Maybe FolderMetadata)
+    , _gfrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetFolderResponse' with the minimum fields required to make a request.

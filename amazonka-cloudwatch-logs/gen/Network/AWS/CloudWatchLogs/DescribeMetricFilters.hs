@@ -54,14 +54,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeMetricFilters' smart constructor.
-data DescribeMetricFilters = DescribeMetricFilters'
-  { _dmfFilterNamePrefix :: !(Maybe Text)
-  , _dmfMetricName       :: !(Maybe Text)
-  , _dmfLogGroupName     :: !(Maybe Text)
-  , _dmfNextToken        :: !(Maybe Text)
-  , _dmfMetricNamespace  :: !(Maybe Text)
-  , _dmfLimit            :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeMetricFilters =
+  DescribeMetricFilters'
+    { _dmfFilterNamePrefix :: !(Maybe Text)
+    , _dmfMetricName       :: !(Maybe Text)
+    , _dmfLogGroupName     :: !(Maybe Text)
+    , _dmfNextToken        :: !(Maybe Text)
+    , _dmfMetricNamespace  :: !(Maybe Text)
+    , _dmfLimit            :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeMetricFilters' with the minimum fields required to make a request.
@@ -167,11 +169,13 @@ instance ToQuery DescribeMetricFilters where
         toQuery = const mempty
 
 -- | /See:/ 'describeMetricFiltersResponse' smart constructor.
-data DescribeMetricFiltersResponse = DescribeMetricFiltersResponse'
-  { _dmfrsNextToken      :: !(Maybe Text)
-  , _dmfrsMetricFilters  :: !(Maybe [MetricFilter])
-  , _dmfrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeMetricFiltersResponse =
+  DescribeMetricFiltersResponse'
+    { _dmfrsNextToken      :: !(Maybe Text)
+    , _dmfrsMetricFilters  :: !(Maybe [MetricFilter])
+    , _dmfrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeMetricFiltersResponse' with the minimum fields required to make a request.

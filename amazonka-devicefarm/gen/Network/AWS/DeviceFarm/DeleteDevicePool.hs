@@ -48,9 +48,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteDevicePool' smart constructor.
-newtype DeleteDevicePool = DeleteDevicePool'
-  { _ddpArn :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteDevicePool =
+  DeleteDevicePool'
+    { _ddpArn :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteDevicePool' with the minimum fields required to make a request.
@@ -105,9 +107,11 @@ instance ToQuery DeleteDevicePool where
 --
 --
 -- /See:/ 'deleteDevicePoolResponse' smart constructor.
-newtype DeleteDevicePoolResponse = DeleteDevicePoolResponse'
-  { _ddprsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteDevicePoolResponse =
+  DeleteDevicePoolResponse'
+    { _ddprsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteDevicePoolResponse' with the minimum fields required to make a request.

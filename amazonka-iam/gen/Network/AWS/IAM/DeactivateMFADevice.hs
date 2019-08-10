@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deactivateMFADevice' smart constructor.
-data DeactivateMFADevice = DeactivateMFADevice'
-  { _dmdUserName     :: !Text
-  , _dmdSerialNumber :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeactivateMFADevice =
+  DeactivateMFADevice'
+    { _dmdUserName     :: !Text
+    , _dmdSerialNumber :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeactivateMFADevice' with the minimum fields required to make a request.

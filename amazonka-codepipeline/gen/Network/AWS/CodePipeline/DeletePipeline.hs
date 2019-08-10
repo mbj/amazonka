@@ -46,9 +46,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deletePipeline' smart constructor.
-newtype DeletePipeline = DeletePipeline'
-  { _dpName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeletePipeline =
+  DeletePipeline'
+    { _dpName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeletePipeline' with the minimum fields required to make a request.

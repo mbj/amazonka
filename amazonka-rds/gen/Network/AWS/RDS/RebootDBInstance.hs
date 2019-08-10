@@ -54,10 +54,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'rebootDBInstance' smart constructor.
-data RebootDBInstance = RebootDBInstance'
-  { _rdiForceFailover        :: !(Maybe Bool)
-  , _rdiDBInstanceIdentifier :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RebootDBInstance =
+  RebootDBInstance'
+    { _rdiForceFailover        :: !(Maybe Bool)
+    , _rdiDBInstanceIdentifier :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RebootDBInstance' with the minimum fields required to make a request.
@@ -113,10 +115,12 @@ instance ToQuery RebootDBInstance where
                "DBInstanceIdentifier" =: _rdiDBInstanceIdentifier]
 
 -- | /See:/ 'rebootDBInstanceResponse' smart constructor.
-data RebootDBInstanceResponse = RebootDBInstanceResponse'
-  { _rdirsDBInstance     :: !(Maybe DBInstance)
-  , _rdirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RebootDBInstanceResponse =
+  RebootDBInstanceResponse'
+    { _rdirsDBInstance     :: !(Maybe DBInstance)
+    , _rdirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RebootDBInstanceResponse' with the minimum fields required to make a request.

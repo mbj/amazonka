@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'associateElasticIP' smart constructor.
-data AssociateElasticIP = AssociateElasticIP'
-  { _aeiInstanceId :: !(Maybe Text)
-  , _aeiElasticIP  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssociateElasticIP =
+  AssociateElasticIP'
+    { _aeiInstanceId :: !(Maybe Text)
+    , _aeiElasticIP  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateElasticIP' with the minimum fields required to make a request.

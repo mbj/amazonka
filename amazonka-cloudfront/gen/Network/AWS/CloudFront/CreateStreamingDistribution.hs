@@ -59,9 +59,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createStreamingDistribution' smart constructor.
-newtype CreateStreamingDistribution = CreateStreamingDistribution'
-  { _csdStreamingDistributionConfig :: StreamingDistributionConfig
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateStreamingDistribution =
+  CreateStreamingDistribution'
+    { _csdStreamingDistributionConfig :: StreamingDistributionConfig
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateStreamingDistribution' with the minimum fields required to make a request.
@@ -118,12 +120,14 @@ instance ToQuery CreateStreamingDistribution where
 --
 --
 -- /See:/ 'createStreamingDistributionResponse' smart constructor.
-data CreateStreamingDistributionResponse = CreateStreamingDistributionResponse'
-  { _csdrsETag                  :: !(Maybe Text)
-  , _csdrsLocation              :: !(Maybe Text)
-  , _csdrsStreamingDistribution :: !(Maybe StreamingDistribution)
-  , _csdrsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateStreamingDistributionResponse =
+  CreateStreamingDistributionResponse'
+    { _csdrsETag                  :: !(Maybe Text)
+    , _csdrsLocation              :: !(Maybe Text)
+    , _csdrsStreamingDistribution :: !(Maybe StreamingDistribution)
+    , _csdrsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateStreamingDistributionResponse' with the minimum fields required to make a request.

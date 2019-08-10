@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'untagStream' smart constructor.
-data UntagStream = UntagStream'
-  { _usStreamARN  :: !(Maybe Text)
-  , _usStreamName :: !(Maybe Text)
-  , _usTagKeyList :: !(List1 Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UntagStream =
+  UntagStream'
+    { _usStreamARN  :: !(Maybe Text)
+    , _usStreamName :: !(Maybe Text)
+    , _usTagKeyList :: !(List1 Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UntagStream' with the minimum fields required to make a request.
@@ -117,9 +119,11 @@ instance ToQuery UntagStream where
         toQuery = const mempty
 
 -- | /See:/ 'untagStreamResponse' smart constructor.
-newtype UntagStreamResponse = UntagStreamResponse'
-  { _ursResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UntagStreamResponse =
+  UntagStreamResponse'
+    { _ursResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UntagStreamResponse' with the minimum fields required to make a request.

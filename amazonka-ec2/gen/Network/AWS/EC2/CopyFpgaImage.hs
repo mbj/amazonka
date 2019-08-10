@@ -50,14 +50,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'copyFpgaImage' smart constructor.
-data CopyFpgaImage = CopyFpgaImage'
-  { _cfiClientToken       :: !(Maybe Text)
-  , _cfiName              :: !(Maybe Text)
-  , _cfiDescription       :: !(Maybe Text)
-  , _cfiDryRun            :: !(Maybe Bool)
-  , _cfiSourceFpgaImageId :: !Text
-  , _cfiSourceRegion      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CopyFpgaImage =
+  CopyFpgaImage'
+    { _cfiClientToken       :: !(Maybe Text)
+    , _cfiName              :: !(Maybe Text)
+    , _cfiDescription       :: !(Maybe Text)
+    , _cfiDryRun            :: !(Maybe Bool)
+    , _cfiSourceFpgaImageId :: !Text
+    , _cfiSourceRegion      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CopyFpgaImage' with the minimum fields required to make a request.
@@ -145,10 +147,12 @@ instance ToQuery CopyFpgaImage where
                "SourceRegion" =: _cfiSourceRegion]
 
 -- | /See:/ 'copyFpgaImageResponse' smart constructor.
-data CopyFpgaImageResponse = CopyFpgaImageResponse'
-  { _crsFpgaImageId    :: !(Maybe Text)
-  , _crsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CopyFpgaImageResponse =
+  CopyFpgaImageResponse'
+    { _crsFpgaImageId    :: !(Maybe Text)
+    , _crsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CopyFpgaImageResponse' with the minimum fields required to make a request.

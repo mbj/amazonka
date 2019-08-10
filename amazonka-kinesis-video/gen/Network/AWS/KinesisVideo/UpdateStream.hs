@@ -54,13 +54,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateStream' smart constructor.
-data UpdateStream = UpdateStream'
-  { _uMediaType      :: !(Maybe Text)
-  , _uStreamARN      :: !(Maybe Text)
-  , _uDeviceName     :: !(Maybe Text)
-  , _uStreamName     :: !(Maybe Text)
-  , _uCurrentVersion :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateStream =
+  UpdateStream'
+    { _uMediaType      :: !(Maybe Text)
+    , _uStreamARN      :: !(Maybe Text)
+    , _uDeviceName     :: !(Maybe Text)
+    , _uStreamName     :: !(Maybe Text)
+    , _uCurrentVersion :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateStream' with the minimum fields required to make a request.
@@ -141,9 +143,11 @@ instance ToQuery UpdateStream where
         toQuery = const mempty
 
 -- | /See:/ 'updateStreamResponse' smart constructor.
-newtype UpdateStreamResponse = UpdateStreamResponse'
-  { _usrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateStreamResponse =
+  UpdateStreamResponse'
+    { _usrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateStreamResponse' with the minimum fields required to make a request.

@@ -49,10 +49,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'modifyCacheParameterGroup' smart constructor.
-data ModifyCacheParameterGroup = ModifyCacheParameterGroup'
-  { _mcpgCacheParameterGroupName :: !Text
-  , _mcpgParameterNameValues     :: ![ParameterNameValue]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyCacheParameterGroup =
+  ModifyCacheParameterGroup'
+    { _mcpgCacheParameterGroupName :: !Text
+    , _mcpgParameterNameValues     :: ![ParameterNameValue]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyCacheParameterGroup' with the minimum fields required to make a request.

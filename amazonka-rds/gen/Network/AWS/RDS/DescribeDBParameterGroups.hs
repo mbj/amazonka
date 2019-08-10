@@ -56,12 +56,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeDBParameterGroups' smart constructor.
-data DescribeDBParameterGroups = DescribeDBParameterGroups'
-  { _ddpgFilters              :: !(Maybe [Filter])
-  , _ddpgDBParameterGroupName :: !(Maybe Text)
-  , _ddpgMarker               :: !(Maybe Text)
-  , _ddpgMaxRecords           :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDBParameterGroups =
+  DescribeDBParameterGroups'
+    { _ddpgFilters              :: !(Maybe [Filter])
+    , _ddpgDBParameterGroupName :: !(Maybe Text)
+    , _ddpgMarker               :: !(Maybe Text)
+    , _ddpgMaxRecords           :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDBParameterGroups' with the minimum fields required to make a request.
@@ -149,11 +151,13 @@ instance ToQuery DescribeDBParameterGroups where
 --
 --
 -- /See:/ 'describeDBParameterGroupsResponse' smart constructor.
-data DescribeDBParameterGroupsResponse = DescribeDBParameterGroupsResponse'
-  { _ddpgrsMarker            :: !(Maybe Text)
-  , _ddpgrsDBParameterGroups :: !(Maybe [DBParameterGroup])
-  , _ddpgrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDBParameterGroupsResponse =
+  DescribeDBParameterGroupsResponse'
+    { _ddpgrsMarker            :: !(Maybe Text)
+    , _ddpgrsDBParameterGroups :: !(Maybe [DBParameterGroup])
+    , _ddpgrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDBParameterGroupsResponse' with the minimum fields required to make a request.

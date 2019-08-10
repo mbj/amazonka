@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'startStreamProcessor' smart constructor.
-newtype StartStreamProcessor = StartStreamProcessor'
-  { _sName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StartStreamProcessor =
+  StartStreamProcessor'
+    { _sName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartStreamProcessor' with the minimum fields required to make a request.
@@ -99,9 +101,11 @@ instance ToQuery StartStreamProcessor where
         toQuery = const mempty
 
 -- | /See:/ 'startStreamProcessorResponse' smart constructor.
-newtype StartStreamProcessorResponse = StartStreamProcessorResponse'
-  { _srsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StartStreamProcessorResponse =
+  StartStreamProcessorResponse'
+    { _srsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartStreamProcessorResponse' with the minimum fields required to make a request.

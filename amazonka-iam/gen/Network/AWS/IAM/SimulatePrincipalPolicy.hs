@@ -71,19 +71,21 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'simulatePrincipalPolicy' smart constructor.
-data SimulatePrincipalPolicy = SimulatePrincipalPolicy'
-  { _sppPolicyInputList        :: !(Maybe [Text])
-  , _sppResourcePolicy         :: !(Maybe Text)
-  , _sppCallerARN              :: !(Maybe Text)
-  , _sppResourceHandlingOption :: !(Maybe Text)
-  , _sppResourceARNs           :: !(Maybe [Text])
-  , _sppMarker                 :: !(Maybe Text)
-  , _sppMaxItems               :: !(Maybe Nat)
-  , _sppContextEntries         :: !(Maybe [ContextEntry])
-  , _sppResourceOwner          :: !(Maybe Text)
-  , _sppPolicySourceARN        :: !Text
-  , _sppActionNames            :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SimulatePrincipalPolicy =
+  SimulatePrincipalPolicy'
+    { _sppPolicyInputList        :: !(Maybe [Text])
+    , _sppResourcePolicy         :: !(Maybe Text)
+    , _sppCallerARN              :: !(Maybe Text)
+    , _sppResourceHandlingOption :: !(Maybe Text)
+    , _sppResourceARNs           :: !(Maybe [Text])
+    , _sppMarker                 :: !(Maybe Text)
+    , _sppMaxItems               :: !(Maybe Nat)
+    , _sppContextEntries         :: !(Maybe [ContextEntry])
+    , _sppResourceOwner          :: !(Maybe Text)
+    , _sppPolicySourceARN        :: !Text
+    , _sppActionNames            :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SimulatePrincipalPolicy' with the minimum fields required to make a request.

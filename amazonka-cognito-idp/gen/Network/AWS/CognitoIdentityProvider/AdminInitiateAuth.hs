@@ -60,15 +60,17 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'adminInitiateAuth' smart constructor.
-data AdminInitiateAuth = AdminInitiateAuth'
-  { _aiaClientMetadata    :: !(Maybe (Map Text Text))
-  , _aiaContextData       :: !(Maybe ContextDataType)
-  , _aiaAnalyticsMetadata :: !(Maybe AnalyticsMetadataType)
-  , _aiaAuthParameters    :: !(Maybe (Map Text Text))
-  , _aiaUserPoolId        :: !Text
-  , _aiaClientId          :: !(Sensitive Text)
-  , _aiaAuthFlow          :: !AuthFlowType
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data AdminInitiateAuth =
+  AdminInitiateAuth'
+    { _aiaClientMetadata    :: !(Maybe (Map Text Text))
+    , _aiaContextData       :: !(Maybe ContextDataType)
+    , _aiaAnalyticsMetadata :: !(Maybe AnalyticsMetadataType)
+    , _aiaAuthParameters    :: !(Maybe (Map Text Text))
+    , _aiaUserPoolId        :: !Text
+    , _aiaClientId          :: !(Sensitive Text)
+    , _aiaAuthFlow          :: !AuthFlowType
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AdminInitiateAuth' with the minimum fields required to make a request.
@@ -183,13 +185,15 @@ instance ToQuery AdminInitiateAuth where
 --
 --
 -- /See:/ 'adminInitiateAuthResponse' smart constructor.
-data AdminInitiateAuthResponse = AdminInitiateAuthResponse'
-  { _aiarsChallengeName        :: !(Maybe ChallengeNameType)
-  , _aiarsChallengeParameters  :: !(Maybe (Map Text Text))
-  , _aiarsAuthenticationResult :: !(Maybe AuthenticationResultType)
-  , _aiarsSession              :: !(Maybe Text)
-  , _aiarsResponseStatus       :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data AdminInitiateAuthResponse =
+  AdminInitiateAuthResponse'
+    { _aiarsChallengeName        :: !(Maybe ChallengeNameType)
+    , _aiarsChallengeParameters  :: !(Maybe (Map Text Text))
+    , _aiarsAuthenticationResult :: !(Maybe AuthenticationResultType)
+    , _aiarsSession              :: !(Maybe Text)
+    , _aiarsResponseStatus       :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AdminInitiateAuthResponse' with the minimum fields required to make a request.

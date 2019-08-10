@@ -67,12 +67,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putLogEvents' smart constructor.
-data PutLogEvents = PutLogEvents'
-  { _pleSequenceToken :: !(Maybe Text)
-  , _pleLogGroupName  :: !Text
-  , _pleLogStreamName :: !Text
-  , _pleLogEvents     :: !(List1 InputLogEvent)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutLogEvents =
+  PutLogEvents'
+    { _pleSequenceToken :: !(Maybe Text)
+    , _pleLogGroupName  :: !Text
+    , _pleLogStreamName :: !Text
+    , _pleLogEvents     :: !(List1 InputLogEvent)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutLogEvents' with the minimum fields required to make a request.
@@ -156,11 +158,13 @@ instance ToQuery PutLogEvents where
         toQuery = const mempty
 
 -- | /See:/ 'putLogEventsResponse' smart constructor.
-data PutLogEventsResponse = PutLogEventsResponse'
-  { _plersRejectedLogEventsInfo :: !(Maybe RejectedLogEventsInfo)
-  , _plersNextSequenceToken     :: !(Maybe Text)
-  , _plersResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutLogEventsResponse =
+  PutLogEventsResponse'
+    { _plersRejectedLogEventsInfo :: !(Maybe RejectedLogEventsInfo)
+    , _plersNextSequenceToken     :: !(Maybe Text)
+    , _plersResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutLogEventsResponse' with the minimum fields required to make a request.

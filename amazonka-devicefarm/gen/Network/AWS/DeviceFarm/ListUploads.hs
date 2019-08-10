@@ -54,10 +54,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listUploads' smart constructor.
-data ListUploads = ListUploads'
-  { _luNextToken :: !(Maybe Text)
-  , _luArn       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListUploads =
+  ListUploads'
+    { _luNextToken :: !(Maybe Text)
+    , _luArn       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListUploads' with the minimum fields required to make a request.
@@ -129,11 +131,13 @@ instance ToQuery ListUploads where
 --
 --
 -- /See:/ 'listUploadsResponse' smart constructor.
-data ListUploadsResponse = ListUploadsResponse'
-  { _lursNextToken      :: !(Maybe Text)
-  , _lursUploads        :: !(Maybe [Upload])
-  , _lursResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListUploadsResponse =
+  ListUploadsResponse'
+    { _lursNextToken      :: !(Maybe Text)
+    , _lursUploads        :: !(Maybe [Upload])
+    , _lursResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListUploadsResponse' with the minimum fields required to make a request.

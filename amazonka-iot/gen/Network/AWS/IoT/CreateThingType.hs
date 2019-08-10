@@ -52,10 +52,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createThingType' smart constructor.
-data CreateThingType = CreateThingType'
-  { _cttThingTypeProperties :: !(Maybe ThingTypeProperties)
-  , _cttThingTypeName       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateThingType =
+  CreateThingType'
+    { _cttThingTypeProperties :: !(Maybe ThingTypeProperties)
+    , _cttThingTypeName       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateThingType' with the minimum fields required to make a request.
@@ -118,12 +120,14 @@ instance ToQuery CreateThingType where
 --
 --
 -- /See:/ 'createThingTypeResponse' smart constructor.
-data CreateThingTypeResponse = CreateThingTypeResponse'
-  { _cttrsThingTypeName  :: !(Maybe Text)
-  , _cttrsThingTypeId    :: !(Maybe Text)
-  , _cttrsThingTypeARN   :: !(Maybe Text)
-  , _cttrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateThingTypeResponse =
+  CreateThingTypeResponse'
+    { _cttrsThingTypeName  :: !(Maybe Text)
+    , _cttrsThingTypeId    :: !(Maybe Text)
+    , _cttrsThingTypeARN   :: !(Maybe Text)
+    , _cttrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateThingTypeResponse' with the minimum fields required to make a request.

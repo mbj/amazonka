@@ -51,11 +51,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeAnalysisSchemes' smart constructor.
-data DescribeAnalysisSchemes = DescribeAnalysisSchemes'
-  { _dassDeployed            :: !(Maybe Bool)
-  , _dassAnalysisSchemeNames :: !(Maybe [Text])
-  , _dassDomainName          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAnalysisSchemes =
+  DescribeAnalysisSchemes'
+    { _dassDeployed            :: !(Maybe Bool)
+    , _dassAnalysisSchemeNames :: !(Maybe [Text])
+    , _dassDomainName          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAnalysisSchemes' with the minimum fields required to make a request.
@@ -129,10 +131,12 @@ instance ToQuery DescribeAnalysisSchemes where
 --
 --
 -- /See:/ 'describeAnalysisSchemesResponse' smart constructor.
-data DescribeAnalysisSchemesResponse = DescribeAnalysisSchemesResponse'
-  { _dasrsResponseStatus  :: !Int
-  , _dasrsAnalysisSchemes :: ![AnalysisSchemeStatus]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAnalysisSchemesResponse =
+  DescribeAnalysisSchemesResponse'
+    { _dasrsResponseStatus  :: !Int
+    , _dasrsAnalysisSchemes :: ![AnalysisSchemeStatus]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAnalysisSchemesResponse' with the minimum fields required to make a request.

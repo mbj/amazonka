@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeValidDBInstanceModifications' smart constructor.
-newtype DescribeValidDBInstanceModifications = DescribeValidDBInstanceModifications'
-  { _dvdimDBInstanceIdentifier :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeValidDBInstanceModifications =
+  DescribeValidDBInstanceModifications'
+    { _dvdimDBInstanceIdentifier :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeValidDBInstanceModifications' with the minimum fields required to make a request.
@@ -112,10 +114,12 @@ instance ToQuery DescribeValidDBInstanceModifications
                "DBInstanceIdentifier" =: _dvdimDBInstanceIdentifier]
 
 -- | /See:/ 'describeValidDBInstanceModificationsResponse' smart constructor.
-data DescribeValidDBInstanceModificationsResponse = DescribeValidDBInstanceModificationsResponse'
-  { _dvdimrsValidDBInstanceModificationsMessage :: !(Maybe ValidDBInstanceModificationsMessage)
-  , _dvdimrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeValidDBInstanceModificationsResponse =
+  DescribeValidDBInstanceModificationsResponse'
+    { _dvdimrsValidDBInstanceModificationsMessage :: !(Maybe ValidDBInstanceModificationsMessage)
+    , _dvdimrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeValidDBInstanceModificationsResponse' with the minimum fields required to make a request.

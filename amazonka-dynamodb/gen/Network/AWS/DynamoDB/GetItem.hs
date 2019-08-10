@@ -58,15 +58,17 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getItem' smart constructor.
-data GetItem = GetItem'
-  { _giProjectionExpression     :: !(Maybe Text)
-  , _giAttributesToGet          :: !(Maybe (List1 Text))
-  , _giExpressionAttributeNames :: !(Maybe (Map Text Text))
-  , _giConsistentRead           :: !(Maybe Bool)
-  , _giReturnConsumedCapacity   :: !(Maybe ReturnConsumedCapacity)
-  , _giTableName                :: !Text
-  , _giKey                      :: !(Map Text AttributeValue)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetItem =
+  GetItem'
+    { _giProjectionExpression     :: !(Maybe Text)
+    , _giAttributesToGet          :: !(Maybe (List1 Text))
+    , _giExpressionAttributeNames :: !(Maybe (Map Text Text))
+    , _giConsistentRead           :: !(Maybe Bool)
+    , _giReturnConsumedCapacity   :: !(Maybe ReturnConsumedCapacity)
+    , _giTableName                :: !Text
+    , _giKey                      :: !(Map Text AttributeValue)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetItem' with the minimum fields required to make a request.
@@ -179,11 +181,13 @@ instance ToQuery GetItem where
 --
 --
 -- /See:/ 'getItemResponse' smart constructor.
-data GetItemResponse = GetItemResponse'
-  { _girsConsumedCapacity :: !(Maybe ConsumedCapacity)
-  , _girsItem             :: !(Maybe (Map Text AttributeValue))
-  , _girsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetItemResponse =
+  GetItemResponse'
+    { _girsConsumedCapacity :: !(Maybe ConsumedCapacity)
+    , _girsItem             :: !(Maybe (Map Text AttributeValue))
+    , _girsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetItemResponse' with the minimum fields required to make a request.

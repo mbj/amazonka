@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateCrawlerSchedule' smart constructor.
-data UpdateCrawlerSchedule = UpdateCrawlerSchedule'
-  { _ucsSchedule    :: !(Maybe Text)
-  , _ucsCrawlerName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateCrawlerSchedule =
+  UpdateCrawlerSchedule'
+    { _ucsSchedule    :: !(Maybe Text)
+    , _ucsCrawlerName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateCrawlerSchedule' with the minimum fields required to make a request.
@@ -111,9 +113,11 @@ instance ToQuery UpdateCrawlerSchedule where
         toQuery = const mempty
 
 -- | /See:/ 'updateCrawlerScheduleResponse' smart constructor.
-newtype UpdateCrawlerScheduleResponse = UpdateCrawlerScheduleResponse'
-  { _ucsrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateCrawlerScheduleResponse =
+  UpdateCrawlerScheduleResponse'
+    { _ucsrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateCrawlerScheduleResponse' with the minimum fields required to make a request.

@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getPipelineExecution' smart constructor.
-data GetPipelineExecution = GetPipelineExecution'
-  { _gpePipelineName        :: !Text
-  , _gpePipelineExecutionId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetPipelineExecution =
+  GetPipelineExecution'
+    { _gpePipelineName        :: !Text
+    , _gpePipelineExecutionId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetPipelineExecution' with the minimum fields required to make a request.
@@ -125,10 +127,12 @@ instance ToQuery GetPipelineExecution where
 --
 --
 -- /See:/ 'getPipelineExecutionResponse' smart constructor.
-data GetPipelineExecutionResponse = GetPipelineExecutionResponse'
-  { _gpersPipelineExecution :: !(Maybe PipelineExecution)
-  , _gpersResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetPipelineExecutionResponse =
+  GetPipelineExecutionResponse'
+    { _gpersPipelineExecution :: !(Maybe PipelineExecution)
+    , _gpersResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetPipelineExecutionResponse' with the minimum fields required to make a request.

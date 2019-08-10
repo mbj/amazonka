@@ -46,9 +46,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteDBSecurityGroup' smart constructor.
-newtype DeleteDBSecurityGroup = DeleteDBSecurityGroup'
-  { _ddsgDBSecurityGroupName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteDBSecurityGroup =
+  DeleteDBSecurityGroup'
+    { _ddsgDBSecurityGroupName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteDBSecurityGroup' with the minimum fields required to make a request.

@@ -50,10 +50,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listInstanceFleets' smart constructor.
-data ListInstanceFleets = ListInstanceFleets'
-  { _lifMarker    :: !(Maybe Text)
-  , _lifClusterId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListInstanceFleets =
+  ListInstanceFleets'
+    { _lifMarker    :: !(Maybe Text)
+    , _lifClusterId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListInstanceFleets' with the minimum fields required to make a request.
@@ -125,11 +127,13 @@ instance ToQuery ListInstanceFleets where
         toQuery = const mempty
 
 -- | /See:/ 'listInstanceFleetsResponse' smart constructor.
-data ListInstanceFleetsResponse = ListInstanceFleetsResponse'
-  { _lifrsInstanceFleets :: !(Maybe [InstanceFleet])
-  , _lifrsMarker         :: !(Maybe Text)
-  , _lifrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListInstanceFleetsResponse =
+  ListInstanceFleetsResponse'
+    { _lifrsInstanceFleets :: !(Maybe [InstanceFleet])
+    , _lifrsMarker         :: !(Maybe Text)
+    , _lifrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListInstanceFleetsResponse' with the minimum fields required to make a request.

@@ -69,14 +69,16 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeTags' smart constructor.
-data DescribeTags = DescribeTags'
-  { _dtTagValues    :: !(Maybe [Text])
-  , _dtResourceType :: !(Maybe Text)
-  , _dtResourceName :: !(Maybe Text)
-  , _dtTagKeys      :: !(Maybe [Text])
-  , _dtMarker       :: !(Maybe Text)
-  , _dtMaxRecords   :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeTags =
+  DescribeTags'
+    { _dtTagValues    :: !(Maybe [Text])
+    , _dtResourceType :: !(Maybe Text)
+    , _dtResourceName :: !(Maybe Text)
+    , _dtTagKeys      :: !(Maybe [Text])
+    , _dtMarker       :: !(Maybe Text)
+    , _dtMaxRecords   :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeTags' with the minimum fields required to make a request.
@@ -171,11 +173,13 @@ instance ToQuery DescribeTags where
 --
 --
 -- /See:/ 'describeTagsResponse' smart constructor.
-data DescribeTagsResponse = DescribeTagsResponse'
-  { _dtrsMarker          :: !(Maybe Text)
-  , _dtrsTaggedResources :: !(Maybe [TaggedResource])
-  , _dtrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeTagsResponse =
+  DescribeTagsResponse'
+    { _dtrsMarker          :: !(Maybe Text)
+    , _dtrsTaggedResources :: !(Maybe [TaggedResource])
+    , _dtrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeTagsResponse' with the minimum fields required to make a request.

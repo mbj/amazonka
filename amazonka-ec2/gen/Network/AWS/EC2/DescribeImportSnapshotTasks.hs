@@ -54,13 +54,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeImportSnapshotTasks' smart constructor.
-data DescribeImportSnapshotTasks = DescribeImportSnapshotTasks'
-  { _distFilters       :: !(Maybe [Filter])
-  , _distImportTaskIds :: !(Maybe [Text])
-  , _distNextToken     :: !(Maybe Text)
-  , _distDryRun        :: !(Maybe Bool)
-  , _distMaxResults    :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeImportSnapshotTasks =
+  DescribeImportSnapshotTasks'
+    { _distFilters       :: !(Maybe [Filter])
+    , _distImportTaskIds :: !(Maybe [Text])
+    , _distNextToken     :: !(Maybe Text)
+    , _distDryRun        :: !(Maybe Bool)
+    , _distMaxResults    :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeImportSnapshotTasks' with the minimum fields required to make a request.
@@ -149,11 +151,13 @@ instance ToQuery DescribeImportSnapshotTasks where
 --
 --
 -- /See:/ 'describeImportSnapshotTasksResponse' smart constructor.
-data DescribeImportSnapshotTasksResponse = DescribeImportSnapshotTasksResponse'
-  { _distrsNextToken           :: !(Maybe Text)
-  , _distrsImportSnapshotTasks :: !(Maybe [ImportSnapshotTask])
-  , _distrsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeImportSnapshotTasksResponse =
+  DescribeImportSnapshotTasksResponse'
+    { _distrsNextToken           :: !(Maybe Text)
+    , _distrsImportSnapshotTasks :: !(Maybe [ImportSnapshotTask])
+    , _distrsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeImportSnapshotTasksResponse' with the minimum fields required to make a request.

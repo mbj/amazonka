@@ -52,10 +52,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listAllowedNodeTypeModifications' smart constructor.
-data ListAllowedNodeTypeModifications = ListAllowedNodeTypeModifications'
-  { _lantmCacheClusterId     :: !(Maybe Text)
-  , _lantmReplicationGroupId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAllowedNodeTypeModifications =
+  ListAllowedNodeTypeModifications'
+    { _lantmCacheClusterId     :: !(Maybe Text)
+    , _lantmReplicationGroupId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAllowedNodeTypeModifications' with the minimum fields required to make a request.
@@ -123,10 +125,12 @@ instance ToQuery ListAllowedNodeTypeModifications
 --
 --
 -- /See:/ 'listAllowedNodeTypeModificationsResponse' smart constructor.
-data ListAllowedNodeTypeModificationsResponse = ListAllowedNodeTypeModificationsResponse'
-  { _lantmrsScaleUpModifications :: !(Maybe [Text])
-  , _lantmrsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAllowedNodeTypeModificationsResponse =
+  ListAllowedNodeTypeModificationsResponse'
+    { _lantmrsScaleUpModifications :: !(Maybe [Text])
+    , _lantmrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAllowedNodeTypeModificationsResponse' with the minimum fields required to make a request.

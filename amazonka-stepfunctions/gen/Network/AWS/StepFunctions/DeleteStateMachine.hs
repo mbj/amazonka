@@ -44,9 +44,11 @@ import Network.AWS.StepFunctions.Types
 import Network.AWS.StepFunctions.Types.Product
 
 -- | /See:/ 'deleteStateMachine' smart constructor.
-newtype DeleteStateMachine = DeleteStateMachine'
-  { _dStateMachineARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteStateMachine =
+  DeleteStateMachine'
+    { _dStateMachineARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteStateMachine' with the minimum fields required to make a request.
@@ -101,9 +103,11 @@ instance ToQuery DeleteStateMachine where
         toQuery = const mempty
 
 -- | /See:/ 'deleteStateMachineResponse' smart constructor.
-newtype DeleteStateMachineResponse = DeleteStateMachineResponse'
-  { _drsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteStateMachineResponse =
+  DeleteStateMachineResponse'
+    { _drsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteStateMachineResponse' with the minimum fields required to make a request.

@@ -54,10 +54,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getClientCertificates' smart constructor.
-data GetClientCertificates = GetClientCertificates'
-  { _gccLimit    :: !(Maybe Int)
-  , _gccPosition :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetClientCertificates =
+  GetClientCertificates'
+    { _gccLimit    :: !(Maybe Int)
+    , _gccPosition :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetClientCertificates' with the minimum fields required to make a request.
@@ -123,11 +125,13 @@ instance ToQuery GetClientCertificates where
 -- <http://docs.aws.amazon.com/apigateway/latest/developerguide/getting-started-client-side-ssl-authentication.html Use Client-Side Certificate>
 --
 -- /See:/ 'getClientCertificatesResponse' smart constructor.
-data GetClientCertificatesResponse = GetClientCertificatesResponse'
-  { _gccrsItems          :: !(Maybe [ClientCertificate])
-  , _gccrsPosition       :: !(Maybe Text)
-  , _gccrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetClientCertificatesResponse =
+  GetClientCertificatesResponse'
+    { _gccrsItems          :: !(Maybe [ClientCertificate])
+    , _gccrsPosition       :: !(Maybe Text)
+    , _gccrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetClientCertificatesResponse' with the minimum fields required to make a request.

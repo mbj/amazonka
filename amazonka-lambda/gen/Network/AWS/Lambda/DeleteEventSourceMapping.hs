@@ -57,9 +57,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteEventSourceMapping' smart constructor.
-newtype DeleteEventSourceMapping = DeleteEventSourceMapping'
-  { _desmUUId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteEventSourceMapping =
+  DeleteEventSourceMapping'
+    { _desmUUId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteEventSourceMapping' with the minimum fields required to make a request.

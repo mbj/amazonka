@@ -46,9 +46,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createOrUpdateTags' smart constructor.
-newtype CreateOrUpdateTags = CreateOrUpdateTags'
-  { _coutTags :: [Tag]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateOrUpdateTags =
+  CreateOrUpdateTags'
+    { _coutTags :: [Tag]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateOrUpdateTags' with the minimum fields required to make a request.

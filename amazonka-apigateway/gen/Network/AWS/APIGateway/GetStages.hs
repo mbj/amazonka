@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getStages' smart constructor.
-data GetStages = GetStages'
-  { _gsDeploymentId :: !(Maybe Text)
-  , _gsRestAPIId    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetStages =
+  GetStages'
+    { _gsDeploymentId :: !(Maybe Text)
+    , _gsRestAPIId    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetStages' with the minimum fields required to make a request.
@@ -112,10 +114,12 @@ instance ToQuery GetStages where
 -- <http://docs.aws.amazon.com/apigateway/latest/developerguide/stages.html Deploying API in Stages>
 --
 -- /See:/ 'getStagesResponse' smart constructor.
-data GetStagesResponse = GetStagesResponse'
-  { _gsrsItem           :: !(Maybe [Stage])
-  , _gsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetStagesResponse =
+  GetStagesResponse'
+    { _gsrsItem           :: !(Maybe [Stage])
+    , _gsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetStagesResponse' with the minimum fields required to make a request.

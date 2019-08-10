@@ -53,10 +53,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateClientCertificate' smart constructor.
-data UpdateClientCertificate = UpdateClientCertificate'
-  { _uccPatchOperations     :: !(Maybe [PatchOperation])
-  , _uccClientCertificateId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateClientCertificate =
+  UpdateClientCertificate'
+    { _uccPatchOperations     :: !(Maybe [PatchOperation])
+    , _uccClientCertificateId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateClientCertificate' with the minimum fields required to make a request.

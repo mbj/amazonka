@@ -53,13 +53,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'startContentModeration' smart constructor.
-data StartContentModeration = StartContentModeration'
-  { _scmJobTag              :: !(Maybe Text)
-  , _scmNotificationChannel :: !(Maybe NotificationChannel)
-  , _scmClientRequestToken  :: !(Maybe Text)
-  , _scmMinConfidence       :: !(Maybe Double)
-  , _scmVideo               :: !Video
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartContentModeration =
+  StartContentModeration'
+    { _scmJobTag              :: !(Maybe Text)
+    , _scmNotificationChannel :: !(Maybe NotificationChannel)
+    , _scmClientRequestToken  :: !(Maybe Text)
+    , _scmMinConfidence       :: !(Maybe Double)
+    , _scmVideo               :: !Video
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartContentModeration' with the minimum fields required to make a request.
@@ -150,10 +152,12 @@ instance ToQuery StartContentModeration where
         toQuery = const mempty
 
 -- | /See:/ 'startContentModerationResponse' smart constructor.
-data StartContentModerationResponse = StartContentModerationResponse'
-  { _scmrsJobId          :: !(Maybe Text)
-  , _scmrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartContentModerationResponse =
+  StartContentModerationResponse'
+    { _scmrsJobId          :: !(Maybe Text)
+    , _scmrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartContentModerationResponse' with the minimum fields required to make a request.

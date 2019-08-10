@@ -50,13 +50,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeVPCEndpointConnectionNotifications' smart constructor.
-data DescribeVPCEndpointConnectionNotifications = DescribeVPCEndpointConnectionNotifications'
-  { _dvpcecnFilters                  :: !(Maybe [Filter])
-  , _dvpcecnNextToken                :: !(Maybe Text)
-  , _dvpcecnConnectionNotificationId :: !(Maybe Text)
-  , _dvpcecnDryRun                   :: !(Maybe Bool)
-  , _dvpcecnMaxResults               :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeVPCEndpointConnectionNotifications =
+  DescribeVPCEndpointConnectionNotifications'
+    { _dvpcecnFilters                  :: !(Maybe [Filter])
+    , _dvpcecnNextToken                :: !(Maybe Text)
+    , _dvpcecnConnectionNotificationId :: !(Maybe Text)
+    , _dvpcecnDryRun                   :: !(Maybe Bool)
+    , _dvpcecnMaxResults               :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeVPCEndpointConnectionNotifications' with the minimum fields required to make a request.
@@ -156,11 +158,13 @@ instance ToQuery
                "MaxResults" =: _dvpcecnMaxResults]
 
 -- | /See:/ 'describeVPCEndpointConnectionNotificationsResponse' smart constructor.
-data DescribeVPCEndpointConnectionNotificationsResponse = DescribeVPCEndpointConnectionNotificationsResponse'
-  { _dvpcecnrsConnectionNotificationSet :: !(Maybe [ConnectionNotification])
-  , _dvpcecnrsNextToken                 :: !(Maybe Text)
-  , _dvpcecnrsResponseStatus            :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeVPCEndpointConnectionNotificationsResponse =
+  DescribeVPCEndpointConnectionNotificationsResponse'
+    { _dvpcecnrsConnectionNotificationSet :: !(Maybe [ConnectionNotification])
+    , _dvpcecnrsNextToken                 :: !(Maybe Text)
+    , _dvpcecnrsResponseStatus            :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeVPCEndpointConnectionNotificationsResponse' with the minimum fields required to make a request.

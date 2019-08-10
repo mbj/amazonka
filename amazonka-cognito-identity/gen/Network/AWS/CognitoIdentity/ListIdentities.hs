@@ -56,12 +56,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listIdentities' smart constructor.
-data ListIdentities = ListIdentities'
-  { _liHideDisabled   :: !(Maybe Bool)
-  , _liNextToken      :: !(Maybe Text)
-  , _liIdentityPoolId :: !Text
-  , _liMaxResults     :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListIdentities =
+  ListIdentities'
+    { _liHideDisabled   :: !(Maybe Bool)
+    , _liNextToken      :: !(Maybe Text)
+    , _liIdentityPoolId :: !Text
+    , _liMaxResults     :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListIdentities' with the minimum fields required to make a request.
@@ -149,12 +151,14 @@ instance ToQuery ListIdentities where
 --
 --
 -- /See:/ 'listIdentitiesResponse' smart constructor.
-data ListIdentitiesResponse = ListIdentitiesResponse'
-  { _lirsIdentityPoolId :: !(Maybe Text)
-  , _lirsNextToken      :: !(Maybe Text)
-  , _lirsIdentities     :: !(Maybe [IdentityDescription])
-  , _lirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListIdentitiesResponse =
+  ListIdentitiesResponse'
+    { _lirsIdentityPoolId :: !(Maybe Text)
+    , _lirsNextToken      :: !(Maybe Text)
+    , _lirsIdentities     :: !(Maybe [IdentityDescription])
+    , _lirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListIdentitiesResponse' with the minimum fields required to make a request.

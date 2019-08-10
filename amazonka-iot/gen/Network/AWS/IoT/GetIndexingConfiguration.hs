@@ -80,10 +80,12 @@ instance ToQuery GetIndexingConfiguration where
         toQuery = const mempty
 
 -- | /See:/ 'getIndexingConfigurationResponse' smart constructor.
-data GetIndexingConfigurationResponse = GetIndexingConfigurationResponse'
-  { _gicrsThingIndexingConfiguration :: !(Maybe ThingIndexingConfiguration)
-  , _gicrsResponseStatus             :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetIndexingConfigurationResponse =
+  GetIndexingConfigurationResponse'
+    { _gicrsThingIndexingConfiguration :: !(Maybe ThingIndexingConfiguration)
+    , _gicrsResponseStatus             :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetIndexingConfigurationResponse' with the minimum fields required to make a request.

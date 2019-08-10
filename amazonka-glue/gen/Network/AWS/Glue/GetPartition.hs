@@ -48,12 +48,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getPartition' smart constructor.
-data GetPartition = GetPartition'
-  { _gpCatalogId       :: !(Maybe Text)
-  , _gpDatabaseName    :: !Text
-  , _gpTableName       :: !Text
-  , _gpPartitionValues :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetPartition =
+  GetPartition'
+    { _gpCatalogId       :: !(Maybe Text)
+    , _gpDatabaseName    :: !Text
+    , _gpTableName       :: !Text
+    , _gpPartitionValues :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetPartition' with the minimum fields required to make a request.
@@ -134,10 +136,12 @@ instance ToQuery GetPartition where
         toQuery = const mempty
 
 -- | /See:/ 'getPartitionResponse' smart constructor.
-data GetPartitionResponse = GetPartitionResponse'
-  { _gprsPartition      :: !(Maybe Partition)
-  , _gprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetPartitionResponse =
+  GetPartitionResponse'
+    { _gprsPartition      :: !(Maybe Partition)
+    , _gprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetPartitionResponse' with the minimum fields required to make a request.

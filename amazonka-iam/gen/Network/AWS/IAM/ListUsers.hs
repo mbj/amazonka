@@ -54,11 +54,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listUsers' smart constructor.
-data ListUsers = ListUsers'
-  { _luPathPrefix :: !(Maybe Text)
-  , _luMarker     :: !(Maybe Text)
-  , _luMaxItems   :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListUsers =
+  ListUsers'
+    { _luPathPrefix :: !(Maybe Text)
+    , _luMarker     :: !(Maybe Text)
+    , _luMaxItems   :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListUsers' with the minimum fields required to make a request.
@@ -131,12 +133,14 @@ instance ToQuery ListUsers where
 --
 --
 -- /See:/ 'listUsersResponse' smart constructor.
-data ListUsersResponse = ListUsersResponse'
-  { _lursMarker         :: !(Maybe Text)
-  , _lursIsTruncated    :: !(Maybe Bool)
-  , _lursResponseStatus :: !Int
-  , _lursUsers          :: ![User]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListUsersResponse =
+  ListUsersResponse'
+    { _lursMarker         :: !(Maybe Text)
+    , _lursIsTruncated    :: !(Maybe Bool)
+    , _lursResponseStatus :: !Int
+    , _lursUsers          :: ![User]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListUsersResponse' with the minimum fields required to make a request.

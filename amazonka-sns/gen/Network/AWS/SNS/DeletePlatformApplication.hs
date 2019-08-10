@@ -46,9 +46,11 @@ import Network.AWS.SNS.Types.Product
 --
 --
 -- /See:/ 'deletePlatformApplication' smart constructor.
-newtype DeletePlatformApplication = DeletePlatformApplication'
-  { _dpaPlatformApplicationARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeletePlatformApplication =
+  DeletePlatformApplication'
+    { _dpaPlatformApplicationARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeletePlatformApplication' with the minimum fields required to make a request.

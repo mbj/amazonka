@@ -95,17 +95,19 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createGameSession' smart constructor.
-data CreateGameSession = CreateGameSession'
-  { _cgsIdempotencyToken          :: !(Maybe Text)
-  , _cgsGameProperties            :: !(Maybe [GameProperty])
-  , _cgsGameSessionId             :: !(Maybe Text)
-  , _cgsAliasId                   :: !(Maybe Text)
-  , _cgsName                      :: !(Maybe Text)
-  , _cgsGameSessionData           :: !(Maybe Text)
-  , _cgsFleetId                   :: !(Maybe Text)
-  , _cgsCreatorId                 :: !(Maybe Text)
-  , _cgsMaximumPlayerSessionCount :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateGameSession =
+  CreateGameSession'
+    { _cgsIdempotencyToken          :: !(Maybe Text)
+    , _cgsGameProperties            :: !(Maybe [GameProperty])
+    , _cgsGameSessionId             :: !(Maybe Text)
+    , _cgsAliasId                   :: !(Maybe Text)
+    , _cgsName                      :: !(Maybe Text)
+    , _cgsGameSessionData           :: !(Maybe Text)
+    , _cgsFleetId                   :: !(Maybe Text)
+    , _cgsCreatorId                 :: !(Maybe Text)
+    , _cgsMaximumPlayerSessionCount :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateGameSession' with the minimum fields required to make a request.
@@ -231,10 +233,12 @@ instance ToQuery CreateGameSession where
 --
 --
 -- /See:/ 'createGameSessionResponse' smart constructor.
-data CreateGameSessionResponse = CreateGameSessionResponse'
-  { _cgsrsGameSession    :: !(Maybe GameSession)
-  , _cgsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateGameSessionResponse =
+  CreateGameSessionResponse'
+    { _cgsrsGameSession    :: !(Maybe GameSession)
+    , _cgsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateGameSessionResponse' with the minimum fields required to make a request.

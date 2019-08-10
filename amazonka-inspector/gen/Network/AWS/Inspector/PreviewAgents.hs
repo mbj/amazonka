@@ -51,11 +51,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'previewAgents' smart constructor.
-data PreviewAgents = PreviewAgents'
-  { _paNextToken        :: !(Maybe Text)
-  , _paMaxResults       :: !(Maybe Int)
-  , _paPreviewAgentsARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PreviewAgents =
+  PreviewAgents'
+    { _paNextToken        :: !(Maybe Text)
+    , _paMaxResults       :: !(Maybe Int)
+    , _paPreviewAgentsARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PreviewAgents' with the minimum fields required to make a request.
@@ -135,11 +137,13 @@ instance ToQuery PreviewAgents where
         toQuery = const mempty
 
 -- | /See:/ 'previewAgentsResponse' smart constructor.
-data PreviewAgentsResponse = PreviewAgentsResponse'
-  { _parsNextToken      :: !(Maybe Text)
-  , _parsResponseStatus :: !Int
-  , _parsAgentPreviews  :: ![AgentPreview]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PreviewAgentsResponse =
+  PreviewAgentsResponse'
+    { _parsNextToken      :: !(Maybe Text)
+    , _parsResponseStatus :: !Int
+    , _parsAgentPreviews  :: ![AgentPreview]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PreviewAgentsResponse' with the minimum fields required to make a request.

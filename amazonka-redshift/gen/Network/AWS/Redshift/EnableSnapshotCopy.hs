@@ -52,12 +52,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'enableSnapshotCopy' smart constructor.
-data EnableSnapshotCopy = EnableSnapshotCopy'
-  { _escRetentionPeriod       :: !(Maybe Int)
-  , _escSnapshotCopyGrantName :: !(Maybe Text)
-  , _escClusterIdentifier     :: !Text
-  , _escDestinationRegion     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EnableSnapshotCopy =
+  EnableSnapshotCopy'
+    { _escRetentionPeriod       :: !(Maybe Int)
+    , _escSnapshotCopyGrantName :: !(Maybe Text)
+    , _escClusterIdentifier     :: !Text
+    , _escDestinationRegion     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EnableSnapshotCopy' with the minimum fields required to make a request.
@@ -131,10 +133,12 @@ instance ToQuery EnableSnapshotCopy where
                "DestinationRegion" =: _escDestinationRegion]
 
 -- | /See:/ 'enableSnapshotCopyResponse' smart constructor.
-data EnableSnapshotCopyResponse = EnableSnapshotCopyResponse'
-  { _escrsCluster        :: !(Maybe Cluster)
-  , _escrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EnableSnapshotCopyResponse =
+  EnableSnapshotCopyResponse'
+    { _escrsCluster        :: !(Maybe Cluster)
+    , _escrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EnableSnapshotCopyResponse' with the minimum fields required to make a request.

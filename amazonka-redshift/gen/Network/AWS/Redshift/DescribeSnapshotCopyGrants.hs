@@ -56,13 +56,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeSnapshotCopyGrants' smart constructor.
-data DescribeSnapshotCopyGrants = DescribeSnapshotCopyGrants'
-  { _dscgsTagValues             :: !(Maybe [Text])
-  , _dscgsTagKeys               :: !(Maybe [Text])
-  , _dscgsMarker                :: !(Maybe Text)
-  , _dscgsMaxRecords            :: !(Maybe Int)
-  , _dscgsSnapshotCopyGrantName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeSnapshotCopyGrants =
+  DescribeSnapshotCopyGrants'
+    { _dscgsTagValues             :: !(Maybe [Text])
+    , _dscgsTagKeys               :: !(Maybe [Text])
+    , _dscgsMarker                :: !(Maybe Text)
+    , _dscgsMaxRecords            :: !(Maybe Int)
+    , _dscgsSnapshotCopyGrantName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeSnapshotCopyGrants' with the minimum fields required to make a request.
@@ -154,11 +156,13 @@ instance ToQuery DescribeSnapshotCopyGrants where
 --
 --
 -- /See:/ 'describeSnapshotCopyGrantsResponse' smart constructor.
-data DescribeSnapshotCopyGrantsResponse = DescribeSnapshotCopyGrantsResponse'
-  { _dscgrsSnapshotCopyGrants :: !(Maybe [SnapshotCopyGrant])
-  , _dscgrsMarker             :: !(Maybe Text)
-  , _dscgrsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeSnapshotCopyGrantsResponse =
+  DescribeSnapshotCopyGrantsResponse'
+    { _dscgrsSnapshotCopyGrants :: !(Maybe [SnapshotCopyGrant])
+    , _dscgrsMarker             :: !(Maybe Text)
+    , _dscgrsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeSnapshotCopyGrantsResponse' with the minimum fields required to make a request.

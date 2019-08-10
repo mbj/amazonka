@@ -45,9 +45,11 @@ import Network.AWS.WAFRegional.Types
 import Network.AWS.WAFRegional.Types.Product
 
 -- | /See:/ 'getPermissionPolicy' smart constructor.
-newtype GetPermissionPolicy = GetPermissionPolicy'
-  { _gppResourceARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetPermissionPolicy =
+  GetPermissionPolicy'
+    { _gppResourceARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetPermissionPolicy' with the minimum fields required to make a request.
@@ -102,10 +104,12 @@ instance ToQuery GetPermissionPolicy where
         toQuery = const mempty
 
 -- | /See:/ 'getPermissionPolicyResponse' smart constructor.
-data GetPermissionPolicyResponse = GetPermissionPolicyResponse'
-  { _gpprsPolicy         :: !(Maybe Text)
-  , _gpprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetPermissionPolicyResponse =
+  GetPermissionPolicyResponse'
+    { _gpprsPolicy         :: !(Maybe Text)
+    , _gpprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetPermissionPolicyResponse' with the minimum fields required to make a request.

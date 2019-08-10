@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describePendingAggregationRequests' smart constructor.
-data DescribePendingAggregationRequests = DescribePendingAggregationRequests'
-  { _dparNextToken :: !(Maybe Text)
-  , _dparLimit     :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribePendingAggregationRequests =
+  DescribePendingAggregationRequests'
+    { _dparNextToken :: !(Maybe Text)
+    , _dparLimit     :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribePendingAggregationRequests' with the minimum fields required to make a request.
@@ -123,11 +125,13 @@ instance ToQuery DescribePendingAggregationRequests
         toQuery = const mempty
 
 -- | /See:/ 'describePendingAggregationRequestsResponse' smart constructor.
-data DescribePendingAggregationRequestsResponse = DescribePendingAggregationRequestsResponse'
-  { _dparrsNextToken                  :: !(Maybe Text)
-  , _dparrsPendingAggregationRequests :: !(Maybe [PendingAggregationRequest])
-  , _dparrsResponseStatus             :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribePendingAggregationRequestsResponse =
+  DescribePendingAggregationRequestsResponse'
+    { _dparrsNextToken                  :: !(Maybe Text)
+    , _dparrsPendingAggregationRequests :: !(Maybe [PendingAggregationRequest])
+    , _dparrsResponseStatus             :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribePendingAggregationRequestsResponse' with the minimum fields required to make a request.

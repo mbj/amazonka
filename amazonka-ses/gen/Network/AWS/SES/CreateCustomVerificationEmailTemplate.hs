@@ -55,14 +55,16 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'createCustomVerificationEmailTemplate' smart constructor.
-data CreateCustomVerificationEmailTemplate = CreateCustomVerificationEmailTemplate'
-  { _ccvetTemplateName          :: !Text
-  , _ccvetFromEmailAddress      :: !Text
-  , _ccvetTemplateSubject       :: !Text
-  , _ccvetTemplateContent       :: !Text
-  , _ccvetSuccessRedirectionURL :: !Text
-  , _ccvetFailureRedirectionURL :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateCustomVerificationEmailTemplate =
+  CreateCustomVerificationEmailTemplate'
+    { _ccvetTemplateName          :: !Text
+    , _ccvetFromEmailAddress      :: !Text
+    , _ccvetTemplateSubject       :: !Text
+    , _ccvetTemplateContent       :: !Text
+    , _ccvetSuccessRedirectionURL :: !Text
+    , _ccvetFailureRedirectionURL :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateCustomVerificationEmailTemplate' with the minimum fields required to make a request.

@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteTypedLinkFacet' smart constructor.
-data DeleteTypedLinkFacet = DeleteTypedLinkFacet'
-  { _dtlfSchemaARN :: !Text
-  , _dtlfName      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteTypedLinkFacet =
+  DeleteTypedLinkFacet'
+    { _dtlfSchemaARN :: !Text
+    , _dtlfName      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteTypedLinkFacet' with the minimum fields required to make a request.
@@ -105,9 +107,11 @@ instance ToQuery DeleteTypedLinkFacet where
         toQuery = const mempty
 
 -- | /See:/ 'deleteTypedLinkFacetResponse' smart constructor.
-newtype DeleteTypedLinkFacetResponse = DeleteTypedLinkFacetResponse'
-  { _dtlfrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteTypedLinkFacetResponse =
+  DeleteTypedLinkFacetResponse'
+    { _dtlfrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteTypedLinkFacetResponse' with the minimum fields required to make a request.

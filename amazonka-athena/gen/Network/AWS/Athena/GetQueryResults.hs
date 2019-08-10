@@ -51,11 +51,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getQueryResults' smart constructor.
-data GetQueryResults = GetQueryResults'
-  { _gqrNextToken        :: !(Maybe Text)
-  , _gqrMaxResults       :: !(Maybe Nat)
-  , _gqrQueryExecutionId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetQueryResults =
+  GetQueryResults'
+    { _gqrNextToken        :: !(Maybe Text)
+    , _gqrMaxResults       :: !(Maybe Nat)
+    , _gqrQueryExecutionId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetQueryResults' with the minimum fields required to make a request.
@@ -136,11 +138,13 @@ instance ToQuery GetQueryResults where
         toQuery = const mempty
 
 -- | /See:/ 'getQueryResultsResponse' smart constructor.
-data GetQueryResultsResponse = GetQueryResultsResponse'
-  { _gqrrsNextToken      :: !(Maybe Text)
-  , _gqrrsResultSet      :: !(Maybe ResultSet)
-  , _gqrrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetQueryResultsResponse =
+  GetQueryResultsResponse'
+    { _gqrrsNextToken      :: !(Maybe Text)
+    , _gqrrsResultSet      :: !(Maybe ResultSet)
+    , _gqrrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetQueryResultsResponse' with the minimum fields required to make a request.

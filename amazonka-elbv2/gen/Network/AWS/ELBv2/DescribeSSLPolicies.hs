@@ -50,11 +50,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeSSLPolicies' smart constructor.
-data DescribeSSLPolicies = DescribeSSLPolicies'
-  { _dspNames    :: !(Maybe [Text])
-  , _dspMarker   :: !(Maybe Text)
-  , _dspPageSize :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeSSLPolicies =
+  DescribeSSLPolicies'
+    { _dspNames    :: !(Maybe [Text])
+    , _dspMarker   :: !(Maybe Text)
+    , _dspPageSize :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeSSLPolicies' with the minimum fields required to make a request.
@@ -118,11 +120,13 @@ instance ToQuery DescribeSSLPolicies where
                "Marker" =: _dspMarker, "PageSize" =: _dspPageSize]
 
 -- | /See:/ 'describeSSLPoliciesResponse' smart constructor.
-data DescribeSSLPoliciesResponse = DescribeSSLPoliciesResponse'
-  { _dsprsSSLPolicies    :: !(Maybe [SSLPolicy])
-  , _dsprsNextMarker     :: !(Maybe Text)
-  , _dsprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeSSLPoliciesResponse =
+  DescribeSSLPoliciesResponse'
+    { _dsprsSSLPolicies    :: !(Maybe [SSLPolicy])
+    , _dsprsNextMarker     :: !(Maybe Text)
+    , _dsprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeSSLPoliciesResponse' with the minimum fields required to make a request.

@@ -51,10 +51,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getContextKeysForPrincipalPolicy' smart constructor.
-data GetContextKeysForPrincipalPolicy = GetContextKeysForPrincipalPolicy'
-  { _gckfppPolicyInputList :: !(Maybe [Text])
-  , _gckfppPolicySourceARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetContextKeysForPrincipalPolicy =
+  GetContextKeysForPrincipalPolicy'
+    { _gckfppPolicyInputList :: !(Maybe [Text])
+    , _gckfppPolicySourceARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetContextKeysForPrincipalPolicy' with the minimum fields required to make a request.

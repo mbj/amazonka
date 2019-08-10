@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateUserAttributes' smart constructor.
-data UpdateUserAttributes = UpdateUserAttributes'
-  { _uuaUserAttributes :: ![AttributeType]
-  , _uuaAccessToken    :: !(Sensitive Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data UpdateUserAttributes =
+  UpdateUserAttributes'
+    { _uuaUserAttributes :: ![AttributeType]
+    , _uuaAccessToken    :: !(Sensitive Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateUserAttributes' with the minimum fields required to make a request.
@@ -122,10 +124,12 @@ instance ToQuery UpdateUserAttributes where
 --
 --
 -- /See:/ 'updateUserAttributesResponse' smart constructor.
-data UpdateUserAttributesResponse = UpdateUserAttributesResponse'
-  { _uuarsCodeDeliveryDetailsList :: !(Maybe [CodeDeliveryDetailsType])
-  , _uuarsResponseStatus          :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateUserAttributesResponse =
+  UpdateUserAttributesResponse'
+    { _uuarsCodeDeliveryDetailsList :: !(Maybe [CodeDeliveryDetailsType])
+    , _uuarsResponseStatus          :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateUserAttributesResponse' with the minimum fields required to make a request.

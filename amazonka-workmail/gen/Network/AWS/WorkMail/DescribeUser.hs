@@ -53,10 +53,12 @@ import Network.AWS.WorkMail.Types
 import Network.AWS.WorkMail.Types.Product
 
 -- | /See:/ 'describeUser' smart constructor.
-data DescribeUser = DescribeUser'
-  { _duOrganizationId :: !Text
-  , _duUserId         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeUser =
+  DescribeUser'
+    { _duOrganizationId :: !Text
+    , _duUserId         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeUser' with the minimum fields required to make a request.
@@ -125,17 +127,19 @@ instance ToQuery DescribeUser where
         toQuery = const mempty
 
 -- | /See:/ 'describeUserResponse' smart constructor.
-data DescribeUserResponse = DescribeUserResponse'
-  { _dursEmail          :: !(Maybe Text)
-  , _dursState          :: !(Maybe EntityState)
-  , _dursUserId         :: !(Maybe Text)
-  , _dursDisabledDate   :: !(Maybe POSIX)
-  , _dursName           :: !(Maybe Text)
-  , _dursDisplayName    :: !(Maybe Text)
-  , _dursUserRole       :: !(Maybe UserRole)
-  , _dursEnabledDate    :: !(Maybe POSIX)
-  , _dursResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeUserResponse =
+  DescribeUserResponse'
+    { _dursEmail          :: !(Maybe Text)
+    , _dursState          :: !(Maybe EntityState)
+    , _dursUserId         :: !(Maybe Text)
+    , _dursDisabledDate   :: !(Maybe POSIX)
+    , _dursName           :: !(Maybe Text)
+    , _dursDisplayName    :: !(Maybe Text)
+    , _dursUserRole       :: !(Maybe UserRole)
+    , _dursEnabledDate    :: !(Maybe POSIX)
+    , _dursResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeUserResponse' with the minimum fields required to make a request.

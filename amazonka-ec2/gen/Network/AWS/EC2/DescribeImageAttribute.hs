@@ -58,11 +58,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeImageAttribute' smart constructor.
-data DescribeImageAttribute = DescribeImageAttribute'
-  { _diaiDryRun    :: !(Maybe Bool)
-  , _diaiAttribute :: !ImageAttributeName
-  , _diaiImageId   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeImageAttribute =
+  DescribeImageAttribute'
+    { _diaiDryRun    :: !(Maybe Bool)
+    , _diaiAttribute :: !ImageAttributeName
+    , _diaiImageId   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeImageAttribute' with the minimum fields required to make a request.
@@ -146,17 +148,19 @@ instance ToQuery DescribeImageAttribute where
 --
 --
 -- /See:/ 'describeImageAttributeResponse' smart constructor.
-data DescribeImageAttributeResponse = DescribeImageAttributeResponse'
-  { _diarsLaunchPermissions   :: !(Maybe [LaunchPermission])
-  , _diarsRAMDiskId           :: !(Maybe AttributeValue)
-  , _diarsKernelId            :: !(Maybe AttributeValue)
-  , _diarsSRIOVNetSupport     :: !(Maybe AttributeValue)
-  , _diarsImageId             :: !(Maybe Text)
-  , _diarsProductCodes        :: !(Maybe [ProductCode])
-  , _diarsDescription         :: !(Maybe AttributeValue)
-  , _diarsBlockDeviceMappings :: !(Maybe [BlockDeviceMapping])
-  , _diarsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeImageAttributeResponse =
+  DescribeImageAttributeResponse'
+    { _diarsLaunchPermissions   :: !(Maybe [LaunchPermission])
+    , _diarsRAMDiskId           :: !(Maybe AttributeValue)
+    , _diarsKernelId            :: !(Maybe AttributeValue)
+    , _diarsSRIOVNetSupport     :: !(Maybe AttributeValue)
+    , _diarsImageId             :: !(Maybe Text)
+    , _diarsProductCodes        :: !(Maybe [ProductCode])
+    , _diarsDescription         :: !(Maybe AttributeValue)
+    , _diarsBlockDeviceMappings :: !(Maybe [BlockDeviceMapping])
+    , _diarsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeImageAttributeResponse' with the minimum fields required to make a request.

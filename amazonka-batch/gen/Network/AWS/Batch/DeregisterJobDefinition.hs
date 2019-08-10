@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deregisterJobDefinition' smart constructor.
-newtype DeregisterJobDefinition = DeregisterJobDefinition'
-  { _djdJobDefinition :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeregisterJobDefinition =
+  DeregisterJobDefinition'
+    { _djdJobDefinition :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeregisterJobDefinition' with the minimum fields required to make a request.
@@ -99,9 +101,11 @@ instance ToQuery DeregisterJobDefinition where
         toQuery = const mempty
 
 -- | /See:/ 'deregisterJobDefinitionResponse' smart constructor.
-newtype DeregisterJobDefinitionResponse = DeregisterJobDefinitionResponse'
-  { _derrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeregisterJobDefinitionResponse =
+  DeregisterJobDefinitionResponse'
+    { _derrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeregisterJobDefinitionResponse' with the minimum fields required to make a request.

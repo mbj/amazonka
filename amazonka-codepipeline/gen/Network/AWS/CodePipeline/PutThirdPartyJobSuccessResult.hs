@@ -50,13 +50,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'putThirdPartyJobSuccessResult' smart constructor.
-data PutThirdPartyJobSuccessResult = PutThirdPartyJobSuccessResult'
-  { _ptpjsrContinuationToken :: !(Maybe Text)
-  , _ptpjsrExecutionDetails  :: !(Maybe ExecutionDetails)
-  , _ptpjsrCurrentRevision   :: !(Maybe CurrentRevision)
-  , _ptpjsrJobId             :: !Text
-  , _ptpjsrClientToken       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutThirdPartyJobSuccessResult =
+  PutThirdPartyJobSuccessResult'
+    { _ptpjsrContinuationToken :: !(Maybe Text)
+    , _ptpjsrExecutionDetails  :: !(Maybe ExecutionDetails)
+    , _ptpjsrCurrentRevision   :: !(Maybe CurrentRevision)
+    , _ptpjsrJobId             :: !Text
+    , _ptpjsrClientToken       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutThirdPartyJobSuccessResult' with the minimum fields required to make a request.

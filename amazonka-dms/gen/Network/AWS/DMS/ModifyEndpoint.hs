@@ -65,25 +65,27 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'modifyEndpoint' smart constructor.
-data ModifyEndpoint = ModifyEndpoint'
-  { _meServerName                :: !(Maybe Text)
-  , _meCertificateARN            :: !(Maybe Text)
-  , _meServiceAccessRoleARN      :: !(Maybe Text)
-  , _meExtraConnectionAttributes :: !(Maybe Text)
-  , _meEndpointType              :: !(Maybe ReplicationEndpointTypeValue)
-  , _meUsername                  :: !(Maybe Text)
-  , _meExternalTableDefinition   :: !(Maybe Text)
-  , _meEngineName                :: !(Maybe Text)
-  , _meMongoDBSettings           :: !(Maybe MongoDBSettings)
-  , _meSSLMode                   :: !(Maybe DmsSSLModeValue)
-  , _mePassword                  :: !(Maybe (Sensitive Text))
-  , _meDatabaseName              :: !(Maybe Text)
-  , _meS3Settings                :: !(Maybe S3Settings)
-  , _meEndpointIdentifier        :: !(Maybe Text)
-  , _meDynamoDBSettings          :: !(Maybe DynamoDBSettings)
-  , _mePort                      :: !(Maybe Int)
-  , _meEndpointARN               :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data ModifyEndpoint =
+  ModifyEndpoint'
+    { _meServerName                :: !(Maybe Text)
+    , _meCertificateARN            :: !(Maybe Text)
+    , _meServiceAccessRoleARN      :: !(Maybe Text)
+    , _meExtraConnectionAttributes :: !(Maybe Text)
+    , _meEndpointType              :: !(Maybe ReplicationEndpointTypeValue)
+    , _meUsername                  :: !(Maybe Text)
+    , _meExternalTableDefinition   :: !(Maybe Text)
+    , _meEngineName                :: !(Maybe Text)
+    , _meMongoDBSettings           :: !(Maybe MongoDBSettings)
+    , _meSSLMode                   :: !(Maybe DmsSSLModeValue)
+    , _mePassword                  :: !(Maybe (Sensitive Text))
+    , _meDatabaseName              :: !(Maybe Text)
+    , _meS3Settings                :: !(Maybe S3Settings)
+    , _meEndpointIdentifier        :: !(Maybe Text)
+    , _meDynamoDBSettings          :: !(Maybe DynamoDBSettings)
+    , _mePort                      :: !(Maybe Int)
+    , _meEndpointARN               :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyEndpoint' with the minimum fields required to make a request.
@@ -274,10 +276,12 @@ instance ToQuery ModifyEndpoint where
 --
 --
 -- /See:/ 'modifyEndpointResponse' smart constructor.
-data ModifyEndpointResponse = ModifyEndpointResponse'
-  { _mersEndpoint       :: !(Maybe Endpoint)
-  , _mersResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data ModifyEndpointResponse =
+  ModifyEndpointResponse'
+    { _mersEndpoint       :: !(Maybe Endpoint)
+    , _mersResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyEndpointResponse' with the minimum fields required to make a request.

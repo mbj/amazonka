@@ -85,9 +85,11 @@ instance ToQuery DeleteServerCatalog where
         toQuery = const mempty
 
 -- | /See:/ 'deleteServerCatalogResponse' smart constructor.
-newtype DeleteServerCatalogResponse = DeleteServerCatalogResponse'
-  { _dscrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteServerCatalogResponse =
+  DeleteServerCatalogResponse'
+    { _dscrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteServerCatalogResponse' with the minimum fields required to make a request.

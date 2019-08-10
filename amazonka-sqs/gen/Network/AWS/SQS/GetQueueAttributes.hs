@@ -50,10 +50,12 @@ import Network.AWS.SQS.Types.Product
 --
 --
 -- /See:/ 'getQueueAttributes' smart constructor.
-data GetQueueAttributes = GetQueueAttributes'
-  { _gqaAttributeNames :: !(Maybe [QueueAttributeName])
-  , _gqaQueueURL       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetQueueAttributes =
+  GetQueueAttributes'
+    { _gqaAttributeNames :: !(Maybe [QueueAttributeName])
+    , _gqaQueueURL       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetQueueAttributes' with the minimum fields required to make a request.
@@ -113,10 +115,12 @@ instance ToQuery GetQueueAttributes where
 --
 --
 -- /See:/ 'getQueueAttributesResponse' smart constructor.
-data GetQueueAttributesResponse = GetQueueAttributesResponse'
-  { _gqarsAttributes     :: !(Maybe (Map QueueAttributeName Text))
-  , _gqarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetQueueAttributesResponse =
+  GetQueueAttributesResponse'
+    { _gqarsAttributes     :: !(Maybe (Map QueueAttributeName Text))
+    , _gqarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetQueueAttributesResponse' with the minimum fields required to make a request.

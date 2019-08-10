@@ -53,9 +53,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeApplication' smart constructor.
-newtype DescribeApplication = DescribeApplication'
-  { _daApplicationName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeApplication =
+  DescribeApplication'
+    { _daApplicationName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeApplication' with the minimum fields required to make a request.
@@ -115,10 +117,12 @@ instance ToQuery DescribeApplication where
 --
 --
 -- /See:/ 'describeApplicationResponse' smart constructor.
-data DescribeApplicationResponse = DescribeApplicationResponse'
-  { _darsResponseStatus    :: !Int
-  , _darsApplicationDetail :: !ApplicationDetail
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeApplicationResponse =
+  DescribeApplicationResponse'
+    { _darsResponseStatus    :: !Int
+    , _darsApplicationDetail :: !ApplicationDetail
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeApplicationResponse' with the minimum fields required to make a request.

@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'grantAccess' smart constructor.
-data GrantAccess = GrantAccess'
-  { _gaValidForInMinutes :: !(Maybe Nat)
-  , _gaInstanceId        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GrantAccess =
+  GrantAccess'
+    { _gaValidForInMinutes :: !(Maybe Nat)
+    , _gaInstanceId        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GrantAccess' with the minimum fields required to make a request.
@@ -115,10 +117,12 @@ instance ToQuery GrantAccess where
 --
 --
 -- /See:/ 'grantAccessResponse' smart constructor.
-data GrantAccessResponse = GrantAccessResponse'
-  { _garsTemporaryCredential :: !(Maybe TemporaryCredential)
-  , _garsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GrantAccessResponse =
+  GrantAccessResponse'
+    { _garsTemporaryCredential :: !(Maybe TemporaryCredential)
+    , _garsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GrantAccessResponse' with the minimum fields required to make a request.

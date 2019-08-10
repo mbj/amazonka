@@ -51,10 +51,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'modifyDBParameterGroup' smart constructor.
-data ModifyDBParameterGroup = ModifyDBParameterGroup'
-  { _mdpgDBParameterGroupName :: !Text
-  , _mdpgParameters           :: ![Parameter]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyDBParameterGroup =
+  ModifyDBParameterGroup'
+    { _mdpgDBParameterGroupName :: !Text
+    , _mdpgParameters           :: ![Parameter]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyDBParameterGroup' with the minimum fields required to make a request.

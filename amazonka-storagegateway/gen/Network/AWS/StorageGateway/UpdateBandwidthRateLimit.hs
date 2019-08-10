@@ -61,11 +61,13 @@ import Network.AWS.StorageGateway.Types.Product
 --
 --
 -- /See:/ 'updateBandwidthRateLimit' smart constructor.
-data UpdateBandwidthRateLimit = UpdateBandwidthRateLimit'
-  { _ubrlAverageUploadRateLimitInBitsPerSec   :: !(Maybe Nat)
-  , _ubrlAverageDownloadRateLimitInBitsPerSec :: !(Maybe Nat)
-  , _ubrlGatewayARN                           :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateBandwidthRateLimit =
+  UpdateBandwidthRateLimit'
+    { _ubrlAverageUploadRateLimitInBitsPerSec   :: !(Maybe Nat)
+    , _ubrlAverageDownloadRateLimitInBitsPerSec :: !(Maybe Nat)
+    , _ubrlGatewayARN                           :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateBandwidthRateLimit' with the minimum fields required to make a request.
@@ -145,10 +147,12 @@ instance ToQuery UpdateBandwidthRateLimit where
 --
 --
 -- /See:/ 'updateBandwidthRateLimitResponse' smart constructor.
-data UpdateBandwidthRateLimitResponse = UpdateBandwidthRateLimitResponse'
-  { _ubrlrsGatewayARN     :: !(Maybe Text)
-  , _ubrlrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateBandwidthRateLimitResponse =
+  UpdateBandwidthRateLimitResponse'
+    { _ubrlrsGatewayARN     :: !(Maybe Text)
+    , _ubrlrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateBandwidthRateLimitResponse' with the minimum fields required to make a request.

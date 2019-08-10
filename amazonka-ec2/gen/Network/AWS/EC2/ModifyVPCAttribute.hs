@@ -48,11 +48,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'modifyVPCAttribute' smart constructor.
-data ModifyVPCAttribute = ModifyVPCAttribute'
-  { _mvaEnableDNSHostnames :: !(Maybe AttributeBooleanValue)
-  , _mvaEnableDNSSupport   :: !(Maybe AttributeBooleanValue)
-  , _mvaVPCId              :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyVPCAttribute =
+  ModifyVPCAttribute'
+    { _mvaEnableDNSHostnames :: !(Maybe AttributeBooleanValue)
+    , _mvaEnableDNSSupport   :: !(Maybe AttributeBooleanValue)
+    , _mvaVPCId              :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyVPCAttribute' with the minimum fields required to make a request.

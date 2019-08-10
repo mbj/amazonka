@@ -48,11 +48,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'enableStageTransition' smart constructor.
-data EnableStageTransition = EnableStageTransition'
-  { _estPipelineName   :: !Text
-  , _estStageName      :: !Text
-  , _estTransitionType :: !StageTransitionType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EnableStageTransition =
+  EnableStageTransition'
+    { _estPipelineName   :: !Text
+    , _estStageName      :: !Text
+    , _estTransitionType :: !StageTransitionType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EnableStageTransition' with the minimum fields required to make a request.

@@ -51,9 +51,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'confirmConnection' smart constructor.
-newtype ConfirmConnection = ConfirmConnection'
-  { _ccConnectionId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ConfirmConnection =
+  ConfirmConnection'
+    { _ccConnectionId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ConfirmConnection' with the minimum fields required to make a request.
@@ -111,10 +113,12 @@ instance ToQuery ConfirmConnection where
 --
 --
 -- /See:/ 'confirmConnectionResponse' smart constructor.
-data ConfirmConnectionResponse = ConfirmConnectionResponse'
-  { _ccrsConnectionState :: !(Maybe ConnectionState)
-  , _ccrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ConfirmConnectionResponse =
+  ConfirmConnectionResponse'
+    { _ccrsConnectionState :: !(Maybe ConnectionState)
+    , _ccrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ConfirmConnectionResponse' with the minimum fields required to make a request.

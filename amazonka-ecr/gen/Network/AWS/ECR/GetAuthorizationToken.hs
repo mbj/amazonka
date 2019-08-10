@@ -47,9 +47,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getAuthorizationToken' smart constructor.
-newtype GetAuthorizationToken = GetAuthorizationToken'
-  { _gatRegistryIds :: Maybe (List1 Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetAuthorizationToken =
+  GetAuthorizationToken'
+    { _gatRegistryIds :: Maybe (List1 Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetAuthorizationToken' with the minimum fields required to make a request.
@@ -103,10 +105,12 @@ instance ToQuery GetAuthorizationToken where
         toQuery = const mempty
 
 -- | /See:/ 'getAuthorizationTokenResponse' smart constructor.
-data GetAuthorizationTokenResponse = GetAuthorizationTokenResponse'
-  { _gatrsAuthorizationData :: !(Maybe [AuthorizationData])
-  , _gatrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetAuthorizationTokenResponse =
+  GetAuthorizationTokenResponse'
+    { _gatrsAuthorizationData :: !(Maybe [AuthorizationData])
+    , _gatrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetAuthorizationTokenResponse' with the minimum fields required to make a request.

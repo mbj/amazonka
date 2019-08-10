@@ -48,12 +48,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateAPIKey' smart constructor.
-data UpdateAPIKey = UpdateAPIKey'
-  { _uakExpires     :: !(Maybe Integer)
-  , _uakDescription :: !(Maybe Text)
-  , _uakApiId       :: !Text
-  , _uakId          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateAPIKey =
+  UpdateAPIKey'
+    { _uakExpires     :: !(Maybe Integer)
+    , _uakDescription :: !(Maybe Text)
+    , _uakApiId       :: !Text
+    , _uakId          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateAPIKey' with the minimum fields required to make a request.
@@ -133,10 +135,12 @@ instance ToQuery UpdateAPIKey where
         toQuery = const mempty
 
 -- | /See:/ 'updateAPIKeyResponse' smart constructor.
-data UpdateAPIKeyResponse = UpdateAPIKeyResponse'
-  { _uakrsApiKey         :: !(Maybe APIKey)
-  , _uakrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateAPIKeyResponse =
+  UpdateAPIKeyResponse'
+    { _uakrsApiKey         :: !(Maybe APIKey)
+    , _uakrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateAPIKeyResponse' with the minimum fields required to make a request.

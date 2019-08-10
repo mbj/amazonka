@@ -43,9 +43,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getAPNSChannel' smart constructor.
-newtype GetAPNSChannel = GetAPNSChannel'
-  { _gacApplicationId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetAPNSChannel =
+  GetAPNSChannel'
+    { _gacApplicationId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetAPNSChannel' with the minimum fields required to make a request.
@@ -94,10 +96,12 @@ instance ToQuery GetAPNSChannel where
         toQuery = const mempty
 
 -- | /See:/ 'getAPNSChannelResponse' smart constructor.
-data GetAPNSChannelResponse = GetAPNSChannelResponse'
-  { _gacrsResponseStatus      :: !Int
-  , _gacrsAPNSChannelResponse :: !APNSChannelResponse
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetAPNSChannelResponse =
+  GetAPNSChannelResponse'
+    { _gacrsResponseStatus      :: !Int
+    , _gacrsAPNSChannelResponse :: !APNSChannelResponse
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetAPNSChannelResponse' with the minimum fields required to make a request.

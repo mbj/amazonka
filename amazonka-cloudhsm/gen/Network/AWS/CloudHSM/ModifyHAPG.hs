@@ -51,11 +51,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'modifyHAPG' smart constructor.
-data ModifyHAPG = ModifyHAPG'
-  { _mhPartitionSerialList :: !(Maybe [Text])
-  , _mhLabel               :: !(Maybe Text)
-  , _mhHAPGARN             :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyHAPG =
+  ModifyHAPG'
+    { _mhPartitionSerialList :: !(Maybe [Text])
+    , _mhLabel               :: !(Maybe Text)
+    , _mhHAPGARN             :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyHAPG' with the minimum fields required to make a request.
@@ -128,10 +130,12 @@ instance ToQuery ModifyHAPG where
         toQuery = const mempty
 
 -- | /See:/ 'modifyHAPGResponse' smart constructor.
-data ModifyHAPGResponse = ModifyHAPGResponse'
-  { _mhrsHAPGARN        :: !(Maybe Text)
-  , _mhrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyHAPGResponse =
+  ModifyHAPGResponse'
+    { _mhrsHAPGARN        :: !(Maybe Text)
+    , _mhrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyHAPGResponse' with the minimum fields required to make a request.

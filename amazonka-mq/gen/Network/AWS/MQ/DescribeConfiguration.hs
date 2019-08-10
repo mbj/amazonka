@@ -49,9 +49,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeConfiguration' smart constructor.
-newtype DescribeConfiguration = DescribeConfiguration'
-  { _dcConfigurationId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeConfiguration =
+  DescribeConfiguration'
+    { _dcConfigurationId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeConfiguration' with the minimum fields required to make a request.
@@ -106,16 +108,18 @@ instance ToQuery DescribeConfiguration where
         toQuery = const mempty
 
 -- | /See:/ 'describeConfigurationResponse' smart constructor.
-data DescribeConfigurationResponse = DescribeConfigurationResponse'
-  { _dcrsEngineVersion  :: !(Maybe Text)
-  , _dcrsARN            :: !(Maybe Text)
-  , _dcrsLatestRevision :: !(Maybe ConfigurationRevision)
-  , _dcrsName           :: !(Maybe Text)
-  , _dcrsId             :: !(Maybe Text)
-  , _dcrsDescription    :: !(Maybe Text)
-  , _dcrsEngineType     :: !(Maybe EngineType)
-  , _dcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeConfigurationResponse =
+  DescribeConfigurationResponse'
+    { _dcrsEngineVersion  :: !(Maybe Text)
+    , _dcrsARN            :: !(Maybe Text)
+    , _dcrsLatestRevision :: !(Maybe ConfigurationRevision)
+    , _dcrsName           :: !(Maybe Text)
+    , _dcrsId             :: !(Maybe Text)
+    , _dcrsDescription    :: !(Maybe Text)
+    , _dcrsEngineType     :: !(Maybe EngineType)
+    , _dcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeConfigurationResponse' with the minimum fields required to make a request.

@@ -43,10 +43,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteMetricFilter' smart constructor.
-data DeleteMetricFilter = DeleteMetricFilter'
-  { _delLogGroupName :: !Text
-  , _delFilterName   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteMetricFilter =
+  DeleteMetricFilter'
+    { _delLogGroupName :: !Text
+    , _delFilterName   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteMetricFilter' with the minimum fields required to make a request.

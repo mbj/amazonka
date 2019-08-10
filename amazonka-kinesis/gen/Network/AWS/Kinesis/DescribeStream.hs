@@ -62,11 +62,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeStream' smart constructor.
-data DescribeStream = DescribeStream'
-  { _dExclusiveStartShardId :: !(Maybe Text)
-  , _dLimit                 :: !(Maybe Nat)
-  , _dStreamName            :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeStream =
+  DescribeStream'
+    { _dExclusiveStartShardId :: !(Maybe Text)
+    , _dLimit                 :: !(Maybe Nat)
+    , _dStreamName            :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeStream' with the minimum fields required to make a request.
@@ -158,10 +160,12 @@ instance ToQuery DescribeStream where
 --
 --
 -- /See:/ 'describeStreamResponse' smart constructor.
-data DescribeStreamResponse = DescribeStreamResponse'
-  { _dsrsResponseStatus    :: !Int
-  , _dsrsStreamDescription :: !StreamDescription
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeStreamResponse =
+  DescribeStreamResponse'
+    { _dsrsResponseStatus    :: !Int
+    , _dsrsStreamDescription :: !StreamDescription
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeStreamResponse' with the minimum fields required to make a request.

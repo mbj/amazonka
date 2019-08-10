@@ -48,10 +48,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getDatasetContent' smart constructor.
-data GetDatasetContent = GetDatasetContent'
-  { _gdcVersionId   :: !(Maybe Text)
-  , _gdcDatasetName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDatasetContent =
+  GetDatasetContent'
+    { _gdcVersionId   :: !(Maybe Text)
+    , _gdcDatasetName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDatasetContent' with the minimum fields required to make a request.
@@ -104,12 +106,14 @@ instance ToQuery GetDatasetContent where
           = mconcat ["versionId" =: _gdcVersionId]
 
 -- | /See:/ 'getDatasetContentResponse' smart constructor.
-data GetDatasetContentResponse = GetDatasetContentResponse'
-  { _gdcrsStatus         :: !(Maybe DatasetContentStatus)
-  , _gdcrsEntries        :: !(Maybe [DatasetEntry])
-  , _gdcrsTimestamp      :: !(Maybe POSIX)
-  , _gdcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDatasetContentResponse =
+  GetDatasetContentResponse'
+    { _gdcrsStatus         :: !(Maybe DatasetContentStatus)
+    , _gdcrsEntries        :: !(Maybe [DatasetEntry])
+    , _gdcrsTimestamp      :: !(Maybe POSIX)
+    , _gdcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDatasetContentResponse' with the minimum fields required to make a request.

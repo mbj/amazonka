@@ -49,9 +49,11 @@ import Network.AWS.WAFRegional.Types.Product
 --
 --
 -- /See:/ 'getSqlInjectionMatchSet' smart constructor.
-newtype GetSqlInjectionMatchSet = GetSqlInjectionMatchSet'
-  { _gsimsSqlInjectionMatchSetId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetSqlInjectionMatchSet =
+  GetSqlInjectionMatchSet'
+    { _gsimsSqlInjectionMatchSetId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetSqlInjectionMatchSet' with the minimum fields required to make a request.
@@ -115,10 +117,12 @@ instance ToQuery GetSqlInjectionMatchSet where
 --
 --
 -- /See:/ 'getSqlInjectionMatchSetResponse' smart constructor.
-data GetSqlInjectionMatchSetResponse = GetSqlInjectionMatchSetResponse'
-  { _gsimsrsSqlInjectionMatchSet :: !(Maybe SqlInjectionMatchSet)
-  , _gsimsrsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetSqlInjectionMatchSetResponse =
+  GetSqlInjectionMatchSetResponse'
+    { _gsimsrsSqlInjectionMatchSet :: !(Maybe SqlInjectionMatchSet)
+    , _gsimsrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetSqlInjectionMatchSetResponse' with the minimum fields required to make a request.

@@ -45,9 +45,11 @@ import Network.AWS.ResourceGroups.Types.Product
 import Network.AWS.Response
 
 -- | /See:/ 'getGroupQuery' smart constructor.
-newtype GetGroupQuery = GetGroupQuery'
-  { _ggqGroupName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetGroupQuery =
+  GetGroupQuery'
+    { _ggqGroupName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetGroupQuery' with the minimum fields required to make a request.
@@ -89,10 +91,12 @@ instance ToQuery GetGroupQuery where
         toQuery = const mempty
 
 -- | /See:/ 'getGroupQueryResponse' smart constructor.
-data GetGroupQueryResponse = GetGroupQueryResponse'
-  { _ggqrsGroupQuery     :: !(Maybe GroupQuery)
-  , _ggqrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetGroupQueryResponse =
+  GetGroupQueryResponse'
+    { _ggqrsGroupQuery     :: !(Maybe GroupQuery)
+    , _ggqrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetGroupQueryResponse' with the minimum fields required to make a request.

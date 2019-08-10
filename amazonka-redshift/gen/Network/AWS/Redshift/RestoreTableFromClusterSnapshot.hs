@@ -58,16 +58,18 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'restoreTableFromClusterSnapshot' smart constructor.
-data RestoreTableFromClusterSnapshot = RestoreTableFromClusterSnapshot'
-  { _rtfcsTargetSchemaName   :: !(Maybe Text)
-  , _rtfcsTargetDatabaseName :: !(Maybe Text)
-  , _rtfcsSourceSchemaName   :: !(Maybe Text)
-  , _rtfcsClusterIdentifier  :: !Text
-  , _rtfcsSnapshotIdentifier :: !Text
-  , _rtfcsSourceDatabaseName :: !Text
-  , _rtfcsSourceTableName    :: !Text
-  , _rtfcsNewTableName       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RestoreTableFromClusterSnapshot =
+  RestoreTableFromClusterSnapshot'
+    { _rtfcsTargetSchemaName   :: !(Maybe Text)
+    , _rtfcsTargetDatabaseName :: !(Maybe Text)
+    , _rtfcsSourceSchemaName   :: !(Maybe Text)
+    , _rtfcsClusterIdentifier  :: !Text
+    , _rtfcsSnapshotIdentifier :: !Text
+    , _rtfcsSourceDatabaseName :: !Text
+    , _rtfcsSourceTableName    :: !Text
+    , _rtfcsNewTableName       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RestoreTableFromClusterSnapshot' with the minimum fields required to make a request.
@@ -182,10 +184,12 @@ instance ToQuery RestoreTableFromClusterSnapshot
                "NewTableName" =: _rtfcsNewTableName]
 
 -- | /See:/ 'restoreTableFromClusterSnapshotResponse' smart constructor.
-data RestoreTableFromClusterSnapshotResponse = RestoreTableFromClusterSnapshotResponse'
-  { _rtfcsrsTableRestoreStatus :: !(Maybe TableRestoreStatus)
-  , _rtfcsrsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RestoreTableFromClusterSnapshotResponse =
+  RestoreTableFromClusterSnapshotResponse'
+    { _rtfcsrsTableRestoreStatus :: !(Maybe TableRestoreStatus)
+    , _rtfcsrsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RestoreTableFromClusterSnapshotResponse' with the minimum fields required to make a request.

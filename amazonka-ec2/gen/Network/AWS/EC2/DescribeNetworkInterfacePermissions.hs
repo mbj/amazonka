@@ -53,12 +53,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeNetworkInterfacePermissions' smart constructor.
-data DescribeNetworkInterfacePermissions = DescribeNetworkInterfacePermissions'
-  { _dnipFilters                       :: !(Maybe [Filter])
-  , _dnipNextToken                     :: !(Maybe Text)
-  , _dnipNetworkInterfacePermissionIds :: !(Maybe [Text])
-  , _dnipMaxResults                    :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeNetworkInterfacePermissions =
+  DescribeNetworkInterfacePermissions'
+    { _dnipFilters                       :: !(Maybe [Filter])
+    , _dnipNextToken                     :: !(Maybe Text)
+    , _dnipNetworkInterfacePermissionIds :: !(Maybe [Text])
+    , _dnipMaxResults                    :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeNetworkInterfacePermissions' with the minimum fields required to make a request.
@@ -149,11 +151,13 @@ instance ToQuery DescribeNetworkInterfacePermissions
 --
 --
 -- /See:/ 'describeNetworkInterfacePermissionsResponse' smart constructor.
-data DescribeNetworkInterfacePermissionsResponse = DescribeNetworkInterfacePermissionsResponse'
-  { _dnipsrsNetworkInterfacePermissions :: !(Maybe [NetworkInterfacePermission])
-  , _dnipsrsNextToken                   :: !(Maybe Text)
-  , _dnipsrsResponseStatus              :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeNetworkInterfacePermissionsResponse =
+  DescribeNetworkInterfacePermissionsResponse'
+    { _dnipsrsNetworkInterfacePermissions :: !(Maybe [NetworkInterfacePermission])
+    , _dnipsrsNextToken :: !(Maybe Text)
+    , _dnipsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeNetworkInterfacePermissionsResponse' with the minimum fields required to make a request.

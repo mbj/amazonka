@@ -47,11 +47,13 @@ import Network.AWS.StepFunctions.Types
 import Network.AWS.StepFunctions.Types.Product
 
 -- | /See:/ 'updateStateMachine' smart constructor.
-data UpdateStateMachine = UpdateStateMachine'
-  { _usmDefinition      :: !(Maybe Text)
-  , _usmRoleARN         :: !(Maybe Text)
-  , _usmStateMachineARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateStateMachine =
+  UpdateStateMachine'
+    { _usmDefinition      :: !(Maybe Text)
+    , _usmRoleARN         :: !(Maybe Text)
+    , _usmStateMachineARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateStateMachine' with the minimum fields required to make a request.
@@ -125,10 +127,12 @@ instance ToQuery UpdateStateMachine where
         toQuery = const mempty
 
 -- | /See:/ 'updateStateMachineResponse' smart constructor.
-data UpdateStateMachineResponse = UpdateStateMachineResponse'
-  { _usmrsResponseStatus :: !Int
-  , _usmrsUpdateDate     :: !POSIX
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateStateMachineResponse =
+  UpdateStateMachineResponse'
+    { _usmrsResponseStatus :: !Int
+    , _usmrsUpdateDate     :: !POSIX
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateStateMachineResponse' with the minimum fields required to make a request.

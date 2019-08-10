@@ -56,9 +56,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteStream' smart constructor.
-newtype DeleteStream = DeleteStream'
-  { _dsStreamName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteStream =
+  DeleteStream'
+    { _dsStreamName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteStream' with the minimum fields required to make a request.

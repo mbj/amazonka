@@ -21,7 +21,7 @@
 -- Gets the specified limit for the current account, for example, the maximum number of health checks that you can create using the account.
 --
 --
--- For the default limit, see <http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DNSLimitations.html Limits> in the /Amazon Route 53 Developer Guide/ . To request a higher limit, <https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&amp;limitType=service-code-route53 open a case> .
+-- For the default limit, see <http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DNSLimitations.html Limits> in the /Amazon Route 53 Developer Guide/ . To request a higher limit, <https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-route53 open a case> .
 --
 module Network.AWS.Route53.GetAccountLimit
     (
@@ -52,9 +52,11 @@ import Network.AWS.Route53.Types.Product
 --
 --
 -- /See:/ 'getAccountLimit' smart constructor.
-newtype GetAccountLimit = GetAccountLimit'
-  { _galType :: AccountLimitType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetAccountLimit =
+  GetAccountLimit'
+    { _galType :: AccountLimitType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetAccountLimit' with the minimum fields required to make a request.
@@ -102,11 +104,13 @@ instance ToQuery GetAccountLimit where
 --
 --
 -- /See:/ 'getAccountLimitResponse' smart constructor.
-data GetAccountLimitResponse = GetAccountLimitResponse'
-  { _galrsResponseStatus :: !Int
-  , _galrsLimit          :: !AccountLimit
-  , _galrsCount          :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetAccountLimitResponse =
+  GetAccountLimitResponse'
+    { _galrsResponseStatus :: !Int
+    , _galrsLimit          :: !AccountLimit
+    , _galrsCount          :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetAccountLimitResponse' with the minimum fields required to make a request.

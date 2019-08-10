@@ -54,13 +54,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createPlatformVersion' smart constructor.
-data CreatePlatformVersion = CreatePlatformVersion'
-  { _cpvOptionSettings           :: !(Maybe [ConfigurationOptionSetting])
-  , _cpvEnvironmentName          :: !(Maybe Text)
-  , _cpvPlatformName             :: !Text
-  , _cpvPlatformVersion          :: !Text
-  , _cpvPlatformDefinitionBundle :: !S3Location
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreatePlatformVersion =
+  CreatePlatformVersion'
+    { _cpvOptionSettings           :: !(Maybe [ConfigurationOptionSetting])
+    , _cpvEnvironmentName          :: !(Maybe Text)
+    , _cpvPlatformName             :: !Text
+    , _cpvPlatformVersion          :: !Text
+    , _cpvPlatformDefinitionBundle :: !S3Location
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreatePlatformVersion' with the minimum fields required to make a request.
@@ -147,11 +149,13 @@ instance ToQuery CreatePlatformVersion where
                  _cpvPlatformDefinitionBundle]
 
 -- | /See:/ 'createPlatformVersionResponse' smart constructor.
-data CreatePlatformVersionResponse = CreatePlatformVersionResponse'
-  { _cpvrsBuilder         :: !(Maybe Builder)
-  , _cpvrsPlatformSummary :: !(Maybe PlatformSummary)
-  , _cpvrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreatePlatformVersionResponse =
+  CreatePlatformVersionResponse'
+    { _cpvrsBuilder         :: !(Maybe Builder)
+    , _cpvrsPlatformSummary :: !(Maybe PlatformSummary)
+    , _cpvrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreatePlatformVersionResponse' with the minimum fields required to make a request.

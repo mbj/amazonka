@@ -57,11 +57,13 @@ import Network.AWS.StorageGateway.Types.Product
 --
 --
 -- /See:/ 'describeTapeArchives' smart constructor.
-data DescribeTapeArchives = DescribeTapeArchives'
-  { _dtaMarker   :: !(Maybe Text)
-  , _dtaLimit    :: !(Maybe Nat)
-  , _dtaTapeARNs :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeTapeArchives =
+  DescribeTapeArchives'
+    { _dtaMarker   :: !(Maybe Text)
+    , _dtaLimit    :: !(Maybe Nat)
+    , _dtaTapeARNs :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeTapeArchives' with the minimum fields required to make a request.
@@ -144,11 +146,13 @@ instance ToQuery DescribeTapeArchives where
 --
 --
 -- /See:/ 'describeTapeArchivesResponse' smart constructor.
-data DescribeTapeArchivesResponse = DescribeTapeArchivesResponse'
-  { _dtarsTapeArchives   :: !(Maybe [TapeArchive])
-  , _dtarsMarker         :: !(Maybe Text)
-  , _dtarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeTapeArchivesResponse =
+  DescribeTapeArchivesResponse'
+    { _dtarsTapeArchives   :: !(Maybe [TapeArchive])
+    , _dtarsMarker         :: !(Maybe Text)
+    , _dtarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeTapeArchivesResponse' with the minimum fields required to make a request.

@@ -50,13 +50,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getPlan' smart constructor.
-data GetPlan = GetPlan'
-  { _gpSinks    :: !(Maybe [CatalogEntry])
-  , _gpLocation :: !(Maybe Location)
-  , _gpLanguage :: !(Maybe Language)
-  , _gpMapping  :: ![MappingEntry]
-  , _gpSource   :: !CatalogEntry
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetPlan =
+  GetPlan'
+    { _gpSinks    :: !(Maybe [CatalogEntry])
+    , _gpLocation :: !(Maybe Location)
+    , _gpLanguage :: !(Maybe Language)
+    , _gpMapping  :: ![MappingEntry]
+    , _gpSource   :: !CatalogEntry
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetPlan' with the minimum fields required to make a request.
@@ -144,11 +146,13 @@ instance ToQuery GetPlan where
         toQuery = const mempty
 
 -- | /See:/ 'getPlanResponse' smart constructor.
-data GetPlanResponse = GetPlanResponse'
-  { _gpprsPythonScript   :: !(Maybe Text)
-  , _gpprsScalaCode      :: !(Maybe Text)
-  , _gpprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetPlanResponse =
+  GetPlanResponse'
+    { _gpprsPythonScript   :: !(Maybe Text)
+    , _gpprsScalaCode      :: !(Maybe Text)
+    , _gpprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetPlanResponse' with the minimum fields required to make a request.

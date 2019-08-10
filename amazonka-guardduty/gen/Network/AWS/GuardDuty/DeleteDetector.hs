@@ -42,9 +42,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteDetector' smart constructor.
-newtype DeleteDetector = DeleteDetector'
-  { _ddDetectorId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteDetector =
+  DeleteDetector'
+    { _ddDetectorId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteDetector' with the minimum fields required to make a request.
@@ -89,9 +91,11 @@ instance ToQuery DeleteDetector where
         toQuery = const mempty
 
 -- | /See:/ 'deleteDetectorResponse' smart constructor.
-newtype DeleteDetectorResponse = DeleteDetectorResponse'
-  { _ddrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteDetectorResponse =
+  DeleteDetectorResponse'
+    { _ddrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteDetectorResponse' with the minimum fields required to make a request.

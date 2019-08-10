@@ -42,11 +42,13 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'putBucketCORS' smart constructor.
-data PutBucketCORS = PutBucketCORS'
-  { _pbcContentMD5        :: !(Maybe Text)
-  , _pbcBucket            :: !BucketName
-  , _pbcCORSConfiguration :: !CORSConfiguration
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutBucketCORS =
+  PutBucketCORS'
+    { _pbcContentMD5        :: !(Maybe Text)
+    , _pbcBucket            :: !BucketName
+    , _pbcCORSConfiguration :: !CORSConfiguration
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutBucketCORS' with the minimum fields required to make a request.

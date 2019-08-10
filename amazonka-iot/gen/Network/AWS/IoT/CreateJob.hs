@@ -55,17 +55,19 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createJob' smart constructor.
-data CreateJob = CreateJob'
-  { _cjJobExecutionsRolloutConfig :: !(Maybe JobExecutionsRolloutConfig)
-  , _cjDocumentSource             :: !(Maybe Text)
-  , _cjDocumentParameters         :: !(Maybe (Map Text Text))
-  , _cjPresignedURLConfig         :: !(Maybe PresignedURLConfig)
-  , _cjDocument                   :: !(Maybe Text)
-  , _cjDescription                :: !(Maybe Text)
-  , _cjTargetSelection            :: !(Maybe TargetSelection)
-  , _cjJobId                      :: !Text
-  , _cjTargets                    :: !(List1 Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateJob =
+  CreateJob'
+    { _cjJobExecutionsRolloutConfig :: !(Maybe JobExecutionsRolloutConfig)
+    , _cjDocumentSource             :: !(Maybe Text)
+    , _cjDocumentParameters         :: !(Maybe (Map Text Text))
+    , _cjPresignedURLConfig         :: !(Maybe PresignedURLConfig)
+    , _cjDocument                   :: !(Maybe Text)
+    , _cjDescription                :: !(Maybe Text)
+    , _cjTargetSelection            :: !(Maybe TargetSelection)
+    , _cjJobId                      :: !Text
+    , _cjTargets                    :: !(List1 Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateJob' with the minimum fields required to make a request.
@@ -183,12 +185,14 @@ instance ToQuery CreateJob where
         toQuery = const mempty
 
 -- | /See:/ 'createJobResponse' smart constructor.
-data CreateJobResponse = CreateJobResponse'
-  { _cjrsJobId          :: !(Maybe Text)
-  , _cjrsJobARN         :: !(Maybe Text)
-  , _cjrsDescription    :: !(Maybe Text)
-  , _cjrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateJobResponse =
+  CreateJobResponse'
+    { _cjrsJobId          :: !(Maybe Text)
+    , _cjrsJobARN         :: !(Maybe Text)
+    , _cjrsDescription    :: !(Maybe Text)
+    , _cjrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateJobResponse' with the minimum fields required to make a request.

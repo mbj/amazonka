@@ -86,14 +86,16 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'copyDBClusterSnapshot' smart constructor.
-data CopyDBClusterSnapshot = CopyDBClusterSnapshot'
-  { _cdbcsPreSignedURL                      :: !(Maybe Text)
-  , _cdbcsCopyTags                          :: !(Maybe Bool)
-  , _cdbcsKMSKeyId                          :: !(Maybe Text)
-  , _cdbcsTags                              :: !(Maybe [Tag])
-  , _cdbcsSourceDBClusterSnapshotIdentifier :: !Text
-  , _cdbcsTargetDBClusterSnapshotIdentifier :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CopyDBClusterSnapshot =
+  CopyDBClusterSnapshot'
+    { _cdbcsPreSignedURL                      :: !(Maybe Text)
+    , _cdbcsCopyTags                          :: !(Maybe Bool)
+    , _cdbcsKMSKeyId                          :: !(Maybe Text)
+    , _cdbcsTags                              :: !(Maybe [Tag])
+    , _cdbcsSourceDBClusterSnapshotIdentifier :: !Text
+    , _cdbcsTargetDBClusterSnapshotIdentifier :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CopyDBClusterSnapshot' with the minimum fields required to make a request.
@@ -187,10 +189,12 @@ instance ToQuery CopyDBClusterSnapshot where
                  _cdbcsTargetDBClusterSnapshotIdentifier]
 
 -- | /See:/ 'copyDBClusterSnapshotResponse' smart constructor.
-data CopyDBClusterSnapshotResponse = CopyDBClusterSnapshotResponse'
-  { _cdcsrsDBClusterSnapshot :: !(Maybe DBClusterSnapshot)
-  , _cdcsrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CopyDBClusterSnapshotResponse =
+  CopyDBClusterSnapshotResponse'
+    { _cdcsrsDBClusterSnapshot :: !(Maybe DBClusterSnapshot)
+    , _cdcsrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CopyDBClusterSnapshotResponse' with the minimum fields required to make a request.

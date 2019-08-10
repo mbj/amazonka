@@ -64,12 +64,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getCelebrityRecognition' smart constructor.
-data GetCelebrityRecognition = GetCelebrityRecognition'
-  { _gcrNextToken  :: !(Maybe Text)
-  , _gcrMaxResults :: !(Maybe Nat)
-  , _gcrSortBy     :: !(Maybe CelebrityRecognitionSortBy)
-  , _gcrJobId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetCelebrityRecognition =
+  GetCelebrityRecognition'
+    { _gcrNextToken  :: !(Maybe Text)
+    , _gcrMaxResults :: !(Maybe Nat)
+    , _gcrSortBy     :: !(Maybe CelebrityRecognitionSortBy)
+    , _gcrJobId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetCelebrityRecognition' with the minimum fields required to make a request.
@@ -155,14 +157,16 @@ instance ToQuery GetCelebrityRecognition where
         toQuery = const mempty
 
 -- | /See:/ 'getCelebrityRecognitionResponse' smart constructor.
-data GetCelebrityRecognitionResponse = GetCelebrityRecognitionResponse'
-  { _gcrrsNextToken      :: !(Maybe Text)
-  , _gcrrsVideoMetadata  :: !(Maybe VideoMetadata)
-  , _gcrrsStatusMessage  :: !(Maybe Text)
-  , _gcrrsCelebrities    :: !(Maybe [CelebrityRecognition])
-  , _gcrrsJobStatus      :: !(Maybe VideoJobStatus)
-  , _gcrrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetCelebrityRecognitionResponse =
+  GetCelebrityRecognitionResponse'
+    { _gcrrsNextToken      :: !(Maybe Text)
+    , _gcrrsVideoMetadata  :: !(Maybe VideoMetadata)
+    , _gcrrsStatusMessage  :: !(Maybe Text)
+    , _gcrrsCelebrities    :: !(Maybe [CelebrityRecognition])
+    , _gcrrsJobStatus      :: !(Maybe VideoJobStatus)
+    , _gcrrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetCelebrityRecognitionResponse' with the minimum fields required to make a request.

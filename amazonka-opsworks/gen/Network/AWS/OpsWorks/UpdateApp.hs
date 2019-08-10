@@ -54,19 +54,21 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateApp' smart constructor.
-data UpdateApp = UpdateApp'
-  { _uaSSLConfiguration :: !(Maybe SSLConfiguration)
-  , _uaEnvironment      :: !(Maybe [EnvironmentVariable])
-  , _uaEnableSSL        :: !(Maybe Bool)
-  , _uaDataSources      :: !(Maybe [DataSource])
-  , _uaAppSource        :: !(Maybe Source)
-  , _uaAttributes       :: !(Maybe (Map AppAttributesKeys Text))
-  , _uaName             :: !(Maybe Text)
-  , _uaType             :: !(Maybe AppType)
-  , _uaDomains          :: !(Maybe [Text])
-  , _uaDescription      :: !(Maybe Text)
-  , _uaAppId            :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateApp =
+  UpdateApp'
+    { _uaSSLConfiguration :: !(Maybe SSLConfiguration)
+    , _uaEnvironment      :: !(Maybe [EnvironmentVariable])
+    , _uaEnableSSL        :: !(Maybe Bool)
+    , _uaDataSources      :: !(Maybe [DataSource])
+    , _uaAppSource        :: !(Maybe Source)
+    , _uaAttributes       :: !(Maybe (Map AppAttributesKeys Text))
+    , _uaName             :: !(Maybe Text)
+    , _uaType             :: !(Maybe AppType)
+    , _uaDomains          :: !(Maybe [Text])
+    , _uaDescription      :: !(Maybe Text)
+    , _uaAppId            :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateApp' with the minimum fields required to make a request.

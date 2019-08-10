@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'initializeCluster' smart constructor.
-data InitializeCluster = InitializeCluster'
-  { _icClusterId   :: !Text
-  , _icSignedCert  :: !Text
-  , _icTrustAnchor :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InitializeCluster =
+  InitializeCluster'
+    { _icClusterId   :: !Text
+    , _icSignedCert  :: !Text
+    , _icTrustAnchor :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InitializeCluster' with the minimum fields required to make a request.
@@ -127,11 +129,13 @@ instance ToQuery InitializeCluster where
         toQuery = const mempty
 
 -- | /See:/ 'initializeClusterResponse' smart constructor.
-data InitializeClusterResponse = InitializeClusterResponse'
-  { _icrsStateMessage   :: !(Maybe Text)
-  , _icrsState          :: !(Maybe ClusterState)
-  , _icrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InitializeClusterResponse =
+  InitializeClusterResponse'
+    { _icrsStateMessage   :: !(Maybe Text)
+    , _icrsState          :: !(Maybe ClusterState)
+    , _icrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InitializeClusterResponse' with the minimum fields required to make a request.

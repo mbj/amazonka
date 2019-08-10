@@ -54,10 +54,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listBundles' smart constructor.
-data ListBundles = ListBundles'
-  { _lbNextToken  :: !(Maybe Text)
-  , _lbMaxResults :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListBundles =
+  ListBundles'
+    { _lbNextToken  :: !(Maybe Text)
+    , _lbMaxResults :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListBundles' with the minimum fields required to make a request.
@@ -123,11 +125,13 @@ instance ToQuery ListBundles where
 --
 --
 -- /See:/ 'listBundlesResponse' smart constructor.
-data ListBundlesResponse = ListBundlesResponse'
-  { _lbrsBundleList     :: !(Maybe [BundleDetails])
-  , _lbrsNextToken      :: !(Maybe Text)
-  , _lbrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListBundlesResponse =
+  ListBundlesResponse'
+    { _lbrsBundleList     :: !(Maybe [BundleDetails])
+    , _lbrsNextToken      :: !(Maybe Text)
+    , _lbrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListBundlesResponse' with the minimum fields required to make a request.

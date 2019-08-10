@@ -44,9 +44,11 @@ import Network.AWS.Snowball.Types
 import Network.AWS.Snowball.Types.Product
 
 -- | /See:/ 'cancelJob' smart constructor.
-newtype CancelJob = CancelJob'
-  { _cjJobId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CancelJob =
+  CancelJob'
+    { _cjJobId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CancelJob' with the minimum fields required to make a request.
@@ -97,9 +99,11 @@ instance ToQuery CancelJob where
         toQuery = const mempty
 
 -- | /See:/ 'cancelJobResponse' smart constructor.
-newtype CancelJobResponse = CancelJobResponse'
-  { _crsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CancelJobResponse =
+  CancelJobResponse'
+    { _crsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CancelJobResponse' with the minimum fields required to make a request.

@@ -52,12 +52,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createReplicationSubnetGroup' smart constructor.
-data CreateReplicationSubnetGroup = CreateReplicationSubnetGroup'
-  { _crsgTags                              :: !(Maybe [Tag])
-  , _crsgReplicationSubnetGroupIdentifier  :: !Text
-  , _crsgReplicationSubnetGroupDescription :: !Text
-  , _crsgSubnetIds                         :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateReplicationSubnetGroup =
+  CreateReplicationSubnetGroup'
+    { _crsgTags                              :: !(Maybe [Tag])
+    , _crsgReplicationSubnetGroupIdentifier  :: !Text
+    , _crsgReplicationSubnetGroupDescription :: !Text
+    , _crsgSubnetIds                         :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateReplicationSubnetGroup' with the minimum fields required to make a request.
@@ -151,10 +153,12 @@ instance ToQuery CreateReplicationSubnetGroup where
 --
 --
 -- /See:/ 'createReplicationSubnetGroupResponse' smart constructor.
-data CreateReplicationSubnetGroupResponse = CreateReplicationSubnetGroupResponse'
-  { _crsgrsReplicationSubnetGroup :: !(Maybe ReplicationSubnetGroup)
-  , _crsgrsResponseStatus         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateReplicationSubnetGroupResponse =
+  CreateReplicationSubnetGroupResponse'
+    { _crsgrsReplicationSubnetGroup :: !(Maybe ReplicationSubnetGroup)
+    , _crsgrsResponseStatus         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateReplicationSubnetGroupResponse' with the minimum fields required to make a request.

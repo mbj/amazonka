@@ -53,10 +53,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteSnapshot' smart constructor.
-data DeleteSnapshot = DeleteSnapshot'
-  { _deleDryRun     :: !(Maybe Bool)
-  , _deleSnapshotId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteSnapshot =
+  DeleteSnapshot'
+    { _deleDryRun     :: !(Maybe Bool)
+    , _deleSnapshotId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteSnapshot' with the minimum fields required to make a request.

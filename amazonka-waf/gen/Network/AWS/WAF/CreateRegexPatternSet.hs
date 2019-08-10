@@ -61,10 +61,12 @@ import Network.AWS.WAF.Types
 import Network.AWS.WAF.Types.Product
 
 -- | /See:/ 'createRegexPatternSet' smart constructor.
-data CreateRegexPatternSet = CreateRegexPatternSet'
-  { _crpsName        :: !Text
-  , _crpsChangeToken :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateRegexPatternSet =
+  CreateRegexPatternSet'
+    { _crpsName        :: !Text
+    , _crpsChangeToken :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateRegexPatternSet' with the minimum fields required to make a request.
@@ -129,11 +131,13 @@ instance ToQuery CreateRegexPatternSet where
         toQuery = const mempty
 
 -- | /See:/ 'createRegexPatternSetResponse' smart constructor.
-data CreateRegexPatternSetResponse = CreateRegexPatternSetResponse'
-  { _crpsrsRegexPatternSet :: !(Maybe RegexPatternSet)
-  , _crpsrsChangeToken     :: !(Maybe Text)
-  , _crpsrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateRegexPatternSetResponse =
+  CreateRegexPatternSetResponse'
+    { _crpsrsRegexPatternSet :: !(Maybe RegexPatternSet)
+    , _crpsrsChangeToken     :: !(Maybe Text)
+    , _crpsrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateRegexPatternSetResponse' with the minimum fields required to make a request.

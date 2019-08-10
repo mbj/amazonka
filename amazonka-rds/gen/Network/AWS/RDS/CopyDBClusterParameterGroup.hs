@@ -48,12 +48,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'copyDBClusterParameterGroup' smart constructor.
-data CopyDBClusterParameterGroup = CopyDBClusterParameterGroup'
-  { _cdbcpgTags                                     :: !(Maybe [Tag])
-  , _cdbcpgSourceDBClusterParameterGroupIdentifier  :: !Text
-  , _cdbcpgTargetDBClusterParameterGroupIdentifier  :: !Text
-  , _cdbcpgTargetDBClusterParameterGroupDescription :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CopyDBClusterParameterGroup =
+  CopyDBClusterParameterGroup'
+    { _cdbcpgTags                                     :: !(Maybe [Tag])
+    , _cdbcpgSourceDBClusterParameterGroupIdentifier  :: !Text
+    , _cdbcpgTargetDBClusterParameterGroupIdentifier  :: !Text
+    , _cdbcpgTargetDBClusterParameterGroupDescription :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CopyDBClusterParameterGroup' with the minimum fields required to make a request.
@@ -138,10 +140,12 @@ instance ToQuery CopyDBClusterParameterGroup where
                  _cdbcpgTargetDBClusterParameterGroupDescription]
 
 -- | /See:/ 'copyDBClusterParameterGroupResponse' smart constructor.
-data CopyDBClusterParameterGroupResponse = CopyDBClusterParameterGroupResponse'
-  { _cdcpgrsDBClusterParameterGroup :: !(Maybe DBClusterParameterGroup)
-  , _cdcpgrsResponseStatus          :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CopyDBClusterParameterGroupResponse =
+  CopyDBClusterParameterGroupResponse'
+    { _cdcpgrsDBClusterParameterGroup :: !(Maybe DBClusterParameterGroup)
+    , _cdcpgrsResponseStatus          :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CopyDBClusterParameterGroupResponse' with the minimum fields required to make a request.

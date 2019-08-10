@@ -52,14 +52,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getCostAndUsage' smart constructor.
-data GetCostAndUsage = GetCostAndUsage'
-  { _gcauGroupBy       :: !(Maybe [GroupDefinition])
-  , _gcauNextPageToken :: !(Maybe Text)
-  , _gcauMetrics       :: !(Maybe [Text])
-  , _gcauTimePeriod    :: !(Maybe DateInterval)
-  , _gcauGranularity   :: !(Maybe Granularity)
-  , _gcauFilter        :: !(Maybe Expression)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetCostAndUsage =
+  GetCostAndUsage'
+    { _gcauGroupBy       :: !(Maybe [GroupDefinition])
+    , _gcauNextPageToken :: !(Maybe Text)
+    , _gcauMetrics       :: !(Maybe [Text])
+    , _gcauTimePeriod    :: !(Maybe DateInterval)
+    , _gcauGranularity   :: !(Maybe Granularity)
+    , _gcauFilter        :: !(Maybe Expression)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetCostAndUsage' with the minimum fields required to make a request.
@@ -158,12 +160,14 @@ instance ToQuery GetCostAndUsage where
         toQuery = const mempty
 
 -- | /See:/ 'getCostAndUsageResponse' smart constructor.
-data GetCostAndUsageResponse = GetCostAndUsageResponse'
-  { _gcaursResultsByTime    :: !(Maybe [ResultByTime])
-  , _gcaursNextPageToken    :: !(Maybe Text)
-  , _gcaursGroupDefinitions :: !(Maybe [GroupDefinition])
-  , _gcaursResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetCostAndUsageResponse =
+  GetCostAndUsageResponse'
+    { _gcaursResultsByTime    :: !(Maybe [ResultByTime])
+    , _gcaursNextPageToken    :: !(Maybe Text)
+    , _gcaursGroupDefinitions :: !(Maybe [GroupDefinition])
+    , _gcaursResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetCostAndUsageResponse' with the minimum fields required to make a request.

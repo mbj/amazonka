@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getHIT' smart constructor.
-newtype GetHIT = GetHIT'
-  { _ghitHITId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetHIT =
+  GetHIT'
+    { _ghitHITId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetHIT' with the minimum fields required to make a request.
@@ -99,10 +101,12 @@ instance ToQuery GetHIT where
         toQuery = const mempty
 
 -- | /See:/ 'getHITResponse' smart constructor.
-data GetHITResponse = GetHITResponse'
-  { _ghitrsHIT            :: !(Maybe HIT)
-  , _ghitrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetHITResponse =
+  GetHITResponse'
+    { _ghitrsHIT            :: !(Maybe HIT)
+    , _ghitrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetHITResponse' with the minimum fields required to make a request.

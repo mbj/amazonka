@@ -26,11 +26,13 @@ import Network.AWS.ResourceGroupsTagging.Types.Sum
 --
 --
 -- /See:/ 'failureInfo' smart constructor.
-data FailureInfo = FailureInfo'
-  { _fiErrorCode    :: !(Maybe ResourceErrorCode)
-  , _fiErrorMessage :: !(Maybe Text)
-  , _fiStatusCode   :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FailureInfo =
+  FailureInfo'
+    { _fiErrorCode    :: !(Maybe ResourceErrorCode)
+    , _fiErrorMessage :: !(Maybe Text)
+    , _fiStatusCode   :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FailureInfo' with the minimum fields required to make a request.
@@ -78,10 +80,12 @@ instance NFData FailureInfo where
 --
 --
 -- /See:/ 'resourceTagMapping' smart constructor.
-data ResourceTagMapping = ResourceTagMapping'
-  { _rtmResourceARN :: !(Maybe Text)
-  , _rtmTags        :: !(Maybe [Tag])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResourceTagMapping =
+  ResourceTagMapping'
+    { _rtmResourceARN :: !(Maybe Text)
+    , _rtmTags        :: !(Maybe [Tag])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResourceTagMapping' with the minimum fields required to make a request.
@@ -121,10 +125,12 @@ instance NFData ResourceTagMapping where
 --
 --
 -- /See:/ 'tag' smart constructor.
-data Tag = Tag'
-  { _tagKey   :: !Text
-  , _tagValue :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Tag =
+  Tag'
+    { _tagKey   :: !Text
+    , _tagValue :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Tag' with the minimum fields required to make a request.
@@ -163,10 +169,12 @@ instance NFData Tag where
 --
 --
 -- /See:/ 'tagFilter' smart constructor.
-data TagFilter = TagFilter'
-  { _tfValues :: !(Maybe [Text])
-  , _tfKey    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TagFilter =
+  TagFilter'
+    { _tfValues :: !(Maybe [Text])
+    , _tfKey    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TagFilter' with the minimum fields required to make a request.

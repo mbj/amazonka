@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeListenerCertificates' smart constructor.
-data DescribeListenerCertificates = DescribeListenerCertificates'
-  { _dlcMarker      :: !(Maybe Text)
-  , _dlcPageSize    :: !(Maybe Nat)
-  , _dlcListenerARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeListenerCertificates =
+  DescribeListenerCertificates'
+    { _dlcMarker      :: !(Maybe Text)
+    , _dlcPageSize    :: !(Maybe Nat)
+    , _dlcListenerARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeListenerCertificates' with the minimum fields required to make a request.
@@ -122,11 +124,13 @@ instance ToQuery DescribeListenerCertificates where
                "ListenerArn" =: _dlcListenerARN]
 
 -- | /See:/ 'describeListenerCertificatesResponse' smart constructor.
-data DescribeListenerCertificatesResponse = DescribeListenerCertificatesResponse'
-  { _dlcrsCertificates   :: !(Maybe [Certificate])
-  , _dlcrsNextMarker     :: !(Maybe Text)
-  , _dlcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeListenerCertificatesResponse =
+  DescribeListenerCertificatesResponse'
+    { _dlcrsCertificates   :: !(Maybe [Certificate])
+    , _dlcrsNextMarker     :: !(Maybe Text)
+    , _dlcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeListenerCertificatesResponse' with the minimum fields required to make a request.

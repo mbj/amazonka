@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getTest' smart constructor.
-newtype GetTest = GetTest'
-  { _gtArn :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetTest =
+  GetTest'
+    { _gtArn :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetTest' with the minimum fields required to make a request.
@@ -106,10 +108,12 @@ instance ToQuery GetTest where
 --
 --
 -- /See:/ 'getTestResponse' smart constructor.
-data GetTestResponse = GetTestResponse'
-  { _gtrsTest           :: !(Maybe Test)
-  , _gtrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetTestResponse =
+  GetTestResponse'
+    { _gtrsTest           :: !(Maybe Test)
+    , _gtrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetTestResponse' with the minimum fields required to make a request.

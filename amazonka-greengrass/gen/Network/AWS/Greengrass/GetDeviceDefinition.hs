@@ -49,9 +49,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getDeviceDefinition' smart constructor.
-newtype GetDeviceDefinition = GetDeviceDefinition'
-  { _gddDeviceDefinitionId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetDeviceDefinition =
+  GetDeviceDefinition'
+    { _gddDeviceDefinitionId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDeviceDefinition' with the minimum fields required to make a request.
@@ -107,16 +109,18 @@ instance ToQuery GetDeviceDefinition where
         toQuery = const mempty
 
 -- | /See:/ 'getDeviceDefinitionResponse' smart constructor.
-data GetDeviceDefinitionResponse = GetDeviceDefinitionResponse'
-  { _gddrsLatestVersionARN     :: !(Maybe Text)
-  , _gddrsARN                  :: !(Maybe Text)
-  , _gddrsName                 :: !(Maybe Text)
-  , _gddrsCreationTimestamp    :: !(Maybe Text)
-  , _gddrsId                   :: !(Maybe Text)
-  , _gddrsLatestVersion        :: !(Maybe Text)
-  , _gddrsLastUpdatedTimestamp :: !(Maybe Text)
-  , _gddrsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDeviceDefinitionResponse =
+  GetDeviceDefinitionResponse'
+    { _gddrsLatestVersionARN     :: !(Maybe Text)
+    , _gddrsARN                  :: !(Maybe Text)
+    , _gddrsName                 :: !(Maybe Text)
+    , _gddrsCreationTimestamp    :: !(Maybe Text)
+    , _gddrsId                   :: !(Maybe Text)
+    , _gddrsLatestVersion        :: !(Maybe Text)
+    , _gddrsLastUpdatedTimestamp :: !(Maybe Text)
+    , _gddrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDeviceDefinitionResponse' with the minimum fields required to make a request.

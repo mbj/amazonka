@@ -67,13 +67,15 @@ import Network.AWS.SWF.Types
 import Network.AWS.SWF.Types.Product
 
 -- | /See:/ 'getWorkflowExecutionHistory' smart constructor.
-data GetWorkflowExecutionHistory = GetWorkflowExecutionHistory'
-  { _gwehNextPageToken   :: !(Maybe Text)
-  , _gwehReverseOrder    :: !(Maybe Bool)
-  , _gwehMaximumPageSize :: !(Maybe Nat)
-  , _gwehDomain          :: !Text
-  , _gwehExecution       :: !WorkflowExecution
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetWorkflowExecutionHistory =
+  GetWorkflowExecutionHistory'
+    { _gwehNextPageToken   :: !(Maybe Text)
+    , _gwehReverseOrder    :: !(Maybe Bool)
+    , _gwehMaximumPageSize :: !(Maybe Nat)
+    , _gwehDomain          :: !Text
+    , _gwehExecution       :: !WorkflowExecution
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetWorkflowExecutionHistory' with the minimum fields required to make a request.
@@ -177,11 +179,13 @@ instance ToQuery GetWorkflowExecutionHistory where
 --
 --
 -- /See:/ 'getWorkflowExecutionHistoryResponse' smart constructor.
-data GetWorkflowExecutionHistoryResponse = GetWorkflowExecutionHistoryResponse'
-  { _gwehrsNextPageToken  :: !(Maybe Text)
-  , _gwehrsResponseStatus :: !Int
-  , _gwehrsEvents         :: ![HistoryEvent]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetWorkflowExecutionHistoryResponse =
+  GetWorkflowExecutionHistoryResponse'
+    { _gwehrsNextPageToken  :: !(Maybe Text)
+    , _gwehrsResponseStatus :: !Int
+    , _gwehrsEvents         :: ![HistoryEvent]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetWorkflowExecutionHistoryResponse' with the minimum fields required to make a request.

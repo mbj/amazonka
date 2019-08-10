@@ -58,14 +58,16 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createTrust' smart constructor.
-data CreateTrust = CreateTrust'
-  { _ctConditionalForwarderIPAddrs :: !(Maybe [Text])
-  , _ctTrustType                   :: !(Maybe TrustType)
-  , _ctDirectoryId                 :: !Text
-  , _ctRemoteDomainName            :: !Text
-  , _ctTrustPassword               :: !(Sensitive Text)
-  , _ctTrustDirection              :: !TrustDirection
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data CreateTrust =
+  CreateTrust'
+    { _ctConditionalForwarderIPAddrs :: !(Maybe [Text])
+    , _ctTrustType                   :: !(Maybe TrustType)
+    , _ctDirectoryId                 :: !Text
+    , _ctRemoteDomainName            :: !Text
+    , _ctTrustPassword               :: !(Sensitive Text)
+    , _ctTrustDirection              :: !TrustDirection
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateTrust' with the minimum fields required to make a request.
@@ -170,10 +172,12 @@ instance ToQuery CreateTrust where
 --
 --
 -- /See:/ 'createTrustResponse' smart constructor.
-data CreateTrustResponse = CreateTrustResponse'
-  { _ctrsTrustId        :: !(Maybe Text)
-  , _ctrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateTrustResponse =
+  CreateTrustResponse'
+    { _ctrsTrustId        :: !(Maybe Text)
+    , _ctrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateTrustResponse' with the minimum fields required to make a request.

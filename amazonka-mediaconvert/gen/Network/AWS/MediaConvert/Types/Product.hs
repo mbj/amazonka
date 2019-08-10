@@ -24,17 +24,19 @@ import Network.AWS.Prelude
 -- | Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value AAC.
 --
 -- /See:/ 'aacSettings' smart constructor.
-data AacSettings = AacSettings'
-  { _assAudioDescriptionBroadcasterMix :: !(Maybe AacAudioDescriptionBroadcasterMix)
-  , _assRawFormat :: !(Maybe AacRawFormat)
-  , _assCodingMode :: !(Maybe AacCodingMode)
-  , _assRateControlMode :: !(Maybe AacRateControlMode)
-  , _assSampleRate :: !(Maybe Int)
-  , _assSpecification :: !(Maybe AacSpecification)
-  , _assCodecProfile :: !(Maybe AacCodecProfile)
-  , _assBitrate :: !(Maybe Int)
-  , _assVbrQuality :: !(Maybe AacVbrQuality)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AacSettings =
+  AacSettings'
+    { _assAudioDescriptionBroadcasterMix :: !(Maybe AacAudioDescriptionBroadcasterMix)
+    , _assRawFormat :: !(Maybe AacRawFormat)
+    , _assCodingMode :: !(Maybe AacCodingMode)
+    , _assRateControlMode :: !(Maybe AacRateControlMode)
+    , _assSampleRate :: !(Maybe Int)
+    , _assSpecification :: !(Maybe AacSpecification)
+    , _assCodecProfile :: !(Maybe AacCodecProfile)
+    , _assBitrate :: !(Maybe Int)
+    , _assVbrQuality :: !(Maybe AacVbrQuality)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AacSettings' with the minimum fields required to make a request.
@@ -147,16 +149,18 @@ instance ToJSON AacSettings where
 -- | Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value AC3.
 --
 -- /See:/ 'ac3Settings' smart constructor.
-data Ac3Settings = Ac3Settings'
-  { _aLfeFilter :: !(Maybe Ac3LfeFilter)
-  , _aMetadataControl :: !(Maybe Ac3MetadataControl)
-  , _aBitstreamMode :: !(Maybe Ac3BitstreamMode)
-  , _aCodingMode :: !(Maybe Ac3CodingMode)
-  , _aSampleRate :: !(Maybe Int)
-  , _aDynamicRangeCompressionProfile :: !(Maybe Ac3DynamicRangeCompressionProfile)
-  , _aBitrate :: !(Maybe Int)
-  , _aDialnorm :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Ac3Settings =
+  Ac3Settings'
+    { _aLfeFilter :: !(Maybe Ac3LfeFilter)
+    , _aMetadataControl :: !(Maybe Ac3MetadataControl)
+    , _aBitstreamMode :: !(Maybe Ac3BitstreamMode)
+    , _aCodingMode :: !(Maybe Ac3CodingMode)
+    , _aSampleRate :: !(Maybe Int)
+    , _aDynamicRangeCompressionProfile :: !(Maybe Ac3DynamicRangeCompressionProfile)
+    , _aBitrate :: !(Maybe Int)
+    , _aDialnorm :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Ac3Settings' with the minimum fields required to make a request.
@@ -259,11 +263,13 @@ instance ToJSON Ac3Settings where
 -- | Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value AIFF.
 --
 -- /See:/ 'aiffSettings' smart constructor.
-data AiffSettings = AiffSettings'
-  { _asBitDepth   :: !(Maybe Int)
-  , _asChannels   :: !(Maybe Int)
-  , _asSampleRate :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AiffSettings =
+  AiffSettings'
+    { _asBitDepth   :: !(Maybe Int)
+    , _asChannels   :: !(Maybe Int)
+    , _asSampleRate :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AiffSettings' with the minimum fields required to make a request.
@@ -317,9 +323,11 @@ instance ToJSON AiffSettings where
 -- | Settings for ancillary captions source.
 --
 -- /See:/ 'ancillarySourceSettings' smart constructor.
-newtype AncillarySourceSettings = AncillarySourceSettings'
-  { _assSourceAncillaryChannelNumber :: Maybe Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AncillarySourceSettings =
+  AncillarySourceSettings'
+    { _assSourceAncillaryChannelNumber :: Maybe Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AncillarySourceSettings' with the minimum fields required to make a request.
@@ -358,15 +366,17 @@ instance ToJSON AncillarySourceSettings where
 -- | Audio codec settings (CodecSettings) under (AudioDescriptions) contains the group of settings related to audio encoding. The settings in this group vary depending on the value you choose for Audio codec (Codec). For each codec enum you choose, define the corresponding settings object. The following lists the codec enum, settings object pairs. * AAC, AacSettings * MP2, Mp2Settings * WAV, WavSettings * AIFF, AiffSettings * AC3, Ac3Settings * EAC3, Eac3Settings
 --
 -- /See:/ 'audioCodecSettings' smart constructor.
-data AudioCodecSettings = AudioCodecSettings'
-  { _acsAiffSettings :: !(Maybe AiffSettings)
-  , _acsCodec        :: !(Maybe AudioCodec)
-  , _acsAc3Settings  :: !(Maybe Ac3Settings)
-  , _acsMp2Settings  :: !(Maybe Mp2Settings)
-  , _acsWavSettings  :: !(Maybe WavSettings)
-  , _acsAacSettings  :: !(Maybe AacSettings)
-  , _acsEac3Settings :: !(Maybe Eac3Settings)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AudioCodecSettings =
+  AudioCodecSettings'
+    { _acsAiffSettings :: !(Maybe AiffSettings)
+    , _acsCodec        :: !(Maybe AudioCodec)
+    , _acsAc3Settings  :: !(Maybe Ac3Settings)
+    , _acsMp2Settings  :: !(Maybe Mp2Settings)
+    , _acsWavSettings  :: !(Maybe WavSettings)
+    , _acsAacSettings  :: !(Maybe AacSettings)
+    , _acsEac3Settings :: !(Maybe Eac3Settings)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AudioCodecSettings' with the minimum fields required to make a request.
@@ -459,17 +469,19 @@ instance ToJSON AudioCodecSettings where
 -- | Description of audio output
 --
 -- /See:/ 'audioDescription' smart constructor.
-data AudioDescription = AudioDescription'
-  { _adAudioSourceName            :: !(Maybe Text)
-  , _adLanguageCode               :: !(Maybe LanguageCode)
-  , _adAudioType                  :: !(Maybe Int)
-  , _adAudioNormalizationSettings :: !(Maybe AudioNormalizationSettings)
-  , _adLanguageCodeControl        :: !(Maybe AudioLanguageCodeControl)
-  , _adCodecSettings              :: !(Maybe AudioCodecSettings)
-  , _adStreamName                 :: !(Maybe Text)
-  , _adRemixSettings              :: !(Maybe RemixSettings)
-  , _adAudioTypeControl           :: !(Maybe AudioTypeControl)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AudioDescription =
+  AudioDescription'
+    { _adAudioSourceName            :: !(Maybe Text)
+    , _adLanguageCode               :: !(Maybe LanguageCode)
+    , _adAudioType                  :: !(Maybe Int)
+    , _adAudioNormalizationSettings :: !(Maybe AudioNormalizationSettings)
+    , _adLanguageCodeControl        :: !(Maybe AudioLanguageCodeControl)
+    , _adCodecSettings              :: !(Maybe AudioCodecSettings)
+    , _adStreamName                 :: !(Maybe Text)
+    , _adRemixSettings              :: !(Maybe RemixSettings)
+    , _adAudioTypeControl           :: !(Maybe AudioTypeControl)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AudioDescription' with the minimum fields required to make a request.
@@ -582,14 +594,16 @@ instance ToJSON AudioDescription where
 -- | Advanced audio normalization settings.
 --
 -- /See:/ 'audioNormalizationSettings' smart constructor.
-data AudioNormalizationSettings = AudioNormalizationSettings'
-  { _ansAlgorithmControl    :: !(Maybe AudioNormalizationAlgorithmControl)
-  , _ansTargetLkfs          :: !(Maybe Double)
-  , _ansPeakCalculation     :: !(Maybe AudioNormalizationPeakCalculation)
-  , _ansCorrectionGateLevel :: !(Maybe Int)
-  , _ansAlgorithm           :: !(Maybe AudioNormalizationAlgorithm)
-  , _ansLoudnessLogging     :: !(Maybe AudioNormalizationLoudnessLogging)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AudioNormalizationSettings =
+  AudioNormalizationSettings'
+    { _ansAlgorithmControl    :: !(Maybe AudioNormalizationAlgorithmControl)
+    , _ansTargetLkfs          :: !(Maybe Double)
+    , _ansPeakCalculation     :: !(Maybe AudioNormalizationPeakCalculation)
+    , _ansCorrectionGateLevel :: !(Maybe Int)
+    , _ansAlgorithm           :: !(Maybe AudioNormalizationAlgorithm)
+    , _ansLoudnessLogging     :: !(Maybe AudioNormalizationLoudnessLogging)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AudioNormalizationSettings' with the minimum fields required to make a request.
@@ -674,17 +688,19 @@ instance ToJSON AudioNormalizationSettings where
 -- | Selector for Audio
 --
 -- /See:/ 'audioSelector' smart constructor.
-data AudioSelector = AudioSelector'
-  { _asTracks                 :: !(Maybe [Int])
-  , _asProgramSelection       :: !(Maybe Int)
-  , _asLanguageCode           :: !(Maybe LanguageCode)
-  , _asOffset                 :: !(Maybe Int)
-  , _asDefaultSelection       :: !(Maybe AudioDefaultSelection)
-  , _asPids                   :: !(Maybe [Int])
-  , _asSelectorType           :: !(Maybe AudioSelectorType)
-  , _asExternalAudioFileInput :: !(Maybe Text)
-  , _asRemixSettings          :: !(Maybe RemixSettings)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AudioSelector =
+  AudioSelector'
+    { _asTracks                 :: !(Maybe [Int])
+    , _asProgramSelection       :: !(Maybe Int)
+    , _asLanguageCode           :: !(Maybe LanguageCode)
+    , _asOffset                 :: !(Maybe Int)
+    , _asDefaultSelection       :: !(Maybe AudioDefaultSelection)
+    , _asPids                   :: !(Maybe [Int])
+    , _asSelectorType           :: !(Maybe AudioSelectorType)
+    , _asExternalAudioFileInput :: !(Maybe Text)
+    , _asRemixSettings          :: !(Maybe RemixSettings)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AudioSelector' with the minimum fields required to make a request.
@@ -797,9 +813,11 @@ instance ToJSON AudioSelector where
 -- | Group of Audio Selectors
 --
 -- /See:/ 'audioSelectorGroup' smart constructor.
-newtype AudioSelectorGroup = AudioSelectorGroup'
-  { _asgAudioSelectorNames :: Maybe [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AudioSelectorGroup =
+  AudioSelectorGroup'
+    { _asgAudioSelectorNames :: Maybe [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AudioSelectorGroup' with the minimum fields required to make a request.
@@ -837,9 +855,11 @@ instance ToJSON AudioSelectorGroup where
 -- | Settings for Avail Blanking
 --
 -- /See:/ 'availBlanking' smart constructor.
-newtype AvailBlanking = AvailBlanking'
-  { _abAvailBlankingImage :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AvailBlanking =
+  AvailBlanking'
+    { _abAvailBlankingImage :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AvailBlanking' with the minimum fields required to make a request.
@@ -876,24 +896,26 @@ instance ToJSON AvailBlanking where
 -- | Burn-In Destination Settings.
 --
 -- /See:/ 'burninDestinationSettings' smart constructor.
-data BurninDestinationSettings = BurninDestinationSettings'
-  { _bdsBackgroundOpacity :: !(Maybe Int)
-  , _bdsFontOpacity       :: !(Maybe Int)
-  , _bdsShadowYOffset     :: !(Maybe Int)
-  , _bdsFontResolution    :: !(Maybe Int)
-  , _bdsYPosition         :: !(Maybe Int)
-  , _bdsBackgroundColor   :: !(Maybe BurninSubtitleBackgroundColor)
-  , _bdsShadowXOffset     :: !(Maybe Int)
-  , _bdsFontSize          :: !(Maybe Int)
-  , _bdsXPosition         :: !(Maybe Int)
-  , _bdsTeletextSpacing   :: !(Maybe BurninSubtitleTeletextSpacing)
-  , _bdsAlignment         :: !(Maybe BurninSubtitleAlignment)
-  , _bdsShadowOpacity     :: !(Maybe Int)
-  , _bdsOutlineColor      :: !(Maybe BurninSubtitleOutlineColor)
-  , _bdsOutlineSize       :: !(Maybe Int)
-  , _bdsShadowColor       :: !(Maybe BurninSubtitleShadowColor)
-  , _bdsFontColor         :: !(Maybe BurninSubtitleFontColor)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BurninDestinationSettings =
+  BurninDestinationSettings'
+    { _bdsBackgroundOpacity :: !(Maybe Int)
+    , _bdsFontOpacity       :: !(Maybe Int)
+    , _bdsShadowYOffset     :: !(Maybe Int)
+    , _bdsFontResolution    :: !(Maybe Int)
+    , _bdsYPosition         :: !(Maybe Int)
+    , _bdsBackgroundColor   :: !(Maybe BurninSubtitleBackgroundColor)
+    , _bdsShadowXOffset     :: !(Maybe Int)
+    , _bdsFontSize          :: !(Maybe Int)
+    , _bdsXPosition         :: !(Maybe Int)
+    , _bdsTeletextSpacing   :: !(Maybe BurninSubtitleTeletextSpacing)
+    , _bdsAlignment         :: !(Maybe BurninSubtitleAlignment)
+    , _bdsShadowOpacity     :: !(Maybe Int)
+    , _bdsOutlineColor      :: !(Maybe BurninSubtitleOutlineColor)
+    , _bdsOutlineSize       :: !(Maybe Int)
+    , _bdsShadowColor       :: !(Maybe BurninSubtitleShadowColor)
+    , _bdsFontColor         :: !(Maybe BurninSubtitleFontColor)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BurninDestinationSettings' with the minimum fields required to make a request.
@@ -1067,12 +1089,14 @@ instance ToJSON BurninDestinationSettings where
 -- | Description of Caption output
 --
 -- /See:/ 'captionDescription' smart constructor.
-data CaptionDescription = CaptionDescription'
-  { _cdCaptionSelectorName :: !(Maybe Text)
-  , _cdLanguageCode        :: !(Maybe LanguageCode)
-  , _cdDestinationSettings :: !(Maybe CaptionDestinationSettings)
-  , _cdLanguageDescription :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CaptionDescription =
+  CaptionDescription'
+    { _cdCaptionSelectorName :: !(Maybe Text)
+    , _cdLanguageCode        :: !(Maybe LanguageCode)
+    , _cdDestinationSettings :: !(Maybe CaptionDestinationSettings)
+    , _cdLanguageDescription :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CaptionDescription' with the minimum fields required to make a request.
@@ -1142,11 +1166,13 @@ instance ToJSON CaptionDescription where
 -- | Caption Description for preset
 --
 -- /See:/ 'captionDescriptionPreset' smart constructor.
-data CaptionDescriptionPreset = CaptionDescriptionPreset'
-  { _cdpLanguageCode        :: !(Maybe LanguageCode)
-  , _cdpDestinationSettings :: !(Maybe CaptionDestinationSettings)
-  , _cdpLanguageDescription :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CaptionDescriptionPreset =
+  CaptionDescriptionPreset'
+    { _cdpLanguageCode        :: !(Maybe LanguageCode)
+    , _cdpDestinationSettings :: !(Maybe CaptionDestinationSettings)
+    , _cdpLanguageDescription :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CaptionDescriptionPreset' with the minimum fields required to make a request.
@@ -1206,14 +1232,16 @@ instance ToJSON CaptionDescriptionPreset where
 -- | Specific settings required by destination type. Note that burnin_destination_settings are not available if the source of the caption data is Embedded or Teletext.
 --
 -- /See:/ 'captionDestinationSettings' smart constructor.
-data CaptionDestinationSettings = CaptionDestinationSettings'
-  { _cdsTeletextDestinationSettings :: !(Maybe TeletextDestinationSettings)
-  , _cdsDvbSubDestinationSettings   :: !(Maybe DvbSubDestinationSettings)
-  , _cdsTtmlDestinationSettings     :: !(Maybe TtmlDestinationSettings)
-  , _cdsDestinationType             :: !(Maybe CaptionDestinationType)
-  , _cdsSccDestinationSettings      :: !(Maybe SccDestinationSettings)
-  , _cdsBurninDestinationSettings   :: !(Maybe BurninDestinationSettings)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CaptionDestinationSettings =
+  CaptionDestinationSettings'
+    { _cdsTeletextDestinationSettings :: !(Maybe TeletextDestinationSettings)
+    , _cdsDvbSubDestinationSettings   :: !(Maybe DvbSubDestinationSettings)
+    , _cdsTtmlDestinationSettings     :: !(Maybe TtmlDestinationSettings)
+    , _cdsDestinationType             :: !(Maybe CaptionDestinationType)
+    , _cdsSccDestinationSettings      :: !(Maybe SccDestinationSettings)
+    , _cdsBurninDestinationSettings   :: !(Maybe BurninDestinationSettings)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CaptionDestinationSettings' with the minimum fields required to make a request.
@@ -1303,10 +1331,12 @@ instance ToJSON CaptionDestinationSettings where
 -- | Caption inputs to be mapped to caption outputs.
 --
 -- /See:/ 'captionSelector' smart constructor.
-data CaptionSelector = CaptionSelector'
-  { _csLanguageCode   :: !(Maybe LanguageCode)
-  , _csSourceSettings :: !(Maybe CaptionSourceSettings)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CaptionSelector =
+  CaptionSelector'
+    { _csLanguageCode   :: !(Maybe LanguageCode)
+    , _csSourceSettings :: !(Maybe CaptionSourceSettings)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CaptionSelector' with the minimum fields required to make a request.
@@ -1351,14 +1381,16 @@ instance ToJSON CaptionSelector where
 -- | Source settings (SourceSettings) contains the group of settings for captions in the input.
 --
 -- /See:/ 'captionSourceSettings' smart constructor.
-data CaptionSourceSettings = CaptionSourceSettings'
-  { _cssTeletextSourceSettings  :: !(Maybe TeletextSourceSettings)
-  , _cssSourceType              :: !(Maybe CaptionSourceType)
-  , _cssFileSourceSettings      :: !(Maybe FileSourceSettings)
-  , _cssDvbSubSourceSettings    :: !(Maybe DvbSubSourceSettings)
-  , _cssAncillarySourceSettings :: !(Maybe AncillarySourceSettings)
-  , _cssEmbeddedSourceSettings  :: !(Maybe EmbeddedSourceSettings)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CaptionSourceSettings =
+  CaptionSourceSettings'
+    { _cssTeletextSourceSettings  :: !(Maybe TeletextSourceSettings)
+    , _cssSourceType              :: !(Maybe CaptionSourceType)
+    , _cssFileSourceSettings      :: !(Maybe FileSourceSettings)
+    , _cssDvbSubSourceSettings    :: !(Maybe DvbSubSourceSettings)
+    , _cssAncillarySourceSettings :: !(Maybe AncillarySourceSettings)
+    , _cssEmbeddedSourceSettings  :: !(Maybe EmbeddedSourceSettings)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CaptionSourceSettings' with the minimum fields required to make a request.
@@ -1447,9 +1479,11 @@ instance ToJSON CaptionSourceSettings where
 -- | Channel mapping (ChannelMapping) contains the group of fields that hold the remixing value for each channel. Units are in dB. Acceptable values are within the range from -60 (mute) through 6. A setting of 0 passes the input channel unchanged to the output channel (no attenuation or amplification).
 --
 -- /See:/ 'channelMapping' smart constructor.
-newtype ChannelMapping = ChannelMapping'
-  { _cmOutputChannels :: Maybe [OutputChannelMapping]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ChannelMapping =
+  ChannelMapping'
+    { _cmOutputChannels :: Maybe [OutputChannelMapping]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ChannelMapping' with the minimum fields required to make a request.
@@ -1486,14 +1520,16 @@ instance ToJSON ChannelMapping where
 -- | Settings for color correction.
 --
 -- /See:/ 'colorCorrector' smart constructor.
-data ColorCorrector = ColorCorrector'
-  { _ccSaturation           :: !(Maybe Int)
-  , _ccHue                  :: !(Maybe Int)
-  , _ccColorSpaceConversion :: !(Maybe ColorSpaceConversion)
-  , _ccHdr10Metadata        :: !(Maybe Hdr10Metadata)
-  , _ccContrast             :: !(Maybe Int)
-  , _ccBrightness           :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ColorCorrector =
+  ColorCorrector'
+    { _ccSaturation           :: !(Maybe Int)
+    , _ccHue                  :: !(Maybe Int)
+    , _ccColorSpaceConversion :: !(Maybe ColorSpaceConversion)
+    , _ccHdr10Metadata        :: !(Maybe Hdr10Metadata)
+    , _ccContrast             :: !(Maybe Int)
+    , _ccBrightness           :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ColorCorrector' with the minimum fields required to make a request.
@@ -1578,14 +1614,16 @@ instance ToJSON ColorCorrector where
 -- | Container specific settings.
 --
 -- /See:/ 'containerSettings' smart constructor.
-data ContainerSettings = ContainerSettings'
-  { _csM2tsSettings :: !(Maybe M2tsSettings)
-  , _csM3u8Settings :: !(Maybe M3u8Settings)
-  , _csMovSettings  :: !(Maybe MovSettings)
-  , _csMp4Settings  :: !(Maybe Mp4Settings)
-  , _csContainer    :: !(Maybe ContainerType)
-  , _csF4vSettings  :: !(Maybe F4vSettings)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ContainerSettings =
+  ContainerSettings'
+    { _csM2tsSettings :: !(Maybe M2tsSettings)
+    , _csM3u8Settings :: !(Maybe M3u8Settings)
+    , _csMovSettings  :: !(Maybe MovSettings)
+    , _csMp4Settings  :: !(Maybe Mp4Settings)
+    , _csContainer    :: !(Maybe ContainerType)
+    , _csF4vSettings  :: !(Maybe F4vSettings)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ContainerSettings' with the minimum fields required to make a request.
@@ -1669,9 +1707,11 @@ instance ToJSON ContainerSettings where
 -- | Specifies DRM settings for DASH outputs.
 --
 -- /See:/ 'dashIsoEncryptionSettings' smart constructor.
-newtype DashIsoEncryptionSettings = DashIsoEncryptionSettings'
-  { _diesSpekeKeyProvider :: Maybe SpekeKeyProvider
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DashIsoEncryptionSettings =
+  DashIsoEncryptionSettings'
+    { _diesSpekeKeyProvider :: Maybe SpekeKeyProvider
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DashIsoEncryptionSettings' with the minimum fields required to make a request.
@@ -1709,16 +1749,18 @@ instance ToJSON DashIsoEncryptionSettings where
 -- | Required when you set (Type) under (OutputGroups)>(OutputGroupSettings) to DASH_ISO_GROUP_SETTINGS.
 --
 -- /See:/ 'dashIsoGroupSettings' smart constructor.
-data DashIsoGroupSettings = DashIsoGroupSettings'
-  { _digsFragmentLength  :: !(Maybe Int)
-  , _digsSegmentControl  :: !(Maybe DashIsoSegmentControl)
-  , _digsDestination     :: !(Maybe Text)
-  , _digsHbbtvCompliance :: !(Maybe DashIsoHbbtvCompliance)
-  , _digsMinBufferTime   :: !(Maybe Int)
-  , _digsBaseURL         :: !(Maybe Text)
-  , _digsEncryption      :: !(Maybe DashIsoEncryptionSettings)
-  , _digsSegmentLength   :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DashIsoGroupSettings =
+  DashIsoGroupSettings'
+    { _digsFragmentLength  :: !(Maybe Int)
+    , _digsSegmentControl  :: !(Maybe DashIsoSegmentControl)
+    , _digsDestination     :: !(Maybe Text)
+    , _digsHbbtvCompliance :: !(Maybe DashIsoHbbtvCompliance)
+    , _digsMinBufferTime   :: !(Maybe Int)
+    , _digsBaseURL         :: !(Maybe Text)
+    , _digsEncryption      :: !(Maybe DashIsoEncryptionSettings)
+    , _digsSegmentLength   :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DashIsoGroupSettings' with the minimum fields required to make a request.
@@ -1820,11 +1862,13 @@ instance ToJSON DashIsoGroupSettings where
 -- | Settings for deinterlacer
 --
 -- /See:/ 'deinterlacer' smart constructor.
-data Deinterlacer = Deinterlacer'
-  { _dControl   :: !(Maybe DeinterlacerControl)
-  , _dMode      :: !(Maybe DeinterlacerMode)
-  , _dAlgorithm :: !(Maybe DeinterlaceAlgorithm)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Deinterlacer =
+  Deinterlacer'
+    { _dControl   :: !(Maybe DeinterlacerControl)
+    , _dMode      :: !(Maybe DeinterlacerMode)
+    , _dAlgorithm :: !(Maybe DeinterlaceAlgorithm)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Deinterlacer' with the minimum fields required to make a request.
@@ -1877,11 +1921,13 @@ instance ToJSON Deinterlacer where
 -- | Inserts DVB Network Information Table (NIT) at the specified table repetition interval.
 --
 -- /See:/ 'dvbNitSettings' smart constructor.
-data DvbNitSettings = DvbNitSettings'
-  { _dnsNetworkId   :: !(Maybe Int)
-  , _dnsNetworkName :: !(Maybe Text)
-  , _dnsNitInterval :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DvbNitSettings =
+  DvbNitSettings'
+    { _dnsNetworkId   :: !(Maybe Int)
+    , _dnsNetworkName :: !(Maybe Text)
+    , _dnsNitInterval :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DvbNitSettings' with the minimum fields required to make a request.
@@ -1938,12 +1984,14 @@ instance ToJSON DvbNitSettings where
 -- | Inserts DVB Service Description Table (NIT) at the specified table repetition interval.
 --
 -- /See:/ 'dvbSdtSettings' smart constructor.
-data DvbSdtSettings = DvbSdtSettings'
-  { _dssSdtInterval         :: !(Maybe Int)
-  , _dssServiceProviderName :: !(Maybe Text)
-  , _dssOutputSdt           :: !(Maybe OutputSdt)
-  , _dssServiceName         :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DvbSdtSettings =
+  DvbSdtSettings'
+    { _dssSdtInterval         :: !(Maybe Int)
+    , _dssServiceProviderName :: !(Maybe Text)
+    , _dssOutputSdt           :: !(Maybe OutputSdt)
+    , _dssServiceName         :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DvbSdtSettings' with the minimum fields required to make a request.
@@ -2011,24 +2059,26 @@ instance ToJSON DvbSdtSettings where
 -- | DVB-Sub Destination Settings
 --
 -- /See:/ 'dvbSubDestinationSettings' smart constructor.
-data DvbSubDestinationSettings = DvbSubDestinationSettings'
-  { _dsdsBackgroundOpacity :: !(Maybe Int)
-  , _dsdsFontOpacity       :: !(Maybe Int)
-  , _dsdsShadowYOffset     :: !(Maybe Int)
-  , _dsdsFontResolution    :: !(Maybe Int)
-  , _dsdsYPosition         :: !(Maybe Int)
-  , _dsdsBackgroundColor   :: !(Maybe DvbSubtitleBackgroundColor)
-  , _dsdsShadowXOffset     :: !(Maybe Int)
-  , _dsdsFontSize          :: !(Maybe Int)
-  , _dsdsXPosition         :: !(Maybe Int)
-  , _dsdsTeletextSpacing   :: !(Maybe DvbSubtitleTeletextSpacing)
-  , _dsdsAlignment         :: !(Maybe DvbSubtitleAlignment)
-  , _dsdsShadowOpacity     :: !(Maybe Int)
-  , _dsdsOutlineColor      :: !(Maybe DvbSubtitleOutlineColor)
-  , _dsdsOutlineSize       :: !(Maybe Int)
-  , _dsdsShadowColor       :: !(Maybe DvbSubtitleShadowColor)
-  , _dsdsFontColor         :: !(Maybe DvbSubtitleFontColor)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DvbSubDestinationSettings =
+  DvbSubDestinationSettings'
+    { _dsdsBackgroundOpacity :: !(Maybe Int)
+    , _dsdsFontOpacity       :: !(Maybe Int)
+    , _dsdsShadowYOffset     :: !(Maybe Int)
+    , _dsdsFontResolution    :: !(Maybe Int)
+    , _dsdsYPosition         :: !(Maybe Int)
+    , _dsdsBackgroundColor   :: !(Maybe DvbSubtitleBackgroundColor)
+    , _dsdsShadowXOffset     :: !(Maybe Int)
+    , _dsdsFontSize          :: !(Maybe Int)
+    , _dsdsXPosition         :: !(Maybe Int)
+    , _dsdsTeletextSpacing   :: !(Maybe DvbSubtitleTeletextSpacing)
+    , _dsdsAlignment         :: !(Maybe DvbSubtitleAlignment)
+    , _dsdsShadowOpacity     :: !(Maybe Int)
+    , _dsdsOutlineColor      :: !(Maybe DvbSubtitleOutlineColor)
+    , _dsdsOutlineSize       :: !(Maybe Int)
+    , _dsdsShadowColor       :: !(Maybe DvbSubtitleShadowColor)
+    , _dsdsFontColor         :: !(Maybe DvbSubtitleFontColor)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DvbSubDestinationSettings' with the minimum fields required to make a request.
@@ -2202,9 +2252,11 @@ instance ToJSON DvbSubDestinationSettings where
 -- | DVB Sub Source Settings
 --
 -- /See:/ 'dvbSubSourceSettings' smart constructor.
-newtype DvbSubSourceSettings = DvbSubSourceSettings'
-  { _dsssPid :: Maybe Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DvbSubSourceSettings =
+  DvbSubSourceSettings'
+    { _dsssPid :: Maybe Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DvbSubSourceSettings' with the minimum fields required to make a request.
@@ -2237,9 +2289,11 @@ instance ToJSON DvbSubSourceSettings where
 -- | Inserts DVB Time and Date Table (TDT) at the specified table repetition interval.
 --
 -- /See:/ 'dvbTdtSettings' smart constructor.
-newtype DvbTdtSettings = DvbTdtSettings'
-  { _dtsTdtInterval :: Maybe Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DvbTdtSettings =
+  DvbTdtSettings'
+    { _dtsTdtInterval :: Maybe Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DvbTdtSettings' with the minimum fields required to make a request.
@@ -2273,29 +2327,31 @@ instance ToJSON DvbTdtSettings where
 -- | Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value EAC3.
 --
 -- /See:/ 'eac3Settings' smart constructor.
-data Eac3Settings = Eac3Settings'
-  { _esStereoDownmix               :: !(Maybe Eac3StereoDownmix)
-  , _esLoRoCenterMixLevel          :: !(Maybe Double)
-  , _esLtRtCenterMixLevel          :: !(Maybe Double)
-  , _esLfeFilter                   :: !(Maybe Eac3LfeFilter)
-  , _esDynamicRangeCompressionLine :: !(Maybe Eac3DynamicRangeCompressionLine)
-  , _esLtRtSurroundMixLevel        :: !(Maybe Double)
-  , _esMetadataControl             :: !(Maybe Eac3MetadataControl)
-  , _esLoRoSurroundMixLevel        :: !(Maybe Double)
-  , _esSurroundMode                :: !(Maybe Eac3SurroundMode)
-  , _esAttenuationControl          :: !(Maybe Eac3AttenuationControl)
-  , _esPassthroughControl          :: !(Maybe Eac3PassthroughControl)
-  , _esBitstreamMode               :: !(Maybe Eac3BitstreamMode)
-  , _esLfeControl                  :: !(Maybe Eac3LfeControl)
-  , _esDynamicRangeCompressionRf   :: !(Maybe Eac3DynamicRangeCompressionRf)
-  , _esCodingMode                  :: !(Maybe Eac3CodingMode)
-  , _esSampleRate                  :: !(Maybe Int)
-  , _esDcFilter                    :: !(Maybe Eac3DcFilter)
-  , _esBitrate                     :: !(Maybe Int)
-  , _esPhaseControl                :: !(Maybe Eac3PhaseControl)
-  , _esSurroundExMode              :: !(Maybe Eac3SurroundExMode)
-  , _esDialnorm                    :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Eac3Settings =
+  Eac3Settings'
+    { _esStereoDownmix               :: !(Maybe Eac3StereoDownmix)
+    , _esLoRoCenterMixLevel          :: !(Maybe Double)
+    , _esLtRtCenterMixLevel          :: !(Maybe Double)
+    , _esLfeFilter                   :: !(Maybe Eac3LfeFilter)
+    , _esDynamicRangeCompressionLine :: !(Maybe Eac3DynamicRangeCompressionLine)
+    , _esLtRtSurroundMixLevel        :: !(Maybe Double)
+    , _esMetadataControl             :: !(Maybe Eac3MetadataControl)
+    , _esLoRoSurroundMixLevel        :: !(Maybe Double)
+    , _esSurroundMode                :: !(Maybe Eac3SurroundMode)
+    , _esAttenuationControl          :: !(Maybe Eac3AttenuationControl)
+    , _esPassthroughControl          :: !(Maybe Eac3PassthroughControl)
+    , _esBitstreamMode               :: !(Maybe Eac3BitstreamMode)
+    , _esLfeControl                  :: !(Maybe Eac3LfeControl)
+    , _esDynamicRangeCompressionRf   :: !(Maybe Eac3DynamicRangeCompressionRf)
+    , _esCodingMode                  :: !(Maybe Eac3CodingMode)
+    , _esSampleRate                  :: !(Maybe Int)
+    , _esDcFilter                    :: !(Maybe Eac3DcFilter)
+    , _esBitrate                     :: !(Maybe Int)
+    , _esPhaseControl                :: !(Maybe Eac3PhaseControl)
+    , _esSurroundExMode              :: !(Maybe Eac3SurroundExMode)
+    , _esDialnorm                    :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Eac3Settings' with the minimum fields required to make a request.
@@ -2519,11 +2575,13 @@ instance ToJSON Eac3Settings where
 -- | Settings for embedded captions Source
 --
 -- /See:/ 'embeddedSourceSettings' smart constructor.
-data EmbeddedSourceSettings = EmbeddedSourceSettings'
-  { _essConvert608To708        :: !(Maybe EmbeddedConvert608To708)
-  , _essSource608TrackNumber   :: !(Maybe Int)
-  , _essSource608ChannelNumber :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EmbeddedSourceSettings =
+  EmbeddedSourceSettings'
+    { _essConvert608To708        :: !(Maybe EmbeddedConvert608To708)
+    , _essSource608TrackNumber   :: !(Maybe Int)
+    , _essSource608ChannelNumber :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EmbeddedSourceSettings' with the minimum fields required to make a request.
@@ -2583,9 +2641,11 @@ instance ToJSON EmbeddedSourceSettings where
 -- | Describes account specific API endpoint
 --
 -- /See:/ 'endpoint' smart constructor.
-newtype Endpoint = Endpoint'
-  { _eURL :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype Endpoint =
+  Endpoint'
+    { _eURL :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Endpoint' with the minimum fields required to make a request.
@@ -2614,9 +2674,11 @@ instance NFData Endpoint where
 -- | Settings for F4v container
 --
 -- /See:/ 'f4vSettings' smart constructor.
-newtype F4vSettings = F4vSettings'
-  { _fsMoovPlacement :: Maybe F4vMoovPlacement
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype F4vSettings =
+  F4vSettings'
+    { _fsMoovPlacement :: Maybe F4vMoovPlacement
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'F4vSettings' with the minimum fields required to make a request.
@@ -2651,9 +2713,11 @@ instance ToJSON F4vSettings where
 -- | Required when you set (Type) under (OutputGroups)>(OutputGroupSettings) to FILE_GROUP_SETTINGS.
 --
 -- /See:/ 'fileGroupSettings' smart constructor.
-newtype FileGroupSettings = FileGroupSettings'
-  { _fgsDestination :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype FileGroupSettings =
+  FileGroupSettings'
+    { _fgsDestination :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FileGroupSettings' with the minimum fields required to make a request.
@@ -2687,11 +2751,13 @@ instance ToJSON FileGroupSettings where
 -- | Settings for File-based Captions in Source
 --
 -- /See:/ 'fileSourceSettings' smart constructor.
-data FileSourceSettings = FileSourceSettings'
-  { _fssConvert608To708 :: !(Maybe FileSourceConvert608To708)
-  , _fssTimeDelta       :: !(Maybe Int)
-  , _fssSourceFile      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FileSourceSettings =
+  FileSourceSettings'
+    { _fssConvert608To708 :: !(Maybe FileSourceConvert608To708)
+    , _fssTimeDelta       :: !(Maybe Int)
+    , _fssSourceFile      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FileSourceSettings' with the minimum fields required to make a request.
@@ -2748,12 +2814,14 @@ instance ToJSON FileSourceSettings where
 -- | Required when you set (Codec) under (VideoDescription)>(CodecSettings) to the value FRAME_CAPTURE.
 --
 -- /See:/ 'frameCaptureSettings' smart constructor.
-data FrameCaptureSettings = FrameCaptureSettings'
-  { _fcsQuality              :: !(Maybe Int)
-  , _fcsFramerateDenominator :: !(Maybe Int)
-  , _fcsMaxCaptures          :: !(Maybe Int)
-  , _fcsFramerateNumerator   :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FrameCaptureSettings =
+  FrameCaptureSettings'
+    { _fcsQuality              :: !(Maybe Int)
+    , _fcsFramerateDenominator :: !(Maybe Int)
+    , _fcsMaxCaptures          :: !(Maybe Int)
+    , _fcsFramerateNumerator   :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FrameCaptureSettings' with the minimum fields required to make a request.
@@ -2821,45 +2889,47 @@ instance ToJSON FrameCaptureSettings where
 -- | Required when you set (Codec) under (VideoDescription)>(CodecSettings) to the value H_264.
 --
 -- /See:/ 'h264Settings' smart constructor.
-data H264Settings = H264Settings'
-  { _hUnregisteredSeiTimecode :: !(Maybe H264UnregisteredSeiTimecode)
-  , _hQualityTuningLevel :: !(Maybe H264QualityTuningLevel)
-  , _hTemporalAdaptiveQuantization :: !(Maybe H264TemporalAdaptiveQuantization)
-  , _hSceneChangeDetect :: !(Maybe H264SceneChangeDetect)
-  , _hHrdBufferInitialFillPercentage :: !(Maybe Int)
-  , _hSlowPal :: !(Maybe H264SlowPal)
-  , _hParNumerator :: !(Maybe Int)
-  , _hGopSize :: !(Maybe Double)
-  , _hNumberBFramesBetweenReferenceFrames :: !(Maybe Int)
-  , _hGopSizeUnits :: !(Maybe H264GopSizeUnits)
-  , _hHrdBufferSize :: !(Maybe Int)
-  , _hSlices :: !(Maybe Int)
-  , _hRateControlMode :: !(Maybe H264RateControlMode)
-  , _hNumberReferenceFrames :: !(Maybe Int)
-  , _hTelecine :: !(Maybe H264Telecine)
-  , _hMinIInterval :: !(Maybe Int)
-  , _hInterlaceMode :: !(Maybe H264InterlaceMode)
-  , _hParControl :: !(Maybe H264ParControl)
-  , _hRepeatPps :: !(Maybe H264RepeatPps)
-  , _hFlickerAdaptiveQuantization :: !(Maybe H264FlickerAdaptiveQuantization)
-  , _hSoftness :: !(Maybe Int)
-  , _hCodecProfile :: !(Maybe H264CodecProfile)
-  , _hBitrate :: !(Maybe Int)
-  , _hFramerateDenominator :: !(Maybe Int)
-  , _hFramerateConversionAlgorithm :: !(Maybe H264FramerateConversionAlgorithm)
-  , _hCodecLevel :: !(Maybe H264CodecLevel)
-  , _hEntropyEncoding :: !(Maybe H264EntropyEncoding)
-  , _hFramerateControl :: !(Maybe H264FramerateControl)
-  , _hAdaptiveQuantization :: !(Maybe H264AdaptiveQuantization)
-  , _hFramerateNumerator :: !(Maybe Int)
-  , _hGopBReference :: !(Maybe H264GopBReference)
-  , _hMaxBitrate :: !(Maybe Int)
-  , _hSyntax :: !(Maybe H264Syntax)
-  , _hFieldEncoding :: !(Maybe H264FieldEncoding)
-  , _hGopClosedCadence :: !(Maybe Int)
-  , _hParDenominator :: !(Maybe Int)
-  , _hSpatialAdaptiveQuantization :: !(Maybe H264SpatialAdaptiveQuantization)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data H264Settings =
+  H264Settings'
+    { _hUnregisteredSeiTimecode :: !(Maybe H264UnregisteredSeiTimecode)
+    , _hQualityTuningLevel :: !(Maybe H264QualityTuningLevel)
+    , _hTemporalAdaptiveQuantization :: !(Maybe H264TemporalAdaptiveQuantization)
+    , _hSceneChangeDetect :: !(Maybe H264SceneChangeDetect)
+    , _hHrdBufferInitialFillPercentage :: !(Maybe Int)
+    , _hSlowPal :: !(Maybe H264SlowPal)
+    , _hParNumerator :: !(Maybe Int)
+    , _hGopSize :: !(Maybe Double)
+    , _hNumberBFramesBetweenReferenceFrames :: !(Maybe Int)
+    , _hGopSizeUnits :: !(Maybe H264GopSizeUnits)
+    , _hHrdBufferSize :: !(Maybe Int)
+    , _hSlices :: !(Maybe Int)
+    , _hRateControlMode :: !(Maybe H264RateControlMode)
+    , _hNumberReferenceFrames :: !(Maybe Int)
+    , _hTelecine :: !(Maybe H264Telecine)
+    , _hMinIInterval :: !(Maybe Int)
+    , _hInterlaceMode :: !(Maybe H264InterlaceMode)
+    , _hParControl :: !(Maybe H264ParControl)
+    , _hRepeatPps :: !(Maybe H264RepeatPps)
+    , _hFlickerAdaptiveQuantization :: !(Maybe H264FlickerAdaptiveQuantization)
+    , _hSoftness :: !(Maybe Int)
+    , _hCodecProfile :: !(Maybe H264CodecProfile)
+    , _hBitrate :: !(Maybe Int)
+    , _hFramerateDenominator :: !(Maybe Int)
+    , _hFramerateConversionAlgorithm :: !(Maybe H264FramerateConversionAlgorithm)
+    , _hCodecLevel :: !(Maybe H264CodecLevel)
+    , _hEntropyEncoding :: !(Maybe H264EntropyEncoding)
+    , _hFramerateControl :: !(Maybe H264FramerateControl)
+    , _hAdaptiveQuantization :: !(Maybe H264AdaptiveQuantization)
+    , _hFramerateNumerator :: !(Maybe Int)
+    , _hGopBReference :: !(Maybe H264GopBReference)
+    , _hMaxBitrate :: !(Maybe Int)
+    , _hSyntax :: !(Maybe H264Syntax)
+    , _hFieldEncoding :: !(Maybe H264FieldEncoding)
+    , _hGopClosedCadence :: !(Maybe Int)
+    , _hParDenominator :: !(Maybe Int)
+    , _hSpatialAdaptiveQuantization :: !(Maybe H264SpatialAdaptiveQuantization)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'H264Settings' with the minimum fields required to make a request.
@@ -3233,44 +3303,46 @@ instance ToJSON H264Settings where
 -- | Settings for H265 codec
 --
 -- /See:/ 'h265Settings' smart constructor.
-data H265Settings = H265Settings'
-  { _hsUnregisteredSeiTimecode :: !(Maybe H265UnregisteredSeiTimecode)
-  , _hsQualityTuningLevel :: !(Maybe H265QualityTuningLevel)
-  , _hsTemporalAdaptiveQuantization :: !(Maybe H265TemporalAdaptiveQuantization)
-  , _hsSceneChangeDetect :: !(Maybe H265SceneChangeDetect)
-  , _hsHrdBufferInitialFillPercentage :: !(Maybe Int)
-  , _hsTiles :: !(Maybe H265Tiles)
-  , _hsSlowPal :: !(Maybe H265SlowPal)
-  , _hsTemporalIds :: !(Maybe H265TemporalIds)
-  , _hsParNumerator :: !(Maybe Int)
-  , _hsGopSize :: !(Maybe Double)
-  , _hsNumberBFramesBetweenReferenceFrames :: !(Maybe Int)
-  , _hsGopSizeUnits :: !(Maybe H265GopSizeUnits)
-  , _hsHrdBufferSize :: !(Maybe Int)
-  , _hsSlices :: !(Maybe Int)
-  , _hsAlternateTransferFunctionSei :: !(Maybe H265AlternateTransferFunctionSei)
-  , _hsRateControlMode :: !(Maybe H265RateControlMode)
-  , _hsNumberReferenceFrames :: !(Maybe Int)
-  , _hsTelecine :: !(Maybe H265Telecine)
-  , _hsMinIInterval :: !(Maybe Int)
-  , _hsInterlaceMode :: !(Maybe H265InterlaceMode)
-  , _hsParControl :: !(Maybe H265ParControl)
-  , _hsFlickerAdaptiveQuantization :: !(Maybe H265FlickerAdaptiveQuantization)
-  , _hsSampleAdaptiveOffsetFilterMode :: !(Maybe H265SampleAdaptiveOffsetFilterMode)
-  , _hsCodecProfile :: !(Maybe H265CodecProfile)
-  , _hsBitrate :: !(Maybe Int)
-  , _hsFramerateDenominator :: !(Maybe Int)
-  , _hsFramerateConversionAlgorithm :: !(Maybe H265FramerateConversionAlgorithm)
-  , _hsCodecLevel :: !(Maybe H265CodecLevel)
-  , _hsFramerateControl :: !(Maybe H265FramerateControl)
-  , _hsAdaptiveQuantization :: !(Maybe H265AdaptiveQuantization)
-  , _hsFramerateNumerator :: !(Maybe Int)
-  , _hsGopBReference :: !(Maybe H265GopBReference)
-  , _hsMaxBitrate :: !(Maybe Int)
-  , _hsGopClosedCadence :: !(Maybe Int)
-  , _hsParDenominator :: !(Maybe Int)
-  , _hsSpatialAdaptiveQuantization :: !(Maybe H265SpatialAdaptiveQuantization)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data H265Settings =
+  H265Settings'
+    { _hsUnregisteredSeiTimecode :: !(Maybe H265UnregisteredSeiTimecode)
+    , _hsQualityTuningLevel :: !(Maybe H265QualityTuningLevel)
+    , _hsTemporalAdaptiveQuantization :: !(Maybe H265TemporalAdaptiveQuantization)
+    , _hsSceneChangeDetect :: !(Maybe H265SceneChangeDetect)
+    , _hsHrdBufferInitialFillPercentage :: !(Maybe Int)
+    , _hsTiles :: !(Maybe H265Tiles)
+    , _hsSlowPal :: !(Maybe H265SlowPal)
+    , _hsTemporalIds :: !(Maybe H265TemporalIds)
+    , _hsParNumerator :: !(Maybe Int)
+    , _hsGopSize :: !(Maybe Double)
+    , _hsNumberBFramesBetweenReferenceFrames :: !(Maybe Int)
+    , _hsGopSizeUnits :: !(Maybe H265GopSizeUnits)
+    , _hsHrdBufferSize :: !(Maybe Int)
+    , _hsSlices :: !(Maybe Int)
+    , _hsAlternateTransferFunctionSei :: !(Maybe H265AlternateTransferFunctionSei)
+    , _hsRateControlMode :: !(Maybe H265RateControlMode)
+    , _hsNumberReferenceFrames :: !(Maybe Int)
+    , _hsTelecine :: !(Maybe H265Telecine)
+    , _hsMinIInterval :: !(Maybe Int)
+    , _hsInterlaceMode :: !(Maybe H265InterlaceMode)
+    , _hsParControl :: !(Maybe H265ParControl)
+    , _hsFlickerAdaptiveQuantization :: !(Maybe H265FlickerAdaptiveQuantization)
+    , _hsSampleAdaptiveOffsetFilterMode :: !(Maybe H265SampleAdaptiveOffsetFilterMode)
+    , _hsCodecProfile :: !(Maybe H265CodecProfile)
+    , _hsBitrate :: !(Maybe Int)
+    , _hsFramerateDenominator :: !(Maybe Int)
+    , _hsFramerateConversionAlgorithm :: !(Maybe H265FramerateConversionAlgorithm)
+    , _hsCodecLevel :: !(Maybe H265CodecLevel)
+    , _hsFramerateControl :: !(Maybe H265FramerateControl)
+    , _hsAdaptiveQuantization :: !(Maybe H265AdaptiveQuantization)
+    , _hsFramerateNumerator :: !(Maybe Int)
+    , _hsGopBReference :: !(Maybe H265GopBReference)
+    , _hsMaxBitrate :: !(Maybe Int)
+    , _hsGopClosedCadence :: !(Maybe Int)
+    , _hsParDenominator :: !(Maybe Int)
+    , _hsSpatialAdaptiveQuantization :: !(Maybe H265SpatialAdaptiveQuantization)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'H265Settings' with the minimum fields required to make a request.
@@ -3637,20 +3709,22 @@ instance ToJSON H265Settings where
 -- | Use the HDR master display (Hdr10Metadata) settings to provide values for HDR color. These values vary depending on the input video and must be provided by a color grader. Range is 0 to 50,000, each increment represents 0.00002 in CIE1931 color coordinate.
 --
 -- /See:/ 'hdr10Metadata' smart constructor.
-data Hdr10Metadata = Hdr10Metadata'
-  { _hmRedPrimaryX               :: !(Maybe Int)
-  , _hmBluePrimaryX              :: !(Maybe Int)
-  , _hmMaxFrameAverageLightLevel :: !(Maybe Int)
-  , _hmWhitePointY               :: !(Maybe Int)
-  , _hmMaxContentLightLevel      :: !(Maybe Int)
-  , _hmWhitePointX               :: !(Maybe Int)
-  , _hmBluePrimaryY              :: !(Maybe Int)
-  , _hmGreenPrimaryY             :: !(Maybe Int)
-  , _hmGreenPrimaryX             :: !(Maybe Int)
-  , _hmMinLuminance              :: !(Maybe Int)
-  , _hmRedPrimaryY               :: !(Maybe Int)
-  , _hmMaxLuminance              :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Hdr10Metadata =
+  Hdr10Metadata'
+    { _hmRedPrimaryX               :: !(Maybe Int)
+    , _hmBluePrimaryX              :: !(Maybe Int)
+    , _hmMaxFrameAverageLightLevel :: !(Maybe Int)
+    , _hmWhitePointY               :: !(Maybe Int)
+    , _hmMaxContentLightLevel      :: !(Maybe Int)
+    , _hmWhitePointX               :: !(Maybe Int)
+    , _hmBluePrimaryY              :: !(Maybe Int)
+    , _hmGreenPrimaryY             :: !(Maybe Int)
+    , _hmGreenPrimaryX             :: !(Maybe Int)
+    , _hmMinLuminance              :: !(Maybe Int)
+    , _hmRedPrimaryY               :: !(Maybe Int)
+    , _hmMaxLuminance              :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Hdr10Metadata' with the minimum fields required to make a request.
@@ -3790,11 +3864,13 @@ instance ToJSON Hdr10Metadata where
 -- | Caption Language Mapping
 --
 -- /See:/ 'hlsCaptionLanguageMapping' smart constructor.
-data HlsCaptionLanguageMapping = HlsCaptionLanguageMapping'
-  { _hclmLanguageCode        :: !(Maybe LanguageCode)
-  , _hclmLanguageDescription :: !(Maybe Text)
-  , _hclmCaptionChannel      :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data HlsCaptionLanguageMapping =
+  HlsCaptionLanguageMapping'
+    { _hclmLanguageCode        :: !(Maybe LanguageCode)
+    , _hclmLanguageDescription :: !(Maybe Text)
+    , _hclmCaptionChannel      :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'HlsCaptionLanguageMapping' with the minimum fields required to make a request.
@@ -3853,14 +3929,16 @@ instance ToJSON HlsCaptionLanguageMapping where
 -- | Settings for HLS encryption
 --
 -- /See:/ 'hlsEncryptionSettings' smart constructor.
-data HlsEncryptionSettings = HlsEncryptionSettings'
-  { _hesEncryptionMethod :: !(Maybe HlsEncryptionType)
-  , _hesConstantInitializationVector :: !(Maybe Text)
-  , _hesType :: !(Maybe HlsKeyProviderType)
-  , _hesStaticKeyProvider :: !(Maybe StaticKeyProvider)
-  , _hesSpekeKeyProvider :: !(Maybe SpekeKeyProvider)
-  , _hesInitializationVectorInManifest :: !(Maybe HlsInitializationVectorInManifest)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data HlsEncryptionSettings =
+  HlsEncryptionSettings'
+    { _hesEncryptionMethod :: !(Maybe HlsEncryptionType)
+    , _hesConstantInitializationVector :: !(Maybe Text)
+    , _hesType :: !(Maybe HlsKeyProviderType)
+    , _hesStaticKeyProvider :: !(Maybe StaticKeyProvider)
+    , _hesSpekeKeyProvider :: !(Maybe SpekeKeyProvider)
+    , _hesInitializationVectorInManifest :: !(Maybe HlsInitializationVectorInManifest)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'HlsEncryptionSettings' with the minimum fields required to make a request.
@@ -3947,30 +4025,32 @@ instance ToJSON HlsEncryptionSettings where
 -- | Required when you set (Type) under (OutputGroups)>(OutputGroupSettings) to HLS_GROUP_SETTINGS.
 --
 -- /See:/ 'hlsGroupSettings' smart constructor.
-data HlsGroupSettings = HlsGroupSettings'
-  { _hgsDirectoryStructure         :: !(Maybe HlsDirectoryStructure)
-  , _hgsSegmentControl             :: !(Maybe HlsSegmentControl)
-  , _hgsDestination                :: !(Maybe Text)
-  , _hgsTimedMetadataId3Period     :: !(Maybe Int)
-  , _hgsMinSegmentLength           :: !(Maybe Int)
-  , _hgsProgramDateTime            :: !(Maybe HlsProgramDateTime)
-  , _hgsProgramDateTimePeriod      :: !(Maybe Int)
-  , _hgsCodecSpecification         :: !(Maybe HlsCodecSpecification)
-  , _hgsCaptionLanguageMappings    :: !(Maybe [HlsCaptionLanguageMapping])
-  , _hgsBaseURL                    :: !(Maybe Text)
-  , _hgsAdMarkers                  :: !(Maybe [HlsAdMarkers])
-  , _hgsEncryption                 :: !(Maybe HlsEncryptionSettings)
-  , _hgsSegmentLength              :: !(Maybe Int)
-  , _hgsTimedMetadataId3Frame      :: !(Maybe HlsTimedMetadataId3Frame)
-  , _hgsOutputSelection            :: !(Maybe HlsOutputSelection)
-  , _hgsCaptionLanguageSetting     :: !(Maybe HlsCaptionLanguageSetting)
-  , _hgsSegmentsPerSubdirectory    :: !(Maybe Int)
-  , _hgsManifestDurationFormat     :: !(Maybe HlsManifestDurationFormat)
-  , _hgsClientCache                :: !(Maybe HlsClientCache)
-  , _hgsTimestampDeltaMilliseconds :: !(Maybe Int)
-  , _hgsStreamInfResolution        :: !(Maybe HlsStreamInfResolution)
-  , _hgsManifestCompression        :: !(Maybe HlsManifestCompression)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data HlsGroupSettings =
+  HlsGroupSettings'
+    { _hgsDirectoryStructure         :: !(Maybe HlsDirectoryStructure)
+    , _hgsSegmentControl             :: !(Maybe HlsSegmentControl)
+    , _hgsDestination                :: !(Maybe Text)
+    , _hgsTimedMetadataId3Period     :: !(Maybe Int)
+    , _hgsMinSegmentLength           :: !(Maybe Int)
+    , _hgsProgramDateTime            :: !(Maybe HlsProgramDateTime)
+    , _hgsProgramDateTimePeriod      :: !(Maybe Int)
+    , _hgsCodecSpecification         :: !(Maybe HlsCodecSpecification)
+    , _hgsCaptionLanguageMappings    :: !(Maybe [HlsCaptionLanguageMapping])
+    , _hgsBaseURL                    :: !(Maybe Text)
+    , _hgsAdMarkers                  :: !(Maybe [HlsAdMarkers])
+    , _hgsEncryption                 :: !(Maybe HlsEncryptionSettings)
+    , _hgsSegmentLength              :: !(Maybe Int)
+    , _hgsTimedMetadataId3Frame      :: !(Maybe HlsTimedMetadataId3Frame)
+    , _hgsOutputSelection            :: !(Maybe HlsOutputSelection)
+    , _hgsCaptionLanguageSetting     :: !(Maybe HlsCaptionLanguageSetting)
+    , _hgsSegmentsPerSubdirectory    :: !(Maybe Int)
+    , _hgsManifestDurationFormat     :: !(Maybe HlsManifestDurationFormat)
+    , _hgsClientCache                :: !(Maybe HlsClientCache)
+    , _hgsTimestampDeltaMilliseconds :: !(Maybe Int)
+    , _hgsStreamInfResolution        :: !(Maybe HlsStreamInfResolution)
+    , _hgsManifestCompression        :: !(Maybe HlsManifestCompression)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'HlsGroupSettings' with the minimum fields required to make a request.
@@ -4210,13 +4290,15 @@ instance ToJSON HlsGroupSettings where
 -- | Settings for HLS output groups
 --
 -- /See:/ 'hlsSettings' smart constructor.
-data HlsSettings = HlsSettings'
-  { _hsAudioRenditionSets :: !(Maybe Text)
-  , _hsIFrameOnlyManifest :: !(Maybe HlsIFrameOnlyManifest)
-  , _hsAudioGroupId       :: !(Maybe Text)
-  , _hsSegmentModifier    :: !(Maybe Text)
-  , _hsAudioTrackType     :: !(Maybe HlsAudioTrackType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data HlsSettings =
+  HlsSettings'
+    { _hsAudioRenditionSets :: !(Maybe Text)
+    , _hsIFrameOnlyManifest :: !(Maybe HlsIFrameOnlyManifest)
+    , _hsAudioGroupId       :: !(Maybe Text)
+    , _hsSegmentModifier    :: !(Maybe Text)
+    , _hsAudioTrackType     :: !(Maybe HlsAudioTrackType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'HlsSettings' with the minimum fields required to make a request.
@@ -4292,10 +4374,12 @@ instance ToJSON HlsSettings where
 -- | To insert ID3 tags in your output, specify two values. Use ID3 tag (Id3) to specify the base 64 encoded string and use Timecode (TimeCode) to specify the time when the tag should be inserted. To insert multiple ID3 tags in your output, create mulitple instances of ID3 insertion (Id3Insertion).
 --
 -- /See:/ 'id3Insertion' smart constructor.
-data Id3Insertion = Id3Insertion'
-  { _iiId3      :: !(Maybe Text)
-  , _iiTimecode :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Id3Insertion =
+  Id3Insertion'
+    { _iiId3      :: !(Maybe Text)
+    , _iiTimecode :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Id3Insertion' with the minimum fields required to make a request.
@@ -4339,9 +4423,11 @@ instance ToJSON Id3Insertion where
 -- | Enable the Image inserter (ImageInserter) feature to include a graphic overlay on your video. Enable or disable this feature for each output individually. This setting is disabled by default.
 --
 -- /See:/ 'imageInserter' smart constructor.
-newtype ImageInserter = ImageInserter'
-  { _iiInsertableImages :: Maybe [InsertableImage]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ImageInserter =
+  ImageInserter'
+    { _iiInsertableImages :: Maybe [InsertableImage]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ImageInserter' with the minimum fields required to make a request.
@@ -4378,21 +4464,23 @@ instance ToJSON ImageInserter where
 -- | Specifies media input
 --
 -- /See:/ 'input' smart constructor.
-data Input = Input'
-  { _iVideoSelector       :: !(Maybe VideoSelector)
-  , _iProgramNumber       :: !(Maybe Int)
-  , _iAudioSelectorGroups :: !(Maybe (Map Text AudioSelectorGroup))
-  , _iTimecodeSource      :: !(Maybe InputTimecodeSource)
-  , _iAudioSelectors      :: !(Maybe (Map Text AudioSelector))
-  , _iDeblockFilter       :: !(Maybe InputDeblockFilter)
-  , _iInputClippings      :: !(Maybe [InputClipping])
-  , _iDenoiseFilter       :: !(Maybe InputDenoiseFilter)
-  , _iFilterStrength      :: !(Maybe Int)
-  , _iPsiControl          :: !(Maybe InputPsiControl)
-  , _iCaptionSelectors    :: !(Maybe (Map Text CaptionSelector))
-  , _iFileInput           :: !(Maybe Text)
-  , _iFilterEnable        :: !(Maybe InputFilterEnable)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Input =
+  Input'
+    { _iVideoSelector       :: !(Maybe VideoSelector)
+    , _iProgramNumber       :: !(Maybe Int)
+    , _iAudioSelectorGroups :: !(Maybe (Map Text AudioSelectorGroup))
+    , _iTimecodeSource      :: !(Maybe InputTimecodeSource)
+    , _iAudioSelectors      :: !(Maybe (Map Text AudioSelector))
+    , _iDeblockFilter       :: !(Maybe InputDeblockFilter)
+    , _iInputClippings      :: !(Maybe [InputClipping])
+    , _iDenoiseFilter       :: !(Maybe InputDenoiseFilter)
+    , _iFilterStrength      :: !(Maybe Int)
+    , _iPsiControl          :: !(Maybe InputPsiControl)
+    , _iCaptionSelectors    :: !(Maybe (Map Text CaptionSelector))
+    , _iFileInput           :: !(Maybe Text)
+    , _iFilterEnable        :: !(Maybe InputFilterEnable)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Input' with the minimum fields required to make a request.
@@ -4539,10 +4627,12 @@ instance ToJSON Input where
 -- | Include one instance of (InputClipping) for each input clip.
 --
 -- /See:/ 'inputClipping' smart constructor.
-data InputClipping = InputClipping'
-  { _icEndTimecode   :: !(Maybe Text)
-  , _icStartTimecode :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InputClipping =
+  InputClipping'
+    { _icEndTimecode   :: !(Maybe Text)
+    , _icStartTimecode :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InputClipping' with the minimum fields required to make a request.
@@ -4587,20 +4677,22 @@ instance ToJSON InputClipping where
 -- | Specified video input in a template.
 --
 -- /See:/ 'inputTemplate' smart constructor.
-data InputTemplate = InputTemplate'
-  { _itVideoSelector       :: !(Maybe VideoSelector)
-  , _itProgramNumber       :: !(Maybe Int)
-  , _itAudioSelectorGroups :: !(Maybe (Map Text AudioSelectorGroup))
-  , _itTimecodeSource      :: !(Maybe InputTimecodeSource)
-  , _itAudioSelectors      :: !(Maybe (Map Text AudioSelector))
-  , _itDeblockFilter       :: !(Maybe InputDeblockFilter)
-  , _itInputClippings      :: !(Maybe [InputClipping])
-  , _itDenoiseFilter       :: !(Maybe InputDenoiseFilter)
-  , _itFilterStrength      :: !(Maybe Int)
-  , _itPsiControl          :: !(Maybe InputPsiControl)
-  , _itCaptionSelectors    :: !(Maybe (Map Text CaptionSelector))
-  , _itFilterEnable        :: !(Maybe InputFilterEnable)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InputTemplate =
+  InputTemplate'
+    { _itVideoSelector       :: !(Maybe VideoSelector)
+    , _itProgramNumber       :: !(Maybe Int)
+    , _itAudioSelectorGroups :: !(Maybe (Map Text AudioSelectorGroup))
+    , _itTimecodeSource      :: !(Maybe InputTimecodeSource)
+    , _itAudioSelectors      :: !(Maybe (Map Text AudioSelector))
+    , _itDeblockFilter       :: !(Maybe InputDeblockFilter)
+    , _itInputClippings      :: !(Maybe [InputClipping])
+    , _itDenoiseFilter       :: !(Maybe InputDenoiseFilter)
+    , _itFilterStrength      :: !(Maybe Int)
+    , _itPsiControl          :: !(Maybe InputPsiControl)
+    , _itCaptionSelectors    :: !(Maybe (Map Text CaptionSelector))
+    , _itFilterEnable        :: !(Maybe InputFilterEnable)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InputTemplate' with the minimum fields required to make a request.
@@ -4739,19 +4831,21 @@ instance ToJSON InputTemplate where
 -- | Settings for Insertable Image
 --
 -- /See:/ 'insertableImage' smart constructor.
-data InsertableImage = InsertableImage'
-  { _iiImageX             :: !(Maybe Int)
-  , _iiHeight             :: !(Maybe Int)
-  , _iiStartTime          :: !(Maybe Text)
-  , _iiFadeOut            :: !(Maybe Int)
-  , _iiWidth              :: !(Maybe Int)
-  , _iiOpacity            :: !(Maybe Int)
-  , _iiLayer              :: !(Maybe Int)
-  , _iiDuration           :: !(Maybe Int)
-  , _iiImageY             :: !(Maybe Int)
-  , _iiImageInserterInput :: !(Maybe Text)
-  , _iiFadeIn             :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InsertableImage =
+  InsertableImage'
+    { _iiImageX             :: !(Maybe Int)
+    , _iiHeight             :: !(Maybe Int)
+    , _iiStartTime          :: !(Maybe Text)
+    , _iiFadeOut            :: !(Maybe Int)
+    , _iiWidth              :: !(Maybe Int)
+    , _iiOpacity            :: !(Maybe Int)
+    , _iiLayer              :: !(Maybe Int)
+    , _iiDuration           :: !(Maybe Int)
+    , _iiImageY             :: !(Maybe Int)
+    , _iiImageInserterInput :: !(Maybe Text)
+    , _iiFadeIn             :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InsertableImage' with the minimum fields required to make a request.
@@ -4880,21 +4974,23 @@ instance ToJSON InsertableImage where
 -- | Each job converts an input file into an output file or files. For more information, see the User Guide at http://docs.aws.amazon.com/mediaconvert/latest/ug/what-is.html
 --
 -- /See:/ 'job' smart constructor.
-data Job = Job'
-  { _jStatus             :: !(Maybe JobStatus)
-  , _jJobTemplate        :: !(Maybe Text)
-  , _jSettings           :: !(Maybe JobSettings)
-  , _jARN                :: !(Maybe Text)
-  , _jCreatedAt          :: !(Maybe POSIX)
-  , _jQueue              :: !(Maybe Text)
-  , _jUserMetadata       :: !(Maybe (Map Text Text))
-  , _jRole               :: !(Maybe Text)
-  , _jOutputGroupDetails :: !(Maybe [OutputGroupDetail])
-  , _jErrorCode          :: !(Maybe Int)
-  , _jId                 :: !(Maybe Text)
-  , _jTiming             :: !(Maybe Timing)
-  , _jErrorMessage       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Job =
+  Job'
+    { _jStatus             :: !(Maybe JobStatus)
+    , _jJobTemplate        :: !(Maybe Text)
+    , _jSettings           :: !(Maybe JobSettings)
+    , _jARN                :: !(Maybe Text)
+    , _jCreatedAt          :: !(Maybe POSIX)
+    , _jQueue              :: !(Maybe Text)
+    , _jUserMetadata       :: !(Maybe (Map Text Text))
+    , _jRole               :: !(Maybe Text)
+    , _jOutputGroupDetails :: !(Maybe [OutputGroupDetail])
+    , _jErrorCode          :: !(Maybe Int)
+    , _jId                 :: !(Maybe Text)
+    , _jTiming             :: !(Maybe Timing)
+    , _jErrorMessage       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Job' with the minimum fields required to make a request.
@@ -5023,15 +5119,17 @@ instance NFData Job where
 -- | JobSettings contains all the transcode settings for a job.
 --
 -- /See:/ 'jobSettings' smart constructor.
-data JobSettings = JobSettings'
-  { _jsInputs                 :: !(Maybe [Input])
-  , _jsTimedMetadataInsertion :: !(Maybe TimedMetadataInsertion)
-  , _jsNielsenConfiguration   :: !(Maybe NielsenConfiguration)
-  , _jsAvailBlanking          :: !(Maybe AvailBlanking)
-  , _jsTimecodeConfig         :: !(Maybe TimecodeConfig)
-  , _jsOutputGroups           :: !(Maybe [OutputGroup])
-  , _jsAdAvailOffset          :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data JobSettings =
+  JobSettings'
+    { _jsInputs                 :: !(Maybe [Input])
+    , _jsTimedMetadataInsertion :: !(Maybe TimedMetadataInsertion)
+    , _jsNielsenConfiguration   :: !(Maybe NielsenConfiguration)
+    , _jsAvailBlanking          :: !(Maybe AvailBlanking)
+    , _jsTimecodeConfig         :: !(Maybe TimecodeConfig)
+    , _jsOutputGroups           :: !(Maybe [OutputGroup])
+    , _jsAdAvailOffset          :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'JobSettings' with the minimum fields required to make a request.
@@ -5127,17 +5225,19 @@ instance ToJSON JobSettings where
 -- | A job template is a pre-made set of encoding instructions that you can use to quickly create a job.
 --
 -- /See:/ 'jobTemplate' smart constructor.
-data JobTemplate = JobTemplate'
-  { _jtLastUpdated :: !(Maybe POSIX)
-  , _jtSettings    :: !(Maybe JobTemplateSettings)
-  , _jtARN         :: !(Maybe Text)
-  , _jtCreatedAt   :: !(Maybe POSIX)
-  , _jtCategory    :: !(Maybe Text)
-  , _jtQueue       :: !(Maybe Text)
-  , _jtName        :: !(Maybe Text)
-  , _jtType        :: !(Maybe Type)
-  , _jtDescription :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data JobTemplate =
+  JobTemplate'
+    { _jtLastUpdated :: !(Maybe POSIX)
+    , _jtSettings    :: !(Maybe JobTemplateSettings)
+    , _jtARN         :: !(Maybe Text)
+    , _jtCreatedAt   :: !(Maybe POSIX)
+    , _jtCategory    :: !(Maybe Text)
+    , _jtQueue       :: !(Maybe Text)
+    , _jtName        :: !(Maybe Text)
+    , _jtType        :: !(Maybe Type)
+    , _jtDescription :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'JobTemplate' with the minimum fields required to make a request.
@@ -5234,15 +5334,17 @@ instance NFData JobTemplate where
 -- | JobTemplateSettings contains all the transcode settings saved in the template that will be applied to jobs created from it.
 --
 -- /See:/ 'jobTemplateSettings' smart constructor.
-data JobTemplateSettings = JobTemplateSettings'
-  { _jtsInputs                 :: !(Maybe [InputTemplate])
-  , _jtsTimedMetadataInsertion :: !(Maybe TimedMetadataInsertion)
-  , _jtsNielsenConfiguration   :: !(Maybe NielsenConfiguration)
-  , _jtsAvailBlanking          :: !(Maybe AvailBlanking)
-  , _jtsTimecodeConfig         :: !(Maybe TimecodeConfig)
-  , _jtsOutputGroups           :: !(Maybe [OutputGroup])
-  , _jtsAdAvailOffset          :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data JobTemplateSettings =
+  JobTemplateSettings'
+    { _jtsInputs                 :: !(Maybe [InputTemplate])
+    , _jtsTimedMetadataInsertion :: !(Maybe TimedMetadataInsertion)
+    , _jtsNielsenConfiguration   :: !(Maybe NielsenConfiguration)
+    , _jtsAvailBlanking          :: !(Maybe AvailBlanking)
+    , _jtsTimecodeConfig         :: !(Maybe TimecodeConfig)
+    , _jtsOutputGroups           :: !(Maybe [OutputGroup])
+    , _jtsAdAvailOffset          :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'JobTemplateSettings' with the minimum fields required to make a request.
@@ -5338,42 +5440,44 @@ instance ToJSON JobTemplateSettings where
 -- | Settings for M2TS Container.
 --
 -- /See:/ 'm2tsSettings' smart constructor.
-data M2tsSettings = M2tsSettings'
-  { _mPmtPid              :: !(Maybe Int)
-  , _mVideoPid            :: !(Maybe Int)
-  , _mBufferModel         :: !(Maybe M2tsBufferModel)
-  , _mProgramNumber       :: !(Maybe Int)
-  , _mScte35Pid           :: !(Maybe Int)
-  , _mMinEbpInterval      :: !(Maybe Int)
-  , _mTransportStreamId   :: !(Maybe Int)
-  , _mMaxPcrInterval      :: !(Maybe Int)
-  , _mFragmentTime        :: !(Maybe Double)
-  , _mPrivateMetadataPid  :: !(Maybe Int)
-  , _mPmtInterval         :: !(Maybe Int)
-  , _mDvbSdtSettings      :: !(Maybe DvbSdtSettings)
-  , _mNullPacketBitrate   :: !(Maybe Double)
-  , _mAudioBufferModel    :: !(Maybe M2tsAudioBufferModel)
-  , _mTimedMetadataPid    :: !(Maybe Int)
-  , _mAudioFramesPerPes   :: !(Maybe Int)
-  , _mPcrPid              :: !(Maybe Int)
-  , _mSegmentationMarkers :: !(Maybe M2tsSegmentationMarkers)
-  , _mDvbSubPids          :: !(Maybe [Int])
-  , _mScte35Source        :: !(Maybe M2tsScte35Source)
-  , _mPatInterval         :: !(Maybe Int)
-  , _mEsRateInPes         :: !(Maybe M2tsEsRateInPes)
-  , _mBitrate             :: !(Maybe Int)
-  , _mAudioPids           :: !(Maybe [Int])
-  , _mDvbTeletextPid      :: !(Maybe Int)
-  , _mNielsenId3          :: !(Maybe M2tsNielsenId3)
-  , _mSegmentationTime    :: !(Maybe Double)
-  , _mEbpAudioInterval    :: !(Maybe M2tsEbpAudioInterval)
-  , _mDvbNitSettings      :: !(Maybe DvbNitSettings)
-  , _mPcrControl          :: !(Maybe M2tsPcrControl)
-  , _mEbpPlacement        :: !(Maybe M2tsEbpPlacement)
-  , _mRateMode            :: !(Maybe M2tsRateMode)
-  , _mSegmentationStyle   :: !(Maybe M2tsSegmentationStyle)
-  , _mDvbTdtSettings      :: !(Maybe DvbTdtSettings)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data M2tsSettings =
+  M2tsSettings'
+    { _mPmtPid              :: !(Maybe Int)
+    , _mVideoPid            :: !(Maybe Int)
+    , _mBufferModel         :: !(Maybe M2tsBufferModel)
+    , _mProgramNumber       :: !(Maybe Int)
+    , _mScte35Pid           :: !(Maybe Int)
+    , _mMinEbpInterval      :: !(Maybe Int)
+    , _mTransportStreamId   :: !(Maybe Int)
+    , _mMaxPcrInterval      :: !(Maybe Int)
+    , _mFragmentTime        :: !(Maybe Double)
+    , _mPrivateMetadataPid  :: !(Maybe Int)
+    , _mPmtInterval         :: !(Maybe Int)
+    , _mDvbSdtSettings      :: !(Maybe DvbSdtSettings)
+    , _mNullPacketBitrate   :: !(Maybe Double)
+    , _mAudioBufferModel    :: !(Maybe M2tsAudioBufferModel)
+    , _mTimedMetadataPid    :: !(Maybe Int)
+    , _mAudioFramesPerPes   :: !(Maybe Int)
+    , _mPcrPid              :: !(Maybe Int)
+    , _mSegmentationMarkers :: !(Maybe M2tsSegmentationMarkers)
+    , _mDvbSubPids          :: !(Maybe [Int])
+    , _mScte35Source        :: !(Maybe M2tsScte35Source)
+    , _mPatInterval         :: !(Maybe Int)
+    , _mEsRateInPes         :: !(Maybe M2tsEsRateInPes)
+    , _mBitrate             :: !(Maybe Int)
+    , _mAudioPids           :: !(Maybe [Int])
+    , _mDvbTeletextPid      :: !(Maybe Int)
+    , _mNielsenId3          :: !(Maybe M2tsNielsenId3)
+    , _mSegmentationTime    :: !(Maybe Double)
+    , _mEbpAudioInterval    :: !(Maybe M2tsEbpAudioInterval)
+    , _mDvbNitSettings      :: !(Maybe DvbNitSettings)
+    , _mPcrControl          :: !(Maybe M2tsPcrControl)
+    , _mEbpPlacement        :: !(Maybe M2tsEbpPlacement)
+    , _mRateMode            :: !(Maybe M2tsRateMode)
+    , _mSegmentationStyle   :: !(Maybe M2tsSegmentationStyle)
+    , _mDvbTdtSettings      :: !(Maybe DvbTdtSettings)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'M2tsSettings' with the minimum fields required to make a request.
@@ -5709,24 +5813,26 @@ instance ToJSON M2tsSettings where
 -- | Settings for TS segments in HLS
 --
 -- /See:/ 'm3u8Settings' smart constructor.
-data M3u8Settings = M3u8Settings'
-  { _msPmtPid             :: !(Maybe Int)
-  , _msVideoPid           :: !(Maybe Int)
-  , _msProgramNumber      :: !(Maybe Int)
-  , _msScte35Pid          :: !(Maybe Int)
-  , _msTransportStreamId  :: !(Maybe Int)
-  , _msPrivateMetadataPid :: !(Maybe Int)
-  , _msPmtInterval        :: !(Maybe Int)
-  , _msTimedMetadataPid   :: !(Maybe Int)
-  , _msAudioFramesPerPes  :: !(Maybe Int)
-  , _msPcrPid             :: !(Maybe Int)
-  , _msTimedMetadata      :: !(Maybe TimedMetadata)
-  , _msScte35Source       :: !(Maybe M3u8Scte35Source)
-  , _msPatInterval        :: !(Maybe Int)
-  , _msAudioPids          :: !(Maybe [Int])
-  , _msNielsenId3         :: !(Maybe M3u8NielsenId3)
-  , _msPcrControl         :: !(Maybe M3u8PcrControl)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data M3u8Settings =
+  M3u8Settings'
+    { _msPmtPid             :: !(Maybe Int)
+    , _msVideoPid           :: !(Maybe Int)
+    , _msProgramNumber      :: !(Maybe Int)
+    , _msScte35Pid          :: !(Maybe Int)
+    , _msTransportStreamId  :: !(Maybe Int)
+    , _msPrivateMetadataPid :: !(Maybe Int)
+    , _msPmtInterval        :: !(Maybe Int)
+    , _msTimedMetadataPid   :: !(Maybe Int)
+    , _msAudioFramesPerPes  :: !(Maybe Int)
+    , _msPcrPid             :: !(Maybe Int)
+    , _msTimedMetadata      :: !(Maybe TimedMetadata)
+    , _msScte35Source       :: !(Maybe M3u8Scte35Source)
+    , _msPatInterval        :: !(Maybe Int)
+    , _msAudioPids          :: !(Maybe [Int])
+    , _msNielsenId3         :: !(Maybe M3u8NielsenId3)
+    , _msPcrControl         :: !(Maybe M3u8PcrControl)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'M3u8Settings' with the minimum fields required to make a request.
@@ -5900,13 +6006,15 @@ instance ToJSON M3u8Settings where
 -- | Settings for MOV Container.
 --
 -- /See:/ 'movSettings' smart constructor.
-data MovSettings = MovSettings'
-  { _msReference          :: !(Maybe MovReference)
-  , _msCslgAtom           :: !(Maybe MovCslgAtom)
-  , _msMpeg2FourCCControl :: !(Maybe MovMpeg2FourCCControl)
-  , _msPaddingControl     :: !(Maybe MovPaddingControl)
-  , _msClapAtom           :: !(Maybe MovClapAtom)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MovSettings =
+  MovSettings'
+    { _msReference          :: !(Maybe MovReference)
+    , _msCslgAtom           :: !(Maybe MovCslgAtom)
+    , _msMpeg2FourCCControl :: !(Maybe MovMpeg2FourCCControl)
+    , _msPaddingControl     :: !(Maybe MovPaddingControl)
+    , _msClapAtom           :: !(Maybe MovClapAtom)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MovSettings' with the minimum fields required to make a request.
@@ -5981,11 +6089,13 @@ instance ToJSON MovSettings where
 -- | Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value MP2.
 --
 -- /See:/ 'mp2Settings' smart constructor.
-data Mp2Settings = Mp2Settings'
-  { _mssChannels   :: !(Maybe Int)
-  , _mssSampleRate :: !(Maybe Int)
-  , _mssBitrate    :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Mp2Settings =
+  Mp2Settings'
+    { _mssChannels   :: !(Maybe Int)
+    , _mssSampleRate :: !(Maybe Int)
+    , _mssBitrate    :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Mp2Settings' with the minimum fields required to make a request.
@@ -6039,12 +6149,14 @@ instance ToJSON Mp2Settings where
 -- | Settings for MP4 Container
 --
 -- /See:/ 'mp4Settings' smart constructor.
-data Mp4Settings = Mp4Settings'
-  { _mMoovPlacement :: !(Maybe Mp4MoovPlacement)
-  , _mFreeSpaceBox  :: !(Maybe Mp4FreeSpaceBox)
-  , _mMp4MajorBrand :: !(Maybe Text)
-  , _mCslgAtom      :: !(Maybe Mp4CslgAtom)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Mp4Settings =
+  Mp4Settings'
+    { _mMoovPlacement :: !(Maybe Mp4MoovPlacement)
+    , _mFreeSpaceBox  :: !(Maybe Mp4FreeSpaceBox)
+    , _mMp4MajorBrand :: !(Maybe Text)
+    , _mCslgAtom      :: !(Maybe Mp4CslgAtom)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Mp4Settings' with the minimum fields required to make a request.
@@ -6110,38 +6222,40 @@ instance ToJSON Mp4Settings where
 -- | Required when you set (Codec) under (VideoDescription)>(CodecSettings) to the value MPEG2.
 --
 -- /See:/ 'mpeg2Settings' smart constructor.
-data Mpeg2Settings = Mpeg2Settings'
-  { _msQualityTuningLevel :: !(Maybe Mpeg2QualityTuningLevel)
-  , _msTemporalAdaptiveQuantization :: !(Maybe Mpeg2TemporalAdaptiveQuantization)
-  , _msSceneChangeDetect :: !(Maybe Mpeg2SceneChangeDetect)
-  , _msHrdBufferInitialFillPercentage :: !(Maybe Int)
-  , _msSlowPal :: !(Maybe Mpeg2SlowPal)
-  , _msParNumerator :: !(Maybe Int)
-  , _msGopSize :: !(Maybe Double)
-  , _msNumberBFramesBetweenReferenceFrames :: !(Maybe Int)
-  , _msGopSizeUnits :: !(Maybe Mpeg2GopSizeUnits)
-  , _msHrdBufferSize :: !(Maybe Int)
-  , _msRateControlMode :: !(Maybe Mpeg2RateControlMode)
-  , _msTelecine :: !(Maybe Mpeg2Telecine)
-  , _msIntraDcPrecision :: !(Maybe Mpeg2IntraDcPrecision)
-  , _msMinIInterval :: !(Maybe Int)
-  , _msInterlaceMode :: !(Maybe Mpeg2InterlaceMode)
-  , _msParControl :: !(Maybe Mpeg2ParControl)
-  , _msSoftness :: !(Maybe Int)
-  , _msCodecProfile :: !(Maybe Mpeg2CodecProfile)
-  , _msBitrate :: !(Maybe Int)
-  , _msFramerateDenominator :: !(Maybe Int)
-  , _msFramerateConversionAlgorithm :: !(Maybe Mpeg2FramerateConversionAlgorithm)
-  , _msCodecLevel :: !(Maybe Mpeg2CodecLevel)
-  , _msFramerateControl :: !(Maybe Mpeg2FramerateControl)
-  , _msAdaptiveQuantization :: !(Maybe Mpeg2AdaptiveQuantization)
-  , _msFramerateNumerator :: !(Maybe Int)
-  , _msMaxBitrate :: !(Maybe Int)
-  , _msSyntax :: !(Maybe Mpeg2Syntax)
-  , _msGopClosedCadence :: !(Maybe Int)
-  , _msParDenominator :: !(Maybe Int)
-  , _msSpatialAdaptiveQuantization :: !(Maybe Mpeg2SpatialAdaptiveQuantization)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Mpeg2Settings =
+  Mpeg2Settings'
+    { _msQualityTuningLevel :: !(Maybe Mpeg2QualityTuningLevel)
+    , _msTemporalAdaptiveQuantization :: !(Maybe Mpeg2TemporalAdaptiveQuantization)
+    , _msSceneChangeDetect :: !(Maybe Mpeg2SceneChangeDetect)
+    , _msHrdBufferInitialFillPercentage :: !(Maybe Int)
+    , _msSlowPal :: !(Maybe Mpeg2SlowPal)
+    , _msParNumerator :: !(Maybe Int)
+    , _msGopSize :: !(Maybe Double)
+    , _msNumberBFramesBetweenReferenceFrames :: !(Maybe Int)
+    , _msGopSizeUnits :: !(Maybe Mpeg2GopSizeUnits)
+    , _msHrdBufferSize :: !(Maybe Int)
+    , _msRateControlMode :: !(Maybe Mpeg2RateControlMode)
+    , _msTelecine :: !(Maybe Mpeg2Telecine)
+    , _msIntraDcPrecision :: !(Maybe Mpeg2IntraDcPrecision)
+    , _msMinIInterval :: !(Maybe Int)
+    , _msInterlaceMode :: !(Maybe Mpeg2InterlaceMode)
+    , _msParControl :: !(Maybe Mpeg2ParControl)
+    , _msSoftness :: !(Maybe Int)
+    , _msCodecProfile :: !(Maybe Mpeg2CodecProfile)
+    , _msBitrate :: !(Maybe Int)
+    , _msFramerateDenominator :: !(Maybe Int)
+    , _msFramerateConversionAlgorithm :: !(Maybe Mpeg2FramerateConversionAlgorithm)
+    , _msCodecLevel :: !(Maybe Mpeg2CodecLevel)
+    , _msFramerateControl :: !(Maybe Mpeg2FramerateControl)
+    , _msAdaptiveQuantization :: !(Maybe Mpeg2AdaptiveQuantization)
+    , _msFramerateNumerator :: !(Maybe Int)
+    , _msMaxBitrate :: !(Maybe Int)
+    , _msSyntax :: !(Maybe Mpeg2Syntax)
+    , _msGopClosedCadence :: !(Maybe Int)
+    , _msParDenominator :: !(Maybe Int)
+    , _msSpatialAdaptiveQuantization :: !(Maybe Mpeg2SpatialAdaptiveQuantization)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Mpeg2Settings' with the minimum fields required to make a request.
@@ -6449,9 +6563,11 @@ instance ToJSON Mpeg2Settings where
 -- | If you are using DRM, set DRM System (MsSmoothEncryptionSettings) to specify the value SpekeKeyProvider.
 --
 -- /See:/ 'msSmoothEncryptionSettings' smart constructor.
-newtype MsSmoothEncryptionSettings = MsSmoothEncryptionSettings'
-  { _msesSpekeKeyProvider :: Maybe SpekeKeyProvider
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype MsSmoothEncryptionSettings =
+  MsSmoothEncryptionSettings'
+    { _msesSpekeKeyProvider :: Maybe SpekeKeyProvider
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MsSmoothEncryptionSettings' with the minimum fields required to make a request.
@@ -6489,13 +6605,15 @@ instance ToJSON MsSmoothEncryptionSettings where
 -- | Required when you set (Type) under (OutputGroups)>(OutputGroupSettings) to MS_SMOOTH_GROUP_SETTINGS.
 --
 -- /See:/ 'msSmoothGroupSettings' smart constructor.
-data MsSmoothGroupSettings = MsSmoothGroupSettings'
-  { _msgsFragmentLength     :: !(Maybe Int)
-  , _msgsManifestEncoding   :: !(Maybe MsSmoothManifestEncoding)
-  , _msgsDestination        :: !(Maybe Text)
-  , _msgsAudioDeduplication :: !(Maybe MsSmoothAudioDeduplication)
-  , _msgsEncryption         :: !(Maybe MsSmoothEncryptionSettings)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MsSmoothGroupSettings =
+  MsSmoothGroupSettings'
+    { _msgsFragmentLength     :: !(Maybe Int)
+    , _msgsManifestEncoding   :: !(Maybe MsSmoothManifestEncoding)
+    , _msgsDestination        :: !(Maybe Text)
+    , _msgsAudioDeduplication :: !(Maybe MsSmoothAudioDeduplication)
+    , _msgsEncryption         :: !(Maybe MsSmoothEncryptionSettings)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MsSmoothGroupSettings' with the minimum fields required to make a request.
@@ -6572,10 +6690,12 @@ instance ToJSON MsSmoothGroupSettings where
 -- | Settings for Nielsen Configuration
 --
 -- /See:/ 'nielsenConfiguration' smart constructor.
-data NielsenConfiguration = NielsenConfiguration'
-  { _ncBreakoutCode  :: !(Maybe Int)
-  , _ncDistributorId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NielsenConfiguration =
+  NielsenConfiguration'
+    { _ncBreakoutCode  :: !(Maybe Int)
+    , _ncDistributorId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NielsenConfiguration' with the minimum fields required to make a request.
@@ -6620,11 +6740,13 @@ instance ToJSON NielsenConfiguration where
 -- | Enable the Noise reducer (NoiseReducer) feature to remove noise from your video output if necessary. Enable or disable this feature for each output individually. This setting is disabled by default. When you enable Noise reducer (NoiseReducer), you must also select a value for Noise reducer filter (NoiseReducerFilter).
 --
 -- /See:/ 'noiseReducer' smart constructor.
-data NoiseReducer = NoiseReducer'
-  { _nrSpatialFilterSettings :: !(Maybe NoiseReducerSpatialFilterSettings)
-  , _nrFilterSettings        :: !(Maybe NoiseReducerFilterSettings)
-  , _nrFilter                :: !(Maybe NoiseReducerFilter)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NoiseReducer =
+  NoiseReducer'
+    { _nrSpatialFilterSettings :: !(Maybe NoiseReducerSpatialFilterSettings)
+    , _nrFilterSettings        :: !(Maybe NoiseReducerFilterSettings)
+    , _nrFilter                :: !(Maybe NoiseReducerFilter)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NoiseReducer' with the minimum fields required to make a request.
@@ -6683,9 +6805,11 @@ instance ToJSON NoiseReducer where
 -- | Settings for a noise reducer filter
 --
 -- /See:/ 'noiseReducerFilterSettings' smart constructor.
-newtype NoiseReducerFilterSettings = NoiseReducerFilterSettings'
-  { _nrfsStrength :: Maybe Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype NoiseReducerFilterSettings =
+  NoiseReducerFilterSettings'
+    { _nrfsStrength :: Maybe Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NoiseReducerFilterSettings' with the minimum fields required to make a request.
@@ -6721,11 +6845,13 @@ instance ToJSON NoiseReducerFilterSettings where
 -- | Noise reducer filter settings for spatial filter.
 --
 -- /See:/ 'noiseReducerSpatialFilterSettings' smart constructor.
-data NoiseReducerSpatialFilterSettings = NoiseReducerSpatialFilterSettings'
-  { _nrsfsStrength                  :: !(Maybe Int)
-  , _nrsfsPostFilterSharpenStrength :: !(Maybe Int)
-  , _nrsfsSpeed                     :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NoiseReducerSpatialFilterSettings =
+  NoiseReducerSpatialFilterSettings'
+    { _nrsfsStrength                  :: !(Maybe Int)
+    , _nrsfsPostFilterSharpenStrength :: !(Maybe Int)
+    , _nrsfsSpeed                     :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NoiseReducerSpatialFilterSettings' with the minimum fields required to make a request.
@@ -6788,16 +6914,18 @@ instance ToJSON NoiseReducerSpatialFilterSettings
 -- | An output object describes the settings for a single output file or stream in an output group.
 --
 -- /See:/ 'output' smart constructor.
-data Output = Output'
-  { _oCaptionDescriptions :: !(Maybe [CaptionDescription])
-  , _oExtension           :: !(Maybe Text)
-  , _oVideoDescription    :: !(Maybe VideoDescription)
-  , _oContainerSettings   :: !(Maybe ContainerSettings)
-  , _oOutputSettings      :: !(Maybe OutputSettings)
-  , _oPreset              :: !(Maybe Text)
-  , _oNameModifier        :: !(Maybe Text)
-  , _oAudioDescriptions   :: !(Maybe [AudioDescription])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Output =
+  Output'
+    { _oCaptionDescriptions :: !(Maybe [CaptionDescription])
+    , _oExtension           :: !(Maybe Text)
+    , _oVideoDescription    :: !(Maybe VideoDescription)
+    , _oContainerSettings   :: !(Maybe ContainerSettings)
+    , _oOutputSettings      :: !(Maybe OutputSettings)
+    , _oPreset              :: !(Maybe Text)
+    , _oNameModifier        :: !(Maybe Text)
+    , _oAudioDescriptions   :: !(Maybe [AudioDescription])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Output' with the minimum fields required to make a request.
@@ -6901,9 +7029,11 @@ instance ToJSON Output where
 -- | OutputChannel mapping settings.
 --
 -- /See:/ 'outputChannelMapping' smart constructor.
-newtype OutputChannelMapping = OutputChannelMapping'
-  { _ocmInputChannels :: Maybe [Int]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype OutputChannelMapping =
+  OutputChannelMapping'
+    { _ocmInputChannels :: Maybe [Int]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OutputChannelMapping' with the minimum fields required to make a request.
@@ -6940,10 +7070,12 @@ instance ToJSON OutputChannelMapping where
 -- | Details regarding output
 --
 -- /See:/ 'outputDetail' smart constructor.
-data OutputDetail = OutputDetail'
-  { _odVideoDetails :: !(Maybe VideoDetail)
-  , _odDurationInMs :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data OutputDetail =
+  OutputDetail'
+    { _odVideoDetails :: !(Maybe VideoDetail)
+    , _odDurationInMs :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OutputDetail' with the minimum fields required to make a request.
@@ -6981,12 +7113,14 @@ instance NFData OutputDetail where
 -- | Group of outputs
 --
 -- /See:/ 'outputGroup' smart constructor.
-data OutputGroup = OutputGroup'
-  { _ogOutputGroupSettings :: !(Maybe OutputGroupSettings)
-  , _ogOutputs             :: !(Maybe [Output])
-  , _ogCustomName          :: !(Maybe Text)
-  , _ogName                :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data OutputGroup =
+  OutputGroup'
+    { _ogOutputGroupSettings :: !(Maybe OutputGroupSettings)
+    , _ogOutputs             :: !(Maybe [Output])
+    , _ogCustomName          :: !(Maybe Text)
+    , _ogName                :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OutputGroup' with the minimum fields required to make a request.
@@ -7054,9 +7188,11 @@ instance ToJSON OutputGroup where
 -- | Contains details about the output groups specified in the job settings.
 --
 -- /See:/ 'outputGroupDetail' smart constructor.
-newtype OutputGroupDetail = OutputGroupDetail'
-  { _ogdOutputDetails :: Maybe [OutputDetail]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype OutputGroupDetail =
+  OutputGroupDetail'
+    { _ogdOutputDetails :: Maybe [OutputDetail]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OutputGroupDetail' with the minimum fields required to make a request.
@@ -7087,13 +7223,15 @@ instance NFData OutputGroupDetail where
 -- | Output Group settings, including type
 --
 -- /See:/ 'outputGroupSettings' smart constructor.
-data OutputGroupSettings = OutputGroupSettings'
-  { _ogsFileGroupSettings     :: !(Maybe FileGroupSettings)
-  , _ogsMsSmoothGroupSettings :: !(Maybe MsSmoothGroupSettings)
-  , _ogsHlsGroupSettings      :: !(Maybe HlsGroupSettings)
-  , _ogsType                  :: !(Maybe OutputGroupType)
-  , _ogsDashIsoGroupSettings  :: !(Maybe DashIsoGroupSettings)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data OutputGroupSettings =
+  OutputGroupSettings'
+    { _ogsFileGroupSettings     :: !(Maybe FileGroupSettings)
+    , _ogsMsSmoothGroupSettings :: !(Maybe MsSmoothGroupSettings)
+    , _ogsHlsGroupSettings      :: !(Maybe HlsGroupSettings)
+    , _ogsType                  :: !(Maybe OutputGroupType)
+    , _ogsDashIsoGroupSettings  :: !(Maybe DashIsoGroupSettings)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OutputGroupSettings' with the minimum fields required to make a request.
@@ -7171,9 +7309,11 @@ instance ToJSON OutputGroupSettings where
 -- | Specific settings for this type of output.
 --
 -- /See:/ 'outputSettings' smart constructor.
-newtype OutputSettings = OutputSettings'
-  { _osHlsSettings :: Maybe HlsSettings
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype OutputSettings =
+  OutputSettings'
+    { _osHlsSettings :: Maybe HlsSettings
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OutputSettings' with the minimum fields required to make a request.
@@ -7207,16 +7347,18 @@ instance ToJSON OutputSettings where
 -- | A preset is a collection of preconfigured media conversion settings that you want MediaConvert to apply to the output during the conversion process.
 --
 -- /See:/ 'preset' smart constructor.
-data Preset = Preset'
-  { _pLastUpdated :: !(Maybe POSIX)
-  , _pSettings    :: !(Maybe PresetSettings)
-  , _pARN         :: !(Maybe Text)
-  , _pCreatedAt   :: !(Maybe POSIX)
-  , _pCategory    :: !(Maybe Text)
-  , _pName        :: !(Maybe Text)
-  , _pType        :: !(Maybe Type)
-  , _pDescription :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Preset =
+  Preset'
+    { _pLastUpdated :: !(Maybe POSIX)
+    , _pSettings    :: !(Maybe PresetSettings)
+    , _pARN         :: !(Maybe Text)
+    , _pCreatedAt   :: !(Maybe POSIX)
+    , _pCategory    :: !(Maybe Text)
+    , _pName        :: !(Maybe Text)
+    , _pType        :: !(Maybe Type)
+    , _pDescription :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Preset' with the minimum fields required to make a request.
@@ -7305,12 +7447,14 @@ instance NFData Preset where
 -- | Settings for preset
 --
 -- /See:/ 'presetSettings' smart constructor.
-data PresetSettings = PresetSettings'
-  { _psCaptionDescriptions :: !(Maybe [CaptionDescriptionPreset])
-  , _psVideoDescription    :: !(Maybe VideoDescription)
-  , _psContainerSettings   :: !(Maybe ContainerSettings)
-  , _psAudioDescriptions   :: !(Maybe [AudioDescription])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PresetSettings =
+  PresetSettings'
+    { _psCaptionDescriptions :: !(Maybe [CaptionDescriptionPreset])
+    , _psVideoDescription    :: !(Maybe VideoDescription)
+    , _psContainerSettings   :: !(Maybe ContainerSettings)
+    , _psAudioDescriptions   :: !(Maybe [AudioDescription])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PresetSettings' with the minimum fields required to make a request.
@@ -7378,19 +7522,21 @@ instance ToJSON PresetSettings where
 -- | Required when you set (Codec) under (VideoDescription)>(CodecSettings) to the value PRORES.
 --
 -- /See:/ 'proresSettings' smart constructor.
-data ProresSettings = ProresSettings'
-  { _psSlowPal :: !(Maybe ProresSlowPal)
-  , _psParNumerator :: !(Maybe Int)
-  , _psTelecine :: !(Maybe ProresTelecine)
-  , _psInterlaceMode :: !(Maybe ProresInterlaceMode)
-  , _psParControl :: !(Maybe ProresParControl)
-  , _psCodecProfile :: !(Maybe ProresCodecProfile)
-  , _psFramerateDenominator :: !(Maybe Int)
-  , _psFramerateConversionAlgorithm :: !(Maybe ProresFramerateConversionAlgorithm)
-  , _psFramerateControl :: !(Maybe ProresFramerateControl)
-  , _psFramerateNumerator :: !(Maybe Int)
-  , _psParDenominator :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ProresSettings =
+  ProresSettings'
+    { _psSlowPal :: !(Maybe ProresSlowPal)
+    , _psParNumerator :: !(Maybe Int)
+    , _psTelecine :: !(Maybe ProresTelecine)
+    , _psInterlaceMode :: !(Maybe ProresInterlaceMode)
+    , _psParControl :: !(Maybe ProresParControl)
+    , _psCodecProfile :: !(Maybe ProresCodecProfile)
+    , _psFramerateDenominator :: !(Maybe Int)
+    , _psFramerateConversionAlgorithm :: !(Maybe ProresFramerateConversionAlgorithm)
+    , _psFramerateControl :: !(Maybe ProresFramerateControl)
+    , _psFramerateNumerator :: !(Maybe Int)
+    , _psParDenominator :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ProresSettings' with the minimum fields required to make a request.
@@ -7521,15 +7667,17 @@ instance ToJSON ProresSettings where
 -- | MediaConvert jobs are submitted to a queue. Unless specified otherwise jobs are submitted to a built-in default queue. User can create additional queues to separate the jobs of different categories or priority.
 --
 -- /See:/ 'queue' smart constructor.
-data Queue = Queue'
-  { _qStatus      :: !(Maybe QueueStatus)
-  , _qLastUpdated :: !(Maybe POSIX)
-  , _qARN         :: !(Maybe Text)
-  , _qCreatedAt   :: !(Maybe POSIX)
-  , _qName        :: !(Maybe Text)
-  , _qType        :: !(Maybe Type)
-  , _qDescription :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Queue =
+  Queue'
+    { _qStatus      :: !(Maybe QueueStatus)
+    , _qLastUpdated :: !(Maybe POSIX)
+    , _qARN         :: !(Maybe Text)
+    , _qCreatedAt   :: !(Maybe POSIX)
+    , _qName        :: !(Maybe Text)
+    , _qType        :: !(Maybe Type)
+    , _qDescription :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Queue' with the minimum fields required to make a request.
@@ -7610,12 +7758,14 @@ instance NFData Queue where
 -- | Use Rectangle to identify a specific area of the video frame.
 --
 -- /See:/ 'rectangle' smart constructor.
-data Rectangle = Rectangle'
-  { _rHeight :: !(Maybe Int)
-  , _rWidth  :: !(Maybe Int)
-  , _rX      :: !(Maybe Int)
-  , _rY      :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Rectangle =
+  Rectangle'
+    { _rHeight :: !(Maybe Int)
+    , _rWidth  :: !(Maybe Int)
+    , _rX      :: !(Maybe Int)
+    , _rY      :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Rectangle' with the minimum fields required to make a request.
@@ -7675,11 +7825,13 @@ instance ToJSON Rectangle where
 -- | Use Manual audio remixing (RemixSettings) to adjust audio levels for each output channel. With audio remixing, you can output more or fewer audio channels than your input audio source provides.
 --
 -- /See:/ 'remixSettings' smart constructor.
-data RemixSettings = RemixSettings'
-  { _rsChannelMapping :: !(Maybe ChannelMapping)
-  , _rsChannelsIn     :: !(Maybe Int)
-  , _rsChannelsOut    :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RemixSettings =
+  RemixSettings'
+    { _rsChannelMapping :: !(Maybe ChannelMapping)
+    , _rsChannelsIn     :: !(Maybe Int)
+    , _rsChannelsOut    :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RemixSettings' with the minimum fields required to make a request.
@@ -7736,9 +7888,11 @@ instance ToJSON RemixSettings where
 -- | Settings for SCC caption output.
 --
 -- /See:/ 'sccDestinationSettings' smart constructor.
-newtype SccDestinationSettings = SccDestinationSettings'
-  { _sdsFramerate :: Maybe SccDestinationFramerate
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype SccDestinationSettings =
+  SccDestinationSettings'
+    { _sdsFramerate :: Maybe SccDestinationFramerate
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SccDestinationSettings' with the minimum fields required to make a request.
@@ -7773,11 +7927,13 @@ instance ToJSON SccDestinationSettings where
 -- | Settings for use with a SPEKE key provider
 --
 -- /See:/ 'spekeKeyProvider' smart constructor.
-data SpekeKeyProvider = SpekeKeyProvider'
-  { _skpResourceId :: !(Maybe Text)
-  , _skpURL        :: !(Maybe Text)
-  , _skpSystemIds  :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SpekeKeyProvider =
+  SpekeKeyProvider'
+    { _skpResourceId :: !(Maybe Text)
+    , _skpURL        :: !(Maybe Text)
+    , _skpSystemIds  :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SpekeKeyProvider' with the minimum fields required to make a request.
@@ -7831,12 +7987,14 @@ instance ToJSON SpekeKeyProvider where
 -- | Settings for use with a SPEKE key provider.
 --
 -- /See:/ 'staticKeyProvider' smart constructor.
-data StaticKeyProvider = StaticKeyProvider'
-  { _sStaticKeyValue    :: !(Maybe Text)
-  , _sURL               :: !(Maybe Text)
-  , _sKeyFormat         :: !(Maybe Text)
-  , _sKeyFormatVersions :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StaticKeyProvider =
+  StaticKeyProvider'
+    { _sStaticKeyValue    :: !(Maybe Text)
+    , _sURL               :: !(Maybe Text)
+    , _sKeyFormat         :: !(Maybe Text)
+    , _sKeyFormatVersions :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StaticKeyProvider' with the minimum fields required to make a request.
@@ -7902,9 +8060,11 @@ instance ToJSON StaticKeyProvider where
 -- | Settings for Teletext caption output
 --
 -- /See:/ 'teletextDestinationSettings' smart constructor.
-newtype TeletextDestinationSettings = TeletextDestinationSettings'
-  { _tdsPageNumber :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype TeletextDestinationSettings =
+  TeletextDestinationSettings'
+    { _tdsPageNumber :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TeletextDestinationSettings' with the minimum fields required to make a request.
@@ -7941,9 +8101,11 @@ instance ToJSON TeletextDestinationSettings where
 -- | Settings specific to Teletext caption sources, including Page number.
 --
 -- /See:/ 'teletextSourceSettings' smart constructor.
-newtype TeletextSourceSettings = TeletextSourceSettings'
-  { _tssPageNumber :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype TeletextSourceSettings =
+  TeletextSourceSettings'
+    { _tssPageNumber :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TeletextSourceSettings' with the minimum fields required to make a request.
@@ -7978,11 +8140,13 @@ instance ToJSON TeletextSourceSettings where
 -- | Timecode burn-in (TimecodeBurnIn)--Burns the output timecode and specified prefix into the output.
 --
 -- /See:/ 'timecodeBurnin' smart constructor.
-data TimecodeBurnin = TimecodeBurnin'
-  { _tbPrefix   :: !(Maybe Text)
-  , _tbFontSize :: !(Maybe Int)
-  , _tbPosition :: !(Maybe TimecodeBurninPosition)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TimecodeBurnin =
+  TimecodeBurnin'
+    { _tbPrefix   :: !(Maybe Text)
+    , _tbFontSize :: !(Maybe Int)
+    , _tbPosition :: !(Maybe TimecodeBurninPosition)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TimecodeBurnin' with the minimum fields required to make a request.
@@ -8036,12 +8200,14 @@ instance ToJSON TimecodeBurnin where
 -- | Contains settings used to acquire and adjust timecode information from inputs.
 --
 -- /See:/ 'timecodeConfig' smart constructor.
-data TimecodeConfig = TimecodeConfig'
-  { _tcStart           :: !(Maybe Text)
-  , _tcTimestampOffset :: !(Maybe Text)
-  , _tcAnchor          :: !(Maybe Text)
-  , _tcSource          :: !(Maybe TimecodeSource)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TimecodeConfig =
+  TimecodeConfig'
+    { _tcStart           :: !(Maybe Text)
+    , _tcTimestampOffset :: !(Maybe Text)
+    , _tcAnchor          :: !(Maybe Text)
+    , _tcSource          :: !(Maybe TimecodeSource)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TimecodeConfig' with the minimum fields required to make a request.
@@ -8107,9 +8273,11 @@ instance ToJSON TimecodeConfig where
 -- | Enable Timed metadata insertion (TimedMetadataInsertion) to include ID3 tags in your job. To include timed metadata, you must enable it here, enable it in each output container, and specify tags and timecodes in ID3 insertion (Id3Insertion) objects.
 --
 -- /See:/ 'timedMetadataInsertion' smart constructor.
-newtype TimedMetadataInsertion = TimedMetadataInsertion'
-  { _tmiId3Insertions :: Maybe [Id3Insertion]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype TimedMetadataInsertion =
+  TimedMetadataInsertion'
+    { _tmiId3Insertions :: Maybe [Id3Insertion]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TimedMetadataInsertion' with the minimum fields required to make a request.
@@ -8146,11 +8314,13 @@ instance ToJSON TimedMetadataInsertion where
 -- | Information about when jobs are submitted, started, and finished is specified in Unix epoch format in seconds.
 --
 -- /See:/ 'timing' smart constructor.
-data Timing = Timing'
-  { _tStartTime  :: !(Maybe POSIX)
-  , _tFinishTime :: !(Maybe POSIX)
-  , _tSubmitTime :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Timing =
+  Timing'
+    { _tStartTime  :: !(Maybe POSIX)
+    , _tFinishTime :: !(Maybe POSIX)
+    , _tSubmitTime :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Timing' with the minimum fields required to make a request.
@@ -8196,9 +8366,11 @@ instance NFData Timing where
 -- | Settings specific to TTML caption outputs, including Pass style information (TtmlStylePassthrough).
 --
 -- /See:/ 'ttmlDestinationSettings' smart constructor.
-newtype TtmlDestinationSettings = TtmlDestinationSettings'
-  { _tdsStylePassthrough :: Maybe TtmlStylePassthrough
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype TtmlDestinationSettings =
+  TtmlDestinationSettings'
+    { _tdsStylePassthrough :: Maybe TtmlStylePassthrough
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TtmlDestinationSettings' with the minimum fields required to make a request.
@@ -8236,14 +8408,16 @@ instance ToJSON TtmlDestinationSettings where
 -- | Video codec settings, (CodecSettings) under (VideoDescription), contains the group of settings related to video encoding. The settings in this group vary depending on the value you choose for Video codec (Codec). For each codec enum you choose, define the corresponding settings object. The following lists the codec enum, settings object pairs. * H_264, H264Settings * H_265, H265Settings * MPEG2, Mpeg2Settings * PRORES, ProresSettings * FRAME_CAPTURE, FrameCaptureSettings
 --
 -- /See:/ 'videoCodecSettings' smart constructor.
-data VideoCodecSettings = VideoCodecSettings'
-  { _vcsFrameCaptureSettings :: !(Maybe FrameCaptureSettings)
-  , _vcsCodec                :: !(Maybe VideoCodec)
-  , _vcsH265Settings         :: !(Maybe H265Settings)
-  , _vcsProresSettings       :: !(Maybe ProresSettings)
-  , _vcsH264Settings         :: !(Maybe H264Settings)
-  , _vcsMpeg2Settings        :: !(Maybe Mpeg2Settings)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VideoCodecSettings =
+  VideoCodecSettings'
+    { _vcsFrameCaptureSettings :: !(Maybe FrameCaptureSettings)
+    , _vcsCodec                :: !(Maybe VideoCodec)
+    , _vcsH265Settings         :: !(Maybe H265Settings)
+    , _vcsProresSettings       :: !(Maybe ProresSettings)
+    , _vcsH264Settings         :: !(Maybe H264Settings)
+    , _vcsMpeg2Settings        :: !(Maybe Mpeg2Settings)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VideoCodecSettings' with the minimum fields required to make a request.
@@ -8328,23 +8502,25 @@ instance ToJSON VideoCodecSettings where
 -- | Settings for video outputs
 --
 -- /See:/ 'videoDescription' smart constructor.
-data VideoDescription = VideoDescription'
-  { _vdTimecodeInsertion  :: !(Maybe VideoTimecodeInsertion)
-  , _vdHeight             :: !(Maybe Int)
-  , _vdAfdSignaling       :: !(Maybe AfdSignaling)
-  , _vdSharpness          :: !(Maybe Int)
-  , _vdCrop               :: !(Maybe Rectangle)
-  , _vdWidth              :: !(Maybe Int)
-  , _vdScalingBehavior    :: !(Maybe ScalingBehavior)
-  , _vdRespondToAfd       :: !(Maybe RespondToAfd)
-  , _vdDropFrameTimecode  :: !(Maybe DropFrameTimecode)
-  , _vdAntiAlias          :: !(Maybe AntiAlias)
-  , _vdFixedAfd           :: !(Maybe Int)
-  , _vdColorMetadata      :: !(Maybe ColorMetadata)
-  , _vdCodecSettings      :: !(Maybe VideoCodecSettings)
-  , _vdVideoPreprocessors :: !(Maybe VideoPreprocessor)
-  , _vdPosition           :: !(Maybe Rectangle)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VideoDescription =
+  VideoDescription'
+    { _vdTimecodeInsertion  :: !(Maybe VideoTimecodeInsertion)
+    , _vdHeight             :: !(Maybe Int)
+    , _vdAfdSignaling       :: !(Maybe AfdSignaling)
+    , _vdSharpness          :: !(Maybe Int)
+    , _vdCrop               :: !(Maybe Rectangle)
+    , _vdWidth              :: !(Maybe Int)
+    , _vdScalingBehavior    :: !(Maybe ScalingBehavior)
+    , _vdRespondToAfd       :: !(Maybe RespondToAfd)
+    , _vdDropFrameTimecode  :: !(Maybe DropFrameTimecode)
+    , _vdAntiAlias          :: !(Maybe AntiAlias)
+    , _vdFixedAfd           :: !(Maybe Int)
+    , _vdColorMetadata      :: !(Maybe ColorMetadata)
+    , _vdCodecSettings      :: !(Maybe VideoCodecSettings)
+    , _vdVideoPreprocessors :: !(Maybe VideoPreprocessor)
+    , _vdPosition           :: !(Maybe Rectangle)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VideoDescription' with the minimum fields required to make a request.
@@ -8508,10 +8684,12 @@ instance ToJSON VideoDescription where
 -- | Contains details about the output's video stream
 --
 -- /See:/ 'videoDetail' smart constructor.
-data VideoDetail = VideoDetail'
-  { _vdHeightInPx :: !(Maybe Int)
-  , _vdWidthInPx  :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VideoDetail =
+  VideoDetail'
+    { _vdHeightInPx :: !(Maybe Int)
+    , _vdWidthInPx  :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VideoDetail' with the minimum fields required to make a request.
@@ -8548,13 +8726,15 @@ instance NFData VideoDetail where
 -- | Find additional transcoding features under Preprocessors (VideoPreprocessors). Enable the features at each output individually. These features are disabled by default.
 --
 -- /See:/ 'videoPreprocessor' smart constructor.
-data VideoPreprocessor = VideoPreprocessor'
-  { _vpTimecodeBurnin :: !(Maybe TimecodeBurnin)
-  , _vpColorCorrector :: !(Maybe ColorCorrector)
-  , _vpDeinterlacer   :: !(Maybe Deinterlacer)
-  , _vpNoiseReducer   :: !(Maybe NoiseReducer)
-  , _vpImageInserter  :: !(Maybe ImageInserter)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VideoPreprocessor =
+  VideoPreprocessor'
+    { _vpTimecodeBurnin :: !(Maybe TimecodeBurnin)
+    , _vpColorCorrector :: !(Maybe ColorCorrector)
+    , _vpDeinterlacer   :: !(Maybe Deinterlacer)
+    , _vpNoiseReducer   :: !(Maybe NoiseReducer)
+    , _vpImageInserter  :: !(Maybe ImageInserter)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VideoPreprocessor' with the minimum fields required to make a request.
@@ -8629,13 +8809,15 @@ instance ToJSON VideoPreprocessor where
 -- | Selector for video.
 --
 -- /See:/ 'videoSelector' smart constructor.
-data VideoSelector = VideoSelector'
-  { _vsProgramNumber   :: !(Maybe Int)
-  , _vsColorSpaceUsage :: !(Maybe ColorSpaceUsage)
-  , _vsHdr10Metadata   :: !(Maybe Hdr10Metadata)
-  , _vsPid             :: !(Maybe Int)
-  , _vsColorSpace      :: !(Maybe ColorSpace)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VideoSelector =
+  VideoSelector'
+    { _vsProgramNumber   :: !(Maybe Int)
+    , _vsColorSpaceUsage :: !(Maybe ColorSpaceUsage)
+    , _vsHdr10Metadata   :: !(Maybe Hdr10Metadata)
+    , _vsPid             :: !(Maybe Int)
+    , _vsColorSpace      :: !(Maybe ColorSpace)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VideoSelector' with the minimum fields required to make a request.
@@ -8710,11 +8892,13 @@ instance ToJSON VideoSelector where
 -- | Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value WAV.
 --
 -- /See:/ 'wavSettings' smart constructor.
-data WavSettings = WavSettings'
-  { _wsBitDepth   :: !(Maybe Int)
-  , _wsChannels   :: !(Maybe Int)
-  , _wsSampleRate :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data WavSettings =
+  WavSettings'
+    { _wsBitDepth   :: !(Maybe Int)
+    , _wsChannels   :: !(Maybe Int)
+    , _wsSampleRate :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'WavSettings' with the minimum fields required to make a request.

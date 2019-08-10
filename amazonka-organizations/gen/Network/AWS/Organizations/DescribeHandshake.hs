@@ -49,9 +49,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeHandshake' smart constructor.
-newtype DescribeHandshake = DescribeHandshake'
-  { _dhHandshakeId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeHandshake =
+  DescribeHandshake'
+    { _dhHandshakeId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeHandshake' with the minimum fields required to make a request.
@@ -105,10 +107,12 @@ instance ToQuery DescribeHandshake where
         toQuery = const mempty
 
 -- | /See:/ 'describeHandshakeResponse' smart constructor.
-data DescribeHandshakeResponse = DescribeHandshakeResponse'
-  { _dhrsHandshake      :: !(Maybe Handshake)
-  , _dhrsResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data DescribeHandshakeResponse =
+  DescribeHandshakeResponse'
+    { _dhrsHandshake      :: !(Maybe Handshake)
+    , _dhrsResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeHandshakeResponse' with the minimum fields required to make a request.

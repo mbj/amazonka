@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'allocateStaticIP' smart constructor.
-newtype AllocateStaticIP = AllocateStaticIP'
-  { _asiStaticIPName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AllocateStaticIP =
+  AllocateStaticIP'
+    { _asiStaticIPName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AllocateStaticIP' with the minimum fields required to make a request.
@@ -103,10 +105,12 @@ instance ToQuery AllocateStaticIP where
         toQuery = const mempty
 
 -- | /See:/ 'allocateStaticIPResponse' smart constructor.
-data AllocateStaticIPResponse = AllocateStaticIPResponse'
-  { _asirsOperations     :: !(Maybe [Operation])
-  , _asirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AllocateStaticIPResponse =
+  AllocateStaticIPResponse'
+    { _asirsOperations     :: !(Maybe [Operation])
+    , _asirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AllocateStaticIPResponse' with the minimum fields required to make a request.

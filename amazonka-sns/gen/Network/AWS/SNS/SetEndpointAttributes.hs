@@ -47,10 +47,12 @@ import Network.AWS.SNS.Types.Product
 --
 --
 -- /See:/ 'setEndpointAttributes' smart constructor.
-data SetEndpointAttributes = SetEndpointAttributes'
-  { _seaEndpointARN :: !Text
-  , _seaAttributes  :: !(Map Text Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SetEndpointAttributes =
+  SetEndpointAttributes'
+    { _seaEndpointARN :: !Text
+    , _seaAttributes  :: !(Map Text Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetEndpointAttributes' with the minimum fields required to make a request.

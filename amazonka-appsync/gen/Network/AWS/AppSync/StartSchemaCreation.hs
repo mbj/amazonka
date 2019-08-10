@@ -48,10 +48,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'startSchemaCreation' smart constructor.
-data StartSchemaCreation = StartSchemaCreation'
-  { _sscApiId      :: !Text
-  , _sscDefinition :: !Base64
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartSchemaCreation =
+  StartSchemaCreation'
+    { _sscApiId      :: !Text
+    , _sscDefinition :: !Base64
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartSchemaCreation' with the minimum fields required to make a request.
@@ -113,10 +115,12 @@ instance ToQuery StartSchemaCreation where
         toQuery = const mempty
 
 -- | /See:/ 'startSchemaCreationResponse' smart constructor.
-data StartSchemaCreationResponse = StartSchemaCreationResponse'
-  { _sscrsStatus         :: !(Maybe SchemaStatus)
-  , _sscrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartSchemaCreationResponse =
+  StartSchemaCreationResponse'
+    { _sscrsStatus         :: !(Maybe SchemaStatus)
+    , _sscrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartSchemaCreationResponse' with the minimum fields required to make a request.

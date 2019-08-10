@@ -49,10 +49,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteEnvironmentConfiguration' smart constructor.
-data DeleteEnvironmentConfiguration = DeleteEnvironmentConfiguration'
-  { _decApplicationName :: !Text
-  , _decEnvironmentName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteEnvironmentConfiguration =
+  DeleteEnvironmentConfiguration'
+    { _decApplicationName :: !Text
+    , _decEnvironmentName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteEnvironmentConfiguration' with the minimum fields required to make a request.

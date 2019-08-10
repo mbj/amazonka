@@ -47,11 +47,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeJobExecution' smart constructor.
-data DescribeJobExecution = DescribeJobExecution'
-  { _djeExecutionNumber :: !(Maybe Integer)
-  , _djeJobId           :: !Text
-  , _djeThingName       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeJobExecution =
+  DescribeJobExecution'
+    { _djeExecutionNumber :: !(Maybe Integer)
+    , _djeJobId           :: !Text
+    , _djeThingName       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeJobExecution' with the minimum fields required to make a request.
@@ -115,10 +117,12 @@ instance ToQuery DescribeJobExecution where
           = mconcat ["executionNumber" =: _djeExecutionNumber]
 
 -- | /See:/ 'describeJobExecutionResponse' smart constructor.
-data DescribeJobExecutionResponse = DescribeJobExecutionResponse'
-  { _djersExecution      :: !(Maybe JobExecution)
-  , _djersResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeJobExecutionResponse =
+  DescribeJobExecutionResponse'
+    { _djersExecution      :: !(Maybe JobExecution)
+    , _djersResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeJobExecutionResponse' with the minimum fields required to make a request.

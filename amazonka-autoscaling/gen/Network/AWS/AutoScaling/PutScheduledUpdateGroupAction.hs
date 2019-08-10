@@ -52,17 +52,19 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putScheduledUpdateGroupAction' smart constructor.
-data PutScheduledUpdateGroupAction = PutScheduledUpdateGroupAction'
-  { _psugaStartTime            :: !(Maybe ISO8601)
-  , _psugaTime                 :: !(Maybe ISO8601)
-  , _psugaMaxSize              :: !(Maybe Int)
-  , _psugaRecurrence           :: !(Maybe Text)
-  , _psugaDesiredCapacity      :: !(Maybe Int)
-  , _psugaMinSize              :: !(Maybe Int)
-  , _psugaEndTime              :: !(Maybe ISO8601)
-  , _psugaAutoScalingGroupName :: !Text
-  , _psugaScheduledActionName  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutScheduledUpdateGroupAction =
+  PutScheduledUpdateGroupAction'
+    { _psugaStartTime            :: !(Maybe ISO8601)
+    , _psugaTime                 :: !(Maybe ISO8601)
+    , _psugaMaxSize              :: !(Maybe Int)
+    , _psugaRecurrence           :: !(Maybe Text)
+    , _psugaDesiredCapacity      :: !(Maybe Int)
+    , _psugaMinSize              :: !(Maybe Int)
+    , _psugaEndTime              :: !(Maybe ISO8601)
+    , _psugaAutoScalingGroupName :: !Text
+    , _psugaScheduledActionName  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutScheduledUpdateGroupAction' with the minimum fields required to make a request.

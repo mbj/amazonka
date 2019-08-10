@@ -47,11 +47,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteRepository' smart constructor.
-data DeleteRepository = DeleteRepository'
-  { _dForce          :: !(Maybe Bool)
-  , _dRegistryId     :: !(Maybe Text)
-  , _dRepositoryName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteRepository =
+  DeleteRepository'
+    { _dForce          :: !(Maybe Bool)
+    , _dRegistryId     :: !(Maybe Text)
+    , _dRepositoryName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteRepository' with the minimum fields required to make a request.
@@ -124,10 +126,12 @@ instance ToQuery DeleteRepository where
         toQuery = const mempty
 
 -- | /See:/ 'deleteRepositoryResponse' smart constructor.
-data DeleteRepositoryResponse = DeleteRepositoryResponse'
-  { _drsRepository     :: !(Maybe Repository)
-  , _drsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteRepositoryResponse =
+  DeleteRepositoryResponse'
+    { _drsRepository     :: !(Maybe Repository)
+    , _drsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteRepositoryResponse' with the minimum fields required to make a request.

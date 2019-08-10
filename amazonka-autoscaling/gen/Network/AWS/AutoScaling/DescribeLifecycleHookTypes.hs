@@ -87,10 +87,12 @@ instance ToQuery DescribeLifecycleHookTypes where
                   "Version" =: ("2011-01-01" :: ByteString)])
 
 -- | /See:/ 'describeLifecycleHookTypesResponse' smart constructor.
-data DescribeLifecycleHookTypesResponse = DescribeLifecycleHookTypesResponse'
-  { _dlhtrsLifecycleHookTypes :: !(Maybe [Text])
-  , _dlhtrsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeLifecycleHookTypesResponse =
+  DescribeLifecycleHookTypesResponse'
+    { _dlhtrsLifecycleHookTypes :: !(Maybe [Text])
+    , _dlhtrsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeLifecycleHookTypesResponse' with the minimum fields required to make a request.

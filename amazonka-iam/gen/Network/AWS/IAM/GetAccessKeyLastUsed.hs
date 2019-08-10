@@ -46,9 +46,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getAccessKeyLastUsed' smart constructor.
-newtype GetAccessKeyLastUsed = GetAccessKeyLastUsed'
-  { _gakluAccessKeyId :: AccessKey
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetAccessKeyLastUsed =
+  GetAccessKeyLastUsed'
+    { _gakluAccessKeyId :: AccessKey
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetAccessKeyLastUsed' with the minimum fields required to make a request.
@@ -100,11 +102,13 @@ instance ToQuery GetAccessKeyLastUsed where
 --
 --
 -- /See:/ 'getAccessKeyLastUsedResponse' smart constructor.
-data GetAccessKeyLastUsedResponse = GetAccessKeyLastUsedResponse'
-  { _gaklursUserName          :: !(Maybe Text)
-  , _gaklursAccessKeyLastUsed :: !(Maybe AccessKeyLastUsed)
-  , _gaklursResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetAccessKeyLastUsedResponse =
+  GetAccessKeyLastUsedResponse'
+    { _gaklursUserName          :: !(Maybe Text)
+    , _gaklursAccessKeyLastUsed :: !(Maybe AccessKeyLastUsed)
+    , _gaklursResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetAccessKeyLastUsedResponse' with the minimum fields required to make a request.

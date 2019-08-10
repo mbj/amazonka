@@ -44,9 +44,11 @@ import Network.AWS.Response
 -- | Placeholder documentation for DeleteInputRequest
 --
 -- /See:/ 'deleteInput' smart constructor.
-newtype DeleteInput = DeleteInput'
-  { _diInputId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteInput =
+  DeleteInput'
+    { _diInputId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteInput' with the minimum fields required to make a request.
@@ -93,9 +95,11 @@ instance ToQuery DeleteInput where
 -- | Placeholder documentation for DeleteInputResponse
 --
 -- /See:/ 'deleteInputResponse' smart constructor.
-newtype DeleteInputResponse = DeleteInputResponse'
-  { _dirsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteInputResponse =
+  DeleteInputResponse'
+    { _dirsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteInputResponse' with the minimum fields required to make a request.

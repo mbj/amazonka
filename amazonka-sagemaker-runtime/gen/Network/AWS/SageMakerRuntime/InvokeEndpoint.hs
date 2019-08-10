@@ -54,12 +54,14 @@ import Network.AWS.SageMakerRuntime.Types
 import Network.AWS.SageMakerRuntime.Types.Product
 
 -- | /See:/ 'invokeEndpoint' smart constructor.
-data InvokeEndpoint = InvokeEndpoint'
-  { _ieAccept       :: !(Maybe Text)
-  , _ieContentType  :: !(Maybe Text)
-  , _ieEndpointName :: !Text
-  , _ieBody         :: !ByteString
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InvokeEndpoint =
+  InvokeEndpoint'
+    { _ieAccept       :: !(Maybe Text)
+    , _ieContentType  :: !(Maybe Text)
+    , _ieEndpointName :: !Text
+    , _ieBody         :: !ByteString
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InvokeEndpoint' with the minimum fields required to make a request.
@@ -136,12 +138,14 @@ instance ToQuery InvokeEndpoint where
         toQuery = const mempty
 
 -- | /See:/ 'invokeEndpointResponse' smart constructor.
-data InvokeEndpointResponse = InvokeEndpointResponse'
-  { _iersInvokedProductionVariant :: !(Maybe Text)
-  , _iersContentType              :: !(Maybe Text)
-  , _iersResponseStatus           :: !Int
-  , _iersBody                     :: !ByteString
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InvokeEndpointResponse =
+  InvokeEndpointResponse'
+    { _iersInvokedProductionVariant :: !(Maybe Text)
+    , _iersContentType              :: !(Maybe Text)
+    , _iersResponseStatus           :: !Int
+    , _iersBody                     :: !ByteString
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InvokeEndpointResponse' with the minimum fields required to make a request.

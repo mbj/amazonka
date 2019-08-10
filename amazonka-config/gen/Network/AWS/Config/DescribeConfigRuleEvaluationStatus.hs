@@ -52,11 +52,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeConfigRuleEvaluationStatus' smart constructor.
-data DescribeConfigRuleEvaluationStatus = DescribeConfigRuleEvaluationStatus'
-  { _dcresConfigRuleNames :: !(Maybe [Text])
-  , _dcresNextToken       :: !(Maybe Text)
-  , _dcresLimit           :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeConfigRuleEvaluationStatus =
+  DescribeConfigRuleEvaluationStatus'
+    { _dcresConfigRuleNames :: !(Maybe [Text])
+    , _dcresNextToken       :: !(Maybe Text)
+    , _dcresLimit           :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeConfigRuleEvaluationStatus' with the minimum fields required to make a request.
@@ -143,11 +145,13 @@ instance ToQuery DescribeConfigRuleEvaluationStatus
 --
 --
 -- /See:/ 'describeConfigRuleEvaluationStatusResponse' smart constructor.
-data DescribeConfigRuleEvaluationStatusResponse = DescribeConfigRuleEvaluationStatusResponse'
-  { _dcresrsConfigRulesEvaluationStatus :: !(Maybe [ConfigRuleEvaluationStatus])
-  , _dcresrsNextToken                   :: !(Maybe Text)
-  , _dcresrsResponseStatus              :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeConfigRuleEvaluationStatusResponse =
+  DescribeConfigRuleEvaluationStatusResponse'
+    { _dcresrsConfigRulesEvaluationStatus :: !(Maybe [ConfigRuleEvaluationStatus])
+    , _dcresrsNextToken :: !(Maybe Text)
+    , _dcresrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeConfigRuleEvaluationStatusResponse' with the minimum fields required to make a request.

@@ -53,14 +53,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getMetricData' smart constructor.
-data GetMetricData = GetMetricData'
-  { _gmdMaxDatapoints     :: !(Maybe Int)
-  , _gmdNextToken         :: !(Maybe Text)
-  , _gmdScanBy            :: !(Maybe ScanBy)
-  , _gmdMetricDataQueries :: ![MetricDataQuery]
-  , _gmdStartTime         :: !ISO8601
-  , _gmdEndTime           :: !ISO8601
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetMetricData =
+  GetMetricData'
+    { _gmdMaxDatapoints     :: !(Maybe Int)
+    , _gmdNextToken         :: !(Maybe Text)
+    , _gmdScanBy            :: !(Maybe ScanBy)
+    , _gmdMetricDataQueries :: ![MetricDataQuery]
+    , _gmdStartTime         :: !ISO8601
+    , _gmdEndTime           :: !ISO8601
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetMetricData' with the minimum fields required to make a request.
@@ -152,11 +154,13 @@ instance ToQuery GetMetricData where
                "EndTime" =: _gmdEndTime]
 
 -- | /See:/ 'getMetricDataResponse' smart constructor.
-data GetMetricDataResponse = GetMetricDataResponse'
-  { _gmdrsMetricDataResults :: !(Maybe [MetricDataResult])
-  , _gmdrsNextToken         :: !(Maybe Text)
-  , _gmdrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetMetricDataResponse =
+  GetMetricDataResponse'
+    { _gmdrsMetricDataResults :: !(Maybe [MetricDataResult])
+    , _gmdrsNextToken         :: !(Maybe Text)
+    , _gmdrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetMetricDataResponse' with the minimum fields required to make a request.

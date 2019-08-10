@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deregisterTargets' smart constructor.
-data DeregisterTargets = DeregisterTargets'
-  { _dtTargetGroupARN :: !Text
-  , _dtTargets        :: ![TargetDescription]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeregisterTargets =
+  DeregisterTargets'
+    { _dtTargetGroupARN :: !Text
+    , _dtTargets        :: ![TargetDescription]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeregisterTargets' with the minimum fields required to make a request.
@@ -100,9 +102,11 @@ instance ToQuery DeregisterTargets where
                "Targets" =: toQueryList "member" _dtTargets]
 
 -- | /See:/ 'deregisterTargetsResponse' smart constructor.
-newtype DeregisterTargetsResponse = DeregisterTargetsResponse'
-  { _dtsrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeregisterTargetsResponse =
+  DeregisterTargetsResponse'
+    { _dtsrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeregisterTargetsResponse' with the minimum fields required to make a request.

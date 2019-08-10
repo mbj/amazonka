@@ -49,9 +49,11 @@ import Network.AWS.Route53.Types.Product
 --
 --
 -- /See:/ 'getTrafficPolicyInstance' smart constructor.
-newtype GetTrafficPolicyInstance = GetTrafficPolicyInstance'
-  { _gtpiId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetTrafficPolicyInstance =
+  GetTrafficPolicyInstance'
+    { _gtpiId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetTrafficPolicyInstance' with the minimum fields required to make a request.
@@ -100,10 +102,12 @@ instance ToQuery GetTrafficPolicyInstance where
 --
 --
 -- /See:/ 'getTrafficPolicyInstanceResponse' smart constructor.
-data GetTrafficPolicyInstanceResponse = GetTrafficPolicyInstanceResponse'
-  { _gtpirsResponseStatus        :: !Int
-  , _gtpirsTrafficPolicyInstance :: !TrafficPolicyInstance
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetTrafficPolicyInstanceResponse =
+  GetTrafficPolicyInstanceResponse'
+    { _gtpirsResponseStatus        :: !Int
+    , _gtpirsTrafficPolicyInstance :: !TrafficPolicyInstance
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetTrafficPolicyInstanceResponse' with the minimum fields required to make a request.

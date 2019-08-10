@@ -68,12 +68,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createConnection' smart constructor.
-data CreateConnection = CreateConnection'
-  { _ccLagId          :: !(Maybe Text)
-  , _ccLocation       :: !Text
-  , _ccBandwidth      :: !Text
-  , _ccConnectionName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateConnection =
+  CreateConnection'
+    { _ccLagId          :: !(Maybe Text)
+    , _ccLocation       :: !Text
+    , _ccBandwidth      :: !Text
+    , _ccConnectionName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateConnection' with the minimum fields required to make a request.

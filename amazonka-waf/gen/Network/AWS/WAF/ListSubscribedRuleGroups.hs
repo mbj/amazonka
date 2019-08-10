@@ -47,10 +47,12 @@ import Network.AWS.WAF.Types
 import Network.AWS.WAF.Types.Product
 
 -- | /See:/ 'listSubscribedRuleGroups' smart constructor.
-data ListSubscribedRuleGroups = ListSubscribedRuleGroups'
-  { _lsrgNextMarker :: !(Maybe Text)
-  , _lsrgLimit      :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListSubscribedRuleGroups =
+  ListSubscribedRuleGroups'
+    { _lsrgNextMarker :: !(Maybe Text)
+    , _lsrgLimit      :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListSubscribedRuleGroups' with the minimum fields required to make a request.
@@ -114,11 +116,13 @@ instance ToQuery ListSubscribedRuleGroups where
         toQuery = const mempty
 
 -- | /See:/ 'listSubscribedRuleGroupsResponse' smart constructor.
-data ListSubscribedRuleGroupsResponse = ListSubscribedRuleGroupsResponse'
-  { _lsrgrsRuleGroups     :: !(Maybe [SubscribedRuleGroupSummary])
-  , _lsrgrsNextMarker     :: !(Maybe Text)
-  , _lsrgrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListSubscribedRuleGroupsResponse =
+  ListSubscribedRuleGroupsResponse'
+    { _lsrgrsRuleGroups     :: !(Maybe [SubscribedRuleGroupSummary])
+    , _lsrgrsNextMarker     :: !(Maybe Text)
+    , _lsrgrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListSubscribedRuleGroupsResponse' with the minimum fields required to make a request.

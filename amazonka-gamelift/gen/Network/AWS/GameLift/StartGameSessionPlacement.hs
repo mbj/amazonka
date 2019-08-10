@@ -104,16 +104,18 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'startGameSessionPlacement' smart constructor.
-data StartGameSessionPlacement = StartGameSessionPlacement'
-  { _sgspGameProperties            :: !(Maybe [GameProperty])
-  , _sgspGameSessionName           :: !(Maybe Text)
-  , _sgspPlayerLatencies           :: !(Maybe [PlayerLatency])
-  , _sgspGameSessionData           :: !(Maybe Text)
-  , _sgspDesiredPlayerSessions     :: !(Maybe [DesiredPlayerSession])
-  , _sgspPlacementId               :: !Text
-  , _sgspGameSessionQueueName      :: !Text
-  , _sgspMaximumPlayerSessionCount :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartGameSessionPlacement =
+  StartGameSessionPlacement'
+    { _sgspGameProperties            :: !(Maybe [GameProperty])
+    , _sgspGameSessionName           :: !(Maybe Text)
+    , _sgspPlayerLatencies           :: !(Maybe [PlayerLatency])
+    , _sgspGameSessionData           :: !(Maybe Text)
+    , _sgspDesiredPlayerSessions     :: !(Maybe [DesiredPlayerSession])
+    , _sgspPlacementId               :: !Text
+    , _sgspGameSessionQueueName      :: !Text
+    , _sgspMaximumPlayerSessionCount :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartGameSessionPlacement' with the minimum fields required to make a request.
@@ -238,10 +240,12 @@ instance ToQuery StartGameSessionPlacement where
 --
 --
 -- /See:/ 'startGameSessionPlacementResponse' smart constructor.
-data StartGameSessionPlacementResponse = StartGameSessionPlacementResponse'
-  { _sgsprsGameSessionPlacement :: !(Maybe GameSessionPlacement)
-  , _sgsprsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartGameSessionPlacementResponse =
+  StartGameSessionPlacementResponse'
+    { _sgsprsGameSessionPlacement :: !(Maybe GameSessionPlacement)
+    , _sgsprsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartGameSessionPlacementResponse' with the minimum fields required to make a request.

@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getAddressBook' smart constructor.
-newtype GetAddressBook = GetAddressBook'
-  { _gabAddressBookARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetAddressBook =
+  GetAddressBook'
+    { _gabAddressBookARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetAddressBook' with the minimum fields required to make a request.
@@ -101,10 +103,12 @@ instance ToQuery GetAddressBook where
         toQuery = const mempty
 
 -- | /See:/ 'getAddressBookResponse' smart constructor.
-data GetAddressBookResponse = GetAddressBookResponse'
-  { _gabrsAddressBook    :: !(Maybe AddressBook)
-  , _gabrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetAddressBookResponse =
+  GetAddressBookResponse'
+    { _gabrsAddressBook    :: !(Maybe AddressBook)
+    , _gabrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetAddressBookResponse' with the minimum fields required to make a request.

@@ -56,20 +56,22 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createNetworkProfile' smart constructor.
-data CreateNetworkProfile = CreateNetworkProfile'
-  { _cnpUplinkJitterMs        :: !(Maybe Integer)
-  , _cnpUplinkLossPercent     :: !(Maybe Nat)
-  , _cnpDownlinkJitterMs      :: !(Maybe Integer)
-  , _cnpDownlinkLossPercent   :: !(Maybe Nat)
-  , _cnpType                  :: !(Maybe NetworkProfileType)
-  , _cnpUplinkDelayMs         :: !(Maybe Integer)
-  , _cnpUplinkBandwidthBits   :: !(Maybe Integer)
-  , _cnpDescription           :: !(Maybe Text)
-  , _cnpDownlinkDelayMs       :: !(Maybe Integer)
-  , _cnpDownlinkBandwidthBits :: !(Maybe Integer)
-  , _cnpProjectARN            :: !Text
-  , _cnpName                  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateNetworkProfile =
+  CreateNetworkProfile'
+    { _cnpUplinkJitterMs        :: !(Maybe Integer)
+    , _cnpUplinkLossPercent     :: !(Maybe Nat)
+    , _cnpDownlinkJitterMs      :: !(Maybe Integer)
+    , _cnpDownlinkLossPercent   :: !(Maybe Nat)
+    , _cnpType                  :: !(Maybe NetworkProfileType)
+    , _cnpUplinkDelayMs         :: !(Maybe Integer)
+    , _cnpUplinkBandwidthBits   :: !(Maybe Integer)
+    , _cnpDescription           :: !(Maybe Text)
+    , _cnpDownlinkDelayMs       :: !(Maybe Integer)
+    , _cnpDownlinkBandwidthBits :: !(Maybe Integer)
+    , _cnpProjectARN            :: !Text
+    , _cnpName                  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateNetworkProfile' with the minimum fields required to make a request.
@@ -219,10 +221,12 @@ instance ToQuery CreateNetworkProfile where
         toQuery = const mempty
 
 -- | /See:/ 'createNetworkProfileResponse' smart constructor.
-data CreateNetworkProfileResponse = CreateNetworkProfileResponse'
-  { _cnprsNetworkProfile :: !(Maybe NetworkProfile)
-  , _cnprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateNetworkProfileResponse =
+  CreateNetworkProfileResponse'
+    { _cnprsNetworkProfile :: !(Maybe NetworkProfile)
+    , _cnprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateNetworkProfileResponse' with the minimum fields required to make a request.

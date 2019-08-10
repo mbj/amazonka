@@ -64,11 +64,13 @@ import Network.AWS.StorageGateway.Types.Product
 --
 --
 -- /See:/ 'listVolumes' smart constructor.
-data ListVolumes = ListVolumes'
-  { _lvGatewayARN :: !(Maybe Text)
-  , _lvMarker     :: !(Maybe Text)
-  , _lvLimit      :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListVolumes =
+  ListVolumes'
+    { _lvGatewayARN :: !(Maybe Text)
+    , _lvMarker     :: !(Maybe Text)
+    , _lvLimit      :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListVolumes' with the minimum fields required to make a request.
@@ -146,12 +148,14 @@ instance ToQuery ListVolumes where
         toQuery = const mempty
 
 -- | /See:/ 'listVolumesResponse' smart constructor.
-data ListVolumesResponse = ListVolumesResponse'
-  { _lvrsGatewayARN     :: !(Maybe Text)
-  , _lvrsMarker         :: !(Maybe Text)
-  , _lvrsVolumeInfos    :: !(Maybe [VolumeInfo])
-  , _lvrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListVolumesResponse =
+  ListVolumesResponse'
+    { _lvrsGatewayARN     :: !(Maybe Text)
+    , _lvrsMarker         :: !(Maybe Text)
+    , _lvrsVolumeInfos    :: !(Maybe [VolumeInfo])
+    , _lvrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListVolumesResponse' with the minimum fields required to make a request.

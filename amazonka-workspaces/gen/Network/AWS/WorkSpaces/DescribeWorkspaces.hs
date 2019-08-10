@@ -56,14 +56,16 @@ import Network.AWS.WorkSpaces.Types
 import Network.AWS.WorkSpaces.Types.Product
 
 -- | /See:/ 'describeWorkspaces' smart constructor.
-data DescribeWorkspaces = DescribeWorkspaces'
-  { _dwDirectoryId  :: !(Maybe Text)
-  , _dwWorkspaceIds :: !(Maybe (List1 Text))
-  , _dwUserName     :: !(Maybe Text)
-  , _dwBundleId     :: !(Maybe Text)
-  , _dwNextToken    :: !(Maybe Text)
-  , _dwLimit        :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeWorkspaces =
+  DescribeWorkspaces'
+    { _dwDirectoryId  :: !(Maybe Text)
+    , _dwWorkspaceIds :: !(Maybe (List1 Text))
+    , _dwUserName     :: !(Maybe Text)
+    , _dwBundleId     :: !(Maybe Text)
+    , _dwNextToken    :: !(Maybe Text)
+    , _dwLimit        :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeWorkspaces' with the minimum fields required to make a request.
@@ -169,11 +171,13 @@ instance ToQuery DescribeWorkspaces where
         toQuery = const mempty
 
 -- | /See:/ 'describeWorkspacesResponse' smart constructor.
-data DescribeWorkspacesResponse = DescribeWorkspacesResponse'
-  { _dwrsNextToken      :: !(Maybe Text)
-  , _dwrsWorkspaces     :: !(Maybe [Workspace])
-  , _dwrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeWorkspacesResponse =
+  DescribeWorkspacesResponse'
+    { _dwrsNextToken      :: !(Maybe Text)
+    , _dwrsWorkspaces     :: !(Maybe [Workspace])
+    , _dwrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeWorkspacesResponse' with the minimum fields required to make a request.

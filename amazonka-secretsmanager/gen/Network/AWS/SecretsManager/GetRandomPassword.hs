@@ -60,16 +60,18 @@ import Network.AWS.SecretsManager.Types
 import Network.AWS.SecretsManager.Types.Product
 
 -- | /See:/ 'getRandomPassword' smart constructor.
-data GetRandomPassword = GetRandomPassword'
-  { _grpIncludeSpace            :: !(Maybe Bool)
-  , _grpExcludeNumbers          :: !(Maybe Bool)
-  , _grpExcludeLowercase        :: !(Maybe Bool)
-  , _grpExcludeCharacters       :: !(Maybe Text)
-  , _grpExcludePunctuation      :: !(Maybe Bool)
-  , _grpRequireEachIncludedType :: !(Maybe Bool)
-  , _grpExcludeUppercase        :: !(Maybe Bool)
-  , _grpPasswordLength          :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetRandomPassword =
+  GetRandomPassword'
+    { _grpIncludeSpace            :: !(Maybe Bool)
+    , _grpExcludeNumbers          :: !(Maybe Bool)
+    , _grpExcludeLowercase        :: !(Maybe Bool)
+    , _grpExcludeCharacters       :: !(Maybe Text)
+    , _grpExcludePunctuation      :: !(Maybe Bool)
+    , _grpRequireEachIncludedType :: !(Maybe Bool)
+    , _grpExcludeUppercase        :: !(Maybe Bool)
+    , _grpPasswordLength          :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetRandomPassword' with the minimum fields required to make a request.
@@ -181,10 +183,12 @@ instance ToQuery GetRandomPassword where
         toQuery = const mempty
 
 -- | /See:/ 'getRandomPasswordResponse' smart constructor.
-data GetRandomPasswordResponse = GetRandomPasswordResponse'
-  { _grprsRandomPassword :: !(Maybe Text)
-  , _grprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetRandomPasswordResponse =
+  GetRandomPasswordResponse'
+    { _grprsRandomPassword :: !(Maybe Text)
+    , _grprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetRandomPasswordResponse' with the minimum fields required to make a request.

@@ -45,9 +45,11 @@ import Network.AWS.Shield.Types
 import Network.AWS.Shield.Types.Product
 
 -- | /See:/ 'describeProtection' smart constructor.
-newtype DescribeProtection = DescribeProtection'
-  { _dpProtectionId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeProtection =
+  DescribeProtection'
+    { _dpProtectionId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeProtection' with the minimum fields required to make a request.
@@ -103,10 +105,12 @@ instance ToQuery DescribeProtection where
         toQuery = const mempty
 
 -- | /See:/ 'describeProtectionResponse' smart constructor.
-data DescribeProtectionResponse = DescribeProtectionResponse'
-  { _dprsProtection     :: !(Maybe Protection)
-  , _dprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeProtectionResponse =
+  DescribeProtectionResponse'
+    { _dprsProtection     :: !(Maybe Protection)
+    , _dprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeProtectionResponse' with the minimum fields required to make a request.

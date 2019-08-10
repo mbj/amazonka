@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteAlias' smart constructor.
-data DeleteAlias = DeleteAlias'
-  { _daFunctionName :: !Text
-  , _daName         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteAlias =
+  DeleteAlias'
+    { _daFunctionName :: !Text
+    , _daName         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteAlias' with the minimum fields required to make a request.

@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'disassociateConfigurationItemsFromApplication' smart constructor.
-data DisassociateConfigurationItemsFromApplication = DisassociateConfigurationItemsFromApplication'
-  { _dcifaApplicationConfigurationId :: !Text
-  , _dcifaConfigurationIds           :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DisassociateConfigurationItemsFromApplication =
+  DisassociateConfigurationItemsFromApplication'
+    { _dcifaApplicationConfigurationId :: !Text
+    , _dcifaConfigurationIds           :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisassociateConfigurationItemsFromApplication' with the minimum fields required to make a request.
@@ -132,9 +134,11 @@ instance ToQuery
         toQuery = const mempty
 
 -- | /See:/ 'disassociateConfigurationItemsFromApplicationResponse' smart constructor.
-newtype DisassociateConfigurationItemsFromApplicationResponse = DisassociateConfigurationItemsFromApplicationResponse'
-  { _dcifarsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DisassociateConfigurationItemsFromApplicationResponse =
+  DisassociateConfigurationItemsFromApplicationResponse'
+    { _dcifarsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisassociateConfigurationItemsFromApplicationResponse' with the minimum fields required to make a request.

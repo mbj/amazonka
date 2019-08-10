@@ -65,10 +65,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteVPCPeeringAuthorization' smart constructor.
-data DeleteVPCPeeringAuthorization = DeleteVPCPeeringAuthorization'
-  { _dvpaGameLiftAWSAccountId :: !Text
-  , _dvpaPeerVPCId            :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteVPCPeeringAuthorization =
+  DeleteVPCPeeringAuthorization'
+    { _dvpaGameLiftAWSAccountId :: !Text
+    , _dvpaPeerVPCId            :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteVPCPeeringAuthorization' with the minimum fields required to make a request.
@@ -139,9 +141,11 @@ instance ToQuery DeleteVPCPeeringAuthorization where
         toQuery = const mempty
 
 -- | /See:/ 'deleteVPCPeeringAuthorizationResponse' smart constructor.
-newtype DeleteVPCPeeringAuthorizationResponse = DeleteVPCPeeringAuthorizationResponse'
-  { _dvparsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteVPCPeeringAuthorizationResponse =
+  DeleteVPCPeeringAuthorizationResponse'
+    { _dvparsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteVPCPeeringAuthorizationResponse' with the minimum fields required to make a request.

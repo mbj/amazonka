@@ -58,12 +58,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createReservedInstancesListing' smart constructor.
-data CreateReservedInstancesListing = CreateReservedInstancesListing'
-  { _crilClientToken         :: !Text
-  , _crilInstanceCount       :: !Int
-  , _crilPriceSchedules      :: ![PriceScheduleSpecification]
-  , _crilReservedInstancesId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateReservedInstancesListing =
+  CreateReservedInstancesListing'
+    { _crilClientToken         :: !Text
+    , _crilInstanceCount       :: !Int
+    , _crilPriceSchedules      :: ![PriceScheduleSpecification]
+    , _crilReservedInstancesId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateReservedInstancesListing' with the minimum fields required to make a request.
@@ -148,10 +150,12 @@ instance ToQuery CreateReservedInstancesListing where
 --
 --
 -- /See:/ 'createReservedInstancesListingResponse' smart constructor.
-data CreateReservedInstancesListingResponse = CreateReservedInstancesListingResponse'
-  { _crilrrsReservedInstancesListings :: !(Maybe [ReservedInstancesListing])
-  , _crilrrsResponseStatus            :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateReservedInstancesListingResponse =
+  CreateReservedInstancesListingResponse'
+    { _crilrrsReservedInstancesListings :: !(Maybe [ReservedInstancesListing])
+    , _crilrrsResponseStatus            :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateReservedInstancesListingResponse' with the minimum fields required to make a request.

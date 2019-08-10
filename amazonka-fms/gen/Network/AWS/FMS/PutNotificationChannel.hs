@@ -43,10 +43,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putNotificationChannel' smart constructor.
-data PutNotificationChannel = PutNotificationChannel'
-  { _pncSNSTopicARN :: !Text
-  , _pncSNSRoleName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutNotificationChannel =
+  PutNotificationChannel'
+    { _pncSNSTopicARN :: !Text
+    , _pncSNSRoleName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutNotificationChannel' with the minimum fields required to make a request.

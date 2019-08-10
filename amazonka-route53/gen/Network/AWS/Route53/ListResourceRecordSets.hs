@@ -85,13 +85,15 @@ import Network.AWS.Route53.Types.Product
 --
 --
 -- /See:/ 'listResourceRecordSets' smart constructor.
-data ListResourceRecordSets = ListResourceRecordSets'
-  { _lrrsStartRecordName       :: !(Maybe Text)
-  , _lrrsStartRecordType       :: !(Maybe RecordType)
-  , _lrrsStartRecordIdentifier :: !(Maybe Text)
-  , _lrrsMaxItems              :: !(Maybe Text)
-  , _lrrsHostedZoneId          :: !ResourceId
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListResourceRecordSets =
+  ListResourceRecordSets'
+    { _lrrsStartRecordName       :: !(Maybe Text)
+    , _lrrsStartRecordType       :: !(Maybe RecordType)
+    , _lrrsStartRecordIdentifier :: !(Maybe Text)
+    , _lrrsMaxItems              :: !(Maybe Text)
+    , _lrrsHostedZoneId          :: !ResourceId
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListResourceRecordSets' with the minimum fields required to make a request.
@@ -198,15 +200,17 @@ instance ToQuery ListResourceRecordSets where
 --
 --
 -- /See:/ 'listResourceRecordSetsResponse' smart constructor.
-data ListResourceRecordSetsResponse = ListResourceRecordSetsResponse'
-  { _lrrsrsNextRecordType       :: !(Maybe RecordType)
-  , _lrrsrsNextRecordName       :: !(Maybe Text)
-  , _lrrsrsNextRecordIdentifier :: !(Maybe Text)
-  , _lrrsrsResponseStatus       :: !Int
-  , _lrrsrsResourceRecordSets   :: ![ResourceRecordSet]
-  , _lrrsrsIsTruncated          :: !Bool
-  , _lrrsrsMaxItems             :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListResourceRecordSetsResponse =
+  ListResourceRecordSetsResponse'
+    { _lrrsrsNextRecordType       :: !(Maybe RecordType)
+    , _lrrsrsNextRecordName       :: !(Maybe Text)
+    , _lrrsrsNextRecordIdentifier :: !(Maybe Text)
+    , _lrrsrsResponseStatus       :: !Int
+    , _lrrsrsResourceRecordSets   :: ![ResourceRecordSet]
+    , _lrrsrsIsTruncated          :: !Bool
+    , _lrrsrsMaxItems             :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListResourceRecordSetsResponse' with the minimum fields required to make a request.

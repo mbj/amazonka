@@ -54,13 +54,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describePrefixLists' smart constructor.
-data DescribePrefixLists = DescribePrefixLists'
-  { _dplFilters       :: !(Maybe [Filter])
-  , _dplPrefixListIds :: !(Maybe [Text])
-  , _dplNextToken     :: !(Maybe Text)
-  , _dplDryRun        :: !(Maybe Bool)
-  , _dplMaxResults    :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribePrefixLists =
+  DescribePrefixLists'
+    { _dplFilters       :: !(Maybe [Filter])
+    , _dplPrefixListIds :: !(Maybe [Text])
+    , _dplNextToken     :: !(Maybe Text)
+    , _dplDryRun        :: !(Maybe Bool)
+    , _dplMaxResults    :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribePrefixLists' with the minimum fields required to make a request.
@@ -147,11 +149,13 @@ instance ToQuery DescribePrefixLists where
 --
 --
 -- /See:/ 'describePrefixListsResponse' smart constructor.
-data DescribePrefixListsResponse = DescribePrefixListsResponse'
-  { _dplrsNextToken      :: !(Maybe Text)
-  , _dplrsPrefixLists    :: !(Maybe [PrefixList])
-  , _dplrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribePrefixListsResponse =
+  DescribePrefixListsResponse'
+    { _dplrsNextToken      :: !(Maybe Text)
+    , _dplrsPrefixLists    :: !(Maybe [PrefixList])
+    , _dplrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribePrefixListsResponse' with the minimum fields required to make a request.

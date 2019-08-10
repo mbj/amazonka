@@ -50,14 +50,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateGraphqlAPI' smart constructor.
-data UpdateGraphqlAPI = UpdateGraphqlAPI'
-  { _ugaOpenIdConnectConfig :: !(Maybe OpenIdConnectConfig)
-  , _ugaUserPoolConfig      :: !(Maybe UserPoolConfig)
-  , _ugaAuthenticationType  :: !(Maybe AuthenticationType)
-  , _ugaLogConfig           :: !(Maybe LogConfig)
-  , _ugaApiId               :: !Text
-  , _ugaName                :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateGraphqlAPI =
+  UpdateGraphqlAPI'
+    { _ugaOpenIdConnectConfig :: !(Maybe OpenIdConnectConfig)
+    , _ugaUserPoolConfig      :: !(Maybe UserPoolConfig)
+    , _ugaAuthenticationType  :: !(Maybe AuthenticationType)
+    , _ugaLogConfig           :: !(Maybe LogConfig)
+    , _ugaApiId               :: !Text
+    , _ugaName                :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateGraphqlAPI' with the minimum fields required to make a request.
@@ -153,10 +155,12 @@ instance ToQuery UpdateGraphqlAPI where
         toQuery = const mempty
 
 -- | /See:/ 'updateGraphqlAPIResponse' smart constructor.
-data UpdateGraphqlAPIResponse = UpdateGraphqlAPIResponse'
-  { _ugarsGraphqlAPI     :: !(Maybe GraphqlAPI)
-  , _ugarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateGraphqlAPIResponse =
+  UpdateGraphqlAPIResponse'
+    { _ugarsGraphqlAPI     :: !(Maybe GraphqlAPI)
+    , _ugarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateGraphqlAPIResponse' with the minimum fields required to make a request.

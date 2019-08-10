@@ -58,11 +58,13 @@ import Network.AWS.StorageGateway.Types.Product
 --
 --
 -- /See:/ 'describeTapeRecoveryPoints' smart constructor.
-data DescribeTapeRecoveryPoints = DescribeTapeRecoveryPoints'
-  { _dtrpMarker     :: !(Maybe Text)
-  , _dtrpLimit      :: !(Maybe Nat)
-  , _dtrpGatewayARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeTapeRecoveryPoints =
+  DescribeTapeRecoveryPoints'
+    { _dtrpMarker     :: !(Maybe Text)
+    , _dtrpLimit      :: !(Maybe Nat)
+    , _dtrpGatewayARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeTapeRecoveryPoints' with the minimum fields required to make a request.
@@ -150,12 +152,14 @@ instance ToQuery DescribeTapeRecoveryPoints where
 --
 --
 -- /See:/ 'describeTapeRecoveryPointsResponse' smart constructor.
-data DescribeTapeRecoveryPointsResponse = DescribeTapeRecoveryPointsResponse'
-  { _dtrprsTapeRecoveryPointInfos :: !(Maybe [TapeRecoveryPointInfo])
-  , _dtrprsGatewayARN             :: !(Maybe Text)
-  , _dtrprsMarker                 :: !(Maybe Text)
-  , _dtrprsResponseStatus         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeTapeRecoveryPointsResponse =
+  DescribeTapeRecoveryPointsResponse'
+    { _dtrprsTapeRecoveryPointInfos :: !(Maybe [TapeRecoveryPointInfo])
+    , _dtrprsGatewayARN             :: !(Maybe Text)
+    , _dtrprsMarker                 :: !(Maybe Text)
+    , _dtrprsResponseStatus         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeTapeRecoveryPointsResponse' with the minimum fields required to make a request.

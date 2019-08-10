@@ -46,10 +46,12 @@ import Network.AWS.Response
 -- | DeleteMembers request body.
 --
 -- /See:/ 'deleteMembers' smart constructor.
-data DeleteMembers = DeleteMembers'
-  { _dmAccountIds :: !(Maybe [Text])
-  , _dmDetectorId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteMembers =
+  DeleteMembers'
+    { _dmAccountIds :: !(Maybe [Text])
+    , _dmDetectorId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteMembers' with the minimum fields required to make a request.
@@ -109,10 +111,12 @@ instance ToQuery DeleteMembers where
         toQuery = const mempty
 
 -- | /See:/ 'deleteMembersResponse' smart constructor.
-data DeleteMembersResponse = DeleteMembersResponse'
-  { _drsUnprocessedAccounts :: !(Maybe [UnprocessedAccount])
-  , _drsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteMembersResponse =
+  DeleteMembersResponse'
+    { _drsUnprocessedAccounts :: !(Maybe [UnprocessedAccount])
+    , _drsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteMembersResponse' with the minimum fields required to make a request.

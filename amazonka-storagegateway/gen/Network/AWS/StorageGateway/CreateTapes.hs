@@ -53,13 +53,15 @@ import Network.AWS.StorageGateway.Types.Product
 --
 --
 -- /See:/ 'createTapes' smart constructor.
-data CreateTapes = CreateTapes'
-  { _ctGatewayARN        :: !Text
-  , _ctTapeSizeInBytes   :: !Integer
-  , _ctClientToken       :: !Text
-  , _ctNumTapesToCreate  :: !Nat
-  , _ctTapeBarcodePrefix :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateTapes =
+  CreateTapes'
+    { _ctGatewayARN        :: !Text
+    , _ctTapeSizeInBytes   :: !Integer
+    , _ctClientToken       :: !Text
+    , _ctNumTapesToCreate  :: !Nat
+    , _ctTapeBarcodePrefix :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateTapes' with the minimum fields required to make a request.
@@ -157,10 +159,12 @@ instance ToQuery CreateTapes where
 --
 --
 -- /See:/ 'createTapesResponse' smart constructor.
-data CreateTapesResponse = CreateTapesResponse'
-  { _ctrsTapeARNs       :: !(Maybe [Text])
-  , _ctrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateTapesResponse =
+  CreateTapesResponse'
+    { _ctrsTapeARNs       :: !(Maybe [Text])
+    , _ctrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateTapesResponse' with the minimum fields required to make a request.

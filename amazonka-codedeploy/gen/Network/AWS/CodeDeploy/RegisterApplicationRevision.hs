@@ -48,11 +48,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'registerApplicationRevision' smart constructor.
-data RegisterApplicationRevision = RegisterApplicationRevision'
-  { _rarDescription     :: !(Maybe Text)
-  , _rarApplicationName :: !Text
-  , _rarRevision        :: !RevisionLocation
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RegisterApplicationRevision =
+  RegisterApplicationRevision'
+    { _rarDescription     :: !(Maybe Text)
+    , _rarApplicationName :: !Text
+    , _rarRevision        :: !RevisionLocation
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterApplicationRevision' with the minimum fields required to make a request.

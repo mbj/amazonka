@@ -54,13 +54,15 @@ import Network.AWS.ServerlessApplicationRepository.Types
 import Network.AWS.ServerlessApplicationRepository.Types.Product
 
 -- | /See:/ 'createApplicationVersion' smart constructor.
-data CreateApplicationVersion = CreateApplicationVersion'
-  { _cavSourceCodeURL   :: !(Maybe Text)
-  , _cavTemplateBody    :: !(Maybe Text)
-  , _cavTemplateURL     :: !(Maybe Text)
-  , _cavApplicationId   :: !Text
-  , _cavSemanticVersion :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateApplicationVersion =
+  CreateApplicationVersion'
+    { _cavSourceCodeURL   :: !(Maybe Text)
+    , _cavTemplateBody    :: !(Maybe Text)
+    , _cavTemplateURL     :: !(Maybe Text)
+    , _cavApplicationId   :: !Text
+    , _cavSemanticVersion :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateApplicationVersion' with the minimum fields required to make a request.
@@ -155,15 +157,17 @@ instance ToQuery CreateApplicationVersion where
         toQuery = const mempty
 
 -- | /See:/ 'createApplicationVersionResponse' smart constructor.
-data CreateApplicationVersionResponse = CreateApplicationVersionResponse'
-  { _cavrsCreationTime         :: !(Maybe Text)
-  , _cavrsParameterDefinitions :: !(Maybe [ParameterDefinition])
-  , _cavrsSemanticVersion      :: !(Maybe Text)
-  , _cavrsSourceCodeURL        :: !(Maybe Text)
-  , _cavrsApplicationId        :: !(Maybe Text)
-  , _cavrsTemplateURL          :: !(Maybe Text)
-  , _cavrsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateApplicationVersionResponse =
+  CreateApplicationVersionResponse'
+    { _cavrsCreationTime         :: !(Maybe Text)
+    , _cavrsParameterDefinitions :: !(Maybe [ParameterDefinition])
+    , _cavrsSemanticVersion      :: !(Maybe Text)
+    , _cavrsSourceCodeURL        :: !(Maybe Text)
+    , _cavrsApplicationId        :: !(Maybe Text)
+    , _cavrsTemplateURL          :: !(Maybe Text)
+    , _cavrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateApplicationVersionResponse' with the minimum fields required to make a request.

@@ -47,10 +47,12 @@ import Network.AWS.ServiceCatalog.Types
 import Network.AWS.ServiceCatalog.Types.Product
 
 -- | /See:/ 'listPortfolioAccess' smart constructor.
-data ListPortfolioAccess = ListPortfolioAccess'
-  { _lAcceptLanguage :: !(Maybe Text)
-  , _lPortfolioId    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListPortfolioAccess =
+  ListPortfolioAccess'
+    { _lAcceptLanguage :: !(Maybe Text)
+    , _lPortfolioId    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListPortfolioAccess' with the minimum fields required to make a request.
@@ -116,11 +118,13 @@ instance ToQuery ListPortfolioAccess where
         toQuery = const mempty
 
 -- | /See:/ 'listPortfolioAccessResponse' smart constructor.
-data ListPortfolioAccessResponse = ListPortfolioAccessResponse'
-  { _lparsNextPageToken  :: !(Maybe Text)
-  , _lparsAccountIds     :: !(Maybe [Text])
-  , _lparsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListPortfolioAccessResponse =
+  ListPortfolioAccessResponse'
+    { _lparsNextPageToken  :: !(Maybe Text)
+    , _lparsAccountIds     :: !(Maybe [Text])
+    , _lparsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListPortfolioAccessResponse' with the minimum fields required to make a request.

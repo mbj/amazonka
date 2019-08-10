@@ -55,14 +55,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createFpgaImage' smart constructor.
-data CreateFpgaImage = CreateFpgaImage'
-  { _creClientToken          :: !(Maybe Text)
-  , _creLogsStorageLocation  :: !(Maybe StorageLocation)
-  , _creName                 :: !(Maybe Text)
-  , _creDescription          :: !(Maybe Text)
-  , _creDryRun               :: !(Maybe Bool)
-  , _creInputStorageLocation :: !StorageLocation
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateFpgaImage =
+  CreateFpgaImage'
+    { _creClientToken          :: !(Maybe Text)
+    , _creLogsStorageLocation  :: !(Maybe StorageLocation)
+    , _creName                 :: !(Maybe Text)
+    , _creDescription          :: !(Maybe Text)
+    , _creDryRun               :: !(Maybe Bool)
+    , _creInputStorageLocation :: !StorageLocation
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateFpgaImage' with the minimum fields required to make a request.
@@ -150,11 +152,13 @@ instance ToQuery CreateFpgaImage where
                "InputStorageLocation" =: _creInputStorageLocation]
 
 -- | /See:/ 'createFpgaImageResponse' smart constructor.
-data CreateFpgaImageResponse = CreateFpgaImageResponse'
-  { _cfirsFpgaImageId       :: !(Maybe Text)
-  , _cfirsFpgaImageGlobalId :: !(Maybe Text)
-  , _cfirsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateFpgaImageResponse =
+  CreateFpgaImageResponse'
+    { _cfirsFpgaImageId       :: !(Maybe Text)
+    , _cfirsFpgaImageGlobalId :: !(Maybe Text)
+    , _cfirsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateFpgaImageResponse' with the minimum fields required to make a request.

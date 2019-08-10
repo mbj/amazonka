@@ -48,10 +48,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getResourceDefinitionVersion' smart constructor.
-data GetResourceDefinitionVersion = GetResourceDefinitionVersion'
-  { _grdvResourceDefinitionVersionId :: !Text
-  , _grdvResourceDefinitionId        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetResourceDefinitionVersion =
+  GetResourceDefinitionVersion'
+    { _grdvResourceDefinitionVersionId :: !Text
+    , _grdvResourceDefinitionId        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetResourceDefinitionVersion' with the minimum fields required to make a request.
@@ -117,14 +119,16 @@ instance ToQuery GetResourceDefinitionVersion where
         toQuery = const mempty
 
 -- | /See:/ 'getResourceDefinitionVersionResponse' smart constructor.
-data GetResourceDefinitionVersionResponse = GetResourceDefinitionVersionResponse'
-  { _grdvrsDefinition        :: !(Maybe ResourceDefinitionVersion)
-  , _grdvrsARN               :: !(Maybe Text)
-  , _grdvrsCreationTimestamp :: !(Maybe Text)
-  , _grdvrsVersion           :: !(Maybe Text)
-  , _grdvrsId                :: !(Maybe Text)
-  , _grdvrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetResourceDefinitionVersionResponse =
+  GetResourceDefinitionVersionResponse'
+    { _grdvrsDefinition        :: !(Maybe ResourceDefinitionVersion)
+    , _grdvrsARN               :: !(Maybe Text)
+    , _grdvrsCreationTimestamp :: !(Maybe Text)
+    , _grdvrsVersion           :: !(Maybe Text)
+    , _grdvrsId                :: !(Maybe Text)
+    , _grdvrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetResourceDefinitionVersionResponse' with the minimum fields required to make a request.

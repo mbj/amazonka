@@ -66,11 +66,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listBuilds' smart constructor.
-data ListBuilds = ListBuilds'
-  { _lbStatus    :: !(Maybe BuildStatus)
-  , _lbNextToken :: !(Maybe Text)
-  , _lbLimit     :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListBuilds =
+  ListBuilds'
+    { _lbStatus    :: !(Maybe BuildStatus)
+    , _lbNextToken :: !(Maybe Text)
+    , _lbLimit     :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListBuilds' with the minimum fields required to make a request.
@@ -142,11 +144,13 @@ instance ToQuery ListBuilds where
 --
 --
 -- /See:/ 'listBuildsResponse' smart constructor.
-data ListBuildsResponse = ListBuildsResponse'
-  { _lbrsBuilds         :: !(Maybe [Build])
-  , _lbrsNextToken      :: !(Maybe Text)
-  , _lbrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListBuildsResponse =
+  ListBuildsResponse'
+    { _lbrsBuilds         :: !(Maybe [Build])
+    , _lbrsNextToken      :: !(Maybe Text)
+    , _lbrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListBuildsResponse' with the minimum fields required to make a request.

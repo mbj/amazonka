@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeIdentityProvider' smart constructor.
-data DescribeIdentityProvider = DescribeIdentityProvider'
-  { _dipUserPoolId   :: !Text
-  , _dipProviderName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeIdentityProvider =
+  DescribeIdentityProvider'
+    { _dipUserPoolId   :: !Text
+    , _dipProviderName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeIdentityProvider' with the minimum fields required to make a request.
@@ -114,10 +116,12 @@ instance ToQuery DescribeIdentityProvider where
         toQuery = const mempty
 
 -- | /See:/ 'describeIdentityProviderResponse' smart constructor.
-data DescribeIdentityProviderResponse = DescribeIdentityProviderResponse'
-  { _diprsResponseStatus   :: !Int
-  , _diprsIdentityProvider :: !IdentityProviderType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeIdentityProviderResponse =
+  DescribeIdentityProviderResponse'
+    { _diprsResponseStatus   :: !Int
+    , _diprsIdentityProvider :: !IdentityProviderType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeIdentityProviderResponse' with the minimum fields required to make a request.

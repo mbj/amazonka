@@ -85,11 +85,13 @@ import Network.AWS.WAFRegional.Types
 import Network.AWS.WAFRegional.Types.Product
 
 -- | /See:/ 'updateIPSet' smart constructor.
-data UpdateIPSet = UpdateIPSet'
-  { _uisIPSetId     :: !Text
-  , _uisChangeToken :: !Text
-  , _uisUpdates     :: !(List1 IPSetUpdate)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateIPSet =
+  UpdateIPSet'
+    { _uisIPSetId     :: !Text
+    , _uisChangeToken :: !Text
+    , _uisUpdates     :: !(List1 IPSetUpdate)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateIPSet' with the minimum fields required to make a request.
@@ -164,10 +166,12 @@ instance ToQuery UpdateIPSet where
         toQuery = const mempty
 
 -- | /See:/ 'updateIPSetResponse' smart constructor.
-data UpdateIPSetResponse = UpdateIPSetResponse'
-  { _uisrsChangeToken    :: !(Maybe Text)
-  , _uisrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateIPSetResponse =
+  UpdateIPSetResponse'
+    { _uisrsChangeToken    :: !(Maybe Text)
+    , _uisrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateIPSetResponse' with the minimum fields required to make a request.

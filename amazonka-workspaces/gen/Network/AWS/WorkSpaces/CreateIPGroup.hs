@@ -51,11 +51,13 @@ import Network.AWS.WorkSpaces.Types
 import Network.AWS.WorkSpaces.Types.Product
 
 -- | /See:/ 'createIPGroup' smart constructor.
-data CreateIPGroup = CreateIPGroup'
-  { _cigGroupDesc :: !(Maybe Text)
-  , _cigUserRules :: !(Maybe [IPRuleItem])
-  , _cigGroupName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateIPGroup =
+  CreateIPGroup'
+    { _cigGroupDesc :: !(Maybe Text)
+    , _cigUserRules :: !(Maybe [IPRuleItem])
+    , _cigGroupName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateIPGroup' with the minimum fields required to make a request.
@@ -127,10 +129,12 @@ instance ToQuery CreateIPGroup where
         toQuery = const mempty
 
 -- | /See:/ 'createIPGroupResponse' smart constructor.
-data CreateIPGroupResponse = CreateIPGroupResponse'
-  { _cigrsGroupId        :: !(Maybe Text)
-  , _cigrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateIPGroupResponse =
+  CreateIPGroupResponse'
+    { _cigrsGroupId        :: !(Maybe Text)
+    , _cigrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateIPGroupResponse' with the minimum fields required to make a request.

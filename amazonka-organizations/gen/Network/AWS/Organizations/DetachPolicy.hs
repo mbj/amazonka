@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'detachPolicy' smart constructor.
-data DetachPolicy = DetachPolicy'
-  { _detPolicyId :: !Text
-  , _detTargetId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DetachPolicy =
+  DetachPolicy'
+    { _detPolicyId :: !Text
+    , _detTargetId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DetachPolicy' with the minimum fields required to make a request.

@@ -46,9 +46,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getLexicon' smart constructor.
-newtype GetLexicon = GetLexicon'
-  { _glName :: Sensitive Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+newtype GetLexicon =
+  GetLexicon'
+    { _glName :: Sensitive Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetLexicon' with the minimum fields required to make a request.
@@ -91,11 +93,13 @@ instance ToQuery GetLexicon where
         toQuery = const mempty
 
 -- | /See:/ 'getLexiconResponse' smart constructor.
-data GetLexiconResponse = GetLexiconResponse'
-  { _glrsLexiconAttributes :: !(Maybe LexiconAttributes)
-  , _glrsLexicon           :: !(Maybe Lexicon)
-  , _glrsResponseStatus    :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data GetLexiconResponse =
+  GetLexiconResponse'
+    { _glrsLexiconAttributes :: !(Maybe LexiconAttributes)
+    , _glrsLexicon           :: !(Maybe Lexicon)
+    , _glrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetLexiconResponse' with the minimum fields required to make a request.

@@ -58,12 +58,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'authorizeClusterSecurityGroupIngress' smart constructor.
-data AuthorizeClusterSecurityGroupIngress = AuthorizeClusterSecurityGroupIngress'
-  { _acsgiEC2SecurityGroupOwnerId  :: !(Maybe Text)
-  , _acsgiEC2SecurityGroupName     :: !(Maybe Text)
-  , _acsgiCIdRIP                   :: !(Maybe Text)
-  , _acsgiClusterSecurityGroupName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AuthorizeClusterSecurityGroupIngress =
+  AuthorizeClusterSecurityGroupIngress'
+    { _acsgiEC2SecurityGroupOwnerId  :: !(Maybe Text)
+    , _acsgiEC2SecurityGroupName     :: !(Maybe Text)
+    , _acsgiCIdRIP                   :: !(Maybe Text)
+    , _acsgiClusterSecurityGroupName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AuthorizeClusterSecurityGroupIngress' with the minimum fields required to make a request.
@@ -151,10 +153,12 @@ instance ToQuery AuthorizeClusterSecurityGroupIngress
                  _acsgiClusterSecurityGroupName]
 
 -- | /See:/ 'authorizeClusterSecurityGroupIngressResponse' smart constructor.
-data AuthorizeClusterSecurityGroupIngressResponse = AuthorizeClusterSecurityGroupIngressResponse'
-  { _acsgirsClusterSecurityGroup :: !(Maybe ClusterSecurityGroup)
-  , _acsgirsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AuthorizeClusterSecurityGroupIngressResponse =
+  AuthorizeClusterSecurityGroupIngressResponse'
+    { _acsgirsClusterSecurityGroup :: !(Maybe ClusterSecurityGroup)
+    , _acsgirsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AuthorizeClusterSecurityGroupIngressResponse' with the minimum fields required to make a request.

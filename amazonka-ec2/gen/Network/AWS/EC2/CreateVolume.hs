@@ -75,17 +75,19 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createVolume' smart constructor.
-data CreateVolume = CreateVolume'
-  { _cvvSize              :: !(Maybe Int)
-  , _cvvIOPS              :: !(Maybe Int)
-  , _cvvEncrypted         :: !(Maybe Bool)
-  , _cvvTagSpecifications :: !(Maybe [TagSpecification])
-  , _cvvKMSKeyId          :: !(Maybe Text)
-  , _cvvVolumeType        :: !(Maybe VolumeType)
-  , _cvvDryRun            :: !(Maybe Bool)
-  , _cvvSnapshotId        :: !(Maybe Text)
-  , _cvvAvailabilityZone  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateVolume =
+  CreateVolume'
+    { _cvvSize              :: !(Maybe Int)
+    , _cvvIOPS              :: !(Maybe Int)
+    , _cvvEncrypted         :: !(Maybe Bool)
+    , _cvvTagSpecifications :: !(Maybe [TagSpecification])
+    , _cvvKMSKeyId          :: !(Maybe Text)
+    , _cvvVolumeType        :: !(Maybe VolumeType)
+    , _cvvDryRun            :: !(Maybe Bool)
+    , _cvvSnapshotId        :: !(Maybe Text)
+    , _cvvAvailabilityZone  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateVolume' with the minimum fields required to make a request.

@@ -49,11 +49,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeReplicationInstanceTaskLogs' smart constructor.
-data DescribeReplicationInstanceTaskLogs = DescribeReplicationInstanceTaskLogs'
-  { _dritlMarker                 :: !(Maybe Text)
-  , _dritlMaxRecords             :: !(Maybe Int)
-  , _dritlReplicationInstanceARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeReplicationInstanceTaskLogs =
+  DescribeReplicationInstanceTaskLogs'
+    { _dritlMarker                 :: !(Maybe Text)
+    , _dritlMaxRecords             :: !(Maybe Int)
+    , _dritlReplicationInstanceARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeReplicationInstanceTaskLogs' with the minimum fields required to make a request.
@@ -141,12 +143,14 @@ instance ToQuery DescribeReplicationInstanceTaskLogs
         toQuery = const mempty
 
 -- | /See:/ 'describeReplicationInstanceTaskLogsResponse' smart constructor.
-data DescribeReplicationInstanceTaskLogsResponse = DescribeReplicationInstanceTaskLogsResponse'
-  { _dritlrsReplicationInstanceTaskLogs :: !(Maybe [ReplicationInstanceTaskLog])
-  , _dritlrsMarker                      :: !(Maybe Text)
-  , _dritlrsReplicationInstanceARN      :: !(Maybe Text)
-  , _dritlrsResponseStatus              :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeReplicationInstanceTaskLogsResponse =
+  DescribeReplicationInstanceTaskLogsResponse'
+    { _dritlrsReplicationInstanceTaskLogs :: !(Maybe [ReplicationInstanceTaskLog])
+    , _dritlrsMarker :: !(Maybe Text)
+    , _dritlrsReplicationInstanceARN :: !(Maybe Text)
+    , _dritlrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeReplicationInstanceTaskLogsResponse' with the minimum fields required to make a request.

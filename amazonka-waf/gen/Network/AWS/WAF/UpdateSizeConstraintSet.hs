@@ -73,11 +73,13 @@ import Network.AWS.WAF.Types
 import Network.AWS.WAF.Types.Product
 
 -- | /See:/ 'updateSizeConstraintSet' smart constructor.
-data UpdateSizeConstraintSet = UpdateSizeConstraintSet'
-  { _uscsSizeConstraintSetId :: !Text
-  , _uscsChangeToken         :: !Text
-  , _uscsUpdates             :: !(List1 SizeConstraintSetUpdate)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateSizeConstraintSet =
+  UpdateSizeConstraintSet'
+    { _uscsSizeConstraintSetId :: !Text
+    , _uscsChangeToken         :: !Text
+    , _uscsUpdates             :: !(List1 SizeConstraintSetUpdate)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateSizeConstraintSet' with the minimum fields required to make a request.
@@ -154,10 +156,12 @@ instance ToQuery UpdateSizeConstraintSet where
         toQuery = const mempty
 
 -- | /See:/ 'updateSizeConstraintSetResponse' smart constructor.
-data UpdateSizeConstraintSetResponse = UpdateSizeConstraintSetResponse'
-  { _uscsrsChangeToken    :: !(Maybe Text)
-  , _uscsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateSizeConstraintSetResponse =
+  UpdateSizeConstraintSetResponse'
+    { _uscsrsChangeToken    :: !(Maybe Text)
+    , _uscsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateSizeConstraintSetResponse' with the minimum fields required to make a request.

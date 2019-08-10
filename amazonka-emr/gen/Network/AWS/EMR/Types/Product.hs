@@ -34,12 +34,14 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'application' smart constructor.
-data Application = Application'
-  { _aArgs           :: !(Maybe [Text])
-  , _aAdditionalInfo :: !(Maybe (Map Text Text))
-  , _aName           :: !(Maybe Text)
-  , _aVersion        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Application =
+  Application'
+    { _aArgs           :: !(Maybe [Text])
+    , _aAdditionalInfo :: !(Maybe (Map Text Text))
+    , _aName           :: !(Maybe Text)
+    , _aVersion        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Application' with the minimum fields required to make a request.
@@ -108,10 +110,12 @@ instance ToJSON Application where
 --
 --
 -- /See:/ 'autoScalingPolicy' smart constructor.
-data AutoScalingPolicy = AutoScalingPolicy'
-  { _aspConstraints :: !ScalingConstraints
-  , _aspRules       :: ![ScalingRule]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AutoScalingPolicy =
+  AutoScalingPolicy'
+    { _aspConstraints :: !ScalingConstraints
+    , _aspRules       :: ![ScalingRule]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AutoScalingPolicy' with the minimum fields required to make a request.
@@ -152,11 +156,13 @@ instance ToJSON AutoScalingPolicy where
 --
 --
 -- /See:/ 'autoScalingPolicyDescription' smart constructor.
-data AutoScalingPolicyDescription = AutoScalingPolicyDescription'
-  { _aspdStatus      :: !(Maybe AutoScalingPolicyStatus)
-  , _aspdRules       :: !(Maybe [ScalingRule])
-  , _aspdConstraints :: !(Maybe ScalingConstraints)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AutoScalingPolicyDescription =
+  AutoScalingPolicyDescription'
+    { _aspdStatus      :: !(Maybe AutoScalingPolicyStatus)
+    , _aspdRules       :: !(Maybe [ScalingRule])
+    , _aspdConstraints :: !(Maybe ScalingConstraints)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AutoScalingPolicyDescription' with the minimum fields required to make a request.
@@ -204,10 +210,12 @@ instance NFData AutoScalingPolicyDescription where
 --
 --
 -- /See:/ 'autoScalingPolicyStateChangeReason' smart constructor.
-data AutoScalingPolicyStateChangeReason = AutoScalingPolicyStateChangeReason'
-  { _aspscrCode    :: !(Maybe AutoScalingPolicyStateChangeReasonCode)
-  , _aspscrMessage :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AutoScalingPolicyStateChangeReason =
+  AutoScalingPolicyStateChangeReason'
+    { _aspscrCode    :: !(Maybe AutoScalingPolicyStateChangeReasonCode)
+    , _aspscrMessage :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AutoScalingPolicyStateChangeReason' with the minimum fields required to make a request.
@@ -251,10 +259,12 @@ instance NFData AutoScalingPolicyStateChangeReason
 --
 --
 -- /See:/ 'autoScalingPolicyStatus' smart constructor.
-data AutoScalingPolicyStatus = AutoScalingPolicyStatus'
-  { _aspsState             :: !(Maybe AutoScalingPolicyState)
-  , _aspsStateChangeReason :: !(Maybe AutoScalingPolicyStateChangeReason)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AutoScalingPolicyStatus =
+  AutoScalingPolicyStatus'
+    { _aspsState             :: !(Maybe AutoScalingPolicyState)
+    , _aspsStateChangeReason :: !(Maybe AutoScalingPolicyStateChangeReason)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AutoScalingPolicyStatus' with the minimum fields required to make a request.
@@ -295,10 +305,12 @@ instance NFData AutoScalingPolicyStatus where
 --
 --
 -- /See:/ 'bootstrapActionConfig' smart constructor.
-data BootstrapActionConfig = BootstrapActionConfig'
-  { _bacName                  :: !Text
-  , _bacScriptBootstrapAction :: !ScriptBootstrapActionConfig
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BootstrapActionConfig =
+  BootstrapActionConfig'
+    { _bacName                  :: !Text
+    , _bacScriptBootstrapAction :: !ScriptBootstrapActionConfig
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BootstrapActionConfig' with the minimum fields required to make a request.
@@ -343,11 +355,13 @@ instance ToJSON BootstrapActionConfig where
 --
 --
 -- /See:/ 'cancelStepsInfo' smart constructor.
-data CancelStepsInfo = CancelStepsInfo'
-  { _csiStatus :: !(Maybe CancelStepsRequestStatus)
-  , _csiStepId :: !(Maybe Text)
-  , _csiReason :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CancelStepsInfo =
+  CancelStepsInfo'
+    { _csiStatus :: !(Maybe CancelStepsRequestStatus)
+    , _csiStepId :: !(Maybe Text)
+    , _csiReason :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CancelStepsInfo' with the minimum fields required to make a request.
@@ -395,17 +409,19 @@ instance NFData CancelStepsInfo where
 --
 --
 -- /See:/ 'cloudWatchAlarmDefinition' smart constructor.
-data CloudWatchAlarmDefinition = CloudWatchAlarmDefinition'
-  { _cwadEvaluationPeriods  :: !(Maybe Int)
-  , _cwadNamespace          :: !(Maybe Text)
-  , _cwadDimensions         :: !(Maybe [MetricDimension])
-  , _cwadUnit               :: !(Maybe Unit)
-  , _cwadStatistic          :: !(Maybe Statistic)
-  , _cwadComparisonOperator :: !ComparisonOperator
-  , _cwadMetricName         :: !Text
-  , _cwadPeriod             :: !Int
-  , _cwadThreshold          :: !Double
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CloudWatchAlarmDefinition =
+  CloudWatchAlarmDefinition'
+    { _cwadEvaluationPeriods  :: !(Maybe Int)
+    , _cwadNamespace          :: !(Maybe Text)
+    , _cwadDimensions         :: !(Maybe [MetricDimension])
+    , _cwadUnit               :: !(Maybe Unit)
+    , _cwadStatistic          :: !(Maybe Statistic)
+    , _cwadComparisonOperator :: !ComparisonOperator
+    , _cwadMetricName         :: !Text
+    , _cwadPeriod             :: !Int
+    , _cwadThreshold          :: !Double
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CloudWatchAlarmDefinition' with the minimum fields required to make a request.
@@ -523,33 +539,35 @@ instance ToJSON CloudWatchAlarmDefinition where
 --
 --
 -- /See:/ 'cluster' smart constructor.
-data Cluster = Cluster'
-  { _cluRequestedAMIVersion     :: !(Maybe Text)
-  , _cluEBSRootVolumeSize       :: !(Maybe Int)
-  , _cluEC2InstanceAttributes   :: !(Maybe EC2InstanceAttributes)
-  , _cluNormalizedInstanceHours :: !(Maybe Int)
-  , _cluConfigurations          :: !(Maybe [Configuration])
-  , _cluCustomAMIId             :: !(Maybe Text)
-  , _cluAutoScalingRole         :: !(Maybe Text)
-  , _cluSecurityConfiguration   :: !(Maybe Text)
-  , _cluScaleDownBehavior       :: !(Maybe ScaleDownBehavior)
-  , _cluInstanceCollectionType  :: !(Maybe InstanceCollectionType)
-  , _cluReleaseLabel            :: !(Maybe Text)
-  , _cluRepoUpgradeOnBoot       :: !(Maybe RepoUpgradeOnBoot)
-  , _cluLogURI                  :: !(Maybe Text)
-  , _cluKerberosAttributes      :: !(Maybe KerberosAttributes)
-  , _cluRunningAMIVersion       :: !(Maybe Text)
-  , _cluMasterPublicDNSName     :: !(Maybe Text)
-  , _cluTerminationProtected    :: !(Maybe Bool)
-  , _cluVisibleToAllUsers       :: !(Maybe Bool)
-  , _cluAutoTerminate           :: !(Maybe Bool)
-  , _cluApplications            :: !(Maybe [Application])
-  , _cluTags                    :: !(Maybe [Tag])
-  , _cluServiceRole             :: !(Maybe Text)
-  , _cluId                      :: !Text
-  , _cluName                    :: !Text
-  , _cluStatus                  :: !ClusterStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Cluster =
+  Cluster'
+    { _cluRequestedAMIVersion     :: !(Maybe Text)
+    , _cluEBSRootVolumeSize       :: !(Maybe Int)
+    , _cluEC2InstanceAttributes   :: !(Maybe EC2InstanceAttributes)
+    , _cluNormalizedInstanceHours :: !(Maybe Int)
+    , _cluConfigurations          :: !(Maybe [Configuration])
+    , _cluCustomAMIId             :: !(Maybe Text)
+    , _cluAutoScalingRole         :: !(Maybe Text)
+    , _cluSecurityConfiguration   :: !(Maybe Text)
+    , _cluScaleDownBehavior       :: !(Maybe ScaleDownBehavior)
+    , _cluInstanceCollectionType  :: !(Maybe InstanceCollectionType)
+    , _cluReleaseLabel            :: !(Maybe Text)
+    , _cluRepoUpgradeOnBoot       :: !(Maybe RepoUpgradeOnBoot)
+    , _cluLogURI                  :: !(Maybe Text)
+    , _cluKerberosAttributes      :: !(Maybe KerberosAttributes)
+    , _cluRunningAMIVersion       :: !(Maybe Text)
+    , _cluMasterPublicDNSName     :: !(Maybe Text)
+    , _cluTerminationProtected    :: !(Maybe Bool)
+    , _cluVisibleToAllUsers       :: !(Maybe Bool)
+    , _cluAutoTerminate           :: !(Maybe Bool)
+    , _cluApplications            :: !(Maybe [Application])
+    , _cluTags                    :: !(Maybe [Tag])
+    , _cluServiceRole             :: !(Maybe Text)
+    , _cluId                      :: !Text
+    , _cluName                    :: !Text
+    , _cluStatus                  :: !ClusterStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Cluster' with the minimum fields required to make a request.
@@ -780,10 +798,12 @@ instance NFData Cluster where
 --
 --
 -- /See:/ 'clusterStateChangeReason' smart constructor.
-data ClusterStateChangeReason = ClusterStateChangeReason'
-  { _cscrCode    :: !(Maybe ClusterStateChangeReasonCode)
-  , _cscrMessage :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ClusterStateChangeReason =
+  ClusterStateChangeReason'
+    { _cscrCode    :: !(Maybe ClusterStateChangeReasonCode)
+    , _cscrMessage :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ClusterStateChangeReason' with the minimum fields required to make a request.
@@ -823,11 +843,13 @@ instance NFData ClusterStateChangeReason where
 --
 --
 -- /See:/ 'clusterStatus' smart constructor.
-data ClusterStatus = ClusterStatus'
-  { _csState             :: !(Maybe ClusterState)
-  , _csStateChangeReason :: !(Maybe ClusterStateChangeReason)
-  , _csTimeline          :: !(Maybe ClusterTimeline)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ClusterStatus =
+  ClusterStatus'
+    { _csState             :: !(Maybe ClusterState)
+    , _csStateChangeReason :: !(Maybe ClusterStateChangeReason)
+    , _csTimeline          :: !(Maybe ClusterTimeline)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ClusterStatus' with the minimum fields required to make a request.
@@ -875,12 +897,14 @@ instance NFData ClusterStatus where
 --
 --
 -- /See:/ 'clusterSummary' smart constructor.
-data ClusterSummary = ClusterSummary'
-  { _csStatus                  :: !(Maybe ClusterStatus)
-  , _csNormalizedInstanceHours :: !(Maybe Int)
-  , _csName                    :: !(Maybe Text)
-  , _csId                      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ClusterSummary =
+  ClusterSummary'
+    { _csStatus                  :: !(Maybe ClusterStatus)
+    , _csNormalizedInstanceHours :: !(Maybe Int)
+    , _csName                    :: !(Maybe Text)
+    , _csId                      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ClusterSummary' with the minimum fields required to make a request.
@@ -940,11 +964,13 @@ instance NFData ClusterSummary where
 --
 --
 -- /See:/ 'clusterTimeline' smart constructor.
-data ClusterTimeline = ClusterTimeline'
-  { _ctReadyDateTime    :: !(Maybe POSIX)
-  , _ctCreationDateTime :: !(Maybe POSIX)
-  , _ctEndDateTime      :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ClusterTimeline =
+  ClusterTimeline'
+    { _ctReadyDateTime    :: !(Maybe POSIX)
+    , _ctCreationDateTime :: !(Maybe POSIX)
+    , _ctEndDateTime      :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ClusterTimeline' with the minimum fields required to make a request.
@@ -996,11 +1022,13 @@ instance NFData ClusterTimeline where
 --
 --
 -- /See:/ 'command' smart constructor.
-data Command = Command'
-  { _cArgs       :: !(Maybe [Text])
-  , _cScriptPath :: !(Maybe Text)
-  , _cName       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Command =
+  Command'
+    { _cArgs       :: !(Maybe [Text])
+    , _cScriptPath :: !(Maybe Text)
+    , _cName       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Command' with the minimum fields required to make a request.
@@ -1046,11 +1074,13 @@ instance NFData Command where
 --
 --
 -- /See:/ 'configuration' smart constructor.
-data Configuration = Configuration'
-  { _cConfigurations :: !(Maybe [Configuration])
-  , _cClassification :: !(Maybe Text)
-  , _cProperties     :: !(Maybe (Map Text Text))
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Configuration =
+  Configuration'
+    { _cConfigurations :: !(Maybe [Configuration])
+    , _cClassification :: !(Maybe Text)
+    , _cProperties     :: !(Maybe (Map Text Text))
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Configuration' with the minimum fields required to make a request.
@@ -1110,10 +1140,12 @@ instance ToJSON Configuration where
 --
 --
 -- /See:/ 'ebsBlockDevice' smart constructor.
-data EBSBlockDevice = EBSBlockDevice'
-  { _ebdDevice              :: !(Maybe Text)
-  , _ebdVolumeSpecification :: !(Maybe VolumeSpecification)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EBSBlockDevice =
+  EBSBlockDevice'
+    { _ebdDevice              :: !(Maybe Text)
+    , _ebdVolumeSpecification :: !(Maybe VolumeSpecification)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EBSBlockDevice' with the minimum fields required to make a request.
@@ -1153,10 +1185,12 @@ instance NFData EBSBlockDevice where
 --
 --
 -- /See:/ 'ebsBlockDeviceConfig' smart constructor.
-data EBSBlockDeviceConfig = EBSBlockDeviceConfig'
-  { _ebdcVolumesPerInstance  :: !(Maybe Int)
-  , _ebdcVolumeSpecification :: !VolumeSpecification
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EBSBlockDeviceConfig =
+  EBSBlockDeviceConfig'
+    { _ebdcVolumesPerInstance  :: !(Maybe Int)
+    , _ebdcVolumeSpecification :: !VolumeSpecification
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EBSBlockDeviceConfig' with the minimum fields required to make a request.
@@ -1202,10 +1236,12 @@ instance ToJSON EBSBlockDeviceConfig where
 --
 --
 -- /See:/ 'ebsConfiguration' smart constructor.
-data EBSConfiguration = EBSConfiguration'
-  { _ecEBSOptimized          :: !(Maybe Bool)
-  , _ecEBSBlockDeviceConfigs :: !(Maybe [EBSBlockDeviceConfig])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EBSConfiguration =
+  EBSConfiguration'
+    { _ecEBSOptimized          :: !(Maybe Bool)
+    , _ecEBSBlockDeviceConfigs :: !(Maybe [EBSBlockDeviceConfig])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EBSConfiguration' with the minimum fields required to make a request.
@@ -1247,10 +1283,12 @@ instance ToJSON EBSConfiguration where
 --
 --
 -- /See:/ 'ebsVolume' smart constructor.
-data EBSVolume = EBSVolume'
-  { _evDevice   :: !(Maybe Text)
-  , _evVolumeId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EBSVolume =
+  EBSVolume'
+    { _evDevice   :: !(Maybe Text)
+    , _evVolumeId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EBSVolume' with the minimum fields required to make a request.
@@ -1289,19 +1327,21 @@ instance NFData EBSVolume where
 --
 --
 -- /See:/ 'ec2InstanceAttributes' smart constructor.
-data EC2InstanceAttributes = EC2InstanceAttributes'
-  { _eiaEC2KeyName                     :: !(Maybe Text)
-  , _eiaEmrManagedSlaveSecurityGroup   :: !(Maybe Text)
-  , _eiaAdditionalSlaveSecurityGroups  :: !(Maybe [Text])
-  , _eiaRequestedEC2SubnetIds          :: !(Maybe [Text])
-  , _eiaAdditionalMasterSecurityGroups :: !(Maybe [Text])
-  , _eiaIAMInstanceProfile             :: !(Maybe Text)
-  , _eiaEmrManagedMasterSecurityGroup  :: !(Maybe Text)
-  , _eiaEC2SubnetId                    :: !(Maybe Text)
-  , _eiaRequestedEC2AvailabilityZones  :: !(Maybe [Text])
-  , _eiaServiceAccessSecurityGroup     :: !(Maybe Text)
-  , _eiaEC2AvailabilityZone            :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EC2InstanceAttributes =
+  EC2InstanceAttributes'
+    { _eiaEC2KeyName                     :: !(Maybe Text)
+    , _eiaEmrManagedSlaveSecurityGroup   :: !(Maybe Text)
+    , _eiaAdditionalSlaveSecurityGroups  :: !(Maybe [Text])
+    , _eiaRequestedEC2SubnetIds          :: !(Maybe [Text])
+    , _eiaAdditionalMasterSecurityGroups :: !(Maybe [Text])
+    , _eiaIAMInstanceProfile             :: !(Maybe Text)
+    , _eiaEmrManagedMasterSecurityGroup  :: !(Maybe Text)
+    , _eiaEC2SubnetId                    :: !(Maybe Text)
+    , _eiaRequestedEC2AvailabilityZones  :: !(Maybe [Text])
+    , _eiaServiceAccessSecurityGroup     :: !(Maybe Text)
+    , _eiaEC2AvailabilityZone            :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EC2InstanceAttributes' with the minimum fields required to make a request.
@@ -1420,11 +1460,13 @@ instance NFData EC2InstanceAttributes where
 --
 --
 -- /See:/ 'failureDetails' smart constructor.
-data FailureDetails = FailureDetails'
-  { _fdLogFile :: !(Maybe Text)
-  , _fdReason  :: !(Maybe Text)
-  , _fdMessage :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FailureDetails =
+  FailureDetails'
+    { _fdLogFile :: !(Maybe Text)
+    , _fdReason  :: !(Maybe Text)
+    , _fdMessage :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FailureDetails' with the minimum fields required to make a request.
@@ -1472,12 +1514,14 @@ instance NFData FailureDetails where
 --
 --
 -- /See:/ 'hadoopJARStepConfig' smart constructor.
-data HadoopJARStepConfig = HadoopJARStepConfig'
-  { _hjscArgs       :: !(Maybe [Text])
-  , _hjscMainClass  :: !(Maybe Text)
-  , _hjscProperties :: !(Maybe [KeyValue])
-  , _hjscJAR        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data HadoopJARStepConfig =
+  HadoopJARStepConfig'
+    { _hjscArgs       :: !(Maybe [Text])
+    , _hjscMainClass  :: !(Maybe Text)
+    , _hjscProperties :: !(Maybe [KeyValue])
+    , _hjscJAR        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'HadoopJARStepConfig' with the minimum fields required to make a request.
@@ -1537,12 +1581,14 @@ instance ToJSON HadoopJARStepConfig where
 --
 --
 -- /See:/ 'hadoopStepConfig' smart constructor.
-data HadoopStepConfig = HadoopStepConfig'
-  { _hscArgs       :: !(Maybe [Text])
-  , _hscJAR        :: !(Maybe Text)
-  , _hscMainClass  :: !(Maybe Text)
-  , _hscProperties :: !(Maybe (Map Text Text))
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data HadoopStepConfig =
+  HadoopStepConfig'
+    { _hscArgs       :: !(Maybe [Text])
+    , _hscJAR        :: !(Maybe Text)
+    , _hscMainClass  :: !(Maybe Text)
+    , _hscProperties :: !(Maybe (Map Text Text))
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'HadoopStepConfig' with the minimum fields required to make a request.
@@ -1601,20 +1647,22 @@ instance NFData HadoopStepConfig where
 --
 --
 -- /See:/ 'instance'' smart constructor.
-data Instance = Instance'
-  { _iStatus           :: !(Maybe InstanceStatus)
-  , _iPublicDNSName    :: !(Maybe Text)
-  , _iEBSVolumes       :: !(Maybe [EBSVolume])
-  , _iEC2InstanceId    :: !(Maybe Text)
-  , _iInstanceType     :: !(Maybe Text)
-  , _iMarket           :: !(Maybe MarketType)
-  , _iPrivateIPAddress :: !(Maybe Text)
-  , _iInstanceFleetId  :: !(Maybe Text)
-  , _iId               :: !(Maybe Text)
-  , _iInstanceGroupId  :: !(Maybe Text)
-  , _iPrivateDNSName   :: !(Maybe Text)
-  , _iPublicIPAddress  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Instance =
+  Instance'
+    { _iStatus           :: !(Maybe InstanceStatus)
+    , _iPublicDNSName    :: !(Maybe Text)
+    , _iEBSVolumes       :: !(Maybe [EBSVolume])
+    , _iEC2InstanceId    :: !(Maybe Text)
+    , _iInstanceType     :: !(Maybe Text)
+    , _iMarket           :: !(Maybe MarketType)
+    , _iPrivateIPAddress :: !(Maybe Text)
+    , _iInstanceFleetId  :: !(Maybe Text)
+    , _iId               :: !(Maybe Text)
+    , _iInstanceGroupId  :: !(Maybe Text)
+    , _iPrivateDNSName   :: !(Maybe Text)
+    , _iPublicIPAddress  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Instance' with the minimum fields required to make a request.
@@ -1737,18 +1785,20 @@ instance NFData Instance where
 --
 --
 -- /See:/ 'instanceFleet' smart constructor.
-data InstanceFleet = InstanceFleet'
-  { _ifProvisionedSpotCapacity :: !(Maybe Nat)
-  , _ifStatus :: !(Maybe InstanceFleetStatus)
-  , _ifTargetOnDemandCapacity :: !(Maybe Nat)
-  , _ifInstanceFleetType :: !(Maybe InstanceFleetType)
-  , _ifInstanceTypeSpecifications :: !(Maybe [InstanceTypeSpecification])
-  , _ifName :: !(Maybe Text)
-  , _ifProvisionedOnDemandCapacity :: !(Maybe Nat)
-  , _ifTargetSpotCapacity :: !(Maybe Nat)
-  , _ifId :: !(Maybe Text)
-  , _ifLaunchSpecifications :: !(Maybe InstanceFleetProvisioningSpecifications)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceFleet =
+  InstanceFleet'
+    { _ifProvisionedSpotCapacity :: !(Maybe Nat)
+    , _ifStatus :: !(Maybe InstanceFleetStatus)
+    , _ifTargetOnDemandCapacity :: !(Maybe Nat)
+    , _ifInstanceFleetType :: !(Maybe InstanceFleetType)
+    , _ifInstanceTypeSpecifications :: !(Maybe [InstanceTypeSpecification])
+    , _ifName :: !(Maybe Text)
+    , _ifProvisionedOnDemandCapacity :: !(Maybe Nat)
+    , _ifTargetSpotCapacity :: !(Maybe Nat)
+    , _ifId :: !(Maybe Text)
+    , _ifLaunchSpecifications :: !(Maybe InstanceFleetProvisioningSpecifications)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceFleet' with the minimum fields required to make a request.
@@ -1856,14 +1906,16 @@ instance NFData InstanceFleet where
 --
 --
 -- /See:/ 'instanceFleetConfig' smart constructor.
-data InstanceFleetConfig = InstanceFleetConfig'
-  { _ifcInstanceTypeConfigs :: !(Maybe [InstanceTypeConfig])
-  , _ifcTargetOnDemandCapacity :: !(Maybe Nat)
-  , _ifcName :: !(Maybe Text)
-  , _ifcTargetSpotCapacity :: !(Maybe Nat)
-  , _ifcLaunchSpecifications :: !(Maybe InstanceFleetProvisioningSpecifications)
-  , _ifcInstanceFleetType :: !InstanceFleetType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceFleetConfig =
+  InstanceFleetConfig'
+    { _ifcInstanceTypeConfigs :: !(Maybe [InstanceTypeConfig])
+    , _ifcTargetOnDemandCapacity :: !(Maybe Nat)
+    , _ifcName :: !(Maybe Text)
+    , _ifcTargetSpotCapacity :: !(Maybe Nat)
+    , _ifcLaunchSpecifications :: !(Maybe InstanceFleetProvisioningSpecifications)
+    , _ifcInstanceFleetType :: !InstanceFleetType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceFleetConfig' with the minimum fields required to make a request.
@@ -1942,11 +1994,13 @@ instance ToJSON InstanceFleetConfig where
 --
 --
 -- /See:/ 'instanceFleetModifyConfig' smart constructor.
-data InstanceFleetModifyConfig = InstanceFleetModifyConfig'
-  { _ifmcTargetOnDemandCapacity :: !(Maybe Nat)
-  , _ifmcTargetSpotCapacity     :: !(Maybe Nat)
-  , _ifmcInstanceFleetId        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceFleetModifyConfig =
+  InstanceFleetModifyConfig'
+    { _ifmcTargetOnDemandCapacity :: !(Maybe Nat)
+    , _ifmcTargetSpotCapacity     :: !(Maybe Nat)
+    , _ifmcInstanceFleetId        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceFleetModifyConfig' with the minimum fields required to make a request.
@@ -2000,9 +2054,11 @@ instance ToJSON InstanceFleetModifyConfig where
 --
 --
 -- /See:/ 'instanceFleetProvisioningSpecifications' smart constructor.
-newtype InstanceFleetProvisioningSpecifications = InstanceFleetProvisioningSpecifications'
-  { _ifpsSpotSpecification :: SpotProvisioningSpecification
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype InstanceFleetProvisioningSpecifications =
+  InstanceFleetProvisioningSpecifications'
+    { _ifpsSpotSpecification :: SpotProvisioningSpecification
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceFleetProvisioningSpecifications' with the minimum fields required to make a request.
@@ -2054,10 +2110,12 @@ instance ToJSON
 --
 --
 -- /See:/ 'instanceFleetStateChangeReason' smart constructor.
-data InstanceFleetStateChangeReason = InstanceFleetStateChangeReason'
-  { _ifscrCode    :: !(Maybe InstanceFleetStateChangeReasonCode)
-  , _ifscrMessage :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceFleetStateChangeReason =
+  InstanceFleetStateChangeReason'
+    { _ifscrCode    :: !(Maybe InstanceFleetStateChangeReasonCode)
+    , _ifscrMessage :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceFleetStateChangeReason' with the minimum fields required to make a request.
@@ -2100,11 +2158,13 @@ instance NFData InstanceFleetStateChangeReason where
 --
 --
 -- /See:/ 'instanceFleetStatus' smart constructor.
-data InstanceFleetStatus = InstanceFleetStatus'
-  { _ifsState             :: !(Maybe InstanceFleetState)
-  , _ifsStateChangeReason :: !(Maybe InstanceFleetStateChangeReason)
-  , _ifsTimeline          :: !(Maybe InstanceFleetTimeline)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceFleetStatus =
+  InstanceFleetStatus'
+    { _ifsState             :: !(Maybe InstanceFleetState)
+    , _ifsStateChangeReason :: !(Maybe InstanceFleetStateChangeReason)
+    , _ifsTimeline          :: !(Maybe InstanceFleetTimeline)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceFleetStatus' with the minimum fields required to make a request.
@@ -2155,11 +2215,13 @@ instance NFData InstanceFleetStatus where
 --
 --
 -- /See:/ 'instanceFleetTimeline' smart constructor.
-data InstanceFleetTimeline = InstanceFleetTimeline'
-  { _iftReadyDateTime    :: !(Maybe POSIX)
-  , _iftCreationDateTime :: !(Maybe POSIX)
-  , _iftEndDateTime      :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceFleetTimeline =
+  InstanceFleetTimeline'
+    { _iftReadyDateTime    :: !(Maybe POSIX)
+    , _iftCreationDateTime :: !(Maybe POSIX)
+    , _iftEndDateTime      :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceFleetTimeline' with the minimum fields required to make a request.
@@ -2211,22 +2273,24 @@ instance NFData InstanceFleetTimeline where
 --
 --
 -- /See:/ 'instanceGroup' smart constructor.
-data InstanceGroup = InstanceGroup'
-  { _igStatus                 :: !(Maybe InstanceGroupStatus)
-  , _igBidPrice               :: !(Maybe Text)
-  , _igRequestedInstanceCount :: !(Maybe Int)
-  , _igRunningInstanceCount   :: !(Maybe Int)
-  , _igConfigurations         :: !(Maybe [Configuration])
-  , _igInstanceGroupType      :: !(Maybe InstanceGroupType)
-  , _igEBSBlockDevices        :: !(Maybe [EBSBlockDevice])
-  , _igInstanceType           :: !(Maybe Text)
-  , _igEBSOptimized           :: !(Maybe Bool)
-  , _igMarket                 :: !(Maybe MarketType)
-  , _igName                   :: !(Maybe Text)
-  , _igAutoScalingPolicy      :: !(Maybe AutoScalingPolicyDescription)
-  , _igShrinkPolicy           :: !(Maybe ShrinkPolicy)
-  , _igId                     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceGroup =
+  InstanceGroup'
+    { _igStatus                 :: !(Maybe InstanceGroupStatus)
+    , _igBidPrice               :: !(Maybe Text)
+    , _igRequestedInstanceCount :: !(Maybe Int)
+    , _igRunningInstanceCount   :: !(Maybe Int)
+    , _igConfigurations         :: !(Maybe [Configuration])
+    , _igInstanceGroupType      :: !(Maybe InstanceGroupType)
+    , _igEBSBlockDevices        :: !(Maybe [EBSBlockDevice])
+    , _igInstanceType           :: !(Maybe Text)
+    , _igEBSOptimized           :: !(Maybe Bool)
+    , _igMarket                 :: !(Maybe MarketType)
+    , _igName                   :: !(Maybe Text)
+    , _igAutoScalingPolicy      :: !(Maybe AutoScalingPolicyDescription)
+    , _igShrinkPolicy           :: !(Maybe ShrinkPolicy)
+    , _igId                     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceGroup' with the minimum fields required to make a request.
@@ -2365,17 +2429,19 @@ instance NFData InstanceGroup where
 --
 --
 -- /See:/ 'instanceGroupConfig' smart constructor.
-data InstanceGroupConfig = InstanceGroupConfig'
-  { _igcEBSConfiguration  :: !(Maybe EBSConfiguration)
-  , _igcBidPrice          :: !(Maybe Text)
-  , _igcConfigurations    :: !(Maybe [Configuration])
-  , _igcMarket            :: !(Maybe MarketType)
-  , _igcName              :: !(Maybe Text)
-  , _igcAutoScalingPolicy :: !(Maybe AutoScalingPolicy)
-  , _igcInstanceRole      :: !InstanceRoleType
-  , _igcInstanceType      :: !Text
-  , _igcInstanceCount     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceGroupConfig =
+  InstanceGroupConfig'
+    { _igcEBSConfiguration  :: !(Maybe EBSConfiguration)
+    , _igcBidPrice          :: !(Maybe Text)
+    , _igcConfigurations    :: !(Maybe [Configuration])
+    , _igcMarket            :: !(Maybe MarketType)
+    , _igcName              :: !(Maybe Text)
+    , _igcAutoScalingPolicy :: !(Maybe AutoScalingPolicy)
+    , _igcInstanceRole      :: !InstanceRoleType
+    , _igcInstanceType      :: !Text
+    , _igcInstanceCount     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceGroupConfig' with the minimum fields required to make a request.
@@ -2477,12 +2543,14 @@ instance ToJSON InstanceGroupConfig where
 --
 --
 -- /See:/ 'instanceGroupModifyConfig' smart constructor.
-data InstanceGroupModifyConfig = InstanceGroupModifyConfig'
-  { _igmcInstanceCount             :: !(Maybe Int)
-  , _igmcEC2InstanceIdsToTerminate :: !(Maybe [Text])
-  , _igmcShrinkPolicy              :: !(Maybe ShrinkPolicy)
-  , _igmcInstanceGroupId           :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceGroupModifyConfig =
+  InstanceGroupModifyConfig'
+    { _igmcInstanceCount             :: !(Maybe Int)
+    , _igmcEC2InstanceIdsToTerminate :: !(Maybe [Text])
+    , _igmcShrinkPolicy              :: !(Maybe ShrinkPolicy)
+    , _igmcInstanceGroupId           :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceGroupModifyConfig' with the minimum fields required to make a request.
@@ -2543,10 +2611,12 @@ instance ToJSON InstanceGroupModifyConfig where
 --
 --
 -- /See:/ 'instanceGroupStateChangeReason' smart constructor.
-data InstanceGroupStateChangeReason = InstanceGroupStateChangeReason'
-  { _igscrCode    :: !(Maybe InstanceGroupStateChangeReasonCode)
-  , _igscrMessage :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceGroupStateChangeReason =
+  InstanceGroupStateChangeReason'
+    { _igscrCode    :: !(Maybe InstanceGroupStateChangeReasonCode)
+    , _igscrMessage :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceGroupStateChangeReason' with the minimum fields required to make a request.
@@ -2589,11 +2659,13 @@ instance NFData InstanceGroupStateChangeReason where
 --
 --
 -- /See:/ 'instanceGroupStatus' smart constructor.
-data InstanceGroupStatus = InstanceGroupStatus'
-  { _igsState             :: !(Maybe InstanceGroupState)
-  , _igsStateChangeReason :: !(Maybe InstanceGroupStateChangeReason)
-  , _igsTimeline          :: !(Maybe InstanceGroupTimeline)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceGroupStatus =
+  InstanceGroupStatus'
+    { _igsState             :: !(Maybe InstanceGroupState)
+    , _igsStateChangeReason :: !(Maybe InstanceGroupStateChangeReason)
+    , _igsTimeline          :: !(Maybe InstanceGroupTimeline)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceGroupStatus' with the minimum fields required to make a request.
@@ -2644,11 +2716,13 @@ instance NFData InstanceGroupStatus where
 --
 --
 -- /See:/ 'instanceGroupTimeline' smart constructor.
-data InstanceGroupTimeline = InstanceGroupTimeline'
-  { _igtReadyDateTime    :: !(Maybe POSIX)
-  , _igtCreationDateTime :: !(Maybe POSIX)
-  , _igtEndDateTime      :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceGroupTimeline =
+  InstanceGroupTimeline'
+    { _igtReadyDateTime    :: !(Maybe POSIX)
+    , _igtCreationDateTime :: !(Maybe POSIX)
+    , _igtEndDateTime      :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceGroupTimeline' with the minimum fields required to make a request.
@@ -2700,11 +2774,13 @@ instance NFData InstanceGroupTimeline where
 --
 --
 -- /See:/ 'instanceResizePolicy' smart constructor.
-data InstanceResizePolicy = InstanceResizePolicy'
-  { _irpInstancesToProtect         :: !(Maybe [Text])
-  , _irpInstancesToTerminate       :: !(Maybe [Text])
-  , _irpInstanceTerminationTimeout :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceResizePolicy =
+  InstanceResizePolicy'
+    { _irpInstancesToProtect         :: !(Maybe [Text])
+    , _irpInstancesToTerminate       :: !(Maybe [Text])
+    , _irpInstanceTerminationTimeout :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceResizePolicy' with the minimum fields required to make a request.
@@ -2767,10 +2843,12 @@ instance ToJSON InstanceResizePolicy where
 --
 --
 -- /See:/ 'instanceStateChangeReason' smart constructor.
-data InstanceStateChangeReason = InstanceStateChangeReason'
-  { _iscrCode    :: !(Maybe InstanceStateChangeReasonCode)
-  , _iscrMessage :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceStateChangeReason =
+  InstanceStateChangeReason'
+    { _iscrCode    :: !(Maybe InstanceStateChangeReasonCode)
+    , _iscrMessage :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceStateChangeReason' with the minimum fields required to make a request.
@@ -2810,11 +2888,13 @@ instance NFData InstanceStateChangeReason where
 --
 --
 -- /See:/ 'instanceStatus' smart constructor.
-data InstanceStatus = InstanceStatus'
-  { _isState             :: !(Maybe InstanceState)
-  , _isStateChangeReason :: !(Maybe InstanceStateChangeReason)
-  , _isTimeline          :: !(Maybe InstanceTimeline)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceStatus =
+  InstanceStatus'
+    { _isState             :: !(Maybe InstanceState)
+    , _isStateChangeReason :: !(Maybe InstanceStateChangeReason)
+    , _isTimeline          :: !(Maybe InstanceTimeline)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceStatus' with the minimum fields required to make a request.
@@ -2862,11 +2942,13 @@ instance NFData InstanceStatus where
 --
 --
 -- /See:/ 'instanceTimeline' smart constructor.
-data InstanceTimeline = InstanceTimeline'
-  { _itReadyDateTime    :: !(Maybe POSIX)
-  , _itCreationDateTime :: !(Maybe POSIX)
-  , _itEndDateTime      :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceTimeline =
+  InstanceTimeline'
+    { _itReadyDateTime    :: !(Maybe POSIX)
+    , _itCreationDateTime :: !(Maybe POSIX)
+    , _itEndDateTime      :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceTimeline' with the minimum fields required to make a request.
@@ -2918,14 +3000,16 @@ instance NFData InstanceTimeline where
 --
 --
 -- /See:/ 'instanceTypeConfig' smart constructor.
-data InstanceTypeConfig = InstanceTypeConfig'
-  { _itcEBSConfiguration                    :: !(Maybe EBSConfiguration)
-  , _itcBidPrice                            :: !(Maybe Text)
-  , _itcWeightedCapacity                    :: !(Maybe Nat)
-  , _itcConfigurations                      :: !(Maybe [Configuration])
-  , _itcBidPriceAsPercentageOfOnDemandPrice :: !(Maybe Double)
-  , _itcInstanceType                        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceTypeConfig =
+  InstanceTypeConfig'
+    { _itcEBSConfiguration                    :: !(Maybe EBSConfiguration)
+    , _itcBidPrice                            :: !(Maybe Text)
+    , _itcWeightedCapacity                    :: !(Maybe Nat)
+    , _itcConfigurations                      :: !(Maybe [Configuration])
+    , _itcBidPriceAsPercentageOfOnDemandPrice :: !(Maybe Double)
+    , _itcInstanceType                        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceTypeConfig' with the minimum fields required to make a request.
@@ -3002,15 +3086,17 @@ instance ToJSON InstanceTypeConfig where
 --
 --
 -- /See:/ 'instanceTypeSpecification' smart constructor.
-data InstanceTypeSpecification = InstanceTypeSpecification'
-  { _itsBidPrice                            :: !(Maybe Text)
-  , _itsWeightedCapacity                    :: !(Maybe Nat)
-  , _itsConfigurations                      :: !(Maybe [Configuration])
-  , _itsEBSBlockDevices                     :: !(Maybe [EBSBlockDevice])
-  , _itsInstanceType                        :: !(Maybe Text)
-  , _itsEBSOptimized                        :: !(Maybe Bool)
-  , _itsBidPriceAsPercentageOfOnDemandPrice :: !(Maybe Double)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceTypeSpecification =
+  InstanceTypeSpecification'
+    { _itsBidPrice                            :: !(Maybe Text)
+    , _itsWeightedCapacity                    :: !(Maybe Nat)
+    , _itsConfigurations                      :: !(Maybe [Configuration])
+    , _itsEBSBlockDevices                     :: !(Maybe [EBSBlockDevice])
+    , _itsInstanceType                        :: !(Maybe Text)
+    , _itsEBSOptimized                        :: !(Maybe Bool)
+    , _itsBidPriceAsPercentageOfOnDemandPrice :: !(Maybe Double)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceTypeSpecification' with the minimum fields required to make a request.
@@ -3093,25 +3179,27 @@ instance NFData InstanceTypeSpecification where
 --
 --
 -- /See:/ 'jobFlowInstancesConfig' smart constructor.
-data JobFlowInstancesConfig = JobFlowInstancesConfig'
-  { _jficInstanceFleets                 :: !(Maybe [InstanceFleetConfig])
-  , _jficEC2KeyName                     :: !(Maybe Text)
-  , _jficSlaveInstanceType              :: !(Maybe Text)
-  , _jficInstanceCount                  :: !(Maybe Int)
-  , _jficEmrManagedSlaveSecurityGroup   :: !(Maybe Text)
-  , _jficAdditionalSlaveSecurityGroups  :: !(Maybe [Text])
-  , _jficEC2SubnetIds                   :: !(Maybe [Text])
-  , _jficHadoopVersion                  :: !(Maybe Text)
-  , _jficAdditionalMasterSecurityGroups :: !(Maybe [Text])
-  , _jficEmrManagedMasterSecurityGroup  :: !(Maybe Text)
-  , _jficEC2SubnetId                    :: !(Maybe Text)
-  , _jficMasterInstanceType             :: !(Maybe Text)
-  , _jficInstanceGroups                 :: !(Maybe [InstanceGroupConfig])
-  , _jficKeepJobFlowAliveWhenNoSteps    :: !(Maybe Bool)
-  , _jficServiceAccessSecurityGroup     :: !(Maybe Text)
-  , _jficTerminationProtected           :: !(Maybe Bool)
-  , _jficPlacement                      :: !(Maybe PlacementType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data JobFlowInstancesConfig =
+  JobFlowInstancesConfig'
+    { _jficInstanceFleets                 :: !(Maybe [InstanceFleetConfig])
+    , _jficEC2KeyName                     :: !(Maybe Text)
+    , _jficSlaveInstanceType              :: !(Maybe Text)
+    , _jficInstanceCount                  :: !(Maybe Int)
+    , _jficEmrManagedSlaveSecurityGroup   :: !(Maybe Text)
+    , _jficAdditionalSlaveSecurityGroups  :: !(Maybe [Text])
+    , _jficEC2SubnetIds                   :: !(Maybe [Text])
+    , _jficHadoopVersion                  :: !(Maybe Text)
+    , _jficAdditionalMasterSecurityGroups :: !(Maybe [Text])
+    , _jficEmrManagedMasterSecurityGroup  :: !(Maybe Text)
+    , _jficEC2SubnetId                    :: !(Maybe Text)
+    , _jficMasterInstanceType             :: !(Maybe Text)
+    , _jficInstanceGroups                 :: !(Maybe [InstanceGroupConfig])
+    , _jficKeepJobFlowAliveWhenNoSteps    :: !(Maybe Bool)
+    , _jficServiceAccessSecurityGroup     :: !(Maybe Text)
+    , _jficTerminationProtected           :: !(Maybe Bool)
+    , _jficPlacement                      :: !(Maybe PlacementType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'JobFlowInstancesConfig' with the minimum fields required to make a request.
@@ -3282,13 +3370,15 @@ instance ToJSON JobFlowInstancesConfig where
 --
 --
 -- /See:/ 'kerberosAttributes' smart constructor.
-data KerberosAttributes = KerberosAttributes'
-  { _kaADDomainJoinPassword             :: !(Maybe Text)
-  , _kaCrossRealmTrustPrincipalPassword :: !(Maybe Text)
-  , _kaADDomainJoinUser                 :: !(Maybe Text)
-  , _kaRealm                            :: !Text
-  , _kaKdcAdminPassword                 :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data KerberosAttributes =
+  KerberosAttributes'
+    { _kaADDomainJoinPassword             :: !(Maybe Text)
+    , _kaCrossRealmTrustPrincipalPassword :: !(Maybe Text)
+    , _kaADDomainJoinUser                 :: !(Maybe Text)
+    , _kaRealm                            :: !Text
+    , _kaKdcAdminPassword                 :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'KerberosAttributes' with the minimum fields required to make a request.
@@ -3370,10 +3460,12 @@ instance ToJSON KerberosAttributes where
 --
 --
 -- /See:/ 'keyValue' smart constructor.
-data KeyValue = KeyValue'
-  { _kvValue :: !(Maybe Text)
-  , _kvKey   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data KeyValue =
+  KeyValue'
+    { _kvValue :: !(Maybe Text)
+    , _kvKey   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'KeyValue' with the minimum fields required to make a request.
@@ -3411,10 +3503,12 @@ instance ToJSON KeyValue where
 --
 --
 -- /See:/ 'metricDimension' smart constructor.
-data MetricDimension = MetricDimension'
-  { _mdValue :: !(Maybe Text)
-  , _mdKey   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MetricDimension =
+  MetricDimension'
+    { _mdValue :: !(Maybe Text)
+    , _mdKey   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MetricDimension' with the minimum fields required to make a request.
@@ -3459,10 +3553,12 @@ instance ToJSON MetricDimension where
 --
 --
 -- /See:/ 'placementType' smart constructor.
-data PlacementType = PlacementType'
-  { _ptAvailabilityZones :: !(Maybe [Text])
-  , _ptAvailabilityZone  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PlacementType =
+  PlacementType'
+    { _ptAvailabilityZones :: !(Maybe [Text])
+    , _ptAvailabilityZone  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PlacementType' with the minimum fields required to make a request.
@@ -3502,10 +3598,12 @@ instance ToJSON PlacementType where
 --
 --
 -- /See:/ 'scalingAction' smart constructor.
-data ScalingAction = ScalingAction'
-  { _saMarket                           :: !(Maybe MarketType)
-  , _saSimpleScalingPolicyConfiguration :: !SimpleScalingPolicyConfiguration
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ScalingAction =
+  ScalingAction'
+    { _saMarket                           :: !(Maybe MarketType)
+    , _saSimpleScalingPolicyConfiguration :: !SimpleScalingPolicyConfiguration
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ScalingAction' with the minimum fields required to make a request.
@@ -3559,10 +3657,12 @@ instance ToJSON ScalingAction where
 --
 --
 -- /See:/ 'scalingConstraints' smart constructor.
-data ScalingConstraints = ScalingConstraints'
-  { _scMinCapacity :: !Int
-  , _scMaxCapacity :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ScalingConstraints =
+  ScalingConstraints'
+    { _scMinCapacity :: !Int
+    , _scMaxCapacity :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ScalingConstraints' with the minimum fields required to make a request.
@@ -3612,12 +3712,14 @@ instance ToJSON ScalingConstraints where
 --
 --
 -- /See:/ 'scalingRule' smart constructor.
-data ScalingRule = ScalingRule'
-  { _srDescription :: !(Maybe Text)
-  , _srName        :: !Text
-  , _srAction      :: !ScalingAction
-  , _srTrigger     :: !ScalingTrigger
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ScalingRule =
+  ScalingRule'
+    { _srDescription :: !(Maybe Text)
+    , _srName        :: !Text
+    , _srAction      :: !ScalingAction
+    , _srTrigger     :: !ScalingTrigger
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ScalingRule' with the minimum fields required to make a request.
@@ -3688,9 +3790,11 @@ instance ToJSON ScalingRule where
 --
 --
 -- /See:/ 'scalingTrigger' smart constructor.
-newtype ScalingTrigger = ScalingTrigger'
-  { _stCloudWatchAlarmDefinition :: CloudWatchAlarmDefinition
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ScalingTrigger =
+  ScalingTrigger'
+    { _stCloudWatchAlarmDefinition :: CloudWatchAlarmDefinition
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ScalingTrigger' with the minimum fields required to make a request.
@@ -3733,10 +3837,12 @@ instance ToJSON ScalingTrigger where
 --
 --
 -- /See:/ 'scriptBootstrapActionConfig' smart constructor.
-data ScriptBootstrapActionConfig = ScriptBootstrapActionConfig'
-  { _sbacArgs :: !(Maybe [Text])
-  , _sbacPath :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ScriptBootstrapActionConfig =
+  ScriptBootstrapActionConfig'
+    { _sbacArgs :: !(Maybe [Text])
+    , _sbacPath :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ScriptBootstrapActionConfig' with the minimum fields required to make a request.
@@ -3777,10 +3883,12 @@ instance ToJSON ScriptBootstrapActionConfig where
 --
 --
 -- /See:/ 'securityConfigurationSummary' smart constructor.
-data SecurityConfigurationSummary = SecurityConfigurationSummary'
-  { _scsName             :: !(Maybe Text)
-  , _scsCreationDateTime :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SecurityConfigurationSummary =
+  SecurityConfigurationSummary'
+    { _scsName             :: !(Maybe Text)
+    , _scsCreationDateTime :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SecurityConfigurationSummary' with the minimum fields required to make a request.
@@ -3821,10 +3929,12 @@ instance NFData SecurityConfigurationSummary where
 --
 --
 -- /See:/ 'shrinkPolicy' smart constructor.
-data ShrinkPolicy = ShrinkPolicy'
-  { _spDecommissionTimeout  :: !(Maybe Int)
-  , _spInstanceResizePolicy :: !(Maybe InstanceResizePolicy)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ShrinkPolicy =
+  ShrinkPolicy'
+    { _spDecommissionTimeout  :: !(Maybe Int)
+    , _spInstanceResizePolicy :: !(Maybe InstanceResizePolicy)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ShrinkPolicy' with the minimum fields required to make a request.
@@ -3875,11 +3985,13 @@ instance ToJSON ShrinkPolicy where
 --
 --
 -- /See:/ 'simpleScalingPolicyConfiguration' smart constructor.
-data SimpleScalingPolicyConfiguration = SimpleScalingPolicyConfiguration'
-  { _sspcAdjustmentType    :: !(Maybe AdjustmentType)
-  , _sspcCoolDown          :: !(Maybe Int)
-  , _sspcScalingAdjustment :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SimpleScalingPolicyConfiguration =
+  SimpleScalingPolicyConfiguration'
+    { _sspcAdjustmentType    :: !(Maybe AdjustmentType)
+    , _sspcCoolDown          :: !(Maybe Int)
+    , _sspcScalingAdjustment :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SimpleScalingPolicyConfiguration' with the minimum fields required to make a request.
@@ -3944,11 +4056,13 @@ instance ToJSON SimpleScalingPolicyConfiguration
 --
 --
 -- /See:/ 'spotProvisioningSpecification' smart constructor.
-data SpotProvisioningSpecification = SpotProvisioningSpecification'
-  { _spsBlockDurationMinutes   :: !(Maybe Nat)
-  , _spsTimeoutDurationMinutes :: !Nat
-  , _spsTimeoutAction          :: !SpotProvisioningTimeoutAction
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SpotProvisioningSpecification =
+  SpotProvisioningSpecification'
+    { _spsBlockDurationMinutes   :: !(Maybe Nat)
+    , _spsTimeoutDurationMinutes :: !Nat
+    , _spsTimeoutAction          :: !SpotProvisioningTimeoutAction
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SpotProvisioningSpecification' with the minimum fields required to make a request.
@@ -4013,13 +4127,15 @@ instance ToJSON SpotProvisioningSpecification where
 --
 --
 -- /See:/ 'step' smart constructor.
-data Step = Step'
-  { _sStatus          :: !(Maybe StepStatus)
-  , _sActionOnFailure :: !(Maybe ActionOnFailure)
-  , _sConfig          :: !(Maybe HadoopStepConfig)
-  , _sName            :: !(Maybe Text)
-  , _sId              :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Step =
+  Step'
+    { _sStatus          :: !(Maybe StepStatus)
+    , _sActionOnFailure :: !(Maybe ActionOnFailure)
+    , _sConfig          :: !(Maybe HadoopStepConfig)
+    , _sName            :: !(Maybe Text)
+    , _sId              :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Step' with the minimum fields required to make a request.
@@ -4086,11 +4202,13 @@ instance NFData Step where
 --
 --
 -- /See:/ 'stepConfig' smart constructor.
-data StepConfig = StepConfig'
-  { _scActionOnFailure :: !(Maybe ActionOnFailure)
-  , _scName            :: !Text
-  , _scHadoopJARStep   :: !HadoopJARStepConfig
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StepConfig =
+  StepConfig'
+    { _scActionOnFailure :: !(Maybe ActionOnFailure)
+    , _scName            :: !Text
+    , _scHadoopJARStep   :: !HadoopJARStepConfig
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StepConfig' with the minimum fields required to make a request.
@@ -4143,10 +4261,12 @@ instance ToJSON StepConfig where
 --
 --
 -- /See:/ 'stepStateChangeReason' smart constructor.
-data StepStateChangeReason = StepStateChangeReason'
-  { _sscrCode    :: !(Maybe StepStateChangeReasonCode)
-  , _sscrMessage :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StepStateChangeReason =
+  StepStateChangeReason'
+    { _sscrCode    :: !(Maybe StepStateChangeReasonCode)
+    , _sscrMessage :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StepStateChangeReason' with the minimum fields required to make a request.
@@ -4186,12 +4306,14 @@ instance NFData StepStateChangeReason where
 --
 --
 -- /See:/ 'stepStatus' smart constructor.
-data StepStatus = StepStatus'
-  { _ssState             :: !(Maybe StepState)
-  , _ssFailureDetails    :: !(Maybe FailureDetails)
-  , _ssStateChangeReason :: !(Maybe StepStateChangeReason)
-  , _ssTimeline          :: !(Maybe StepTimeline)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StepStatus =
+  StepStatus'
+    { _ssState             :: !(Maybe StepState)
+    , _ssFailureDetails    :: !(Maybe FailureDetails)
+    , _ssStateChangeReason :: !(Maybe StepStateChangeReason)
+    , _ssTimeline          :: !(Maybe StepTimeline)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StepStatus' with the minimum fields required to make a request.
@@ -4250,13 +4372,15 @@ instance NFData StepStatus where
 --
 --
 -- /See:/ 'stepSummary' smart constructor.
-data StepSummary = StepSummary'
-  { _ssStatus          :: !(Maybe StepStatus)
-  , _ssActionOnFailure :: !(Maybe ActionOnFailure)
-  , _ssConfig          :: !(Maybe HadoopStepConfig)
-  , _ssName            :: !(Maybe Text)
-  , _ssId              :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StepSummary =
+  StepSummary'
+    { _ssStatus          :: !(Maybe StepStatus)
+    , _ssActionOnFailure :: !(Maybe ActionOnFailure)
+    , _ssConfig          :: !(Maybe HadoopStepConfig)
+    , _ssName            :: !(Maybe Text)
+    , _ssId              :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StepSummary' with the minimum fields required to make a request.
@@ -4323,11 +4447,13 @@ instance NFData StepSummary where
 --
 --
 -- /See:/ 'stepTimeline' smart constructor.
-data StepTimeline = StepTimeline'
-  { _stCreationDateTime :: !(Maybe POSIX)
-  , _stEndDateTime      :: !(Maybe POSIX)
-  , _stStartDateTime    :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StepTimeline =
+  StepTimeline'
+    { _stCreationDateTime :: !(Maybe POSIX)
+    , _stEndDateTime      :: !(Maybe POSIX)
+    , _stStartDateTime    :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StepTimeline' with the minimum fields required to make a request.
@@ -4378,10 +4504,12 @@ instance NFData StepTimeline where
 --
 --
 -- /See:/ 'supportedProductConfig' smart constructor.
-data SupportedProductConfig = SupportedProductConfig'
-  { _spcArgs :: !(Maybe [Text])
-  , _spcName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SupportedProductConfig =
+  SupportedProductConfig'
+    { _spcArgs :: !(Maybe [Text])
+    , _spcName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SupportedProductConfig' with the minimum fields required to make a request.
@@ -4420,10 +4548,12 @@ instance ToJSON SupportedProductConfig where
 --
 --
 -- /See:/ 'tag' smart constructor.
-data Tag = Tag'
-  { _tagValue :: !(Maybe Text)
-  , _tagKey   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Tag =
+  Tag'
+    { _tagValue :: !(Maybe Text)
+    , _tagKey   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Tag' with the minimum fields required to make a request.
@@ -4466,11 +4596,13 @@ instance ToJSON Tag where
 --
 --
 -- /See:/ 'volumeSpecification' smart constructor.
-data VolumeSpecification = VolumeSpecification'
-  { _vsIOPS       :: !(Maybe Int)
-  , _vsVolumeType :: !Text
-  , _vsSizeInGB   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VolumeSpecification =
+  VolumeSpecification'
+    { _vsIOPS       :: !(Maybe Int)
+    , _vsVolumeType :: !Text
+    , _vsSizeInGB   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VolumeSpecification' with the minimum fields required to make a request.

@@ -50,11 +50,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createDocumentationPart' smart constructor.
-data CreateDocumentationPart = CreateDocumentationPart'
-  { _cdpRestAPIId  :: !Text
-  , _cdpLocation   :: !DocumentationPartLocation
-  , _cdpProperties :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDocumentationPart =
+  CreateDocumentationPart'
+    { _cdpRestAPIId  :: !Text
+    , _cdpLocation   :: !DocumentationPartLocation
+    , _cdpProperties :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDocumentationPart' with the minimum fields required to make a request.

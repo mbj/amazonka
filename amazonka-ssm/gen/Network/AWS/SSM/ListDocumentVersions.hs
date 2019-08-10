@@ -48,11 +48,13 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'listDocumentVersions' smart constructor.
-data ListDocumentVersions = ListDocumentVersions'
-  { _ldvNextToken  :: !(Maybe Text)
-  , _ldvMaxResults :: !(Maybe Nat)
-  , _ldvName       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListDocumentVersions =
+  ListDocumentVersions'
+    { _ldvNextToken  :: !(Maybe Text)
+    , _ldvMaxResults :: !(Maybe Nat)
+    , _ldvName       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDocumentVersions' with the minimum fields required to make a request.
@@ -123,11 +125,13 @@ instance ToQuery ListDocumentVersions where
         toQuery = const mempty
 
 -- | /See:/ 'listDocumentVersionsResponse' smart constructor.
-data ListDocumentVersionsResponse = ListDocumentVersionsResponse'
-  { _ldvrsDocumentVersions :: !(Maybe (List1 DocumentVersionInfo))
-  , _ldvrsNextToken        :: !(Maybe Text)
-  , _ldvrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListDocumentVersionsResponse =
+  ListDocumentVersionsResponse'
+    { _ldvrsDocumentVersions :: !(Maybe (List1 DocumentVersionInfo))
+    , _ldvrsNextToken        :: !(Maybe Text)
+    , _ldvrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDocumentVersionsResponse' with the minimum fields required to make a request.

@@ -59,11 +59,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeReservedInstancesListings' smart constructor.
-data DescribeReservedInstancesListings = DescribeReservedInstancesListings'
-  { _drilFilters                    :: !(Maybe [Filter])
-  , _drilReservedInstancesId        :: !(Maybe Text)
-  , _drilReservedInstancesListingId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeReservedInstancesListings =
+  DescribeReservedInstancesListings'
+    { _drilFilters                    :: !(Maybe [Filter])
+    , _drilReservedInstancesId        :: !(Maybe Text)
+    , _drilReservedInstancesListingId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeReservedInstancesListings' with the minimum fields required to make a request.
@@ -141,10 +143,12 @@ instance ToQuery DescribeReservedInstancesListings
 --
 --
 -- /See:/ 'describeReservedInstancesListingsResponse' smart constructor.
-data DescribeReservedInstancesListingsResponse = DescribeReservedInstancesListingsResponse'
-  { _drilrsReservedInstancesListings :: !(Maybe [ReservedInstancesListing])
-  , _drilrsResponseStatus            :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeReservedInstancesListingsResponse =
+  DescribeReservedInstancesListingsResponse'
+    { _drilrsReservedInstancesListings :: !(Maybe [ReservedInstancesListing])
+    , _drilrsResponseStatus            :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeReservedInstancesListingsResponse' with the minimum fields required to make a request.

@@ -50,11 +50,13 @@ import Network.AWS.Transcribe.Types
 import Network.AWS.Transcribe.Types.Product
 
 -- | /See:/ 'updateVocabulary' smart constructor.
-data UpdateVocabulary = UpdateVocabulary'
-  { _uvVocabularyName :: !Text
-  , _uvLanguageCode   :: !LanguageCode
-  , _uvPhrases        :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateVocabulary =
+  UpdateVocabulary'
+    { _uvVocabularyName :: !Text
+    , _uvLanguageCode   :: !LanguageCode
+    , _uvPhrases        :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateVocabulary' with the minimum fields required to make a request.
@@ -130,13 +132,15 @@ instance ToQuery UpdateVocabulary where
         toQuery = const mempty
 
 -- | /See:/ 'updateVocabularyResponse' smart constructor.
-data UpdateVocabularyResponse = UpdateVocabularyResponse'
-  { _uvrsLanguageCode     :: !(Maybe LanguageCode)
-  , _uvrsVocabularyName   :: !(Maybe Text)
-  , _uvrsLastModifiedTime :: !(Maybe POSIX)
-  , _uvrsVocabularyState  :: !(Maybe VocabularyState)
-  , _uvrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateVocabularyResponse =
+  UpdateVocabularyResponse'
+    { _uvrsLanguageCode     :: !(Maybe LanguageCode)
+    , _uvrsVocabularyName   :: !(Maybe Text)
+    , _uvrsLastModifiedTime :: !(Maybe POSIX)
+    , _uvrsVocabularyState  :: !(Maybe VocabularyState)
+    , _uvrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateVocabularyResponse' with the minimum fields required to make a request.

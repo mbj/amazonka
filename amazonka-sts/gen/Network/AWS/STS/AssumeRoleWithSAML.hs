@@ -82,13 +82,15 @@ import Network.AWS.STS.Types
 import Network.AWS.STS.Types.Product
 
 -- | /See:/ 'assumeRoleWithSAML' smart constructor.
-data AssumeRoleWithSAML = AssumeRoleWithSAML'
-  { _arwsamlDurationSeconds :: !(Maybe Nat)
-  , _arwsamlPolicy          :: !(Maybe Text)
-  , _arwsamlRoleARN         :: !Text
-  , _arwsamlPrincipalARN    :: !Text
-  , _arwsamlSAMLAssertion   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssumeRoleWithSAML =
+  AssumeRoleWithSAML'
+    { _arwsamlDurationSeconds :: !(Maybe Nat)
+    , _arwsamlPolicy          :: !(Maybe Text)
+    , _arwsamlRoleARN         :: !Text
+    , _arwsamlPrincipalARN    :: !Text
+    , _arwsamlSAMLAssertion   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssumeRoleWithSAML' with the minimum fields required to make a request.
@@ -182,17 +184,19 @@ instance ToQuery AssumeRoleWithSAML where
 --
 --
 -- /See:/ 'assumeRoleWithSAMLResponse' smart constructor.
-data AssumeRoleWithSAMLResponse = AssumeRoleWithSAMLResponse'
-  { _arwsamlrsSubject          :: !(Maybe Text)
-  , _arwsamlrsAudience         :: !(Maybe Text)
-  , _arwsamlrsPackedPolicySize :: !(Maybe Nat)
-  , _arwsamlrsCredentials      :: !(Maybe AuthEnv)
-  , _arwsamlrsSubjectType      :: !(Maybe Text)
-  , _arwsamlrsNameQualifier    :: !(Maybe Text)
-  , _arwsamlrsAssumedRoleUser  :: !(Maybe AssumedRoleUser)
-  , _arwsamlrsIssuer           :: !(Maybe Text)
-  , _arwsamlrsResponseStatus   :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data AssumeRoleWithSAMLResponse =
+  AssumeRoleWithSAMLResponse'
+    { _arwsamlrsSubject          :: !(Maybe Text)
+    , _arwsamlrsAudience         :: !(Maybe Text)
+    , _arwsamlrsPackedPolicySize :: !(Maybe Nat)
+    , _arwsamlrsCredentials      :: !(Maybe AuthEnv)
+    , _arwsamlrsSubjectType      :: !(Maybe Text)
+    , _arwsamlrsNameQualifier    :: !(Maybe Text)
+    , _arwsamlrsAssumedRoleUser  :: !(Maybe AssumedRoleUser)
+    , _arwsamlrsIssuer           :: !(Maybe Text)
+    , _arwsamlrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssumeRoleWithSAMLResponse' with the minimum fields required to make a request.

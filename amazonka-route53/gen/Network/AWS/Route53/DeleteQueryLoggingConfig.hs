@@ -46,9 +46,11 @@ import Network.AWS.Route53.Types
 import Network.AWS.Route53.Types.Product
 
 -- | /See:/ 'deleteQueryLoggingConfig' smart constructor.
-newtype DeleteQueryLoggingConfig = DeleteQueryLoggingConfig'
-  { _dqlcId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteQueryLoggingConfig =
+  DeleteQueryLoggingConfig'
+    { _dqlcId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteQueryLoggingConfig' with the minimum fields required to make a request.
@@ -92,9 +94,11 @@ instance ToQuery DeleteQueryLoggingConfig where
         toQuery = const mempty
 
 -- | /See:/ 'deleteQueryLoggingConfigResponse' smart constructor.
-newtype DeleteQueryLoggingConfigResponse = DeleteQueryLoggingConfigResponse'
-  { _dqlcrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteQueryLoggingConfigResponse =
+  DeleteQueryLoggingConfigResponse'
+    { _dqlcrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteQueryLoggingConfigResponse' with the minimum fields required to make a request.

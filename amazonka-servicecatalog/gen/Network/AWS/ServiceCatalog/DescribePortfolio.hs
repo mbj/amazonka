@@ -48,10 +48,12 @@ import Network.AWS.ServiceCatalog.Types
 import Network.AWS.ServiceCatalog.Types.Product
 
 -- | /See:/ 'describePortfolio' smart constructor.
-data DescribePortfolio = DescribePortfolio'
-  { _desAcceptLanguage :: !(Maybe Text)
-  , _desId             :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribePortfolio =
+  DescribePortfolio'
+    { _desAcceptLanguage :: !(Maybe Text)
+    , _desId             :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribePortfolio' with the minimum fields required to make a request.
@@ -116,12 +118,14 @@ instance ToQuery DescribePortfolio where
         toQuery = const mempty
 
 -- | /See:/ 'describePortfolioResponse' smart constructor.
-data DescribePortfolioResponse = DescribePortfolioResponse'
-  { _dprsPortfolioDetail :: !(Maybe PortfolioDetail)
-  , _dprsTagOptions      :: !(Maybe [TagOptionDetail])
-  , _dprsTags            :: !(Maybe [Tag])
-  , _dprsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribePortfolioResponse =
+  DescribePortfolioResponse'
+    { _dprsPortfolioDetail :: !(Maybe PortfolioDetail)
+    , _dprsTagOptions      :: !(Maybe [TagOptionDetail])
+    , _dprsTags            :: !(Maybe [Tag])
+    , _dprsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribePortfolioResponse' with the minimum fields required to make a request.

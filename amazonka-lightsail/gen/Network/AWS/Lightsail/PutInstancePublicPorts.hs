@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putInstancePublicPorts' smart constructor.
-data PutInstancePublicPorts = PutInstancePublicPorts'
-  { _pippPortInfos    :: ![PortInfo]
-  , _pippInstanceName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutInstancePublicPorts =
+  PutInstancePublicPorts'
+    { _pippPortInfos    :: ![PortInfo]
+    , _pippInstanceName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutInstancePublicPorts' with the minimum fields required to make a request.
@@ -113,10 +115,12 @@ instance ToQuery PutInstancePublicPorts where
         toQuery = const mempty
 
 -- | /See:/ 'putInstancePublicPortsResponse' smart constructor.
-data PutInstancePublicPortsResponse = PutInstancePublicPortsResponse'
-  { _pipprsOperation      :: !(Maybe Operation)
-  , _pipprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutInstancePublicPortsResponse =
+  PutInstancePublicPortsResponse'
+    { _pipprsOperation      :: !(Maybe Operation)
+    , _pipprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutInstancePublicPortsResponse' with the minimum fields required to make a request.

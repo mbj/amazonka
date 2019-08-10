@@ -65,12 +65,14 @@ import Network.AWS.StorageGateway.Types.Product
 --
 --
 -- /See:/ 'updateChapCredentials' smart constructor.
-data UpdateChapCredentials = UpdateChapCredentials'
-  { _uccSecretToAuthenticateTarget    :: !(Maybe Text)
-  , _uccTargetARN                     :: !Text
-  , _uccSecretToAuthenticateInitiator :: !Text
-  , _uccInitiatorName                 :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateChapCredentials =
+  UpdateChapCredentials'
+    { _uccSecretToAuthenticateTarget    :: !(Maybe Text)
+    , _uccTargetARN                     :: !Text
+    , _uccSecretToAuthenticateInitiator :: !Text
+    , _uccInitiatorName                 :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateChapCredentials' with the minimum fields required to make a request.
@@ -162,11 +164,13 @@ instance ToQuery UpdateChapCredentials where
 --
 --
 -- /See:/ 'updateChapCredentialsResponse' smart constructor.
-data UpdateChapCredentialsResponse = UpdateChapCredentialsResponse'
-  { _uccrsTargetARN      :: !(Maybe Text)
-  , _uccrsInitiatorName  :: !(Maybe Text)
-  , _uccrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateChapCredentialsResponse =
+  UpdateChapCredentialsResponse'
+    { _uccrsTargetARN      :: !(Maybe Text)
+    , _uccrsInitiatorName  :: !(Maybe Text)
+    , _uccrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateChapCredentialsResponse' with the minimum fields required to make a request.

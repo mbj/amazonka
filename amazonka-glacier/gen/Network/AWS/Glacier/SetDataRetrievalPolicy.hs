@@ -49,10 +49,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'setDataRetrievalPolicy' smart constructor.
-data SetDataRetrievalPolicy = SetDataRetrievalPolicy'
-  { _sdrpPolicy    :: !(Maybe DataRetrievalPolicy)
-  , _sdrpAccountId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SetDataRetrievalPolicy =
+  SetDataRetrievalPolicy'
+    { _sdrpPolicy    :: !(Maybe DataRetrievalPolicy)
+    , _sdrpAccountId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetDataRetrievalPolicy' with the minimum fields required to make a request.

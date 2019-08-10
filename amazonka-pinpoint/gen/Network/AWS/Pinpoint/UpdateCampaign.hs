@@ -45,11 +45,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateCampaign' smart constructor.
-data UpdateCampaign = UpdateCampaign'
-  { _ucCampaignId           :: !Text
-  , _ucApplicationId        :: !Text
-  , _ucWriteCampaignRequest :: !WriteCampaignRequest
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateCampaign =
+  UpdateCampaign'
+    { _ucCampaignId           :: !Text
+    , _ucApplicationId        :: !Text
+    , _ucWriteCampaignRequest :: !WriteCampaignRequest
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateCampaign' with the minimum fields required to make a request.
@@ -123,10 +125,12 @@ instance ToQuery UpdateCampaign where
         toQuery = const mempty
 
 -- | /See:/ 'updateCampaignResponse' smart constructor.
-data UpdateCampaignResponse = UpdateCampaignResponse'
-  { _ucrsResponseStatus   :: !Int
-  , _ucrsCampaignResponse :: !CampaignResponse
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateCampaignResponse =
+  UpdateCampaignResponse'
+    { _ucrsResponseStatus   :: !Int
+    , _ucrsCampaignResponse :: !CampaignResponse
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateCampaignResponse' with the minimum fields required to make a request.

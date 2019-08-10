@@ -42,9 +42,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteFunctionConcurrency' smart constructor.
-newtype DeleteFunctionConcurrency = DeleteFunctionConcurrency'
-  { _dfcFunctionName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteFunctionConcurrency =
+  DeleteFunctionConcurrency'
+    { _dfcFunctionName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteFunctionConcurrency' with the minimum fields required to make a request.

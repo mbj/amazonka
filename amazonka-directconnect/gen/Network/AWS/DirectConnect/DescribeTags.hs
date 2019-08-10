@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeTags' smart constructor.
-newtype DescribeTags = DescribeTags'
-  { _dtResourceARNs :: [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeTags =
+  DescribeTags'
+    { _dtResourceARNs :: [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeTags' with the minimum fields required to make a request.
@@ -108,10 +110,12 @@ instance ToQuery DescribeTags where
 --
 --
 -- /See:/ 'describeTagsResponse' smart constructor.
-data DescribeTagsResponse = DescribeTagsResponse'
-  { _dtrsResourceTags   :: !(Maybe [ResourceTag])
-  , _dtrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeTagsResponse =
+  DescribeTagsResponse'
+    { _dtrsResourceTags   :: !(Maybe [ResourceTag])
+    , _dtrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeTagsResponse' with the minimum fields required to make a request.

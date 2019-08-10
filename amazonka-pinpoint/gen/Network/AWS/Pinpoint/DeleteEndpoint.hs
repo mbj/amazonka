@@ -44,10 +44,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteEndpoint' smart constructor.
-data DeleteEndpoint = DeleteEndpoint'
-  { _deApplicationId :: !Text
-  , _deEndpointId    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteEndpoint =
+  DeleteEndpoint'
+    { _deApplicationId :: !Text
+    , _deEndpointId    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteEndpoint' with the minimum fields required to make a request.
@@ -104,10 +106,12 @@ instance ToQuery DeleteEndpoint where
         toQuery = const mempty
 
 -- | /See:/ 'deleteEndpointResponse' smart constructor.
-data DeleteEndpointResponse = DeleteEndpointResponse'
-  { _dersResponseStatus   :: !Int
-  , _dersEndpointResponse :: !EndpointResponse
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteEndpointResponse =
+  DeleteEndpointResponse'
+    { _dersResponseStatus   :: !Int
+    , _dersEndpointResponse :: !EndpointResponse
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteEndpointResponse' with the minimum fields required to make a request.

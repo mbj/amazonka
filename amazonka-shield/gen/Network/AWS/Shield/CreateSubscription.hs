@@ -87,9 +87,11 @@ instance ToQuery CreateSubscription where
         toQuery = const mempty
 
 -- | /See:/ 'createSubscriptionResponse' smart constructor.
-newtype CreateSubscriptionResponse = CreateSubscriptionResponse'
-  { _csrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateSubscriptionResponse =
+  CreateSubscriptionResponse'
+    { _csrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateSubscriptionResponse' with the minimum fields required to make a request.

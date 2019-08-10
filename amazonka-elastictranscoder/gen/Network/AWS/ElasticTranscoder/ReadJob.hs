@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'readJob' smart constructor.
-newtype ReadJob = ReadJob'
-  { _rjId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ReadJob =
+  ReadJob'
+    { _rjId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReadJob' with the minimum fields required to make a request.
@@ -97,10 +99,12 @@ instance ToQuery ReadJob where
 --
 --
 -- /See:/ 'readJobResponse' smart constructor.
-data ReadJobResponse = ReadJobResponse'
-  { _rjrsResponseStatus :: !Int
-  , _rjrsJob            :: !Job'
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReadJobResponse =
+  ReadJobResponse'
+    { _rjrsResponseStatus :: !Int
+    , _rjrsJob            :: !Job'
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReadJobResponse' with the minimum fields required to make a request.

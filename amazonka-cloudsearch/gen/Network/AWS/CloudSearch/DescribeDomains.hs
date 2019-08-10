@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeDomains' smart constructor.
-newtype DescribeDomains = DescribeDomains'
-  { _ddDomainNames :: Maybe [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeDomains =
+  DescribeDomains'
+    { _ddDomainNames :: Maybe [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDomains' with the minimum fields required to make a request.
@@ -102,10 +104,12 @@ instance ToQuery DescribeDomains where
 --
 --
 -- /See:/ 'describeDomainsResponse' smart constructor.
-data DescribeDomainsResponse = DescribeDomainsResponse'
-  { _ddsrsResponseStatus   :: !Int
-  , _ddsrsDomainStatusList :: ![DomainStatus]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDomainsResponse =
+  DescribeDomainsResponse'
+    { _ddsrsResponseStatus   :: !Int
+    , _ddsrsDomainStatusList :: ![DomainStatus]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDomainsResponse' with the minimum fields required to make a request.

@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listConfigurationRevisions' smart constructor.
-data ListConfigurationRevisions = ListConfigurationRevisions'
-  { _lcrNextToken       :: !(Maybe Text)
-  , _lcrMaxResults      :: !(Maybe Nat)
-  , _lcrConfigurationId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListConfigurationRevisions =
+  ListConfigurationRevisions'
+    { _lcrNextToken       :: !(Maybe Text)
+    , _lcrMaxResults      :: !(Maybe Nat)
+    , _lcrConfigurationId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListConfigurationRevisions' with the minimum fields required to make a request.
@@ -124,13 +126,15 @@ instance ToQuery ListConfigurationRevisions where
                "maxResults" =: _lcrMaxResults]
 
 -- | /See:/ 'listConfigurationRevisionsResponse' smart constructor.
-data ListConfigurationRevisionsResponse = ListConfigurationRevisionsResponse'
-  { _lcrrsConfigurationId :: !(Maybe Text)
-  , _lcrrsNextToken       :: !(Maybe Text)
-  , _lcrrsRevisions       :: !(Maybe [ConfigurationRevision])
-  , _lcrrsMaxResults      :: !(Maybe Int)
-  , _lcrrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListConfigurationRevisionsResponse =
+  ListConfigurationRevisionsResponse'
+    { _lcrrsConfigurationId :: !(Maybe Text)
+    , _lcrrsNextToken       :: !(Maybe Text)
+    , _lcrrsRevisions       :: !(Maybe [ConfigurationRevision])
+    , _lcrrsMaxResults      :: !(Maybe Int)
+    , _lcrrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListConfigurationRevisionsResponse' with the minimum fields required to make a request.

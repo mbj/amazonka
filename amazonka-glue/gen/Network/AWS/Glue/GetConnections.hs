@@ -52,12 +52,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getConnections' smart constructor.
-data GetConnections = GetConnections'
-  { _gcsCatalogId  :: !(Maybe Text)
-  , _gcsNextToken  :: !(Maybe Text)
-  , _gcsFilter     :: !(Maybe GetConnectionsFilter)
-  , _gcsMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetConnections =
+  GetConnections'
+    { _gcsCatalogId  :: !(Maybe Text)
+    , _gcsNextToken  :: !(Maybe Text)
+    , _gcsFilter     :: !(Maybe GetConnectionsFilter)
+    , _gcsMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetConnections' with the minimum fields required to make a request.
@@ -145,11 +147,13 @@ instance ToQuery GetConnections where
         toQuery = const mempty
 
 -- | /See:/ 'getConnectionsResponse' smart constructor.
-data GetConnectionsResponse = GetConnectionsResponse'
-  { _gccrsNextToken      :: !(Maybe Text)
-  , _gccrsConnectionList :: !(Maybe [Connection])
-  , _gccrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetConnectionsResponse =
+  GetConnectionsResponse'
+    { _gccrsNextToken      :: !(Maybe Text)
+    , _gccrsConnectionList :: !(Maybe [Connection])
+    , _gccrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetConnectionsResponse' with the minimum fields required to make a request.

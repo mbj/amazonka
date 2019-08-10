@@ -49,10 +49,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'removeListenerCertificates' smart constructor.
-data RemoveListenerCertificates = RemoveListenerCertificates'
-  { _rlcListenerARN  :: !Text
-  , _rlcCertificates :: ![Certificate]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RemoveListenerCertificates =
+  RemoveListenerCertificates'
+    { _rlcListenerARN  :: !Text
+    , _rlcCertificates :: ![Certificate]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RemoveListenerCertificates' with the minimum fields required to make a request.
@@ -110,9 +112,11 @@ instance ToQuery RemoveListenerCertificates where
                  toQueryList "member" _rlcCertificates]
 
 -- | /See:/ 'removeListenerCertificatesResponse' smart constructor.
-newtype RemoveListenerCertificatesResponse = RemoveListenerCertificatesResponse'
-  { _rlcrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RemoveListenerCertificatesResponse =
+  RemoveListenerCertificatesResponse'
+    { _rlcrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RemoveListenerCertificatesResponse' with the minimum fields required to make a request.

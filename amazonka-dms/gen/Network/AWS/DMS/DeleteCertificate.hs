@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteCertificate' smart constructor.
-newtype DeleteCertificate = DeleteCertificate'
-  { _dcCertificateARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteCertificate =
+  DeleteCertificate'
+    { _dcCertificateARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteCertificate' with the minimum fields required to make a request.
@@ -102,10 +104,12 @@ instance ToQuery DeleteCertificate where
         toQuery = const mempty
 
 -- | /See:/ 'deleteCertificateResponse' smart constructor.
-data DeleteCertificateResponse = DeleteCertificateResponse'
-  { _dccrsCertificate    :: !(Maybe Certificate)
-  , _dccrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteCertificateResponse =
+  DeleteCertificateResponse'
+    { _dccrsCertificate    :: !(Maybe Certificate)
+    , _dccrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteCertificateResponse' with the minimum fields required to make a request.

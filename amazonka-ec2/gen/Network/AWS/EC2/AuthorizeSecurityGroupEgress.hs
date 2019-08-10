@@ -58,17 +58,19 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'authorizeSecurityGroupEgress' smart constructor.
-data AuthorizeSecurityGroupEgress = AuthorizeSecurityGroupEgress'
-  { _asgeFromPort                   :: !(Maybe Int)
-  , _asgeIPPermissions              :: !(Maybe [IPPermission])
-  , _asgeIPProtocol                 :: !(Maybe Text)
-  , _asgeToPort                     :: !(Maybe Int)
-  , _asgeCidrIP                     :: !(Maybe Text)
-  , _asgeSourceSecurityGroupOwnerId :: !(Maybe Text)
-  , _asgeSourceSecurityGroupName    :: !(Maybe Text)
-  , _asgeDryRun                     :: !(Maybe Bool)
-  , _asgeGroupId                    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AuthorizeSecurityGroupEgress =
+  AuthorizeSecurityGroupEgress'
+    { _asgeFromPort                   :: !(Maybe Int)
+    , _asgeIPPermissions              :: !(Maybe [IPPermission])
+    , _asgeIPProtocol                 :: !(Maybe Text)
+    , _asgeToPort                     :: !(Maybe Int)
+    , _asgeCidrIP                     :: !(Maybe Text)
+    , _asgeSourceSecurityGroupOwnerId :: !(Maybe Text)
+    , _asgeSourceSecurityGroupName    :: !(Maybe Text)
+    , _asgeDryRun                     :: !(Maybe Bool)
+    , _asgeGroupId                    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AuthorizeSecurityGroupEgress' with the minimum fields required to make a request.

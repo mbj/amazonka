@@ -47,11 +47,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getRoomSkillParameter' smart constructor.
-data GetRoomSkillParameter = GetRoomSkillParameter'
-  { _grspRoomARN      :: !(Maybe Text)
-  , _grspSkillId      :: !Text
-  , _grspParameterKey :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetRoomSkillParameter =
+  GetRoomSkillParameter'
+    { _grspRoomARN      :: !(Maybe Text)
+    , _grspSkillId      :: !Text
+    , _grspParameterKey :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetRoomSkillParameter' with the minimum fields required to make a request.
@@ -126,10 +128,12 @@ instance ToQuery GetRoomSkillParameter where
         toQuery = const mempty
 
 -- | /See:/ 'getRoomSkillParameterResponse' smart constructor.
-data GetRoomSkillParameterResponse = GetRoomSkillParameterResponse'
-  { _grsprsRoomSkillParameter :: !(Maybe RoomSkillParameter)
-  , _grsprsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetRoomSkillParameterResponse =
+  GetRoomSkillParameterResponse'
+    { _grsprsRoomSkillParameter :: !(Maybe RoomSkillParameter)
+    , _grsprsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetRoomSkillParameterResponse' with the minimum fields required to make a request.

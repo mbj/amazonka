@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'invalidateProjectCache' smart constructor.
-newtype InvalidateProjectCache = InvalidateProjectCache'
-  { _ipcProjectName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype InvalidateProjectCache =
+  InvalidateProjectCache'
+    { _ipcProjectName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InvalidateProjectCache' with the minimum fields required to make a request.
@@ -101,9 +103,11 @@ instance ToQuery InvalidateProjectCache where
         toQuery = const mempty
 
 -- | /See:/ 'invalidateProjectCacheResponse' smart constructor.
-newtype InvalidateProjectCacheResponse = InvalidateProjectCacheResponse'
-  { _ipcrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype InvalidateProjectCacheResponse =
+  InvalidateProjectCacheResponse'
+    { _ipcrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InvalidateProjectCacheResponse' with the minimum fields required to make a request.

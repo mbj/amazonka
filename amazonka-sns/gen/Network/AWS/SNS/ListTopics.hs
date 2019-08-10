@@ -49,9 +49,11 @@ import Network.AWS.SNS.Types
 import Network.AWS.SNS.Types.Product
 
 -- | /See:/ 'listTopics' smart constructor.
-newtype ListTopics = ListTopics'
-  { _ltNextToken :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ListTopics =
+  ListTopics'
+    { _ltNextToken :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTopics' with the minimum fields required to make a request.
@@ -109,11 +111,13 @@ instance ToQuery ListTopics where
 --
 --
 -- /See:/ 'listTopicsResponse' smart constructor.
-data ListTopicsResponse = ListTopicsResponse'
-  { _ltrsTopics         :: !(Maybe [Topic])
-  , _ltrsNextToken      :: !(Maybe Text)
-  , _ltrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTopicsResponse =
+  ListTopicsResponse'
+    { _ltrsTopics         :: !(Maybe [Topic])
+    , _ltrsNextToken      :: !(Maybe Text)
+    , _ltrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTopicsResponse' with the minimum fields required to make a request.

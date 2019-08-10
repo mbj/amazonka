@@ -42,9 +42,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteLoggerDefinition' smart constructor.
-newtype DeleteLoggerDefinition = DeleteLoggerDefinition'
-  { _dldLoggerDefinitionId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteLoggerDefinition =
+  DeleteLoggerDefinition'
+    { _dldLoggerDefinitionId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteLoggerDefinition' with the minimum fields required to make a request.
@@ -94,9 +96,11 @@ instance ToQuery DeleteLoggerDefinition where
         toQuery = const mempty
 
 -- | /See:/ 'deleteLoggerDefinitionResponse' smart constructor.
-newtype DeleteLoggerDefinitionResponse = DeleteLoggerDefinitionResponse'
-  { _dldrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteLoggerDefinitionResponse =
+  DeleteLoggerDefinitionResponse'
+    { _dldrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteLoggerDefinitionResponse' with the minimum fields required to make a request.

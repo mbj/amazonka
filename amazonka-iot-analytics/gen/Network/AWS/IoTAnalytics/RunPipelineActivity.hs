@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'runPipelineActivity' smart constructor.
-data RunPipelineActivity = RunPipelineActivity'
-  { _rpaPipelineActivity :: !PipelineActivity
-  , _rpaPayloads         :: !(List1 Base64)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RunPipelineActivity =
+  RunPipelineActivity'
+    { _rpaPipelineActivity :: !PipelineActivity
+    , _rpaPayloads         :: !(List1 Base64)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RunPipelineActivity' with the minimum fields required to make a request.
@@ -111,11 +113,13 @@ instance ToQuery RunPipelineActivity where
         toQuery = const mempty
 
 -- | /See:/ 'runPipelineActivityResponse' smart constructor.
-data RunPipelineActivityResponse = RunPipelineActivityResponse'
-  { _rparsLogResult      :: !(Maybe Text)
-  , _rparsPayloads       :: !(Maybe (List1 Base64))
-  , _rparsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RunPipelineActivityResponse =
+  RunPipelineActivityResponse'
+    { _rparsLogResult      :: !(Maybe Text)
+    , _rparsPayloads       :: !(Maybe (List1 Base64))
+    , _rparsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RunPipelineActivityResponse' with the minimum fields required to make a request.

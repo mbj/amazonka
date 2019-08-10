@@ -43,9 +43,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteSmsChannel' smart constructor.
-newtype DeleteSmsChannel = DeleteSmsChannel'
-  { _dscApplicationId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteSmsChannel =
+  DeleteSmsChannel'
+    { _dscApplicationId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteSmsChannel' with the minimum fields required to make a request.
@@ -94,10 +96,12 @@ instance ToQuery DeleteSmsChannel where
         toQuery = const mempty
 
 -- | /See:/ 'deleteSmsChannelResponse' smart constructor.
-data DeleteSmsChannelResponse = DeleteSmsChannelResponse'
-  { _dscrsResponseStatus     :: !Int
-  , _dscrsSMSChannelResponse :: !SMSChannelResponse
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteSmsChannelResponse =
+  DeleteSmsChannelResponse'
+    { _dscrsResponseStatus     :: !Int
+    , _dscrsSMSChannelResponse :: !SMSChannelResponse
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteSmsChannelResponse' with the minimum fields required to make a request.

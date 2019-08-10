@@ -42,9 +42,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteDestination' smart constructor.
-newtype DeleteDestination = DeleteDestination'
-  { _ddDestinationName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteDestination =
+  DeleteDestination'
+    { _ddDestinationName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteDestination' with the minimum fields required to make a request.

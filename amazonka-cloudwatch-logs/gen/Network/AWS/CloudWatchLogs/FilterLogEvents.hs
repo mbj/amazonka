@@ -59,16 +59,18 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'filterLogEvents' smart constructor.
-data FilterLogEvents = FilterLogEvents'
-  { _fleStartTime      :: !(Maybe Nat)
-  , _fleNextToken      :: !(Maybe Text)
-  , _fleLogStreamNames :: !(Maybe (List1 Text))
-  , _fleEndTime        :: !(Maybe Nat)
-  , _fleLimit          :: !(Maybe Nat)
-  , _fleFilterPattern  :: !(Maybe Text)
-  , _fleInterleaved    :: !(Maybe Bool)
-  , _fleLogGroupName   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FilterLogEvents =
+  FilterLogEvents'
+    { _fleStartTime      :: !(Maybe Nat)
+    , _fleNextToken      :: !(Maybe Text)
+    , _fleLogStreamNames :: !(Maybe (List1 Text))
+    , _fleEndTime        :: !(Maybe Nat)
+    , _fleLimit          :: !(Maybe Nat)
+    , _fleFilterPattern  :: !(Maybe Text)
+    , _fleInterleaved    :: !(Maybe Bool)
+    , _fleLogGroupName   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FilterLogEvents' with the minimum fields required to make a request.
@@ -189,12 +191,14 @@ instance ToQuery FilterLogEvents where
         toQuery = const mempty
 
 -- | /See:/ 'filterLogEventsResponse' smart constructor.
-data FilterLogEventsResponse = FilterLogEventsResponse'
-  { _flersSearchedLogStreams :: !(Maybe [SearchedLogStream])
-  , _flersNextToken          :: !(Maybe Text)
-  , _flersEvents             :: !(Maybe [FilteredLogEvent])
-  , _flersResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FilterLogEventsResponse =
+  FilterLogEventsResponse'
+    { _flersSearchedLogStreams :: !(Maybe [SearchedLogStream])
+    , _flersNextToken          :: !(Maybe Text)
+    , _flersEvents             :: !(Maybe [FilteredLogEvent])
+    , _flersResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FilterLogEventsResponse' with the minimum fields required to make a request.

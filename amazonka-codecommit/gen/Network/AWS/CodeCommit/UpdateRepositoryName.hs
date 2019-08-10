@@ -47,10 +47,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateRepositoryName' smart constructor.
-data UpdateRepositoryName = UpdateRepositoryName'
-  { _urnOldName :: !Text
-  , _urnNewName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateRepositoryName =
+  UpdateRepositoryName'
+    { _urnOldName :: !Text
+    , _urnNewName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateRepositoryName' with the minimum fields required to make a request.

@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteDeploymentGroup' smart constructor.
-data DeleteDeploymentGroup = DeleteDeploymentGroup'
-  { _ddgApplicationName     :: !Text
-  , _ddgDeploymentGroupName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteDeploymentGroup =
+  DeleteDeploymentGroup'
+    { _ddgApplicationName     :: !Text
+    , _ddgDeploymentGroupName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteDeploymentGroup' with the minimum fields required to make a request.
@@ -126,10 +128,12 @@ instance ToQuery DeleteDeploymentGroup where
 --
 --
 -- /See:/ 'deleteDeploymentGroupResponse' smart constructor.
-data DeleteDeploymentGroupResponse = DeleteDeploymentGroupResponse'
-  { _ddgrsHooksNotCleanedUp :: !(Maybe [AutoScalingGroup])
-  , _ddgrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteDeploymentGroupResponse =
+  DeleteDeploymentGroupResponse'
+    { _ddgrsHooksNotCleanedUp :: !(Maybe [AutoScalingGroup])
+    , _ddgrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteDeploymentGroupResponse' with the minimum fields required to make a request.

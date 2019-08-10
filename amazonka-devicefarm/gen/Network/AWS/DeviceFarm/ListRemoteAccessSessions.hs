@@ -51,10 +51,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listRemoteAccessSessions' smart constructor.
-data ListRemoteAccessSessions = ListRemoteAccessSessions'
-  { _lrasNextToken :: !(Maybe Text)
-  , _lrasArn       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListRemoteAccessSessions =
+  ListRemoteAccessSessions'
+    { _lrasNextToken :: !(Maybe Text)
+    , _lrasArn       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListRemoteAccessSessions' with the minimum fields required to make a request.
@@ -123,11 +125,13 @@ instance ToQuery ListRemoteAccessSessions where
 --
 --
 -- /See:/ 'listRemoteAccessSessionsResponse' smart constructor.
-data ListRemoteAccessSessionsResponse = ListRemoteAccessSessionsResponse'
-  { _lrasrsNextToken            :: !(Maybe Text)
-  , _lrasrsRemoteAccessSessions :: !(Maybe [RemoteAccessSession])
-  , _lrasrsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListRemoteAccessSessionsResponse =
+  ListRemoteAccessSessionsResponse'
+    { _lrasrsNextToken            :: !(Maybe Text)
+    , _lrasrsRemoteAccessSessions :: !(Maybe [RemoteAccessSession])
+    , _lrasrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListRemoteAccessSessionsResponse' with the minimum fields required to make a request.

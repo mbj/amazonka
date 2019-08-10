@@ -48,10 +48,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'setSecurityGroups' smart constructor.
-data SetSecurityGroups = SetSecurityGroups'
-  { _ssgLoadBalancerARN :: !Text
-  , _ssgSecurityGroups  :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SetSecurityGroups =
+  SetSecurityGroups'
+    { _ssgLoadBalancerARN :: !Text
+    , _ssgSecurityGroups  :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetSecurityGroups' with the minimum fields required to make a request.
@@ -108,10 +110,12 @@ instance ToQuery SetSecurityGroups where
                  toQueryList "member" _ssgSecurityGroups]
 
 -- | /See:/ 'setSecurityGroupsResponse' smart constructor.
-data SetSecurityGroupsResponse = SetSecurityGroupsResponse'
-  { _ssgrsSecurityGroupIds :: !(Maybe [Text])
-  , _ssgrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SetSecurityGroupsResponse =
+  SetSecurityGroupsResponse'
+    { _ssgrsSecurityGroupIds :: !(Maybe [Text])
+    , _ssgrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetSecurityGroupsResponse' with the minimum fields required to make a request.

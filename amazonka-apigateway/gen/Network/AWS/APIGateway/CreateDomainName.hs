@@ -66,17 +66,19 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createDomainName' smart constructor.
-data CreateDomainName = CreateDomainName'
-  { _cdnCertificateName         :: !(Maybe Text)
-  , _cdnRegionalCertificateARN  :: !(Maybe Text)
-  , _cdnCertificateARN          :: !(Maybe Text)
-  , _cdnCertificatePrivateKey   :: !(Maybe Text)
-  , _cdnRegionalCertificateName :: !(Maybe Text)
-  , _cdnCertificateBody         :: !(Maybe Text)
-  , _cdnCertificateChain        :: !(Maybe Text)
-  , _cdnEndpointConfiguration   :: !(Maybe EndpointConfiguration)
-  , _cdnDomainName              :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDomainName =
+  CreateDomainName'
+    { _cdnCertificateName         :: !(Maybe Text)
+    , _cdnRegionalCertificateARN  :: !(Maybe Text)
+    , _cdnCertificateARN          :: !(Maybe Text)
+    , _cdnCertificatePrivateKey   :: !(Maybe Text)
+    , _cdnRegionalCertificateName :: !(Maybe Text)
+    , _cdnCertificateBody         :: !(Maybe Text)
+    , _cdnCertificateChain        :: !(Maybe Text)
+    , _cdnEndpointConfiguration   :: !(Maybe EndpointConfiguration)
+    , _cdnDomainName              :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDomainName' with the minimum fields required to make a request.

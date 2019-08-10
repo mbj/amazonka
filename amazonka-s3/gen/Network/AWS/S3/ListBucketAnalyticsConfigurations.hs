@@ -47,10 +47,12 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'listBucketAnalyticsConfigurations' smart constructor.
-data ListBucketAnalyticsConfigurations = ListBucketAnalyticsConfigurations'
-  { _lbacContinuationToken :: !(Maybe Text)
-  , _lbacBucket            :: !BucketName
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListBucketAnalyticsConfigurations =
+  ListBucketAnalyticsConfigurations'
+    { _lbacContinuationToken :: !(Maybe Text)
+    , _lbacBucket            :: !BucketName
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListBucketAnalyticsConfigurations' with the minimum fields required to make a request.
@@ -114,13 +116,15 @@ instance ToQuery ListBucketAnalyticsConfigurations
                "analytics"]
 
 -- | /See:/ 'listBucketAnalyticsConfigurationsResponse' smart constructor.
-data ListBucketAnalyticsConfigurationsResponse = ListBucketAnalyticsConfigurationsResponse'
-  { _lbacrsAnalyticsConfigurationList :: !(Maybe [AnalyticsConfiguration])
-  , _lbacrsContinuationToken          :: !(Maybe Text)
-  , _lbacrsNextContinuationToken      :: !(Maybe Text)
-  , _lbacrsIsTruncated                :: !(Maybe Bool)
-  , _lbacrsResponseStatus             :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListBucketAnalyticsConfigurationsResponse =
+  ListBucketAnalyticsConfigurationsResponse'
+    { _lbacrsAnalyticsConfigurationList :: !(Maybe [AnalyticsConfiguration])
+    , _lbacrsContinuationToken          :: !(Maybe Text)
+    , _lbacrsNextContinuationToken      :: !(Maybe Text)
+    , _lbacrsIsTruncated                :: !(Maybe Bool)
+    , _lbacrsResponseStatus             :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListBucketAnalyticsConfigurationsResponse' with the minimum fields required to make a request.

@@ -40,9 +40,11 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'deleteBucketEncryption' smart constructor.
-newtype DeleteBucketEncryption = DeleteBucketEncryption'
-  { _dbeBucket :: BucketName
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteBucketEncryption =
+  DeleteBucketEncryption'
+    { _dbeBucket :: BucketName
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteBucketEncryption' with the minimum fields required to make a request.

@@ -26,9 +26,11 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'coverage' smart constructor.
-newtype Coverage = Coverage'
-  { _cCoverageHours :: Maybe CoverageHours
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype Coverage =
+  Coverage'
+    { _cCoverageHours :: Maybe CoverageHours
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Coverage' with the minimum fields required to make a request.
@@ -59,11 +61,13 @@ instance NFData Coverage where
 --
 --
 -- /See:/ 'coverageByTime' smart constructor.
-data CoverageByTime = CoverageByTime'
-  { _cbtGroups     :: !(Maybe [ReservationCoverageGroup])
-  , _cbtTimePeriod :: !(Maybe DateInterval)
-  , _cbtTotal      :: !(Maybe Coverage)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CoverageByTime =
+  CoverageByTime'
+    { _cbtGroups     :: !(Maybe [ReservationCoverageGroup])
+    , _cbtTimePeriod :: !(Maybe DateInterval)
+    , _cbtTotal      :: !(Maybe Coverage)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CoverageByTime' with the minimum fields required to make a request.
@@ -111,12 +115,14 @@ instance NFData CoverageByTime where
 --
 --
 -- /See:/ 'coverageHours' smart constructor.
-data CoverageHours = CoverageHours'
-  { _chCoverageHoursPercentage :: !(Maybe Text)
-  , _chOnDemandHours           :: !(Maybe Text)
-  , _chTotalRunningHours       :: !(Maybe Text)
-  , _chReservedHours           :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CoverageHours =
+  CoverageHours'
+    { _chCoverageHoursPercentage :: !(Maybe Text)
+    , _chOnDemandHours           :: !(Maybe Text)
+    , _chTotalRunningHours       :: !(Maybe Text)
+    , _chReservedHours           :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CoverageHours' with the minimum fields required to make a request.
@@ -176,10 +182,12 @@ instance NFData CoverageHours where
 --
 --
 -- /See:/ 'dateInterval' smart constructor.
-data DateInterval = DateInterval'
-  { _diStart :: !Text
-  , _diEnd   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DateInterval =
+  DateInterval'
+    { _diStart :: !Text
+    , _diEnd   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DateInterval' with the minimum fields required to make a request.
@@ -225,10 +233,12 @@ instance ToJSON DateInterval where
 --
 --
 -- /See:/ 'dimensionValues' smart constructor.
-data DimensionValues = DimensionValues'
-  { _dvValues :: !(Maybe [Text])
-  , _dvKey    :: !(Maybe Dimension)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DimensionValues =
+  DimensionValues'
+    { _dvValues :: !(Maybe [Text])
+    , _dvKey    :: !(Maybe Dimension)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DimensionValues' with the minimum fields required to make a request.
@@ -266,10 +276,12 @@ instance ToJSON DimensionValues where
 --
 --
 -- /See:/ 'dimensionValuesWithAttributes' smart constructor.
-data DimensionValuesWithAttributes = DimensionValuesWithAttributes'
-  { _dvwaValue      :: !(Maybe Text)
-  , _dvwaAttributes :: !(Maybe (Map Text Text))
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DimensionValuesWithAttributes =
+  DimensionValuesWithAttributes'
+    { _dvwaValue      :: !(Maybe Text)
+    , _dvwaAttributes :: !(Maybe (Map Text Text))
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DimensionValuesWithAttributes' with the minimum fields required to make a request.
@@ -310,16 +322,18 @@ instance NFData DimensionValuesWithAttributes where
 --
 --
 -- /See:/ 'ec2InstanceDetails' smart constructor.
-data EC2InstanceDetails = EC2InstanceDetails'
-  { _eidCurrentGeneration :: !(Maybe Bool)
-  , _eidPlatform          :: !(Maybe Text)
-  , _eidFamily            :: !(Maybe Text)
-  , _eidInstanceType      :: !(Maybe Text)
-  , _eidAvailabilityZone  :: !(Maybe Text)
-  , _eidSizeFlexEligible  :: !(Maybe Bool)
-  , _eidTenancy           :: !(Maybe Text)
-  , _eidRegion            :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EC2InstanceDetails =
+  EC2InstanceDetails'
+    { _eidCurrentGeneration :: !(Maybe Bool)
+    , _eidPlatform          :: !(Maybe Text)
+    , _eidFamily            :: !(Maybe Text)
+    , _eidInstanceType      :: !(Maybe Text)
+    , _eidAvailabilityZone  :: !(Maybe Text)
+    , _eidSizeFlexEligible  :: !(Maybe Bool)
+    , _eidTenancy           :: !(Maybe Text)
+    , _eidRegion            :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EC2InstanceDetails' with the minimum fields required to make a request.
@@ -410,9 +424,11 @@ instance NFData EC2InstanceDetails where
 --
 --
 -- /See:/ 'ec2Specification' smart constructor.
-newtype EC2Specification = EC2Specification'
-  { _esOfferingClass :: Maybe OfferingClass
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype EC2Specification =
+  EC2Specification'
+    { _esOfferingClass :: Maybe OfferingClass
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EC2Specification' with the minimum fields required to make a request.
@@ -464,13 +480,15 @@ instance ToJSON EC2Specification where
 --
 --
 -- /See:/ 'expression' smart constructor.
-data Expression = Expression'
-  { _eNot        :: !(Maybe Expression)
-  , _eAnd        :: !(Maybe [Expression])
-  , _eOr         :: !(Maybe [Expression])
-  , _eDimensions :: !(Maybe DimensionValues)
-  , _eTags       :: !(Maybe TagValues)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Expression =
+  Expression'
+    { _eNot        :: !(Maybe Expression)
+    , _eAnd        :: !(Maybe [Expression])
+    , _eOr         :: !(Maybe [Expression])
+    , _eDimensions :: !(Maybe DimensionValues)
+    , _eTags       :: !(Maybe TagValues)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Expression' with the minimum fields required to make a request.
@@ -536,10 +554,12 @@ instance ToJSON Expression where
 --
 --
 -- /See:/ 'group'' smart constructor.
-data Group = Group'
-  { _gMetrics :: !(Maybe (Map Text MetricValue))
-  , _gKeys    :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Group =
+  Group'
+    { _gMetrics :: !(Maybe (Map Text MetricValue))
+    , _gKeys    :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Group' with the minimum fields required to make a request.
@@ -579,10 +599,12 @@ instance NFData Group where
 --
 --
 -- /See:/ 'groupDefinition' smart constructor.
-data GroupDefinition = GroupDefinition'
-  { _gdKey  :: !(Maybe Text)
-  , _gdType :: !(Maybe GroupDefinitionType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GroupDefinition =
+  GroupDefinition'
+    { _gdKey  :: !(Maybe Text)
+    , _gdType :: !(Maybe GroupDefinitionType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GroupDefinition' with the minimum fields required to make a request.
@@ -627,10 +649,12 @@ instance ToJSON GroupDefinition where
 --
 --
 -- /See:/ 'instanceDetails' smart constructor.
-data InstanceDetails = InstanceDetails'
-  { _idRDSInstanceDetails :: !(Maybe RDSInstanceDetails)
-  , _idEC2InstanceDetails :: !(Maybe EC2InstanceDetails)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceDetails =
+  InstanceDetails'
+    { _idRDSInstanceDetails :: !(Maybe RDSInstanceDetails)
+    , _idEC2InstanceDetails :: !(Maybe EC2InstanceDetails)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceDetails' with the minimum fields required to make a request.
@@ -672,10 +696,12 @@ instance NFData InstanceDetails where
 --
 --
 -- /See:/ 'metricValue' smart constructor.
-data MetricValue = MetricValue'
-  { _mvAmount :: !(Maybe Text)
-  , _mvUnit   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MetricValue =
+  MetricValue'
+    { _mvAmount :: !(Maybe Text)
+    , _mvUnit   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MetricValue' with the minimum fields required to make a request.
@@ -713,16 +739,18 @@ instance NFData MetricValue where
 --
 --
 -- /See:/ 'rdsInstanceDetails' smart constructor.
-data RDSInstanceDetails = RDSInstanceDetails'
-  { _ridCurrentGeneration :: !(Maybe Bool)
-  , _ridDeploymentOption  :: !(Maybe Text)
-  , _ridFamily            :: !(Maybe Text)
-  , _ridInstanceType      :: !(Maybe Text)
-  , _ridLicenseModel      :: !(Maybe Text)
-  , _ridSizeFlexEligible  :: !(Maybe Bool)
-  , _ridRegion            :: !(Maybe Text)
-  , _ridDatabaseEngine    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RDSInstanceDetails =
+  RDSInstanceDetails'
+    { _ridCurrentGeneration :: !(Maybe Bool)
+    , _ridDeploymentOption  :: !(Maybe Text)
+    , _ridFamily            :: !(Maybe Text)
+    , _ridInstanceType      :: !(Maybe Text)
+    , _ridLicenseModel      :: !(Maybe Text)
+    , _ridSizeFlexEligible  :: !(Maybe Bool)
+    , _ridRegion            :: !(Maybe Text)
+    , _ridDatabaseEngine    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RDSInstanceDetails' with the minimum fields required to make a request.
@@ -814,12 +842,14 @@ instance NFData RDSInstanceDetails where
 --
 --
 -- /See:/ 'reservationAggregates' smart constructor.
-data ReservationAggregates = ReservationAggregates'
-  { _raPurchasedHours        :: !(Maybe Text)
-  , _raTotalActualHours      :: !(Maybe Text)
-  , _raUtilizationPercentage :: !(Maybe Text)
-  , _raUnusedHours           :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReservationAggregates =
+  ReservationAggregates'
+    { _raPurchasedHours        :: !(Maybe Text)
+    , _raTotalActualHours      :: !(Maybe Text)
+    , _raUtilizationPercentage :: !(Maybe Text)
+    , _raUnusedHours           :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReservationAggregates' with the minimum fields required to make a request.
@@ -879,10 +909,12 @@ instance NFData ReservationAggregates where
 --
 --
 -- /See:/ 'reservationCoverageGroup' smart constructor.
-data ReservationCoverageGroup = ReservationCoverageGroup'
-  { _rcgCoverage   :: !(Maybe Coverage)
-  , _rcgAttributes :: !(Maybe (Map Text Text))
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReservationCoverageGroup =
+  ReservationCoverageGroup'
+    { _rcgCoverage   :: !(Maybe Coverage)
+    , _rcgAttributes :: !(Maybe (Map Text Text))
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReservationCoverageGroup' with the minimum fields required to make a request.
@@ -923,15 +955,17 @@ instance NFData ReservationCoverageGroup where
 --
 --
 -- /See:/ 'reservationPurchaseRecommendation' smart constructor.
-data ReservationPurchaseRecommendation = ReservationPurchaseRecommendation'
-  { _rprTermInYears :: !(Maybe TermInYears)
-  , _rprRecommendationSummary :: !(Maybe ReservationPurchaseRecommendationSummary)
-  , _rprServiceSpecification :: !(Maybe ServiceSpecification)
-  , _rprAccountScope :: !(Maybe AccountScope)
-  , _rprRecommendationDetails :: !(Maybe [ReservationPurchaseRecommendationDetail])
-  , _rprLookbackPeriodInDays :: !(Maybe LookbackPeriodInDays)
-  , _rprPaymentOption :: !(Maybe PaymentOption)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReservationPurchaseRecommendation =
+  ReservationPurchaseRecommendation'
+    { _rprTermInYears :: !(Maybe TermInYears)
+    , _rprRecommendationSummary :: !(Maybe ReservationPurchaseRecommendationSummary)
+    , _rprServiceSpecification :: !(Maybe ServiceSpecification)
+    , _rprAccountScope :: !(Maybe AccountScope)
+    , _rprRecommendationDetails :: !(Maybe [ReservationPurchaseRecommendationDetail])
+    , _rprLookbackPeriodInDays :: !(Maybe LookbackPeriodInDays)
+    , _rprPaymentOption :: !(Maybe PaymentOption)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReservationPurchaseRecommendation' with the minimum fields required to make a request.
@@ -1018,26 +1052,28 @@ instance NFData ReservationPurchaseRecommendation
 --
 --
 -- /See:/ 'reservationPurchaseRecommendationDetail' smart constructor.
-data ReservationPurchaseRecommendationDetail = ReservationPurchaseRecommendationDetail'
-  { _rprdMaximumNormalizedUnitsUsedPerHour         :: !(Maybe Text)
-  , _rprdRecurringStandardMonthlyCost              :: !(Maybe Text)
-  , _rprdAverageNormalizedUnitsUsedPerHour         :: !(Maybe Text)
-  , _rprdCurrencyCode                              :: !(Maybe Text)
-  , _rprdEstimatedMonthlySavingsPercentage         :: !(Maybe Text)
-  , _rprdRecommendedNormalizedUnitsToPurchase      :: !(Maybe Text)
-  , _rprdAverageUtilization                        :: !(Maybe Text)
-  , _rprdEstimatedMonthlySavingsAmount             :: !(Maybe Text)
-  , _rprdUpfrontCost                               :: !(Maybe Text)
-  , _rprdMinimumNormalizedUnitsUsedPerHour         :: !(Maybe Text)
-  , _rprdEstimatedMonthlyOnDemandCost              :: !(Maybe Text)
-  , _rprdRecommendedNumberOfInstancesToPurchase    :: !(Maybe Text)
-  , _rprdMaximumNumberOfInstancesUsedPerHour       :: !(Maybe Text)
-  , _rprdEstimatedReservationCostForLookbackPeriod :: !(Maybe Text)
-  , _rprdInstanceDetails                           :: !(Maybe InstanceDetails)
-  , _rprdAverageNumberOfInstancesUsedPerHour       :: !(Maybe Text)
-  , _rprdMinimumNumberOfInstancesUsedPerHour       :: !(Maybe Text)
-  , _rprdEstimatedBreakEvenInMonths                :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReservationPurchaseRecommendationDetail =
+  ReservationPurchaseRecommendationDetail'
+    { _rprdMaximumNormalizedUnitsUsedPerHour         :: !(Maybe Text)
+    , _rprdRecurringStandardMonthlyCost              :: !(Maybe Text)
+    , _rprdAverageNormalizedUnitsUsedPerHour         :: !(Maybe Text)
+    , _rprdCurrencyCode                              :: !(Maybe Text)
+    , _rprdEstimatedMonthlySavingsPercentage         :: !(Maybe Text)
+    , _rprdRecommendedNormalizedUnitsToPurchase      :: !(Maybe Text)
+    , _rprdAverageUtilization                        :: !(Maybe Text)
+    , _rprdEstimatedMonthlySavingsAmount             :: !(Maybe Text)
+    , _rprdUpfrontCost                               :: !(Maybe Text)
+    , _rprdMinimumNormalizedUnitsUsedPerHour         :: !(Maybe Text)
+    , _rprdEstimatedMonthlyOnDemandCost              :: !(Maybe Text)
+    , _rprdRecommendedNumberOfInstancesToPurchase    :: !(Maybe Text)
+    , _rprdMaximumNumberOfInstancesUsedPerHour       :: !(Maybe Text)
+    , _rprdEstimatedReservationCostForLookbackPeriod :: !(Maybe Text)
+    , _rprdInstanceDetails                           :: !(Maybe InstanceDetails)
+    , _rprdAverageNumberOfInstancesUsedPerHour       :: !(Maybe Text)
+    , _rprdMinimumNumberOfInstancesUsedPerHour       :: !(Maybe Text)
+    , _rprdEstimatedBreakEvenInMonths                :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReservationPurchaseRecommendationDetail' with the minimum fields required to make a request.
@@ -1217,10 +1253,12 @@ instance NFData
 --
 --
 -- /See:/ 'reservationPurchaseRecommendationMetadata' smart constructor.
-data ReservationPurchaseRecommendationMetadata = ReservationPurchaseRecommendationMetadata'
-  { _rprmRecommendationId    :: !(Maybe Text)
-  , _rprmGenerationTimestamp :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReservationPurchaseRecommendationMetadata =
+  ReservationPurchaseRecommendationMetadata'
+    { _rprmRecommendationId    :: !(Maybe Text)
+    , _rprmGenerationTimestamp :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReservationPurchaseRecommendationMetadata' with the minimum fields required to make a request.
@@ -1269,11 +1307,13 @@ instance NFData
 --
 --
 -- /See:/ 'reservationPurchaseRecommendationSummary' smart constructor.
-data ReservationPurchaseRecommendationSummary = ReservationPurchaseRecommendationSummary'
-  { _rprsCurrencyCode                           :: !(Maybe Text)
-  , _rprsTotalEstimatedMonthlySavingsPercentage :: !(Maybe Text)
-  , _rprsTotalEstimatedMonthlySavingsAmount     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReservationPurchaseRecommendationSummary =
+  ReservationPurchaseRecommendationSummary'
+    { _rprsCurrencyCode                           :: !(Maybe Text)
+    , _rprsTotalEstimatedMonthlySavingsPercentage :: !(Maybe Text)
+    , _rprsTotalEstimatedMonthlySavingsAmount     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReservationPurchaseRecommendationSummary' with the minimum fields required to make a request.
@@ -1332,12 +1372,14 @@ instance NFData
 --
 --
 -- /See:/ 'reservationUtilizationGroup' smart constructor.
-data ReservationUtilizationGroup = ReservationUtilizationGroup'
-  { _rugValue       :: !(Maybe Text)
-  , _rugKey         :: !(Maybe Text)
-  , _rugAttributes  :: !(Maybe (Map Text Text))
-  , _rugUtilization :: !(Maybe ReservationAggregates)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReservationUtilizationGroup =
+  ReservationUtilizationGroup'
+    { _rugValue       :: !(Maybe Text)
+    , _rugKey         :: !(Maybe Text)
+    , _rugAttributes  :: !(Maybe (Map Text Text))
+    , _rugUtilization :: !(Maybe ReservationAggregates)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReservationUtilizationGroup' with the minimum fields required to make a request.
@@ -1396,12 +1438,14 @@ instance NFData ReservationUtilizationGroup where
 --
 --
 -- /See:/ 'resultByTime' smart constructor.
-data ResultByTime = ResultByTime'
-  { _rbtGroups     :: !(Maybe [Group])
-  , _rbtTimePeriod :: !(Maybe DateInterval)
-  , _rbtTotal      :: !(Maybe (Map Text MetricValue))
-  , _rbtEstimated  :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResultByTime =
+  ResultByTime'
+    { _rbtGroups     :: !(Maybe [Group])
+    , _rbtTimePeriod :: !(Maybe DateInterval)
+    , _rbtTotal      :: !(Maybe (Map Text MetricValue))
+    , _rbtEstimated  :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResultByTime' with the minimum fields required to make a request.
@@ -1460,9 +1504,11 @@ instance NFData ResultByTime where
 --
 --
 -- /See:/ 'serviceSpecification' smart constructor.
-newtype ServiceSpecification = ServiceSpecification'
-  { _ssEC2Specification :: Maybe EC2Specification
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ServiceSpecification =
+  ServiceSpecification'
+    { _ssEC2Specification :: Maybe EC2Specification
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ServiceSpecification' with the minimum fields required to make a request.
@@ -1500,10 +1546,12 @@ instance ToJSON ServiceSpecification where
 --
 --
 -- /See:/ 'tagValues' smart constructor.
-data TagValues = TagValues'
-  { _tvValues :: !(Maybe [Text])
-  , _tvKey    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TagValues =
+  TagValues'
+    { _tvValues :: !(Maybe [Text])
+    , _tvKey    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TagValues' with the minimum fields required to make a request.
@@ -1541,11 +1589,13 @@ instance ToJSON TagValues where
 --
 --
 -- /See:/ 'utilizationByTime' smart constructor.
-data UtilizationByTime = UtilizationByTime'
-  { _ubtGroups     :: !(Maybe [ReservationUtilizationGroup])
-  , _ubtTimePeriod :: !(Maybe DateInterval)
-  , _ubtTotal      :: !(Maybe ReservationAggregates)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UtilizationByTime =
+  UtilizationByTime'
+    { _ubtGroups     :: !(Maybe [ReservationUtilizationGroup])
+    , _ubtTimePeriod :: !(Maybe DateInterval)
+    , _ubtTotal      :: !(Maybe ReservationAggregates)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UtilizationByTime' with the minimum fields required to make a request.

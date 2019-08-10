@@ -50,9 +50,11 @@ import Network.AWS.SQS.Types.Product
 --
 --
 -- /See:/ 'purgeQueue' smart constructor.
-newtype PurgeQueue = PurgeQueue'
-  { _pqQueueURL :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype PurgeQueue =
+  PurgeQueue'
+    { _pqQueueURL :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PurgeQueue' with the minimum fields required to make a request.

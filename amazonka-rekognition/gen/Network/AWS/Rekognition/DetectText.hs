@@ -59,9 +59,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'detectText' smart constructor.
-newtype DetectText = DetectText'
-  { _dtImage :: Image
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DetectText =
+  DetectText'
+    { _dtImage :: Image
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DetectText' with the minimum fields required to make a request.
@@ -113,10 +115,12 @@ instance ToQuery DetectText where
         toQuery = const mempty
 
 -- | /See:/ 'detectTextResponse' smart constructor.
-data DetectTextResponse = DetectTextResponse'
-  { _dtrsTextDetections :: !(Maybe [TextDetection])
-  , _dtrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DetectTextResponse =
+  DetectTextResponse'
+    { _dtrsTextDetections :: !(Maybe [TextDetection])
+    , _dtrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DetectTextResponse' with the minimum fields required to make a request.

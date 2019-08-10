@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeDataset' smart constructor.
-newtype DescribeDataset = DescribeDataset'
-  { _ddDatasetName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeDataset =
+  DescribeDataset'
+    { _ddDatasetName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDataset' with the minimum fields required to make a request.
@@ -90,10 +92,12 @@ instance ToQuery DescribeDataset where
         toQuery = const mempty
 
 -- | /See:/ 'describeDatasetResponse' smart constructor.
-data DescribeDatasetResponse = DescribeDatasetResponse'
-  { _ddrsDataset        :: !(Maybe Dataset)
-  , _ddrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDatasetResponse =
+  DescribeDatasetResponse'
+    { _ddrsDataset        :: !(Maybe Dataset)
+    , _ddrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDatasetResponse' with the minimum fields required to make a request.

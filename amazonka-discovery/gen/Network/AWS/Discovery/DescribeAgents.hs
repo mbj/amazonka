@@ -49,12 +49,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeAgents' smart constructor.
-data DescribeAgents = DescribeAgents'
-  { _daAgentIds   :: !(Maybe [Text])
-  , _daFilters    :: !(Maybe [Filter])
-  , _daNextToken  :: !(Maybe Text)
-  , _daMaxResults :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAgents =
+  DescribeAgents'
+    { _daAgentIds   :: !(Maybe [Text])
+    , _daFilters    :: !(Maybe [Filter])
+    , _daNextToken  :: !(Maybe Text)
+    , _daMaxResults :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAgents' with the minimum fields required to make a request.
@@ -136,11 +138,13 @@ instance ToQuery DescribeAgents where
         toQuery = const mempty
 
 -- | /See:/ 'describeAgentsResponse' smart constructor.
-data DescribeAgentsResponse = DescribeAgentsResponse'
-  { _dasrsAgentsInfo     :: !(Maybe [AgentInfo])
-  , _dasrsNextToken      :: !(Maybe Text)
-  , _dasrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAgentsResponse =
+  DescribeAgentsResponse'
+    { _dasrsAgentsInfo     :: !(Maybe [AgentInfo])
+    , _dasrsNextToken      :: !(Maybe Text)
+    , _dasrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAgentsResponse' with the minimum fields required to make a request.

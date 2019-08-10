@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listNetworkProfiles' smart constructor.
-data ListNetworkProfiles = ListNetworkProfiles'
-  { _lnpNextToken :: !(Maybe Text)
-  , _lnpType      :: !(Maybe NetworkProfileType)
-  , _lnpArn       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListNetworkProfiles =
+  ListNetworkProfiles'
+    { _lnpNextToken :: !(Maybe Text)
+    , _lnpType      :: !(Maybe NetworkProfileType)
+    , _lnpArn       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListNetworkProfiles' with the minimum fields required to make a request.
@@ -124,11 +126,13 @@ instance ToQuery ListNetworkProfiles where
         toQuery = const mempty
 
 -- | /See:/ 'listNetworkProfilesResponse' smart constructor.
-data ListNetworkProfilesResponse = ListNetworkProfilesResponse'
-  { _lnprsNetworkProfiles :: !(Maybe [NetworkProfile])
-  , _lnprsNextToken       :: !(Maybe Text)
-  , _lnprsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListNetworkProfilesResponse =
+  ListNetworkProfilesResponse'
+    { _lnprsNetworkProfiles :: !(Maybe [NetworkProfile])
+    , _lnprsNextToken       :: !(Maybe Text)
+    , _lnprsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListNetworkProfilesResponse' with the minimum fields required to make a request.

@@ -56,11 +56,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listSSHPublicKeys' smart constructor.
-data ListSSHPublicKeys = ListSSHPublicKeys'
-  { _lspkUserName :: !(Maybe Text)
-  , _lspkMarker   :: !(Maybe Text)
-  , _lspkMaxItems :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListSSHPublicKeys =
+  ListSSHPublicKeys'
+    { _lspkUserName :: !(Maybe Text)
+    , _lspkMarker   :: !(Maybe Text)
+    , _lspkMaxItems :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListSSHPublicKeys' with the minimum fields required to make a request.
@@ -134,12 +136,14 @@ instance ToQuery ListSSHPublicKeys where
 --
 --
 -- /See:/ 'listSSHPublicKeysResponse' smart constructor.
-data ListSSHPublicKeysResponse = ListSSHPublicKeysResponse'
-  { _lspkrsSSHPublicKeys  :: !(Maybe [SSHPublicKeyMetadata])
-  , _lspkrsMarker         :: !(Maybe Text)
-  , _lspkrsIsTruncated    :: !(Maybe Bool)
-  , _lspkrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListSSHPublicKeysResponse =
+  ListSSHPublicKeysResponse'
+    { _lspkrsSSHPublicKeys  :: !(Maybe [SSHPublicKeyMetadata])
+    , _lspkrsMarker         :: !(Maybe Text)
+    , _lspkrsIsTruncated    :: !(Maybe Bool)
+    , _lspkrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListSSHPublicKeysResponse' with the minimum fields required to make a request.

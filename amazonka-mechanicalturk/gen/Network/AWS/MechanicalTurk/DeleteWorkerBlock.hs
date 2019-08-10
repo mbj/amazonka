@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteWorkerBlock' smart constructor.
-data DeleteWorkerBlock = DeleteWorkerBlock'
-  { _dwbReason   :: !(Maybe Text)
-  , _dwbWorkerId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteWorkerBlock =
+  DeleteWorkerBlock'
+    { _dwbReason   :: !(Maybe Text)
+    , _dwbWorkerId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteWorkerBlock' with the minimum fields required to make a request.
@@ -109,9 +111,11 @@ instance ToQuery DeleteWorkerBlock where
         toQuery = const mempty
 
 -- | /See:/ 'deleteWorkerBlockResponse' smart constructor.
-newtype DeleteWorkerBlockResponse = DeleteWorkerBlockResponse'
-  { _dwbrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteWorkerBlockResponse =
+  DeleteWorkerBlockResponse'
+    { _dwbrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteWorkerBlockResponse' with the minimum fields required to make a request.

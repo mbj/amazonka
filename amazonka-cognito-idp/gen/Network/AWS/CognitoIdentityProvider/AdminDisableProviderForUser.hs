@@ -55,10 +55,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'adminDisableProviderForUser' smart constructor.
-data AdminDisableProviderForUser = AdminDisableProviderForUser'
-  { _adpfuUserPoolId :: !Text
-  , _adpfuUser       :: !ProviderUserIdentifierType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AdminDisableProviderForUser =
+  AdminDisableProviderForUser'
+    { _adpfuUserPoolId :: !Text
+    , _adpfuUser       :: !ProviderUserIdentifierType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AdminDisableProviderForUser' with the minimum fields required to make a request.
@@ -123,9 +125,11 @@ instance ToQuery AdminDisableProviderForUser where
         toQuery = const mempty
 
 -- | /See:/ 'adminDisableProviderForUserResponse' smart constructor.
-newtype AdminDisableProviderForUserResponse = AdminDisableProviderForUserResponse'
-  { _adpfursResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AdminDisableProviderForUserResponse =
+  AdminDisableProviderForUserResponse'
+    { _adpfursResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AdminDisableProviderForUserResponse' with the minimum fields required to make a request.

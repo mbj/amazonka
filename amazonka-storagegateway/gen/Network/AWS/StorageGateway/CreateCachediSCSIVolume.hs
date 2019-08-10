@@ -56,15 +56,17 @@ import Network.AWS.StorageGateway.Types
 import Network.AWS.StorageGateway.Types.Product
 
 -- | /See:/ 'createCachediSCSIVolume' smart constructor.
-data CreateCachediSCSIVolume = CreateCachediSCSIVolume'
-  { _ccscsivSourceVolumeARN    :: !(Maybe Text)
-  , _ccscsivSnapshotId         :: !(Maybe Text)
-  , _ccscsivGatewayARN         :: !Text
-  , _ccscsivVolumeSizeInBytes  :: !Integer
-  , _ccscsivTargetName         :: !Text
-  , _ccscsivNetworkInterfaceId :: !Text
-  , _ccscsivClientToken        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateCachediSCSIVolume =
+  CreateCachediSCSIVolume'
+    { _ccscsivSourceVolumeARN    :: !(Maybe Text)
+    , _ccscsivSnapshotId         :: !(Maybe Text)
+    , _ccscsivGatewayARN         :: !Text
+    , _ccscsivVolumeSizeInBytes  :: !Integer
+    , _ccscsivTargetName         :: !Text
+    , _ccscsivNetworkInterfaceId :: !Text
+    , _ccscsivClientToken        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateCachediSCSIVolume' with the minimum fields required to make a request.
@@ -177,11 +179,13 @@ instance ToQuery CreateCachediSCSIVolume where
         toQuery = const mempty
 
 -- | /See:/ 'createCachediSCSIVolumeResponse' smart constructor.
-data CreateCachediSCSIVolumeResponse = CreateCachediSCSIVolumeResponse'
-  { _ccscsivrsTargetARN      :: !(Maybe Text)
-  , _ccscsivrsVolumeARN      :: !(Maybe Text)
-  , _ccscsivrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateCachediSCSIVolumeResponse =
+  CreateCachediSCSIVolumeResponse'
+    { _ccscsivrsTargetARN      :: !(Maybe Text)
+    , _ccscsivrsVolumeARN      :: !(Maybe Text)
+    , _ccscsivrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateCachediSCSIVolumeResponse' with the minimum fields required to make a request.

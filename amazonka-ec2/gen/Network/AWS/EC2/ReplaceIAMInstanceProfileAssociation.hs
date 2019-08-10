@@ -48,10 +48,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'replaceIAMInstanceProfileAssociation' smart constructor.
-data ReplaceIAMInstanceProfileAssociation = ReplaceIAMInstanceProfileAssociation'
-  { _riapaIAMInstanceProfile :: !IAMInstanceProfileSpecification
-  , _riapaAssociationId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReplaceIAMInstanceProfileAssociation =
+  ReplaceIAMInstanceProfileAssociation'
+    { _riapaIAMInstanceProfile :: !IAMInstanceProfileSpecification
+    , _riapaAssociationId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReplaceIAMInstanceProfileAssociation' with the minimum fields required to make a request.
@@ -121,10 +123,12 @@ instance ToQuery ReplaceIAMInstanceProfileAssociation
                "AssociationId" =: _riapaAssociationId]
 
 -- | /See:/ 'replaceIAMInstanceProfileAssociationResponse' smart constructor.
-data ReplaceIAMInstanceProfileAssociationResponse = ReplaceIAMInstanceProfileAssociationResponse'
-  { _riaparsIAMInstanceProfileAssociation :: !(Maybe IAMInstanceProfileAssociation)
-  , _riaparsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReplaceIAMInstanceProfileAssociationResponse =
+  ReplaceIAMInstanceProfileAssociationResponse'
+    { _riaparsIAMInstanceProfileAssociation :: !(Maybe IAMInstanceProfileAssociation)
+    , _riaparsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReplaceIAMInstanceProfileAssociationResponse' with the minimum fields required to make a request.

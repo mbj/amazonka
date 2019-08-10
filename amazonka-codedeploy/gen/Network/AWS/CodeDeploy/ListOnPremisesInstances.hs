@@ -54,11 +54,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listOnPremisesInstances' smart constructor.
-data ListOnPremisesInstances = ListOnPremisesInstances'
-  { _lopiTagFilters         :: !(Maybe [TagFilter])
-  , _lopiNextToken          :: !(Maybe Text)
-  , _lopiRegistrationStatus :: !(Maybe RegistrationStatus)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListOnPremisesInstances =
+  ListOnPremisesInstances'
+    { _lopiTagFilters         :: !(Maybe [TagFilter])
+    , _lopiNextToken          :: !(Maybe Text)
+    , _lopiRegistrationStatus :: !(Maybe RegistrationStatus)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListOnPremisesInstances' with the minimum fields required to make a request.
@@ -138,11 +140,13 @@ instance ToQuery ListOnPremisesInstances where
 --
 --
 -- /See:/ 'listOnPremisesInstancesResponse' smart constructor.
-data ListOnPremisesInstancesResponse = ListOnPremisesInstancesResponse'
-  { _lopirsNextToken      :: !(Maybe Text)
-  , _lopirsInstanceNames  :: !(Maybe [Text])
-  , _lopirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListOnPremisesInstancesResponse =
+  ListOnPremisesInstancesResponse'
+    { _lopirsNextToken      :: !(Maybe Text)
+    , _lopirsInstanceNames  :: !(Maybe [Text])
+    , _lopirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListOnPremisesInstancesResponse' with the minimum fields required to make a request.

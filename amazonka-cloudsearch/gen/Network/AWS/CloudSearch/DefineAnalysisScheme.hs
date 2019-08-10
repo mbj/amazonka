@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'defineAnalysisScheme' smart constructor.
-data DefineAnalysisScheme = DefineAnalysisScheme'
-  { _dasaDomainName     :: !Text
-  , _dasaAnalysisScheme :: !AnalysisScheme
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DefineAnalysisScheme =
+  DefineAnalysisScheme'
+    { _dasaDomainName     :: !Text
+    , _dasaAnalysisScheme :: !AnalysisScheme
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DefineAnalysisScheme' with the minimum fields required to make a request.
@@ -113,10 +115,12 @@ instance ToQuery DefineAnalysisScheme where
 --
 --
 -- /See:/ 'defineAnalysisSchemeResponse' smart constructor.
-data DefineAnalysisSchemeResponse = DefineAnalysisSchemeResponse'
-  { _defersResponseStatus :: !Int
-  , _defersAnalysisScheme :: !AnalysisSchemeStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DefineAnalysisSchemeResponse =
+  DefineAnalysisSchemeResponse'
+    { _defersResponseStatus :: !Int
+    , _defersAnalysisScheme :: !AnalysisSchemeStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DefineAnalysisSchemeResponse' with the minimum fields required to make a request.

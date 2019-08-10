@@ -53,16 +53,18 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createGroupVersion' smart constructor.
-data CreateGroupVersion = CreateGroupVersion'
-  { _cgvAmznClientToken                  :: !(Maybe Text)
-  , _cgvResourceDefinitionVersionARN     :: !(Maybe Text)
-  , _cgvSubscriptionDefinitionVersionARN :: !(Maybe Text)
-  , _cgvCoreDefinitionVersionARN         :: !(Maybe Text)
-  , _cgvDeviceDefinitionVersionARN       :: !(Maybe Text)
-  , _cgvFunctionDefinitionVersionARN     :: !(Maybe Text)
-  , _cgvLoggerDefinitionVersionARN       :: !(Maybe Text)
-  , _cgvGroupId                          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateGroupVersion =
+  CreateGroupVersion'
+    { _cgvAmznClientToken                  :: !(Maybe Text)
+    , _cgvResourceDefinitionVersionARN     :: !(Maybe Text)
+    , _cgvSubscriptionDefinitionVersionARN :: !(Maybe Text)
+    , _cgvCoreDefinitionVersionARN         :: !(Maybe Text)
+    , _cgvDeviceDefinitionVersionARN       :: !(Maybe Text)
+    , _cgvFunctionDefinitionVersionARN     :: !(Maybe Text)
+    , _cgvLoggerDefinitionVersionARN       :: !(Maybe Text)
+    , _cgvGroupId                          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateGroupVersion' with the minimum fields required to make a request.
@@ -183,13 +185,15 @@ instance ToQuery CreateGroupVersion where
         toQuery = const mempty
 
 -- | /See:/ 'createGroupVersionResponse' smart constructor.
-data CreateGroupVersionResponse = CreateGroupVersionResponse'
-  { _cgvrsARN               :: !(Maybe Text)
-  , _cgvrsCreationTimestamp :: !(Maybe Text)
-  , _cgvrsVersion           :: !(Maybe Text)
-  , _cgvrsId                :: !(Maybe Text)
-  , _cgvrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateGroupVersionResponse =
+  CreateGroupVersionResponse'
+    { _cgvrsARN               :: !(Maybe Text)
+    , _cgvrsCreationTimestamp :: !(Maybe Text)
+    , _cgvrsVersion           :: !(Maybe Text)
+    , _cgvrsId                :: !(Maybe Text)
+    , _cgvrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateGroupVersionResponse' with the minimum fields required to make a request.

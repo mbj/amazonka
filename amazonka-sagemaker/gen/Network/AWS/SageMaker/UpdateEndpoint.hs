@@ -48,10 +48,12 @@ import Network.AWS.SageMaker.Types
 import Network.AWS.SageMaker.Types.Product
 
 -- | /See:/ 'updateEndpoint' smart constructor.
-data UpdateEndpoint = UpdateEndpoint'
-  { _ueEndpointName       :: !Text
-  , _ueEndpointConfigName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateEndpoint =
+  UpdateEndpoint'
+    { _ueEndpointName       :: !Text
+    , _ueEndpointConfigName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateEndpoint' with the minimum fields required to make a request.
@@ -117,10 +119,12 @@ instance ToQuery UpdateEndpoint where
         toQuery = const mempty
 
 -- | /See:/ 'updateEndpointResponse' smart constructor.
-data UpdateEndpointResponse = UpdateEndpointResponse'
-  { _uersResponseStatus :: !Int
-  , _uersEndpointARN    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateEndpointResponse =
+  UpdateEndpointResponse'
+    { _uersResponseStatus :: !Int
+    , _uersEndpointARN    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateEndpointResponse' with the minimum fields required to make a request.

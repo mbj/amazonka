@@ -62,10 +62,12 @@ import Network.AWS.WAF.Types.Product
 --
 --
 -- /See:/ 'deleteXSSMatchSet' smart constructor.
-data DeleteXSSMatchSet = DeleteXSSMatchSet'
-  { _dxmsXSSMatchSetId :: !Text
-  , _dxmsChangeToken   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteXSSMatchSet =
+  DeleteXSSMatchSet'
+    { _dxmsXSSMatchSetId :: !Text
+    , _dxmsChangeToken   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteXSSMatchSet' with the minimum fields required to make a request.
@@ -132,10 +134,12 @@ instance ToQuery DeleteXSSMatchSet where
 --
 --
 -- /See:/ 'deleteXSSMatchSetResponse' smart constructor.
-data DeleteXSSMatchSetResponse = DeleteXSSMatchSetResponse'
-  { _dxmsrsChangeToken    :: !(Maybe Text)
-  , _dxmsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteXSSMatchSetResponse =
+  DeleteXSSMatchSetResponse'
+    { _dxmsrsChangeToken    :: !(Maybe Text)
+    , _dxmsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteXSSMatchSetResponse' with the minimum fields required to make a request.

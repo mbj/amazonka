@@ -68,11 +68,13 @@ import Network.AWS.SWF.Types
 import Network.AWS.SWF.Types.Product
 
 -- | /See:/ 'pollForActivityTask' smart constructor.
-data PollForActivityTask = PollForActivityTask'
-  { _pfatIdentity :: !(Maybe Text)
-  , _pfatDomain   :: !Text
-  , _pfatTaskList :: !TaskList
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PollForActivityTask =
+  PollForActivityTask'
+    { _pfatIdentity :: !(Maybe Text)
+    , _pfatDomain   :: !Text
+    , _pfatTaskList :: !TaskList
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PollForActivityTask' with the minimum fields required to make a request.
@@ -156,15 +158,17 @@ instance ToQuery PollForActivityTask where
 --
 --
 -- /See:/ 'pollForActivityTaskResponse' smart constructor.
-data PollForActivityTaskResponse = PollForActivityTaskResponse'
-  { _pfatrsActivityType      :: !(Maybe ActivityType)
-  , _pfatrsActivityId        :: !(Maybe Text)
-  , _pfatrsInput             :: !(Maybe Text)
-  , _pfatrsTaskToken         :: !(Maybe Text)
-  , _pfatrsWorkflowExecution :: !(Maybe WorkflowExecution)
-  , _pfatrsResponseStatus    :: !Int
-  , _pfatrsStartedEventId    :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PollForActivityTaskResponse =
+  PollForActivityTaskResponse'
+    { _pfatrsActivityType      :: !(Maybe ActivityType)
+    , _pfatrsActivityId        :: !(Maybe Text)
+    , _pfatrsInput             :: !(Maybe Text)
+    , _pfatrsTaskToken         :: !(Maybe Text)
+    , _pfatrsWorkflowExecution :: !(Maybe WorkflowExecution)
+    , _pfatrsResponseStatus    :: !Int
+    , _pfatrsStartedEventId    :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PollForActivityTaskResponse' with the minimum fields required to make a request.

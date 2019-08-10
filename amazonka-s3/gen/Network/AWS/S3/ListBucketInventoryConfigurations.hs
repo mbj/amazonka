@@ -47,10 +47,12 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'listBucketInventoryConfigurations' smart constructor.
-data ListBucketInventoryConfigurations = ListBucketInventoryConfigurations'
-  { _lbicContinuationToken :: !(Maybe Text)
-  , _lbicBucket            :: !BucketName
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListBucketInventoryConfigurations =
+  ListBucketInventoryConfigurations'
+    { _lbicContinuationToken :: !(Maybe Text)
+    , _lbicBucket            :: !BucketName
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListBucketInventoryConfigurations' with the minimum fields required to make a request.
@@ -114,13 +116,15 @@ instance ToQuery ListBucketInventoryConfigurations
                "inventory"]
 
 -- | /See:/ 'listBucketInventoryConfigurationsResponse' smart constructor.
-data ListBucketInventoryConfigurationsResponse = ListBucketInventoryConfigurationsResponse'
-  { _lbicrsContinuationToken          :: !(Maybe Text)
-  , _lbicrsInventoryConfigurationList :: !(Maybe [InventoryConfiguration])
-  , _lbicrsNextContinuationToken      :: !(Maybe Text)
-  , _lbicrsIsTruncated                :: !(Maybe Bool)
-  , _lbicrsResponseStatus             :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data ListBucketInventoryConfigurationsResponse =
+  ListBucketInventoryConfigurationsResponse'
+    { _lbicrsContinuationToken          :: !(Maybe Text)
+    , _lbicrsInventoryConfigurationList :: !(Maybe [InventoryConfiguration])
+    , _lbicrsNextContinuationToken      :: !(Maybe Text)
+    , _lbicrsIsTruncated                :: !(Maybe Bool)
+    , _lbicrsResponseStatus             :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListBucketInventoryConfigurationsResponse' with the minimum fields required to make a request.

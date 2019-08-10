@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeStackSetOperation' smart constructor.
-data DescribeStackSetOperation = DescribeStackSetOperation'
-  { _dssoStackSetName :: !Text
-  , _dssoOperationId  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeStackSetOperation =
+  DescribeStackSetOperation'
+    { _dssoStackSetName :: !Text
+    , _dssoOperationId  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeStackSetOperation' with the minimum fields required to make a request.
@@ -106,10 +108,12 @@ instance ToQuery DescribeStackSetOperation where
                "OperationId" =: _dssoOperationId]
 
 -- | /See:/ 'describeStackSetOperationResponse' smart constructor.
-data DescribeStackSetOperationResponse = DescribeStackSetOperationResponse'
-  { _dssorsStackSetOperation :: !(Maybe StackSetOperation)
-  , _dssorsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeStackSetOperationResponse =
+  DescribeStackSetOperationResponse'
+    { _dssorsStackSetOperation :: !(Maybe StackSetOperation)
+    , _dssorsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeStackSetOperationResponse' with the minimum fields required to make a request.

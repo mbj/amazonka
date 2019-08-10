@@ -53,11 +53,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'replaceNetworkACLAssociation' smart constructor.
-data ReplaceNetworkACLAssociation = ReplaceNetworkACLAssociation'
-  { _rnaaDryRun        :: !(Maybe Bool)
-  , _rnaaAssociationId :: !Text
-  , _rnaaNetworkACLId  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReplaceNetworkACLAssociation =
+  ReplaceNetworkACLAssociation'
+    { _rnaaDryRun        :: !(Maybe Bool)
+    , _rnaaAssociationId :: !Text
+    , _rnaaNetworkACLId  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReplaceNetworkACLAssociation' with the minimum fields required to make a request.
@@ -129,10 +131,12 @@ instance ToQuery ReplaceNetworkACLAssociation where
 --
 --
 -- /See:/ 'replaceNetworkACLAssociationResponse' smart constructor.
-data ReplaceNetworkACLAssociationResponse = ReplaceNetworkACLAssociationResponse'
-  { _rnaarsNewAssociationId :: !(Maybe Text)
-  , _rnaarsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReplaceNetworkACLAssociationResponse =
+  ReplaceNetworkACLAssociationResponse'
+    { _rnaarsNewAssociationId :: !(Maybe Text)
+    , _rnaarsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReplaceNetworkACLAssociationResponse' with the minimum fields required to make a request.

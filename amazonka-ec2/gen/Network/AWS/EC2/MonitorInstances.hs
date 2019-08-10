@@ -52,10 +52,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'monitorInstances' smart constructor.
-data MonitorInstances = MonitorInstances'
-  { _miDryRun      :: !(Maybe Bool)
-  , _miInstanceIds :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MonitorInstances =
+  MonitorInstances'
+    { _miDryRun      :: !(Maybe Bool)
+    , _miInstanceIds :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MonitorInstances' with the minimum fields required to make a request.
@@ -113,10 +115,12 @@ instance ToQuery MonitorInstances where
 --
 --
 -- /See:/ 'monitorInstancesResponse' smart constructor.
-data MonitorInstancesResponse = MonitorInstancesResponse'
-  { _mirsInstanceMonitorings :: !(Maybe [InstanceMonitoring])
-  , _mirsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MonitorInstancesResponse =
+  MonitorInstancesResponse'
+    { _mirsInstanceMonitorings :: !(Maybe [InstanceMonitoring])
+    , _mirsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MonitorInstancesResponse' with the minimum fields required to make a request.

@@ -65,10 +65,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putRecordBatch' smart constructor.
-data PutRecordBatch = PutRecordBatch'
-  { _prbDeliveryStreamName :: !Text
-  , _prbRecords            :: !(List1 Record)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutRecordBatch =
+  PutRecordBatch'
+    { _prbDeliveryStreamName :: !Text
+    , _prbRecords            :: !(List1 Record)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutRecordBatch' with the minimum fields required to make a request.
@@ -135,11 +137,13 @@ instance ToQuery PutRecordBatch where
         toQuery = const mempty
 
 -- | /See:/ 'putRecordBatchResponse' smart constructor.
-data PutRecordBatchResponse = PutRecordBatchResponse'
-  { _prbrsResponseStatus   :: !Int
-  , _prbrsFailedPutCount   :: !Nat
-  , _prbrsRequestResponses :: !(List1 PutRecordBatchResponseEntry)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutRecordBatchResponse =
+  PutRecordBatchResponse'
+    { _prbrsResponseStatus   :: !Int
+    , _prbrsFailedPutCount   :: !Nat
+    , _prbrsRequestResponses :: !(List1 PutRecordBatchResponseEntry)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutRecordBatchResponse' with the minimum fields required to make a request.

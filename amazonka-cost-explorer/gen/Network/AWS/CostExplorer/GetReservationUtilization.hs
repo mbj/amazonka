@@ -51,13 +51,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getReservationUtilization' smart constructor.
-data GetReservationUtilization = GetReservationUtilization'
-  { _gruGroupBy       :: !(Maybe [GroupDefinition])
-  , _gruNextPageToken :: !(Maybe Text)
-  , _gruGranularity   :: !(Maybe Granularity)
-  , _gruFilter        :: !(Maybe Expression)
-  , _gruTimePeriod    :: !DateInterval
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetReservationUtilization =
+  GetReservationUtilization'
+    { _gruGroupBy       :: !(Maybe [GroupDefinition])
+    , _gruNextPageToken :: !(Maybe Text)
+    , _gruGranularity   :: !(Maybe Granularity)
+    , _gruFilter        :: !(Maybe Expression)
+    , _gruTimePeriod    :: !DateInterval
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetReservationUtilization' with the minimum fields required to make a request.
@@ -149,12 +151,14 @@ instance ToQuery GetReservationUtilization where
         toQuery = const mempty
 
 -- | /See:/ 'getReservationUtilizationResponse' smart constructor.
-data GetReservationUtilizationResponse = GetReservationUtilizationResponse'
-  { _grursNextPageToken      :: !(Maybe Text)
-  , _grursTotal              :: !(Maybe ReservationAggregates)
-  , _grursResponseStatus     :: !Int
-  , _grursUtilizationsByTime :: ![UtilizationByTime]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetReservationUtilizationResponse =
+  GetReservationUtilizationResponse'
+    { _grursNextPageToken      :: !(Maybe Text)
+    , _grursTotal              :: !(Maybe ReservationAggregates)
+    , _grursResponseStatus     :: !Int
+    , _grursUtilizationsByTime :: ![UtilizationByTime]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetReservationUtilizationResponse' with the minimum fields required to make a request.

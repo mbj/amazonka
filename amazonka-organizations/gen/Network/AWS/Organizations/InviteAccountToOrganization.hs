@@ -52,10 +52,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'inviteAccountToOrganization' smart constructor.
-data InviteAccountToOrganization = InviteAccountToOrganization'
-  { _iatoNotes  :: !(Maybe (Sensitive Text))
-  , _iatoTarget :: !HandshakeParty
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data InviteAccountToOrganization =
+  InviteAccountToOrganization'
+    { _iatoNotes  :: !(Maybe (Sensitive Text))
+    , _iatoTarget :: !HandshakeParty
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InviteAccountToOrganization' with the minimum fields required to make a request.
@@ -118,10 +120,12 @@ instance ToQuery InviteAccountToOrganization where
         toQuery = const mempty
 
 -- | /See:/ 'inviteAccountToOrganizationResponse' smart constructor.
-data InviteAccountToOrganizationResponse = InviteAccountToOrganizationResponse'
-  { _iatorsHandshake      :: !(Maybe Handshake)
-  , _iatorsResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data InviteAccountToOrganizationResponse =
+  InviteAccountToOrganizationResponse'
+    { _iatorsHandshake      :: !(Maybe Handshake)
+    , _iatorsResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InviteAccountToOrganizationResponse' with the minimum fields required to make a request.

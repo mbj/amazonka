@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'rebootReplicationInstance' smart constructor.
-data RebootReplicationInstance = RebootReplicationInstance'
-  { _rriForceFailover          :: !(Maybe Bool)
-  , _rriReplicationInstanceARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RebootReplicationInstance =
+  RebootReplicationInstance'
+    { _rriForceFailover          :: !(Maybe Bool)
+    , _rriReplicationInstanceARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RebootReplicationInstance' with the minimum fields required to make a request.
@@ -118,10 +120,12 @@ instance ToQuery RebootReplicationInstance where
         toQuery = const mempty
 
 -- | /See:/ 'rebootReplicationInstanceResponse' smart constructor.
-data RebootReplicationInstanceResponse = RebootReplicationInstanceResponse'
-  { _rrirsReplicationInstance :: !(Maybe ReplicationInstance)
-  , _rrirsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RebootReplicationInstanceResponse =
+  RebootReplicationInstanceResponse'
+    { _rrirsReplicationInstance :: !(Maybe ReplicationInstance)
+    , _rrirsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RebootReplicationInstanceResponse' with the minimum fields required to make a request.

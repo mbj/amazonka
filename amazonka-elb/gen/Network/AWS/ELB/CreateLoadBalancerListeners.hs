@@ -51,10 +51,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createLoadBalancerListeners' smart constructor.
-data CreateLoadBalancerListeners = CreateLoadBalancerListeners'
-  { _clblLoadBalancerName :: !Text
-  , _clblListeners        :: ![Listener]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateLoadBalancerListeners =
+  CreateLoadBalancerListeners'
+    { _clblLoadBalancerName :: !Text
+    , _clblListeners        :: ![Listener]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateLoadBalancerListeners' with the minimum fields required to make a request.
@@ -115,9 +117,11 @@ instance ToQuery CreateLoadBalancerListeners where
 --
 --
 -- /See:/ 'createLoadBalancerListenersResponse' smart constructor.
-newtype CreateLoadBalancerListenersResponse = CreateLoadBalancerListenersResponse'
-  { _clblrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateLoadBalancerListenersResponse =
+  CreateLoadBalancerListenersResponse'
+    { _clblrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateLoadBalancerListenersResponse' with the minimum fields required to make a request.

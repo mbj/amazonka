@@ -51,9 +51,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createStreamingDistributionWithTags' smart constructor.
-newtype CreateStreamingDistributionWithTags = CreateStreamingDistributionWithTags'
-  { _csdwtStreamingDistributionConfigWithTags :: StreamingDistributionConfigWithTags
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateStreamingDistributionWithTags =
+  CreateStreamingDistributionWithTags'
+    { _csdwtStreamingDistributionConfigWithTags :: StreamingDistributionConfigWithTags
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateStreamingDistributionWithTags' with the minimum fields required to make a request.
@@ -122,12 +124,14 @@ instance ToQuery CreateStreamingDistributionWithTags
 --
 --
 -- /See:/ 'createStreamingDistributionWithTagsResponse' smart constructor.
-data CreateStreamingDistributionWithTagsResponse = CreateStreamingDistributionWithTagsResponse'
-  { _csdwtrsETag                  :: !(Maybe Text)
-  , _csdwtrsLocation              :: !(Maybe Text)
-  , _csdwtrsStreamingDistribution :: !(Maybe StreamingDistribution)
-  , _csdwtrsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateStreamingDistributionWithTagsResponse =
+  CreateStreamingDistributionWithTagsResponse'
+    { _csdwtrsETag                  :: !(Maybe Text)
+    , _csdwtrsLocation              :: !(Maybe Text)
+    , _csdwtrsStreamingDistribution :: !(Maybe StreamingDistribution)
+    , _csdwtrsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateStreamingDistributionWithTagsResponse' with the minimum fields required to make a request.

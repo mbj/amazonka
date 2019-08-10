@@ -46,9 +46,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeResourceGroups' smart constructor.
-newtype DescribeResourceGroups = DescribeResourceGroups'
-  { _drgResourceGroupARNs :: List1 Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeResourceGroups =
+  DescribeResourceGroups'
+    { _drgResourceGroupARNs :: List1 Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeResourceGroups' with the minimum fields required to make a request.
@@ -107,11 +109,13 @@ instance ToQuery DescribeResourceGroups where
         toQuery = const mempty
 
 -- | /See:/ 'describeResourceGroupsResponse' smart constructor.
-data DescribeResourceGroupsResponse = DescribeResourceGroupsResponse'
-  { _drgrsResponseStatus :: !Int
-  , _drgrsResourceGroups :: ![ResourceGroup]
-  , _drgrsFailedItems    :: !(Map Text FailedItemDetails)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeResourceGroupsResponse =
+  DescribeResourceGroupsResponse'
+    { _drgrsResponseStatus :: !Int
+    , _drgrsResourceGroups :: ![ResourceGroup]
+    , _drgrsFailedItems    :: !(Map Text FailedItemDetails)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeResourceGroupsResponse' with the minimum fields required to make a request.

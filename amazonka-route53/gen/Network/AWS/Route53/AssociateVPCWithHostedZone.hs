@@ -53,11 +53,13 @@ import Network.AWS.Route53.Types.Product
 --
 --
 -- /See:/ 'associateVPCWithHostedZone' smart constructor.
-data AssociateVPCWithHostedZone = AssociateVPCWithHostedZone'
-  { _avwhzComment      :: !(Maybe Text)
-  , _avwhzHostedZoneId :: !ResourceId
-  , _avwhzVPC          :: !VPC
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssociateVPCWithHostedZone =
+  AssociateVPCWithHostedZone'
+    { _avwhzComment      :: !(Maybe Text)
+    , _avwhzHostedZoneId :: !ResourceId
+    , _avwhzVPC          :: !VPC
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateVPCWithHostedZone' with the minimum fields required to make a request.
@@ -134,10 +136,12 @@ instance ToXML AssociateVPCWithHostedZone where
 --
 --
 -- /See:/ 'associateVPCWithHostedZoneResponse' smart constructor.
-data AssociateVPCWithHostedZoneResponse = AssociateVPCWithHostedZoneResponse'
-  { _avwhzrsResponseStatus :: !Int
-  , _avwhzrsChangeInfo     :: !ChangeInfo
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssociateVPCWithHostedZoneResponse =
+  AssociateVPCWithHostedZoneResponse'
+    { _avwhzrsResponseStatus :: !Int
+    , _avwhzrsChangeInfo     :: !ChangeInfo
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateVPCWithHostedZoneResponse' with the minimum fields required to make a request.

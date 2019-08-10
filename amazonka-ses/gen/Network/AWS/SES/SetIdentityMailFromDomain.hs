@@ -54,11 +54,13 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'setIdentityMailFromDomain' smart constructor.
-data SetIdentityMailFromDomain = SetIdentityMailFromDomain'
-  { _simfdMailFromDomain      :: !(Maybe Text)
-  , _simfdBehaviorOnMXFailure :: !(Maybe BehaviorOnMXFailure)
-  , _simfdIdentity            :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SetIdentityMailFromDomain =
+  SetIdentityMailFromDomain'
+    { _simfdMailFromDomain      :: !(Maybe Text)
+    , _simfdBehaviorOnMXFailure :: !(Maybe BehaviorOnMXFailure)
+    , _simfdIdentity            :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetIdentityMailFromDomain' with the minimum fields required to make a request.
@@ -128,9 +130,11 @@ instance ToQuery SetIdentityMailFromDomain where
 --
 --
 -- /See:/ 'setIdentityMailFromDomainResponse' smart constructor.
-newtype SetIdentityMailFromDomainResponse = SetIdentityMailFromDomainResponse'
-  { _simfdrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype SetIdentityMailFromDomainResponse =
+  SetIdentityMailFromDomainResponse'
+    { _simfdrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetIdentityMailFromDomainResponse' with the minimum fields required to make a request.

@@ -46,11 +46,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'addApplicationCloudWatchLoggingOption' smart constructor.
-data AddApplicationCloudWatchLoggingOption = AddApplicationCloudWatchLoggingOption'
-  { _aacwloApplicationName             :: !Text
-  , _aacwloCurrentApplicationVersionId :: !Nat
-  , _aacwloCloudWatchLoggingOption     :: !CloudWatchLoggingOption
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddApplicationCloudWatchLoggingOption =
+  AddApplicationCloudWatchLoggingOption'
+    { _aacwloApplicationName             :: !Text
+    , _aacwloCurrentApplicationVersionId :: !Nat
+    , _aacwloCloudWatchLoggingOption     :: !CloudWatchLoggingOption
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddApplicationCloudWatchLoggingOption' with the minimum fields required to make a request.
@@ -141,9 +143,11 @@ instance ToQuery
         toQuery = const mempty
 
 -- | /See:/ 'addApplicationCloudWatchLoggingOptionResponse' smart constructor.
-newtype AddApplicationCloudWatchLoggingOptionResponse = AddApplicationCloudWatchLoggingOptionResponse'
-  { _aacwlorsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AddApplicationCloudWatchLoggingOptionResponse =
+  AddApplicationCloudWatchLoggingOptionResponse'
+    { _aacwlorsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddApplicationCloudWatchLoggingOptionResponse' with the minimum fields required to make a request.

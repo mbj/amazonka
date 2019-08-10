@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'removeAutoScalingPolicy' smart constructor.
-data RemoveAutoScalingPolicy = RemoveAutoScalingPolicy'
-  { _raspClusterId       :: !Text
-  , _raspInstanceGroupId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RemoveAutoScalingPolicy =
+  RemoveAutoScalingPolicy'
+    { _raspClusterId       :: !Text
+    , _raspInstanceGroupId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RemoveAutoScalingPolicy' with the minimum fields required to make a request.
@@ -113,9 +115,11 @@ instance ToQuery RemoveAutoScalingPolicy where
         toQuery = const mempty
 
 -- | /See:/ 'removeAutoScalingPolicyResponse' smart constructor.
-newtype RemoveAutoScalingPolicyResponse = RemoveAutoScalingPolicyResponse'
-  { _rasprsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RemoveAutoScalingPolicyResponse =
+  RemoveAutoScalingPolicyResponse'
+    { _rasprsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RemoveAutoScalingPolicyResponse' with the minimum fields required to make a request.

@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'addIPRoutes' smart constructor.
-data AddIPRoutes = AddIPRoutes'
-  { _airUpdateSecurityGroupForDirectoryControllers :: !(Maybe Bool)
-  , _airDirectoryId                                :: !Text
-  , _airIPRoutes                                   :: ![IPRoute]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddIPRoutes =
+  AddIPRoutes'
+    { _airUpdateSecurityGroupForDirectoryControllers :: !(Maybe Bool)
+    , _airDirectoryId                                :: !Text
+    , _airIPRoutes                                   :: ![IPRoute]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddIPRoutes' with the minimum fields required to make a request.
@@ -125,9 +127,11 @@ instance ToQuery AddIPRoutes where
         toQuery = const mempty
 
 -- | /See:/ 'addIPRoutesResponse' smart constructor.
-newtype AddIPRoutesResponse = AddIPRoutesResponse'
-  { _airrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AddIPRoutesResponse =
+  AddIPRoutesResponse'
+    { _airrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddIPRoutesResponse' with the minimum fields required to make a request.

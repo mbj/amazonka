@@ -56,12 +56,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getBuiltinSlotTypes' smart constructor.
-data GetBuiltinSlotTypes = GetBuiltinSlotTypes'
-  { _gbstLocale            :: !(Maybe Locale)
-  , _gbstNextToken         :: !(Maybe Text)
-  , _gbstSignatureContains :: !(Maybe Text)
-  , _gbstMaxResults        :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetBuiltinSlotTypes =
+  GetBuiltinSlotTypes'
+    { _gbstLocale            :: !(Maybe Locale)
+    , _gbstNextToken         :: !(Maybe Text)
+    , _gbstSignatureContains :: !(Maybe Text)
+    , _gbstMaxResults        :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBuiltinSlotTypes' with the minimum fields required to make a request.
@@ -144,11 +146,13 @@ instance ToQuery GetBuiltinSlotTypes where
                "maxResults" =: _gbstMaxResults]
 
 -- | /See:/ 'getBuiltinSlotTypesResponse' smart constructor.
-data GetBuiltinSlotTypesResponse = GetBuiltinSlotTypesResponse'
-  { _gbstrsNextToken      :: !(Maybe Text)
-  , _gbstrsSlotTypes      :: !(Maybe [BuiltinSlotTypeMetadata])
-  , _gbstrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetBuiltinSlotTypesResponse =
+  GetBuiltinSlotTypesResponse'
+    { _gbstrsNextToken      :: !(Maybe Text)
+    , _gbstrsSlotTypes      :: !(Maybe [BuiltinSlotTypeMetadata])
+    , _gbstrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBuiltinSlotTypesResponse' with the minimum fields required to make a request.

@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeDeliveryChannelStatus' smart constructor.
-newtype DescribeDeliveryChannelStatus = DescribeDeliveryChannelStatus'
-  { _ddcsDeliveryChannelNames :: Maybe [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeDeliveryChannelStatus =
+  DescribeDeliveryChannelStatus'
+    { _ddcsDeliveryChannelNames :: Maybe [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDeliveryChannelStatus' with the minimum fields required to make a request.
@@ -114,10 +116,12 @@ instance ToQuery DescribeDeliveryChannelStatus where
 --
 --
 -- /See:/ 'describeDeliveryChannelStatusResponse' smart constructor.
-data DescribeDeliveryChannelStatusResponse = DescribeDeliveryChannelStatusResponse'
-  { _ddcsrsDeliveryChannelsStatus :: !(Maybe [DeliveryChannelStatus])
-  , _ddcsrsResponseStatus         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDeliveryChannelStatusResponse =
+  DescribeDeliveryChannelStatusResponse'
+    { _ddcsrsDeliveryChannelsStatus :: !(Maybe [DeliveryChannelStatus])
+    , _ddcsrsResponseStatus         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDeliveryChannelStatusResponse' with the minimum fields required to make a request.

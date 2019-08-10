@@ -49,9 +49,11 @@ import Network.AWS.Response
 -- | Placeholder documentation for DescribeInputSecurityGroupRequest
 --
 -- /See:/ 'describeInputSecurityGroup' smart constructor.
-newtype DescribeInputSecurityGroup = DescribeInputSecurityGroup'
-  { _disgInputSecurityGroupId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeInputSecurityGroup =
+  DescribeInputSecurityGroup'
+    { _disgInputSecurityGroupId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeInputSecurityGroup' with the minimum fields required to make a request.
@@ -108,14 +110,16 @@ instance ToQuery DescribeInputSecurityGroup where
 -- | Placeholder documentation for DescribeInputSecurityGroupResponse
 --
 -- /See:/ 'describeInputSecurityGroupResponse' smart constructor.
-data DescribeInputSecurityGroupResponse = DescribeInputSecurityGroupResponse'
-  { _desrsState          :: !(Maybe InputSecurityGroupState)
-  , _desrsARN            :: !(Maybe Text)
-  , _desrsInputs         :: !(Maybe [Text])
-  , _desrsId             :: !(Maybe Text)
-  , _desrsWhitelistRules :: !(Maybe [InputWhitelistRule])
-  , _desrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeInputSecurityGroupResponse =
+  DescribeInputSecurityGroupResponse'
+    { _desrsState          :: !(Maybe InputSecurityGroupState)
+    , _desrsARN            :: !(Maybe Text)
+    , _desrsInputs         :: !(Maybe [Text])
+    , _desrsId             :: !(Maybe Text)
+    , _desrsWhitelistRules :: !(Maybe [InputWhitelistRule])
+    , _desrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeInputSecurityGroupResponse' with the minimum fields required to make a request.

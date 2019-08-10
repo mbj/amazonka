@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listCertificateAuthorities' smart constructor.
-data ListCertificateAuthorities = ListCertificateAuthorities'
-  { _lcaNextToken  :: !(Maybe Text)
-  , _lcaMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListCertificateAuthorities =
+  ListCertificateAuthorities'
+    { _lcaNextToken  :: !(Maybe Text)
+    , _lcaMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListCertificateAuthorities' with the minimum fields required to make a request.
@@ -115,11 +117,13 @@ instance ToQuery ListCertificateAuthorities where
         toQuery = const mempty
 
 -- | /See:/ 'listCertificateAuthoritiesResponse' smart constructor.
-data ListCertificateAuthoritiesResponse = ListCertificateAuthoritiesResponse'
-  { _lcarsCertificateAuthorities :: !(Maybe [CertificateAuthority])
-  , _lcarsNextToken              :: !(Maybe Text)
-  , _lcarsResponseStatus         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListCertificateAuthoritiesResponse =
+  ListCertificateAuthoritiesResponse'
+    { _lcarsCertificateAuthorities :: !(Maybe [CertificateAuthority])
+    , _lcarsNextToken              :: !(Maybe Text)
+    , _lcarsResponseStatus         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListCertificateAuthoritiesResponse' with the minimum fields required to make a request.

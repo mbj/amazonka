@@ -47,12 +47,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateDevEndpoint' smart constructor.
-data UpdateDevEndpoint = UpdateDevEndpoint'
-  { _udeCustomLibraries    :: !(Maybe DevEndpointCustomLibraries)
-  , _udePublicKey          :: !(Maybe Text)
-  , _udeUpdateEtlLibraries :: !(Maybe Bool)
-  , _udeEndpointName       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateDevEndpoint =
+  UpdateDevEndpoint'
+    { _udeCustomLibraries    :: !(Maybe DevEndpointCustomLibraries)
+    , _udePublicKey          :: !(Maybe Text)
+    , _udeUpdateEtlLibraries :: !(Maybe Bool)
+    , _udeEndpointName       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateDevEndpoint' with the minimum fields required to make a request.
@@ -131,9 +133,11 @@ instance ToQuery UpdateDevEndpoint where
         toQuery = const mempty
 
 -- | /See:/ 'updateDevEndpointResponse' smart constructor.
-newtype UpdateDevEndpointResponse = UpdateDevEndpointResponse'
-  { _udersResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateDevEndpointResponse =
+  UpdateDevEndpointResponse'
+    { _udersResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateDevEndpointResponse' with the minimum fields required to make a request.

@@ -47,12 +47,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'disassociateDiscoveredResource' smart constructor.
-data DisassociateDiscoveredResource = DisassociateDiscoveredResource'
-  { _ddrDryRun               :: !(Maybe Bool)
-  , _ddrProgressUpdateStream :: !Text
-  , _ddrMigrationTaskName    :: !Text
-  , _ddrConfigurationId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DisassociateDiscoveredResource =
+  DisassociateDiscoveredResource'
+    { _ddrDryRun               :: !(Maybe Bool)
+    , _ddrProgressUpdateStream :: !Text
+    , _ddrMigrationTaskName    :: !Text
+    , _ddrConfigurationId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisassociateDiscoveredResource' with the minimum fields required to make a request.
@@ -140,9 +142,11 @@ instance ToQuery DisassociateDiscoveredResource where
         toQuery = const mempty
 
 -- | /See:/ 'disassociateDiscoveredResourceResponse' smart constructor.
-newtype DisassociateDiscoveredResourceResponse = DisassociateDiscoveredResourceResponse'
-  { _ddrrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DisassociateDiscoveredResourceResponse =
+  DisassociateDiscoveredResourceResponse'
+    { _ddrrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisassociateDiscoveredResourceResponse' with the minimum fields required to make a request.

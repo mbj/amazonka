@@ -61,16 +61,18 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeScheduledInstanceAvailability' smart constructor.
-data DescribeScheduledInstanceAvailability = DescribeScheduledInstanceAvailability'
-  { _dsiaMinSlotDurationInHours  :: !(Maybe Int)
-  , _dsiaFilters                 :: !(Maybe [Filter])
-  , _dsiaNextToken               :: !(Maybe Text)
-  , _dsiaMaxSlotDurationInHours  :: !(Maybe Int)
-  , _dsiaDryRun                  :: !(Maybe Bool)
-  , _dsiaMaxResults              :: !(Maybe Int)
-  , _dsiaFirstSlotStartTimeRange :: !SlotDateTimeRangeRequest
-  , _dsiaRecurrence              :: !ScheduledInstanceRecurrenceRequest
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeScheduledInstanceAvailability =
+  DescribeScheduledInstanceAvailability'
+    { _dsiaMinSlotDurationInHours  :: !(Maybe Int)
+    , _dsiaFilters                 :: !(Maybe [Filter])
+    , _dsiaNextToken               :: !(Maybe Text)
+    , _dsiaMaxSlotDurationInHours  :: !(Maybe Int)
+    , _dsiaDryRun                  :: !(Maybe Bool)
+    , _dsiaMaxResults              :: !(Maybe Int)
+    , _dsiaFirstSlotStartTimeRange :: !SlotDateTimeRangeRequest
+    , _dsiaRecurrence              :: !ScheduledInstanceRecurrenceRequest
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeScheduledInstanceAvailability' with the minimum fields required to make a request.
@@ -198,11 +200,13 @@ instance ToQuery
 --
 --
 -- /See:/ 'describeScheduledInstanceAvailabilityResponse' smart constructor.
-data DescribeScheduledInstanceAvailabilityResponse = DescribeScheduledInstanceAvailabilityResponse'
-  { _dsiarsScheduledInstanceAvailabilitySet :: !(Maybe [ScheduledInstanceAvailability])
-  , _dsiarsNextToken :: !(Maybe Text)
-  , _dsiarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeScheduledInstanceAvailabilityResponse =
+  DescribeScheduledInstanceAvailabilityResponse'
+    { _dsiarsScheduledInstanceAvailabilitySet :: !(Maybe [ScheduledInstanceAvailability])
+    , _dsiarsNextToken :: !(Maybe Text)
+    , _dsiarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeScheduledInstanceAvailabilityResponse' with the minimum fields required to make a request.

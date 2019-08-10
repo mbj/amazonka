@@ -47,10 +47,12 @@ import Network.AWS.ServiceCatalog.Types
 import Network.AWS.ServiceCatalog.Types.Product
 
 -- | /See:/ 'listProvisioningArtifacts' smart constructor.
-data ListProvisioningArtifacts = ListProvisioningArtifacts'
-  { _lpaAcceptLanguage :: !(Maybe Text)
-  , _lpaProductId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListProvisioningArtifacts =
+  ListProvisioningArtifacts'
+    { _lpaAcceptLanguage :: !(Maybe Text)
+    , _lpaProductId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListProvisioningArtifacts' with the minimum fields required to make a request.
@@ -116,11 +118,13 @@ instance ToQuery ListProvisioningArtifacts where
         toQuery = const mempty
 
 -- | /See:/ 'listProvisioningArtifactsResponse' smart constructor.
-data ListProvisioningArtifactsResponse = ListProvisioningArtifactsResponse'
-  { _lrsNextPageToken               :: !(Maybe Text)
-  , _lrsProvisioningArtifactDetails :: !(Maybe [ProvisioningArtifactDetail])
-  , _lrsResponseStatus              :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListProvisioningArtifactsResponse =
+  ListProvisioningArtifactsResponse'
+    { _lrsNextPageToken               :: !(Maybe Text)
+    , _lrsProvisioningArtifactDetails :: !(Maybe [ProvisioningArtifactDetail])
+    , _lrsResponseStatus              :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListProvisioningArtifactsResponse' with the minimum fields required to make a request.

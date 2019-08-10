@@ -43,9 +43,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createApp' smart constructor.
-newtype CreateApp = CreateApp'
-  { _caCreateApplicationRequest :: CreateApplicationRequest
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateApp =
+  CreateApp'
+    { _caCreateApplicationRequest :: CreateApplicationRequest
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateApp' with the minimum fields required to make a request.
@@ -99,10 +101,12 @@ instance ToQuery CreateApp where
         toQuery = const mempty
 
 -- | /See:/ 'createAppResponse' smart constructor.
-data CreateAppResponse = CreateAppResponse'
-  { _carsResponseStatus      :: !Int
-  , _carsApplicationResponse :: !ApplicationResponse
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateAppResponse =
+  CreateAppResponse'
+    { _carsResponseStatus      :: !Int
+    , _carsApplicationResponse :: !ApplicationResponse
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateAppResponse' with the minimum fields required to make a request.

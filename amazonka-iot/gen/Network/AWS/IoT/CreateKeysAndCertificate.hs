@@ -54,9 +54,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createKeysAndCertificate' smart constructor.
-newtype CreateKeysAndCertificate = CreateKeysAndCertificate'
-  { _ckacSetAsActive :: Maybe Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateKeysAndCertificate =
+  CreateKeysAndCertificate'
+    { _ckacSetAsActive :: Maybe Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateKeysAndCertificate' with the minimum fields required to make a request.
@@ -109,13 +111,15 @@ instance ToQuery CreateKeysAndCertificate where
 --
 --
 -- /See:/ 'createKeysAndCertificateResponse' smart constructor.
-data CreateKeysAndCertificateResponse = CreateKeysAndCertificateResponse'
-  { _ckacrsKeyPair        :: !(Maybe KeyPair)
-  , _ckacrsCertificatePem :: !(Maybe Text)
-  , _ckacrsCertificateARN :: !(Maybe Text)
-  , _ckacrsCertificateId  :: !(Maybe Text)
-  , _ckacrsResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data CreateKeysAndCertificateResponse =
+  CreateKeysAndCertificateResponse'
+    { _ckacrsKeyPair        :: !(Maybe KeyPair)
+    , _ckacrsCertificatePem :: !(Maybe Text)
+    , _ckacrsCertificateARN :: !(Maybe Text)
+    , _ckacrsCertificateId  :: !(Maybe Text)
+    , _ckacrsResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateKeysAndCertificateResponse' with the minimum fields required to make a request.

@@ -48,12 +48,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteHSM' smart constructor.
-data DeleteHSM = DeleteHSM'
-  { _dhEniId     :: !(Maybe Text)
-  , _dhHSMId     :: !(Maybe Text)
-  , _dhEniIP     :: !(Maybe Text)
-  , _dhClusterId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteHSM =
+  DeleteHSM'
+    { _dhEniId     :: !(Maybe Text)
+    , _dhHSMId     :: !(Maybe Text)
+    , _dhEniIP     :: !(Maybe Text)
+    , _dhClusterId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteHSM' with the minimum fields required to make a request.
@@ -132,10 +134,12 @@ instance ToQuery DeleteHSM where
         toQuery = const mempty
 
 -- | /See:/ 'deleteHSMResponse' smart constructor.
-data DeleteHSMResponse = DeleteHSMResponse'
-  { _dhrsHSMId          :: !(Maybe Text)
-  , _dhrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteHSMResponse =
+  DeleteHSMResponse'
+    { _dhrsHSMId          :: !(Maybe Text)
+    , _dhrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteHSMResponse' with the minimum fields required to make a request.

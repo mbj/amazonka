@@ -26,22 +26,24 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'action' smart constructor.
-data Action = Action'
-  { _aCloudwatchMetric :: !(Maybe CloudwatchMetricAction)
-  , _aDynamoDBv2       :: !(Maybe DynamoDBv2Action)
-  , _aCloudwatchAlarm  :: !(Maybe CloudwatchAlarmAction)
-  , _aSns              :: !(Maybe SNSAction)
-  , _aDynamoDB         :: !(Maybe DynamoDBAction)
-  , _aFirehose         :: !(Maybe FirehoseAction)
-  , _aIotAnalytics     :: !(Maybe IotAnalyticsAction)
-  , _aLambda           :: !(Maybe LambdaAction)
-  , _aSalesforce       :: !(Maybe SalesforceAction)
-  , _aKinesis          :: !(Maybe KinesisAction)
-  , _aS3               :: !(Maybe S3Action)
-  , _aElasticsearch    :: !(Maybe ElasticsearchAction)
-  , _aRepublish        :: !(Maybe RepublishAction)
-  , _aSqs              :: !(Maybe SqsAction)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Action =
+  Action'
+    { _aCloudwatchMetric :: !(Maybe CloudwatchMetricAction)
+    , _aDynamoDBv2       :: !(Maybe DynamoDBv2Action)
+    , _aCloudwatchAlarm  :: !(Maybe CloudwatchAlarmAction)
+    , _aSns              :: !(Maybe SNSAction)
+    , _aDynamoDB         :: !(Maybe DynamoDBAction)
+    , _aFirehose         :: !(Maybe FirehoseAction)
+    , _aIotAnalytics     :: !(Maybe IotAnalyticsAction)
+    , _aLambda           :: !(Maybe LambdaAction)
+    , _aSalesforce       :: !(Maybe SalesforceAction)
+    , _aKinesis          :: !(Maybe KinesisAction)
+    , _aS3               :: !(Maybe S3Action)
+    , _aElasticsearch    :: !(Maybe ElasticsearchAction)
+    , _aRepublish        :: !(Maybe RepublishAction)
+    , _aSqs              :: !(Maybe SqsAction)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Action' with the minimum fields required to make a request.
@@ -197,9 +199,11 @@ instance ToJSON Action where
 --
 --
 -- /See:/ 'allowed' smart constructor.
-newtype Allowed = Allowed'
-  { _aPolicies :: Maybe [Policy]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype Allowed =
+  Allowed'
+    { _aPolicies :: Maybe [Policy]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Allowed' with the minimum fields required to make a request.
@@ -230,10 +234,12 @@ instance NFData Allowed where
 --
 --
 -- /See:/ 'attributePayload' smart constructor.
-data AttributePayload = AttributePayload'
-  { _apAttributes :: !(Maybe (Map Text Text))
-  , _apMerge      :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AttributePayload =
+  AttributePayload'
+    { _apAttributes :: !(Maybe (Map Text Text))
+    , _apMerge      :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttributePayload' with the minimum fields required to make a request.
@@ -280,10 +286,12 @@ instance ToJSON AttributePayload where
 --
 --
 -- /See:/ 'authInfo' smart constructor.
-data AuthInfo = AuthInfo'
-  { _aiResources  :: !(Maybe [Text])
-  , _aiActionType :: !(Maybe ActionType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AuthInfo =
+  AuthInfo'
+    { _aiResources  :: !(Maybe [Text])
+    , _aiActionType :: !(Maybe ActionType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AuthInfo' with the minimum fields required to make a request.
@@ -330,13 +338,15 @@ instance ToJSON AuthInfo where
 --
 --
 -- /See:/ 'authResult' smart constructor.
-data AuthResult = AuthResult'
-  { _arDenied               :: !(Maybe Denied)
-  , _arAuthDecision         :: !(Maybe AuthDecision)
-  , _arAllowed              :: !(Maybe Allowed)
-  , _arMissingContextValues :: !(Maybe [Text])
-  , _arAuthInfo             :: !(Maybe AuthInfo)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AuthResult =
+  AuthResult'
+    { _arDenied               :: !(Maybe Denied)
+    , _arAuthDecision         :: !(Maybe AuthDecision)
+    , _arAllowed              :: !(Maybe Allowed)
+    , _arMissingContextValues :: !(Maybe [Text])
+    , _arAuthInfo             :: !(Maybe AuthInfo)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AuthResult' with the minimum fields required to make a request.
@@ -403,16 +413,18 @@ instance NFData AuthResult where
 --
 --
 -- /See:/ 'authorizerDescription' smart constructor.
-data AuthorizerDescription = AuthorizerDescription'
-  { _adStatus                 :: !(Maybe AuthorizerStatus)
-  , _adLastModifiedDate       :: !(Maybe POSIX)
-  , _adAuthorizerName         :: !(Maybe Text)
-  , _adAuthorizerFunctionARN  :: !(Maybe Text)
-  , _adAuthorizerARN          :: !(Maybe Text)
-  , _adCreationDate           :: !(Maybe POSIX)
-  , _adTokenSigningPublicKeys :: !(Maybe (Map Text Text))
-  , _adTokenKeyName           :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AuthorizerDescription =
+  AuthorizerDescription'
+    { _adStatus                 :: !(Maybe AuthorizerStatus)
+    , _adLastModifiedDate       :: !(Maybe POSIX)
+    , _adAuthorizerName         :: !(Maybe Text)
+    , _adAuthorizerFunctionARN  :: !(Maybe Text)
+    , _adAuthorizerARN          :: !(Maybe Text)
+    , _adCreationDate           :: !(Maybe POSIX)
+    , _adTokenSigningPublicKeys :: !(Maybe (Map Text Text))
+    , _adTokenKeyName           :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AuthorizerDescription' with the minimum fields required to make a request.
@@ -503,10 +515,12 @@ instance NFData AuthorizerDescription where
 --
 --
 -- /See:/ 'authorizerSummary' smart constructor.
-data AuthorizerSummary = AuthorizerSummary'
-  { _asAuthorizerName :: !(Maybe Text)
-  , _asAuthorizerARN  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AuthorizerSummary =
+  AuthorizerSummary'
+    { _asAuthorizerName :: !(Maybe Text)
+    , _asAuthorizerARN  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AuthorizerSummary' with the minimum fields required to make a request.
@@ -546,12 +560,14 @@ instance NFData AuthorizerSummary where
 --
 --
 -- /See:/ 'cACertificate' smart constructor.
-data CACertificate = CACertificate'
-  { _cacStatus         :: !(Maybe CACertificateStatus)
-  , _cacCertificateARN :: !(Maybe Text)
-  , _cacCertificateId  :: !(Maybe Text)
-  , _cacCreationDate   :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CACertificate =
+  CACertificate'
+    { _cacStatus         :: !(Maybe CACertificateStatus)
+    , _cacCertificateARN :: !(Maybe Text)
+    , _cacCertificateId  :: !(Maybe Text)
+    , _cacCreationDate   :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CACertificate' with the minimum fields required to make a request.
@@ -610,18 +626,20 @@ instance NFData CACertificate where
 --
 --
 -- /See:/ 'cACertificateDescription' smart constructor.
-data CACertificateDescription = CACertificateDescription'
-  { _cacdStatus                 :: !(Maybe CACertificateStatus)
-  , _cacdOwnedBy                :: !(Maybe Text)
-  , _cacdLastModifiedDate       :: !(Maybe POSIX)
-  , _cacdCertificatePem         :: !(Maybe Text)
-  , _cacdCertificateARN         :: !(Maybe Text)
-  , _cacdCertificateId          :: !(Maybe Text)
-  , _cacdAutoRegistrationStatus :: !(Maybe AutoRegistrationStatus)
-  , _cacdCreationDate           :: !(Maybe POSIX)
-  , _cacdGenerationId           :: !(Maybe Text)
-  , _cacdCustomerVersion        :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CACertificateDescription =
+  CACertificateDescription'
+    { _cacdStatus                 :: !(Maybe CACertificateStatus)
+    , _cacdOwnedBy                :: !(Maybe Text)
+    , _cacdLastModifiedDate       :: !(Maybe POSIX)
+    , _cacdCertificatePem         :: !(Maybe Text)
+    , _cacdCertificateARN         :: !(Maybe Text)
+    , _cacdCertificateId          :: !(Maybe Text)
+    , _cacdAutoRegistrationStatus :: !(Maybe AutoRegistrationStatus)
+    , _cacdCreationDate           :: !(Maybe POSIX)
+    , _cacdGenerationId           :: !(Maybe Text)
+    , _cacdCustomerVersion        :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CACertificateDescription' with the minimum fields required to make a request.
@@ -728,12 +746,14 @@ instance NFData CACertificateDescription where
 --
 --
 -- /See:/ 'certificate' smart constructor.
-data Certificate = Certificate'
-  { _cStatus         :: !(Maybe CertificateStatus)
-  , _cCertificateARN :: !(Maybe Text)
-  , _cCertificateId  :: !(Maybe Text)
-  , _cCreationDate   :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Certificate =
+  Certificate'
+    { _cStatus         :: !(Maybe CertificateStatus)
+    , _cCertificateARN :: !(Maybe Text)
+    , _cCertificateId  :: !(Maybe Text)
+    , _cCreationDate   :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Certificate' with the minimum fields required to make a request.
@@ -792,20 +812,22 @@ instance NFData Certificate where
 --
 --
 -- /See:/ 'certificateDescription' smart constructor.
-data CertificateDescription = CertificateDescription'
-  { _cdStatus           :: !(Maybe CertificateStatus)
-  , _cdOwnedBy          :: !(Maybe Text)
-  , _cdLastModifiedDate :: !(Maybe POSIX)
-  , _cdCaCertificateId  :: !(Maybe Text)
-  , _cdPreviousOwnedBy  :: !(Maybe Text)
-  , _cdCertificatePem   :: !(Maybe Text)
-  , _cdCertificateARN   :: !(Maybe Text)
-  , _cdCertificateId    :: !(Maybe Text)
-  , _cdCreationDate     :: !(Maybe POSIX)
-  , _cdGenerationId     :: !(Maybe Text)
-  , _cdTransferData     :: !(Maybe TransferData)
-  , _cdCustomerVersion  :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CertificateDescription =
+  CertificateDescription'
+    { _cdStatus           :: !(Maybe CertificateStatus)
+    , _cdOwnedBy          :: !(Maybe Text)
+    , _cdLastModifiedDate :: !(Maybe POSIX)
+    , _cdCaCertificateId  :: !(Maybe Text)
+    , _cdPreviousOwnedBy  :: !(Maybe Text)
+    , _cdCertificatePem   :: !(Maybe Text)
+    , _cdCertificateARN   :: !(Maybe Text)
+    , _cdCertificateId    :: !(Maybe Text)
+    , _cdCreationDate     :: !(Maybe POSIX)
+    , _cdGenerationId     :: !(Maybe Text)
+    , _cdTransferData     :: !(Maybe TransferData)
+    , _cdCustomerVersion  :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CertificateDescription' with the minimum fields required to make a request.
@@ -928,12 +950,14 @@ instance NFData CertificateDescription where
 --
 --
 -- /See:/ 'cloudwatchAlarmAction' smart constructor.
-data CloudwatchAlarmAction = CloudwatchAlarmAction'
-  { _caaRoleARN     :: !Text
-  , _caaAlarmName   :: !Text
-  , _caaStateReason :: !Text
-  , _caaStateValue  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CloudwatchAlarmAction =
+  CloudwatchAlarmAction'
+    { _caaRoleARN     :: !Text
+    , _caaAlarmName   :: !Text
+    , _caaStateReason :: !Text
+    , _caaStateValue  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CloudwatchAlarmAction' with the minimum fields required to make a request.
@@ -1005,14 +1029,16 @@ instance ToJSON CloudwatchAlarmAction where
 --
 --
 -- /See:/ 'cloudwatchMetricAction' smart constructor.
-data CloudwatchMetricAction = CloudwatchMetricAction'
-  { _cmaMetricTimestamp :: !(Maybe Text)
-  , _cmaRoleARN         :: !Text
-  , _cmaMetricNamespace :: !Text
-  , _cmaMetricName      :: !Text
-  , _cmaMetricValue     :: !Text
-  , _cmaMetricUnit      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CloudwatchMetricAction =
+  CloudwatchMetricAction'
+    { _cmaMetricTimestamp :: !(Maybe Text)
+    , _cmaRoleARN         :: !Text
+    , _cmaMetricNamespace :: !Text
+    , _cmaMetricName      :: !Text
+    , _cmaMetricValue     :: !Text
+    , _cmaMetricUnit      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CloudwatchMetricAction' with the minimum fields required to make a request.
@@ -1103,10 +1129,12 @@ instance ToJSON CloudwatchMetricAction where
 --
 --
 -- /See:/ 'codeSigning' smart constructor.
-data CodeSigning = CodeSigning'
-  { _csCustomCodeSigning :: !(Maybe CustomCodeSigning)
-  , _csAwsSignerJobId    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CodeSigning =
+  CodeSigning'
+    { _csCustomCodeSigning :: !(Maybe CustomCodeSigning)
+    , _csAwsSignerJobId    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CodeSigning' with the minimum fields required to make a request.
@@ -1154,11 +1182,13 @@ instance ToJSON CodeSigning where
 --
 --
 -- /See:/ 'codeSigningCertificateChain' smart constructor.
-data CodeSigningCertificateChain = CodeSigningCertificateChain'
-  { _csccStream          :: !(Maybe Stream)
-  , _csccCertificateName :: !(Maybe Text)
-  , _csccInlineDocument  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CodeSigningCertificateChain =
+  CodeSigningCertificateChain'
+    { _csccStream          :: !(Maybe Stream)
+    , _csccCertificateName :: !(Maybe Text)
+    , _csccInlineDocument  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CodeSigningCertificateChain' with the minimum fields required to make a request.
@@ -1217,10 +1247,12 @@ instance ToJSON CodeSigningCertificateChain where
 --
 --
 -- /See:/ 'codeSigningSignature' smart constructor.
-data CodeSigningSignature = CodeSigningSignature'
-  { _cssStream         :: !(Maybe Stream)
-  , _cssInlineDocument :: !(Maybe Base64)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CodeSigningSignature =
+  CodeSigningSignature'
+    { _cssStream         :: !(Maybe Stream)
+    , _cssInlineDocument :: !(Maybe Base64)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CodeSigningSignature' with the minimum fields required to make a request.
@@ -1267,9 +1299,11 @@ instance ToJSON CodeSigningSignature where
 --
 --
 -- /See:/ 'configuration' smart constructor.
-newtype Configuration = Configuration'
-  { _cEnabled :: Maybe Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype Configuration =
+  Configuration'
+    { _cEnabled :: Maybe Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Configuration' with the minimum fields required to make a request.
@@ -1304,12 +1338,14 @@ instance ToJSON Configuration where
 --
 --
 -- /See:/ 'customCodeSigning' smart constructor.
-data CustomCodeSigning = CustomCodeSigning'
-  { _ccsSignature          :: !(Maybe CodeSigningSignature)
-  , _ccsHashAlgorithm      :: !(Maybe Text)
-  , _ccsCertificateChain   :: !(Maybe CodeSigningCertificateChain)
-  , _ccsSignatureAlgorithm :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CustomCodeSigning =
+  CustomCodeSigning'
+    { _ccsSignature          :: !(Maybe CodeSigningSignature)
+    , _ccsHashAlgorithm      :: !(Maybe Text)
+    , _ccsCertificateChain   :: !(Maybe CodeSigningCertificateChain)
+    , _ccsSignatureAlgorithm :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CustomCodeSigning' with the minimum fields required to make a request.
@@ -1378,10 +1414,12 @@ instance ToJSON CustomCodeSigning where
 --
 --
 -- /See:/ 'denied' smart constructor.
-data Denied = Denied'
-  { _dImplicitDeny :: !(Maybe ImplicitDeny)
-  , _dExplicitDeny :: !(Maybe ExplicitDeny)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Denied =
+  Denied'
+    { _dImplicitDeny :: !(Maybe ImplicitDeny)
+    , _dExplicitDeny :: !(Maybe ExplicitDeny)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Denied' with the minimum fields required to make a request.
@@ -1432,18 +1470,20 @@ instance NFData Denied where
 --
 --
 -- /See:/ 'dynamoDBAction' smart constructor.
-data DynamoDBAction = DynamoDBAction'
-  { _ddbaHashKeyType   :: !(Maybe DynamoKeyType)
-  , _ddbaOperation     :: !(Maybe Text)
-  , _ddbaRangeKeyType  :: !(Maybe DynamoKeyType)
-  , _ddbaPayloadField  :: !(Maybe Text)
-  , _ddbaRangeKeyField :: !(Maybe Text)
-  , _ddbaRangeKeyValue :: !(Maybe Text)
-  , _ddbaTableName     :: !Text
-  , _ddbaRoleARN       :: !Text
-  , _ddbaHashKeyField  :: !Text
-  , _ddbaHashKeyValue  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DynamoDBAction =
+  DynamoDBAction'
+    { _ddbaHashKeyType   :: !(Maybe DynamoKeyType)
+    , _ddbaOperation     :: !(Maybe Text)
+    , _ddbaRangeKeyType  :: !(Maybe DynamoKeyType)
+    , _ddbaPayloadField  :: !(Maybe Text)
+    , _ddbaRangeKeyField :: !(Maybe Text)
+    , _ddbaRangeKeyValue :: !(Maybe Text)
+    , _ddbaTableName     :: !Text
+    , _ddbaRoleARN       :: !Text
+    , _ddbaHashKeyField  :: !Text
+    , _ddbaHashKeyValue  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DynamoDBAction' with the minimum fields required to make a request.
@@ -1571,10 +1611,12 @@ instance ToJSON DynamoDBAction where
 --
 --
 -- /See:/ 'dynamoDBv2Action' smart constructor.
-data DynamoDBv2Action = DynamoDBv2Action'
-  { _ddaPutItem :: !(Maybe PutItemInput)
-  , _ddaRoleARN :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DynamoDBv2Action =
+  DynamoDBv2Action'
+    { _ddaPutItem :: !(Maybe PutItemInput)
+    , _ddaRoleARN :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DynamoDBv2Action' with the minimum fields required to make a request.
@@ -1621,11 +1663,13 @@ instance ToJSON DynamoDBv2Action where
 --
 --
 -- /See:/ 'effectivePolicy' smart constructor.
-data EffectivePolicy = EffectivePolicy'
-  { _epPolicyName     :: !(Maybe Text)
-  , _epPolicyDocument :: !(Maybe Text)
-  , _epPolicyARN      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EffectivePolicy =
+  EffectivePolicy'
+    { _epPolicyName     :: !(Maybe Text)
+    , _epPolicyDocument :: !(Maybe Text)
+    , _epPolicyARN      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EffectivePolicy' with the minimum fields required to make a request.
@@ -1676,13 +1720,15 @@ instance NFData EffectivePolicy where
 --
 --
 -- /See:/ 'elasticsearchAction' smart constructor.
-data ElasticsearchAction = ElasticsearchAction'
-  { _eaRoleARN  :: !Text
-  , _eaEndpoint :: !Text
-  , _eaIndex    :: !Text
-  , _eaType     :: !Text
-  , _eaId       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ElasticsearchAction =
+  ElasticsearchAction'
+    { _eaRoleARN  :: !Text
+    , _eaEndpoint :: !Text
+    , _eaIndex    :: !Text
+    , _eaType     :: !Text
+    , _eaId       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ElasticsearchAction' with the minimum fields required to make a request.
@@ -1763,10 +1809,12 @@ instance ToJSON ElasticsearchAction where
 --
 --
 -- /See:/ 'errorInfo' smart constructor.
-data ErrorInfo = ErrorInfo'
-  { _eiCode    :: !(Maybe Text)
-  , _eiMessage :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ErrorInfo =
+  ErrorInfo'
+    { _eiCode    :: !(Maybe Text)
+    , _eiMessage :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ErrorInfo' with the minimum fields required to make a request.
@@ -1804,9 +1852,11 @@ instance NFData ErrorInfo where
 --
 --
 -- /See:/ 'explicitDeny' smart constructor.
-newtype ExplicitDeny = ExplicitDeny'
-  { _edPolicies :: Maybe [Policy]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ExplicitDeny =
+  ExplicitDeny'
+    { _edPolicies :: Maybe [Policy]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ExplicitDeny' with the minimum fields required to make a request.
@@ -1838,11 +1888,13 @@ instance NFData ExplicitDeny where
 --
 --
 -- /See:/ 'firehoseAction' smart constructor.
-data FirehoseAction = FirehoseAction'
-  { _faSeparator          :: !(Maybe Text)
-  , _faRoleARN            :: !Text
-  , _faDeliveryStreamName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FirehoseAction =
+  FirehoseAction'
+    { _faSeparator          :: !(Maybe Text)
+    , _faRoleARN            :: !Text
+    , _faDeliveryStreamName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FirehoseAction' with the minimum fields required to make a request.
@@ -1904,10 +1956,12 @@ instance ToJSON FirehoseAction where
 --
 --
 -- /See:/ 'groupNameAndARN' smart constructor.
-data GroupNameAndARN = GroupNameAndARN'
-  { _gnaaGroupARN  :: !(Maybe Text)
-  , _gnaaGroupName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GroupNameAndARN =
+  GroupNameAndARN'
+    { _gnaaGroupARN  :: !(Maybe Text)
+    , _gnaaGroupName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GroupNameAndARN' with the minimum fields required to make a request.
@@ -1947,9 +2001,11 @@ instance NFData GroupNameAndARN where
 --
 --
 -- /See:/ 'implicitDeny' smart constructor.
-newtype ImplicitDeny = ImplicitDeny'
-  { _idPolicies :: Maybe [Policy]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ImplicitDeny =
+  ImplicitDeny'
+    { _idPolicies :: Maybe [Policy]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ImplicitDeny' with the minimum fields required to make a request.
@@ -1981,11 +2037,13 @@ instance NFData ImplicitDeny where
 --
 --
 -- /See:/ 'iotAnalyticsAction' smart constructor.
-data IotAnalyticsAction = IotAnalyticsAction'
-  { _iaaChannelARN  :: !(Maybe Text)
-  , _iaaChannelName :: !(Maybe Text)
-  , _iaaRoleARN     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data IotAnalyticsAction =
+  IotAnalyticsAction'
+    { _iaaChannelARN  :: !(Maybe Text)
+    , _iaaChannelName :: !(Maybe Text)
+    , _iaaRoleARN     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'IotAnalyticsAction' with the minimum fields required to make a request.
@@ -2041,22 +2099,24 @@ instance ToJSON IotAnalyticsAction where
 --
 --
 -- /See:/ 'job' smart constructor.
-data Job = Job'
-  { _jobStatus                     :: !(Maybe JobStatus)
-  , _jobJobExecutionsRolloutConfig :: !(Maybe JobExecutionsRolloutConfig)
-  , _jobJobId                      :: !(Maybe Text)
-  , _jobLastUpdatedAt              :: !(Maybe POSIX)
-  , _jobJobARN                     :: !(Maybe Text)
-  , _jobCreatedAt                  :: !(Maybe POSIX)
-  , _jobDocumentParameters         :: !(Maybe (Map Text Text))
-  , _jobJobProcessDetails          :: !(Maybe JobProcessDetails)
-  , _jobPresignedURLConfig         :: !(Maybe PresignedURLConfig)
-  , _jobTargets                    :: !(Maybe (List1 Text))
-  , _jobCompletedAt                :: !(Maybe POSIX)
-  , _jobComment                    :: !(Maybe Text)
-  , _jobDescription                :: !(Maybe Text)
-  , _jobTargetSelection            :: !(Maybe TargetSelection)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Job =
+  Job'
+    { _jobStatus                     :: !(Maybe JobStatus)
+    , _jobJobExecutionsRolloutConfig :: !(Maybe JobExecutionsRolloutConfig)
+    , _jobJobId                      :: !(Maybe Text)
+    , _jobLastUpdatedAt              :: !(Maybe POSIX)
+    , _jobJobARN                     :: !(Maybe Text)
+    , _jobCreatedAt                  :: !(Maybe POSIX)
+    , _jobDocumentParameters         :: !(Maybe (Map Text Text))
+    , _jobJobProcessDetails          :: !(Maybe JobProcessDetails)
+    , _jobPresignedURLConfig         :: !(Maybe PresignedURLConfig)
+    , _jobTargets                    :: !(Maybe (List1 Text))
+    , _jobCompletedAt                :: !(Maybe POSIX)
+    , _jobComment                    :: !(Maybe Text)
+    , _jobDescription                :: !(Maybe Text)
+    , _jobTargetSelection            :: !(Maybe TargetSelection)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Job' with the minimum fields required to make a request.
@@ -2196,16 +2256,18 @@ instance NFData Job where
 --
 --
 -- /See:/ 'jobExecution' smart constructor.
-data JobExecution = JobExecution'
-  { _jeStatus          :: !(Maybe JobExecutionStatus)
-  , _jeJobId           :: !(Maybe Text)
-  , _jeLastUpdatedAt   :: !(Maybe POSIX)
-  , _jeQueuedAt        :: !(Maybe POSIX)
-  , _jeStatusDetails   :: !(Maybe JobExecutionStatusDetails)
-  , _jeThingARN        :: !(Maybe Text)
-  , _jeExecutionNumber :: !(Maybe Integer)
-  , _jeStartedAt       :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data JobExecution =
+  JobExecution'
+    { _jeStatus          :: !(Maybe JobExecutionStatus)
+    , _jeJobId           :: !(Maybe Text)
+    , _jeLastUpdatedAt   :: !(Maybe POSIX)
+    , _jeQueuedAt        :: !(Maybe POSIX)
+    , _jeStatusDetails   :: !(Maybe JobExecutionStatusDetails)
+    , _jeThingARN        :: !(Maybe Text)
+    , _jeExecutionNumber :: !(Maybe Integer)
+    , _jeStartedAt       :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'JobExecution' with the minimum fields required to make a request.
@@ -2296,9 +2358,11 @@ instance NFData JobExecution where
 --
 --
 -- /See:/ 'jobExecutionStatusDetails' smart constructor.
-newtype JobExecutionStatusDetails = JobExecutionStatusDetails'
-  { _jesdDetailsMap :: Maybe (Map Text Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype JobExecutionStatusDetails =
+  JobExecutionStatusDetails'
+    { _jesdDetailsMap :: Maybe (Map Text Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'JobExecutionStatusDetails' with the minimum fields required to make a request.
@@ -2332,13 +2396,15 @@ instance NFData JobExecutionStatusDetails where
 --
 --
 -- /See:/ 'jobExecutionSummary' smart constructor.
-data JobExecutionSummary = JobExecutionSummary'
-  { _jesStatus          :: !(Maybe JobExecutionStatus)
-  , _jesLastUpdatedAt   :: !(Maybe POSIX)
-  , _jesQueuedAt        :: !(Maybe POSIX)
-  , _jesExecutionNumber :: !(Maybe Integer)
-  , _jesStartedAt       :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data JobExecutionSummary =
+  JobExecutionSummary'
+    { _jesStatus          :: !(Maybe JobExecutionStatus)
+    , _jesLastUpdatedAt   :: !(Maybe POSIX)
+    , _jesQueuedAt        :: !(Maybe POSIX)
+    , _jesExecutionNumber :: !(Maybe Integer)
+    , _jesStartedAt       :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'JobExecutionSummary' with the minimum fields required to make a request.
@@ -2405,10 +2471,12 @@ instance NFData JobExecutionSummary where
 --
 --
 -- /See:/ 'jobExecutionSummaryForJob' smart constructor.
-data JobExecutionSummaryForJob = JobExecutionSummaryForJob'
-  { _jesfjJobExecutionSummary :: !(Maybe JobExecutionSummary)
-  , _jesfjThingARN            :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data JobExecutionSummaryForJob =
+  JobExecutionSummaryForJob'
+    { _jesfjJobExecutionSummary :: !(Maybe JobExecutionSummary)
+    , _jesfjThingARN            :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'JobExecutionSummaryForJob' with the minimum fields required to make a request.
@@ -2449,10 +2517,12 @@ instance NFData JobExecutionSummaryForJob where
 --
 --
 -- /See:/ 'jobExecutionSummaryForThing' smart constructor.
-data JobExecutionSummaryForThing = JobExecutionSummaryForThing'
-  { _jesftJobId               :: !(Maybe Text)
-  , _jesftJobExecutionSummary :: !(Maybe JobExecutionSummary)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data JobExecutionSummaryForThing =
+  JobExecutionSummaryForThing'
+    { _jesftJobId               :: !(Maybe Text)
+    , _jesftJobExecutionSummary :: !(Maybe JobExecutionSummary)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'JobExecutionSummaryForThing' with the minimum fields required to make a request.
@@ -2493,9 +2563,11 @@ instance NFData JobExecutionSummaryForThing where
 --
 --
 -- /See:/ 'jobExecutionsRolloutConfig' smart constructor.
-newtype JobExecutionsRolloutConfig = JobExecutionsRolloutConfig'
-  { _jercMaximumPerMinute :: Maybe Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype JobExecutionsRolloutConfig =
+  JobExecutionsRolloutConfig'
+    { _jercMaximumPerMinute :: Maybe Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'JobExecutionsRolloutConfig' with the minimum fields required to make a request.
@@ -2535,16 +2607,18 @@ instance ToJSON JobExecutionsRolloutConfig where
 --
 --
 -- /See:/ 'jobProcessDetails' smart constructor.
-data JobProcessDetails = JobProcessDetails'
-  { _jpdNumberOfRemovedThings    :: !(Maybe Int)
-  , _jpdNumberOfQueuedThings     :: !(Maybe Int)
-  , _jpdNumberOfFailedThings     :: !(Maybe Int)
-  , _jpdNumberOfSucceededThings  :: !(Maybe Int)
-  , _jpdNumberOfInProgressThings :: !(Maybe Int)
-  , _jpdNumberOfCanceledThings   :: !(Maybe Int)
-  , _jpdNumberOfRejectedThings   :: !(Maybe Int)
-  , _jpdProcessingTargets        :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data JobProcessDetails =
+  JobProcessDetails'
+    { _jpdNumberOfRemovedThings    :: !(Maybe Int)
+    , _jpdNumberOfQueuedThings     :: !(Maybe Int)
+    , _jpdNumberOfFailedThings     :: !(Maybe Int)
+    , _jpdNumberOfSucceededThings  :: !(Maybe Int)
+    , _jpdNumberOfInProgressThings :: !(Maybe Int)
+    , _jpdNumberOfCanceledThings   :: !(Maybe Int)
+    , _jpdNumberOfRejectedThings   :: !(Maybe Int)
+    , _jpdProcessingTargets        :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'JobProcessDetails' with the minimum fields required to make a request.
@@ -2636,16 +2710,18 @@ instance NFData JobProcessDetails where
 --
 --
 -- /See:/ 'jobSummary' smart constructor.
-data JobSummary = JobSummary'
-  { _jsStatus          :: !(Maybe JobStatus)
-  , _jsJobId           :: !(Maybe Text)
-  , _jsLastUpdatedAt   :: !(Maybe POSIX)
-  , _jsJobARN          :: !(Maybe Text)
-  , _jsCreatedAt       :: !(Maybe POSIX)
-  , _jsThingGroupId    :: !(Maybe Text)
-  , _jsCompletedAt     :: !(Maybe POSIX)
-  , _jsTargetSelection :: !(Maybe TargetSelection)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data JobSummary =
+  JobSummary'
+    { _jsStatus          :: !(Maybe JobStatus)
+    , _jsJobId           :: !(Maybe Text)
+    , _jsLastUpdatedAt   :: !(Maybe POSIX)
+    , _jsJobARN          :: !(Maybe Text)
+    , _jsCreatedAt       :: !(Maybe POSIX)
+    , _jsThingGroupId    :: !(Maybe Text)
+    , _jsCompletedAt     :: !(Maybe POSIX)
+    , _jsTargetSelection :: !(Maybe TargetSelection)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'JobSummary' with the minimum fields required to make a request.
@@ -2736,10 +2812,12 @@ instance NFData JobSummary where
 --
 --
 -- /See:/ 'keyPair' smart constructor.
-data KeyPair = KeyPair'
-  { _kpPrivateKey :: !(Maybe (Sensitive Text))
-  , _kpPublicKey  :: !(Maybe Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data KeyPair =
+  KeyPair'
+    { _kpPrivateKey :: !(Maybe (Sensitive Text))
+    , _kpPublicKey  :: !(Maybe Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'KeyPair' with the minimum fields required to make a request.
@@ -2778,11 +2856,13 @@ instance NFData KeyPair where
 --
 --
 -- /See:/ 'kinesisAction' smart constructor.
-data KinesisAction = KinesisAction'
-  { _kaPartitionKey :: !(Maybe Text)
-  , _kaRoleARN      :: !Text
-  , _kaStreamName   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data KinesisAction =
+  KinesisAction'
+    { _kaPartitionKey :: !(Maybe Text)
+    , _kaRoleARN      :: !Text
+    , _kaStreamName   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'KinesisAction' with the minimum fields required to make a request.
@@ -2843,9 +2923,11 @@ instance ToJSON KinesisAction where
 --
 --
 -- /See:/ 'lambdaAction' smart constructor.
-newtype LambdaAction = LambdaAction'
-  { _laFunctionARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype LambdaAction =
+  LambdaAction'
+    { _laFunctionARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LambdaAction' with the minimum fields required to make a request.
@@ -2882,10 +2964,12 @@ instance ToJSON LambdaAction where
 --
 --
 -- /See:/ 'logTarget' smart constructor.
-data LogTarget = LogTarget'
-  { _ltTargetName :: !(Maybe Text)
-  , _ltTargetType :: !LogTargetType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LogTarget =
+  LogTarget'
+    { _ltTargetName :: !(Maybe Text)
+    , _ltTargetType :: !LogTargetType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LogTarget' with the minimum fields required to make a request.
@@ -2933,10 +3017,12 @@ instance ToJSON LogTarget where
 --
 --
 -- /See:/ 'logTargetConfiguration' smart constructor.
-data LogTargetConfiguration = LogTargetConfiguration'
-  { _ltcLogLevel  :: !(Maybe LogLevel)
-  , _ltcLogTarget :: !(Maybe LogTarget)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LogTargetConfiguration =
+  LogTargetConfiguration'
+    { _ltcLogLevel  :: !(Maybe LogLevel)
+    , _ltcLogTarget :: !(Maybe LogTarget)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LogTargetConfiguration' with the minimum fields required to make a request.
@@ -2976,10 +3062,12 @@ instance NFData LogTargetConfiguration where
 --
 --
 -- /See:/ 'loggingOptionsPayload' smart constructor.
-data LoggingOptionsPayload = LoggingOptionsPayload'
-  { _lopLogLevel :: !(Maybe LogLevel)
-  , _lopRoleARN  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LoggingOptionsPayload =
+  LoggingOptionsPayload'
+    { _lopLogLevel :: !(Maybe LogLevel)
+    , _lopRoleARN  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LoggingOptionsPayload' with the minimum fields required to make a request.
@@ -3020,13 +3108,15 @@ instance ToJSON LoggingOptionsPayload where
 --
 --
 -- /See:/ 'oTAUpdateFile' smart constructor.
-data OTAUpdateFile = OTAUpdateFile'
-  { _otaufFileVersion :: !(Maybe Text)
-  , _otaufAttributes  :: !(Maybe (Map Text Text))
-  , _otaufFileSource  :: !(Maybe Stream)
-  , _otaufCodeSigning :: !(Maybe CodeSigning)
-  , _otaufFileName    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data OTAUpdateFile =
+  OTAUpdateFile'
+    { _otaufFileVersion :: !(Maybe Text)
+    , _otaufAttributes  :: !(Maybe (Map Text Text))
+    , _otaufFileSource  :: !(Maybe Stream)
+    , _otaufCodeSigning :: !(Maybe CodeSigning)
+    , _otaufFileName    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OTAUpdateFile' with the minimum fields required to make a request.
@@ -3104,21 +3194,23 @@ instance ToJSON OTAUpdateFile where
 --
 --
 -- /See:/ 'oTAUpdateInfo' smart constructor.
-data OTAUpdateInfo = OTAUpdateInfo'
-  { _otauiLastModifiedDate     :: !(Maybe POSIX)
-  , _otauiAwsIotJobId          :: !(Maybe Text)
-  , _otauiOtaUpdateFiles       :: !(Maybe (List1 OTAUpdateFile))
-  , _otauiOtaUpdateStatus      :: !(Maybe OTAUpdateStatus)
-  , _otauiTargets              :: !(Maybe (List1 Text))
-  , _otauiAwsIotJobARN         :: !(Maybe Text)
-  , _otauiCreationDate         :: !(Maybe POSIX)
-  , _otauiAdditionalParameters :: !(Maybe (Map Text Text))
-  , _otauiOtaUpdateId          :: !(Maybe Text)
-  , _otauiErrorInfo            :: !(Maybe ErrorInfo)
-  , _otauiOtaUpdateARN         :: !(Maybe Text)
-  , _otauiDescription          :: !(Maybe Text)
-  , _otauiTargetSelection      :: !(Maybe TargetSelection)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data OTAUpdateInfo =
+  OTAUpdateInfo'
+    { _otauiLastModifiedDate     :: !(Maybe POSIX)
+    , _otauiAwsIotJobId          :: !(Maybe Text)
+    , _otauiOtaUpdateFiles       :: !(Maybe (List1 OTAUpdateFile))
+    , _otauiOtaUpdateStatus      :: !(Maybe OTAUpdateStatus)
+    , _otauiTargets              :: !(Maybe (List1 Text))
+    , _otauiAwsIotJobARN         :: !(Maybe Text)
+    , _otauiCreationDate         :: !(Maybe POSIX)
+    , _otauiAdditionalParameters :: !(Maybe (Map Text Text))
+    , _otauiOtaUpdateId          :: !(Maybe Text)
+    , _otauiErrorInfo            :: !(Maybe ErrorInfo)
+    , _otauiOtaUpdateARN         :: !(Maybe Text)
+    , _otauiDescription          :: !(Maybe Text)
+    , _otauiTargetSelection      :: !(Maybe TargetSelection)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OTAUpdateInfo' with the minimum fields required to make a request.
@@ -3249,11 +3341,13 @@ instance NFData OTAUpdateInfo where
 --
 --
 -- /See:/ 'oTAUpdateSummary' smart constructor.
-data OTAUpdateSummary = OTAUpdateSummary'
-  { _otausCreationDate :: !(Maybe POSIX)
-  , _otausOtaUpdateId  :: !(Maybe Text)
-  , _otausOtaUpdateARN :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data OTAUpdateSummary =
+  OTAUpdateSummary'
+    { _otausCreationDate :: !(Maybe POSIX)
+    , _otausOtaUpdateId  :: !(Maybe Text)
+    , _otausOtaUpdateARN :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OTAUpdateSummary' with the minimum fields required to make a request.
@@ -3304,14 +3398,16 @@ instance NFData OTAUpdateSummary where
 --
 --
 -- /See:/ 'outgoingCertificate' smart constructor.
-data OutgoingCertificate = OutgoingCertificate'
-  { _ocTransferDate    :: !(Maybe POSIX)
-  , _ocCertificateARN  :: !(Maybe Text)
-  , _ocCertificateId   :: !(Maybe Text)
-  , _ocTransferredTo   :: !(Maybe Text)
-  , _ocCreationDate    :: !(Maybe POSIX)
-  , _ocTransferMessage :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data OutgoingCertificate =
+  OutgoingCertificate'
+    { _ocTransferDate    :: !(Maybe POSIX)
+    , _ocCertificateARN  :: !(Maybe Text)
+    , _ocCertificateId   :: !(Maybe Text)
+    , _ocTransferredTo   :: !(Maybe Text)
+    , _ocCreationDate    :: !(Maybe POSIX)
+    , _ocTransferMessage :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OutgoingCertificate' with the minimum fields required to make a request.
@@ -3386,10 +3482,12 @@ instance NFData OutgoingCertificate where
 --
 --
 -- /See:/ 'policy' smart constructor.
-data Policy = Policy'
-  { _pPolicyName :: !(Maybe Text)
-  , _pPolicyARN  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Policy =
+  Policy'
+    { _pPolicyName :: !(Maybe Text)
+    , _pPolicyARN  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Policy' with the minimum fields required to make a request.
@@ -3428,11 +3526,13 @@ instance NFData Policy where
 --
 --
 -- /See:/ 'policyVersion' smart constructor.
-data PolicyVersion = PolicyVersion'
-  { _pvVersionId        :: !(Maybe Text)
-  , _pvCreateDate       :: !(Maybe POSIX)
-  , _pvIsDefaultVersion :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PolicyVersion =
+  PolicyVersion'
+    { _pvVersionId        :: !(Maybe Text)
+    , _pvCreateDate       :: !(Maybe POSIX)
+    , _pvIsDefaultVersion :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PolicyVersion' with the minimum fields required to make a request.
@@ -3483,10 +3583,12 @@ instance NFData PolicyVersion where
 --
 --
 -- /See:/ 'presignedURLConfig' smart constructor.
-data PresignedURLConfig = PresignedURLConfig'
-  { _pucExpiresInSec :: !(Maybe Nat)
-  , _pucRoleARN      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PresignedURLConfig =
+  PresignedURLConfig'
+    { _pucExpiresInSec :: !(Maybe Nat)
+    , _pucRoleARN      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PresignedURLConfig' with the minimum fields required to make a request.
@@ -3533,9 +3635,11 @@ instance ToJSON PresignedURLConfig where
 --
 --
 -- /See:/ 'putItemInput' smart constructor.
-newtype PutItemInput = PutItemInput'
-  { _piiTableName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype PutItemInput =
+  PutItemInput'
+    { _piiTableName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutItemInput' with the minimum fields required to make a request.
@@ -3572,10 +3676,12 @@ instance ToJSON PutItemInput where
 --
 --
 -- /See:/ 'registrationConfig' smart constructor.
-data RegistrationConfig = RegistrationConfig'
-  { _rcTemplateBody :: !(Maybe Text)
-  , _rcRoleARN      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RegistrationConfig =
+  RegistrationConfig'
+    { _rcTemplateBody :: !(Maybe Text)
+    , _rcRoleARN      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegistrationConfig' with the minimum fields required to make a request.
@@ -3622,10 +3728,12 @@ instance ToJSON RegistrationConfig where
 --
 --
 -- /See:/ 'republishAction' smart constructor.
-data RepublishAction = RepublishAction'
-  { _raRoleARN :: !Text
-  , _raTopic   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RepublishAction =
+  RepublishAction'
+    { _raRoleARN :: !Text
+    , _raTopic   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RepublishAction' with the minimum fields required to make a request.
@@ -3674,15 +3782,17 @@ instance ToJSON RepublishAction where
 --
 --
 -- /See:/ 'roleAliasDescription' smart constructor.
-data RoleAliasDescription = RoleAliasDescription'
-  { _radRoleAliasARN              :: !(Maybe Text)
-  , _radLastModifiedDate          :: !(Maybe POSIX)
-  , _radRoleAlias                 :: !(Maybe Text)
-  , _radOwner                     :: !(Maybe Text)
-  , _radCreationDate              :: !(Maybe POSIX)
-  , _radCredentialDurationSeconds :: !(Maybe Nat)
-  , _radRoleARN                   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RoleAliasDescription =
+  RoleAliasDescription'
+    { _radRoleAliasARN              :: !(Maybe Text)
+    , _radLastModifiedDate          :: !(Maybe POSIX)
+    , _radRoleAlias                 :: !(Maybe Text)
+    , _radOwner                     :: !(Maybe Text)
+    , _radCreationDate              :: !(Maybe POSIX)
+    , _radCredentialDurationSeconds :: !(Maybe Nat)
+    , _radRoleARN                   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RoleAliasDescription' with the minimum fields required to make a request.
@@ -3765,12 +3875,14 @@ instance NFData RoleAliasDescription where
 --
 --
 -- /See:/ 's3Action' smart constructor.
-data S3Action = S3Action'
-  { _sCannedACL  :: !(Maybe CannedAccessControlList)
-  , _sRoleARN    :: !Text
-  , _sBucketName :: !Text
-  , _sKey        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data S3Action =
+  S3Action'
+    { _sCannedACL  :: !(Maybe CannedAccessControlList)
+    , _sRoleARN    :: !Text
+    , _sBucketName :: !Text
+    , _sKey        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'S3Action' with the minimum fields required to make a request.
@@ -3841,11 +3953,13 @@ instance ToJSON S3Action where
 --
 --
 -- /See:/ 's3Location' smart constructor.
-data S3Location = S3Location'
-  { _slVersion :: !(Maybe Text)
-  , _slBucket  :: !Text
-  , _slKey     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data S3Location =
+  S3Location'
+    { _slVersion :: !(Maybe Text)
+    , _slBucket  :: !Text
+    , _slKey     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'S3Location' with the minimum fields required to make a request.
@@ -3902,11 +4016,13 @@ instance ToJSON S3Location where
 --
 --
 -- /See:/ 'snsAction' smart constructor.
-data SNSAction = SNSAction'
-  { _snsaMessageFormat :: !(Maybe MessageFormat)
-  , _snsaTargetARN     :: !Text
-  , _snsaRoleARN       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SNSAction =
+  SNSAction'
+    { _snsaMessageFormat :: !(Maybe MessageFormat)
+    , _snsaTargetARN     :: !Text
+    , _snsaRoleARN       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SNSAction' with the minimum fields required to make a request.
@@ -3967,10 +4083,12 @@ instance ToJSON SNSAction where
 --
 --
 -- /See:/ 'salesforceAction' smart constructor.
-data SalesforceAction = SalesforceAction'
-  { _saToken :: !Text
-  , _saUrl   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SalesforceAction =
+  SalesforceAction'
+    { _saToken :: !Text
+    , _saUrl   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SalesforceAction' with the minimum fields required to make a request.
@@ -4018,11 +4136,13 @@ instance ToJSON SalesforceAction where
 --
 --
 -- /See:/ 'sqsAction' smart constructor.
-data SqsAction = SqsAction'
-  { _saUseBase64 :: !(Maybe Bool)
-  , _saRoleARN   :: !Text
-  , _saQueueURL  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SqsAction =
+  SqsAction'
+    { _saUseBase64 :: !(Maybe Bool)
+    , _saRoleARN   :: !Text
+    , _saQueueURL  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SqsAction' with the minimum fields required to make a request.
@@ -4080,10 +4200,12 @@ instance ToJSON SqsAction where
 --
 --
 -- /See:/ 'stream' smart constructor.
-data Stream = Stream'
-  { _sFileId   :: !(Maybe Nat)
-  , _sStreamId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Stream =
+  Stream'
+    { _sFileId   :: !(Maybe Nat)
+    , _sStreamId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Stream' with the minimum fields required to make a request.
@@ -4128,10 +4250,12 @@ instance ToJSON Stream where
 --
 --
 -- /See:/ 'streamFile' smart constructor.
-data StreamFile = StreamFile'
-  { _sfS3Location :: !(Maybe S3Location)
-  , _sfFileId     :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StreamFile =
+  StreamFile'
+    { _sfS3Location :: !(Maybe S3Location)
+    , _sfFileId     :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StreamFile' with the minimum fields required to make a request.
@@ -4177,16 +4301,18 @@ instance ToJSON StreamFile where
 --
 --
 -- /See:/ 'streamInfo' smart constructor.
-data StreamInfo = StreamInfo'
-  { _siLastUpdatedAt :: !(Maybe POSIX)
-  , _siCreatedAt     :: !(Maybe POSIX)
-  , _siStreamVersion :: !(Maybe Nat)
-  , _siStreamARN     :: !(Maybe Text)
-  , _siFiles         :: !(Maybe (List1 StreamFile))
-  , _siDescription   :: !(Maybe Text)
-  , _siStreamId      :: !(Maybe Text)
-  , _siRoleARN       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StreamInfo =
+  StreamInfo'
+    { _siLastUpdatedAt :: !(Maybe POSIX)
+    , _siCreatedAt     :: !(Maybe POSIX)
+    , _siStreamVersion :: !(Maybe Nat)
+    , _siStreamARN     :: !(Maybe Text)
+    , _siFiles         :: !(Maybe (List1 StreamFile))
+    , _siDescription   :: !(Maybe Text)
+    , _siStreamId      :: !(Maybe Text)
+    , _siRoleARN       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StreamInfo' with the minimum fields required to make a request.
@@ -4277,12 +4403,14 @@ instance NFData StreamInfo where
 --
 --
 -- /See:/ 'streamSummary' smart constructor.
-data StreamSummary = StreamSummary'
-  { _ssStreamVersion :: !(Maybe Nat)
-  , _ssStreamARN     :: !(Maybe Text)
-  , _ssDescription   :: !(Maybe Text)
-  , _ssStreamId      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StreamSummary =
+  StreamSummary'
+    { _ssStreamVersion :: !(Maybe Nat)
+    , _ssStreamARN     :: !(Maybe Text)
+    , _ssDescription   :: !(Maybe Text)
+    , _ssStreamId      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StreamSummary' with the minimum fields required to make a request.
@@ -4341,13 +4469,15 @@ instance NFData StreamSummary where
 --
 --
 -- /See:/ 'thingAttribute' smart constructor.
-data ThingAttribute = ThingAttribute'
-  { _taThingTypeName :: !(Maybe Text)
-  , _taThingARN      :: !(Maybe Text)
-  , _taAttributes    :: !(Maybe (Map Text Text))
-  , _taVersion       :: !(Maybe Integer)
-  , _taThingName     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ThingAttribute =
+  ThingAttribute'
+    { _taThingTypeName :: !(Maybe Text)
+    , _taThingARN      :: !(Maybe Text)
+    , _taAttributes    :: !(Maybe (Map Text Text))
+    , _taVersion       :: !(Maybe Integer)
+    , _taThingName     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ThingAttribute' with the minimum fields required to make a request.
@@ -4414,14 +4544,16 @@ instance NFData ThingAttribute where
 --
 --
 -- /See:/ 'thingDocument' smart constructor.
-data ThingDocument = ThingDocument'
-  { _tdThingGroupNames :: !(Maybe [Text])
-  , _tdThingTypeName   :: !(Maybe Text)
-  , _tdShadow          :: !(Maybe Text)
-  , _tdAttributes      :: !(Maybe (Map Text Text))
-  , _tdThingName       :: !(Maybe Text)
-  , _tdThingId         :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ThingDocument =
+  ThingDocument'
+    { _tdThingGroupNames :: !(Maybe [Text])
+    , _tdThingTypeName   :: !(Maybe Text)
+    , _tdShadow          :: !(Maybe Text)
+    , _tdAttributes      :: !(Maybe (Map Text Text))
+    , _tdThingName       :: !(Maybe Text)
+    , _tdThingId         :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ThingDocument' with the minimum fields required to make a request.
@@ -4497,11 +4629,13 @@ instance NFData ThingDocument where
 --
 --
 -- /See:/ 'thingGroupMetadata' smart constructor.
-data ThingGroupMetadata = ThingGroupMetadata'
-  { _tgmRootToParentThingGroups :: !(Maybe [GroupNameAndARN])
-  , _tgmParentGroupName         :: !(Maybe Text)
-  , _tgmCreationDate            :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ThingGroupMetadata =
+  ThingGroupMetadata'
+    { _tgmRootToParentThingGroups :: !(Maybe [GroupNameAndARN])
+    , _tgmParentGroupName         :: !(Maybe Text)
+    , _tgmCreationDate            :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ThingGroupMetadata' with the minimum fields required to make a request.
@@ -4553,10 +4687,12 @@ instance NFData ThingGroupMetadata where
 --
 --
 -- /See:/ 'thingGroupProperties' smart constructor.
-data ThingGroupProperties = ThingGroupProperties'
-  { _tgpAttributePayload      :: !(Maybe AttributePayload)
-  , _tgpThingGroupDescription :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ThingGroupProperties =
+  ThingGroupProperties'
+    { _tgpAttributePayload      :: !(Maybe AttributePayload)
+    , _tgpThingGroupDescription :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ThingGroupProperties' with the minimum fields required to make a request.
@@ -4606,9 +4742,11 @@ instance ToJSON ThingGroupProperties where
 --
 --
 -- /See:/ 'thingIndexingConfiguration' smart constructor.
-newtype ThingIndexingConfiguration = ThingIndexingConfiguration'
-  { _ticThingIndexingMode :: Maybe ThingIndexingMode
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ThingIndexingConfiguration =
+  ThingIndexingConfiguration'
+    { _ticThingIndexingMode :: Maybe ThingIndexingMode
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ThingIndexingConfiguration' with the minimum fields required to make a request.
@@ -4648,12 +4786,14 @@ instance ToJSON ThingIndexingConfiguration where
 --
 --
 -- /See:/ 'thingTypeDefinition' smart constructor.
-data ThingTypeDefinition = ThingTypeDefinition'
-  { _ttdThingTypeProperties :: !(Maybe ThingTypeProperties)
-  , _ttdThingTypeName       :: !(Maybe Text)
-  , _ttdThingTypeMetadata   :: !(Maybe ThingTypeMetadata)
-  , _ttdThingTypeARN        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ThingTypeDefinition =
+  ThingTypeDefinition'
+    { _ttdThingTypeProperties :: !(Maybe ThingTypeProperties)
+    , _ttdThingTypeName       :: !(Maybe Text)
+    , _ttdThingTypeMetadata   :: !(Maybe ThingTypeMetadata)
+    , _ttdThingTypeARN        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ThingTypeDefinition' with the minimum fields required to make a request.
@@ -4713,11 +4853,13 @@ instance NFData ThingTypeDefinition where
 --
 --
 -- /See:/ 'thingTypeMetadata' smart constructor.
-data ThingTypeMetadata = ThingTypeMetadata'
-  { _ttmDeprecationDate :: !(Maybe POSIX)
-  , _ttmCreationDate    :: !(Maybe POSIX)
-  , _ttmDeprecated      :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ThingTypeMetadata =
+  ThingTypeMetadata'
+    { _ttmDeprecationDate :: !(Maybe POSIX)
+    , _ttmCreationDate    :: !(Maybe POSIX)
+    , _ttmDeprecated      :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ThingTypeMetadata' with the minimum fields required to make a request.
@@ -4768,10 +4910,12 @@ instance NFData ThingTypeMetadata where
 --
 --
 -- /See:/ 'thingTypeProperties' smart constructor.
-data ThingTypeProperties = ThingTypeProperties'
-  { _ttpSearchableAttributes :: !(Maybe [Text])
-  , _ttpThingTypeDescription :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ThingTypeProperties =
+  ThingTypeProperties'
+    { _ttpSearchableAttributes :: !(Maybe [Text])
+    , _ttpThingTypeDescription :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ThingTypeProperties' with the minimum fields required to make a request.
@@ -4822,16 +4966,18 @@ instance ToJSON ThingTypeProperties where
 --
 --
 -- /See:/ 'topicRule' smart constructor.
-data TopicRule = TopicRule'
-  { _trCreatedAt        :: !(Maybe POSIX)
-  , _trActions          :: !(Maybe [Action])
-  , _trAwsIotSqlVersion :: !(Maybe Text)
-  , _trErrorAction      :: !(Maybe Action)
-  , _trRuleDisabled     :: !(Maybe Bool)
-  , _trRuleName         :: !(Maybe Text)
-  , _trSql              :: !(Maybe Text)
-  , _trDescription      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TopicRule =
+  TopicRule'
+    { _trCreatedAt        :: !(Maybe POSIX)
+    , _trActions          :: !(Maybe [Action])
+    , _trAwsIotSqlVersion :: !(Maybe Text)
+    , _trErrorAction      :: !(Maybe Action)
+    , _trRuleDisabled     :: !(Maybe Bool)
+    , _trRuleName         :: !(Maybe Text)
+    , _trSql              :: !(Maybe Text)
+    , _trDescription      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TopicRule' with the minimum fields required to make a request.
@@ -4922,13 +5068,15 @@ instance NFData TopicRule where
 --
 --
 -- /See:/ 'topicRuleListItem' smart constructor.
-data TopicRuleListItem = TopicRuleListItem'
-  { _trliCreatedAt    :: !(Maybe POSIX)
-  , _trliRuleDisabled :: !(Maybe Bool)
-  , _trliRuleName     :: !(Maybe Text)
-  , _trliRuleARN      :: !(Maybe Text)
-  , _trliTopicPattern :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TopicRuleListItem =
+  TopicRuleListItem'
+    { _trliCreatedAt    :: !(Maybe POSIX)
+    , _trliRuleDisabled :: !(Maybe Bool)
+    , _trliRuleName     :: !(Maybe Text)
+    , _trliRuleARN      :: !(Maybe Text)
+    , _trliTopicPattern :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TopicRuleListItem' with the minimum fields required to make a request.
@@ -4995,14 +5143,16 @@ instance NFData TopicRuleListItem where
 --
 --
 -- /See:/ 'topicRulePayload' smart constructor.
-data TopicRulePayload = TopicRulePayload'
-  { _trpAwsIotSqlVersion :: !(Maybe Text)
-  , _trpErrorAction      :: !(Maybe Action)
-  , _trpRuleDisabled     :: !(Maybe Bool)
-  , _trpDescription      :: !(Maybe Text)
-  , _trpSql              :: !Text
-  , _trpActions          :: ![Action]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TopicRulePayload =
+  TopicRulePayload'
+    { _trpAwsIotSqlVersion :: !(Maybe Text)
+    , _trpErrorAction      :: !(Maybe Action)
+    , _trpRuleDisabled     :: !(Maybe Bool)
+    , _trpDescription      :: !(Maybe Text)
+    , _trpSql              :: !Text
+    , _trpActions          :: ![Action]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TopicRulePayload' with the minimum fields required to make a request.
@@ -5078,13 +5228,15 @@ instance ToJSON TopicRulePayload where
 --
 --
 -- /See:/ 'transferData' smart constructor.
-data TransferData = TransferData'
-  { _tdTransferDate    :: !(Maybe POSIX)
-  , _tdAcceptDate      :: !(Maybe POSIX)
-  , _tdTransferMessage :: !(Maybe Text)
-  , _tdRejectDate      :: !(Maybe POSIX)
-  , _tdRejectReason    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TransferData =
+  TransferData'
+    { _tdTransferDate    :: !(Maybe POSIX)
+    , _tdAcceptDate      :: !(Maybe POSIX)
+    , _tdTransferMessage :: !(Maybe Text)
+    , _tdRejectDate      :: !(Maybe POSIX)
+    , _tdRejectReason    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TransferData' with the minimum fields required to make a request.

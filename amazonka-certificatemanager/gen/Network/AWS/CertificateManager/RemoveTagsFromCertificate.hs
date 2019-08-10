@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'removeTagsFromCertificate' smart constructor.
-data RemoveTagsFromCertificate = RemoveTagsFromCertificate'
-  { _rtfcCertificateARN :: !Text
-  , _rtfcTags           :: !(List1 Tag)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RemoveTagsFromCertificate =
+  RemoveTagsFromCertificate'
+    { _rtfcCertificateARN :: !Text
+    , _rtfcTags           :: !(List1 Tag)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RemoveTagsFromCertificate' with the minimum fields required to make a request.

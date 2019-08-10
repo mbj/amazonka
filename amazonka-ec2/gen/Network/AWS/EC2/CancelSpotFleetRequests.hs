@@ -54,11 +54,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'cancelSpotFleetRequests' smart constructor.
-data CancelSpotFleetRequests = CancelSpotFleetRequests'
-  { _csfrDryRun              :: !(Maybe Bool)
-  , _csfrSpotFleetRequestIds :: ![Text]
-  , _csfrTerminateInstances  :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CancelSpotFleetRequests =
+  CancelSpotFleetRequests'
+    { _csfrDryRun              :: !(Maybe Bool)
+    , _csfrSpotFleetRequestIds :: ![Text]
+    , _csfrTerminateInstances  :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CancelSpotFleetRequests' with the minimum fields required to make a request.
@@ -134,11 +136,13 @@ instance ToQuery CancelSpotFleetRequests where
 --
 --
 -- /See:/ 'cancelSpotFleetRequestsResponse' smart constructor.
-data CancelSpotFleetRequestsResponse = CancelSpotFleetRequestsResponse'
-  { _csfrrsSuccessfulFleetRequests :: !(Maybe [CancelSpotFleetRequestsSuccessItem])
-  , _csfrrsUnsuccessfulFleetRequests :: !(Maybe [CancelSpotFleetRequestsErrorItem])
-  , _csfrrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CancelSpotFleetRequestsResponse =
+  CancelSpotFleetRequestsResponse'
+    { _csfrrsSuccessfulFleetRequests :: !(Maybe [CancelSpotFleetRequestsSuccessItem])
+    , _csfrrsUnsuccessfulFleetRequests :: !(Maybe [CancelSpotFleetRequestsErrorItem])
+    , _csfrrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CancelSpotFleetRequestsResponse' with the minimum fields required to make a request.

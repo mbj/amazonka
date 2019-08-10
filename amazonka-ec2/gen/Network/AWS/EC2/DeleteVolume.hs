@@ -49,10 +49,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteVolume' smart constructor.
-data DeleteVolume = DeleteVolume'
-  { _dvvDryRun   :: !(Maybe Bool)
-  , _dvvVolumeId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteVolume =
+  DeleteVolume'
+    { _dvvDryRun   :: !(Maybe Bool)
+    , _dvvVolumeId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteVolume' with the minimum fields required to make a request.

@@ -49,12 +49,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeConfigurationAggregatorSourcesStatus' smart constructor.
-data DescribeConfigurationAggregatorSourcesStatus = DescribeConfigurationAggregatorSourcesStatus'
-  { _dcassNextToken :: !(Maybe Text)
-  , _dcassLimit :: !(Maybe Nat)
-  , _dcassUpdateStatus :: !(Maybe (List1 AggregatedSourceStatusType))
-  , _dcassConfigurationAggregatorName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeConfigurationAggregatorSourcesStatus =
+  DescribeConfigurationAggregatorSourcesStatus'
+    { _dcassNextToken :: !(Maybe Text)
+    , _dcassLimit :: !(Maybe Nat)
+    , _dcassUpdateStatus :: !(Maybe (List1 AggregatedSourceStatusType))
+    , _dcassConfigurationAggregatorName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeConfigurationAggregatorSourcesStatus' with the minimum fields required to make a request.
@@ -157,11 +159,13 @@ instance ToQuery
         toQuery = const mempty
 
 -- | /See:/ 'describeConfigurationAggregatorSourcesStatusResponse' smart constructor.
-data DescribeConfigurationAggregatorSourcesStatusResponse = DescribeConfigurationAggregatorSourcesStatusResponse'
-  { _dcassrsAggregatedSourceStatusList :: !(Maybe [AggregatedSourceStatus])
-  , _dcassrsNextToken                  :: !(Maybe Text)
-  , _dcassrsResponseStatus             :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeConfigurationAggregatorSourcesStatusResponse =
+  DescribeConfigurationAggregatorSourcesStatusResponse'
+    { _dcassrsAggregatedSourceStatusList :: !(Maybe [AggregatedSourceStatus])
+    , _dcassrsNextToken                  :: !(Maybe Text)
+    , _dcassrsResponseStatus             :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeConfigurationAggregatorSourcesStatusResponse' with the minimum fields required to make a request.

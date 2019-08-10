@@ -40,10 +40,12 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'dataResource' smart constructor.
-data DataResource = DataResource'
-  { _drValues :: !(Maybe [Text])
-  , _drType   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DataResource =
+  DataResource'
+    { _drValues :: !(Maybe [Text])
+    , _drType   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DataResource' with the minimum fields required to make a request.
@@ -89,15 +91,17 @@ instance ToJSON DataResource where
 --
 --
 -- /See:/ 'event' smart constructor.
-data Event = Event'
-  { _eUsername        :: !(Maybe Text)
-  , _eResources       :: !(Maybe [Resource])
-  , _eEventTime       :: !(Maybe POSIX)
-  , _eCloudTrailEvent :: !(Maybe Text)
-  , _eEventName       :: !(Maybe Text)
-  , _eEventSource     :: !(Maybe Text)
-  , _eEventId         :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Event =
+  Event'
+    { _eUsername        :: !(Maybe Text)
+    , _eResources       :: !(Maybe [Resource])
+    , _eEventTime       :: !(Maybe POSIX)
+    , _eCloudTrailEvent :: !(Maybe Text)
+    , _eEventName       :: !(Maybe Text)
+    , _eEventSource     :: !(Maybe Text)
+    , _eEventId         :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Event' with the minimum fields required to make a request.
@@ -182,11 +186,13 @@ instance NFData Event where
 --
 --
 -- /See:/ 'eventSelector' smart constructor.
-data EventSelector = EventSelector'
-  { _esDataResources           :: !(Maybe [DataResource])
-  , _esReadWriteType           :: !(Maybe ReadWriteType)
-  , _esIncludeManagementEvents :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EventSelector =
+  EventSelector'
+    { _esDataResources           :: !(Maybe [DataResource])
+    , _esReadWriteType           :: !(Maybe ReadWriteType)
+    , _esIncludeManagementEvents :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EventSelector' with the minimum fields required to make a request.
@@ -247,10 +253,12 @@ instance ToJSON EventSelector where
 --
 --
 -- /See:/ 'lookupAttribute' smart constructor.
-data LookupAttribute = LookupAttribute'
-  { _laAttributeKey   :: !LookupAttributeKey
-  , _laAttributeValue :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LookupAttribute =
+  LookupAttribute'
+    { _laAttributeKey   :: !LookupAttributeKey
+    , _laAttributeValue :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LookupAttribute' with the minimum fields required to make a request.
@@ -293,12 +301,14 @@ instance ToJSON LookupAttribute where
 --
 --
 -- /See:/ 'publicKey' smart constructor.
-data PublicKey = PublicKey'
-  { _pkFingerprint       :: !(Maybe Text)
-  , _pkValidityEndTime   :: !(Maybe POSIX)
-  , _pkValue             :: !(Maybe Base64)
-  , _pkValidityStartTime :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PublicKey =
+  PublicKey'
+    { _pkFingerprint       :: !(Maybe Text)
+    , _pkValidityEndTime   :: !(Maybe POSIX)
+    , _pkValue             :: !(Maybe Base64)
+    , _pkValidityStartTime :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PublicKey' with the minimum fields required to make a request.
@@ -357,10 +367,12 @@ instance NFData PublicKey where
 --
 --
 -- /See:/ 'resource' smart constructor.
-data Resource = Resource'
-  { _rResourceType :: !(Maybe Text)
-  , _rResourceName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Resource =
+  Resource'
+    { _rResourceType :: !(Maybe Text)
+    , _rResourceName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Resource' with the minimum fields required to make a request.
@@ -399,10 +411,12 @@ instance NFData Resource where
 --
 --
 -- /See:/ 'resourceTag' smart constructor.
-data ResourceTag = ResourceTag'
-  { _rResourceId :: !(Maybe Text)
-  , _rTagsList   :: !(Maybe [Tag])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResourceTag =
+  ResourceTag'
+    { _rResourceId :: !(Maybe Text)
+    , _rTagsList   :: !(Maybe [Tag])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResourceTag' with the minimum fields required to make a request.
@@ -442,10 +456,12 @@ instance NFData ResourceTag where
 --
 --
 -- /See:/ 'tag' smart constructor.
-data Tag = Tag'
-  { _tagValue :: !(Maybe Text)
-  , _tagKey   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Tag =
+  Tag'
+    { _tagValue :: !(Maybe Text)
+    , _tagKey   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Tag' with the minimum fields required to make a request.
@@ -490,22 +506,24 @@ instance ToJSON Tag where
 --
 --
 -- /See:/ 'trail' smart constructor.
-data Trail = Trail'
-  { _tLogFileValidationEnabled   :: !(Maybe Bool)
-  , _tTrailARN                   :: !(Maybe Text)
-  , _tS3KeyPrefix                :: !(Maybe Text)
-  , _tSNSTopicARN                :: !(Maybe Text)
-  , _tSNSTopicName               :: !(Maybe Text)
-  , _tCloudWatchLogsLogGroupARN  :: !(Maybe Text)
-  , _tKMSKeyId                   :: !(Maybe Text)
-  , _tHomeRegion                 :: !(Maybe Text)
-  , _tName                       :: !(Maybe Text)
-  , _tIncludeGlobalServiceEvents :: !(Maybe Bool)
-  , _tHasCustomEventSelectors    :: !(Maybe Bool)
-  , _tCloudWatchLogsRoleARN      :: !(Maybe Text)
-  , _tS3BucketName               :: !(Maybe Text)
-  , _tIsMultiRegionTrail         :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Trail =
+  Trail'
+    { _tLogFileValidationEnabled   :: !(Maybe Bool)
+    , _tTrailARN                   :: !(Maybe Text)
+    , _tS3KeyPrefix                :: !(Maybe Text)
+    , _tSNSTopicARN                :: !(Maybe Text)
+    , _tSNSTopicName               :: !(Maybe Text)
+    , _tCloudWatchLogsLogGroupARN  :: !(Maybe Text)
+    , _tKMSKeyId                   :: !(Maybe Text)
+    , _tHomeRegion                 :: !(Maybe Text)
+    , _tName                       :: !(Maybe Text)
+    , _tIncludeGlobalServiceEvents :: !(Maybe Bool)
+    , _tHasCustomEventSelectors    :: !(Maybe Bool)
+    , _tCloudWatchLogsRoleARN      :: !(Maybe Text)
+    , _tS3BucketName               :: !(Maybe Text)
+    , _tIsMultiRegionTrail         :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Trail' with the minimum fields required to make a request.

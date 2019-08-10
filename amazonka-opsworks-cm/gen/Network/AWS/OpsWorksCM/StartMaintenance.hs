@@ -48,10 +48,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'startMaintenance' smart constructor.
-data StartMaintenance = StartMaintenance'
-  { _smEngineAttributes :: !(Maybe [EngineAttribute])
-  , _smServerName       :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data StartMaintenance =
+  StartMaintenance'
+    { _smEngineAttributes :: !(Maybe [EngineAttribute])
+    , _smServerName       :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartMaintenance' with the minimum fields required to make a request.
@@ -114,10 +116,12 @@ instance ToQuery StartMaintenance where
         toQuery = const mempty
 
 -- | /See:/ 'startMaintenanceResponse' smart constructor.
-data StartMaintenanceResponse = StartMaintenanceResponse'
-  { _smrsServer         :: !(Maybe Server)
-  , _smrsResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data StartMaintenanceResponse =
+  StartMaintenanceResponse'
+    { _smrsServer         :: !(Maybe Server)
+    , _smrsResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartMaintenanceResponse' with the minimum fields required to make a request.

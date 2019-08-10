@@ -50,14 +50,16 @@ import Network.AWS.Transcribe.Types
 import Network.AWS.Transcribe.Types.Product
 
 -- | /See:/ 'startTranscriptionJob' smart constructor.
-data StartTranscriptionJob = StartTranscriptionJob'
-  { _stjSettings             :: !(Maybe Settings)
-  , _stjMediaSampleRateHertz :: !(Maybe Nat)
-  , _stjTranscriptionJobName :: !Text
-  , _stjLanguageCode         :: !LanguageCode
-  , _stjMediaFormat          :: !MediaFormat
-  , _stjMedia                :: !Media
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartTranscriptionJob =
+  StartTranscriptionJob'
+    { _stjSettings             :: !(Maybe Settings)
+    , _stjMediaSampleRateHertz :: !(Maybe Nat)
+    , _stjTranscriptionJobName :: !Text
+    , _stjLanguageCode         :: !LanguageCode
+    , _stjMediaFormat          :: !MediaFormat
+    , _stjMedia                :: !Media
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartTranscriptionJob' with the minimum fields required to make a request.
@@ -159,10 +161,12 @@ instance ToQuery StartTranscriptionJob where
         toQuery = const mempty
 
 -- | /See:/ 'startTranscriptionJobResponse' smart constructor.
-data StartTranscriptionJobResponse = StartTranscriptionJobResponse'
-  { _stjrsTranscriptionJob :: !(Maybe TranscriptionJob)
-  , _stjrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartTranscriptionJobResponse =
+  StartTranscriptionJobResponse'
+    { _stjrsTranscriptionJob :: !(Maybe TranscriptionJob)
+    , _stjrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartTranscriptionJobResponse' with the minimum fields required to make a request.

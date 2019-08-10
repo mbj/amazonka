@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createDatabase' smart constructor.
-data CreateDatabase = CreateDatabase'
-  { _cdCatalogId     :: !(Maybe Text)
-  , _cdDatabaseInput :: !DatabaseInput
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDatabase =
+  CreateDatabase'
+    { _cdCatalogId     :: !(Maybe Text)
+    , _cdDatabaseInput :: !DatabaseInput
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDatabase' with the minimum fields required to make a request.
@@ -108,9 +110,11 @@ instance ToQuery CreateDatabase where
         toQuery = const mempty
 
 -- | /See:/ 'createDatabaseResponse' smart constructor.
-newtype CreateDatabaseResponse = CreateDatabaseResponse'
-  { _cdrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateDatabaseResponse =
+  CreateDatabaseResponse'
+    { _cdrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDatabaseResponse' with the minimum fields required to make a request.

@@ -46,10 +46,12 @@ import Network.AWS.Response
 -- | Input structure for the CancelJob operation.
 --
 -- /See:/ 'cancelJob' smart constructor.
-data CancelJob = CancelJob'
-  { _cAPIVersion :: !(Maybe Text)
-  , _cJobId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CancelJob =
+  CancelJob'
+    { _cAPIVersion :: !(Maybe Text)
+    , _cJobId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CancelJob' with the minimum fields required to make a request.
@@ -103,10 +105,12 @@ instance ToQuery CancelJob where
 -- | Output structure for the CancelJob operation.
 --
 -- /See:/ 'cancelJobResponse' smart constructor.
-data CancelJobResponse = CancelJobResponse'
-  { _crsSuccess        :: !(Maybe Bool)
-  , _crsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CancelJobResponse =
+  CancelJobResponse'
+    { _crsSuccess        :: !(Maybe Bool)
+    , _crsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CancelJobResponse' with the minimum fields required to make a request.

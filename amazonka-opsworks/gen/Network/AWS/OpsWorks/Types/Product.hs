@@ -26,10 +26,12 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'agentVersion' smart constructor.
-data AgentVersion = AgentVersion'
-  { _avVersion              :: !(Maybe Text)
-  , _avConfigurationManager :: !(Maybe StackConfigurationManager)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AgentVersion =
+  AgentVersion'
+    { _avVersion              :: !(Maybe Text)
+    , _avConfigurationManager :: !(Maybe StackConfigurationManager)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AgentVersion' with the minimum fields required to make a request.
@@ -69,22 +71,24 @@ instance NFData AgentVersion where
 --
 --
 -- /See:/ 'app' smart constructor.
-data App = App'
-  { _appSSLConfiguration :: !(Maybe SSLConfiguration)
-  , _appEnvironment      :: !(Maybe [EnvironmentVariable])
-  , _appEnableSSL        :: !(Maybe Bool)
-  , _appCreatedAt        :: !(Maybe Text)
-  , _appShortname        :: !(Maybe Text)
-  , _appDataSources      :: !(Maybe [DataSource])
-  , _appAppSource        :: !(Maybe Source)
-  , _appAppId            :: !(Maybe Text)
-  , _appAttributes       :: !(Maybe (Map AppAttributesKeys Text))
-  , _appName             :: !(Maybe Text)
-  , _appType             :: !(Maybe AppType)
-  , _appStackId          :: !(Maybe Text)
-  , _appDomains          :: !(Maybe [Text])
-  , _appDescription      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data App =
+  App'
+    { _appSSLConfiguration :: !(Maybe SSLConfiguration)
+    , _appEnvironment      :: !(Maybe [EnvironmentVariable])
+    , _appEnableSSL        :: !(Maybe Bool)
+    , _appCreatedAt        :: !(Maybe Text)
+    , _appShortname        :: !(Maybe Text)
+    , _appDataSources      :: !(Maybe [DataSource])
+    , _appAppSource        :: !(Maybe Source)
+    , _appAppId            :: !(Maybe Text)
+    , _appAttributes       :: !(Maybe (Map AppAttributesKeys Text))
+    , _appName             :: !(Maybe Text)
+    , _appType             :: !(Maybe AppType)
+    , _appStackId          :: !(Maybe Text)
+    , _appDomains          :: !(Maybe [Text])
+    , _appDescription      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'App' with the minimum fields required to make a request.
@@ -224,15 +228,17 @@ instance NFData App where
 --
 --
 -- /See:/ 'autoScalingThresholds' smart constructor.
-data AutoScalingThresholds = AutoScalingThresholds'
-  { _astInstanceCount      :: !(Maybe Int)
-  , _astIgnoreMetricsTime  :: !(Maybe Nat)
-  , _astLoadThreshold      :: !(Maybe Double)
-  , _astThresholdsWaitTime :: !(Maybe Nat)
-  , _astAlarms             :: !(Maybe [Text])
-  , _astMemoryThreshold    :: !(Maybe Double)
-  , _astCPUThreshold       :: !(Maybe Double)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AutoScalingThresholds =
+  AutoScalingThresholds'
+    { _astInstanceCount      :: !(Maybe Int)
+    , _astIgnoreMetricsTime  :: !(Maybe Nat)
+    , _astLoadThreshold      :: !(Maybe Double)
+    , _astThresholdsWaitTime :: !(Maybe Nat)
+    , _astAlarms             :: !(Maybe [Text])
+    , _astMemoryThreshold    :: !(Maybe Double)
+    , _astCPUThreshold       :: !(Maybe Double)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AutoScalingThresholds' with the minimum fields required to make a request.
@@ -328,12 +334,14 @@ instance ToJSON AutoScalingThresholds where
 --
 --
 -- /See:/ 'blockDeviceMapping' smart constructor.
-data BlockDeviceMapping = BlockDeviceMapping'
-  { _bdmVirtualName :: !(Maybe Text)
-  , _bdmNoDevice    :: !(Maybe Text)
-  , _bdmEBS         :: !(Maybe EBSBlockDevice)
-  , _bdmDeviceName  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BlockDeviceMapping =
+  BlockDeviceMapping'
+    { _bdmVirtualName :: !(Maybe Text)
+    , _bdmNoDevice    :: !(Maybe Text)
+    , _bdmEBS         :: !(Maybe EBSBlockDevice)
+    , _bdmDeviceName  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BlockDeviceMapping' with the minimum fields required to make a request.
@@ -401,10 +409,12 @@ instance ToJSON BlockDeviceMapping where
 --
 --
 -- /See:/ 'chefConfiguration' smart constructor.
-data ChefConfiguration = ChefConfiguration'
-  { _ccBerkshelfVersion :: !(Maybe Text)
-  , _ccManageBerkshelf  :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ChefConfiguration =
+  ChefConfiguration'
+    { _ccBerkshelfVersion :: !(Maybe Text)
+    , _ccManageBerkshelf  :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ChefConfiguration' with the minimum fields required to make a request.
@@ -453,10 +463,12 @@ instance ToJSON ChefConfiguration where
 --
 --
 -- /See:/ 'cloudWatchLogsConfiguration' smart constructor.
-data CloudWatchLogsConfiguration = CloudWatchLogsConfiguration'
-  { _cwlcEnabled    :: !(Maybe Bool)
-  , _cwlcLogStreams :: !(Maybe [CloudWatchLogsLogStream])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CloudWatchLogsConfiguration =
+  CloudWatchLogsConfiguration'
+    { _cwlcEnabled    :: !(Maybe Bool)
+    , _cwlcLogStreams :: !(Maybe [CloudWatchLogsLogStream])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CloudWatchLogsConfiguration' with the minimum fields required to make a request.
@@ -505,19 +517,21 @@ instance ToJSON CloudWatchLogsConfiguration where
 --
 --
 -- /See:/ 'cloudWatchLogsLogStream' smart constructor.
-data CloudWatchLogsLogStream = CloudWatchLogsLogStream'
-  { _cwllsBatchCount            :: !(Maybe Int)
-  , _cwllsFileFingerprintLines  :: !(Maybe Text)
-  , _cwllsBufferDuration        :: !(Maybe Int)
-  , _cwllsBatchSize             :: !(Maybe Int)
-  , _cwllsLogGroupName          :: !(Maybe Text)
-  , _cwllsMultiLineStartPattern :: !(Maybe Text)
-  , _cwllsInitialPosition       :: !(Maybe CloudWatchLogsInitialPosition)
-  , _cwllsDatetimeFormat        :: !(Maybe Text)
-  , _cwllsEncoding              :: !(Maybe CloudWatchLogsEncoding)
-  , _cwllsTimeZone              :: !(Maybe CloudWatchLogsTimeZone)
-  , _cwllsFile                  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CloudWatchLogsLogStream =
+  CloudWatchLogsLogStream'
+    { _cwllsBatchCount            :: !(Maybe Int)
+    , _cwllsFileFingerprintLines  :: !(Maybe Text)
+    , _cwllsBufferDuration        :: !(Maybe Int)
+    , _cwllsBatchSize             :: !(Maybe Int)
+    , _cwllsLogGroupName          :: !(Maybe Text)
+    , _cwllsMultiLineStartPattern :: !(Maybe Text)
+    , _cwllsInitialPosition       :: !(Maybe CloudWatchLogsInitialPosition)
+    , _cwllsDatetimeFormat        :: !(Maybe Text)
+    , _cwllsEncoding              :: !(Maybe CloudWatchLogsEncoding)
+    , _cwllsTimeZone              :: !(Maybe CloudWatchLogsTimeZone)
+    , _cwllsFile                  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CloudWatchLogsLogStream' with the minimum fields required to make a request.
@@ -651,18 +665,20 @@ instance ToJSON CloudWatchLogsLogStream where
 --
 --
 -- /See:/ 'command' smart constructor.
-data Command = Command'
-  { _cDeploymentId   :: !(Maybe Text)
-  , _cInstanceId     :: !(Maybe Text)
-  , _cStatus         :: !(Maybe Text)
-  , _cLogURL         :: !(Maybe Text)
-  , _cCreatedAt      :: !(Maybe Text)
-  , _cCommandId      :: !(Maybe Text)
-  , _cExitCode       :: !(Maybe Int)
-  , _cType           :: !(Maybe Text)
-  , _cCompletedAt    :: !(Maybe Text)
-  , _cAcknowledgedAt :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Command =
+  Command'
+    { _cDeploymentId   :: !(Maybe Text)
+    , _cInstanceId     :: !(Maybe Text)
+    , _cStatus         :: !(Maybe Text)
+    , _cLogURL         :: !(Maybe Text)
+    , _cCreatedAt      :: !(Maybe Text)
+    , _cCommandId      :: !(Maybe Text)
+    , _cExitCode       :: !(Maybe Int)
+    , _cType           :: !(Maybe Text)
+    , _cCompletedAt    :: !(Maybe Text)
+    , _cAcknowledgedAt :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Command' with the minimum fields required to make a request.
@@ -769,11 +785,13 @@ instance NFData Command where
 --
 --
 -- /See:/ 'dataSource' smart constructor.
-data DataSource = DataSource'
-  { _dsARN          :: !(Maybe Text)
-  , _dsDatabaseName :: !(Maybe Text)
-  , _dsType         :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DataSource =
+  DataSource'
+    { _dsARN          :: !(Maybe Text)
+    , _dsDatabaseName :: !(Maybe Text)
+    , _dsType         :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DataSource' with the minimum fields required to make a request.
@@ -828,20 +846,22 @@ instance ToJSON DataSource where
 --
 --
 -- /See:/ 'deployment' smart constructor.
-data Deployment = Deployment'
-  { _dDeploymentId :: !(Maybe Text)
-  , _dStatus       :: !(Maybe Text)
-  , _dCommand      :: !(Maybe DeploymentCommand)
-  , _dCreatedAt    :: !(Maybe Text)
-  , _dCustomJSON   :: !(Maybe Text)
-  , _dIAMUserARN   :: !(Maybe Text)
-  , _dAppId        :: !(Maybe Text)
-  , _dInstanceIds  :: !(Maybe [Text])
-  , _dCompletedAt  :: !(Maybe Text)
-  , _dStackId      :: !(Maybe Text)
-  , _dComment      :: !(Maybe Text)
-  , _dDuration     :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Deployment =
+  Deployment'
+    { _dDeploymentId :: !(Maybe Text)
+    , _dStatus       :: !(Maybe Text)
+    , _dCommand      :: !(Maybe DeploymentCommand)
+    , _dCreatedAt    :: !(Maybe Text)
+    , _dCustomJSON   :: !(Maybe Text)
+    , _dIAMUserARN   :: !(Maybe Text)
+    , _dAppId        :: !(Maybe Text)
+    , _dInstanceIds  :: !(Maybe [Text])
+    , _dCompletedAt  :: !(Maybe Text)
+    , _dStackId      :: !(Maybe Text)
+    , _dComment      :: !(Maybe Text)
+    , _dDuration     :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Deployment' with the minimum fields required to make a request.
@@ -964,10 +984,12 @@ instance NFData Deployment where
 --
 --
 -- /See:/ 'deploymentCommand' smart constructor.
-data DeploymentCommand = DeploymentCommand'
-  { _dcArgs :: !(Maybe (Map Text [Text]))
-  , _dcName :: !DeploymentCommandName
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeploymentCommand =
+  DeploymentCommand'
+    { _dcArgs :: !(Maybe (Map Text [Text]))
+    , _dcName :: !DeploymentCommandName
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeploymentCommand' with the minimum fields required to make a request.
@@ -1014,13 +1036,15 @@ instance ToJSON DeploymentCommand where
 --
 --
 -- /See:/ 'ebsBlockDevice' smart constructor.
-data EBSBlockDevice = EBSBlockDevice'
-  { _ebdDeleteOnTermination :: !(Maybe Bool)
-  , _ebdVolumeSize          :: !(Maybe Int)
-  , _ebdIOPS                :: !(Maybe Int)
-  , _ebdVolumeType          :: !(Maybe VolumeType)
-  , _ebdSnapshotId          :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EBSBlockDevice =
+  EBSBlockDevice'
+    { _ebdDeleteOnTermination :: !(Maybe Bool)
+    , _ebdVolumeSize          :: !(Maybe Int)
+    , _ebdIOPS                :: !(Maybe Int)
+    , _ebdVolumeType          :: !(Maybe VolumeType)
+    , _ebdSnapshotId          :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EBSBlockDevice' with the minimum fields required to make a request.
@@ -1099,12 +1123,14 @@ instance ToJSON EBSBlockDevice where
 --
 --
 -- /See:/ 'ecsCluster' smart constructor.
-data EcsCluster = EcsCluster'
-  { _ecEcsClusterARN  :: !(Maybe Text)
-  , _ecEcsClusterName :: !(Maybe Text)
-  , _ecRegisteredAt   :: !(Maybe Text)
-  , _ecStackId        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EcsCluster =
+  EcsCluster'
+    { _ecEcsClusterARN  :: !(Maybe Text)
+    , _ecEcsClusterName :: !(Maybe Text)
+    , _ecRegisteredAt   :: !(Maybe Text)
+    , _ecStackId        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EcsCluster' with the minimum fields required to make a request.
@@ -1163,13 +1189,15 @@ instance NFData EcsCluster where
 --
 --
 -- /See:/ 'elasticIP' smart constructor.
-data ElasticIP = ElasticIP'
-  { _eiInstanceId :: !(Maybe Text)
-  , _eiDomain     :: !(Maybe Text)
-  , _eiIP         :: !(Maybe Text)
-  , _eiName       :: !(Maybe Text)
-  , _eiRegion     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ElasticIP =
+  ElasticIP'
+    { _eiInstanceId :: !(Maybe Text)
+    , _eiDomain     :: !(Maybe Text)
+    , _eiIP         :: !(Maybe Text)
+    , _eiName       :: !(Maybe Text)
+    , _eiRegion     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ElasticIP' with the minimum fields required to make a request.
@@ -1236,17 +1264,19 @@ instance NFData ElasticIP where
 --
 --
 -- /See:/ 'elasticLoadBalancer' smart constructor.
-data ElasticLoadBalancer = ElasticLoadBalancer'
-  { _elbSubnetIds               :: !(Maybe [Text])
-  , _elbVPCId                   :: !(Maybe Text)
-  , _elbAvailabilityZones       :: !(Maybe [Text])
-  , _elbRegion                  :: !(Maybe Text)
-  , _elbElasticLoadBalancerName :: !(Maybe Text)
-  , _elbStackId                 :: !(Maybe Text)
-  , _elbEC2InstanceIds          :: !(Maybe [Text])
-  , _elbLayerId                 :: !(Maybe Text)
-  , _elbDNSName                 :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ElasticLoadBalancer =
+  ElasticLoadBalancer'
+    { _elbSubnetIds               :: !(Maybe [Text])
+    , _elbVPCId                   :: !(Maybe Text)
+    , _elbAvailabilityZones       :: !(Maybe [Text])
+    , _elbRegion                  :: !(Maybe Text)
+    , _elbElasticLoadBalancerName :: !(Maybe Text)
+    , _elbStackId                 :: !(Maybe Text)
+    , _elbEC2InstanceIds          :: !(Maybe [Text])
+    , _elbLayerId                 :: !(Maybe Text)
+    , _elbDNSName                 :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ElasticLoadBalancer' with the minimum fields required to make a request.
@@ -1345,11 +1375,13 @@ instance NFData ElasticLoadBalancer where
 --
 --
 -- /See:/ 'environmentVariable' smart constructor.
-data EnvironmentVariable = EnvironmentVariable'
-  { _evSecure :: !(Maybe Bool)
-  , _evKey    :: !Text
-  , _evValue  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EnvironmentVariable =
+  EnvironmentVariable'
+    { _evSecure :: !(Maybe Bool)
+    , _evKey    :: !Text
+    , _evValue  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EnvironmentVariable' with the minimum fields required to make a request.
@@ -1404,49 +1436,51 @@ instance ToJSON EnvironmentVariable where
 --
 --
 -- /See:/ 'instance'' smart constructor.
-data Instance = Instance'
-  { _iPrivateDNS               :: !(Maybe Text)
-  , _iReportedAgentVersion     :: !(Maybe Text)
-  , _iInstanceId               :: !(Maybe Text)
-  , _iStatus                   :: !(Maybe Text)
-  , _iPrivateIP                :: !(Maybe Text)
-  , _iInstallUpdatesOnBoot     :: !(Maybe Bool)
-  , _iVirtualizationType       :: !(Maybe VirtualizationType)
-  , _iInstanceProfileARN       :: !(Maybe Text)
-  , _iPlatform                 :: !(Maybe Text)
-  , _iHostname                 :: !(Maybe Text)
-  , _iSSHHostRsaKeyFingerprint :: !(Maybe Text)
-  , _iSecurityGroupIds         :: !(Maybe [Text])
-  , _iEcsClusterARN            :: !(Maybe Text)
-  , _iARN                      :: !(Maybe Text)
-  , _iCreatedAt                :: !(Maybe Text)
-  , _iEC2InstanceId            :: !(Maybe Text)
-  , _iSSHKeyName               :: !(Maybe Text)
-  , _iAgentVersion             :: !(Maybe Text)
-  , _iRootDeviceVolumeId       :: !(Maybe Text)
-  , _iSubnetId                 :: !(Maybe Text)
-  , _iInfrastructureClass      :: !(Maybe Text)
-  , _iSSHHostDsaKeyFingerprint :: !(Maybe Text)
-  , _iInstanceType             :: !(Maybe Text)
-  , _iEBSOptimized             :: !(Maybe Bool)
-  , _iElasticIP                :: !(Maybe Text)
-  , _iOS                       :: !(Maybe Text)
-  , _iAvailabilityZone         :: !(Maybe Text)
-  , _iLastServiceErrorId       :: !(Maybe Text)
-  , _iTenancy                  :: !(Maybe Text)
-  , _iAutoScalingType          :: !(Maybe AutoScalingType)
-  , _iLayerIds                 :: !(Maybe [Text])
-  , _iArchitecture             :: !(Maybe Architecture)
-  , _iPublicDNS                :: !(Maybe Text)
-  , _iAMIId                    :: !(Maybe Text)
-  , _iPublicIP                 :: !(Maybe Text)
-  , _iReportedOS               :: !(Maybe ReportedOS)
-  , _iRegisteredBy             :: !(Maybe Text)
-  , _iStackId                  :: !(Maybe Text)
-  , _iRootDeviceType           :: !(Maybe RootDeviceType)
-  , _iEcsContainerInstanceARN  :: !(Maybe Text)
-  , _iBlockDeviceMappings      :: !(Maybe [BlockDeviceMapping])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Instance =
+  Instance'
+    { _iPrivateDNS               :: !(Maybe Text)
+    , _iReportedAgentVersion     :: !(Maybe Text)
+    , _iInstanceId               :: !(Maybe Text)
+    , _iStatus                   :: !(Maybe Text)
+    , _iPrivateIP                :: !(Maybe Text)
+    , _iInstallUpdatesOnBoot     :: !(Maybe Bool)
+    , _iVirtualizationType       :: !(Maybe VirtualizationType)
+    , _iInstanceProfileARN       :: !(Maybe Text)
+    , _iPlatform                 :: !(Maybe Text)
+    , _iHostname                 :: !(Maybe Text)
+    , _iSSHHostRsaKeyFingerprint :: !(Maybe Text)
+    , _iSecurityGroupIds         :: !(Maybe [Text])
+    , _iEcsClusterARN            :: !(Maybe Text)
+    , _iARN                      :: !(Maybe Text)
+    , _iCreatedAt                :: !(Maybe Text)
+    , _iEC2InstanceId            :: !(Maybe Text)
+    , _iSSHKeyName               :: !(Maybe Text)
+    , _iAgentVersion             :: !(Maybe Text)
+    , _iRootDeviceVolumeId       :: !(Maybe Text)
+    , _iSubnetId                 :: !(Maybe Text)
+    , _iInfrastructureClass      :: !(Maybe Text)
+    , _iSSHHostDsaKeyFingerprint :: !(Maybe Text)
+    , _iInstanceType             :: !(Maybe Text)
+    , _iEBSOptimized             :: !(Maybe Bool)
+    , _iElasticIP                :: !(Maybe Text)
+    , _iOS                       :: !(Maybe Text)
+    , _iAvailabilityZone         :: !(Maybe Text)
+    , _iLastServiceErrorId       :: !(Maybe Text)
+    , _iTenancy                  :: !(Maybe Text)
+    , _iAutoScalingType          :: !(Maybe AutoScalingType)
+    , _iLayerIds                 :: !(Maybe [Text])
+    , _iArchitecture             :: !(Maybe Architecture)
+    , _iPublicDNS                :: !(Maybe Text)
+    , _iAMIId                    :: !(Maybe Text)
+    , _iPublicIP                 :: !(Maybe Text)
+    , _iReportedOS               :: !(Maybe ReportedOS)
+    , _iRegisteredBy             :: !(Maybe Text)
+    , _iStackId                  :: !(Maybe Text)
+    , _iRootDeviceType           :: !(Maybe RootDeviceType)
+    , _iEcsContainerInstanceARN  :: !(Maybe Text)
+    , _iBlockDeviceMappings      :: !(Maybe [BlockDeviceMapping])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Instance' with the minimum fields required to make a request.
@@ -1802,10 +1836,12 @@ instance NFData Instance where
 --
 --
 -- /See:/ 'instanceIdentity' smart constructor.
-data InstanceIdentity = InstanceIdentity'
-  { _iiSignature :: !(Maybe Text)
-  , _iiDocument  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceIdentity =
+  InstanceIdentity'
+    { _iiSignature :: !(Maybe Text)
+    , _iiDocument  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceIdentity' with the minimum fields required to make a request.
@@ -1845,28 +1881,30 @@ instance ToJSON InstanceIdentity where
 --
 --
 -- /See:/ 'instancesCount' smart constructor.
-data InstancesCount = InstancesCount'
-  { _icTerminating    :: !(Maybe Int)
-  , _icPending        :: !(Maybe Int)
-  , _icOnline         :: !(Maybe Int)
-  , _icUnassigning    :: !(Maybe Int)
-  , _icDeregistering  :: !(Maybe Int)
-  , _icRunningSetup   :: !(Maybe Int)
-  , _icRequested      :: !(Maybe Int)
-  , _icStopFailed     :: !(Maybe Int)
-  , _icBooting        :: !(Maybe Int)
-  , _icStopped        :: !(Maybe Int)
-  , _icRebooting      :: !(Maybe Int)
-  , _icAssigning      :: !(Maybe Int)
-  , _icShuttingDown   :: !(Maybe Int)
-  , _icSetupFailed    :: !(Maybe Int)
-  , _icConnectionLost :: !(Maybe Int)
-  , _icTerminated     :: !(Maybe Int)
-  , _icStopping       :: !(Maybe Int)
-  , _icRegistered     :: !(Maybe Int)
-  , _icStartFailed    :: !(Maybe Int)
-  , _icRegistering    :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstancesCount =
+  InstancesCount'
+    { _icTerminating    :: !(Maybe Int)
+    , _icPending        :: !(Maybe Int)
+    , _icOnline         :: !(Maybe Int)
+    , _icUnassigning    :: !(Maybe Int)
+    , _icDeregistering  :: !(Maybe Int)
+    , _icRunningSetup   :: !(Maybe Int)
+    , _icRequested      :: !(Maybe Int)
+    , _icStopFailed     :: !(Maybe Int)
+    , _icBooting        :: !(Maybe Int)
+    , _icStopped        :: !(Maybe Int)
+    , _icRebooting      :: !(Maybe Int)
+    , _icAssigning      :: !(Maybe Int)
+    , _icShuttingDown   :: !(Maybe Int)
+    , _icSetupFailed    :: !(Maybe Int)
+    , _icConnectionLost :: !(Maybe Int)
+    , _icTerminated     :: !(Maybe Int)
+    , _icStopping       :: !(Maybe Int)
+    , _icRegistered     :: !(Maybe Int)
+    , _icStartFailed    :: !(Maybe Int)
+    , _icRegistering    :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstancesCount' with the minimum fields required to make a request.
@@ -2053,31 +2091,33 @@ instance NFData InstancesCount where
 --
 --
 -- /See:/ 'layer' smart constructor.
-data Layer = Layer'
-  { _lCustomInstanceProfileARN :: !(Maybe Text)
-  , _lCustomSecurityGroupIds :: !(Maybe [Text])
-  , _lInstallUpdatesOnBoot :: !(Maybe Bool)
-  , _lCloudWatchLogsConfiguration :: !(Maybe CloudWatchLogsConfiguration)
-  , _lLifecycleEventConfiguration :: !(Maybe LifecycleEventConfiguration)
-  , _lARN :: !(Maybe Text)
-  , _lCreatedAt :: !(Maybe Text)
-  , _lShortname :: !(Maybe Text)
-  , _lDefaultRecipes :: !(Maybe Recipes)
-  , _lCustomRecipes :: !(Maybe Recipes)
-  , _lCustomJSON :: !(Maybe Text)
-  , _lVolumeConfigurations :: !(Maybe [VolumeConfiguration])
-  , _lEnableAutoHealing :: !(Maybe Bool)
-  , _lPackages :: !(Maybe [Text])
-  , _lAttributes :: !(Maybe (Map LayerAttributesKeys (Maybe Text)))
-  , _lName :: !(Maybe Text)
-  , _lAutoAssignPublicIPs :: !(Maybe Bool)
-  , _lType :: !(Maybe LayerType)
-  , _lUseEBSOptimizedInstances :: !(Maybe Bool)
-  , _lStackId :: !(Maybe Text)
-  , _lLayerId :: !(Maybe Text)
-  , _lDefaultSecurityGroupNames :: !(Maybe [Text])
-  , _lAutoAssignElasticIPs :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Layer =
+  Layer'
+    { _lCustomInstanceProfileARN :: !(Maybe Text)
+    , _lCustomSecurityGroupIds :: !(Maybe [Text])
+    , _lInstallUpdatesOnBoot :: !(Maybe Bool)
+    , _lCloudWatchLogsConfiguration :: !(Maybe CloudWatchLogsConfiguration)
+    , _lLifecycleEventConfiguration :: !(Maybe LifecycleEventConfiguration)
+    , _lARN :: !(Maybe Text)
+    , _lCreatedAt :: !(Maybe Text)
+    , _lShortname :: !(Maybe Text)
+    , _lDefaultRecipes :: !(Maybe Recipes)
+    , _lCustomRecipes :: !(Maybe Recipes)
+    , _lCustomJSON :: !(Maybe Text)
+    , _lVolumeConfigurations :: !(Maybe [VolumeConfiguration])
+    , _lEnableAutoHealing :: !(Maybe Bool)
+    , _lPackages :: !(Maybe [Text])
+    , _lAttributes :: !(Maybe (Map LayerAttributesKeys (Maybe Text)))
+    , _lName :: !(Maybe Text)
+    , _lAutoAssignPublicIPs :: !(Maybe Bool)
+    , _lType :: !(Maybe LayerType)
+    , _lUseEBSOptimizedInstances :: !(Maybe Bool)
+    , _lStackId :: !(Maybe Text)
+    , _lLayerId :: !(Maybe Text)
+    , _lDefaultSecurityGroupNames :: !(Maybe [Text])
+    , _lAutoAssignElasticIPs :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Layer' with the minimum fields required to make a request.
@@ -2289,9 +2329,11 @@ instance NFData Layer where
 --
 --
 -- /See:/ 'lifecycleEventConfiguration' smart constructor.
-newtype LifecycleEventConfiguration = LifecycleEventConfiguration'
-  { _lecShutdown :: Maybe ShutdownEventConfiguration
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype LifecycleEventConfiguration =
+  LifecycleEventConfiguration'
+    { _lecShutdown :: Maybe ShutdownEventConfiguration
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LifecycleEventConfiguration' with the minimum fields required to make a request.
@@ -2329,12 +2371,14 @@ instance ToJSON LifecycleEventConfiguration where
 --
 --
 -- /See:/ 'loadBasedAutoScalingConfiguration' smart constructor.
-data LoadBasedAutoScalingConfiguration = LoadBasedAutoScalingConfiguration'
-  { _lbascUpScaling   :: !(Maybe AutoScalingThresholds)
-  , _lbascEnable      :: !(Maybe Bool)
-  , _lbascDownScaling :: !(Maybe AutoScalingThresholds)
-  , _lbascLayerId     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LoadBasedAutoScalingConfiguration =
+  LoadBasedAutoScalingConfiguration'
+    { _lbascUpScaling   :: !(Maybe AutoScalingThresholds)
+    , _lbascEnable      :: !(Maybe Bool)
+    , _lbascDownScaling :: !(Maybe AutoScalingThresholds)
+    , _lbascLayerId     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LoadBasedAutoScalingConfiguration' with the minimum fields required to make a request.
@@ -2396,15 +2440,17 @@ instance NFData LoadBasedAutoScalingConfiguration
 --
 --
 -- /See:/ 'operatingSystem' smart constructor.
-data OperatingSystem = OperatingSystem'
-  { _osReportedVersion       :: !(Maybe Text)
-  , _osSupported             :: !(Maybe Bool)
-  , _osName                  :: !(Maybe Text)
-  , _osId                    :: !(Maybe Text)
-  , _osConfigurationManagers :: !(Maybe [OperatingSystemConfigurationManager])
-  , _osType                  :: !(Maybe Text)
-  , _osReportedName          :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data OperatingSystem =
+  OperatingSystem'
+    { _osReportedVersion       :: !(Maybe Text)
+    , _osSupported             :: !(Maybe Bool)
+    , _osName                  :: !(Maybe Text)
+    , _osId                    :: !(Maybe Text)
+    , _osConfigurationManagers :: !(Maybe [OperatingSystemConfigurationManager])
+    , _osType                  :: !(Maybe Text)
+    , _osReportedName          :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OperatingSystem' with the minimum fields required to make a request.
@@ -2487,10 +2533,12 @@ instance NFData OperatingSystem where
 --
 --
 -- /See:/ 'operatingSystemConfigurationManager' smart constructor.
-data OperatingSystemConfigurationManager = OperatingSystemConfigurationManager'
-  { _oscmName    :: !(Maybe Text)
-  , _oscmVersion :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data OperatingSystemConfigurationManager =
+  OperatingSystemConfigurationManager'
+    { _oscmName    :: !(Maybe Text)
+    , _oscmVersion :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OperatingSystemConfigurationManager' with the minimum fields required to make a request.
@@ -2534,13 +2582,15 @@ instance NFData OperatingSystemConfigurationManager
 --
 --
 -- /See:/ 'permission' smart constructor.
-data Permission = Permission'
-  { _pIAMUserARN :: !(Maybe Text)
-  , _pAllowSudo  :: !(Maybe Bool)
-  , _pStackId    :: !(Maybe Text)
-  , _pLevel      :: !(Maybe Text)
-  , _pAllowSSH   :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Permission =
+  Permission'
+    { _pIAMUserARN :: !(Maybe Text)
+    , _pAllowSudo  :: !(Maybe Bool)
+    , _pStackId    :: !(Maybe Text)
+    , _pLevel      :: !(Maybe Text)
+    , _pAllowSSH   :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Permission' with the minimum fields required to make a request.
@@ -2607,21 +2657,23 @@ instance NFData Permission where
 --
 --
 -- /See:/ 'rAIdArray' smart constructor.
-data RAIdArray = RAIdArray'
-  { _raiaInstanceId       :: !(Maybe Text)
-  , _raiaSize             :: !(Maybe Int)
-  , _raiaIOPS             :: !(Maybe Int)
-  , _raiaCreatedAt        :: !(Maybe Text)
-  , _raiaRAIdLevel        :: !(Maybe Int)
-  , _raiaDevice           :: !(Maybe Text)
-  , _raiaNumberOfDisks    :: !(Maybe Int)
-  , _raiaAvailabilityZone :: !(Maybe Text)
-  , _raiaName             :: !(Maybe Text)
-  , _raiaRAIdArrayId      :: !(Maybe Text)
-  , _raiaVolumeType       :: !(Maybe Text)
-  , _raiaStackId          :: !(Maybe Text)
-  , _raiaMountPoint       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RAIdArray =
+  RAIdArray'
+    { _raiaInstanceId       :: !(Maybe Text)
+    , _raiaSize             :: !(Maybe Int)
+    , _raiaIOPS             :: !(Maybe Int)
+    , _raiaCreatedAt        :: !(Maybe Text)
+    , _raiaRAIdLevel        :: !(Maybe Int)
+    , _raiaDevice           :: !(Maybe Text)
+    , _raiaNumberOfDisks    :: !(Maybe Int)
+    , _raiaAvailabilityZone :: !(Maybe Text)
+    , _raiaName             :: !(Maybe Text)
+    , _raiaRAIdArrayId      :: !(Maybe Text)
+    , _raiaVolumeType       :: !(Maybe Text)
+    , _raiaStackId          :: !(Maybe Text)
+    , _raiaMountPoint       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RAIdArray' with the minimum fields required to make a request.
@@ -2752,17 +2804,19 @@ instance NFData RAIdArray where
 --
 --
 -- /See:/ 'rdsDBInstance' smart constructor.
-data RDSDBInstance = RDSDBInstance'
-  { _rdiRDSDBInstanceARN     :: !(Maybe Text)
-  , _rdiDBUser               :: !(Maybe Text)
-  , _rdiMissingOnRDS         :: !(Maybe Bool)
-  , _rdiEngine               :: !(Maybe Text)
-  , _rdiAddress              :: !(Maybe Text)
-  , _rdiDBInstanceIdentifier :: !(Maybe Text)
-  , _rdiRegion               :: !(Maybe Text)
-  , _rdiStackId              :: !(Maybe Text)
-  , _rdiDBPassword           :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RDSDBInstance =
+  RDSDBInstance'
+    { _rdiRDSDBInstanceARN     :: !(Maybe Text)
+    , _rdiDBUser               :: !(Maybe Text)
+    , _rdiMissingOnRDS         :: !(Maybe Bool)
+    , _rdiEngine               :: !(Maybe Text)
+    , _rdiAddress              :: !(Maybe Text)
+    , _rdiDBInstanceIdentifier :: !(Maybe Text)
+    , _rdiRegion               :: !(Maybe Text)
+    , _rdiStackId              :: !(Maybe Text)
+    , _rdiDBPassword           :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RDSDBInstance' with the minimum fields required to make a request.
@@ -2863,13 +2917,15 @@ instance NFData RDSDBInstance where
 --
 --
 -- /See:/ 'recipes' smart constructor.
-data Recipes = Recipes'
-  { _rSetup     :: !(Maybe [Text])
-  , _rShutdown  :: !(Maybe [Text])
-  , _rUndeploy  :: !(Maybe [Text])
-  , _rConfigure :: !(Maybe [Text])
-  , _rDeploy    :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Recipes =
+  Recipes'
+    { _rSetup     :: !(Maybe [Text])
+    , _rShutdown  :: !(Maybe [Text])
+    , _rUndeploy  :: !(Maybe [Text])
+    , _rConfigure :: !(Maybe [Text])
+    , _rDeploy    :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Recipes' with the minimum fields required to make a request.
@@ -2947,11 +3003,13 @@ instance ToJSON Recipes where
 --
 --
 -- /See:/ 'reportedOS' smart constructor.
-data ReportedOS = ReportedOS'
-  { _roFamily  :: !(Maybe Text)
-  , _roName    :: !(Maybe Text)
-  , _roVersion :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReportedOS =
+  ReportedOS'
+    { _roFamily  :: !(Maybe Text)
+    , _roName    :: !(Maybe Text)
+    , _roVersion :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReportedOS' with the minimum fields required to make a request.
@@ -2998,11 +3056,13 @@ instance NFData ReportedOS where
 --
 --
 -- /See:/ 'sslConfiguration' smart constructor.
-data SSLConfiguration = SSLConfiguration'
-  { _scPrivateKey  :: !(Maybe Text)
-  , _scCertificate :: !(Maybe Text)
-  , _scChain       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SSLConfiguration =
+  SSLConfiguration'
+    { _scPrivateKey  :: !(Maybe Text)
+    , _scCertificate :: !(Maybe Text)
+    , _scChain       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SSLConfiguration' with the minimum fields required to make a request.
@@ -3058,12 +3118,14 @@ instance ToJSON SSLConfiguration where
 --
 --
 -- /See:/ 'selfUserProfile' smart constructor.
-data SelfUserProfile = SelfUserProfile'
-  { _supSSHPublicKey :: !(Maybe Text)
-  , _supSSHUsername  :: !(Maybe Text)
-  , _supIAMUserARN   :: !(Maybe Text)
-  , _supName         :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SelfUserProfile =
+  SelfUserProfile'
+    { _supSSHPublicKey :: !(Maybe Text)
+    , _supSSHUsername  :: !(Maybe Text)
+    , _supIAMUserARN   :: !(Maybe Text)
+    , _supName         :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SelfUserProfile' with the minimum fields required to make a request.
@@ -3122,14 +3184,16 @@ instance NFData SelfUserProfile where
 --
 --
 -- /See:/ 'serviceError'' smart constructor.
-data ServiceError' = ServiceError''
-  { _seInstanceId     :: !(Maybe Text)
-  , _seCreatedAt      :: !(Maybe Text)
-  , _seServiceErrorId :: !(Maybe Text)
-  , _seType           :: !(Maybe Text)
-  , _seStackId        :: !(Maybe Text)
-  , _seMessage        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ServiceError' =
+  ServiceError''
+    { _seInstanceId     :: !(Maybe Text)
+    , _seCreatedAt      :: !(Maybe Text)
+    , _seServiceErrorId :: !(Maybe Text)
+    , _seType           :: !(Maybe Text)
+    , _seStackId        :: !(Maybe Text)
+    , _seMessage        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ServiceError'' with the minimum fields required to make a request.
@@ -3204,10 +3268,12 @@ instance NFData ServiceError' where
 --
 --
 -- /See:/ 'shutdownEventConfiguration' smart constructor.
-data ShutdownEventConfiguration = ShutdownEventConfiguration'
-  { _secExecutionTimeout                :: !(Maybe Int)
-  , _secDelayUntilElbConnectionsDrained :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ShutdownEventConfiguration =
+  ShutdownEventConfiguration'
+    { _secExecutionTimeout                :: !(Maybe Int)
+    , _secDelayUntilElbConnectionsDrained :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ShutdownEventConfiguration' with the minimum fields required to make a request.
@@ -3259,14 +3325,16 @@ instance ToJSON ShutdownEventConfiguration where
 --
 --
 -- /See:/ 'source' smart constructor.
-data Source = Source'
-  { _sURL      :: !(Maybe Text)
-  , _sUsername :: !(Maybe Text)
-  , _sSSHKey   :: !(Maybe Text)
-  , _sPassword :: !(Maybe Text)
-  , _sType     :: !(Maybe SourceType)
-  , _sRevision :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Source =
+  Source'
+    { _sURL      :: !(Maybe Text)
+    , _sUsername :: !(Maybe Text)
+    , _sSSHKey   :: !(Maybe Text)
+    , _sPassword :: !(Maybe Text)
+    , _sType     :: !(Maybe SourceType)
+    , _sRevision :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Source' with the minimum fields required to make a request.
@@ -3352,30 +3420,32 @@ instance ToJSON Source where
 --
 --
 -- /See:/ 'stack' smart constructor.
-data Stack = Stack'
-  { _sDefaultInstanceProfileARN :: !(Maybe Text)
-  , _sServiceRoleARN :: !(Maybe Text)
-  , _sDefaultRootDeviceType :: !(Maybe RootDeviceType)
-  , _sARN :: !(Maybe Text)
-  , _sCreatedAt :: !(Maybe Text)
-  , _sVPCId :: !(Maybe Text)
-  , _sChefConfiguration :: !(Maybe ChefConfiguration)
-  , _sAgentVersion :: !(Maybe Text)
-  , _sDefaultSSHKeyName :: !(Maybe Text)
-  , _sCustomJSON :: !(Maybe Text)
-  , _sCustomCookbooksSource :: !(Maybe Source)
-  , _sDefaultAvailabilityZone :: !(Maybe Text)
-  , _sAttributes :: !(Maybe (Map StackAttributesKeys (Maybe Text)))
-  , _sName :: !(Maybe Text)
-  , _sDefaultOS :: !(Maybe Text)
-  , _sUseOpsworksSecurityGroups :: !(Maybe Bool)
-  , _sUseCustomCookbooks :: !(Maybe Bool)
-  , _sDefaultSubnetId :: !(Maybe Text)
-  , _sRegion :: !(Maybe Text)
-  , _sConfigurationManager :: !(Maybe StackConfigurationManager)
-  , _sStackId :: !(Maybe Text)
-  , _sHostnameTheme :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Stack =
+  Stack'
+    { _sDefaultInstanceProfileARN :: !(Maybe Text)
+    , _sServiceRoleARN :: !(Maybe Text)
+    , _sDefaultRootDeviceType :: !(Maybe RootDeviceType)
+    , _sARN :: !(Maybe Text)
+    , _sCreatedAt :: !(Maybe Text)
+    , _sVPCId :: !(Maybe Text)
+    , _sChefConfiguration :: !(Maybe ChefConfiguration)
+    , _sAgentVersion :: !(Maybe Text)
+    , _sDefaultSSHKeyName :: !(Maybe Text)
+    , _sCustomJSON :: !(Maybe Text)
+    , _sCustomCookbooksSource :: !(Maybe Source)
+    , _sDefaultAvailabilityZone :: !(Maybe Text)
+    , _sAttributes :: !(Maybe (Map StackAttributesKeys (Maybe Text)))
+    , _sName :: !(Maybe Text)
+    , _sDefaultOS :: !(Maybe Text)
+    , _sUseOpsworksSecurityGroups :: !(Maybe Bool)
+    , _sUseCustomCookbooks :: !(Maybe Bool)
+    , _sDefaultSubnetId :: !(Maybe Text)
+    , _sRegion :: !(Maybe Text)
+    , _sConfigurationManager :: !(Maybe StackConfigurationManager)
+    , _sStackId :: !(Maybe Text)
+    , _sHostnameTheme :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Stack' with the minimum fields required to make a request.
@@ -3579,10 +3649,12 @@ instance NFData Stack where
 --
 --
 -- /See:/ 'stackConfigurationManager' smart constructor.
-data StackConfigurationManager = StackConfigurationManager'
-  { _scmName    :: !(Maybe Text)
-  , _scmVersion :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StackConfigurationManager =
+  StackConfigurationManager'
+    { _scmName    :: !(Maybe Text)
+    , _scmVersion :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StackConfigurationManager' with the minimum fields required to make a request.
@@ -3629,14 +3701,16 @@ instance ToJSON StackConfigurationManager where
 --
 --
 -- /See:/ 'stackSummary' smart constructor.
-data StackSummary = StackSummary'
-  { _ssARN            :: !(Maybe Text)
-  , _ssAppsCount      :: !(Maybe Int)
-  , _ssName           :: !(Maybe Text)
-  , _ssStackId        :: !(Maybe Text)
-  , _ssLayersCount    :: !(Maybe Int)
-  , _ssInstancesCount :: !(Maybe InstancesCount)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StackSummary =
+  StackSummary'
+    { _ssARN            :: !(Maybe Text)
+    , _ssAppsCount      :: !(Maybe Int)
+    , _ssName           :: !(Maybe Text)
+    , _ssStackId        :: !(Maybe Text)
+    , _ssLayersCount    :: !(Maybe Int)
+    , _ssInstancesCount :: !(Maybe InstancesCount)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StackSummary' with the minimum fields required to make a request.
@@ -3711,12 +3785,14 @@ instance NFData StackSummary where
 --
 --
 -- /See:/ 'temporaryCredential' smart constructor.
-data TemporaryCredential = TemporaryCredential'
-  { _tcInstanceId        :: !(Maybe Text)
-  , _tcUsername          :: !(Maybe Text)
-  , _tcPassword          :: !(Maybe Text)
-  , _tcValidForInMinutes :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TemporaryCredential =
+  TemporaryCredential'
+    { _tcInstanceId        :: !(Maybe Text)
+    , _tcUsername          :: !(Maybe Text)
+    , _tcPassword          :: !(Maybe Text)
+    , _tcValidForInMinutes :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TemporaryCredential' with the minimum fields required to make a request.
@@ -3775,10 +3851,12 @@ instance NFData TemporaryCredential where
 --
 --
 -- /See:/ 'timeBasedAutoScalingConfiguration' smart constructor.
-data TimeBasedAutoScalingConfiguration = TimeBasedAutoScalingConfiguration'
-  { _tbascInstanceId          :: !(Maybe Text)
-  , _tbascAutoScalingSchedule :: !(Maybe WeeklyAutoScalingSchedule)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TimeBasedAutoScalingConfiguration =
+  TimeBasedAutoScalingConfiguration'
+    { _tbascInstanceId          :: !(Maybe Text)
+    , _tbascAutoScalingSchedule :: !(Maybe WeeklyAutoScalingSchedule)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TimeBasedAutoScalingConfiguration' with the minimum fields required to make a request.
@@ -3823,13 +3901,15 @@ instance NFData TimeBasedAutoScalingConfiguration
 --
 --
 -- /See:/ 'userProfile' smart constructor.
-data UserProfile = UserProfile'
-  { _upAllowSelfManagement :: !(Maybe Bool)
-  , _upSSHPublicKey        :: !(Maybe Text)
-  , _upSSHUsername         :: !(Maybe Text)
-  , _upIAMUserARN          :: !(Maybe Text)
-  , _upName                :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UserProfile =
+  UserProfile'
+    { _upAllowSelfManagement :: !(Maybe Bool)
+    , _upSSHPublicKey        :: !(Maybe Text)
+    , _upSSHUsername         :: !(Maybe Text)
+    , _upIAMUserARN          :: !(Maybe Text)
+    , _upName                :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UserProfile' with the minimum fields required to make a request.
@@ -3897,22 +3977,24 @@ instance NFData UserProfile where
 --
 --
 -- /See:/ 'volume' smart constructor.
-data Volume = Volume'
-  { _vInstanceId       :: !(Maybe Text)
-  , _vStatus           :: !(Maybe Text)
-  , _vSize             :: !(Maybe Int)
-  , _vIOPS             :: !(Maybe Int)
-  , _vDevice           :: !(Maybe Text)
-  , _vEncrypted        :: !(Maybe Bool)
-  , _vAvailabilityZone :: !(Maybe Text)
-  , _vName             :: !(Maybe Text)
-  , _vRAIdArrayId      :: !(Maybe Text)
-  , _vVolumeId         :: !(Maybe Text)
-  , _vRegion           :: !(Maybe Text)
-  , _vVolumeType       :: !(Maybe Text)
-  , _vEC2VolumeId      :: !(Maybe Text)
-  , _vMountPoint       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Volume =
+  Volume'
+    { _vInstanceId       :: !(Maybe Text)
+    , _vStatus           :: !(Maybe Text)
+    , _vSize             :: !(Maybe Int)
+    , _vIOPS             :: !(Maybe Int)
+    , _vDevice           :: !(Maybe Text)
+    , _vEncrypted        :: !(Maybe Bool)
+    , _vAvailabilityZone :: !(Maybe Text)
+    , _vName             :: !(Maybe Text)
+    , _vRAIdArrayId      :: !(Maybe Text)
+    , _vVolumeId         :: !(Maybe Text)
+    , _vRegion           :: !(Maybe Text)
+    , _vVolumeType       :: !(Maybe Text)
+    , _vEC2VolumeId      :: !(Maybe Text)
+    , _vMountPoint       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Volume' with the minimum fields required to make a request.
@@ -4051,15 +4133,17 @@ instance NFData Volume where
 --
 --
 -- /See:/ 'volumeConfiguration' smart constructor.
-data VolumeConfiguration = VolumeConfiguration'
-  { _vcIOPS          :: !(Maybe Int)
-  , _vcRAIdLevel     :: !(Maybe Int)
-  , _vcEncrypted     :: !(Maybe Bool)
-  , _vcVolumeType    :: !(Maybe Text)
-  , _vcMountPoint    :: !Text
-  , _vcNumberOfDisks :: !Int
-  , _vcSize          :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VolumeConfiguration =
+  VolumeConfiguration'
+    { _vcIOPS          :: !(Maybe Int)
+    , _vcRAIdLevel     :: !(Maybe Int)
+    , _vcEncrypted     :: !(Maybe Bool)
+    , _vcVolumeType    :: !(Maybe Text)
+    , _vcMountPoint    :: !Text
+    , _vcNumberOfDisks :: !Int
+    , _vcSize          :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VolumeConfiguration' with the minimum fields required to make a request.
@@ -4169,15 +4253,17 @@ instance ToJSON VolumeConfiguration where
 --
 --
 -- /See:/ 'weeklyAutoScalingSchedule' smart constructor.
-data WeeklyAutoScalingSchedule = WeeklyAutoScalingSchedule'
-  { _wassThursday  :: !(Maybe (Map Text Text))
-  , _wassWednesday :: !(Maybe (Map Text Text))
-  , _wassSaturday  :: !(Maybe (Map Text Text))
-  , _wassMonday    :: !(Maybe (Map Text Text))
-  , _wassFriday    :: !(Maybe (Map Text Text))
-  , _wassSunday    :: !(Maybe (Map Text Text))
-  , _wassTuesday   :: !(Maybe (Map Text Text))
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data WeeklyAutoScalingSchedule =
+  WeeklyAutoScalingSchedule'
+    { _wassThursday  :: !(Maybe (Map Text Text))
+    , _wassWednesday :: !(Maybe (Map Text Text))
+    , _wassSaturday  :: !(Maybe (Map Text Text))
+    , _wassMonday    :: !(Maybe (Map Text Text))
+    , _wassFriday    :: !(Maybe (Map Text Text))
+    , _wassSunday    :: !(Maybe (Map Text Text))
+    , _wassTuesday   :: !(Maybe (Map Text Text))
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'WeeklyAutoScalingSchedule' with the minimum fields required to make a request.

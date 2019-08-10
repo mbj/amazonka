@@ -43,9 +43,11 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'getBucketLocation' smart constructor.
-newtype GetBucketLocation = GetBucketLocation'
-  { _gblBucket :: BucketName
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetBucketLocation =
+  GetBucketLocation'
+    { _gblBucket :: BucketName
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBucketLocation' with the minimum fields required to make a request.
@@ -87,10 +89,12 @@ instance ToQuery GetBucketLocation where
         toQuery = const (mconcat ["location"])
 
 -- | /See:/ 'getBucketLocationResponse' smart constructor.
-data GetBucketLocationResponse = GetBucketLocationResponse'
-  { _gblbrsResponseStatus     :: !Int
-  , _gblbrsLocationConstraint :: !LocationConstraint
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetBucketLocationResponse =
+  GetBucketLocationResponse'
+    { _gblbrsResponseStatus     :: !Int
+    , _gblbrsLocationConstraint :: !LocationConstraint
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBucketLocationResponse' with the minimum fields required to make a request.

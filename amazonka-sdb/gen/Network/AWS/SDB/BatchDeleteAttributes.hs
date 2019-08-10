@@ -47,10 +47,12 @@ import Network.AWS.SDB.Types
 import Network.AWS.SDB.Types.Product
 
 -- | /See:/ 'batchDeleteAttributes' smart constructor.
-data BatchDeleteAttributes = BatchDeleteAttributes'
-  { _bdaDomainName :: !Text
-  , _bdaItems      :: ![DeletableItem]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchDeleteAttributes =
+  BatchDeleteAttributes'
+    { _bdaDomainName :: !Text
+    , _bdaItems      :: ![DeletableItem]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchDeleteAttributes' with the minimum fields required to make a request.

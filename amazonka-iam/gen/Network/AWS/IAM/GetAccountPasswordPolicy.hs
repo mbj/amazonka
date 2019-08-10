@@ -88,10 +88,12 @@ instance ToQuery GetAccountPasswordPolicy where
 --
 --
 -- /See:/ 'getAccountPasswordPolicyResponse' smart constructor.
-data GetAccountPasswordPolicyResponse = GetAccountPasswordPolicyResponse'
-  { _gapprsResponseStatus :: !Int
-  , _gapprsPasswordPolicy :: !PasswordPolicy
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetAccountPasswordPolicyResponse =
+  GetAccountPasswordPolicyResponse'
+    { _gapprsResponseStatus :: !Int
+    , _gapprsPasswordPolicy :: !PasswordPolicy
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetAccountPasswordPolicyResponse' with the minimum fields required to make a request.

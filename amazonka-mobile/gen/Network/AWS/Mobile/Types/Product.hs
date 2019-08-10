@@ -26,14 +26,16 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'bundleDetails' smart constructor.
-data BundleDetails = BundleDetails'
-  { _bdAvailablePlatforms :: !(Maybe [Platform])
-  , _bdBundleId           :: !(Maybe Text)
-  , _bdVersion            :: !(Maybe Text)
-  , _bdIconURL            :: !(Maybe Text)
-  , _bdTitle              :: !(Maybe Text)
-  , _bdDescription        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BundleDetails =
+  BundleDetails'
+    { _bdAvailablePlatforms :: !(Maybe [Platform])
+    , _bdBundleId           :: !(Maybe Text)
+    , _bdVersion            :: !(Maybe Text)
+    , _bdIconURL            :: !(Maybe Text)
+    , _bdTitle              :: !(Maybe Text)
+    , _bdDescription        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BundleDetails' with the minimum fields required to make a request.
@@ -109,16 +111,18 @@ instance NFData BundleDetails where
 --
 --
 -- /See:/ 'projectDetails' smart constructor.
-data ProjectDetails = ProjectDetails'
-  { _pdState           :: !(Maybe ProjectState)
-  , _pdResources       :: !(Maybe [Resource])
-  , _pdCreatedDate     :: !(Maybe POSIX)
-  , _pdConsoleURL      :: !(Maybe Text)
-  , _pdName            :: !(Maybe Text)
-  , _pdRegion          :: !(Maybe Text)
-  , _pdProjectId       :: !(Maybe Text)
-  , _pdLastUpdatedDate :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ProjectDetails =
+  ProjectDetails'
+    { _pdState           :: !(Maybe ProjectState)
+    , _pdResources       :: !(Maybe [Resource])
+    , _pdCreatedDate     :: !(Maybe POSIX)
+    , _pdConsoleURL      :: !(Maybe Text)
+    , _pdName            :: !(Maybe Text)
+    , _pdRegion          :: !(Maybe Text)
+    , _pdProjectId       :: !(Maybe Text)
+    , _pdLastUpdatedDate :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ProjectDetails' with the minimum fields required to make a request.
@@ -209,10 +213,12 @@ instance NFData ProjectDetails where
 --
 --
 -- /See:/ 'projectSummary' smart constructor.
-data ProjectSummary = ProjectSummary'
-  { _psName      :: !(Maybe Text)
-  , _psProjectId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ProjectSummary =
+  ProjectSummary'
+    { _psName      :: !(Maybe Text)
+    , _psProjectId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ProjectSummary' with the minimum fields required to make a request.
@@ -251,13 +257,15 @@ instance NFData ProjectSummary where
 --
 --
 -- /See:/ 'resource' smart constructor.
-data Resource = Resource'
-  { _rFeature    :: !(Maybe Text)
-  , _rArn        :: !(Maybe Text)
-  , _rName       :: !(Maybe Text)
-  , _rAttributes :: !(Maybe (Map Text Text))
-  , _rType       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Resource =
+  Resource'
+    { _rFeature    :: !(Maybe Text)
+    , _rArn        :: !(Maybe Text)
+    , _rName       :: !(Maybe Text)
+    , _rAttributes :: !(Maybe (Map Text Text))
+    , _rType       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Resource' with the minimum fields required to make a request.

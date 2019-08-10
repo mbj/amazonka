@@ -49,12 +49,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeAggregateComplianceByConfigRules' smart constructor.
-data DescribeAggregateComplianceByConfigRules = DescribeAggregateComplianceByConfigRules'
-  { _dacbcrFilters                     :: !(Maybe ConfigRuleComplianceFilters)
-  , _dacbcrNextToken                   :: !(Maybe Text)
-  , _dacbcrLimit                       :: !(Maybe Nat)
-  , _dacbcrConfigurationAggregatorName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAggregateComplianceByConfigRules =
+  DescribeAggregateComplianceByConfigRules'
+    { _dacbcrFilters                     :: !(Maybe ConfigRuleComplianceFilters)
+    , _dacbcrNextToken                   :: !(Maybe Text)
+    , _dacbcrLimit                       :: !(Maybe Nat)
+    , _dacbcrConfigurationAggregatorName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAggregateComplianceByConfigRules' with the minimum fields required to make a request.
@@ -154,11 +156,13 @@ instance ToQuery
         toQuery = const mempty
 
 -- | /See:/ 'describeAggregateComplianceByConfigRulesResponse' smart constructor.
-data DescribeAggregateComplianceByConfigRulesResponse = DescribeAggregateComplianceByConfigRulesResponse'
-  { _dacbcrrsNextToken :: !(Maybe Text)
-  , _dacbcrrsAggregateComplianceByConfigRules :: !(Maybe [AggregateComplianceByConfigRule])
-  , _dacbcrrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAggregateComplianceByConfigRulesResponse =
+  DescribeAggregateComplianceByConfigRulesResponse'
+    { _dacbcrrsNextToken :: !(Maybe Text)
+    , _dacbcrrsAggregateComplianceByConfigRules :: !(Maybe [AggregateComplianceByConfigRule])
+    , _dacbcrrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAggregateComplianceByConfigRulesResponse' with the minimum fields required to make a request.

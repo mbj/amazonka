@@ -26,10 +26,12 @@ import Network.AWS.Support.Types.Sum
 --
 --
 -- /See:/ 'attachment' smart constructor.
-data Attachment = Attachment'
-  { _aData     :: !(Maybe Base64)
-  , _aFileName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Attachment =
+  Attachment'
+    { _aData     :: !(Maybe Base64)
+    , _aFileName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Attachment' with the minimum fields required to make a request.
@@ -75,10 +77,12 @@ instance ToJSON Attachment where
 --
 --
 -- /See:/ 'attachmentDetails' smart constructor.
-data AttachmentDetails = AttachmentDetails'
-  { _adAttachmentId :: !(Maybe Text)
-  , _adFileName     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AttachmentDetails =
+  AttachmentDetails'
+    { _adAttachmentId :: !(Maybe Text)
+    , _adFileName     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttachmentDetails' with the minimum fields required to make a request.
@@ -144,20 +148,22 @@ instance NFData AttachmentDetails where
 --
 --
 -- /See:/ 'caseDetails' smart constructor.
-data CaseDetails = CaseDetails'
-  { _cdSubject              :: !(Maybe Text)
-  , _cdStatus               :: !(Maybe Text)
-  , _cdRecentCommunications :: !(Maybe RecentCaseCommunications)
-  , _cdSeverityCode         :: !(Maybe Text)
-  , _cdCaseId               :: !(Maybe Text)
-  , _cdCcEmailAddresses     :: !(Maybe [Text])
-  , _cdDisplayId            :: !(Maybe Text)
-  , _cdSubmittedBy          :: !(Maybe Text)
-  , _cdLanguage             :: !(Maybe Text)
-  , _cdTimeCreated          :: !(Maybe Text)
-  , _cdCategoryCode         :: !(Maybe Text)
-  , _cdServiceCode          :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CaseDetails =
+  CaseDetails'
+    { _cdSubject              :: !(Maybe Text)
+    , _cdStatus               :: !(Maybe Text)
+    , _cdRecentCommunications :: !(Maybe RecentCaseCommunications)
+    , _cdSeverityCode         :: !(Maybe Text)
+    , _cdCaseId               :: !(Maybe Text)
+    , _cdCcEmailAddresses     :: !(Maybe [Text])
+    , _cdDisplayId            :: !(Maybe Text)
+    , _cdSubmittedBy          :: !(Maybe Text)
+    , _cdLanguage             :: !(Maybe Text)
+    , _cdTimeCreated          :: !(Maybe Text)
+    , _cdCategoryCode         :: !(Maybe Text)
+    , _cdServiceCode          :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CaseDetails' with the minimum fields required to make a request.
@@ -280,10 +286,12 @@ instance NFData CaseDetails where
 --
 --
 -- /See:/ 'category' smart constructor.
-data Category = Category'
-  { _cName :: !(Maybe Text)
-  , _cCode :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Category =
+  Category'
+    { _cName :: !(Maybe Text)
+    , _cCode :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Category' with the minimum fields required to make a request.
@@ -321,13 +329,15 @@ instance NFData Category where
 --
 --
 -- /See:/ 'communication' smart constructor.
-data Communication = Communication'
-  { _cBody          :: !(Maybe Text)
-  , _cCaseId        :: !(Maybe Text)
-  , _cSubmittedBy   :: !(Maybe Text)
-  , _cTimeCreated   :: !(Maybe Text)
-  , _cAttachmentSet :: !(Maybe [AttachmentDetails])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Communication =
+  Communication'
+    { _cBody          :: !(Maybe Text)
+    , _cCaseId        :: !(Maybe Text)
+    , _cSubmittedBy   :: !(Maybe Text)
+    , _cTimeCreated   :: !(Maybe Text)
+    , _cAttachmentSet :: !(Maybe [AttachmentDetails])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Communication' with the minimum fields required to make a request.
@@ -394,10 +404,12 @@ instance NFData Communication where
 --
 --
 -- /See:/ 'recentCaseCommunications' smart constructor.
-data RecentCaseCommunications = RecentCaseCommunications'
-  { _rccNextToken      :: !(Maybe Text)
-  , _rccCommunications :: !(Maybe [Communication])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RecentCaseCommunications =
+  RecentCaseCommunications'
+    { _rccNextToken      :: !(Maybe Text)
+    , _rccCommunications :: !(Maybe [Communication])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RecentCaseCommunications' with the minimum fields required to make a request.
@@ -439,10 +451,12 @@ instance NFData RecentCaseCommunications where
 --
 --
 -- /See:/ 'severityLevel' smart constructor.
-data SeverityLevel = SeverityLevel'
-  { _slName :: !(Maybe Text)
-  , _slCode :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SeverityLevel =
+  SeverityLevel'
+    { _slName :: !(Maybe Text)
+    , _slCode :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SeverityLevel' with the minimum fields required to make a request.
@@ -480,11 +494,13 @@ instance NFData SeverityLevel where
 --
 --
 -- /See:/ 'supportService' smart constructor.
-data SupportService = SupportService'
-  { _ssCategories :: !(Maybe [Category])
-  , _ssName       :: !(Maybe Text)
-  , _ssCode       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SupportService =
+  SupportService'
+    { _ssCategories :: !(Maybe [Category])
+    , _ssName       :: !(Maybe Text)
+    , _ssCode       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SupportService' with the minimum fields required to make a request.
@@ -532,9 +548,11 @@ instance NFData SupportService where
 --
 --
 -- /See:/ 'trustedAdvisorCategorySpecificSummary' smart constructor.
-newtype TrustedAdvisorCategorySpecificSummary = TrustedAdvisorCategorySpecificSummary'
-  { _tacssCostOptimizing :: Maybe TrustedAdvisorCostOptimizingSummary
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype TrustedAdvisorCategorySpecificSummary =
+  TrustedAdvisorCategorySpecificSummary'
+    { _tacssCostOptimizing :: Maybe TrustedAdvisorCostOptimizingSummary
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TrustedAdvisorCategorySpecificSummary' with the minimum fields required to make a request.
@@ -573,13 +591,15 @@ instance NFData TrustedAdvisorCategorySpecificSummary
 --
 --
 -- /See:/ 'trustedAdvisorCheckDescription' smart constructor.
-data TrustedAdvisorCheckDescription = TrustedAdvisorCheckDescription'
-  { _tacdId          :: !Text
-  , _tacdName        :: !Text
-  , _tacdDescription :: !Text
-  , _tacdCategory    :: !Text
-  , _tacdMetadata    :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TrustedAdvisorCheckDescription =
+  TrustedAdvisorCheckDescription'
+    { _tacdId          :: !Text
+    , _tacdName        :: !Text
+    , _tacdDescription :: !Text
+    , _tacdCategory    :: !Text
+    , _tacdMetadata    :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TrustedAdvisorCheckDescription' with the minimum fields required to make a request.
@@ -652,11 +672,13 @@ instance NFData TrustedAdvisorCheckDescription where
 --
 --
 -- /See:/ 'trustedAdvisorCheckRefreshStatus' smart constructor.
-data TrustedAdvisorCheckRefreshStatus = TrustedAdvisorCheckRefreshStatus'
-  { _tacrsCheckId                    :: !Text
-  , _tacrsStatus                     :: !Text
-  , _tacrsMillisUntilNextRefreshable :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TrustedAdvisorCheckRefreshStatus =
+  TrustedAdvisorCheckRefreshStatus'
+    { _tacrsCheckId                    :: !Text
+    , _tacrsStatus                     :: !Text
+    , _tacrsMillisUntilNextRefreshable :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TrustedAdvisorCheckRefreshStatus' with the minimum fields required to make a request.
@@ -713,14 +735,16 @@ instance NFData TrustedAdvisorCheckRefreshStatus
 --
 --
 -- /See:/ 'trustedAdvisorCheckResult' smart constructor.
-data TrustedAdvisorCheckResult = TrustedAdvisorCheckResult'
-  { _tacrCheckId                 :: !Text
-  , _tacrTimestamp               :: !Text
-  , _tacrStatus                  :: !Text
-  , _tacrResourcesSummary        :: !TrustedAdvisorResourcesSummary
-  , _tacrCategorySpecificSummary :: !TrustedAdvisorCategorySpecificSummary
-  , _tacrFlaggedResources        :: ![TrustedAdvisorResourceDetail]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TrustedAdvisorCheckResult =
+  TrustedAdvisorCheckResult'
+    { _tacrCheckId                 :: !Text
+    , _tacrTimestamp               :: !Text
+    , _tacrStatus                  :: !Text
+    , _tacrResourcesSummary        :: !TrustedAdvisorResourcesSummary
+    , _tacrCategorySpecificSummary :: !TrustedAdvisorCategorySpecificSummary
+    , _tacrFlaggedResources        :: ![TrustedAdvisorResourceDetail]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TrustedAdvisorCheckResult' with the minimum fields required to make a request.
@@ -800,14 +824,16 @@ instance NFData TrustedAdvisorCheckResult where
 --
 --
 -- /See:/ 'trustedAdvisorCheckSummary' smart constructor.
-data TrustedAdvisorCheckSummary = TrustedAdvisorCheckSummary'
-  { _tacsHasFlaggedResources     :: !(Maybe Bool)
-  , _tacsCheckId                 :: !Text
-  , _tacsTimestamp               :: !Text
-  , _tacsStatus                  :: !Text
-  , _tacsResourcesSummary        :: !TrustedAdvisorResourcesSummary
-  , _tacsCategorySpecificSummary :: !TrustedAdvisorCategorySpecificSummary
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TrustedAdvisorCheckSummary =
+  TrustedAdvisorCheckSummary'
+    { _tacsHasFlaggedResources     :: !(Maybe Bool)
+    , _tacsCheckId                 :: !Text
+    , _tacsTimestamp               :: !Text
+    , _tacsStatus                  :: !Text
+    , _tacsResourcesSummary        :: !TrustedAdvisorResourcesSummary
+    , _tacsCategorySpecificSummary :: !TrustedAdvisorCategorySpecificSummary
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TrustedAdvisorCheckSummary' with the minimum fields required to make a request.
@@ -887,10 +913,12 @@ instance NFData TrustedAdvisorCheckSummary where
 --
 --
 -- /See:/ 'trustedAdvisorCostOptimizingSummary' smart constructor.
-data TrustedAdvisorCostOptimizingSummary = TrustedAdvisorCostOptimizingSummary'
-  { _tacosEstimatedMonthlySavings        :: !Double
-  , _tacosEstimatedPercentMonthlySavings :: !Double
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TrustedAdvisorCostOptimizingSummary =
+  TrustedAdvisorCostOptimizingSummary'
+    { _tacosEstimatedMonthlySavings        :: !Double
+    , _tacosEstimatedPercentMonthlySavings :: !Double
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TrustedAdvisorCostOptimizingSummary' with the minimum fields required to make a request.
@@ -939,13 +967,15 @@ instance NFData TrustedAdvisorCostOptimizingSummary
 --
 --
 -- /See:/ 'trustedAdvisorResourceDetail' smart constructor.
-data TrustedAdvisorResourceDetail = TrustedAdvisorResourceDetail'
-  { _tardIsSuppressed :: !(Maybe Bool)
-  , _tardRegion       :: !(Maybe Text)
-  , _tardStatus       :: !Text
-  , _tardResourceId   :: !Text
-  , _tardMetadata     :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TrustedAdvisorResourceDetail =
+  TrustedAdvisorResourceDetail'
+    { _tardIsSuppressed :: !(Maybe Bool)
+    , _tardRegion       :: !(Maybe Text)
+    , _tardStatus       :: !Text
+    , _tardResourceId   :: !Text
+    , _tardMetadata     :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TrustedAdvisorResourceDetail' with the minimum fields required to make a request.
@@ -1014,12 +1044,14 @@ instance NFData TrustedAdvisorResourceDetail where
 --
 --
 -- /See:/ 'trustedAdvisorResourcesSummary' smart constructor.
-data TrustedAdvisorResourcesSummary = TrustedAdvisorResourcesSummary'
-  { _tarsResourcesProcessed  :: !Integer
-  , _tarsResourcesFlagged    :: !Integer
-  , _tarsResourcesIgnored    :: !Integer
-  , _tarsResourcesSuppressed :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TrustedAdvisorResourcesSummary =
+  TrustedAdvisorResourcesSummary'
+    { _tarsResourcesProcessed  :: !Integer
+    , _tarsResourcesFlagged    :: !Integer
+    , _tarsResourcesIgnored    :: !Integer
+    , _tarsResourcesSuppressed :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TrustedAdvisorResourcesSummary' with the minimum fields required to make a request.

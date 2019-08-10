@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateParameterGroup' smart constructor.
-data UpdateParameterGroup = UpdateParameterGroup'
-  { _upgParameterGroupName  :: !Text
-  , _upgParameterNameValues :: ![ParameterNameValue]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateParameterGroup =
+  UpdateParameterGroup'
+    { _upgParameterGroupName  :: !Text
+    , _upgParameterNameValues :: ![ParameterNameValue]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateParameterGroup' with the minimum fields required to make a request.
@@ -116,10 +118,12 @@ instance ToQuery UpdateParameterGroup where
         toQuery = const mempty
 
 -- | /See:/ 'updateParameterGroupResponse' smart constructor.
-data UpdateParameterGroupResponse = UpdateParameterGroupResponse'
-  { _upgrsParameterGroup :: !(Maybe ParameterGroup)
-  , _upgrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateParameterGroupResponse =
+  UpdateParameterGroupResponse'
+    { _upgrsParameterGroup :: !(Maybe ParameterGroup)
+    , _upgrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateParameterGroupResponse' with the minimum fields required to make a request.

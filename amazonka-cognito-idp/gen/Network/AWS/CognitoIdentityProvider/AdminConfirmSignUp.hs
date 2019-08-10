@@ -51,10 +51,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'adminConfirmSignUp' smart constructor.
-data AdminConfirmSignUp = AdminConfirmSignUp'
-  { _acsuUserPoolId :: !Text
-  , _acsuUsername   :: !(Sensitive Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data AdminConfirmSignUp =
+  AdminConfirmSignUp'
+    { _acsuUserPoolId :: !Text
+    , _acsuUsername   :: !(Sensitive Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AdminConfirmSignUp' with the minimum fields required to make a request.
@@ -122,9 +124,11 @@ instance ToQuery AdminConfirmSignUp where
 --
 --
 -- /See:/ 'adminConfirmSignUpResponse' smart constructor.
-newtype AdminConfirmSignUpResponse = AdminConfirmSignUpResponse'
-  { _acsursResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AdminConfirmSignUpResponse =
+  AdminConfirmSignUpResponse'
+    { _acsursResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AdminConfirmSignUpResponse' with the minimum fields required to make a request.

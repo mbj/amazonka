@@ -52,11 +52,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getRequestValidators' smart constructor.
-data GetRequestValidators = GetRequestValidators'
-  { _grvLimit     :: !(Maybe Int)
-  , _grvPosition  :: !(Maybe Text)
-  , _grvRestAPIId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetRequestValidators =
+  GetRequestValidators'
+    { _grvLimit     :: !(Maybe Int)
+    , _grvPosition  :: !(Maybe Text)
+    , _grvRestAPIId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetRequestValidators' with the minimum fields required to make a request.
@@ -128,11 +130,13 @@ instance ToQuery GetRequestValidators where
 -- <http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-method-request-validation.html Enable Basic Request Validation in API Gateway>
 --
 -- /See:/ 'getRequestValidatorsResponse' smart constructor.
-data GetRequestValidatorsResponse = GetRequestValidatorsResponse'
-  { _grvrsItems          :: !(Maybe [RequestValidator])
-  , _grvrsPosition       :: !(Maybe Text)
-  , _grvrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetRequestValidatorsResponse =
+  GetRequestValidatorsResponse'
+    { _grvrsItems          :: !(Maybe [RequestValidator])
+    , _grvrsPosition       :: !(Maybe Text)
+    , _grvrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetRequestValidatorsResponse' with the minimum fields required to make a request.

@@ -57,12 +57,14 @@ import Network.AWS.SDB.Types
 import Network.AWS.SDB.Types.Product
 
 -- | /See:/ 'putAttributes' smart constructor.
-data PutAttributes = PutAttributes'
-  { _paExpected   :: !(Maybe UpdateCondition)
-  , _paDomainName :: !Text
-  , _paItemName   :: !Text
-  , _paAttributes :: ![ReplaceableAttribute]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutAttributes =
+  PutAttributes'
+    { _paExpected   :: !(Maybe UpdateCondition)
+    , _paDomainName :: !Text
+    , _paItemName   :: !Text
+    , _paAttributes :: ![ReplaceableAttribute]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutAttributes' with the minimum fields required to make a request.

@@ -51,11 +51,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'modifyClusterSubnetGroup' smart constructor.
-data ModifyClusterSubnetGroup = ModifyClusterSubnetGroup'
-  { _mcsgDescription            :: !(Maybe Text)
-  , _mcsgClusterSubnetGroupName :: !Text
-  , _mcsgSubnetIds              :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyClusterSubnetGroup =
+  ModifyClusterSubnetGroup'
+    { _mcsgDescription            :: !(Maybe Text)
+    , _mcsgClusterSubnetGroupName :: !Text
+    , _mcsgSubnetIds              :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyClusterSubnetGroup' with the minimum fields required to make a request.
@@ -123,10 +125,12 @@ instance ToQuery ModifyClusterSubnetGroup where
                  toQueryList "SubnetIdentifier" _mcsgSubnetIds]
 
 -- | /See:/ 'modifyClusterSubnetGroupResponse' smart constructor.
-data ModifyClusterSubnetGroupResponse = ModifyClusterSubnetGroupResponse'
-  { _mcsgrsClusterSubnetGroup :: !(Maybe ClusterSubnetGroup)
-  , _mcsgrsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyClusterSubnetGroupResponse =
+  ModifyClusterSubnetGroupResponse'
+    { _mcsgrsClusterSubnetGroup :: !(Maybe ClusterSubnetGroup)
+    , _mcsgrsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyClusterSubnetGroupResponse' with the minimum fields required to make a request.

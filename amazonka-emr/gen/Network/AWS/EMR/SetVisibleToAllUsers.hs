@@ -47,10 +47,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'setVisibleToAllUsers' smart constructor.
-data SetVisibleToAllUsers = SetVisibleToAllUsers'
-  { _svtauJobFlowIds        :: ![Text]
-  , _svtauVisibleToAllUsers :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SetVisibleToAllUsers =
+  SetVisibleToAllUsers'
+    { _svtauJobFlowIds        :: ![Text]
+    , _svtauVisibleToAllUsers :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetVisibleToAllUsers' with the minimum fields required to make a request.

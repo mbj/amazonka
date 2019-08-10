@@ -50,13 +50,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeScalingPlans' smart constructor.
-data DescribeScalingPlans = DescribeScalingPlans'
-  { _dScalingPlanVersion :: !(Maybe Integer)
-  , _dScalingPlanNames   :: !(Maybe [Text])
-  , _dNextToken          :: !(Maybe Text)
-  , _dApplicationSources :: !(Maybe [ApplicationSource])
-  , _dMaxResults         :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeScalingPlans =
+  DescribeScalingPlans'
+    { _dScalingPlanVersion :: !(Maybe Integer)
+    , _dScalingPlanNames   :: !(Maybe [Text])
+    , _dNextToken          :: !(Maybe Text)
+    , _dApplicationSources :: !(Maybe [ApplicationSource])
+    , _dMaxResults         :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeScalingPlans' with the minimum fields required to make a request.
@@ -147,11 +149,13 @@ instance ToQuery DescribeScalingPlans where
         toQuery = const mempty
 
 -- | /See:/ 'describeScalingPlansResponse' smart constructor.
-data DescribeScalingPlansResponse = DescribeScalingPlansResponse'
-  { _drsScalingPlans   :: !(Maybe [ScalingPlan])
-  , _drsNextToken      :: !(Maybe Text)
-  , _drsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeScalingPlansResponse =
+  DescribeScalingPlansResponse'
+    { _drsScalingPlans   :: !(Maybe [ScalingPlan])
+    , _drsNextToken      :: !(Maybe Text)
+    , _drsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeScalingPlansResponse' with the minimum fields required to make a request.

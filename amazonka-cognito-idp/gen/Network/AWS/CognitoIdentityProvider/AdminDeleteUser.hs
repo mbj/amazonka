@@ -49,10 +49,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'adminDeleteUser' smart constructor.
-data AdminDeleteUser = AdminDeleteUser'
-  { _aUserPoolId :: !Text
-  , _aUsername   :: !(Sensitive Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data AdminDeleteUser =
+  AdminDeleteUser'
+    { _aUserPoolId :: !Text
+    , _aUsername   :: !(Sensitive Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AdminDeleteUser' with the minimum fields required to make a request.

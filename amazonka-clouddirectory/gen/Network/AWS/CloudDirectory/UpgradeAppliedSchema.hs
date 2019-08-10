@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'upgradeAppliedSchema' smart constructor.
-data UpgradeAppliedSchema = UpgradeAppliedSchema'
-  { _uasDryRun             :: !(Maybe Bool)
-  , _uasPublishedSchemaARN :: !Text
-  , _uasDirectoryARN       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpgradeAppliedSchema =
+  UpgradeAppliedSchema'
+    { _uasDryRun             :: !(Maybe Bool)
+    , _uasPublishedSchemaARN :: !Text
+    , _uasDirectoryARN       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpgradeAppliedSchema' with the minimum fields required to make a request.
@@ -125,11 +127,13 @@ instance ToQuery UpgradeAppliedSchema where
         toQuery = const mempty
 
 -- | /See:/ 'upgradeAppliedSchemaResponse' smart constructor.
-data UpgradeAppliedSchemaResponse = UpgradeAppliedSchemaResponse'
-  { _uasrsDirectoryARN      :: !(Maybe Text)
-  , _uasrsUpgradedSchemaARN :: !(Maybe Text)
-  , _uasrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpgradeAppliedSchemaResponse =
+  UpgradeAppliedSchemaResponse'
+    { _uasrsDirectoryARN      :: !(Maybe Text)
+    , _uasrsUpgradedSchemaARN :: !(Maybe Text)
+    , _uasrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpgradeAppliedSchemaResponse' with the minimum fields required to make a request.

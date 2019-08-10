@@ -50,11 +50,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'resetCacheParameterGroup' smart constructor.
-data ResetCacheParameterGroup = ResetCacheParameterGroup'
-  { _rcpgResetAllParameters      :: !(Maybe Bool)
-  , _rcpgParameterNameValues     :: !(Maybe [ParameterNameValue])
-  , _rcpgCacheParameterGroupName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResetCacheParameterGroup =
+  ResetCacheParameterGroup'
+    { _rcpgResetAllParameters      :: !(Maybe Bool)
+    , _rcpgParameterNameValues     :: !(Maybe [ParameterNameValue])
+    , _rcpgCacheParameterGroupName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResetCacheParameterGroup' with the minimum fields required to make a request.

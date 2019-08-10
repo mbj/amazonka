@@ -56,10 +56,12 @@ import Network.AWS.WAFRegional.Types
 import Network.AWS.WAFRegional.Types.Product
 
 -- | /See:/ 'deleteWebACL' smart constructor.
-data DeleteWebACL = DeleteWebACL'
-  { _dwaWebACLId    :: !Text
-  , _dwaChangeToken :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteWebACL =
+  DeleteWebACL'
+    { _dwaWebACLId    :: !Text
+    , _dwaChangeToken :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteWebACL' with the minimum fields required to make a request.
@@ -122,10 +124,12 @@ instance ToQuery DeleteWebACL where
         toQuery = const mempty
 
 -- | /See:/ 'deleteWebACLResponse' smart constructor.
-data DeleteWebACLResponse = DeleteWebACLResponse'
-  { _dwarsChangeToken    :: !(Maybe Text)
-  , _dwarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteWebACLResponse =
+  DeleteWebACLResponse'
+    { _dwarsChangeToken    :: !(Maybe Text)
+    , _dwarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteWebACLResponse' with the minimum fields required to make a request.

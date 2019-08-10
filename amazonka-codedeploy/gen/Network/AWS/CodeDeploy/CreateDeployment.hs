@@ -58,18 +58,20 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createDeployment' smart constructor.
-data CreateDeployment = CreateDeployment'
-  { _cdDeploymentConfigName          :: !(Maybe Text)
-  , _cdFileExistsBehavior            :: !(Maybe FileExistsBehavior)
-  , _cdTargetInstances               :: !(Maybe TargetInstances)
-  , _cdRevision                      :: !(Maybe RevisionLocation)
-  , _cdDescription                   :: !(Maybe Text)
-  , _cdAutoRollbackConfiguration     :: !(Maybe AutoRollbackConfiguration)
-  , _cdUpdateOutdatedInstancesOnly   :: !(Maybe Bool)
-  , _cdDeploymentGroupName           :: !(Maybe Text)
-  , _cdIgnoreApplicationStopFailures :: !(Maybe Bool)
-  , _cdApplicationName               :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDeployment =
+  CreateDeployment'
+    { _cdDeploymentConfigName          :: !(Maybe Text)
+    , _cdFileExistsBehavior            :: !(Maybe FileExistsBehavior)
+    , _cdTargetInstances               :: !(Maybe TargetInstances)
+    , _cdRevision                      :: !(Maybe RevisionLocation)
+    , _cdDescription                   :: !(Maybe Text)
+    , _cdAutoRollbackConfiguration     :: !(Maybe AutoRollbackConfiguration)
+    , _cdUpdateOutdatedInstancesOnly   :: !(Maybe Bool)
+    , _cdDeploymentGroupName           :: !(Maybe Text)
+    , _cdIgnoreApplicationStopFailures :: !(Maybe Bool)
+    , _cdApplicationName               :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDeployment' with the minimum fields required to make a request.
@@ -207,10 +209,12 @@ instance ToQuery CreateDeployment where
 --
 --
 -- /See:/ 'createDeploymentResponse' smart constructor.
-data CreateDeploymentResponse = CreateDeploymentResponse'
-  { _cdrsDeploymentId   :: !(Maybe Text)
-  , _cdrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDeploymentResponse =
+  CreateDeploymentResponse'
+    { _cdrsDeploymentId   :: !(Maybe Text)
+    , _cdrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDeploymentResponse' with the minimum fields required to make a request.

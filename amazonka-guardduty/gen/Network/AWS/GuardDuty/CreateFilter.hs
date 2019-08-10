@@ -51,15 +51,17 @@ import Network.AWS.Response
 -- | CreateFilterRequest request body.
 --
 -- /See:/ 'createFilter' smart constructor.
-data CreateFilter = CreateFilter'
-  { _cfClientToken     :: !(Maybe Text)
-  , _cfFindingCriteria :: !(Maybe FindingCriteria)
-  , _cfAction          :: !(Maybe FilterAction)
-  , _cfName            :: !(Maybe Text)
-  , _cfDescription     :: !(Maybe Text)
-  , _cfRank            :: !(Maybe Int)
-  , _cfDetectorId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateFilter =
+  CreateFilter'
+    { _cfClientToken     :: !(Maybe Text)
+    , _cfFindingCriteria :: !(Maybe FindingCriteria)
+    , _cfAction          :: !(Maybe FilterAction)
+    , _cfName            :: !(Maybe Text)
+    , _cfDescription     :: !(Maybe Text)
+    , _cfRank            :: !(Maybe Int)
+    , _cfDetectorId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateFilter' with the minimum fields required to make a request.
@@ -161,10 +163,12 @@ instance ToQuery CreateFilter where
         toQuery = const mempty
 
 -- | /See:/ 'createFilterResponse' smart constructor.
-data CreateFilterResponse = CreateFilterResponse'
-  { _cfrsName           :: !(Maybe Text)
-  , _cfrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateFilterResponse =
+  CreateFilterResponse'
+    { _cfrsName           :: !(Maybe Text)
+    , _cfrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateFilterResponse' with the minimum fields required to make a request.

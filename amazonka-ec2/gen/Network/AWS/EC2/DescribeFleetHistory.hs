@@ -54,14 +54,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeFleetHistory' smart constructor.
-data DescribeFleetHistory = DescribeFleetHistory'
-  { _dfhNextToken  :: !(Maybe Text)
-  , _dfhEventType  :: !(Maybe FleetEventType)
-  , _dfhDryRun     :: !(Maybe Bool)
-  , _dfhMaxResults :: !(Maybe Int)
-  , _dfhFleetId    :: !Text
-  , _dfhStartTime  :: !ISO8601
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeFleetHistory =
+  DescribeFleetHistory'
+    { _dfhNextToken  :: !(Maybe Text)
+    , _dfhEventType  :: !(Maybe FleetEventType)
+    , _dfhDryRun     :: !(Maybe Bool)
+    , _dfhMaxResults :: !(Maybe Int)
+    , _dfhFleetId    :: !Text
+    , _dfhStartTime  :: !ISO8601
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeFleetHistory' with the minimum fields required to make a request.
@@ -156,14 +158,16 @@ instance ToQuery DescribeFleetHistory where
                "StartTime" =: _dfhStartTime]
 
 -- | /See:/ 'describeFleetHistoryResponse' smart constructor.
-data DescribeFleetHistoryResponse = DescribeFleetHistoryResponse'
-  { _dfhrsStartTime         :: !(Maybe ISO8601)
-  , _dfhrsLastEvaluatedTime :: !(Maybe ISO8601)
-  , _dfhrsNextToken         :: !(Maybe Text)
-  , _dfhrsHistoryRecords    :: !(Maybe [HistoryRecordEntry])
-  , _dfhrsFleetId           :: !(Maybe Text)
-  , _dfhrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeFleetHistoryResponse =
+  DescribeFleetHistoryResponse'
+    { _dfhrsStartTime         :: !(Maybe ISO8601)
+    , _dfhrsLastEvaluatedTime :: !(Maybe ISO8601)
+    , _dfhrsNextToken         :: !(Maybe Text)
+    , _dfhrsHistoryRecords    :: !(Maybe [HistoryRecordEntry])
+    , _dfhrsFleetId           :: !(Maybe Text)
+    , _dfhrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeFleetHistoryResponse' with the minimum fields required to make a request.

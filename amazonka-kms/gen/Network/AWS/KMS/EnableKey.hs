@@ -42,9 +42,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'enableKey' smart constructor.
-newtype EnableKey = EnableKey'
-  { _ekKeyId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype EnableKey =
+  EnableKey'
+    { _ekKeyId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EnableKey' with the minimum fields required to make a request.

@@ -48,10 +48,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateEvaluation' smart constructor.
-data UpdateEvaluation = UpdateEvaluation'
-  { _ueEvaluationId   :: !Text
-  , _ueEvaluationName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateEvaluation =
+  UpdateEvaluation'
+    { _ueEvaluationId   :: !Text
+    , _ueEvaluationName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateEvaluation' with the minimum fields required to make a request.
@@ -120,10 +122,12 @@ instance ToQuery UpdateEvaluation where
 --
 --
 -- /See:/ 'updateEvaluationResponse' smart constructor.
-data UpdateEvaluationResponse = UpdateEvaluationResponse'
-  { _uersEvaluationId   :: !(Maybe Text)
-  , _uersResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateEvaluationResponse =
+  UpdateEvaluationResponse'
+    { _uersEvaluationId   :: !(Maybe Text)
+    , _uersResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateEvaluationResponse' with the minimum fields required to make a request.

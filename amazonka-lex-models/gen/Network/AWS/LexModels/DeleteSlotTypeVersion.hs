@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteSlotTypeVersion' smart constructor.
-data DeleteSlotTypeVersion = DeleteSlotTypeVersion'
-  { _dstvName    :: !Text
-  , _dstvVersion :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteSlotTypeVersion =
+  DeleteSlotTypeVersion'
+    { _dstvName    :: !Text
+    , _dstvVersion :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteSlotTypeVersion' with the minimum fields required to make a request.

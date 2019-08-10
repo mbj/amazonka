@@ -46,11 +46,13 @@ import Network.AWS.ServiceCatalog.Types
 import Network.AWS.ServiceCatalog.Types.Product
 
 -- | /See:/ 'disassociateProductFromPortfolio' smart constructor.
-data DisassociateProductFromPortfolio = DisassociateProductFromPortfolio'
-  { _dpfpAcceptLanguage :: !(Maybe Text)
-  , _dpfpProductId      :: !Text
-  , _dpfpPortfolioId    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DisassociateProductFromPortfolio =
+  DisassociateProductFromPortfolio'
+    { _dpfpAcceptLanguage :: !(Maybe Text)
+    , _dpfpProductId      :: !Text
+    , _dpfpPortfolioId    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisassociateProductFromPortfolio' with the minimum fields required to make a request.
@@ -132,9 +134,11 @@ instance ToQuery DisassociateProductFromPortfolio
         toQuery = const mempty
 
 -- | /See:/ 'disassociateProductFromPortfolioResponse' smart constructor.
-newtype DisassociateProductFromPortfolioResponse = DisassociateProductFromPortfolioResponse'
-  { _disrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DisassociateProductFromPortfolioResponse =
+  DisassociateProductFromPortfolioResponse'
+    { _disrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisassociateProductFromPortfolioResponse' with the minimum fields required to make a request.

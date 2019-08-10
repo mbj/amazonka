@@ -56,12 +56,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createClusterParameterGroup' smart constructor.
-data CreateClusterParameterGroup = CreateClusterParameterGroup'
-  { _ccpgTags                 :: !(Maybe [Tag])
-  , _ccpgParameterGroupName   :: !Text
-  , _ccpgParameterGroupFamily :: !Text
-  , _ccpgDescription          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateClusterParameterGroup =
+  CreateClusterParameterGroup'
+    { _ccpgTags                 :: !(Maybe [Tag])
+    , _ccpgParameterGroupName   :: !Text
+    , _ccpgParameterGroupFamily :: !Text
+    , _ccpgDescription          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateClusterParameterGroup' with the minimum fields required to make a request.
@@ -139,10 +141,12 @@ instance ToQuery CreateClusterParameterGroup where
                "Description" =: _ccpgDescription]
 
 -- | /See:/ 'createClusterParameterGroupResponse' smart constructor.
-data CreateClusterParameterGroupResponse = CreateClusterParameterGroupResponse'
-  { _ccpgrsClusterParameterGroup :: !(Maybe ClusterParameterGroup)
-  , _ccpgrsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateClusterParameterGroupResponse =
+  CreateClusterParameterGroupResponse'
+    { _ccpgrsClusterParameterGroup :: !(Maybe ClusterParameterGroup)
+    , _ccpgrsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateClusterParameterGroupResponse' with the minimum fields required to make a request.

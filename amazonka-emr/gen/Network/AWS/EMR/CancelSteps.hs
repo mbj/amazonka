@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'cancelSteps' smart constructor.
-data CancelSteps = CancelSteps'
-  { _csStepIds   :: !(Maybe [Text])
-  , _csClusterId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CancelSteps =
+  CancelSteps'
+    { _csStepIds   :: !(Maybe [Text])
+    , _csClusterId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CancelSteps' with the minimum fields required to make a request.
@@ -117,10 +119,12 @@ instance ToQuery CancelSteps where
 --
 --
 -- /See:/ 'cancelStepsResponse' smart constructor.
-data CancelStepsResponse = CancelStepsResponse'
-  { _csrsCancelStepsInfoList :: !(Maybe [CancelStepsInfo])
-  , _csrsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CancelStepsResponse =
+  CancelStepsResponse'
+    { _csrsCancelStepsInfoList :: !(Maybe [CancelStepsInfo])
+    , _csrsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CancelStepsResponse' with the minimum fields required to make a request.

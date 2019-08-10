@@ -59,17 +59,19 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getReservationPurchaseRecommendation' smart constructor.
-data GetReservationPurchaseRecommendation = GetReservationPurchaseRecommendation'
-  { _grprNextPageToken        :: !(Maybe Text)
-  , _grprTermInYears          :: !(Maybe TermInYears)
-  , _grprServiceSpecification :: !(Maybe ServiceSpecification)
-  , _grprAccountScope         :: !(Maybe AccountScope)
-  , _grprAccountId            :: !(Maybe Text)
-  , _grprPageSize             :: !(Maybe Nat)
-  , _grprLookbackPeriodInDays :: !(Maybe LookbackPeriodInDays)
-  , _grprPaymentOption        :: !(Maybe PaymentOption)
-  , _grprService              :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetReservationPurchaseRecommendation =
+  GetReservationPurchaseRecommendation'
+    { _grprNextPageToken        :: !(Maybe Text)
+    , _grprTermInYears          :: !(Maybe TermInYears)
+    , _grprServiceSpecification :: !(Maybe ServiceSpecification)
+    , _grprAccountScope         :: !(Maybe AccountScope)
+    , _grprAccountId            :: !(Maybe Text)
+    , _grprPageSize             :: !(Maybe Nat)
+    , _grprLookbackPeriodInDays :: !(Maybe LookbackPeriodInDays)
+    , _grprPaymentOption        :: !(Maybe PaymentOption)
+    , _grprService              :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetReservationPurchaseRecommendation' with the minimum fields required to make a request.
@@ -206,12 +208,14 @@ instance ToQuery GetReservationPurchaseRecommendation
         toQuery = const mempty
 
 -- | /See:/ 'getReservationPurchaseRecommendationResponse' smart constructor.
-data GetReservationPurchaseRecommendationResponse = GetReservationPurchaseRecommendationResponse'
-  { _grprrsNextPageToken   :: !(Maybe Text)
-  , _grprrsRecommendations :: !(Maybe [ReservationPurchaseRecommendation])
-  , _grprrsMetadata        :: !(Maybe ReservationPurchaseRecommendationMetadata)
-  , _grprrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetReservationPurchaseRecommendationResponse =
+  GetReservationPurchaseRecommendationResponse'
+    { _grprrsNextPageToken :: !(Maybe Text)
+    , _grprrsRecommendations :: !(Maybe [ReservationPurchaseRecommendation])
+    , _grprrsMetadata :: !(Maybe ReservationPurchaseRecommendationMetadata)
+    , _grprrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetReservationPurchaseRecommendationResponse' with the minimum fields required to make a request.

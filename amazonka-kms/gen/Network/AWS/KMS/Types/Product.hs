@@ -26,11 +26,13 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'aliasListEntry' smart constructor.
-data AliasListEntry = AliasListEntry'
-  { _aleTargetKeyId :: !(Maybe Text)
-  , _aleAliasName   :: !(Maybe Text)
-  , _aleAliasARN    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AliasListEntry =
+  AliasListEntry'
+    { _aleTargetKeyId :: !(Maybe Text)
+    , _aleAliasName   :: !(Maybe Text)
+    , _aleAliasARN    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AliasListEntry' with the minimum fields required to make a request.
@@ -80,10 +82,12 @@ instance NFData AliasListEntry where
 --
 --
 -- /See:/ 'grantConstraints' smart constructor.
-data GrantConstraints = GrantConstraints'
-  { _gcEncryptionContextEquals :: !(Maybe (Map Text Text))
-  , _gcEncryptionContextSubset :: !(Maybe (Map Text Text))
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GrantConstraints =
+  GrantConstraints'
+    { _gcEncryptionContextEquals :: !(Maybe (Map Text Text))
+    , _gcEncryptionContextSubset :: !(Maybe (Map Text Text))
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GrantConstraints' with the minimum fields required to make a request.
@@ -134,17 +138,19 @@ instance ToJSON GrantConstraints where
 --
 --
 -- /See:/ 'grantListEntry' smart constructor.
-data GrantListEntry = GrantListEntry'
-  { _gleKeyId             :: !(Maybe Text)
-  , _gleRetiringPrincipal :: !(Maybe Text)
-  , _gleIssuingAccount    :: !(Maybe Text)
-  , _gleGrantId           :: !(Maybe Text)
-  , _gleConstraints       :: !(Maybe GrantConstraints)
-  , _gleGranteePrincipal  :: !(Maybe Text)
-  , _gleName              :: !(Maybe Text)
-  , _gleCreationDate      :: !(Maybe POSIX)
-  , _gleOperations        :: !(Maybe [GrantOperation])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GrantListEntry =
+  GrantListEntry'
+    { _gleKeyId             :: !(Maybe Text)
+    , _gleRetiringPrincipal :: !(Maybe Text)
+    , _gleIssuingAccount    :: !(Maybe Text)
+    , _gleGrantId           :: !(Maybe Text)
+    , _gleConstraints       :: !(Maybe GrantConstraints)
+    , _gleGranteePrincipal  :: !(Maybe Text)
+    , _gleName              :: !(Maybe Text)
+    , _gleCreationDate      :: !(Maybe POSIX)
+    , _gleOperations        :: !(Maybe [GrantOperation])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GrantListEntry' with the minimum fields required to make a request.
@@ -243,10 +249,12 @@ instance NFData GrantListEntry where
 --
 --
 -- /See:/ 'keyListEntry' smart constructor.
-data KeyListEntry = KeyListEntry'
-  { _kleKeyId  :: !(Maybe Text)
-  , _kleKeyARN :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data KeyListEntry =
+  KeyListEntry'
+    { _kleKeyId  :: !(Maybe Text)
+    , _kleKeyARN :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'KeyListEntry' with the minimum fields required to make a request.
@@ -287,21 +295,23 @@ instance NFData KeyListEntry where
 --
 --
 -- /See:/ 'keyMetadata' smart constructor.
-data KeyMetadata = KeyMetadata'
-  { _kmOrigin          :: !(Maybe OriginType)
-  , _kmExpirationModel :: !(Maybe ExpirationModelType)
-  , _kmKeyManager      :: !(Maybe KeyManagerType)
-  , _kmEnabled         :: !(Maybe Bool)
-  , _kmValidTo         :: !(Maybe POSIX)
-  , _kmARN             :: !(Maybe Text)
-  , _kmKeyState        :: !(Maybe KeyState)
-  , _kmAWSAccountId    :: !(Maybe Text)
-  , _kmKeyUsage        :: !(Maybe KeyUsageType)
-  , _kmCreationDate    :: !(Maybe POSIX)
-  , _kmDeletionDate    :: !(Maybe POSIX)
-  , _kmDescription     :: !(Maybe Text)
-  , _kmKeyId           :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data KeyMetadata =
+  KeyMetadata'
+    { _kmOrigin          :: !(Maybe OriginType)
+    , _kmExpirationModel :: !(Maybe ExpirationModelType)
+    , _kmKeyManager      :: !(Maybe KeyManagerType)
+    , _kmEnabled         :: !(Maybe Bool)
+    , _kmValidTo         :: !(Maybe POSIX)
+    , _kmARN             :: !(Maybe Text)
+    , _kmKeyState        :: !(Maybe KeyState)
+    , _kmAWSAccountId    :: !(Maybe Text)
+    , _kmKeyUsage        :: !(Maybe KeyUsageType)
+    , _kmCreationDate    :: !(Maybe POSIX)
+    , _kmDeletionDate    :: !(Maybe POSIX)
+    , _kmDescription     :: !(Maybe Text)
+    , _kmKeyId           :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'KeyMetadata' with the minimum fields required to make a request.
@@ -429,11 +439,13 @@ instance Hashable KeyMetadata where
 instance NFData KeyMetadata where
 
 -- | /See:/ 'listGrantsResponse' smart constructor.
-data ListGrantsResponse = ListGrantsResponse'
-  { _lgTruncated  :: !(Maybe Bool)
-  , _lgGrants     :: !(Maybe [GrantListEntry])
-  , _lgNextMarker :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListGrantsResponse =
+  ListGrantsResponse'
+    { _lgTruncated  :: !(Maybe Bool)
+    , _lgGrants     :: !(Maybe [GrantListEntry])
+    , _lgNextMarker :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListGrantsResponse' with the minimum fields required to make a request.
@@ -483,10 +495,12 @@ instance NFData ListGrantsResponse where
 --
 --
 -- /See:/ 'tag' smart constructor.
-data Tag = Tag'
-  { _tagTagKey   :: !Text
-  , _tagTagValue :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Tag =
+  Tag'
+    { _tagTagKey   :: !Text
+    , _tagTagValue :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Tag' with the minimum fields required to make a request.

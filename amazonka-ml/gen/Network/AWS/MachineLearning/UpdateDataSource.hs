@@ -48,10 +48,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateDataSource' smart constructor.
-data UpdateDataSource = UpdateDataSource'
-  { _udsDataSourceId   :: !Text
-  , _udsDataSourceName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateDataSource =
+  UpdateDataSource'
+    { _udsDataSourceId   :: !Text
+    , _udsDataSourceName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateDataSource' with the minimum fields required to make a request.
@@ -120,10 +122,12 @@ instance ToQuery UpdateDataSource where
 --
 --
 -- /See:/ 'updateDataSourceResponse' smart constructor.
-data UpdateDataSourceResponse = UpdateDataSourceResponse'
-  { _udsrsDataSourceId   :: !(Maybe Text)
-  , _udsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateDataSourceResponse =
+  UpdateDataSourceResponse'
+    { _udsrsDataSourceId   :: !(Maybe Text)
+    , _udsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateDataSourceResponse' with the minimum fields required to make a request.

@@ -26,15 +26,17 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'botAliasMetadata' smart constructor.
-data BotAliasMetadata = BotAliasMetadata'
-  { _bamChecksum        :: !(Maybe Text)
-  , _bamBotVersion      :: !(Maybe Text)
-  , _bamBotName         :: !(Maybe Text)
-  , _bamCreatedDate     :: !(Maybe POSIX)
-  , _bamName            :: !(Maybe Text)
-  , _bamLastUpdatedDate :: !(Maybe POSIX)
-  , _bamDescription     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BotAliasMetadata =
+  BotAliasMetadata'
+    { _bamChecksum        :: !(Maybe Text)
+    , _bamBotVersion      :: !(Maybe Text)
+    , _bamBotName         :: !(Maybe Text)
+    , _bamCreatedDate     :: !(Maybe POSIX)
+    , _bamName            :: !(Maybe Text)
+    , _bamLastUpdatedDate :: !(Maybe POSIX)
+    , _bamDescription     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BotAliasMetadata' with the minimum fields required to make a request.
@@ -117,17 +119,19 @@ instance NFData BotAliasMetadata where
 --
 --
 -- /See:/ 'botChannelAssociation' smart constructor.
-data BotChannelAssociation = BotChannelAssociation'
-  { _bcaFailureReason    :: !(Maybe Text)
-  , _bcaStatus           :: !(Maybe ChannelStatus)
-  , _bcaBotAlias         :: !(Maybe Text)
-  , _bcaBotName          :: !(Maybe Text)
-  , _bcaBotConfiguration :: !(Maybe (Sensitive (Map Text Text)))
-  , _bcaCreatedDate      :: !(Maybe POSIX)
-  , _bcaName             :: !(Maybe Text)
-  , _bcaType             :: !(Maybe ChannelType)
-  , _bcaDescription      :: !(Maybe Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data BotChannelAssociation =
+  BotChannelAssociation'
+    { _bcaFailureReason    :: !(Maybe Text)
+    , _bcaStatus           :: !(Maybe ChannelStatus)
+    , _bcaBotAlias         :: !(Maybe Text)
+    , _bcaBotName          :: !(Maybe Text)
+    , _bcaBotConfiguration :: !(Maybe (Sensitive (Map Text Text)))
+    , _bcaCreatedDate      :: !(Maybe POSIX)
+    , _bcaName             :: !(Maybe Text)
+    , _bcaType             :: !(Maybe ChannelType)
+    , _bcaDescription      :: !(Maybe Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BotChannelAssociation' with the minimum fields required to make a request.
@@ -226,14 +230,16 @@ instance NFData BotChannelAssociation where
 --
 --
 -- /See:/ 'botMetadata' smart constructor.
-data BotMetadata = BotMetadata'
-  { _bmStatus          :: !(Maybe LexStatus)
-  , _bmCreatedDate     :: !(Maybe POSIX)
-  , _bmName            :: !(Maybe Text)
-  , _bmVersion         :: !(Maybe Text)
-  , _bmLastUpdatedDate :: !(Maybe POSIX)
-  , _bmDescription     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BotMetadata =
+  BotMetadata'
+    { _bmStatus          :: !(Maybe LexStatus)
+    , _bmCreatedDate     :: !(Maybe POSIX)
+    , _bmName            :: !(Maybe Text)
+    , _bmVersion         :: !(Maybe Text)
+    , _bmLastUpdatedDate :: !(Maybe POSIX)
+    , _bmDescription     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BotMetadata' with the minimum fields required to make a request.
@@ -308,10 +314,12 @@ instance NFData BotMetadata where
 --
 --
 -- /See:/ 'builtinIntentMetadata' smart constructor.
-data BuiltinIntentMetadata = BuiltinIntentMetadata'
-  { _bimSignature        :: !(Maybe Text)
-  , _bimSupportedLocales :: !(Maybe [Locale])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BuiltinIntentMetadata =
+  BuiltinIntentMetadata'
+    { _bimSignature        :: !(Maybe Text)
+    , _bimSupportedLocales :: !(Maybe [Locale])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BuiltinIntentMetadata' with the minimum fields required to make a request.
@@ -353,9 +361,11 @@ instance NFData BuiltinIntentMetadata where
 --
 --
 -- /See:/ 'builtinIntentSlot' smart constructor.
-newtype BuiltinIntentSlot = BuiltinIntentSlot'
-  { _bisName :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype BuiltinIntentSlot =
+  BuiltinIntentSlot'
+    { _bisName :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BuiltinIntentSlot' with the minimum fields required to make a request.
@@ -386,10 +396,12 @@ instance NFData BuiltinIntentSlot where
 --
 --
 -- /See:/ 'builtinSlotTypeMetadata' smart constructor.
-data BuiltinSlotTypeMetadata = BuiltinSlotTypeMetadata'
-  { _bstmSignature        :: !(Maybe Text)
-  , _bstmSupportedLocales :: !(Maybe [Locale])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BuiltinSlotTypeMetadata =
+  BuiltinSlotTypeMetadata'
+    { _bstmSignature        :: !(Maybe Text)
+    , _bstmSupportedLocales :: !(Maybe [Locale])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BuiltinSlotTypeMetadata' with the minimum fields required to make a request.
@@ -431,10 +443,12 @@ instance NFData BuiltinSlotTypeMetadata where
 --
 --
 -- /See:/ 'codeHook' smart constructor.
-data CodeHook = CodeHook'
-  { _chUri            :: !Text
-  , _chMessageVersion :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CodeHook =
+  CodeHook'
+    { _chUri            :: !Text
+    , _chMessageVersion :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CodeHook' with the minimum fields required to make a request.
@@ -493,10 +507,12 @@ instance ToJSON CodeHook where
 --
 --
 -- /See:/ 'enumerationValue' smart constructor.
-data EnumerationValue = EnumerationValue'
-  { _evSynonyms :: !(Maybe [Text])
-  , _evValue    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EnumerationValue =
+  EnumerationValue'
+    { _evSynonyms :: !(Maybe [Text])
+    , _evValue    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EnumerationValue' with the minimum fields required to make a request.
@@ -544,10 +560,12 @@ instance ToJSON EnumerationValue where
 --
 --
 -- /See:/ 'followUpPrompt' smart constructor.
-data FollowUpPrompt = FollowUpPrompt'
-  { _fupPrompt             :: !Prompt
-  , _fupRejectionStatement :: !Statement
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FollowUpPrompt =
+  FollowUpPrompt'
+    { _fupPrompt             :: !Prompt
+    , _fupRejectionStatement :: !Statement
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FollowUpPrompt' with the minimum fields required to make a request.
@@ -606,10 +624,12 @@ instance ToJSON FollowUpPrompt where
 --
 --
 -- /See:/ 'fulfillmentActivity' smart constructor.
-data FulfillmentActivity = FulfillmentActivity'
-  { _faCodeHook :: !(Maybe CodeHook)
-  , _faType     :: !FulfillmentActivityType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FulfillmentActivity =
+  FulfillmentActivity'
+    { _faCodeHook :: !(Maybe CodeHook)
+    , _faType     :: !FulfillmentActivityType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FulfillmentActivity' with the minimum fields required to make a request.
@@ -657,10 +677,12 @@ instance ToJSON FulfillmentActivity where
 --
 --
 -- /See:/ 'intent' smart constructor.
-data Intent = Intent'
-  { _iIntentName    :: !Text
-  , _iIntentVersion :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Intent =
+  Intent'
+    { _iIntentName    :: !Text
+    , _iIntentVersion :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Intent' with the minimum fields required to make a request.
@@ -709,13 +731,15 @@ instance ToJSON Intent where
 --
 --
 -- /See:/ 'intentMetadata' smart constructor.
-data IntentMetadata = IntentMetadata'
-  { _imCreatedDate     :: !(Maybe POSIX)
-  , _imName            :: !(Maybe Text)
-  , _imVersion         :: !(Maybe Text)
-  , _imLastUpdatedDate :: !(Maybe POSIX)
-  , _imDescription     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data IntentMetadata =
+  IntentMetadata'
+    { _imCreatedDate     :: !(Maybe POSIX)
+    , _imName            :: !(Maybe Text)
+    , _imVersion         :: !(Maybe Text)
+    , _imLastUpdatedDate :: !(Maybe POSIX)
+    , _imDescription     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'IntentMetadata' with the minimum fields required to make a request.
@@ -782,11 +806,13 @@ instance NFData IntentMetadata where
 --
 --
 -- /See:/ 'message' smart constructor.
-data Message = Message'
-  { _mGroupNumber :: !(Maybe Nat)
-  , _mContentType :: !ContentType
-  , _mContent     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Message =
+  Message'
+    { _mGroupNumber :: !(Maybe Nat)
+    , _mContentType :: !ContentType
+    , _mContent     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Message' with the minimum fields required to make a request.
@@ -847,11 +873,13 @@ instance ToJSON Message where
 --
 --
 -- /See:/ 'prompt' smart constructor.
-data Prompt = Prompt'
-  { _pResponseCard :: !(Maybe Text)
-  , _pMessages     :: !(List1 Message)
-  , _pMaxAttempts  :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Prompt =
+  Prompt'
+    { _pResponseCard :: !(Maybe Text)
+    , _pMessages     :: !(List1 Message)
+    , _pMaxAttempts  :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Prompt' with the minimum fields required to make a request.
@@ -912,17 +940,19 @@ instance ToJSON Prompt where
 --
 --
 -- /See:/ 'slot' smart constructor.
-data Slot = Slot'
-  { _sSlotType               :: !(Maybe Text)
-  , _sValueElicitationPrompt :: !(Maybe Prompt)
-  , _sResponseCard           :: !(Maybe Text)
-  , _sPriority               :: !(Maybe Nat)
-  , _sSlotTypeVersion        :: !(Maybe Text)
-  , _sSampleUtterances       :: !(Maybe [Text])
-  , _sDescription            :: !(Maybe Text)
-  , _sName                   :: !Text
-  , _sSlotConstraint         :: !SlotConstraint
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Slot =
+  Slot'
+    { _sSlotType               :: !(Maybe Text)
+    , _sValueElicitationPrompt :: !(Maybe Prompt)
+    , _sResponseCard           :: !(Maybe Text)
+    , _sPriority               :: !(Maybe Nat)
+    , _sSlotTypeVersion        :: !(Maybe Text)
+    , _sSampleUtterances       :: !(Maybe [Text])
+    , _sDescription            :: !(Maybe Text)
+    , _sName                   :: !Text
+    , _sSlotConstraint         :: !SlotConstraint
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Slot' with the minimum fields required to make a request.
@@ -1039,13 +1069,15 @@ instance ToJSON Slot where
 --
 --
 -- /See:/ 'slotTypeMetadata' smart constructor.
-data SlotTypeMetadata = SlotTypeMetadata'
-  { _stmCreatedDate     :: !(Maybe POSIX)
-  , _stmName            :: !(Maybe Text)
-  , _stmVersion         :: !(Maybe Text)
-  , _stmLastUpdatedDate :: !(Maybe POSIX)
-  , _stmDescription     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SlotTypeMetadata =
+  SlotTypeMetadata'
+    { _stmCreatedDate     :: !(Maybe POSIX)
+    , _stmName            :: !(Maybe Text)
+    , _stmVersion         :: !(Maybe Text)
+    , _stmLastUpdatedDate :: !(Maybe POSIX)
+    , _stmDescription     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SlotTypeMetadata' with the minimum fields required to make a request.
@@ -1112,10 +1144,12 @@ instance NFData SlotTypeMetadata where
 --
 --
 -- /See:/ 'statement' smart constructor.
-data Statement = Statement'
-  { _staResponseCard :: !(Maybe Text)
-  , _staMessages     :: !(List1 Message)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Statement =
+  Statement'
+    { _staResponseCard :: !(Maybe Text)
+    , _staMessages     :: !(List1 Message)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Statement' with the minimum fields required to make a request.
@@ -1163,13 +1197,15 @@ instance ToJSON Statement where
 --
 --
 -- /See:/ 'utteranceData' smart constructor.
-data UtteranceData = UtteranceData'
-  { _udFirstUtteredDate :: !(Maybe POSIX)
-  , _udCount            :: !(Maybe Int)
-  , _udUtteranceString  :: !(Maybe Text)
-  , _udLastUtteredDate  :: !(Maybe POSIX)
-  , _udDistinctUsers    :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UtteranceData =
+  UtteranceData'
+    { _udFirstUtteredDate :: !(Maybe POSIX)
+    , _udCount            :: !(Maybe Int)
+    , _udUtteranceString  :: !(Maybe Text)
+    , _udLastUtteredDate  :: !(Maybe POSIX)
+    , _udDistinctUsers    :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UtteranceData' with the minimum fields required to make a request.
@@ -1236,10 +1272,12 @@ instance NFData UtteranceData where
 --
 --
 -- /See:/ 'utteranceList' smart constructor.
-data UtteranceList = UtteranceList'
-  { _ulBotVersion :: !(Maybe Text)
-  , _ulUtterances :: !(Maybe [UtteranceData])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UtteranceList =
+  UtteranceList'
+    { _ulBotVersion :: !(Maybe Text)
+    , _ulUtterances :: !(Maybe [UtteranceData])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UtteranceList' with the minimum fields required to make a request.

@@ -45,10 +45,12 @@ import Network.AWS.WorkSpaces.Types
 import Network.AWS.WorkSpaces.Types.Product
 
 -- | /See:/ 'associateIPGroups' smart constructor.
-data AssociateIPGroups = AssociateIPGroups'
-  { _aigDirectoryId :: !Text
-  , _aigGroupIds    :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssociateIPGroups =
+  AssociateIPGroups'
+    { _aigDirectoryId :: !Text
+    , _aigGroupIds    :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateIPGroups' with the minimum fields required to make a request.
@@ -109,9 +111,11 @@ instance ToQuery AssociateIPGroups where
         toQuery = const mempty
 
 -- | /See:/ 'associateIPGroupsResponse' smart constructor.
-newtype AssociateIPGroupsResponse = AssociateIPGroupsResponse'
-  { _aigrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AssociateIPGroupsResponse =
+  AssociateIPGroupsResponse'
+    { _aigrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateIPGroupsResponse' with the minimum fields required to make a request.

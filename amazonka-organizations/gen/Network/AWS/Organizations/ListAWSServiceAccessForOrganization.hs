@@ -54,10 +54,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listAWSServiceAccessForOrganization' smart constructor.
-data ListAWSServiceAccessForOrganization = ListAWSServiceAccessForOrganization'
-  { _lasafoNextToken  :: !(Maybe Text)
-  , _lasafoMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAWSServiceAccessForOrganization =
+  ListAWSServiceAccessForOrganization'
+    { _lasafoNextToken  :: !(Maybe Text)
+    , _lasafoMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAWSServiceAccessForOrganization' with the minimum fields required to make a request.
@@ -141,11 +143,13 @@ instance ToQuery ListAWSServiceAccessForOrganization
         toQuery = const mempty
 
 -- | /See:/ 'listAWSServiceAccessForOrganizationResponse' smart constructor.
-data ListAWSServiceAccessForOrganizationResponse = ListAWSServiceAccessForOrganizationResponse'
-  { _lasaforsNextToken                :: !(Maybe Text)
-  , _lasaforsEnabledServicePrincipals :: !(Maybe [EnabledServicePrincipal])
-  , _lasaforsResponseStatus           :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAWSServiceAccessForOrganizationResponse =
+  ListAWSServiceAccessForOrganizationResponse'
+    { _lasaforsNextToken                :: !(Maybe Text)
+    , _lasaforsEnabledServicePrincipals :: !(Maybe [EnabledServicePrincipal])
+    , _lasaforsResponseStatus           :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAWSServiceAccessForOrganizationResponse' with the minimum fields required to make a request.

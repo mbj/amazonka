@@ -42,9 +42,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createAccountAlias' smart constructor.
-newtype CreateAccountAlias = CreateAccountAlias'
-  { _caaAccountAlias :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateAccountAlias =
+  CreateAccountAlias'
+    { _caaAccountAlias :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateAccountAlias' with the minimum fields required to make a request.

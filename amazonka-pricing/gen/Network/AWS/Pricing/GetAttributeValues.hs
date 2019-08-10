@@ -52,12 +52,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getAttributeValues' smart constructor.
-data GetAttributeValues = GetAttributeValues'
-  { _gavNextToken     :: !(Maybe Text)
-  , _gavMaxResults    :: !(Maybe Nat)
-  , _gavServiceCode   :: !Text
-  , _gavAttributeName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetAttributeValues =
+  GetAttributeValues'
+    { _gavNextToken     :: !(Maybe Text)
+    , _gavMaxResults    :: !(Maybe Nat)
+    , _gavServiceCode   :: !Text
+    , _gavAttributeName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetAttributeValues' with the minimum fields required to make a request.
@@ -149,11 +151,13 @@ instance ToQuery GetAttributeValues where
         toQuery = const mempty
 
 -- | /See:/ 'getAttributeValuesResponse' smart constructor.
-data GetAttributeValuesResponse = GetAttributeValuesResponse'
-  { _gavrsAttributeValues :: !(Maybe [AttributeValue])
-  , _gavrsNextToken       :: !(Maybe Text)
-  , _gavrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetAttributeValuesResponse =
+  GetAttributeValuesResponse'
+    { _gavrsAttributeValues :: !(Maybe [AttributeValue])
+    , _gavrsNextToken       :: !(Maybe Text)
+    , _gavrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetAttributeValuesResponse' with the minimum fields required to make a request.

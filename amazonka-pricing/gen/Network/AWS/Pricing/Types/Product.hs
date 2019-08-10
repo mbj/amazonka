@@ -26,9 +26,11 @@ import Network.AWS.Pricing.Types.Sum
 --
 --
 -- /See:/ 'attributeValue' smart constructor.
-newtype AttributeValue = AttributeValue'
-  { _avValue :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AttributeValue =
+  AttributeValue'
+    { _avValue :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttributeValue' with the minimum fields required to make a request.
@@ -59,11 +61,13 @@ instance NFData AttributeValue where
 --
 --
 -- /See:/ 'filter'' smart constructor.
-data Filter = Filter'
-  { _fType  :: !FilterType
-  , _fField :: !Text
-  , _fValue :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Filter =
+  Filter'
+    { _fType  :: !FilterType
+    , _fField :: !Text
+    , _fValue :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Filter' with the minimum fields required to make a request.
@@ -112,10 +116,12 @@ instance ToJSON Filter where
 --
 --
 -- /See:/ 'pricingService' smart constructor.
-data PricingService = PricingService'
-  { _psAttributeNames :: !(Maybe [Text])
-  , _psServiceCode    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PricingService =
+  PricingService'
+    { _psAttributeNames :: !(Maybe [Text])
+    , _psServiceCode    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PricingService' with the minimum fields required to make a request.

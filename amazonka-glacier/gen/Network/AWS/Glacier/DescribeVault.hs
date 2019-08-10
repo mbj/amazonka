@@ -58,10 +58,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeVault' smart constructor.
-data DescribeVault = DescribeVault'
-  { _dvAccountId :: !Text
-  , _dvVaultName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeVault =
+  DescribeVault'
+    { _dvAccountId :: !Text
+    , _dvVaultName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeVault' with the minimum fields required to make a request.

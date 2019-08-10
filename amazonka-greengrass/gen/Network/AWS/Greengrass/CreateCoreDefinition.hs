@@ -53,11 +53,13 @@ import Network.AWS.Response
 -- | Information needed to create a core definition.
 --
 -- /See:/ 'createCoreDefinition' smart constructor.
-data CreateCoreDefinition = CreateCoreDefinition'
-  { _ccdAmznClientToken :: !(Maybe Text)
-  , _ccdInitialVersion  :: !(Maybe CoreDefinitionVersion)
-  , _ccdName            :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateCoreDefinition =
+  CreateCoreDefinition'
+    { _ccdAmznClientToken :: !(Maybe Text)
+    , _ccdInitialVersion  :: !(Maybe CoreDefinitionVersion)
+    , _ccdName            :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateCoreDefinition' with the minimum fields required to make a request.
@@ -132,16 +134,18 @@ instance ToQuery CreateCoreDefinition where
         toQuery = const mempty
 
 -- | /See:/ 'createCoreDefinitionResponse' smart constructor.
-data CreateCoreDefinitionResponse = CreateCoreDefinitionResponse'
-  { _ccdrsLatestVersionARN     :: !(Maybe Text)
-  , _ccdrsARN                  :: !(Maybe Text)
-  , _ccdrsName                 :: !(Maybe Text)
-  , _ccdrsCreationTimestamp    :: !(Maybe Text)
-  , _ccdrsId                   :: !(Maybe Text)
-  , _ccdrsLatestVersion        :: !(Maybe Text)
-  , _ccdrsLastUpdatedTimestamp :: !(Maybe Text)
-  , _ccdrsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateCoreDefinitionResponse =
+  CreateCoreDefinitionResponse'
+    { _ccdrsLatestVersionARN     :: !(Maybe Text)
+    , _ccdrsARN                  :: !(Maybe Text)
+    , _ccdrsName                 :: !(Maybe Text)
+    , _ccdrsCreationTimestamp    :: !(Maybe Text)
+    , _ccdrsId                   :: !(Maybe Text)
+    , _ccdrsLatestVersion        :: !(Maybe Text)
+    , _ccdrsLastUpdatedTimestamp :: !(Maybe Text)
+    , _ccdrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateCoreDefinitionResponse' with the minimum fields required to make a request.

@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'addTagsToCertificate' smart constructor.
-data AddTagsToCertificate = AddTagsToCertificate'
-  { _attcCertificateARN :: !Text
-  , _attcTags           :: !(List1 Tag)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddTagsToCertificate =
+  AddTagsToCertificate'
+    { _attcCertificateARN :: !Text
+    , _attcTags           :: !(List1 Tag)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddTagsToCertificate' with the minimum fields required to make a request.

@@ -82,10 +82,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'testFailover' smart constructor.
-data TestFailover = TestFailover'
-  { _tfReplicationGroupId :: !Text
-  , _tfNodeGroupId        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TestFailover =
+  TestFailover'
+    { _tfReplicationGroupId :: !Text
+    , _tfNodeGroupId        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TestFailover' with the minimum fields required to make a request.
@@ -142,10 +144,12 @@ instance ToQuery TestFailover where
                "NodeGroupId" =: _tfNodeGroupId]
 
 -- | /See:/ 'testFailoverResponse' smart constructor.
-data TestFailoverResponse = TestFailoverResponse'
-  { _tfrsReplicationGroup :: !(Maybe ReplicationGroup)
-  , _tfrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TestFailoverResponse =
+  TestFailoverResponse'
+    { _tfrsReplicationGroup :: !(Maybe ReplicationGroup)
+    , _tfrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TestFailoverResponse' with the minimum fields required to make a request.

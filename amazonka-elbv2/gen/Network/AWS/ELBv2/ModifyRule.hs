@@ -51,11 +51,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'modifyRule' smart constructor.
-data ModifyRule = ModifyRule'
-  { _mrActions    :: !(Maybe [Action])
-  , _mrConditions :: !(Maybe [RuleCondition])
-  , _mrRuleARN    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyRule =
+  ModifyRule'
+    { _mrActions    :: !(Maybe [Action])
+    , _mrConditions :: !(Maybe [RuleCondition])
+    , _mrRuleARN    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyRule' with the minimum fields required to make a request.
@@ -120,10 +122,12 @@ instance ToQuery ModifyRule where
                "RuleArn" =: _mrRuleARN]
 
 -- | /See:/ 'modifyRuleResponse' smart constructor.
-data ModifyRuleResponse = ModifyRuleResponse'
-  { _mrrsRules          :: !(Maybe [Rule])
-  , _mrrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyRuleResponse =
+  ModifyRuleResponse'
+    { _mrrsRules          :: !(Maybe [Rule])
+    , _mrrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyRuleResponse' with the minimum fields required to make a request.

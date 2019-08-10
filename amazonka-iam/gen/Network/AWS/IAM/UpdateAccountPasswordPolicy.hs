@@ -52,17 +52,19 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateAccountPasswordPolicy' smart constructor.
-data UpdateAccountPasswordPolicy = UpdateAccountPasswordPolicy'
-  { _uappMinimumPasswordLength      :: !(Maybe Nat)
-  , _uappRequireNumbers             :: !(Maybe Bool)
-  , _uappPasswordReusePrevention    :: !(Maybe Nat)
-  , _uappRequireLowercaseCharacters :: !(Maybe Bool)
-  , _uappMaxPasswordAge             :: !(Maybe Nat)
-  , _uappHardExpiry                 :: !(Maybe Bool)
-  , _uappRequireSymbols             :: !(Maybe Bool)
-  , _uappRequireUppercaseCharacters :: !(Maybe Bool)
-  , _uappAllowUsersToChangePassword :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateAccountPasswordPolicy =
+  UpdateAccountPasswordPolicy'
+    { _uappMinimumPasswordLength      :: !(Maybe Nat)
+    , _uappRequireNumbers             :: !(Maybe Bool)
+    , _uappPasswordReusePrevention    :: !(Maybe Nat)
+    , _uappRequireLowercaseCharacters :: !(Maybe Bool)
+    , _uappMaxPasswordAge             :: !(Maybe Nat)
+    , _uappHardExpiry                 :: !(Maybe Bool)
+    , _uappRequireSymbols             :: !(Maybe Bool)
+    , _uappRequireUppercaseCharacters :: !(Maybe Bool)
+    , _uappAllowUsersToChangePassword :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateAccountPasswordPolicy' with the minimum fields required to make a request.

@@ -54,13 +54,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeClassicLinkInstances' smart constructor.
-data DescribeClassicLinkInstances = DescribeClassicLinkInstances'
-  { _dcliFilters     :: !(Maybe [Filter])
-  , _dcliNextToken   :: !(Maybe Text)
-  , _dcliInstanceIds :: !(Maybe [Text])
-  , _dcliDryRun      :: !(Maybe Bool)
-  , _dcliMaxResults  :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeClassicLinkInstances =
+  DescribeClassicLinkInstances'
+    { _dcliFilters     :: !(Maybe [Filter])
+    , _dcliNextToken   :: !(Maybe Text)
+    , _dcliInstanceIds :: !(Maybe [Text])
+    , _dcliDryRun      :: !(Maybe Bool)
+    , _dcliMaxResults  :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeClassicLinkInstances' with the minimum fields required to make a request.
@@ -150,11 +152,13 @@ instance ToQuery DescribeClassicLinkInstances where
 --
 --
 -- /See:/ 'describeClassicLinkInstancesResponse' smart constructor.
-data DescribeClassicLinkInstancesResponse = DescribeClassicLinkInstancesResponse'
-  { _dclirsNextToken      :: !(Maybe Text)
-  , _dclirsInstances      :: !(Maybe [ClassicLinkInstance])
-  , _dclirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeClassicLinkInstancesResponse =
+  DescribeClassicLinkInstancesResponse'
+    { _dclirsNextToken      :: !(Maybe Text)
+    , _dclirsInstances      :: !(Maybe [ClassicLinkInstance])
+    , _dclirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeClassicLinkInstancesResponse' with the minimum fields required to make a request.

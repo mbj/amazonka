@@ -53,13 +53,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeEnvironmentMemberships' smart constructor.
-data DescribeEnvironmentMemberships = DescribeEnvironmentMemberships'
-  { _dUserARN       :: !(Maybe Text)
-  , _dNextToken     :: !(Maybe Text)
-  , _dPermissions   :: !(Maybe [Permissions])
-  , _dEnvironmentId :: !(Maybe Text)
-  , _dMaxResults    :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeEnvironmentMemberships =
+  DescribeEnvironmentMemberships'
+    { _dUserARN       :: !(Maybe Text)
+    , _dNextToken     :: !(Maybe Text)
+    , _dPermissions   :: !(Maybe [Permissions])
+    , _dEnvironmentId :: !(Maybe Text)
+    , _dMaxResults    :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEnvironmentMemberships' with the minimum fields required to make a request.
@@ -161,11 +163,13 @@ instance ToQuery DescribeEnvironmentMemberships where
         toQuery = const mempty
 
 -- | /See:/ 'describeEnvironmentMembershipsResponse' smart constructor.
-data DescribeEnvironmentMembershipsResponse = DescribeEnvironmentMembershipsResponse'
-  { _drsNextToken      :: !(Maybe Text)
-  , _drsMemberships    :: !(Maybe [EnvironmentMember])
-  , _drsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeEnvironmentMembershipsResponse =
+  DescribeEnvironmentMembershipsResponse'
+    { _drsNextToken      :: !(Maybe Text)
+    , _drsMemberships    :: !(Maybe [EnvironmentMember])
+    , _drsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEnvironmentMembershipsResponse' with the minimum fields required to make a request.

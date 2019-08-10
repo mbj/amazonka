@@ -59,13 +59,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createDataSourceFromRedshift' smart constructor.
-data CreateDataSourceFromRedshift = CreateDataSourceFromRedshift'
-  { _cdsfrDataSourceName    :: !(Maybe Text)
-  , _cdsfrComputeStatistics :: !(Maybe Bool)
-  , _cdsfrDataSourceId      :: !Text
-  , _cdsfrDataSpec          :: !RedshiftDataSpec
-  , _cdsfrRoleARN           :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDataSourceFromRedshift =
+  CreateDataSourceFromRedshift'
+    { _cdsfrDataSourceName    :: !(Maybe Text)
+    , _cdsfrComputeStatistics :: !(Maybe Bool)
+    , _cdsfrDataSourceId      :: !Text
+    , _cdsfrDataSpec          :: !RedshiftDataSpec
+    , _cdsfrRoleARN           :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDataSourceFromRedshift' with the minimum fields required to make a request.
@@ -164,10 +166,12 @@ instance ToQuery CreateDataSourceFromRedshift where
 --
 --
 -- /See:/ 'createDataSourceFromRedshiftResponse' smart constructor.
-data CreateDataSourceFromRedshiftResponse = CreateDataSourceFromRedshiftResponse'
-  { _cdsfrrsDataSourceId   :: !(Maybe Text)
-  , _cdsfrrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDataSourceFromRedshiftResponse =
+  CreateDataSourceFromRedshiftResponse'
+    { _cdsfrrsDataSourceId   :: !(Maybe Text)
+    , _cdsfrrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDataSourceFromRedshiftResponse' with the minimum fields required to make a request.

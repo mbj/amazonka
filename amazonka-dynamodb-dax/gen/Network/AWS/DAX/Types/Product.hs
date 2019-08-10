@@ -26,24 +26,26 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'cluster' smart constructor.
-data Cluster = Cluster'
-  { _cStatus                     :: !(Maybe Text)
-  , _cIAMRoleARN                 :: !(Maybe Text)
-  , _cClusterARN                 :: !(Maybe Text)
-  , _cActiveNodes                :: !(Maybe Int)
-  , _cSecurityGroups             :: !(Maybe [SecurityGroupMembership])
-  , _cNotificationConfiguration  :: !(Maybe NotificationConfiguration)
-  , _cNodeIdsToRemove            :: !(Maybe [Text])
-  , _cTotalNodes                 :: !(Maybe Int)
-  , _cPreferredMaintenanceWindow :: !(Maybe Text)
-  , _cSubnetGroup                :: !(Maybe Text)
-  , _cClusterName                :: !(Maybe Text)
-  , _cNodeType                   :: !(Maybe Text)
-  , _cNodes                      :: !(Maybe [Node])
-  , _cClusterDiscoveryEndpoint   :: !(Maybe Endpoint)
-  , _cDescription                :: !(Maybe Text)
-  , _cParameterGroup             :: !(Maybe ParameterGroupStatus)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Cluster =
+  Cluster'
+    { _cStatus                     :: !(Maybe Text)
+    , _cIAMRoleARN                 :: !(Maybe Text)
+    , _cClusterARN                 :: !(Maybe Text)
+    , _cActiveNodes                :: !(Maybe Int)
+    , _cSecurityGroups             :: !(Maybe [SecurityGroupMembership])
+    , _cNotificationConfiguration  :: !(Maybe NotificationConfiguration)
+    , _cNodeIdsToRemove            :: !(Maybe [Text])
+    , _cTotalNodes                 :: !(Maybe Int)
+    , _cPreferredMaintenanceWindow :: !(Maybe Text)
+    , _cSubnetGroup                :: !(Maybe Text)
+    , _cClusterName                :: !(Maybe Text)
+    , _cNodeType                   :: !(Maybe Text)
+    , _cNodes                      :: !(Maybe [Node])
+    , _cClusterDiscoveryEndpoint   :: !(Maybe Endpoint)
+    , _cDescription                :: !(Maybe Text)
+    , _cParameterGroup             :: !(Maybe ParameterGroupStatus)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Cluster' with the minimum fields required to make a request.
@@ -198,10 +200,12 @@ instance NFData Cluster where
 --
 --
 -- /See:/ 'endpoint' smart constructor.
-data Endpoint = Endpoint'
-  { _eAddress :: !(Maybe Text)
-  , _ePort    :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Endpoint =
+  Endpoint'
+    { _eAddress :: !(Maybe Text)
+    , _ePort    :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Endpoint' with the minimum fields required to make a request.
@@ -239,12 +243,14 @@ instance NFData Endpoint where
 --
 --
 -- /See:/ 'event' smart constructor.
-data Event = Event'
-  { _eSourceName :: !(Maybe Text)
-  , _eSourceType :: !(Maybe SourceType)
-  , _eDate       :: !(Maybe POSIX)
-  , _eMessage    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Event =
+  Event'
+    { _eSourceName :: !(Maybe Text)
+    , _eSourceType :: !(Maybe SourceType)
+    , _eDate       :: !(Maybe POSIX)
+    , _eMessage    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Event' with the minimum fields required to make a request.
@@ -303,14 +309,16 @@ instance NFData Event where
 --
 --
 -- /See:/ 'node' smart constructor.
-data Node = Node'
-  { _nNodeStatus           :: !(Maybe Text)
-  , _nParameterGroupStatus :: !(Maybe Text)
-  , _nAvailabilityZone     :: !(Maybe Text)
-  , _nNodeId               :: !(Maybe Text)
-  , _nEndpoint             :: !(Maybe Endpoint)
-  , _nNodeCreateTime       :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Node =
+  Node'
+    { _nNodeStatus           :: !(Maybe Text)
+    , _nParameterGroupStatus :: !(Maybe Text)
+    , _nAvailabilityZone     :: !(Maybe Text)
+    , _nNodeId               :: !(Maybe Text)
+    , _nEndpoint             :: !(Maybe Endpoint)
+    , _nNodeCreateTime       :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Node' with the minimum fields required to make a request.
@@ -386,10 +394,12 @@ instance NFData Node where
 --
 --
 -- /See:/ 'nodeTypeSpecificValue' smart constructor.
-data NodeTypeSpecificValue = NodeTypeSpecificValue'
-  { _ntsvValue    :: !(Maybe Text)
-  , _ntsvNodeType :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NodeTypeSpecificValue =
+  NodeTypeSpecificValue'
+    { _ntsvValue    :: !(Maybe Text)
+    , _ntsvNodeType :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NodeTypeSpecificValue' with the minimum fields required to make a request.
@@ -429,10 +439,12 @@ instance NFData NodeTypeSpecificValue where
 --
 --
 -- /See:/ 'notificationConfiguration' smart constructor.
-data NotificationConfiguration = NotificationConfiguration'
-  { _ncTopicStatus :: !(Maybe Text)
-  , _ncTopicARN    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NotificationConfiguration =
+  NotificationConfiguration'
+    { _ncTopicStatus :: !(Maybe Text)
+    , _ncTopicARN    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NotificationConfiguration' with the minimum fields required to make a request.
@@ -472,18 +484,20 @@ instance NFData NotificationConfiguration where
 --
 --
 -- /See:/ 'parameter' smart constructor.
-data Parameter = Parameter'
-  { _pParameterValue         :: !(Maybe Text)
-  , _pParameterType          :: !(Maybe ParameterType)
-  , _pSource                 :: !(Maybe Text)
-  , _pIsModifiable           :: !(Maybe IsModifiable)
-  , _pDataType               :: !(Maybe Text)
-  , _pNodeTypeSpecificValues :: !(Maybe [NodeTypeSpecificValue])
-  , _pAllowedValues          :: !(Maybe Text)
-  , _pParameterName          :: !(Maybe Text)
-  , _pDescription            :: !(Maybe Text)
-  , _pChangeType             :: !(Maybe ChangeType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Parameter =
+  Parameter'
+    { _pParameterValue         :: !(Maybe Text)
+    , _pParameterType          :: !(Maybe ParameterType)
+    , _pSource                 :: !(Maybe Text)
+    , _pIsModifiable           :: !(Maybe IsModifiable)
+    , _pDataType               :: !(Maybe Text)
+    , _pNodeTypeSpecificValues :: !(Maybe [NodeTypeSpecificValue])
+    , _pAllowedValues          :: !(Maybe Text)
+    , _pParameterName          :: !(Maybe Text)
+    , _pDescription            :: !(Maybe Text)
+    , _pChangeType             :: !(Maybe ChangeType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Parameter' with the minimum fields required to make a request.
@@ -590,10 +604,12 @@ instance NFData Parameter where
 --
 --
 -- /See:/ 'parameterGroup' smart constructor.
-data ParameterGroup = ParameterGroup'
-  { _pgDescription        :: !(Maybe Text)
-  , _pgParameterGroupName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ParameterGroup =
+  ParameterGroup'
+    { _pgDescription        :: !(Maybe Text)
+    , _pgParameterGroupName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ParameterGroup' with the minimum fields required to make a request.
@@ -634,11 +650,13 @@ instance NFData ParameterGroup where
 --
 --
 -- /See:/ 'parameterGroupStatus' smart constructor.
-data ParameterGroupStatus = ParameterGroupStatus'
-  { _pgsNodeIdsToReboot      :: !(Maybe [Text])
-  , _pgsParameterApplyStatus :: !(Maybe Text)
-  , _pgsParameterGroupName   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ParameterGroupStatus =
+  ParameterGroupStatus'
+    { _pgsNodeIdsToReboot      :: !(Maybe [Text])
+    , _pgsParameterApplyStatus :: !(Maybe Text)
+    , _pgsParameterGroupName   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ParameterGroupStatus' with the minimum fields required to make a request.
@@ -690,10 +708,12 @@ instance NFData ParameterGroupStatus where
 --
 --
 -- /See:/ 'parameterNameValue' smart constructor.
-data ParameterNameValue = ParameterNameValue'
-  { _pnvParameterValue :: !(Maybe Text)
-  , _pnvParameterName  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ParameterNameValue =
+  ParameterNameValue'
+    { _pnvParameterValue :: !(Maybe Text)
+    , _pnvParameterName  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ParameterNameValue' with the minimum fields required to make a request.
@@ -734,10 +754,12 @@ instance ToJSON ParameterNameValue where
 --
 --
 -- /See:/ 'securityGroupMembership' smart constructor.
-data SecurityGroupMembership = SecurityGroupMembership'
-  { _sgmStatus                  :: !(Maybe Text)
-  , _sgmSecurityGroupIdentifier :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SecurityGroupMembership =
+  SecurityGroupMembership'
+    { _sgmStatus                  :: !(Maybe Text)
+    , _sgmSecurityGroupIdentifier :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SecurityGroupMembership' with the minimum fields required to make a request.
@@ -779,10 +801,12 @@ instance NFData SecurityGroupMembership where
 --
 --
 -- /See:/ 'subnet' smart constructor.
-data Subnet = Subnet'
-  { _sSubnetIdentifier       :: !(Maybe Text)
-  , _sSubnetAvailabilityZone :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Subnet =
+  Subnet'
+    { _sSubnetIdentifier       :: !(Maybe Text)
+    , _sSubnetAvailabilityZone :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Subnet' with the minimum fields required to make a request.
@@ -829,12 +853,14 @@ instance NFData Subnet where
 --
 --
 -- /See:/ 'subnetGroup' smart constructor.
-data SubnetGroup = SubnetGroup'
-  { _sgVPCId           :: !(Maybe Text)
-  , _sgSubnets         :: !(Maybe [Subnet])
-  , _sgSubnetGroupName :: !(Maybe Text)
-  , _sgDescription     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SubnetGroup =
+  SubnetGroup'
+    { _sgVPCId           :: !(Maybe Text)
+    , _sgSubnets         :: !(Maybe [Subnet])
+    , _sgSubnetGroupName :: !(Maybe Text)
+    , _sgDescription     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SubnetGroup' with the minimum fields required to make a request.
@@ -897,10 +923,12 @@ instance NFData SubnetGroup where
 --
 --
 -- /See:/ 'tag' smart constructor.
-data Tag = Tag'
-  { _tagValue :: !(Maybe Text)
-  , _tagKey   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Tag =
+  Tag'
+    { _tagValue :: !(Maybe Text)
+    , _tagKey   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Tag' with the minimum fields required to make a request.

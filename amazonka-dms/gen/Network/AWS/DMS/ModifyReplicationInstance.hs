@@ -63,19 +63,21 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'modifyReplicationInstance' smart constructor.
-data ModifyReplicationInstance = ModifyReplicationInstance'
-  { _mriEngineVersion                 :: !(Maybe Text)
-  , _mriAutoMinorVersionUpgrade       :: !(Maybe Bool)
-  , _mriAllowMajorVersionUpgrade      :: !(Maybe Bool)
-  , _mriPreferredMaintenanceWindow    :: !(Maybe Text)
-  , _mriVPCSecurityGroupIds           :: !(Maybe [Text])
-  , _mriMultiAZ                       :: !(Maybe Bool)
-  , _mriAllocatedStorage              :: !(Maybe Int)
-  , _mriApplyImmediately              :: !(Maybe Bool)
-  , _mriReplicationInstanceClass      :: !(Maybe Text)
-  , _mriReplicationInstanceIdentifier :: !(Maybe Text)
-  , _mriReplicationInstanceARN        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyReplicationInstance =
+  ModifyReplicationInstance'
+    { _mriEngineVersion                 :: !(Maybe Text)
+    , _mriAutoMinorVersionUpgrade       :: !(Maybe Bool)
+    , _mriAllowMajorVersionUpgrade      :: !(Maybe Bool)
+    , _mriPreferredMaintenanceWindow    :: !(Maybe Text)
+    , _mriVPCSecurityGroupIds           :: !(Maybe [Text])
+    , _mriMultiAZ                       :: !(Maybe Bool)
+    , _mriAllocatedStorage              :: !(Maybe Int)
+    , _mriApplyImmediately              :: !(Maybe Bool)
+    , _mriReplicationInstanceClass      :: !(Maybe Text)
+    , _mriReplicationInstanceIdentifier :: !(Maybe Text)
+    , _mriReplicationInstanceARN        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyReplicationInstance' with the minimum fields required to make a request.
@@ -226,10 +228,12 @@ instance ToQuery ModifyReplicationInstance where
 --
 --
 -- /See:/ 'modifyReplicationInstanceResponse' smart constructor.
-data ModifyReplicationInstanceResponse = ModifyReplicationInstanceResponse'
-  { _mrirsReplicationInstance :: !(Maybe ReplicationInstance)
-  , _mrirsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyReplicationInstanceResponse =
+  ModifyReplicationInstanceResponse'
+    { _mrirsReplicationInstance :: !(Maybe ReplicationInstance)
+    , _mrirsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyReplicationInstanceResponse' with the minimum fields required to make a request.

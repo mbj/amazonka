@@ -53,9 +53,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createHAPG' smart constructor.
-newtype CreateHAPG = CreateHAPG'
-  { _chLabel :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateHAPG =
+  CreateHAPG'
+    { _chLabel :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateHAPG' with the minimum fields required to make a request.
@@ -110,10 +112,12 @@ instance ToQuery CreateHAPG where
 --
 --
 -- /See:/ 'createHAPGResponse' smart constructor.
-data CreateHAPGResponse = CreateHAPGResponse'
-  { _chapgrsHAPGARN        :: !(Maybe Text)
-  , _chapgrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateHAPGResponse =
+  CreateHAPGResponse'
+    { _chapgrsHAPGARN        :: !(Maybe Text)
+    , _chapgrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateHAPGResponse' with the minimum fields required to make a request.

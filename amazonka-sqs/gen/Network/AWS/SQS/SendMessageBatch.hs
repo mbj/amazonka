@@ -63,10 +63,12 @@ import Network.AWS.SQS.Types.Product
 --
 --
 -- /See:/ 'sendMessageBatch' smart constructor.
-data SendMessageBatch = SendMessageBatch'
-  { _smbQueueURL :: !Text
-  , _smbEntries  :: ![SendMessageBatchRequestEntry]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SendMessageBatch =
+  SendMessageBatch'
+    { _smbQueueURL :: !Text
+    , _smbEntries  :: ![SendMessageBatchRequestEntry]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SendMessageBatch' with the minimum fields required to make a request.
@@ -126,11 +128,13 @@ instance ToQuery SendMessageBatch where
 --
 --
 -- /See:/ 'sendMessageBatchResponse' smart constructor.
-data SendMessageBatchResponse = SendMessageBatchResponse'
-  { _smbrsResponseStatus :: !Int
-  , _smbrsSuccessful     :: ![SendMessageBatchResultEntry]
-  , _smbrsFailed         :: ![BatchResultErrorEntry]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SendMessageBatchResponse =
+  SendMessageBatchResponse'
+    { _smbrsResponseStatus :: !Int
+    , _smbrsSuccessful     :: ![SendMessageBatchResultEntry]
+    , _smbrsFailed         :: ![BatchResultErrorEntry]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SendMessageBatchResponse' with the minimum fields required to make a request.

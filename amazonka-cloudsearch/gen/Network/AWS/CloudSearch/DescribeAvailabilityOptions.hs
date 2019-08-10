@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeAvailabilityOptions' smart constructor.
-data DescribeAvailabilityOptions = DescribeAvailabilityOptions'
-  { _daoDeployed   :: !(Maybe Bool)
-  , _daoDomainName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAvailabilityOptions =
+  DescribeAvailabilityOptions'
+    { _daoDeployed   :: !(Maybe Bool)
+    , _daoDomainName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAvailabilityOptions' with the minimum fields required to make a request.
@@ -115,10 +117,12 @@ instance ToQuery DescribeAvailabilityOptions where
 --
 --
 -- /See:/ 'describeAvailabilityOptionsResponse' smart constructor.
-data DescribeAvailabilityOptionsResponse = DescribeAvailabilityOptionsResponse'
-  { _daorsAvailabilityOptions :: !(Maybe AvailabilityOptionsStatus)
-  , _daorsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAvailabilityOptionsResponse =
+  DescribeAvailabilityOptionsResponse'
+    { _daorsAvailabilityOptions :: !(Maybe AvailabilityOptionsStatus)
+    , _daorsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAvailabilityOptionsResponse' with the minimum fields required to make a request.

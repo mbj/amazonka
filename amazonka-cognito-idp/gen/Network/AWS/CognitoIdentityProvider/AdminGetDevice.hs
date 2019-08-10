@@ -53,11 +53,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'adminGetDevice' smart constructor.
-data AdminGetDevice = AdminGetDevice'
-  { _agdDeviceKey  :: !Text
-  , _agdUserPoolId :: !Text
-  , _agdUsername   :: !(Sensitive Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data AdminGetDevice =
+  AdminGetDevice'
+    { _agdDeviceKey  :: !Text
+    , _agdUserPoolId :: !Text
+    , _agdUsername   :: !(Sensitive Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AdminGetDevice' with the minimum fields required to make a request.
@@ -136,10 +138,12 @@ instance ToQuery AdminGetDevice where
 --
 --
 -- /See:/ 'adminGetDeviceResponse' smart constructor.
-data AdminGetDeviceResponse = AdminGetDeviceResponse'
-  { _agdrsResponseStatus :: !Int
-  , _agdrsDevice         :: !DeviceType
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data AdminGetDeviceResponse =
+  AdminGetDeviceResponse'
+    { _agdrsResponseStatus :: !Int
+    , _agdrsDevice         :: !DeviceType
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AdminGetDeviceResponse' with the minimum fields required to make a request.

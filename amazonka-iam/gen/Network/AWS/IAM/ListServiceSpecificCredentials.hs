@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listServiceSpecificCredentials' smart constructor.
-data ListServiceSpecificCredentials = ListServiceSpecificCredentials'
-  { _lsscUserName    :: !(Maybe Text)
-  , _lsscServiceName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListServiceSpecificCredentials =
+  ListServiceSpecificCredentials'
+    { _lsscUserName    :: !(Maybe Text)
+    , _lsscServiceName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListServiceSpecificCredentials' with the minimum fields required to make a request.
@@ -110,10 +112,12 @@ instance ToQuery ListServiceSpecificCredentials where
                "ServiceName" =: _lsscServiceName]
 
 -- | /See:/ 'listServiceSpecificCredentialsResponse' smart constructor.
-data ListServiceSpecificCredentialsResponse = ListServiceSpecificCredentialsResponse'
-  { _lsscrsServiceSpecificCredentials :: !(Maybe [ServiceSpecificCredentialMetadata])
-  , _lsscrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListServiceSpecificCredentialsResponse =
+  ListServiceSpecificCredentialsResponse'
+    { _lsscrsServiceSpecificCredentials :: !(Maybe [ServiceSpecificCredentialMetadata])
+    , _lsscrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListServiceSpecificCredentialsResponse' with the minimum fields required to make a request.

@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'attachStaticIP' smart constructor.
-data AttachStaticIP = AttachStaticIP'
-  { _asipStaticIPName :: !Text
-  , _asipInstanceName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AttachStaticIP =
+  AttachStaticIP'
+    { _asipStaticIPName :: !Text
+    , _asipInstanceName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttachStaticIP' with the minimum fields required to make a request.
@@ -113,10 +115,12 @@ instance ToQuery AttachStaticIP where
         toQuery = const mempty
 
 -- | /See:/ 'attachStaticIPResponse' smart constructor.
-data AttachStaticIPResponse = AttachStaticIPResponse'
-  { _asiprsOperations     :: !(Maybe [Operation])
-  , _asiprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AttachStaticIPResponse =
+  AttachStaticIPResponse'
+    { _asiprsOperations     :: !(Maybe [Operation])
+    , _asiprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttachStaticIPResponse' with the minimum fields required to make a request.

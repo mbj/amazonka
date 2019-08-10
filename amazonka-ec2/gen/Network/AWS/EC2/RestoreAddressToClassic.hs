@@ -51,10 +51,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'restoreAddressToClassic' smart constructor.
-data RestoreAddressToClassic = RestoreAddressToClassic'
-  { _ratcDryRun   :: !(Maybe Bool)
-  , _ratcPublicIP :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RestoreAddressToClassic =
+  RestoreAddressToClassic'
+    { _ratcDryRun   :: !(Maybe Bool)
+    , _ratcPublicIP :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RestoreAddressToClassic' with the minimum fields required to make a request.
@@ -113,11 +115,13 @@ instance ToQuery RestoreAddressToClassic where
 --
 --
 -- /See:/ 'restoreAddressToClassicResponse' smart constructor.
-data RestoreAddressToClassicResponse = RestoreAddressToClassicResponse'
-  { _ratcrsStatus         :: !(Maybe AddressStatus)
-  , _ratcrsPublicIP       :: !(Maybe Text)
-  , _ratcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RestoreAddressToClassicResponse =
+  RestoreAddressToClassicResponse'
+    { _ratcrsStatus         :: !(Maybe AddressStatus)
+    , _ratcrsPublicIP       :: !(Maybe Text)
+    , _ratcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RestoreAddressToClassicResponse' with the minimum fields required to make a request.

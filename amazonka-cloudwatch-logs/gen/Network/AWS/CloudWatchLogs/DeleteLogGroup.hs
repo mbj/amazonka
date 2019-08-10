@@ -42,9 +42,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteLogGroup' smart constructor.
-newtype DeleteLogGroup = DeleteLogGroup'
-  { _dlgLogGroupName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteLogGroup =
+  DeleteLogGroup'
+    { _dlgLogGroupName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteLogGroup' with the minimum fields required to make a request.

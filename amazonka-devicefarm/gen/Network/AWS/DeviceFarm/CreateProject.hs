@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createProject' smart constructor.
-data CreateProject = CreateProject'
-  { _cpDefaultJobTimeoutMinutes :: !(Maybe Int)
-  , _cpName                     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateProject =
+  CreateProject'
+    { _cpDefaultJobTimeoutMinutes :: !(Maybe Int)
+    , _cpName                     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateProject' with the minimum fields required to make a request.
@@ -119,10 +121,12 @@ instance ToQuery CreateProject where
 --
 --
 -- /See:/ 'createProjectResponse' smart constructor.
-data CreateProjectResponse = CreateProjectResponse'
-  { _cprsProject        :: !(Maybe Project)
-  , _cprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateProjectResponse =
+  CreateProjectResponse'
+    { _cprsProject        :: !(Maybe Project)
+    , _cprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateProjectResponse' with the minimum fields required to make a request.

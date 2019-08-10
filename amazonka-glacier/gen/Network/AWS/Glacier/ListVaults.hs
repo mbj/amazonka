@@ -61,11 +61,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listVaults' smart constructor.
-data ListVaults = ListVaults'
-  { _lvMarker    :: !(Maybe Text)
-  , _lvLimit     :: !(Maybe Text)
-  , _lvAccountId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListVaults =
+  ListVaults'
+    { _lvMarker    :: !(Maybe Text)
+    , _lvLimit     :: !(Maybe Text)
+    , _lvAccountId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListVaults' with the minimum fields required to make a request.
@@ -135,11 +137,13 @@ instance ToQuery ListVaults where
 --
 --
 -- /See:/ 'listVaultsResponse' smart constructor.
-data ListVaultsResponse = ListVaultsResponse'
-  { _lvrsMarker         :: !(Maybe Text)
-  , _lvrsVaultList      :: !(Maybe [DescribeVaultOutput])
-  , _lvrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListVaultsResponse =
+  ListVaultsResponse'
+    { _lvrsMarker         :: !(Maybe Text)
+    , _lvrsVaultList      :: !(Maybe [DescribeVaultOutput])
+    , _lvrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListVaultsResponse' with the minimum fields required to make a request.

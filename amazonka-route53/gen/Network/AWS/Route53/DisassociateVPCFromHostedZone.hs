@@ -53,11 +53,13 @@ import Network.AWS.Route53.Types.Product
 --
 --
 -- /See:/ 'disassociateVPCFromHostedZone' smart constructor.
-data DisassociateVPCFromHostedZone = DisassociateVPCFromHostedZone'
-  { _dvfhzComment      :: !(Maybe Text)
-  , _dvfhzHostedZoneId :: !ResourceId
-  , _dvfhzVPC          :: !VPC
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DisassociateVPCFromHostedZone =
+  DisassociateVPCFromHostedZone'
+    { _dvfhzComment      :: !(Maybe Text)
+    , _dvfhzHostedZoneId :: !ResourceId
+    , _dvfhzVPC          :: !VPC
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisassociateVPCFromHostedZone' with the minimum fields required to make a request.
@@ -137,10 +139,12 @@ instance ToXML DisassociateVPCFromHostedZone where
 --
 --
 -- /See:/ 'disassociateVPCFromHostedZoneResponse' smart constructor.
-data DisassociateVPCFromHostedZoneResponse = DisassociateVPCFromHostedZoneResponse'
-  { _dvfhzrsResponseStatus :: !Int
-  , _dvfhzrsChangeInfo     :: !ChangeInfo
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DisassociateVPCFromHostedZoneResponse =
+  DisassociateVPCFromHostedZoneResponse'
+    { _dvfhzrsResponseStatus :: !Int
+    , _dvfhzrsChangeInfo     :: !ChangeInfo
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisassociateVPCFromHostedZoneResponse' with the minimum fields required to make a request.

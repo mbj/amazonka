@@ -42,9 +42,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteFunctionDefinition' smart constructor.
-newtype DeleteFunctionDefinition = DeleteFunctionDefinition'
-  { _dfdFunctionDefinitionId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteFunctionDefinition =
+  DeleteFunctionDefinition'
+    { _dfdFunctionDefinitionId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteFunctionDefinition' with the minimum fields required to make a request.
@@ -94,9 +96,11 @@ instance ToQuery DeleteFunctionDefinition where
         toQuery = const mempty
 
 -- | /See:/ 'deleteFunctionDefinitionResponse' smart constructor.
-newtype DeleteFunctionDefinitionResponse = DeleteFunctionDefinitionResponse'
-  { _dfdrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteFunctionDefinitionResponse =
+  DeleteFunctionDefinitionResponse'
+    { _dfdrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteFunctionDefinitionResponse' with the minimum fields required to make a request.

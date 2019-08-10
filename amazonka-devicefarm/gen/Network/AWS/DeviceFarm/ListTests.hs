@@ -54,10 +54,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listTests' smart constructor.
-data ListTests = ListTests'
-  { _ltNextToken :: !(Maybe Text)
-  , _ltArn       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTests =
+  ListTests'
+    { _ltNextToken :: !(Maybe Text)
+    , _ltArn       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTests' with the minimum fields required to make a request.
@@ -129,11 +131,13 @@ instance ToQuery ListTests where
 --
 --
 -- /See:/ 'listTestsResponse' smart constructor.
-data ListTestsResponse = ListTestsResponse'
-  { _ltrsTests          :: !(Maybe [Test])
-  , _ltrsNextToken      :: !(Maybe Text)
-  , _ltrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTestsResponse =
+  ListTestsResponse'
+    { _ltrsTests          :: !(Maybe [Test])
+    , _ltrsNextToken      :: !(Maybe Text)
+    , _ltrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTestsResponse' with the minimum fields required to make a request.

@@ -105,10 +105,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putTargets' smart constructor.
-data PutTargets = PutTargets'
-  { _ptRule    :: !Text
-  , _ptTargets :: !(List1 Target)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutTargets =
+  PutTargets'
+    { _ptRule    :: !Text
+    , _ptTargets :: !(List1 Target)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutTargets' with the minimum fields required to make a request.
@@ -172,11 +174,13 @@ instance ToQuery PutTargets where
         toQuery = const mempty
 
 -- | /See:/ 'putTargetsResponse' smart constructor.
-data PutTargetsResponse = PutTargetsResponse'
-  { _ptrsFailedEntryCount :: !(Maybe Int)
-  , _ptrsFailedEntries    :: !(Maybe [PutTargetsResultEntry])
-  , _ptrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutTargetsResponse =
+  PutTargetsResponse'
+    { _ptrsFailedEntryCount :: !(Maybe Int)
+    , _ptrsFailedEntries    :: !(Maybe [PutTargetsResultEntry])
+    , _ptrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutTargetsResponse' with the minimum fields required to make a request.

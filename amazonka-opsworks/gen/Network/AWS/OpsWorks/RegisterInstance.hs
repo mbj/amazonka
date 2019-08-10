@@ -55,15 +55,17 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'registerInstance' smart constructor.
-data RegisterInstance = RegisterInstance'
-  { _riPrivateIP               :: !(Maybe Text)
-  , _riHostname                :: !(Maybe Text)
-  , _riInstanceIdentity        :: !(Maybe InstanceIdentity)
-  , _riPublicIP                :: !(Maybe Text)
-  , _riRsaPublicKeyFingerprint :: !(Maybe Text)
-  , _riRsaPublicKey            :: !(Maybe Text)
-  , _riStackId                 :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RegisterInstance =
+  RegisterInstance'
+    { _riPrivateIP               :: !(Maybe Text)
+    , _riHostname                :: !(Maybe Text)
+    , _riInstanceIdentity        :: !(Maybe InstanceIdentity)
+    , _riPublicIP                :: !(Maybe Text)
+    , _riRsaPublicKeyFingerprint :: !(Maybe Text)
+    , _riRsaPublicKey            :: !(Maybe Text)
+    , _riStackId                 :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterInstance' with the minimum fields required to make a request.
@@ -172,10 +174,12 @@ instance ToQuery RegisterInstance where
 --
 --
 -- /See:/ 'registerInstanceResponse' smart constructor.
-data RegisterInstanceResponse = RegisterInstanceResponse'
-  { _rirsInstanceId     :: !(Maybe Text)
-  , _rirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RegisterInstanceResponse =
+  RegisterInstanceResponse'
+    { _rirsInstanceId     :: !(Maybe Text)
+    , _rirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterInstanceResponse' with the minimum fields required to make a request.

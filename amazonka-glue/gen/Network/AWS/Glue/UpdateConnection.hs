@@ -46,11 +46,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateConnection' smart constructor.
-data UpdateConnection = UpdateConnection'
-  { _ucCatalogId       :: !(Maybe Text)
-  , _ucName            :: !Text
-  , _ucConnectionInput :: !ConnectionInput
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateConnection =
+  UpdateConnection'
+    { _ucCatalogId       :: !(Maybe Text)
+    , _ucName            :: !Text
+    , _ucConnectionInput :: !ConnectionInput
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateConnection' with the minimum fields required to make a request.
@@ -122,9 +124,11 @@ instance ToQuery UpdateConnection where
         toQuery = const mempty
 
 -- | /See:/ 'updateConnectionResponse' smart constructor.
-newtype UpdateConnectionResponse = UpdateConnectionResponse'
-  { _ucrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateConnectionResponse =
+  UpdateConnectionResponse'
+    { _ucrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateConnectionResponse' with the minimum fields required to make a request.

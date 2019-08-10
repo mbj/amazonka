@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteElasticsearchDomain' smart constructor.
-newtype DeleteElasticsearchDomain = DeleteElasticsearchDomain'
-  { _dDomainName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteElasticsearchDomain =
+  DeleteElasticsearchDomain'
+    { _dDomainName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteElasticsearchDomain' with the minimum fields required to make a request.
@@ -100,10 +102,12 @@ instance ToQuery DeleteElasticsearchDomain where
 --
 --
 -- /See:/ 'deleteElasticsearchDomainResponse' smart constructor.
-data DeleteElasticsearchDomainResponse = DeleteElasticsearchDomainResponse'
-  { _delrsDomainStatus   :: !(Maybe ElasticsearchDomainStatus)
-  , _delrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteElasticsearchDomainResponse =
+  DeleteElasticsearchDomainResponse'
+    { _delrsDomainStatus   :: !(Maybe ElasticsearchDomainStatus)
+    , _delrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteElasticsearchDomainResponse' with the minimum fields required to make a request.

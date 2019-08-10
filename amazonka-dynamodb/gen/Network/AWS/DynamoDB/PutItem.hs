@@ -88,18 +88,20 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'putItem' smart constructor.
-data PutItem = PutItem'
-  { _piExpressionAttributeNames    :: !(Maybe (Map Text Text))
-  , _piReturnValues                :: !(Maybe ReturnValue)
-  , _piExpressionAttributeValues   :: !(Maybe (Map Text AttributeValue))
-  , _piReturnConsumedCapacity      :: !(Maybe ReturnConsumedCapacity)
-  , _piReturnItemCollectionMetrics :: !(Maybe ReturnItemCollectionMetrics)
-  , _piConditionExpression         :: !(Maybe Text)
-  , _piConditionalOperator         :: !(Maybe ConditionalOperator)
-  , _piExpected                    :: !(Maybe (Map Text ExpectedAttributeValue))
-  , _piTableName                   :: !Text
-  , _piItem                        :: !(Map Text AttributeValue)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutItem =
+  PutItem'
+    { _piExpressionAttributeNames :: !(Maybe (Map Text Text))
+    , _piReturnValues :: !(Maybe ReturnValue)
+    , _piExpressionAttributeValues :: !(Maybe (Map Text AttributeValue))
+    , _piReturnConsumedCapacity :: !(Maybe ReturnConsumedCapacity)
+    , _piReturnItemCollectionMetrics :: !(Maybe ReturnItemCollectionMetrics)
+    , _piConditionExpression :: !(Maybe Text)
+    , _piConditionalOperator :: !(Maybe ConditionalOperator)
+    , _piExpected :: !(Maybe (Map Text ExpectedAttributeValue))
+    , _piTableName :: !Text
+    , _piItem :: !(Map Text AttributeValue)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutItem' with the minimum fields required to make a request.
@@ -240,12 +242,14 @@ instance ToQuery PutItem where
 --
 --
 -- /See:/ 'putItemResponse' smart constructor.
-data PutItemResponse = PutItemResponse'
-  { _pirsItemCollectionMetrics :: !(Maybe ItemCollectionMetrics)
-  , _pirsConsumedCapacity      :: !(Maybe ConsumedCapacity)
-  , _pirsAttributes            :: !(Maybe (Map Text AttributeValue))
-  , _pirsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutItemResponse =
+  PutItemResponse'
+    { _pirsItemCollectionMetrics :: !(Maybe ItemCollectionMetrics)
+    , _pirsConsumedCapacity      :: !(Maybe ConsumedCapacity)
+    , _pirsAttributes            :: !(Maybe (Map Text AttributeValue))
+    , _pirsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutItemResponse' with the minimum fields required to make a request.

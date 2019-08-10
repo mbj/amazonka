@@ -60,11 +60,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createLogGroup' smart constructor.
-data CreateLogGroup = CreateLogGroup'
-  { _clgKmsKeyId     :: !(Maybe Text)
-  , _clgTags         :: !(Maybe (Map Text Text))
-  , _clgLogGroupName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateLogGroup =
+  CreateLogGroup'
+    { _clgKmsKeyId     :: !(Maybe Text)
+    , _clgTags         :: !(Maybe (Map Text Text))
+    , _clgLogGroupName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateLogGroup' with the minimum fields required to make a request.

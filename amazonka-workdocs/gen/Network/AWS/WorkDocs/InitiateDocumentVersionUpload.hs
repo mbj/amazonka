@@ -57,16 +57,18 @@ import Network.AWS.WorkDocs.Types
 import Network.AWS.WorkDocs.Types.Product
 
 -- | /See:/ 'initiateDocumentVersionUpload' smart constructor.
-data InitiateDocumentVersionUpload = InitiateDocumentVersionUpload'
-  { _idvuDocumentSizeInBytes      :: !(Maybe Integer)
-  , _idvuContentCreatedTimestamp  :: !(Maybe POSIX)
-  , _idvuAuthenticationToken      :: !(Maybe (Sensitive Text))
-  , _idvuName                     :: !(Maybe Text)
-  , _idvuId                       :: !(Maybe Text)
-  , _idvuContentModifiedTimestamp :: !(Maybe POSIX)
-  , _idvuContentType              :: !(Maybe Text)
-  , _idvuParentFolderId           :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data InitiateDocumentVersionUpload =
+  InitiateDocumentVersionUpload'
+    { _idvuDocumentSizeInBytes      :: !(Maybe Integer)
+    , _idvuContentCreatedTimestamp  :: !(Maybe POSIX)
+    , _idvuAuthenticationToken      :: !(Maybe (Sensitive Text))
+    , _idvuName                     :: !(Maybe Text)
+    , _idvuId                       :: !(Maybe Text)
+    , _idvuContentModifiedTimestamp :: !(Maybe POSIX)
+    , _idvuContentType              :: !(Maybe Text)
+    , _idvuParentFolderId           :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InitiateDocumentVersionUpload' with the minimum fields required to make a request.
@@ -181,11 +183,13 @@ instance ToQuery InitiateDocumentVersionUpload where
         toQuery = const mempty
 
 -- | /See:/ 'initiateDocumentVersionUploadResponse' smart constructor.
-data InitiateDocumentVersionUploadResponse = InitiateDocumentVersionUploadResponse'
-  { _idvursMetadata       :: !(Maybe DocumentMetadata)
-  , _idvursUploadMetadata :: !(Maybe UploadMetadata)
-  , _idvursResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data InitiateDocumentVersionUploadResponse =
+  InitiateDocumentVersionUploadResponse'
+    { _idvursMetadata       :: !(Maybe DocumentMetadata)
+    , _idvursUploadMetadata :: !(Maybe UploadMetadata)
+    , _idvursResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InitiateDocumentVersionUploadResponse' with the minimum fields required to make a request.

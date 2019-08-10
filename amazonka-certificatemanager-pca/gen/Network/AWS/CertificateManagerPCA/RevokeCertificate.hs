@@ -44,11 +44,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'revokeCertificate' smart constructor.
-data RevokeCertificate = RevokeCertificate'
-  { _rcCertificateAuthorityARN :: !Text
-  , _rcCertificateSerial       :: !Text
-  , _rcRevocationReason        :: !RevocationReason
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RevokeCertificate =
+  RevokeCertificate'
+    { _rcCertificateAuthorityARN :: !Text
+    , _rcCertificateSerial       :: !Text
+    , _rcRevocationReason        :: !RevocationReason
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RevokeCertificate' with the minimum fields required to make a request.

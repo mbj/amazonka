@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'applySchema' smart constructor.
-data ApplySchema = ApplySchema'
-  { _asPublishedSchemaARN :: !Text
-  , _asDirectoryARN       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ApplySchema =
+  ApplySchema'
+    { _asPublishedSchemaARN :: !Text
+    , _asDirectoryARN       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ApplySchema' with the minimum fields required to make a request.
@@ -113,11 +115,13 @@ instance ToQuery ApplySchema where
         toQuery = const mempty
 
 -- | /See:/ 'applySchemaResponse' smart constructor.
-data ApplySchemaResponse = ApplySchemaResponse'
-  { _asrsDirectoryARN     :: !(Maybe Text)
-  , _asrsAppliedSchemaARN :: !(Maybe Text)
-  , _asrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ApplySchemaResponse =
+  ApplySchemaResponse'
+    { _asrsDirectoryARN     :: !(Maybe Text)
+    , _asrsAppliedSchemaARN :: !(Maybe Text)
+    , _asrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ApplySchemaResponse' with the minimum fields required to make a request.

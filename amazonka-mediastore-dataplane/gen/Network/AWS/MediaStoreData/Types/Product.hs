@@ -26,14 +26,16 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'item' smart constructor.
-data Item = Item'
-  { _iETag          :: !(Maybe Text)
-  , _iContentLength :: !(Maybe Nat)
-  , _iName          :: !(Maybe Text)
-  , _iType          :: !(Maybe ItemType)
-  , _iLastModified  :: !(Maybe POSIX)
-  , _iContentType   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Item =
+  Item'
+    { _iETag          :: !(Maybe Text)
+    , _iContentLength :: !(Maybe Nat)
+    , _iName          :: !(Maybe Text)
+    , _iType          :: !(Maybe ItemType)
+    , _iLastModified  :: !(Maybe POSIX)
+    , _iContentType   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Item' with the minimum fields required to make a request.

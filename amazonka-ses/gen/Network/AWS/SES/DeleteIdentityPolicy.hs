@@ -53,10 +53,12 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'deleteIdentityPolicy' smart constructor.
-data DeleteIdentityPolicy = DeleteIdentityPolicy'
-  { _dipIdentity   :: !Text
-  , _dipPolicyName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteIdentityPolicy =
+  DeleteIdentityPolicy'
+    { _dipIdentity   :: !Text
+    , _dipPolicyName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteIdentityPolicy' with the minimum fields required to make a request.
@@ -116,9 +118,11 @@ instance ToQuery DeleteIdentityPolicy where
 --
 --
 -- /See:/ 'deleteIdentityPolicyResponse' smart constructor.
-newtype DeleteIdentityPolicyResponse = DeleteIdentityPolicyResponse'
-  { _diprsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteIdentityPolicyResponse =
+  DeleteIdentityPolicyResponse'
+    { _diprsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteIdentityPolicyResponse' with the minimum fields required to make a request.

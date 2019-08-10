@@ -51,9 +51,11 @@ import Network.AWS.SNS.Types.Product
 --
 --
 -- /See:/ 'getSMSAttributes' smart constructor.
-newtype GetSMSAttributes = GetSMSAttributes'
-  { _gsmsaAttributes :: Maybe [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetSMSAttributes =
+  GetSMSAttributes'
+    { _gsmsaAttributes :: Maybe [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetSMSAttributes' with the minimum fields required to make a request.
@@ -104,10 +106,12 @@ instance ToQuery GetSMSAttributes where
 --
 --
 -- /See:/ 'getSMSAttributesResponse' smart constructor.
-data GetSMSAttributesResponse = GetSMSAttributesResponse'
-  { _gsmsarsAttributes     :: !(Maybe (Map Text Text))
-  , _gsmsarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetSMSAttributesResponse =
+  GetSMSAttributesResponse'
+    { _gsmsarsAttributes     :: !(Maybe (Map Text Text))
+    , _gsmsarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetSMSAttributesResponse' with the minimum fields required to make a request.

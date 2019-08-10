@@ -64,11 +64,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateStage' smart constructor.
-data UpdateStage = UpdateStage'
-  { _usPatchOperations :: !(Maybe [PatchOperation])
-  , _usRestAPIId       :: !Text
-  , _usStageName       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateStage =
+  UpdateStage'
+    { _usPatchOperations :: !(Maybe [PatchOperation])
+    , _usRestAPIId       :: !Text
+    , _usStageName       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateStage' with the minimum fields required to make a request.

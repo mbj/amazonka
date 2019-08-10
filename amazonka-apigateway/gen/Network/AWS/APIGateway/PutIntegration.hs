@@ -76,24 +76,26 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'putIntegration' smart constructor.
-data PutIntegration = PutIntegration'
-  { _pRequestTemplates      :: !(Maybe (Map Text Text))
-  , _pCredentials           :: !(Maybe Text)
-  , _pConnectionId          :: !(Maybe Text)
-  , _pRequestParameters     :: !(Maybe (Map Text Text))
-  , _pContentHandling       :: !(Maybe ContentHandlingStrategy)
-  , _pPassthroughBehavior   :: !(Maybe Text)
-  , _pUri                   :: !(Maybe Text)
-  , _pCacheNamespace        :: !(Maybe Text)
-  , _pTimeoutInMillis       :: !(Maybe Int)
-  , _pConnectionType        :: !(Maybe ConnectionType)
-  , _pIntegrationHTTPMethod :: !(Maybe Text)
-  , _pCacheKeyParameters    :: !(Maybe [Text])
-  , _pRestAPIId             :: !Text
-  , _pResourceId            :: !Text
-  , _pHttpMethod            :: !Text
-  , _pType                  :: !IntegrationType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutIntegration =
+  PutIntegration'
+    { _pRequestTemplates      :: !(Maybe (Map Text Text))
+    , _pCredentials           :: !(Maybe Text)
+    , _pConnectionId          :: !(Maybe Text)
+    , _pRequestParameters     :: !(Maybe (Map Text Text))
+    , _pContentHandling       :: !(Maybe ContentHandlingStrategy)
+    , _pPassthroughBehavior   :: !(Maybe Text)
+    , _pUri                   :: !(Maybe Text)
+    , _pCacheNamespace        :: !(Maybe Text)
+    , _pTimeoutInMillis       :: !(Maybe Int)
+    , _pConnectionType        :: !(Maybe ConnectionType)
+    , _pIntegrationHTTPMethod :: !(Maybe Text)
+    , _pCacheKeyParameters    :: !(Maybe [Text])
+    , _pRestAPIId             :: !Text
+    , _pResourceId            :: !Text
+    , _pHttpMethod            :: !Text
+    , _pType                  :: !IntegrationType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutIntegration' with the minimum fields required to make a request.

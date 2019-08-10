@@ -46,9 +46,11 @@ import Network.AWS.WAFRegional.Types
 import Network.AWS.WAFRegional.Types.Product
 
 -- | /See:/ 'deletePermissionPolicy' smart constructor.
-newtype DeletePermissionPolicy = DeletePermissionPolicy'
-  { _dppResourceARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeletePermissionPolicy =
+  DeletePermissionPolicy'
+    { _dppResourceARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeletePermissionPolicy' with the minimum fields required to make a request.
@@ -103,9 +105,11 @@ instance ToQuery DeletePermissionPolicy where
         toQuery = const mempty
 
 -- | /See:/ 'deletePermissionPolicyResponse' smart constructor.
-newtype DeletePermissionPolicyResponse = DeletePermissionPolicyResponse'
-  { _dpprsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeletePermissionPolicyResponse =
+  DeletePermissionPolicyResponse'
+    { _dpprsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeletePermissionPolicyResponse' with the minimum fields required to make a request.

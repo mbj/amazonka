@@ -51,11 +51,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'detachClassicLinkVPC' smart constructor.
-data DetachClassicLinkVPC = DetachClassicLinkVPC'
-  { _dclvDryRun     :: !(Maybe Bool)
-  , _dclvInstanceId :: !Text
-  , _dclvVPCId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DetachClassicLinkVPC =
+  DetachClassicLinkVPC'
+    { _dclvDryRun     :: !(Maybe Bool)
+    , _dclvInstanceId :: !Text
+    , _dclvVPCId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DetachClassicLinkVPC' with the minimum fields required to make a request.
@@ -125,10 +127,12 @@ instance ToQuery DetachClassicLinkVPC where
 --
 --
 -- /See:/ 'detachClassicLinkVPCResponse' smart constructor.
-data DetachClassicLinkVPCResponse = DetachClassicLinkVPCResponse'
-  { _dclvrsReturn         :: !(Maybe Bool)
-  , _dclvrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DetachClassicLinkVPCResponse =
+  DetachClassicLinkVPCResponse'
+    { _dclvrsReturn         :: !(Maybe Bool)
+    , _dclvrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DetachClassicLinkVPCResponse' with the minimum fields required to make a request.

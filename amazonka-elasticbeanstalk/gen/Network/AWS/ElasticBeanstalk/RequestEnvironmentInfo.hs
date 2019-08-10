@@ -60,11 +60,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'requestEnvironmentInfo' smart constructor.
-data RequestEnvironmentInfo = RequestEnvironmentInfo'
-  { _reiEnvironmentName :: !(Maybe Text)
-  , _reiEnvironmentId   :: !(Maybe Text)
-  , _reiInfoType        :: !EnvironmentInfoType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RequestEnvironmentInfo =
+  RequestEnvironmentInfo'
+    { _reiEnvironmentName :: !(Maybe Text)
+    , _reiEnvironmentId   :: !(Maybe Text)
+    , _reiInfoType        :: !EnvironmentInfoType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RequestEnvironmentInfo' with the minimum fields required to make a request.

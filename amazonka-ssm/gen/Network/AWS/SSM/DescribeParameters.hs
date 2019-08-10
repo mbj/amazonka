@@ -54,12 +54,14 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'describeParameters' smart constructor.
-data DescribeParameters = DescribeParameters'
-  { _dpParameterFilters :: !(Maybe [ParameterStringFilter])
-  , _dpFilters          :: !(Maybe [ParametersFilter])
-  , _dpNextToken        :: !(Maybe Text)
-  , _dpMaxResults       :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeParameters =
+  DescribeParameters'
+    { _dpParameterFilters :: !(Maybe [ParameterStringFilter])
+    , _dpFilters          :: !(Maybe [ParametersFilter])
+    , _dpNextToken        :: !(Maybe Text)
+    , _dpMaxResults       :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeParameters' with the minimum fields required to make a request.
@@ -148,11 +150,13 @@ instance ToQuery DescribeParameters where
         toQuery = const mempty
 
 -- | /See:/ 'describeParametersResponse' smart constructor.
-data DescribeParametersResponse = DescribeParametersResponse'
-  { _dprsNextToken      :: !(Maybe Text)
-  , _dprsParameters     :: !(Maybe [ParameterMetadata])
-  , _dprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeParametersResponse =
+  DescribeParametersResponse'
+    { _dprsNextToken      :: !(Maybe Text)
+    , _dprsParameters     :: !(Maybe [ParameterMetadata])
+    , _dprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeParametersResponse' with the minimum fields required to make a request.

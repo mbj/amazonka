@@ -60,20 +60,22 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'requestSpotInstances' smart constructor.
-data RequestSpotInstances = RequestSpotInstances'
-  { _rBlockDurationMinutes         :: !(Maybe Int)
-  , _rClientToken                  :: !(Maybe Text)
-  , _rInstanceCount                :: !(Maybe Int)
-  , _rInstanceInterruptionBehavior :: !(Maybe InstanceInterruptionBehavior)
-  , _rSpotPrice                    :: !(Maybe Text)
-  , _rLaunchSpecification          :: !(Maybe RequestSpotLaunchSpecification)
-  , _rAvailabilityZoneGroup        :: !(Maybe Text)
-  , _rValidUntil                   :: !(Maybe ISO8601)
-  , _rLaunchGroup                  :: !(Maybe Text)
-  , _rType                         :: !(Maybe SpotInstanceType)
-  , _rValidFrom                    :: !(Maybe ISO8601)
-  , _rDryRun                       :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RequestSpotInstances =
+  RequestSpotInstances'
+    { _rBlockDurationMinutes         :: !(Maybe Int)
+    , _rClientToken                  :: !(Maybe Text)
+    , _rInstanceCount                :: !(Maybe Int)
+    , _rInstanceInterruptionBehavior :: !(Maybe InstanceInterruptionBehavior)
+    , _rSpotPrice                    :: !(Maybe Text)
+    , _rLaunchSpecification          :: !(Maybe RequestSpotLaunchSpecification)
+    , _rAvailabilityZoneGroup        :: !(Maybe Text)
+    , _rValidUntil                   :: !(Maybe ISO8601)
+    , _rLaunchGroup                  :: !(Maybe Text)
+    , _rType                         :: !(Maybe SpotInstanceType)
+    , _rValidFrom                    :: !(Maybe ISO8601)
+    , _rDryRun                       :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RequestSpotInstances' with the minimum fields required to make a request.
@@ -214,10 +216,12 @@ instance ToQuery RequestSpotInstances where
 --
 --
 -- /See:/ 'requestSpotInstancesResponse' smart constructor.
-data RequestSpotInstancesResponse = RequestSpotInstancesResponse'
-  { _rsirsSpotInstanceRequests :: !(Maybe [SpotInstanceRequest])
-  , _rsirsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RequestSpotInstancesResponse =
+  RequestSpotInstancesResponse'
+    { _rsirsSpotInstanceRequests :: !(Maybe [SpotInstanceRequest])
+    , _rsirsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RequestSpotInstancesResponse' with the minimum fields required to make a request.

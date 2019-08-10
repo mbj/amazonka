@@ -46,9 +46,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteBot' smart constructor.
-newtype DeleteBot = DeleteBot'
-  { _dbName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteBot =
+  DeleteBot'
+    { _dbName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteBot' with the minimum fields required to make a request.

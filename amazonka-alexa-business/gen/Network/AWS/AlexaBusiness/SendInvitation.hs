@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'sendInvitation' smart constructor.
-newtype SendInvitation = SendInvitation'
-  { _siUserARN :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype SendInvitation =
+  SendInvitation'
+    { _siUserARN :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SendInvitation' with the minimum fields required to make a request.
@@ -95,9 +97,11 @@ instance ToQuery SendInvitation where
         toQuery = const mempty
 
 -- | /See:/ 'sendInvitationResponse' smart constructor.
-newtype SendInvitationResponse = SendInvitationResponse'
-  { _sirsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype SendInvitationResponse =
+  SendInvitationResponse'
+    { _sirsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SendInvitationResponse' with the minimum fields required to make a request.

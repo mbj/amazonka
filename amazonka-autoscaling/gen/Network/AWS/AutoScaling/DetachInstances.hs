@@ -55,11 +55,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'detachInstances' smart constructor.
-data DetachInstances = DetachInstances'
-  { _diInstanceIds                    :: !(Maybe [Text])
-  , _diAutoScalingGroupName           :: !Text
-  , _diShouldDecrementDesiredCapacity :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DetachInstances =
+  DetachInstances'
+    { _diInstanceIds                    :: !(Maybe [Text])
+    , _diAutoScalingGroupName           :: !Text
+    , _diShouldDecrementDesiredCapacity :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DetachInstances' with the minimum fields required to make a request.
@@ -128,10 +130,12 @@ instance ToQuery DetachInstances where
                  _diShouldDecrementDesiredCapacity]
 
 -- | /See:/ 'detachInstancesResponse' smart constructor.
-data DetachInstancesResponse = DetachInstancesResponse'
-  { _dirsActivities     :: !(Maybe [Activity])
-  , _dirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DetachInstancesResponse =
+  DetachInstancesResponse'
+    { _dirsActivities     :: !(Maybe [Activity])
+    , _dirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DetachInstancesResponse' with the minimum fields required to make a request.

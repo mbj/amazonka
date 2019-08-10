@@ -64,12 +64,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createSecurityGroup' smart constructor.
-data CreateSecurityGroup = CreateSecurityGroup'
-  { _csgVPCId       :: !(Maybe Text)
-  , _csgDryRun      :: !(Maybe Bool)
-  , _csgDescription :: !Text
-  , _csgGroupName   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateSecurityGroup =
+  CreateSecurityGroup'
+    { _csgVPCId       :: !(Maybe Text)
+    , _csgDryRun      :: !(Maybe Bool)
+    , _csgDescription :: !Text
+    , _csgGroupName   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateSecurityGroup' with the minimum fields required to make a request.
@@ -146,10 +148,12 @@ instance ToQuery CreateSecurityGroup where
 --
 --
 -- /See:/ 'createSecurityGroupResponse' smart constructor.
-data CreateSecurityGroupResponse = CreateSecurityGroupResponse'
-  { _csgrsResponseStatus :: !Int
-  , _csgrsGroupId        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateSecurityGroupResponse =
+  CreateSecurityGroupResponse'
+    { _csgrsResponseStatus :: !Int
+    , _csgrsGroupId        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateSecurityGroupResponse' with the minimum fields required to make a request.

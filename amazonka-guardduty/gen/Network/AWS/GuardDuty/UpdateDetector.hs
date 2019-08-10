@@ -45,10 +45,12 @@ import Network.AWS.Response
 -- | UpdateDetector request body.
 --
 -- /See:/ 'updateDetector' smart constructor.
-data UpdateDetector = UpdateDetector'
-  { _udEnable     :: !(Maybe Bool)
-  , _udDetectorId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateDetector =
+  UpdateDetector'
+    { _udEnable     :: !(Maybe Bool)
+    , _udDetectorId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateDetector' with the minimum fields required to make a request.
@@ -104,9 +106,11 @@ instance ToQuery UpdateDetector where
         toQuery = const mempty
 
 -- | /See:/ 'updateDetectorResponse' smart constructor.
-newtype UpdateDetectorResponse = UpdateDetectorResponse'
-  { _udrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateDetectorResponse =
+  UpdateDetectorResponse'
+    { _udrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateDetectorResponse' with the minimum fields required to make a request.

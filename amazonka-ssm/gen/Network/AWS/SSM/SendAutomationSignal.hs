@@ -46,11 +46,13 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'sendAutomationSignal' smart constructor.
-data SendAutomationSignal = SendAutomationSignal'
-  { _sasPayload               :: !(Maybe (Map Text [Text]))
-  , _sasAutomationExecutionId :: !Text
-  , _sasSignalType            :: !SignalType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SendAutomationSignal =
+  SendAutomationSignal'
+    { _sasPayload               :: !(Maybe (Map Text [Text]))
+    , _sasAutomationExecutionId :: !Text
+    , _sasSignalType            :: !SignalType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SendAutomationSignal' with the minimum fields required to make a request.
@@ -126,9 +128,11 @@ instance ToQuery SendAutomationSignal where
         toQuery = const mempty
 
 -- | /See:/ 'sendAutomationSignalResponse' smart constructor.
-newtype SendAutomationSignalResponse = SendAutomationSignalResponse'
-  { _sasrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype SendAutomationSignalResponse =
+  SendAutomationSignalResponse'
+    { _sasrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SendAutomationSignalResponse' with the minimum fields required to make a request.

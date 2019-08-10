@@ -47,9 +47,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'setRulePriorities' smart constructor.
-newtype SetRulePriorities = SetRulePriorities'
-  { _srpRulePriorities :: [RulePriorityPair]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype SetRulePriorities =
+  SetRulePriorities'
+    { _srpRulePriorities :: [RulePriorityPair]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetRulePriorities' with the minimum fields required to make a request.
@@ -96,10 +98,12 @@ instance ToQuery SetRulePriorities where
                  toQueryList "member" _srpRulePriorities]
 
 -- | /See:/ 'setRulePrioritiesResponse' smart constructor.
-data SetRulePrioritiesResponse = SetRulePrioritiesResponse'
-  { _srprsRules          :: !(Maybe [Rule])
-  , _srprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SetRulePrioritiesResponse =
+  SetRulePrioritiesResponse'
+    { _srprsRules          :: !(Maybe [Rule])
+    , _srprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetRulePrioritiesResponse' with the minimum fields required to make a request.

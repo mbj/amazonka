@@ -56,14 +56,16 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createMicrosoftAD' smart constructor.
-data CreateMicrosoftAD = CreateMicrosoftAD'
-  { _cmadEdition     :: !(Maybe DirectoryEdition)
-  , _cmadShortName   :: !(Maybe Text)
-  , _cmadDescription :: !(Maybe Text)
-  , _cmadName        :: !Text
-  , _cmadPassword    :: !(Sensitive Text)
-  , _cmadVPCSettings :: !DirectoryVPCSettings
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data CreateMicrosoftAD =
+  CreateMicrosoftAD'
+    { _cmadEdition     :: !(Maybe DirectoryEdition)
+    , _cmadShortName   :: !(Maybe Text)
+    , _cmadDescription :: !(Maybe Text)
+    , _cmadName        :: !Text
+    , _cmadPassword    :: !(Sensitive Text)
+    , _cmadVPCSettings :: !DirectoryVPCSettings
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateMicrosoftAD' with the minimum fields required to make a request.
@@ -166,10 +168,12 @@ instance ToQuery CreateMicrosoftAD where
 --
 --
 -- /See:/ 'createMicrosoftADResponse' smart constructor.
-data CreateMicrosoftADResponse = CreateMicrosoftADResponse'
-  { _cmadrsDirectoryId    :: !(Maybe Text)
-  , _cmadrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateMicrosoftADResponse =
+  CreateMicrosoftADResponse'
+    { _cmadrsDirectoryId    :: !(Maybe Text)
+    , _cmadrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateMicrosoftADResponse' with the minimum fields required to make a request.

@@ -53,10 +53,12 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'listConfigurationSets' smart constructor.
-data ListConfigurationSets = ListConfigurationSets'
-  { _lcsNextToken :: !(Maybe Text)
-  , _lcsMaxItems  :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListConfigurationSets =
+  ListConfigurationSets'
+    { _lcsNextToken :: !(Maybe Text)
+    , _lcsMaxItems  :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListConfigurationSets' with the minimum fields required to make a request.
@@ -116,11 +118,13 @@ instance ToQuery ListConfigurationSets where
 --
 --
 -- /See:/ 'listConfigurationSetsResponse' smart constructor.
-data ListConfigurationSetsResponse = ListConfigurationSetsResponse'
-  { _lcsrsConfigurationSets :: !(Maybe [ConfigurationSet])
-  , _lcsrsNextToken         :: !(Maybe Text)
-  , _lcsrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListConfigurationSetsResponse =
+  ListConfigurationSetsResponse'
+    { _lcsrsConfigurationSets :: !(Maybe [ConfigurationSet])
+    , _lcsrsNextToken         :: !(Maybe Text)
+    , _lcsrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListConfigurationSetsResponse' with the minimum fields required to make a request.

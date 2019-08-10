@@ -44,11 +44,13 @@ import Network.AWS.WorkDocs.Types
 import Network.AWS.WorkDocs.Types.Product
 
 -- | /See:/ 'abortDocumentVersionUpload' smart constructor.
-data AbortDocumentVersionUpload = AbortDocumentVersionUpload'
-  { _advuAuthenticationToken :: !(Maybe (Sensitive Text))
-  , _advuDocumentId          :: !Text
-  , _advuVersionId           :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data AbortDocumentVersionUpload =
+  AbortDocumentVersionUpload'
+    { _advuAuthenticationToken :: !(Maybe (Sensitive Text))
+    , _advuDocumentId          :: !Text
+    , _advuVersionId           :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AbortDocumentVersionUpload' with the minimum fields required to make a request.

@@ -47,12 +47,14 @@ import Network.AWS.WorkMail.Types
 import Network.AWS.WorkMail.Types.Product
 
 -- | /See:/ 'putMailboxPermissions' smart constructor.
-data PutMailboxPermissions = PutMailboxPermissions'
-  { _pmpOrganizationId   :: !Text
-  , _pmpEntityId         :: !Text
-  , _pmpGranteeId        :: !Text
-  , _pmpPermissionValues :: ![PermissionType]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutMailboxPermissions =
+  PutMailboxPermissions'
+    { _pmpOrganizationId   :: !Text
+    , _pmpEntityId         :: !Text
+    , _pmpGranteeId        :: !Text
+    , _pmpPermissionValues :: ![PermissionType]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutMailboxPermissions' with the minimum fields required to make a request.
@@ -136,9 +138,11 @@ instance ToQuery PutMailboxPermissions where
         toQuery = const mempty
 
 -- | /See:/ 'putMailboxPermissionsResponse' smart constructor.
-newtype PutMailboxPermissionsResponse = PutMailboxPermissionsResponse'
-  { _pmprsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype PutMailboxPermissionsResponse =
+  PutMailboxPermissionsResponse'
+    { _pmprsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutMailboxPermissionsResponse' with the minimum fields required to make a request.

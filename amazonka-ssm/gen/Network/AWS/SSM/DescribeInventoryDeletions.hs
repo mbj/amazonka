@@ -48,11 +48,13 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'describeInventoryDeletions' smart constructor.
-data DescribeInventoryDeletions = DescribeInventoryDeletions'
-  { _didNextToken  :: !(Maybe Text)
-  , _didMaxResults :: !(Maybe Nat)
-  , _didDeletionId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeInventoryDeletions =
+  DescribeInventoryDeletions'
+    { _didNextToken  :: !(Maybe Text)
+    , _didMaxResults :: !(Maybe Nat)
+    , _didDeletionId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeInventoryDeletions' with the minimum fields required to make a request.
@@ -127,11 +129,13 @@ instance ToQuery DescribeInventoryDeletions where
         toQuery = const mempty
 
 -- | /See:/ 'describeInventoryDeletionsResponse' smart constructor.
-data DescribeInventoryDeletionsResponse = DescribeInventoryDeletionsResponse'
-  { _didrsInventoryDeletions :: !(Maybe [InventoryDeletionStatusItem])
-  , _didrsNextToken          :: !(Maybe Text)
-  , _didrsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeInventoryDeletionsResponse =
+  DescribeInventoryDeletionsResponse'
+    { _didrsInventoryDeletions :: !(Maybe [InventoryDeletionStatusItem])
+    , _didrsNextToken          :: !(Maybe Text)
+    , _didrsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeInventoryDeletionsResponse' with the minimum fields required to make a request.

@@ -57,9 +57,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getEventSourceMapping' smart constructor.
-newtype GetEventSourceMapping = GetEventSourceMapping'
-  { _gesmUUId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetEventSourceMapping =
+  GetEventSourceMapping'
+    { _gesmUUId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetEventSourceMapping' with the minimum fields required to make a request.

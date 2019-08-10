@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listRules' smart constructor.
-data ListRules = ListRules'
-  { _lrNextToken  :: !(Maybe Text)
-  , _lrNamePrefix :: !(Maybe Text)
-  , _lrLimit      :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListRules =
+  ListRules'
+    { _lrNextToken  :: !(Maybe Text)
+    , _lrNamePrefix :: !(Maybe Text)
+    , _lrLimit      :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListRules' with the minimum fields required to make a request.
@@ -121,11 +123,13 @@ instance ToQuery ListRules where
         toQuery = const mempty
 
 -- | /See:/ 'listRulesResponse' smart constructor.
-data ListRulesResponse = ListRulesResponse'
-  { _lrrsRules          :: !(Maybe [Rule])
-  , _lrrsNextToken      :: !(Maybe Text)
-  , _lrrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListRulesResponse =
+  ListRulesResponse'
+    { _lrrsRules          :: !(Maybe [Rule])
+    , _lrrsNextToken      :: !(Maybe Text)
+    , _lrrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListRulesResponse' with the minimum fields required to make a request.

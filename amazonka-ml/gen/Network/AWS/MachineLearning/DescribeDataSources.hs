@@ -59,19 +59,21 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeDataSources' smart constructor.
-data DescribeDataSources = DescribeDataSources'
-  { _ddsEQ             :: !(Maybe Text)
-  , _ddsGE             :: !(Maybe Text)
-  , _ddsPrefix         :: !(Maybe Text)
-  , _ddsGT             :: !(Maybe Text)
-  , _ddsNE             :: !(Maybe Text)
-  , _ddsNextToken      :: !(Maybe Text)
-  , _ddsSortOrder      :: !(Maybe SortOrder)
-  , _ddsLimit          :: !(Maybe Nat)
-  , _ddsLT             :: !(Maybe Text)
-  , _ddsFilterVariable :: !(Maybe DataSourceFilterVariable)
-  , _ddsLE             :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDataSources =
+  DescribeDataSources'
+    { _ddsEQ             :: !(Maybe Text)
+    , _ddsGE             :: !(Maybe Text)
+    , _ddsPrefix         :: !(Maybe Text)
+    , _ddsGT             :: !(Maybe Text)
+    , _ddsNE             :: !(Maybe Text)
+    , _ddsNextToken      :: !(Maybe Text)
+    , _ddsSortOrder      :: !(Maybe SortOrder)
+    , _ddsLimit          :: !(Maybe Nat)
+    , _ddsLT             :: !(Maybe Text)
+    , _ddsFilterVariable :: !(Maybe DataSourceFilterVariable)
+    , _ddsLE             :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDataSources' with the minimum fields required to make a request.
@@ -217,11 +219,13 @@ instance ToQuery DescribeDataSources where
 --
 --
 -- /See:/ 'describeDataSourcesResponse' smart constructor.
-data DescribeDataSourcesResponse = DescribeDataSourcesResponse'
-  { _ddssrsResults        :: !(Maybe [DataSource])
-  , _ddssrsNextToken      :: !(Maybe Text)
-  , _ddssrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDataSourcesResponse =
+  DescribeDataSourcesResponse'
+    { _ddssrsResults        :: !(Maybe [DataSource])
+    , _ddssrsNextToken      :: !(Maybe Text)
+    , _ddssrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDataSourcesResponse' with the minimum fields required to make a request.

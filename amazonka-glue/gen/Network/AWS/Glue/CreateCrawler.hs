@@ -53,18 +53,20 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createCrawler' smart constructor.
-data CreateCrawler = CreateCrawler'
-  { _ccSchemaChangePolicy :: !(Maybe SchemaChangePolicy)
-  , _ccSchedule           :: !(Maybe Text)
-  , _ccClassifiers        :: !(Maybe [Text])
-  , _ccConfiguration      :: !(Maybe Text)
-  , _ccTablePrefix        :: !(Maybe Text)
-  , _ccDescription        :: !(Maybe Text)
-  , _ccName               :: !Text
-  , _ccRole               :: !Text
-  , _ccDatabaseName       :: !Text
-  , _ccTargets            :: !CrawlerTargets
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateCrawler =
+  CreateCrawler'
+    { _ccSchemaChangePolicy :: !(Maybe SchemaChangePolicy)
+    , _ccSchedule           :: !(Maybe Text)
+    , _ccClassifiers        :: !(Maybe [Text])
+    , _ccConfiguration      :: !(Maybe Text)
+    , _ccTablePrefix        :: !(Maybe Text)
+    , _ccDescription        :: !(Maybe Text)
+    , _ccName               :: !Text
+    , _ccRole               :: !Text
+    , _ccDatabaseName       :: !Text
+    , _ccTargets            :: !CrawlerTargets
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateCrawler' with the minimum fields required to make a request.
@@ -193,9 +195,11 @@ instance ToQuery CreateCrawler where
         toQuery = const mempty
 
 -- | /See:/ 'createCrawlerResponse' smart constructor.
-newtype CreateCrawlerResponse = CreateCrawlerResponse'
-  { _crersResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateCrawlerResponse =
+  CreateCrawlerResponse'
+    { _crersResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateCrawlerResponse' with the minimum fields required to make a request.

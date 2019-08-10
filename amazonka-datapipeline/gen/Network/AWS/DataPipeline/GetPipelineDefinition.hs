@@ -52,10 +52,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getPipelineDefinition' smart constructor.
-data GetPipelineDefinition = GetPipelineDefinition'
-  { _gpdVersion    :: !(Maybe Text)
-  , _gpdPipelineId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetPipelineDefinition =
+  GetPipelineDefinition'
+    { _gpdVersion    :: !(Maybe Text)
+    , _gpdPipelineId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetPipelineDefinition' with the minimum fields required to make a request.
@@ -124,12 +126,14 @@ instance ToQuery GetPipelineDefinition where
 --
 --
 -- /See:/ 'getPipelineDefinitionResponse' smart constructor.
-data GetPipelineDefinitionResponse = GetPipelineDefinitionResponse'
-  { _gpdrsPipelineObjects  :: !(Maybe [PipelineObject])
-  , _gpdrsParameterObjects :: !(Maybe [ParameterObject])
-  , _gpdrsParameterValues  :: !(Maybe [ParameterValue])
-  , _gpdrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetPipelineDefinitionResponse =
+  GetPipelineDefinitionResponse'
+    { _gpdrsPipelineObjects  :: !(Maybe [PipelineObject])
+    , _gpdrsParameterObjects :: !(Maybe [ParameterObject])
+    , _gpdrsParameterValues  :: !(Maybe [ParameterValue])
+    , _gpdrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetPipelineDefinitionResponse' with the minimum fields required to make a request.

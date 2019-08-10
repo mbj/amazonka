@@ -26,19 +26,21 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'fileSystemDescription' smart constructor.
-data FileSystemDescription = FileSystemDescription'
-  { _fsdEncrypted            :: !(Maybe Bool)
-  , _fsdKMSKeyId             :: !(Maybe Text)
-  , _fsdName                 :: !(Maybe Text)
-  , _fsdOwnerId              :: !Text
-  , _fsdCreationToken        :: !Text
-  , _fsdFileSystemId         :: !Text
-  , _fsdCreationTime         :: !POSIX
-  , _fsdLifeCycleState       :: !LifeCycleState
-  , _fsdNumberOfMountTargets :: !Nat
-  , _fsdSizeInBytes          :: !FileSystemSize
-  , _fsdPerformanceMode      :: !PerformanceMode
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FileSystemDescription =
+  FileSystemDescription'
+    { _fsdEncrypted            :: !(Maybe Bool)
+    , _fsdKMSKeyId             :: !(Maybe Text)
+    , _fsdName                 :: !(Maybe Text)
+    , _fsdOwnerId              :: !Text
+    , _fsdCreationToken        :: !Text
+    , _fsdFileSystemId         :: !Text
+    , _fsdCreationTime         :: !POSIX
+    , _fsdLifeCycleState       :: !LifeCycleState
+    , _fsdNumberOfMountTargets :: !Nat
+    , _fsdSizeInBytes          :: !FileSystemSize
+    , _fsdPerformanceMode      :: !PerformanceMode
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FileSystemDescription' with the minimum fields required to make a request.
@@ -161,10 +163,12 @@ instance NFData FileSystemDescription where
 --
 --
 -- /See:/ 'fileSystemSize' smart constructor.
-data FileSystemSize = FileSystemSize'
-  { _fssTimestamp :: !(Maybe POSIX)
-  , _fssValue     :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FileSystemSize =
+  FileSystemSize'
+    { _fssTimestamp :: !(Maybe POSIX)
+    , _fssValue     :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FileSystemSize' with the minimum fields required to make a request.
@@ -205,15 +209,17 @@ instance NFData FileSystemSize where
 --
 --
 -- /See:/ 'mountTargetDescription' smart constructor.
-data MountTargetDescription = MountTargetDescription'
-  { _mtdIPAddress          :: !(Maybe Text)
-  , _mtdNetworkInterfaceId :: !(Maybe Text)
-  , _mtdOwnerId            :: !(Maybe Text)
-  , _mtdMountTargetId      :: !Text
-  , _mtdFileSystemId       :: !Text
-  , _mtdSubnetId           :: !Text
-  , _mtdLifeCycleState     :: !LifeCycleState
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MountTargetDescription =
+  MountTargetDescription'
+    { _mtdIPAddress          :: !(Maybe Text)
+    , _mtdNetworkInterfaceId :: !(Maybe Text)
+    , _mtdOwnerId            :: !(Maybe Text)
+    , _mtdMountTargetId      :: !Text
+    , _mtdFileSystemId       :: !Text
+    , _mtdSubnetId           :: !Text
+    , _mtdLifeCycleState     :: !LifeCycleState
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MountTargetDescription' with the minimum fields required to make a request.
@@ -300,10 +306,12 @@ instance NFData MountTargetDescription where
 --
 --
 -- /See:/ 'tag' smart constructor.
-data Tag = Tag'
-  { _tagKey   :: !Text
-  , _tagValue :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Tag =
+  Tag'
+    { _tagKey   :: !Text
+    , _tagValue :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Tag' with the minimum fields required to make a request.

@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteTags' smart constructor.
-data DeleteTags = DeleteTags'
-  { _dtTags             :: !(Maybe [Tag])
-  , _dtConfigurationIds :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteTags =
+  DeleteTags'
+    { _dtTags             :: !(Maybe [Tag])
+    , _dtConfigurationIds :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteTags' with the minimum fields required to make a request.
@@ -107,9 +109,11 @@ instance ToQuery DeleteTags where
         toQuery = const mempty
 
 -- | /See:/ 'deleteTagsResponse' smart constructor.
-newtype DeleteTagsResponse = DeleteTagsResponse'
-  { _drsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteTagsResponse =
+  DeleteTagsResponse'
+    { _drsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteTagsResponse' with the minimum fields required to make a request.

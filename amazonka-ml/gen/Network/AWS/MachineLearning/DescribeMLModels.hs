@@ -59,19 +59,21 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeMLModels' smart constructor.
-data DescribeMLModels = DescribeMLModels'
-  { _dmlmEQ             :: !(Maybe Text)
-  , _dmlmGE             :: !(Maybe Text)
-  , _dmlmPrefix         :: !(Maybe Text)
-  , _dmlmGT             :: !(Maybe Text)
-  , _dmlmNE             :: !(Maybe Text)
-  , _dmlmNextToken      :: !(Maybe Text)
-  , _dmlmSortOrder      :: !(Maybe SortOrder)
-  , _dmlmLimit          :: !(Maybe Nat)
-  , _dmlmLT             :: !(Maybe Text)
-  , _dmlmFilterVariable :: !(Maybe MLModelFilterVariable)
-  , _dmlmLE             :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeMLModels =
+  DescribeMLModels'
+    { _dmlmEQ             :: !(Maybe Text)
+    , _dmlmGE             :: !(Maybe Text)
+    , _dmlmPrefix         :: !(Maybe Text)
+    , _dmlmGT             :: !(Maybe Text)
+    , _dmlmNE             :: !(Maybe Text)
+    , _dmlmNextToken      :: !(Maybe Text)
+    , _dmlmSortOrder      :: !(Maybe SortOrder)
+    , _dmlmLimit          :: !(Maybe Nat)
+    , _dmlmLT             :: !(Maybe Text)
+    , _dmlmFilterVariable :: !(Maybe MLModelFilterVariable)
+    , _dmlmLE             :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeMLModels' with the minimum fields required to make a request.
@@ -215,11 +217,13 @@ instance ToQuery DescribeMLModels where
 --
 --
 -- /See:/ 'describeMLModelsResponse' smart constructor.
-data DescribeMLModelsResponse = DescribeMLModelsResponse'
-  { _dmlmsrsResults        :: !(Maybe [MLModel])
-  , _dmlmsrsNextToken      :: !(Maybe Text)
-  , _dmlmsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeMLModelsResponse =
+  DescribeMLModelsResponse'
+    { _dmlmsrsResults        :: !(Maybe [MLModel])
+    , _dmlmsrsNextToken      :: !(Maybe Text)
+    , _dmlmsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeMLModelsResponse' with the minimum fields required to make a request.

@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createResourceDefinitionVersion' smart constructor.
-data CreateResourceDefinitionVersion = CreateResourceDefinitionVersion'
-  { _crdvAmznClientToken      :: !(Maybe Text)
-  , _crdvResources            :: !(Maybe [Resource])
-  , _crdvResourceDefinitionId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateResourceDefinitionVersion =
+  CreateResourceDefinitionVersion'
+    { _crdvAmznClientToken      :: !(Maybe Text)
+    , _crdvResources            :: !(Maybe [Resource])
+    , _crdvResourceDefinitionId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateResourceDefinitionVersion' with the minimum fields required to make a request.
@@ -130,13 +132,15 @@ instance ToQuery CreateResourceDefinitionVersion
         toQuery = const mempty
 
 -- | /See:/ 'createResourceDefinitionVersionResponse' smart constructor.
-data CreateResourceDefinitionVersionResponse = CreateResourceDefinitionVersionResponse'
-  { _crdvrsARN               :: !(Maybe Text)
-  , _crdvrsCreationTimestamp :: !(Maybe Text)
-  , _crdvrsVersion           :: !(Maybe Text)
-  , _crdvrsId                :: !(Maybe Text)
-  , _crdvrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateResourceDefinitionVersionResponse =
+  CreateResourceDefinitionVersionResponse'
+    { _crdvrsARN               :: !(Maybe Text)
+    , _crdvrsCreationTimestamp :: !(Maybe Text)
+    , _crdvrsVersion           :: !(Maybe Text)
+    , _crdvrsId                :: !(Maybe Text)
+    , _crdvrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateResourceDefinitionVersionResponse' with the minimum fields required to make a request.

@@ -60,16 +60,18 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createEventSubscription' smart constructor.
-data CreateEventSubscription = CreateEventSubscription'
-  { _cesEnabled          :: !(Maybe Bool)
-  , _cesSourceType       :: !(Maybe Text)
-  , _cesSeverity         :: !(Maybe Text)
-  , _cesEventCategories  :: !(Maybe [Text])
-  , _cesSourceIds        :: !(Maybe [Text])
-  , _cesTags             :: !(Maybe [Tag])
-  , _cesSubscriptionName :: !Text
-  , _cesSNSTopicARN      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateEventSubscription =
+  CreateEventSubscription'
+    { _cesEnabled          :: !(Maybe Bool)
+    , _cesSourceType       :: !(Maybe Text)
+    , _cesSeverity         :: !(Maybe Text)
+    , _cesEventCategories  :: !(Maybe [Text])
+    , _cesSourceIds        :: !(Maybe [Text])
+    , _cesTags             :: !(Maybe [Tag])
+    , _cesSubscriptionName :: !Text
+    , _cesSNSTopicARN      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateEventSubscription' with the minimum fields required to make a request.
@@ -180,10 +182,12 @@ instance ToQuery CreateEventSubscription where
                "SnsTopicArn" =: _cesSNSTopicARN]
 
 -- | /See:/ 'createEventSubscriptionResponse' smart constructor.
-data CreateEventSubscriptionResponse = CreateEventSubscriptionResponse'
-  { _cesrsEventSubscription :: !(Maybe EventSubscription)
-  , _cesrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateEventSubscriptionResponse =
+  CreateEventSubscriptionResponse'
+    { _cesrsEventSubscription :: !(Maybe EventSubscription)
+    , _cesrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateEventSubscriptionResponse' with the minimum fields required to make a request.

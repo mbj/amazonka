@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteLoginProfile' smart constructor.
-newtype DeleteLoginProfile = DeleteLoginProfile'
-  { _dlpUserName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteLoginProfile =
+  DeleteLoginProfile'
+    { _dlpUserName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteLoginProfile' with the minimum fields required to make a request.

@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'setTimeBasedAutoScaling' smart constructor.
-data SetTimeBasedAutoScaling = SetTimeBasedAutoScaling'
-  { _stbasAutoScalingSchedule :: !(Maybe WeeklyAutoScalingSchedule)
-  , _stbasInstanceId          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SetTimeBasedAutoScaling =
+  SetTimeBasedAutoScaling'
+    { _stbasAutoScalingSchedule :: !(Maybe WeeklyAutoScalingSchedule)
+    , _stbasInstanceId          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetTimeBasedAutoScaling' with the minimum fields required to make a request.

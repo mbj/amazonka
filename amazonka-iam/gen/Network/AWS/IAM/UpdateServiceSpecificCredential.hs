@@ -44,11 +44,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateServiceSpecificCredential' smart constructor.
-data UpdateServiceSpecificCredential = UpdateServiceSpecificCredential'
-  { _usscUserName                    :: !(Maybe Text)
-  , _usscServiceSpecificCredentialId :: !Text
-  , _usscStatus                      :: !StatusType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateServiceSpecificCredential =
+  UpdateServiceSpecificCredential'
+    { _usscUserName                    :: !(Maybe Text)
+    , _usscServiceSpecificCredentialId :: !Text
+    , _usscStatus                      :: !StatusType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateServiceSpecificCredential' with the minimum fields required to make a request.

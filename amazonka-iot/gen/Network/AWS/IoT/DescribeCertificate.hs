@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeCertificate' smart constructor.
-newtype DescribeCertificate = DescribeCertificate'
-  { _desCertificateId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeCertificate =
+  DescribeCertificate'
+    { _desCertificateId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeCertificate' with the minimum fields required to make a request.
@@ -100,10 +102,12 @@ instance ToQuery DescribeCertificate where
 --
 --
 -- /See:/ 'describeCertificateResponse' smart constructor.
-data DescribeCertificateResponse = DescribeCertificateResponse'
-  { _dcrsCertificateDescription :: !(Maybe CertificateDescription)
-  , _dcrsResponseStatus         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeCertificateResponse =
+  DescribeCertificateResponse'
+    { _dcrsCertificateDescription :: !(Maybe CertificateDescription)
+    , _dcrsResponseStatus         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeCertificateResponse' with the minimum fields required to make a request.

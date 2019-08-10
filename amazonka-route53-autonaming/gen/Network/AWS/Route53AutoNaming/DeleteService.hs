@@ -44,9 +44,11 @@ import Network.AWS.Route53AutoNaming.Types
 import Network.AWS.Route53AutoNaming.Types.Product
 
 -- | /See:/ 'deleteService' smart constructor.
-newtype DeleteService = DeleteService'
-  { _dsId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteService =
+  DeleteService'
+    { _dsId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteService' with the minimum fields required to make a request.
@@ -97,9 +99,11 @@ instance ToQuery DeleteService where
         toQuery = const mempty
 
 -- | /See:/ 'deleteServiceResponse' smart constructor.
-newtype DeleteServiceResponse = DeleteServiceResponse'
-  { _dsrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteServiceResponse =
+  DeleteServiceResponse'
+    { _dsrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteServiceResponse' with the minimum fields required to make a request.

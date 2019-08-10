@@ -53,13 +53,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describePullRequestEvents' smart constructor.
-data DescribePullRequestEvents = DescribePullRequestEvents'
-  { _dprePullRequestEventType :: !(Maybe PullRequestEventType)
-  , _dpreActorARN             :: !(Maybe Text)
-  , _dpreNextToken            :: !(Maybe Text)
-  , _dpreMaxResults           :: !(Maybe Int)
-  , _dprePullRequestId        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribePullRequestEvents =
+  DescribePullRequestEvents'
+    { _dprePullRequestEventType :: !(Maybe PullRequestEventType)
+    , _dpreActorARN             :: !(Maybe Text)
+    , _dpreNextToken            :: !(Maybe Text)
+    , _dpreMaxResults           :: !(Maybe Int)
+    , _dprePullRequestId        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribePullRequestEvents' with the minimum fields required to make a request.
@@ -158,11 +160,13 @@ instance ToQuery DescribePullRequestEvents where
         toQuery = const mempty
 
 -- | /See:/ 'describePullRequestEventsResponse' smart constructor.
-data DescribePullRequestEventsResponse = DescribePullRequestEventsResponse'
-  { _dprersNextToken         :: !(Maybe Text)
-  , _dprersResponseStatus    :: !Int
-  , _dprersPullRequestEvents :: ![PullRequestEvent]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribePullRequestEventsResponse =
+  DescribePullRequestEventsResponse'
+    { _dprersNextToken         :: !(Maybe Text)
+    , _dprersResponseStatus    :: !Int
+    , _dprersPullRequestEvents :: ![PullRequestEvent]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribePullRequestEventsResponse' with the minimum fields required to make a request.

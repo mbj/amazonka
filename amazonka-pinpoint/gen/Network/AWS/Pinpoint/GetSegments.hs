@@ -45,11 +45,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getSegments' smart constructor.
-data GetSegments = GetSegments'
-  { _gssToken         :: !(Maybe Text)
-  , _gssPageSize      :: !(Maybe Text)
-  , _gssApplicationId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetSegments =
+  GetSegments'
+    { _gssToken         :: !(Maybe Text)
+    , _gssPageSize      :: !(Maybe Text)
+    , _gssApplicationId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetSegments' with the minimum fields required to make a request.
@@ -115,10 +117,12 @@ instance ToQuery GetSegments where
               ["token" =: _gssToken, "page-size" =: _gssPageSize]
 
 -- | /See:/ 'getSegmentsResponse' smart constructor.
-data GetSegmentsResponse = GetSegmentsResponse'
-  { _gsrsResponseStatus   :: !Int
-  , _gsrsSegmentsResponse :: !SegmentsResponse
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetSegmentsResponse =
+  GetSegmentsResponse'
+    { _gsrsResponseStatus   :: !Int
+    , _gsrsSegmentsResponse :: !SegmentsResponse
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetSegmentsResponse' with the minimum fields required to make a request.

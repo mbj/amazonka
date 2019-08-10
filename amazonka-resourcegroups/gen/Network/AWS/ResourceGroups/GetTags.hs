@@ -46,9 +46,11 @@ import Network.AWS.ResourceGroups.Types.Product
 import Network.AWS.Response
 
 -- | /See:/ 'getTags' smart constructor.
-newtype GetTags = GetTags'
-  { _gtARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetTags =
+  GetTags'
+    { _gtARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetTags' with the minimum fields required to make a request.
@@ -91,11 +93,13 @@ instance ToQuery GetTags where
         toQuery = const mempty
 
 -- | /See:/ 'getTagsResponse' smart constructor.
-data GetTagsResponse = GetTagsResponse'
-  { _gtrsARN            :: !(Maybe Text)
-  , _gtrsTags           :: !(Maybe (Map Text Text))
-  , _gtrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetTagsResponse =
+  GetTagsResponse'
+    { _gtrsARN            :: !(Maybe Text)
+    , _gtrsTags           :: !(Maybe (Map Text Text))
+    , _gtrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetTagsResponse' with the minimum fields required to make a request.

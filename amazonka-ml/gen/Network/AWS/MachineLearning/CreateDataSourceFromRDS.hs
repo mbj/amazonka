@@ -53,13 +53,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createDataSourceFromRDS' smart constructor.
-data CreateDataSourceFromRDS = CreateDataSourceFromRDS'
-  { _cdsfrdsDataSourceName    :: !(Maybe Text)
-  , _cdsfrdsComputeStatistics :: !(Maybe Bool)
-  , _cdsfrdsDataSourceId      :: !Text
-  , _cdsfrdsRDSData           :: !RDSDataSpec
-  , _cdsfrdsRoleARN           :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDataSourceFromRDS =
+  CreateDataSourceFromRDS'
+    { _cdsfrdsDataSourceName    :: !(Maybe Text)
+    , _cdsfrdsComputeStatistics :: !(Maybe Bool)
+    , _cdsfrdsDataSourceId      :: !Text
+    , _cdsfrdsRDSData           :: !RDSDataSpec
+    , _cdsfrdsRoleARN           :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDataSourceFromRDS' with the minimum fields required to make a request.
@@ -158,10 +160,12 @@ instance ToQuery CreateDataSourceFromRDS where
 --
 --
 -- /See:/ 'createDataSourceFromRDSResponse' smart constructor.
-data CreateDataSourceFromRDSResponse = CreateDataSourceFromRDSResponse'
-  { _cdsfrdsrsDataSourceId   :: !(Maybe Text)
-  , _cdsfrdsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDataSourceFromRDSResponse =
+  CreateDataSourceFromRDSResponse'
+    { _cdsfrdsrsDataSourceId   :: !(Maybe Text)
+    , _cdsfrdsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDataSourceFromRDSResponse' with the minimum fields required to make a request.

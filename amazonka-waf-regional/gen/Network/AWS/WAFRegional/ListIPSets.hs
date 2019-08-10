@@ -47,10 +47,12 @@ import Network.AWS.WAFRegional.Types
 import Network.AWS.WAFRegional.Types.Product
 
 -- | /See:/ 'listIPSets' smart constructor.
-data ListIPSets = ListIPSets'
-  { _lisNextMarker :: !(Maybe Text)
-  , _lisLimit      :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListIPSets =
+  ListIPSets'
+    { _lisNextMarker :: !(Maybe Text)
+    , _lisLimit      :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListIPSets' with the minimum fields required to make a request.
@@ -111,11 +113,13 @@ instance ToQuery ListIPSets where
         toQuery = const mempty
 
 -- | /See:/ 'listIPSetsResponse' smart constructor.
-data ListIPSetsResponse = ListIPSetsResponse'
-  { _lisrsNextMarker     :: !(Maybe Text)
-  , _lisrsIPSets         :: !(Maybe [IPSetSummary])
-  , _lisrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListIPSetsResponse =
+  ListIPSetsResponse'
+    { _lisrsNextMarker     :: !(Maybe Text)
+    , _lisrsIPSets         :: !(Maybe [IPSetSummary])
+    , _lisrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListIPSetsResponse' with the minimum fields required to make a request.

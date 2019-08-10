@@ -49,10 +49,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getSDKTypes' smart constructor.
-data GetSDKTypes = GetSDKTypes'
-  { _gstLimit    :: !(Maybe Int)
-  , _gstPosition :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetSDKTypes =
+  GetSDKTypes'
+    { _gstLimit    :: !(Maybe Int)
+    , _gstPosition :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetSDKTypes' with the minimum fields required to make a request.
@@ -108,11 +110,13 @@ instance ToQuery GetSDKTypes where
 --
 --
 -- /See:/ 'getSDKTypesResponse' smart constructor.
-data GetSDKTypesResponse = GetSDKTypesResponse'
-  { _gstrsItems          :: !(Maybe [SDKType])
-  , _gstrsPosition       :: !(Maybe Text)
-  , _gstrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetSDKTypesResponse =
+  GetSDKTypesResponse'
+    { _gstrsItems          :: !(Maybe [SDKType])
+    , _gstrsPosition       :: !(Maybe Text)
+    , _gstrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetSDKTypesResponse' with the minimum fields required to make a request.

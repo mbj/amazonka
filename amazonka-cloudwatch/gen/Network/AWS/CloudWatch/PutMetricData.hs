@@ -59,10 +59,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putMetricData' smart constructor.
-data PutMetricData = PutMetricData'
-  { _pmdNamespace  :: !Text
-  , _pmdMetricData :: ![MetricDatum]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutMetricData =
+  PutMetricData'
+    { _pmdNamespace  :: !Text
+    , _pmdMetricData :: ![MetricDatum]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutMetricData' with the minimum fields required to make a request.

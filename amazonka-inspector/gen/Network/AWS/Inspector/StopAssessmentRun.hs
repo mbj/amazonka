@@ -43,10 +43,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'stopAssessmentRun' smart constructor.
-data StopAssessmentRun = StopAssessmentRun'
-  { _sarStopAction       :: !(Maybe StopAction)
-  , _sarAssessmentRunARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StopAssessmentRun =
+  StopAssessmentRun'
+    { _sarStopAction       :: !(Maybe StopAction)
+    , _sarAssessmentRunARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopAssessmentRun' with the minimum fields required to make a request.

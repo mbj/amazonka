@@ -55,9 +55,11 @@ import Network.AWS.Response
 -- | Placeholder documentation for DeleteChannelRequest
 --
 -- /See:/ 'deleteChannel' smart constructor.
-newtype DeleteChannel = DeleteChannel'
-  { _dcChannelId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteChannel =
+  DeleteChannel'
+    { _dcChannelId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteChannel' with the minimum fields required to make a request.
@@ -115,20 +117,22 @@ instance ToQuery DeleteChannel where
 -- | Placeholder documentation for DeleteChannelResponse
 --
 -- /See:/ 'deleteChannelResponse' smart constructor.
-data DeleteChannelResponse = DeleteChannelResponse'
-  { _drsState                 :: !(Maybe ChannelState)
-  , _drsARN                   :: !(Maybe Text)
-  , _drsPipelinesRunningCount :: !(Maybe Int)
-  , _drsInputSpecification    :: !(Maybe InputSpecification)
-  , _drsInputAttachments      :: !(Maybe [InputAttachment])
-  , _drsDestinations          :: !(Maybe [OutputDestination])
-  , _drsName                  :: !(Maybe Text)
-  , _drsId                    :: !(Maybe Text)
-  , _drsEgressEndpoints       :: !(Maybe [ChannelEgressEndpoint])
-  , _drsEncoderSettings       :: !(Maybe EncoderSettings)
-  , _drsRoleARN               :: !(Maybe Text)
-  , _drsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteChannelResponse =
+  DeleteChannelResponse'
+    { _drsState                 :: !(Maybe ChannelState)
+    , _drsARN                   :: !(Maybe Text)
+    , _drsPipelinesRunningCount :: !(Maybe Int)
+    , _drsInputSpecification    :: !(Maybe InputSpecification)
+    , _drsInputAttachments      :: !(Maybe [InputAttachment])
+    , _drsDestinations          :: !(Maybe [OutputDestination])
+    , _drsName                  :: !(Maybe Text)
+    , _drsId                    :: !(Maybe Text)
+    , _drsEgressEndpoints       :: !(Maybe [ChannelEgressEndpoint])
+    , _drsEncoderSettings       :: !(Maybe EncoderSettings)
+    , _drsRoleARN               :: !(Maybe Text)
+    , _drsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteChannelResponse' with the minimum fields required to make a request.

@@ -51,9 +51,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createCollection' smart constructor.
-newtype CreateCollection = CreateCollection'
-  { _ccCollectionId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateCollection =
+  CreateCollection'
+    { _ccCollectionId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateCollection' with the minimum fields required to make a request.
@@ -111,12 +113,14 @@ instance ToQuery CreateCollection where
         toQuery = const mempty
 
 -- | /See:/ 'createCollectionResponse' smart constructor.
-data CreateCollectionResponse = CreateCollectionResponse'
-  { _ccrsFaceModelVersion :: !(Maybe Text)
-  , _ccrsCollectionARN    :: !(Maybe Text)
-  , _ccrsStatusCode       :: !(Maybe Nat)
-  , _ccrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateCollectionResponse =
+  CreateCollectionResponse'
+    { _ccrsFaceModelVersion :: !(Maybe Text)
+    , _ccrsCollectionARN    :: !(Maybe Text)
+    , _ccrsStatusCode       :: !(Maybe Nat)
+    , _ccrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateCollectionResponse' with the minimum fields required to make a request.

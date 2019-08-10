@@ -58,12 +58,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'backtrackDBCluster' smart constructor.
-data BacktrackDBCluster = BacktrackDBCluster'
-  { _bdcForce                                   :: !(Maybe Bool)
-  , _bdcUseEarliestTimeOnPointInTimeUnavailable :: !(Maybe Bool)
-  , _bdcDBClusterIdentifier                     :: !Text
-  , _bdcBacktrackTo                             :: !ISO8601
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BacktrackDBCluster =
+  BacktrackDBCluster'
+    { _bdcForce                                   :: !(Maybe Bool)
+    , _bdcUseEarliestTimeOnPointInTimeUnavailable :: !(Maybe Bool)
+    , _bdcDBClusterIdentifier                     :: !Text
+    , _bdcBacktrackTo                             :: !ISO8601
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BacktrackDBCluster' with the minimum fields required to make a request.

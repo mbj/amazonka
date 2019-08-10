@@ -63,13 +63,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeClusterParameterGroups' smart constructor.
-data DescribeClusterParameterGroups = DescribeClusterParameterGroups'
-  { _dcpgTagValues          :: !(Maybe [Text])
-  , _dcpgTagKeys            :: !(Maybe [Text])
-  , _dcpgMarker             :: !(Maybe Text)
-  , _dcpgMaxRecords         :: !(Maybe Int)
-  , _dcpgParameterGroupName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeClusterParameterGroups =
+  DescribeClusterParameterGroups'
+    { _dcpgTagValues          :: !(Maybe [Text])
+    , _dcpgTagKeys            :: !(Maybe [Text])
+    , _dcpgMarker             :: !(Maybe Text)
+    , _dcpgMaxRecords         :: !(Maybe Int)
+    , _dcpgParameterGroupName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeClusterParameterGroups' with the minimum fields required to make a request.
@@ -171,11 +173,13 @@ instance ToQuery DescribeClusterParameterGroups where
 --
 --
 -- /See:/ 'describeClusterParameterGroupsResponse' smart constructor.
-data DescribeClusterParameterGroupsResponse = DescribeClusterParameterGroupsResponse'
-  { _dcpgrsMarker          :: !(Maybe Text)
-  , _dcpgrsParameterGroups :: !(Maybe [ClusterParameterGroup])
-  , _dcpgrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeClusterParameterGroupsResponse =
+  DescribeClusterParameterGroupsResponse'
+    { _dcpgrsMarker          :: !(Maybe Text)
+    , _dcpgrsParameterGroups :: !(Maybe [ClusterParameterGroup])
+    , _dcpgrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeClusterParameterGroupsResponse' with the minimum fields required to make a request.

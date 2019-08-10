@@ -44,10 +44,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateSmsChannel' smart constructor.
-data UpdateSmsChannel = UpdateSmsChannel'
-  { _uscApplicationId     :: !Text
-  , _uscSMSChannelRequest :: !SMSChannelRequest
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateSmsChannel =
+  UpdateSmsChannel'
+    { _uscApplicationId     :: !Text
+    , _uscSMSChannelRequest :: !SMSChannelRequest
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateSmsChannel' with the minimum fields required to make a request.
@@ -113,10 +115,12 @@ instance ToQuery UpdateSmsChannel where
         toQuery = const mempty
 
 -- | /See:/ 'updateSmsChannelResponse' smart constructor.
-data UpdateSmsChannelResponse = UpdateSmsChannelResponse'
-  { _uscrsResponseStatus     :: !Int
-  , _uscrsSMSChannelResponse :: !SMSChannelResponse
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateSmsChannelResponse =
+  UpdateSmsChannelResponse'
+    { _uscrsResponseStatus     :: !Int
+    , _uscrsSMSChannelResponse :: !SMSChannelResponse
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateSmsChannelResponse' with the minimum fields required to make a request.

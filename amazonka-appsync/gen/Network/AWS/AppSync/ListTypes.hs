@@ -49,12 +49,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listTypes' smart constructor.
-data ListTypes = ListTypes'
-  { _ltNextToken  :: !(Maybe Text)
-  , _ltMaxResults :: !(Maybe Nat)
-  , _ltApiId      :: !Text
-  , _ltFormat     :: !TypeDefinitionFormat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTypes =
+  ListTypes'
+    { _ltNextToken  :: !(Maybe Text)
+    , _ltMaxResults :: !(Maybe Nat)
+    , _ltApiId      :: !Text
+    , _ltFormat     :: !TypeDefinitionFormat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTypes' with the minimum fields required to make a request.
@@ -129,11 +131,13 @@ instance ToQuery ListTypes where
                "maxResults" =: _ltMaxResults, "format" =: _ltFormat]
 
 -- | /See:/ 'listTypesResponse' smart constructor.
-data ListTypesResponse = ListTypesResponse'
-  { _ltrsTypes          :: !(Maybe [Type])
-  , _ltrsNextToken      :: !(Maybe Text)
-  , _ltrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTypesResponse =
+  ListTypesResponse'
+    { _ltrsTypes          :: !(Maybe [Type])
+    , _ltrsNextToken      :: !(Maybe Text)
+    , _ltrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTypesResponse' with the minimum fields required to make a request.

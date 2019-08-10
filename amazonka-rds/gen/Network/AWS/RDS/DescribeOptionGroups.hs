@@ -58,14 +58,16 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeOptionGroups' smart constructor.
-data DescribeOptionGroups = DescribeOptionGroups'
-  { _dogFilters            :: !(Maybe [Filter])
-  , _dogEngineName         :: !(Maybe Text)
-  , _dogMajorEngineVersion :: !(Maybe Text)
-  , _dogMarker             :: !(Maybe Text)
-  , _dogMaxRecords         :: !(Maybe Int)
-  , _dogOptionGroupName    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeOptionGroups =
+  DescribeOptionGroups'
+    { _dogFilters            :: !(Maybe [Filter])
+    , _dogEngineName         :: !(Maybe Text)
+    , _dogMajorEngineVersion :: !(Maybe Text)
+    , _dogMarker             :: !(Maybe Text)
+    , _dogMaxRecords         :: !(Maybe Int)
+    , _dogOptionGroupName    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeOptionGroups' with the minimum fields required to make a request.
@@ -168,11 +170,13 @@ instance ToQuery DescribeOptionGroups where
 --
 --
 -- /See:/ 'describeOptionGroupsResponse' smart constructor.
-data DescribeOptionGroupsResponse = DescribeOptionGroupsResponse'
-  { _dogrsMarker           :: !(Maybe Text)
-  , _dogrsOptionGroupsList :: !(Maybe [OptionGroup])
-  , _dogrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeOptionGroupsResponse =
+  DescribeOptionGroupsResponse'
+    { _dogrsMarker           :: !(Maybe Text)
+    , _dogrsOptionGroupsList :: !(Maybe [OptionGroup])
+    , _dogrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeOptionGroupsResponse' with the minimum fields required to make a request.

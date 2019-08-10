@@ -54,12 +54,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createInstanceExportTask' smart constructor.
-data CreateInstanceExportTask = CreateInstanceExportTask'
-  { _cietTargetEnvironment :: !(Maybe ExportEnvironment)
-  , _cietExportToS3Task    :: !(Maybe ExportToS3TaskSpecification)
-  , _cietDescription       :: !(Maybe Text)
-  , _cietInstanceId        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateInstanceExportTask =
+  CreateInstanceExportTask'
+    { _cietTargetEnvironment :: !(Maybe ExportEnvironment)
+    , _cietExportToS3Task    :: !(Maybe ExportToS3TaskSpecification)
+    , _cietDescription       :: !(Maybe Text)
+    , _cietInstanceId        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateInstanceExportTask' with the minimum fields required to make a request.
@@ -137,10 +139,12 @@ instance ToQuery CreateInstanceExportTask where
 --
 --
 -- /See:/ 'createInstanceExportTaskResponse' smart constructor.
-data CreateInstanceExportTaskResponse = CreateInstanceExportTaskResponse'
-  { _cietrsExportTask     :: !(Maybe ExportTask)
-  , _cietrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateInstanceExportTaskResponse =
+  CreateInstanceExportTaskResponse'
+    { _cietrsExportTask     :: !(Maybe ExportTask)
+    , _cietrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateInstanceExportTaskResponse' with the minimum fields required to make a request.

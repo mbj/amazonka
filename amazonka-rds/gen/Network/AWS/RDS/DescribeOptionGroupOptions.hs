@@ -57,13 +57,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeOptionGroupOptions' smart constructor.
-data DescribeOptionGroupOptions = DescribeOptionGroupOptions'
-  { _dogoFilters            :: !(Maybe [Filter])
-  , _dogoMajorEngineVersion :: !(Maybe Text)
-  , _dogoMarker             :: !(Maybe Text)
-  , _dogoMaxRecords         :: !(Maybe Int)
-  , _dogoEngineName         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeOptionGroupOptions =
+  DescribeOptionGroupOptions'
+    { _dogoFilters            :: !(Maybe [Filter])
+    , _dogoMajorEngineVersion :: !(Maybe Text)
+    , _dogoMarker             :: !(Maybe Text)
+    , _dogoMaxRecords         :: !(Maybe Int)
+    , _dogoEngineName         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeOptionGroupOptions' with the minimum fields required to make a request.
@@ -161,11 +163,13 @@ instance ToQuery DescribeOptionGroupOptions where
 --
 --
 -- /See:/ 'describeOptionGroupOptionsResponse' smart constructor.
-data DescribeOptionGroupOptionsResponse = DescribeOptionGroupOptionsResponse'
-  { _dogorsOptionGroupOptions :: !(Maybe [OptionGroupOption])
-  , _dogorsMarker             :: !(Maybe Text)
-  , _dogorsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeOptionGroupOptionsResponse =
+  DescribeOptionGroupOptionsResponse'
+    { _dogorsOptionGroupOptions :: !(Maybe [OptionGroupOption])
+    , _dogorsMarker             :: !(Maybe Text)
+    , _dogorsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeOptionGroupOptionsResponse' with the minimum fields required to make a request.

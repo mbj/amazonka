@@ -47,10 +47,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteCustomerGateway' smart constructor.
-data DeleteCustomerGateway = DeleteCustomerGateway'
-  { _dcgcDryRun            :: !(Maybe Bool)
-  , _dcgcCustomerGatewayId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteCustomerGateway =
+  DeleteCustomerGateway'
+    { _dcgcDryRun            :: !(Maybe Bool)
+    , _dcgcCustomerGatewayId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteCustomerGateway' with the minimum fields required to make a request.

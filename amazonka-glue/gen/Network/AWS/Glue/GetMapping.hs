@@ -47,11 +47,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getMapping' smart constructor.
-data GetMapping = GetMapping'
-  { _gmSinks    :: !(Maybe [CatalogEntry])
-  , _gmLocation :: !(Maybe Location)
-  , _gmSource   :: !CatalogEntry
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetMapping =
+  GetMapping'
+    { _gmSinks    :: !(Maybe [CatalogEntry])
+    , _gmLocation :: !(Maybe Location)
+    , _gmSource   :: !CatalogEntry
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetMapping' with the minimum fields required to make a request.
@@ -119,10 +121,12 @@ instance ToQuery GetMapping where
         toQuery = const mempty
 
 -- | /See:/ 'getMappingResponse' smart constructor.
-data GetMappingResponse = GetMappingResponse'
-  { _gmrsResponseStatus :: !Int
-  , _gmrsMapping        :: ![MappingEntry]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetMappingResponse =
+  GetMappingResponse'
+    { _gmrsResponseStatus :: !Int
+    , _gmrsMapping        :: ![MappingEntry]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetMappingResponse' with the minimum fields required to make a request.

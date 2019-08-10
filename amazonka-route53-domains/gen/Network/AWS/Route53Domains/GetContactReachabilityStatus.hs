@@ -48,9 +48,11 @@ import Network.AWS.Route53Domains.Types
 import Network.AWS.Route53Domains.Types.Product
 
 -- | /See:/ 'getContactReachabilityStatus' smart constructor.
-newtype GetContactReachabilityStatus = GetContactReachabilityStatus'
-  { _gcrsDomainName :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetContactReachabilityStatus =
+  GetContactReachabilityStatus'
+    { _gcrsDomainName :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetContactReachabilityStatus' with the minimum fields required to make a request.
@@ -106,11 +108,13 @@ instance ToQuery GetContactReachabilityStatus where
         toQuery = const mempty
 
 -- | /See:/ 'getContactReachabilityStatusResponse' smart constructor.
-data GetContactReachabilityStatusResponse = GetContactReachabilityStatusResponse'
-  { _gcrsrsStatus         :: !(Maybe ReachabilityStatus)
-  , _gcrsrsDomainName     :: !(Maybe Text)
-  , _gcrsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetContactReachabilityStatusResponse =
+  GetContactReachabilityStatusResponse'
+    { _gcrsrsStatus         :: !(Maybe ReachabilityStatus)
+    , _gcrsrsDomainName     :: !(Maybe Text)
+    , _gcrsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetContactReachabilityStatusResponse' with the minimum fields required to make a request.

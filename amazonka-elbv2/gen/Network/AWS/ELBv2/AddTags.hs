@@ -49,10 +49,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'addTags' smart constructor.
-data AddTags = AddTags'
-  { _atResourceARNs :: ![Text]
-  , _atTags         :: !(List1 Tag)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddTags =
+  AddTags'
+    { _atResourceARNs :: ![Text]
+    , _atTags         :: !(List1 Tag)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddTags' with the minimum fields required to make a request.
@@ -103,9 +105,11 @@ instance ToQuery AddTags where
                "Tags" =: toQueryList "member" _atTags]
 
 -- | /See:/ 'addTagsResponse' smart constructor.
-newtype AddTagsResponse = AddTagsResponse'
-  { _atrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AddTagsResponse =
+  AddTagsResponse'
+    { _atrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddTagsResponse' with the minimum fields required to make a request.

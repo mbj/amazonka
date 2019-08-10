@@ -53,18 +53,20 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateCrawler' smart constructor.
-data UpdateCrawler = UpdateCrawler'
-  { _uSchemaChangePolicy :: !(Maybe SchemaChangePolicy)
-  , _uSchedule           :: !(Maybe Text)
-  , _uClassifiers        :: !(Maybe [Text])
-  , _uRole               :: !(Maybe Text)
-  , _uTargets            :: !(Maybe CrawlerTargets)
-  , _uDatabaseName       :: !(Maybe Text)
-  , _uConfiguration      :: !(Maybe Text)
-  , _uTablePrefix        :: !(Maybe Text)
-  , _uDescription        :: !(Maybe Text)
-  , _uName               :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateCrawler =
+  UpdateCrawler'
+    { _uSchemaChangePolicy :: !(Maybe SchemaChangePolicy)
+    , _uSchedule           :: !(Maybe Text)
+    , _uClassifiers        :: !(Maybe [Text])
+    , _uRole               :: !(Maybe Text)
+    , _uTargets            :: !(Maybe CrawlerTargets)
+    , _uDatabaseName       :: !(Maybe Text)
+    , _uConfiguration      :: !(Maybe Text)
+    , _uTablePrefix        :: !(Maybe Text)
+    , _uDescription        :: !(Maybe Text)
+    , _uName               :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateCrawler' with the minimum fields required to make a request.
@@ -190,9 +192,11 @@ instance ToQuery UpdateCrawler where
         toQuery = const mempty
 
 -- | /See:/ 'updateCrawlerResponse' smart constructor.
-newtype UpdateCrawlerResponse = UpdateCrawlerResponse'
-  { _uccrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateCrawlerResponse =
+  UpdateCrawlerResponse'
+    { _uccrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateCrawlerResponse' with the minimum fields required to make a request.

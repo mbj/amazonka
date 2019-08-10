@@ -60,11 +60,13 @@ import Network.AWS.Route53.Types.Product
 --
 --
 -- /See:/ 'listHostedZones' smart constructor.
-data ListHostedZones = ListHostedZones'
-  { _lhzDelegationSetId :: !(Maybe ResourceId)
-  , _lhzMarker          :: !(Maybe Text)
-  , _lhzMaxItems        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListHostedZones =
+  ListHostedZones'
+    { _lhzDelegationSetId :: !(Maybe ResourceId)
+    , _lhzMarker          :: !(Maybe Text)
+    , _lhzMaxItems        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListHostedZones' with the minimum fields required to make a request.
@@ -137,14 +139,16 @@ instance ToQuery ListHostedZones where
                "marker" =: _lhzMarker, "maxitems" =: _lhzMaxItems]
 
 -- | /See:/ 'listHostedZonesResponse' smart constructor.
-data ListHostedZonesResponse = ListHostedZonesResponse'
-  { _lhzrsMarker         :: !(Maybe Text)
-  , _lhzrsNextMarker     :: !(Maybe Text)
-  , _lhzrsResponseStatus :: !Int
-  , _lhzrsHostedZones    :: ![HostedZone]
-  , _lhzrsIsTruncated    :: !Bool
-  , _lhzrsMaxItems       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListHostedZonesResponse =
+  ListHostedZonesResponse'
+    { _lhzrsMarker         :: !(Maybe Text)
+    , _lhzrsNextMarker     :: !(Maybe Text)
+    , _lhzrsResponseStatus :: !Int
+    , _lhzrsHostedZones    :: ![HostedZone]
+    , _lhzrsIsTruncated    :: !Bool
+    , _lhzrsMaxItems       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListHostedZonesResponse' with the minimum fields required to make a request.

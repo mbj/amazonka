@@ -43,9 +43,11 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'getBucketRequestPayment' smart constructor.
-newtype GetBucketRequestPayment = GetBucketRequestPayment'
-  { _gbrpBucket :: BucketName
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetBucketRequestPayment =
+  GetBucketRequestPayment'
+    { _gbrpBucket :: BucketName
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBucketRequestPayment' with the minimum fields required to make a request.
@@ -89,10 +91,12 @@ instance ToQuery GetBucketRequestPayment where
         toQuery = const (mconcat ["requestPayment"])
 
 -- | /See:/ 'getBucketRequestPaymentResponse' smart constructor.
-data GetBucketRequestPaymentResponse = GetBucketRequestPaymentResponse'
-  { _gbrprsPayer          :: !(Maybe Payer)
-  , _gbrprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetBucketRequestPaymentResponse =
+  GetBucketRequestPaymentResponse'
+    { _gbrprsPayer          :: !(Maybe Payer)
+    , _gbrprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBucketRequestPaymentResponse' with the minimum fields required to make a request.

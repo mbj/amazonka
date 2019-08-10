@@ -52,12 +52,14 @@ import Network.AWS.ServiceCatalog.Types
 import Network.AWS.ServiceCatalog.Types.Product
 
 -- | /See:/ 'listLaunchPaths' smart constructor.
-data ListLaunchPaths = ListLaunchPaths'
-  { _llpAcceptLanguage :: !(Maybe Text)
-  , _llpPageToken      :: !(Maybe Text)
-  , _llpPageSize       :: !(Maybe Nat)
-  , _llpProductId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListLaunchPaths =
+  ListLaunchPaths'
+    { _llpAcceptLanguage :: !(Maybe Text)
+    , _llpPageToken      :: !(Maybe Text)
+    , _llpPageSize       :: !(Maybe Nat)
+    , _llpProductId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListLaunchPaths' with the minimum fields required to make a request.
@@ -147,11 +149,13 @@ instance ToQuery ListLaunchPaths where
         toQuery = const mempty
 
 -- | /See:/ 'listLaunchPathsResponse' smart constructor.
-data ListLaunchPathsResponse = ListLaunchPathsResponse'
-  { _llprsNextPageToken       :: !(Maybe Text)
-  , _llprsLaunchPathSummaries :: !(Maybe [LaunchPathSummary])
-  , _llprsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListLaunchPathsResponse =
+  ListLaunchPathsResponse'
+    { _llprsNextPageToken       :: !(Maybe Text)
+    , _llprsLaunchPathSummaries :: !(Maybe [LaunchPathSummary])
+    , _llprsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListLaunchPathsResponse' with the minimum fields required to make a request.

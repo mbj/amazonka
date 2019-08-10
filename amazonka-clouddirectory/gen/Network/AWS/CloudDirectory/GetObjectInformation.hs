@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getObjectInformation' smart constructor.
-data GetObjectInformation = GetObjectInformation'
-  { _goiConsistencyLevel :: !(Maybe ConsistencyLevel)
-  , _goiDirectoryARN     :: !Text
-  , _goiObjectReference  :: !ObjectReference
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetObjectInformation =
+  GetObjectInformation'
+    { _goiConsistencyLevel :: !(Maybe ConsistencyLevel)
+    , _goiDirectoryARN     :: !Text
+    , _goiObjectReference  :: !ObjectReference
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetObjectInformation' with the minimum fields required to make a request.
@@ -125,11 +127,13 @@ instance ToQuery GetObjectInformation where
         toQuery = const mempty
 
 -- | /See:/ 'getObjectInformationResponse' smart constructor.
-data GetObjectInformationResponse = GetObjectInformationResponse'
-  { _goirsObjectIdentifier :: !(Maybe Text)
-  , _goirsSchemaFacets     :: !(Maybe [SchemaFacet])
-  , _goirsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetObjectInformationResponse =
+  GetObjectInformationResponse'
+    { _goirsObjectIdentifier :: !(Maybe Text)
+    , _goirsSchemaFacets     :: !(Maybe [SchemaFacet])
+    , _goirsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetObjectInformationResponse' with the minimum fields required to make a request.

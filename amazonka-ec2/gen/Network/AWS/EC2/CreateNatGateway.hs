@@ -52,11 +52,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createNatGateway' smart constructor.
-data CreateNatGateway = CreateNatGateway'
-  { _cngClientToken  :: !(Maybe Text)
-  , _cngAllocationId :: !Text
-  , _cngSubnetId     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateNatGateway =
+  CreateNatGateway'
+    { _cngClientToken  :: !(Maybe Text)
+    , _cngAllocationId :: !Text
+    , _cngSubnetId     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateNatGateway' with the minimum fields required to make a request.
@@ -126,11 +128,13 @@ instance ToQuery CreateNatGateway where
 --
 --
 -- /See:/ 'createNatGatewayResponse' smart constructor.
-data CreateNatGatewayResponse = CreateNatGatewayResponse'
-  { _cngrsClientToken    :: !(Maybe Text)
-  , _cngrsNatGateway     :: !(Maybe NatGateway)
-  , _cngrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateNatGatewayResponse =
+  CreateNatGatewayResponse'
+    { _cngrsClientToken    :: !(Maybe Text)
+    , _cngrsNatGateway     :: !(Maybe NatGateway)
+    , _cngrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateNatGatewayResponse' with the minimum fields required to make a request.

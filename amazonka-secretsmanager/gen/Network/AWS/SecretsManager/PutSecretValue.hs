@@ -86,13 +86,15 @@ import Network.AWS.SecretsManager.Types
 import Network.AWS.SecretsManager.Types.Product
 
 -- | /See:/ 'putSecretValue' smart constructor.
-data PutSecretValue = PutSecretValue'
-  { _psvVersionStages      :: !(Maybe (List1 Text))
-  , _psvSecretBinary       :: !(Maybe (Sensitive Base64))
-  , _psvSecretString       :: !(Maybe (Sensitive Text))
-  , _psvClientRequestToken :: !(Maybe Text)
-  , _psvSecretId           :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data PutSecretValue =
+  PutSecretValue'
+    { _psvVersionStages      :: !(Maybe (List1 Text))
+    , _psvSecretBinary       :: !(Maybe (Sensitive Base64))
+    , _psvSecretString       :: !(Maybe (Sensitive Text))
+    , _psvClientRequestToken :: !(Maybe Text)
+    , _psvSecretId           :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutSecretValue' with the minimum fields required to make a request.
@@ -183,13 +185,15 @@ instance ToQuery PutSecretValue where
         toQuery = const mempty
 
 -- | /See:/ 'putSecretValueResponse' smart constructor.
-data PutSecretValueResponse = PutSecretValueResponse'
-  { _psvrsVersionId      :: !(Maybe Text)
-  , _psvrsARN            :: !(Maybe Text)
-  , _psvrsVersionStages  :: !(Maybe (List1 Text))
-  , _psvrsName           :: !(Maybe Text)
-  , _psvrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutSecretValueResponse =
+  PutSecretValueResponse'
+    { _psvrsVersionId      :: !(Maybe Text)
+    , _psvrsARN            :: !(Maybe Text)
+    , _psvrsVersionStages  :: !(Maybe (List1 Text))
+    , _psvrsName           :: !(Maybe Text)
+    , _psvrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutSecretValueResponse' with the minimum fields required to make a request.

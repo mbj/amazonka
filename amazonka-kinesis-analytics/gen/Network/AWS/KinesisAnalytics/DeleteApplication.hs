@@ -51,10 +51,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteApplication' smart constructor.
-data DeleteApplication = DeleteApplication'
-  { _dApplicationName :: !Text
-  , _dCreateTimestamp :: !POSIX
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteApplication =
+  DeleteApplication'
+    { _dApplicationName :: !Text
+    , _dCreateTimestamp :: !POSIX
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteApplication' with the minimum fields required to make a request.
@@ -123,9 +125,11 @@ instance ToQuery DeleteApplication where
 --
 --
 -- /See:/ 'deleteApplicationResponse' smart constructor.
-newtype DeleteApplicationResponse = DeleteApplicationResponse'
-  { _drsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteApplicationResponse =
+  DeleteApplicationResponse'
+    { _drsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteApplicationResponse' with the minimum fields required to make a request.

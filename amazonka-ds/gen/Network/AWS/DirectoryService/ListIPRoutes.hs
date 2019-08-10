@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listIPRoutes' smart constructor.
-data ListIPRoutes = ListIPRoutes'
-  { _lirNextToken   :: !(Maybe Text)
-  , _lirLimit       :: !(Maybe Nat)
-  , _lirDirectoryId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListIPRoutes =
+  ListIPRoutes'
+    { _lirNextToken   :: !(Maybe Text)
+    , _lirLimit       :: !(Maybe Nat)
+    , _lirDirectoryId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListIPRoutes' with the minimum fields required to make a request.
@@ -127,11 +129,13 @@ instance ToQuery ListIPRoutes where
         toQuery = const mempty
 
 -- | /See:/ 'listIPRoutesResponse' smart constructor.
-data ListIPRoutesResponse = ListIPRoutesResponse'
-  { _lirrsIPRoutesInfo   :: !(Maybe [IPRouteInfo])
-  , _lirrsNextToken      :: !(Maybe Text)
-  , _lirrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListIPRoutesResponse =
+  ListIPRoutesResponse'
+    { _lirrsIPRoutesInfo   :: !(Maybe [IPRouteInfo])
+    , _lirrsNextToken      :: !(Maybe Text)
+    , _lirrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListIPRoutesResponse' with the minimum fields required to make a request.

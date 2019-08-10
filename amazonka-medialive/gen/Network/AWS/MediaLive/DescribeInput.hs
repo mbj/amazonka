@@ -53,9 +53,11 @@ import Network.AWS.Response
 -- | Placeholder documentation for DescribeInputRequest
 --
 -- /See:/ 'describeInput' smart constructor.
-newtype DescribeInput = DescribeInput'
-  { _dInputId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeInput =
+  DescribeInput'
+    { _dInputId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeInput' with the minimum fields required to make a request.
@@ -112,18 +114,20 @@ instance ToQuery DescribeInput where
 -- | Placeholder documentation for DescribeInputResponse
 --
 -- /See:/ 'describeInputResponse' smart constructor.
-data DescribeInputResponse = DescribeInputResponse'
-  { _diirsState            :: !(Maybe InputState)
-  , _diirsSecurityGroups   :: !(Maybe [Text])
-  , _diirsARN              :: !(Maybe Text)
-  , _diirsSources          :: !(Maybe [InputSource])
-  , _diirsDestinations     :: !(Maybe [InputDestination])
-  , _diirsName             :: !(Maybe Text)
-  , _diirsAttachedChannels :: !(Maybe [Text])
-  , _diirsId               :: !(Maybe Text)
-  , _diirsType             :: !(Maybe InputType)
-  , _diirsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeInputResponse =
+  DescribeInputResponse'
+    { _diirsState            :: !(Maybe InputState)
+    , _diirsSecurityGroups   :: !(Maybe [Text])
+    , _diirsARN              :: !(Maybe Text)
+    , _diirsSources          :: !(Maybe [InputSource])
+    , _diirsDestinations     :: !(Maybe [InputDestination])
+    , _diirsName             :: !(Maybe Text)
+    , _diirsAttachedChannels :: !(Maybe [Text])
+    , _diirsId               :: !(Maybe Text)
+    , _diirsType             :: !(Maybe InputType)
+    , _diirsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeInputResponse' with the minimum fields required to make a request.

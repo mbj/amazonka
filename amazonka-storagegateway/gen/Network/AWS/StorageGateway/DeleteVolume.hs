@@ -53,9 +53,11 @@ import Network.AWS.StorageGateway.Types.Product
 --
 --
 -- /See:/ 'deleteVolume' smart constructor.
-newtype DeleteVolume = DeleteVolume'
-  { _dvVolumeARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteVolume =
+  DeleteVolume'
+    { _dvVolumeARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteVolume' with the minimum fields required to make a request.
@@ -112,10 +114,12 @@ instance ToQuery DeleteVolume where
 --
 --
 -- /See:/ 'deleteVolumeResponse' smart constructor.
-data DeleteVolumeResponse = DeleteVolumeResponse'
-  { _dvrsVolumeARN      :: !(Maybe Text)
-  , _dvrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteVolumeResponse =
+  DeleteVolumeResponse'
+    { _dvrsVolumeARN      :: !(Maybe Text)
+    , _dvrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteVolumeResponse' with the minimum fields required to make a request.

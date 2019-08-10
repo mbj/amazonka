@@ -60,16 +60,18 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'modifyReplicationTask' smart constructor.
-data ModifyReplicationTask = ModifyReplicationTask'
-  { _mrtReplicationTaskSettings   :: !(Maybe Text)
-  , _mrtReplicationTaskIdentifier :: !(Maybe Text)
-  , _mrtCdcStartPosition          :: !(Maybe Text)
-  , _mrtTableMappings             :: !(Maybe Text)
-  , _mrtMigrationType             :: !(Maybe MigrationTypeValue)
-  , _mrtCdcStopPosition           :: !(Maybe Text)
-  , _mrtCdcStartTime              :: !(Maybe POSIX)
-  , _mrtReplicationTaskARN        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyReplicationTask =
+  ModifyReplicationTask'
+    { _mrtReplicationTaskSettings   :: !(Maybe Text)
+    , _mrtReplicationTaskIdentifier :: !(Maybe Text)
+    , _mrtCdcStartPosition          :: !(Maybe Text)
+    , _mrtTableMappings             :: !(Maybe Text)
+    , _mrtMigrationType             :: !(Maybe MigrationTypeValue)
+    , _mrtCdcStopPosition           :: !(Maybe Text)
+    , _mrtCdcStartTime              :: !(Maybe POSIX)
+    , _mrtReplicationTaskARN        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyReplicationTask' with the minimum fields required to make a request.
@@ -190,10 +192,12 @@ instance ToQuery ModifyReplicationTask where
 --
 --
 -- /See:/ 'modifyReplicationTaskResponse' smart constructor.
-data ModifyReplicationTaskResponse = ModifyReplicationTaskResponse'
-  { _mrtrsReplicationTask :: !(Maybe ReplicationTask)
-  , _mrtrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyReplicationTaskResponse =
+  ModifyReplicationTaskResponse'
+    { _mrtrsReplicationTask :: !(Maybe ReplicationTask)
+    , _mrtrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyReplicationTaskResponse' with the minimum fields required to make a request.

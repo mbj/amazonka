@@ -105,9 +105,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeEC2InstanceLimits' smart constructor.
-newtype DescribeEC2InstanceLimits = DescribeEC2InstanceLimits'
-  { _deilEC2InstanceType :: Maybe EC2InstanceType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeEC2InstanceLimits =
+  DescribeEC2InstanceLimits'
+    { _deilEC2InstanceType :: Maybe EC2InstanceType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEC2InstanceLimits' with the minimum fields required to make a request.
@@ -166,10 +168,12 @@ instance ToQuery DescribeEC2InstanceLimits where
 --
 --
 -- /See:/ 'describeEC2InstanceLimitsResponse' smart constructor.
-data DescribeEC2InstanceLimitsResponse = DescribeEC2InstanceLimitsResponse'
-  { _deilrsEC2InstanceLimits :: !(Maybe [EC2InstanceLimit])
-  , _deilrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeEC2InstanceLimitsResponse =
+  DescribeEC2InstanceLimitsResponse'
+    { _deilrsEC2InstanceLimits :: !(Maybe [EC2InstanceLimit])
+    , _deilrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEC2InstanceLimitsResponse' with the minimum fields required to make a request.

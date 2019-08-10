@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteFlowLogs' smart constructor.
-newtype DeleteFlowLogs = DeleteFlowLogs'
-  { _dflFlowLogIds :: [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteFlowLogs =
+  DeleteFlowLogs'
+    { _dflFlowLogIds :: [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteFlowLogs' with the minimum fields required to make a request.
@@ -101,10 +103,12 @@ instance ToQuery DeleteFlowLogs where
 --
 --
 -- /See:/ 'deleteFlowLogsResponse' smart constructor.
-data DeleteFlowLogsResponse = DeleteFlowLogsResponse'
-  { _dflrsUnsuccessful   :: !(Maybe [UnsuccessfulItem])
-  , _dflrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteFlowLogsResponse =
+  DeleteFlowLogsResponse'
+    { _dflrsUnsuccessful   :: !(Maybe [UnsuccessfulItem])
+    , _dflrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteFlowLogsResponse' with the minimum fields required to make a request.

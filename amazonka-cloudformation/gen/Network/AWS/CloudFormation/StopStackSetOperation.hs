@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'stopStackSetOperation' smart constructor.
-data StopStackSetOperation = StopStackSetOperation'
-  { _sssoStackSetName :: !Text
-  , _sssoOperationId  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StopStackSetOperation =
+  StopStackSetOperation'
+    { _sssoStackSetName :: !Text
+    , _sssoOperationId  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopStackSetOperation' with the minimum fields required to make a request.
@@ -104,9 +106,11 @@ instance ToQuery StopStackSetOperation where
                "OperationId" =: _sssoOperationId]
 
 -- | /See:/ 'stopStackSetOperationResponse' smart constructor.
-newtype StopStackSetOperationResponse = StopStackSetOperationResponse'
-  { _sssorsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StopStackSetOperationResponse =
+  StopStackSetOperationResponse'
+    { _sssorsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopStackSetOperationResponse' with the minimum fields required to make a request.

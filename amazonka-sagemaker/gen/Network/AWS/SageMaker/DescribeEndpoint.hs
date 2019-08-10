@@ -52,9 +52,11 @@ import Network.AWS.SageMaker.Types
 import Network.AWS.SageMaker.Types.Product
 
 -- | /See:/ 'describeEndpoint' smart constructor.
-newtype DescribeEndpoint = DescribeEndpoint'
-  { _dEndpointName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeEndpoint =
+  DescribeEndpoint'
+    { _dEndpointName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEndpoint' with the minimum fields required to make a request.
@@ -115,17 +117,19 @@ instance ToQuery DescribeEndpoint where
         toQuery = const mempty
 
 -- | /See:/ 'describeEndpointResponse' smart constructor.
-data DescribeEndpointResponse = DescribeEndpointResponse'
-  { _dersFailureReason      :: !(Maybe Text)
-  , _dersProductionVariants :: !(Maybe (List1 ProductionVariantSummary))
-  , _dersResponseStatus     :: !Int
-  , _dersEndpointName       :: !Text
-  , _dersEndpointARN        :: !Text
-  , _dersEndpointConfigName :: !Text
-  , _dersEndpointStatus     :: !EndpointStatus
-  , _dersCreationTime       :: !POSIX
-  , _dersLastModifiedTime   :: !POSIX
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeEndpointResponse =
+  DescribeEndpointResponse'
+    { _dersFailureReason      :: !(Maybe Text)
+    , _dersProductionVariants :: !(Maybe (List1 ProductionVariantSummary))
+    , _dersResponseStatus     :: !Int
+    , _dersEndpointName       :: !Text
+    , _dersEndpointARN        :: !Text
+    , _dersEndpointConfigName :: !Text
+    , _dersEndpointStatus     :: !EndpointStatus
+    , _dersCreationTime       :: !POSIX
+    , _dersLastModifiedTime   :: !POSIX
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEndpointResponse' with the minimum fields required to make a request.

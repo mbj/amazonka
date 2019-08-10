@@ -26,10 +26,12 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'lexicon' smart constructor.
-data Lexicon = Lexicon'
-  { _lContent :: !(Maybe Text)
-  , _lName    :: !(Maybe (Sensitive Text))
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data Lexicon =
+  Lexicon'
+    { _lContent :: !(Maybe Text)
+    , _lName    :: !(Maybe (Sensitive Text))
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Lexicon' with the minimum fields required to make a request.
@@ -67,14 +69,16 @@ instance NFData Lexicon where
 --
 --
 -- /See:/ 'lexiconAttributes' smart constructor.
-data LexiconAttributes = LexiconAttributes'
-  { _laLanguageCode :: !(Maybe LanguageCode)
-  , _laSize         :: !(Maybe Int)
-  , _laLexemesCount :: !(Maybe Int)
-  , _laLexiconARN   :: !(Maybe Text)
-  , _laAlphabet     :: !(Maybe Text)
-  , _laLastModified :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LexiconAttributes =
+  LexiconAttributes'
+    { _laLanguageCode :: !(Maybe LanguageCode)
+    , _laSize         :: !(Maybe Int)
+    , _laLexemesCount :: !(Maybe Int)
+    , _laLexiconARN   :: !(Maybe Text)
+    , _laAlphabet     :: !(Maybe Text)
+    , _laLastModified :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LexiconAttributes' with the minimum fields required to make a request.
@@ -149,10 +153,12 @@ instance NFData LexiconAttributes where
 --
 --
 -- /See:/ 'lexiconDescription' smart constructor.
-data LexiconDescription = LexiconDescription'
-  { _ldAttributes :: !(Maybe LexiconAttributes)
-  , _ldName       :: !(Maybe (Sensitive Text))
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data LexiconDescription =
+  LexiconDescription'
+    { _ldAttributes :: !(Maybe LexiconAttributes)
+    , _ldName       :: !(Maybe (Sensitive Text))
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LexiconDescription' with the minimum fields required to make a request.
@@ -192,13 +198,15 @@ instance NFData LexiconDescription where
 --
 --
 -- /See:/ 'voice' smart constructor.
-data Voice = Voice'
-  { _vLanguageCode :: !(Maybe LanguageCode)
-  , _vLanguageName :: !(Maybe Text)
-  , _vGender       :: !(Maybe Gender)
-  , _vName         :: !(Maybe Text)
-  , _vId           :: !(Maybe VoiceId)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Voice =
+  Voice'
+    { _vLanguageCode :: !(Maybe LanguageCode)
+    , _vLanguageName :: !(Maybe Text)
+    , _vGender       :: !(Maybe Gender)
+    , _vName         :: !(Maybe Text)
+    , _vId           :: !(Maybe VoiceId)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Voice' with the minimum fields required to make a request.

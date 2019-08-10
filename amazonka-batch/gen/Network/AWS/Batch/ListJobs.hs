@@ -50,13 +50,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listJobs' smart constructor.
-data ListJobs = ListJobs'
-  { _ljNextToken  :: !(Maybe Text)
-  , _ljJobStatus  :: !(Maybe JobStatus)
-  , _ljArrayJobId :: !(Maybe Text)
-  , _ljJobQueue   :: !(Maybe Text)
-  , _ljMaxResults :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListJobs =
+  ListJobs'
+    { _ljNextToken  :: !(Maybe Text)
+    , _ljJobStatus  :: !(Maybe JobStatus)
+    , _ljArrayJobId :: !(Maybe Text)
+    , _ljJobQueue   :: !(Maybe Text)
+    , _ljMaxResults :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListJobs' with the minimum fields required to make a request.
@@ -142,11 +144,13 @@ instance ToQuery ListJobs where
         toQuery = const mempty
 
 -- | /See:/ 'listJobsResponse' smart constructor.
-data ListJobsResponse = ListJobsResponse'
-  { _ljrsNextToken      :: !(Maybe Text)
-  , _ljrsResponseStatus :: !Int
-  , _ljrsJobSummaryList :: ![JobSummary]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListJobsResponse =
+  ListJobsResponse'
+    { _ljrsNextToken      :: !(Maybe Text)
+    , _ljrsResponseStatus :: !Int
+    , _ljrsJobSummaryList :: ![JobSummary]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListJobsResponse' with the minimum fields required to make a request.

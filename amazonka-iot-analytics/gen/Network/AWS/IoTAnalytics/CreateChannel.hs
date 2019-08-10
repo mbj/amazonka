@@ -48,10 +48,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createChannel' smart constructor.
-data CreateChannel = CreateChannel'
-  { _ccRetentionPeriod :: !(Maybe RetentionPeriod)
-  , _ccChannelName     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateChannel =
+  CreateChannel'
+    { _ccRetentionPeriod :: !(Maybe RetentionPeriod)
+    , _ccChannelName     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateChannel' with the minimum fields required to make a request.
@@ -108,12 +110,14 @@ instance ToQuery CreateChannel where
         toQuery = const mempty
 
 -- | /See:/ 'createChannelResponse' smart constructor.
-data CreateChannelResponse = CreateChannelResponse'
-  { _ccrsChannelARN      :: !(Maybe Text)
-  , _ccrsRetentionPeriod :: !(Maybe RetentionPeriod)
-  , _ccrsChannelName     :: !(Maybe Text)
-  , _ccrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateChannelResponse =
+  CreateChannelResponse'
+    { _ccrsChannelARN      :: !(Maybe Text)
+    , _ccrsRetentionPeriod :: !(Maybe RetentionPeriod)
+    , _ccrsChannelName     :: !(Maybe Text)
+    , _ccrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateChannelResponse' with the minimum fields required to make a request.

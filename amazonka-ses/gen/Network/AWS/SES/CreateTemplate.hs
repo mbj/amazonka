@@ -50,9 +50,11 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'createTemplate' smart constructor.
-newtype CreateTemplate = CreateTemplate'
-  { _ctTemplate :: Template
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateTemplate =
+  CreateTemplate'
+    { _ctTemplate :: Template
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateTemplate' with the minimum fields required to make a request.
@@ -96,9 +98,11 @@ instance ToQuery CreateTemplate where
                "Template" =: _ctTemplate]
 
 -- | /See:/ 'createTemplateResponse' smart constructor.
-newtype CreateTemplateResponse = CreateTemplateResponse'
-  { _ctrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateTemplateResponse =
+  CreateTemplateResponse'
+    { _ctrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateTemplateResponse' with the minimum fields required to make a request.

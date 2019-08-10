@@ -60,13 +60,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listPolicies' smart constructor.
-data ListPolicies = ListPolicies'
-  { _lpPathPrefix   :: !(Maybe Text)
-  , _lpOnlyAttached :: !(Maybe Bool)
-  , _lpMarker       :: !(Maybe Text)
-  , _lpScope        :: !(Maybe PolicyScopeType)
-  , _lpMaxItems     :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListPolicies =
+  ListPolicies'
+    { _lpPathPrefix   :: !(Maybe Text)
+    , _lpOnlyAttached :: !(Maybe Bool)
+    , _lpMarker       :: !(Maybe Text)
+    , _lpScope        :: !(Maybe PolicyScopeType)
+    , _lpMaxItems     :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListPolicies' with the minimum fields required to make a request.
@@ -158,12 +160,14 @@ instance ToQuery ListPolicies where
 --
 --
 -- /See:/ 'listPoliciesResponse' smart constructor.
-data ListPoliciesResponse = ListPoliciesResponse'
-  { _lprsMarker         :: !(Maybe Text)
-  , _lprsIsTruncated    :: !(Maybe Bool)
-  , _lprsPolicies       :: !(Maybe [Policy])
-  , _lprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListPoliciesResponse =
+  ListPoliciesResponse'
+    { _lprsMarker         :: !(Maybe Text)
+    , _lprsIsTruncated    :: !(Maybe Bool)
+    , _lprsPolicies       :: !(Maybe [Policy])
+    , _lprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListPoliciesResponse' with the minimum fields required to make a request.

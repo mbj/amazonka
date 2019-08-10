@@ -46,11 +46,13 @@ import Network.AWS.WorkMail.Types
 import Network.AWS.WorkMail.Types.Product
 
 -- | /See:/ 'associateMemberToGroup' smart constructor.
-data AssociateMemberToGroup = AssociateMemberToGroup'
-  { _amtgOrganizationId :: !Text
-  , _amtgGroupId        :: !Text
-  , _amtgMemberId       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssociateMemberToGroup =
+  AssociateMemberToGroup'
+    { _amtgOrganizationId :: !Text
+    , _amtgGroupId        :: !Text
+    , _amtgMemberId       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateMemberToGroup' with the minimum fields required to make a request.
@@ -126,9 +128,11 @@ instance ToQuery AssociateMemberToGroup where
         toQuery = const mempty
 
 -- | /See:/ 'associateMemberToGroupResponse' smart constructor.
-newtype AssociateMemberToGroupResponse = AssociateMemberToGroupResponse'
-  { _amtgrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AssociateMemberToGroupResponse =
+  AssociateMemberToGroupResponse'
+    { _amtgrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateMemberToGroupResponse' with the minimum fields required to make a request.

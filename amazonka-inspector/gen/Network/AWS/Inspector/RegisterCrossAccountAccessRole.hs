@@ -42,9 +42,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'registerCrossAccountAccessRole' smart constructor.
-newtype RegisterCrossAccountAccessRole = RegisterCrossAccountAccessRole'
-  { _rcaarRoleARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RegisterCrossAccountAccessRole =
+  RegisterCrossAccountAccessRole'
+    { _rcaarRoleARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterCrossAccountAccessRole' with the minimum fields required to make a request.

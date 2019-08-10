@@ -46,11 +46,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listDeployments' smart constructor.
-data ListDeployments = ListDeployments'
-  { _lNextToken  :: !(Maybe Text)
-  , _lMaxResults :: !(Maybe Text)
-  , _lGroupId    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListDeployments =
+  ListDeployments'
+    { _lNextToken  :: !(Maybe Text)
+    , _lMaxResults :: !(Maybe Text)
+    , _lGroupId    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDeployments' with the minimum fields required to make a request.
@@ -117,11 +119,13 @@ instance ToQuery ListDeployments where
                "MaxResults" =: _lMaxResults]
 
 -- | /See:/ 'listDeploymentsResponse' smart constructor.
-data ListDeploymentsResponse = ListDeploymentsResponse'
-  { _ldrsNextToken      :: !(Maybe Text)
-  , _ldrsDeployments    :: !(Maybe [Deployment])
-  , _ldrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListDeploymentsResponse =
+  ListDeploymentsResponse'
+    { _ldrsNextToken      :: !(Maybe Text)
+    , _ldrsDeployments    :: !(Maybe [Deployment])
+    , _ldrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDeploymentsResponse' with the minimum fields required to make a request.

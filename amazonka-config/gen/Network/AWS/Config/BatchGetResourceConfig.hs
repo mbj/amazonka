@@ -46,9 +46,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'batchGetResourceConfig' smart constructor.
-newtype BatchGetResourceConfig = BatchGetResourceConfig'
-  { _bgrcResourceKeys :: List1 ResourceKey
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype BatchGetResourceConfig =
+  BatchGetResourceConfig'
+    { _bgrcResourceKeys :: List1 ResourceKey
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchGetResourceConfig' with the minimum fields required to make a request.
@@ -106,11 +108,13 @@ instance ToQuery BatchGetResourceConfig where
         toQuery = const mempty
 
 -- | /See:/ 'batchGetResourceConfigResponse' smart constructor.
-data BatchGetResourceConfigResponse = BatchGetResourceConfigResponse'
-  { _bgrcrsBaseConfigurationItems  :: !(Maybe [BaseConfigurationItem])
-  , _bgrcrsUnprocessedResourceKeys :: !(Maybe (List1 ResourceKey))
-  , _bgrcrsResponseStatus          :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchGetResourceConfigResponse =
+  BatchGetResourceConfigResponse'
+    { _bgrcrsBaseConfigurationItems  :: !(Maybe [BaseConfigurationItem])
+    , _bgrcrsUnprocessedResourceKeys :: !(Maybe (List1 ResourceKey))
+    , _bgrcrsResponseStatus          :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchGetResourceConfigResponse' with the minimum fields required to make a request.

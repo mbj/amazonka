@@ -75,9 +75,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'stopGameSessionPlacement' smart constructor.
-newtype StopGameSessionPlacement = StopGameSessionPlacement'
-  { _sPlacementId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StopGameSessionPlacement =
+  StopGameSessionPlacement'
+    { _sPlacementId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopGameSessionPlacement' with the minimum fields required to make a request.
@@ -136,10 +138,12 @@ instance ToQuery StopGameSessionPlacement where
 --
 --
 -- /See:/ 'stopGameSessionPlacementResponse' smart constructor.
-data StopGameSessionPlacementResponse = StopGameSessionPlacementResponse'
-  { _storsGameSessionPlacement :: !(Maybe GameSessionPlacement)
-  , _storsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StopGameSessionPlacementResponse =
+  StopGameSessionPlacementResponse'
+    { _storsGameSessionPlacement :: !(Maybe GameSessionPlacement)
+    , _storsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopGameSessionPlacementResponse' with the minimum fields required to make a request.

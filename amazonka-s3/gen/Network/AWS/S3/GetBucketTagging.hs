@@ -43,9 +43,11 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'getBucketTagging' smart constructor.
-newtype GetBucketTagging = GetBucketTagging'
-  { _gbtBucket :: BucketName
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetBucketTagging =
+  GetBucketTagging'
+    { _gbtBucket :: BucketName
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBucketTagging' with the minimum fields required to make a request.
@@ -88,10 +90,12 @@ instance ToQuery GetBucketTagging where
         toQuery = const (mconcat ["tagging"])
 
 -- | /See:/ 'getBucketTaggingResponse' smart constructor.
-data GetBucketTaggingResponse = GetBucketTaggingResponse'
-  { _gbtrsResponseStatus :: !Int
-  , _gbtrsTagSet         :: ![Tag]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetBucketTaggingResponse =
+  GetBucketTaggingResponse'
+    { _gbtrsResponseStatus :: !Int
+    , _gbtrsTagSet         :: ![Tag]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBucketTaggingResponse' with the minimum fields required to make a request.

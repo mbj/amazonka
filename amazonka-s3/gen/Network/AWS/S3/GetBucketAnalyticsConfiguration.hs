@@ -44,10 +44,12 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'getBucketAnalyticsConfiguration' smart constructor.
-data GetBucketAnalyticsConfiguration = GetBucketAnalyticsConfiguration'
-  { _getBucket :: !BucketName
-  , _getId     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetBucketAnalyticsConfiguration =
+  GetBucketAnalyticsConfiguration'
+    { _getBucket :: !BucketName
+    , _getId     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBucketAnalyticsConfiguration' with the minimum fields required to make a request.
@@ -103,10 +105,12 @@ instance ToQuery GetBucketAnalyticsConfiguration
           = mconcat ["id" =: _getId, "analytics"]
 
 -- | /See:/ 'getBucketAnalyticsConfigurationResponse' smart constructor.
-data GetBucketAnalyticsConfigurationResponse = GetBucketAnalyticsConfigurationResponse'
-  { _gbacrsAnalyticsConfiguration :: !(Maybe AnalyticsConfiguration)
-  , _gbacrsResponseStatus         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetBucketAnalyticsConfigurationResponse =
+  GetBucketAnalyticsConfigurationResponse'
+    { _gbacrsAnalyticsConfiguration :: !(Maybe AnalyticsConfiguration)
+    , _gbacrsResponseStatus         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBucketAnalyticsConfigurationResponse' with the minimum fields required to make a request.

@@ -43,10 +43,12 @@ import Network.AWS.WorkDocs.Types
 import Network.AWS.WorkDocs.Types.Product
 
 -- | /See:/ 'deleteFolder' smart constructor.
-data DeleteFolder = DeleteFolder'
-  { _dfAuthenticationToken :: !(Maybe (Sensitive Text))
-  , _dfFolderId            :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data DeleteFolder =
+  DeleteFolder'
+    { _dfAuthenticationToken :: !(Maybe (Sensitive Text))
+    , _dfFolderId            :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteFolder' with the minimum fields required to make a request.

@@ -50,13 +50,15 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'getInventorySchema' smart constructor.
-data GetInventorySchema = GetInventorySchema'
-  { _gisTypeName   :: !(Maybe Text)
-  , _gisAggregator :: !(Maybe Bool)
-  , _gisNextToken  :: !(Maybe Text)
-  , _gisSubType    :: !(Maybe Bool)
-  , _gisMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetInventorySchema =
+  GetInventorySchema'
+    { _gisTypeName   :: !(Maybe Text)
+    , _gisAggregator :: !(Maybe Bool)
+    , _gisNextToken  :: !(Maybe Text)
+    , _gisSubType    :: !(Maybe Bool)
+    , _gisMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetInventorySchema' with the minimum fields required to make a request.
@@ -145,11 +147,13 @@ instance ToQuery GetInventorySchema where
         toQuery = const mempty
 
 -- | /See:/ 'getInventorySchemaResponse' smart constructor.
-data GetInventorySchemaResponse = GetInventorySchemaResponse'
-  { _gisrsSchemas        :: !(Maybe [InventoryItemSchema])
-  , _gisrsNextToken      :: !(Maybe Text)
-  , _gisrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetInventorySchemaResponse =
+  GetInventorySchemaResponse'
+    { _gisrsSchemas        :: !(Maybe [InventoryItemSchema])
+    , _gisrsNextToken      :: !(Maybe Text)
+    , _gisrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetInventorySchemaResponse' with the minimum fields required to make a request.

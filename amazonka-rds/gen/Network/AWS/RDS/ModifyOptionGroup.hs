@@ -52,12 +52,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'modifyOptionGroup' smart constructor.
-data ModifyOptionGroup = ModifyOptionGroup'
-  { _mogOptionsToInclude :: !(Maybe [OptionConfiguration])
-  , _mogOptionsToRemove  :: !(Maybe [Text])
-  , _mogApplyImmediately :: !(Maybe Bool)
-  , _mogOptionGroupName  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyOptionGroup =
+  ModifyOptionGroup'
+    { _mogOptionsToInclude :: !(Maybe [OptionConfiguration])
+    , _mogOptionsToRemove  :: !(Maybe [Text])
+    , _mogApplyImmediately :: !(Maybe Bool)
+    , _mogOptionGroupName  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyOptionGroup' with the minimum fields required to make a request.
@@ -134,10 +136,12 @@ instance ToQuery ModifyOptionGroup where
                "OptionGroupName" =: _mogOptionGroupName]
 
 -- | /See:/ 'modifyOptionGroupResponse' smart constructor.
-data ModifyOptionGroupResponse = ModifyOptionGroupResponse'
-  { _mogrsOptionGroup    :: !(Maybe OptionGroup)
-  , _mogrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyOptionGroupResponse =
+  ModifyOptionGroupResponse'
+    { _mogrsOptionGroup    :: !(Maybe OptionGroup)
+    , _mogrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyOptionGroupResponse' with the minimum fields required to make a request.

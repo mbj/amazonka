@@ -51,11 +51,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'modifyCacheSubnetGroup' smart constructor.
-data ModifyCacheSubnetGroup = ModifyCacheSubnetGroup'
-  { _mcsgSubnetIds                   :: !(Maybe [Text])
-  , _mcsgCacheSubnetGroupDescription :: !(Maybe Text)
-  , _mcsgCacheSubnetGroupName        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyCacheSubnetGroup =
+  ModifyCacheSubnetGroup'
+    { _mcsgSubnetIds                   :: !(Maybe [Text])
+    , _mcsgCacheSubnetGroupDescription :: !(Maybe Text)
+    , _mcsgCacheSubnetGroupName        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyCacheSubnetGroup' with the minimum fields required to make a request.
@@ -124,10 +126,12 @@ instance ToQuery ModifyCacheSubnetGroup where
                "CacheSubnetGroupName" =: _mcsgCacheSubnetGroupName]
 
 -- | /See:/ 'modifyCacheSubnetGroupResponse' smart constructor.
-data ModifyCacheSubnetGroupResponse = ModifyCacheSubnetGroupResponse'
-  { _mcsgrsCacheSubnetGroup :: !(Maybe CacheSubnetGroup)
-  , _mcsgrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyCacheSubnetGroupResponse =
+  ModifyCacheSubnetGroupResponse'
+    { _mcsgrsCacheSubnetGroup :: !(Maybe CacheSubnetGroup)
+    , _mcsgrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyCacheSubnetGroupResponse' with the minimum fields required to make a request.

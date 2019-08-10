@@ -69,11 +69,13 @@ import Network.AWS.WAF.Types
 import Network.AWS.WAF.Types.Product
 
 -- | /See:/ 'updateGeoMatchSet' smart constructor.
-data UpdateGeoMatchSet = UpdateGeoMatchSet'
-  { _ugmsGeoMatchSetId :: !Text
-  , _ugmsChangeToken   :: !Text
-  , _ugmsUpdates       :: !(List1 GeoMatchSetUpdate)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateGeoMatchSet =
+  UpdateGeoMatchSet'
+    { _ugmsGeoMatchSetId :: !Text
+    , _ugmsChangeToken   :: !Text
+    , _ugmsUpdates       :: !(List1 GeoMatchSetUpdate)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateGeoMatchSet' with the minimum fields required to make a request.
@@ -147,10 +149,12 @@ instance ToQuery UpdateGeoMatchSet where
         toQuery = const mempty
 
 -- | /See:/ 'updateGeoMatchSetResponse' smart constructor.
-data UpdateGeoMatchSetResponse = UpdateGeoMatchSetResponse'
-  { _ugmsrsChangeToken    :: !(Maybe Text)
-  , _ugmsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateGeoMatchSetResponse =
+  UpdateGeoMatchSetResponse'
+    { _ugmsrsChangeToken    :: !(Maybe Text)
+    , _ugmsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateGeoMatchSetResponse' with the minimum fields required to make a request.

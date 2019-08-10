@@ -49,11 +49,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listIPSets' smart constructor.
-data ListIPSets = ListIPSets'
-  { _lisNextToken  :: !(Maybe Text)
-  , _lisMaxResults :: !(Maybe Nat)
-  , _lisDetectorId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListIPSets =
+  ListIPSets'
+    { _lisNextToken  :: !(Maybe Text)
+    , _lisMaxResults :: !(Maybe Nat)
+    , _lisDetectorId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListIPSets' with the minimum fields required to make a request.
@@ -128,11 +130,13 @@ instance ToQuery ListIPSets where
                "maxResults" =: _lisMaxResults]
 
 -- | /See:/ 'listIPSetsResponse' smart constructor.
-data ListIPSetsResponse = ListIPSetsResponse'
-  { _lisrsNextToken      :: !(Maybe Text)
-  , _lisrsIPSetIds       :: !(Maybe [Text])
-  , _lisrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListIPSetsResponse =
+  ListIPSetsResponse'
+    { _lisrsNextToken      :: !(Maybe Text)
+    , _lisrsIPSetIds       :: !(Maybe [Text])
+    , _lisrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListIPSetsResponse' with the minimum fields required to make a request.

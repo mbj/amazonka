@@ -49,10 +49,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'tagResource' smart constructor.
-data TagResource = TagResource'
-  { _trKeyId :: !Text
-  , _trTags  :: ![Tag]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TagResource =
+  TagResource'
+    { _trKeyId :: !Text
+    , _trTags  :: ![Tag]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TagResource' with the minimum fields required to make a request.

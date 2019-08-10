@@ -47,11 +47,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createLoginProfile' smart constructor.
-data CreateLoginProfile = CreateLoginProfile'
-  { _clpPasswordResetRequired :: !(Maybe Bool)
-  , _clpUserName              :: !Text
-  , _clpPassword              :: !(Sensitive Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data CreateLoginProfile =
+  CreateLoginProfile'
+    { _clpPasswordResetRequired :: !(Maybe Bool)
+    , _clpUserName              :: !Text
+    , _clpPassword              :: !(Sensitive Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateLoginProfile' with the minimum fields required to make a request.
@@ -121,10 +123,12 @@ instance ToQuery CreateLoginProfile where
 --
 --
 -- /See:/ 'createLoginProfileResponse' smart constructor.
-data CreateLoginProfileResponse = CreateLoginProfileResponse'
-  { _clprsResponseStatus :: !Int
-  , _clprsLoginProfile   :: !LoginProfile
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateLoginProfileResponse =
+  CreateLoginProfileResponse'
+    { _clprsResponseStatus :: !Int
+    , _clprsLoginProfile   :: !LoginProfile
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateLoginProfileResponse' with the minimum fields required to make a request.

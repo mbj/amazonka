@@ -80,10 +80,12 @@ instance ToQuery DescribeDefaultAuthorizer where
         toQuery = const mempty
 
 -- | /See:/ 'describeDefaultAuthorizerResponse' smart constructor.
-data DescribeDefaultAuthorizerResponse = DescribeDefaultAuthorizerResponse'
-  { _ddarsAuthorizerDescription :: !(Maybe AuthorizerDescription)
-  , _ddarsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDefaultAuthorizerResponse =
+  DescribeDefaultAuthorizerResponse'
+    { _ddarsAuthorizerDescription :: !(Maybe AuthorizerDescription)
+    , _ddarsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDefaultAuthorizerResponse' with the minimum fields required to make a request.

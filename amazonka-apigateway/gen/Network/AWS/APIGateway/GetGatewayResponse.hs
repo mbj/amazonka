@@ -53,10 +53,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getGatewayResponse' smart constructor.
-data GetGatewayResponse = GetGatewayResponse'
-  { _gggRestAPIId    :: !Text
-  , _gggResponseType :: !GatewayResponseType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetGatewayResponse =
+  GetGatewayResponse'
+    { _gggRestAPIId    :: !Text
+    , _gggResponseType :: !GatewayResponseType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetGatewayResponse' with the minimum fields required to make a request.

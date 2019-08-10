@@ -80,11 +80,13 @@ instance ToQuery ListBuckets where
         toQuery = const mempty
 
 -- | /See:/ 'listBucketsResponse' smart constructor.
-data ListBucketsResponse = ListBucketsResponse'
-  { _lbrsBuckets        :: !(Maybe [Bucket])
-  , _lbrsOwner          :: !(Maybe Owner)
-  , _lbrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListBucketsResponse =
+  ListBucketsResponse'
+    { _lbrsBuckets        :: !(Maybe [Bucket])
+    , _lbrsOwner          :: !(Maybe Owner)
+    , _lbrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListBucketsResponse' with the minimum fields required to make a request.

@@ -47,10 +47,12 @@ import Network.AWS.ResourceGroups.Types.Product
 import Network.AWS.Response
 
 -- | /See:/ 'untag' smart constructor.
-data Untag = Untag'
-  { _uARN  :: !Text
-  , _uKeys :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Untag =
+  Untag'
+    { _uARN  :: !Text
+    , _uKeys :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Untag' with the minimum fields required to make a request.
@@ -103,11 +105,13 @@ instance ToQuery Untag where
         toQuery = const mempty
 
 -- | /See:/ 'untagResponse' smart constructor.
-data UntagResponse = UntagResponse'
-  { _ursARN            :: !(Maybe Text)
-  , _ursKeys           :: !(Maybe [Text])
-  , _ursResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UntagResponse =
+  UntagResponse'
+    { _ursARN            :: !(Maybe Text)
+    , _ursKeys           :: !(Maybe [Text])
+    , _ursResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UntagResponse' with the minimum fields required to make a request.

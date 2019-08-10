@@ -65,25 +65,27 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createStack' smart constructor.
-data CreateStack = CreateStack'
-  { _csDisableRollback             :: !(Maybe Bool)
-  , _csNotificationARNs            :: !(Maybe [Text])
-  , _csEnableTerminationProtection :: !(Maybe Bool)
-  , _csStackPolicyBody             :: !(Maybe Text)
-  , _csParameters                  :: !(Maybe [Parameter])
-  , _csStackPolicyURL              :: !(Maybe Text)
-  , _csTemplateBody                :: !(Maybe Text)
-  , _csTemplateURL                 :: !(Maybe Text)
-  , _csClientRequestToken          :: !(Maybe Text)
-  , _csCapabilities                :: !(Maybe [Capability])
-  , _csRollbackConfiguration       :: !(Maybe RollbackConfiguration)
-  , _csOnFailure                   :: !(Maybe OnFailure)
-  , _csResourceTypes               :: !(Maybe [Text])
-  , _csTags                        :: !(Maybe [Tag])
-  , _csTimeoutInMinutes            :: !(Maybe Nat)
-  , _csRoleARN                     :: !(Maybe Text)
-  , _csStackName                   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateStack =
+  CreateStack'
+    { _csDisableRollback             :: !(Maybe Bool)
+    , _csNotificationARNs            :: !(Maybe [Text])
+    , _csEnableTerminationProtection :: !(Maybe Bool)
+    , _csStackPolicyBody             :: !(Maybe Text)
+    , _csParameters                  :: !(Maybe [Parameter])
+    , _csStackPolicyURL              :: !(Maybe Text)
+    , _csTemplateBody                :: !(Maybe Text)
+    , _csTemplateURL                 :: !(Maybe Text)
+    , _csClientRequestToken          :: !(Maybe Text)
+    , _csCapabilities                :: !(Maybe [Capability])
+    , _csRollbackConfiguration       :: !(Maybe RollbackConfiguration)
+    , _csOnFailure                   :: !(Maybe OnFailure)
+    , _csResourceTypes               :: !(Maybe [Text])
+    , _csTags                        :: !(Maybe [Tag])
+    , _csTimeoutInMinutes            :: !(Maybe Nat)
+    , _csRoleARN                     :: !(Maybe Text)
+    , _csStackName                   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateStack' with the minimum fields required to make a request.
@@ -268,10 +270,12 @@ instance ToQuery CreateStack where
 --
 --
 -- /See:/ 'createStackResponse' smart constructor.
-data CreateStackResponse = CreateStackResponse'
-  { _csrsStackId        :: !(Maybe Text)
-  , _csrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateStackResponse =
+  CreateStackResponse'
+    { _csrsStackId        :: !(Maybe Text)
+    , _csrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateStackResponse' with the minimum fields required to make a request.

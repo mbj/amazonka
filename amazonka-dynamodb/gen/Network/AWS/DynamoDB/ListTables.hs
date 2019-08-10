@@ -54,10 +54,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listTables' smart constructor.
-data ListTables = ListTables'
-  { _ltExclusiveStartTableName :: !(Maybe Text)
-  , _ltLimit                   :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTables =
+  ListTables'
+    { _ltExclusiveStartTableName :: !(Maybe Text)
+    , _ltLimit                   :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTables' with the minimum fields required to make a request.
@@ -133,11 +135,13 @@ instance ToQuery ListTables where
 --
 --
 -- /See:/ 'listTablesResponse' smart constructor.
-data ListTablesResponse = ListTablesResponse'
-  { _ltrsLastEvaluatedTableName :: !(Maybe Text)
-  , _ltrsTableNames             :: !(Maybe [Text])
-  , _ltrsResponseStatus         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTablesResponse =
+  ListTablesResponse'
+    { _ltrsLastEvaluatedTableName :: !(Maybe Text)
+    , _ltrsTableNames             :: !(Maybe [Text])
+    , _ltrsResponseStatus         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTablesResponse' with the minimum fields required to make a request.

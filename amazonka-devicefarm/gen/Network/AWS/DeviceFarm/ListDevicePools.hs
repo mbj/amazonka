@@ -55,11 +55,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listDevicePools' smart constructor.
-data ListDevicePools = ListDevicePools'
-  { _ldpNextToken :: !(Maybe Text)
-  , _ldpType      :: !(Maybe DevicePoolType)
-  , _ldpArn       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListDevicePools =
+  ListDevicePools'
+    { _ldpNextToken :: !(Maybe Text)
+    , _ldpType      :: !(Maybe DevicePoolType)
+    , _ldpArn       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDevicePools' with the minimum fields required to make a request.
@@ -141,11 +143,13 @@ instance ToQuery ListDevicePools where
 --
 --
 -- /See:/ 'listDevicePoolsResponse' smart constructor.
-data ListDevicePoolsResponse = ListDevicePoolsResponse'
-  { _ldprsDevicePools    :: !(Maybe [DevicePool])
-  , _ldprsNextToken      :: !(Maybe Text)
-  , _ldprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListDevicePoolsResponse =
+  ListDevicePoolsResponse'
+    { _ldprsDevicePools    :: !(Maybe [DevicePool])
+    , _ldprsNextToken      :: !(Maybe Text)
+    , _ldprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDevicePoolsResponse' with the minimum fields required to make a request.

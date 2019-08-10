@@ -47,13 +47,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateJobTemplate' smart constructor.
-data UpdateJobTemplate = UpdateJobTemplate'
-  { _ujtSettings    :: !(Maybe JobTemplateSettings)
-  , _ujtCategory    :: !(Maybe Text)
-  , _ujtQueue       :: !(Maybe Text)
-  , _ujtDescription :: !(Maybe Text)
-  , _ujtName        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateJobTemplate =
+  UpdateJobTemplate'
+    { _ujtSettings    :: !(Maybe JobTemplateSettings)
+    , _ujtCategory    :: !(Maybe Text)
+    , _ujtQueue       :: !(Maybe Text)
+    , _ujtDescription :: !(Maybe Text)
+    , _ujtName        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateJobTemplate' with the minimum fields required to make a request.
@@ -140,10 +142,12 @@ instance ToQuery UpdateJobTemplate where
         toQuery = const mempty
 
 -- | /See:/ 'updateJobTemplateResponse' smart constructor.
-data UpdateJobTemplateResponse = UpdateJobTemplateResponse'
-  { _ujtrsJobTemplate    :: !(Maybe JobTemplate)
-  , _ujtrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateJobTemplateResponse =
+  UpdateJobTemplateResponse'
+    { _ujtrsJobTemplate    :: !(Maybe JobTemplate)
+    , _ujtrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateJobTemplateResponse' with the minimum fields required to make a request.

@@ -42,9 +42,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteChannel' smart constructor.
-newtype DeleteChannel = DeleteChannel'
-  { _dcId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteChannel =
+  DeleteChannel'
+    { _dcId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteChannel' with the minimum fields required to make a request.
@@ -89,9 +91,11 @@ instance ToQuery DeleteChannel where
         toQuery = const mempty
 
 -- | /See:/ 'deleteChannelResponse' smart constructor.
-newtype DeleteChannelResponse = DeleteChannelResponse'
-  { _drsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteChannelResponse =
+  DeleteChannelResponse'
+    { _drsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteChannelResponse' with the minimum fields required to make a request.

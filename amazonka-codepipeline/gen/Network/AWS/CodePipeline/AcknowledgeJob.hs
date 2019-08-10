@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'acknowledgeJob' smart constructor.
-data AcknowledgeJob = AcknowledgeJob'
-  { _ajJobId :: !Text
-  , _ajNonce :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AcknowledgeJob =
+  AcknowledgeJob'
+    { _ajJobId :: !Text
+    , _ajNonce :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AcknowledgeJob' with the minimum fields required to make a request.
@@ -120,10 +122,12 @@ instance ToQuery AcknowledgeJob where
 --
 --
 -- /See:/ 'acknowledgeJobResponse' smart constructor.
-data AcknowledgeJobResponse = AcknowledgeJobResponse'
-  { _ajrsStatus         :: !(Maybe JobStatus)
-  , _ajrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AcknowledgeJobResponse =
+  AcknowledgeJobResponse'
+    { _ajrsStatus         :: !(Maybe JobStatus)
+    , _ajrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AcknowledgeJobResponse' with the minimum fields required to make a request.

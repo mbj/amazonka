@@ -68,13 +68,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listParts' smart constructor.
-data ListParts = ListParts'
-  { _lpMarker    :: !(Maybe Text)
-  , _lpLimit     :: !(Maybe Text)
-  , _lpAccountId :: !Text
-  , _lpVaultName :: !Text
-  , _lpUploadId  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListParts =
+  ListParts'
+    { _lpMarker    :: !(Maybe Text)
+    , _lpLimit     :: !(Maybe Text)
+    , _lpAccountId :: !Text
+    , _lpVaultName :: !Text
+    , _lpUploadId  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListParts' with the minimum fields required to make a request.
@@ -172,16 +174,18 @@ instance ToQuery ListParts where
 --
 --
 -- /See:/ 'listPartsResponse' smart constructor.
-data ListPartsResponse = ListPartsResponse'
-  { _lprsParts              :: !(Maybe [PartListElement])
-  , _lprsMultipartUploadId  :: !(Maybe Text)
-  , _lprsPartSizeInBytes    :: !(Maybe Integer)
-  , _lprsArchiveDescription :: !(Maybe Text)
-  , _lprsVaultARN           :: !(Maybe Text)
-  , _lprsMarker             :: !(Maybe Text)
-  , _lprsCreationDate       :: !(Maybe Text)
-  , _lprsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListPartsResponse =
+  ListPartsResponse'
+    { _lprsParts              :: !(Maybe [PartListElement])
+    , _lprsMultipartUploadId  :: !(Maybe Text)
+    , _lprsPartSizeInBytes    :: !(Maybe Integer)
+    , _lprsArchiveDescription :: !(Maybe Text)
+    , _lprsVaultARN           :: !(Maybe Text)
+    , _lprsMarker             :: !(Maybe Text)
+    , _lprsCreationDate       :: !(Maybe Text)
+    , _lprsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListPartsResponse' with the minimum fields required to make a request.

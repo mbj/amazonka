@@ -55,10 +55,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getOpenIdToken' smart constructor.
-data GetOpenIdToken = GetOpenIdToken'
-  { _goitLogins     :: !(Maybe (Map Text Text))
-  , _goitIdentityId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetOpenIdToken =
+  GetOpenIdToken'
+    { _goitLogins     :: !(Maybe (Map Text Text))
+    , _goitIdentityId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetOpenIdToken' with the minimum fields required to make a request.
@@ -125,11 +127,13 @@ instance ToQuery GetOpenIdToken where
 --
 --
 -- /See:/ 'getOpenIdTokenResponse' smart constructor.
-data GetOpenIdTokenResponse = GetOpenIdTokenResponse'
-  { _goitrsToken          :: !(Maybe Text)
-  , _goitrsIdentityId     :: !(Maybe Text)
-  , _goitrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetOpenIdTokenResponse =
+  GetOpenIdTokenResponse'
+    { _goitrsToken          :: !(Maybe Text)
+    , _goitrsIdentityId     :: !(Maybe Text)
+    , _goitrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetOpenIdTokenResponse' with the minimum fields required to make a request.

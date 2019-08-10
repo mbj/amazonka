@@ -52,13 +52,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'setTaskStatus' smart constructor.
-data SetTaskStatus = SetTaskStatus'
-  { _stsErrorStackTrace :: !(Maybe Text)
-  , _stsErrorId         :: !(Maybe Text)
-  , _stsErrorMessage    :: !(Maybe Text)
-  , _stsTaskId          :: !Text
-  , _stsTaskStatus      :: !TaskStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SetTaskStatus =
+  SetTaskStatus'
+    { _stsErrorStackTrace :: !(Maybe Text)
+    , _stsErrorId         :: !(Maybe Text)
+    , _stsErrorMessage    :: !(Maybe Text)
+    , _stsTaskId          :: !Text
+    , _stsTaskStatus      :: !TaskStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetTaskStatus' with the minimum fields required to make a request.
@@ -150,9 +152,11 @@ instance ToQuery SetTaskStatus where
 --
 --
 -- /See:/ 'setTaskStatusResponse' smart constructor.
-newtype SetTaskStatusResponse = SetTaskStatusResponse'
-  { _stsrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype SetTaskStatusResponse =
+  SetTaskStatusResponse'
+    { _stsrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetTaskStatusResponse' with the minimum fields required to make a request.

@@ -56,11 +56,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeDefaultClusterParameters' smart constructor.
-data DescribeDefaultClusterParameters = DescribeDefaultClusterParameters'
-  { _ddcpMarker               :: !(Maybe Text)
-  , _ddcpMaxRecords           :: !(Maybe Int)
-  , _ddcpParameterGroupFamily :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDefaultClusterParameters =
+  DescribeDefaultClusterParameters'
+    { _ddcpMarker               :: !(Maybe Text)
+    , _ddcpMaxRecords           :: !(Maybe Int)
+    , _ddcpParameterGroupFamily :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDefaultClusterParameters' with the minimum fields required to make a request.
@@ -151,10 +153,12 @@ instance ToQuery DescribeDefaultClusterParameters
                "ParameterGroupFamily" =: _ddcpParameterGroupFamily]
 
 -- | /See:/ 'describeDefaultClusterParametersResponse' smart constructor.
-data DescribeDefaultClusterParametersResponse = DescribeDefaultClusterParametersResponse'
-  { _ddcprsResponseStatus           :: !Int
-  , _ddcprsDefaultClusterParameters :: !DefaultClusterParameters
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDefaultClusterParametersResponse =
+  DescribeDefaultClusterParametersResponse'
+    { _ddcprsResponseStatus           :: !Int
+    , _ddcprsDefaultClusterParameters :: !DefaultClusterParameters
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDefaultClusterParametersResponse' with the minimum fields required to make a request.

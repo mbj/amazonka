@@ -76,12 +76,14 @@ import Network.AWS.WAF.Types
 import Network.AWS.WAF.Types.Product
 
 -- | /See:/ 'updateRateBasedRule' smart constructor.
-data UpdateRateBasedRule = UpdateRateBasedRule'
-  { _urbrRuleId      :: !Text
-  , _urbrChangeToken :: !Text
-  , _urbrUpdates     :: ![RuleUpdate]
-  , _urbrRateLimit   :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateRateBasedRule =
+  UpdateRateBasedRule'
+    { _urbrRuleId      :: !Text
+    , _urbrChangeToken :: !Text
+    , _urbrUpdates     :: ![RuleUpdate]
+    , _urbrRateLimit   :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateRateBasedRule' with the minimum fields required to make a request.
@@ -165,10 +167,12 @@ instance ToQuery UpdateRateBasedRule where
         toQuery = const mempty
 
 -- | /See:/ 'updateRateBasedRuleResponse' smart constructor.
-data UpdateRateBasedRuleResponse = UpdateRateBasedRuleResponse'
-  { _urbrrsChangeToken    :: !(Maybe Text)
-  , _urbrrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateRateBasedRuleResponse =
+  UpdateRateBasedRuleResponse'
+    { _urbrrsChangeToken    :: !(Maybe Text)
+    , _urbrrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateRateBasedRuleResponse' with the minimum fields required to make a request.

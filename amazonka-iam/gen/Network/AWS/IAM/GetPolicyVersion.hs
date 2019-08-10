@@ -54,10 +54,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getPolicyVersion' smart constructor.
-data GetPolicyVersion = GetPolicyVersion'
-  { _gpvPolicyARN :: !Text
-  , _gpvVersionId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetPolicyVersion =
+  GetPolicyVersion'
+    { _gpvPolicyARN :: !Text
+    , _gpvVersionId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetPolicyVersion' with the minimum fields required to make a request.
@@ -115,10 +117,12 @@ instance ToQuery GetPolicyVersion where
 --
 --
 -- /See:/ 'getPolicyVersionResponse' smart constructor.
-data GetPolicyVersionResponse = GetPolicyVersionResponse'
-  { _gpvrsPolicyVersion  :: !(Maybe PolicyVersion)
-  , _gpvrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetPolicyVersionResponse =
+  GetPolicyVersionResponse'
+    { _gpvrsPolicyVersion  :: !(Maybe PolicyVersion)
+    , _gpvrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetPolicyVersionResponse' with the minimum fields required to make a request.

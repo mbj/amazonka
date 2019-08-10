@@ -64,14 +64,16 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createApplication' smart constructor.
-data CreateApplication = CreateApplication'
-  { _caApplicationDescription   :: !(Maybe Text)
-  , _caInputs                   :: !(Maybe [Input])
-  , _caCloudWatchLoggingOptions :: !(Maybe [CloudWatchLoggingOption])
-  , _caOutputs                  :: !(Maybe [Output])
-  , _caApplicationCode          :: !(Maybe Text)
-  , _caApplicationName          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateApplication =
+  CreateApplication'
+    { _caApplicationDescription   :: !(Maybe Text)
+    , _caInputs                   :: !(Maybe [Input])
+    , _caCloudWatchLoggingOptions :: !(Maybe [CloudWatchLoggingOption])
+    , _caOutputs                  :: !(Maybe [Output])
+    , _caApplicationCode          :: !(Maybe Text)
+    , _caApplicationName          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateApplication' with the minimum fields required to make a request.
@@ -174,10 +176,12 @@ instance ToQuery CreateApplication where
 --
 --
 -- /See:/ 'createApplicationResponse' smart constructor.
-data CreateApplicationResponse = CreateApplicationResponse'
-  { _carsResponseStatus     :: !Int
-  , _carsApplicationSummary :: !ApplicationSummary
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateApplicationResponse =
+  CreateApplicationResponse'
+    { _carsResponseStatus     :: !Int
+    , _carsApplicationSummary :: !ApplicationSummary
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateApplicationResponse' with the minimum fields required to make a request.

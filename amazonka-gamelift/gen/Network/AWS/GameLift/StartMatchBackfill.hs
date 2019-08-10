@@ -70,12 +70,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'startMatchBackfill' smart constructor.
-data StartMatchBackfill = StartMatchBackfill'
-  { _smbTicketId          :: !(Maybe Text)
-  , _smbConfigurationName :: !Text
-  , _smbGameSessionARN    :: !Text
-  , _smbPlayers           :: ![Player]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartMatchBackfill =
+  StartMatchBackfill'
+    { _smbTicketId          :: !(Maybe Text)
+    , _smbConfigurationName :: !Text
+    , _smbGameSessionARN    :: !Text
+    , _smbPlayers           :: ![Player]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartMatchBackfill' with the minimum fields required to make a request.
@@ -161,10 +163,12 @@ instance ToQuery StartMatchBackfill where
 --
 --
 -- /See:/ 'startMatchBackfillResponse' smart constructor.
-data StartMatchBackfillResponse = StartMatchBackfillResponse'
-  { _smbrsMatchmakingTicket :: !(Maybe MatchmakingTicket)
-  , _smbrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartMatchBackfillResponse =
+  StartMatchBackfillResponse'
+    { _smbrsMatchmakingTicket :: !(Maybe MatchmakingTicket)
+    , _smbrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartMatchBackfillResponse' with the minimum fields required to make a request.

@@ -50,9 +50,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteConfigRule' smart constructor.
-newtype DeleteConfigRule = DeleteConfigRule'
-  { _dcrConfigRuleName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteConfigRule =
+  DeleteConfigRule'
+    { _dcrConfigRuleName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteConfigRule' with the minimum fields required to make a request.

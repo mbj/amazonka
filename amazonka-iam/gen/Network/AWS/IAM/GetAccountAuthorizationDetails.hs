@@ -57,11 +57,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getAccountAuthorizationDetails' smart constructor.
-data GetAccountAuthorizationDetails = GetAccountAuthorizationDetails'
-  { _gaadMarker   :: !(Maybe Text)
-  , _gaadMaxItems :: !(Maybe Nat)
-  , _gaadFilter   :: !(Maybe [EntityType])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetAccountAuthorizationDetails =
+  GetAccountAuthorizationDetails'
+    { _gaadMarker   :: !(Maybe Text)
+    , _gaadMaxItems :: !(Maybe Nat)
+    , _gaadFilter   :: !(Maybe [EntityType])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetAccountAuthorizationDetails' with the minimum fields required to make a request.
@@ -152,15 +154,17 @@ instance ToQuery GetAccountAuthorizationDetails where
 --
 --
 -- /See:/ 'getAccountAuthorizationDetailsResponse' smart constructor.
-data GetAccountAuthorizationDetailsResponse = GetAccountAuthorizationDetailsResponse'
-  { _gaadrsRoleDetailList  :: !(Maybe [RoleDetail])
-  , _gaadrsGroupDetailList :: !(Maybe [GroupDetail])
-  , _gaadrsUserDetailList  :: !(Maybe [UserDetail])
-  , _gaadrsMarker          :: !(Maybe Text)
-  , _gaadrsIsTruncated     :: !(Maybe Bool)
-  , _gaadrsPolicies        :: !(Maybe [ManagedPolicyDetail])
-  , _gaadrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetAccountAuthorizationDetailsResponse =
+  GetAccountAuthorizationDetailsResponse'
+    { _gaadrsRoleDetailList  :: !(Maybe [RoleDetail])
+    , _gaadrsGroupDetailList :: !(Maybe [GroupDetail])
+    , _gaadrsUserDetailList  :: !(Maybe [UserDetail])
+    , _gaadrsMarker          :: !(Maybe Text)
+    , _gaadrsIsTruncated     :: !(Maybe Bool)
+    , _gaadrsPolicies        :: !(Maybe [ManagedPolicyDetail])
+    , _gaadrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetAccountAuthorizationDetailsResponse' with the minimum fields required to make a request.

@@ -26,11 +26,13 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'awsCredentials' smart constructor.
-data AWSCredentials = AWSCredentials'
-  { _acSecretAccessKey :: !(Maybe Text)
-  , _acSessionToken    :: !(Maybe Text)
-  , _acAccessKeyId     :: !(Maybe Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data AWSCredentials =
+  AWSCredentials'
+    { _acSecretAccessKey :: !(Maybe Text)
+    , _acSessionToken    :: !(Maybe Text)
+    , _acAccessKeyId     :: !(Maybe Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AWSCredentials' with the minimum fields required to make a request.
@@ -97,15 +99,17 @@ instance NFData AWSCredentials where
 --
 --
 -- /See:/ 'alias' smart constructor.
-data Alias = Alias'
-  { _aCreationTime    :: !(Maybe POSIX)
-  , _aLastUpdatedTime :: !(Maybe POSIX)
-  , _aAliasId         :: !(Maybe Text)
-  , _aRoutingStrategy :: !(Maybe RoutingStrategy)
-  , _aName            :: !(Maybe Text)
-  , _aAliasARN        :: !(Maybe Text)
-  , _aDescription     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Alias =
+  Alias'
+    { _aCreationTime    :: !(Maybe POSIX)
+    , _aLastUpdatedTime :: !(Maybe POSIX)
+    , _aAliasId         :: !(Maybe Text)
+    , _aRoutingStrategy :: !(Maybe RoutingStrategy)
+    , _aName            :: !(Maybe Text)
+    , _aAliasARN        :: !(Maybe Text)
+    , _aDescription     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Alias' with the minimum fields required to make a request.
@@ -188,12 +192,14 @@ instance NFData Alias where
 --
 --
 -- /See:/ 'attributeValue' smart constructor.
-data AttributeValue = AttributeValue'
-  { _avSL  :: !(Maybe [Text])
-  , _avSDM :: !(Maybe (Map Text Double))
-  , _avN   :: !(Maybe Double)
-  , _avS   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AttributeValue =
+  AttributeValue'
+    { _avSL  :: !(Maybe [Text])
+    , _avSDM :: !(Maybe (Map Text Double))
+    , _avN   :: !(Maybe Double)
+    , _avS   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttributeValue' with the minimum fields required to make a request.
@@ -269,15 +275,17 @@ instance ToJSON AttributeValue where
 --
 --
 -- /See:/ 'build' smart constructor.
-data Build = Build'
-  { _bCreationTime    :: !(Maybe POSIX)
-  , _bStatus          :: !(Maybe BuildStatus)
-  , _bOperatingSystem :: !(Maybe OperatingSystem)
-  , _bBuildId         :: !(Maybe Text)
-  , _bName            :: !(Maybe Text)
-  , _bVersion         :: !(Maybe Text)
-  , _bSizeOnDisk      :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Build =
+  Build'
+    { _bCreationTime    :: !(Maybe POSIX)
+    , _bStatus          :: !(Maybe BuildStatus)
+    , _bOperatingSystem :: !(Maybe OperatingSystem)
+    , _bBuildId         :: !(Maybe Text)
+    , _bName            :: !(Maybe Text)
+    , _bVersion         :: !(Maybe Text)
+    , _bSizeOnDisk      :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Build' with the minimum fields required to make a request.
@@ -360,10 +368,12 @@ instance NFData Build where
 --
 --
 -- /See:/ 'desiredPlayerSession' smart constructor.
-data DesiredPlayerSession = DesiredPlayerSession'
-  { _dpsPlayerData :: !(Maybe Text)
-  , _dpsPlayerId   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DesiredPlayerSession =
+  DesiredPlayerSession'
+    { _dpsPlayerData :: !(Maybe Text)
+    , _dpsPlayerId   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DesiredPlayerSession' with the minimum fields required to make a request.
@@ -451,15 +461,17 @@ instance ToJSON DesiredPlayerSession where
 --
 --
 -- /See:/ 'ec2InstanceCounts' smart constructor.
-data EC2InstanceCounts = EC2InstanceCounts'
-  { _eicIdLE        :: !(Maybe Nat)
-  , _eicTERMINATING :: !(Maybe Nat)
-  , _eicPENDING     :: !(Maybe Nat)
-  , _eicMAXIMUM     :: !(Maybe Nat)
-  , _eicDESIRED     :: !(Maybe Nat)
-  , _eicMINIMUM     :: !(Maybe Nat)
-  , _eicACTIVE      :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EC2InstanceCounts =
+  EC2InstanceCounts'
+    { _eicIdLE        :: !(Maybe Nat)
+    , _eicTERMINATING :: !(Maybe Nat)
+    , _eicPENDING     :: !(Maybe Nat)
+    , _eicMAXIMUM     :: !(Maybe Nat)
+    , _eicDESIRED     :: !(Maybe Nat)
+    , _eicMINIMUM     :: !(Maybe Nat)
+    , _eicACTIVE      :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EC2InstanceCounts' with the minimum fields required to make a request.
@@ -542,11 +554,13 @@ instance NFData EC2InstanceCounts where
 --
 --
 -- /See:/ 'ec2InstanceLimit' smart constructor.
-data EC2InstanceLimit = EC2InstanceLimit'
-  { _eilEC2InstanceType  :: !(Maybe EC2InstanceType)
-  , _eilCurrentInstances :: !(Maybe Nat)
-  , _eilInstanceLimit    :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EC2InstanceLimit =
+  EC2InstanceLimit'
+    { _eilEC2InstanceType  :: !(Maybe EC2InstanceType)
+    , _eilCurrentInstances :: !(Maybe Nat)
+    , _eilInstanceLimit    :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EC2InstanceLimit' with the minimum fields required to make a request.
@@ -598,14 +612,16 @@ instance NFData EC2InstanceLimit where
 --
 --
 -- /See:/ 'event' smart constructor.
-data Event = Event'
-  { _eResourceId      :: !(Maybe Text)
-  , _ePreSignedLogURL :: !(Maybe Text)
-  , _eEventTime       :: !(Maybe POSIX)
-  , _eMessage         :: !(Maybe Text)
-  , _eEventCode       :: !(Maybe EventCode)
-  , _eEventId         :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Event =
+  Event'
+    { _eResourceId      :: !(Maybe Text)
+    , _ePreSignedLogURL :: !(Maybe Text)
+    , _eEventTime       :: !(Maybe POSIX)
+    , _eMessage         :: !(Maybe Text)
+    , _eEventCode       :: !(Maybe EventCode)
+    , _eEventId         :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Event' with the minimum fields required to make a request.
@@ -728,26 +744,28 @@ instance NFData Event where
 --
 --
 -- /See:/ 'fleetAttributes' smart constructor.
-data FleetAttributes = FleetAttributes'
-  { _faCreationTime                   :: !(Maybe POSIX)
-  , _faStatus                         :: !(Maybe FleetStatus)
-  , _faServerLaunchParameters         :: !(Maybe Text)
-  , _faLogPaths                       :: !(Maybe [Text])
-  , _faOperatingSystem                :: !(Maybe OperatingSystem)
-  , _faBuildId                        :: !(Maybe Text)
-  , _faFleetARN                       :: !(Maybe Text)
-  , _faFleetType                      :: !(Maybe FleetType)
-  , _faTerminationTime                :: !(Maybe POSIX)
-  , _faInstanceType                   :: !(Maybe EC2InstanceType)
-  , _faStoppedActions                 :: !(Maybe (List1 FleetAction))
-  , _faNewGameSessionProtectionPolicy :: !(Maybe ProtectionPolicy)
-  , _faName                           :: !(Maybe Text)
-  , _faServerLaunchPath               :: !(Maybe Text)
-  , _faMetricGroups                   :: !(Maybe [Text])
-  , _faFleetId                        :: !(Maybe Text)
-  , _faDescription                    :: !(Maybe Text)
-  , _faResourceCreationLimitPolicy    :: !(Maybe ResourceCreationLimitPolicy)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FleetAttributes =
+  FleetAttributes'
+    { _faCreationTime                   :: !(Maybe POSIX)
+    , _faStatus                         :: !(Maybe FleetStatus)
+    , _faServerLaunchParameters         :: !(Maybe Text)
+    , _faLogPaths                       :: !(Maybe [Text])
+    , _faOperatingSystem                :: !(Maybe OperatingSystem)
+    , _faBuildId                        :: !(Maybe Text)
+    , _faFleetARN                       :: !(Maybe Text)
+    , _faFleetType                      :: !(Maybe FleetType)
+    , _faTerminationTime                :: !(Maybe POSIX)
+    , _faInstanceType                   :: !(Maybe EC2InstanceType)
+    , _faStoppedActions                 :: !(Maybe (List1 FleetAction))
+    , _faNewGameSessionProtectionPolicy :: !(Maybe ProtectionPolicy)
+    , _faName                           :: !(Maybe Text)
+    , _faServerLaunchPath               :: !(Maybe Text)
+    , _faMetricGroups                   :: !(Maybe [Text])
+    , _faFleetId                        :: !(Maybe Text)
+    , _faDescription                    :: !(Maybe Text)
+    , _faResourceCreationLimitPolicy    :: !(Maybe ResourceCreationLimitPolicy)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FleetAttributes' with the minimum fields required to make a request.
@@ -966,11 +984,13 @@ instance NFData FleetAttributes where
 --
 --
 -- /See:/ 'fleetCapacity' smart constructor.
-data FleetCapacity = FleetCapacity'
-  { _fcInstanceType   :: !(Maybe EC2InstanceType)
-  , _fcFleetId        :: !(Maybe Text)
-  , _fcInstanceCounts :: !(Maybe EC2InstanceCounts)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FleetCapacity =
+  FleetCapacity'
+    { _fcInstanceType   :: !(Maybe EC2InstanceType)
+    , _fcFleetId        :: !(Maybe Text)
+    , _fcInstanceCounts :: !(Maybe EC2InstanceCounts)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FleetCapacity' with the minimum fields required to make a request.
@@ -1069,13 +1089,15 @@ instance NFData FleetCapacity where
 --
 --
 -- /See:/ 'fleetUtilization' smart constructor.
-data FleetUtilization = FleetUtilization'
-  { _fuActiveGameSessionCount    :: !(Maybe Nat)
-  , _fuMaximumPlayerSessionCount :: !(Maybe Nat)
-  , _fuCurrentPlayerSessionCount :: !(Maybe Nat)
-  , _fuFleetId                   :: !(Maybe Text)
-  , _fuActiveServerProcessCount  :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FleetUtilization =
+  FleetUtilization'
+    { _fuActiveGameSessionCount    :: !(Maybe Nat)
+    , _fuMaximumPlayerSessionCount :: !(Maybe Nat)
+    , _fuCurrentPlayerSessionCount :: !(Maybe Nat)
+    , _fuFleetId                   :: !(Maybe Text)
+    , _fuActiveServerProcessCount  :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FleetUtilization' with the minimum fields required to make a request.
@@ -1143,10 +1165,12 @@ instance NFData FleetUtilization where
 --
 --
 -- /See:/ 'gameProperty' smart constructor.
-data GameProperty = GameProperty'
-  { _gpKey   :: !Text
-  , _gpValue :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GameProperty =
+  GameProperty'
+    { _gpKey   :: !Text
+    , _gpValue :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GameProperty' with the minimum fields required to make a request.
@@ -1222,24 +1246,26 @@ instance ToJSON GameProperty where
 --
 --
 -- /See:/ 'gameSession' smart constructor.
-data GameSession = GameSession'
-  { _gsCreationTime                :: !(Maybe POSIX)
-  , _gsStatus                      :: !(Maybe GameSessionStatus)
-  , _gsGameProperties              :: !(Maybe [GameProperty])
-  , _gsIPAddress                   :: !(Maybe Text)
-  , _gsGameSessionId               :: !(Maybe Text)
-  , _gsMatchmakerData              :: !(Maybe Text)
-  , _gsMaximumPlayerSessionCount   :: !(Maybe Nat)
-  , _gsTerminationTime             :: !(Maybe POSIX)
-  , _gsPlayerSessionCreationPolicy :: !(Maybe PlayerSessionCreationPolicy)
-  , _gsName                        :: !(Maybe Text)
-  , _gsCurrentPlayerSessionCount   :: !(Maybe Nat)
-  , _gsStatusReason                :: !(Maybe GameSessionStatusReason)
-  , _gsGameSessionData             :: !(Maybe Text)
-  , _gsFleetId                     :: !(Maybe Text)
-  , _gsCreatorId                   :: !(Maybe Text)
-  , _gsPort                        :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GameSession =
+  GameSession'
+    { _gsCreationTime                :: !(Maybe POSIX)
+    , _gsStatus                      :: !(Maybe GameSessionStatus)
+    , _gsGameProperties              :: !(Maybe [GameProperty])
+    , _gsIPAddress                   :: !(Maybe Text)
+    , _gsGameSessionId               :: !(Maybe Text)
+    , _gsMatchmakerData              :: !(Maybe Text)
+    , _gsMaximumPlayerSessionCount   :: !(Maybe Nat)
+    , _gsTerminationTime             :: !(Maybe POSIX)
+    , _gsPlayerSessionCreationPolicy :: !(Maybe PlayerSessionCreationPolicy)
+    , _gsName                        :: !(Maybe Text)
+    , _gsCurrentPlayerSessionCount   :: !(Maybe Nat)
+    , _gsStatusReason                :: !(Maybe GameSessionStatusReason)
+    , _gsGameSessionData             :: !(Maybe Text)
+    , _gsFleetId                     :: !(Maybe Text)
+    , _gsCreatorId                   :: !(Maybe Text)
+    , _gsPort                        :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GameSession' with the minimum fields required to make a request.
@@ -1394,12 +1420,14 @@ instance NFData GameSession where
 --
 --
 -- /See:/ 'gameSessionConnectionInfo' smart constructor.
-data GameSessionConnectionInfo = GameSessionConnectionInfo'
-  { _gsciMatchedPlayerSessions :: !(Maybe [MatchedPlayerSession])
-  , _gsciIPAddress             :: !(Maybe Text)
-  , _gsciGameSessionARN        :: !(Maybe Text)
-  , _gsciPort                  :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GameSessionConnectionInfo =
+  GameSessionConnectionInfo'
+    { _gsciMatchedPlayerSessions :: !(Maybe [MatchedPlayerSession])
+    , _gsciIPAddress             :: !(Maybe Text)
+    , _gsciGameSessionARN        :: !(Maybe Text)
+    , _gsciPort                  :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GameSessionConnectionInfo' with the minimum fields required to make a request.
@@ -1459,10 +1487,12 @@ instance NFData GameSessionConnectionInfo where
 --
 --
 -- /See:/ 'gameSessionDetail' smart constructor.
-data GameSessionDetail = GameSessionDetail'
-  { _gsdGameSession      :: !(Maybe GameSession)
-  , _gsdProtectionPolicy :: !(Maybe ProtectionPolicy)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GameSessionDetail =
+  GameSessionDetail'
+    { _gsdGameSession      :: !(Maybe GameSession)
+    , _gsdProtectionPolicy :: !(Maybe ProtectionPolicy)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GameSessionDetail' with the minimum fields required to make a request.
@@ -1512,25 +1542,27 @@ instance NFData GameSessionDetail where
 --
 --
 -- /See:/ 'gameSessionPlacement' smart constructor.
-data GameSessionPlacement = GameSessionPlacement'
-  { _gspStatus                    :: !(Maybe GameSessionPlacementState)
-  , _gspPlacementId               :: !(Maybe Text)
-  , _gspGameProperties            :: !(Maybe [GameProperty])
-  , _gspIPAddress                 :: !(Maybe Text)
-  , _gspGameSessionName           :: !(Maybe Text)
-  , _gspStartTime                 :: !(Maybe POSIX)
-  , _gspGameSessionId             :: !(Maybe Text)
-  , _gspGameSessionRegion         :: !(Maybe Text)
-  , _gspMatchmakerData            :: !(Maybe Text)
-  , _gspMaximumPlayerSessionCount :: !(Maybe Nat)
-  , _gspEndTime                   :: !(Maybe POSIX)
-  , _gspGameSessionARN            :: !(Maybe Text)
-  , _gspPlayerLatencies           :: !(Maybe [PlayerLatency])
-  , _gspGameSessionData           :: !(Maybe Text)
-  , _gspGameSessionQueueName      :: !(Maybe Text)
-  , _gspPlacedPlayerSessions      :: !(Maybe [PlacedPlayerSession])
-  , _gspPort                      :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GameSessionPlacement =
+  GameSessionPlacement'
+    { _gspStatus                    :: !(Maybe GameSessionPlacementState)
+    , _gspPlacementId               :: !(Maybe Text)
+    , _gspGameProperties            :: !(Maybe [GameProperty])
+    , _gspIPAddress                 :: !(Maybe Text)
+    , _gspGameSessionName           :: !(Maybe Text)
+    , _gspStartTime                 :: !(Maybe POSIX)
+    , _gspGameSessionId             :: !(Maybe Text)
+    , _gspGameSessionRegion         :: !(Maybe Text)
+    , _gspMatchmakerData            :: !(Maybe Text)
+    , _gspMaximumPlayerSessionCount :: !(Maybe Nat)
+    , _gspEndTime                   :: !(Maybe POSIX)
+    , _gspGameSessionARN            :: !(Maybe Text)
+    , _gspPlayerLatencies           :: !(Maybe [PlayerLatency])
+    , _gspGameSessionData           :: !(Maybe Text)
+    , _gspGameSessionQueueName      :: !(Maybe Text)
+    , _gspPlacedPlayerSessions      :: !(Maybe [PlacedPlayerSession])
+    , _gspPort                      :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GameSessionPlacement' with the minimum fields required to make a request.
@@ -1713,13 +1745,15 @@ instance NFData GameSessionPlacement where
 --
 --
 -- /See:/ 'gameSessionQueue' smart constructor.
-data GameSessionQueue = GameSessionQueue'
-  { _gsqGameSessionQueueARN   :: !(Maybe Text)
-  , _gsqPlayerLatencyPolicies :: !(Maybe [PlayerLatencyPolicy])
-  , _gsqTimeoutInSeconds      :: !(Maybe Nat)
-  , _gsqDestinations          :: !(Maybe [GameSessionQueueDestination])
-  , _gsqName                  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GameSessionQueue =
+  GameSessionQueue'
+    { _gsqGameSessionQueueARN   :: !(Maybe Text)
+    , _gsqPlayerLatencyPolicies :: !(Maybe [PlayerLatencyPolicy])
+    , _gsqTimeoutInSeconds      :: !(Maybe Nat)
+    , _gsqDestinations          :: !(Maybe [GameSessionQueueDestination])
+    , _gsqName                  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GameSessionQueue' with the minimum fields required to make a request.
@@ -1799,9 +1833,11 @@ instance NFData GameSessionQueue where
 --
 --
 -- /See:/ 'gameSessionQueueDestination' smart constructor.
-newtype GameSessionQueueDestination = GameSessionQueueDestination'
-  { _gsqdDestinationARN :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GameSessionQueueDestination =
+  GameSessionQueueDestination'
+    { _gsqdDestinationARN :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GameSessionQueueDestination' with the minimum fields required to make a request.
@@ -1841,12 +1877,14 @@ instance ToJSON GameSessionQueueDestination where
 --
 --
 -- /See:/ 'ipPermission' smart constructor.
-data IPPermission = IPPermission'
-  { _ipFromPort :: !Nat
-  , _ipToPort   :: !Nat
-  , _ipIPRange  :: !Text
-  , _ipProtocol :: !IPProtocol
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data IPPermission =
+  IPPermission'
+    { _ipFromPort :: !Nat
+    , _ipToPort   :: !Nat
+    , _ipIPRange  :: !Text
+    , _ipProtocol :: !IPProtocol
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'IPPermission' with the minimum fields required to make a request.
@@ -1918,15 +1956,17 @@ instance ToJSON IPPermission where
 --
 --
 -- /See:/ 'instance'' smart constructor.
-data Instance = Instance'
-  { _iCreationTime    :: !(Maybe POSIX)
-  , _iInstanceId      :: !(Maybe Text)
-  , _iStatus          :: !(Maybe InstanceStatus)
-  , _iIPAddress       :: !(Maybe Text)
-  , _iOperatingSystem :: !(Maybe OperatingSystem)
-  , _iType            :: !(Maybe EC2InstanceType)
-  , _iFleetId         :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Instance =
+  Instance'
+    { _iCreationTime    :: !(Maybe POSIX)
+    , _iInstanceId      :: !(Maybe Text)
+    , _iStatus          :: !(Maybe InstanceStatus)
+    , _iIPAddress       :: !(Maybe Text)
+    , _iOperatingSystem :: !(Maybe OperatingSystem)
+    , _iType            :: !(Maybe EC2InstanceType)
+    , _iFleetId         :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Instance' with the minimum fields required to make a request.
@@ -2009,13 +2049,15 @@ instance NFData Instance where
 --
 --
 -- /See:/ 'instanceAccess' smart constructor.
-data InstanceAccess = InstanceAccess'
-  { _iaInstanceId      :: !(Maybe Text)
-  , _iaIPAddress       :: !(Maybe Text)
-  , _iaOperatingSystem :: !(Maybe OperatingSystem)
-  , _iaCredentials     :: !(Maybe (Sensitive InstanceCredentials))
-  , _iaFleetId         :: !(Maybe Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data InstanceAccess =
+  InstanceAccess'
+    { _iaInstanceId      :: !(Maybe Text)
+    , _iaIPAddress       :: !(Maybe Text)
+    , _iaOperatingSystem :: !(Maybe OperatingSystem)
+    , _iaCredentials     :: !(Maybe (Sensitive InstanceCredentials))
+    , _iaFleetId         :: !(Maybe Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceAccess' with the minimum fields required to make a request.
@@ -2082,10 +2124,12 @@ instance NFData InstanceAccess where
 --
 --
 -- /See:/ 'instanceCredentials' smart constructor.
-data InstanceCredentials = InstanceCredentials'
-  { _icUserName :: !(Maybe Text)
-  , _icSecret   :: !(Maybe Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data InstanceCredentials =
+  InstanceCredentials'
+    { _icUserName :: !(Maybe Text)
+    , _icSecret   :: !(Maybe Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceCredentials' with the minimum fields required to make a request.
@@ -2127,10 +2171,12 @@ instance NFData InstanceCredentials where
 --
 --
 -- /See:/ 'matchedPlayerSession' smart constructor.
-data MatchedPlayerSession = MatchedPlayerSession'
-  { _mpsPlayerSessionId :: !(Maybe Text)
-  , _mpsPlayerId        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MatchedPlayerSession =
+  MatchedPlayerSession'
+    { _mpsPlayerSessionId :: !(Maybe Text)
+    , _mpsPlayerId        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MatchedPlayerSession' with the minimum fields required to make a request.
@@ -2170,21 +2216,23 @@ instance NFData MatchedPlayerSession where
 --
 --
 -- /See:/ 'matchmakingConfiguration' smart constructor.
-data MatchmakingConfiguration = MatchmakingConfiguration'
-  { _mcCreationTime             :: !(Maybe POSIX)
-  , _mcGameProperties           :: !(Maybe [GameProperty])
-  , _mcRuleSetName              :: !(Maybe Text)
-  , _mcAcceptanceTimeoutSeconds :: !(Maybe Nat)
-  , _mcRequestTimeoutSeconds    :: !(Maybe Nat)
-  , _mcNotificationTarget       :: !(Maybe Text)
-  , _mcGameSessionQueueARNs     :: !(Maybe [Text])
-  , _mcName                     :: !(Maybe Text)
-  , _mcCustomEventData          :: !(Maybe Text)
-  , _mcAcceptanceRequired       :: !(Maybe Bool)
-  , _mcGameSessionData          :: !(Maybe Text)
-  , _mcDescription              :: !(Maybe Text)
-  , _mcAdditionalPlayerCount    :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MatchmakingConfiguration =
+  MatchmakingConfiguration'
+    { _mcCreationTime             :: !(Maybe POSIX)
+    , _mcGameProperties           :: !(Maybe [GameProperty])
+    , _mcRuleSetName              :: !(Maybe Text)
+    , _mcAcceptanceTimeoutSeconds :: !(Maybe Nat)
+    , _mcRequestTimeoutSeconds    :: !(Maybe Nat)
+    , _mcNotificationTarget       :: !(Maybe Text)
+    , _mcGameSessionQueueARNs     :: !(Maybe [Text])
+    , _mcName                     :: !(Maybe Text)
+    , _mcCustomEventData          :: !(Maybe Text)
+    , _mcAcceptanceRequired       :: !(Maybe Bool)
+    , _mcGameSessionData          :: !(Maybe Text)
+    , _mcDescription              :: !(Maybe Text)
+    , _mcAdditionalPlayerCount    :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MatchmakingConfiguration' with the minimum fields required to make a request.
@@ -2328,11 +2376,13 @@ instance NFData MatchmakingConfiguration where
 --
 --
 -- /See:/ 'matchmakingRuleSet' smart constructor.
-data MatchmakingRuleSet = MatchmakingRuleSet'
-  { _mrsCreationTime :: !(Maybe POSIX)
-  , _mrsRuleSetName  :: !(Maybe Text)
-  , _mrsRuleSetBody  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MatchmakingRuleSet =
+  MatchmakingRuleSet'
+    { _mrsCreationTime :: !(Maybe POSIX)
+    , _mrsRuleSetName  :: !(Maybe Text)
+    , _mrsRuleSetBody  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MatchmakingRuleSet' with the minimum fields required to make a request.
@@ -2384,18 +2434,20 @@ instance NFData MatchmakingRuleSet where
 --
 --
 -- /See:/ 'matchmakingTicket' smart constructor.
-data MatchmakingTicket = MatchmakingTicket'
-  { _mtStatus                    :: !(Maybe MatchmakingConfigurationStatus)
-  , _mtConfigurationName         :: !(Maybe Text)
-  , _mtStartTime                 :: !(Maybe POSIX)
-  , _mtGameSessionConnectionInfo :: !(Maybe GameSessionConnectionInfo)
-  , _mtTicketId                  :: !(Maybe Text)
-  , _mtEstimatedWaitTime         :: !(Maybe Nat)
-  , _mtStatusMessage             :: !(Maybe Text)
-  , _mtEndTime                   :: !(Maybe POSIX)
-  , _mtStatusReason              :: !(Maybe Text)
-  , _mtPlayers                   :: !(Maybe [Player])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MatchmakingTicket =
+  MatchmakingTicket'
+    { _mtStatus                    :: !(Maybe MatchmakingConfigurationStatus)
+    , _mtConfigurationName         :: !(Maybe Text)
+    , _mtStartTime                 :: !(Maybe POSIX)
+    , _mtGameSessionConnectionInfo :: !(Maybe GameSessionConnectionInfo)
+    , _mtTicketId                  :: !(Maybe Text)
+    , _mtEstimatedWaitTime         :: !(Maybe Nat)
+    , _mtStatusMessage             :: !(Maybe Text)
+    , _mtEndTime                   :: !(Maybe POSIX)
+    , _mtStatusReason              :: !(Maybe Text)
+    , _mtPlayers                   :: !(Maybe [Player])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MatchmakingTicket' with the minimum fields required to make a request.
@@ -2522,10 +2574,12 @@ instance NFData MatchmakingTicket where
 --
 --
 -- /See:/ 'placedPlayerSession' smart constructor.
-data PlacedPlayerSession = PlacedPlayerSession'
-  { _ppsPlayerSessionId :: !(Maybe Text)
-  , _ppsPlayerId        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PlacedPlayerSession =
+  PlacedPlayerSession'
+    { _ppsPlayerSessionId :: !(Maybe Text)
+    , _ppsPlayerId        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PlacedPlayerSession' with the minimum fields required to make a request.
@@ -2565,12 +2619,14 @@ instance NFData PlacedPlayerSession where
 --
 --
 -- /See:/ 'player' smart constructor.
-data Player = Player'
-  { _pPlayerAttributes :: !(Maybe (Map Text AttributeValue))
-  , _pTeam             :: !(Maybe Text)
-  , _pPlayerId         :: !(Maybe Text)
-  , _pLatencyInMs      :: !(Maybe (Map Text Nat))
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Player =
+  Player'
+    { _pPlayerAttributes :: !(Maybe (Map Text AttributeValue))
+    , _pTeam             :: !(Maybe Text)
+    , _pPlayerId         :: !(Maybe Text)
+    , _pLatencyInMs      :: !(Maybe (Map Text Nat))
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Player' with the minimum fields required to make a request.
@@ -2639,11 +2695,13 @@ instance ToJSON Player where
 --
 --
 -- /See:/ 'playerLatency' smart constructor.
-data PlayerLatency = PlayerLatency'
-  { _plLatencyInMilliseconds :: !(Maybe Double)
-  , _plRegionIdentifier      :: !(Maybe Text)
-  , _plPlayerId              :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PlayerLatency =
+  PlayerLatency'
+    { _plLatencyInMilliseconds :: !(Maybe Double)
+    , _plRegionIdentifier      :: !(Maybe Text)
+    , _plPlayerId              :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PlayerLatency' with the minimum fields required to make a request.
@@ -2716,10 +2774,12 @@ instance ToJSON PlayerLatency where
 --
 --
 -- /See:/ 'playerLatencyPolicy' smart constructor.
-data PlayerLatencyPolicy = PlayerLatencyPolicy'
-  { _plpPolicyDurationSeconds                      :: !(Maybe Nat)
-  , _plpMaximumIndividualPlayerLatencyMilliseconds :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PlayerLatencyPolicy =
+  PlayerLatencyPolicy'
+    { _plpPolicyDurationSeconds                      :: !(Maybe Nat)
+    , _plpMaximumIndividualPlayerLatencyMilliseconds :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PlayerLatencyPolicy' with the minimum fields required to make a request.
@@ -2794,18 +2854,20 @@ instance ToJSON PlayerLatencyPolicy where
 --
 --
 -- /See:/ 'playerSession' smart constructor.
-data PlayerSession = PlayerSession'
-  { _psCreationTime    :: !(Maybe POSIX)
-  , _psStatus          :: !(Maybe PlayerSessionStatus)
-  , _psIPAddress       :: !(Maybe Text)
-  , _psGameSessionId   :: !(Maybe Text)
-  , _psTerminationTime :: !(Maybe POSIX)
-  , _psPlayerSessionId :: !(Maybe Text)
-  , _psFleetId         :: !(Maybe Text)
-  , _psPlayerData      :: !(Maybe Text)
-  , _psPlayerId        :: !(Maybe Text)
-  , _psPort            :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PlayerSession =
+  PlayerSession'
+    { _psCreationTime    :: !(Maybe POSIX)
+    , _psStatus          :: !(Maybe PlayerSessionStatus)
+    , _psIPAddress       :: !(Maybe Text)
+    , _psGameSessionId   :: !(Maybe Text)
+    , _psTerminationTime :: !(Maybe POSIX)
+    , _psPlayerSessionId :: !(Maybe Text)
+    , _psFleetId         :: !(Maybe Text)
+    , _psPlayerData      :: !(Maybe Text)
+    , _psPlayerId        :: !(Maybe Text)
+    , _psPort            :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PlayerSession' with the minimum fields required to make a request.
@@ -2914,10 +2976,12 @@ instance NFData PlayerSession where
 --
 --
 -- /See:/ 'resourceCreationLimitPolicy' smart constructor.
-data ResourceCreationLimitPolicy = ResourceCreationLimitPolicy'
-  { _rclpNewGameSessionsPerCreator :: !(Maybe Nat)
-  , _rclpPolicyPeriodInMinutes     :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResourceCreationLimitPolicy =
+  ResourceCreationLimitPolicy'
+    { _rclpNewGameSessionsPerCreator :: !(Maybe Nat)
+    , _rclpPolicyPeriodInMinutes     :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResourceCreationLimitPolicy' with the minimum fields required to make a request.
@@ -3018,11 +3082,13 @@ instance ToJSON ResourceCreationLimitPolicy where
 --
 --
 -- /See:/ 'routingStrategy' smart constructor.
-data RoutingStrategy = RoutingStrategy'
-  { _rsType    :: !(Maybe RoutingStrategyType)
-  , _rsMessage :: !(Maybe Text)
-  , _rsFleetId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RoutingStrategy =
+  RoutingStrategy'
+    { _rsType    :: !(Maybe RoutingStrategyType)
+    , _rsMessage :: !(Maybe Text)
+    , _rsFleetId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RoutingStrategy' with the minimum fields required to make a request.
@@ -3130,11 +3196,13 @@ instance ToJSON RoutingStrategy where
 --
 --
 -- /See:/ 'runtimeConfiguration' smart constructor.
-data RuntimeConfiguration = RuntimeConfiguration'
-  { _rcGameSessionActivationTimeoutSeconds :: !(Maybe Nat)
-  , _rcServerProcesses                     :: !(Maybe (List1 ServerProcess))
-  , _rcMaxConcurrentGameSessionActivations :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RuntimeConfiguration =
+  RuntimeConfiguration'
+    { _rcGameSessionActivationTimeoutSeconds :: !(Maybe Nat)
+    , _rcServerProcesses                     :: !(Maybe (List1 ServerProcess))
+    , _rcMaxConcurrentGameSessionActivations :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RuntimeConfiguration' with the minimum fields required to make a request.
@@ -3196,11 +3264,13 @@ instance ToJSON RuntimeConfiguration where
 --
 --
 -- /See:/ 's3Location' smart constructor.
-data S3Location = S3Location'
-  { _slBucket  :: !(Maybe Text)
-  , _slKey     :: !(Maybe Text)
-  , _slRoleARN :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data S3Location =
+  S3Location'
+    { _slBucket  :: !(Maybe Text)
+    , _slKey     :: !(Maybe Text)
+    , _slRoleARN :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'S3Location' with the minimum fields required to make a request.
@@ -3282,19 +3352,21 @@ instance ToJSON S3Location where
 --
 --
 -- /See:/ 'scalingPolicy' smart constructor.
-data ScalingPolicy = ScalingPolicy'
-  { _spStatus                :: !(Maybe ScalingStatusType)
-  , _spScalingAdjustmentType :: !(Maybe ScalingAdjustmentType)
-  , _spEvaluationPeriods     :: !(Maybe Nat)
-  , _spPolicyType            :: !(Maybe PolicyType)
-  , _spMetricName            :: !(Maybe MetricName)
-  , _spComparisonOperator    :: !(Maybe ComparisonOperatorType)
-  , _spName                  :: !(Maybe Text)
-  , _spThreshold             :: !(Maybe Double)
-  , _spScalingAdjustment     :: !(Maybe Int)
-  , _spFleetId               :: !(Maybe Text)
-  , _spTargetConfiguration   :: !(Maybe TargetConfiguration)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ScalingPolicy =
+  ScalingPolicy'
+    { _spStatus                :: !(Maybe ScalingStatusType)
+    , _spScalingAdjustmentType :: !(Maybe ScalingAdjustmentType)
+    , _spEvaluationPeriods     :: !(Maybe Nat)
+    , _spPolicyType            :: !(Maybe PolicyType)
+    , _spMetricName            :: !(Maybe MetricName)
+    , _spComparisonOperator    :: !(Maybe ComparisonOperatorType)
+    , _spName                  :: !(Maybe Text)
+    , _spThreshold             :: !(Maybe Double)
+    , _spScalingAdjustment     :: !(Maybe Int)
+    , _spFleetId               :: !(Maybe Text)
+    , _spTargetConfiguration   :: !(Maybe TargetConfiguration)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ScalingPolicy' with the minimum fields required to make a request.
@@ -3409,11 +3481,13 @@ instance NFData ScalingPolicy where
 --
 --
 -- /See:/ 'serverProcess' smart constructor.
-data ServerProcess = ServerProcess'
-  { _spParameters           :: !(Maybe Text)
-  , _spLaunchPath           :: !Text
-  , _spConcurrentExecutions :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ServerProcess =
+  ServerProcess'
+    { _spParameters           :: !(Maybe Text)
+    , _spLaunchPath           :: !Text
+    , _spConcurrentExecutions :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ServerProcess' with the minimum fields required to make a request.
@@ -3503,9 +3577,11 @@ instance ToJSON ServerProcess where
 --
 --
 -- /See:/ 'targetConfiguration' smart constructor.
-newtype TargetConfiguration = TargetConfiguration'
-  { _tcTargetValue :: Double
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype TargetConfiguration =
+  TargetConfiguration'
+    { _tcTargetValue :: Double
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TargetConfiguration' with the minimum fields required to make a request.
@@ -3560,13 +3636,15 @@ instance ToJSON TargetConfiguration where
 --
 --
 -- /See:/ 'vpcPeeringAuthorization' smart constructor.
-data VPCPeeringAuthorization = VPCPeeringAuthorization'
-  { _vpaCreationTime         :: !(Maybe POSIX)
-  , _vpaPeerVPCId            :: !(Maybe Text)
-  , _vpaPeerVPCAWSAccountId  :: !(Maybe Text)
-  , _vpaGameLiftAWSAccountId :: !(Maybe Text)
-  , _vpaExpirationTime       :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VPCPeeringAuthorization =
+  VPCPeeringAuthorization'
+    { _vpaCreationTime         :: !(Maybe POSIX)
+    , _vpaPeerVPCId            :: !(Maybe Text)
+    , _vpaPeerVPCAWSAccountId  :: !(Maybe Text)
+    , _vpaGameLiftAWSAccountId :: !(Maybe Text)
+    , _vpaExpirationTime       :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VPCPeeringAuthorization' with the minimum fields required to make a request.
@@ -3649,14 +3727,16 @@ instance NFData VPCPeeringAuthorization where
 --
 --
 -- /See:/ 'vpcPeeringConnection' smart constructor.
-data VPCPeeringConnection = VPCPeeringConnection'
-  { _vpcVPCPeeringConnectionId :: !(Maybe Text)
-  , _vpcStatus                 :: !(Maybe VPCPeeringConnectionStatus)
-  , _vpcPeerVPCId              :: !(Maybe Text)
-  , _vpcIPV4CidrBlock          :: !(Maybe Text)
-  , _vpcGameLiftVPCId          :: !(Maybe Text)
-  , _vpcFleetId                :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VPCPeeringConnection =
+  VPCPeeringConnection'
+    { _vpcVPCPeeringConnectionId :: !(Maybe Text)
+    , _vpcStatus                 :: !(Maybe VPCPeeringConnectionStatus)
+    , _vpcPeerVPCId              :: !(Maybe Text)
+    , _vpcIPV4CidrBlock          :: !(Maybe Text)
+    , _vpcGameLiftVPCId          :: !(Maybe Text)
+    , _vpcFleetId                :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VPCPeeringConnection' with the minimum fields required to make a request.
@@ -3731,10 +3811,12 @@ instance NFData VPCPeeringConnection where
 --
 --
 -- /See:/ 'vpcPeeringConnectionStatus' smart constructor.
-data VPCPeeringConnectionStatus = VPCPeeringConnectionStatus'
-  { _vpcsCode    :: !(Maybe Text)
-  , _vpcsMessage :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VPCPeeringConnectionStatus =
+  VPCPeeringConnectionStatus'
+    { _vpcsCode    :: !(Maybe Text)
+    , _vpcsMessage :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VPCPeeringConnectionStatus' with the minimum fields required to make a request.

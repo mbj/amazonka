@@ -40,9 +40,11 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'deleteBucketCORS' smart constructor.
-newtype DeleteBucketCORS = DeleteBucketCORS'
-  { _dbcBucket :: BucketName
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteBucketCORS =
+  DeleteBucketCORS'
+    { _dbcBucket :: BucketName
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteBucketCORS' with the minimum fields required to make a request.

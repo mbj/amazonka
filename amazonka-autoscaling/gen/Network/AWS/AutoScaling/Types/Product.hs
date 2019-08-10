@@ -26,18 +26,20 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'activity' smart constructor.
-data Activity = Activity'
-  { _aProgress             :: !(Maybe Int)
-  , _aStatusMessage        :: !(Maybe Text)
-  , _aEndTime              :: !(Maybe ISO8601)
-  , _aDetails              :: !(Maybe Text)
-  , _aDescription          :: !(Maybe Text)
-  , _aActivityId           :: !Text
-  , _aAutoScalingGroupName :: !Text
-  , _aCause                :: !Text
-  , _aStartTime            :: !ISO8601
-  , _aStatusCode           :: !ScalingActivityStatusCode
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Activity =
+  Activity'
+    { _aProgress             :: !(Maybe Int)
+    , _aStatusMessage        :: !(Maybe Text)
+    , _aEndTime              :: !(Maybe ISO8601)
+    , _aDetails              :: !(Maybe Text)
+    , _aDescription          :: !(Maybe Text)
+    , _aActivityId           :: !Text
+    , _aAutoScalingGroupName :: !Text
+    , _aCause                :: !Text
+    , _aStartTime            :: !ISO8601
+    , _aStatusCode           :: !ScalingActivityStatusCode
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Activity' with the minimum fields required to make a request.
@@ -149,9 +151,11 @@ instance NFData Activity where
 --
 --
 -- /See:/ 'adjustmentType' smart constructor.
-newtype AdjustmentType = AdjustmentType'
-  { _atAdjustmentType :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AdjustmentType =
+  AdjustmentType'
+    { _atAdjustmentType :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AdjustmentType' with the minimum fields required to make a request.
@@ -181,10 +185,12 @@ instance NFData AdjustmentType where
 --
 --
 -- /See:/ 'alarm' smart constructor.
-data Alarm = Alarm'
-  { _aAlarmName :: !(Maybe Text)
-  , _aAlarmARN  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Alarm =
+  Alarm'
+    { _aAlarmName :: !(Maybe Text)
+    , _aAlarmARN  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Alarm' with the minimum fields required to make a request.
@@ -221,32 +227,34 @@ instance NFData Alarm where
 --
 --
 -- /See:/ 'autoScalingGroup' smart constructor.
-data AutoScalingGroup = AutoScalingGroup'
-  { _asgStatus                           :: !(Maybe Text)
-  , _asgTerminationPolicies              :: !(Maybe [Text])
-  , _asgHealthCheckGracePeriod           :: !(Maybe Int)
-  , _asgServiceLinkedRoleARN             :: !(Maybe Text)
-  , _asgNewInstancesProtectedFromScaleIn :: !(Maybe Bool)
-  , _asgVPCZoneIdentifier                :: !(Maybe Text)
-  , _asgTargetGroupARNs                  :: !(Maybe [Text])
-  , _asgEnabledMetrics                   :: !(Maybe [EnabledMetric])
-  , _asgLaunchConfigurationName          :: !(Maybe Text)
-  , _asgInstances                        :: !(Maybe [Instance])
-  , _asgLaunchTemplate                   :: !(Maybe LaunchTemplateSpecification)
-  , _asgAutoScalingGroupARN              :: !(Maybe Text)
-  , _asgPlacementGroup                   :: !(Maybe Text)
-  , _asgSuspendedProcesses               :: !(Maybe [SuspendedProcess])
-  , _asgLoadBalancerNames                :: !(Maybe [Text])
-  , _asgTags                             :: !(Maybe [TagDescription])
-  , _asgAutoScalingGroupName             :: !Text
-  , _asgMinSize                          :: !Int
-  , _asgMaxSize                          :: !Int
-  , _asgDesiredCapacity                  :: !Int
-  , _asgDefaultCooldown                  :: !Int
-  , _asgAvailabilityZones                :: !(List1 Text)
-  , _asgHealthCheckType                  :: !Text
-  , _asgCreatedTime                      :: !ISO8601
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AutoScalingGroup =
+  AutoScalingGroup'
+    { _asgStatus :: !(Maybe Text)
+    , _asgTerminationPolicies :: !(Maybe [Text])
+    , _asgHealthCheckGracePeriod :: !(Maybe Int)
+    , _asgServiceLinkedRoleARN :: !(Maybe Text)
+    , _asgNewInstancesProtectedFromScaleIn :: !(Maybe Bool)
+    , _asgVPCZoneIdentifier :: !(Maybe Text)
+    , _asgTargetGroupARNs :: !(Maybe [Text])
+    , _asgEnabledMetrics :: !(Maybe [EnabledMetric])
+    , _asgLaunchConfigurationName :: !(Maybe Text)
+    , _asgInstances :: !(Maybe [Instance])
+    , _asgLaunchTemplate :: !(Maybe LaunchTemplateSpecification)
+    , _asgAutoScalingGroupARN :: !(Maybe Text)
+    , _asgPlacementGroup :: !(Maybe Text)
+    , _asgSuspendedProcesses :: !(Maybe [SuspendedProcess])
+    , _asgLoadBalancerNames :: !(Maybe [Text])
+    , _asgTags :: !(Maybe [TagDescription])
+    , _asgAutoScalingGroupName :: !Text
+    , _asgMinSize :: !Int
+    , _asgMaxSize :: !Int
+    , _asgDesiredCapacity :: !Int
+    , _asgDefaultCooldown :: !Int
+    , _asgAvailabilityZones :: !(List1 Text)
+    , _asgHealthCheckType :: !Text
+    , _asgCreatedTime :: !ISO8601
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AutoScalingGroup' with the minimum fields required to make a request.
@@ -487,16 +495,18 @@ instance NFData AutoScalingGroup where
 --
 --
 -- /See:/ 'autoScalingInstanceDetails' smart constructor.
-data AutoScalingInstanceDetails = AutoScalingInstanceDetails'
-  { _asidLaunchConfigurationName :: !(Maybe Text)
-  , _asidLaunchTemplate          :: !(Maybe LaunchTemplateSpecification)
-  , _asidInstanceId              :: !Text
-  , _asidAutoScalingGroupName    :: !Text
-  , _asidAvailabilityZone        :: !Text
-  , _asidLifecycleState          :: !Text
-  , _asidHealthStatus            :: !Text
-  , _asidProtectedFromScaleIn    :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AutoScalingInstanceDetails =
+  AutoScalingInstanceDetails'
+    { _asidLaunchConfigurationName :: !(Maybe Text)
+    , _asidLaunchTemplate          :: !(Maybe LaunchTemplateSpecification)
+    , _asidInstanceId              :: !Text
+    , _asidAutoScalingGroupName    :: !Text
+    , _asidAvailabilityZone        :: !Text
+    , _asidLifecycleState          :: !Text
+    , _asidHealthStatus            :: !Text
+    , _asidProtectedFromScaleIn    :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AutoScalingInstanceDetails' with the minimum fields required to make a request.
@@ -592,12 +602,14 @@ instance NFData AutoScalingInstanceDetails where
 --
 --
 -- /See:/ 'blockDeviceMapping' smart constructor.
-data BlockDeviceMapping = BlockDeviceMapping'
-  { _bdmVirtualName :: !(Maybe Text)
-  , _bdmNoDevice    :: !(Maybe Bool)
-  , _bdmEBS         :: !(Maybe EBS)
-  , _bdmDeviceName  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BlockDeviceMapping =
+  BlockDeviceMapping'
+    { _bdmVirtualName :: !(Maybe Text)
+    , _bdmNoDevice    :: !(Maybe Bool)
+    , _bdmEBS         :: !(Maybe EBS)
+    , _bdmDeviceName  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BlockDeviceMapping' with the minimum fields required to make a request.
@@ -662,13 +674,15 @@ instance ToQuery BlockDeviceMapping where
 --
 --
 -- /See:/ 'customizedMetricSpecification' smart constructor.
-data CustomizedMetricSpecification = CustomizedMetricSpecification'
-  { _cmsDimensions :: !(Maybe [MetricDimension])
-  , _cmsUnit       :: !(Maybe Text)
-  , _cmsMetricName :: !Text
-  , _cmsNamespace  :: !Text
-  , _cmsStatistic  :: !MetricStatistic
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CustomizedMetricSpecification =
+  CustomizedMetricSpecification'
+    { _cmsDimensions :: !(Maybe [MetricDimension])
+    , _cmsUnit       :: !(Maybe Text)
+    , _cmsMetricName :: !Text
+    , _cmsNamespace  :: !Text
+    , _cmsStatistic  :: !MetricStatistic
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CustomizedMetricSpecification' with the minimum fields required to make a request.
@@ -747,14 +761,16 @@ instance ToQuery CustomizedMetricSpecification where
 --
 --
 -- /See:/ 'ebs' smart constructor.
-data EBS = EBS'
-  { _ebsDeleteOnTermination :: !(Maybe Bool)
-  , _ebsVolumeSize          :: !(Maybe Nat)
-  , _ebsIOPS                :: !(Maybe Nat)
-  , _ebsEncrypted           :: !(Maybe Bool)
-  , _ebsVolumeType          :: !(Maybe Text)
-  , _ebsSnapshotId          :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EBS =
+  EBS'
+    { _ebsDeleteOnTermination :: !(Maybe Bool)
+    , _ebsVolumeSize          :: !(Maybe Nat)
+    , _ebsIOPS                :: !(Maybe Nat)
+    , _ebsEncrypted           :: !(Maybe Bool)
+    , _ebsVolumeType          :: !(Maybe Text)
+    , _ebsSnapshotId          :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EBS' with the minimum fields required to make a request.
@@ -837,10 +853,12 @@ instance ToQuery EBS where
 --
 --
 -- /See:/ 'enabledMetric' smart constructor.
-data EnabledMetric = EnabledMetric'
-  { _emGranularity :: !(Maybe Text)
-  , _emMetric      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EnabledMetric =
+  EnabledMetric'
+    { _emGranularity :: !(Maybe Text)
+    , _emMetric      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EnabledMetric' with the minimum fields required to make a request.
@@ -877,10 +895,12 @@ instance NFData EnabledMetric where
 --
 --
 -- /See:/ 'filter'' smart constructor.
-data Filter = Filter'
-  { _fValues :: !(Maybe [Text])
-  , _fName   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Filter =
+  Filter'
+    { _fValues :: !(Maybe [Text])
+    , _fName   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Filter' with the minimum fields required to make a request.
@@ -920,15 +940,17 @@ instance ToQuery Filter where
 --
 --
 -- /See:/ 'instance'' smart constructor.
-data Instance = Instance'
-  { _iLaunchConfigurationName :: !(Maybe Text)
-  , _iLaunchTemplate          :: !(Maybe LaunchTemplateSpecification)
-  , _iInstanceId              :: !Text
-  , _iAvailabilityZone        :: !Text
-  , _iLifecycleState          :: !LifecycleState
-  , _iHealthStatus            :: !Text
-  , _iProtectedFromScaleIn    :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Instance =
+  Instance'
+    { _iLaunchConfigurationName :: !(Maybe Text)
+    , _iLaunchTemplate          :: !(Maybe LaunchTemplateSpecification)
+    , _iInstanceId              :: !Text
+    , _iAvailabilityZone        :: !Text
+    , _iLifecycleState          :: !LifecycleState
+    , _iHealthStatus            :: !Text
+    , _iProtectedFromScaleIn    :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Instance' with the minimum fields required to make a request.
@@ -1015,9 +1037,11 @@ instance NFData Instance where
 --
 --
 -- /See:/ 'instanceMonitoring' smart constructor.
-newtype InstanceMonitoring = InstanceMonitoring'
-  { _imEnabled :: Maybe Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype InstanceMonitoring =
+  InstanceMonitoring'
+    { _imEnabled :: Maybe Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceMonitoring' with the minimum fields required to make a request.
@@ -1051,27 +1075,29 @@ instance ToQuery InstanceMonitoring where
 --
 --
 -- /See:/ 'launchConfiguration' smart constructor.
-data LaunchConfiguration = LaunchConfiguration'
-  { _lcAssociatePublicIPAddress     :: !(Maybe Bool)
-  , _lcSecurityGroups               :: !(Maybe [Text])
-  , _lcSpotPrice                    :: !(Maybe Text)
-  , _lcInstanceMonitoring           :: !(Maybe InstanceMonitoring)
-  , _lcKeyName                      :: !(Maybe Text)
-  , _lcClassicLinkVPCSecurityGroups :: !(Maybe [Text])
-  , _lcRAMDiskId                    :: !(Maybe Text)
-  , _lcKernelId                     :: !(Maybe Text)
-  , _lcEBSOptimized                 :: !(Maybe Bool)
-  , _lcUserData                     :: !(Maybe Text)
-  , _lcClassicLinkVPCId             :: !(Maybe Text)
-  , _lcIAMInstanceProfile           :: !(Maybe Text)
-  , _lcLaunchConfigurationARN       :: !(Maybe Text)
-  , _lcPlacementTenancy             :: !(Maybe Text)
-  , _lcBlockDeviceMappings          :: !(Maybe [BlockDeviceMapping])
-  , _lcLaunchConfigurationName      :: !Text
-  , _lcImageId                      :: !Text
-  , _lcInstanceType                 :: !Text
-  , _lcCreatedTime                  :: !ISO8601
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LaunchConfiguration =
+  LaunchConfiguration'
+    { _lcAssociatePublicIPAddress     :: !(Maybe Bool)
+    , _lcSecurityGroups               :: !(Maybe [Text])
+    , _lcSpotPrice                    :: !(Maybe Text)
+    , _lcInstanceMonitoring           :: !(Maybe InstanceMonitoring)
+    , _lcKeyName                      :: !(Maybe Text)
+    , _lcClassicLinkVPCSecurityGroups :: !(Maybe [Text])
+    , _lcRAMDiskId                    :: !(Maybe Text)
+    , _lcKernelId                     :: !(Maybe Text)
+    , _lcEBSOptimized                 :: !(Maybe Bool)
+    , _lcUserData                     :: !(Maybe Text)
+    , _lcClassicLinkVPCId             :: !(Maybe Text)
+    , _lcIAMInstanceProfile           :: !(Maybe Text)
+    , _lcLaunchConfigurationARN       :: !(Maybe Text)
+    , _lcPlacementTenancy             :: !(Maybe Text)
+    , _lcBlockDeviceMappings          :: !(Maybe [BlockDeviceMapping])
+    , _lcLaunchConfigurationName      :: !Text
+    , _lcImageId                      :: !Text
+    , _lcInstanceType                 :: !Text
+    , _lcCreatedTime                  :: !ISO8601
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LaunchConfiguration' with the minimum fields required to make a request.
@@ -1258,11 +1284,13 @@ instance NFData LaunchConfiguration where
 --
 --
 -- /See:/ 'launchTemplateSpecification' smart constructor.
-data LaunchTemplateSpecification = LaunchTemplateSpecification'
-  { _ltsLaunchTemplateName :: !(Maybe Text)
-  , _ltsLaunchTemplateId   :: !(Maybe Text)
-  , _ltsVersion            :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LaunchTemplateSpecification =
+  LaunchTemplateSpecification'
+    { _ltsLaunchTemplateName :: !(Maybe Text)
+    , _ltsLaunchTemplateId   :: !(Maybe Text)
+    , _ltsVersion            :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LaunchTemplateSpecification' with the minimum fields required to make a request.
@@ -1321,17 +1349,19 @@ instance ToQuery LaunchTemplateSpecification where
 --
 --
 -- /See:/ 'lifecycleHook' smart constructor.
-data LifecycleHook = LifecycleHook'
-  { _lhDefaultResult         :: !(Maybe Text)
-  , _lhLifecycleHookName     :: !(Maybe Text)
-  , _lhHeartbeatTimeout      :: !(Maybe Int)
-  , _lhAutoScalingGroupName  :: !(Maybe Text)
-  , _lhNotificationMetadata  :: !(Maybe Text)
-  , _lhGlobalTimeout         :: !(Maybe Int)
-  , _lhNotificationTargetARN :: !(Maybe Text)
-  , _lhLifecycleTransition   :: !(Maybe Text)
-  , _lhRoleARN               :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LifecycleHook =
+  LifecycleHook'
+    { _lhDefaultResult         :: !(Maybe Text)
+    , _lhLifecycleHookName     :: !(Maybe Text)
+    , _lhHeartbeatTimeout      :: !(Maybe Int)
+    , _lhAutoScalingGroupName  :: !(Maybe Text)
+    , _lhNotificationMetadata  :: !(Maybe Text)
+    , _lhGlobalTimeout         :: !(Maybe Int)
+    , _lhNotificationTargetARN :: !(Maybe Text)
+    , _lhLifecycleTransition   :: !(Maybe Text)
+    , _lhRoleARN               :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LifecycleHook' with the minimum fields required to make a request.
@@ -1431,15 +1461,17 @@ instance NFData LifecycleHook where
 --
 --
 -- /See:/ 'lifecycleHookSpecification' smart constructor.
-data LifecycleHookSpecification = LifecycleHookSpecification'
-  { _lhsDefaultResult         :: !(Maybe Text)
-  , _lhsHeartbeatTimeout      :: !(Maybe Int)
-  , _lhsNotificationMetadata  :: !(Maybe Text)
-  , _lhsNotificationTargetARN :: !(Maybe Text)
-  , _lhsRoleARN               :: !(Maybe Text)
-  , _lhsLifecycleHookName     :: !Text
-  , _lhsLifecycleTransition   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LifecycleHookSpecification =
+  LifecycleHookSpecification'
+    { _lhsDefaultResult         :: !(Maybe Text)
+    , _lhsHeartbeatTimeout      :: !(Maybe Int)
+    , _lhsNotificationMetadata  :: !(Maybe Text)
+    , _lhsNotificationTargetARN :: !(Maybe Text)
+    , _lhsRoleARN               :: !(Maybe Text)
+    , _lhsLifecycleHookName     :: !Text
+    , _lhsLifecycleTransition   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LifecycleHookSpecification' with the minimum fields required to make a request.
@@ -1527,10 +1559,12 @@ instance ToQuery LifecycleHookSpecification where
 --
 --
 -- /See:/ 'loadBalancerState' smart constructor.
-data LoadBalancerState = LoadBalancerState'
-  { _lbsState            :: !(Maybe Text)
-  , _lbsLoadBalancerName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LoadBalancerState =
+  LoadBalancerState'
+    { _lbsState            :: !(Maybe Text)
+    , _lbsLoadBalancerName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LoadBalancerState' with the minimum fields required to make a request.
@@ -1570,10 +1604,12 @@ instance NFData LoadBalancerState where
 --
 --
 -- /See:/ 'loadBalancerTargetGroupState' smart constructor.
-data LoadBalancerTargetGroupState = LoadBalancerTargetGroupState'
-  { _lbtgsState                      :: !(Maybe Text)
-  , _lbtgsLoadBalancerTargetGroupARN :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LoadBalancerTargetGroupState =
+  LoadBalancerTargetGroupState'
+    { _lbtgsState                      :: !(Maybe Text)
+    , _lbtgsLoadBalancerTargetGroupARN :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LoadBalancerTargetGroupState' with the minimum fields required to make a request.
@@ -1613,9 +1649,11 @@ instance NFData LoadBalancerTargetGroupState where
 --
 --
 -- /See:/ 'metricCollectionType' smart constructor.
-newtype MetricCollectionType = MetricCollectionType'
-  { _mctMetric :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype MetricCollectionType =
+  MetricCollectionType'
+    { _mctMetric :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MetricCollectionType' with the minimum fields required to make a request.
@@ -1645,10 +1683,12 @@ instance NFData MetricCollectionType where
 --
 --
 -- /See:/ 'metricDimension' smart constructor.
-data MetricDimension = MetricDimension'
-  { _mdName  :: !Text
-  , _mdValue :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MetricDimension =
+  MetricDimension'
+    { _mdName  :: !Text
+    , _mdValue :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MetricDimension' with the minimum fields required to make a request.
@@ -1692,9 +1732,11 @@ instance ToQuery MetricDimension where
 --
 --
 -- /See:/ 'metricGranularityType' smart constructor.
-newtype MetricGranularityType = MetricGranularityType'
-  { _mgtGranularity :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype MetricGranularityType =
+  MetricGranularityType'
+    { _mgtGranularity :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MetricGranularityType' with the minimum fields required to make a request.
@@ -1724,11 +1766,13 @@ instance NFData MetricGranularityType where
 --
 --
 -- /See:/ 'notificationConfiguration' smart constructor.
-data NotificationConfiguration = NotificationConfiguration'
-  { _ncTopicARN             :: !(Maybe Text)
-  , _ncAutoScalingGroupName :: !(Maybe Text)
-  , _ncNotificationType     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NotificationConfiguration =
+  NotificationConfiguration'
+    { _ncTopicARN             :: !(Maybe Text)
+    , _ncAutoScalingGroupName :: !(Maybe Text)
+    , _ncNotificationType     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NotificationConfiguration' with the minimum fields required to make a request.
@@ -1777,10 +1821,12 @@ instance NFData NotificationConfiguration where
 --
 --
 -- /See:/ 'predefinedMetricSpecification' smart constructor.
-data PredefinedMetricSpecification = PredefinedMetricSpecification'
-  { _pmsResourceLabel        :: !(Maybe Text)
-  , _pmsPredefinedMetricType :: !MetricType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PredefinedMetricSpecification =
+  PredefinedMetricSpecification'
+    { _pmsResourceLabel        :: !(Maybe Text)
+    , _pmsPredefinedMetricType :: !MetricType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PredefinedMetricSpecification' with the minimum fields required to make a request.
@@ -1831,9 +1877,11 @@ instance ToQuery PredefinedMetricSpecification where
 --
 --
 -- /See:/ 'processType' smart constructor.
-newtype ProcessType = ProcessType'
-  { _ptProcessName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ProcessType =
+  ProcessType'
+    { _ptProcessName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ProcessType' with the minimum fields required to make a request.
@@ -1863,22 +1911,24 @@ instance NFData ProcessType where
 --
 --
 -- /See:/ 'scalingPolicy' smart constructor.
-data ScalingPolicy = ScalingPolicy'
-  { _sMinAdjustmentStep           :: !(Maybe Int)
-  , _sEstimatedInstanceWarmup     :: !(Maybe Int)
-  , _sPolicyName                  :: !(Maybe Text)
-  , _sPolicyType                  :: !(Maybe Text)
-  , _sStepAdjustments             :: !(Maybe [StepAdjustment])
-  , _sTargetTrackingConfiguration :: !(Maybe TargetTrackingConfiguration)
-  , _sAdjustmentType              :: !(Maybe Text)
-  , _sAutoScalingGroupName        :: !(Maybe Text)
-  , _sScalingAdjustment           :: !(Maybe Int)
-  , _sCooldown                    :: !(Maybe Int)
-  , _sPolicyARN                   :: !(Maybe Text)
-  , _sAlarms                      :: !(Maybe [Alarm])
-  , _sMetricAggregationType       :: !(Maybe Text)
-  , _sMinAdjustmentMagnitude      :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ScalingPolicy =
+  ScalingPolicy'
+    { _sMinAdjustmentStep           :: !(Maybe Int)
+    , _sEstimatedInstanceWarmup     :: !(Maybe Int)
+    , _sPolicyName                  :: !(Maybe Text)
+    , _sPolicyType                  :: !(Maybe Text)
+    , _sStepAdjustments             :: !(Maybe [StepAdjustment])
+    , _sTargetTrackingConfiguration :: !(Maybe TargetTrackingConfiguration)
+    , _sAdjustmentType              :: !(Maybe Text)
+    , _sAutoScalingGroupName        :: !(Maybe Text)
+    , _sScalingAdjustment           :: !(Maybe Int)
+    , _sCooldown                    :: !(Maybe Int)
+    , _sPolicyARN                   :: !(Maybe Text)
+    , _sAlarms                      :: !(Maybe [Alarm])
+    , _sMetricAggregationType       :: !(Maybe Text)
+    , _sMinAdjustmentMagnitude      :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ScalingPolicy' with the minimum fields required to make a request.
@@ -2016,10 +2066,12 @@ instance Hashable ScalingPolicy where
 instance NFData ScalingPolicy where
 
 -- | /See:/ 'scalingProcessQuery' smart constructor.
-data ScalingProcessQuery = ScalingProcessQuery'
-  { _spqScalingProcesses     :: !(Maybe [Text])
-  , _spqAutoScalingGroupName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ScalingProcessQuery =
+  ScalingProcessQuery'
+    { _spqScalingProcesses     :: !(Maybe [Text])
+    , _spqAutoScalingGroupName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ScalingProcessQuery' with the minimum fields required to make a request.
@@ -2064,18 +2116,20 @@ instance ToQuery ScalingProcessQuery where
 --
 --
 -- /See:/ 'scheduledUpdateGroupAction' smart constructor.
-data ScheduledUpdateGroupAction = ScheduledUpdateGroupAction'
-  { _sugaScheduledActionARN   :: !(Maybe Text)
-  , _sugaStartTime            :: !(Maybe ISO8601)
-  , _sugaTime                 :: !(Maybe ISO8601)
-  , _sugaScheduledActionName  :: !(Maybe Text)
-  , _sugaMaxSize              :: !(Maybe Int)
-  , _sugaRecurrence           :: !(Maybe Text)
-  , _sugaDesiredCapacity      :: !(Maybe Int)
-  , _sugaMinSize              :: !(Maybe Int)
-  , _sugaAutoScalingGroupName :: !(Maybe Text)
-  , _sugaEndTime              :: !(Maybe ISO8601)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ScheduledUpdateGroupAction =
+  ScheduledUpdateGroupAction'
+    { _sugaScheduledActionARN   :: !(Maybe Text)
+    , _sugaStartTime            :: !(Maybe ISO8601)
+    , _sugaTime                 :: !(Maybe ISO8601)
+    , _sugaScheduledActionName  :: !(Maybe Text)
+    , _sugaMaxSize              :: !(Maybe Int)
+    , _sugaRecurrence           :: !(Maybe Text)
+    , _sugaDesiredCapacity      :: !(Maybe Int)
+    , _sugaMinSize              :: !(Maybe Int)
+    , _sugaAutoScalingGroupName :: !(Maybe Text)
+    , _sugaEndTime              :: !(Maybe ISO8601)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ScheduledUpdateGroupAction' with the minimum fields required to make a request.
@@ -2200,11 +2254,13 @@ instance NFData ScheduledUpdateGroupAction where
 --
 --
 -- /See:/ 'stepAdjustment' smart constructor.
-data StepAdjustment = StepAdjustment'
-  { _saMetricIntervalLowerBound :: !(Maybe Double)
-  , _saMetricIntervalUpperBound :: !(Maybe Double)
-  , _saScalingAdjustment        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StepAdjustment =
+  StepAdjustment'
+    { _saMetricIntervalLowerBound :: !(Maybe Double)
+    , _saMetricIntervalUpperBound :: !(Maybe Double)
+    , _saScalingAdjustment        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StepAdjustment' with the minimum fields required to make a request.
@@ -2264,10 +2320,12 @@ instance ToQuery StepAdjustment where
 --
 --
 -- /See:/ 'suspendedProcess' smart constructor.
-data SuspendedProcess = SuspendedProcess'
-  { _spProcessName      :: !(Maybe Text)
-  , _spSuspensionReason :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SuspendedProcess =
+  SuspendedProcess'
+    { _spProcessName      :: !(Maybe Text)
+    , _spSuspensionReason :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SuspendedProcess' with the minimum fields required to make a request.
@@ -2305,13 +2363,15 @@ instance NFData SuspendedProcess where
 --
 --
 -- /See:/ 'tag' smart constructor.
-data Tag = Tag'
-  { _tagKey               :: !Text
-  , _tagResourceId        :: !Text
-  , _tagResourceType      :: !Text
-  , _tagPropagateAtLaunch :: !Bool
-  , _tagValue             :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Tag =
+  Tag'
+    { _tagKey               :: !Text
+    , _tagResourceId        :: !Text
+    , _tagResourceType      :: !Text
+    , _tagPropagateAtLaunch :: !Bool
+    , _tagValue             :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Tag' with the minimum fields required to make a request.
@@ -2381,13 +2441,15 @@ instance ToQuery Tag where
 --
 --
 -- /See:/ 'tagDescription' smart constructor.
-data TagDescription = TagDescription'
-  { _tdResourceId        :: !Text
-  , _tdResourceType      :: !Text
-  , _tdKey               :: !Text
-  , _tdPropagateAtLaunch :: !Bool
-  , _tdValue             :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TagDescription =
+  TagDescription'
+    { _tdResourceId        :: !Text
+    , _tdResourceType      :: !Text
+    , _tdKey               :: !Text
+    , _tdPropagateAtLaunch :: !Bool
+    , _tdValue             :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TagDescription' with the minimum fields required to make a request.
@@ -2457,12 +2519,14 @@ instance NFData TagDescription where
 --
 --
 -- /See:/ 'targetTrackingConfiguration' smart constructor.
-data TargetTrackingConfiguration = TargetTrackingConfiguration'
-  { _ttcPredefinedMetricSpecification :: !(Maybe PredefinedMetricSpecification)
-  , _ttcCustomizedMetricSpecification :: !(Maybe CustomizedMetricSpecification)
-  , _ttcDisableScaleIn                :: !(Maybe Bool)
-  , _ttcTargetValue                   :: !Double
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TargetTrackingConfiguration =
+  TargetTrackingConfiguration'
+    { _ttcPredefinedMetricSpecification :: !(Maybe PredefinedMetricSpecification)
+    , _ttcCustomizedMetricSpecification :: !(Maybe CustomizedMetricSpecification)
+    , _ttcDisableScaleIn :: !(Maybe Bool)
+    , _ttcTargetValue :: !Double
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TargetTrackingConfiguration' with the minimum fields required to make a request.

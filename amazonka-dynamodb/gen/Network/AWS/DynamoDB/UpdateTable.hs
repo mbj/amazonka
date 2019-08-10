@@ -67,13 +67,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateTable' smart constructor.
-data UpdateTable = UpdateTable'
-  { _utAttributeDefinitions        :: !(Maybe [AttributeDefinition])
-  , _utProvisionedThroughput       :: !(Maybe ProvisionedThroughput)
-  , _utGlobalSecondaryIndexUpdates :: !(Maybe [GlobalSecondaryIndexUpdate])
-  , _utStreamSpecification         :: !(Maybe StreamSpecification)
-  , _utTableName                   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateTable =
+  UpdateTable'
+    { _utAttributeDefinitions        :: !(Maybe [AttributeDefinition])
+    , _utProvisionedThroughput       :: !(Maybe ProvisionedThroughput)
+    , _utGlobalSecondaryIndexUpdates :: !(Maybe [GlobalSecondaryIndexUpdate])
+    , _utStreamSpecification         :: !(Maybe StreamSpecification)
+    , _utTableName                   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateTable' with the minimum fields required to make a request.
@@ -169,10 +171,12 @@ instance ToQuery UpdateTable where
 --
 --
 -- /See:/ 'updateTableResponse' smart constructor.
-data UpdateTableResponse = UpdateTableResponse'
-  { _utrsTableDescription :: !(Maybe TableDescription)
-  , _utrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateTableResponse =
+  UpdateTableResponse'
+    { _utrsTableDescription :: !(Maybe TableDescription)
+    , _utrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateTableResponse' with the minimum fields required to make a request.

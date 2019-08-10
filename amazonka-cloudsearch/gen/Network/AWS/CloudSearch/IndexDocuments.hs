@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'indexDocuments' smart constructor.
-newtype IndexDocuments = IndexDocuments'
-  { _idDomainName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype IndexDocuments =
+  IndexDocuments'
+    { _idDomainName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'IndexDocuments' with the minimum fields required to make a request.
@@ -102,10 +104,12 @@ instance ToQuery IndexDocuments where
 --
 --
 -- /See:/ 'indexDocumentsResponse' smart constructor.
-data IndexDocumentsResponse = IndexDocumentsResponse'
-  { _idrsFieldNames     :: !(Maybe [Text])
-  , _idrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data IndexDocumentsResponse =
+  IndexDocumentsResponse'
+    { _idrsFieldNames     :: !(Maybe [Text])
+    , _idrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'IndexDocumentsResponse' with the minimum fields required to make a request.

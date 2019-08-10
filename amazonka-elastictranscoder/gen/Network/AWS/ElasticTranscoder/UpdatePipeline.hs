@@ -59,16 +59,18 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updatePipeline' smart constructor.
-data UpdatePipeline = UpdatePipeline'
-  { _upInputBucket     :: !(Maybe Text)
-  , _upContentConfig   :: !(Maybe PipelineOutputConfig)
-  , _upRole            :: !(Maybe Text)
-  , _upName            :: !(Maybe Text)
-  , _upAWSKMSKeyARN    :: !(Maybe Text)
-  , _upNotifications   :: !(Maybe Notifications)
-  , _upThumbnailConfig :: !(Maybe PipelineOutputConfig)
-  , _upId              :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdatePipeline =
+  UpdatePipeline'
+    { _upInputBucket     :: !(Maybe Text)
+    , _upContentConfig   :: !(Maybe PipelineOutputConfig)
+    , _upRole            :: !(Maybe Text)
+    , _upName            :: !(Maybe Text)
+    , _upAWSKMSKeyARN    :: !(Maybe Text)
+    , _upNotifications   :: !(Maybe Notifications)
+    , _upThumbnailConfig :: !(Maybe PipelineOutputConfig)
+    , _upId              :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdatePipeline' with the minimum fields required to make a request.
@@ -178,11 +180,13 @@ instance ToQuery UpdatePipeline where
 --
 --
 -- /See:/ 'updatePipelineResponse' smart constructor.
-data UpdatePipelineResponse = UpdatePipelineResponse'
-  { _uprsWarnings       :: !(Maybe [Warning])
-  , _uprsPipeline       :: !(Maybe Pipeline)
-  , _uprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdatePipelineResponse =
+  UpdatePipelineResponse'
+    { _uprsWarnings       :: !(Maybe [Warning])
+    , _uprsPipeline       :: !(Maybe Pipeline)
+    , _uprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdatePipelineResponse' with the minimum fields required to make a request.

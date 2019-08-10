@@ -54,10 +54,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getDomainNames' smart constructor.
-data GetDomainNames = GetDomainNames'
-  { _gdnLimit    :: !(Maybe Int)
-  , _gdnPosition :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDomainNames =
+  GetDomainNames'
+    { _gdnLimit    :: !(Maybe Int)
+    , _gdnPosition :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDomainNames' with the minimum fields required to make a request.
@@ -121,11 +123,13 @@ instance ToQuery GetDomainNames where
 -- <http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html Use Client-Side Certificate>
 --
 -- /See:/ 'getDomainNamesResponse' smart constructor.
-data GetDomainNamesResponse = GetDomainNamesResponse'
-  { _gdnrsItems          :: !(Maybe [DomainName])
-  , _gdnrsPosition       :: !(Maybe Text)
-  , _gdnrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDomainNamesResponse =
+  GetDomainNamesResponse'
+    { _gdnrsItems          :: !(Maybe [DomainName])
+    , _gdnrsPosition       :: !(Maybe Text)
+    , _gdnrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDomainNamesResponse' with the minimum fields required to make a request.

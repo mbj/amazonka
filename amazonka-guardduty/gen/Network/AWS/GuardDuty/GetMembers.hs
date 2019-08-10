@@ -47,10 +47,12 @@ import Network.AWS.Response
 -- | GetMembers request body.
 --
 -- /See:/ 'getMembers' smart constructor.
-data GetMembers = GetMembers'
-  { _gmAccountIds :: !(Maybe [Text])
-  , _gmDetectorId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetMembers =
+  GetMembers'
+    { _gmAccountIds :: !(Maybe [Text])
+    , _gmDetectorId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetMembers' with the minimum fields required to make a request.
@@ -111,11 +113,13 @@ instance ToQuery GetMembers where
         toQuery = const mempty
 
 -- | /See:/ 'getMembersResponse' smart constructor.
-data GetMembersResponse = GetMembersResponse'
-  { _gmrsMembers             :: !(Maybe [Member])
-  , _gmrsUnprocessedAccounts :: !(Maybe [UnprocessedAccount])
-  , _gmrsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetMembersResponse =
+  GetMembersResponse'
+    { _gmrsMembers             :: !(Maybe [Member])
+    , _gmrsUnprocessedAccounts :: !(Maybe [UnprocessedAccount])
+    , _gmrsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetMembersResponse' with the minimum fields required to make a request.

@@ -96,10 +96,12 @@ instance ToQuery DescribeVirtualGateways where
 --
 --
 -- /See:/ 'describeVirtualGatewaysResponse' smart constructor.
-data DescribeVirtualGatewaysResponse = DescribeVirtualGatewaysResponse'
-  { _dvgrsVirtualGateways :: !(Maybe [VirtualGateway])
-  , _dvgrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeVirtualGatewaysResponse =
+  DescribeVirtualGatewaysResponse'
+    { _dvgrsVirtualGateways :: !(Maybe [VirtualGateway])
+    , _dvgrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeVirtualGatewaysResponse' with the minimum fields required to make a request.

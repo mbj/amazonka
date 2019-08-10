@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'disableKey' smart constructor.
-newtype DisableKey = DisableKey'
-  { _dkKeyId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DisableKey =
+  DisableKey'
+    { _dkKeyId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisableKey' with the minimum fields required to make a request.

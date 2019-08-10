@@ -45,11 +45,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getCampaignVersion' smart constructor.
-data GetCampaignVersion = GetCampaignVersion'
-  { _gcvcVersion       :: !Text
-  , _gcvcApplicationId :: !Text
-  , _gcvcCampaignId    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetCampaignVersion =
+  GetCampaignVersion'
+    { _gcvcVersion       :: !Text
+    , _gcvcApplicationId :: !Text
+    , _gcvcCampaignId    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetCampaignVersion' with the minimum fields required to make a request.
@@ -118,10 +120,12 @@ instance ToQuery GetCampaignVersion where
         toQuery = const mempty
 
 -- | /See:/ 'getCampaignVersionResponse' smart constructor.
-data GetCampaignVersionResponse = GetCampaignVersionResponse'
-  { _gcvcrsResponseStatus   :: !Int
-  , _gcvcrsCampaignResponse :: !CampaignResponse
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetCampaignVersionResponse =
+  GetCampaignVersionResponse'
+    { _gcvcrsResponseStatus   :: !Int
+    , _gcvcrsCampaignResponse :: !CampaignResponse
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetCampaignVersionResponse' with the minimum fields required to make a request.

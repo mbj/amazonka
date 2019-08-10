@@ -47,10 +47,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'enableVolumeIO' smart constructor.
-data EnableVolumeIO = EnableVolumeIO'
-  { _evioDryRun   :: !(Maybe Bool)
-  , _evioVolumeId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EnableVolumeIO =
+  EnableVolumeIO'
+    { _evioDryRun   :: !(Maybe Bool)
+    , _evioVolumeId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EnableVolumeIO' with the minimum fields required to make a request.

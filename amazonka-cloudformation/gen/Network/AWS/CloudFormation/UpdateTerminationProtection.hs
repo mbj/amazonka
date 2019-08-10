@@ -48,10 +48,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateTerminationProtection' smart constructor.
-data UpdateTerminationProtection = UpdateTerminationProtection'
-  { _utpEnableTerminationProtection :: !Bool
-  , _utpStackName                   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateTerminationProtection =
+  UpdateTerminationProtection'
+    { _utpEnableTerminationProtection :: !Bool
+    , _utpStackName                   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateTerminationProtection' with the minimum fields required to make a request.
@@ -112,10 +114,12 @@ instance ToQuery UpdateTerminationProtection where
                "StackName" =: _utpStackName]
 
 -- | /See:/ 'updateTerminationProtectionResponse' smart constructor.
-data UpdateTerminationProtectionResponse = UpdateTerminationProtectionResponse'
-  { _utprsStackId        :: !(Maybe Text)
-  , _utprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateTerminationProtectionResponse =
+  UpdateTerminationProtectionResponse'
+    { _utprsStackId        :: !(Maybe Text)
+    , _utprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateTerminationProtectionResponse' with the minimum fields required to make a request.

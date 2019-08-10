@@ -51,10 +51,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'disableEnhancedMonitoring' smart constructor.
-data DisableEnhancedMonitoring = DisableEnhancedMonitoring'
-  { _demStreamName        :: !Text
-  , _demShardLevelMetrics :: ![MetricsName]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DisableEnhancedMonitoring =
+  DisableEnhancedMonitoring'
+    { _demStreamName        :: !Text
+    , _demShardLevelMetrics :: ![MetricsName]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisableEnhancedMonitoring' with the minimum fields required to make a request.

@@ -50,16 +50,18 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'createBucket' smart constructor.
-data CreateBucket = CreateBucket'
-  { _cbGrantReadACP              :: !(Maybe Text)
-  , _cbGrantWriteACP             :: !(Maybe Text)
-  , _cbGrantRead                 :: !(Maybe Text)
-  , _cbGrantFullControl          :: !(Maybe Text)
-  , _cbCreateBucketConfiguration :: !(Maybe CreateBucketConfiguration)
-  , _cbGrantWrite                :: !(Maybe Text)
-  , _cbACL                       :: !(Maybe BucketCannedACL)
-  , _cbBucket                    :: !BucketName
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateBucket =
+  CreateBucket'
+    { _cbGrantReadACP              :: !(Maybe Text)
+    , _cbGrantWriteACP             :: !(Maybe Text)
+    , _cbGrantRead                 :: !(Maybe Text)
+    , _cbGrantFullControl          :: !(Maybe Text)
+    , _cbCreateBucketConfiguration :: !(Maybe CreateBucketConfiguration)
+    , _cbGrantWrite                :: !(Maybe Text)
+    , _cbACL                       :: !(Maybe BucketCannedACL)
+    , _cbBucket                    :: !BucketName
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateBucket' with the minimum fields required to make a request.
@@ -167,10 +169,12 @@ instance ToQuery CreateBucket where
         toQuery = const mempty
 
 -- | /See:/ 'createBucketResponse' smart constructor.
-data CreateBucketResponse = CreateBucketResponse'
-  { _cbrsLocation       :: !(Maybe Text)
-  , _cbrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateBucketResponse =
+  CreateBucketResponse'
+    { _cbrsLocation       :: !(Maybe Text)
+    , _cbrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateBucketResponse' with the minimum fields required to make a request.

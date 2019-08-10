@@ -55,20 +55,22 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateInstance' smart constructor.
-data UpdateInstance = UpdateInstance'
-  { _uiInstallUpdatesOnBoot :: !(Maybe Bool)
-  , _uiHostname             :: !(Maybe Text)
-  , _uiSSHKeyName           :: !(Maybe Text)
-  , _uiAgentVersion         :: !(Maybe Text)
-  , _uiInstanceType         :: !(Maybe Text)
-  , _uiEBSOptimized         :: !(Maybe Bool)
-  , _uiOS                   :: !(Maybe Text)
-  , _uiAutoScalingType      :: !(Maybe AutoScalingType)
-  , _uiLayerIds             :: !(Maybe [Text])
-  , _uiArchitecture         :: !(Maybe Architecture)
-  , _uiAMIId                :: !(Maybe Text)
-  , _uiInstanceId           :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateInstance =
+  UpdateInstance'
+    { _uiInstallUpdatesOnBoot :: !(Maybe Bool)
+    , _uiHostname             :: !(Maybe Text)
+    , _uiSSHKeyName           :: !(Maybe Text)
+    , _uiAgentVersion         :: !(Maybe Text)
+    , _uiInstanceType         :: !(Maybe Text)
+    , _uiEBSOptimized         :: !(Maybe Bool)
+    , _uiOS                   :: !(Maybe Text)
+    , _uiAutoScalingType      :: !(Maybe AutoScalingType)
+    , _uiLayerIds             :: !(Maybe [Text])
+    , _uiArchitecture         :: !(Maybe Architecture)
+    , _uiAMIId                :: !(Maybe Text)
+    , _uiInstanceId           :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateInstance' with the minimum fields required to make a request.

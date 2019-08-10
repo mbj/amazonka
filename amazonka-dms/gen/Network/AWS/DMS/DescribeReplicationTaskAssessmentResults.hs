@@ -56,11 +56,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeReplicationTaskAssessmentResults' smart constructor.
-data DescribeReplicationTaskAssessmentResults = DescribeReplicationTaskAssessmentResults'
-  { _drtarReplicationTaskARN :: !(Maybe Text)
-  , _drtarMarker             :: !(Maybe Text)
-  , _drtarMaxRecords         :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeReplicationTaskAssessmentResults =
+  DescribeReplicationTaskAssessmentResults'
+    { _drtarReplicationTaskARN :: !(Maybe Text)
+    , _drtarMarker             :: !(Maybe Text)
+    , _drtarMaxRecords         :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeReplicationTaskAssessmentResults' with the minimum fields required to make a request.
@@ -165,12 +167,14 @@ instance ToQuery
 --
 --
 -- /See:/ 'describeReplicationTaskAssessmentResultsResponse' smart constructor.
-data DescribeReplicationTaskAssessmentResultsResponse = DescribeReplicationTaskAssessmentResultsResponse'
-  { _drtarrsBucketName :: !(Maybe Text)
-  , _drtarrsMarker :: !(Maybe Text)
-  , _drtarrsReplicationTaskAssessmentResults :: !(Maybe [ReplicationTaskAssessmentResult])
-  , _drtarrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeReplicationTaskAssessmentResultsResponse =
+  DescribeReplicationTaskAssessmentResultsResponse'
+    { _drtarrsBucketName :: !(Maybe Text)
+    , _drtarrsMarker :: !(Maybe Text)
+    , _drtarrsReplicationTaskAssessmentResults :: !(Maybe [ReplicationTaskAssessmentResult])
+    , _drtarrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeReplicationTaskAssessmentResultsResponse' with the minimum fields required to make a request.

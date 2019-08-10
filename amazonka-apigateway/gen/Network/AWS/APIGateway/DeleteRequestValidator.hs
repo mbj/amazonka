@@ -47,10 +47,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteRequestValidator' smart constructor.
-data DeleteRequestValidator = DeleteRequestValidator'
-  { _drvRestAPIId          :: !Text
-  , _drvRequestValidatorId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteRequestValidator =
+  DeleteRequestValidator'
+    { _drvRestAPIId          :: !Text
+    , _drvRequestValidatorId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteRequestValidator' with the minimum fields required to make a request.

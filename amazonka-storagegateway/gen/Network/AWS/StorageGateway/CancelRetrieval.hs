@@ -50,10 +50,12 @@ import Network.AWS.StorageGateway.Types.Product
 --
 --
 -- /See:/ 'cancelRetrieval' smart constructor.
-data CancelRetrieval = CancelRetrieval'
-  { _crGatewayARN :: !Text
-  , _crTapeARN    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CancelRetrieval =
+  CancelRetrieval'
+    { _crGatewayARN :: !Text
+    , _crTapeARN    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CancelRetrieval' with the minimum fields required to make a request.
@@ -120,10 +122,12 @@ instance ToQuery CancelRetrieval where
 --
 --
 -- /See:/ 'cancelRetrievalResponse' smart constructor.
-data CancelRetrievalResponse = CancelRetrievalResponse'
-  { _crrsTapeARN        :: !(Maybe Text)
-  , _crrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CancelRetrievalResponse =
+  CancelRetrievalResponse'
+    { _crrsTapeARN        :: !(Maybe Text)
+    , _crrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CancelRetrievalResponse' with the minimum fields required to make a request.

@@ -61,10 +61,12 @@ import Network.AWS.WAF.Types
 import Network.AWS.WAF.Types.Product
 
 -- | /See:/ 'createRegexMatchSet' smart constructor.
-data CreateRegexMatchSet = CreateRegexMatchSet'
-  { _crmsName        :: !Text
-  , _crmsChangeToken :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateRegexMatchSet =
+  CreateRegexMatchSet'
+    { _crmsName        :: !Text
+    , _crmsChangeToken :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateRegexMatchSet' with the minimum fields required to make a request.
@@ -129,11 +131,13 @@ instance ToQuery CreateRegexMatchSet where
         toQuery = const mempty
 
 -- | /See:/ 'createRegexMatchSetResponse' smart constructor.
-data CreateRegexMatchSetResponse = CreateRegexMatchSetResponse'
-  { _crmsrsRegexMatchSet  :: !(Maybe RegexMatchSet)
-  , _crmsrsChangeToken    :: !(Maybe Text)
-  , _crmsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateRegexMatchSetResponse =
+  CreateRegexMatchSetResponse'
+    { _crmsrsRegexMatchSet  :: !(Maybe RegexMatchSet)
+    , _crmsrsChangeToken    :: !(Maybe Text)
+    , _crmsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateRegexMatchSetResponse' with the minimum fields required to make a request.

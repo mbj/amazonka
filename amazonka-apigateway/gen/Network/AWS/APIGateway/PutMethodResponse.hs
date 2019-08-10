@@ -55,14 +55,16 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'putMethodResponse' smart constructor.
-data PutMethodResponse = PutMethodResponse'
-  { _pmResponseModels     :: !(Maybe (Map Text Text))
-  , _pmResponseParameters :: !(Maybe (Map Text Bool))
-  , _pmRestAPIId          :: !Text
-  , _pmResourceId         :: !Text
-  , _pmHttpMethod         :: !Text
-  , _pmStatusCode         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutMethodResponse =
+  PutMethodResponse'
+    { _pmResponseModels     :: !(Maybe (Map Text Text))
+    , _pmResponseParameters :: !(Maybe (Map Text Bool))
+    , _pmRestAPIId          :: !Text
+    , _pmResourceId         :: !Text
+    , _pmHttpMethod         :: !Text
+    , _pmStatusCode         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutMethodResponse' with the minimum fields required to make a request.

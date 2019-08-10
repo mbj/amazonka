@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'stopUserImportJob' smart constructor.
-data StopUserImportJob = StopUserImportJob'
-  { _sUserPoolId :: !Text
-  , _sJobId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StopUserImportJob =
+  StopUserImportJob'
+    { _sUserPoolId :: !Text
+    , _sJobId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopUserImportJob' with the minimum fields required to make a request.
@@ -120,10 +122,12 @@ instance ToQuery StopUserImportJob where
 --
 --
 -- /See:/ 'stopUserImportJobResponse' smart constructor.
-data StopUserImportJobResponse = StopUserImportJobResponse'
-  { _srsUserImportJob  :: !(Maybe UserImportJobType)
-  , _srsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StopUserImportJobResponse =
+  StopUserImportJobResponse'
+    { _srsUserImportJob  :: !(Maybe UserImportJobType)
+    , _srsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopUserImportJobResponse' with the minimum fields required to make a request.

@@ -53,12 +53,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeCertificates' smart constructor.
-data DescribeCertificates = DescribeCertificates'
-  { _dcFilters               :: !(Maybe [Filter])
-  , _dcCertificateIdentifier :: !(Maybe Text)
-  , _dcMarker                :: !(Maybe Text)
-  , _dcMaxRecords            :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeCertificates =
+  DescribeCertificates'
+    { _dcFilters               :: !(Maybe [Filter])
+    , _dcCertificateIdentifier :: !(Maybe Text)
+    , _dcMarker                :: !(Maybe Text)
+    , _dcMaxRecords            :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeCertificates' with the minimum fields required to make a request.
@@ -137,11 +139,13 @@ instance ToQuery DescribeCertificates where
 --
 --
 -- /See:/ 'describeCertificatesResponse' smart constructor.
-data DescribeCertificatesResponse = DescribeCertificatesResponse'
-  { _dcrsCertificates   :: !(Maybe [Certificate])
-  , _dcrsMarker         :: !(Maybe Text)
-  , _dcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeCertificatesResponse =
+  DescribeCertificatesResponse'
+    { _dcrsCertificates   :: !(Maybe [Certificate])
+    , _dcrsMarker         :: !(Maybe Text)
+    , _dcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeCertificatesResponse' with the minimum fields required to make a request.

@@ -50,12 +50,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'startQueryExecution' smart constructor.
-data StartQueryExecution = StartQueryExecution'
-  { _sqeQueryExecutionContext :: !(Maybe QueryExecutionContext)
-  , _sqeClientRequestToken    :: !(Maybe Text)
-  , _sqeQueryString           :: !Text
-  , _sqeResultConfiguration   :: !ResultConfiguration
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartQueryExecution =
+  StartQueryExecution'
+    { _sqeQueryExecutionContext :: !(Maybe QueryExecutionContext)
+    , _sqeClientRequestToken    :: !(Maybe Text)
+    , _sqeQueryString           :: !Text
+    , _sqeResultConfiguration   :: !ResultConfiguration
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartQueryExecution' with the minimum fields required to make a request.
@@ -139,10 +141,12 @@ instance ToQuery StartQueryExecution where
         toQuery = const mempty
 
 -- | /See:/ 'startQueryExecutionResponse' smart constructor.
-data StartQueryExecutionResponse = StartQueryExecutionResponse'
-  { _sqersQueryExecutionId :: !(Maybe Text)
-  , _sqersResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartQueryExecutionResponse =
+  StartQueryExecutionResponse'
+    { _sqersQueryExecutionId :: !(Maybe Text)
+    , _sqersResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartQueryExecutionResponse' with the minimum fields required to make a request.

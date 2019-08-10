@@ -53,13 +53,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getCommentsForComparedCommit' smart constructor.
-data GetCommentsForComparedCommit = GetCommentsForComparedCommit'
-  { _gcfccNextToken      :: !(Maybe Text)
-  , _gcfccBeforeCommitId :: !(Maybe Text)
-  , _gcfccMaxResults     :: !(Maybe Int)
-  , _gcfccRepositoryName :: !Text
-  , _gcfccAfterCommitId  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetCommentsForComparedCommit =
+  GetCommentsForComparedCommit'
+    { _gcfccNextToken      :: !(Maybe Text)
+    , _gcfccBeforeCommitId :: !(Maybe Text)
+    , _gcfccMaxResults     :: !(Maybe Int)
+    , _gcfccRepositoryName :: !Text
+    , _gcfccAfterCommitId  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetCommentsForComparedCommit' with the minimum fields required to make a request.
@@ -161,11 +163,13 @@ instance ToQuery GetCommentsForComparedCommit where
         toQuery = const mempty
 
 -- | /See:/ 'getCommentsForComparedCommitResponse' smart constructor.
-data GetCommentsForComparedCommitResponse = GetCommentsForComparedCommitResponse'
-  { _gcfccrsCommentsForComparedCommitData :: !(Maybe [CommentsForComparedCommit])
-  , _gcfccrsNextToken :: !(Maybe Text)
-  , _gcfccrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetCommentsForComparedCommitResponse =
+  GetCommentsForComparedCommitResponse'
+    { _gcfccrsCommentsForComparedCommitData :: !(Maybe [CommentsForComparedCommit])
+    , _gcfccrsNextToken :: !(Maybe Text)
+    , _gcfccrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetCommentsForComparedCommitResponse' with the minimum fields required to make a request.

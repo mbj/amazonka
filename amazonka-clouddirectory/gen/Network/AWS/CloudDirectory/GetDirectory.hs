@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getDirectory' smart constructor.
-newtype GetDirectory = GetDirectory'
-  { _gdDirectoryARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetDirectory =
+  GetDirectory'
+    { _gdDirectoryARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDirectory' with the minimum fields required to make a request.
@@ -94,10 +96,12 @@ instance ToQuery GetDirectory where
         toQuery = const mempty
 
 -- | /See:/ 'getDirectoryResponse' smart constructor.
-data GetDirectoryResponse = GetDirectoryResponse'
-  { _gdrsResponseStatus :: !Int
-  , _gdrsDirectory      :: !Directory
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDirectoryResponse =
+  GetDirectoryResponse'
+    { _gdrsResponseStatus :: !Int
+    , _gdrsDirectory      :: !Directory
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDirectoryResponse' with the minimum fields required to make a request.

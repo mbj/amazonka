@@ -49,12 +49,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'swapEnvironmentCNAMEs' smart constructor.
-data SwapEnvironmentCNAMEs = SwapEnvironmentCNAMEs'
-  { _secnameDestinationEnvironmentName :: !(Maybe Text)
-  , _secnameDestinationEnvironmentId   :: !(Maybe Text)
-  , _secnameSourceEnvironmentName      :: !(Maybe Text)
-  , _secnameSourceEnvironmentId        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SwapEnvironmentCNAMEs =
+  SwapEnvironmentCNAMEs'
+    { _secnameDestinationEnvironmentName :: !(Maybe Text)
+    , _secnameDestinationEnvironmentId   :: !(Maybe Text)
+    , _secnameSourceEnvironmentName      :: !(Maybe Text)
+    , _secnameSourceEnvironmentId        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SwapEnvironmentCNAMEs' with the minimum fields required to make a request.

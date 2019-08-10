@@ -57,12 +57,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listAttachedUserPolicies' smart constructor.
-data ListAttachedUserPolicies = ListAttachedUserPolicies'
-  { _laupPathPrefix :: !(Maybe Text)
-  , _laupMarker     :: !(Maybe Text)
-  , _laupMaxItems   :: !(Maybe Nat)
-  , _laupUserName   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAttachedUserPolicies =
+  ListAttachedUserPolicies'
+    { _laupPathPrefix :: !(Maybe Text)
+    , _laupMarker     :: !(Maybe Text)
+    , _laupMaxItems   :: !(Maybe Nat)
+    , _laupUserName   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAttachedUserPolicies' with the minimum fields required to make a request.
@@ -150,12 +152,14 @@ instance ToQuery ListAttachedUserPolicies where
 --
 --
 -- /See:/ 'listAttachedUserPoliciesResponse' smart constructor.
-data ListAttachedUserPoliciesResponse = ListAttachedUserPoliciesResponse'
-  { _lauprsAttachedPolicies :: !(Maybe [AttachedPolicy])
-  , _lauprsMarker           :: !(Maybe Text)
-  , _lauprsIsTruncated      :: !(Maybe Bool)
-  , _lauprsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAttachedUserPoliciesResponse =
+  ListAttachedUserPoliciesResponse'
+    { _lauprsAttachedPolicies :: !(Maybe [AttachedPolicy])
+    , _lauprsMarker           :: !(Maybe Text)
+    , _lauprsIsTruncated      :: !(Maybe Bool)
+    , _lauprsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAttachedUserPoliciesResponse' with the minimum fields required to make a request.

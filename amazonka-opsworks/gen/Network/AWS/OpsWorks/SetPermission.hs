@@ -48,13 +48,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'setPermission' smart constructor.
-data SetPermission = SetPermission'
-  { _spAllowSudo  :: !(Maybe Bool)
-  , _spLevel      :: !(Maybe Text)
-  , _spAllowSSH   :: !(Maybe Bool)
-  , _spStackId    :: !Text
-  , _spIAMUserARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SetPermission =
+  SetPermission'
+    { _spAllowSudo  :: !(Maybe Bool)
+    , _spLevel      :: !(Maybe Text)
+    , _spAllowSSH   :: !(Maybe Bool)
+    , _spStackId    :: !Text
+    , _spIAMUserARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetPermission' with the minimum fields required to make a request.

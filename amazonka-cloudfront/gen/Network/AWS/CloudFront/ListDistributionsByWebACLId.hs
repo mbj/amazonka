@@ -51,11 +51,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listDistributionsByWebACLId' smart constructor.
-data ListDistributionsByWebACLId = ListDistributionsByWebACLId'
-  { _ldbwaiMarker   :: !(Maybe Text)
-  , _ldbwaiMaxItems :: !(Maybe Text)
-  , _ldbwaiWebACLId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListDistributionsByWebACLId =
+  ListDistributionsByWebACLId'
+    { _ldbwaiMarker   :: !(Maybe Text)
+    , _ldbwaiMaxItems :: !(Maybe Text)
+    , _ldbwaiWebACLId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDistributionsByWebACLId' with the minimum fields required to make a request.
@@ -124,10 +126,12 @@ instance ToQuery ListDistributionsByWebACLId where
 --
 --
 -- /See:/ 'listDistributionsByWebACLIdResponse' smart constructor.
-data ListDistributionsByWebACLIdResponse = ListDistributionsByWebACLIdResponse'
-  { _ldbwairsDistributionList :: !(Maybe DistributionList)
-  , _ldbwairsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListDistributionsByWebACLIdResponse =
+  ListDistributionsByWebACLIdResponse'
+    { _ldbwairsDistributionList :: !(Maybe DistributionList)
+    , _ldbwairsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDistributionsByWebACLIdResponse' with the minimum fields required to make a request.

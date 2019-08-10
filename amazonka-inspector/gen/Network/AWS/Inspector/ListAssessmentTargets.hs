@@ -51,11 +51,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listAssessmentTargets' smart constructor.
-data ListAssessmentTargets = ListAssessmentTargets'
-  { _lNextToken  :: !(Maybe Text)
-  , _lFilter     :: !(Maybe AssessmentTargetFilter)
-  , _lMaxResults :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAssessmentTargets =
+  ListAssessmentTargets'
+    { _lNextToken  :: !(Maybe Text)
+    , _lFilter     :: !(Maybe AssessmentTargetFilter)
+    , _lMaxResults :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAssessmentTargets' with the minimum fields required to make a request.
@@ -133,11 +135,13 @@ instance ToQuery ListAssessmentTargets where
         toQuery = const mempty
 
 -- | /See:/ 'listAssessmentTargetsResponse' smart constructor.
-data ListAssessmentTargetsResponse = ListAssessmentTargetsResponse'
-  { _lrsNextToken            :: !(Maybe Text)
-  , _lrsResponseStatus       :: !Int
-  , _lrsAssessmentTargetARNs :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAssessmentTargetsResponse =
+  ListAssessmentTargetsResponse'
+    { _lrsNextToken            :: !(Maybe Text)
+    , _lrsResponseStatus       :: !Int
+    , _lrsAssessmentTargetARNs :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAssessmentTargetsResponse' with the minimum fields required to make a request.

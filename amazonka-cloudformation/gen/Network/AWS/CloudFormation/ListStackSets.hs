@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listStackSets' smart constructor.
-data ListStackSets = ListStackSets'
-  { _lssStatus     :: !(Maybe StackSetStatus)
-  , _lssNextToken  :: !(Maybe Text)
-  , _lssMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListStackSets =
+  ListStackSets'
+    { _lssStatus     :: !(Maybe StackSetStatus)
+    , _lssNextToken  :: !(Maybe Text)
+    , _lssMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListStackSets' with the minimum fields required to make a request.
@@ -114,11 +116,13 @@ instance ToQuery ListStackSets where
                "MaxResults" =: _lssMaxResults]
 
 -- | /See:/ 'listStackSetsResponse' smart constructor.
-data ListStackSetsResponse = ListStackSetsResponse'
-  { _lssrsNextToken      :: !(Maybe Text)
-  , _lssrsSummaries      :: !(Maybe [StackSetSummary])
-  , _lssrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListStackSetsResponse =
+  ListStackSetsResponse'
+    { _lssrsNextToken      :: !(Maybe Text)
+    , _lssrsSummaries      :: !(Maybe [StackSetSummary])
+    , _lssrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListStackSetsResponse' with the minimum fields required to make a request.

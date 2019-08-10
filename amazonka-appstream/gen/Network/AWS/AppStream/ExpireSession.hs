@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'expireSession' smart constructor.
-newtype ExpireSession = ExpireSession'
-  { _esSessionId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ExpireSession =
+  ExpireSession'
+    { _esSessionId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ExpireSession' with the minimum fields required to make a request.
@@ -98,9 +100,11 @@ instance ToQuery ExpireSession where
         toQuery = const mempty
 
 -- | /See:/ 'expireSessionResponse' smart constructor.
-newtype ExpireSessionResponse = ExpireSessionResponse'
-  { _esrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ExpireSessionResponse =
+  ExpireSessionResponse'
+    { _esrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ExpireSessionResponse' with the minimum fields required to make a request.

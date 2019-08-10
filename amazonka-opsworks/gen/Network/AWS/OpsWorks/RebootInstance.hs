@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'rebootInstance' smart constructor.
-newtype RebootInstance = RebootInstance'
-  { _riInstanceId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RebootInstance =
+  RebootInstance'
+    { _riInstanceId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RebootInstance' with the minimum fields required to make a request.

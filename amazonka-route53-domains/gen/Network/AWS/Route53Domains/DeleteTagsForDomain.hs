@@ -51,10 +51,12 @@ import Network.AWS.Route53Domains.Types.Product
 --
 --
 -- /See:/ 'deleteTagsForDomain' smart constructor.
-data DeleteTagsForDomain = DeleteTagsForDomain'
-  { _dtfdDomainName   :: !Text
-  , _dtfdTagsToDelete :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteTagsForDomain =
+  DeleteTagsForDomain'
+    { _dtfdDomainName   :: !Text
+    , _dtfdTagsToDelete :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteTagsForDomain' with the minimum fields required to make a request.
@@ -117,9 +119,11 @@ instance ToQuery DeleteTagsForDomain where
         toQuery = const mempty
 
 -- | /See:/ 'deleteTagsForDomainResponse' smart constructor.
-newtype DeleteTagsForDomainResponse = DeleteTagsForDomainResponse'
-  { _dtfdrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteTagsForDomainResponse =
+  DeleteTagsForDomainResponse'
+    { _dtfdrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteTagsForDomainResponse' with the minimum fields required to make a request.

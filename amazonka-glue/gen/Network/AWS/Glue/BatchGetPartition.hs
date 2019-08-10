@@ -49,12 +49,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'batchGetPartition' smart constructor.
-data BatchGetPartition = BatchGetPartition'
-  { _bgpCatalogId       :: !(Maybe Text)
-  , _bgpDatabaseName    :: !Text
-  , _bgpTableName       :: !Text
-  , _bgpPartitionsToGet :: ![PartitionValueList]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchGetPartition =
+  BatchGetPartition'
+    { _bgpCatalogId       :: !(Maybe Text)
+    , _bgpDatabaseName    :: !Text
+    , _bgpTableName       :: !Text
+    , _bgpPartitionsToGet :: ![PartitionValueList]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchGetPartition' with the minimum fields required to make a request.
@@ -137,11 +139,13 @@ instance ToQuery BatchGetPartition where
         toQuery = const mempty
 
 -- | /See:/ 'batchGetPartitionResponse' smart constructor.
-data BatchGetPartitionResponse = BatchGetPartitionResponse'
-  { _bgprsUnprocessedKeys :: !(Maybe [PartitionValueList])
-  , _bgprsPartitions      :: !(Maybe [Partition])
-  , _bgprsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchGetPartitionResponse =
+  BatchGetPartitionResponse'
+    { _bgprsUnprocessedKeys :: !(Maybe [PartitionValueList])
+    , _bgprsPartitions      :: !(Maybe [Partition])
+    , _bgprsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchGetPartitionResponse' with the minimum fields required to make a request.

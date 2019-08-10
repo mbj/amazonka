@@ -46,9 +46,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteOpenIdConnectProvider' smart constructor.
-newtype DeleteOpenIdConnectProvider = DeleteOpenIdConnectProvider'
-  { _doicpOpenIdConnectProviderARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteOpenIdConnectProvider =
+  DeleteOpenIdConnectProvider'
+    { _doicpOpenIdConnectProviderARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteOpenIdConnectProvider' with the minimum fields required to make a request.

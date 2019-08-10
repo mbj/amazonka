@@ -57,13 +57,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putBotAlias' smart constructor.
-data PutBotAlias = PutBotAlias'
-  { _pbaChecksum    :: !(Maybe Text)
-  , _pbaDescription :: !(Maybe Text)
-  , _pbaName        :: !Text
-  , _pbaBotVersion  :: !Text
-  , _pbaBotName     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutBotAlias =
+  PutBotAlias'
+    { _pbaChecksum    :: !(Maybe Text)
+    , _pbaDescription :: !(Maybe Text)
+    , _pbaName        :: !Text
+    , _pbaBotVersion  :: !Text
+    , _pbaBotName     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutBotAlias' with the minimum fields required to make a request.
@@ -158,16 +160,18 @@ instance ToQuery PutBotAlias where
         toQuery = const mempty
 
 -- | /See:/ 'putBotAliasResponse' smart constructor.
-data PutBotAliasResponse = PutBotAliasResponse'
-  { _pbarsChecksum        :: !(Maybe Text)
-  , _pbarsBotVersion      :: !(Maybe Text)
-  , _pbarsBotName         :: !(Maybe Text)
-  , _pbarsCreatedDate     :: !(Maybe POSIX)
-  , _pbarsName            :: !(Maybe Text)
-  , _pbarsLastUpdatedDate :: !(Maybe POSIX)
-  , _pbarsDescription     :: !(Maybe Text)
-  , _pbarsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutBotAliasResponse =
+  PutBotAliasResponse'
+    { _pbarsChecksum        :: !(Maybe Text)
+    , _pbarsBotVersion      :: !(Maybe Text)
+    , _pbarsBotName         :: !(Maybe Text)
+    , _pbarsCreatedDate     :: !(Maybe POSIX)
+    , _pbarsName            :: !(Maybe Text)
+    , _pbarsLastUpdatedDate :: !(Maybe POSIX)
+    , _pbarsDescription     :: !(Maybe Text)
+    , _pbarsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutBotAliasResponse' with the minimum fields required to make a request.

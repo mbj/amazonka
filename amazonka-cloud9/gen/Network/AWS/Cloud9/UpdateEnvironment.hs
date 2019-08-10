@@ -46,11 +46,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateEnvironment' smart constructor.
-data UpdateEnvironment = UpdateEnvironment'
-  { _ueName          :: !(Maybe Text)
-  , _ueDescription   :: !(Maybe Text)
-  , _ueEnvironmentId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateEnvironment =
+  UpdateEnvironment'
+    { _ueName          :: !(Maybe Text)
+    , _ueDescription   :: !(Maybe Text)
+    , _ueEnvironmentId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateEnvironment' with the minimum fields required to make a request.
@@ -122,9 +124,11 @@ instance ToQuery UpdateEnvironment where
         toQuery = const mempty
 
 -- | /See:/ 'updateEnvironmentResponse' smart constructor.
-newtype UpdateEnvironmentResponse = UpdateEnvironmentResponse'
-  { _uersResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateEnvironmentResponse =
+  UpdateEnvironmentResponse'
+    { _uersResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateEnvironmentResponse' with the minimum fields required to make a request.

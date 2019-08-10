@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createSubscriptionDefinitionVersion' smart constructor.
-data CreateSubscriptionDefinitionVersion = CreateSubscriptionDefinitionVersion'
-  { _csdvAmznClientToken          :: !(Maybe Text)
-  , _csdvSubscriptions            :: !(Maybe [Subscription])
-  , _csdvSubscriptionDefinitionId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateSubscriptionDefinitionVersion =
+  CreateSubscriptionDefinitionVersion'
+    { _csdvAmznClientToken          :: !(Maybe Text)
+    , _csdvSubscriptions            :: !(Maybe [Subscription])
+    , _csdvSubscriptionDefinitionId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateSubscriptionDefinitionVersion' with the minimum fields required to make a request.
@@ -136,13 +138,15 @@ instance ToQuery CreateSubscriptionDefinitionVersion
         toQuery = const mempty
 
 -- | /See:/ 'createSubscriptionDefinitionVersionResponse' smart constructor.
-data CreateSubscriptionDefinitionVersionResponse = CreateSubscriptionDefinitionVersionResponse'
-  { _csdvrsARN               :: !(Maybe Text)
-  , _csdvrsCreationTimestamp :: !(Maybe Text)
-  , _csdvrsVersion           :: !(Maybe Text)
-  , _csdvrsId                :: !(Maybe Text)
-  , _csdvrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateSubscriptionDefinitionVersionResponse =
+  CreateSubscriptionDefinitionVersionResponse'
+    { _csdvrsARN               :: !(Maybe Text)
+    , _csdvrsCreationTimestamp :: !(Maybe Text)
+    , _csdvrsVersion           :: !(Maybe Text)
+    , _csdvrsId                :: !(Maybe Text)
+    , _csdvrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateSubscriptionDefinitionVersionResponse' with the minimum fields required to make a request.

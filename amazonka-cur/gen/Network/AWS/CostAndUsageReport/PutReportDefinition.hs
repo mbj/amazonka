@@ -44,9 +44,11 @@ import Network.AWS.Response
 -- | Request of PutReportDefinition
 --
 -- /See:/ 'putReportDefinition' smart constructor.
-newtype PutReportDefinition = PutReportDefinition'
-  { _prdReportDefinition :: ReportDefinition
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype PutReportDefinition =
+  PutReportDefinition'
+    { _prdReportDefinition :: ReportDefinition
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutReportDefinition' with the minimum fields required to make a request.
@@ -103,9 +105,11 @@ instance ToQuery PutReportDefinition where
 -- | Response of PutReportDefinition
 --
 -- /See:/ 'putReportDefinitionResponse' smart constructor.
-newtype PutReportDefinitionResponse = PutReportDefinitionResponse'
-  { _prdrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype PutReportDefinitionResponse =
+  PutReportDefinitionResponse'
+    { _prdrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutReportDefinitionResponse' with the minimum fields required to make a request.

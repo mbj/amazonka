@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getDevice' smart constructor.
-data GetDevice = GetDevice'
-  { _gdAccessToken :: !(Maybe (Sensitive Text))
-  , _gdDeviceKey   :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data GetDevice =
+  GetDevice'
+    { _gdAccessToken :: !(Maybe (Sensitive Text))
+    , _gdDeviceKey   :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDevice' with the minimum fields required to make a request.
@@ -119,10 +121,12 @@ instance ToQuery GetDevice where
 --
 --
 -- /See:/ 'getDeviceResponse' smart constructor.
-data GetDeviceResponse = GetDeviceResponse'
-  { _gdrsResponseStatus :: !Int
-  , _gdrsDevice         :: !DeviceType
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data GetDeviceResponse =
+  GetDeviceResponse'
+    { _gdrsResponseStatus :: !Int
+    , _gdrsDevice         :: !DeviceType
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDeviceResponse' with the minimum fields required to make a request.

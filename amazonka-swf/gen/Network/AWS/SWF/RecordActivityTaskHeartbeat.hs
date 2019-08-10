@@ -66,10 +66,12 @@ import Network.AWS.SWF.Types
 import Network.AWS.SWF.Types.Product
 
 -- | /See:/ 'recordActivityTaskHeartbeat' smart constructor.
-data RecordActivityTaskHeartbeat = RecordActivityTaskHeartbeat'
-  { _rathDetails   :: !(Maybe Text)
-  , _rathTaskToken :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RecordActivityTaskHeartbeat =
+  RecordActivityTaskHeartbeat'
+    { _rathDetails   :: !(Maybe Text)
+    , _rathTaskToken :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RecordActivityTaskHeartbeat' with the minimum fields required to make a request.
@@ -137,10 +139,12 @@ instance ToQuery RecordActivityTaskHeartbeat where
 --
 --
 -- /See:/ 'recordActivityTaskHeartbeatResponse' smart constructor.
-data RecordActivityTaskHeartbeatResponse = RecordActivityTaskHeartbeatResponse'
-  { _rathrsResponseStatus  :: !Int
-  , _rathrsCancelRequested :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RecordActivityTaskHeartbeatResponse =
+  RecordActivityTaskHeartbeatResponse'
+    { _rathrsResponseStatus  :: !Int
+    , _rathrsCancelRequested :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RecordActivityTaskHeartbeatResponse' with the minimum fields required to make a request.

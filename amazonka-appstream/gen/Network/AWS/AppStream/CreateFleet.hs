@@ -56,20 +56,22 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createFleet' smart constructor.
-data CreateFleet = CreateFleet'
-  { _cfDomainJoinInfo              :: !(Maybe DomainJoinInfo)
-  , _cfDisconnectTimeoutInSeconds  :: !(Maybe Int)
-  , _cfMaxUserDurationInSeconds    :: !(Maybe Int)
-  , _cfFleetType                   :: !(Maybe FleetType)
-  , _cfVPCConfig                   :: !(Maybe VPCConfig)
-  , _cfDisplayName                 :: !(Maybe Text)
-  , _cfEnableDefaultInternetAccess :: !(Maybe Bool)
-  , _cfDescription                 :: !(Maybe Text)
-  , _cfName                        :: !Text
-  , _cfImageName                   :: !Text
-  , _cfInstanceType                :: !Text
-  , _cfComputeCapacity             :: !ComputeCapacity
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateFleet =
+  CreateFleet'
+    { _cfDomainJoinInfo              :: !(Maybe DomainJoinInfo)
+    , _cfDisconnectTimeoutInSeconds  :: !(Maybe Int)
+    , _cfMaxUserDurationInSeconds    :: !(Maybe Int)
+    , _cfFleetType                   :: !(Maybe FleetType)
+    , _cfVPCConfig                   :: !(Maybe VPCConfig)
+    , _cfDisplayName                 :: !(Maybe Text)
+    , _cfEnableDefaultInternetAccess :: !(Maybe Bool)
+    , _cfDescription                 :: !(Maybe Text)
+    , _cfName                        :: !Text
+    , _cfImageName                   :: !Text
+    , _cfInstanceType                :: !Text
+    , _cfComputeCapacity             :: !ComputeCapacity
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateFleet' with the minimum fields required to make a request.
@@ -220,10 +222,12 @@ instance ToQuery CreateFleet where
         toQuery = const mempty
 
 -- | /See:/ 'createFleetResponse' smart constructor.
-data CreateFleetResponse = CreateFleetResponse'
-  { _cfrsFleet          :: !(Maybe Fleet)
-  , _cfrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateFleetResponse =
+  CreateFleetResponse'
+    { _cfrsFleet          :: !(Maybe Fleet)
+    , _cfrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateFleetResponse' with the minimum fields required to make a request.

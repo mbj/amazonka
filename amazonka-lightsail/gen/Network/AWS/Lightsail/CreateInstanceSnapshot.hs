@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createInstanceSnapshot' smart constructor.
-data CreateInstanceSnapshot = CreateInstanceSnapshot'
-  { _cisInstanceSnapshotName :: !Text
-  , _cisInstanceName         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateInstanceSnapshot =
+  CreateInstanceSnapshot'
+    { _cisInstanceSnapshotName :: !Text
+    , _cisInstanceName         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateInstanceSnapshot' with the minimum fields required to make a request.
@@ -118,10 +120,12 @@ instance ToQuery CreateInstanceSnapshot where
         toQuery = const mempty
 
 -- | /See:/ 'createInstanceSnapshotResponse' smart constructor.
-data CreateInstanceSnapshotResponse = CreateInstanceSnapshotResponse'
-  { _cisrsOperations     :: !(Maybe [Operation])
-  , _cisrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateInstanceSnapshotResponse =
+  CreateInstanceSnapshotResponse'
+    { _cisrsOperations     :: !(Maybe [Operation])
+    , _cisrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateInstanceSnapshotResponse' with the minimum fields required to make a request.

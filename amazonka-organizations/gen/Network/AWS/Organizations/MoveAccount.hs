@@ -46,11 +46,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'moveAccount' smart constructor.
-data MoveAccount = MoveAccount'
-  { _maAccountId           :: !Text
-  , _maSourceParentId      :: !Text
-  , _maDestinationParentId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MoveAccount =
+  MoveAccount'
+    { _maAccountId           :: !Text
+    , _maSourceParentId      :: !Text
+    , _maDestinationParentId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MoveAccount' with the minimum fields required to make a request.

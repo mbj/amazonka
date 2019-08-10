@@ -51,9 +51,11 @@ import Network.AWS.Route53Domains.Types.Product
 --
 --
 -- /See:/ 'listTagsForDomain' smart constructor.
-newtype ListTagsForDomain = ListTagsForDomain'
-  { _ltfdDomainName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ListTagsForDomain =
+  ListTagsForDomain'
+    { _ltfdDomainName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTagsForDomain' with the minimum fields required to make a request.
@@ -111,10 +113,12 @@ instance ToQuery ListTagsForDomain where
 --
 --
 -- /See:/ 'listTagsForDomainResponse' smart constructor.
-data ListTagsForDomainResponse = ListTagsForDomainResponse'
-  { _ltfdrsResponseStatus :: !Int
-  , _ltfdrsTagList        :: ![Tag]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTagsForDomainResponse =
+  ListTagsForDomainResponse'
+    { _ltfdrsResponseStatus :: !Int
+    , _ltfdrsTagList        :: ![Tag]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTagsForDomainResponse' with the minimum fields required to make a request.

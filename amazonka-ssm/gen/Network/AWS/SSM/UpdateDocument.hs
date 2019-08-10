@@ -49,13 +49,15 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'updateDocument' smart constructor.
-data UpdateDocument = UpdateDocument'
-  { _udTargetType      :: !(Maybe Text)
-  , _udDocumentFormat  :: !(Maybe DocumentFormat)
-  , _udDocumentVersion :: !(Maybe Text)
-  , _udContent         :: !Text
-  , _udName            :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateDocument =
+  UpdateDocument'
+    { _udTargetType      :: !(Maybe Text)
+    , _udDocumentFormat  :: !(Maybe DocumentFormat)
+    , _udDocumentVersion :: !(Maybe Text)
+    , _udContent         :: !Text
+    , _udName            :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateDocument' with the minimum fields required to make a request.
@@ -145,10 +147,12 @@ instance ToQuery UpdateDocument where
         toQuery = const mempty
 
 -- | /See:/ 'updateDocumentResponse' smart constructor.
-data UpdateDocumentResponse = UpdateDocumentResponse'
-  { _udrsDocumentDescription :: !(Maybe DocumentDescription)
-  , _udrsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateDocumentResponse =
+  UpdateDocumentResponse'
+    { _udrsDocumentDescription :: !(Maybe DocumentDescription)
+    , _udrsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateDocumentResponse' with the minimum fields required to make a request.

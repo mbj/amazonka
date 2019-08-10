@@ -52,11 +52,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'completeVaultLock' smart constructor.
-data CompleteVaultLock = CompleteVaultLock'
-  { _cvlAccountId :: !Text
-  , _cvlVaultName :: !Text
-  , _cvlLockId    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CompleteVaultLock =
+  CompleteVaultLock'
+    { _cvlAccountId :: !Text
+    , _cvlVaultName :: !Text
+    , _cvlLockId    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CompleteVaultLock' with the minimum fields required to make a request.

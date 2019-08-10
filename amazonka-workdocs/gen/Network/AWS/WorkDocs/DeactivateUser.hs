@@ -43,10 +43,12 @@ import Network.AWS.WorkDocs.Types
 import Network.AWS.WorkDocs.Types.Product
 
 -- | /See:/ 'deactivateUser' smart constructor.
-data DeactivateUser = DeactivateUser'
-  { _dAuthenticationToken :: !(Maybe (Sensitive Text))
-  , _dUserId              :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data DeactivateUser =
+  DeactivateUser'
+    { _dAuthenticationToken :: !(Maybe (Sensitive Text))
+    , _dUserId              :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeactivateUser' with the minimum fields required to make a request.

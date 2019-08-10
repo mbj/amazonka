@@ -55,15 +55,17 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'scheduleRun' smart constructor.
-data ScheduleRun = ScheduleRun'
-  { _srExecutionConfiguration :: !(Maybe ExecutionConfiguration)
-  , _srAppARN                 :: !(Maybe Text)
-  , _srName                   :: !(Maybe Text)
-  , _srConfiguration          :: !(Maybe ScheduleRunConfiguration)
-  , _srProjectARN             :: !Text
-  , _srDevicePoolARN          :: !Text
-  , _srTest                   :: !ScheduleRunTest
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ScheduleRun =
+  ScheduleRun'
+    { _srExecutionConfiguration :: !(Maybe ExecutionConfiguration)
+    , _srAppARN                 :: !(Maybe Text)
+    , _srName                   :: !(Maybe Text)
+    , _srConfiguration          :: !(Maybe ScheduleRunConfiguration)
+    , _srProjectARN             :: !Text
+    , _srDevicePoolARN          :: !Text
+    , _srTest                   :: !ScheduleRunTest
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ScheduleRun' with the minimum fields required to make a request.
@@ -173,10 +175,12 @@ instance ToQuery ScheduleRun where
 --
 --
 -- /See:/ 'scheduleRunResponse' smart constructor.
-data ScheduleRunResponse = ScheduleRunResponse'
-  { _srrsRun            :: !(Maybe Run)
-  , _srrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ScheduleRunResponse =
+  ScheduleRunResponse'
+    { _srrsRun            :: !(Maybe Run)
+    , _srrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ScheduleRunResponse' with the minimum fields required to make a request.

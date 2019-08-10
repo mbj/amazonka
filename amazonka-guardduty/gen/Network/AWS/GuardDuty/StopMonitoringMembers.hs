@@ -46,10 +46,12 @@ import Network.AWS.Response
 -- | StopMonitoringMembers request body.
 --
 -- /See:/ 'stopMonitoringMembers' smart constructor.
-data StopMonitoringMembers = StopMonitoringMembers'
-  { _smmAccountIds :: !(Maybe [Text])
-  , _smmDetectorId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StopMonitoringMembers =
+  StopMonitoringMembers'
+    { _smmAccountIds :: !(Maybe [Text])
+    , _smmDetectorId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopMonitoringMembers' with the minimum fields required to make a request.
@@ -111,10 +113,12 @@ instance ToQuery StopMonitoringMembers where
         toQuery = const mempty
 
 -- | /See:/ 'stopMonitoringMembersResponse' smart constructor.
-data StopMonitoringMembersResponse = StopMonitoringMembersResponse'
-  { _smmrsUnprocessedAccounts :: !(Maybe [UnprocessedAccount])
-  , _smmrsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StopMonitoringMembersResponse =
+  StopMonitoringMembersResponse'
+    { _smmrsUnprocessedAccounts :: !(Maybe [UnprocessedAccount])
+    , _smmrsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopMonitoringMembersResponse' with the minimum fields required to make a request.

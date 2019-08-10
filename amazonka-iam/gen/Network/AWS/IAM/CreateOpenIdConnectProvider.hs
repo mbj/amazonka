@@ -61,11 +61,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createOpenIdConnectProvider' smart constructor.
-data CreateOpenIdConnectProvider = CreateOpenIdConnectProvider'
-  { _coicpClientIdList   :: !(Maybe [Text])
-  , _coicpURL            :: !Text
-  , _coicpThumbprintList :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateOpenIdConnectProvider =
+  CreateOpenIdConnectProvider'
+    { _coicpClientIdList   :: !(Maybe [Text])
+    , _coicpURL            :: !Text
+    , _coicpThumbprintList :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateOpenIdConnectProvider' with the minimum fields required to make a request.
@@ -140,10 +142,12 @@ instance ToQuery CreateOpenIdConnectProvider where
 --
 --
 -- /See:/ 'createOpenIdConnectProviderResponse' smart constructor.
-data CreateOpenIdConnectProviderResponse = CreateOpenIdConnectProviderResponse'
-  { _coicprsOpenIdConnectProviderARN :: !(Maybe Text)
-  , _coicprsResponseStatus           :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateOpenIdConnectProviderResponse =
+  CreateOpenIdConnectProviderResponse'
+    { _coicprsOpenIdConnectProviderARN :: !(Maybe Text)
+    , _coicprsResponseStatus           :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateOpenIdConnectProviderResponse' with the minimum fields required to make a request.

@@ -56,12 +56,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getComplianceDetailsByConfigRule' smart constructor.
-data GetComplianceDetailsByConfigRule = GetComplianceDetailsByConfigRule'
-  { _gcdbcrComplianceTypes :: !(Maybe [ComplianceType])
-  , _gcdbcrNextToken       :: !(Maybe Text)
-  , _gcdbcrLimit           :: !(Maybe Nat)
-  , _gcdbcrConfigRuleName  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetComplianceDetailsByConfigRule =
+  GetComplianceDetailsByConfigRule'
+    { _gcdbcrComplianceTypes :: !(Maybe [ComplianceType])
+    , _gcdbcrNextToken       :: !(Maybe Text)
+    , _gcdbcrLimit           :: !(Maybe Nat)
+    , _gcdbcrConfigRuleName  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetComplianceDetailsByConfigRule' with the minimum fields required to make a request.
@@ -165,11 +167,13 @@ instance ToQuery GetComplianceDetailsByConfigRule
 --
 --
 -- /See:/ 'getComplianceDetailsByConfigRuleResponse' smart constructor.
-data GetComplianceDetailsByConfigRuleResponse = GetComplianceDetailsByConfigRuleResponse'
-  { _gcdbcrrsEvaluationResults :: !(Maybe [EvaluationResult])
-  , _gcdbcrrsNextToken         :: !(Maybe Text)
-  , _gcdbcrrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetComplianceDetailsByConfigRuleResponse =
+  GetComplianceDetailsByConfigRuleResponse'
+    { _gcdbcrrsEvaluationResults :: !(Maybe [EvaluationResult])
+    , _gcdbcrrsNextToken         :: !(Maybe Text)
+    , _gcdbcrrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetComplianceDetailsByConfigRuleResponse' with the minimum fields required to make a request.

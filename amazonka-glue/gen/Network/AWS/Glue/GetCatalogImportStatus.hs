@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getCatalogImportStatus' smart constructor.
-newtype GetCatalogImportStatus = GetCatalogImportStatus'
-  { _gcisCatalogId :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetCatalogImportStatus =
+  GetCatalogImportStatus'
+    { _gcisCatalogId :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetCatalogImportStatus' with the minimum fields required to make a request.
@@ -99,10 +101,12 @@ instance ToQuery GetCatalogImportStatus where
         toQuery = const mempty
 
 -- | /See:/ 'getCatalogImportStatusResponse' smart constructor.
-data GetCatalogImportStatusResponse = GetCatalogImportStatusResponse'
-  { _gcisrsImportStatus   :: !(Maybe CatalogImportStatus)
-  , _gcisrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetCatalogImportStatusResponse =
+  GetCatalogImportStatusResponse'
+    { _gcisrsImportStatus   :: !(Maybe CatalogImportStatus)
+    , _gcisrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetCatalogImportStatusResponse' with the minimum fields required to make a request.

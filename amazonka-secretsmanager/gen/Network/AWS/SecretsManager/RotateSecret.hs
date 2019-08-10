@@ -84,12 +84,14 @@ import Network.AWS.SecretsManager.Types
 import Network.AWS.SecretsManager.Types.Product
 
 -- | /See:/ 'rotateSecret' smart constructor.
-data RotateSecret = RotateSecret'
-  { _rsRotationRules      :: !(Maybe RotationRulesType)
-  , _rsClientRequestToken :: !(Maybe Text)
-  , _rsRotationLambdaARN  :: !(Maybe Text)
-  , _rsSecretId           :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RotateSecret =
+  RotateSecret'
+    { _rsRotationRules      :: !(Maybe RotationRulesType)
+    , _rsClientRequestToken :: !(Maybe Text)
+    , _rsRotationLambdaARN  :: !(Maybe Text)
+    , _rsSecretId           :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RotateSecret' with the minimum fields required to make a request.
@@ -171,12 +173,14 @@ instance ToQuery RotateSecret where
         toQuery = const mempty
 
 -- | /See:/ 'rotateSecretResponse' smart constructor.
-data RotateSecretResponse = RotateSecretResponse'
-  { _rsrsVersionId      :: !(Maybe Text)
-  , _rsrsARN            :: !(Maybe Text)
-  , _rsrsName           :: !(Maybe Text)
-  , _rsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RotateSecretResponse =
+  RotateSecretResponse'
+    { _rsrsVersionId      :: !(Maybe Text)
+    , _rsrsARN            :: !(Maybe Text)
+    , _rsrsName           :: !(Maybe Text)
+    , _rsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RotateSecretResponse' with the minimum fields required to make a request.

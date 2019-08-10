@@ -66,22 +66,24 @@ import Network.AWS.StorageGateway.Types.Product
 --
 --
 -- /See:/ 'createNFSFileShare' smart constructor.
-data CreateNFSFileShare = CreateNFSFileShare'
-  { _cnfsfsKMSKey               :: !(Maybe Text)
-  , _cnfsfsObjectACL            :: !(Maybe ObjectACL)
-  , _cnfsfsKMSEncrypted         :: !(Maybe Bool)
-  , _cnfsfsDefaultStorageClass  :: !(Maybe Text)
-  , _cnfsfsSquash               :: !(Maybe Text)
-  , _cnfsfsRequesterPays        :: !(Maybe Bool)
-  , _cnfsfsNFSFileShareDefaults :: !(Maybe NFSFileShareDefaults)
-  , _cnfsfsClientList           :: !(Maybe (List1 Text))
-  , _cnfsfsGuessMIMETypeEnabled :: !(Maybe Bool)
-  , _cnfsfsReadOnly             :: !(Maybe Bool)
-  , _cnfsfsClientToken          :: !Text
-  , _cnfsfsGatewayARN           :: !Text
-  , _cnfsfsRole                 :: !Text
-  , _cnfsfsLocationARN          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateNFSFileShare =
+  CreateNFSFileShare'
+    { _cnfsfsKMSKey               :: !(Maybe Text)
+    , _cnfsfsObjectACL            :: !(Maybe ObjectACL)
+    , _cnfsfsKMSEncrypted         :: !(Maybe Bool)
+    , _cnfsfsDefaultStorageClass  :: !(Maybe Text)
+    , _cnfsfsSquash               :: !(Maybe Text)
+    , _cnfsfsRequesterPays        :: !(Maybe Bool)
+    , _cnfsfsNFSFileShareDefaults :: !(Maybe NFSFileShareDefaults)
+    , _cnfsfsClientList           :: !(Maybe (List1 Text))
+    , _cnfsfsGuessMIMETypeEnabled :: !(Maybe Bool)
+    , _cnfsfsReadOnly             :: !(Maybe Bool)
+    , _cnfsfsClientToken          :: !Text
+    , _cnfsfsGatewayARN           :: !Text
+    , _cnfsfsRole                 :: !Text
+    , _cnfsfsLocationARN          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateNFSFileShare' with the minimum fields required to make a request.
@@ -253,10 +255,12 @@ instance ToQuery CreateNFSFileShare where
 --
 --
 -- /See:/ 'createNFSFileShareResponse' smart constructor.
-data CreateNFSFileShareResponse = CreateNFSFileShareResponse'
-  { _cnfsfsrsFileShareARN   :: !(Maybe Text)
-  , _cnfsfsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateNFSFileShareResponse =
+  CreateNFSFileShareResponse'
+    { _cnfsfsrsFileShareARN   :: !(Maybe Text)
+    , _cnfsfsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateNFSFileShareResponse' with the minimum fields required to make a request.

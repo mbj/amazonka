@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listAssociatedFleets' smart constructor.
-data ListAssociatedFleets = ListAssociatedFleets'
-  { _lafNextToken :: !(Maybe Text)
-  , _lafStackName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAssociatedFleets =
+  ListAssociatedFleets'
+    { _lafNextToken :: !(Maybe Text)
+    , _lafStackName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAssociatedFleets' with the minimum fields required to make a request.
@@ -114,11 +116,13 @@ instance ToQuery ListAssociatedFleets where
         toQuery = const mempty
 
 -- | /See:/ 'listAssociatedFleetsResponse' smart constructor.
-data ListAssociatedFleetsResponse = ListAssociatedFleetsResponse'
-  { _lafrsNextToken      :: !(Maybe Text)
-  , _lafrsNames          :: !(Maybe [Text])
-  , _lafrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAssociatedFleetsResponse =
+  ListAssociatedFleetsResponse'
+    { _lafrsNextToken      :: !(Maybe Text)
+    , _lafrsNames          :: !(Maybe [Text])
+    , _lafrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAssociatedFleetsResponse' with the minimum fields required to make a request.

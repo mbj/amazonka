@@ -51,11 +51,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeVPCPeeringConnections' smart constructor.
-data DescribeVPCPeeringConnections = DescribeVPCPeeringConnections'
-  { _dvpcpcFilters                 :: !(Maybe [Filter])
-  , _dvpcpcVPCPeeringConnectionIds :: !(Maybe [Text])
-  , _dvpcpcDryRun                  :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeVPCPeeringConnections =
+  DescribeVPCPeeringConnections'
+    { _dvpcpcFilters                 :: !(Maybe [Filter])
+    , _dvpcpcVPCPeeringConnectionIds :: !(Maybe [Text])
+    , _dvpcpcDryRun                  :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeVPCPeeringConnections' with the minimum fields required to make a request.
@@ -130,10 +132,12 @@ instance ToQuery DescribeVPCPeeringConnections where
 --
 --
 -- /See:/ 'describeVPCPeeringConnectionsResponse' smart constructor.
-data DescribeVPCPeeringConnectionsResponse = DescribeVPCPeeringConnectionsResponse'
-  { _dvpcpcrsVPCPeeringConnections :: !(Maybe [VPCPeeringConnection])
-  , _dvpcpcrsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeVPCPeeringConnectionsResponse =
+  DescribeVPCPeeringConnectionsResponse'
+    { _dvpcpcrsVPCPeeringConnections :: !(Maybe [VPCPeeringConnection])
+    , _dvpcpcrsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeVPCPeeringConnectionsResponse' with the minimum fields required to make a request.

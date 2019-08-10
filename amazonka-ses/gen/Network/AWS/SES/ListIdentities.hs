@@ -57,11 +57,13 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'listIdentities' smart constructor.
-data ListIdentities = ListIdentities'
-  { _liIdentityType :: !(Maybe IdentityType)
-  , _liNextToken    :: !(Maybe Text)
-  , _liMaxItems     :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListIdentities =
+  ListIdentities'
+    { _liIdentityType :: !(Maybe IdentityType)
+    , _liNextToken    :: !(Maybe Text)
+    , _liMaxItems     :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListIdentities' with the minimum fields required to make a request.
@@ -134,11 +136,13 @@ instance ToQuery ListIdentities where
 --
 --
 -- /See:/ 'listIdentitiesResponse' smart constructor.
-data ListIdentitiesResponse = ListIdentitiesResponse'
-  { _lirsNextToken      :: !(Maybe Text)
-  , _lirsResponseStatus :: !Int
-  , _lirsIdentities     :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListIdentitiesResponse =
+  ListIdentitiesResponse'
+    { _lirsNextToken      :: !(Maybe Text)
+    , _lirsResponseStatus :: !Int
+    , _lirsIdentities     :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListIdentitiesResponse' with the minimum fields required to make a request.

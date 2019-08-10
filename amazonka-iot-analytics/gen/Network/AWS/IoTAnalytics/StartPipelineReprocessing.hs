@@ -47,11 +47,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'startPipelineReprocessing' smart constructor.
-data StartPipelineReprocessing = StartPipelineReprocessing'
-  { _sprStartTime    :: !(Maybe POSIX)
-  , _sprEndTime      :: !(Maybe POSIX)
-  , _sprPipelineName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartPipelineReprocessing =
+  StartPipelineReprocessing'
+    { _sprStartTime    :: !(Maybe POSIX)
+    , _sprEndTime      :: !(Maybe POSIX)
+    , _sprPipelineName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartPipelineReprocessing' with the minimum fields required to make a request.
@@ -120,10 +122,12 @@ instance ToQuery StartPipelineReprocessing where
         toQuery = const mempty
 
 -- | /See:/ 'startPipelineReprocessingResponse' smart constructor.
-data StartPipelineReprocessingResponse = StartPipelineReprocessingResponse'
-  { _sprrsReprocessingId :: !(Maybe Text)
-  , _sprrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartPipelineReprocessingResponse =
+  StartPipelineReprocessingResponse'
+    { _sprrsReprocessingId :: !(Maybe Text)
+    , _sprrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartPipelineReprocessingResponse' with the minimum fields required to make a request.

@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getInstancePortStates' smart constructor.
-newtype GetInstancePortStates = GetInstancePortStates'
-  { _gipsInstanceName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetInstancePortStates =
+  GetInstancePortStates'
+    { _gipsInstanceName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetInstancePortStates' with the minimum fields required to make a request.
@@ -104,10 +106,12 @@ instance ToQuery GetInstancePortStates where
         toQuery = const mempty
 
 -- | /See:/ 'getInstancePortStatesResponse' smart constructor.
-data GetInstancePortStatesResponse = GetInstancePortStatesResponse'
-  { _gipsrsPortStates     :: !(Maybe [InstancePortState])
-  , _gipsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetInstancePortStatesResponse =
+  GetInstancePortStatesResponse'
+    { _gipsrsPortStates     :: !(Maybe [InstancePortState])
+    , _gipsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetInstancePortStatesResponse' with the minimum fields required to make a request.

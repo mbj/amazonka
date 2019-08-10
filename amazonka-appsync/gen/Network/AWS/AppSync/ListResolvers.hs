@@ -49,12 +49,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listResolvers' smart constructor.
-data ListResolvers = ListResolvers'
-  { _lrNextToken  :: !(Maybe Text)
-  , _lrMaxResults :: !(Maybe Nat)
-  , _lrApiId      :: !Text
-  , _lrTypeName   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListResolvers =
+  ListResolvers'
+    { _lrNextToken  :: !(Maybe Text)
+    , _lrMaxResults :: !(Maybe Nat)
+    , _lrApiId      :: !Text
+    , _lrTypeName   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListResolvers' with the minimum fields required to make a request.
@@ -132,11 +134,13 @@ instance ToQuery ListResolvers where
                "maxResults" =: _lrMaxResults]
 
 -- | /See:/ 'listResolversResponse' smart constructor.
-data ListResolversResponse = ListResolversResponse'
-  { _lrrsNextToken      :: !(Maybe Text)
-  , _lrrsResolvers      :: !(Maybe [Resolver])
-  , _lrrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListResolversResponse =
+  ListResolversResponse'
+    { _lrrsNextToken      :: !(Maybe Text)
+    , _lrrsResolvers      :: !(Maybe [Resolver])
+    , _lrrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListResolversResponse' with the minimum fields required to make a request.

@@ -56,9 +56,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeThingRegistrationTask' smart constructor.
-newtype DescribeThingRegistrationTask = DescribeThingRegistrationTask'
-  { _dtrtTaskId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeThingRegistrationTask =
+  DescribeThingRegistrationTask'
+    { _dtrtTaskId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeThingRegistrationTask' with the minimum fields required to make a request.
@@ -116,21 +118,23 @@ instance ToQuery DescribeThingRegistrationTask where
         toQuery = const mempty
 
 -- | /See:/ 'describeThingRegistrationTaskResponse' smart constructor.
-data DescribeThingRegistrationTaskResponse = DescribeThingRegistrationTaskResponse'
-  { _dtrtrsStatus             :: !(Maybe TaskStatus)
-  , _dtrtrsLastModifiedDate   :: !(Maybe POSIX)
-  , _dtrtrsInputFileKey       :: !(Maybe Text)
-  , _dtrtrsTaskId             :: !(Maybe Text)
-  , _dtrtrsCreationDate       :: !(Maybe POSIX)
-  , _dtrtrsPercentageProgress :: !(Maybe Nat)
-  , _dtrtrsTemplateBody       :: !(Maybe Text)
-  , _dtrtrsSuccessCount       :: !(Maybe Int)
-  , _dtrtrsMessage            :: !(Maybe Text)
-  , _dtrtrsFailureCount       :: !(Maybe Int)
-  , _dtrtrsInputFileBucket    :: !(Maybe Text)
-  , _dtrtrsRoleARN            :: !(Maybe Text)
-  , _dtrtrsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeThingRegistrationTaskResponse =
+  DescribeThingRegistrationTaskResponse'
+    { _dtrtrsStatus             :: !(Maybe TaskStatus)
+    , _dtrtrsLastModifiedDate   :: !(Maybe POSIX)
+    , _dtrtrsInputFileKey       :: !(Maybe Text)
+    , _dtrtrsTaskId             :: !(Maybe Text)
+    , _dtrtrsCreationDate       :: !(Maybe POSIX)
+    , _dtrtrsPercentageProgress :: !(Maybe Nat)
+    , _dtrtrsTemplateBody       :: !(Maybe Text)
+    , _dtrtrsSuccessCount       :: !(Maybe Int)
+    , _dtrtrsMessage            :: !(Maybe Text)
+    , _dtrtrsFailureCount       :: !(Maybe Int)
+    , _dtrtrsInputFileBucket    :: !(Maybe Text)
+    , _dtrtrsRoleARN            :: !(Maybe Text)
+    , _dtrtrsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeThingRegistrationTaskResponse' with the minimum fields required to make a request.

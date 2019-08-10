@@ -67,10 +67,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getDataSource' smart constructor.
-data GetDataSource = GetDataSource'
-  { _gdsVerbose      :: !(Maybe Bool)
-  , _gdsDataSourceId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDataSource =
+  GetDataSource'
+    { _gdsVerbose      :: !(Maybe Bool)
+    , _gdsDataSourceId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDataSource' with the minimum fields required to make a request.
@@ -154,29 +156,31 @@ instance ToQuery GetDataSource where
 --
 --
 -- /See:/ 'getDataSourceResponse' smart constructor.
-data GetDataSourceResponse = GetDataSourceResponse'
-  { _gdsrsStatus            :: !(Maybe EntityStatus)
-  , _gdsrsNumberOfFiles     :: !(Maybe Integer)
-  , _gdsrsLastUpdatedAt     :: !(Maybe POSIX)
-  , _gdsrsCreatedAt         :: !(Maybe POSIX)
-  , _gdsrsComputeTime       :: !(Maybe Integer)
-  , _gdsrsDataSourceId      :: !(Maybe Text)
-  , _gdsrsRDSMetadata       :: !(Maybe RDSMetadata)
-  , _gdsrsDataSizeInBytes   :: !(Maybe Integer)
-  , _gdsrsDataSourceSchema  :: !(Maybe Text)
-  , _gdsrsStartedAt         :: !(Maybe POSIX)
-  , _gdsrsFinishedAt        :: !(Maybe POSIX)
-  , _gdsrsCreatedByIAMUser  :: !(Maybe Text)
-  , _gdsrsName              :: !(Maybe Text)
-  , _gdsrsLogURI            :: !(Maybe Text)
-  , _gdsrsDataLocationS3    :: !(Maybe Text)
-  , _gdsrsComputeStatistics :: !(Maybe Bool)
-  , _gdsrsMessage           :: !(Maybe Text)
-  , _gdsrsRedshiftMetadata  :: !(Maybe RedshiftMetadata)
-  , _gdsrsDataRearrangement :: !(Maybe Text)
-  , _gdsrsRoleARN           :: !(Maybe Text)
-  , _gdsrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDataSourceResponse =
+  GetDataSourceResponse'
+    { _gdsrsStatus            :: !(Maybe EntityStatus)
+    , _gdsrsNumberOfFiles     :: !(Maybe Integer)
+    , _gdsrsLastUpdatedAt     :: !(Maybe POSIX)
+    , _gdsrsCreatedAt         :: !(Maybe POSIX)
+    , _gdsrsComputeTime       :: !(Maybe Integer)
+    , _gdsrsDataSourceId      :: !(Maybe Text)
+    , _gdsrsRDSMetadata       :: !(Maybe RDSMetadata)
+    , _gdsrsDataSizeInBytes   :: !(Maybe Integer)
+    , _gdsrsDataSourceSchema  :: !(Maybe Text)
+    , _gdsrsStartedAt         :: !(Maybe POSIX)
+    , _gdsrsFinishedAt        :: !(Maybe POSIX)
+    , _gdsrsCreatedByIAMUser  :: !(Maybe Text)
+    , _gdsrsName              :: !(Maybe Text)
+    , _gdsrsLogURI            :: !(Maybe Text)
+    , _gdsrsDataLocationS3    :: !(Maybe Text)
+    , _gdsrsComputeStatistics :: !(Maybe Bool)
+    , _gdsrsMessage           :: !(Maybe Text)
+    , _gdsrsRedshiftMetadata  :: !(Maybe RedshiftMetadata)
+    , _gdsrsDataRearrangement :: !(Maybe Text)
+    , _gdsrsRoleARN           :: !(Maybe Text)
+    , _gdsrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDataSourceResponse' with the minimum fields required to make a request.

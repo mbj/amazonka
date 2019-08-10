@@ -47,11 +47,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteLaunchTemplate' smart constructor.
-data DeleteLaunchTemplate = DeleteLaunchTemplate'
-  { _dltLaunchTemplateName :: !(Maybe Text)
-  , _dltLaunchTemplateId   :: !(Maybe Text)
-  , _dltDryRun             :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteLaunchTemplate =
+  DeleteLaunchTemplate'
+    { _dltLaunchTemplateName :: !(Maybe Text)
+    , _dltLaunchTemplateId   :: !(Maybe Text)
+    , _dltDryRun             :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteLaunchTemplate' with the minimum fields required to make a request.
@@ -115,10 +117,12 @@ instance ToQuery DeleteLaunchTemplate where
                "DryRun" =: _dltDryRun]
 
 -- | /See:/ 'deleteLaunchTemplateResponse' smart constructor.
-data DeleteLaunchTemplateResponse = DeleteLaunchTemplateResponse'
-  { _dltrsLaunchTemplate :: !(Maybe LaunchTemplate)
-  , _dltrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteLaunchTemplateResponse =
+  DeleteLaunchTemplateResponse'
+    { _dltrsLaunchTemplate :: !(Maybe LaunchTemplate)
+    , _dltrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteLaunchTemplateResponse' with the minimum fields required to make a request.

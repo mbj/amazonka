@@ -47,13 +47,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createJobTemplate' smart constructor.
-data CreateJobTemplate = CreateJobTemplate'
-  { _cjtSettings    :: !(Maybe JobTemplateSettings)
-  , _cjtCategory    :: !(Maybe Text)
-  , _cjtQueue       :: !(Maybe Text)
-  , _cjtName        :: !(Maybe Text)
-  , _cjtDescription :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateJobTemplate =
+  CreateJobTemplate'
+    { _cjtSettings    :: !(Maybe JobTemplateSettings)
+    , _cjtCategory    :: !(Maybe Text)
+    , _cjtQueue       :: !(Maybe Text)
+    , _cjtName        :: !(Maybe Text)
+    , _cjtDescription :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateJobTemplate' with the minimum fields required to make a request.
@@ -137,10 +139,12 @@ instance ToQuery CreateJobTemplate where
         toQuery = const mempty
 
 -- | /See:/ 'createJobTemplateResponse' smart constructor.
-data CreateJobTemplateResponse = CreateJobTemplateResponse'
-  { _cjtrsJobTemplate    :: !(Maybe JobTemplate)
-  , _cjtrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateJobTemplateResponse =
+  CreateJobTemplateResponse'
+    { _cjtrsJobTemplate    :: !(Maybe JobTemplate)
+    , _cjtrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateJobTemplateResponse' with the minimum fields required to make a request.

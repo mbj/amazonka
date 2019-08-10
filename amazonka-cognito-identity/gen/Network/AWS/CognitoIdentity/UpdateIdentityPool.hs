@@ -64,16 +64,18 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateIdentityPool' smart constructor.
-data UpdateIdentityPool = UpdateIdentityPool'
-  { _uipSamlProviderARNs               :: !(Maybe [Text])
-  , _uipSupportedLoginProviders        :: !(Maybe (Map Text Text))
-  , _uipDeveloperProviderName          :: !(Maybe Text)
-  , _uipOpenIdConnectProviderARNs      :: !(Maybe [Text])
-  , _uipCognitoIdentityProviders       :: !(Maybe [CognitoIdentityProvider])
-  , _uipIdentityPoolId                 :: !Text
-  , _uipIdentityPoolName               :: !Text
-  , _uipAllowUnauthenticatedIdentities :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateIdentityPool =
+  UpdateIdentityPool'
+    { _uipSamlProviderARNs               :: !(Maybe [Text])
+    , _uipSupportedLoginProviders        :: !(Maybe (Map Text Text))
+    , _uipDeveloperProviderName          :: !(Maybe Text)
+    , _uipOpenIdConnectProviderARNs      :: !(Maybe [Text])
+    , _uipCognitoIdentityProviders       :: !(Maybe [CognitoIdentityProvider])
+    , _uipIdentityPoolId                 :: !Text
+    , _uipIdentityPoolName               :: !Text
+    , _uipAllowUnauthenticatedIdentities :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateIdentityPool' with the minimum fields required to make a request.

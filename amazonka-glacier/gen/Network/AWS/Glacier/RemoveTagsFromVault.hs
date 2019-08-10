@@ -48,11 +48,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'removeTagsFromVault' smart constructor.
-data RemoveTagsFromVault = RemoveTagsFromVault'
-  { _rtfvTagKeys   :: !(Maybe [Text])
-  , _rtfvAccountId :: !Text
-  , _rtfvVaultName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RemoveTagsFromVault =
+  RemoveTagsFromVault'
+    { _rtfvTagKeys   :: !(Maybe [Text])
+    , _rtfvAccountId :: !Text
+    , _rtfvVaultName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RemoveTagsFromVault' with the minimum fields required to make a request.

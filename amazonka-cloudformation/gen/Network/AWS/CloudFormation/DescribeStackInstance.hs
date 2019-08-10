@@ -49,11 +49,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeStackInstance' smart constructor.
-data DescribeStackInstance = DescribeStackInstance'
-  { _dStackSetName         :: !Text
-  , _dStackInstanceAccount :: !Text
-  , _dStackInstanceRegion  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeStackInstance =
+  DescribeStackInstance'
+    { _dStackSetName         :: !Text
+    , _dStackInstanceAccount :: !Text
+    , _dStackInstanceRegion  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeStackInstance' with the minimum fields required to make a request.
@@ -120,10 +122,12 @@ instance ToQuery DescribeStackInstance where
                "StackInstanceRegion" =: _dStackInstanceRegion]
 
 -- | /See:/ 'describeStackInstanceResponse' smart constructor.
-data DescribeStackInstanceResponse = DescribeStackInstanceResponse'
-  { _dsisrsStackInstance  :: !(Maybe StackInstance)
-  , _dsisrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeStackInstanceResponse =
+  DescribeStackInstanceResponse'
+    { _dsisrsStackInstance  :: !(Maybe StackInstance)
+    , _dsisrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeStackInstanceResponse' with the minimum fields required to make a request.

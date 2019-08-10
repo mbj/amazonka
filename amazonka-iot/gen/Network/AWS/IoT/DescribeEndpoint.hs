@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeEndpoint' smart constructor.
-newtype DescribeEndpoint = DescribeEndpoint'
-  { _deEndpointType :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeEndpoint =
+  DescribeEndpoint'
+    { _deEndpointType :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEndpoint' with the minimum fields required to make a request.
@@ -96,10 +98,12 @@ instance ToQuery DescribeEndpoint where
 --
 --
 -- /See:/ 'describeEndpointResponse' smart constructor.
-data DescribeEndpointResponse = DescribeEndpointResponse'
-  { _dersEndpointAddress :: !(Maybe Text)
-  , _dersResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeEndpointResponse =
+  DescribeEndpointResponse'
+    { _dersEndpointAddress :: !(Maybe Text)
+    , _dersResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEndpointResponse' with the minimum fields required to make a request.

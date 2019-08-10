@@ -51,11 +51,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeBundleTasks' smart constructor.
-data DescribeBundleTasks = DescribeBundleTasks'
-  { _dbtBundleIds :: !(Maybe [Text])
-  , _dbtFilters   :: !(Maybe [Filter])
-  , _dbtDryRun    :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeBundleTasks =
+  DescribeBundleTasks'
+    { _dbtBundleIds :: !(Maybe [Text])
+    , _dbtFilters   :: !(Maybe [Filter])
+    , _dbtDryRun    :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeBundleTasks' with the minimum fields required to make a request.
@@ -122,10 +124,12 @@ instance ToQuery DescribeBundleTasks where
 --
 --
 -- /See:/ 'describeBundleTasksResponse' smart constructor.
-data DescribeBundleTasksResponse = DescribeBundleTasksResponse'
-  { _dbtrsBundleTasks    :: !(Maybe [BundleTask])
-  , _dbtrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeBundleTasksResponse =
+  DescribeBundleTasksResponse'
+    { _dbtrsBundleTasks    :: !(Maybe [BundleTask])
+    , _dbtrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeBundleTasksResponse' with the minimum fields required to make a request.

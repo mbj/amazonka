@@ -53,10 +53,12 @@ import Network.AWS.WorkMail.Types
 import Network.AWS.WorkMail.Types.Product
 
 -- | /See:/ 'describeResource' smart constructor.
-data DescribeResource = DescribeResource'
-  { _drOrganizationId :: !Text
-  , _drResourceId     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeResource =
+  DescribeResource'
+    { _drOrganizationId :: !Text
+    , _drResourceId     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeResource' with the minimum fields required to make a request.
@@ -126,17 +128,19 @@ instance ToQuery DescribeResource where
         toQuery = const mempty
 
 -- | /See:/ 'describeResourceResponse' smart constructor.
-data DescribeResourceResponse = DescribeResourceResponse'
-  { _drrsEmail          :: !(Maybe Text)
-  , _drrsState          :: !(Maybe EntityState)
-  , _drrsResourceId     :: !(Maybe Text)
-  , _drrsDisabledDate   :: !(Maybe POSIX)
-  , _drrsName           :: !(Maybe Text)
-  , _drrsType           :: !(Maybe ResourceType)
-  , _drrsEnabledDate    :: !(Maybe POSIX)
-  , _drrsBookingOptions :: !(Maybe BookingOptions)
-  , _drrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeResourceResponse =
+  DescribeResourceResponse'
+    { _drrsEmail          :: !(Maybe Text)
+    , _drrsState          :: !(Maybe EntityState)
+    , _drrsResourceId     :: !(Maybe Text)
+    , _drrsDisabledDate   :: !(Maybe POSIX)
+    , _drrsName           :: !(Maybe Text)
+    , _drrsType           :: !(Maybe ResourceType)
+    , _drrsEnabledDate    :: !(Maybe POSIX)
+    , _drrsBookingOptions :: !(Maybe BookingOptions)
+    , _drrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeResourceResponse' with the minimum fields required to make a request.

@@ -28,16 +28,18 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'budget' smart constructor.
-data Budget = Budget'
-  { _bCalculatedSpend :: !(Maybe CalculatedSpend)
-  , _bBudgetLimit     :: !(Maybe Spend)
-  , _bTimePeriod      :: !(Maybe TimePeriod)
-  , _bCostTypes       :: !(Maybe CostTypes)
-  , _bCostFilters     :: !(Maybe (Map Text [Text]))
-  , _bBudgetName      :: !Text
-  , _bTimeUnit        :: !TimeUnit
-  , _bBudgetType      :: !BudgetType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Budget =
+  Budget'
+    { _bCalculatedSpend :: !(Maybe CalculatedSpend)
+    , _bBudgetLimit     :: !(Maybe Spend)
+    , _bTimePeriod      :: !(Maybe TimePeriod)
+    , _bCostTypes       :: !(Maybe CostTypes)
+    , _bCostFilters     :: !(Maybe (Map Text [Text]))
+    , _bBudgetName      :: !Text
+    , _bTimeUnit        :: !TimeUnit
+    , _bBudgetType      :: !BudgetType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Budget' with the minimum fields required to make a request.
@@ -146,10 +148,12 @@ instance ToJSON Budget where
 --
 --
 -- /See:/ 'calculatedSpend' smart constructor.
-data CalculatedSpend = CalculatedSpend'
-  { _csForecastedSpend :: !(Maybe Spend)
-  , _csActualSpend     :: !Spend
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CalculatedSpend =
+  CalculatedSpend'
+    { _csForecastedSpend :: !(Maybe Spend)
+    , _csActualSpend     :: !Spend
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CalculatedSpend' with the minimum fields required to make a request.
@@ -198,19 +202,21 @@ instance ToJSON CalculatedSpend where
 --
 --
 -- /See:/ 'costTypes' smart constructor.
-data CostTypes = CostTypes'
-  { _ctUseAmortized             :: !(Maybe Bool)
-  , _ctIncludeRecurring         :: !(Maybe Bool)
-  , _ctUseBlended               :: !(Maybe Bool)
-  , _ctIncludeSupport           :: !(Maybe Bool)
-  , _ctIncludeDiscount          :: !(Maybe Bool)
-  , _ctIncludeSubscription      :: !(Maybe Bool)
-  , _ctIncludeRefund            :: !(Maybe Bool)
-  , _ctIncludeUpfront           :: !(Maybe Bool)
-  , _ctIncludeOtherSubscription :: !(Maybe Bool)
-  , _ctIncludeTax               :: !(Maybe Bool)
-  , _ctIncludeCredit            :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CostTypes =
+  CostTypes'
+    { _ctUseAmortized             :: !(Maybe Bool)
+    , _ctIncludeRecurring         :: !(Maybe Bool)
+    , _ctUseBlended               :: !(Maybe Bool)
+    , _ctIncludeSupport           :: !(Maybe Bool)
+    , _ctIncludeDiscount          :: !(Maybe Bool)
+    , _ctIncludeSubscription      :: !(Maybe Bool)
+    , _ctIncludeRefund            :: !(Maybe Bool)
+    , _ctIncludeUpfront           :: !(Maybe Bool)
+    , _ctIncludeOtherSubscription :: !(Maybe Bool)
+    , _ctIncludeTax               :: !(Maybe Bool)
+    , _ctIncludeCredit            :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CostTypes' with the minimum fields required to make a request.
@@ -355,12 +361,14 @@ instance ToJSON CostTypes where
 --
 --
 -- /See:/ 'notification' smart constructor.
-data Notification = Notification'
-  { _nThresholdType      :: !(Maybe ThresholdType)
-  , _nNotificationType   :: !NotificationType
-  , _nComparisonOperator :: !ComparisonOperator
-  , _nThreshold          :: !Double
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Notification =
+  Notification'
+    { _nThresholdType      :: !(Maybe ThresholdType)
+    , _nNotificationType   :: !NotificationType
+    , _nComparisonOperator :: !ComparisonOperator
+    , _nThreshold          :: !Double
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Notification' with the minimum fields required to make a request.
@@ -431,10 +439,12 @@ instance ToJSON Notification where
 --
 --
 -- /See:/ 'notificationWithSubscribers' smart constructor.
-data NotificationWithSubscribers = NotificationWithSubscribers'
-  { _nwsNotification :: !Notification
-  , _nwsSubscribers  :: !(List1 Subscriber)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NotificationWithSubscribers =
+  NotificationWithSubscribers'
+    { _nwsNotification :: !Notification
+    , _nwsSubscribers  :: !(List1 Subscriber)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NotificationWithSubscribers' with the minimum fields required to make a request.
@@ -487,10 +497,12 @@ instance ToJSON NotificationWithSubscribers where
 --
 --
 -- /See:/ 'spend' smart constructor.
-data Spend = Spend'
-  { _sAmount :: !Text
-  , _sUnit   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Spend =
+  Spend'
+    { _sAmount :: !Text
+    , _sUnit   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Spend' with the minimum fields required to make a request.
@@ -544,10 +556,12 @@ instance ToJSON Spend where
 --
 --
 -- /See:/ 'subscriber' smart constructor.
-data Subscriber = Subscriber'
-  { _sSubscriptionType :: !SubscriptionType
-  , _sAddress          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Subscriber =
+  Subscriber'
+    { _sSubscriptionType :: !SubscriptionType
+    , _sAddress          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Subscriber' with the minimum fields required to make a request.
@@ -596,10 +610,12 @@ instance ToJSON Subscriber where
 --
 --
 -- /See:/ 'timePeriod' smart constructor.
-data TimePeriod = TimePeriod'
-  { _tpStart :: !(Maybe POSIX)
-  , _tpEnd   :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TimePeriod =
+  TimePeriod'
+    { _tpStart :: !(Maybe POSIX)
+    , _tpEnd   :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TimePeriod' with the minimum fields required to make a request.

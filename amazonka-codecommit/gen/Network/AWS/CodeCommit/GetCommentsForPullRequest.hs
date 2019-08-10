@@ -54,14 +54,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getCommentsForPullRequest' smart constructor.
-data GetCommentsForPullRequest = GetCommentsForPullRequest'
-  { _gcfprAfterCommitId  :: !(Maybe Text)
-  , _gcfprNextToken      :: !(Maybe Text)
-  , _gcfprBeforeCommitId :: !(Maybe Text)
-  , _gcfprRepositoryName :: !(Maybe Text)
-  , _gcfprMaxResults     :: !(Maybe Int)
-  , _gcfprPullRequestId  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetCommentsForPullRequest =
+  GetCommentsForPullRequest'
+    { _gcfprAfterCommitId  :: !(Maybe Text)
+    , _gcfprNextToken      :: !(Maybe Text)
+    , _gcfprBeforeCommitId :: !(Maybe Text)
+    , _gcfprRepositoryName :: !(Maybe Text)
+    , _gcfprMaxResults     :: !(Maybe Int)
+    , _gcfprPullRequestId  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetCommentsForPullRequest' with the minimum fields required to make a request.
@@ -169,11 +171,13 @@ instance ToQuery GetCommentsForPullRequest where
         toQuery = const mempty
 
 -- | /See:/ 'getCommentsForPullRequestResponse' smart constructor.
-data GetCommentsForPullRequestResponse = GetCommentsForPullRequestResponse'
-  { _gcfprrsCommentsForPullRequestData :: !(Maybe [CommentsForPullRequest])
-  , _gcfprrsNextToken                  :: !(Maybe Text)
-  , _gcfprrsResponseStatus             :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetCommentsForPullRequestResponse =
+  GetCommentsForPullRequestResponse'
+    { _gcfprrsCommentsForPullRequestData :: !(Maybe [CommentsForPullRequest])
+    , _gcfprrsNextToken                  :: !(Maybe Text)
+    , _gcfprrsResponseStatus             :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetCommentsForPullRequestResponse' with the minimum fields required to make a request.

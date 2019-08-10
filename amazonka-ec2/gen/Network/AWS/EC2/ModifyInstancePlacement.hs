@@ -67,13 +67,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'modifyInstancePlacement' smart constructor.
-data ModifyInstancePlacement = ModifyInstancePlacement'
-  { _mipAffinity   :: !(Maybe Affinity)
-  , _mipHostId     :: !(Maybe Text)
-  , _mipTenancy    :: !(Maybe HostTenancy)
-  , _mipGroupName  :: !(Maybe Text)
-  , _mipInstanceId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyInstancePlacement =
+  ModifyInstancePlacement'
+    { _mipAffinity   :: !(Maybe Affinity)
+    , _mipHostId     :: !(Maybe Text)
+    , _mipTenancy    :: !(Maybe HostTenancy)
+    , _mipGroupName  :: !(Maybe Text)
+    , _mipInstanceId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyInstancePlacement' with the minimum fields required to make a request.
@@ -158,10 +160,12 @@ instance ToQuery ModifyInstancePlacement where
 --
 --
 -- /See:/ 'modifyInstancePlacementResponse' smart constructor.
-data ModifyInstancePlacementResponse = ModifyInstancePlacementResponse'
-  { _miprsReturn         :: !(Maybe Bool)
-  , _miprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyInstancePlacementResponse =
+  ModifyInstancePlacementResponse'
+    { _miprsReturn         :: !(Maybe Bool)
+    , _miprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyInstancePlacementResponse' with the minimum fields required to make a request.

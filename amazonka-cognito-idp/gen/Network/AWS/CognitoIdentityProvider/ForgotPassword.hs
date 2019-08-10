@@ -53,13 +53,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'forgotPassword' smart constructor.
-data ForgotPassword = ForgotPassword'
-  { _fpAnalyticsMetadata :: !(Maybe AnalyticsMetadataType)
-  , _fpUserContextData   :: !(Maybe UserContextDataType)
-  , _fpSecretHash        :: !(Maybe (Sensitive Text))
-  , _fpClientId          :: !(Sensitive Text)
-  , _fpUsername          :: !(Sensitive Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data ForgotPassword =
+  ForgotPassword'
+    { _fpAnalyticsMetadata :: !(Maybe AnalyticsMetadataType)
+    , _fpUserContextData   :: !(Maybe UserContextDataType)
+    , _fpSecretHash        :: !(Maybe (Sensitive Text))
+    , _fpClientId          :: !(Sensitive Text)
+    , _fpUsername          :: !(Sensitive Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ForgotPassword' with the minimum fields required to make a request.
@@ -154,10 +156,12 @@ instance ToQuery ForgotPassword where
 --
 --
 -- /See:/ 'forgotPasswordResponse' smart constructor.
-data ForgotPasswordResponse = ForgotPasswordResponse'
-  { _fprsCodeDeliveryDetails :: !(Maybe CodeDeliveryDetailsType)
-  , _fprsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ForgotPasswordResponse =
+  ForgotPasswordResponse'
+    { _fprsCodeDeliveryDetails :: !(Maybe CodeDeliveryDetailsType)
+    , _fprsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ForgotPasswordResponse' with the minimum fields required to make a request.

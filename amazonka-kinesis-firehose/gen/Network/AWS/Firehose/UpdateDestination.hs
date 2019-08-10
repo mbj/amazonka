@@ -61,16 +61,18 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateDestination' smart constructor.
-data UpdateDestination = UpdateDestination'
-  { _udSplunkDestinationUpdate        :: !(Maybe SplunkDestinationUpdate)
-  , _udS3DestinationUpdate            :: !(Maybe S3DestinationUpdate)
-  , _udRedshiftDestinationUpdate      :: !(Maybe RedshiftDestinationUpdate)
-  , _udElasticsearchDestinationUpdate :: !(Maybe ElasticsearchDestinationUpdate)
-  , _udExtendedS3DestinationUpdate    :: !(Maybe ExtendedS3DestinationUpdate)
-  , _udDeliveryStreamName             :: !Text
-  , _udCurrentDeliveryStreamVersionId :: !Text
-  , _udDestinationId                  :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data UpdateDestination =
+  UpdateDestination'
+    { _udSplunkDestinationUpdate :: !(Maybe SplunkDestinationUpdate)
+    , _udS3DestinationUpdate :: !(Maybe S3DestinationUpdate)
+    , _udRedshiftDestinationUpdate :: !(Maybe RedshiftDestinationUpdate)
+    , _udElasticsearchDestinationUpdate :: !(Maybe ElasticsearchDestinationUpdate)
+    , _udExtendedS3DestinationUpdate :: !(Maybe ExtendedS3DestinationUpdate)
+    , _udDeliveryStreamName :: !Text
+    , _udCurrentDeliveryStreamVersionId :: !Text
+    , _udDestinationId :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateDestination' with the minimum fields required to make a request.
@@ -191,9 +193,11 @@ instance ToQuery UpdateDestination where
         toQuery = const mempty
 
 -- | /See:/ 'updateDestinationResponse' smart constructor.
-newtype UpdateDestinationResponse = UpdateDestinationResponse'
-  { _udrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateDestinationResponse =
+  UpdateDestinationResponse'
+    { _udrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateDestinationResponse' with the minimum fields required to make a request.

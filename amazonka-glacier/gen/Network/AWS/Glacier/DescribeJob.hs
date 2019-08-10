@@ -76,11 +76,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeJob' smart constructor.
-data DescribeJob = DescribeJob'
-  { _djAccountId :: !Text
-  , _djVaultName :: !Text
-  , _djJobId     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeJob =
+  DescribeJob'
+    { _djAccountId :: !Text
+    , _djVaultName :: !Text
+    , _djJobId     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeJob' with the minimum fields required to make a request.

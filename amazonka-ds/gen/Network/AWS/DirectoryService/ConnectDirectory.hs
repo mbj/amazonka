@@ -56,14 +56,16 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'connectDirectory' smart constructor.
-data ConnectDirectory = ConnectDirectory'
-  { _cdShortName       :: !(Maybe Text)
-  , _cdDescription     :: !(Maybe Text)
-  , _cdName            :: !Text
-  , _cdPassword        :: !(Sensitive Text)
-  , _cdSize            :: !DirectorySize
-  , _cdConnectSettings :: !DirectoryConnectSettings
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data ConnectDirectory =
+  ConnectDirectory'
+    { _cdShortName       :: !(Maybe Text)
+    , _cdDescription     :: !(Maybe Text)
+    , _cdName            :: !Text
+    , _cdPassword        :: !(Sensitive Text)
+    , _cdSize            :: !DirectorySize
+    , _cdConnectSettings :: !DirectoryConnectSettings
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ConnectDirectory' with the minimum fields required to make a request.
@@ -167,10 +169,12 @@ instance ToQuery ConnectDirectory where
 --
 --
 -- /See:/ 'connectDirectoryResponse' smart constructor.
-data ConnectDirectoryResponse = ConnectDirectoryResponse'
-  { _cdrsDirectoryId    :: !(Maybe Text)
-  , _cdrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ConnectDirectoryResponse =
+  ConnectDirectoryResponse'
+    { _cdrsDirectoryId    :: !(Maybe Text)
+    , _cdrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ConnectDirectoryResponse' with the minimum fields required to make a request.

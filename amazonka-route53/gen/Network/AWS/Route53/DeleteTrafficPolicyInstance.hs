@@ -48,9 +48,11 @@ import Network.AWS.Route53.Types.Product
 --
 --
 -- /See:/ 'deleteTrafficPolicyInstance' smart constructor.
-newtype DeleteTrafficPolicyInstance = DeleteTrafficPolicyInstance'
-  { _dtpiId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteTrafficPolicyInstance =
+  DeleteTrafficPolicyInstance'
+    { _dtpiId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteTrafficPolicyInstance' with the minimum fields required to make a request.
@@ -98,9 +100,11 @@ instance ToQuery DeleteTrafficPolicyInstance where
 --
 --
 -- /See:/ 'deleteTrafficPolicyInstanceResponse' smart constructor.
-newtype DeleteTrafficPolicyInstanceResponse = DeleteTrafficPolicyInstanceResponse'
-  { _dtpirsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteTrafficPolicyInstanceResponse =
+  DeleteTrafficPolicyInstanceResponse'
+    { _dtpirsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteTrafficPolicyInstanceResponse' with the minimum fields required to make a request.

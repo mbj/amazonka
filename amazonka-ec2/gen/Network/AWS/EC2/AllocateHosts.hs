@@ -53,13 +53,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'allocateHosts' smart constructor.
-data AllocateHosts = AllocateHosts'
-  { _ahClientToken      :: !(Maybe Text)
-  , _ahAutoPlacement    :: !(Maybe AutoPlacement)
-  , _ahAvailabilityZone :: !Text
-  , _ahInstanceType     :: !Text
-  , _ahQuantity         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AllocateHosts =
+  AllocateHosts'
+    { _ahClientToken      :: !(Maybe Text)
+    , _ahAutoPlacement    :: !(Maybe AutoPlacement)
+    , _ahAvailabilityZone :: !Text
+    , _ahInstanceType     :: !Text
+    , _ahQuantity         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AllocateHosts' with the minimum fields required to make a request.
@@ -147,10 +149,12 @@ instance ToQuery AllocateHosts where
 --
 --
 -- /See:/ 'allocateHostsResponse' smart constructor.
-data AllocateHostsResponse = AllocateHostsResponse'
-  { _ahrsHostIds        :: !(Maybe [Text])
-  , _ahrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AllocateHostsResponse =
+  AllocateHostsResponse'
+    { _ahrsHostIds        :: !(Maybe [Text])
+    , _ahrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AllocateHostsResponse' with the minimum fields required to make a request.

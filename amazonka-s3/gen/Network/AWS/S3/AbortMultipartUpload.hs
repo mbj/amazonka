@@ -50,12 +50,14 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'abortMultipartUpload' smart constructor.
-data AbortMultipartUpload = AbortMultipartUpload'
-  { _amuRequestPayer :: !(Maybe RequestPayer)
-  , _amuBucket       :: !BucketName
-  , _amuKey          :: !ObjectKey
-  , _amuUploadId     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AbortMultipartUpload =
+  AbortMultipartUpload'
+    { _amuRequestPayer :: !(Maybe RequestPayer)
+    , _amuBucket       :: !BucketName
+    , _amuKey          :: !ObjectKey
+    , _amuUploadId     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AbortMultipartUpload' with the minimum fields required to make a request.
@@ -127,10 +129,12 @@ instance ToQuery AbortMultipartUpload where
           = mconcat ["uploadId" =: _amuUploadId]
 
 -- | /See:/ 'abortMultipartUploadResponse' smart constructor.
-data AbortMultipartUploadResponse = AbortMultipartUploadResponse'
-  { _amursRequestCharged :: !(Maybe RequestCharged)
-  , _amursResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AbortMultipartUploadResponse =
+  AbortMultipartUploadResponse'
+    { _amursRequestCharged :: !(Maybe RequestCharged)
+    , _amursResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AbortMultipartUploadResponse' with the minimum fields required to make a request.

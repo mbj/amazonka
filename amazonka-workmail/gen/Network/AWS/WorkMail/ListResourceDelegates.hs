@@ -49,12 +49,14 @@ import Network.AWS.WorkMail.Types
 import Network.AWS.WorkMail.Types.Product
 
 -- | /See:/ 'listResourceDelegates' smart constructor.
-data ListResourceDelegates = ListResourceDelegates'
-  { _lrdNextToken      :: !(Maybe Text)
-  , _lrdMaxResults     :: !(Maybe Nat)
-  , _lrdOrganizationId :: !Text
-  , _lrdResourceId     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListResourceDelegates =
+  ListResourceDelegates'
+    { _lrdNextToken      :: !(Maybe Text)
+    , _lrdMaxResults     :: !(Maybe Nat)
+    , _lrdOrganizationId :: !Text
+    , _lrdResourceId     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListResourceDelegates' with the minimum fields required to make a request.
@@ -139,11 +141,13 @@ instance ToQuery ListResourceDelegates where
         toQuery = const mempty
 
 -- | /See:/ 'listResourceDelegatesResponse' smart constructor.
-data ListResourceDelegatesResponse = ListResourceDelegatesResponse'
-  { _lrdrsDelegates      :: !(Maybe [Delegate])
-  , _lrdrsNextToken      :: !(Maybe Text)
-  , _lrdrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListResourceDelegatesResponse =
+  ListResourceDelegatesResponse'
+    { _lrdrsDelegates      :: !(Maybe [Delegate])
+    , _lrdrsNextToken      :: !(Maybe Text)
+    , _lrdrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListResourceDelegatesResponse' with the minimum fields required to make a request.

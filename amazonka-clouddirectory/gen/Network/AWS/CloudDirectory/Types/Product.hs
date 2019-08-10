@@ -26,11 +26,13 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'attributeKey' smart constructor.
-data AttributeKey = AttributeKey'
-  { _akSchemaARN :: !Text
-  , _akFacetName :: !Text
-  , _akName      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AttributeKey =
+  AttributeKey'
+    { _akSchemaARN :: !Text
+    , _akFacetName :: !Text
+    , _akName      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttributeKey' with the minimum fields required to make a request.
@@ -89,10 +91,12 @@ instance ToJSON AttributeKey where
 --
 --
 -- /See:/ 'attributeKeyAndValue' smart constructor.
-data AttributeKeyAndValue = AttributeKeyAndValue'
-  { _akavKey   :: !AttributeKey
-  , _akavValue :: !TypedAttributeValue
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AttributeKeyAndValue =
+  AttributeKeyAndValue'
+    { _akavKey   :: !AttributeKey
+    , _akavValue :: !TypedAttributeValue
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttributeKeyAndValue' with the minimum fields required to make a request.
@@ -141,10 +145,12 @@ instance ToJSON AttributeKeyAndValue where
 --
 --
 -- /See:/ 'attributeNameAndValue' smart constructor.
-data AttributeNameAndValue = AttributeNameAndValue'
-  { _anavAttributeName :: !Text
-  , _anavValue         :: !TypedAttributeValue
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AttributeNameAndValue =
+  AttributeNameAndValue'
+    { _anavAttributeName :: !Text
+    , _anavValue         :: !TypedAttributeValue
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttributeNameAndValue' with the minimum fields required to make a request.
@@ -194,11 +200,13 @@ instance ToJSON AttributeNameAndValue where
 --
 --
 -- /See:/ 'batchAddFacetToObject' smart constructor.
-data BatchAddFacetToObject = BatchAddFacetToObject'
-  { _baftoSchemaFacet         :: !SchemaFacet
-  , _baftoObjectAttributeList :: ![AttributeKeyAndValue]
-  , _baftoObjectReference     :: !ObjectReference
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchAddFacetToObject =
+  BatchAddFacetToObject'
+    { _baftoSchemaFacet         :: !SchemaFacet
+    , _baftoObjectAttributeList :: ![AttributeKeyAndValue]
+    , _baftoObjectReference     :: !ObjectReference
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchAddFacetToObject' with the minimum fields required to make a request.
@@ -278,11 +286,13 @@ instance NFData BatchAddFacetToObjectResponse where
 --
 --
 -- /See:/ 'batchAttachObject' smart constructor.
-data BatchAttachObject = BatchAttachObject'
-  { _baoParentReference :: !ObjectReference
-  , _baoChildReference  :: !ObjectReference
-  , _baoLinkName        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchAttachObject =
+  BatchAttachObject'
+    { _baoParentReference :: !ObjectReference
+    , _baoChildReference  :: !ObjectReference
+    , _baoLinkName        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchAttachObject' with the minimum fields required to make a request.
@@ -336,9 +346,11 @@ instance ToJSON BatchAttachObject where
 --
 --
 -- /See:/ 'batchAttachObjectResponse' smart constructor.
-newtype BatchAttachObjectResponse = BatchAttachObjectResponse'
-  { _baoAttachedObjectIdentifier :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype BatchAttachObjectResponse =
+  BatchAttachObjectResponse'
+    { _baoAttachedObjectIdentifier :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchAttachObjectResponse' with the minimum fields required to make a request.
@@ -372,10 +384,12 @@ instance NFData BatchAttachObjectResponse where
 --
 --
 -- /See:/ 'batchAttachPolicy' smart constructor.
-data BatchAttachPolicy = BatchAttachPolicy'
-  { _bapPolicyReference :: !ObjectReference
-  , _bapObjectReference :: !ObjectReference
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchAttachPolicy =
+  BatchAttachPolicy'
+    { _bapPolicyReference :: !ObjectReference
+    , _bapObjectReference :: !ObjectReference
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchAttachPolicy' with the minimum fields required to make a request.
@@ -446,10 +460,12 @@ instance NFData BatchAttachPolicyResponse where
 --
 --
 -- /See:/ 'batchAttachToIndex' smart constructor.
-data BatchAttachToIndex = BatchAttachToIndex'
-  { _batiIndexReference  :: !ObjectReference
-  , _batiTargetReference :: !ObjectReference
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchAttachToIndex =
+  BatchAttachToIndex'
+    { _batiIndexReference  :: !ObjectReference
+    , _batiTargetReference :: !ObjectReference
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchAttachToIndex' with the minimum fields required to make a request.
@@ -494,9 +510,11 @@ instance ToJSON BatchAttachToIndex where
 --
 --
 -- /See:/ 'batchAttachToIndexResponse' smart constructor.
-newtype BatchAttachToIndexResponse = BatchAttachToIndexResponse'
-  { _batiAttachedObjectIdentifier :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype BatchAttachToIndexResponse =
+  BatchAttachToIndexResponse'
+    { _batiAttachedObjectIdentifier :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchAttachToIndexResponse' with the minimum fields required to make a request.
@@ -530,12 +548,14 @@ instance NFData BatchAttachToIndexResponse where
 --
 --
 -- /See:/ 'batchAttachTypedLink' smart constructor.
-data BatchAttachTypedLink = BatchAttachTypedLink'
-  { _batlSourceObjectReference :: !ObjectReference
-  , _batlTargetObjectReference :: !ObjectReference
-  , _batlTypedLinkFacet        :: !TypedLinkSchemaAndFacetName
-  , _batlAttributes            :: ![AttributeNameAndValue]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchAttachTypedLink =
+  BatchAttachTypedLink'
+    { _batlSourceObjectReference :: !ObjectReference
+    , _batlTargetObjectReference :: !ObjectReference
+    , _batlTypedLinkFacet        :: !TypedLinkSchemaAndFacetName
+    , _batlAttributes            :: ![AttributeNameAndValue]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchAttachTypedLink' with the minimum fields required to make a request.
@@ -601,9 +621,11 @@ instance ToJSON BatchAttachTypedLink where
 --
 --
 -- /See:/ 'batchAttachTypedLinkResponse' smart constructor.
-newtype BatchAttachTypedLinkResponse = BatchAttachTypedLinkResponse'
-  { _batlTypedLinkSpecifier :: Maybe TypedLinkSpecifier
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype BatchAttachTypedLinkResponse =
+  BatchAttachTypedLinkResponse'
+    { _batlTypedLinkSpecifier :: Maybe TypedLinkSpecifier
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchAttachTypedLinkResponse' with the minimum fields required to make a request.
@@ -637,13 +659,15 @@ instance NFData BatchAttachTypedLinkResponse where
 --
 --
 -- /See:/ 'batchCreateIndex' smart constructor.
-data BatchCreateIndex = BatchCreateIndex'
-  { _bciParentReference             :: !(Maybe ObjectReference)
-  , _bciLinkName                    :: !(Maybe Text)
-  , _bciBatchReferenceName          :: !(Maybe Text)
-  , _bciOrderedIndexedAttributeList :: ![AttributeKey]
-  , _bciIsUnique                    :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchCreateIndex =
+  BatchCreateIndex'
+    { _bciParentReference             :: !(Maybe ObjectReference)
+    , _bciLinkName                    :: !(Maybe Text)
+    , _bciBatchReferenceName          :: !(Maybe Text)
+    , _bciOrderedIndexedAttributeList :: ![AttributeKey]
+    , _bciIsUnique                    :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchCreateIndex' with the minimum fields required to make a request.
@@ -713,9 +737,11 @@ instance ToJSON BatchCreateIndex where
 --
 --
 -- /See:/ 'batchCreateIndexResponse' smart constructor.
-newtype BatchCreateIndexResponse = BatchCreateIndexResponse'
-  { _bciObjectIdentifier :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype BatchCreateIndexResponse =
+  BatchCreateIndexResponse'
+    { _bciObjectIdentifier :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchCreateIndexResponse' with the minimum fields required to make a request.
@@ -749,13 +775,15 @@ instance NFData BatchCreateIndexResponse where
 --
 --
 -- /See:/ 'batchCreateObject' smart constructor.
-data BatchCreateObject = BatchCreateObject'
-  { _bcoParentReference     :: !(Maybe ObjectReference)
-  , _bcoLinkName            :: !(Maybe Text)
-  , _bcoBatchReferenceName  :: !(Maybe Text)
-  , _bcoSchemaFacet         :: ![SchemaFacet]
-  , _bcoObjectAttributeList :: ![AttributeKeyAndValue]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchCreateObject =
+  BatchCreateObject'
+    { _bcoParentReference     :: !(Maybe ObjectReference)
+    , _bcoLinkName            :: !(Maybe Text)
+    , _bcoBatchReferenceName  :: !(Maybe Text)
+    , _bcoSchemaFacet         :: ![SchemaFacet]
+    , _bcoObjectAttributeList :: ![AttributeKeyAndValue]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchCreateObject' with the minimum fields required to make a request.
@@ -823,9 +851,11 @@ instance ToJSON BatchCreateObject where
 --
 --
 -- /See:/ 'batchCreateObjectResponse' smart constructor.
-newtype BatchCreateObjectResponse = BatchCreateObjectResponse'
-  { _bcoObjectIdentifier :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype BatchCreateObjectResponse =
+  BatchCreateObjectResponse'
+    { _bcoObjectIdentifier :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchCreateObjectResponse' with the minimum fields required to make a request.
@@ -859,9 +889,11 @@ instance NFData BatchCreateObjectResponse where
 --
 --
 -- /See:/ 'batchDeleteObject' smart constructor.
-newtype BatchDeleteObject = BatchDeleteObject'
-  { _bdoObjectReference :: ObjectReference
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype BatchDeleteObject =
+  BatchDeleteObject'
+    { _bdoObjectReference :: ObjectReference
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchDeleteObject' with the minimum fields required to make a request.
@@ -921,10 +953,12 @@ instance NFData BatchDeleteObjectResponse where
 --
 --
 -- /See:/ 'batchDetachFromIndex' smart constructor.
-data BatchDetachFromIndex = BatchDetachFromIndex'
-  { _bdfiIndexReference  :: !ObjectReference
-  , _bdfiTargetReference :: !ObjectReference
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchDetachFromIndex =
+  BatchDetachFromIndex'
+    { _bdfiIndexReference  :: !ObjectReference
+    , _bdfiTargetReference :: !ObjectReference
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchDetachFromIndex' with the minimum fields required to make a request.
@@ -969,9 +1003,11 @@ instance ToJSON BatchDetachFromIndex where
 --
 --
 -- /See:/ 'batchDetachFromIndexResponse' smart constructor.
-newtype BatchDetachFromIndexResponse = BatchDetachFromIndexResponse'
-  { _bdfiDetachedObjectIdentifier :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype BatchDetachFromIndexResponse =
+  BatchDetachFromIndexResponse'
+    { _bdfiDetachedObjectIdentifier :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchDetachFromIndexResponse' with the minimum fields required to make a request.
@@ -1005,11 +1041,13 @@ instance NFData BatchDetachFromIndexResponse where
 --
 --
 -- /See:/ 'batchDetachObject' smart constructor.
-data BatchDetachObject = BatchDetachObject'
-  { _bdoBatchReferenceName :: !(Maybe Text)
-  , _bdoParentReference    :: !ObjectReference
-  , _bdoLinkName           :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchDetachObject =
+  BatchDetachObject'
+    { _bdoBatchReferenceName :: !(Maybe Text)
+    , _bdoParentReference    :: !ObjectReference
+    , _bdoLinkName           :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchDetachObject' with the minimum fields required to make a request.
@@ -1063,9 +1101,11 @@ instance ToJSON BatchDetachObject where
 --
 --
 -- /See:/ 'batchDetachObjectResponse' smart constructor.
-newtype BatchDetachObjectResponse = BatchDetachObjectResponse'
-  { _bdoDetachedObjectIdentifier :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype BatchDetachObjectResponse =
+  BatchDetachObjectResponse'
+    { _bdoDetachedObjectIdentifier :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchDetachObjectResponse' with the minimum fields required to make a request.
@@ -1099,10 +1139,12 @@ instance NFData BatchDetachObjectResponse where
 --
 --
 -- /See:/ 'batchDetachPolicy' smart constructor.
-data BatchDetachPolicy = BatchDetachPolicy'
-  { _bdpPolicyReference :: !ObjectReference
-  , _bdpObjectReference :: !ObjectReference
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchDetachPolicy =
+  BatchDetachPolicy'
+    { _bdpPolicyReference :: !ObjectReference
+    , _bdpObjectReference :: !ObjectReference
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchDetachPolicy' with the minimum fields required to make a request.
@@ -1173,9 +1215,11 @@ instance NFData BatchDetachPolicyResponse where
 --
 --
 -- /See:/ 'batchDetachTypedLink' smart constructor.
-newtype BatchDetachTypedLink = BatchDetachTypedLink'
-  { _bdtlTypedLinkSpecifier :: TypedLinkSpecifier
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype BatchDetachTypedLink =
+  BatchDetachTypedLink'
+    { _bdtlTypedLinkSpecifier :: TypedLinkSpecifier
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchDetachTypedLink' with the minimum fields required to make a request.
@@ -1236,11 +1280,13 @@ instance NFData BatchDetachTypedLinkResponse where
 --
 --
 -- /See:/ 'batchGetObjectAttributes' smart constructor.
-data BatchGetObjectAttributes = BatchGetObjectAttributes'
-  { _bgoaObjectReference :: !ObjectReference
-  , _bgoaSchemaFacet     :: !SchemaFacet
-  , _bgoaAttributeNames  :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchGetObjectAttributes =
+  BatchGetObjectAttributes'
+    { _bgoaObjectReference :: !ObjectReference
+    , _bgoaSchemaFacet     :: !SchemaFacet
+    , _bgoaAttributeNames  :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchGetObjectAttributes' with the minimum fields required to make a request.
@@ -1293,9 +1339,11 @@ instance ToJSON BatchGetObjectAttributes where
 --
 --
 -- /See:/ 'batchGetObjectAttributesResponse' smart constructor.
-newtype BatchGetObjectAttributesResponse = BatchGetObjectAttributesResponse'
-  { _bgoaAttributes :: Maybe [AttributeKeyAndValue]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype BatchGetObjectAttributesResponse =
+  BatchGetObjectAttributesResponse'
+    { _bgoaAttributes :: Maybe [AttributeKeyAndValue]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchGetObjectAttributesResponse' with the minimum fields required to make a request.
@@ -1332,9 +1380,11 @@ instance NFData BatchGetObjectAttributesResponse
 --
 --
 -- /See:/ 'batchGetObjectInformation' smart constructor.
-newtype BatchGetObjectInformation = BatchGetObjectInformation'
-  { _bgoiObjectReference :: ObjectReference
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype BatchGetObjectInformation =
+  BatchGetObjectInformation'
+    { _bgoiObjectReference :: ObjectReference
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchGetObjectInformation' with the minimum fields required to make a request.
@@ -1368,10 +1418,12 @@ instance ToJSON BatchGetObjectInformation where
 --
 --
 -- /See:/ 'batchGetObjectInformationResponse' smart constructor.
-data BatchGetObjectInformationResponse = BatchGetObjectInformationResponse'
-  { _bgoiObjectIdentifier :: !(Maybe Text)
-  , _bgoiSchemaFacets     :: !(Maybe [SchemaFacet])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchGetObjectInformationResponse =
+  BatchGetObjectInformationResponse'
+    { _bgoiObjectIdentifier :: !(Maybe Text)
+    , _bgoiSchemaFacets     :: !(Maybe [SchemaFacet])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchGetObjectInformationResponse' with the minimum fields required to make a request.
@@ -1416,11 +1468,13 @@ instance NFData BatchGetObjectInformationResponse
 --
 --
 -- /See:/ 'batchListAttachedIndices' smart constructor.
-data BatchListAttachedIndices = BatchListAttachedIndices'
-  { _blaisNextToken       :: !(Maybe Text)
-  , _blaisMaxResults      :: !(Maybe Nat)
-  , _blaisTargetReference :: !ObjectReference
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchListAttachedIndices =
+  BatchListAttachedIndices'
+    { _blaisNextToken       :: !(Maybe Text)
+    , _blaisMaxResults      :: !(Maybe Nat)
+    , _blaisTargetReference :: !ObjectReference
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchListAttachedIndices' with the minimum fields required to make a request.
@@ -1472,10 +1526,12 @@ instance ToJSON BatchListAttachedIndices where
 --
 --
 -- /See:/ 'batchListAttachedIndicesResponse' smart constructor.
-data BatchListAttachedIndicesResponse = BatchListAttachedIndicesResponse'
-  { _blaiIndexAttachments :: !(Maybe [IndexAttachment])
-  , _blaiNextToken        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchListAttachedIndicesResponse =
+  BatchListAttachedIndicesResponse'
+    { _blaiIndexAttachments :: !(Maybe [IndexAttachment])
+    , _blaiNextToken        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchListAttachedIndicesResponse' with the minimum fields required to make a request.
@@ -1520,13 +1576,15 @@ instance NFData BatchListAttachedIndicesResponse
 --
 --
 -- /See:/ 'batchListIncomingTypedLinks' smart constructor.
-data BatchListIncomingTypedLinks = BatchListIncomingTypedLinks'
-  { _blitlsFilterAttributeRanges :: !(Maybe [TypedLinkAttributeRange])
-  , _blitlsNextToken             :: !(Maybe Text)
-  , _blitlsFilterTypedLink       :: !(Maybe TypedLinkSchemaAndFacetName)
-  , _blitlsMaxResults            :: !(Maybe Nat)
-  , _blitlsObjectReference       :: !ObjectReference
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchListIncomingTypedLinks =
+  BatchListIncomingTypedLinks'
+    { _blitlsFilterAttributeRanges :: !(Maybe [TypedLinkAttributeRange])
+    , _blitlsNextToken             :: !(Maybe Text)
+    , _blitlsFilterTypedLink       :: !(Maybe TypedLinkSchemaAndFacetName)
+    , _blitlsMaxResults            :: !(Maybe Nat)
+    , _blitlsObjectReference       :: !ObjectReference
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchListIncomingTypedLinks' with the minimum fields required to make a request.
@@ -1595,10 +1653,12 @@ instance ToJSON BatchListIncomingTypedLinks where
 --
 --
 -- /See:/ 'batchListIncomingTypedLinksResponse' smart constructor.
-data BatchListIncomingTypedLinksResponse = BatchListIncomingTypedLinksResponse'
-  { _blitlLinkSpecifiers :: !(Maybe [TypedLinkSpecifier])
-  , _blitlNextToken      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchListIncomingTypedLinksResponse =
+  BatchListIncomingTypedLinksResponse'
+    { _blitlLinkSpecifiers :: !(Maybe [TypedLinkSpecifier])
+    , _blitlNextToken      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchListIncomingTypedLinksResponse' with the minimum fields required to make a request.
@@ -1643,12 +1703,14 @@ instance NFData BatchListIncomingTypedLinksResponse
 --
 --
 -- /See:/ 'batchListIndex' smart constructor.
-data BatchListIndex = BatchListIndex'
-  { _batRangesOnIndexedValues :: !(Maybe [ObjectAttributeRange])
-  , _batNextToken             :: !(Maybe Text)
-  , _batMaxResults            :: !(Maybe Nat)
-  , _batIndexReference        :: !ObjectReference
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchListIndex =
+  BatchListIndex'
+    { _batRangesOnIndexedValues :: !(Maybe [ObjectAttributeRange])
+    , _batNextToken             :: !(Maybe Text)
+    , _batMaxResults            :: !(Maybe Nat)
+    , _batIndexReference        :: !ObjectReference
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchListIndex' with the minimum fields required to make a request.
@@ -1709,10 +1771,12 @@ instance ToJSON BatchListIndex where
 --
 --
 -- /See:/ 'batchListIndexResponse' smart constructor.
-data BatchListIndexResponse = BatchListIndexResponse'
-  { _bliIndexAttachments :: !(Maybe [IndexAttachment])
-  , _bliNextToken        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchListIndexResponse =
+  BatchListIndexResponse'
+    { _bliIndexAttachments :: !(Maybe [IndexAttachment])
+    , _bliNextToken        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchListIndexResponse' with the minimum fields required to make a request.
@@ -1754,12 +1818,14 @@ instance NFData BatchListIndexResponse where
 --
 --
 -- /See:/ 'batchListObjectAttributes' smart constructor.
-data BatchListObjectAttributes = BatchListObjectAttributes'
-  { _bloaFacetFilter     :: !(Maybe SchemaFacet)
-  , _bloaNextToken       :: !(Maybe Text)
-  , _bloaMaxResults      :: !(Maybe Nat)
-  , _bloaObjectReference :: !ObjectReference
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchListObjectAttributes =
+  BatchListObjectAttributes'
+    { _bloaFacetFilter     :: !(Maybe SchemaFacet)
+    , _bloaNextToken       :: !(Maybe Text)
+    , _bloaMaxResults      :: !(Maybe Nat)
+    , _bloaObjectReference :: !ObjectReference
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchListObjectAttributes' with the minimum fields required to make a request.
@@ -1819,10 +1885,12 @@ instance ToJSON BatchListObjectAttributes where
 --
 --
 -- /See:/ 'batchListObjectAttributesResponse' smart constructor.
-data BatchListObjectAttributesResponse = BatchListObjectAttributesResponse'
-  { _bNextToken  :: !(Maybe Text)
-  , _bAttributes :: !(Maybe [AttributeKeyAndValue])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchListObjectAttributesResponse =
+  BatchListObjectAttributesResponse'
+    { _bNextToken  :: !(Maybe Text)
+    , _bAttributes :: !(Maybe [AttributeKeyAndValue])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchListObjectAttributesResponse' with the minimum fields required to make a request.
@@ -1867,11 +1935,13 @@ instance NFData BatchListObjectAttributesResponse
 --
 --
 -- /See:/ 'batchListObjectChildren' smart constructor.
-data BatchListObjectChildren = BatchListObjectChildren'
-  { _bloclNextToken       :: !(Maybe Text)
-  , _bloclMaxResults      :: !(Maybe Nat)
-  , _bloclObjectReference :: !ObjectReference
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchListObjectChildren =
+  BatchListObjectChildren'
+    { _bloclNextToken       :: !(Maybe Text)
+    , _bloclMaxResults      :: !(Maybe Nat)
+    , _bloclObjectReference :: !ObjectReference
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchListObjectChildren' with the minimum fields required to make a request.
@@ -1923,10 +1993,12 @@ instance ToJSON BatchListObjectChildren where
 --
 --
 -- /See:/ 'batchListObjectChildrenResponse' smart constructor.
-data BatchListObjectChildrenResponse = BatchListObjectChildrenResponse'
-  { _blocChildren  :: !(Maybe (Map Text Text))
-  , _blocNextToken :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchListObjectChildrenResponse =
+  BatchListObjectChildrenResponse'
+    { _blocChildren  :: !(Maybe (Map Text Text))
+    , _blocNextToken :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchListObjectChildrenResponse' with the minimum fields required to make a request.
@@ -1970,11 +2042,13 @@ instance NFData BatchListObjectChildrenResponse where
 --
 --
 -- /See:/ 'batchListObjectParentPaths' smart constructor.
-data BatchListObjectParentPaths = BatchListObjectParentPaths'
-  { _bloppsNextToken       :: !(Maybe Text)
-  , _bloppsMaxResults      :: !(Maybe Nat)
-  , _bloppsObjectReference :: !ObjectReference
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchListObjectParentPaths =
+  BatchListObjectParentPaths'
+    { _bloppsNextToken       :: !(Maybe Text)
+    , _bloppsMaxResults      :: !(Maybe Nat)
+    , _bloppsObjectReference :: !ObjectReference
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchListObjectParentPaths' with the minimum fields required to make a request.
@@ -2026,10 +2100,12 @@ instance ToJSON BatchListObjectParentPaths where
 --
 --
 -- /See:/ 'batchListObjectParentPathsResponse' smart constructor.
-data BatchListObjectParentPathsResponse = BatchListObjectParentPathsResponse'
-  { _bloppPathToObjectIdentifiersList :: !(Maybe [PathToObjectIdentifiers])
-  , _bloppNextToken                   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchListObjectParentPathsResponse =
+  BatchListObjectParentPathsResponse'
+    { _bloppPathToObjectIdentifiersList :: !(Maybe [PathToObjectIdentifiers])
+    , _bloppNextToken                   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchListObjectParentPathsResponse' with the minimum fields required to make a request.
@@ -2074,11 +2150,13 @@ instance NFData BatchListObjectParentPathsResponse
 --
 --
 -- /See:/ 'batchListObjectPolicies' smart constructor.
-data BatchListObjectPolicies = BatchListObjectPolicies'
-  { _blopsNextToken       :: !(Maybe Text)
-  , _blopsMaxResults      :: !(Maybe Nat)
-  , _blopsObjectReference :: !ObjectReference
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchListObjectPolicies =
+  BatchListObjectPolicies'
+    { _blopsNextToken       :: !(Maybe Text)
+    , _blopsMaxResults      :: !(Maybe Nat)
+    , _blopsObjectReference :: !ObjectReference
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchListObjectPolicies' with the minimum fields required to make a request.
@@ -2130,10 +2208,12 @@ instance ToJSON BatchListObjectPolicies where
 --
 --
 -- /See:/ 'batchListObjectPoliciesResponse' smart constructor.
-data BatchListObjectPoliciesResponse = BatchListObjectPoliciesResponse'
-  { _blopNextToken         :: !(Maybe Text)
-  , _blopAttachedPolicyIds :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchListObjectPoliciesResponse =
+  BatchListObjectPoliciesResponse'
+    { _blopNextToken         :: !(Maybe Text)
+    , _blopAttachedPolicyIds :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchListObjectPoliciesResponse' with the minimum fields required to make a request.
@@ -2177,13 +2257,15 @@ instance NFData BatchListObjectPoliciesResponse where
 --
 --
 -- /See:/ 'batchListOutgoingTypedLinks' smart constructor.
-data BatchListOutgoingTypedLinks = BatchListOutgoingTypedLinks'
-  { _blotlsFilterAttributeRanges :: !(Maybe [TypedLinkAttributeRange])
-  , _blotlsNextToken             :: !(Maybe Text)
-  , _blotlsFilterTypedLink       :: !(Maybe TypedLinkSchemaAndFacetName)
-  , _blotlsMaxResults            :: !(Maybe Nat)
-  , _blotlsObjectReference       :: !ObjectReference
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchListOutgoingTypedLinks =
+  BatchListOutgoingTypedLinks'
+    { _blotlsFilterAttributeRanges :: !(Maybe [TypedLinkAttributeRange])
+    , _blotlsNextToken             :: !(Maybe Text)
+    , _blotlsFilterTypedLink       :: !(Maybe TypedLinkSchemaAndFacetName)
+    , _blotlsMaxResults            :: !(Maybe Nat)
+    , _blotlsObjectReference       :: !ObjectReference
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchListOutgoingTypedLinks' with the minimum fields required to make a request.
@@ -2252,10 +2334,12 @@ instance ToJSON BatchListOutgoingTypedLinks where
 --
 --
 -- /See:/ 'batchListOutgoingTypedLinksResponse' smart constructor.
-data BatchListOutgoingTypedLinksResponse = BatchListOutgoingTypedLinksResponse'
-  { _blotlTypedLinkSpecifiers :: !(Maybe [TypedLinkSpecifier])
-  , _blotlNextToken           :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchListOutgoingTypedLinksResponse =
+  BatchListOutgoingTypedLinksResponse'
+    { _blotlTypedLinkSpecifiers :: !(Maybe [TypedLinkSpecifier])
+    , _blotlNextToken           :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchListOutgoingTypedLinksResponse' with the minimum fields required to make a request.
@@ -2300,11 +2384,13 @@ instance NFData BatchListOutgoingTypedLinksResponse
 --
 --
 -- /See:/ 'batchListPolicyAttachments' smart constructor.
-data BatchListPolicyAttachments = BatchListPolicyAttachments'
-  { _blpasNextToken       :: !(Maybe Text)
-  , _blpasMaxResults      :: !(Maybe Nat)
-  , _blpasPolicyReference :: !ObjectReference
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchListPolicyAttachments =
+  BatchListPolicyAttachments'
+    { _blpasNextToken       :: !(Maybe Text)
+    , _blpasMaxResults      :: !(Maybe Nat)
+    , _blpasPolicyReference :: !ObjectReference
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchListPolicyAttachments' with the minimum fields required to make a request.
@@ -2356,10 +2442,12 @@ instance ToJSON BatchListPolicyAttachments where
 --
 --
 -- /See:/ 'batchListPolicyAttachmentsResponse' smart constructor.
-data BatchListPolicyAttachmentsResponse = BatchListPolicyAttachmentsResponse'
-  { _blpaObjectIdentifiers :: !(Maybe [Text])
-  , _blpaNextToken         :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchListPolicyAttachmentsResponse =
+  BatchListPolicyAttachmentsResponse'
+    { _blpaObjectIdentifiers :: !(Maybe [Text])
+    , _blpaNextToken         :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchListPolicyAttachmentsResponse' with the minimum fields required to make a request.
@@ -2404,11 +2492,13 @@ instance NFData BatchListPolicyAttachmentsResponse
 --
 --
 -- /See:/ 'batchLookupPolicy' smart constructor.
-data BatchLookupPolicy = BatchLookupPolicy'
-  { _blplNextToken       :: !(Maybe Text)
-  , _blplMaxResults      :: !(Maybe Nat)
-  , _blplObjectReference :: !ObjectReference
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchLookupPolicy =
+  BatchLookupPolicy'
+    { _blplNextToken       :: !(Maybe Text)
+    , _blplMaxResults      :: !(Maybe Nat)
+    , _blplObjectReference :: !ObjectReference
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchLookupPolicy' with the minimum fields required to make a request.
@@ -2460,10 +2550,12 @@ instance ToJSON BatchLookupPolicy where
 --
 --
 -- /See:/ 'batchLookupPolicyResponse' smart constructor.
-data BatchLookupPolicyResponse = BatchLookupPolicyResponse'
-  { _blpNextToken        :: !(Maybe Text)
-  , _blpPolicyToPathList :: !(Maybe [PolicyToPath])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchLookupPolicyResponse =
+  BatchLookupPolicyResponse'
+    { _blpNextToken        :: !(Maybe Text)
+    , _blpPolicyToPathList :: !(Maybe [PolicyToPath])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchLookupPolicyResponse' with the minimum fields required to make a request.
@@ -2505,10 +2597,12 @@ instance NFData BatchLookupPolicyResponse where
 --
 --
 -- /See:/ 'batchReadException' smart constructor.
-data BatchReadException = BatchReadException'
-  { _breType    :: !(Maybe BatchReadExceptionType)
-  , _breMessage :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchReadException =
+  BatchReadException'
+    { _breType    :: !(Maybe BatchReadExceptionType)
+    , _breMessage :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchReadException' with the minimum fields required to make a request.
@@ -2548,20 +2642,22 @@ instance NFData BatchReadException where
 --
 --
 -- /See:/ 'batchReadOperation' smart constructor.
-data BatchReadOperation = BatchReadOperation'
-  { _broListIndex              :: !(Maybe BatchListIndex)
-  , _broGetObjectInformation   :: !(Maybe BatchGetObjectInformation)
-  , _broListAttachedIndices    :: !(Maybe BatchListAttachedIndices)
-  , _broLookupPolicy           :: !(Maybe BatchLookupPolicy)
-  , _broListObjectParentPaths  :: !(Maybe BatchListObjectParentPaths)
-  , _broListObjectAttributes   :: !(Maybe BatchListObjectAttributes)
-  , _broListIncomingTypedLinks :: !(Maybe BatchListIncomingTypedLinks)
-  , _broGetObjectAttributes    :: !(Maybe BatchGetObjectAttributes)
-  , _broListObjectChildren     :: !(Maybe BatchListObjectChildren)
-  , _broListPolicyAttachments  :: !(Maybe BatchListPolicyAttachments)
-  , _broListOutgoingTypedLinks :: !(Maybe BatchListOutgoingTypedLinks)
-  , _broListObjectPolicies     :: !(Maybe BatchListObjectPolicies)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchReadOperation =
+  BatchReadOperation'
+    { _broListIndex              :: !(Maybe BatchListIndex)
+    , _broGetObjectInformation   :: !(Maybe BatchGetObjectInformation)
+    , _broListAttachedIndices    :: !(Maybe BatchListAttachedIndices)
+    , _broLookupPolicy           :: !(Maybe BatchLookupPolicy)
+    , _broListObjectParentPaths  :: !(Maybe BatchListObjectParentPaths)
+    , _broListObjectAttributes   :: !(Maybe BatchListObjectAttributes)
+    , _broListIncomingTypedLinks :: !(Maybe BatchListIncomingTypedLinks)
+    , _broGetObjectAttributes    :: !(Maybe BatchGetObjectAttributes)
+    , _broListObjectChildren     :: !(Maybe BatchListObjectChildren)
+    , _broListPolicyAttachments  :: !(Maybe BatchListPolicyAttachments)
+    , _broListOutgoingTypedLinks :: !(Maybe BatchListOutgoingTypedLinks)
+    , _broListObjectPolicies     :: !(Maybe BatchListObjectPolicies)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchReadOperation' with the minimum fields required to make a request.
@@ -2693,10 +2789,12 @@ instance ToJSON BatchReadOperation where
 --
 --
 -- /See:/ 'batchReadOperationResponse' smart constructor.
-data BatchReadOperationResponse = BatchReadOperationResponse'
-  { _broExceptionResponse  :: !(Maybe BatchReadException)
-  , _broSuccessfulResponse :: !(Maybe BatchReadSuccessfulResponse)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchReadOperationResponse =
+  BatchReadOperationResponse'
+    { _broExceptionResponse  :: !(Maybe BatchReadException)
+    , _broSuccessfulResponse :: !(Maybe BatchReadSuccessfulResponse)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchReadOperationResponse' with the minimum fields required to make a request.
@@ -2738,20 +2836,22 @@ instance NFData BatchReadOperationResponse where
 --
 --
 -- /See:/ 'batchReadSuccessfulResponse' smart constructor.
-data BatchReadSuccessfulResponse = BatchReadSuccessfulResponse'
-  { _brsListIndex              :: !(Maybe BatchListIndexResponse)
-  , _brsGetObjectInformation   :: !(Maybe BatchGetObjectInformationResponse)
-  , _brsListAttachedIndices    :: !(Maybe BatchListAttachedIndicesResponse)
-  , _brsLookupPolicy           :: !(Maybe BatchLookupPolicyResponse)
-  , _brsListObjectParentPaths  :: !(Maybe BatchListObjectParentPathsResponse)
-  , _brsListObjectAttributes   :: !(Maybe BatchListObjectAttributesResponse)
-  , _brsListIncomingTypedLinks :: !(Maybe BatchListIncomingTypedLinksResponse)
-  , _brsGetObjectAttributes    :: !(Maybe BatchGetObjectAttributesResponse)
-  , _brsListObjectChildren     :: !(Maybe BatchListObjectChildrenResponse)
-  , _brsListPolicyAttachments  :: !(Maybe BatchListPolicyAttachmentsResponse)
-  , _brsListOutgoingTypedLinks :: !(Maybe BatchListOutgoingTypedLinksResponse)
-  , _brsListObjectPolicies     :: !(Maybe BatchListObjectPoliciesResponse)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchReadSuccessfulResponse =
+  BatchReadSuccessfulResponse'
+    { _brsListIndex              :: !(Maybe BatchListIndexResponse)
+    , _brsGetObjectInformation   :: !(Maybe BatchGetObjectInformationResponse)
+    , _brsListAttachedIndices    :: !(Maybe BatchListAttachedIndicesResponse)
+    , _brsLookupPolicy           :: !(Maybe BatchLookupPolicyResponse)
+    , _brsListObjectParentPaths  :: !(Maybe BatchListObjectParentPathsResponse)
+    , _brsListObjectAttributes   :: !(Maybe BatchListObjectAttributesResponse)
+    , _brsListIncomingTypedLinks :: !(Maybe BatchListIncomingTypedLinksResponse)
+    , _brsGetObjectAttributes    :: !(Maybe BatchGetObjectAttributesResponse)
+    , _brsListObjectChildren     :: !(Maybe BatchListObjectChildrenResponse)
+    , _brsListPolicyAttachments  :: !(Maybe BatchListPolicyAttachmentsResponse)
+    , _brsListOutgoingTypedLinks :: !(Maybe BatchListOutgoingTypedLinksResponse)
+    , _brsListObjectPolicies     :: !(Maybe BatchListObjectPoliciesResponse)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchReadSuccessfulResponse' with the minimum fields required to make a request.
@@ -2875,10 +2975,12 @@ instance NFData BatchReadSuccessfulResponse where
 --
 --
 -- /See:/ 'batchRemoveFacetFromObject' smart constructor.
-data BatchRemoveFacetFromObject = BatchRemoveFacetFromObject'
-  { _brffoSchemaFacet     :: !SchemaFacet
-  , _brffoObjectReference :: !ObjectReference
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchRemoveFacetFromObject =
+  BatchRemoveFacetFromObject'
+    { _brffoSchemaFacet     :: !SchemaFacet
+    , _brffoObjectReference :: !ObjectReference
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchRemoveFacetFromObject' with the minimum fields required to make a request.
@@ -2952,10 +3054,12 @@ instance NFData BatchRemoveFacetFromObjectResponse
 --
 --
 -- /See:/ 'batchUpdateObjectAttributes' smart constructor.
-data BatchUpdateObjectAttributes = BatchUpdateObjectAttributes'
-  { _buoaObjectReference  :: !ObjectReference
-  , _buoaAttributeUpdates :: ![ObjectAttributeUpdate]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchUpdateObjectAttributes =
+  BatchUpdateObjectAttributes'
+    { _buoaObjectReference  :: !ObjectReference
+    , _buoaAttributeUpdates :: ![ObjectAttributeUpdate]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchUpdateObjectAttributes' with the minimum fields required to make a request.
@@ -2997,9 +3101,11 @@ instance ToJSON BatchUpdateObjectAttributes where
 --
 --
 -- /See:/ 'batchUpdateObjectAttributesResponse' smart constructor.
-newtype BatchUpdateObjectAttributesResponse = BatchUpdateObjectAttributesResponse'
-  { _buoaObjectIdentifier :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype BatchUpdateObjectAttributesResponse =
+  BatchUpdateObjectAttributesResponse'
+    { _buoaObjectIdentifier :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchUpdateObjectAttributesResponse' with the minimum fields required to make a request.
@@ -3036,22 +3142,24 @@ instance NFData BatchUpdateObjectAttributesResponse
 --
 --
 -- /See:/ 'batchWriteOperation' smart constructor.
-data BatchWriteOperation = BatchWriteOperation'
-  { _bDeleteObject           :: !(Maybe BatchDeleteObject)
-  , _bDetachFromIndex        :: !(Maybe BatchDetachFromIndex)
-  , _bRemoveFacetFromObject  :: !(Maybe BatchRemoveFacetFromObject)
-  , _bAttachObject           :: !(Maybe BatchAttachObject)
-  , _bCreateObject           :: !(Maybe BatchCreateObject)
-  , _bAttachTypedLink        :: !(Maybe BatchAttachTypedLink)
-  , _bDetachPolicy           :: !(Maybe BatchDetachPolicy)
-  , _bCreateIndex            :: !(Maybe BatchCreateIndex)
-  , _bDetachObject           :: !(Maybe BatchDetachObject)
-  , _bAddFacetToObject       :: !(Maybe BatchAddFacetToObject)
-  , _bDetachTypedLink        :: !(Maybe BatchDetachTypedLink)
-  , _bUpdateObjectAttributes :: !(Maybe BatchUpdateObjectAttributes)
-  , _bAttachPolicy           :: !(Maybe BatchAttachPolicy)
-  , _bAttachToIndex          :: !(Maybe BatchAttachToIndex)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchWriteOperation =
+  BatchWriteOperation'
+    { _bDeleteObject           :: !(Maybe BatchDeleteObject)
+    , _bDetachFromIndex        :: !(Maybe BatchDetachFromIndex)
+    , _bRemoveFacetFromObject  :: !(Maybe BatchRemoveFacetFromObject)
+    , _bAttachObject           :: !(Maybe BatchAttachObject)
+    , _bCreateObject           :: !(Maybe BatchCreateObject)
+    , _bAttachTypedLink        :: !(Maybe BatchAttachTypedLink)
+    , _bDetachPolicy           :: !(Maybe BatchDetachPolicy)
+    , _bCreateIndex            :: !(Maybe BatchCreateIndex)
+    , _bDetachObject           :: !(Maybe BatchDetachObject)
+    , _bAddFacetToObject       :: !(Maybe BatchAddFacetToObject)
+    , _bDetachTypedLink        :: !(Maybe BatchDetachTypedLink)
+    , _bUpdateObjectAttributes :: !(Maybe BatchUpdateObjectAttributes)
+    , _bAttachPolicy           :: !(Maybe BatchAttachPolicy)
+    , _bAttachToIndex          :: !(Maybe BatchAttachToIndex)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchWriteOperation' with the minimum fields required to make a request.
@@ -3192,22 +3300,24 @@ instance ToJSON BatchWriteOperation where
 --
 --
 -- /See:/ 'batchWriteOperationResponse' smart constructor.
-data BatchWriteOperationResponse = BatchWriteOperationResponse'
-  { _bwoDeleteObject           :: !(Maybe BatchDeleteObjectResponse)
-  , _bwoDetachFromIndex        :: !(Maybe BatchDetachFromIndexResponse)
-  , _bwoRemoveFacetFromObject  :: !(Maybe BatchRemoveFacetFromObjectResponse)
-  , _bwoAttachObject           :: !(Maybe BatchAttachObjectResponse)
-  , _bwoCreateObject           :: !(Maybe BatchCreateObjectResponse)
-  , _bwoAttachTypedLink        :: !(Maybe BatchAttachTypedLinkResponse)
-  , _bwoDetachPolicy           :: !(Maybe BatchDetachPolicyResponse)
-  , _bwoCreateIndex            :: !(Maybe BatchCreateIndexResponse)
-  , _bwoDetachObject           :: !(Maybe BatchDetachObjectResponse)
-  , _bwoAddFacetToObject       :: !(Maybe BatchAddFacetToObjectResponse)
-  , _bwoDetachTypedLink        :: !(Maybe BatchDetachTypedLinkResponse)
-  , _bwoUpdateObjectAttributes :: !(Maybe BatchUpdateObjectAttributesResponse)
-  , _bwoAttachPolicy           :: !(Maybe BatchAttachPolicyResponse)
-  , _bwoAttachToIndex          :: !(Maybe BatchAttachToIndexResponse)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchWriteOperationResponse =
+  BatchWriteOperationResponse'
+    { _bwoDeleteObject           :: !(Maybe BatchDeleteObjectResponse)
+    , _bwoDetachFromIndex        :: !(Maybe BatchDetachFromIndexResponse)
+    , _bwoRemoveFacetFromObject  :: !(Maybe BatchRemoveFacetFromObjectResponse)
+    , _bwoAttachObject           :: !(Maybe BatchAttachObjectResponse)
+    , _bwoCreateObject           :: !(Maybe BatchCreateObjectResponse)
+    , _bwoAttachTypedLink        :: !(Maybe BatchAttachTypedLinkResponse)
+    , _bwoDetachPolicy           :: !(Maybe BatchDetachPolicyResponse)
+    , _bwoCreateIndex            :: !(Maybe BatchCreateIndexResponse)
+    , _bwoDetachObject           :: !(Maybe BatchDetachObjectResponse)
+    , _bwoAddFacetToObject       :: !(Maybe BatchAddFacetToObjectResponse)
+    , _bwoDetachTypedLink        :: !(Maybe BatchDetachTypedLinkResponse)
+    , _bwoUpdateObjectAttributes :: !(Maybe BatchUpdateObjectAttributesResponse)
+    , _bwoAttachPolicy           :: !(Maybe BatchAttachPolicyResponse)
+    , _bwoAttachToIndex          :: !(Maybe BatchAttachToIndexResponse)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchWriteOperationResponse' with the minimum fields required to make a request.
@@ -3346,12 +3456,14 @@ instance NFData BatchWriteOperationResponse where
 --
 --
 -- /See:/ 'directory' smart constructor.
-data Directory = Directory'
-  { _dDirectoryARN     :: !(Maybe Text)
-  , _dState            :: !(Maybe DirectoryState)
-  , _dName             :: !(Maybe Text)
-  , _dCreationDateTime :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Directory =
+  Directory'
+    { _dDirectoryARN     :: !(Maybe Text)
+    , _dState            :: !(Maybe DirectoryState)
+    , _dName             :: !(Maybe Text)
+    , _dCreationDateTime :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Directory' with the minimum fields required to make a request.
@@ -3410,10 +3522,12 @@ instance NFData Directory where
 --
 --
 -- /See:/ 'facet' smart constructor.
-data Facet = Facet'
-  { _fObjectType :: !(Maybe ObjectType)
-  , _fName       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Facet =
+  Facet'
+    { _fObjectType :: !(Maybe ObjectType)
+    , _fName       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Facet' with the minimum fields required to make a request.
@@ -3451,12 +3565,14 @@ instance NFData Facet where
 --
 --
 -- /See:/ 'facetAttribute' smart constructor.
-data FacetAttribute = FacetAttribute'
-  { _faAttributeReference  :: !(Maybe FacetAttributeReference)
-  , _faAttributeDefinition :: !(Maybe FacetAttributeDefinition)
-  , _faRequiredBehavior    :: !(Maybe RequiredAttributeBehavior)
-  , _faName                :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FacetAttribute =
+  FacetAttribute'
+    { _faAttributeReference  :: !(Maybe FacetAttributeReference)
+    , _faAttributeDefinition :: !(Maybe FacetAttributeDefinition)
+    , _faRequiredBehavior    :: !(Maybe RequiredAttributeBehavior)
+    , _faName                :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FacetAttribute' with the minimum fields required to make a request.
@@ -3527,12 +3643,14 @@ instance ToJSON FacetAttribute where
 --
 --
 -- /See:/ 'facetAttributeDefinition' smart constructor.
-data FacetAttributeDefinition = FacetAttributeDefinition'
-  { _fadRules        :: !(Maybe (Map Text Rule))
-  , _fadDefaultValue :: !(Maybe TypedAttributeValue)
-  , _fadIsImmutable  :: !(Maybe Bool)
-  , _fadType         :: !FacetAttributeType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FacetAttributeDefinition =
+  FacetAttributeDefinition'
+    { _fadRules        :: !(Maybe (Map Text Rule))
+    , _fadDefaultValue :: !(Maybe TypedAttributeValue)
+    , _fadIsImmutable  :: !(Maybe Bool)
+    , _fadType         :: !FacetAttributeType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FacetAttributeDefinition' with the minimum fields required to make a request.
@@ -3601,10 +3719,12 @@ instance ToJSON FacetAttributeDefinition where
 --
 --
 -- /See:/ 'facetAttributeReference' smart constructor.
-data FacetAttributeReference = FacetAttributeReference'
-  { _farTargetFacetName     :: !Text
-  , _farTargetAttributeName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FacetAttributeReference =
+  FacetAttributeReference'
+    { _farTargetFacetName     :: !Text
+    , _farTargetAttributeName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FacetAttributeReference' with the minimum fields required to make a request.
@@ -3658,10 +3778,12 @@ instance ToJSON FacetAttributeReference where
 --
 --
 -- /See:/ 'facetAttributeUpdate' smart constructor.
-data FacetAttributeUpdate = FacetAttributeUpdate'
-  { _fauAttribute :: !(Maybe FacetAttribute)
-  , _fauAction    :: !(Maybe UpdateActionType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FacetAttributeUpdate =
+  FacetAttributeUpdate'
+    { _fauAttribute :: !(Maybe FacetAttribute)
+    , _fauAction    :: !(Maybe UpdateActionType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FacetAttributeUpdate' with the minimum fields required to make a request.
@@ -3701,10 +3823,12 @@ instance ToJSON FacetAttributeUpdate where
 --
 --
 -- /See:/ 'indexAttachment' smart constructor.
-data IndexAttachment = IndexAttachment'
-  { _iaIndexedAttributes :: !(Maybe [AttributeKeyAndValue])
-  , _iaObjectIdentifier  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data IndexAttachment =
+  IndexAttachment'
+    { _iaIndexedAttributes :: !(Maybe [AttributeKeyAndValue])
+    , _iaObjectIdentifier  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'IndexAttachment' with the minimum fields required to make a request.
@@ -3746,10 +3870,12 @@ instance NFData IndexAttachment where
 --
 --
 -- /See:/ 'objectAttributeAction' smart constructor.
-data ObjectAttributeAction = ObjectAttributeAction'
-  { _oaaObjectAttributeActionType  :: !(Maybe UpdateActionType)
-  , _oaaObjectAttributeUpdateValue :: !(Maybe TypedAttributeValue)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ObjectAttributeAction =
+  ObjectAttributeAction'
+    { _oaaObjectAttributeActionType  :: !(Maybe UpdateActionType)
+    , _oaaObjectAttributeUpdateValue :: !(Maybe TypedAttributeValue)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ObjectAttributeAction' with the minimum fields required to make a request.
@@ -3794,10 +3920,12 @@ instance ToJSON ObjectAttributeAction where
 --
 --
 -- /See:/ 'objectAttributeRange' smart constructor.
-data ObjectAttributeRange = ObjectAttributeRange'
-  { _oarRange        :: !(Maybe TypedAttributeValueRange)
-  , _oarAttributeKey :: !(Maybe AttributeKey)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ObjectAttributeRange =
+  ObjectAttributeRange'
+    { _oarRange        :: !(Maybe TypedAttributeValueRange)
+    , _oarAttributeKey :: !(Maybe AttributeKey)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ObjectAttributeRange' with the minimum fields required to make a request.
@@ -3837,10 +3965,12 @@ instance ToJSON ObjectAttributeRange where
 --
 --
 -- /See:/ 'objectAttributeUpdate' smart constructor.
-data ObjectAttributeUpdate = ObjectAttributeUpdate'
-  { _oauObjectAttributeAction :: !(Maybe ObjectAttributeAction)
-  , _oauObjectAttributeKey    :: !(Maybe AttributeKey)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ObjectAttributeUpdate =
+  ObjectAttributeUpdate'
+    { _oauObjectAttributeAction :: !(Maybe ObjectAttributeAction)
+    , _oauObjectAttributeKey    :: !(Maybe AttributeKey)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ObjectAttributeUpdate' with the minimum fields required to make a request.
@@ -3883,9 +4013,11 @@ instance ToJSON ObjectAttributeUpdate where
 --
 --
 -- /See:/ 'objectReference' smart constructor.
-newtype ObjectReference = ObjectReference'
-  { _orSelector :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ObjectReference =
+  ObjectReference'
+    { _orSelector :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ObjectReference' with the minimum fields required to make a request.
@@ -3921,10 +4053,12 @@ instance ToJSON ObjectReference where
 --
 --
 -- /See:/ 'pathToObjectIdentifiers' smart constructor.
-data PathToObjectIdentifiers = PathToObjectIdentifiers'
-  { _ptoiObjectIdentifiers :: !(Maybe [Text])
-  , _ptoiPath              :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PathToObjectIdentifiers =
+  PathToObjectIdentifiers'
+    { _ptoiObjectIdentifiers :: !(Maybe [Text])
+    , _ptoiPath              :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PathToObjectIdentifiers' with the minimum fields required to make a request.
@@ -3966,11 +4100,13 @@ instance NFData PathToObjectIdentifiers where
 --
 --
 -- /See:/ 'policyAttachment' smart constructor.
-data PolicyAttachment = PolicyAttachment'
-  { _paPolicyId         :: !(Maybe Text)
-  , _paPolicyType       :: !(Maybe Text)
-  , _paObjectIdentifier :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PolicyAttachment =
+  PolicyAttachment'
+    { _paPolicyId         :: !(Maybe Text)
+    , _paPolicyType       :: !(Maybe Text)
+    , _paObjectIdentifier :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PolicyAttachment' with the minimum fields required to make a request.
@@ -4021,10 +4157,12 @@ instance NFData PolicyAttachment where
 --
 --
 -- /See:/ 'policyToPath' smart constructor.
-data PolicyToPath = PolicyToPath'
-  { _ptpPath     :: !(Maybe Text)
-  , _ptpPolicies :: !(Maybe [PolicyAttachment])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PolicyToPath =
+  PolicyToPath'
+    { _ptpPath     :: !(Maybe Text)
+    , _ptpPolicies :: !(Maybe [PolicyAttachment])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PolicyToPath' with the minimum fields required to make a request.
@@ -4063,10 +4201,12 @@ instance NFData PolicyToPath where
 --
 --
 -- /See:/ 'rule' smart constructor.
-data Rule = Rule'
-  { _rParameters :: !(Maybe (Map Text Text))
-  , _rType       :: !(Maybe RuleType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Rule =
+  Rule'
+    { _rParameters :: !(Maybe (Map Text Text))
+    , _rType       :: !(Maybe RuleType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Rule' with the minimum fields required to make a request.
@@ -4112,10 +4252,12 @@ instance ToJSON Rule where
 --
 --
 -- /See:/ 'schemaFacet' smart constructor.
-data SchemaFacet = SchemaFacet'
-  { _sfFacetName :: !(Maybe Text)
-  , _sfSchemaARN :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SchemaFacet =
+  SchemaFacet'
+    { _sfFacetName :: !(Maybe Text)
+    , _sfSchemaARN :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SchemaFacet' with the minimum fields required to make a request.
@@ -4161,10 +4303,12 @@ instance ToJSON SchemaFacet where
 --
 --
 -- /See:/ 'tag' smart constructor.
-data Tag = Tag'
-  { _tagValue :: !(Maybe Text)
-  , _tagKey   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Tag =
+  Tag'
+    { _tagValue :: !(Maybe Text)
+    , _tagKey   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Tag' with the minimum fields required to make a request.
@@ -4207,13 +4351,15 @@ instance ToJSON Tag where
 --
 --
 -- /See:/ 'typedAttributeValue' smart constructor.
-data TypedAttributeValue = TypedAttributeValue'
-  { _tavBinaryValue   :: !(Maybe Base64)
-  , _tavDatetimeValue :: !(Maybe POSIX)
-  , _tavNumberValue   :: !(Maybe Text)
-  , _tavStringValue   :: !(Maybe Text)
-  , _tavBooleanValue  :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TypedAttributeValue =
+  TypedAttributeValue'
+    { _tavBinaryValue   :: !(Maybe Base64)
+    , _tavDatetimeValue :: !(Maybe POSIX)
+    , _tavNumberValue   :: !(Maybe Text)
+    , _tavStringValue   :: !(Maybe Text)
+    , _tavBooleanValue  :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TypedAttributeValue' with the minimum fields required to make a request.
@@ -4290,12 +4436,14 @@ instance ToJSON TypedAttributeValue where
 --
 --
 -- /See:/ 'typedAttributeValueRange' smart constructor.
-data TypedAttributeValueRange = TypedAttributeValueRange'
-  { _tavrEndValue   :: !(Maybe TypedAttributeValue)
-  , _tavrStartValue :: !(Maybe TypedAttributeValue)
-  , _tavrStartMode  :: !RangeMode
-  , _tavrEndMode    :: !RangeMode
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TypedAttributeValueRange =
+  TypedAttributeValueRange'
+    { _tavrEndValue   :: !(Maybe TypedAttributeValue)
+    , _tavrStartValue :: !(Maybe TypedAttributeValue)
+    , _tavrStartMode  :: !RangeMode
+    , _tavrEndMode    :: !RangeMode
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TypedAttributeValueRange' with the minimum fields required to make a request.
@@ -4356,14 +4504,16 @@ instance ToJSON TypedAttributeValueRange where
 --
 --
 -- /See:/ 'typedLinkAttributeDefinition' smart constructor.
-data TypedLinkAttributeDefinition = TypedLinkAttributeDefinition'
-  { _tladRules            :: !(Maybe (Map Text Rule))
-  , _tladDefaultValue     :: !(Maybe TypedAttributeValue)
-  , _tladIsImmutable      :: !(Maybe Bool)
-  , _tladName             :: !Text
-  , _tladType             :: !FacetAttributeType
-  , _tladRequiredBehavior :: !RequiredAttributeBehavior
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TypedLinkAttributeDefinition =
+  TypedLinkAttributeDefinition'
+    { _tladRules            :: !(Maybe (Map Text Rule))
+    , _tladDefaultValue     :: !(Maybe TypedAttributeValue)
+    , _tladIsImmutable      :: !(Maybe Bool)
+    , _tladName             :: !Text
+    , _tladType             :: !FacetAttributeType
+    , _tladRequiredBehavior :: !RequiredAttributeBehavior
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TypedLinkAttributeDefinition' with the minimum fields required to make a request.
@@ -4452,10 +4602,12 @@ instance ToJSON TypedLinkAttributeDefinition where
 --
 --
 -- /See:/ 'typedLinkAttributeRange' smart constructor.
-data TypedLinkAttributeRange = TypedLinkAttributeRange'
-  { _tlarAttributeName :: !(Maybe Text)
-  , _tlarRange         :: !TypedAttributeValueRange
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TypedLinkAttributeRange =
+  TypedLinkAttributeRange'
+    { _tlarAttributeName :: !(Maybe Text)
+    , _tlarRange         :: !TypedAttributeValueRange
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TypedLinkAttributeRange' with the minimum fields required to make a request.
@@ -4496,11 +4648,13 @@ instance ToJSON TypedLinkAttributeRange where
 --
 --
 -- /See:/ 'typedLinkFacet' smart constructor.
-data TypedLinkFacet = TypedLinkFacet'
-  { _tlfName                   :: !Text
-  , _tlfAttributes             :: ![TypedLinkAttributeDefinition]
-  , _tlfIdentityAttributeOrder :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TypedLinkFacet =
+  TypedLinkFacet'
+    { _tlfName                   :: !Text
+    , _tlfAttributes             :: ![TypedLinkAttributeDefinition]
+    , _tlfIdentityAttributeOrder :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TypedLinkFacet' with the minimum fields required to make a request.
@@ -4554,10 +4708,12 @@ instance ToJSON TypedLinkFacet where
 --
 --
 -- /See:/ 'typedLinkFacetAttributeUpdate' smart constructor.
-data TypedLinkFacetAttributeUpdate = TypedLinkFacetAttributeUpdate'
-  { _tlfauAttribute :: !TypedLinkAttributeDefinition
-  , _tlfauAction    :: !UpdateActionType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TypedLinkFacetAttributeUpdate =
+  TypedLinkFacetAttributeUpdate'
+    { _tlfauAttribute :: !TypedLinkAttributeDefinition
+    , _tlfauAction    :: !UpdateActionType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TypedLinkFacetAttributeUpdate' with the minimum fields required to make a request.
@@ -4600,10 +4756,12 @@ instance ToJSON TypedLinkFacetAttributeUpdate where
 --
 --
 -- /See:/ 'typedLinkSchemaAndFacetName' smart constructor.
-data TypedLinkSchemaAndFacetName = TypedLinkSchemaAndFacetName'
-  { _tlsafnSchemaARN     :: !Text
-  , _tlsafnTypedLinkName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TypedLinkSchemaAndFacetName =
+  TypedLinkSchemaAndFacetName'
+    { _tlsafnSchemaARN     :: !Text
+    , _tlsafnTypedLinkName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TypedLinkSchemaAndFacetName' with the minimum fields required to make a request.
@@ -4653,12 +4811,14 @@ instance ToJSON TypedLinkSchemaAndFacetName where
 --
 --
 -- /See:/ 'typedLinkSpecifier' smart constructor.
-data TypedLinkSpecifier = TypedLinkSpecifier'
-  { _tlsTypedLinkFacet          :: !TypedLinkSchemaAndFacetName
-  , _tlsSourceObjectReference   :: !ObjectReference
-  , _tlsTargetObjectReference   :: !ObjectReference
-  , _tlsIdentityAttributeValues :: ![AttributeNameAndValue]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TypedLinkSpecifier =
+  TypedLinkSpecifier'
+    { _tlsTypedLinkFacet          :: !TypedLinkSchemaAndFacetName
+    , _tlsSourceObjectReference   :: !ObjectReference
+    , _tlsTargetObjectReference   :: !ObjectReference
+    , _tlsIdentityAttributeValues :: ![AttributeNameAndValue]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TypedLinkSpecifier' with the minimum fields required to make a request.

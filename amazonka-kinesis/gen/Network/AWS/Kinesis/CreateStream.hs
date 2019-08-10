@@ -67,10 +67,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createStream' smart constructor.
-data CreateStream = CreateStream'
-  { _csStreamName :: !Text
-  , _csShardCount :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateStream =
+  CreateStream'
+    { _csStreamName :: !Text
+    , _csShardCount :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateStream' with the minimum fields required to make a request.

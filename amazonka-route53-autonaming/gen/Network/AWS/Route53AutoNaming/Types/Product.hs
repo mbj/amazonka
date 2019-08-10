@@ -26,11 +26,13 @@ import Network.AWS.Route53AutoNaming.Types.Sum
 --
 --
 -- /See:/ 'dnsConfig' smart constructor.
-data DNSConfig = DNSConfig'
-  { _dcRoutingPolicy :: !(Maybe RoutingPolicy)
-  , _dcNamespaceId   :: !Text
-  , _dcDNSRecords    :: ![DNSRecord]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DNSConfig =
+  DNSConfig'
+    { _dcRoutingPolicy :: !(Maybe RoutingPolicy)
+    , _dcNamespaceId   :: !Text
+    , _dcDNSRecords    :: ![DNSRecord]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DNSConfig' with the minimum fields required to make a request.
@@ -90,9 +92,11 @@ instance ToJSON DNSConfig where
 --
 --
 -- /See:/ 'dnsConfigChange' smart constructor.
-newtype DNSConfigChange = DNSConfigChange'
-  { _dccDNSRecords :: [DNSRecord]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DNSConfigChange =
+  DNSConfigChange'
+    { _dccDNSRecords :: [DNSRecord]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DNSConfigChange' with the minimum fields required to make a request.
@@ -123,9 +127,11 @@ instance ToJSON DNSConfigChange where
 --
 --
 -- /See:/ 'dnsProperties' smart constructor.
-newtype DNSProperties = DNSProperties'
-  { _dpHostedZoneId :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DNSProperties =
+  DNSProperties'
+    { _dpHostedZoneId :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DNSProperties' with the minimum fields required to make a request.
@@ -156,10 +162,12 @@ instance NFData DNSProperties where
 --
 --
 -- /See:/ 'dnsRecord' smart constructor.
-data DNSRecord = DNSRecord'
-  { _drType :: !RecordType
-  , _drTTL  :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DNSRecord =
+  DNSRecord'
+    { _drType :: !RecordType
+    , _drTTL  :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DNSRecord' with the minimum fields required to make a request.
@@ -233,11 +241,13 @@ instance ToJSON DNSRecord where
 --
 --
 -- /See:/ 'healthCheckConfig' smart constructor.
-data HealthCheckConfig = HealthCheckConfig'
-  { _hccFailureThreshold :: !(Maybe Nat)
-  , _hccResourcePath     :: !(Maybe Text)
-  , _hccType             :: !(Maybe HealthCheckType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data HealthCheckConfig =
+  HealthCheckConfig'
+    { _hccFailureThreshold :: !(Maybe Nat)
+    , _hccResourcePath     :: !(Maybe Text)
+    , _hccType             :: !(Maybe HealthCheckType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'HealthCheckConfig' with the minimum fields required to make a request.
@@ -292,9 +302,11 @@ instance ToJSON HealthCheckConfig where
                   ("Type" .=) <$> _hccType])
 
 -- | /See:/ 'healthCheckCustomConfig' smart constructor.
-newtype HealthCheckCustomConfig = HealthCheckCustomConfig'
-  { _hcccFailureThreshold :: Maybe Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype HealthCheckCustomConfig =
+  HealthCheckCustomConfig'
+    { _hcccFailureThreshold :: Maybe Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'HealthCheckCustomConfig' with the minimum fields required to make a request.
@@ -334,11 +346,13 @@ instance ToJSON HealthCheckCustomConfig where
 --
 --
 -- /See:/ 'instance'' smart constructor.
-data Instance = Instance'
-  { _iCreatorRequestId :: !(Maybe Text)
-  , _iAttributes       :: !(Maybe (Map Text Text))
-  , _iId               :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Instance =
+  Instance'
+    { _iCreatorRequestId :: !(Maybe Text)
+    , _iAttributes       :: !(Maybe (Map Text Text))
+    , _iId               :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Instance' with the minimum fields required to make a request.
@@ -387,10 +401,12 @@ instance NFData Instance where
 --
 --
 -- /See:/ 'instanceSummary' smart constructor.
-data InstanceSummary = InstanceSummary'
-  { _isAttributes :: !(Maybe (Map Text Text))
-  , _isId         :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceSummary =
+  InstanceSummary'
+    { _isAttributes :: !(Maybe (Map Text Text))
+    , _isId         :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceSummary' with the minimum fields required to make a request.
@@ -429,17 +445,19 @@ instance NFData InstanceSummary where
 --
 --
 -- /See:/ 'namespace' smart constructor.
-data Namespace = Namespace'
-  { _nARN              :: !(Maybe Text)
-  , _nCreatorRequestId :: !(Maybe Text)
-  , _nCreateDate       :: !(Maybe POSIX)
-  , _nServiceCount     :: !(Maybe Int)
-  , _nName             :: !(Maybe Text)
-  , _nId               :: !(Maybe Text)
-  , _nType             :: !(Maybe NamespaceType)
-  , _nDescription      :: !(Maybe Text)
-  , _nProperties       :: !(Maybe NamespaceProperties)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Namespace =
+  Namespace'
+    { _nARN              :: !(Maybe Text)
+    , _nCreatorRequestId :: !(Maybe Text)
+    , _nCreateDate       :: !(Maybe POSIX)
+    , _nServiceCount     :: !(Maybe Int)
+    , _nName             :: !(Maybe Text)
+    , _nId               :: !(Maybe Text)
+    , _nType             :: !(Maybe NamespaceType)
+    , _nDescription      :: !(Maybe Text)
+    , _nProperties       :: !(Maybe NamespaceProperties)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Namespace' with the minimum fields required to make a request.
@@ -538,11 +556,13 @@ instance NFData Namespace where
 --
 --
 -- /See:/ 'namespaceFilter' smart constructor.
-data NamespaceFilter = NamespaceFilter'
-  { _nfCondition :: !(Maybe FilterCondition)
-  , _nfName      :: !NamespaceFilterName
-  , _nfValues    :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NamespaceFilter =
+  NamespaceFilter'
+    { _nfCondition :: !(Maybe FilterCondition)
+    , _nfName      :: !NamespaceFilterName
+    , _nfValues    :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NamespaceFilter' with the minimum fields required to make a request.
@@ -591,9 +611,11 @@ instance ToJSON NamespaceFilter where
 --
 --
 -- /See:/ 'namespaceProperties' smart constructor.
-newtype NamespaceProperties = NamespaceProperties'
-  { _npDNSProperties :: Maybe DNSProperties
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype NamespaceProperties =
+  NamespaceProperties'
+    { _npDNSProperties :: Maybe DNSProperties
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NamespaceProperties' with the minimum fields required to make a request.
@@ -625,12 +647,14 @@ instance NFData NamespaceProperties where
 --
 --
 -- /See:/ 'namespaceSummary' smart constructor.
-data NamespaceSummary = NamespaceSummary'
-  { _nsARN  :: !(Maybe Text)
-  , _nsName :: !(Maybe Text)
-  , _nsId   :: !(Maybe Text)
-  , _nsType :: !(Maybe NamespaceType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NamespaceSummary =
+  NamespaceSummary'
+    { _nsARN  :: !(Maybe Text)
+    , _nsName :: !(Maybe Text)
+    , _nsId   :: !(Maybe Text)
+    , _nsType :: !(Maybe NamespaceType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NamespaceSummary' with the minimum fields required to make a request.
@@ -684,16 +708,18 @@ instance NFData NamespaceSummary where
 --
 --
 -- /See:/ 'operation' smart constructor.
-data Operation = Operation'
-  { _oStatus       :: !(Maybe OperationStatus)
-  , _oUpdateDate   :: !(Maybe POSIX)
-  , _oCreateDate   :: !(Maybe POSIX)
-  , _oTargets      :: !(Maybe (Map OperationTargetType Text))
-  , _oErrorCode    :: !(Maybe Text)
-  , _oId           :: !(Maybe Text)
-  , _oType         :: !(Maybe OperationType)
-  , _oErrorMessage :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Operation =
+  Operation'
+    { _oStatus       :: !(Maybe OperationStatus)
+    , _oUpdateDate   :: !(Maybe POSIX)
+    , _oCreateDate   :: !(Maybe POSIX)
+    , _oTargets      :: !(Maybe (Map OperationTargetType Text))
+    , _oErrorCode    :: !(Maybe Text)
+    , _oId           :: !(Maybe Text)
+    , _oType         :: !(Maybe OperationType)
+    , _oErrorMessage :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Operation' with the minimum fields required to make a request.
@@ -784,11 +810,13 @@ instance NFData Operation where
 --
 --
 -- /See:/ 'operationFilter' smart constructor.
-data OperationFilter = OperationFilter'
-  { _ofCondition :: !(Maybe FilterCondition)
-  , _ofName      :: !OperationFilterName
-  , _ofValues    :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data OperationFilter =
+  OperationFilter'
+    { _ofCondition :: !(Maybe FilterCondition)
+    , _ofName      :: !OperationFilterName
+    , _ofValues    :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OperationFilter' with the minimum fields required to make a request.
@@ -837,10 +865,12 @@ instance ToJSON OperationFilter where
 --
 --
 -- /See:/ 'operationSummary' smart constructor.
-data OperationSummary = OperationSummary'
-  { _osStatus :: !(Maybe OperationStatus)
-  , _osId     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data OperationSummary =
+  OperationSummary'
+    { _osStatus :: !(Maybe OperationStatus)
+    , _osId     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OperationSummary' with the minimum fields required to make a request.
@@ -879,11 +909,13 @@ instance NFData OperationSummary where
 --
 --
 -- /See:/ 'serviceChange' smart constructor.
-data ServiceChange = ServiceChange'
-  { _scHealthCheckConfig :: !(Maybe HealthCheckConfig)
-  , _scDescription       :: !(Maybe Text)
-  , _scDNSConfig         :: !DNSConfigChange
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ServiceChange =
+  ServiceChange'
+    { _scHealthCheckConfig :: !(Maybe HealthCheckConfig)
+    , _scDescription       :: !(Maybe Text)
+    , _scDNSConfig         :: !DNSConfigChange
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ServiceChange' with the minimum fields required to make a request.
@@ -935,11 +967,13 @@ instance ToJSON ServiceChange where
 --
 --
 -- /See:/ 'serviceFilter' smart constructor.
-data ServiceFilter = ServiceFilter'
-  { _sfCondition :: !(Maybe FilterCondition)
-  , _sfName      :: !ServiceFilterName
-  , _sfValues    :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ServiceFilter =
+  ServiceFilter'
+    { _sfCondition :: !(Maybe FilterCondition)
+    , _sfName      :: !ServiceFilterName
+    , _sfValues    :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ServiceFilter' with the minimum fields required to make a request.
@@ -987,18 +1021,20 @@ instance ToJSON ServiceFilter where
 --
 --
 -- /See:/ 'serviceInfo' smart constructor.
-data ServiceInfo = ServiceInfo'
-  { _siInstanceCount           :: !(Maybe Int)
-  , _siARN                     :: !(Maybe Text)
-  , _siHealthCheckConfig       :: !(Maybe HealthCheckConfig)
-  , _siCreatorRequestId        :: !(Maybe Text)
-  , _siCreateDate              :: !(Maybe POSIX)
-  , _siHealthCheckCustomConfig :: !(Maybe HealthCheckCustomConfig)
-  , _siName                    :: !(Maybe Text)
-  , _siId                      :: !(Maybe Text)
-  , _siDNSConfig               :: !(Maybe DNSConfig)
-  , _siDescription             :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ServiceInfo =
+  ServiceInfo'
+    { _siInstanceCount           :: !(Maybe Int)
+    , _siARN                     :: !(Maybe Text)
+    , _siHealthCheckConfig       :: !(Maybe HealthCheckConfig)
+    , _siCreatorRequestId        :: !(Maybe Text)
+    , _siCreateDate              :: !(Maybe POSIX)
+    , _siHealthCheckCustomConfig :: !(Maybe HealthCheckCustomConfig)
+    , _siName                    :: !(Maybe Text)
+    , _siId                      :: !(Maybe Text)
+    , _siDNSConfig               :: !(Maybe DNSConfig)
+    , _siDescription             :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ServiceInfo' with the minimum fields required to make a request.
@@ -1105,13 +1141,15 @@ instance NFData ServiceInfo where
 --
 --
 -- /See:/ 'serviceSummary' smart constructor.
-data ServiceSummary = ServiceSummary'
-  { _ssInstanceCount :: !(Maybe Int)
-  , _ssARN           :: !(Maybe Text)
-  , _ssName          :: !(Maybe Text)
-  , _ssId            :: !(Maybe Text)
-  , _ssDescription   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ServiceSummary =
+  ServiceSummary'
+    { _ssInstanceCount :: !(Maybe Int)
+    , _ssARN           :: !(Maybe Text)
+    , _ssName          :: !(Maybe Text)
+    , _ssId            :: !(Maybe Text)
+    , _ssDescription   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ServiceSummary' with the minimum fields required to make a request.

@@ -24,11 +24,13 @@ import Network.AWS.Prelude
 -- | Configuration options for configure Cognito streams.
 --
 -- /See:/ 'cognitoStreams' smart constructor.
-data CognitoStreams = CognitoStreams'
-  { _csStreamingStatus :: !(Maybe StreamingStatus)
-  , _csStreamName      :: !(Maybe Text)
-  , _csRoleARN         :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CognitoStreams =
+  CognitoStreams'
+    { _csStreamingStatus :: !(Maybe StreamingStatus)
+    , _csStreamName      :: !(Maybe Text)
+    , _csRoleARN         :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CognitoStreams' with the minimum fields required to make a request.
@@ -85,15 +87,17 @@ instance ToJSON CognitoStreams where
 -- | A collection of data for an identity pool. An identity pool can have multiple datasets. A dataset is per identity and can be general or associated with a particular entity in an application (like a saved game). Datasets are automatically created if they don't exist. Data is synced by dataset, and a dataset can hold up to 1MB of key-value pairs.
 --
 -- /See:/ 'dataset' smart constructor.
-data Dataset = Dataset'
-  { _dLastModifiedDate :: !(Maybe POSIX)
-  , _dNumRecords       :: !(Maybe Integer)
-  , _dDataStorage      :: !(Maybe Integer)
-  , _dDatasetName      :: !(Maybe Text)
-  , _dCreationDate     :: !(Maybe POSIX)
-  , _dLastModifiedBy   :: !(Maybe Text)
-  , _dIdentityId       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Dataset =
+  Dataset'
+    { _dLastModifiedDate :: !(Maybe POSIX)
+    , _dNumRecords       :: !(Maybe Integer)
+    , _dDataStorage      :: !(Maybe Integer)
+    , _dDatasetName      :: !(Maybe Text)
+    , _dCreationDate     :: !(Maybe POSIX)
+    , _dLastModifiedBy   :: !(Maybe Text)
+    , _dIdentityId       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Dataset' with the minimum fields required to make a request.
@@ -174,12 +178,14 @@ instance NFData Dataset where
 -- | Usage information for the identity pool.
 --
 -- /See:/ 'identityPoolUsage' smart constructor.
-data IdentityPoolUsage = IdentityPoolUsage'
-  { _ipuLastModifiedDate  :: !(Maybe POSIX)
-  , _ipuIdentityPoolId    :: !(Maybe Text)
-  , _ipuDataStorage       :: !(Maybe Integer)
-  , _ipuSyncSessionsCount :: !(Maybe Integer)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data IdentityPoolUsage =
+  IdentityPoolUsage'
+    { _ipuLastModifiedDate  :: !(Maybe POSIX)
+    , _ipuIdentityPoolId    :: !(Maybe Text)
+    , _ipuDataStorage       :: !(Maybe Integer)
+    , _ipuSyncSessionsCount :: !(Maybe Integer)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'IdentityPoolUsage' with the minimum fields required to make a request.
@@ -237,13 +243,15 @@ instance NFData IdentityPoolUsage where
 -- | Usage information for the identity.
 --
 -- /See:/ 'identityUsage' smart constructor.
-data IdentityUsage = IdentityUsage'
-  { _iuLastModifiedDate :: !(Maybe POSIX)
-  , _iuIdentityPoolId   :: !(Maybe Text)
-  , _iuDatasetCount     :: !(Maybe Int)
-  , _iuDataStorage      :: !(Maybe Integer)
-  , _iuIdentityId       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data IdentityUsage =
+  IdentityUsage'
+    { _iuLastModifiedDate :: !(Maybe POSIX)
+    , _iuIdentityPoolId   :: !(Maybe Text)
+    , _iuDatasetCount     :: !(Maybe Int)
+    , _iuDataStorage      :: !(Maybe Integer)
+    , _iuIdentityId       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'IdentityUsage' with the minimum fields required to make a request.
@@ -311,10 +319,12 @@ instance NFData IdentityUsage where
 --
 --
 -- /See:/ 'pushSync' smart constructor.
-data PushSync = PushSync'
-  { _psApplicationARNs :: !(Maybe [Text])
-  , _psRoleARN         :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PushSync =
+  PushSync'
+    { _psApplicationARNs :: !(Maybe [Text])
+    , _psRoleARN         :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PushSync' with the minimum fields required to make a request.
@@ -359,14 +369,16 @@ instance ToJSON PushSync where
 -- | The basic data structure of a dataset.
 --
 -- /See:/ 'record' smart constructor.
-data Record = Record'
-  { _rSyncCount              :: !(Maybe Integer)
-  , _rDeviceLastModifiedDate :: !(Maybe POSIX)
-  , _rLastModifiedDate       :: !(Maybe POSIX)
-  , _rValue                  :: !(Maybe Text)
-  , _rKey                    :: !(Maybe Text)
-  , _rLastModifiedBy         :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Record =
+  Record'
+    { _rSyncCount              :: !(Maybe Integer)
+    , _rDeviceLastModifiedDate :: !(Maybe POSIX)
+    , _rLastModifiedDate       :: !(Maybe POSIX)
+    , _rValue                  :: !(Maybe Text)
+    , _rKey                    :: !(Maybe Text)
+    , _rLastModifiedBy         :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Record' with the minimum fields required to make a request.
@@ -440,13 +452,15 @@ instance NFData Record where
 -- | An update operation for a record.
 --
 -- /See:/ 'recordPatch' smart constructor.
-data RecordPatch = RecordPatch'
-  { _rpDeviceLastModifiedDate :: !(Maybe POSIX)
-  , _rpValue                  :: !(Maybe Text)
-  , _rpOp                     :: !Operation
-  , _rpKey                    :: !Text
-  , _rpSyncCount              :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RecordPatch =
+  RecordPatch'
+    { _rpDeviceLastModifiedDate :: !(Maybe POSIX)
+    , _rpValue                  :: !(Maybe Text)
+    , _rpOp                     :: !Operation
+    , _rpKey                    :: !Text
+    , _rpSyncCount              :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RecordPatch' with the minimum fields required to make a request.

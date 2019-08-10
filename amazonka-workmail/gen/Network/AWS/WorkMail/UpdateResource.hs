@@ -47,12 +47,14 @@ import Network.AWS.WorkMail.Types
 import Network.AWS.WorkMail.Types.Product
 
 -- | /See:/ 'updateResource' smart constructor.
-data UpdateResource = UpdateResource'
-  { _urName           :: !(Maybe Text)
-  , _urBookingOptions :: !(Maybe BookingOptions)
-  , _urOrganizationId :: !Text
-  , _urResourceId     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateResource =
+  UpdateResource'
+    { _urName           :: !(Maybe Text)
+    , _urBookingOptions :: !(Maybe BookingOptions)
+    , _urOrganizationId :: !Text
+    , _urResourceId     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateResource' with the minimum fields required to make a request.
@@ -132,9 +134,11 @@ instance ToQuery UpdateResource where
         toQuery = const mempty
 
 -- | /See:/ 'updateResourceResponse' smart constructor.
-newtype UpdateResourceResponse = UpdateResourceResponse'
-  { _urrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateResourceResponse =
+  UpdateResourceResponse'
+    { _urrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateResourceResponse' with the minimum fields required to make a request.

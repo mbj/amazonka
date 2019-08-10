@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'stopTrigger' smart constructor.
-newtype StopTrigger = StopTrigger'
-  { _stName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StopTrigger =
+  StopTrigger'
+    { _stName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopTrigger' with the minimum fields required to make a request.
@@ -98,10 +100,12 @@ instance ToQuery StopTrigger where
         toQuery = const mempty
 
 -- | /See:/ 'stopTriggerResponse' smart constructor.
-data StopTriggerResponse = StopTriggerResponse'
-  { _strsName           :: !(Maybe Text)
-  , _strsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StopTriggerResponse =
+  StopTriggerResponse'
+    { _strsName           :: !(Maybe Text)
+    , _strsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopTriggerResponse' with the minimum fields required to make a request.

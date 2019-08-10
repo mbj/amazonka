@@ -49,9 +49,11 @@ import Network.AWS.SNS.Types.Product
 --
 --
 -- /See:/ 'getSubscriptionAttributes' smart constructor.
-newtype GetSubscriptionAttributes = GetSubscriptionAttributes'
-  { _gsaSubscriptionARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetSubscriptionAttributes =
+  GetSubscriptionAttributes'
+    { _gsaSubscriptionARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetSubscriptionAttributes' with the minimum fields required to make a request.
@@ -105,10 +107,12 @@ instance ToQuery GetSubscriptionAttributes where
 --
 --
 -- /See:/ 'getSubscriptionAttributesResponse' smart constructor.
-data GetSubscriptionAttributesResponse = GetSubscriptionAttributesResponse'
-  { _gsarsAttributes     :: !(Maybe (Map Text Text))
-  , _gsarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetSubscriptionAttributesResponse =
+  GetSubscriptionAttributesResponse'
+    { _gsarsAttributes     :: !(Maybe (Map Text Text))
+    , _gsarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetSubscriptionAttributesResponse' with the minimum fields required to make a request.

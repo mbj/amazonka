@@ -53,11 +53,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'replaceRouteTableAssociation' smart constructor.
-data ReplaceRouteTableAssociation = ReplaceRouteTableAssociation'
-  { _rrtaDryRun        :: !(Maybe Bool)
-  , _rrtaAssociationId :: !Text
-  , _rrtaRouteTableId  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReplaceRouteTableAssociation =
+  ReplaceRouteTableAssociation'
+    { _rrtaDryRun        :: !(Maybe Bool)
+    , _rrtaAssociationId :: !Text
+    , _rrtaRouteTableId  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReplaceRouteTableAssociation' with the minimum fields required to make a request.
@@ -129,10 +131,12 @@ instance ToQuery ReplaceRouteTableAssociation where
 --
 --
 -- /See:/ 'replaceRouteTableAssociationResponse' smart constructor.
-data ReplaceRouteTableAssociationResponse = ReplaceRouteTableAssociationResponse'
-  { _rrtarsNewAssociationId :: !(Maybe Text)
-  , _rrtarsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReplaceRouteTableAssociationResponse =
+  ReplaceRouteTableAssociationResponse'
+    { _rrtarsNewAssociationId :: !(Maybe Text)
+    , _rrtarsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReplaceRouteTableAssociationResponse' with the minimum fields required to make a request.

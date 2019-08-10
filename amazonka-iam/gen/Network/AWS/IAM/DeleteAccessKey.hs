@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteAccessKey' smart constructor.
-data DeleteAccessKey = DeleteAccessKey'
-  { _dakUserName    :: !(Maybe Text)
-  , _dakAccessKeyId :: !AccessKey
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteAccessKey =
+  DeleteAccessKey'
+    { _dakUserName    :: !(Maybe Text)
+    , _dakAccessKeyId :: !AccessKey
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteAccessKey' with the minimum fields required to make a request.

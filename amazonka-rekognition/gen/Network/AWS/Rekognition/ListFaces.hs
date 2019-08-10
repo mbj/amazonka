@@ -54,11 +54,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listFaces' smart constructor.
-data ListFaces = ListFaces'
-  { _lfNextToken    :: !(Maybe Text)
-  , _lfMaxResults   :: !(Maybe Nat)
-  , _lfCollectionId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListFaces =
+  ListFaces'
+    { _lfNextToken    :: !(Maybe Text)
+    , _lfMaxResults   :: !(Maybe Nat)
+    , _lfCollectionId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListFaces' with the minimum fields required to make a request.
@@ -139,12 +141,14 @@ instance ToQuery ListFaces where
         toQuery = const mempty
 
 -- | /See:/ 'listFacesResponse' smart constructor.
-data ListFacesResponse = ListFacesResponse'
-  { _lfrsFaceModelVersion :: !(Maybe Text)
-  , _lfrsNextToken        :: !(Maybe Text)
-  , _lfrsFaces            :: !(Maybe [Face])
-  , _lfrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListFacesResponse =
+  ListFacesResponse'
+    { _lfrsFaceModelVersion :: !(Maybe Text)
+    , _lfrsNextToken        :: !(Maybe Text)
+    , _lfrsFaces            :: !(Maybe [Face])
+    , _lfrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListFacesResponse' with the minimum fields required to make a request.

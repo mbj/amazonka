@@ -50,9 +50,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'readPipeline' smart constructor.
-newtype ReadPipeline = ReadPipeline'
-  { _rId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ReadPipeline =
+  ReadPipeline'
+    { _rId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReadPipeline' with the minimum fields required to make a request.
@@ -99,11 +101,13 @@ instance ToQuery ReadPipeline where
 --
 --
 -- /See:/ 'readPipelineResponse' smart constructor.
-data ReadPipelineResponse = ReadPipelineResponse'
-  { _rrsWarnings       :: !(Maybe [Warning])
-  , _rrsPipeline       :: !(Maybe Pipeline)
-  , _rrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReadPipelineResponse =
+  ReadPipelineResponse'
+    { _rrsWarnings       :: !(Maybe [Warning])
+    , _rrsPipeline       :: !(Maybe Pipeline)
+    , _rrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReadPipelineResponse' with the minimum fields required to make a request.

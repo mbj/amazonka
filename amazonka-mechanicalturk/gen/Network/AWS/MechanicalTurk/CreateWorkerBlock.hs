@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createWorkerBlock' smart constructor.
-data CreateWorkerBlock = CreateWorkerBlock'
-  { _cwbWorkerId :: !Text
-  , _cwbReason   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateWorkerBlock =
+  CreateWorkerBlock'
+    { _cwbWorkerId :: !Text
+    , _cwbReason   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateWorkerBlock' with the minimum fields required to make a request.
@@ -110,9 +112,11 @@ instance ToQuery CreateWorkerBlock where
         toQuery = const mempty
 
 -- | /See:/ 'createWorkerBlockResponse' smart constructor.
-newtype CreateWorkerBlockResponse = CreateWorkerBlockResponse'
-  { _cwbrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateWorkerBlockResponse =
+  CreateWorkerBlockResponse'
+    { _cwbrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateWorkerBlockResponse' with the minimum fields required to make a request.

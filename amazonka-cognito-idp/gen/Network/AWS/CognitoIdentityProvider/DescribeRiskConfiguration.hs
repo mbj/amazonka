@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeRiskConfiguration' smart constructor.
-data DescribeRiskConfiguration = DescribeRiskConfiguration'
-  { _drcClientId   :: !(Maybe (Sensitive Text))
-  , _drcUserPoolId :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data DescribeRiskConfiguration =
+  DescribeRiskConfiguration'
+    { _drcClientId   :: !(Maybe (Sensitive Text))
+    , _drcUserPoolId :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeRiskConfiguration' with the minimum fields required to make a request.
@@ -113,10 +115,12 @@ instance ToQuery DescribeRiskConfiguration where
         toQuery = const mempty
 
 -- | /See:/ 'describeRiskConfigurationResponse' smart constructor.
-data DescribeRiskConfigurationResponse = DescribeRiskConfigurationResponse'
-  { _drcrsResponseStatus    :: !Int
-  , _drcrsRiskConfiguration :: !RiskConfigurationType
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data DescribeRiskConfigurationResponse =
+  DescribeRiskConfigurationResponse'
+    { _drcrsResponseStatus    :: !Int
+    , _drcrsRiskConfiguration :: !RiskConfigurationType
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeRiskConfigurationResponse' with the minimum fields required to make a request.

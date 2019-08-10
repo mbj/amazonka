@@ -54,10 +54,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'validateTemplate' smart constructor.
-data ValidateTemplate = ValidateTemplate'
-  { _vtTemplateBody :: !(Maybe Text)
-  , _vtTemplateURL  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ValidateTemplate =
+  ValidateTemplate'
+    { _vtTemplateBody :: !(Maybe Text)
+    , _vtTemplateURL  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ValidateTemplate' with the minimum fields required to make a request.
@@ -123,14 +125,16 @@ instance ToQuery ValidateTemplate where
 --
 --
 -- /See:/ 'validateTemplateResponse' smart constructor.
-data ValidateTemplateResponse = ValidateTemplateResponse'
-  { _vtrsDeclaredTransforms :: !(Maybe [Text])
-  , _vtrsCapabilitiesReason :: !(Maybe Text)
-  , _vtrsParameters         :: !(Maybe [TemplateParameter])
-  , _vtrsDescription        :: !(Maybe Text)
-  , _vtrsCapabilities       :: !(Maybe [Capability])
-  , _vtrsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ValidateTemplateResponse =
+  ValidateTemplateResponse'
+    { _vtrsDeclaredTransforms :: !(Maybe [Text])
+    , _vtrsCapabilitiesReason :: !(Maybe Text)
+    , _vtrsParameters         :: !(Maybe [TemplateParameter])
+    , _vtrsDescription        :: !(Maybe Text)
+    , _vtrsCapabilities       :: !(Maybe [Capability])
+    , _vtrsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ValidateTemplateResponse' with the minimum fields required to make a request.

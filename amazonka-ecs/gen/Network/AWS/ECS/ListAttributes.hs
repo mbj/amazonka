@@ -51,14 +51,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listAttributes' smart constructor.
-data ListAttributes = ListAttributes'
-  { _laAttributeValue :: !(Maybe Text)
-  , _laCluster        :: !(Maybe Text)
-  , _laNextToken      :: !(Maybe Text)
-  , _laAttributeName  :: !(Maybe Text)
-  , _laMaxResults     :: !(Maybe Int)
-  , _laTargetType     :: !TargetType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAttributes =
+  ListAttributes'
+    { _laAttributeValue :: !(Maybe Text)
+    , _laCluster        :: !(Maybe Text)
+    , _laNextToken      :: !(Maybe Text)
+    , _laAttributeName  :: !(Maybe Text)
+    , _laMaxResults     :: !(Maybe Int)
+    , _laTargetType     :: !TargetType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAttributes' with the minimum fields required to make a request.
@@ -157,11 +159,13 @@ instance ToQuery ListAttributes where
         toQuery = const mempty
 
 -- | /See:/ 'listAttributesResponse' smart constructor.
-data ListAttributesResponse = ListAttributesResponse'
-  { _larsNextToken      :: !(Maybe Text)
-  , _larsAttributes     :: !(Maybe [Attribute])
-  , _larsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAttributesResponse =
+  ListAttributesResponse'
+    { _larsNextToken      :: !(Maybe Text)
+    , _larsAttributes     :: !(Maybe [Attribute])
+    , _larsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAttributesResponse' with the minimum fields required to make a request.

@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'buildSuggesters' smart constructor.
-newtype BuildSuggesters = BuildSuggesters'
-  { _bsDomainName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype BuildSuggesters =
+  BuildSuggesters'
+    { _bsDomainName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BuildSuggesters' with the minimum fields required to make a request.
@@ -102,10 +104,12 @@ instance ToQuery BuildSuggesters where
 --
 --
 -- /See:/ 'buildSuggestersResponse' smart constructor.
-data BuildSuggestersResponse = BuildSuggestersResponse'
-  { _bsrsFieldNames     :: !(Maybe [Text])
-  , _bsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BuildSuggestersResponse =
+  BuildSuggestersResponse'
+    { _bsrsFieldNames     :: !(Maybe [Text])
+    , _bsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BuildSuggestersResponse' with the minimum fields required to make a request.

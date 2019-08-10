@@ -60,16 +60,18 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'testInvokeMethod' smart constructor.
-data TestInvokeMethod = TestInvokeMethod'
-  { _timPathWithQueryString :: !(Maybe Text)
-  , _timBody                :: !(Maybe Text)
-  , _timClientCertificateId :: !(Maybe Text)
-  , _timStageVariables      :: !(Maybe (Map Text Text))
-  , _timHeaders             :: !(Maybe (Map Text Text))
-  , _timRestAPIId           :: !Text
-  , _timResourceId          :: !Text
-  , _timHttpMethod          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TestInvokeMethod =
+  TestInvokeMethod'
+    { _timPathWithQueryString :: !(Maybe Text)
+    , _timBody                :: !(Maybe Text)
+    , _timClientCertificateId :: !(Maybe Text)
+    , _timStageVariables      :: !(Maybe (Map Text Text))
+    , _timHeaders             :: !(Maybe (Map Text Text))
+    , _timRestAPIId           :: !Text
+    , _timResourceId          :: !Text
+    , _timHttpMethod          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TestInvokeMethod' with the minimum fields required to make a request.
@@ -191,14 +193,16 @@ instance ToQuery TestInvokeMethod where
 -- <http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-test-method.html#how-to-test-method-console Test API using the API Gateway console>
 --
 -- /See:/ 'testInvokeMethodResponse' smart constructor.
-data TestInvokeMethodResponse = TestInvokeMethodResponse'
-  { _timrsLog            :: !(Maybe Text)
-  , _timrsStatus         :: !(Maybe Int)
-  , _timrsBody           :: !(Maybe Text)
-  , _timrsLatency        :: !(Maybe Integer)
-  , _timrsHeaders        :: !(Maybe (Map Text Text))
-  , _timrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TestInvokeMethodResponse =
+  TestInvokeMethodResponse'
+    { _timrsLog            :: !(Maybe Text)
+    , _timrsStatus         :: !(Maybe Int)
+    , _timrsBody           :: !(Maybe Text)
+    , _timrsLatency        :: !(Maybe Integer)
+    , _timrsHeaders        :: !(Maybe (Map Text Text))
+    , _timrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TestInvokeMethodResponse' with the minimum fields required to make a request.

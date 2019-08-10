@@ -62,11 +62,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'mergeShards' smart constructor.
-data MergeShards = MergeShards'
-  { _msStreamName           :: !Text
-  , _msShardToMerge         :: !Text
-  , _msAdjacentShardToMerge :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MergeShards =
+  MergeShards'
+    { _msStreamName           :: !Text
+    , _msShardToMerge         :: !Text
+    , _msAdjacentShardToMerge :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MergeShards' with the minimum fields required to make a request.

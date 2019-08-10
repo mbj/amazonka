@@ -87,9 +87,11 @@ instance ToQuery DeleteSubscription where
         toQuery = const mempty
 
 -- | /See:/ 'deleteSubscriptionResponse' smart constructor.
-newtype DeleteSubscriptionResponse = DeleteSubscriptionResponse'
-  { _drsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteSubscriptionResponse =
+  DeleteSubscriptionResponse'
+    { _drsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteSubscriptionResponse' with the minimum fields required to make a request.

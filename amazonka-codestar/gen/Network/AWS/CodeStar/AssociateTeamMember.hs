@@ -49,13 +49,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'associateTeamMember' smart constructor.
-data AssociateTeamMember = AssociateTeamMember'
-  { _atmRemoteAccessAllowed :: !(Maybe Bool)
-  , _atmClientRequestToken  :: !(Maybe Text)
-  , _atmProjectId           :: !Text
-  , _atmUserARN             :: !Text
-  , _atmProjectRole         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssociateTeamMember =
+  AssociateTeamMember'
+    { _atmRemoteAccessAllowed :: !(Maybe Bool)
+    , _atmClientRequestToken  :: !(Maybe Text)
+    , _atmProjectId           :: !Text
+    , _atmUserARN             :: !Text
+    , _atmProjectRole         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateTeamMember' with the minimum fields required to make a request.
@@ -148,10 +150,12 @@ instance ToQuery AssociateTeamMember where
         toQuery = const mempty
 
 -- | /See:/ 'associateTeamMemberResponse' smart constructor.
-data AssociateTeamMemberResponse = AssociateTeamMemberResponse'
-  { _atmrsClientRequestToken :: !(Maybe Text)
-  , _atmrsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssociateTeamMemberResponse =
+  AssociateTeamMemberResponse'
+    { _atmrsClientRequestToken :: !(Maybe Text)
+    , _atmrsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateTeamMemberResponse' with the minimum fields required to make a request.

@@ -24,10 +24,12 @@ import Network.AWS.Prelude
 -- | Returns information about all brokers.
 --
 -- /See:/ 'brokerInstance' smart constructor.
-data BrokerInstance = BrokerInstance'
-  { _biConsoleURL :: !(Maybe Text)
-  , _biEndpoints  :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BrokerInstance =
+  BrokerInstance'
+    { _biConsoleURL :: !(Maybe Text)
+    , _biEndpoints  :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BrokerInstance' with the minimum fields required to make a request.
@@ -66,14 +68,16 @@ instance NFData BrokerInstance where
 -- | The Amazon Resource Name (ARN) of the broker.
 --
 -- /See:/ 'brokerSummary' smart constructor.
-data BrokerSummary = BrokerSummary'
-  { _bsBrokerName       :: !(Maybe Text)
-  , _bsBrokerState      :: !(Maybe BrokerState)
-  , _bsDeploymentMode   :: !(Maybe DeploymentMode)
-  , _bsBrokerId         :: !(Maybe Text)
-  , _bsBrokerARN        :: !(Maybe Text)
-  , _bsHostInstanceType :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BrokerSummary =
+  BrokerSummary'
+    { _bsBrokerName       :: !(Maybe Text)
+    , _bsBrokerState      :: !(Maybe BrokerState)
+    , _bsDeploymentMode   :: !(Maybe DeploymentMode)
+    , _bsBrokerId         :: !(Maybe Text)
+    , _bsBrokerARN        :: !(Maybe Text)
+    , _bsHostInstanceType :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BrokerSummary' with the minimum fields required to make a request.
@@ -146,15 +150,17 @@ instance NFData BrokerSummary where
 -- | Returns information about all configurations.
 --
 -- /See:/ 'configuration' smart constructor.
-data Configuration = Configuration'
-  { _cEngineVersion  :: !(Maybe Text)
-  , _cARN            :: !(Maybe Text)
-  , _cLatestRevision :: !(Maybe ConfigurationRevision)
-  , _cName           :: !(Maybe Text)
-  , _cId             :: !(Maybe Text)
-  , _cDescription    :: !(Maybe Text)
-  , _cEngineType     :: !(Maybe EngineType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Configuration =
+  Configuration'
+    { _cEngineVersion  :: !(Maybe Text)
+    , _cARN            :: !(Maybe Text)
+    , _cLatestRevision :: !(Maybe ConfigurationRevision)
+    , _cName           :: !(Maybe Text)
+    , _cId             :: !(Maybe Text)
+    , _cDescription    :: !(Maybe Text)
+    , _cEngineType     :: !(Maybe EngineType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Configuration' with the minimum fields required to make a request.
@@ -235,10 +241,12 @@ instance NFData Configuration where
 -- | A list of information about the configuration.
 --
 -- /See:/ 'configurationId' smart constructor.
-data ConfigurationId = ConfigurationId'
-  { _ciId       :: !(Maybe Text)
-  , _ciRevision :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ConfigurationId =
+  ConfigurationId'
+    { _ciId       :: !(Maybe Text)
+    , _ciRevision :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ConfigurationId' with the minimum fields required to make a request.
@@ -282,10 +290,12 @@ instance ToJSON ConfigurationId where
 -- | Returns information about the specified configuration revision.
 --
 -- /See:/ 'configurationRevision' smart constructor.
-data ConfigurationRevision = ConfigurationRevision'
-  { _crRevision    :: !(Maybe Int)
-  , _crDescription :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ConfigurationRevision =
+  ConfigurationRevision'
+    { _crRevision    :: !(Maybe Int)
+    , _crDescription :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ConfigurationRevision' with the minimum fields required to make a request.
@@ -323,11 +333,13 @@ instance NFData ConfigurationRevision where
 -- | Broker configuration information
 --
 -- /See:/ 'configurations' smart constructor.
-data Configurations = Configurations'
-  { _cPending :: !(Maybe ConfigurationId)
-  , _cHistory :: !(Maybe [ConfigurationId])
-  , _cCurrent :: !(Maybe ConfigurationId)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Configurations =
+  Configurations'
+    { _cPending :: !(Maybe ConfigurationId)
+    , _cHistory :: !(Maybe [ConfigurationId])
+    , _cCurrent :: !(Maybe ConfigurationId)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Configurations' with the minimum fields required to make a request.
@@ -373,11 +385,13 @@ instance NFData Configurations where
 -- | Returns information about the XML element or attribute that was sanitized in the configuration.
 --
 -- /See:/ 'sanitizationWarning' smart constructor.
-data SanitizationWarning = SanitizationWarning'
-  { _swReason        :: !(Maybe SanitizationWarningReason)
-  , _swAttributeName :: !(Maybe Text)
-  , _swElementName   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SanitizationWarning =
+  SanitizationWarning'
+    { _swReason        :: !(Maybe SanitizationWarningReason)
+    , _swAttributeName :: !(Maybe Text)
+    , _swElementName   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SanitizationWarning' with the minimum fields required to make a request.
@@ -423,12 +437,14 @@ instance NFData SanitizationWarning where
 -- | An ActiveMQ user associated with the broker.
 --
 -- /See:/ 'user' smart constructor.
-data User = User'
-  { _uGroups        :: !(Maybe [Text])
-  , _uConsoleAccess :: !(Maybe Bool)
-  , _uUsername      :: !(Maybe Text)
-  , _uPassword      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data User =
+  User'
+    { _uGroups        :: !(Maybe [Text])
+    , _uConsoleAccess :: !(Maybe Bool)
+    , _uUsername      :: !(Maybe Text)
+    , _uPassword      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'User' with the minimum fields required to make a request.
@@ -485,11 +501,13 @@ instance ToJSON User where
 -- | Returns information about the status of the changes pending for the ActiveMQ user.
 --
 -- /See:/ 'userPendingChanges' smart constructor.
-data UserPendingChanges = UserPendingChanges'
-  { _upcGroups        :: !(Maybe [Text])
-  , _upcConsoleAccess :: !(Maybe Bool)
-  , _upcPendingChange :: !(Maybe ChangeType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UserPendingChanges =
+  UserPendingChanges'
+    { _upcGroups        :: !(Maybe [Text])
+    , _upcConsoleAccess :: !(Maybe Bool)
+    , _upcPendingChange :: !(Maybe ChangeType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UserPendingChanges' with the minimum fields required to make a request.
@@ -539,10 +557,12 @@ instance NFData UserPendingChanges where
 -- | Returns a list of all ActiveMQ users.
 --
 -- /See:/ 'userSummary' smart constructor.
-data UserSummary = UserSummary'
-  { _usUsername      :: !(Maybe Text)
-  , _usPendingChange :: !(Maybe ChangeType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UserSummary =
+  UserSummary'
+    { _usUsername      :: !(Maybe Text)
+    , _usPendingChange :: !(Maybe ChangeType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UserSummary' with the minimum fields required to make a request.
@@ -579,11 +599,13 @@ instance NFData UserSummary where
 -- | The scheduled time period relative to UTC during which Amazon MQ begins to apply pending updates or patches to the broker.
 --
 -- /See:/ 'weeklyStartTime' smart constructor.
-data WeeklyStartTime = WeeklyStartTime'
-  { _wstTimeOfDay :: !(Maybe Text)
-  , _wstTimeZone  :: !(Maybe Text)
-  , _wstDayOfWeek :: !(Maybe DayOfWeek)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data WeeklyStartTime =
+  WeeklyStartTime'
+    { _wstTimeOfDay :: !(Maybe Text)
+    , _wstTimeZone  :: !(Maybe Text)
+    , _wstDayOfWeek :: !(Maybe DayOfWeek)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'WeeklyStartTime' with the minimum fields required to make a request.

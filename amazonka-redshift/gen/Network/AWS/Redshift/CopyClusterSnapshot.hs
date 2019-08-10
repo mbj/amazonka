@@ -55,11 +55,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'copyClusterSnapshot' smart constructor.
-data CopyClusterSnapshot = CopyClusterSnapshot'
-  { _ccsSourceSnapshotClusterIdentifier :: !(Maybe Text)
-  , _ccsSourceSnapshotIdentifier        :: !Text
-  , _ccsTargetSnapshotIdentifier        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CopyClusterSnapshot =
+  CopyClusterSnapshot'
+    { _ccsSourceSnapshotClusterIdentifier :: !(Maybe Text)
+    , _ccsSourceSnapshotIdentifier        :: !Text
+    , _ccsTargetSnapshotIdentifier        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CopyClusterSnapshot' with the minimum fields required to make a request.
@@ -128,10 +130,12 @@ instance ToQuery CopyClusterSnapshot where
                  _ccsTargetSnapshotIdentifier]
 
 -- | /See:/ 'copyClusterSnapshotResponse' smart constructor.
-data CopyClusterSnapshotResponse = CopyClusterSnapshotResponse'
-  { _ccsrsSnapshot       :: !(Maybe Snapshot)
-  , _ccsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CopyClusterSnapshotResponse =
+  CopyClusterSnapshotResponse'
+    { _ccsrsSnapshot       :: !(Maybe Snapshot)
+    , _ccsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CopyClusterSnapshotResponse' with the minimum fields required to make a request.

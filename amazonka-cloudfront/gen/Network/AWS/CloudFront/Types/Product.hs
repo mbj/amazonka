@@ -30,11 +30,13 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'activeTrustedSigners' smart constructor.
-data ActiveTrustedSigners = ActiveTrustedSigners'
-  { _atsItems    :: !(Maybe [Signer])
-  , _atsEnabled  :: !Bool
-  , _atsQuantity :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ActiveTrustedSigners =
+  ActiveTrustedSigners'
+    { _atsItems    :: !(Maybe [Signer])
+    , _atsEnabled  :: !Bool
+    , _atsQuantity :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ActiveTrustedSigners' with the minimum fields required to make a request.
@@ -84,10 +86,12 @@ instance NFData ActiveTrustedSigners where
 --
 --
 -- /See:/ 'aliases' smart constructor.
-data Aliases = Aliases'
-  { _aItems    :: !(Maybe [Text])
-  , _aQuantity :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Aliases =
+  Aliases'
+    { _aItems    :: !(Maybe [Text])
+    , _aQuantity :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Aliases' with the minimum fields required to make a request.
@@ -143,11 +147,13 @@ instance ToXML Aliases where
 --
 --
 -- /See:/ 'allowedMethods' smart constructor.
-data AllowedMethods = AllowedMethods'
-  { _amCachedMethods :: !(Maybe CachedMethods)
-  , _amQuantity      :: !Int
-  , _amItems         :: ![Method]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AllowedMethods =
+  AllowedMethods'
+    { _amCachedMethods :: !(Maybe CachedMethods)
+    , _amQuantity      :: !Int
+    , _amItems         :: ![Method]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AllowedMethods' with the minimum fields required to make a request.
@@ -213,21 +219,23 @@ instance ToXML AllowedMethods where
 --
 --
 -- /See:/ 'cacheBehavior' smart constructor.
-data CacheBehavior = CacheBehavior'
-  { _cbAllowedMethods             :: !(Maybe AllowedMethods)
-  , _cbLambdaFunctionAssociations :: !(Maybe LambdaFunctionAssociations)
-  , _cbMaxTTL                     :: !(Maybe Integer)
-  , _cbCompress                   :: !(Maybe Bool)
-  , _cbSmoothStreaming            :: !(Maybe Bool)
-  , _cbDefaultTTL                 :: !(Maybe Integer)
-  , _cbFieldLevelEncryptionId     :: !(Maybe Text)
-  , _cbPathPattern                :: !Text
-  , _cbTargetOriginId             :: !Text
-  , _cbForwardedValues            :: !ForwardedValues
-  , _cbTrustedSigners             :: !TrustedSigners
-  , _cbViewerProtocolPolicy       :: !ViewerProtocolPolicy
-  , _cbMinTTL                     :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CacheBehavior =
+  CacheBehavior'
+    { _cbAllowedMethods             :: !(Maybe AllowedMethods)
+    , _cbLambdaFunctionAssociations :: !(Maybe LambdaFunctionAssociations)
+    , _cbMaxTTL                     :: !(Maybe Integer)
+    , _cbCompress                   :: !(Maybe Bool)
+    , _cbSmoothStreaming            :: !(Maybe Bool)
+    , _cbDefaultTTL                 :: !(Maybe Integer)
+    , _cbFieldLevelEncryptionId     :: !(Maybe Text)
+    , _cbPathPattern                :: !Text
+    , _cbTargetOriginId             :: !Text
+    , _cbForwardedValues            :: !ForwardedValues
+    , _cbTrustedSigners             :: !TrustedSigners
+    , _cbViewerProtocolPolicy       :: !ViewerProtocolPolicy
+    , _cbMinTTL                     :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CacheBehavior' with the minimum fields required to make a request.
@@ -381,10 +389,12 @@ instance ToXML CacheBehavior where
 --
 --
 -- /See:/ 'cacheBehaviors' smart constructor.
-data CacheBehaviors = CacheBehaviors'
-  { _cbItems    :: !(Maybe [CacheBehavior])
-  , _cbQuantity :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CacheBehaviors =
+  CacheBehaviors'
+    { _cbItems    :: !(Maybe [CacheBehavior])
+    , _cbQuantity :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CacheBehaviors' with the minimum fields required to make a request.
@@ -440,10 +450,12 @@ instance ToXML CacheBehaviors where
 --
 --
 -- /See:/ 'cachedMethods' smart constructor.
-data CachedMethods = CachedMethods'
-  { _cmQuantity :: !Int
-  , _cmItems    :: ![Method]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CachedMethods =
+  CachedMethods'
+    { _cmQuantity :: !Int
+    , _cmItems    :: ![Method]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CachedMethods' with the minimum fields required to make a request.
@@ -489,11 +501,13 @@ instance ToXML CachedMethods where
 --
 --
 -- /See:/ 'cloudFrontOriginAccessIdentity' smart constructor.
-data CloudFrontOriginAccessIdentity = CloudFrontOriginAccessIdentity'
-  { _cfoaiCloudFrontOriginAccessIdentityConfig :: !(Maybe CloudFrontOriginAccessIdentityConfig)
-  , _cfoaiId :: !Text
-  , _cfoaiS3CanonicalUserId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CloudFrontOriginAccessIdentity =
+  CloudFrontOriginAccessIdentity'
+    { _cfoaiCloudFrontOriginAccessIdentityConfig :: !(Maybe CloudFrontOriginAccessIdentityConfig)
+    , _cfoaiId :: !Text
+    , _cfoaiS3CanonicalUserId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CloudFrontOriginAccessIdentity' with the minimum fields required to make a request.
@@ -546,10 +560,12 @@ instance NFData CloudFrontOriginAccessIdentity where
 --
 --
 -- /See:/ 'cloudFrontOriginAccessIdentityConfig' smart constructor.
-data CloudFrontOriginAccessIdentityConfig = CloudFrontOriginAccessIdentityConfig'
-  { _cfoaicCallerReference :: !Text
-  , _cfoaicComment         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CloudFrontOriginAccessIdentityConfig =
+  CloudFrontOriginAccessIdentityConfig'
+    { _cfoaicCallerReference :: !Text
+    , _cfoaicComment         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CloudFrontOriginAccessIdentityConfig' with the minimum fields required to make a request.
@@ -601,14 +617,16 @@ instance ToXML CloudFrontOriginAccessIdentityConfig
 --
 --
 -- /See:/ 'cloudFrontOriginAccessIdentityList' smart constructor.
-data CloudFrontOriginAccessIdentityList = CloudFrontOriginAccessIdentityList'
-  { _cfoailItems       :: !(Maybe [CloudFrontOriginAccessIdentitySummary])
-  , _cfoailNextMarker  :: !(Maybe Text)
-  , _cfoailMarker      :: !Text
-  , _cfoailMaxItems    :: !Int
-  , _cfoailIsTruncated :: !Bool
-  , _cfoailQuantity    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CloudFrontOriginAccessIdentityList =
+  CloudFrontOriginAccessIdentityList'
+    { _cfoailItems       :: !(Maybe [CloudFrontOriginAccessIdentitySummary])
+    , _cfoailNextMarker  :: !(Maybe Text)
+    , _cfoailMarker      :: !Text
+    , _cfoailMaxItems    :: !Int
+    , _cfoailIsTruncated :: !Bool
+    , _cfoailQuantity    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CloudFrontOriginAccessIdentityList' with the minimum fields required to make a request.
@@ -692,11 +710,13 @@ instance NFData CloudFrontOriginAccessIdentityList
 --
 --
 -- /See:/ 'cloudFrontOriginAccessIdentitySummary' smart constructor.
-data CloudFrontOriginAccessIdentitySummary = CloudFrontOriginAccessIdentitySummary'
-  { _cfoaisId                :: !Text
-  , _cfoaisS3CanonicalUserId :: !Text
-  , _cfoaisComment           :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CloudFrontOriginAccessIdentitySummary =
+  CloudFrontOriginAccessIdentitySummary'
+    { _cfoaisId                :: !Text
+    , _cfoaisS3CanonicalUserId :: !Text
+    , _cfoaisComment           :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CloudFrontOriginAccessIdentitySummary' with the minimum fields required to make a request.
@@ -753,11 +773,13 @@ instance NFData CloudFrontOriginAccessIdentitySummary
 --
 --
 -- /See:/ 'contentTypeProfile' smart constructor.
-data ContentTypeProfile = ContentTypeProfile'
-  { _ctpProfileId   :: !(Maybe Text)
-  , _ctpFormat      :: !Format
-  , _ctpContentType :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ContentTypeProfile =
+  ContentTypeProfile'
+    { _ctpProfileId   :: !(Maybe Text)
+    , _ctpFormat      :: !Format
+    , _ctpContentType :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ContentTypeProfile' with the minimum fields required to make a request.
@@ -815,10 +837,12 @@ instance ToXML ContentTypeProfile where
 --
 --
 -- /See:/ 'contentTypeProfileConfig' smart constructor.
-data ContentTypeProfileConfig = ContentTypeProfileConfig'
-  { _ctpcContentTypeProfiles             :: !(Maybe ContentTypeProfiles)
-  , _ctpcForwardWhenContentTypeIsUnknown :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ContentTypeProfileConfig =
+  ContentTypeProfileConfig'
+    { _ctpcContentTypeProfiles             :: !(Maybe ContentTypeProfiles)
+    , _ctpcForwardWhenContentTypeIsUnknown :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ContentTypeProfileConfig' with the minimum fields required to make a request.
@@ -868,10 +892,12 @@ instance ToXML ContentTypeProfileConfig where
 --
 --
 -- /See:/ 'contentTypeProfiles' smart constructor.
-data ContentTypeProfiles = ContentTypeProfiles'
-  { _ctpItems    :: !(Maybe [ContentTypeProfile])
-  , _ctpQuantity :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ContentTypeProfiles =
+  ContentTypeProfiles'
+    { _ctpItems    :: !(Maybe [ContentTypeProfile])
+    , _ctpQuantity :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ContentTypeProfiles' with the minimum fields required to make a request.
@@ -919,10 +945,12 @@ instance ToXML ContentTypeProfiles where
 --
 --
 -- /See:/ 'cookieNames' smart constructor.
-data CookieNames = CookieNames'
-  { _cnItems    :: !(Maybe [Text])
-  , _cnQuantity :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CookieNames =
+  CookieNames'
+    { _cnItems    :: !(Maybe [Text])
+    , _cnQuantity :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CookieNames' with the minimum fields required to make a request.
@@ -969,10 +997,12 @@ instance ToXML CookieNames where
 --
 --
 -- /See:/ 'cookiePreference' smart constructor.
-data CookiePreference = CookiePreference'
-  { _cpWhitelistedNames :: !(Maybe CookieNames)
-  , _cpForward          :: !ItemSelection
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CookiePreference =
+  CookiePreference'
+    { _cpWhitelistedNames :: !(Maybe CookieNames)
+    , _cpForward          :: !ItemSelection
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CookiePreference' with the minimum fields required to make a request.
@@ -1025,12 +1055,14 @@ instance ToXML CookiePreference where
 --
 --
 -- /See:/ 'customErrorResponse' smart constructor.
-data CustomErrorResponse = CustomErrorResponse'
-  { _ceResponsePagePath   :: !(Maybe Text)
-  , _ceResponseCode       :: !(Maybe Text)
-  , _ceErrorCachingMinTTL :: !(Maybe Integer)
-  , _ceErrorCode          :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CustomErrorResponse =
+  CustomErrorResponse'
+    { _ceResponsePagePath   :: !(Maybe Text)
+    , _ceResponseCode       :: !(Maybe Text)
+    , _ceErrorCachingMinTTL :: !(Maybe Integer)
+    , _ceErrorCode          :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CustomErrorResponse' with the minimum fields required to make a request.
@@ -1104,10 +1136,12 @@ instance ToXML CustomErrorResponse where
 --
 --
 -- /See:/ 'customErrorResponses' smart constructor.
-data CustomErrorResponses = CustomErrorResponses'
-  { _cerItems    :: !(Maybe [CustomErrorResponse])
-  , _cerQuantity :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CustomErrorResponses =
+  CustomErrorResponses'
+    { _cerItems    :: !(Maybe [CustomErrorResponse])
+    , _cerQuantity :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CustomErrorResponses' with the minimum fields required to make a request.
@@ -1156,10 +1190,12 @@ instance ToXML CustomErrorResponses where
 --
 --
 -- /See:/ 'customHeaders' smart constructor.
-data CustomHeaders = CustomHeaders'
-  { _chItems    :: !(Maybe [OriginCustomHeader])
-  , _chQuantity :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CustomHeaders =
+  CustomHeaders'
+    { _chItems    :: !(Maybe [OriginCustomHeader])
+    , _chQuantity :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CustomHeaders' with the minimum fields required to make a request.
@@ -1207,14 +1243,16 @@ instance ToXML CustomHeaders where
 --
 --
 -- /See:/ 'customOriginConfig' smart constructor.
-data CustomOriginConfig = CustomOriginConfig'
-  { _cocOriginKeepaliveTimeout :: !(Maybe Int)
-  , _cocOriginReadTimeout      :: !(Maybe Int)
-  , _cocOriginSSLProtocols     :: !(Maybe OriginSSLProtocols)
-  , _cocHTTPPort               :: !Int
-  , _cocHTTPSPort              :: !Int
-  , _cocOriginProtocolPolicy   :: !OriginProtocolPolicy
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CustomOriginConfig =
+  CustomOriginConfig'
+    { _cocOriginKeepaliveTimeout :: !(Maybe Int)
+    , _cocOriginReadTimeout      :: !(Maybe Int)
+    , _cocOriginSSLProtocols     :: !(Maybe OriginSSLProtocols)
+    , _cocHTTPPort               :: !Int
+    , _cocHTTPSPort              :: !Int
+    , _cocOriginProtocolPolicy   :: !OriginProtocolPolicy
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CustomOriginConfig' with the minimum fields required to make a request.
@@ -1302,20 +1340,22 @@ instance ToXML CustomOriginConfig where
 --
 --
 -- /See:/ 'defaultCacheBehavior' smart constructor.
-data DefaultCacheBehavior = DefaultCacheBehavior'
-  { _dcbAllowedMethods             :: !(Maybe AllowedMethods)
-  , _dcbLambdaFunctionAssociations :: !(Maybe LambdaFunctionAssociations)
-  , _dcbMaxTTL                     :: !(Maybe Integer)
-  , _dcbCompress                   :: !(Maybe Bool)
-  , _dcbSmoothStreaming            :: !(Maybe Bool)
-  , _dcbDefaultTTL                 :: !(Maybe Integer)
-  , _dcbFieldLevelEncryptionId     :: !(Maybe Text)
-  , _dcbTargetOriginId             :: !Text
-  , _dcbForwardedValues            :: !ForwardedValues
-  , _dcbTrustedSigners             :: !TrustedSigners
-  , _dcbViewerProtocolPolicy       :: !ViewerProtocolPolicy
-  , _dcbMinTTL                     :: !Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DefaultCacheBehavior =
+  DefaultCacheBehavior'
+    { _dcbAllowedMethods             :: !(Maybe AllowedMethods)
+    , _dcbLambdaFunctionAssociations :: !(Maybe LambdaFunctionAssociations)
+    , _dcbMaxTTL                     :: !(Maybe Integer)
+    , _dcbCompress                   :: !(Maybe Bool)
+    , _dcbSmoothStreaming            :: !(Maybe Bool)
+    , _dcbDefaultTTL                 :: !(Maybe Integer)
+    , _dcbFieldLevelEncryptionId     :: !(Maybe Text)
+    , _dcbTargetOriginId             :: !Text
+    , _dcbForwardedValues            :: !ForwardedValues
+    , _dcbTrustedSigners             :: !TrustedSigners
+    , _dcbViewerProtocolPolicy       :: !ViewerProtocolPolicy
+    , _dcbMinTTL                     :: !Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DefaultCacheBehavior' with the minimum fields required to make a request.
@@ -1459,16 +1499,18 @@ instance ToXML DefaultCacheBehavior where
 --
 --
 -- /See:/ 'distribution' smart constructor.
-data Distribution = Distribution'
-  { _dId                            :: !Text
-  , _dARN                           :: !Text
-  , _dStatus                        :: !Text
-  , _dLastModifiedTime              :: !ISO8601
-  , _dInProgressInvalidationBatches :: !Int
-  , _dDomainName                    :: !Text
-  , _dActiveTrustedSigners          :: !ActiveTrustedSigners
-  , _dDistributionConfig            :: !DistributionConfig
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Distribution =
+  Distribution'
+    { _dId                            :: !Text
+    , _dARN                           :: !Text
+    , _dStatus                        :: !Text
+    , _dLastModifiedTime              :: !ISO8601
+    , _dInProgressInvalidationBatches :: !Int
+    , _dDomainName                    :: !Text
+    , _dActiveTrustedSigners          :: !ActiveTrustedSigners
+    , _dDistributionConfig            :: !DistributionConfig
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Distribution' with the minimum fields required to make a request.
@@ -1564,24 +1606,26 @@ instance NFData Distribution where
 --
 --
 -- /See:/ 'distributionConfig' smart constructor.
-data DistributionConfig = DistributionConfig'
-  { _dcHTTPVersion          :: !(Maybe HTTPVersion)
-  , _dcAliases              :: !(Maybe Aliases)
-  , _dcDefaultRootObject    :: !(Maybe Text)
-  , _dcPriceClass           :: !(Maybe PriceClass)
-  , _dcCustomErrorResponses :: !(Maybe CustomErrorResponses)
-  , _dcWebACLId             :: !(Maybe Text)
-  , _dcViewerCertificate    :: !(Maybe ViewerCertificate)
-  , _dcRestrictions         :: !(Maybe Restrictions)
-  , _dcLogging              :: !(Maybe LoggingConfig)
-  , _dcCacheBehaviors       :: !(Maybe CacheBehaviors)
-  , _dcIsIPV6Enabled        :: !(Maybe Bool)
-  , _dcCallerReference      :: !Text
-  , _dcOrigins              :: !Origins
-  , _dcDefaultCacheBehavior :: !DefaultCacheBehavior
-  , _dcComment              :: !Text
-  , _dcEnabled              :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DistributionConfig =
+  DistributionConfig'
+    { _dcHTTPVersion          :: !(Maybe HTTPVersion)
+    , _dcAliases              :: !(Maybe Aliases)
+    , _dcDefaultRootObject    :: !(Maybe Text)
+    , _dcPriceClass           :: !(Maybe PriceClass)
+    , _dcCustomErrorResponses :: !(Maybe CustomErrorResponses)
+    , _dcWebACLId             :: !(Maybe Text)
+    , _dcViewerCertificate    :: !(Maybe ViewerCertificate)
+    , _dcRestrictions         :: !(Maybe Restrictions)
+    , _dcLogging              :: !(Maybe LoggingConfig)
+    , _dcCacheBehaviors       :: !(Maybe CacheBehaviors)
+    , _dcIsIPV6Enabled        :: !(Maybe Bool)
+    , _dcCallerReference      :: !Text
+    , _dcOrigins              :: !Origins
+    , _dcDefaultCacheBehavior :: !DefaultCacheBehavior
+    , _dcComment              :: !Text
+    , _dcEnabled              :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DistributionConfig' with the minimum fields required to make a request.
@@ -1758,10 +1802,12 @@ instance ToXML DistributionConfig where
 --
 --
 -- /See:/ 'distributionConfigWithTags' smart constructor.
-data DistributionConfigWithTags = DistributionConfigWithTags'
-  { _dcwtDistributionConfig :: !DistributionConfig
-  , _dcwtTags               :: !Tags
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DistributionConfigWithTags =
+  DistributionConfigWithTags'
+    { _dcwtDistributionConfig :: !DistributionConfig
+    , _dcwtTags               :: !Tags
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DistributionConfigWithTags' with the minimum fields required to make a request.
@@ -1803,14 +1849,16 @@ instance ToXML DistributionConfigWithTags where
 --
 --
 -- /See:/ 'distributionList' smart constructor.
-data DistributionList = DistributionList'
-  { _dlItems       :: !(Maybe [DistributionSummary])
-  , _dlNextMarker  :: !(Maybe Text)
-  , _dlMarker      :: !Text
-  , _dlMaxItems    :: !Int
-  , _dlIsTruncated :: !Bool
-  , _dlQuantity    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DistributionList =
+  DistributionList'
+    { _dlItems       :: !(Maybe [DistributionSummary])
+    , _dlNextMarker  :: !(Maybe Text)
+    , _dlMarker      :: !Text
+    , _dlMaxItems    :: !Int
+    , _dlIsTruncated :: !Bool
+    , _dlQuantity    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DistributionList' with the minimum fields required to make a request.
@@ -1889,26 +1937,28 @@ instance NFData DistributionList where
 --
 --
 -- /See:/ 'distributionSummary' smart constructor.
-data DistributionSummary = DistributionSummary'
-  { _dsId                   :: !Text
-  , _dsARN                  :: !Text
-  , _dsStatus               :: !Text
-  , _dsLastModifiedTime     :: !ISO8601
-  , _dsDomainName           :: !Text
-  , _dsAliases              :: !Aliases
-  , _dsOrigins              :: !Origins
-  , _dsDefaultCacheBehavior :: !DefaultCacheBehavior
-  , _dsCacheBehaviors       :: !CacheBehaviors
-  , _dsCustomErrorResponses :: !CustomErrorResponses
-  , _dsComment              :: !Text
-  , _dsPriceClass           :: !PriceClass
-  , _dsEnabled              :: !Bool
-  , _dsViewerCertificate    :: !ViewerCertificate
-  , _dsRestrictions         :: !Restrictions
-  , _dsWebACLId             :: !Text
-  , _dsHTTPVersion          :: !HTTPVersion
-  , _dsIsIPV6Enabled        :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DistributionSummary =
+  DistributionSummary'
+    { _dsId                   :: !Text
+    , _dsARN                  :: !Text
+    , _dsStatus               :: !Text
+    , _dsLastModifiedTime     :: !ISO8601
+    , _dsDomainName           :: !Text
+    , _dsAliases              :: !Aliases
+    , _dsOrigins              :: !Origins
+    , _dsDefaultCacheBehavior :: !DefaultCacheBehavior
+    , _dsCacheBehaviors       :: !CacheBehaviors
+    , _dsCustomErrorResponses :: !CustomErrorResponses
+    , _dsComment              :: !Text
+    , _dsPriceClass           :: !PriceClass
+    , _dsEnabled              :: !Bool
+    , _dsViewerCertificate    :: !ViewerCertificate
+    , _dsRestrictions         :: !Restrictions
+    , _dsWebACLId             :: !Text
+    , _dsHTTPVersion          :: !HTTPVersion
+    , _dsIsIPV6Enabled        :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DistributionSummary' with the minimum fields required to make a request.
@@ -2094,10 +2144,12 @@ instance NFData DistributionSummary where
 --
 --
 -- /See:/ 'encryptionEntities' smart constructor.
-data EncryptionEntities = EncryptionEntities'
-  { _eeItems    :: !(Maybe [EncryptionEntity])
-  , _eeQuantity :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EncryptionEntities =
+  EncryptionEntities'
+    { _eeItems    :: !(Maybe [EncryptionEntity])
+    , _eeQuantity :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EncryptionEntities' with the minimum fields required to make a request.
@@ -2145,11 +2197,13 @@ instance ToXML EncryptionEntities where
 --
 --
 -- /See:/ 'encryptionEntity' smart constructor.
-data EncryptionEntity = EncryptionEntity'
-  { _eePublicKeyId   :: !Text
-  , _eeProviderId    :: !Text
-  , _eeFieldPatterns :: !FieldPatterns
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EncryptionEntity =
+  EncryptionEntity'
+    { _eePublicKeyId   :: !Text
+    , _eeProviderId    :: !Text
+    , _eeFieldPatterns :: !FieldPatterns
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EncryptionEntity' with the minimum fields required to make a request.
@@ -2208,11 +2262,13 @@ instance ToXML EncryptionEntity where
 --
 --
 -- /See:/ 'fieldLevelEncryption' smart constructor.
-data FieldLevelEncryption = FieldLevelEncryption'
-  { _fleId                         :: !Text
-  , _fleLastModifiedTime           :: !ISO8601
-  , _fleFieldLevelEncryptionConfig :: !FieldLevelEncryptionConfig
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FieldLevelEncryption =
+  FieldLevelEncryption'
+    { _fleId                         :: !Text
+    , _fleLastModifiedTime           :: !ISO8601
+    , _fleFieldLevelEncryptionConfig :: !FieldLevelEncryptionConfig
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FieldLevelEncryption' with the minimum fields required to make a request.
@@ -2264,12 +2320,14 @@ instance NFData FieldLevelEncryption where
 --
 --
 -- /See:/ 'fieldLevelEncryptionConfig' smart constructor.
-data FieldLevelEncryptionConfig = FieldLevelEncryptionConfig'
-  { _flecQueryArgProfileConfig    :: !(Maybe QueryArgProfileConfig)
-  , _flecContentTypeProfileConfig :: !(Maybe ContentTypeProfileConfig)
-  , _flecComment                  :: !(Maybe Text)
-  , _flecCallerReference          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FieldLevelEncryptionConfig =
+  FieldLevelEncryptionConfig'
+    { _flecQueryArgProfileConfig    :: !(Maybe QueryArgProfileConfig)
+    , _flecContentTypeProfileConfig :: !(Maybe ContentTypeProfileConfig)
+    , _flecComment                  :: !(Maybe Text)
+    , _flecCallerReference          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FieldLevelEncryptionConfig' with the minimum fields required to make a request.
@@ -2338,12 +2396,14 @@ instance ToXML FieldLevelEncryptionConfig where
 --
 --
 -- /See:/ 'fieldLevelEncryptionList' smart constructor.
-data FieldLevelEncryptionList = FieldLevelEncryptionList'
-  { _flelItems      :: !(Maybe [FieldLevelEncryptionSummary])
-  , _flelNextMarker :: !(Maybe Text)
-  , _flelMaxItems   :: !Int
-  , _flelQuantity   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FieldLevelEncryptionList =
+  FieldLevelEncryptionList'
+    { _flelItems      :: !(Maybe [FieldLevelEncryptionSummary])
+    , _flelNextMarker :: !(Maybe Text)
+    , _flelMaxItems   :: !Int
+    , _flelQuantity   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FieldLevelEncryptionList' with the minimum fields required to make a request.
@@ -2404,11 +2464,13 @@ instance NFData FieldLevelEncryptionList where
 --
 --
 -- /See:/ 'fieldLevelEncryptionProfile' smart constructor.
-data FieldLevelEncryptionProfile = FieldLevelEncryptionProfile'
-  { _flepId                                :: !Text
-  , _flepLastModifiedTime                  :: !ISO8601
-  , _flepFieldLevelEncryptionProfileConfig :: !FieldLevelEncryptionProfileConfig
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FieldLevelEncryptionProfile =
+  FieldLevelEncryptionProfile'
+    { _flepId :: !Text
+    , _flepLastModifiedTime :: !ISO8601
+    , _flepFieldLevelEncryptionProfileConfig :: !FieldLevelEncryptionProfileConfig
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FieldLevelEncryptionProfile' with the minimum fields required to make a request.
@@ -2461,12 +2523,14 @@ instance NFData FieldLevelEncryptionProfile where
 --
 --
 -- /See:/ 'fieldLevelEncryptionProfileConfig' smart constructor.
-data FieldLevelEncryptionProfileConfig = FieldLevelEncryptionProfileConfig'
-  { _flepcComment            :: !(Maybe Text)
-  , _flepcName               :: !Text
-  , _flepcCallerReference    :: !Text
-  , _flepcEncryptionEntities :: !EncryptionEntities
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FieldLevelEncryptionProfileConfig =
+  FieldLevelEncryptionProfileConfig'
+    { _flepcComment            :: !(Maybe Text)
+    , _flepcName               :: !Text
+    , _flepcCallerReference    :: !Text
+    , _flepcEncryptionEntities :: !EncryptionEntities
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FieldLevelEncryptionProfileConfig' with the minimum fields required to make a request.
@@ -2537,12 +2601,14 @@ instance ToXML FieldLevelEncryptionProfileConfig
 --
 --
 -- /See:/ 'fieldLevelEncryptionProfileList' smart constructor.
-data FieldLevelEncryptionProfileList = FieldLevelEncryptionProfileList'
-  { _fleplItems      :: !(Maybe [FieldLevelEncryptionProfileSummary])
-  , _fleplNextMarker :: !(Maybe Text)
-  , _fleplMaxItems   :: !Int
-  , _fleplQuantity   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FieldLevelEncryptionProfileList =
+  FieldLevelEncryptionProfileList'
+    { _fleplItems      :: !(Maybe [FieldLevelEncryptionProfileSummary])
+    , _fleplNextMarker :: !(Maybe Text)
+    , _fleplMaxItems   :: !Int
+    , _fleplQuantity   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FieldLevelEncryptionProfileList' with the minimum fields required to make a request.
@@ -2606,13 +2672,15 @@ instance NFData FieldLevelEncryptionProfileList where
 --
 --
 -- /See:/ 'fieldLevelEncryptionProfileSummary' smart constructor.
-data FieldLevelEncryptionProfileSummary = FieldLevelEncryptionProfileSummary'
-  { _flepsComment            :: !(Maybe Text)
-  , _flepsId                 :: !Text
-  , _flepsLastModifiedTime   :: !ISO8601
-  , _flepsName               :: !Text
-  , _flepsEncryptionEntities :: !EncryptionEntities
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FieldLevelEncryptionProfileSummary =
+  FieldLevelEncryptionProfileSummary'
+    { _flepsComment            :: !(Maybe Text)
+    , _flepsId                 :: !Text
+    , _flepsLastModifiedTime   :: !ISO8601
+    , _flepsName               :: !Text
+    , _flepsEncryptionEntities :: !EncryptionEntities
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FieldLevelEncryptionProfileSummary' with the minimum fields required to make a request.
@@ -2684,13 +2752,15 @@ instance NFData FieldLevelEncryptionProfileSummary
 --
 --
 -- /See:/ 'fieldLevelEncryptionSummary' smart constructor.
-data FieldLevelEncryptionSummary = FieldLevelEncryptionSummary'
-  { _flesQueryArgProfileConfig    :: !(Maybe QueryArgProfileConfig)
-  , _flesContentTypeProfileConfig :: !(Maybe ContentTypeProfileConfig)
-  , _flesComment                  :: !(Maybe Text)
-  , _flesId                       :: !Text
-  , _flesLastModifiedTime         :: !ISO8601
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FieldLevelEncryptionSummary =
+  FieldLevelEncryptionSummary'
+    { _flesQueryArgProfileConfig    :: !(Maybe QueryArgProfileConfig)
+    , _flesContentTypeProfileConfig :: !(Maybe ContentTypeProfileConfig)
+    , _flesComment                  :: !(Maybe Text)
+    , _flesId                       :: !Text
+    , _flesLastModifiedTime         :: !ISO8601
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FieldLevelEncryptionSummary' with the minimum fields required to make a request.
@@ -2758,10 +2828,12 @@ instance NFData FieldLevelEncryptionSummary where
 --
 --
 -- /See:/ 'fieldPatterns' smart constructor.
-data FieldPatterns = FieldPatterns'
-  { _fpItems    :: !(Maybe [Text])
-  , _fpQuantity :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FieldPatterns =
+  FieldPatterns'
+    { _fpItems    :: !(Maybe [Text])
+    , _fpQuantity :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FieldPatterns' with the minimum fields required to make a request.
@@ -2809,12 +2881,14 @@ instance ToXML FieldPatterns where
 --
 --
 -- /See:/ 'forwardedValues' smart constructor.
-data ForwardedValues = ForwardedValues'
-  { _fvQueryStringCacheKeys :: !(Maybe QueryStringCacheKeys)
-  , _fvHeaders              :: !(Maybe Headers)
-  , _fvQueryString          :: !Bool
-  , _fvCookies              :: !CookiePreference
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ForwardedValues =
+  ForwardedValues'
+    { _fvQueryStringCacheKeys :: !(Maybe QueryStringCacheKeys)
+    , _fvHeaders              :: !(Maybe Headers)
+    , _fvQueryString          :: !Bool
+    , _fvCookies              :: !CookiePreference
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ForwardedValues' with the minimum fields required to make a request.
@@ -2881,11 +2955,13 @@ instance ToXML ForwardedValues where
 --
 --
 -- /See:/ 'geoRestriction' smart constructor.
-data GeoRestriction = GeoRestriction'
-  { _grItems           :: !(Maybe [Text])
-  , _grRestrictionType :: !GeoRestrictionType
-  , _grQuantity        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GeoRestriction =
+  GeoRestriction'
+    { _grItems           :: !(Maybe [Text])
+    , _grRestrictionType :: !GeoRestrictionType
+    , _grQuantity        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GeoRestriction' with the minimum fields required to make a request.
@@ -2948,10 +3024,12 @@ instance ToXML GeoRestriction where
 --
 --
 -- /See:/ 'headers' smart constructor.
-data Headers = Headers'
-  { _hItems    :: !(Maybe [Text])
-  , _hQuantity :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Headers =
+  Headers'
+    { _hItems    :: !(Maybe [Text])
+    , _hQuantity :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Headers' with the minimum fields required to make a request.
@@ -2997,12 +3075,14 @@ instance ToXML Headers where
 --
 --
 -- /See:/ 'invalidation' smart constructor.
-data Invalidation = Invalidation'
-  { _iId                :: !Text
-  , _iStatus            :: !Text
-  , _iCreateTime        :: !ISO8601
-  , _iInvalidationBatch :: !InvalidationBatch
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Invalidation =
+  Invalidation'
+    { _iId                :: !Text
+    , _iStatus            :: !Text
+    , _iCreateTime        :: !ISO8601
+    , _iInvalidationBatch :: !InvalidationBatch
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Invalidation' with the minimum fields required to make a request.
@@ -3063,10 +3143,12 @@ instance NFData Invalidation where
 --
 --
 -- /See:/ 'invalidationBatch' smart constructor.
-data InvalidationBatch = InvalidationBatch'
-  { _ibPaths           :: !Paths
-  , _ibCallerReference :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InvalidationBatch =
+  InvalidationBatch'
+    { _ibPaths           :: !Paths
+    , _ibCallerReference :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InvalidationBatch' with the minimum fields required to make a request.
@@ -3113,14 +3195,16 @@ instance ToXML InvalidationBatch where
 --
 --
 -- /See:/ 'invalidationList' smart constructor.
-data InvalidationList = InvalidationList'
-  { _ilItems       :: !(Maybe [InvalidationSummary])
-  , _ilNextMarker  :: !(Maybe Text)
-  , _ilMarker      :: !Text
-  , _ilMaxItems    :: !Int
-  , _ilIsTruncated :: !Bool
-  , _ilQuantity    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InvalidationList =
+  InvalidationList'
+    { _ilItems       :: !(Maybe [InvalidationSummary])
+    , _ilNextMarker  :: !(Maybe Text)
+    , _ilMarker      :: !Text
+    , _ilMaxItems    :: !Int
+    , _ilIsTruncated :: !Bool
+    , _ilQuantity    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InvalidationList' with the minimum fields required to make a request.
@@ -3199,11 +3283,13 @@ instance NFData InvalidationList where
 --
 --
 -- /See:/ 'invalidationSummary' smart constructor.
-data InvalidationSummary = InvalidationSummary'
-  { _isId         :: !Text
-  , _isCreateTime :: !ISO8601
-  , _isStatus     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InvalidationSummary =
+  InvalidationSummary'
+    { _isId         :: !Text
+    , _isCreateTime :: !ISO8601
+    , _isStatus     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InvalidationSummary' with the minimum fields required to make a request.
@@ -3254,10 +3340,12 @@ instance NFData InvalidationSummary where
 --
 --
 -- /See:/ 'keyPairIds' smart constructor.
-data KeyPairIds = KeyPairIds'
-  { _kpiItems    :: !(Maybe [Text])
-  , _kpiQuantity :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data KeyPairIds =
+  KeyPairIds'
+    { _kpiItems    :: !(Maybe [Text])
+    , _kpiQuantity :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'KeyPairIds' with the minimum fields required to make a request.
@@ -3298,10 +3386,12 @@ instance NFData KeyPairIds where
 --
 --
 -- /See:/ 'lambdaFunctionAssociation' smart constructor.
-data LambdaFunctionAssociation = LambdaFunctionAssociation'
-  { _lfaLambdaFunctionARN :: !Text
-  , _lfaEventType         :: !EventType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LambdaFunctionAssociation =
+  LambdaFunctionAssociation'
+    { _lfaLambdaFunctionARN :: !Text
+    , _lfaEventType         :: !EventType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LambdaFunctionAssociation' with the minimum fields required to make a request.
@@ -3352,10 +3442,12 @@ instance ToXML LambdaFunctionAssociation where
 --
 --
 -- /See:/ 'lambdaFunctionAssociations' smart constructor.
-data LambdaFunctionAssociations = LambdaFunctionAssociations'
-  { _lfaItems    :: !(Maybe [LambdaFunctionAssociation])
-  , _lfaQuantity :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LambdaFunctionAssociations =
+  LambdaFunctionAssociations'
+    { _lfaItems    :: !(Maybe [LambdaFunctionAssociation])
+    , _lfaQuantity :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LambdaFunctionAssociations' with the minimum fields required to make a request.
@@ -3405,12 +3497,14 @@ instance ToXML LambdaFunctionAssociations where
 --
 --
 -- /See:/ 'loggingConfig' smart constructor.
-data LoggingConfig = LoggingConfig'
-  { _lcEnabled        :: !Bool
-  , _lcIncludeCookies :: !Bool
-  , _lcBucket         :: !Text
-  , _lcPrefix         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LoggingConfig =
+  LoggingConfig'
+    { _lcEnabled        :: !Bool
+    , _lcIncludeCookies :: !Bool
+    , _lcBucket         :: !Text
+    , _lcPrefix         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LoggingConfig' with the minimum fields required to make a request.
@@ -3480,14 +3574,16 @@ instance ToXML LoggingConfig where
 --
 --
 -- /See:/ 'origin' smart constructor.
-data Origin = Origin'
-  { _oCustomHeaders      :: !(Maybe CustomHeaders)
-  , _oCustomOriginConfig :: !(Maybe CustomOriginConfig)
-  , _oS3OriginConfig     :: !(Maybe S3OriginConfig)
-  , _oOriginPath         :: !(Maybe Text)
-  , _oId                 :: !Text
-  , _oDomainName         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Origin =
+  Origin'
+    { _oCustomHeaders      :: !(Maybe CustomHeaders)
+    , _oCustomOriginConfig :: !(Maybe CustomOriginConfig)
+    , _oS3OriginConfig     :: !(Maybe S3OriginConfig)
+    , _oOriginPath         :: !(Maybe Text)
+    , _oId                 :: !Text
+    , _oDomainName         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Origin' with the minimum fields required to make a request.
@@ -3572,10 +3668,12 @@ instance ToXML Origin where
 --
 --
 -- /See:/ 'originCustomHeader' smart constructor.
-data OriginCustomHeader = OriginCustomHeader'
-  { _ochHeaderName  :: !Text
-  , _ochHeaderValue :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data OriginCustomHeader =
+  OriginCustomHeader'
+    { _ochHeaderName  :: !Text
+    , _ochHeaderValue :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OriginCustomHeader' with the minimum fields required to make a request.
@@ -3622,10 +3720,12 @@ instance ToXML OriginCustomHeader where
 --
 --
 -- /See:/ 'originSSLProtocols' smart constructor.
-data OriginSSLProtocols = OriginSSLProtocols'
-  { _ospQuantity :: !Int
-  , _ospItems    :: ![SSLProtocol]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data OriginSSLProtocols =
+  OriginSSLProtocols'
+    { _ospQuantity :: !Int
+    , _ospItems    :: ![SSLProtocol]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OriginSSLProtocols' with the minimum fields required to make a request.
@@ -3672,10 +3772,12 @@ instance ToXML OriginSSLProtocols where
 --
 --
 -- /See:/ 'origins' smart constructor.
-data Origins = Origins'
-  { _oItems    :: !(Maybe (List1 Origin))
-  , _oQuantity :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Origins =
+  Origins'
+    { _oItems    :: !(Maybe (List1 Origin))
+    , _oQuantity :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Origins' with the minimum fields required to make a request.
@@ -3721,10 +3823,12 @@ instance ToXML Origins where
 --
 --
 -- /See:/ 'paths' smart constructor.
-data Paths = Paths'
-  { _pItems    :: !(Maybe [Text])
-  , _pQuantity :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Paths =
+  Paths'
+    { _pItems    :: !(Maybe [Text])
+    , _pQuantity :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Paths' with the minimum fields required to make a request.
@@ -3770,11 +3874,13 @@ instance ToXML Paths where
 --
 --
 -- /See:/ 'publicKey' smart constructor.
-data PublicKey = PublicKey'
-  { _pkId              :: !Text
-  , _pkCreatedTime     :: !ISO8601
-  , _pkPublicKeyConfig :: !PublicKeyConfig
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PublicKey =
+  PublicKey'
+    { _pkId              :: !Text
+    , _pkCreatedTime     :: !ISO8601
+    , _pkPublicKeyConfig :: !PublicKeyConfig
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PublicKey' with the minimum fields required to make a request.
@@ -3826,12 +3932,14 @@ instance NFData PublicKey where
 --
 --
 -- /See:/ 'publicKeyConfig' smart constructor.
-data PublicKeyConfig = PublicKeyConfig'
-  { _pkcComment         :: !(Maybe Text)
-  , _pkcCallerReference :: !Text
-  , _pkcName            :: !Text
-  , _pkcEncodedKey      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PublicKeyConfig =
+  PublicKeyConfig'
+    { _pkcComment         :: !(Maybe Text)
+    , _pkcCallerReference :: !Text
+    , _pkcName            :: !Text
+    , _pkcEncodedKey      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PublicKeyConfig' with the minimum fields required to make a request.
@@ -3898,12 +4006,14 @@ instance ToXML PublicKeyConfig where
 --
 --
 -- /See:/ 'publicKeyList' smart constructor.
-data PublicKeyList = PublicKeyList'
-  { _pklItems      :: !(Maybe [PublicKeySummary])
-  , _pklNextMarker :: !(Maybe Text)
-  , _pklMaxItems   :: !Int
-  , _pklQuantity   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PublicKeyList =
+  PublicKeyList'
+    { _pklItems      :: !(Maybe [PublicKeySummary])
+    , _pklNextMarker :: !(Maybe Text)
+    , _pklMaxItems   :: !Int
+    , _pklQuantity   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PublicKeyList' with the minimum fields required to make a request.
@@ -3964,13 +4074,15 @@ instance NFData PublicKeyList where
 --
 --
 -- /See:/ 'publicKeySummary' smart constructor.
-data PublicKeySummary = PublicKeySummary'
-  { _pksComment     :: !(Maybe Text)
-  , _pksId          :: !Text
-  , _pksName        :: !Text
-  , _pksCreatedTime :: !ISO8601
-  , _pksEncodedKey  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PublicKeySummary =
+  PublicKeySummary'
+    { _pksComment     :: !(Maybe Text)
+    , _pksId          :: !Text
+    , _pksName        :: !Text
+    , _pksCreatedTime :: !ISO8601
+    , _pksEncodedKey  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PublicKeySummary' with the minimum fields required to make a request.
@@ -4038,10 +4150,12 @@ instance NFData PublicKeySummary where
 --
 --
 -- /See:/ 'queryArgProfile' smart constructor.
-data QueryArgProfile = QueryArgProfile'
-  { _qapQueryArg  :: !Text
-  , _qapProfileId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data QueryArgProfile =
+  QueryArgProfile'
+    { _qapQueryArg  :: !Text
+    , _qapProfileId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'QueryArgProfile' with the minimum fields required to make a request.
@@ -4087,10 +4201,12 @@ instance ToXML QueryArgProfile where
 --
 --
 -- /See:/ 'queryArgProfileConfig' smart constructor.
-data QueryArgProfileConfig = QueryArgProfileConfig'
-  { _qapcQueryArgProfiles                    :: !(Maybe QueryArgProfiles)
-  , _qapcForwardWhenQueryArgProfileIsUnknown :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data QueryArgProfileConfig =
+  QueryArgProfileConfig'
+    { _qapcQueryArgProfiles                    :: !(Maybe QueryArgProfiles)
+    , _qapcForwardWhenQueryArgProfileIsUnknown :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'QueryArgProfileConfig' with the minimum fields required to make a request.
@@ -4141,10 +4257,12 @@ instance ToXML QueryArgProfileConfig where
 --
 --
 -- /See:/ 'queryArgProfiles' smart constructor.
-data QueryArgProfiles = QueryArgProfiles'
-  { _qapItems    :: !(Maybe [QueryArgProfile])
-  , _qapQuantity :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data QueryArgProfiles =
+  QueryArgProfiles'
+    { _qapItems    :: !(Maybe [QueryArgProfile])
+    , _qapQuantity :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'QueryArgProfiles' with the minimum fields required to make a request.
@@ -4188,10 +4306,12 @@ instance ToXML QueryArgProfiles where
                "Quantity" @= _qapQuantity]
 
 -- | /See:/ 'queryStringCacheKeys' smart constructor.
-data QueryStringCacheKeys = QueryStringCacheKeys'
-  { _qsckItems    :: !(Maybe [Text])
-  , _qsckQuantity :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data QueryStringCacheKeys =
+  QueryStringCacheKeys'
+    { _qsckItems    :: !(Maybe [Text])
+    , _qsckQuantity :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'QueryStringCacheKeys' with the minimum fields required to make a request.
@@ -4238,9 +4358,11 @@ instance ToXML QueryStringCacheKeys where
 --
 --
 -- /See:/ 'restrictions' smart constructor.
-newtype Restrictions = Restrictions'
-  { _rGeoRestriction :: GeoRestriction
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype Restrictions =
+  Restrictions'
+    { _rGeoRestriction :: GeoRestriction
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Restrictions' with the minimum fields required to make a request.
@@ -4276,10 +4398,12 @@ instance ToXML Restrictions where
 --
 --
 -- /See:/ 's3Origin' smart constructor.
-data S3Origin = S3Origin'
-  { _soDomainName           :: !Text
-  , _soOriginAccessIdentity :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data S3Origin =
+  S3Origin'
+    { _soDomainName           :: !Text
+    , _soOriginAccessIdentity :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'S3Origin' with the minimum fields required to make a request.
@@ -4328,9 +4452,11 @@ instance ToXML S3Origin where
 --
 --
 -- /See:/ 's3OriginConfig' smart constructor.
-newtype S3OriginConfig = S3OriginConfig'
-  { _socOriginAccessIdentity :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype S3OriginConfig =
+  S3OriginConfig'
+    { _socOriginAccessIdentity :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'S3OriginConfig' with the minimum fields required to make a request.
@@ -4367,10 +4493,12 @@ instance ToXML S3OriginConfig where
 --
 --
 -- /See:/ 'signer' smart constructor.
-data Signer = Signer'
-  { _sAWSAccountNumber :: !(Maybe Text)
-  , _sKeyPairIds       :: !(Maybe KeyPairIds)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Signer =
+  Signer'
+    { _sAWSAccountNumber :: !(Maybe Text)
+    , _sKeyPairIds       :: !(Maybe KeyPairIds)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Signer' with the minimum fields required to make a request.
@@ -4407,15 +4535,17 @@ instance NFData Signer where
 --
 --
 -- /See:/ 'streamingDistribution' smart constructor.
-data StreamingDistribution = StreamingDistribution'
-  { _sdLastModifiedTime            :: !(Maybe ISO8601)
-  , _sdId                          :: !Text
-  , _sdARN                         :: !Text
-  , _sdStatus                      :: !Text
-  , _sdDomainName                  :: !Text
-  , _sdActiveTrustedSigners        :: !ActiveTrustedSigners
-  , _sdStreamingDistributionConfig :: !StreamingDistributionConfig
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StreamingDistribution =
+  StreamingDistribution'
+    { _sdLastModifiedTime            :: !(Maybe ISO8601)
+    , _sdId                          :: !Text
+    , _sdARN                         :: !Text
+    , _sdStatus                      :: !Text
+    , _sdDomainName                  :: !Text
+    , _sdActiveTrustedSigners        :: !ActiveTrustedSigners
+    , _sdStreamingDistributionConfig :: !StreamingDistributionConfig
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StreamingDistribution' with the minimum fields required to make a request.
@@ -4502,16 +4632,18 @@ instance NFData StreamingDistribution where
 --
 --
 -- /See:/ 'streamingDistributionConfig' smart constructor.
-data StreamingDistributionConfig = StreamingDistributionConfig'
-  { _sdcAliases         :: !(Maybe Aliases)
-  , _sdcPriceClass      :: !(Maybe PriceClass)
-  , _sdcLogging         :: !(Maybe StreamingLoggingConfig)
-  , _sdcCallerReference :: !Text
-  , _sdcS3Origin        :: !S3Origin
-  , _sdcComment         :: !Text
-  , _sdcTrustedSigners  :: !TrustedSigners
-  , _sdcEnabled         :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StreamingDistributionConfig =
+  StreamingDistributionConfig'
+    { _sdcAliases         :: !(Maybe Aliases)
+    , _sdcPriceClass      :: !(Maybe PriceClass)
+    , _sdcLogging         :: !(Maybe StreamingLoggingConfig)
+    , _sdcCallerReference :: !Text
+    , _sdcS3Origin        :: !S3Origin
+    , _sdcComment         :: !Text
+    , _sdcTrustedSigners  :: !TrustedSigners
+    , _sdcEnabled         :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StreamingDistributionConfig' with the minimum fields required to make a request.
@@ -4616,10 +4748,12 @@ instance ToXML StreamingDistributionConfig where
 --
 --
 -- /See:/ 'streamingDistributionConfigWithTags' smart constructor.
-data StreamingDistributionConfigWithTags = StreamingDistributionConfigWithTags'
-  { _sdcwtStreamingDistributionConfig :: !StreamingDistributionConfig
-  , _sdcwtTags                        :: !Tags
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StreamingDistributionConfigWithTags =
+  StreamingDistributionConfigWithTags'
+    { _sdcwtStreamingDistributionConfig :: !StreamingDistributionConfig
+    , _sdcwtTags                        :: !Tags
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StreamingDistributionConfigWithTags' with the minimum fields required to make a request.
@@ -4667,14 +4801,16 @@ instance ToXML StreamingDistributionConfigWithTags
 --
 --
 -- /See:/ 'streamingDistributionList' smart constructor.
-data StreamingDistributionList = StreamingDistributionList'
-  { _sdlItems       :: !(Maybe [StreamingDistributionSummary])
-  , _sdlNextMarker  :: !(Maybe Text)
-  , _sdlMarker      :: !Text
-  , _sdlMaxItems    :: !Int
-  , _sdlIsTruncated :: !Bool
-  , _sdlQuantity    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StreamingDistributionList =
+  StreamingDistributionList'
+    { _sdlItems       :: !(Maybe [StreamingDistributionSummary])
+    , _sdlNextMarker  :: !(Maybe Text)
+    , _sdlMarker      :: !Text
+    , _sdlMaxItems    :: !Int
+    , _sdlIsTruncated :: !Bool
+    , _sdlQuantity    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StreamingDistributionList' with the minimum fields required to make a request.
@@ -4753,19 +4889,21 @@ instance NFData StreamingDistributionList where
 --
 --
 -- /See:/ 'streamingDistributionSummary' smart constructor.
-data StreamingDistributionSummary = StreamingDistributionSummary'
-  { _sdsId               :: !Text
-  , _sdsARN              :: !Text
-  , _sdsStatus           :: !Text
-  , _sdsLastModifiedTime :: !ISO8601
-  , _sdsDomainName       :: !Text
-  , _sdsS3Origin         :: !S3Origin
-  , _sdsAliases          :: !Aliases
-  , _sdsTrustedSigners   :: !TrustedSigners
-  , _sdsComment          :: !Text
-  , _sdsPriceClass       :: !PriceClass
-  , _sdsEnabled          :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StreamingDistributionSummary =
+  StreamingDistributionSummary'
+    { _sdsId               :: !Text
+    , _sdsARN              :: !Text
+    , _sdsStatus           :: !Text
+    , _sdsLastModifiedTime :: !ISO8601
+    , _sdsDomainName       :: !Text
+    , _sdsS3Origin         :: !S3Origin
+    , _sdsAliases          :: !Aliases
+    , _sdsTrustedSigners   :: !TrustedSigners
+    , _sdsComment          :: !Text
+    , _sdsPriceClass       :: !PriceClass
+    , _sdsEnabled          :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StreamingDistributionSummary' with the minimum fields required to make a request.
@@ -4888,11 +5026,13 @@ instance NFData StreamingDistributionSummary where
 --
 --
 -- /See:/ 'streamingLoggingConfig' smart constructor.
-data StreamingLoggingConfig = StreamingLoggingConfig'
-  { _slcEnabled :: !Bool
-  , _slcBucket  :: !Text
-  , _slcPrefix  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StreamingLoggingConfig =
+  StreamingLoggingConfig'
+    { _slcEnabled :: !Bool
+    , _slcBucket  :: !Text
+    , _slcPrefix  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StreamingLoggingConfig' with the minimum fields required to make a request.
@@ -4947,10 +5087,12 @@ instance ToXML StreamingLoggingConfig where
 --
 --
 -- /See:/ 'tag' smart constructor.
-data Tag = Tag'
-  { _tagValue :: !(Maybe Text)
-  , _tagKey   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Tag =
+  Tag'
+    { _tagValue :: !(Maybe Text)
+    , _tagKey   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Tag' with the minimum fields required to make a request.
@@ -4991,9 +5133,11 @@ instance ToXML Tag where
 --
 --
 -- /See:/ 'tagKeys' smart constructor.
-newtype TagKeys = TagKeys'
-  { _tkItems :: Maybe [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype TagKeys =
+  TagKeys'
+    { _tkItems :: Maybe [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TagKeys' with the minimum fields required to make a request.
@@ -5024,9 +5168,11 @@ instance ToXML TagKeys where
 --
 --
 -- /See:/ 'tags' smart constructor.
-newtype Tags = Tags'
-  { _tItems :: Maybe [Tag]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype Tags =
+  Tags'
+    { _tItems :: Maybe [Tag]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Tags' with the minimum fields required to make a request.
@@ -5071,11 +5217,13 @@ instance ToXML Tags where
 --
 --
 -- /See:/ 'trustedSigners' smart constructor.
-data TrustedSigners = TrustedSigners'
-  { _tsItems    :: !(Maybe [Text])
-  , _tsEnabled  :: !Bool
-  , _tsQuantity :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TrustedSigners =
+  TrustedSigners'
+    { _tsItems    :: !(Maybe [Text])
+    , _tsEnabled  :: !Bool
+    , _tsQuantity :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TrustedSigners' with the minimum fields required to make a request.
@@ -5202,15 +5350,17 @@ instance ToXML TrustedSigners where
 --
 --
 -- /See:/ 'viewerCertificate' smart constructor.
-data ViewerCertificate = ViewerCertificate'
-  { _vcSSLSupportMethod             :: !(Maybe SSLSupportMethod)
-  , _vcACMCertificateARN            :: !(Maybe Text)
-  , _vcCertificateSource            :: !(Maybe CertificateSource)
-  , _vcMinimumProtocolVersion       :: !(Maybe MinimumProtocolVersion)
-  , _vcCertificate                  :: !(Maybe Text)
-  , _vcIAMCertificateId             :: !(Maybe Text)
-  , _vcCloudFrontDefaultCertificate :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ViewerCertificate =
+  ViewerCertificate'
+    { _vcSSLSupportMethod             :: !(Maybe SSLSupportMethod)
+    , _vcACMCertificateARN            :: !(Maybe Text)
+    , _vcCertificateSource            :: !(Maybe CertificateSource)
+    , _vcMinimumProtocolVersion       :: !(Maybe MinimumProtocolVersion)
+    , _vcCertificate                  :: !(Maybe Text)
+    , _vcIAMCertificateId             :: !(Maybe Text)
+    , _vcCloudFrontDefaultCertificate :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ViewerCertificate' with the minimum fields required to make a request.

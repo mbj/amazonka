@@ -42,9 +42,11 @@ import Network.AWS.SMS.Types
 import Network.AWS.SMS.Types.Product
 
 -- | /See:/ 'disassociateConnector' smart constructor.
-newtype DisassociateConnector = DisassociateConnector'
-  { _dcConnectorId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DisassociateConnector =
+  DisassociateConnector'
+    { _dcConnectorId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisassociateConnector' with the minimum fields required to make a request.
@@ -99,9 +101,11 @@ instance ToQuery DisassociateConnector where
         toQuery = const mempty
 
 -- | /See:/ 'disassociateConnectorResponse' smart constructor.
-newtype DisassociateConnectorResponse = DisassociateConnectorResponse'
-  { _dcrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DisassociateConnectorResponse =
+  DisassociateConnectorResponse'
+    { _dcrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisassociateConnectorResponse' with the minimum fields required to make a request.

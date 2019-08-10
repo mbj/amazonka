@@ -50,14 +50,16 @@ import Network.AWS.Response
 -- | The name of the input
 --
 -- /See:/ 'createInput' smart constructor.
-data CreateInput = CreateInput'
-  { _ciRequestId           :: !(Maybe Text)
-  , _ciSources             :: !(Maybe [InputSourceRequest])
-  , _ciInputSecurityGroups :: !(Maybe [Text])
-  , _ciDestinations        :: !(Maybe [InputDestinationRequest])
-  , _ciName                :: !(Maybe Text)
-  , _ciType                :: !(Maybe InputType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateInput =
+  CreateInput'
+    { _ciRequestId           :: !(Maybe Text)
+    , _ciSources             :: !(Maybe [InputSourceRequest])
+    , _ciInputSecurityGroups :: !(Maybe [Text])
+    , _ciDestinations        :: !(Maybe [InputDestinationRequest])
+    , _ciName                :: !(Maybe Text)
+    , _ciType                :: !(Maybe InputType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateInput' with the minimum fields required to make a request.
@@ -152,10 +154,12 @@ instance ToQuery CreateInput where
 -- | Placeholder documentation for CreateInputResponse
 --
 -- /See:/ 'createInputResponse' smart constructor.
-data CreateInputResponse = CreateInputResponse'
-  { _cirsInput          :: !(Maybe Input)
-  , _cirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateInputResponse =
+  CreateInputResponse'
+    { _cirsInput          :: !(Maybe Input)
+    , _cirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateInputResponse' with the minimum fields required to make a request.

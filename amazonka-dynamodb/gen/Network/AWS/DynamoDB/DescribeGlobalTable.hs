@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeGlobalTable' smart constructor.
-newtype DescribeGlobalTable = DescribeGlobalTable'
-  { _dgtGlobalTableName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeGlobalTable =
+  DescribeGlobalTable'
+    { _dgtGlobalTableName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeGlobalTable' with the minimum fields required to make a request.
@@ -104,10 +106,12 @@ instance ToQuery DescribeGlobalTable where
         toQuery = const mempty
 
 -- | /See:/ 'describeGlobalTableResponse' smart constructor.
-data DescribeGlobalTableResponse = DescribeGlobalTableResponse'
-  { _dgtrsGlobalTableDescription :: !(Maybe GlobalTableDescription)
-  , _dgtrsResponseStatus         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeGlobalTableResponse =
+  DescribeGlobalTableResponse'
+    { _dgtrsGlobalTableDescription :: !(Maybe GlobalTableDescription)
+    , _dgtrsResponseStatus         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeGlobalTableResponse' with the minimum fields required to make a request.

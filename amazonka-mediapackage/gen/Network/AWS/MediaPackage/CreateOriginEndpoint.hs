@@ -67,19 +67,21 @@ import Network.AWS.Response
 -- | Configuration parameters used to create a new OriginEndpoint.
 --
 -- /See:/ 'createOriginEndpoint' smart constructor.
-data CreateOriginEndpoint = CreateOriginEndpoint'
-  { _coeWhitelist              :: !(Maybe [Text])
-  , _coeHlsPackage             :: !(Maybe HlsPackage)
-  , _coeManifestName           :: !(Maybe Text)
-  , _coeStartoverWindowSeconds :: !(Maybe Int)
-  , _coeDashPackage            :: !(Maybe DashPackage)
-  , _coeMssPackage             :: !(Maybe MssPackage)
-  , _coeTimeDelaySeconds       :: !(Maybe Int)
-  , _coeCmafPackage            :: !(Maybe CmafPackageCreateOrUpdateParameters)
-  , _coeDescription            :: !(Maybe Text)
-  , _coeChannelId              :: !Text
-  , _coeId                     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateOriginEndpoint =
+  CreateOriginEndpoint'
+    { _coeWhitelist              :: !(Maybe [Text])
+    , _coeHlsPackage             :: !(Maybe HlsPackage)
+    , _coeManifestName           :: !(Maybe Text)
+    , _coeStartoverWindowSeconds :: !(Maybe Int)
+    , _coeDashPackage            :: !(Maybe DashPackage)
+    , _coeMssPackage             :: !(Maybe MssPackage)
+    , _coeTimeDelaySeconds       :: !(Maybe Int)
+    , _coeCmafPackage            :: !(Maybe CmafPackageCreateOrUpdateParameters)
+    , _coeDescription            :: !(Maybe Text)
+    , _coeChannelId              :: !Text
+    , _coeId                     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateOriginEndpoint' with the minimum fields required to make a request.
@@ -229,22 +231,24 @@ instance ToQuery CreateOriginEndpoint where
         toQuery = const mempty
 
 -- | /See:/ 'createOriginEndpointResponse' smart constructor.
-data CreateOriginEndpointResponse = CreateOriginEndpointResponse'
-  { _coersWhitelist              :: !(Maybe [Text])
-  , _coersHlsPackage             :: !(Maybe HlsPackage)
-  , _coersARN                    :: !(Maybe Text)
-  , _coersManifestName           :: !(Maybe Text)
-  , _coersURL                    :: !(Maybe Text)
-  , _coersChannelId              :: !(Maybe Text)
-  , _coersStartoverWindowSeconds :: !(Maybe Int)
-  , _coersDashPackage            :: !(Maybe DashPackage)
-  , _coersMssPackage             :: !(Maybe MssPackage)
-  , _coersId                     :: !(Maybe Text)
-  , _coersTimeDelaySeconds       :: !(Maybe Int)
-  , _coersCmafPackage            :: !(Maybe CmafPackage)
-  , _coersDescription            :: !(Maybe Text)
-  , _coersResponseStatus         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateOriginEndpointResponse =
+  CreateOriginEndpointResponse'
+    { _coersWhitelist              :: !(Maybe [Text])
+    , _coersHlsPackage             :: !(Maybe HlsPackage)
+    , _coersARN                    :: !(Maybe Text)
+    , _coersManifestName           :: !(Maybe Text)
+    , _coersURL                    :: !(Maybe Text)
+    , _coersChannelId              :: !(Maybe Text)
+    , _coersStartoverWindowSeconds :: !(Maybe Int)
+    , _coersDashPackage            :: !(Maybe DashPackage)
+    , _coersMssPackage             :: !(Maybe MssPackage)
+    , _coersId                     :: !(Maybe Text)
+    , _coersTimeDelaySeconds       :: !(Maybe Int)
+    , _coersCmafPackage            :: !(Maybe CmafPackage)
+    , _coersDescription            :: !(Maybe Text)
+    , _coersResponseStatus         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateOriginEndpointResponse' with the minimum fields required to make a request.

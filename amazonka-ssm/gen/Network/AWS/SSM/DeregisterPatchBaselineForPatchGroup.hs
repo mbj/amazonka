@@ -47,10 +47,12 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'deregisterPatchBaselineForPatchGroup' smart constructor.
-data DeregisterPatchBaselineForPatchGroup = DeregisterPatchBaselineForPatchGroup'
-  { _dpbfpgBaselineId :: !Text
-  , _dpbfpgPatchGroup :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeregisterPatchBaselineForPatchGroup =
+  DeregisterPatchBaselineForPatchGroup'
+    { _dpbfpgBaselineId :: !Text
+    , _dpbfpgPatchGroup :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeregisterPatchBaselineForPatchGroup' with the minimum fields required to make a request.
@@ -126,11 +128,13 @@ instance ToQuery DeregisterPatchBaselineForPatchGroup
         toQuery = const mempty
 
 -- | /See:/ 'deregisterPatchBaselineForPatchGroupResponse' smart constructor.
-data DeregisterPatchBaselineForPatchGroupResponse = DeregisterPatchBaselineForPatchGroupResponse'
-  { _dpbfpgrsBaselineId     :: !(Maybe Text)
-  , _dpbfpgrsPatchGroup     :: !(Maybe Text)
-  , _dpbfpgrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeregisterPatchBaselineForPatchGroupResponse =
+  DeregisterPatchBaselineForPatchGroupResponse'
+    { _dpbfpgrsBaselineId     :: !(Maybe Text)
+    , _dpbfpgrsPatchGroup     :: !(Maybe Text)
+    , _dpbfpgrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeregisterPatchBaselineForPatchGroupResponse' with the minimum fields required to make a request.

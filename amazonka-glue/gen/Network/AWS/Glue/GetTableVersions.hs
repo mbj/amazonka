@@ -53,13 +53,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getTableVersions' smart constructor.
-data GetTableVersions = GetTableVersions'
-  { _gtvsCatalogId    :: !(Maybe Text)
-  , _gtvsNextToken    :: !(Maybe Text)
-  , _gtvsMaxResults   :: !(Maybe Nat)
-  , _gtvsDatabaseName :: !Text
-  , _gtvsTableName    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetTableVersions =
+  GetTableVersions'
+    { _gtvsCatalogId    :: !(Maybe Text)
+    , _gtvsNextToken    :: !(Maybe Text)
+    , _gtvsMaxResults   :: !(Maybe Nat)
+    , _gtvsDatabaseName :: !Text
+    , _gtvsTableName    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetTableVersions' with the minimum fields required to make a request.
@@ -157,11 +159,13 @@ instance ToQuery GetTableVersions where
         toQuery = const mempty
 
 -- | /See:/ 'getTableVersionsResponse' smart constructor.
-data GetTableVersionsResponse = GetTableVersionsResponse'
-  { _gtvsrsTableVersions  :: !(Maybe [TableVersion])
-  , _gtvsrsNextToken      :: !(Maybe Text)
-  , _gtvsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetTableVersionsResponse =
+  GetTableVersionsResponse'
+    { _gtvsrsTableVersions  :: !(Maybe [TableVersion])
+    , _gtvsrsNextToken      :: !(Maybe Text)
+    , _gtvsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetTableVersionsResponse' with the minimum fields required to make a request.

@@ -48,9 +48,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeStackProvisioningParameters' smart constructor.
-newtype DescribeStackProvisioningParameters = DescribeStackProvisioningParameters'
-  { _dsppStackId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeStackProvisioningParameters =
+  DescribeStackProvisioningParameters'
+    { _dsppStackId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeStackProvisioningParameters' with the minimum fields required to make a request.
@@ -120,11 +122,13 @@ instance ToQuery DescribeStackProvisioningParameters
 --
 --
 -- /See:/ 'describeStackProvisioningParametersResponse' smart constructor.
-data DescribeStackProvisioningParametersResponse = DescribeStackProvisioningParametersResponse'
-  { _dspprsAgentInstallerURL :: !(Maybe Text)
-  , _dspprsParameters        :: !(Maybe (Map Text Text))
-  , _dspprsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeStackProvisioningParametersResponse =
+  DescribeStackProvisioningParametersResponse'
+    { _dspprsAgentInstallerURL :: !(Maybe Text)
+    , _dspprsParameters        :: !(Maybe (Map Text Text))
+    , _dspprsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeStackProvisioningParametersResponse' with the minimum fields required to make a request.

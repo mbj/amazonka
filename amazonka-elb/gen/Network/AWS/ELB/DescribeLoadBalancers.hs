@@ -55,11 +55,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeLoadBalancers' smart constructor.
-data DescribeLoadBalancers = DescribeLoadBalancers'
-  { _dlbMarker            :: !(Maybe Text)
-  , _dlbPageSize          :: !(Maybe Nat)
-  , _dlbLoadBalancerNames :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeLoadBalancers =
+  DescribeLoadBalancers'
+    { _dlbMarker            :: !(Maybe Text)
+    , _dlbPageSize          :: !(Maybe Nat)
+    , _dlbLoadBalancerNames :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeLoadBalancers' with the minimum fields required to make a request.
@@ -139,11 +141,13 @@ instance ToQuery DescribeLoadBalancers where
 --
 --
 -- /See:/ 'describeLoadBalancersResponse' smart constructor.
-data DescribeLoadBalancersResponse = DescribeLoadBalancersResponse'
-  { _dlbrsLoadBalancerDescriptions :: !(Maybe [LoadBalancerDescription])
-  , _dlbrsNextMarker               :: !(Maybe Text)
-  , _dlbrsResponseStatus           :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeLoadBalancersResponse =
+  DescribeLoadBalancersResponse'
+    { _dlbrsLoadBalancerDescriptions :: !(Maybe [LoadBalancerDescription])
+    , _dlbrsNextMarker               :: !(Maybe Text)
+    , _dlbrsResponseStatus           :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeLoadBalancersResponse' with the minimum fields required to make a request.

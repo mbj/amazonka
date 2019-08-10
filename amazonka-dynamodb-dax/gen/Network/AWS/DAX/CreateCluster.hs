@@ -56,20 +56,22 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createCluster' smart constructor.
-data CreateCluster = CreateCluster'
-  { _ccSecurityGroupIds           :: !(Maybe [Text])
-  , _ccSubnetGroupName            :: !(Maybe Text)
-  , _ccPreferredMaintenanceWindow :: !(Maybe Text)
-  , _ccAvailabilityZones          :: !(Maybe [Text])
-  , _ccDescription                :: !(Maybe Text)
-  , _ccNotificationTopicARN       :: !(Maybe Text)
-  , _ccTags                       :: !(Maybe [Tag])
-  , _ccParameterGroupName         :: !(Maybe Text)
-  , _ccClusterName                :: !Text
-  , _ccNodeType                   :: !Text
-  , _ccReplicationFactor          :: !Int
-  , _ccIAMRoleARN                 :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateCluster =
+  CreateCluster'
+    { _ccSecurityGroupIds           :: !(Maybe [Text])
+    , _ccSubnetGroupName            :: !(Maybe Text)
+    , _ccPreferredMaintenanceWindow :: !(Maybe Text)
+    , _ccAvailabilityZones          :: !(Maybe [Text])
+    , _ccDescription                :: !(Maybe Text)
+    , _ccNotificationTopicARN       :: !(Maybe Text)
+    , _ccTags                       :: !(Maybe [Tag])
+    , _ccParameterGroupName         :: !(Maybe Text)
+    , _ccClusterName                :: !Text
+    , _ccNodeType                   :: !Text
+    , _ccReplicationFactor          :: !Int
+    , _ccIAMRoleARN                 :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateCluster' with the minimum fields required to make a request.
@@ -218,10 +220,12 @@ instance ToQuery CreateCluster where
         toQuery = const mempty
 
 -- | /See:/ 'createClusterResponse' smart constructor.
-data CreateClusterResponse = CreateClusterResponse'
-  { _ccrsCluster        :: !(Maybe Cluster)
-  , _ccrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateClusterResponse =
+  CreateClusterResponse'
+    { _ccrsCluster        :: !(Maybe Cluster)
+    , _ccrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateClusterResponse' with the minimum fields required to make a request.

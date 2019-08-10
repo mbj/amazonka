@@ -42,9 +42,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'enableAlarmActions' smart constructor.
-newtype EnableAlarmActions = EnableAlarmActions'
-  { _eaaAlarmNames :: [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype EnableAlarmActions =
+  EnableAlarmActions'
+    { _eaaAlarmNames :: [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EnableAlarmActions' with the minimum fields required to make a request.

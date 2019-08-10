@@ -44,9 +44,11 @@ import Network.AWS.Shield.Types
 import Network.AWS.Shield.Types.Product
 
 -- | /See:/ 'deleteProtection' smart constructor.
-newtype DeleteProtection = DeleteProtection'
-  { _dProtectionId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteProtection =
+  DeleteProtection'
+    { _dProtectionId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteProtection' with the minimum fields required to make a request.
@@ -99,9 +101,11 @@ instance ToQuery DeleteProtection where
         toQuery = const mempty
 
 -- | /See:/ 'deleteProtectionResponse' smart constructor.
-newtype DeleteProtectionResponse = DeleteProtectionResponse'
-  { _delrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteProtectionResponse =
+  DeleteProtectionResponse'
+    { _delrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteProtectionResponse' with the minimum fields required to make a request.

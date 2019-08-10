@@ -49,9 +49,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getSubscriptionDefinition' smart constructor.
-newtype GetSubscriptionDefinition = GetSubscriptionDefinition'
-  { _gsdSubscriptionDefinitionId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetSubscriptionDefinition =
+  GetSubscriptionDefinition'
+    { _gsdSubscriptionDefinitionId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetSubscriptionDefinition' with the minimum fields required to make a request.
@@ -108,16 +110,18 @@ instance ToQuery GetSubscriptionDefinition where
         toQuery = const mempty
 
 -- | /See:/ 'getSubscriptionDefinitionResponse' smart constructor.
-data GetSubscriptionDefinitionResponse = GetSubscriptionDefinitionResponse'
-  { _gsdrsLatestVersionARN     :: !(Maybe Text)
-  , _gsdrsARN                  :: !(Maybe Text)
-  , _gsdrsName                 :: !(Maybe Text)
-  , _gsdrsCreationTimestamp    :: !(Maybe Text)
-  , _gsdrsId                   :: !(Maybe Text)
-  , _gsdrsLatestVersion        :: !(Maybe Text)
-  , _gsdrsLastUpdatedTimestamp :: !(Maybe Text)
-  , _gsdrsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetSubscriptionDefinitionResponse =
+  GetSubscriptionDefinitionResponse'
+    { _gsdrsLatestVersionARN     :: !(Maybe Text)
+    , _gsdrsARN                  :: !(Maybe Text)
+    , _gsdrsName                 :: !(Maybe Text)
+    , _gsdrsCreationTimestamp    :: !(Maybe Text)
+    , _gsdrsId                   :: !(Maybe Text)
+    , _gsdrsLatestVersion        :: !(Maybe Text)
+    , _gsdrsLastUpdatedTimestamp :: !(Maybe Text)
+    , _gsdrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetSubscriptionDefinitionResponse' with the minimum fields required to make a request.

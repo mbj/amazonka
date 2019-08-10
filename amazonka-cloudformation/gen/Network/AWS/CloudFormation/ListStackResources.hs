@@ -56,10 +56,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listStackResources' smart constructor.
-data ListStackResources = ListStackResources'
-  { _lsrNextToken :: !(Maybe Text)
-  , _lsrStackName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListStackResources =
+  ListStackResources'
+    { _lsrNextToken :: !(Maybe Text)
+    , _lsrStackName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListStackResources' with the minimum fields required to make a request.
@@ -127,11 +129,13 @@ instance ToQuery ListStackResources where
 --
 --
 -- /See:/ 'listStackResourcesResponse' smart constructor.
-data ListStackResourcesResponse = ListStackResourcesResponse'
-  { _lsrrsNextToken              :: !(Maybe Text)
-  , _lsrrsStackResourceSummaries :: !(Maybe [StackResourceSummary])
-  , _lsrrsResponseStatus         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListStackResourcesResponse =
+  ListStackResourcesResponse'
+    { _lsrrsNextToken              :: !(Maybe Text)
+    , _lsrrsStackResourceSummaries :: !(Maybe [StackResourceSummary])
+    , _lsrrsResponseStatus         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListStackResourcesResponse' with the minimum fields required to make a request.

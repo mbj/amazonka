@@ -46,11 +46,13 @@ import Network.AWS.SageMaker.Types
 import Network.AWS.SageMaker.Types.Product
 
 -- | /See:/ 'updateNotebookInstance' smart constructor.
-data UpdateNotebookInstance = UpdateNotebookInstance'
-  { _uniInstanceType         :: !(Maybe InstanceType)
-  , _uniRoleARN              :: !(Maybe Text)
-  , _uniNotebookInstanceName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateNotebookInstance =
+  UpdateNotebookInstance'
+    { _uniInstanceType         :: !(Maybe InstanceType)
+    , _uniRoleARN              :: !(Maybe Text)
+    , _uniNotebookInstanceName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateNotebookInstance' with the minimum fields required to make a request.
@@ -125,9 +127,11 @@ instance ToQuery UpdateNotebookInstance where
         toQuery = const mempty
 
 -- | /See:/ 'updateNotebookInstanceResponse' smart constructor.
-newtype UpdateNotebookInstanceResponse = UpdateNotebookInstanceResponse'
-  { _unirsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateNotebookInstanceResponse =
+  UpdateNotebookInstanceResponse'
+    { _unirsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateNotebookInstanceResponse' with the minimum fields required to make a request.

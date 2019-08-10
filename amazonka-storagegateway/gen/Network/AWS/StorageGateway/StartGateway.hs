@@ -51,9 +51,11 @@ import Network.AWS.StorageGateway.Types.Product
 --
 --
 -- /See:/ 'startGateway' smart constructor.
-newtype StartGateway = StartGateway'
-  { _sgGatewayARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StartGateway =
+  StartGateway'
+    { _sgGatewayARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartGateway' with the minimum fields required to make a request.
@@ -110,10 +112,12 @@ instance ToQuery StartGateway where
 --
 --
 -- /See:/ 'startGatewayResponse' smart constructor.
-data StartGatewayResponse = StartGatewayResponse'
-  { _sgrsGatewayARN     :: !(Maybe Text)
-  , _sgrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartGatewayResponse =
+  StartGatewayResponse'
+    { _sgrsGatewayARN     :: !(Maybe Text)
+    , _sgrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartGatewayResponse' with the minimum fields required to make a request.

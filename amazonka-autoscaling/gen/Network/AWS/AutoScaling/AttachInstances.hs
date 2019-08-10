@@ -49,10 +49,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'attachInstances' smart constructor.
-data AttachInstances = AttachInstances'
-  { _aiInstanceIds          :: !(Maybe [Text])
-  , _aiAutoScalingGroupName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AttachInstances =
+  AttachInstances'
+    { _aiInstanceIds          :: !(Maybe [Text])
+    , _aiAutoScalingGroupName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttachInstances' with the minimum fields required to make a request.

@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getVaultAccessPolicy' smart constructor.
-data GetVaultAccessPolicy = GetVaultAccessPolicy'
-  { _gvapAccountId :: !Text
-  , _gvapVaultName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetVaultAccessPolicy =
+  GetVaultAccessPolicy'
+    { _gvapAccountId :: !Text
+    , _gvapVaultName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetVaultAccessPolicy' with the minimum fields required to make a request.
@@ -111,10 +113,12 @@ instance ToQuery GetVaultAccessPolicy where
 --
 --
 -- /See:/ 'getVaultAccessPolicyResponse' smart constructor.
-data GetVaultAccessPolicyResponse = GetVaultAccessPolicyResponse'
-  { _gvaprsPolicy         :: !(Maybe VaultAccessPolicy)
-  , _gvaprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetVaultAccessPolicyResponse =
+  GetVaultAccessPolicyResponse'
+    { _gvaprsPolicy         :: !(Maybe VaultAccessPolicy)
+    , _gvaprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetVaultAccessPolicyResponse' with the minimum fields required to make a request.

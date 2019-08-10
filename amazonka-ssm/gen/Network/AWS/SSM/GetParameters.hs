@@ -47,10 +47,12 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'getParameters' smart constructor.
-data GetParameters = GetParameters'
-  { _gpWithDecryption :: !(Maybe Bool)
-  , _gpNames          :: !(List1 Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetParameters =
+  GetParameters'
+    { _gpWithDecryption :: !(Maybe Bool)
+    , _gpNames          :: !(List1 Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetParameters' with the minimum fields required to make a request.
@@ -113,11 +115,13 @@ instance ToQuery GetParameters where
         toQuery = const mempty
 
 -- | /See:/ 'getParametersResponse' smart constructor.
-data GetParametersResponse = GetParametersResponse'
-  { _grsParameters        :: !(Maybe [Parameter])
-  , _grsInvalidParameters :: !(Maybe [Text])
-  , _grsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetParametersResponse =
+  GetParametersResponse'
+    { _grsParameters        :: !(Maybe [Parameter])
+    , _grsInvalidParameters :: !(Maybe [Text])
+    , _grsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetParametersResponse' with the minimum fields required to make a request.

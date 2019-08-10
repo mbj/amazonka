@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'addAttributesToFindings' smart constructor.
-data AddAttributesToFindings = AddAttributesToFindings'
-  { _aatfFindingARNs :: !(List1 Text)
-  , _aatfAttributes  :: ![Attribute]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddAttributesToFindings =
+  AddAttributesToFindings'
+    { _aatfFindingARNs :: !(List1 Text)
+    , _aatfAttributes  :: ![Attribute]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddAttributesToFindings' with the minimum fields required to make a request.
@@ -114,10 +116,12 @@ instance ToQuery AddAttributesToFindings where
         toQuery = const mempty
 
 -- | /See:/ 'addAttributesToFindingsResponse' smart constructor.
-data AddAttributesToFindingsResponse = AddAttributesToFindingsResponse'
-  { _aatfrsResponseStatus :: !Int
-  , _aatfrsFailedItems    :: !(Map Text FailedItemDetails)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddAttributesToFindingsResponse =
+  AddAttributesToFindingsResponse'
+    { _aatfrsResponseStatus :: !Int
+    , _aatfrsFailedItems    :: !(Map Text FailedItemDetails)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddAttributesToFindingsResponse' with the minimum fields required to make a request.

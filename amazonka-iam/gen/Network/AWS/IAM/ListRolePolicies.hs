@@ -56,11 +56,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listRolePolicies' smart constructor.
-data ListRolePolicies = ListRolePolicies'
-  { _lrpMarker   :: !(Maybe Text)
-  , _lrpMaxItems :: !(Maybe Nat)
-  , _lrpRoleName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListRolePolicies =
+  ListRolePolicies'
+    { _lrpMarker   :: !(Maybe Text)
+    , _lrpMaxItems :: !(Maybe Nat)
+    , _lrpRoleName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListRolePolicies' with the minimum fields required to make a request.
@@ -135,12 +137,14 @@ instance ToQuery ListRolePolicies where
 --
 --
 -- /See:/ 'listRolePoliciesResponse' smart constructor.
-data ListRolePoliciesResponse = ListRolePoliciesResponse'
-  { _lrprsMarker         :: !(Maybe Text)
-  , _lrprsIsTruncated    :: !(Maybe Bool)
-  , _lrprsResponseStatus :: !Int
-  , _lrprsPolicyNames    :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListRolePoliciesResponse =
+  ListRolePoliciesResponse'
+    { _lrprsMarker         :: !(Maybe Text)
+    , _lrprsIsTruncated    :: !(Maybe Bool)
+    , _lrprsResponseStatus :: !Int
+    , _lrprsPolicyNames    :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListRolePoliciesResponse' with the minimum fields required to make a request.

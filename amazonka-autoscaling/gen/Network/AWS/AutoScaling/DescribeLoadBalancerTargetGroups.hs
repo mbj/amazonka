@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeLoadBalancerTargetGroups' smart constructor.
-data DescribeLoadBalancerTargetGroups = DescribeLoadBalancerTargetGroups'
-  { _dlbtgsNextToken            :: !(Maybe Text)
-  , _dlbtgsMaxRecords           :: !(Maybe Int)
-  , _dlbtgsAutoScalingGroupName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeLoadBalancerTargetGroups =
+  DescribeLoadBalancerTargetGroups'
+    { _dlbtgsNextToken            :: !(Maybe Text)
+    , _dlbtgsMaxRecords           :: !(Maybe Int)
+    , _dlbtgsAutoScalingGroupName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeLoadBalancerTargetGroups' with the minimum fields required to make a request.
@@ -129,11 +131,13 @@ instance ToQuery DescribeLoadBalancerTargetGroups
                  _dlbtgsAutoScalingGroupName]
 
 -- | /See:/ 'describeLoadBalancerTargetGroupsResponse' smart constructor.
-data DescribeLoadBalancerTargetGroupsResponse = DescribeLoadBalancerTargetGroupsResponse'
-  { _dlbtgsrsLoadBalancerTargetGroups :: !(Maybe [LoadBalancerTargetGroupState])
-  , _dlbtgsrsNextToken                :: !(Maybe Text)
-  , _dlbtgsrsResponseStatus           :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeLoadBalancerTargetGroupsResponse =
+  DescribeLoadBalancerTargetGroupsResponse'
+    { _dlbtgsrsLoadBalancerTargetGroups :: !(Maybe [LoadBalancerTargetGroupState])
+    , _dlbtgsrsNextToken :: !(Maybe Text)
+    , _dlbtgsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeLoadBalancerTargetGroupsResponse' with the minimum fields required to make a request.

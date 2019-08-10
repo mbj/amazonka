@@ -48,13 +48,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'sendBonus' smart constructor.
-data SendBonus = SendBonus'
-  { _sbUniqueRequestToken :: !(Maybe Text)
-  , _sbWorkerId           :: !Text
-  , _sbBonusAmount        :: !Text
-  , _sbAssignmentId       :: !Text
-  , _sbReason             :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SendBonus =
+  SendBonus'
+    { _sbUniqueRequestToken :: !(Maybe Text)
+    , _sbWorkerId           :: !Text
+    , _sbBonusAmount        :: !Text
+    , _sbAssignmentId       :: !Text
+    , _sbReason             :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SendBonus' with the minimum fields required to make a request.
@@ -145,9 +147,11 @@ instance ToQuery SendBonus where
         toQuery = const mempty
 
 -- | /See:/ 'sendBonusResponse' smart constructor.
-newtype SendBonusResponse = SendBonusResponse'
-  { _sbrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype SendBonusResponse =
+  SendBonusResponse'
+    { _sbrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SendBonusResponse' with the minimum fields required to make a request.

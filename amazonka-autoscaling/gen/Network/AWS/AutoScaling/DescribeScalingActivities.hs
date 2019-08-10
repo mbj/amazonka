@@ -52,12 +52,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeScalingActivities' smart constructor.
-data DescribeScalingActivities = DescribeScalingActivities'
-  { _desNextToken            :: !(Maybe Text)
-  , _desAutoScalingGroupName :: !(Maybe Text)
-  , _desMaxRecords           :: !(Maybe Int)
-  , _desActivityIds          :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeScalingActivities =
+  DescribeScalingActivities'
+    { _desNextToken            :: !(Maybe Text)
+    , _desAutoScalingGroupName :: !(Maybe Text)
+    , _desMaxRecords           :: !(Maybe Int)
+    , _desActivityIds          :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeScalingActivities' with the minimum fields required to make a request.
@@ -140,11 +142,13 @@ instance ToQuery DescribeScalingActivities where
                  toQuery (toQueryList "member" <$> _desActivityIds)]
 
 -- | /See:/ 'describeScalingActivitiesResponse' smart constructor.
-data DescribeScalingActivitiesResponse = DescribeScalingActivitiesResponse'
-  { _dsasrsNextToken      :: !(Maybe Text)
-  , _dsasrsResponseStatus :: !Int
-  , _dsasrsActivities     :: ![Activity]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeScalingActivitiesResponse =
+  DescribeScalingActivitiesResponse'
+    { _dsasrsNextToken      :: !(Maybe Text)
+    , _dsasrsResponseStatus :: !Int
+    , _dsasrsActivities     :: ![Activity]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeScalingActivitiesResponse' with the minimum fields required to make a request.

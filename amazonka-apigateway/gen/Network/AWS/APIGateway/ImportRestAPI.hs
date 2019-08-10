@@ -60,11 +60,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'importRestAPI' smart constructor.
-data ImportRestAPI = ImportRestAPI'
-  { _iraFailOnWarnings :: !(Maybe Bool)
-  , _iraParameters     :: !(Maybe (Map Text Text))
-  , _iraBody           :: !ByteString
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data ImportRestAPI =
+  ImportRestAPI'
+    { _iraFailOnWarnings :: !(Maybe Bool)
+    , _iraParameters     :: !(Maybe (Map Text Text))
+    , _iraBody           :: !ByteString
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ImportRestAPI' with the minimum fields required to make a request.

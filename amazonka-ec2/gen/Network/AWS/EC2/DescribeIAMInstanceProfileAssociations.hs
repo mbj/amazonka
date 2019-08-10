@@ -52,12 +52,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeIAMInstanceProfileAssociations' smart constructor.
-data DescribeIAMInstanceProfileAssociations = DescribeIAMInstanceProfileAssociations'
-  { _diapaFilters        :: !(Maybe [Filter])
-  , _diapaNextToken      :: !(Maybe Text)
-  , _diapaAssociationIds :: !(Maybe [Text])
-  , _diapaMaxResults     :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeIAMInstanceProfileAssociations =
+  DescribeIAMInstanceProfileAssociations'
+    { _diapaFilters        :: !(Maybe [Filter])
+    , _diapaNextToken      :: !(Maybe Text)
+    , _diapaAssociationIds :: !(Maybe [Text])
+    , _diapaMaxResults     :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeIAMInstanceProfileAssociations' with the minimum fields required to make a request.
@@ -158,11 +160,13 @@ instance ToQuery
                "MaxResults" =: _diapaMaxResults]
 
 -- | /See:/ 'describeIAMInstanceProfileAssociationsResponse' smart constructor.
-data DescribeIAMInstanceProfileAssociationsResponse = DescribeIAMInstanceProfileAssociationsResponse'
-  { _diaparsIAMInstanceProfileAssociations :: !(Maybe [IAMInstanceProfileAssociation])
-  , _diaparsNextToken :: !(Maybe Text)
-  , _diaparsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeIAMInstanceProfileAssociationsResponse =
+  DescribeIAMInstanceProfileAssociationsResponse'
+    { _diaparsIAMInstanceProfileAssociations :: !(Maybe [IAMInstanceProfileAssociation])
+    , _diaparsNextToken :: !(Maybe Text)
+    , _diaparsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeIAMInstanceProfileAssociationsResponse' with the minimum fields required to make a request.

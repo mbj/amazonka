@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteVPCEndpoints' smart constructor.
-data DeleteVPCEndpoints = DeleteVPCEndpoints'
-  { _dveDryRun         :: !(Maybe Bool)
-  , _dveVPCEndpointIds :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteVPCEndpoints =
+  DeleteVPCEndpoints'
+    { _dveDryRun         :: !(Maybe Bool)
+    , _dveVPCEndpointIds :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteVPCEndpoints' with the minimum fields required to make a request.
@@ -112,10 +114,12 @@ instance ToQuery DeleteVPCEndpoints where
 --
 --
 -- /See:/ 'deleteVPCEndpointsResponse' smart constructor.
-data DeleteVPCEndpointsResponse = DeleteVPCEndpointsResponse'
-  { _dversUnsuccessful   :: !(Maybe [UnsuccessfulItem])
-  , _dversResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteVPCEndpointsResponse =
+  DeleteVPCEndpointsResponse'
+    { _dversUnsuccessful   :: !(Maybe [UnsuccessfulItem])
+    , _dversResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteVPCEndpointsResponse' with the minimum fields required to make a request.

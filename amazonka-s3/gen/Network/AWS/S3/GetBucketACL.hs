@@ -44,9 +44,11 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'getBucketACL' smart constructor.
-newtype GetBucketACL = GetBucketACL'
-  { _gbaBucket :: BucketName
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetBucketACL =
+  GetBucketACL'
+    { _gbaBucket :: BucketName
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBucketACL' with the minimum fields required to make a request.
@@ -91,11 +93,13 @@ instance ToQuery GetBucketACL where
         toQuery = const (mconcat ["acl"])
 
 -- | /See:/ 'getBucketACLResponse' smart constructor.
-data GetBucketACLResponse = GetBucketACLResponse'
-  { _gbarsGrants         :: !(Maybe [Grant])
-  , _gbarsOwner          :: !(Maybe Owner)
-  , _gbarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetBucketACLResponse =
+  GetBucketACLResponse'
+    { _gbarsGrants         :: !(Maybe [Grant])
+    , _gbarsOwner          :: !(Maybe Owner)
+    , _gbarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBucketACLResponse' with the minimum fields required to make a request.

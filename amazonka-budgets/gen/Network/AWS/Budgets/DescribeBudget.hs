@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeBudget' smart constructor.
-data DescribeBudget = DescribeBudget'
-  { _desAccountId  :: !Text
-  , _desBudgetName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeBudget =
+  DescribeBudget'
+    { _desAccountId  :: !Text
+    , _desBudgetName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeBudget' with the minimum fields required to make a request.
@@ -120,10 +122,12 @@ instance ToQuery DescribeBudget where
 --
 --
 -- /See:/ 'describeBudgetResponse' smart constructor.
-data DescribeBudgetResponse = DescribeBudgetResponse'
-  { _desrsBudget         :: !(Maybe Budget)
-  , _desrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeBudgetResponse =
+  DescribeBudgetResponse'
+    { _desrsBudget         :: !(Maybe Budget)
+    , _desrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeBudgetResponse' with the minimum fields required to make a request.

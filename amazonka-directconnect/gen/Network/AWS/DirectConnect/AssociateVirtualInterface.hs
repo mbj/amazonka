@@ -71,10 +71,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'associateVirtualInterface' smart constructor.
-data AssociateVirtualInterface = AssociateVirtualInterface'
-  { _aviVirtualInterfaceId :: !Text
-  , _aviConnectionId       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssociateVirtualInterface =
+  AssociateVirtualInterface'
+    { _aviVirtualInterfaceId :: !Text
+    , _aviConnectionId       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateVirtualInterface' with the minimum fields required to make a request.

@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'detachLoadBalancerTargetGroups' smart constructor.
-data DetachLoadBalancerTargetGroups = DetachLoadBalancerTargetGroups'
-  { _dlbtgAutoScalingGroupName :: !Text
-  , _dlbtgTargetGroupARNs      :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DetachLoadBalancerTargetGroups =
+  DetachLoadBalancerTargetGroups'
+    { _dlbtgAutoScalingGroupName :: !Text
+    , _dlbtgTargetGroupARNs      :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DetachLoadBalancerTargetGroups' with the minimum fields required to make a request.
@@ -111,9 +113,11 @@ instance ToQuery DetachLoadBalancerTargetGroups where
                  toQueryList "member" _dlbtgTargetGroupARNs]
 
 -- | /See:/ 'detachLoadBalancerTargetGroupsResponse' smart constructor.
-newtype DetachLoadBalancerTargetGroupsResponse = DetachLoadBalancerTargetGroupsResponse'
-  { _dlbtgrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DetachLoadBalancerTargetGroupsResponse =
+  DetachLoadBalancerTargetGroupsResponse'
+    { _dlbtgrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DetachLoadBalancerTargetGroupsResponse' with the minimum fields required to make a request.

@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'stopBuild' smart constructor.
-newtype StopBuild = StopBuild'
-  { _sbId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StopBuild =
+  StopBuild'
+    { _sbId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopBuild' with the minimum fields required to make a request.
@@ -98,10 +100,12 @@ instance ToQuery StopBuild where
         toQuery = const mempty
 
 -- | /See:/ 'stopBuildResponse' smart constructor.
-data StopBuildResponse = StopBuildResponse'
-  { _sbrsBuild          :: !(Maybe Build)
-  , _sbrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StopBuildResponse =
+  StopBuildResponse'
+    { _sbrsBuild          :: !(Maybe Build)
+    , _sbrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopBuildResponse' with the minimum fields required to make a request.

@@ -55,11 +55,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'modifyVPCTenancy' smart constructor.
-data ModifyVPCTenancy = ModifyVPCTenancy'
-  { _mvtDryRun          :: !(Maybe Bool)
-  , _mvtVPCId           :: !Text
-  , _mvtInstanceTenancy :: !VPCTenancy
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyVPCTenancy =
+  ModifyVPCTenancy'
+    { _mvtDryRun          :: !(Maybe Bool)
+    , _mvtVPCId           :: !Text
+    , _mvtInstanceTenancy :: !VPCTenancy
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyVPCTenancy' with the minimum fields required to make a request.
@@ -127,10 +129,12 @@ instance ToQuery ModifyVPCTenancy where
 --
 --
 -- /See:/ 'modifyVPCTenancyResponse' smart constructor.
-data ModifyVPCTenancyResponse = ModifyVPCTenancyResponse'
-  { _mvtrsReturnValue    :: !(Maybe Bool)
-  , _mvtrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyVPCTenancyResponse =
+  ModifyVPCTenancyResponse'
+    { _mvtrsReturnValue    :: !(Maybe Bool)
+    , _mvtrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyVPCTenancyResponse' with the minimum fields required to make a request.

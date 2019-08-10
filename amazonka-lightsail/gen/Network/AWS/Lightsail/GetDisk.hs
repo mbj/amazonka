@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getDisk' smart constructor.
-newtype GetDisk = GetDisk'
-  { _gdDiskName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetDisk =
+  GetDisk'
+    { _gdDiskName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDisk' with the minimum fields required to make a request.
@@ -99,10 +101,12 @@ instance ToQuery GetDisk where
         toQuery = const mempty
 
 -- | /See:/ 'getDiskResponse' smart constructor.
-data GetDiskResponse = GetDiskResponse'
-  { _getrsDisk           :: !(Maybe Disk)
-  , _getrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDiskResponse =
+  GetDiskResponse'
+    { _getrsDisk           :: !(Maybe Disk)
+    , _getrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDiskResponse' with the minimum fields required to make a request.

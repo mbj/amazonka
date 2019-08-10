@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateApplicationResourceLifecycle' smart constructor.
-data UpdateApplicationResourceLifecycle = UpdateApplicationResourceLifecycle'
-  { _uarlApplicationName         :: !Text
-  , _uarlResourceLifecycleConfig :: !ApplicationResourceLifecycleConfig
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateApplicationResourceLifecycle =
+  UpdateApplicationResourceLifecycle'
+    { _uarlApplicationName         :: !Text
+    , _uarlResourceLifecycleConfig :: !ApplicationResourceLifecycleConfig
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateApplicationResourceLifecycle' with the minimum fields required to make a request.
@@ -120,11 +122,13 @@ instance ToQuery UpdateApplicationResourceLifecycle
                  _uarlResourceLifecycleConfig]
 
 -- | /See:/ 'updateApplicationResourceLifecycleResponse' smart constructor.
-data UpdateApplicationResourceLifecycleResponse = UpdateApplicationResourceLifecycleResponse'
-  { _uarlrsApplicationName :: !(Maybe Text)
-  , _uarlrsResourceLifecycleConfig :: !(Maybe ApplicationResourceLifecycleConfig)
-  , _uarlrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateApplicationResourceLifecycleResponse =
+  UpdateApplicationResourceLifecycleResponse'
+    { _uarlrsApplicationName :: !(Maybe Text)
+    , _uarlrsResourceLifecycleConfig :: !(Maybe ApplicationResourceLifecycleConfig)
+    , _uarlrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateApplicationResourceLifecycleResponse' with the minimum fields required to make a request.

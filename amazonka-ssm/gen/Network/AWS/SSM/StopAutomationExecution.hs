@@ -45,10 +45,12 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'stopAutomationExecution' smart constructor.
-data StopAutomationExecution = StopAutomationExecution'
-  { _saeType                  :: !(Maybe StopType)
-  , _saeAutomationExecutionId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StopAutomationExecution =
+  StopAutomationExecution'
+    { _saeType                  :: !(Maybe StopType)
+    , _saeAutomationExecutionId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopAutomationExecution' with the minimum fields required to make a request.
@@ -113,9 +115,11 @@ instance ToQuery StopAutomationExecution where
         toQuery = const mempty
 
 -- | /See:/ 'stopAutomationExecutionResponse' smart constructor.
-newtype StopAutomationExecutionResponse = StopAutomationExecutionResponse'
-  { _saersResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StopAutomationExecutionResponse =
+  StopAutomationExecutionResponse'
+    { _saersResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopAutomationExecutionResponse' with the minimum fields required to make a request.

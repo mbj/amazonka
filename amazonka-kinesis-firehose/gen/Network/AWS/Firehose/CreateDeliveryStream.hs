@@ -74,16 +74,18 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createDeliveryStream' smart constructor.
-data CreateDeliveryStream = CreateDeliveryStream'
-  { _cdsS3DestinationConfiguration :: !(Maybe S3DestinationConfiguration)
-  , _cdsRedshiftDestinationConfiguration :: !(Maybe RedshiftDestinationConfiguration)
-  , _cdsElasticsearchDestinationConfiguration :: !(Maybe ElasticsearchDestinationConfiguration)
-  , _cdsExtendedS3DestinationConfiguration :: !(Maybe ExtendedS3DestinationConfiguration)
-  , _cdsKinesisStreamSourceConfiguration :: !(Maybe KinesisStreamSourceConfiguration)
-  , _cdsDeliveryStreamType :: !(Maybe DeliveryStreamType)
-  , _cdsSplunkDestinationConfiguration :: !(Maybe SplunkDestinationConfiguration)
-  , _cdsDeliveryStreamName :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data CreateDeliveryStream =
+  CreateDeliveryStream'
+    { _cdsS3DestinationConfiguration :: !(Maybe S3DestinationConfiguration)
+    , _cdsRedshiftDestinationConfiguration :: !(Maybe RedshiftDestinationConfiguration)
+    , _cdsElasticsearchDestinationConfiguration :: !(Maybe ElasticsearchDestinationConfiguration)
+    , _cdsExtendedS3DestinationConfiguration :: !(Maybe ExtendedS3DestinationConfiguration)
+    , _cdsKinesisStreamSourceConfiguration :: !(Maybe KinesisStreamSourceConfiguration)
+    , _cdsDeliveryStreamType :: !(Maybe DeliveryStreamType)
+    , _cdsSplunkDestinationConfiguration :: !(Maybe SplunkDestinationConfiguration)
+    , _cdsDeliveryStreamName :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDeliveryStream' with the minimum fields required to make a request.
@@ -204,10 +206,12 @@ instance ToQuery CreateDeliveryStream where
         toQuery = const mempty
 
 -- | /See:/ 'createDeliveryStreamResponse' smart constructor.
-data CreateDeliveryStreamResponse = CreateDeliveryStreamResponse'
-  { _cdsrsDeliveryStreamARN :: !(Maybe Text)
-  , _cdsrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDeliveryStreamResponse =
+  CreateDeliveryStreamResponse'
+    { _cdsrsDeliveryStreamARN :: !(Maybe Text)
+    , _cdsrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDeliveryStreamResponse' with the minimum fields required to make a request.

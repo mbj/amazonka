@@ -88,10 +88,12 @@ instance ToQuery ListSAMLProviders where
 --
 --
 -- /See:/ 'listSAMLProvidersResponse' smart constructor.
-data ListSAMLProvidersResponse = ListSAMLProvidersResponse'
-  { _lsamlprsSAMLProviderList :: !(Maybe [SAMLProviderListEntry])
-  , _lsamlprsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListSAMLProvidersResponse =
+  ListSAMLProvidersResponse'
+    { _lsamlprsSAMLProviderList :: !(Maybe [SAMLProviderListEntry])
+    , _lsamlprsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListSAMLProvidersResponse' with the minimum fields required to make a request.

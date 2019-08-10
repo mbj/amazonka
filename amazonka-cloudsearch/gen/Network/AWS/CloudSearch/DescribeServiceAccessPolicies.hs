@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeServiceAccessPolicies' smart constructor.
-data DescribeServiceAccessPolicies = DescribeServiceAccessPolicies'
-  { _dsapDeployed   :: !(Maybe Bool)
-  , _dsapDomainName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeServiceAccessPolicies =
+  DescribeServiceAccessPolicies'
+    { _dsapDeployed   :: !(Maybe Bool)
+    , _dsapDomainName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeServiceAccessPolicies' with the minimum fields required to make a request.
@@ -116,10 +118,12 @@ instance ToQuery DescribeServiceAccessPolicies where
 --
 --
 -- /See:/ 'describeServiceAccessPoliciesResponse' smart constructor.
-data DescribeServiceAccessPoliciesResponse = DescribeServiceAccessPoliciesResponse'
-  { _dsaprsResponseStatus :: !Int
-  , _dsaprsAccessPolicies :: !AccessPoliciesStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeServiceAccessPoliciesResponse =
+  DescribeServiceAccessPoliciesResponse'
+    { _dsaprsResponseStatus :: !Int
+    , _dsaprsAccessPolicies :: !AccessPoliciesStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeServiceAccessPoliciesResponse' with the minimum fields required to make a request.

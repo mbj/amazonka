@@ -59,11 +59,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'startInstances' smart constructor.
-data StartInstances = StartInstances'
-  { _sAdditionalInfo :: !(Maybe Text)
-  , _sDryRun         :: !(Maybe Bool)
-  , _sInstanceIds    :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartInstances =
+  StartInstances'
+    { _sAdditionalInfo :: !(Maybe Text)
+    , _sDryRun         :: !(Maybe Bool)
+    , _sInstanceIds    :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartInstances' with the minimum fields required to make a request.
@@ -129,10 +131,12 @@ instance ToQuery StartInstances where
 --
 --
 -- /See:/ 'startInstancesResponse' smart constructor.
-data StartInstancesResponse = StartInstancesResponse'
-  { _srsStartingInstances :: !(Maybe [InstanceStateChange])
-  , _srsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartInstancesResponse =
+  StartInstancesResponse'
+    { _srsStartingInstances :: !(Maybe [InstanceStateChange])
+    , _srsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartInstancesResponse' with the minimum fields required to make a request.

@@ -52,10 +52,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getRequestValidator' smart constructor.
-data GetRequestValidator = GetRequestValidator'
-  { _grvrRestAPIId          :: !Text
-  , _grvrRequestValidatorId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetRequestValidator =
+  GetRequestValidator'
+    { _grvrRestAPIId          :: !Text
+    , _grvrRequestValidatorId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetRequestValidator' with the minimum fields required to make a request.

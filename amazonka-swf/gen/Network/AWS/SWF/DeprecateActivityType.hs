@@ -63,10 +63,12 @@ import Network.AWS.SWF.Types
 import Network.AWS.SWF.Types.Product
 
 -- | /See:/ 'deprecateActivityType' smart constructor.
-data DeprecateActivityType = DeprecateActivityType'
-  { _depDomain       :: !Text
-  , _depActivityType :: !ActivityType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeprecateActivityType =
+  DeprecateActivityType'
+    { _depDomain       :: !Text
+    , _depActivityType :: !ActivityType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeprecateActivityType' with the minimum fields required to make a request.

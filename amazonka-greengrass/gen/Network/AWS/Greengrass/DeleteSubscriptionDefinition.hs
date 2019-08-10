@@ -42,9 +42,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteSubscriptionDefinition' smart constructor.
-newtype DeleteSubscriptionDefinition = DeleteSubscriptionDefinition'
-  { _dsdSubscriptionDefinitionId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteSubscriptionDefinition =
+  DeleteSubscriptionDefinition'
+    { _dsdSubscriptionDefinitionId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteSubscriptionDefinition' with the minimum fields required to make a request.
@@ -96,9 +98,11 @@ instance ToQuery DeleteSubscriptionDefinition where
         toQuery = const mempty
 
 -- | /See:/ 'deleteSubscriptionDefinitionResponse' smart constructor.
-newtype DeleteSubscriptionDefinitionResponse = DeleteSubscriptionDefinitionResponse'
-  { _dsdrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteSubscriptionDefinitionResponse =
+  DeleteSubscriptionDefinitionResponse'
+    { _dsdrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteSubscriptionDefinitionResponse' with the minimum fields required to make a request.

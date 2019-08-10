@@ -49,12 +49,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listDiscoveredResources' smart constructor.
-data ListDiscoveredResources = ListDiscoveredResources'
-  { _ldrNextToken            :: !(Maybe Text)
-  , _ldrMaxResults           :: !(Maybe Nat)
-  , _ldrProgressUpdateStream :: !Text
-  , _ldrMigrationTaskName    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListDiscoveredResources =
+  ListDiscoveredResources'
+    { _ldrNextToken            :: !(Maybe Text)
+    , _ldrMaxResults           :: !(Maybe Nat)
+    , _ldrProgressUpdateStream :: !Text
+    , _ldrMigrationTaskName    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDiscoveredResources' with the minimum fields required to make a request.
@@ -140,11 +142,13 @@ instance ToQuery ListDiscoveredResources where
         toQuery = const mempty
 
 -- | /See:/ 'listDiscoveredResourcesResponse' smart constructor.
-data ListDiscoveredResourcesResponse = ListDiscoveredResourcesResponse'
-  { _ldrrsDiscoveredResourceList :: !(Maybe [DiscoveredResource])
-  , _ldrrsNextToken              :: !(Maybe Text)
-  , _ldrrsResponseStatus         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListDiscoveredResourcesResponse =
+  ListDiscoveredResourcesResponse'
+    { _ldrrsDiscoveredResourceList :: !(Maybe [DiscoveredResource])
+    , _ldrrsNextToken              :: !(Maybe Text)
+    , _ldrrsResponseStatus         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDiscoveredResourcesResponse' with the minimum fields required to make a request.

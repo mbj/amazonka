@@ -48,9 +48,11 @@ import Network.AWS.StorageGateway.Types
 import Network.AWS.StorageGateway.Types.Product
 
 -- | /See:/ 'listVolumeRecoveryPoints' smart constructor.
-newtype ListVolumeRecoveryPoints = ListVolumeRecoveryPoints'
-  { _lvrpGatewayARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ListVolumeRecoveryPoints =
+  ListVolumeRecoveryPoints'
+    { _lvrpGatewayARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListVolumeRecoveryPoints' with the minimum fields required to make a request.
@@ -107,11 +109,13 @@ instance ToQuery ListVolumeRecoveryPoints where
         toQuery = const mempty
 
 -- | /See:/ 'listVolumeRecoveryPointsResponse' smart constructor.
-data ListVolumeRecoveryPointsResponse = ListVolumeRecoveryPointsResponse'
-  { _lvrprsVolumeRecoveryPointInfos :: !(Maybe [VolumeRecoveryPointInfo])
-  , _lvrprsGatewayARN               :: !(Maybe Text)
-  , _lvrprsResponseStatus           :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListVolumeRecoveryPointsResponse =
+  ListVolumeRecoveryPointsResponse'
+    { _lvrprsVolumeRecoveryPointInfos :: !(Maybe [VolumeRecoveryPointInfo])
+    , _lvrprsGatewayARN               :: !(Maybe Text)
+    , _lvrprsResponseStatus           :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListVolumeRecoveryPointsResponse' with the minimum fields required to make a request.

@@ -47,10 +47,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteConfigurationTemplate' smart constructor.
-data DeleteConfigurationTemplate = DeleteConfigurationTemplate'
-  { _dctApplicationName :: !Text
-  , _dctTemplateName    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteConfigurationTemplate =
+  DeleteConfigurationTemplate'
+    { _dctApplicationName :: !Text
+    , _dctTemplateName    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteConfigurationTemplate' with the minimum fields required to make a request.

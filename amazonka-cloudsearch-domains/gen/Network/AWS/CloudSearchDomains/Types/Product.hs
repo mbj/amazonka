@@ -26,10 +26,12 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'bucket' smart constructor.
-data Bucket = Bucket'
-  { _bValue :: !(Maybe Text)
-  , _bCount :: !(Maybe Integer)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Bucket =
+  Bucket'
+    { _bValue :: !(Maybe Text)
+    , _bCount :: !(Maybe Integer)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Bucket' with the minimum fields required to make a request.
@@ -67,9 +69,11 @@ instance NFData Bucket where
 --
 --
 -- /See:/ 'bucketInfo' smart constructor.
-newtype BucketInfo = BucketInfo'
-  { _biBuckets :: Maybe [Bucket]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype BucketInfo =
+  BucketInfo'
+    { _biBuckets :: Maybe [Bucket]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BucketInfo' with the minimum fields required to make a request.
@@ -100,9 +104,11 @@ instance NFData BucketInfo where
 --
 --
 -- /See:/ 'documentServiceWarning' smart constructor.
-newtype DocumentServiceWarning = DocumentServiceWarning'
-  { _dswMessage :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DocumentServiceWarning =
+  DocumentServiceWarning'
+    { _dswMessage :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DocumentServiceWarning' with the minimum fields required to make a request.
@@ -134,16 +140,18 @@ instance NFData DocumentServiceWarning where
 --
 --
 -- /See:/ 'fieldStats' smart constructor.
-data FieldStats = FieldStats'
-  { _fsMax          :: !(Maybe Text)
-  , _fsMean         :: !(Maybe Text)
-  , _fsCount        :: !(Maybe Integer)
-  , _fsMissing      :: !(Maybe Integer)
-  , _fsStddev       :: !(Maybe Double)
-  , _fsMin          :: !(Maybe Text)
-  , _fsSumOfSquares :: !(Maybe Double)
-  , _fsSum          :: !(Maybe Double)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FieldStats =
+  FieldStats'
+    { _fsMax          :: !(Maybe Text)
+    , _fsMean         :: !(Maybe Text)
+    , _fsCount        :: !(Maybe Integer)
+    , _fsMissing      :: !(Maybe Integer)
+    , _fsStddev       :: !(Maybe Double)
+    , _fsMin          :: !(Maybe Text)
+    , _fsSumOfSquares :: !(Maybe Double)
+    , _fsSum          :: !(Maybe Double)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FieldStats' with the minimum fields required to make a request.
@@ -233,12 +241,14 @@ instance NFData FieldStats where
 --
 --
 -- /See:/ 'hit' smart constructor.
-data Hit = Hit'
-  { _hitExprs      :: !(Maybe (Map Text Text))
-  , _hitId         :: !(Maybe Text)
-  , _hitHighlights :: !(Maybe (Map Text Text))
-  , _hitFields     :: !(Maybe (Map Text [Text]))
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Hit =
+  Hit'
+    { _hitExprs      :: !(Maybe (Map Text Text))
+    , _hitId         :: !(Maybe Text)
+    , _hitHighlights :: !(Maybe (Map Text Text))
+    , _hitFields     :: !(Maybe (Map Text [Text]))
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Hit' with the minimum fields required to make a request.
@@ -297,12 +307,14 @@ instance NFData Hit where
 --
 --
 -- /See:/ 'hits' smart constructor.
-data Hits = Hits'
-  { _hCursor :: !(Maybe Text)
-  , _hHit    :: !(Maybe [Hit])
-  , _hStart  :: !(Maybe Integer)
-  , _hFound  :: !(Maybe Integer)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Hits =
+  Hits'
+    { _hCursor :: !(Maybe Text)
+    , _hHit    :: !(Maybe [Hit])
+    , _hStart  :: !(Maybe Integer)
+    , _hFound  :: !(Maybe Integer)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Hits' with the minimum fields required to make a request.
@@ -357,10 +369,12 @@ instance NFData Hits where
 --
 --
 -- /See:/ 'searchStatus' smart constructor.
-data SearchStatus = SearchStatus'
-  { _sRid    :: !(Maybe Text)
-  , _sTimems :: !(Maybe Integer)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SearchStatus =
+  SearchStatus'
+    { _sRid    :: !(Maybe Text)
+    , _sTimems :: !(Maybe Integer)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SearchStatus' with the minimum fields required to make a request.
@@ -398,11 +412,13 @@ instance NFData SearchStatus where
 --
 --
 -- /See:/ 'suggestModel' smart constructor.
-data SuggestModel = SuggestModel'
-  { _smFound       :: !(Maybe Integer)
-  , _smSuggestions :: !(Maybe [SuggestionMatch])
-  , _smQuery       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SuggestModel =
+  SuggestModel'
+    { _smFound       :: !(Maybe Integer)
+    , _smSuggestions :: !(Maybe [SuggestionMatch])
+    , _smQuery       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SuggestModel' with the minimum fields required to make a request.
@@ -450,10 +466,12 @@ instance NFData SuggestModel where
 --
 --
 -- /See:/ 'suggestStatus' smart constructor.
-data SuggestStatus = SuggestStatus'
-  { _ssRid    :: !(Maybe Text)
-  , _ssTimems :: !(Maybe Integer)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SuggestStatus =
+  SuggestStatus'
+    { _ssRid    :: !(Maybe Text)
+    , _ssTimems :: !(Maybe Integer)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SuggestStatus' with the minimum fields required to make a request.
@@ -492,11 +510,13 @@ instance NFData SuggestStatus where
 --
 --
 -- /See:/ 'suggestionMatch' smart constructor.
-data SuggestionMatch = SuggestionMatch'
-  { _smSuggestion :: !(Maybe Text)
-  , _smScore      :: !(Maybe Integer)
-  , _smId         :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SuggestionMatch =
+  SuggestionMatch'
+    { _smSuggestion :: !(Maybe Text)
+    , _smScore      :: !(Maybe Integer)
+    , _smId         :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SuggestionMatch' with the minimum fields required to make a request.

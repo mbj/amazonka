@@ -65,18 +65,20 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createVPCEndpoint' smart constructor.
-data CreateVPCEndpoint = CreateVPCEndpoint'
-  { _cvePolicyDocument    :: !(Maybe Text)
-  , _cveSecurityGroupIds  :: !(Maybe [Text])
-  , _cveClientToken       :: !(Maybe Text)
-  , _cveSubnetIds         :: !(Maybe [Text])
-  , _cveVPCEndpointType   :: !(Maybe VPCEndpointType)
-  , _cvePrivateDNSEnabled :: !(Maybe Bool)
-  , _cveDryRun            :: !(Maybe Bool)
-  , _cveRouteTableIds     :: !(Maybe [Text])
-  , _cveVPCId             :: !Text
-  , _cveServiceName       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateVPCEndpoint =
+  CreateVPCEndpoint'
+    { _cvePolicyDocument    :: !(Maybe Text)
+    , _cveSecurityGroupIds  :: !(Maybe [Text])
+    , _cveClientToken       :: !(Maybe Text)
+    , _cveSubnetIds         :: !(Maybe [Text])
+    , _cveVPCEndpointType   :: !(Maybe VPCEndpointType)
+    , _cvePrivateDNSEnabled :: !(Maybe Bool)
+    , _cveDryRun            :: !(Maybe Bool)
+    , _cveRouteTableIds     :: !(Maybe [Text])
+    , _cveVPCId             :: !Text
+    , _cveServiceName       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateVPCEndpoint' with the minimum fields required to make a request.
@@ -205,11 +207,13 @@ instance ToQuery CreateVPCEndpoint where
 --
 --
 -- /See:/ 'createVPCEndpointResponse' smart constructor.
-data CreateVPCEndpointResponse = CreateVPCEndpointResponse'
-  { _cversClientToken    :: !(Maybe Text)
-  , _cversVPCEndpoint    :: !(Maybe VPCEndpoint)
-  , _cversResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateVPCEndpointResponse =
+  CreateVPCEndpointResponse'
+    { _cversClientToken    :: !(Maybe Text)
+    , _cversVPCEndpoint    :: !(Maybe VPCEndpoint)
+    , _cversResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateVPCEndpointResponse' with the minimum fields required to make a request.

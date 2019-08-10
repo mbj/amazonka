@@ -26,34 +26,36 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'certificateDetail' smart constructor.
-data CertificateDetail = CertificateDetail'
-  { _cdSubject                 :: !(Maybe Text)
-  , _cdStatus                  :: !(Maybe CertificateStatus)
-  , _cdFailureReason           :: !(Maybe FailureReason)
-  , _cdSubjectAlternativeNames :: !(Maybe (List1 Text))
-  , _cdInUseBy                 :: !(Maybe [Text])
-  , _cdCreatedAt               :: !(Maybe POSIX)
-  , _cdCertificateARN          :: !(Maybe Text)
-  , _cdSerial                  :: !(Maybe Text)
-  , _cdRenewalEligibility      :: !(Maybe RenewalEligibility)
-  , _cdExtendedKeyUsages       :: !(Maybe [ExtendedKeyUsage])
-  , _cdImportedAt              :: !(Maybe POSIX)
-  , _cdKeyUsages               :: !(Maybe [KeyUsage])
-  , _cdRevokedAt               :: !(Maybe POSIX)
-  , _cdNotBefore               :: !(Maybe POSIX)
-  , _cdRevocationReason        :: !(Maybe RevocationReason)
-  , _cdDomainName              :: !(Maybe Text)
-  , _cdRenewalSummary          :: !(Maybe RenewalSummary)
-  , _cdKeyAlgorithm            :: !(Maybe KeyAlgorithm)
-  , _cdType                    :: !(Maybe CertificateType)
-  , _cdOptions                 :: !(Maybe CertificateOptions)
-  , _cdIssuedAt                :: !(Maybe POSIX)
-  , _cdSignatureAlgorithm      :: !(Maybe Text)
-  , _cdDomainValidationOptions :: !(Maybe (List1 DomainValidation))
-  , _cdIssuer                  :: !(Maybe Text)
-  , _cdNotAfter                :: !(Maybe POSIX)
-  , _cdCertificateAuthorityARN :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CertificateDetail =
+  CertificateDetail'
+    { _cdSubject                 :: !(Maybe Text)
+    , _cdStatus                  :: !(Maybe CertificateStatus)
+    , _cdFailureReason           :: !(Maybe FailureReason)
+    , _cdSubjectAlternativeNames :: !(Maybe (List1 Text))
+    , _cdInUseBy                 :: !(Maybe [Text])
+    , _cdCreatedAt               :: !(Maybe POSIX)
+    , _cdCertificateARN          :: !(Maybe Text)
+    , _cdSerial                  :: !(Maybe Text)
+    , _cdRenewalEligibility      :: !(Maybe RenewalEligibility)
+    , _cdExtendedKeyUsages       :: !(Maybe [ExtendedKeyUsage])
+    , _cdImportedAt              :: !(Maybe POSIX)
+    , _cdKeyUsages               :: !(Maybe [KeyUsage])
+    , _cdRevokedAt               :: !(Maybe POSIX)
+    , _cdNotBefore               :: !(Maybe POSIX)
+    , _cdRevocationReason        :: !(Maybe RevocationReason)
+    , _cdDomainName              :: !(Maybe Text)
+    , _cdRenewalSummary          :: !(Maybe RenewalSummary)
+    , _cdKeyAlgorithm            :: !(Maybe KeyAlgorithm)
+    , _cdType                    :: !(Maybe CertificateType)
+    , _cdOptions                 :: !(Maybe CertificateOptions)
+    , _cdIssuedAt                :: !(Maybe POSIX)
+    , _cdSignatureAlgorithm      :: !(Maybe Text)
+    , _cdDomainValidationOptions :: !(Maybe (List1 DomainValidation))
+    , _cdIssuer                  :: !(Maybe Text)
+    , _cdNotAfter                :: !(Maybe POSIX)
+    , _cdCertificateAuthorityARN :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CertificateDetail' with the minimum fields required to make a request.
@@ -288,9 +290,11 @@ instance NFData CertificateDetail where
 --
 --
 -- /See:/ 'certificateOptions' smart constructor.
-newtype CertificateOptions = CertificateOptions'
-  { _coCertificateTransparencyLoggingPreference :: Maybe CertificateTransparencyLoggingPreference
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CertificateOptions =
+  CertificateOptions'
+    { _coCertificateTransparencyLoggingPreference :: Maybe CertificateTransparencyLoggingPreference
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CertificateOptions' with the minimum fields required to make a request.
@@ -331,10 +335,12 @@ instance ToJSON CertificateOptions where
 --
 --
 -- /See:/ 'certificateSummary' smart constructor.
-data CertificateSummary = CertificateSummary'
-  { _csCertificateARN :: !(Maybe Text)
-  , _csDomainName     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CertificateSummary =
+  CertificateSummary'
+    { _csCertificateARN :: !(Maybe Text)
+    , _csDomainName     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CertificateSummary' with the minimum fields required to make a request.
@@ -374,14 +380,16 @@ instance NFData CertificateSummary where
 --
 --
 -- /See:/ 'domainValidation' smart constructor.
-data DomainValidation = DomainValidation'
-  { _dvValidationEmails :: !(Maybe [Text])
-  , _dvValidationMethod :: !(Maybe ValidationMethod)
-  , _dvResourceRecord   :: !(Maybe ResourceRecord)
-  , _dvValidationStatus :: !(Maybe DomainStatus)
-  , _dvValidationDomain :: !(Maybe Text)
-  , _dvDomainName       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DomainValidation =
+  DomainValidation'
+    { _dvValidationEmails :: !(Maybe [Text])
+    , _dvValidationMethod :: !(Maybe ValidationMethod)
+    , _dvResourceRecord   :: !(Maybe ResourceRecord)
+    , _dvValidationStatus :: !(Maybe DomainStatus)
+    , _dvValidationDomain :: !(Maybe Text)
+    , _dvDomainName       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DomainValidation' with the minimum fields required to make a request.
@@ -458,10 +466,12 @@ instance NFData DomainValidation where
 --
 --
 -- /See:/ 'domainValidationOption' smart constructor.
-data DomainValidationOption = DomainValidationOption'
-  { _dvoDomainName       :: !Text
-  , _dvoValidationDomain :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DomainValidationOption =
+  DomainValidationOption'
+    { _dvoDomainName       :: !Text
+    , _dvoValidationDomain :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DomainValidationOption' with the minimum fields required to make a request.
@@ -504,10 +514,12 @@ instance ToJSON DomainValidationOption where
 --
 --
 -- /See:/ 'extendedKeyUsage' smart constructor.
-data ExtendedKeyUsage = ExtendedKeyUsage'
-  { _ekuOId  :: !(Maybe Text)
-  , _ekuName :: !(Maybe ExtendedKeyUsageName)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ExtendedKeyUsage =
+  ExtendedKeyUsage'
+    { _ekuOId  :: !(Maybe Text)
+    , _ekuName :: !(Maybe ExtendedKeyUsageName)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ExtendedKeyUsage' with the minimum fields required to make a request.
@@ -546,11 +558,13 @@ instance NFData ExtendedKeyUsage where
 --
 --
 -- /See:/ 'filters' smart constructor.
-data Filters = Filters'
-  { _fKeyTypes         :: !(Maybe [KeyAlgorithm])
-  , _fKeyUsage         :: !(Maybe [KeyUsageName])
-  , _fExtendedKeyUsage :: !(Maybe [ExtendedKeyUsageName])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Filters =
+  Filters'
+    { _fKeyTypes         :: !(Maybe [KeyAlgorithm])
+    , _fKeyUsage         :: !(Maybe [KeyUsageName])
+    , _fExtendedKeyUsage :: !(Maybe [ExtendedKeyUsageName])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Filters' with the minimum fields required to make a request.
@@ -598,9 +612,11 @@ instance ToJSON Filters where
 --
 --
 -- /See:/ 'keyUsage' smart constructor.
-newtype KeyUsage = KeyUsage'
-  { _kuName :: Maybe KeyUsageName
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype KeyUsage =
+  KeyUsage'
+    { _kuName :: Maybe KeyUsageName
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'KeyUsage' with the minimum fields required to make a request.
@@ -631,10 +647,12 @@ instance NFData KeyUsage where
 --
 --
 -- /See:/ 'renewalSummary' smart constructor.
-data RenewalSummary = RenewalSummary'
-  { _rsRenewalStatus           :: !RenewalStatus
-  , _rsDomainValidationOptions :: !(List1 DomainValidation)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RenewalSummary =
+  RenewalSummary'
+    { _rsRenewalStatus           :: !RenewalStatus
+    , _rsDomainValidationOptions :: !(List1 DomainValidation)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RenewalSummary' with the minimum fields required to make a request.
@@ -680,11 +698,13 @@ instance NFData RenewalSummary where
 --
 --
 -- /See:/ 'resourceRecord' smart constructor.
-data ResourceRecord = ResourceRecord'
-  { _rrName  :: !Text
-  , _rrType  :: !RecordType
-  , _rrValue :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResourceRecord =
+  ResourceRecord'
+    { _rrName  :: !Text
+    , _rrType  :: !RecordType
+    , _rrValue :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResourceRecord' with the minimum fields required to make a request.
@@ -733,10 +753,12 @@ instance NFData ResourceRecord where
 --
 --
 -- /See:/ 'tag' smart constructor.
-data Tag = Tag'
-  { _tagValue :: !(Maybe Text)
-  , _tagKey   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Tag =
+  Tag'
+    { _tagValue :: !(Maybe Text)
+    , _tagKey   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Tag' with the minimum fields required to make a request.

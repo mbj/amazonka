@@ -51,10 +51,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'stopDeployment' smart constructor.
-data StopDeployment = StopDeployment'
-  { _sdAutoRollbackEnabled :: !(Maybe Bool)
-  , _sdDeploymentId        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StopDeployment =
+  StopDeployment'
+    { _sdAutoRollbackEnabled :: !(Maybe Bool)
+    , _sdDeploymentId        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopDeployment' with the minimum fields required to make a request.
@@ -122,11 +124,13 @@ instance ToQuery StopDeployment where
 --
 --
 -- /See:/ 'stopDeploymentResponse' smart constructor.
-data StopDeploymentResponse = StopDeploymentResponse'
-  { _sdrsStatus         :: !(Maybe StopStatus)
-  , _sdrsStatusMessage  :: !(Maybe Text)
-  , _sdrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StopDeploymentResponse =
+  StopDeploymentResponse'
+    { _sdrsStatus         :: !(Maybe StopStatus)
+    , _sdrsStatusMessage  :: !(Maybe Text)
+    , _sdrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopDeploymentResponse' with the minimum fields required to make a request.

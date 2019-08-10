@@ -42,9 +42,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteDeviceDefinition' smart constructor.
-newtype DeleteDeviceDefinition = DeleteDeviceDefinition'
-  { _dddDeviceDefinitionId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteDeviceDefinition =
+  DeleteDeviceDefinition'
+    { _dddDeviceDefinitionId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteDeviceDefinition' with the minimum fields required to make a request.
@@ -94,9 +96,11 @@ instance ToQuery DeleteDeviceDefinition where
         toQuery = const mempty
 
 -- | /See:/ 'deleteDeviceDefinitionResponse' smart constructor.
-newtype DeleteDeviceDefinitionResponse = DeleteDeviceDefinitionResponse'
-  { _dddrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteDeviceDefinitionResponse =
+  DeleteDeviceDefinitionResponse'
+    { _dddrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteDeviceDefinitionResponse' with the minimum fields required to make a request.

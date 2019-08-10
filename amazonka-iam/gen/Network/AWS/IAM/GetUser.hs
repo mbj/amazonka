@@ -47,9 +47,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getUser' smart constructor.
-newtype GetUser = GetUser'
-  { _guUserName :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetUser =
+  GetUser'
+    { _guUserName :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetUser' with the minimum fields required to make a request.
@@ -97,10 +99,12 @@ instance ToQuery GetUser where
 --
 --
 -- /See:/ 'getUserResponse' smart constructor.
-data GetUserResponse = GetUserResponse'
-  { _gursResponseStatus :: !Int
-  , _gursUser           :: !User
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetUserResponse =
+  GetUserResponse'
+    { _gursResponseStatus :: !Int
+    , _gursUser           :: !User
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetUserResponse' with the minimum fields required to make a request.

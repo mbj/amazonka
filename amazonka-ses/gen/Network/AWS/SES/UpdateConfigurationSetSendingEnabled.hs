@@ -49,10 +49,12 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'updateConfigurationSetSendingEnabled' smart constructor.
-data UpdateConfigurationSetSendingEnabled = UpdateConfigurationSetSendingEnabled'
-  { _ucsseConfigurationSetName :: !Text
-  , _ucsseEnabled              :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateConfigurationSetSendingEnabled =
+  UpdateConfigurationSetSendingEnabled'
+    { _ucsseConfigurationSetName :: !Text
+    , _ucsseEnabled              :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateConfigurationSetSendingEnabled' with the minimum fields required to make a request.

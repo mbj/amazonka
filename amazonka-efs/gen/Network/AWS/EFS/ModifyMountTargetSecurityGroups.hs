@@ -57,10 +57,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'modifyMountTargetSecurityGroups' smart constructor.
-data ModifyMountTargetSecurityGroups = ModifyMountTargetSecurityGroups'
-  { _mmtsgSecurityGroups :: !(Maybe [Text])
-  , _mmtsgMountTargetId  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyMountTargetSecurityGroups =
+  ModifyMountTargetSecurityGroups'
+    { _mmtsgSecurityGroups :: !(Maybe [Text])
+    , _mmtsgMountTargetId  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyMountTargetSecurityGroups' with the minimum fields required to make a request.

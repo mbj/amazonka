@@ -57,13 +57,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'startLabelDetection' smart constructor.
-data StartLabelDetection = StartLabelDetection'
-  { _sldJobTag              :: !(Maybe Text)
-  , _sldNotificationChannel :: !(Maybe NotificationChannel)
-  , _sldClientRequestToken  :: !(Maybe Text)
-  , _sldMinConfidence       :: !(Maybe Double)
-  , _sldVideo               :: !Video
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartLabelDetection =
+  StartLabelDetection'
+    { _sldJobTag              :: !(Maybe Text)
+    , _sldNotificationChannel :: !(Maybe NotificationChannel)
+    , _sldClientRequestToken  :: !(Maybe Text)
+    , _sldMinConfidence       :: !(Maybe Double)
+    , _sldVideo               :: !Video
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartLabelDetection' with the minimum fields required to make a request.
@@ -154,10 +156,12 @@ instance ToQuery StartLabelDetection where
         toQuery = const mempty
 
 -- | /See:/ 'startLabelDetectionResponse' smart constructor.
-data StartLabelDetectionResponse = StartLabelDetectionResponse'
-  { _sldrsJobId          :: !(Maybe Text)
-  , _sldrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartLabelDetectionResponse =
+  StartLabelDetectionResponse'
+    { _sldrsJobId          :: !(Maybe Text)
+    , _sldrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartLabelDetectionResponse' with the minimum fields required to make a request.

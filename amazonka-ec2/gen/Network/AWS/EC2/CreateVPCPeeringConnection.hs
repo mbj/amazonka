@@ -57,13 +57,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createVPCPeeringConnection' smart constructor.
-data CreateVPCPeeringConnection = CreateVPCPeeringConnection'
-  { _cvpcPeerVPCId   :: !(Maybe Text)
-  , _cvpcVPCId       :: !(Maybe Text)
-  , _cvpcPeerOwnerId :: !(Maybe Text)
-  , _cvpcPeerRegion  :: !(Maybe Text)
-  , _cvpcDryRun      :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateVPCPeeringConnection =
+  CreateVPCPeeringConnection'
+    { _cvpcPeerVPCId   :: !(Maybe Text)
+    , _cvpcVPCId       :: !(Maybe Text)
+    , _cvpcPeerOwnerId :: !(Maybe Text)
+    , _cvpcPeerRegion  :: !(Maybe Text)
+    , _cvpcDryRun      :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateVPCPeeringConnection' with the minimum fields required to make a request.
@@ -148,10 +150,12 @@ instance ToQuery CreateVPCPeeringConnection where
 --
 --
 -- /See:/ 'createVPCPeeringConnectionResponse' smart constructor.
-data CreateVPCPeeringConnectionResponse = CreateVPCPeeringConnectionResponse'
-  { _cvpcrsVPCPeeringConnection :: !(Maybe VPCPeeringConnection)
-  , _cvpcrsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateVPCPeeringConnectionResponse =
+  CreateVPCPeeringConnectionResponse'
+    { _cvpcrsVPCPeeringConnection :: !(Maybe VPCPeeringConnection)
+    , _cvpcrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateVPCPeeringConnectionResponse' with the minimum fields required to make a request.

@@ -50,13 +50,15 @@ import Network.AWS.ServiceCatalog.Types
 import Network.AWS.ServiceCatalog.Types.Product
 
 -- | /See:/ 'listRecordHistory' smart constructor.
-data ListRecordHistory = ListRecordHistory'
-  { _lrhSearchFilter      :: !(Maybe ListRecordHistorySearchFilter)
-  , _lrhAcceptLanguage    :: !(Maybe Text)
-  , _lrhAccessLevelFilter :: !(Maybe AccessLevelFilter)
-  , _lrhPageToken         :: !(Maybe Text)
-  , _lrhPageSize          :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListRecordHistory =
+  ListRecordHistory'
+    { _lrhSearchFilter      :: !(Maybe ListRecordHistorySearchFilter)
+    , _lrhAcceptLanguage    :: !(Maybe Text)
+    , _lrhAccessLevelFilter :: !(Maybe AccessLevelFilter)
+    , _lrhPageToken         :: !(Maybe Text)
+    , _lrhPageSize          :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListRecordHistory' with the minimum fields required to make a request.
@@ -146,11 +148,13 @@ instance ToQuery ListRecordHistory where
         toQuery = const mempty
 
 -- | /See:/ 'listRecordHistoryResponse' smart constructor.
-data ListRecordHistoryResponse = ListRecordHistoryResponse'
-  { _lrhrsNextPageToken  :: !(Maybe Text)
-  , _lrhrsRecordDetails  :: !(Maybe [RecordDetail])
-  , _lrhrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListRecordHistoryResponse =
+  ListRecordHistoryResponse'
+    { _lrhrsNextPageToken  :: !(Maybe Text)
+    , _lrhrsRecordDetails  :: !(Maybe [RecordDetail])
+    , _lrhrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListRecordHistoryResponse' with the minimum fields required to make a request.

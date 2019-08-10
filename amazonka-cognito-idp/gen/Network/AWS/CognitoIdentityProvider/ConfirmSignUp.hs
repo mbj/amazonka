@@ -54,15 +54,17 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'confirmSignUp' smart constructor.
-data ConfirmSignUp = ConfirmSignUp'
-  { _csuForceAliasCreation :: !(Maybe Bool)
-  , _csuAnalyticsMetadata  :: !(Maybe AnalyticsMetadataType)
-  , _csuUserContextData    :: !(Maybe UserContextDataType)
-  , _csuSecretHash         :: !(Maybe (Sensitive Text))
-  , _csuClientId           :: !(Sensitive Text)
-  , _csuUsername           :: !(Sensitive Text)
-  , _csuConfirmationCode   :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data ConfirmSignUp =
+  ConfirmSignUp'
+    { _csuForceAliasCreation :: !(Maybe Bool)
+    , _csuAnalyticsMetadata  :: !(Maybe AnalyticsMetadataType)
+    , _csuUserContextData    :: !(Maybe UserContextDataType)
+    , _csuSecretHash         :: !(Maybe (Sensitive Text))
+    , _csuClientId           :: !(Sensitive Text)
+    , _csuUsername           :: !(Sensitive Text)
+    , _csuConfirmationCode   :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ConfirmSignUp' with the minimum fields required to make a request.
@@ -173,9 +175,11 @@ instance ToQuery ConfirmSignUp where
 --
 --
 -- /See:/ 'confirmSignUpResponse' smart constructor.
-newtype ConfirmSignUpResponse = ConfirmSignUpResponse'
-  { _csursResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ConfirmSignUpResponse =
+  ConfirmSignUpResponse'
+    { _csursResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ConfirmSignUpResponse' with the minimum fields required to make a request.

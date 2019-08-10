@@ -42,9 +42,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deletePolicy' smart constructor.
-newtype DeletePolicy = DeletePolicy'
-  { _dpPolicyId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeletePolicy =
+  DeletePolicy'
+    { _dpPolicyId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeletePolicy' with the minimum fields required to make a request.

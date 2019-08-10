@@ -50,11 +50,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'modifyInstanceCreditSpecification' smart constructor.
-data ModifyInstanceCreditSpecification = ModifyInstanceCreditSpecification'
-  { _micsClientToken                  :: !(Maybe Text)
-  , _micsDryRun                       :: !(Maybe Bool)
-  , _micsInstanceCreditSpecifications :: ![InstanceCreditSpecificationRequest]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyInstanceCreditSpecification =
+  ModifyInstanceCreditSpecification'
+    { _micsClientToken                  :: !(Maybe Text)
+    , _micsDryRun                       :: !(Maybe Bool)
+    , _micsInstanceCreditSpecifications :: ![InstanceCreditSpecificationRequest]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyInstanceCreditSpecification' with the minimum fields required to make a request.
@@ -133,11 +135,13 @@ instance ToQuery ModifyInstanceCreditSpecification
                  _micsInstanceCreditSpecifications]
 
 -- | /See:/ 'modifyInstanceCreditSpecificationResponse' smart constructor.
-data ModifyInstanceCreditSpecificationResponse = ModifyInstanceCreditSpecificationResponse'
-  { _micsrsUnsuccessfulInstanceCreditSpecifications :: !(Maybe [UnsuccessfulInstanceCreditSpecificationItem])
-  , _micsrsSuccessfulInstanceCreditSpecifications :: !(Maybe [SuccessfulInstanceCreditSpecificationItem])
-  , _micsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyInstanceCreditSpecificationResponse =
+  ModifyInstanceCreditSpecificationResponse'
+    { _micsrsUnsuccessfulInstanceCreditSpecifications :: !(Maybe [UnsuccessfulInstanceCreditSpecificationItem])
+    , _micsrsSuccessfulInstanceCreditSpecifications :: !(Maybe [SuccessfulInstanceCreditSpecificationItem])
+    , _micsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyInstanceCreditSpecificationResponse' with the minimum fields required to make a request.

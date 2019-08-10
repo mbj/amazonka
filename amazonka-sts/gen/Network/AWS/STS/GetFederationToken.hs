@@ -79,11 +79,13 @@ import Network.AWS.STS.Types
 import Network.AWS.STS.Types.Product
 
 -- | /See:/ 'getFederationToken' smart constructor.
-data GetFederationToken = GetFederationToken'
-  { _gftDurationSeconds :: !(Maybe Nat)
-  , _gftPolicy          :: !(Maybe Text)
-  , _gftName            :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetFederationToken =
+  GetFederationToken'
+    { _gftDurationSeconds :: !(Maybe Nat)
+    , _gftPolicy          :: !(Maybe Text)
+    , _gftName            :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetFederationToken' with the minimum fields required to make a request.
@@ -150,12 +152,14 @@ instance ToQuery GetFederationToken where
 --
 --
 -- /See:/ 'getFederationTokenResponse' smart constructor.
-data GetFederationTokenResponse = GetFederationTokenResponse'
-  { _gftrsPackedPolicySize :: !(Maybe Nat)
-  , _gftrsCredentials      :: !(Maybe AuthEnv)
-  , _gftrsFederatedUser    :: !(Maybe FederatedUser)
-  , _gftrsResponseStatus   :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data GetFederationTokenResponse =
+  GetFederationTokenResponse'
+    { _gftrsPackedPolicySize :: !(Maybe Nat)
+    , _gftrsCredentials      :: !(Maybe AuthEnv)
+    , _gftrsFederatedUser    :: !(Maybe FederatedUser)
+    , _gftrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetFederationTokenResponse' with the minimum fields required to make a request.

@@ -48,10 +48,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'attachLoadBalancerTLSCertificate' smart constructor.
-data AttachLoadBalancerTLSCertificate = AttachLoadBalancerTLSCertificate'
-  { _albtcLoadBalancerName :: !Text
-  , _albtcCertificateName  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AttachLoadBalancerTLSCertificate =
+  AttachLoadBalancerTLSCertificate'
+    { _albtcLoadBalancerName :: !Text
+    , _albtcCertificateName  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttachLoadBalancerTLSCertificate' with the minimum fields required to make a request.
@@ -126,10 +128,12 @@ instance ToQuery AttachLoadBalancerTLSCertificate
         toQuery = const mempty
 
 -- | /See:/ 'attachLoadBalancerTLSCertificateResponse' smart constructor.
-data AttachLoadBalancerTLSCertificateResponse = AttachLoadBalancerTLSCertificateResponse'
-  { _albtcrsOperations     :: !(Maybe [Operation])
-  , _albtcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AttachLoadBalancerTLSCertificateResponse =
+  AttachLoadBalancerTLSCertificateResponse'
+    { _albtcrsOperations     :: !(Maybe [Operation])
+    , _albtcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttachLoadBalancerTLSCertificateResponse' with the minimum fields required to make a request.

@@ -26,11 +26,13 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'complianceViolator' smart constructor.
-data ComplianceViolator = ComplianceViolator'
-  { _cvResourceId      :: !(Maybe Text)
-  , _cvResourceType    :: !(Maybe Text)
-  , _cvViolationReason :: !(Maybe ViolationReason)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ComplianceViolator =
+  ComplianceViolator'
+    { _cvResourceId      :: !(Maybe Text)
+    , _cvResourceType    :: !(Maybe Text)
+    , _cvViolationReason :: !(Maybe ViolationReason)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ComplianceViolator' with the minimum fields required to make a request.
@@ -81,11 +83,13 @@ instance NFData ComplianceViolator where
 --
 --
 -- /See:/ 'evaluationResult' smart constructor.
-data EvaluationResult = EvaluationResult'
-  { _erViolatorCount           :: !(Maybe Nat)
-  , _erComplianceStatus        :: !(Maybe PolicyComplianceStatusType)
-  , _erEvaluationLimitExceeded :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EvaluationResult =
+  EvaluationResult'
+    { _erViolatorCount           :: !(Maybe Nat)
+    , _erComplianceStatus        :: !(Maybe PolicyComplianceStatusType)
+    , _erEvaluationLimitExceeded :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EvaluationResult' with the minimum fields required to make a request.
@@ -137,16 +141,18 @@ instance NFData EvaluationResult where
 --
 --
 -- /See:/ 'policy' smart constructor.
-data Policy = Policy'
-  { _pPolicyId                  :: !(Maybe Text)
-  , _pResourceTags              :: !(Maybe [ResourceTag])
-  , _pPolicyUpdateToken         :: !(Maybe Text)
-  , _pPolicyName                :: !Text
-  , _pSecurityServicePolicyData :: !SecurityServicePolicyData
-  , _pResourceType              :: !Text
-  , _pExcludeResourceTags       :: !Bool
-  , _pRemediationEnabled        :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Policy =
+  Policy'
+    { _pPolicyId                  :: !(Maybe Text)
+    , _pResourceTags              :: !(Maybe [ResourceTag])
+    , _pPolicyUpdateToken         :: !(Maybe Text)
+    , _pPolicyName                :: !Text
+    , _pSecurityServicePolicyData :: !SecurityServicePolicyData
+    , _pResourceType              :: !Text
+    , _pExcludeResourceTags       :: !Bool
+    , _pRemediationEnabled        :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Policy' with the minimum fields required to make a request.
@@ -259,14 +265,16 @@ instance ToJSON Policy where
 --
 --
 -- /See:/ 'policyComplianceDetail' smart constructor.
-data PolicyComplianceDetail = PolicyComplianceDetail'
-  { _pcdExpiredAt               :: !(Maybe POSIX)
-  , _pcdPolicyId                :: !(Maybe Text)
-  , _pcdViolators               :: !(Maybe [ComplianceViolator])
-  , _pcdEvaluationLimitExceeded :: !(Maybe Bool)
-  , _pcdPolicyOwner             :: !(Maybe Text)
-  , _pcdMemberAccount           :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PolicyComplianceDetail =
+  PolicyComplianceDetail'
+    { _pcdExpiredAt               :: !(Maybe POSIX)
+    , _pcdPolicyId                :: !(Maybe Text)
+    , _pcdViolators               :: !(Maybe [ComplianceViolator])
+    , _pcdEvaluationLimitExceeded :: !(Maybe Bool)
+    , _pcdPolicyOwner             :: !(Maybe Text)
+    , _pcdMemberAccount           :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PolicyComplianceDetail' with the minimum fields required to make a request.
@@ -341,14 +349,16 @@ instance NFData PolicyComplianceDetail where
 --
 --
 -- /See:/ 'policyComplianceStatus' smart constructor.
-data PolicyComplianceStatus = PolicyComplianceStatus'
-  { _pcsEvaluationResults :: !(Maybe [EvaluationResult])
-  , _pcsLastUpdated       :: !(Maybe POSIX)
-  , _pcsPolicyName        :: !(Maybe Text)
-  , _pcsPolicyId          :: !(Maybe Text)
-  , _pcsPolicyOwner       :: !(Maybe Text)
-  , _pcsMemberAccount     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PolicyComplianceStatus =
+  PolicyComplianceStatus'
+    { _pcsEvaluationResults :: !(Maybe [EvaluationResult])
+    , _pcsLastUpdated       :: !(Maybe POSIX)
+    , _pcsPolicyName        :: !(Maybe Text)
+    , _pcsPolicyId          :: !(Maybe Text)
+    , _pcsPolicyOwner       :: !(Maybe Text)
+    , _pcsMemberAccount     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PolicyComplianceStatus' with the minimum fields required to make a request.
@@ -424,14 +434,16 @@ instance NFData PolicyComplianceStatus where
 --
 --
 -- /See:/ 'policySummary' smart constructor.
-data PolicySummary = PolicySummary'
-  { _psPolicyName          :: !(Maybe Text)
-  , _psRemediationEnabled  :: !(Maybe Bool)
-  , _psResourceType        :: !(Maybe Text)
-  , _psPolicyId            :: !(Maybe Text)
-  , _psPolicyARN           :: !(Maybe Text)
-  , _psSecurityServiceType :: !(Maybe SecurityServiceType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PolicySummary =
+  PolicySummary'
+    { _psPolicyName          :: !(Maybe Text)
+    , _psRemediationEnabled  :: !(Maybe Bool)
+    , _psResourceType        :: !(Maybe Text)
+    , _psPolicyId            :: !(Maybe Text)
+    , _psPolicyARN           :: !(Maybe Text)
+    , _psSecurityServiceType :: !(Maybe SecurityServiceType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PolicySummary' with the minimum fields required to make a request.
@@ -506,10 +518,12 @@ instance NFData PolicySummary where
 --
 --
 -- /See:/ 'resourceTag' smart constructor.
-data ResourceTag = ResourceTag'
-  { _rtValue :: !(Maybe Text)
-  , _rtKey   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResourceTag =
+  ResourceTag'
+    { _rtValue :: !(Maybe Text)
+    , _rtKey   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResourceTag' with the minimum fields required to make a request.
@@ -554,10 +568,12 @@ instance ToJSON ResourceTag where
 --
 --
 -- /See:/ 'securityServicePolicyData' smart constructor.
-data SecurityServicePolicyData = SecurityServicePolicyData'
-  { _sspdManagedServiceData :: !(Maybe Text)
-  , _sspdType               :: !SecurityServiceType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SecurityServicePolicyData =
+  SecurityServicePolicyData'
+    { _sspdManagedServiceData :: !(Maybe Text)
+    , _sspdType               :: !SecurityServiceType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SecurityServicePolicyData' with the minimum fields required to make a request.

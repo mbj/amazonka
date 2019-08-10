@@ -51,9 +51,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listExports' smart constructor.
-newtype ListExports = ListExports'
-  { _leNextToken :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ListExports =
+  ListExports'
+    { _leNextToken :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListExports' with the minimum fields required to make a request.
@@ -107,11 +109,13 @@ instance ToQuery ListExports where
                "NextToken" =: _leNextToken]
 
 -- | /See:/ 'listExportsResponse' smart constructor.
-data ListExportsResponse = ListExportsResponse'
-  { _lersNextToken      :: !(Maybe Text)
-  , _lersExports        :: !(Maybe [Export])
-  , _lersResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListExportsResponse =
+  ListExportsResponse'
+    { _lersNextToken      :: !(Maybe Text)
+    , _lersExports        :: !(Maybe [Export])
+    , _lersResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListExportsResponse' with the minimum fields required to make a request.

@@ -49,11 +49,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listFilters' smart constructor.
-data ListFilters = ListFilters'
-  { _lNextToken  :: !(Maybe Text)
-  , _lMaxResults :: !(Maybe Nat)
-  , _lDetectorId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListFilters =
+  ListFilters'
+    { _lNextToken  :: !(Maybe Text)
+    , _lMaxResults :: !(Maybe Nat)
+    , _lDetectorId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListFilters' with the minimum fields required to make a request.
@@ -126,11 +128,13 @@ instance ToQuery ListFilters where
                "maxResults" =: _lMaxResults]
 
 -- | /See:/ 'listFiltersResponse' smart constructor.
-data ListFiltersResponse = ListFiltersResponse'
-  { _lrsFilterNames    :: !(Maybe [Text])
-  , _lrsNextToken      :: !(Maybe Text)
-  , _lrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListFiltersResponse =
+  ListFiltersResponse'
+    { _lrsFilterNames    :: !(Maybe [Text])
+    , _lrsNextToken      :: !(Maybe Text)
+    , _lrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListFiltersResponse' with the minimum fields required to make a request.

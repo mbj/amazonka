@@ -46,9 +46,11 @@ import Network.AWS.ServiceCatalog.Types
 import Network.AWS.ServiceCatalog.Types.Product
 
 -- | /See:/ 'deleteTagOption' smart constructor.
-newtype DeleteTagOption = DeleteTagOption'
-  { _delId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteTagOption =
+  DeleteTagOption'
+    { _delId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteTagOption' with the minimum fields required to make a request.
@@ -99,9 +101,11 @@ instance ToQuery DeleteTagOption where
         toQuery = const mempty
 
 -- | /See:/ 'deleteTagOptionResponse' smart constructor.
-newtype DeleteTagOptionResponse = DeleteTagOptionResponse'
-  { _dtotrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteTagOptionResponse =
+  DeleteTagOptionResponse'
+    { _dtotrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteTagOptionResponse' with the minimum fields required to make a request.

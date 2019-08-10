@@ -102,11 +102,13 @@ instance ToQuery DescribeActiveReceiptRuleSet where
 --
 --
 -- /See:/ 'describeActiveReceiptRuleSetResponse' smart constructor.
-data DescribeActiveReceiptRuleSetResponse = DescribeActiveReceiptRuleSetResponse'
-  { _darrsrsRules          :: !(Maybe [ReceiptRule])
-  , _darrsrsMetadata       :: !(Maybe ReceiptRuleSetMetadata)
-  , _darrsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeActiveReceiptRuleSetResponse =
+  DescribeActiveReceiptRuleSetResponse'
+    { _darrsrsRules          :: !(Maybe [ReceiptRule])
+    , _darrsrsMetadata       :: !(Maybe ReceiptRuleSetMetadata)
+    , _darrsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeActiveReceiptRuleSetResponse' with the minimum fields required to make a request.

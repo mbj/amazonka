@@ -51,11 +51,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'authorizeCacheSecurityGroupIngress' smart constructor.
-data AuthorizeCacheSecurityGroupIngress = AuthorizeCacheSecurityGroupIngress'
-  { _acsgiCacheSecurityGroupName  :: !Text
-  , _acsgiEC2SecurityGroupName    :: !Text
-  , _acsgiEC2SecurityGroupOwnerId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AuthorizeCacheSecurityGroupIngress =
+  AuthorizeCacheSecurityGroupIngress'
+    { _acsgiCacheSecurityGroupName  :: !Text
+    , _acsgiEC2SecurityGroupName    :: !Text
+    , _acsgiEC2SecurityGroupOwnerId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AuthorizeCacheSecurityGroupIngress' with the minimum fields required to make a request.
@@ -133,10 +135,12 @@ instance ToQuery AuthorizeCacheSecurityGroupIngress
                  _acsgiEC2SecurityGroupOwnerId]
 
 -- | /See:/ 'authorizeCacheSecurityGroupIngressResponse' smart constructor.
-data AuthorizeCacheSecurityGroupIngressResponse = AuthorizeCacheSecurityGroupIngressResponse'
-  { _acsgirsCacheSecurityGroup :: !(Maybe CacheSecurityGroup)
-  , _acsgirsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AuthorizeCacheSecurityGroupIngressResponse =
+  AuthorizeCacheSecurityGroupIngressResponse'
+    { _acsgirsCacheSecurityGroup :: !(Maybe CacheSecurityGroup)
+    , _acsgirsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AuthorizeCacheSecurityGroupIngressResponse' with the minimum fields required to make a request.

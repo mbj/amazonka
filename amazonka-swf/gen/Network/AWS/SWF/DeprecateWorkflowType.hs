@@ -63,10 +63,12 @@ import Network.AWS.SWF.Types
 import Network.AWS.SWF.Types.Product
 
 -- | /See:/ 'deprecateWorkflowType' smart constructor.
-data DeprecateWorkflowType = DeprecateWorkflowType'
-  { _dDomain       :: !Text
-  , _dWorkflowType :: !WorkflowType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeprecateWorkflowType =
+  DeprecateWorkflowType'
+    { _dDomain       :: !Text
+    , _dWorkflowType :: !WorkflowType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeprecateWorkflowType' with the minimum fields required to make a request.

@@ -49,13 +49,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateIdentityProvider' smart constructor.
-data UpdateIdentityProvider = UpdateIdentityProvider'
-  { _uipIdpIdentifiers   :: !(Maybe [Text])
-  , _uipAttributeMapping :: !(Maybe (Map Text Text))
-  , _uipProviderDetails  :: !(Maybe (Map Text Text))
-  , _uipUserPoolId       :: !Text
-  , _uipProviderName     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateIdentityProvider =
+  UpdateIdentityProvider'
+    { _uipIdpIdentifiers   :: !(Maybe [Text])
+    , _uipAttributeMapping :: !(Maybe (Map Text Text))
+    , _uipProviderDetails  :: !(Maybe (Map Text Text))
+    , _uipUserPoolId       :: !Text
+    , _uipProviderName     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateIdentityProvider' with the minimum fields required to make a request.
@@ -146,10 +148,12 @@ instance ToQuery UpdateIdentityProvider where
         toQuery = const mempty
 
 -- | /See:/ 'updateIdentityProviderResponse' smart constructor.
-data UpdateIdentityProviderResponse = UpdateIdentityProviderResponse'
-  { _uiprsResponseStatus   :: !Int
-  , _uiprsIdentityProvider :: !IdentityProviderType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateIdentityProviderResponse =
+  UpdateIdentityProviderResponse'
+    { _uiprsResponseStatus   :: !Int
+    , _uiprsIdentityProvider :: !IdentityProviderType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateIdentityProviderResponse' with the minimum fields required to make a request.

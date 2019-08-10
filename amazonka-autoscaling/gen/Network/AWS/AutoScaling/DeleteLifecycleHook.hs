@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteLifecycleHook' smart constructor.
-data DeleteLifecycleHook = DeleteLifecycleHook'
-  { _delLifecycleHookName    :: !Text
-  , _delAutoScalingGroupName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteLifecycleHook =
+  DeleteLifecycleHook'
+    { _delLifecycleHookName    :: !Text
+    , _delAutoScalingGroupName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteLifecycleHook' with the minimum fields required to make a request.
@@ -107,9 +109,11 @@ instance ToQuery DeleteLifecycleHook where
                "AutoScalingGroupName" =: _delAutoScalingGroupName]
 
 -- | /See:/ 'deleteLifecycleHookResponse' smart constructor.
-newtype DeleteLifecycleHookResponse = DeleteLifecycleHookResponse'
-  { _drsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteLifecycleHookResponse =
+  DeleteLifecycleHookResponse'
+    { _drsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteLifecycleHookResponse' with the minimum fields required to make a request.

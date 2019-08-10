@@ -47,11 +47,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createHSM' smart constructor.
-data CreateHSM = CreateHSM'
-  { _chIPAddress        :: !(Maybe Text)
-  , _chClusterId        :: !Text
-  , _chAvailabilityZone :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateHSM =
+  CreateHSM'
+    { _chIPAddress        :: !(Maybe Text)
+    , _chClusterId        :: !Text
+    , _chAvailabilityZone :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateHSM' with the minimum fields required to make a request.
@@ -124,10 +126,12 @@ instance ToQuery CreateHSM where
         toQuery = const mempty
 
 -- | /See:/ 'createHSMResponse' smart constructor.
-data CreateHSMResponse = CreateHSMResponse'
-  { _chrsHSM            :: !(Maybe HSM)
-  , _chrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateHSMResponse =
+  CreateHSMResponse'
+    { _chrsHSM            :: !(Maybe HSM)
+    , _chrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateHSMResponse' with the minimum fields required to make a request.

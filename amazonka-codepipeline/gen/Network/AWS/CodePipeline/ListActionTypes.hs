@@ -51,10 +51,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listActionTypes' smart constructor.
-data ListActionTypes = ListActionTypes'
-  { _latActionOwnerFilter :: !(Maybe ActionOwner)
-  , _latNextToken         :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListActionTypes =
+  ListActionTypes'
+    { _latActionOwnerFilter :: !(Maybe ActionOwner)
+    , _latNextToken         :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListActionTypes' with the minimum fields required to make a request.
@@ -120,11 +122,13 @@ instance ToQuery ListActionTypes where
 --
 --
 -- /See:/ 'listActionTypesResponse' smart constructor.
-data ListActionTypesResponse = ListActionTypesResponse'
-  { _latrsNextToken      :: !(Maybe Text)
-  , _latrsResponseStatus :: !Int
-  , _latrsActionTypes    :: ![ActionType]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListActionTypesResponse =
+  ListActionTypesResponse'
+    { _latrsNextToken      :: !(Maybe Text)
+    , _latrsResponseStatus :: !Int
+    , _latrsActionTypes    :: ![ActionType]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListActionTypesResponse' with the minimum fields required to make a request.

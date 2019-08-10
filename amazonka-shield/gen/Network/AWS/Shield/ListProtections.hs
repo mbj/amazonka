@@ -50,10 +50,12 @@ import Network.AWS.Shield.Types
 import Network.AWS.Shield.Types.Product
 
 -- | /See:/ 'listProtections' smart constructor.
-data ListProtections = ListProtections'
-  { _lpNextToken  :: !(Maybe Text)
-  , _lpMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListProtections =
+  ListProtections'
+    { _lpNextToken  :: !(Maybe Text)
+    , _lpMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListProtections' with the minimum fields required to make a request.
@@ -122,11 +124,13 @@ instance ToQuery ListProtections where
         toQuery = const mempty
 
 -- | /See:/ 'listProtectionsResponse' smart constructor.
-data ListProtectionsResponse = ListProtectionsResponse'
-  { _lprsProtections    :: !(Maybe [Protection])
-  , _lprsNextToken      :: !(Maybe Text)
-  , _lprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListProtectionsResponse =
+  ListProtectionsResponse'
+    { _lprsProtections    :: !(Maybe [Protection])
+    , _lprsNextToken      :: !(Maybe Text)
+    , _lprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListProtectionsResponse' with the minimum fields required to make a request.

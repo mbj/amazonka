@@ -41,7 +41,7 @@
 --
 --
 --
--- For the default limits for an AWS account, see <http://docs.aws.amazon.com/kinesis/latest/dev/service-sizes-and-limits.html Streams Limits> in the /Amazon Kinesis Data Streams Developer Guide/ . To request an increase in the call rate limit, the shard limit for this API, or your overall shard limit, use the <https://console.aws.amazon.com/support/v1#/case/create?issueType=service-limit-increase&amp;limitType=service-code-kinesis limits form> .
+-- For the default limits for an AWS account, see <http://docs.aws.amazon.com/kinesis/latest/dev/service-sizes-and-limits.html Streams Limits> in the /Amazon Kinesis Data Streams Developer Guide/ . To request an increase in the call rate limit, the shard limit for this API, or your overall shard limit, use the <https://console.aws.amazon.com/support/v1#/case/create?issueType=service-limit-increase&limitType=service-code-kinesis limits form> .
 --
 module Network.AWS.Kinesis.UpdateShardCount
     (
@@ -71,11 +71,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateShardCount' smart constructor.
-data UpdateShardCount = UpdateShardCount'
-  { _uscStreamName       :: !Text
-  , _uscTargetShardCount :: !Nat
-  , _uscScalingType      :: !ScalingType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateShardCount =
+  UpdateShardCount'
+    { _uscStreamName       :: !Text
+    , _uscTargetShardCount :: !Nat
+    , _uscScalingType      :: !ScalingType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateShardCount' with the minimum fields required to make a request.
@@ -151,12 +153,14 @@ instance ToQuery UpdateShardCount where
         toQuery = const mempty
 
 -- | /See:/ 'updateShardCountResponse' smart constructor.
-data UpdateShardCountResponse = UpdateShardCountResponse'
-  { _uscrsTargetShardCount  :: !(Maybe Nat)
-  , _uscrsStreamName        :: !(Maybe Text)
-  , _uscrsCurrentShardCount :: !(Maybe Nat)
-  , _uscrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateShardCountResponse =
+  UpdateShardCountResponse'
+    { _uscrsTargetShardCount  :: !(Maybe Nat)
+    , _uscrsStreamName        :: !(Maybe Text)
+    , _uscrsCurrentShardCount :: !(Maybe Nat)
+    , _uscrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateShardCountResponse' with the minimum fields required to make a request.

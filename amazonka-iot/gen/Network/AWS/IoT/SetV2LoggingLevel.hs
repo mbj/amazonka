@@ -43,10 +43,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'setV2LoggingLevel' smart constructor.
-data SetV2LoggingLevel = SetV2LoggingLevel'
-  { _svllLogTarget :: !LogTarget
-  , _svllLogLevel  :: !LogLevel
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SetV2LoggingLevel =
+  SetV2LoggingLevel'
+    { _svllLogTarget :: !LogTarget
+    , _svllLogLevel  :: !LogLevel
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetV2LoggingLevel' with the minimum fields required to make a request.

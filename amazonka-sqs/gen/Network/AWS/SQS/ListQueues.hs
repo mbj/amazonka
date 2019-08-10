@@ -49,9 +49,11 @@ import Network.AWS.SQS.Types.Product
 --
 --
 -- /See:/ 'listQueues' smart constructor.
-newtype ListQueues = ListQueues'
-  { _lqQueueNamePrefix :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ListQueues =
+  ListQueues'
+    { _lqQueueNamePrefix :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListQueues' with the minimum fields required to make a request.
@@ -100,10 +102,12 @@ instance ToQuery ListQueues where
 --
 --
 -- /See:/ 'listQueuesResponse' smart constructor.
-data ListQueuesResponse = ListQueuesResponse'
-  { _lqrsQueueURLs      :: !(Maybe [Text])
-  , _lqrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListQueuesResponse =
+  ListQueuesResponse'
+    { _lqrsQueueURLs      :: !(Maybe [Text])
+    , _lqrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListQueuesResponse' with the minimum fields required to make a request.

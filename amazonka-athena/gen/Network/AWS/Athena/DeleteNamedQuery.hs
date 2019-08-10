@@ -46,9 +46,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteNamedQuery' smart constructor.
-newtype DeleteNamedQuery = DeleteNamedQuery'
-  { _dnqNamedQueryId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteNamedQuery =
+  DeleteNamedQuery'
+    { _dnqNamedQueryId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteNamedQuery' with the minimum fields required to make a request.
@@ -101,9 +103,11 @@ instance ToQuery DeleteNamedQuery where
         toQuery = const mempty
 
 -- | /See:/ 'deleteNamedQueryResponse' smart constructor.
-newtype DeleteNamedQueryResponse = DeleteNamedQueryResponse'
-  { _dnqrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteNamedQueryResponse =
+  DeleteNamedQueryResponse'
+    { _dnqrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteNamedQueryResponse' with the minimum fields required to make a request.

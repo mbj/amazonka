@@ -47,9 +47,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'generateRandom' smart constructor.
-newtype GenerateRandom = GenerateRandom'
-  { _grNumberOfBytes :: Maybe Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GenerateRandom =
+  GenerateRandom'
+    { _grNumberOfBytes :: Maybe Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GenerateRandom' with the minimum fields required to make a request.
@@ -101,10 +103,12 @@ instance ToQuery GenerateRandom where
         toQuery = const mempty
 
 -- | /See:/ 'generateRandomResponse' smart constructor.
-data GenerateRandomResponse = GenerateRandomResponse'
-  { _grrsPlaintext      :: !(Maybe (Sensitive Base64))
-  , _grrsResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data GenerateRandomResponse =
+  GenerateRandomResponse'
+    { _grrsPlaintext      :: !(Maybe (Sensitive Base64))
+    , _grrsResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GenerateRandomResponse' with the minimum fields required to make a request.

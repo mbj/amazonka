@@ -70,23 +70,25 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateAutoScalingGroup' smart constructor.
-data UpdateAutoScalingGroup = UpdateAutoScalingGroup'
-  { _uasgTerminationPolicies :: !(Maybe [Text])
-  , _uasgHealthCheckGracePeriod :: !(Maybe Int)
-  , _uasgServiceLinkedRoleARN :: !(Maybe Text)
-  , _uasgNewInstancesProtectedFromScaleIn :: !(Maybe Bool)
-  , _uasgVPCZoneIdentifier :: !(Maybe Text)
-  , _uasgDefaultCooldown :: !(Maybe Int)
-  , _uasgMaxSize :: !(Maybe Int)
-  , _uasgAvailabilityZones :: !(Maybe (List1 Text))
-  , _uasgDesiredCapacity :: !(Maybe Int)
-  , _uasgMinSize :: !(Maybe Int)
-  , _uasgLaunchConfigurationName :: !(Maybe Text)
-  , _uasgHealthCheckType :: !(Maybe Text)
-  , _uasgLaunchTemplate :: !(Maybe LaunchTemplateSpecification)
-  , _uasgPlacementGroup :: !(Maybe Text)
-  , _uasgAutoScalingGroupName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateAutoScalingGroup =
+  UpdateAutoScalingGroup'
+    { _uasgTerminationPolicies :: !(Maybe [Text])
+    , _uasgHealthCheckGracePeriod :: !(Maybe Int)
+    , _uasgServiceLinkedRoleARN :: !(Maybe Text)
+    , _uasgNewInstancesProtectedFromScaleIn :: !(Maybe Bool)
+    , _uasgVPCZoneIdentifier :: !(Maybe Text)
+    , _uasgDefaultCooldown :: !(Maybe Int)
+    , _uasgMaxSize :: !(Maybe Int)
+    , _uasgAvailabilityZones :: !(Maybe (List1 Text))
+    , _uasgDesiredCapacity :: !(Maybe Int)
+    , _uasgMinSize :: !(Maybe Int)
+    , _uasgLaunchConfigurationName :: !(Maybe Text)
+    , _uasgHealthCheckType :: !(Maybe Text)
+    , _uasgLaunchTemplate :: !(Maybe LaunchTemplateSpecification)
+    , _uasgPlacementGroup :: !(Maybe Text)
+    , _uasgAutoScalingGroupName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateAutoScalingGroup' with the minimum fields required to make a request.

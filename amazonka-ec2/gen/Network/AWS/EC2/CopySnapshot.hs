@@ -60,16 +60,18 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'copySnapshot' smart constructor.
-data CopySnapshot = CopySnapshot'
-  { _csPresignedURL      :: !(Maybe Text)
-  , _csEncrypted         :: !(Maybe Bool)
-  , _csDestinationRegion :: !(Maybe Text)
-  , _csKMSKeyId          :: !(Maybe Text)
-  , _csDescription       :: !(Maybe Text)
-  , _csDryRun            :: !(Maybe Bool)
-  , _csSourceRegion      :: !Text
-  , _csSourceSnapshotId  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CopySnapshot =
+  CopySnapshot'
+    { _csPresignedURL      :: !(Maybe Text)
+    , _csEncrypted         :: !(Maybe Bool)
+    , _csDestinationRegion :: !(Maybe Text)
+    , _csKMSKeyId          :: !(Maybe Text)
+    , _csDescription       :: !(Maybe Text)
+    , _csDryRun            :: !(Maybe Bool)
+    , _csSourceRegion      :: !Text
+    , _csSourceSnapshotId  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CopySnapshot' with the minimum fields required to make a request.
@@ -178,10 +180,12 @@ instance ToQuery CopySnapshot where
 --
 --
 -- /See:/ 'copySnapshotResponse' smart constructor.
-data CopySnapshotResponse = CopySnapshotResponse'
-  { _csrsSnapshotId     :: !(Maybe Text)
-  , _csrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CopySnapshotResponse =
+  CopySnapshotResponse'
+    { _csrsSnapshotId     :: !(Maybe Text)
+    , _csrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CopySnapshotResponse' with the minimum fields required to make a request.

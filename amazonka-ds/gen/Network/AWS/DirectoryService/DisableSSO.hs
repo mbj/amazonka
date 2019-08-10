@@ -50,11 +50,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'disableSSO' smart constructor.
-data DisableSSO = DisableSSO'
-  { _dssoUserName    :: !(Maybe Text)
-  , _dssoPassword    :: !(Maybe (Sensitive Text))
-  , _dssoDirectoryId :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data DisableSSO =
+  DisableSSO'
+    { _dssoUserName    :: !(Maybe Text)
+    , _dssoPassword    :: !(Maybe (Sensitive Text))
+    , _dssoDirectoryId :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisableSSO' with the minimum fields required to make a request.
@@ -130,9 +132,11 @@ instance ToQuery DisableSSO where
 --
 --
 -- /See:/ 'disableSSOResponse' smart constructor.
-newtype DisableSSOResponse = DisableSSOResponse'
-  { _dssorsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DisableSSOResponse =
+  DisableSSOResponse'
+    { _dssorsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisableSSOResponse' with the minimum fields required to make a request.

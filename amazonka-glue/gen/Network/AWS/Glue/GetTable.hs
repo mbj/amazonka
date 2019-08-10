@@ -47,11 +47,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getTable' smart constructor.
-data GetTable = GetTable'
-  { _gttCatalogId    :: !(Maybe Text)
-  , _gttDatabaseName :: !Text
-  , _gttName         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetTable =
+  GetTable'
+    { _gttCatalogId    :: !(Maybe Text)
+    , _gttDatabaseName :: !Text
+    , _gttName         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetTable' with the minimum fields required to make a request.
@@ -124,10 +126,12 @@ instance ToQuery GetTable where
         toQuery = const mempty
 
 -- | /See:/ 'getTableResponse' smart constructor.
-data GetTableResponse = GetTableResponse'
-  { _ggrsTable          :: !(Maybe Table)
-  , _ggrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetTableResponse =
+  GetTableResponse'
+    { _ggrsTable          :: !(Maybe Table)
+    , _ggrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetTableResponse' with the minimum fields required to make a request.

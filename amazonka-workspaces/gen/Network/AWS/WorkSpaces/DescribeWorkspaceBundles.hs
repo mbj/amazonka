@@ -53,11 +53,13 @@ import Network.AWS.WorkSpaces.Types
 import Network.AWS.WorkSpaces.Types.Product
 
 -- | /See:/ 'describeWorkspaceBundles' smart constructor.
-data DescribeWorkspaceBundles = DescribeWorkspaceBundles'
-  { _dwbBundleIds :: !(Maybe (List1 Text))
-  , _dwbOwner     :: !(Maybe Text)
-  , _dwbNextToken :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeWorkspaceBundles =
+  DescribeWorkspaceBundles'
+    { _dwbBundleIds :: !(Maybe (List1 Text))
+    , _dwbOwner     :: !(Maybe Text)
+    , _dwbNextToken :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeWorkspaceBundles' with the minimum fields required to make a request.
@@ -135,11 +137,13 @@ instance ToQuery DescribeWorkspaceBundles where
         toQuery = const mempty
 
 -- | /See:/ 'describeWorkspaceBundlesResponse' smart constructor.
-data DescribeWorkspaceBundlesResponse = DescribeWorkspaceBundlesResponse'
-  { _dwbrsBundles        :: !(Maybe [WorkspaceBundle])
-  , _dwbrsNextToken      :: !(Maybe Text)
-  , _dwbrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeWorkspaceBundlesResponse =
+  DescribeWorkspaceBundlesResponse'
+    { _dwbrsBundles        :: !(Maybe [WorkspaceBundle])
+    , _dwbrsNextToken      :: !(Maybe Text)
+    , _dwbrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeWorkspaceBundlesResponse' with the minimum fields required to make a request.

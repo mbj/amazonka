@@ -60,11 +60,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getMethod' smart constructor.
-data GetMethod = GetMethod'
-  { _gmmRestAPIId  :: !Text
-  , _gmmResourceId :: !Text
-  , _gmmHttpMethod :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetMethod =
+  GetMethod'
+    { _gmmRestAPIId  :: !Text
+    , _gmmResourceId :: !Text
+    , _gmmHttpMethod :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetMethod' with the minimum fields required to make a request.

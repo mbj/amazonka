@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'assignIPv6Addresses' smart constructor.
-data AssignIPv6Addresses = AssignIPv6Addresses'
-  { _aiaIPv6AddressCount   :: !(Maybe Int)
-  , _aiaIPv6Addresses      :: !(Maybe [Text])
-  , _aiaNetworkInterfaceId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssignIPv6Addresses =
+  AssignIPv6Addresses'
+    { _aiaIPv6AddressCount   :: !(Maybe Int)
+    , _aiaIPv6Addresses      :: !(Maybe [Text])
+    , _aiaNetworkInterfaceId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssignIPv6Addresses' with the minimum fields required to make a request.
@@ -121,11 +123,13 @@ instance ToQuery AssignIPv6Addresses where
                "NetworkInterfaceId" =: _aiaNetworkInterfaceId]
 
 -- | /See:/ 'assignIPv6AddressesResponse' smart constructor.
-data AssignIPv6AddressesResponse = AssignIPv6AddressesResponse'
-  { _aiarsNetworkInterfaceId    :: !(Maybe Text)
-  , _aiarsAssignedIPv6Addresses :: !(Maybe [Text])
-  , _aiarsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssignIPv6AddressesResponse =
+  AssignIPv6AddressesResponse'
+    { _aiarsNetworkInterfaceId    :: !(Maybe Text)
+    , _aiarsAssignedIPv6Addresses :: !(Maybe [Text])
+    , _aiarsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssignIPv6AddressesResponse' with the minimum fields required to make a request.

@@ -52,10 +52,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getUserPolicy' smart constructor.
-data GetUserPolicy = GetUserPolicy'
-  { _gupUserName   :: !Text
-  , _gupPolicyName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetUserPolicy =
+  GetUserPolicy'
+    { _gupUserName   :: !Text
+    , _gupPolicyName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetUserPolicy' with the minimum fields required to make a request.
@@ -115,12 +117,14 @@ instance ToQuery GetUserPolicy where
 --
 --
 -- /See:/ 'getUserPolicyResponse' smart constructor.
-data GetUserPolicyResponse = GetUserPolicyResponse'
-  { _guprsResponseStatus :: !Int
-  , _guprsUserName       :: !Text
-  , _guprsPolicyName     :: !Text
-  , _guprsPolicyDocument :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetUserPolicyResponse =
+  GetUserPolicyResponse'
+    { _guprsResponseStatus :: !Int
+    , _guprsUserName       :: !Text
+    , _guprsPolicyName     :: !Text
+    , _guprsPolicyDocument :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetUserPolicyResponse' with the minimum fields required to make a request.

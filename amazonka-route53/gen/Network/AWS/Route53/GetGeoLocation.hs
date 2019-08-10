@@ -63,11 +63,13 @@ import Network.AWS.Route53.Types.Product
 --
 --
 -- /See:/ 'getGeoLocation' smart constructor.
-data GetGeoLocation = GetGeoLocation'
-  { _gglSubdivisionCode :: !(Maybe Text)
-  , _gglCountryCode     :: !(Maybe Text)
-  , _gglContinentCode   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetGeoLocation =
+  GetGeoLocation'
+    { _gglSubdivisionCode :: !(Maybe Text)
+    , _gglCountryCode     :: !(Maybe Text)
+    , _gglContinentCode   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetGeoLocation' with the minimum fields required to make a request.
@@ -132,10 +134,12 @@ instance ToQuery GetGeoLocation where
 --
 --
 -- /See:/ 'getGeoLocationResponse' smart constructor.
-data GetGeoLocationResponse = GetGeoLocationResponse'
-  { _gglrsResponseStatus     :: !Int
-  , _gglrsGeoLocationDetails :: !GeoLocationDetails
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetGeoLocationResponse =
+  GetGeoLocationResponse'
+    { _gglrsResponseStatus     :: !Int
+    , _gglrsGeoLocationDetails :: !GeoLocationDetails
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetGeoLocationResponse' with the minimum fields required to make a request.

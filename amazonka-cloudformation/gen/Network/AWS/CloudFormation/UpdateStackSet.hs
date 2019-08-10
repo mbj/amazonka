@@ -57,19 +57,21 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateStackSet' smart constructor.
-data UpdateStackSet = UpdateStackSet'
-  { _ussAdministrationRoleARN :: !(Maybe Text)
-  , _ussUsePreviousTemplate   :: !(Maybe Bool)
-  , _ussParameters            :: !(Maybe [Parameter])
-  , _ussOperationPreferences  :: !(Maybe StackSetOperationPreferences)
-  , _ussOperationId           :: !(Maybe Text)
-  , _ussTemplateBody          :: !(Maybe Text)
-  , _ussTemplateURL           :: !(Maybe Text)
-  , _ussDescription           :: !(Maybe Text)
-  , _ussCapabilities          :: !(Maybe [Capability])
-  , _ussTags                  :: !(Maybe [Tag])
-  , _ussStackSetName          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateStackSet =
+  UpdateStackSet'
+    { _ussAdministrationRoleARN :: !(Maybe Text)
+    , _ussUsePreviousTemplate   :: !(Maybe Bool)
+    , _ussParameters            :: !(Maybe [Parameter])
+    , _ussOperationPreferences  :: !(Maybe StackSetOperationPreferences)
+    , _ussOperationId           :: !(Maybe Text)
+    , _ussTemplateBody          :: !(Maybe Text)
+    , _ussTemplateURL           :: !(Maybe Text)
+    , _ussDescription           :: !(Maybe Text)
+    , _ussCapabilities          :: !(Maybe [Capability])
+    , _ussTags                  :: !(Maybe [Tag])
+    , _ussStackSetName          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateStackSet' with the minimum fields required to make a request.
@@ -200,10 +202,12 @@ instance ToQuery UpdateStackSet where
                "StackSetName" =: _ussStackSetName]
 
 -- | /See:/ 'updateStackSetResponse' smart constructor.
-data UpdateStackSetResponse = UpdateStackSetResponse'
-  { _ussrsOperationId    :: !(Maybe Text)
-  , _ussrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateStackSetResponse =
+  UpdateStackSetResponse'
+    { _ussrsOperationId    :: !(Maybe Text)
+    , _ussrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateStackSetResponse' with the minimum fields required to make a request.

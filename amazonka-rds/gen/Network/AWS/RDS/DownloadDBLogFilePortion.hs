@@ -57,12 +57,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'downloadDBLogFilePortion' smart constructor.
-data DownloadDBLogFilePortion = DownloadDBLogFilePortion'
-  { _ddlfpNumberOfLines        :: !(Maybe Int)
-  , _ddlfpMarker               :: !(Maybe Text)
-  , _ddlfpDBInstanceIdentifier :: !Text
-  , _ddlfpLogFileName          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DownloadDBLogFilePortion =
+  DownloadDBLogFilePortion'
+    { _ddlfpNumberOfLines        :: !(Maybe Int)
+    , _ddlfpMarker               :: !(Maybe Text)
+    , _ddlfpDBInstanceIdentifier :: !Text
+    , _ddlfpLogFileName          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DownloadDBLogFilePortion' with the minimum fields required to make a request.
@@ -151,12 +153,14 @@ instance ToQuery DownloadDBLogFilePortion where
 --
 --
 -- /See:/ 'downloadDBLogFilePortionResponse' smart constructor.
-data DownloadDBLogFilePortionResponse = DownloadDBLogFilePortionResponse'
-  { _ddlfprsLogFileData           :: !(Maybe Text)
-  , _ddlfprsAdditionalDataPending :: !(Maybe Bool)
-  , _ddlfprsMarker                :: !(Maybe Text)
-  , _ddlfprsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DownloadDBLogFilePortionResponse =
+  DownloadDBLogFilePortionResponse'
+    { _ddlfprsLogFileData           :: !(Maybe Text)
+    , _ddlfprsAdditionalDataPending :: !(Maybe Bool)
+    , _ddlfprsMarker                :: !(Maybe Text)
+    , _ddlfprsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DownloadDBLogFilePortionResponse' with the minimum fields required to make a request.

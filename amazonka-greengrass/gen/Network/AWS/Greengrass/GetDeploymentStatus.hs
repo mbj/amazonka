@@ -48,10 +48,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getDeploymentStatus' smart constructor.
-data GetDeploymentStatus = GetDeploymentStatus'
-  { _gdsGroupId      :: !Text
-  , _gdsDeploymentId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDeploymentStatus =
+  GetDeploymentStatus'
+    { _gdsGroupId      :: !Text
+    , _gdsDeploymentId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDeploymentStatus' with the minimum fields required to make a request.
@@ -114,14 +116,16 @@ instance ToQuery GetDeploymentStatus where
         toQuery = const mempty
 
 -- | /See:/ 'getDeploymentStatusResponse' smart constructor.
-data GetDeploymentStatusResponse = GetDeploymentStatusResponse'
-  { _gdsrsDeploymentType   :: !(Maybe DeploymentType)
-  , _gdsrsErrorDetails     :: !(Maybe [ErrorDetail])
-  , _gdsrsDeploymentStatus :: !(Maybe Text)
-  , _gdsrsUpdatedAt        :: !(Maybe Text)
-  , _gdsrsErrorMessage     :: !(Maybe Text)
-  , _gdsrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDeploymentStatusResponse =
+  GetDeploymentStatusResponse'
+    { _gdsrsDeploymentType   :: !(Maybe DeploymentType)
+    , _gdsrsErrorDetails     :: !(Maybe [ErrorDetail])
+    , _gdsrsDeploymentStatus :: !(Maybe Text)
+    , _gdsrsUpdatedAt        :: !(Maybe Text)
+    , _gdsrsErrorMessage     :: !(Maybe Text)
+    , _gdsrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDeploymentStatusResponse' with the minimum fields required to make a request.

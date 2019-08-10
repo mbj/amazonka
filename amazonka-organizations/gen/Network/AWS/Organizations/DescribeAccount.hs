@@ -47,9 +47,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeAccount' smart constructor.
-newtype DescribeAccount = DescribeAccount'
-  { _daAccountId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeAccount =
+  DescribeAccount'
+    { _daAccountId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAccount' with the minimum fields required to make a request.
@@ -102,10 +104,12 @@ instance ToQuery DescribeAccount where
         toQuery = const mempty
 
 -- | /See:/ 'describeAccountResponse' smart constructor.
-data DescribeAccountResponse = DescribeAccountResponse'
-  { _darsAccount        :: !(Maybe Account)
-  , _darsResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data DescribeAccountResponse =
+  DescribeAccountResponse'
+    { _darsAccount        :: !(Maybe Account)
+    , _darsResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAccountResponse' with the minimum fields required to make a request.

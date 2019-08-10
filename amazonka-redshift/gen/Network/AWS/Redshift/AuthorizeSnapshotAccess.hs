@@ -53,11 +53,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'authorizeSnapshotAccess' smart constructor.
-data AuthorizeSnapshotAccess = AuthorizeSnapshotAccess'
-  { _asaSnapshotClusterIdentifier :: !(Maybe Text)
-  , _asaSnapshotIdentifier        :: !Text
-  , _asaAccountWithRestoreAccess  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AuthorizeSnapshotAccess =
+  AuthorizeSnapshotAccess'
+    { _asaSnapshotClusterIdentifier :: !(Maybe Text)
+    , _asaSnapshotIdentifier        :: !Text
+    , _asaAccountWithRestoreAccess  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AuthorizeSnapshotAccess' with the minimum fields required to make a request.
@@ -126,10 +128,12 @@ instance ToQuery AuthorizeSnapshotAccess where
                  _asaAccountWithRestoreAccess]
 
 -- | /See:/ 'authorizeSnapshotAccessResponse' smart constructor.
-data AuthorizeSnapshotAccessResponse = AuthorizeSnapshotAccessResponse'
-  { _asarsSnapshot       :: !(Maybe Snapshot)
-  , _asarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AuthorizeSnapshotAccessResponse =
+  AuthorizeSnapshotAccessResponse'
+    { _asarsSnapshot       :: !(Maybe Snapshot)
+    , _asarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AuthorizeSnapshotAccessResponse' with the minimum fields required to make a request.

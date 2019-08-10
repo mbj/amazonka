@@ -54,9 +54,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getUsagePlan' smart constructor.
-newtype GetUsagePlan = GetUsagePlan'
-  { _gupUsagePlanId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetUsagePlan =
+  GetUsagePlan'
+    { _gupUsagePlanId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetUsagePlan' with the minimum fields required to make a request.

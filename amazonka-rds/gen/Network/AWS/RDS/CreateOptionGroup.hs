@@ -53,13 +53,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createOptionGroup' smart constructor.
-data CreateOptionGroup = CreateOptionGroup'
-  { _cogTags                   :: !(Maybe [Tag])
-  , _cogOptionGroupName        :: !Text
-  , _cogEngineName             :: !Text
-  , _cogMajorEngineVersion     :: !Text
-  , _cogOptionGroupDescription :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateOptionGroup =
+  CreateOptionGroup'
+    { _cogTags                   :: !(Maybe [Tag])
+    , _cogOptionGroupName        :: !Text
+    , _cogEngineName             :: !Text
+    , _cogMajorEngineVersion     :: !Text
+    , _cogOptionGroupDescription :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateOptionGroup' with the minimum fields required to make a request.
@@ -143,10 +145,12 @@ instance ToQuery CreateOptionGroup where
                  _cogOptionGroupDescription]
 
 -- | /See:/ 'createOptionGroupResponse' smart constructor.
-data CreateOptionGroupResponse = CreateOptionGroupResponse'
-  { _crsOptionGroup    :: !(Maybe OptionGroup)
-  , _crsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateOptionGroupResponse =
+  CreateOptionGroupResponse'
+    { _crsOptionGroup    :: !(Maybe OptionGroup)
+    , _crsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateOptionGroupResponse' with the minimum fields required to make a request.

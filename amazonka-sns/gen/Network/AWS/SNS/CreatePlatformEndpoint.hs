@@ -54,12 +54,14 @@ import Network.AWS.SNS.Types.Product
 --
 --
 -- /See:/ 'createPlatformEndpoint' smart constructor.
-data CreatePlatformEndpoint = CreatePlatformEndpoint'
-  { _cpeCustomUserData         :: !(Maybe Text)
-  , _cpeAttributes             :: !(Maybe (Map Text Text))
-  , _cpePlatformApplicationARN :: !Text
-  , _cpeToken                  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreatePlatformEndpoint =
+  CreatePlatformEndpoint'
+    { _cpeCustomUserData         :: !(Maybe Text)
+    , _cpeAttributes             :: !(Maybe (Map Text Text))
+    , _cpePlatformApplicationARN :: !Text
+    , _cpeToken                  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreatePlatformEndpoint' with the minimum fields required to make a request.
@@ -142,10 +144,12 @@ instance ToQuery CreatePlatformEndpoint where
 --
 --
 -- /See:/ 'createPlatformEndpointResponse' smart constructor.
-data CreatePlatformEndpointResponse = CreatePlatformEndpointResponse'
-  { _cpersEndpointARN    :: !(Maybe Text)
-  , _cpersResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreatePlatformEndpointResponse =
+  CreatePlatformEndpointResponse'
+    { _cpersEndpointARN    :: !(Maybe Text)
+    , _cpersResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreatePlatformEndpointResponse' with the minimum fields required to make a request.

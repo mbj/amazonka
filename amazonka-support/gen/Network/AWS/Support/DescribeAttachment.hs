@@ -45,9 +45,11 @@ import Network.AWS.Support.Types
 import Network.AWS.Support.Types.Product
 
 -- | /See:/ 'describeAttachment' smart constructor.
-newtype DescribeAttachment = DescribeAttachment'
-  { _daAttachmentId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeAttachment =
+  DescribeAttachment'
+    { _daAttachmentId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAttachment' with the minimum fields required to make a request.
@@ -107,10 +109,12 @@ instance ToQuery DescribeAttachment where
 --
 --
 -- /See:/ 'describeAttachmentResponse' smart constructor.
-data DescribeAttachmentResponse = DescribeAttachmentResponse'
-  { _darsAttachment     :: !(Maybe Attachment)
-  , _darsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAttachmentResponse =
+  DescribeAttachmentResponse'
+    { _darsAttachment     :: !(Maybe Attachment)
+    , _darsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAttachmentResponse' with the minimum fields required to make a request.

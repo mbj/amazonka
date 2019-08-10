@@ -68,10 +68,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createBackup' smart constructor.
-data CreateBackup = CreateBackup'
-  { _cbTableName  :: !Text
-  , _cbBackupName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateBackup =
+  CreateBackup'
+    { _cbTableName  :: !Text
+    , _cbBackupName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateBackup' with the minimum fields required to make a request.
@@ -133,10 +135,12 @@ instance ToQuery CreateBackup where
         toQuery = const mempty
 
 -- | /See:/ 'createBackupResponse' smart constructor.
-data CreateBackupResponse = CreateBackupResponse'
-  { _cbrsBackupDetails  :: !(Maybe BackupDetails)
-  , _cbrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateBackupResponse =
+  CreateBackupResponse'
+    { _cbrsBackupDetails  :: !(Maybe BackupDetails)
+    , _cbrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateBackupResponse' with the minimum fields required to make a request.

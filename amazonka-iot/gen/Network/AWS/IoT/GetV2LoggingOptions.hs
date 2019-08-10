@@ -84,12 +84,14 @@ instance ToQuery GetV2LoggingOptions where
         toQuery = const mempty
 
 -- | /See:/ 'getV2LoggingOptionsResponse' smart constructor.
-data GetV2LoggingOptionsResponse = GetV2LoggingOptionsResponse'
-  { _gvlorsDisableAllLogs  :: !(Maybe Bool)
-  , _gvlorsDefaultLogLevel :: !(Maybe LogLevel)
-  , _gvlorsRoleARN         :: !(Maybe Text)
-  , _gvlorsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetV2LoggingOptionsResponse =
+  GetV2LoggingOptionsResponse'
+    { _gvlorsDisableAllLogs  :: !(Maybe Bool)
+    , _gvlorsDefaultLogLevel :: !(Maybe LogLevel)
+    , _gvlorsRoleARN         :: !(Maybe Text)
+    , _gvlorsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetV2LoggingOptionsResponse' with the minimum fields required to make a request.

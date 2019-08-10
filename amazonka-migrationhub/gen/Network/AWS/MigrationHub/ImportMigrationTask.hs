@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'importMigrationTask' smart constructor.
-data ImportMigrationTask = ImportMigrationTask'
-  { _imtDryRun               :: !(Maybe Bool)
-  , _imtProgressUpdateStream :: !Text
-  , _imtMigrationTaskName    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ImportMigrationTask =
+  ImportMigrationTask'
+    { _imtDryRun               :: !(Maybe Bool)
+    , _imtProgressUpdateStream :: !Text
+    , _imtMigrationTaskName    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ImportMigrationTask' with the minimum fields required to make a request.
@@ -127,9 +129,11 @@ instance ToQuery ImportMigrationTask where
         toQuery = const mempty
 
 -- | /See:/ 'importMigrationTaskResponse' smart constructor.
-newtype ImportMigrationTaskResponse = ImportMigrationTaskResponse'
-  { _imtrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ImportMigrationTaskResponse =
+  ImportMigrationTaskResponse'
+    { _imtrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ImportMigrationTaskResponse' with the minimum fields required to make a request.

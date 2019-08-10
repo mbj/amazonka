@@ -51,10 +51,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteChangeSet' smart constructor.
-data DeleteChangeSet = DeleteChangeSet'
-  { _dcsStackName     :: !(Maybe Text)
-  , _dcsChangeSetName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteChangeSet =
+  DeleteChangeSet'
+    { _dcsStackName     :: !(Maybe Text)
+    , _dcsChangeSetName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteChangeSet' with the minimum fields required to make a request.
@@ -111,9 +113,11 @@ instance ToQuery DeleteChangeSet where
 --
 --
 -- /See:/ 'deleteChangeSetResponse' smart constructor.
-newtype DeleteChangeSetResponse = DeleteChangeSetResponse'
-  { _dcsrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteChangeSetResponse =
+  DeleteChangeSetResponse'
+    { _dcsrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteChangeSetResponse' with the minimum fields required to make a request.

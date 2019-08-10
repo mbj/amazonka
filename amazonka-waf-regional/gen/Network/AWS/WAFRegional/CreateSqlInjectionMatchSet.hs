@@ -65,10 +65,12 @@ import Network.AWS.WAFRegional.Types.Product
 --
 --
 -- /See:/ 'createSqlInjectionMatchSet' smart constructor.
-data CreateSqlInjectionMatchSet = CreateSqlInjectionMatchSet'
-  { _csimsName        :: !Text
-  , _csimsChangeToken :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateSqlInjectionMatchSet =
+  CreateSqlInjectionMatchSet'
+    { _csimsName        :: !Text
+    , _csimsChangeToken :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateSqlInjectionMatchSet' with the minimum fields required to make a request.
@@ -139,11 +141,13 @@ instance ToQuery CreateSqlInjectionMatchSet where
 --
 --
 -- /See:/ 'createSqlInjectionMatchSetResponse' smart constructor.
-data CreateSqlInjectionMatchSetResponse = CreateSqlInjectionMatchSetResponse'
-  { _csimsrsSqlInjectionMatchSet :: !(Maybe SqlInjectionMatchSet)
-  , _csimsrsChangeToken          :: !(Maybe Text)
-  , _csimsrsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateSqlInjectionMatchSetResponse =
+  CreateSqlInjectionMatchSetResponse'
+    { _csimsrsSqlInjectionMatchSet :: !(Maybe SqlInjectionMatchSet)
+    , _csimsrsChangeToken          :: !(Maybe Text)
+    , _csimsrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateSqlInjectionMatchSetResponse' with the minimum fields required to make a request.

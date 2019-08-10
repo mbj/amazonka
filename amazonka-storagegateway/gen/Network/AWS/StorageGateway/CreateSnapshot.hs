@@ -63,10 +63,12 @@ import Network.AWS.StorageGateway.Types.Product
 --
 --
 -- /See:/ 'createSnapshot' smart constructor.
-data CreateSnapshot = CreateSnapshot'
-  { _csVolumeARN           :: !Text
-  , _csSnapshotDescription :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateSnapshot =
+  CreateSnapshot'
+    { _csVolumeARN           :: !Text
+    , _csSnapshotDescription :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateSnapshot' with the minimum fields required to make a request.
@@ -136,11 +138,13 @@ instance ToQuery CreateSnapshot where
 --
 --
 -- /See:/ 'createSnapshotResponse' smart constructor.
-data CreateSnapshotResponse = CreateSnapshotResponse'
-  { _csrsVolumeARN      :: !(Maybe Text)
-  , _csrsSnapshotId     :: !(Maybe Text)
-  , _csrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateSnapshotResponse =
+  CreateSnapshotResponse'
+    { _csrsVolumeARN      :: !(Maybe Text)
+    , _csrsSnapshotId     :: !(Maybe Text)
+    , _csrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateSnapshotResponse' with the minimum fields required to make a request.

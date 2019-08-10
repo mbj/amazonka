@@ -49,10 +49,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteCertificate' smart constructor.
-data DeleteCertificate = DeleteCertificate'
-  { _dcForceDelete   :: !(Maybe Bool)
-  , _dcCertificateId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteCertificate =
+  DeleteCertificate'
+    { _dcForceDelete   :: !(Maybe Bool)
+    , _dcCertificateId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteCertificate' with the minimum fields required to make a request.

@@ -53,12 +53,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'searchDevices' smart constructor.
-data SearchDevices = SearchDevices'
-  { _sdFilters      :: !(Maybe [Filter])
-  , _sdSortCriteria :: !(Maybe [Sort])
-  , _sdNextToken    :: !(Maybe Text)
-  , _sdMaxResults   :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SearchDevices =
+  SearchDevices'
+    { _sdFilters      :: !(Maybe [Filter])
+    , _sdSortCriteria :: !(Maybe [Sort])
+    , _sdNextToken    :: !(Maybe Text)
+    , _sdMaxResults   :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SearchDevices' with the minimum fields required to make a request.
@@ -146,12 +148,14 @@ instance ToQuery SearchDevices where
         toQuery = const mempty
 
 -- | /See:/ 'searchDevicesResponse' smart constructor.
-data SearchDevicesResponse = SearchDevicesResponse'
-  { _sdrsNextToken      :: !(Maybe Text)
-  , _sdrsDevices        :: !(Maybe [DeviceData])
-  , _sdrsTotalCount     :: !(Maybe Int)
-  , _sdrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SearchDevicesResponse =
+  SearchDevicesResponse'
+    { _sdrsNextToken      :: !(Maybe Text)
+    , _sdrsDevices        :: !(Maybe [DeviceData])
+    , _sdrsTotalCount     :: !(Maybe Int)
+    , _sdrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SearchDevicesResponse' with the minimum fields required to make a request.

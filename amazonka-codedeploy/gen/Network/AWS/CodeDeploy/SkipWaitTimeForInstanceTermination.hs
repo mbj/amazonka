@@ -42,9 +42,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'skipWaitTimeForInstanceTermination' smart constructor.
-newtype SkipWaitTimeForInstanceTermination = SkipWaitTimeForInstanceTermination'
-  { _swtfitDeploymentId :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype SkipWaitTimeForInstanceTermination =
+  SkipWaitTimeForInstanceTermination'
+    { _swtfitDeploymentId :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SkipWaitTimeForInstanceTermination' with the minimum fields required to make a request.

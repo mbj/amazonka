@@ -43,9 +43,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listGroupCertificateAuthorities' smart constructor.
-newtype ListGroupCertificateAuthorities = ListGroupCertificateAuthorities'
-  { _lgcaGroupId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ListGroupCertificateAuthorities =
+  ListGroupCertificateAuthorities'
+    { _lgcaGroupId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListGroupCertificateAuthorities' with the minimum fields required to make a request.
@@ -100,10 +102,12 @@ instance ToQuery ListGroupCertificateAuthorities
         toQuery = const mempty
 
 -- | /See:/ 'listGroupCertificateAuthoritiesResponse' smart constructor.
-data ListGroupCertificateAuthoritiesResponse = ListGroupCertificateAuthoritiesResponse'
-  { _lgcarsGroupCertificateAuthorities :: !(Maybe [GroupCertificateAuthorityProperties])
-  , _lgcarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListGroupCertificateAuthoritiesResponse =
+  ListGroupCertificateAuthoritiesResponse'
+    { _lgcarsGroupCertificateAuthorities :: !(Maybe [GroupCertificateAuthorityProperties])
+    , _lgcarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListGroupCertificateAuthoritiesResponse' with the minimum fields required to make a request.

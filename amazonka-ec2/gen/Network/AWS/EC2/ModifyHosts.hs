@@ -51,10 +51,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'modifyHosts' smart constructor.
-data ModifyHosts = ModifyHosts'
-  { _mhAutoPlacement :: !AutoPlacement
-  , _mhHostIds       :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyHosts =
+  ModifyHosts'
+    { _mhAutoPlacement :: !AutoPlacement
+    , _mhHostIds       :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyHosts' with the minimum fields required to make a request.
@@ -116,11 +118,13 @@ instance ToQuery ModifyHosts where
 --
 --
 -- /See:/ 'modifyHostsResponse' smart constructor.
-data ModifyHostsResponse = ModifyHostsResponse'
-  { _mhrsUnsuccessful   :: !(Maybe [UnsuccessfulItem])
-  , _mhrsSuccessful     :: !(Maybe [Text])
-  , _mhrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyHostsResponse =
+  ModifyHostsResponse'
+    { _mhrsUnsuccessful   :: !(Maybe [UnsuccessfulItem])
+    , _mhrsSuccessful     :: !(Maybe [Text])
+    , _mhrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyHostsResponse' with the minimum fields required to make a request.

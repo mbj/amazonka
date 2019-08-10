@@ -48,13 +48,15 @@ import Network.AWS.Response
 -- | Updates the information for an ActiveMQ user.
 --
 -- /See:/ 'updateUser' smart constructor.
-data UpdateUser = UpdateUser'
-  { _uuGroups        :: !(Maybe [Text])
-  , _uuConsoleAccess :: !(Maybe Bool)
-  , _uuPassword      :: !(Maybe Text)
-  , _uuUsername      :: !Text
-  , _uuBrokerId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateUser =
+  UpdateUser'
+    { _uuGroups        :: !(Maybe [Text])
+    , _uuConsoleAccess :: !(Maybe Bool)
+    , _uuPassword      :: !(Maybe Text)
+    , _uuUsername      :: !Text
+    , _uuBrokerId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateUser' with the minimum fields required to make a request.
@@ -141,9 +143,11 @@ instance ToQuery UpdateUser where
         toQuery = const mempty
 
 -- | /See:/ 'updateUserResponse' smart constructor.
-newtype UpdateUserResponse = UpdateUserResponse'
-  { _uursResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateUserResponse =
+  UpdateUserResponse'
+    { _uursResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateUserResponse' with the minimum fields required to make a request.

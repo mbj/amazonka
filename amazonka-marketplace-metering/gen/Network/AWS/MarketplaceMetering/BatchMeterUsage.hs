@@ -57,10 +57,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'batchMeterUsage' smart constructor.
-data BatchMeterUsage = BatchMeterUsage'
-  { _bmuUsageRecords :: ![UsageRecord]
-  , _bmuProductCode  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchMeterUsage =
+  BatchMeterUsage'
+    { _bmuUsageRecords :: ![UsageRecord]
+    , _bmuProductCode  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchMeterUsage' with the minimum fields required to make a request.
@@ -128,11 +130,13 @@ instance ToQuery BatchMeterUsage where
 --
 --
 -- /See:/ 'batchMeterUsageResponse' smart constructor.
-data BatchMeterUsageResponse = BatchMeterUsageResponse'
-  { _bmursResults            :: !(Maybe [UsageRecordResult])
-  , _bmursUnprocessedRecords :: !(Maybe [UsageRecord])
-  , _bmursResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchMeterUsageResponse =
+  BatchMeterUsageResponse'
+    { _bmursResults            :: !(Maybe [UsageRecordResult])
+    , _bmursUnprocessedRecords :: !(Maybe [UsageRecord])
+    , _bmursResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchMeterUsageResponse' with the minimum fields required to make a request.

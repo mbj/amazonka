@@ -71,15 +71,17 @@ import Network.AWS.StorageGateway.Types.Product
 --
 --
 -- /See:/ 'activateGateway' smart constructor.
-data ActivateGateway = ActivateGateway'
-  { _agMediumChangerType :: !(Maybe Text)
-  , _agTapeDriveType     :: !(Maybe Text)
-  , _agGatewayType       :: !(Maybe Text)
-  , _agActivationKey     :: !Text
-  , _agGatewayName       :: !Text
-  , _agGatewayTimezone   :: !Text
-  , _agGatewayRegion     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ActivateGateway =
+  ActivateGateway'
+    { _agMediumChangerType :: !(Maybe Text)
+    , _agTapeDriveType     :: !(Maybe Text)
+    , _agGatewayType       :: !(Maybe Text)
+    , _agActivationKey     :: !Text
+    , _agGatewayName       :: !Text
+    , _agGatewayTimezone   :: !Text
+    , _agGatewayRegion     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ActivateGateway' with the minimum fields required to make a request.
@@ -191,10 +193,12 @@ instance ToQuery ActivateGateway where
 --
 --
 -- /See:/ 'activateGatewayResponse' smart constructor.
-data ActivateGatewayResponse = ActivateGatewayResponse'
-  { _agrsGatewayARN     :: !(Maybe Text)
-  , _agrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ActivateGatewayResponse =
+  ActivateGatewayResponse'
+    { _agrsGatewayARN     :: !(Maybe Text)
+    , _agrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ActivateGatewayResponse' with the minimum fields required to make a request.

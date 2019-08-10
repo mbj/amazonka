@@ -48,10 +48,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeApps' smart constructor.
-data DescribeApps = DescribeApps'
-  { _daAppIds  :: !(Maybe [Text])
-  , _daStackId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeApps =
+  DescribeApps'
+    { _daAppIds  :: !(Maybe [Text])
+    , _daStackId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeApps' with the minimum fields required to make a request.
@@ -114,10 +116,12 @@ instance ToQuery DescribeApps where
 --
 --
 -- /See:/ 'describeAppsResponse' smart constructor.
-data DescribeAppsResponse = DescribeAppsResponse'
-  { _darsApps           :: !(Maybe [App])
-  , _darsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAppsResponse =
+  DescribeAppsResponse'
+    { _darsApps           :: !(Maybe [App])
+    , _darsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAppsResponse' with the minimum fields required to make a request.

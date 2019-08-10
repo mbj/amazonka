@@ -44,10 +44,12 @@ import Network.AWS.SMS.Types
 import Network.AWS.SMS.Types.Product
 
 -- | /See:/ 'startOnDemandReplicationRun' smart constructor.
-data StartOnDemandReplicationRun = StartOnDemandReplicationRun'
-  { _sodrrDescription      :: !(Maybe Text)
-  , _sodrrReplicationJobId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartOnDemandReplicationRun =
+  StartOnDemandReplicationRun'
+    { _sodrrDescription      :: !(Maybe Text)
+    , _sodrrReplicationJobId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartOnDemandReplicationRun' with the minimum fields required to make a request.
@@ -111,10 +113,12 @@ instance ToQuery StartOnDemandReplicationRun where
         toQuery = const mempty
 
 -- | /See:/ 'startOnDemandReplicationRunResponse' smart constructor.
-data StartOnDemandReplicationRunResponse = StartOnDemandReplicationRunResponse'
-  { _sodrrrsReplicationRunId :: !(Maybe Text)
-  , _sodrrrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartOnDemandReplicationRunResponse =
+  StartOnDemandReplicationRunResponse'
+    { _sodrrrsReplicationRunId :: !(Maybe Text)
+    , _sodrrrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartOnDemandReplicationRunResponse' with the minimum fields required to make a request.

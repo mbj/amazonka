@@ -58,21 +58,23 @@ import Network.AWS.Response
 -- | Creates a broker using the specified properties.
 --
 -- /See:/ 'createBroker' smart constructor.
-data CreateBroker = CreateBroker'
-  { _cbBrokerName                 :: !(Maybe Text)
-  , _cbEngineVersion              :: !(Maybe Text)
-  , _cbPubliclyAccessible         :: !(Maybe Bool)
-  , _cbAutoMinorVersionUpgrade    :: !(Maybe Bool)
-  , _cbSecurityGroups             :: !(Maybe [Text])
-  , _cbUsers                      :: !(Maybe [User])
-  , _cbSubnetIds                  :: !(Maybe [Text])
-  , _cbCreatorRequestId           :: !(Maybe Text)
-  , _cbMaintenanceWindowStartTime :: !(Maybe WeeklyStartTime)
-  , _cbDeploymentMode             :: !(Maybe DeploymentMode)
-  , _cbConfiguration              :: !(Maybe ConfigurationId)
-  , _cbEngineType                 :: !(Maybe EngineType)
-  , _cbHostInstanceType           :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateBroker =
+  CreateBroker'
+    { _cbBrokerName                 :: !(Maybe Text)
+    , _cbEngineVersion              :: !(Maybe Text)
+    , _cbPubliclyAccessible         :: !(Maybe Bool)
+    , _cbAutoMinorVersionUpgrade    :: !(Maybe Bool)
+    , _cbSecurityGroups             :: !(Maybe [Text])
+    , _cbUsers                      :: !(Maybe [User])
+    , _cbSubnetIds                  :: !(Maybe [Text])
+    , _cbCreatorRequestId           :: !(Maybe Text)
+    , _cbMaintenanceWindowStartTime :: !(Maybe WeeklyStartTime)
+    , _cbDeploymentMode             :: !(Maybe DeploymentMode)
+    , _cbConfiguration              :: !(Maybe ConfigurationId)
+    , _cbEngineType                 :: !(Maybe EngineType)
+    , _cbHostInstanceType           :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateBroker' with the minimum fields required to make a request.
@@ -224,11 +226,13 @@ instance ToQuery CreateBroker where
         toQuery = const mempty
 
 -- | /See:/ 'createBrokerResponse' smart constructor.
-data CreateBrokerResponse = CreateBrokerResponse'
-  { _cbrsBrokerId       :: !(Maybe Text)
-  , _cbrsBrokerARN      :: !(Maybe Text)
-  , _cbrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateBrokerResponse =
+  CreateBrokerResponse'
+    { _cbrsBrokerId       :: !(Maybe Text)
+    , _cbrsBrokerARN      :: !(Maybe Text)
+    , _cbrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateBrokerResponse' with the minimum fields required to make a request.

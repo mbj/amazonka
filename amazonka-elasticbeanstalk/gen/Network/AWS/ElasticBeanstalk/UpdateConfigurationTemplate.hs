@@ -67,13 +67,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateConfigurationTemplate' smart constructor.
-data UpdateConfigurationTemplate = UpdateConfigurationTemplate'
-  { _uctOptionsToRemove :: !(Maybe [OptionSpecification])
-  , _uctOptionSettings  :: !(Maybe [ConfigurationOptionSetting])
-  , _uctDescription     :: !(Maybe Text)
-  , _uctApplicationName :: !Text
-  , _uctTemplateName    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateConfigurationTemplate =
+  UpdateConfigurationTemplate'
+    { _uctOptionsToRemove :: !(Maybe [OptionSpecification])
+    , _uctOptionSettings  :: !(Maybe [ConfigurationOptionSetting])
+    , _uctDescription     :: !(Maybe Text)
+    , _uctApplicationName :: !Text
+    , _uctTemplateName    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateConfigurationTemplate' with the minimum fields required to make a request.

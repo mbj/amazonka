@@ -50,13 +50,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeFleets' smart constructor.
-data DescribeFleets = DescribeFleets'
-  { _dfsFilters    :: !(Maybe [Filter])
-  , _dfsNextToken  :: !(Maybe Text)
-  , _dfsFleetIds   :: !(Maybe [Text])
-  , _dfsDryRun     :: !(Maybe Bool)
-  , _dfsMaxResults :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeFleets =
+  DescribeFleets'
+    { _dfsFilters    :: !(Maybe [Filter])
+    , _dfsNextToken  :: !(Maybe Text)
+    , _dfsFleetIds   :: !(Maybe [Text])
+    , _dfsDryRun     :: !(Maybe Bool)
+    , _dfsMaxResults :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeFleets' with the minimum fields required to make a request.
@@ -138,11 +140,13 @@ instance ToQuery DescribeFleets where
                "MaxResults" =: _dfsMaxResults]
 
 -- | /See:/ 'describeFleetsResponse' smart constructor.
-data DescribeFleetsResponse = DescribeFleetsResponse'
-  { _dfsrsNextToken      :: !(Maybe Text)
-  , _dfsrsFleets         :: !(Maybe [FleetData])
-  , _dfsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeFleetsResponse =
+  DescribeFleetsResponse'
+    { _dfsrsNextToken      :: !(Maybe Text)
+    , _dfsrsFleets         :: !(Maybe [FleetData])
+    , _dfsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeFleetsResponse' with the minimum fields required to make a request.

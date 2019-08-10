@@ -52,15 +52,17 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getAggregateComplianceDetailsByConfigRule' smart constructor.
-data GetAggregateComplianceDetailsByConfigRule = GetAggregateComplianceDetailsByConfigRule'
-  { _gacdbcrNextToken                   :: !(Maybe Text)
-  , _gacdbcrLimit                       :: !(Maybe Nat)
-  , _gacdbcrComplianceType              :: !(Maybe ComplianceType)
-  , _gacdbcrConfigurationAggregatorName :: !Text
-  , _gacdbcrConfigRuleName              :: !Text
-  , _gacdbcrAccountId                   :: !Text
-  , _gacdbcrAWSRegion                   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetAggregateComplianceDetailsByConfigRule =
+  GetAggregateComplianceDetailsByConfigRule'
+    { _gacdbcrNextToken                   :: !(Maybe Text)
+    , _gacdbcrLimit                       :: !(Maybe Nat)
+    , _gacdbcrComplianceType              :: !(Maybe ComplianceType)
+    , _gacdbcrConfigurationAggregatorName :: !Text
+    , _gacdbcrConfigRuleName              :: !Text
+    , _gacdbcrAccountId                   :: !Text
+    , _gacdbcrAWSRegion                   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetAggregateComplianceDetailsByConfigRule' with the minimum fields required to make a request.
@@ -188,11 +190,13 @@ instance ToQuery
         toQuery = const mempty
 
 -- | /See:/ 'getAggregateComplianceDetailsByConfigRuleResponse' smart constructor.
-data GetAggregateComplianceDetailsByConfigRuleResponse = GetAggregateComplianceDetailsByConfigRuleResponse'
-  { _gacdbcrrsNextToken                  :: !(Maybe Text)
-  , _gacdbcrrsAggregateEvaluationResults :: !(Maybe [AggregateEvaluationResult])
-  , _gacdbcrrsResponseStatus             :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetAggregateComplianceDetailsByConfigRuleResponse =
+  GetAggregateComplianceDetailsByConfigRuleResponse'
+    { _gacdbcrrsNextToken :: !(Maybe Text)
+    , _gacdbcrrsAggregateEvaluationResults :: !(Maybe [AggregateEvaluationResult])
+    , _gacdbcrrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetAggregateComplianceDetailsByConfigRuleResponse' with the minimum fields required to make a request.

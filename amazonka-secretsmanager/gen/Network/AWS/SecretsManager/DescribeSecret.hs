@@ -77,9 +77,11 @@ import Network.AWS.SecretsManager.Types
 import Network.AWS.SecretsManager.Types.Product
 
 -- | /See:/ 'describeSecret' smart constructor.
-newtype DescribeSecret = DescribeSecret'
-  { _dSecretId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeSecret =
+  DescribeSecret'
+    { _dSecretId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeSecret' with the minimum fields required to make a request.
@@ -143,22 +145,24 @@ instance ToQuery DescribeSecret where
         toQuery = const mempty
 
 -- | /See:/ 'describeSecretResponse' smart constructor.
-data DescribeSecretResponse = DescribeSecretResponse'
-  { _drsLastChangedDate    :: !(Maybe POSIX)
-  , _drsARN                :: !(Maybe Text)
-  , _drsRotationRules      :: !(Maybe RotationRulesType)
-  , _drsDeletedDate        :: !(Maybe POSIX)
-  , _drsRotationEnabled    :: !(Maybe Bool)
-  , _drsKMSKeyId           :: !(Maybe Text)
-  , _drsName               :: !(Maybe Text)
-  , _drsVersionIdsToStages :: !(Maybe (Map Text (List1 Text)))
-  , _drsLastRotatedDate    :: !(Maybe POSIX)
-  , _drsLastAccessedDate   :: !(Maybe POSIX)
-  , _drsDescription        :: !(Maybe Text)
-  , _drsRotationLambdaARN  :: !(Maybe Text)
-  , _drsTags               :: !(Maybe [Tag])
-  , _drsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeSecretResponse =
+  DescribeSecretResponse'
+    { _drsLastChangedDate    :: !(Maybe POSIX)
+    , _drsARN                :: !(Maybe Text)
+    , _drsRotationRules      :: !(Maybe RotationRulesType)
+    , _drsDeletedDate        :: !(Maybe POSIX)
+    , _drsRotationEnabled    :: !(Maybe Bool)
+    , _drsKMSKeyId           :: !(Maybe Text)
+    , _drsName               :: !(Maybe Text)
+    , _drsVersionIdsToStages :: !(Maybe (Map Text (List1 Text)))
+    , _drsLastRotatedDate    :: !(Maybe POSIX)
+    , _drsLastAccessedDate   :: !(Maybe POSIX)
+    , _drsDescription        :: !(Maybe Text)
+    , _drsRotationLambdaARN  :: !(Maybe Text)
+    , _drsTags               :: !(Maybe [Tag])
+    , _drsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeSecretResponse' with the minimum fields required to make a request.

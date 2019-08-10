@@ -50,10 +50,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createVirtualMFADevice' smart constructor.
-data CreateVirtualMFADevice = CreateVirtualMFADevice'
-  { _cvmdPath                 :: !(Maybe Text)
-  , _cvmdVirtualMFADeviceName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateVirtualMFADevice =
+  CreateVirtualMFADevice'
+    { _cvmdPath                 :: !(Maybe Text)
+    , _cvmdVirtualMFADeviceName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateVirtualMFADevice' with the minimum fields required to make a request.
@@ -113,10 +115,12 @@ instance ToQuery CreateVirtualMFADevice where
 --
 --
 -- /See:/ 'createVirtualMFADeviceResponse' smart constructor.
-data CreateVirtualMFADeviceResponse = CreateVirtualMFADeviceResponse'
-  { _cvmdrsResponseStatus   :: !Int
-  , _cvmdrsVirtualMFADevice :: !VirtualMFADevice
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data CreateVirtualMFADeviceResponse =
+  CreateVirtualMFADeviceResponse'
+    { _cvmdrsResponseStatus   :: !Int
+    , _cvmdrsVirtualMFADevice :: !VirtualMFADevice
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateVirtualMFADeviceResponse' with the minimum fields required to make a request.

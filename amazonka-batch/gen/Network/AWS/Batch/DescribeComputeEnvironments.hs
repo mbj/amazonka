@@ -50,11 +50,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeComputeEnvironments' smart constructor.
-data DescribeComputeEnvironments = DescribeComputeEnvironments'
-  { _dceComputeEnvironments :: !(Maybe [Text])
-  , _dceNextToken           :: !(Maybe Text)
-  , _dceMaxResults          :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeComputeEnvironments =
+  DescribeComputeEnvironments'
+    { _dceComputeEnvironments :: !(Maybe [Text])
+    , _dceNextToken           :: !(Maybe Text)
+    , _dceMaxResults          :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeComputeEnvironments' with the minimum fields required to make a request.
@@ -127,11 +129,13 @@ instance ToQuery DescribeComputeEnvironments where
         toQuery = const mempty
 
 -- | /See:/ 'describeComputeEnvironmentsResponse' smart constructor.
-data DescribeComputeEnvironmentsResponse = DescribeComputeEnvironmentsResponse'
-  { _drsComputeEnvironments :: !(Maybe [ComputeEnvironmentDetail])
-  , _drsNextToken           :: !(Maybe Text)
-  , _drsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeComputeEnvironmentsResponse =
+  DescribeComputeEnvironmentsResponse'
+    { _drsComputeEnvironments :: !(Maybe [ComputeEnvironmentDetail])
+    , _drsNextToken           :: !(Maybe Text)
+    , _drsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeComputeEnvironmentsResponse' with the minimum fields required to make a request.

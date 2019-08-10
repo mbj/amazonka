@@ -52,10 +52,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteClusterSnapshot' smart constructor.
-data DeleteClusterSnapshot = DeleteClusterSnapshot'
-  { _dcsSnapshotClusterIdentifier :: !(Maybe Text)
-  , _dcsSnapshotIdentifier        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteClusterSnapshot =
+  DeleteClusterSnapshot'
+    { _dcsSnapshotClusterIdentifier :: !(Maybe Text)
+    , _dcsSnapshotIdentifier        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteClusterSnapshot' with the minimum fields required to make a request.
@@ -113,10 +115,12 @@ instance ToQuery DeleteClusterSnapshot where
                "SnapshotIdentifier" =: _dcsSnapshotIdentifier]
 
 -- | /See:/ 'deleteClusterSnapshotResponse' smart constructor.
-data DeleteClusterSnapshotResponse = DeleteClusterSnapshotResponse'
-  { _dcsrsSnapshot       :: !(Maybe Snapshot)
-  , _dcsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteClusterSnapshotResponse =
+  DeleteClusterSnapshotResponse'
+    { _dcsrsSnapshot       :: !(Maybe Snapshot)
+    , _dcsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteClusterSnapshotResponse' with the minimum fields required to make a request.

@@ -52,11 +52,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listPublicKeys' smart constructor.
-data ListPublicKeys = ListPublicKeys'
-  { _lpkStartTime :: !(Maybe POSIX)
-  , _lpkNextToken :: !(Maybe Text)
-  , _lpkEndTime   :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListPublicKeys =
+  ListPublicKeys'
+    { _lpkStartTime :: !(Maybe POSIX)
+    , _lpkNextToken :: !(Maybe Text)
+    , _lpkEndTime   :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListPublicKeys' with the minimum fields required to make a request.
@@ -131,11 +133,13 @@ instance ToQuery ListPublicKeys where
 --
 --
 -- /See:/ 'listPublicKeysResponse' smart constructor.
-data ListPublicKeysResponse = ListPublicKeysResponse'
-  { _lpkrsPublicKeyList  :: !(Maybe [PublicKey])
-  , _lpkrsNextToken      :: !(Maybe Text)
-  , _lpkrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListPublicKeysResponse =
+  ListPublicKeysResponse'
+    { _lpkrsPublicKeyList  :: !(Maybe [PublicKey])
+    , _lpkrsNextToken      :: !(Maybe Text)
+    , _lpkrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListPublicKeysResponse' with the minimum fields required to make a request.

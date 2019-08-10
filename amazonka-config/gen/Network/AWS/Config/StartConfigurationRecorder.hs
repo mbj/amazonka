@@ -48,9 +48,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'startConfigurationRecorder' smart constructor.
-newtype StartConfigurationRecorder = StartConfigurationRecorder'
-  { _sConfigurationRecorderName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StartConfigurationRecorder =
+  StartConfigurationRecorder'
+    { _sConfigurationRecorderName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartConfigurationRecorder' with the minimum fields required to make a request.

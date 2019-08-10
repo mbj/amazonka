@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteLoadBalancer' smart constructor.
-newtype DeleteLoadBalancer = DeleteLoadBalancer'
-  { _dlbLoadBalancerName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteLoadBalancer =
+  DeleteLoadBalancer'
+    { _dlbLoadBalancerName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteLoadBalancer' with the minimum fields required to make a request.
@@ -104,10 +106,12 @@ instance ToQuery DeleteLoadBalancer where
         toQuery = const mempty
 
 -- | /See:/ 'deleteLoadBalancerResponse' smart constructor.
-data DeleteLoadBalancerResponse = DeleteLoadBalancerResponse'
-  { _dlbrsOperations     :: !(Maybe [Operation])
-  , _dlbrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteLoadBalancerResponse =
+  DeleteLoadBalancerResponse'
+    { _dlbrsOperations     :: !(Maybe [Operation])
+    , _dlbrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteLoadBalancerResponse' with the minimum fields required to make a request.

@@ -54,13 +54,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeMovingAddresses' smart constructor.
-data DescribeMovingAddresses = DescribeMovingAddresses'
-  { _dmaFilters    :: !(Maybe [Filter])
-  , _dmaPublicIPs  :: !(Maybe [Text])
-  , _dmaNextToken  :: !(Maybe Text)
-  , _dmaDryRun     :: !(Maybe Bool)
-  , _dmaMaxResults :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeMovingAddresses =
+  DescribeMovingAddresses'
+    { _dmaFilters    :: !(Maybe [Filter])
+    , _dmaPublicIPs  :: !(Maybe [Text])
+    , _dmaNextToken  :: !(Maybe Text)
+    , _dmaDryRun     :: !(Maybe Bool)
+    , _dmaMaxResults :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeMovingAddresses' with the minimum fields required to make a request.
@@ -147,11 +149,13 @@ instance ToQuery DescribeMovingAddresses where
 --
 --
 -- /See:/ 'describeMovingAddressesResponse' smart constructor.
-data DescribeMovingAddressesResponse = DescribeMovingAddressesResponse'
-  { _dmarsMovingAddressStatuses :: !(Maybe [MovingAddressStatus])
-  , _dmarsNextToken             :: !(Maybe Text)
-  , _dmarsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeMovingAddressesResponse =
+  DescribeMovingAddressesResponse'
+    { _dmarsMovingAddressStatuses :: !(Maybe [MovingAddressStatus])
+    , _dmarsNextToken             :: !(Maybe Text)
+    , _dmarsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeMovingAddressesResponse' with the minimum fields required to make a request.

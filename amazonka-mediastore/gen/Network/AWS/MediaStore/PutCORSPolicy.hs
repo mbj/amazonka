@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putCORSPolicy' smart constructor.
-data PutCORSPolicy = PutCORSPolicy'
-  { _pcpContainerName :: !Text
-  , _pcpCORSPolicy    :: !(List1 CORSRule)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutCORSPolicy =
+  PutCORSPolicy'
+    { _pcpContainerName :: !Text
+    , _pcpCORSPolicy    :: !(List1 CORSRule)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutCORSPolicy' with the minimum fields required to make a request.
@@ -114,9 +116,11 @@ instance ToQuery PutCORSPolicy where
         toQuery = const mempty
 
 -- | /See:/ 'putCORSPolicyResponse' smart constructor.
-newtype PutCORSPolicyResponse = PutCORSPolicyResponse'
-  { _pcorsprsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype PutCORSPolicyResponse =
+  PutCORSPolicyResponse'
+    { _pcorsprsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutCORSPolicyResponse' with the minimum fields required to make a request.

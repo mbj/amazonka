@@ -46,9 +46,11 @@ import Network.AWS.SageMaker.Types
 import Network.AWS.SageMaker.Types.Product
 
 -- | /See:/ 'stopTrainingJob' smart constructor.
-newtype StopTrainingJob = StopTrainingJob'
-  { _stjTrainingJobName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StopTrainingJob =
+  StopTrainingJob'
+    { _stjTrainingJobName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopTrainingJob' with the minimum fields required to make a request.

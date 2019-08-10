@@ -56,13 +56,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeDBClusterParameters' smart constructor.
-data DescribeDBClusterParameters = DescribeDBClusterParameters'
-  { _ddcpFilters                     :: !(Maybe [Filter])
-  , _ddcpMarker                      :: !(Maybe Text)
-  , _ddcpMaxRecords                  :: !(Maybe Int)
-  , _ddcpSource                      :: !(Maybe Text)
-  , _ddcpDBClusterParameterGroupName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDBClusterParameters =
+  DescribeDBClusterParameters'
+    { _ddcpFilters                     :: !(Maybe [Filter])
+    , _ddcpMarker                      :: !(Maybe Text)
+    , _ddcpMaxRecords                  :: !(Maybe Int)
+    , _ddcpSource                      :: !(Maybe Text)
+    , _ddcpDBClusterParameterGroupName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDBClusterParameters' with the minimum fields required to make a request.
@@ -154,11 +156,13 @@ instance ToQuery DescribeDBClusterParameters where
 --
 --
 -- /See:/ 'describeDBClusterParametersResponse' smart constructor.
-data DescribeDBClusterParametersResponse = DescribeDBClusterParametersResponse'
-  { _ddcprsMarker         :: !(Maybe Text)
-  , _ddcprsParameters     :: !(Maybe [Parameter])
-  , _ddcprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDBClusterParametersResponse =
+  DescribeDBClusterParametersResponse'
+    { _ddcprsMarker         :: !(Maybe Text)
+    , _ddcprsParameters     :: !(Maybe [Parameter])
+    , _ddcprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDBClusterParametersResponse' with the minimum fields required to make a request.

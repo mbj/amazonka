@@ -68,12 +68,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateAlias' smart constructor.
-data UpdateAlias = UpdateAlias'
-  { _uaRoutingStrategy :: !(Maybe RoutingStrategy)
-  , _uaName            :: !(Maybe Text)
-  , _uaDescription     :: !(Maybe Text)
-  , _uaAliasId         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateAlias =
+  UpdateAlias'
+    { _uaRoutingStrategy :: !(Maybe RoutingStrategy)
+    , _uaName            :: !(Maybe Text)
+    , _uaDescription     :: !(Maybe Text)
+    , _uaAliasId         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateAlias' with the minimum fields required to make a request.
@@ -157,10 +159,12 @@ instance ToQuery UpdateAlias where
 --
 --
 -- /See:/ 'updateAliasResponse' smart constructor.
-data UpdateAliasResponse = UpdateAliasResponse'
-  { _uarsAlias          :: !(Maybe Alias)
-  , _uarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateAliasResponse =
+  UpdateAliasResponse'
+    { _uarsAlias          :: !(Maybe Alias)
+    , _uarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateAliasResponse' with the minimum fields required to make a request.

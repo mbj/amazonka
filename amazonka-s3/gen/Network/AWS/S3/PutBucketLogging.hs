@@ -42,11 +42,13 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'putBucketLogging' smart constructor.
-data PutBucketLogging = PutBucketLogging'
-  { _pblContentMD5          :: !(Maybe Text)
-  , _pblBucket              :: !BucketName
-  , _pblBucketLoggingStatus :: !BucketLoggingStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutBucketLogging =
+  PutBucketLogging'
+    { _pblContentMD5          :: !(Maybe Text)
+    , _pblBucket              :: !BucketName
+    , _pblBucketLoggingStatus :: !BucketLoggingStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutBucketLogging' with the minimum fields required to make a request.

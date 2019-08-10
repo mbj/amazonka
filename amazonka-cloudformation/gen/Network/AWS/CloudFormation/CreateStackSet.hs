@@ -53,17 +53,19 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createStackSet' smart constructor.
-data CreateStackSet = CreateStackSet'
-  { _cssAdministrationRoleARN :: !(Maybe Text)
-  , _cssParameters            :: !(Maybe [Parameter])
-  , _cssTemplateBody          :: !(Maybe Text)
-  , _cssTemplateURL           :: !(Maybe Text)
-  , _cssClientRequestToken    :: !(Maybe Text)
-  , _cssDescription           :: !(Maybe Text)
-  , _cssCapabilities          :: !(Maybe [Capability])
-  , _cssTags                  :: !(Maybe [Tag])
-  , _cssStackSetName          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateStackSet =
+  CreateStackSet'
+    { _cssAdministrationRoleARN :: !(Maybe Text)
+    , _cssParameters            :: !(Maybe [Parameter])
+    , _cssTemplateBody          :: !(Maybe Text)
+    , _cssTemplateURL           :: !(Maybe Text)
+    , _cssClientRequestToken    :: !(Maybe Text)
+    , _cssDescription           :: !(Maybe Text)
+    , _cssCapabilities          :: !(Maybe [Capability])
+    , _cssTags                  :: !(Maybe [Tag])
+    , _cssStackSetName          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateStackSet' with the minimum fields required to make a request.
@@ -178,10 +180,12 @@ instance ToQuery CreateStackSet where
                "StackSetName" =: _cssStackSetName]
 
 -- | /See:/ 'createStackSetResponse' smart constructor.
-data CreateStackSetResponse = CreateStackSetResponse'
-  { _cssrsStackSetId     :: !(Maybe Text)
-  , _cssrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateStackSetResponse =
+  CreateStackSetResponse'
+    { _cssrsStackSetId     :: !(Maybe Text)
+    , _cssrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateStackSetResponse' with the minimum fields required to make a request.

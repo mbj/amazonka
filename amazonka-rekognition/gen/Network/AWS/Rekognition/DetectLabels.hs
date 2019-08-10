@@ -74,11 +74,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'detectLabels' smart constructor.
-data DetectLabels = DetectLabels'
-  { _dlMinConfidence :: !(Maybe Double)
-  , _dlMaxLabels     :: !(Maybe Nat)
-  , _dlImage         :: !Image
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DetectLabels =
+  DetectLabels'
+    { _dlMinConfidence :: !(Maybe Double)
+    , _dlMaxLabels     :: !(Maybe Nat)
+    , _dlImage         :: !Image
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DetectLabels' with the minimum fields required to make a request.
@@ -149,11 +151,13 @@ instance ToQuery DetectLabels where
         toQuery = const mempty
 
 -- | /See:/ 'detectLabelsResponse' smart constructor.
-data DetectLabelsResponse = DetectLabelsResponse'
-  { _dlrsLabels                :: !(Maybe [Label])
-  , _dlrsOrientationCorrection :: !(Maybe OrientationCorrection)
-  , _dlrsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DetectLabelsResponse =
+  DetectLabelsResponse'
+    { _dlrsLabels                :: !(Maybe [Label])
+    , _dlrsOrientationCorrection :: !(Maybe OrientationCorrection)
+    , _dlrsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DetectLabelsResponse' with the minimum fields required to make a request.

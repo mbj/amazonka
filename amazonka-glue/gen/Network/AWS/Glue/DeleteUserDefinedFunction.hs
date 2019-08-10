@@ -46,11 +46,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteUserDefinedFunction' smart constructor.
-data DeleteUserDefinedFunction = DeleteUserDefinedFunction'
-  { _dudfCatalogId    :: !(Maybe Text)
-  , _dudfDatabaseName :: !Text
-  , _dudfFunctionName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteUserDefinedFunction =
+  DeleteUserDefinedFunction'
+    { _dudfCatalogId    :: !(Maybe Text)
+    , _dudfDatabaseName :: !Text
+    , _dudfFunctionName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteUserDefinedFunction' with the minimum fields required to make a request.
@@ -124,9 +126,11 @@ instance ToQuery DeleteUserDefinedFunction where
         toQuery = const mempty
 
 -- | /See:/ 'deleteUserDefinedFunctionResponse' smart constructor.
-newtype DeleteUserDefinedFunctionResponse = DeleteUserDefinedFunctionResponse'
-  { _dudfrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteUserDefinedFunctionResponse =
+  DeleteUserDefinedFunctionResponse'
+    { _dudfrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteUserDefinedFunctionResponse' with the minimum fields required to make a request.

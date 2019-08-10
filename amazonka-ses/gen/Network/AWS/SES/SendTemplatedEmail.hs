@@ -75,19 +75,21 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'sendTemplatedEmail' smart constructor.
-data SendTemplatedEmail = SendTemplatedEmail'
-  { _steReturnPath           :: !(Maybe Text)
-  , _steConfigurationSetName :: !(Maybe Text)
-  , _steSourceARN            :: !(Maybe Text)
-  , _steReturnPathARN        :: !(Maybe Text)
-  , _steTemplateARN          :: !(Maybe Text)
-  , _steTags                 :: !(Maybe [MessageTag])
-  , _steReplyToAddresses     :: !(Maybe [Text])
-  , _steSource               :: !Text
-  , _steDestination          :: !Destination
-  , _steTemplate             :: !Text
-  , _steTemplateData         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SendTemplatedEmail =
+  SendTemplatedEmail'
+    { _steReturnPath           :: !(Maybe Text)
+    , _steConfigurationSetName :: !(Maybe Text)
+    , _steSourceARN            :: !(Maybe Text)
+    , _steReturnPathARN        :: !(Maybe Text)
+    , _steTemplateARN          :: !(Maybe Text)
+    , _steTags                 :: !(Maybe [MessageTag])
+    , _steReplyToAddresses     :: !(Maybe [Text])
+    , _steSource               :: !Text
+    , _steDestination          :: !Destination
+    , _steTemplate             :: !Text
+    , _steTemplateData         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SendTemplatedEmail' with the minimum fields required to make a request.
@@ -222,10 +224,12 @@ instance ToQuery SendTemplatedEmail where
                "TemplateData" =: _steTemplateData]
 
 -- | /See:/ 'sendTemplatedEmailResponse' smart constructor.
-data SendTemplatedEmailResponse = SendTemplatedEmailResponse'
-  { _stersResponseStatus :: !Int
-  , _stersMessageId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SendTemplatedEmailResponse =
+  SendTemplatedEmailResponse'
+    { _stersResponseStatus :: !Int
+    , _stersMessageId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SendTemplatedEmailResponse' with the minimum fields required to make a request.

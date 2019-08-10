@@ -64,10 +64,12 @@ import Network.AWS.SWF.Types
 import Network.AWS.SWF.Types.Product
 
 -- | /See:/ 'describeWorkflowExecution' smart constructor.
-data DescribeWorkflowExecution = DescribeWorkflowExecution'
-  { _dweDomain    :: !Text
-  , _dweExecution :: !WorkflowExecution
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeWorkflowExecution =
+  DescribeWorkflowExecution'
+    { _dweDomain    :: !Text
+    , _dweExecution :: !WorkflowExecution
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeWorkflowExecution' with the minimum fields required to make a request.
@@ -141,14 +143,16 @@ instance ToQuery DescribeWorkflowExecution where
 --
 --
 -- /See:/ 'describeWorkflowExecutionResponse' smart constructor.
-data DescribeWorkflowExecutionResponse = DescribeWorkflowExecutionResponse'
-  { _dwersLatestActivityTaskTimestamp :: !(Maybe POSIX)
-  , _dwersLatestExecutionContext      :: !(Maybe Text)
-  , _dwersResponseStatus              :: !Int
-  , _dwersExecutionInfo               :: !WorkflowExecutionInfo
-  , _dwersExecutionConfiguration      :: !WorkflowExecutionConfiguration
-  , _dwersOpenCounts                  :: !WorkflowExecutionOpenCounts
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeWorkflowExecutionResponse =
+  DescribeWorkflowExecutionResponse'
+    { _dwersLatestActivityTaskTimestamp :: !(Maybe POSIX)
+    , _dwersLatestExecutionContext      :: !(Maybe Text)
+    , _dwersResponseStatus              :: !Int
+    , _dwersExecutionInfo               :: !WorkflowExecutionInfo
+    , _dwersExecutionConfiguration      :: !WorkflowExecutionConfiguration
+    , _dwersOpenCounts                  :: !WorkflowExecutionOpenCounts
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeWorkflowExecutionResponse' with the minimum fields required to make a request.

@@ -53,11 +53,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getGroup' smart constructor.
-data GetGroup = GetGroup'
-  { _ggMarker    :: !(Maybe Text)
-  , _ggMaxItems  :: !(Maybe Nat)
-  , _ggGroupName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetGroup =
+  GetGroup'
+    { _ggMarker    :: !(Maybe Text)
+    , _ggMaxItems  :: !(Maybe Nat)
+    , _ggGroupName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetGroup' with the minimum fields required to make a request.
@@ -132,13 +134,15 @@ instance ToQuery GetGroup where
 --
 --
 -- /See:/ 'getGroupResponse' smart constructor.
-data GetGroupResponse = GetGroupResponse'
-  { _ggrsMarker         :: !(Maybe Text)
-  , _ggrsIsTruncated    :: !(Maybe Bool)
-  , _ggrsResponseStatus :: !Int
-  , _ggrsGroup          :: !Group
-  , _ggrsUsers          :: ![User]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetGroupResponse =
+  GetGroupResponse'
+    { _ggrsMarker         :: !(Maybe Text)
+    , _ggrsIsTruncated    :: !(Maybe Bool)
+    , _ggrsResponseStatus :: !Int
+    , _ggrsGroup          :: !Group
+    , _ggrsUsers          :: ![User]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetGroupResponse' with the minimum fields required to make a request.

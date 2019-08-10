@@ -79,13 +79,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateGameSession' smart constructor.
-data UpdateGameSession = UpdateGameSession'
-  { _ugsMaximumPlayerSessionCount   :: !(Maybe Nat)
-  , _ugsPlayerSessionCreationPolicy :: !(Maybe PlayerSessionCreationPolicy)
-  , _ugsName                        :: !(Maybe Text)
-  , _ugsProtectionPolicy            :: !(Maybe ProtectionPolicy)
-  , _ugsGameSessionId               :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateGameSession =
+  UpdateGameSession'
+    { _ugsMaximumPlayerSessionCount   :: !(Maybe Nat)
+    , _ugsPlayerSessionCreationPolicy :: !(Maybe PlayerSessionCreationPolicy)
+    , _ugsName                        :: !(Maybe Text)
+    , _ugsProtectionPolicy            :: !(Maybe ProtectionPolicy)
+    , _ugsGameSessionId               :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateGameSession' with the minimum fields required to make a request.
@@ -179,10 +181,12 @@ instance ToQuery UpdateGameSession where
 --
 --
 -- /See:/ 'updateGameSessionResponse' smart constructor.
-data UpdateGameSessionResponse = UpdateGameSessionResponse'
-  { _ugsrsGameSession    :: !(Maybe GameSession)
-  , _ugsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateGameSessionResponse =
+  UpdateGameSessionResponse'
+    { _ugsrsGameSession    :: !(Maybe GameSession)
+    , _ugsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateGameSessionResponse' with the minimum fields required to make a request.

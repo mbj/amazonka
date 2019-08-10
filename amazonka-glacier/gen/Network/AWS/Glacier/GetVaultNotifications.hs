@@ -56,10 +56,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getVaultNotifications' smart constructor.
-data GetVaultNotifications = GetVaultNotifications'
-  { _gvnAccountId :: !Text
-  , _gvnVaultName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetVaultNotifications =
+  GetVaultNotifications'
+    { _gvnAccountId :: !Text
+    , _gvnVaultName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetVaultNotifications' with the minimum fields required to make a request.
@@ -117,10 +119,12 @@ instance ToQuery GetVaultNotifications where
 --
 --
 -- /See:/ 'getVaultNotificationsResponse' smart constructor.
-data GetVaultNotificationsResponse = GetVaultNotificationsResponse'
-  { _gvnrsVaultNotificationConfig :: !(Maybe VaultNotificationConfig)
-  , _gvnrsResponseStatus          :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetVaultNotificationsResponse =
+  GetVaultNotificationsResponse'
+    { _gvnrsVaultNotificationConfig :: !(Maybe VaultNotificationConfig)
+    , _gvnrsResponseStatus          :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetVaultNotificationsResponse' with the minimum fields required to make a request.

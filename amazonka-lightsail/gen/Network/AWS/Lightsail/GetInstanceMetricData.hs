@@ -52,15 +52,17 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getInstanceMetricData' smart constructor.
-data GetInstanceMetricData = GetInstanceMetricData'
-  { _gimdInstanceName :: !Text
-  , _gimdMetricName   :: !InstanceMetricName
-  , _gimdPeriod       :: !Nat
-  , _gimdStartTime    :: !POSIX
-  , _gimdEndTime      :: !POSIX
-  , _gimdUnit         :: !MetricUnit
-  , _gimdStatistics   :: ![MetricStatistic]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetInstanceMetricData =
+  GetInstanceMetricData'
+    { _gimdInstanceName :: !Text
+    , _gimdMetricName   :: !InstanceMetricName
+    , _gimdPeriod       :: !Nat
+    , _gimdStartTime    :: !POSIX
+    , _gimdEndTime      :: !POSIX
+    , _gimdUnit         :: !MetricUnit
+    , _gimdStatistics   :: ![MetricStatistic]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetInstanceMetricData' with the minimum fields required to make a request.
@@ -173,11 +175,13 @@ instance ToQuery GetInstanceMetricData where
         toQuery = const mempty
 
 -- | /See:/ 'getInstanceMetricDataResponse' smart constructor.
-data GetInstanceMetricDataResponse = GetInstanceMetricDataResponse'
-  { _gimdrsMetricName     :: !(Maybe InstanceMetricName)
-  , _gimdrsMetricData     :: !(Maybe [MetricDatapoint])
-  , _gimdrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetInstanceMetricDataResponse =
+  GetInstanceMetricDataResponse'
+    { _gimdrsMetricName     :: !(Maybe InstanceMetricName)
+    , _gimdrsMetricData     :: !(Maybe [MetricDatapoint])
+    , _gimdrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetInstanceMetricDataResponse' with the minimum fields required to make a request.

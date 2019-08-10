@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'removeTags' smart constructor.
-data RemoveTags = RemoveTags'
-  { _rtResourceARNs :: ![Text]
-  , _rtTagKeys      :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RemoveTags =
+  RemoveTags'
+    { _rtResourceARNs :: ![Text]
+    , _rtTagKeys      :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RemoveTags' with the minimum fields required to make a request.
@@ -101,9 +103,11 @@ instance ToQuery RemoveTags where
                "TagKeys" =: toQueryList "member" _rtTagKeys]
 
 -- | /See:/ 'removeTagsResponse' smart constructor.
-newtype RemoveTagsResponse = RemoveTagsResponse'
-  { _rtrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RemoveTagsResponse =
+  RemoveTagsResponse'
+    { _rtrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RemoveTagsResponse' with the minimum fields required to make a request.

@@ -52,12 +52,14 @@ import Network.AWS.SageMaker.Types
 import Network.AWS.SageMaker.Types.Product
 
 -- | /See:/ 'createEndpointConfig' smart constructor.
-data CreateEndpointConfig = CreateEndpointConfig'
-  { _cecKMSKeyId           :: !(Maybe Text)
-  , _cecTags               :: !(Maybe [Tag])
-  , _cecEndpointConfigName :: !Text
-  , _cecProductionVariants :: !(List1 ProductionVariant)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateEndpointConfig =
+  CreateEndpointConfig'
+    { _cecKMSKeyId           :: !(Maybe Text)
+    , _cecTags               :: !(Maybe [Tag])
+    , _cecEndpointConfigName :: !Text
+    , _cecProductionVariants :: !(List1 ProductionVariant)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateEndpointConfig' with the minimum fields required to make a request.
@@ -141,10 +143,12 @@ instance ToQuery CreateEndpointConfig where
         toQuery = const mempty
 
 -- | /See:/ 'createEndpointConfigResponse' smart constructor.
-data CreateEndpointConfigResponse = CreateEndpointConfigResponse'
-  { _cecrsResponseStatus    :: !Int
-  , _cecrsEndpointConfigARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateEndpointConfigResponse =
+  CreateEndpointConfigResponse'
+    { _cecrsResponseStatus    :: !Int
+    , _cecrsEndpointConfigARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateEndpointConfigResponse' with the minimum fields required to make a request.

@@ -53,18 +53,20 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateProfile' smart constructor.
-data UpdateProfile = UpdateProfile'
-  { _upSetupModeDisabled :: !(Maybe Bool)
-  , _upPSTNEnabled       :: !(Maybe Bool)
-  , _upDistanceUnit      :: !(Maybe DistanceUnit)
-  , _upAddress           :: !(Maybe Text)
-  , _upProfileARN        :: !(Maybe Text)
-  , _upWakeWord          :: !(Maybe WakeWord)
-  , _upProfileName       :: !(Maybe Text)
-  , _upTemperatureUnit   :: !(Maybe TemperatureUnit)
-  , _upTimezone          :: !(Maybe Text)
-  , _upMaxVolumeLimit    :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateProfile =
+  UpdateProfile'
+    { _upSetupModeDisabled :: !(Maybe Bool)
+    , _upPSTNEnabled       :: !(Maybe Bool)
+    , _upDistanceUnit      :: !(Maybe DistanceUnit)
+    , _upAddress           :: !(Maybe Text)
+    , _upProfileARN        :: !(Maybe Text)
+    , _upWakeWord          :: !(Maybe WakeWord)
+    , _upProfileName       :: !(Maybe Text)
+    , _upTemperatureUnit   :: !(Maybe TemperatureUnit)
+    , _upTimezone          :: !(Maybe Text)
+    , _upMaxVolumeLimit    :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateProfile' with the minimum fields required to make a request.
@@ -190,9 +192,11 @@ instance ToQuery UpdateProfile where
         toQuery = const mempty
 
 -- | /See:/ 'updateProfileResponse' smart constructor.
-newtype UpdateProfileResponse = UpdateProfileResponse'
-  { _uprsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateProfileResponse =
+  UpdateProfileResponse'
+    { _uprsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateProfileResponse' with the minimum fields required to make a request.

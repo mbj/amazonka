@@ -47,11 +47,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateLoadBalancerAttribute' smart constructor.
-data UpdateLoadBalancerAttribute = UpdateLoadBalancerAttribute'
-  { _ulbaLoadBalancerName :: !Text
-  , _ulbaAttributeName    :: !LoadBalancerAttributeName
-  , _ulbaAttributeValue   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateLoadBalancerAttribute =
+  UpdateLoadBalancerAttribute'
+    { _ulbaLoadBalancerName :: !Text
+    , _ulbaAttributeName    :: !LoadBalancerAttributeName
+    , _ulbaAttributeValue   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateLoadBalancerAttribute' with the minimum fields required to make a request.
@@ -128,10 +130,12 @@ instance ToQuery UpdateLoadBalancerAttribute where
         toQuery = const mempty
 
 -- | /See:/ 'updateLoadBalancerAttributeResponse' smart constructor.
-data UpdateLoadBalancerAttributeResponse = UpdateLoadBalancerAttributeResponse'
-  { _ulbarsOperations     :: !(Maybe [Operation])
-  , _ulbarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateLoadBalancerAttributeResponse =
+  UpdateLoadBalancerAttributeResponse'
+    { _ulbarsOperations     :: !(Maybe [Operation])
+    , _ulbarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateLoadBalancerAttributeResponse' with the minimum fields required to make a request.

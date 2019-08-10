@@ -56,11 +56,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createPolicyVersion' smart constructor.
-data CreatePolicyVersion = CreatePolicyVersion'
-  { _cpvSetAsDefault   :: !(Maybe Bool)
-  , _cpvPolicyName     :: !Text
-  , _cpvPolicyDocument :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreatePolicyVersion =
+  CreatePolicyVersion'
+    { _cpvSetAsDefault   :: !(Maybe Bool)
+    , _cpvPolicyName     :: !Text
+    , _cpvPolicyDocument :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreatePolicyVersion' with the minimum fields required to make a request.
@@ -137,13 +139,15 @@ instance ToQuery CreatePolicyVersion where
 --
 --
 -- /See:/ 'createPolicyVersionResponse' smart constructor.
-data CreatePolicyVersionResponse = CreatePolicyVersionResponse'
-  { _cpvrsPolicyDocument   :: !(Maybe Text)
-  , _cpvrsPolicyVersionId  :: !(Maybe Text)
-  , _cpvrsPolicyARN        :: !(Maybe Text)
-  , _cpvrsIsDefaultVersion :: !(Maybe Bool)
-  , _cpvrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreatePolicyVersionResponse =
+  CreatePolicyVersionResponse'
+    { _cpvrsPolicyDocument   :: !(Maybe Text)
+    , _cpvrsPolicyVersionId  :: !(Maybe Text)
+    , _cpvrsPolicyARN        :: !(Maybe Text)
+    , _cpvrsIsDefaultVersion :: !(Maybe Bool)
+    , _cpvrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreatePolicyVersionResponse' with the minimum fields required to make a request.

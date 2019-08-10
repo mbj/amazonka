@@ -53,12 +53,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeDirectConnectGatewayAssociations' smart constructor.
-data DescribeDirectConnectGatewayAssociations = DescribeDirectConnectGatewayAssociations'
-  { _ddcgaVirtualGatewayId       :: !(Maybe Text)
-  , _ddcgaDirectConnectGatewayId :: !(Maybe Text)
-  , _ddcgaNextToken              :: !(Maybe Text)
-  , _ddcgaMaxResults             :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDirectConnectGatewayAssociations =
+  DescribeDirectConnectGatewayAssociations'
+    { _ddcgaVirtualGatewayId       :: !(Maybe Text)
+    , _ddcgaDirectConnectGatewayId :: !(Maybe Text)
+    , _ddcgaNextToken              :: !(Maybe Text)
+    , _ddcgaMaxResults             :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDirectConnectGatewayAssociations' with the minimum fields required to make a request.
@@ -160,11 +162,13 @@ instance ToQuery
 --
 --
 -- /See:/ 'describeDirectConnectGatewayAssociationsResponse' smart constructor.
-data DescribeDirectConnectGatewayAssociationsResponse = DescribeDirectConnectGatewayAssociationsResponse'
-  { _ddcgarsNextToken :: !(Maybe Text)
-  , _ddcgarsDirectConnectGatewayAssociations :: !(Maybe [DirectConnectGatewayAssociation])
-  , _ddcgarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDirectConnectGatewayAssociationsResponse =
+  DescribeDirectConnectGatewayAssociationsResponse'
+    { _ddcgarsNextToken :: !(Maybe Text)
+    , _ddcgarsDirectConnectGatewayAssociations :: !(Maybe [DirectConnectGatewayAssociation])
+    , _ddcgarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDirectConnectGatewayAssociationsResponse' with the minimum fields required to make a request.

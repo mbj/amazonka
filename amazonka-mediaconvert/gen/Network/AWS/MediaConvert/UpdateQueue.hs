@@ -45,11 +45,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateQueue' smart constructor.
-data UpdateQueue = UpdateQueue'
-  { _uqStatus      :: !(Maybe QueueStatus)
-  , _uqDescription :: !(Maybe Text)
-  , _uqName        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateQueue =
+  UpdateQueue'
+    { _uqStatus      :: !(Maybe QueueStatus)
+    , _uqDescription :: !(Maybe Text)
+    , _uqName        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateQueue' with the minimum fields required to make a request.
@@ -115,10 +117,12 @@ instance ToQuery UpdateQueue where
         toQuery = const mempty
 
 -- | /See:/ 'updateQueueResponse' smart constructor.
-data UpdateQueueResponse = UpdateQueueResponse'
-  { _uqrsQueue          :: !(Maybe Queue)
-  , _uqrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateQueueResponse =
+  UpdateQueueResponse'
+    { _uqrsQueue          :: !(Maybe Queue)
+    , _uqrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateQueueResponse' with the minimum fields required to make a request.

@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteBranch' smart constructor.
-data DeleteBranch = DeleteBranch'
-  { _dbRepositoryName :: !Text
-  , _dbBranchName     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteBranch =
+  DeleteBranch'
+    { _dbRepositoryName :: !Text
+    , _dbBranchName     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteBranch' with the minimum fields required to make a request.
@@ -120,10 +122,12 @@ instance ToQuery DeleteBranch where
 --
 --
 -- /See:/ 'deleteBranchResponse' smart constructor.
-data DeleteBranchResponse = DeleteBranchResponse'
-  { _dbrsDeletedBranch  :: !(Maybe BranchInfo)
-  , _dbrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteBranchResponse =
+  DeleteBranchResponse'
+    { _dbrsDeletedBranch  :: !(Maybe BranchInfo)
+    , _dbrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteBranchResponse' with the minimum fields required to make a request.

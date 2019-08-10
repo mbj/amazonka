@@ -62,9 +62,11 @@ import Network.AWS.SageMaker.Types
 import Network.AWS.SageMaker.Types.Product
 
 -- | /See:/ 'describeTrainingJob' smart constructor.
-newtype DescribeTrainingJob = DescribeTrainingJob'
-  { _dtjTrainingJobName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeTrainingJob =
+  DescribeTrainingJob'
+    { _dtjTrainingJobName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeTrainingJob' with the minimum fields required to make a request.
@@ -136,27 +138,29 @@ instance ToQuery DescribeTrainingJob where
         toQuery = const mempty
 
 -- | /See:/ 'describeTrainingJobResponse' smart constructor.
-data DescribeTrainingJobResponse = DescribeTrainingJobResponse'
-  { _dtjrsFailureReason          :: !(Maybe Text)
-  , _dtjrsTrainingEndTime        :: !(Maybe POSIX)
-  , _dtjrsLastModifiedTime       :: !(Maybe POSIX)
-  , _dtjrsHyperParameters        :: !(Maybe (Map Text Text))
-  , _dtjrsVPCConfig              :: !(Maybe VPCConfig)
-  , _dtjrsOutputDataConfig       :: !(Maybe OutputDataConfig)
-  , _dtjrsTrainingStartTime      :: !(Maybe POSIX)
-  , _dtjrsRoleARN                :: !(Maybe Text)
-  , _dtjrsResponseStatus         :: !Int
-  , _dtjrsTrainingJobName        :: !Text
-  , _dtjrsTrainingJobARN         :: !Text
-  , _dtjrsModelArtifacts         :: !ModelArtifacts
-  , _dtjrsTrainingJobStatus      :: !TrainingJobStatus
-  , _dtjrsSecondaryStatus        :: !SecondaryStatus
-  , _dtjrsAlgorithmSpecification :: !AlgorithmSpecification
-  , _dtjrsInputDataConfig        :: !(List1 Channel)
-  , _dtjrsResourceConfig         :: !ResourceConfig
-  , _dtjrsStoppingCondition      :: !StoppingCondition
-  , _dtjrsCreationTime           :: !POSIX
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeTrainingJobResponse =
+  DescribeTrainingJobResponse'
+    { _dtjrsFailureReason          :: !(Maybe Text)
+    , _dtjrsTrainingEndTime        :: !(Maybe POSIX)
+    , _dtjrsLastModifiedTime       :: !(Maybe POSIX)
+    , _dtjrsHyperParameters        :: !(Maybe (Map Text Text))
+    , _dtjrsVPCConfig              :: !(Maybe VPCConfig)
+    , _dtjrsOutputDataConfig       :: !(Maybe OutputDataConfig)
+    , _dtjrsTrainingStartTime      :: !(Maybe POSIX)
+    , _dtjrsRoleARN                :: !(Maybe Text)
+    , _dtjrsResponseStatus         :: !Int
+    , _dtjrsTrainingJobName        :: !Text
+    , _dtjrsTrainingJobARN         :: !Text
+    , _dtjrsModelArtifacts         :: !ModelArtifacts
+    , _dtjrsTrainingJobStatus      :: !TrainingJobStatus
+    , _dtjrsSecondaryStatus        :: !SecondaryStatus
+    , _dtjrsAlgorithmSpecification :: !AlgorithmSpecification
+    , _dtjrsInputDataConfig        :: !(List1 Channel)
+    , _dtjrsResourceConfig         :: !ResourceConfig
+    , _dtjrsStoppingCondition      :: !StoppingCondition
+    , _dtjrsCreationTime           :: !POSIX
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeTrainingJobResponse' with the minimum fields required to make a request.

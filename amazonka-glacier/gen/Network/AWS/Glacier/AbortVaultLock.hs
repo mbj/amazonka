@@ -51,10 +51,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'abortVaultLock' smart constructor.
-data AbortVaultLock = AbortVaultLock'
-  { _avlAccountId :: !Text
-  , _avlVaultName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AbortVaultLock =
+  AbortVaultLock'
+    { _avlAccountId :: !Text
+    , _avlVaultName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AbortVaultLock' with the minimum fields required to make a request.

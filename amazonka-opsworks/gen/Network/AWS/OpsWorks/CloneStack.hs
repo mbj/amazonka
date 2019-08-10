@@ -68,30 +68,32 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'cloneStack' smart constructor.
-data CloneStack = CloneStack'
-  { _cDefaultInstanceProfileARN :: !(Maybe Text)
-  , _cCloneAppIds :: !(Maybe [Text])
-  , _cDefaultRootDeviceType :: !(Maybe RootDeviceType)
-  , _cVPCId :: !(Maybe Text)
-  , _cChefConfiguration :: !(Maybe ChefConfiguration)
-  , _cAgentVersion :: !(Maybe Text)
-  , _cDefaultSSHKeyName :: !(Maybe Text)
-  , _cCustomJSON :: !(Maybe Text)
-  , _cClonePermissions :: !(Maybe Bool)
-  , _cCustomCookbooksSource :: !(Maybe Source)
-  , _cDefaultAvailabilityZone :: !(Maybe Text)
-  , _cAttributes :: !(Maybe (Map StackAttributesKeys (Maybe Text)))
-  , _cName :: !(Maybe Text)
-  , _cDefaultOS :: !(Maybe Text)
-  , _cUseOpsworksSecurityGroups :: !(Maybe Bool)
-  , _cUseCustomCookbooks :: !(Maybe Bool)
-  , _cDefaultSubnetId :: !(Maybe Text)
-  , _cRegion :: !(Maybe Text)
-  , _cConfigurationManager :: !(Maybe StackConfigurationManager)
-  , _cHostnameTheme :: !(Maybe Text)
-  , _cSourceStackId :: !Text
-  , _cServiceRoleARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CloneStack =
+  CloneStack'
+    { _cDefaultInstanceProfileARN :: !(Maybe Text)
+    , _cCloneAppIds :: !(Maybe [Text])
+    , _cDefaultRootDeviceType :: !(Maybe RootDeviceType)
+    , _cVPCId :: !(Maybe Text)
+    , _cChefConfiguration :: !(Maybe ChefConfiguration)
+    , _cAgentVersion :: !(Maybe Text)
+    , _cDefaultSSHKeyName :: !(Maybe Text)
+    , _cCustomJSON :: !(Maybe Text)
+    , _cClonePermissions :: !(Maybe Bool)
+    , _cCustomCookbooksSource :: !(Maybe Source)
+    , _cDefaultAvailabilityZone :: !(Maybe Text)
+    , _cAttributes :: !(Maybe (Map StackAttributesKeys (Maybe Text)))
+    , _cName :: !(Maybe Text)
+    , _cDefaultOS :: !(Maybe Text)
+    , _cUseOpsworksSecurityGroups :: !(Maybe Bool)
+    , _cUseCustomCookbooks :: !(Maybe Bool)
+    , _cDefaultSubnetId :: !(Maybe Text)
+    , _cRegion :: !(Maybe Text)
+    , _cConfigurationManager :: !(Maybe StackConfigurationManager)
+    , _cHostnameTheme :: !(Maybe Text)
+    , _cSourceStackId :: !Text
+    , _cServiceRoleARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CloneStack' with the minimum fields required to make a request.
@@ -326,10 +328,12 @@ instance ToQuery CloneStack where
 --
 --
 -- /See:/ 'cloneStackResponse' smart constructor.
-data CloneStackResponse = CloneStackResponse'
-  { _csrsStackId        :: !(Maybe Text)
-  , _csrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CloneStackResponse =
+  CloneStackResponse'
+    { _csrsStackId        :: !(Maybe Text)
+    , _csrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CloneStackResponse' with the minimum fields required to make a request.

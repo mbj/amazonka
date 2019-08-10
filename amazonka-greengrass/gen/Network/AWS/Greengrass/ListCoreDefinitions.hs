@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listCoreDefinitions' smart constructor.
-data ListCoreDefinitions = ListCoreDefinitions'
-  { _lcdNextToken  :: !(Maybe Text)
-  , _lcdMaxResults :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListCoreDefinitions =
+  ListCoreDefinitions'
+    { _lcdNextToken  :: !(Maybe Text)
+    , _lcdMaxResults :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListCoreDefinitions' with the minimum fields required to make a request.
@@ -105,11 +107,13 @@ instance ToQuery ListCoreDefinitions where
                "MaxResults" =: _lcdMaxResults]
 
 -- | /See:/ 'listCoreDefinitionsResponse' smart constructor.
-data ListCoreDefinitionsResponse = ListCoreDefinitionsResponse'
-  { _lcdrsNextToken      :: !(Maybe Text)
-  , _lcdrsDefinitions    :: !(Maybe [DefinitionInformation])
-  , _lcdrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListCoreDefinitionsResponse =
+  ListCoreDefinitionsResponse'
+    { _lcdrsNextToken      :: !(Maybe Text)
+    , _lcdrsDefinitions    :: !(Maybe [DefinitionInformation])
+    , _lcdrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListCoreDefinitionsResponse' with the minimum fields required to make a request.

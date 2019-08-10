@@ -49,10 +49,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'acceptQualificationRequest' smart constructor.
-data AcceptQualificationRequest = AcceptQualificationRequest'
-  { _aqrIntegerValue           :: !(Maybe Int)
-  , _aqrQualificationRequestId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AcceptQualificationRequest =
+  AcceptQualificationRequest'
+    { _aqrIntegerValue           :: !(Maybe Int)
+    , _aqrQualificationRequestId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AcceptQualificationRequest' with the minimum fields required to make a request.
@@ -120,9 +122,11 @@ instance ToQuery AcceptQualificationRequest where
         toQuery = const mempty
 
 -- | /See:/ 'acceptQualificationRequestResponse' smart constructor.
-newtype AcceptQualificationRequestResponse = AcceptQualificationRequestResponse'
-  { _aqrrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AcceptQualificationRequestResponse =
+  AcceptQualificationRequestResponse'
+    { _aqrrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AcceptQualificationRequestResponse' with the minimum fields required to make a request.

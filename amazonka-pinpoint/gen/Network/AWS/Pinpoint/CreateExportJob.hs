@@ -44,10 +44,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createExportJob' smart constructor.
-data CreateExportJob = CreateExportJob'
-  { _cejApplicationId    :: !Text
-  , _cejExportJobRequest :: !ExportJobRequest
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateExportJob =
+  CreateExportJob'
+    { _cejApplicationId    :: !Text
+    , _cejExportJobRequest :: !ExportJobRequest
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateExportJob' with the minimum fields required to make a request.
@@ -111,10 +113,12 @@ instance ToQuery CreateExportJob where
         toQuery = const mempty
 
 -- | /See:/ 'createExportJobResponse' smart constructor.
-data CreateExportJobResponse = CreateExportJobResponse'
-  { _cejrsResponseStatus    :: !Int
-  , _cejrsExportJobResponse :: !ExportJobResponse
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateExportJobResponse =
+  CreateExportJobResponse'
+    { _cejrsResponseStatus    :: !Int
+    , _cejrsExportJobResponse :: !ExportJobResponse
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateExportJobResponse' with the minimum fields required to make a request.

@@ -55,14 +55,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listReviewPolicyResultsForHIT' smart constructor.
-data ListReviewPolicyResultsForHIT = ListReviewPolicyResultsForHIT'
-  { _lrprfhitRetrieveResults :: !(Maybe Bool)
-  , _lrprfhitPolicyLevels    :: !(Maybe [ReviewPolicyLevel])
-  , _lrprfhitRetrieveActions :: !(Maybe Bool)
-  , _lrprfhitNextToken       :: !(Maybe Text)
-  , _lrprfhitMaxResults      :: !(Maybe Nat)
-  , _lrprfhitHITId           :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListReviewPolicyResultsForHIT =
+  ListReviewPolicyResultsForHIT'
+    { _lrprfhitRetrieveResults :: !(Maybe Bool)
+    , _lrprfhitPolicyLevels    :: !(Maybe [ReviewPolicyLevel])
+    , _lrprfhitRetrieveActions :: !(Maybe Bool)
+    , _lrprfhitNextToken       :: !(Maybe Text)
+    , _lrprfhitMaxResults      :: !(Maybe Nat)
+    , _lrprfhitHITId           :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListReviewPolicyResultsForHIT' with the minimum fields required to make a request.
@@ -168,15 +170,17 @@ instance ToQuery ListReviewPolicyResultsForHIT where
         toQuery = const mempty
 
 -- | /See:/ 'listReviewPolicyResultsForHITResponse' smart constructor.
-data ListReviewPolicyResultsForHITResponse = ListReviewPolicyResultsForHITResponse'
-  { _lrprfhitrsHITReviewPolicy        :: !(Maybe ReviewPolicy)
-  , _lrprfhitrsHITReviewReport        :: !(Maybe ReviewReport)
-  , _lrprfhitrsNextToken              :: !(Maybe Text)
-  , _lrprfhitrsAssignmentReviewReport :: !(Maybe ReviewReport)
-  , _lrprfhitrsHITId                  :: !(Maybe Text)
-  , _lrprfhitrsAssignmentReviewPolicy :: !(Maybe ReviewPolicy)
-  , _lrprfhitrsResponseStatus         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListReviewPolicyResultsForHITResponse =
+  ListReviewPolicyResultsForHITResponse'
+    { _lrprfhitrsHITReviewPolicy        :: !(Maybe ReviewPolicy)
+    , _lrprfhitrsHITReviewReport        :: !(Maybe ReviewReport)
+    , _lrprfhitrsNextToken              :: !(Maybe Text)
+    , _lrprfhitrsAssignmentReviewReport :: !(Maybe ReviewReport)
+    , _lrprfhitrsHITId                  :: !(Maybe Text)
+    , _lrprfhitrsAssignmentReviewPolicy :: !(Maybe ReviewPolicy)
+    , _lrprfhitrsResponseStatus         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListReviewPolicyResultsForHITResponse' with the minimum fields required to make a request.

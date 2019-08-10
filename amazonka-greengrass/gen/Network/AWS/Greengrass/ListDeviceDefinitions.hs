@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listDeviceDefinitions' smart constructor.
-data ListDeviceDefinitions = ListDeviceDefinitions'
-  { _lddNextToken  :: !(Maybe Text)
-  , _lddMaxResults :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListDeviceDefinitions =
+  ListDeviceDefinitions'
+    { _lddNextToken  :: !(Maybe Text)
+    , _lddMaxResults :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDeviceDefinitions' with the minimum fields required to make a request.
@@ -105,11 +107,13 @@ instance ToQuery ListDeviceDefinitions where
                "MaxResults" =: _lddMaxResults]
 
 -- | /See:/ 'listDeviceDefinitionsResponse' smart constructor.
-data ListDeviceDefinitionsResponse = ListDeviceDefinitionsResponse'
-  { _lddrsNextToken      :: !(Maybe Text)
-  , _lddrsDefinitions    :: !(Maybe [DefinitionInformation])
-  , _lddrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListDeviceDefinitionsResponse =
+  ListDeviceDefinitionsResponse'
+    { _lddrsNextToken      :: !(Maybe Text)
+    , _lddrsDefinitions    :: !(Maybe [DefinitionInformation])
+    , _lddrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDeviceDefinitionsResponse' with the minimum fields required to make a request.

@@ -60,16 +60,18 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeDBSnapshots' smart constructor.
-data DescribeDBSnapshots = DescribeDBSnapshots'
-  { _ddsIncludeShared        :: !(Maybe Bool)
-  , _ddsFilters              :: !(Maybe [Filter])
-  , _ddsDBSnapshotIdentifier :: !(Maybe Text)
-  , _ddsSnapshotType         :: !(Maybe Text)
-  , _ddsDBInstanceIdentifier :: !(Maybe Text)
-  , _ddsMarker               :: !(Maybe Text)
-  , _ddsMaxRecords           :: !(Maybe Int)
-  , _ddsIncludePublic        :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDBSnapshots =
+  DescribeDBSnapshots'
+    { _ddsIncludeShared        :: !(Maybe Bool)
+    , _ddsFilters              :: !(Maybe [Filter])
+    , _ddsDBSnapshotIdentifier :: !(Maybe Text)
+    , _ddsSnapshotType         :: !(Maybe Text)
+    , _ddsDBInstanceIdentifier :: !(Maybe Text)
+    , _ddsMarker               :: !(Maybe Text)
+    , _ddsMaxRecords           :: !(Maybe Int)
+    , _ddsIncludePublic        :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDBSnapshots' with the minimum fields required to make a request.
@@ -188,11 +190,13 @@ instance ToQuery DescribeDBSnapshots where
 --
 --
 -- /See:/ 'describeDBSnapshotsResponse' smart constructor.
-data DescribeDBSnapshotsResponse = DescribeDBSnapshotsResponse'
-  { _ddsrsMarker         :: !(Maybe Text)
-  , _ddsrsDBSnapshots    :: !(Maybe [DBSnapshot])
-  , _ddsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDBSnapshotsResponse =
+  DescribeDBSnapshotsResponse'
+    { _ddsrsMarker         :: !(Maybe Text)
+    , _ddsrsDBSnapshots    :: !(Maybe [DBSnapshot])
+    , _ddsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDBSnapshotsResponse' with the minimum fields required to make a request.

@@ -45,11 +45,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getCampaigns' smart constructor.
-data GetCampaigns = GetCampaigns'
-  { _gcsToken         :: !(Maybe Text)
-  , _gcsPageSize      :: !(Maybe Text)
-  , _gcsApplicationId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetCampaigns =
+  GetCampaigns'
+    { _gcsToken         :: !(Maybe Text)
+    , _gcsPageSize      :: !(Maybe Text)
+    , _gcsApplicationId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetCampaigns' with the minimum fields required to make a request.
@@ -115,10 +117,12 @@ instance ToQuery GetCampaigns where
               ["token" =: _gcsToken, "page-size" =: _gcsPageSize]
 
 -- | /See:/ 'getCampaignsResponse' smart constructor.
-data GetCampaignsResponse = GetCampaignsResponse'
-  { _gcsrsResponseStatus    :: !Int
-  , _gcsrsCampaignsResponse :: !CampaignsResponse
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetCampaignsResponse =
+  GetCampaignsResponse'
+    { _gcsrsResponseStatus    :: !Int
+    , _gcsrsCampaignsResponse :: !CampaignsResponse
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetCampaignsResponse' with the minimum fields required to make a request.

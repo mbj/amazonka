@@ -55,12 +55,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeHosts' smart constructor.
-data DescribeHosts = DescribeHosts'
-  { _dhNextToken  :: !(Maybe Text)
-  , _dhFilter     :: !(Maybe [Filter])
-  , _dhHostIds    :: !(Maybe [Text])
-  , _dhMaxResults :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeHosts =
+  DescribeHosts'
+    { _dhNextToken  :: !(Maybe Text)
+    , _dhFilter     :: !(Maybe [Filter])
+    , _dhHostIds    :: !(Maybe [Text])
+    , _dhMaxResults :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeHosts' with the minimum fields required to make a request.
@@ -138,11 +140,13 @@ instance ToQuery DescribeHosts where
 --
 --
 -- /See:/ 'describeHostsResponse' smart constructor.
-data DescribeHostsResponse = DescribeHostsResponse'
-  { _dhrsHosts          :: !(Maybe [Host])
-  , _dhrsNextToken      :: !(Maybe Text)
-  , _dhrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeHostsResponse =
+  DescribeHostsResponse'
+    { _dhrsHosts          :: !(Maybe [Host])
+    , _dhrsNextToken      :: !(Maybe Text)
+    , _dhrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeHostsResponse' with the minimum fields required to make a request.

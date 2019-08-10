@@ -136,13 +136,15 @@ instance ToQuery DescribeLimits where
 --
 --
 -- /See:/ 'describeLimitsResponse' smart constructor.
-data DescribeLimitsResponse = DescribeLimitsResponse'
-  { _dlrsTableMaxWriteCapacityUnits   :: !(Maybe Nat)
-  , _dlrsTableMaxReadCapacityUnits    :: !(Maybe Nat)
-  , _dlrsAccountMaxWriteCapacityUnits :: !(Maybe Nat)
-  , _dlrsAccountMaxReadCapacityUnits  :: !(Maybe Nat)
-  , _dlrsResponseStatus               :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeLimitsResponse =
+  DescribeLimitsResponse'
+    { _dlrsTableMaxWriteCapacityUnits   :: !(Maybe Nat)
+    , _dlrsTableMaxReadCapacityUnits    :: !(Maybe Nat)
+    , _dlrsAccountMaxWriteCapacityUnits :: !(Maybe Nat)
+    , _dlrsAccountMaxReadCapacityUnits  :: !(Maybe Nat)
+    , _dlrsResponseStatus               :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeLimitsResponse' with the minimum fields required to make a request.

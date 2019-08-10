@@ -56,11 +56,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createLBCookieStickinessPolicy' smart constructor.
-data CreateLBCookieStickinessPolicy = CreateLBCookieStickinessPolicy'
-  { _clbcspCookieExpirationPeriod :: !(Maybe Integer)
-  , _clbcspLoadBalancerName       :: !Text
-  , _clbcspPolicyName             :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateLBCookieStickinessPolicy =
+  CreateLBCookieStickinessPolicy'
+    { _clbcspCookieExpirationPeriod :: !(Maybe Integer)
+    , _clbcspLoadBalancerName       :: !Text
+    , _clbcspPolicyName             :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateLBCookieStickinessPolicy' with the minimum fields required to make a request.
@@ -136,9 +138,11 @@ instance ToQuery CreateLBCookieStickinessPolicy where
 --
 --
 -- /See:/ 'createLBCookieStickinessPolicyResponse' smart constructor.
-newtype CreateLBCookieStickinessPolicyResponse = CreateLBCookieStickinessPolicyResponse'
-  { _clbcsprsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateLBCookieStickinessPolicyResponse =
+  CreateLBCookieStickinessPolicyResponse'
+    { _clbcsprsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateLBCookieStickinessPolicyResponse' with the minimum fields required to make a request.

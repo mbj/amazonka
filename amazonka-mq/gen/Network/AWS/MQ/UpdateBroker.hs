@@ -47,10 +47,12 @@ import Network.AWS.Response
 -- | Updates the broker using the specified properties.
 --
 -- /See:/ 'updateBroker' smart constructor.
-data UpdateBroker = UpdateBroker'
-  { _ubConfiguration :: !(Maybe ConfigurationId)
-  , _ubBrokerId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateBroker =
+  UpdateBroker'
+    { _ubConfiguration :: !(Maybe ConfigurationId)
+    , _ubBrokerId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateBroker' with the minimum fields required to make a request.
@@ -110,11 +112,13 @@ instance ToQuery UpdateBroker where
         toQuery = const mempty
 
 -- | /See:/ 'updateBrokerResponse' smart constructor.
-data UpdateBrokerResponse = UpdateBrokerResponse'
-  { _ubrsConfiguration  :: !(Maybe ConfigurationId)
-  , _ubrsBrokerId       :: !(Maybe Text)
-  , _ubrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateBrokerResponse =
+  UpdateBrokerResponse'
+    { _ubrsConfiguration  :: !(Maybe ConfigurationId)
+    , _ubrsBrokerId       :: !(Maybe Text)
+    , _ubrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateBrokerResponse' with the minimum fields required to make a request.

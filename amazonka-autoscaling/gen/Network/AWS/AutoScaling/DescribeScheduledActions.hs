@@ -54,14 +54,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeScheduledActions' smart constructor.
-data DescribeScheduledActions = DescribeScheduledActions'
-  { _dsasStartTime            :: !(Maybe ISO8601)
-  , _dsasNextToken            :: !(Maybe Text)
-  , _dsasAutoScalingGroupName :: !(Maybe Text)
-  , _dsasMaxRecords           :: !(Maybe Int)
-  , _dsasEndTime              :: !(Maybe ISO8601)
-  , _dsasScheduledActionNames :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeScheduledActions =
+  DescribeScheduledActions'
+    { _dsasStartTime            :: !(Maybe ISO8601)
+    , _dsasNextToken            :: !(Maybe Text)
+    , _dsasAutoScalingGroupName :: !(Maybe Text)
+    , _dsasMaxRecords           :: !(Maybe Int)
+    , _dsasEndTime              :: !(Maybe ISO8601)
+    , _dsasScheduledActionNames :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeScheduledActions' with the minimum fields required to make a request.
@@ -163,11 +165,13 @@ instance ToQuery DescribeScheduledActions where
                    (toQueryList "member" <$> _dsasScheduledActionNames)]
 
 -- | /See:/ 'describeScheduledActionsResponse' smart constructor.
-data DescribeScheduledActionsResponse = DescribeScheduledActionsResponse'
-  { _dsarsScheduledUpdateGroupActions :: !(Maybe [ScheduledUpdateGroupAction])
-  , _dsarsNextToken                   :: !(Maybe Text)
-  , _dsarsResponseStatus              :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeScheduledActionsResponse =
+  DescribeScheduledActionsResponse'
+    { _dsarsScheduledUpdateGroupActions :: !(Maybe [ScheduledUpdateGroupAction])
+    , _dsarsNextToken                   :: !(Maybe Text)
+    , _dsarsResponseStatus              :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeScheduledActionsResponse' with the minimum fields required to make a request.

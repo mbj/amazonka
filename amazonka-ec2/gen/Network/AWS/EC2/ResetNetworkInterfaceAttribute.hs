@@ -48,11 +48,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'resetNetworkInterfaceAttribute' smart constructor.
-data ResetNetworkInterfaceAttribute = ResetNetworkInterfaceAttribute'
-  { _rniaSourceDestCheck    :: !(Maybe Text)
-  , _rniaDryRun             :: !(Maybe Bool)
-  , _rniaNetworkInterfaceId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResetNetworkInterfaceAttribute =
+  ResetNetworkInterfaceAttribute'
+    { _rniaSourceDestCheck    :: !(Maybe Text)
+    , _rniaDryRun             :: !(Maybe Bool)
+    , _rniaNetworkInterfaceId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResetNetworkInterfaceAttribute' with the minimum fields required to make a request.

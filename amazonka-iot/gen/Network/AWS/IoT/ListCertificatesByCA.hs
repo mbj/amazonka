@@ -56,12 +56,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listCertificatesByCA' smart constructor.
-data ListCertificatesByCA = ListCertificatesByCA'
-  { _lcbcaMarker          :: !(Maybe Text)
-  , _lcbcaAscendingOrder  :: !(Maybe Bool)
-  , _lcbcaPageSize        :: !(Maybe Nat)
-  , _lcbcaCaCertificateId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListCertificatesByCA =
+  ListCertificatesByCA'
+    { _lcbcaMarker          :: !(Maybe Text)
+    , _lcbcaAscendingOrder  :: !(Maybe Bool)
+    , _lcbcaPageSize        :: !(Maybe Nat)
+    , _lcbcaCaCertificateId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListCertificatesByCA' with the minimum fields required to make a request.
@@ -146,11 +148,13 @@ instance ToQuery ListCertificatesByCA where
 --
 --
 -- /See:/ 'listCertificatesByCAResponse' smart constructor.
-data ListCertificatesByCAResponse = ListCertificatesByCAResponse'
-  { _lcbcarsCertificates   :: !(Maybe [Certificate])
-  , _lcbcarsNextMarker     :: !(Maybe Text)
-  , _lcbcarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListCertificatesByCAResponse =
+  ListCertificatesByCAResponse'
+    { _lcbcarsCertificates   :: !(Maybe [Certificate])
+    , _lcbcarsNextMarker     :: !(Maybe Text)
+    , _lcbcarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListCertificatesByCAResponse' with the minimum fields required to make a request.

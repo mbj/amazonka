@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'startDataCollectionByAgentIds' smart constructor.
-newtype StartDataCollectionByAgentIds = StartDataCollectionByAgentIds'
-  { _sAgentIds :: [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StartDataCollectionByAgentIds =
+  StartDataCollectionByAgentIds'
+    { _sAgentIds :: [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartDataCollectionByAgentIds' with the minimum fields required to make a request.
@@ -104,10 +106,12 @@ instance ToQuery StartDataCollectionByAgentIds where
         toQuery = const mempty
 
 -- | /See:/ 'startDataCollectionByAgentIdsResponse' smart constructor.
-data StartDataCollectionByAgentIdsResponse = StartDataCollectionByAgentIdsResponse'
-  { _srsAgentsConfigurationStatus :: !(Maybe [AgentConfigurationStatus])
-  , _srsResponseStatus            :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartDataCollectionByAgentIdsResponse =
+  StartDataCollectionByAgentIdsResponse'
+    { _srsAgentsConfigurationStatus :: !(Maybe [AgentConfigurationStatus])
+    , _srsResponseStatus            :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartDataCollectionByAgentIdsResponse' with the minimum fields required to make a request.

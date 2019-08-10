@@ -48,11 +48,13 @@ import Network.AWS.WorkDocs.Types
 import Network.AWS.WorkDocs.Types.Product
 
 -- | /See:/ 'describeNotificationSubscriptions' smart constructor.
-data DescribeNotificationSubscriptions = DescribeNotificationSubscriptions'
-  { _dMarker         :: !(Maybe Text)
-  , _dLimit          :: !(Maybe Nat)
-  , _dOrganizationId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeNotificationSubscriptions =
+  DescribeNotificationSubscriptions'
+    { _dMarker         :: !(Maybe Text)
+    , _dLimit          :: !(Maybe Nat)
+    , _dOrganizationId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeNotificationSubscriptions' with the minimum fields required to make a request.
@@ -124,11 +126,13 @@ instance ToQuery DescribeNotificationSubscriptions
           = mconcat ["marker" =: _dMarker, "limit" =: _dLimit]
 
 -- | /See:/ 'describeNotificationSubscriptionsResponse' smart constructor.
-data DescribeNotificationSubscriptionsResponse = DescribeNotificationSubscriptionsResponse'
-  { _dnsrsMarker         :: !(Maybe Text)
-  , _dnsrsSubscriptions  :: !(Maybe [Subscription])
-  , _dnsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeNotificationSubscriptionsResponse =
+  DescribeNotificationSubscriptionsResponse'
+    { _dnsrsMarker         :: !(Maybe Text)
+    , _dnsrsSubscriptions  :: !(Maybe [Subscription])
+    , _dnsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeNotificationSubscriptionsResponse' with the minimum fields required to make a request.

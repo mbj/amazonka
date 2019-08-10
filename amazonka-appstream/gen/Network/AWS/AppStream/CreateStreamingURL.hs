@@ -51,14 +51,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createStreamingURL' smart constructor.
-data CreateStreamingURL = CreateStreamingURL'
-  { _csuSessionContext :: !(Maybe Text)
-  , _csuApplicationId  :: !(Maybe Text)
-  , _csuValidity       :: !(Maybe Integer)
-  , _csuStackName      :: !Text
-  , _csuFleetName      :: !Text
-  , _csuUserId         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateStreamingURL =
+  CreateStreamingURL'
+    { _csuSessionContext :: !(Maybe Text)
+    , _csuApplicationId  :: !(Maybe Text)
+    , _csuValidity       :: !(Maybe Integer)
+    , _csuStackName      :: !Text
+    , _csuFleetName      :: !Text
+    , _csuUserId         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateStreamingURL' with the minimum fields required to make a request.
@@ -159,11 +161,13 @@ instance ToQuery CreateStreamingURL where
         toQuery = const mempty
 
 -- | /See:/ 'createStreamingURLResponse' smart constructor.
-data CreateStreamingURLResponse = CreateStreamingURLResponse'
-  { _csursStreamingURL   :: !(Maybe Text)
-  , _csursExpires        :: !(Maybe POSIX)
-  , _csursResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateStreamingURLResponse =
+  CreateStreamingURLResponse'
+    { _csursStreamingURL   :: !(Maybe Text)
+    , _csursExpires        :: !(Maybe POSIX)
+    , _csursResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateStreamingURLResponse' with the minimum fields required to make a request.

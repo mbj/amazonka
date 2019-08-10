@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteDashboards' smart constructor.
-newtype DeleteDashboards = DeleteDashboards'
-  { _ddDashboardNames :: [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteDashboards =
+  DeleteDashboards'
+    { _ddDashboardNames :: [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteDashboards' with the minimum fields required to make a request.
@@ -90,9 +92,11 @@ instance ToQuery DeleteDashboards where
                  toQueryList "member" _ddDashboardNames]
 
 -- | /See:/ 'deleteDashboardsResponse' smart constructor.
-newtype DeleteDashboardsResponse = DeleteDashboardsResponse'
-  { _ddrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteDashboardsResponse =
+  DeleteDashboardsResponse'
+    { _ddrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteDashboardsResponse' with the minimum fields required to make a request.

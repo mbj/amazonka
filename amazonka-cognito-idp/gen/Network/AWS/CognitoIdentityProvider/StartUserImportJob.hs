@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'startUserImportJob' smart constructor.
-data StartUserImportJob = StartUserImportJob'
-  { _suijUserPoolId :: !Text
-  , _suijJobId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartUserImportJob =
+  StartUserImportJob'
+    { _suijUserPoolId :: !Text
+    , _suijJobId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartUserImportJob' with the minimum fields required to make a request.
@@ -121,10 +123,12 @@ instance ToQuery StartUserImportJob where
 --
 --
 -- /See:/ 'startUserImportJobResponse' smart constructor.
-data StartUserImportJobResponse = StartUserImportJobResponse'
-  { _suijrsUserImportJob  :: !(Maybe UserImportJobType)
-  , _suijrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartUserImportJobResponse =
+  StartUserImportJobResponse'
+    { _suijrsUserImportJob  :: !(Maybe UserImportJobType)
+    , _suijrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartUserImportJobResponse' with the minimum fields required to make a request.

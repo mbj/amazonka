@@ -51,10 +51,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteBudget' smart constructor.
-data DeleteBudget = DeleteBudget'
-  { _dAccountId  :: !Text
-  , _dBudgetName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteBudget =
+  DeleteBudget'
+    { _dAccountId  :: !Text
+    , _dBudgetName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteBudget' with the minimum fields required to make a request.
@@ -120,9 +122,11 @@ instance ToQuery DeleteBudget where
 --
 --
 -- /See:/ 'deleteBudgetResponse' smart constructor.
-newtype DeleteBudgetResponse = DeleteBudgetResponse'
-  { _drsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteBudgetResponse =
+  DeleteBudgetResponse'
+    { _drsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteBudgetResponse' with the minimum fields required to make a request.

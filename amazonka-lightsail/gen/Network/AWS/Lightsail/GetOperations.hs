@@ -51,9 +51,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getOperations' smart constructor.
-newtype GetOperations = GetOperations'
-  { _goPageToken :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetOperations =
+  GetOperations'
+    { _goPageToken :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetOperations' with the minimum fields required to make a request.
@@ -113,11 +115,13 @@ instance ToQuery GetOperations where
         toQuery = const mempty
 
 -- | /See:/ 'getOperationsResponse' smart constructor.
-data GetOperationsResponse = GetOperationsResponse'
-  { _gosrsNextPageToken  :: !(Maybe Text)
-  , _gosrsOperations     :: !(Maybe [Operation])
-  , _gosrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetOperationsResponse =
+  GetOperationsResponse'
+    { _gosrsNextPageToken  :: !(Maybe Text)
+    , _gosrsOperations     :: !(Maybe [Operation])
+    , _gosrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetOperationsResponse' with the minimum fields required to make a request.

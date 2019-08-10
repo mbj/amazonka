@@ -60,10 +60,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'associateHostedConnection' smart constructor.
-data AssociateHostedConnection = AssociateHostedConnection'
-  { _assConnectionId       :: !Text
-  , _assParentConnectionId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AssociateHostedConnection =
+  AssociateHostedConnection'
+    { _assConnectionId       :: !Text
+    , _assParentConnectionId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AssociateHostedConnection' with the minimum fields required to make a request.

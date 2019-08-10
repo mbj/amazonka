@@ -51,11 +51,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listSkills' smart constructor.
-data ListSkills = ListSkills'
-  { _lsSkillGroupARN :: !(Maybe Text)
-  , _lsNextToken     :: !(Maybe Text)
-  , _lsMaxResults    :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListSkills =
+  ListSkills'
+    { _lsSkillGroupARN :: !(Maybe Text)
+    , _lsNextToken     :: !(Maybe Text)
+    , _lsMaxResults    :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListSkills' with the minimum fields required to make a request.
@@ -135,11 +137,13 @@ instance ToQuery ListSkills where
         toQuery = const mempty
 
 -- | /See:/ 'listSkillsResponse' smart constructor.
-data ListSkillsResponse = ListSkillsResponse'
-  { _lsrsNextToken      :: !(Maybe Text)
-  , _lsrsSkillSummaries :: !(Maybe [SkillSummary])
-  , _lsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListSkillsResponse =
+  ListSkillsResponse'
+    { _lsrsNextToken      :: !(Maybe Text)
+    , _lsrsSkillSummaries :: !(Maybe [SkillSummary])
+    , _lsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListSkillsResponse' with the minimum fields required to make a request.

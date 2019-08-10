@@ -53,12 +53,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listBonusPayments' smart constructor.
-data ListBonusPayments = ListBonusPayments'
-  { _lbpNextToken    :: !(Maybe Text)
-  , _lbpHITId        :: !(Maybe Text)
-  , _lbpAssignmentId :: !(Maybe Text)
-  , _lbpMaxResults   :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListBonusPayments =
+  ListBonusPayments'
+    { _lbpNextToken    :: !(Maybe Text)
+    , _lbpHITId        :: !(Maybe Text)
+    , _lbpAssignmentId :: !(Maybe Text)
+    , _lbpMaxResults   :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListBonusPayments' with the minimum fields required to make a request.
@@ -148,12 +150,14 @@ instance ToQuery ListBonusPayments where
         toQuery = const mempty
 
 -- | /See:/ 'listBonusPaymentsResponse' smart constructor.
-data ListBonusPaymentsResponse = ListBonusPaymentsResponse'
-  { _lbprsBonusPayments  :: !(Maybe [BonusPayment])
-  , _lbprsNextToken      :: !(Maybe Text)
-  , _lbprsNumResults     :: !(Maybe Int)
-  , _lbprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListBonusPaymentsResponse =
+  ListBonusPaymentsResponse'
+    { _lbprsBonusPayments  :: !(Maybe [BonusPayment])
+    , _lbprsNextToken      :: !(Maybe Text)
+    , _lbprsNumResults     :: !(Maybe Int)
+    , _lbprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListBonusPaymentsResponse' with the minimum fields required to make a request.

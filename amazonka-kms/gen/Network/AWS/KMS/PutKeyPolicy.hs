@@ -47,12 +47,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putKeyPolicy' smart constructor.
-data PutKeyPolicy = PutKeyPolicy'
-  { _pkpBypassPolicyLockoutSafetyCheck :: !(Maybe Bool)
-  , _pkpKeyId                          :: !Text
-  , _pkpPolicyName                     :: !Text
-  , _pkpPolicy                         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutKeyPolicy =
+  PutKeyPolicy'
+    { _pkpBypassPolicyLockoutSafetyCheck :: !(Maybe Bool)
+    , _pkpKeyId                          :: !Text
+    , _pkpPolicyName                     :: !Text
+    , _pkpPolicy                         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutKeyPolicy' with the minimum fields required to make a request.

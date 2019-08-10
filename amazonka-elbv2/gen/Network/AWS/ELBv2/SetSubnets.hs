@@ -49,11 +49,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'setSubnets' smart constructor.
-data SetSubnets = SetSubnets'
-  { _ssSubnetMappings  :: !(Maybe [SubnetMapping])
-  , _ssLoadBalancerARN :: !Text
-  , _ssSubnets         :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SetSubnets =
+  SetSubnets'
+    { _ssSubnetMappings  :: !(Maybe [SubnetMapping])
+    , _ssLoadBalancerARN :: !Text
+    , _ssSubnets         :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetSubnets' with the minimum fields required to make a request.
@@ -120,10 +122,12 @@ instance ToQuery SetSubnets where
                "Subnets" =: toQueryList "member" _ssSubnets]
 
 -- | /See:/ 'setSubnetsResponse' smart constructor.
-data SetSubnetsResponse = SetSubnetsResponse'
-  { _ssrsAvailabilityZones :: !(Maybe [AvailabilityZone])
-  , _ssrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SetSubnetsResponse =
+  SetSubnetsResponse'
+    { _ssrsAvailabilityZones :: !(Maybe [AvailabilityZone])
+    , _ssrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetSubnetsResponse' with the minimum fields required to make a request.

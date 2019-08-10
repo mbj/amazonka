@@ -49,10 +49,12 @@ import Network.AWS.SES.Types
 import Network.AWS.SES.Types.Product
 
 -- | /See:/ 'listTemplates' smart constructor.
-data ListTemplates = ListTemplates'
-  { _ltNextToken :: !(Maybe Text)
-  , _ltMaxItems  :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTemplates =
+  ListTemplates'
+    { _ltNextToken :: !(Maybe Text)
+    , _ltMaxItems  :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTemplates' with the minimum fields required to make a request.
@@ -106,11 +108,13 @@ instance ToQuery ListTemplates where
                "MaxItems" =: _ltMaxItems]
 
 -- | /See:/ 'listTemplatesResponse' smart constructor.
-data ListTemplatesResponse = ListTemplatesResponse'
-  { _ltrsTemplatesMetadata :: !(Maybe [TemplateMetadata])
-  , _ltrsNextToken         :: !(Maybe Text)
-  , _ltrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTemplatesResponse =
+  ListTemplatesResponse'
+    { _ltrsTemplatesMetadata :: !(Maybe [TemplateMetadata])
+    , _ltrsNextToken         :: !(Maybe Text)
+    , _ltrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTemplatesResponse' with the minimum fields required to make a request.

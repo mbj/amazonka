@@ -48,11 +48,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'attachInternetGateway' smart constructor.
-data AttachInternetGateway = AttachInternetGateway'
-  { _aigDryRun            :: !(Maybe Bool)
-  , _aigInternetGatewayId :: !Text
-  , _aigVPCId             :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AttachInternetGateway =
+  AttachInternetGateway'
+    { _aigDryRun            :: !(Maybe Bool)
+    , _aigInternetGatewayId :: !Text
+    , _aigVPCId             :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttachInternetGateway' with the minimum fields required to make a request.

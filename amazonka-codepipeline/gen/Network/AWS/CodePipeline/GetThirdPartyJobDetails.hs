@@ -52,10 +52,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getThirdPartyJobDetails' smart constructor.
-data GetThirdPartyJobDetails = GetThirdPartyJobDetails'
-  { _gtpjdJobId       :: !Text
-  , _gtpjdClientToken :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetThirdPartyJobDetails =
+  GetThirdPartyJobDetails'
+    { _gtpjdJobId       :: !Text
+    , _gtpjdClientToken :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetThirdPartyJobDetails' with the minimum fields required to make a request.
@@ -124,10 +126,12 @@ instance ToQuery GetThirdPartyJobDetails where
 --
 --
 -- /See:/ 'getThirdPartyJobDetailsResponse' smart constructor.
-data GetThirdPartyJobDetailsResponse = GetThirdPartyJobDetailsResponse'
-  { _gtpjdrsJobDetails     :: !(Maybe ThirdPartyJobDetails)
-  , _gtpjdrsResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data GetThirdPartyJobDetailsResponse =
+  GetThirdPartyJobDetailsResponse'
+    { _gtpjdrsJobDetails     :: !(Maybe ThirdPartyJobDetails)
+    , _gtpjdrsResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetThirdPartyJobDetailsResponse' with the minimum fields required to make a request.

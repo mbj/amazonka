@@ -90,12 +90,14 @@ instance ToQuery DescribeEventBus where
         toQuery = const mempty
 
 -- | /See:/ 'describeEventBusResponse' smart constructor.
-data DescribeEventBusResponse = DescribeEventBusResponse'
-  { _debrsARN            :: !(Maybe Text)
-  , _debrsName           :: !(Maybe Text)
-  , _debrsPolicy         :: !(Maybe Text)
-  , _debrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeEventBusResponse =
+  DescribeEventBusResponse'
+    { _debrsARN            :: !(Maybe Text)
+    , _debrsName           :: !(Maybe Text)
+    , _debrsPolicy         :: !(Maybe Text)
+    , _debrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEventBusResponse' with the minimum fields required to make a request.

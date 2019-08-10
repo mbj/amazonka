@@ -47,9 +47,11 @@ import Network.AWS.StorageGateway.Types
 import Network.AWS.StorageGateway.Types.Product
 
 -- | /See:/ 'describeCachediSCSIVolumes' smart constructor.
-newtype DescribeCachediSCSIVolumes = DescribeCachediSCSIVolumes'
-  { _dcscsivVolumeARNs :: [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeCachediSCSIVolumes =
+  DescribeCachediSCSIVolumes'
+    { _dcscsivVolumeARNs :: [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeCachediSCSIVolumes' with the minimum fields required to make a request.
@@ -109,10 +111,12 @@ instance ToQuery DescribeCachediSCSIVolumes where
 --
 --
 -- /See:/ 'describeCachediSCSIVolumesResponse' smart constructor.
-data DescribeCachediSCSIVolumesResponse = DescribeCachediSCSIVolumesResponse'
-  { _dcscsivrsCachediSCSIVolumes :: !(Maybe [CachediSCSIVolume])
-  , _dcscsivrsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeCachediSCSIVolumesResponse =
+  DescribeCachediSCSIVolumesResponse'
+    { _dcscsivrsCachediSCSIVolumes :: !(Maybe [CachediSCSIVolume])
+    , _dcscsivrsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeCachediSCSIVolumesResponse' with the minimum fields required to make a request.

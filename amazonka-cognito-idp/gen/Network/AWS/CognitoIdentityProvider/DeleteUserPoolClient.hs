@@ -47,10 +47,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteUserPoolClient' smart constructor.
-data DeleteUserPoolClient = DeleteUserPoolClient'
-  { _dupcUserPoolId :: !Text
-  , _dupcClientId   :: !(Sensitive Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data DeleteUserPoolClient =
+  DeleteUserPoolClient'
+    { _dupcUserPoolId :: !Text
+    , _dupcClientId   :: !(Sensitive Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteUserPoolClient' with the minimum fields required to make a request.

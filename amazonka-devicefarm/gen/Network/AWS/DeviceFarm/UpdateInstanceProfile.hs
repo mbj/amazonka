@@ -50,14 +50,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateInstanceProfile' smart constructor.
-data UpdateInstanceProfile = UpdateInstanceProfile'
-  { _uipRebootAfterUse                :: !(Maybe Bool)
-  , _uipName                          :: !(Maybe Text)
-  , _uipPackageCleanup                :: !(Maybe Bool)
-  , _uipExcludeAppPackagesFromCleanup :: !(Maybe [Text])
-  , _uipDescription                   :: !(Maybe Text)
-  , _uipArn                           :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateInstanceProfile =
+  UpdateInstanceProfile'
+    { _uipRebootAfterUse                :: !(Maybe Bool)
+    , _uipName                          :: !(Maybe Text)
+    , _uipPackageCleanup                :: !(Maybe Bool)
+    , _uipExcludeAppPackagesFromCleanup :: !(Maybe [Text])
+    , _uipDescription                   :: !(Maybe Text)
+    , _uipArn                           :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateInstanceProfile' with the minimum fields required to make a request.
@@ -156,10 +158,12 @@ instance ToQuery UpdateInstanceProfile where
         toQuery = const mempty
 
 -- | /See:/ 'updateInstanceProfileResponse' smart constructor.
-data UpdateInstanceProfileResponse = UpdateInstanceProfileResponse'
-  { _uiprsInstanceProfile :: !(Maybe InstanceProfile)
-  , _uiprsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateInstanceProfileResponse =
+  UpdateInstanceProfileResponse'
+    { _uiprsInstanceProfile :: !(Maybe InstanceProfile)
+    , _uiprsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateInstanceProfileResponse' with the minimum fields required to make a request.

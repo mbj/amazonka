@@ -97,10 +97,12 @@ instance ToQuery GetAccountSettings where
 --
 --
 -- /See:/ 'getAccountSettingsResponse' smart constructor.
-data GetAccountSettingsResponse = GetAccountSettingsResponse'
-  { _gasrsAccountSettings :: !(Maybe AccountSettings)
-  , _gasrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetAccountSettingsResponse =
+  GetAccountSettingsResponse'
+    { _gasrsAccountSettings :: !(Maybe AccountSettings)
+    , _gasrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetAccountSettingsResponse' with the minimum fields required to make a request.

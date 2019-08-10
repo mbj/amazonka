@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getFileUploadURL' smart constructor.
-data GetFileUploadURL = GetFileUploadURL'
-  { _gfuuAssignmentId       :: !Text
-  , _gfuuQuestionIdentifier :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetFileUploadURL =
+  GetFileUploadURL'
+    { _gfuuAssignmentId       :: !Text
+    , _gfuuQuestionIdentifier :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetFileUploadURL' with the minimum fields required to make a request.
@@ -116,10 +118,12 @@ instance ToQuery GetFileUploadURL where
         toQuery = const mempty
 
 -- | /See:/ 'getFileUploadURLResponse' smart constructor.
-data GetFileUploadURLResponse = GetFileUploadURLResponse'
-  { _gfuursFileUploadURL  :: !(Maybe Text)
-  , _gfuursResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetFileUploadURLResponse =
+  GetFileUploadURLResponse'
+    { _gfuursFileUploadURL  :: !(Maybe Text)
+    , _gfuursResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetFileUploadURLResponse' with the minimum fields required to make a request.

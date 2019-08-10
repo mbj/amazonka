@@ -53,13 +53,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'modifyVolume' smart constructor.
-data ModifyVolume = ModifyVolume'
-  { _mvSize       :: !(Maybe Int)
-  , _mvIOPS       :: !(Maybe Int)
-  , _mvVolumeType :: !(Maybe VolumeType)
-  , _mvDryRun     :: !(Maybe Bool)
-  , _mvVolumeId   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyVolume =
+  ModifyVolume'
+    { _mvSize       :: !(Maybe Int)
+    , _mvIOPS       :: !(Maybe Int)
+    , _mvVolumeType :: !(Maybe VolumeType)
+    , _mvDryRun     :: !(Maybe Bool)
+    , _mvVolumeId   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyVolume' with the minimum fields required to make a request.
@@ -137,10 +139,12 @@ instance ToQuery ModifyVolume where
                "VolumeId" =: _mvVolumeId]
 
 -- | /See:/ 'modifyVolumeResponse' smart constructor.
-data ModifyVolumeResponse = ModifyVolumeResponse'
-  { _mvrsVolumeModification :: !(Maybe VolumeModification)
-  , _mvrsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyVolumeResponse =
+  ModifyVolumeResponse'
+    { _mvrsVolumeModification :: !(Maybe VolumeModification)
+    , _mvrsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyVolumeResponse' with the minimum fields required to make a request.

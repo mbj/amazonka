@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'installToRemoteAccessSession' smart constructor.
-data InstallToRemoteAccessSession = InstallToRemoteAccessSession'
-  { _itrasRemoteAccessSessionARN :: !Text
-  , _itrasAppARN                 :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstallToRemoteAccessSession =
+  InstallToRemoteAccessSession'
+    { _itrasRemoteAccessSessionARN :: !Text
+    , _itrasAppARN                 :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstallToRemoteAccessSession' with the minimum fields required to make a request.
@@ -127,10 +129,12 @@ instance ToQuery InstallToRemoteAccessSession where
 --
 --
 -- /See:/ 'installToRemoteAccessSessionResponse' smart constructor.
-data InstallToRemoteAccessSessionResponse = InstallToRemoteAccessSessionResponse'
-  { _itrasrsAppUpload      :: !(Maybe Upload)
-  , _itrasrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstallToRemoteAccessSessionResponse =
+  InstallToRemoteAccessSessionResponse'
+    { _itrasrsAppUpload      :: !(Maybe Upload)
+    , _itrasrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstallToRemoteAccessSessionResponse' with the minimum fields required to make a request.

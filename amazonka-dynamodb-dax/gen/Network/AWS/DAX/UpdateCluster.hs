@@ -51,15 +51,17 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateCluster' smart constructor.
-data UpdateCluster = UpdateCluster'
-  { _ucSecurityGroupIds           :: !(Maybe [Text])
-  , _ucPreferredMaintenanceWindow :: !(Maybe Text)
-  , _ucNotificationTopicStatus    :: !(Maybe Text)
-  , _ucDescription                :: !(Maybe Text)
-  , _ucNotificationTopicARN       :: !(Maybe Text)
-  , _ucParameterGroupName         :: !(Maybe Text)
-  , _ucClusterName                :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateCluster =
+  UpdateCluster'
+    { _ucSecurityGroupIds           :: !(Maybe [Text])
+    , _ucPreferredMaintenanceWindow :: !(Maybe Text)
+    , _ucNotificationTopicStatus    :: !(Maybe Text)
+    , _ucDescription                :: !(Maybe Text)
+    , _ucNotificationTopicARN       :: !(Maybe Text)
+    , _ucParameterGroupName         :: !(Maybe Text)
+    , _ucClusterName                :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateCluster' with the minimum fields required to make a request.
@@ -166,10 +168,12 @@ instance ToQuery UpdateCluster where
         toQuery = const mempty
 
 -- | /See:/ 'updateClusterResponse' smart constructor.
-data UpdateClusterResponse = UpdateClusterResponse'
-  { _ucrsCluster        :: !(Maybe Cluster)
-  , _ucrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateClusterResponse =
+  UpdateClusterResponse'
+    { _ucrsCluster        :: !(Maybe Cluster)
+    , _ucrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateClusterResponse' with the minimum fields required to make a request.

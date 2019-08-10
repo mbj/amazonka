@@ -50,13 +50,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listConfigurations' smart constructor.
-data ListConfigurations = ListConfigurations'
-  { _lcOrderBy           :: !(Maybe [OrderByElement])
-  , _lcFilters           :: !(Maybe [Filter])
-  , _lcNextToken         :: !(Maybe Text)
-  , _lcMaxResults        :: !(Maybe Int)
-  , _lcConfigurationType :: !ConfigurationItemType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListConfigurations =
+  ListConfigurations'
+    { _lcOrderBy           :: !(Maybe [OrderByElement])
+    , _lcFilters           :: !(Maybe [Filter])
+    , _lcNextToken         :: !(Maybe Text)
+    , _lcMaxResults        :: !(Maybe Int)
+    , _lcConfigurationType :: !ConfigurationItemType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListConfigurations' with the minimum fields required to make a request.
@@ -148,11 +150,13 @@ instance ToQuery ListConfigurations where
         toQuery = const mempty
 
 -- | /See:/ 'listConfigurationsResponse' smart constructor.
-data ListConfigurationsResponse = ListConfigurationsResponse'
-  { _lcrsConfigurations :: !(Maybe [Map Text Text])
-  , _lcrsNextToken      :: !(Maybe Text)
-  , _lcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListConfigurationsResponse =
+  ListConfigurationsResponse'
+    { _lcrsConfigurations :: !(Maybe [Map Text Text])
+    , _lcrsNextToken      :: !(Maybe Text)
+    , _lcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListConfigurationsResponse' with the minimum fields required to make a request.

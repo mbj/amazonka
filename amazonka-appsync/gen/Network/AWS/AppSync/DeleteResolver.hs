@@ -46,11 +46,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteResolver' smart constructor.
-data DeleteResolver = DeleteResolver'
-  { _drApiId     :: !Text
-  , _drTypeName  :: !Text
-  , _drFieldName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteResolver =
+  DeleteResolver'
+    { _drApiId     :: !Text
+    , _drTypeName  :: !Text
+    , _drFieldName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteResolver' with the minimum fields required to make a request.
@@ -113,9 +115,11 @@ instance ToQuery DeleteResolver where
         toQuery = const mempty
 
 -- | /See:/ 'deleteResolverResponse' smart constructor.
-newtype DeleteResolverResponse = DeleteResolverResponse'
-  { _drrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteResolverResponse =
+  DeleteResolverResponse'
+    { _drrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteResolverResponse' with the minimum fields required to make a request.

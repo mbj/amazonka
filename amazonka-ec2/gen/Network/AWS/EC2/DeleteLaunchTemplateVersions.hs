@@ -49,12 +49,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteLaunchTemplateVersions' smart constructor.
-data DeleteLaunchTemplateVersions = DeleteLaunchTemplateVersions'
-  { _dltvLaunchTemplateName :: !(Maybe Text)
-  , _dltvLaunchTemplateId   :: !(Maybe Text)
-  , _dltvDryRun             :: !(Maybe Bool)
-  , _dltvVersions           :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteLaunchTemplateVersions =
+  DeleteLaunchTemplateVersions'
+    { _dltvLaunchTemplateName :: !(Maybe Text)
+    , _dltvLaunchTemplateId   :: !(Maybe Text)
+    , _dltvDryRun             :: !(Maybe Bool)
+    , _dltvVersions           :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteLaunchTemplateVersions' with the minimum fields required to make a request.
@@ -136,11 +138,13 @@ instance ToQuery DeleteLaunchTemplateVersions where
                toQueryList "LaunchTemplateVersion" _dltvVersions]
 
 -- | /See:/ 'deleteLaunchTemplateVersionsResponse' smart constructor.
-data DeleteLaunchTemplateVersionsResponse = DeleteLaunchTemplateVersionsResponse'
-  { _dltvsrsSuccessfullyDeletedLaunchTemplateVersions :: !(Maybe [DeleteLaunchTemplateVersionsResponseSuccessItem])
-  , _dltvsrsUnsuccessfullyDeletedLaunchTemplateVersions :: !(Maybe [DeleteLaunchTemplateVersionsResponseErrorItem])
-  , _dltvsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteLaunchTemplateVersionsResponse =
+  DeleteLaunchTemplateVersionsResponse'
+    { _dltvsrsSuccessfullyDeletedLaunchTemplateVersions :: !(Maybe [DeleteLaunchTemplateVersionsResponseSuccessItem])
+    , _dltvsrsUnsuccessfullyDeletedLaunchTemplateVersions :: !(Maybe [DeleteLaunchTemplateVersionsResponseErrorItem])
+    , _dltvsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteLaunchTemplateVersionsResponse' with the minimum fields required to make a request.

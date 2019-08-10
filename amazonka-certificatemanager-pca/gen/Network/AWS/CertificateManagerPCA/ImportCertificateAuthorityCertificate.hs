@@ -44,11 +44,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'importCertificateAuthorityCertificate' smart constructor.
-data ImportCertificateAuthorityCertificate = ImportCertificateAuthorityCertificate'
-  { _icacCertificateAuthorityARN :: !Text
-  , _icacCertificate             :: !Base64
-  , _icacCertificateChain        :: !Base64
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ImportCertificateAuthorityCertificate =
+  ImportCertificateAuthorityCertificate'
+    { _icacCertificateAuthorityARN :: !Text
+    , _icacCertificate             :: !Base64
+    , _icacCertificateChain        :: !Base64
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ImportCertificateAuthorityCertificate' with the minimum fields required to make a request.

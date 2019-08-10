@@ -48,11 +48,13 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'listResourceComplianceSummaries' smart constructor.
-data ListResourceComplianceSummaries = ListResourceComplianceSummaries'
-  { _lrcsFilters    :: !(Maybe [ComplianceStringFilter])
-  , _lrcsNextToken  :: !(Maybe Text)
-  , _lrcsMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListResourceComplianceSummaries =
+  ListResourceComplianceSummaries'
+    { _lrcsFilters    :: !(Maybe [ComplianceStringFilter])
+    , _lrcsNextToken  :: !(Maybe Text)
+    , _lrcsMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListResourceComplianceSummaries' with the minimum fields required to make a request.
@@ -131,11 +133,13 @@ instance ToQuery ListResourceComplianceSummaries
         toQuery = const mempty
 
 -- | /See:/ 'listResourceComplianceSummariesResponse' smart constructor.
-data ListResourceComplianceSummariesResponse = ListResourceComplianceSummariesResponse'
-  { _lrcsrsResourceComplianceSummaryItems :: !(Maybe [ResourceComplianceSummaryItem])
-  , _lrcsrsNextToken :: !(Maybe Text)
-  , _lrcsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListResourceComplianceSummariesResponse =
+  ListResourceComplianceSummariesResponse'
+    { _lrcsrsResourceComplianceSummaryItems :: !(Maybe [ResourceComplianceSummaryItem])
+    , _lrcsrsNextToken :: !(Maybe Text)
+    , _lrcsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListResourceComplianceSummariesResponse' with the minimum fields required to make a request.

@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeJobQueues' smart constructor.
-data DescribeJobQueues = DescribeJobQueues'
-  { _djqNextToken  :: !(Maybe Text)
-  , _djqJobQueues  :: !(Maybe [Text])
-  , _djqMaxResults :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeJobQueues =
+  DescribeJobQueues'
+    { _djqNextToken  :: !(Maybe Text)
+    , _djqJobQueues  :: !(Maybe [Text])
+    , _djqMaxResults :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeJobQueues' with the minimum fields required to make a request.
@@ -120,11 +122,13 @@ instance ToQuery DescribeJobQueues where
         toQuery = const mempty
 
 -- | /See:/ 'describeJobQueuesResponse' smart constructor.
-data DescribeJobQueuesResponse = DescribeJobQueuesResponse'
-  { _djqsrsNextToken      :: !(Maybe Text)
-  , _djqsrsJobQueues      :: !(Maybe [JobQueueDetail])
-  , _djqsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeJobQueuesResponse =
+  DescribeJobQueuesResponse'
+    { _djqsrsNextToken      :: !(Maybe Text)
+    , _djqsrsJobQueues      :: !(Maybe [JobQueueDetail])
+    , _djqsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeJobQueuesResponse' with the minimum fields required to make a request.

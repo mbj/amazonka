@@ -45,9 +45,11 @@ import Network.AWS.ResourceGroups.Types.Product
 import Network.AWS.Response
 
 -- | /See:/ 'deleteGroup' smart constructor.
-newtype DeleteGroup = DeleteGroup'
-  { _dgGroupName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteGroup =
+  DeleteGroup'
+    { _dgGroupName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteGroup' with the minimum fields required to make a request.
@@ -89,10 +91,12 @@ instance ToQuery DeleteGroup where
         toQuery = const mempty
 
 -- | /See:/ 'deleteGroupResponse' smart constructor.
-data DeleteGroupResponse = DeleteGroupResponse'
-  { _dgrsGroup          :: !(Maybe Group)
-  , _dgrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteGroupResponse =
+  DeleteGroupResponse'
+    { _dgrsGroup          :: !(Maybe Group)
+    , _dgrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteGroupResponse' with the minimum fields required to make a request.

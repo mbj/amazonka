@@ -49,9 +49,11 @@ import Network.AWS.WorkSpaces.Types
 import Network.AWS.WorkSpaces.Types.Product
 
 -- | /See:/ 'rebootWorkspaces' smart constructor.
-newtype RebootWorkspaces = RebootWorkspaces'
-  { _rwRebootWorkspaceRequests :: List1 RebootRequest
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RebootWorkspaces =
+  RebootWorkspaces'
+    { _rwRebootWorkspaceRequests :: List1 RebootRequest
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RebootWorkspaces' with the minimum fields required to make a request.
@@ -109,10 +111,12 @@ instance ToQuery RebootWorkspaces where
         toQuery = const mempty
 
 -- | /See:/ 'rebootWorkspacesResponse' smart constructor.
-data RebootWorkspacesResponse = RebootWorkspacesResponse'
-  { _rrsFailedRequests :: !(Maybe [FailedWorkspaceChangeRequest])
-  , _rrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RebootWorkspacesResponse =
+  RebootWorkspacesResponse'
+    { _rrsFailedRequests :: !(Maybe [FailedWorkspaceChangeRequest])
+    , _rrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RebootWorkspacesResponse' with the minimum fields required to make a request.

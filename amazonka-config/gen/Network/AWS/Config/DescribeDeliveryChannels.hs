@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeDeliveryChannels' smart constructor.
-newtype DescribeDeliveryChannels = DescribeDeliveryChannels'
-  { _ddcDeliveryChannelNames :: Maybe [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeDeliveryChannels =
+  DescribeDeliveryChannels'
+    { _ddcDeliveryChannelNames :: Maybe [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDeliveryChannels' with the minimum fields required to make a request.
@@ -112,10 +114,12 @@ instance ToQuery DescribeDeliveryChannels where
 --
 --
 -- /See:/ 'describeDeliveryChannelsResponse' smart constructor.
-data DescribeDeliveryChannelsResponse = DescribeDeliveryChannelsResponse'
-  { _ddcrsDeliveryChannels :: !(Maybe [DeliveryChannel])
-  , _ddcrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDeliveryChannelsResponse =
+  DescribeDeliveryChannelsResponse'
+    { _ddcrsDeliveryChannels :: !(Maybe [DeliveryChannel])
+    , _ddcrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDeliveryChannelsResponse' with the minimum fields required to make a request.

@@ -74,10 +74,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeHSM' smart constructor.
-data DescribeHSM = DescribeHSM'
-  { _dhsmHSMSerialNumber :: !(Maybe Text)
-  , _dhsmHSMARN          :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeHSM =
+  DescribeHSM'
+    { _dhsmHSMSerialNumber :: !(Maybe Text)
+    , _dhsmHSMARN          :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeHSM' with the minimum fields required to make a request.
@@ -162,30 +164,32 @@ instance ToQuery DescribeHSM where
 --
 --
 -- /See:/ 'describeHSMResponse' smart constructor.
-data DescribeHSMResponse = DescribeHSMResponse'
-  { _desrsStatus                :: !(Maybe HSMStatus)
-  , _desrsIAMRoleARN            :: !(Maybe Text)
-  , _desrsEniId                 :: !(Maybe Text)
-  , _desrsVPCId                 :: !(Maybe Text)
-  , _desrsSSHKeyLastUpdated     :: !(Maybe Text)
-  , _desrsSubscriptionEndDate   :: !(Maybe Text)
-  , _desrsServerCertURI         :: !(Maybe Text)
-  , _desrsSubscriptionType      :: !(Maybe SubscriptionType)
-  , _desrsSSHPublicKey          :: !(Maybe Text)
-  , _desrsSubnetId              :: !(Maybe Text)
-  , _desrsStatusDetails         :: !(Maybe Text)
-  , _desrsPartitions            :: !(Maybe [Text])
-  , _desrsSubscriptionStartDate :: !(Maybe Text)
-  , _desrsAvailabilityZone      :: !(Maybe Text)
-  , _desrsServerCertLastUpdated :: !(Maybe Text)
-  , _desrsSoftwareVersion       :: !(Maybe Text)
-  , _desrsVendorName            :: !(Maybe Text)
-  , _desrsSerialNumber          :: !(Maybe Text)
-  , _desrsHSMARN                :: !(Maybe Text)
-  , _desrsEniIP                 :: !(Maybe Text)
-  , _desrsHSMType               :: !(Maybe Text)
-  , _desrsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeHSMResponse =
+  DescribeHSMResponse'
+    { _desrsStatus                :: !(Maybe HSMStatus)
+    , _desrsIAMRoleARN            :: !(Maybe Text)
+    , _desrsEniId                 :: !(Maybe Text)
+    , _desrsVPCId                 :: !(Maybe Text)
+    , _desrsSSHKeyLastUpdated     :: !(Maybe Text)
+    , _desrsSubscriptionEndDate   :: !(Maybe Text)
+    , _desrsServerCertURI         :: !(Maybe Text)
+    , _desrsSubscriptionType      :: !(Maybe SubscriptionType)
+    , _desrsSSHPublicKey          :: !(Maybe Text)
+    , _desrsSubnetId              :: !(Maybe Text)
+    , _desrsStatusDetails         :: !(Maybe Text)
+    , _desrsPartitions            :: !(Maybe [Text])
+    , _desrsSubscriptionStartDate :: !(Maybe Text)
+    , _desrsAvailabilityZone      :: !(Maybe Text)
+    , _desrsServerCertLastUpdated :: !(Maybe Text)
+    , _desrsSoftwareVersion       :: !(Maybe Text)
+    , _desrsVendorName            :: !(Maybe Text)
+    , _desrsSerialNumber          :: !(Maybe Text)
+    , _desrsHSMARN                :: !(Maybe Text)
+    , _desrsEniIP                 :: !(Maybe Text)
+    , _desrsHSMType               :: !(Maybe Text)
+    , _desrsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeHSMResponse' with the minimum fields required to make a request.

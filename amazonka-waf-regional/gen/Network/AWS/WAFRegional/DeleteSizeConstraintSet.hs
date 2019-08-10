@@ -58,10 +58,12 @@ import Network.AWS.WAFRegional.Types
 import Network.AWS.WAFRegional.Types.Product
 
 -- | /See:/ 'deleteSizeConstraintSet' smart constructor.
-data DeleteSizeConstraintSet = DeleteSizeConstraintSet'
-  { _dscsSizeConstraintSetId :: !Text
-  , _dscsChangeToken         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteSizeConstraintSet =
+  DeleteSizeConstraintSet'
+    { _dscsSizeConstraintSetId :: !Text
+    , _dscsChangeToken         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteSizeConstraintSet' with the minimum fields required to make a request.
@@ -129,10 +131,12 @@ instance ToQuery DeleteSizeConstraintSet where
         toQuery = const mempty
 
 -- | /See:/ 'deleteSizeConstraintSetResponse' smart constructor.
-data DeleteSizeConstraintSetResponse = DeleteSizeConstraintSetResponse'
-  { _dscsrsChangeToken    :: !(Maybe Text)
-  , _dscsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteSizeConstraintSetResponse =
+  DeleteSizeConstraintSetResponse'
+    { _dscsrsChangeToken    :: !(Maybe Text)
+    , _dscsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteSizeConstraintSetResponse' with the minimum fields required to make a request.

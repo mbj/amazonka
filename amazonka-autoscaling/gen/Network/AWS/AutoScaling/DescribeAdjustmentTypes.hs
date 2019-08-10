@@ -86,10 +86,12 @@ instance ToQuery DescribeAdjustmentTypes where
                   "Version" =: ("2011-01-01" :: ByteString)])
 
 -- | /See:/ 'describeAdjustmentTypesResponse' smart constructor.
-data DescribeAdjustmentTypesResponse = DescribeAdjustmentTypesResponse'
-  { _datrsAdjustmentTypes :: !(Maybe [AdjustmentType])
-  , _datrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAdjustmentTypesResponse =
+  DescribeAdjustmentTypesResponse'
+    { _datrsAdjustmentTypes :: !(Maybe [AdjustmentType])
+    , _datrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAdjustmentTypesResponse' with the minimum fields required to make a request.

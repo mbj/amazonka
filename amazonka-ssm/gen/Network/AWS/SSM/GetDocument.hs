@@ -51,11 +51,13 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'getDocument' smart constructor.
-data GetDocument = GetDocument'
-  { _gdDocumentFormat  :: !(Maybe DocumentFormat)
-  , _gdDocumentVersion :: !(Maybe Text)
-  , _gdName            :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDocument =
+  GetDocument'
+    { _gdDocumentFormat  :: !(Maybe DocumentFormat)
+    , _gdDocumentVersion :: !(Maybe Text)
+    , _gdName            :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDocument' with the minimum fields required to make a request.
@@ -131,14 +133,16 @@ instance ToQuery GetDocument where
         toQuery = const mempty
 
 -- | /See:/ 'getDocumentResponse' smart constructor.
-data GetDocumentResponse = GetDocumentResponse'
-  { _gdrsDocumentType    :: !(Maybe DocumentType)
-  , _gdrsContent         :: !(Maybe Text)
-  , _gdrsDocumentFormat  :: !(Maybe DocumentFormat)
-  , _gdrsName            :: !(Maybe Text)
-  , _gdrsDocumentVersion :: !(Maybe Text)
-  , _gdrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDocumentResponse =
+  GetDocumentResponse'
+    { _gdrsDocumentType    :: !(Maybe DocumentType)
+    , _gdrsContent         :: !(Maybe Text)
+    , _gdrsDocumentFormat  :: !(Maybe DocumentFormat)
+    , _gdrsName            :: !(Maybe Text)
+    , _gdrsDocumentVersion :: !(Maybe Text)
+    , _gdrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDocumentResponse' with the minimum fields required to make a request.

@@ -50,10 +50,12 @@ import Network.AWS.WAF.Types
 import Network.AWS.WAF.Types.Product
 
 -- | /See:/ 'listWebACLs' smart constructor.
-data ListWebACLs = ListWebACLs'
-  { _lwaNextMarker :: !(Maybe Text)
-  , _lwaLimit      :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListWebACLs =
+  ListWebACLs'
+    { _lwaNextMarker :: !(Maybe Text)
+    , _lwaLimit      :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListWebACLs' with the minimum fields required to make a request.
@@ -120,11 +122,13 @@ instance ToQuery ListWebACLs where
         toQuery = const mempty
 
 -- | /See:/ 'listWebACLsResponse' smart constructor.
-data ListWebACLsResponse = ListWebACLsResponse'
-  { _lwarsWebACLs        :: !(Maybe [WebACLSummary])
-  , _lwarsNextMarker     :: !(Maybe Text)
-  , _lwarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListWebACLsResponse =
+  ListWebACLsResponse'
+    { _lwarsWebACLs        :: !(Maybe [WebACLSummary])
+    , _lwarsNextMarker     :: !(Maybe Text)
+    , _lwarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListWebACLsResponse' with the minimum fields required to make a request.

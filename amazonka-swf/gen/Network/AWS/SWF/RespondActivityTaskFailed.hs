@@ -60,11 +60,13 @@ import Network.AWS.SWF.Types
 import Network.AWS.SWF.Types.Product
 
 -- | /See:/ 'respondActivityTaskFailed' smart constructor.
-data RespondActivityTaskFailed = RespondActivityTaskFailed'
-  { _ratfReason    :: !(Maybe Text)
-  , _ratfDetails   :: !(Maybe Text)
-  , _ratfTaskToken :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RespondActivityTaskFailed =
+  RespondActivityTaskFailed'
+    { _ratfReason    :: !(Maybe Text)
+    , _ratfDetails   :: !(Maybe Text)
+    , _ratfTaskToken :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RespondActivityTaskFailed' with the minimum fields required to make a request.

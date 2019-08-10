@@ -91,10 +91,12 @@ instance ToQuery ListCuratedEnvironmentImages where
         toQuery = const mempty
 
 -- | /See:/ 'listCuratedEnvironmentImagesResponse' smart constructor.
-data ListCuratedEnvironmentImagesResponse = ListCuratedEnvironmentImagesResponse'
-  { _lceirsPlatforms      :: !(Maybe [EnvironmentPlatform])
-  , _lceirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListCuratedEnvironmentImagesResponse =
+  ListCuratedEnvironmentImagesResponse'
+    { _lceirsPlatforms      :: !(Maybe [EnvironmentPlatform])
+    , _lceirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListCuratedEnvironmentImagesResponse' with the minimum fields required to make a request.

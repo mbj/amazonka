@@ -46,10 +46,12 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'putInventory' smart constructor.
-data PutInventory = PutInventory'
-  { _piInstanceId :: !Text
-  , _piItems      :: !(List1 InventoryItem)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutInventory =
+  PutInventory'
+    { _piInstanceId :: !Text
+    , _piItems      :: !(List1 InventoryItem)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutInventory' with the minimum fields required to make a request.
@@ -111,10 +113,12 @@ instance ToQuery PutInventory where
         toQuery = const mempty
 
 -- | /See:/ 'putInventoryResponse' smart constructor.
-data PutInventoryResponse = PutInventoryResponse'
-  { _pirsMessage        :: !(Maybe Text)
-  , _pirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutInventoryResponse =
+  PutInventoryResponse'
+    { _pirsMessage        :: !(Maybe Text)
+    , _pirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutInventoryResponse' with the minimum fields required to make a request.

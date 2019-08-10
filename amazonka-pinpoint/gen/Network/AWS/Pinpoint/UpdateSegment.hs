@@ -45,11 +45,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateSegment' smart constructor.
-data UpdateSegment = UpdateSegment'
-  { _usSegmentId           :: !Text
-  , _usApplicationId       :: !Text
-  , _usWriteSegmentRequest :: !WriteSegmentRequest
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateSegment =
+  UpdateSegment'
+    { _usSegmentId           :: !Text
+    , _usApplicationId       :: !Text
+    , _usWriteSegmentRequest :: !WriteSegmentRequest
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateSegment' with the minimum fields required to make a request.
@@ -123,10 +125,12 @@ instance ToQuery UpdateSegment where
         toQuery = const mempty
 
 -- | /See:/ 'updateSegmentResponse' smart constructor.
-data UpdateSegmentResponse = UpdateSegmentResponse'
-  { _usrsResponseStatus  :: !Int
-  , _usrsSegmentResponse :: !SegmentResponse
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateSegmentResponse =
+  UpdateSegmentResponse'
+    { _usrsResponseStatus  :: !Int
+    , _usrsSegmentResponse :: !SegmentResponse
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateSegmentResponse' with the minimum fields required to make a request.

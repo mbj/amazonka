@@ -53,11 +53,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'modifyClusterIAMRoles' smart constructor.
-data ModifyClusterIAMRoles = ModifyClusterIAMRoles'
-  { _mcirRemoveIAMRoles    :: !(Maybe [Text])
-  , _mcirAddIAMRoles       :: !(Maybe [Text])
-  , _mcirClusterIdentifier :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyClusterIAMRoles =
+  ModifyClusterIAMRoles'
+    { _mcirRemoveIAMRoles    :: !(Maybe [Text])
+    , _mcirAddIAMRoles       :: !(Maybe [Text])
+    , _mcirClusterIdentifier :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyClusterIAMRoles' with the minimum fields required to make a request.
@@ -126,10 +128,12 @@ instance ToQuery ModifyClusterIAMRoles where
                "ClusterIdentifier" =: _mcirClusterIdentifier]
 
 -- | /See:/ 'modifyClusterIAMRolesResponse' smart constructor.
-data ModifyClusterIAMRolesResponse = ModifyClusterIAMRolesResponse'
-  { _mcirrsCluster        :: !(Maybe Cluster)
-  , _mcirrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyClusterIAMRolesResponse =
+  ModifyClusterIAMRolesResponse'
+    { _mcirrsCluster        :: !(Maybe Cluster)
+    , _mcirrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyClusterIAMRolesResponse' with the minimum fields required to make a request.

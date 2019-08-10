@@ -49,13 +49,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'issueCertificate' smart constructor.
-data IssueCertificate = IssueCertificate'
-  { _icIdempotencyToken        :: !(Maybe Text)
-  , _icCertificateAuthorityARN :: !Text
-  , _icCSR                     :: !Base64
-  , _icSigningAlgorithm        :: !SigningAlgorithm
-  , _icValidity                :: !Validity
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data IssueCertificate =
+  IssueCertificate'
+    { _icIdempotencyToken        :: !(Maybe Text)
+    , _icCertificateAuthorityARN :: !Text
+    , _icCSR                     :: !Base64
+    , _icSigningAlgorithm        :: !SigningAlgorithm
+    , _icValidity                :: !Validity
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'IssueCertificate' with the minimum fields required to make a request.
@@ -148,10 +150,12 @@ instance ToQuery IssueCertificate where
         toQuery = const mempty
 
 -- | /See:/ 'issueCertificateResponse' smart constructor.
-data IssueCertificateResponse = IssueCertificateResponse'
-  { _icrsCertificateARN :: !(Maybe Text)
-  , _icrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data IssueCertificateResponse =
+  IssueCertificateResponse'
+    { _icrsCertificateARN :: !(Maybe Text)
+    , _icrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'IssueCertificateResponse' with the minimum fields required to make a request.

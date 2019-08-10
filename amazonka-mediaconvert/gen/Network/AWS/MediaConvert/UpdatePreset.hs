@@ -46,12 +46,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updatePreset' smart constructor.
-data UpdatePreset = UpdatePreset'
-  { _upSettings    :: !(Maybe PresetSettings)
-  , _upCategory    :: !(Maybe Text)
-  , _upDescription :: !(Maybe Text)
-  , _upName        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdatePreset =
+  UpdatePreset'
+    { _upSettings    :: !(Maybe PresetSettings)
+    , _upCategory    :: !(Maybe Text)
+    , _upDescription :: !(Maybe Text)
+    , _upName        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdatePreset' with the minimum fields required to make a request.
@@ -129,10 +131,12 @@ instance ToQuery UpdatePreset where
         toQuery = const mempty
 
 -- | /See:/ 'updatePresetResponse' smart constructor.
-data UpdatePresetResponse = UpdatePresetResponse'
-  { _uprsPreset         :: !(Maybe Preset)
-  , _uprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdatePresetResponse =
+  UpdatePresetResponse'
+    { _uprsPreset         :: !(Maybe Preset)
+    , _uprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdatePresetResponse' with the minimum fields required to make a request.

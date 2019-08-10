@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getGraphqlAPI' smart constructor.
-newtype GetGraphqlAPI = GetGraphqlAPI'
-  { _ggaApiId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetGraphqlAPI =
+  GetGraphqlAPI'
+    { _ggaApiId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetGraphqlAPI' with the minimum fields required to make a request.
@@ -93,10 +95,12 @@ instance ToQuery GetGraphqlAPI where
         toQuery = const mempty
 
 -- | /See:/ 'getGraphqlAPIResponse' smart constructor.
-data GetGraphqlAPIResponse = GetGraphqlAPIResponse'
-  { _ggarsGraphqlAPI     :: !(Maybe GraphqlAPI)
-  , _ggarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetGraphqlAPIResponse =
+  GetGraphqlAPIResponse'
+    { _ggarsGraphqlAPI     :: !(Maybe GraphqlAPI)
+    , _ggarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetGraphqlAPIResponse' with the minimum fields required to make a request.

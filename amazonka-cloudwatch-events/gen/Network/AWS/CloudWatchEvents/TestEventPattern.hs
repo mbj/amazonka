@@ -48,10 +48,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'testEventPattern' smart constructor.
-data TestEventPattern = TestEventPattern'
-  { _tepEventPattern :: !Text
-  , _tepEvent        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TestEventPattern =
+  TestEventPattern'
+    { _tepEventPattern :: !Text
+    , _tepEvent        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TestEventPattern' with the minimum fields required to make a request.
@@ -113,10 +115,12 @@ instance ToQuery TestEventPattern where
         toQuery = const mempty
 
 -- | /See:/ 'testEventPatternResponse' smart constructor.
-data TestEventPatternResponse = TestEventPatternResponse'
-  { _teprsResult         :: !(Maybe Bool)
-  , _teprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TestEventPatternResponse =
+  TestEventPatternResponse'
+    { _teprsResult         :: !(Maybe Bool)
+    , _teprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TestEventPatternResponse' with the minimum fields required to make a request.

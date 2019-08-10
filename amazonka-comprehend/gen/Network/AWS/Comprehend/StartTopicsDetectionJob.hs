@@ -51,14 +51,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'startTopicsDetectionJob' smart constructor.
-data StartTopicsDetectionJob = StartTopicsDetectionJob'
-  { _stdjJobName            :: !(Maybe Text)
-  , _stdjNumberOfTopics     :: !(Maybe Nat)
-  , _stdjClientRequestToken :: !(Maybe Text)
-  , _stdjInputDataConfig    :: !InputDataConfig
-  , _stdjOutputDataConfig   :: !OutputDataConfig
-  , _stdjDataAccessRoleARN  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartTopicsDetectionJob =
+  StartTopicsDetectionJob'
+    { _stdjJobName            :: !(Maybe Text)
+    , _stdjNumberOfTopics     :: !(Maybe Nat)
+    , _stdjClientRequestToken :: !(Maybe Text)
+    , _stdjInputDataConfig    :: !InputDataConfig
+    , _stdjOutputDataConfig   :: !OutputDataConfig
+    , _stdjDataAccessRoleARN  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartTopicsDetectionJob' with the minimum fields required to make a request.
@@ -161,11 +163,13 @@ instance ToQuery StartTopicsDetectionJob where
         toQuery = const mempty
 
 -- | /See:/ 'startTopicsDetectionJobResponse' smart constructor.
-data StartTopicsDetectionJobResponse = StartTopicsDetectionJobResponse'
-  { _stdjrsJobId          :: !(Maybe Text)
-  , _stdjrsJobStatus      :: !(Maybe JobStatus)
-  , _stdjrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartTopicsDetectionJobResponse =
+  StartTopicsDetectionJobResponse'
+    { _stdjrsJobId          :: !(Maybe Text)
+    , _stdjrsJobStatus      :: !(Maybe JobStatus)
+    , _stdjrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartTopicsDetectionJobResponse' with the minimum fields required to make a request.

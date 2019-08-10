@@ -52,12 +52,14 @@ import Network.AWS.SSM.Types
 import Network.AWS.SSM.Types.Product
 
 -- | /See:/ 'getParameterHistory' smart constructor.
-data GetParameterHistory = GetParameterHistory'
-  { _gphWithDecryption :: !(Maybe Bool)
-  , _gphNextToken      :: !(Maybe Text)
-  , _gphMaxResults     :: !(Maybe Nat)
-  , _gphName           :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetParameterHistory =
+  GetParameterHistory'
+    { _gphWithDecryption :: !(Maybe Bool)
+    , _gphNextToken      :: !(Maybe Text)
+    , _gphMaxResults     :: !(Maybe Nat)
+    , _gphName           :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetParameterHistory' with the minimum fields required to make a request.
@@ -147,11 +149,13 @@ instance ToQuery GetParameterHistory where
         toQuery = const mempty
 
 -- | /See:/ 'getParameterHistoryResponse' smart constructor.
-data GetParameterHistoryResponse = GetParameterHistoryResponse'
-  { _gphrsNextToken      :: !(Maybe Text)
-  , _gphrsParameters     :: !(Maybe [ParameterHistory])
-  , _gphrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetParameterHistoryResponse =
+  GetParameterHistoryResponse'
+    { _gphrsNextToken      :: !(Maybe Text)
+    , _gphrsParameters     :: !(Maybe [ParameterHistory])
+    , _gphrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetParameterHistoryResponse' with the minimum fields required to make a request.

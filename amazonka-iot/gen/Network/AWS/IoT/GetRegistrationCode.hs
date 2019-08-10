@@ -87,10 +87,12 @@ instance ToQuery GetRegistrationCode where
 --
 --
 -- /See:/ 'getRegistrationCodeResponse' smart constructor.
-data GetRegistrationCodeResponse = GetRegistrationCodeResponse'
-  { _grcrsRegistrationCode :: !(Maybe Text)
-  , _grcrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetRegistrationCodeResponse =
+  GetRegistrationCodeResponse'
+    { _grcrsRegistrationCode :: !(Maybe Text)
+    , _grcrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetRegistrationCodeResponse' with the minimum fields required to make a request.

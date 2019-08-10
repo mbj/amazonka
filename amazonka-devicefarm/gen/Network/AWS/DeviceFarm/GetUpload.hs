@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getUpload' smart constructor.
-newtype GetUpload = GetUpload'
-  { _guArn :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetUpload =
+  GetUpload'
+    { _guArn :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetUpload' with the minimum fields required to make a request.
@@ -106,10 +108,12 @@ instance ToQuery GetUpload where
 --
 --
 -- /See:/ 'getUploadResponse' smart constructor.
-data GetUploadResponse = GetUploadResponse'
-  { _gursUpload         :: !(Maybe Upload)
-  , _gursResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetUploadResponse =
+  GetUploadResponse'
+    { _gursUpload         :: !(Maybe Upload)
+    , _gursResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetUploadResponse' with the minimum fields required to make a request.

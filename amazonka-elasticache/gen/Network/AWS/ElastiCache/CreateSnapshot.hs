@@ -51,11 +51,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createSnapshot' smart constructor.
-data CreateSnapshot = CreateSnapshot'
-  { _csCacheClusterId     :: !(Maybe Text)
-  , _csReplicationGroupId :: !(Maybe Text)
-  , _csSnapshotName       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateSnapshot =
+  CreateSnapshot'
+    { _csCacheClusterId     :: !(Maybe Text)
+    , _csReplicationGroupId :: !(Maybe Text)
+    , _csSnapshotName       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateSnapshot' with the minimum fields required to make a request.
@@ -119,10 +121,12 @@ instance ToQuery CreateSnapshot where
                "SnapshotName" =: _csSnapshotName]
 
 -- | /See:/ 'createSnapshotResponse' smart constructor.
-data CreateSnapshotResponse = CreateSnapshotResponse'
-  { _crersSnapshot       :: !(Maybe Snapshot)
-  , _crersResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateSnapshotResponse =
+  CreateSnapshotResponse'
+    { _crersSnapshot       :: !(Maybe Snapshot)
+    , _crersResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateSnapshotResponse' with the minimum fields required to make a request.

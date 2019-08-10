@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateEventConfigurations' smart constructor.
-newtype UpdateEventConfigurations = UpdateEventConfigurations'
-  { _uecEventConfigurations :: Maybe (Map EventType Configuration)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateEventConfigurations =
+  UpdateEventConfigurations'
+    { _uecEventConfigurations :: Maybe (Map EventType Configuration)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateEventConfigurations' with the minimum fields required to make a request.
@@ -95,9 +97,11 @@ instance ToQuery UpdateEventConfigurations where
         toQuery = const mempty
 
 -- | /See:/ 'updateEventConfigurationsResponse' smart constructor.
-newtype UpdateEventConfigurationsResponse = UpdateEventConfigurationsResponse'
-  { _uecrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateEventConfigurationsResponse =
+  UpdateEventConfigurationsResponse'
+    { _uecrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateEventConfigurationsResponse' with the minimum fields required to make a request.

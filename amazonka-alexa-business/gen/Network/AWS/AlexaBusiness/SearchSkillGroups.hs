@@ -53,12 +53,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'searchSkillGroups' smart constructor.
-data SearchSkillGroups = SearchSkillGroups'
-  { _ssgFilters      :: !(Maybe [Filter])
-  , _ssgSortCriteria :: !(Maybe [Sort])
-  , _ssgNextToken    :: !(Maybe Text)
-  , _ssgMaxResults   :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SearchSkillGroups =
+  SearchSkillGroups'
+    { _ssgFilters      :: !(Maybe [Filter])
+    , _ssgSortCriteria :: !(Maybe [Sort])
+    , _ssgNextToken    :: !(Maybe Text)
+    , _ssgMaxResults   :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SearchSkillGroups' with the minimum fields required to make a request.
@@ -147,12 +149,14 @@ instance ToQuery SearchSkillGroups where
         toQuery = const mempty
 
 -- | /See:/ 'searchSkillGroupsResponse' smart constructor.
-data SearchSkillGroupsResponse = SearchSkillGroupsResponse'
-  { _ssgrsNextToken      :: !(Maybe Text)
-  , _ssgrsSkillGroups    :: !(Maybe [SkillGroupData])
-  , _ssgrsTotalCount     :: !(Maybe Int)
-  , _ssgrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SearchSkillGroupsResponse =
+  SearchSkillGroupsResponse'
+    { _ssgrsNextToken      :: !(Maybe Text)
+    , _ssgrsSkillGroups    :: !(Maybe [SkillGroupData])
+    , _ssgrsTotalCount     :: !(Maybe Int)
+    , _ssgrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SearchSkillGroupsResponse' with the minimum fields required to make a request.

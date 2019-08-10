@@ -59,15 +59,17 @@ import Network.AWS.SNS.Types.Product
 --
 --
 -- /See:/ 'publish' smart constructor.
-data Publish = Publish'
-  { _pSubject           :: !(Maybe Text)
-  , _pTargetARN         :: !(Maybe Text)
-  , _pMessageAttributes :: !(Maybe (Map Text MessageAttributeValue))
-  , _pTopicARN          :: !(Maybe Text)
-  , _pPhoneNumber       :: !(Maybe Text)
-  , _pMessageStructure  :: !(Maybe Text)
-  , _pMessage           :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Publish =
+  Publish'
+    { _pSubject           :: !(Maybe Text)
+    , _pTargetARN         :: !(Maybe Text)
+    , _pMessageAttributes :: !(Maybe (Map Text MessageAttributeValue))
+    , _pTopicARN          :: !(Maybe Text)
+    , _pPhoneNumber       :: !(Maybe Text)
+    , _pMessageStructure  :: !(Maybe Text)
+    , _pMessage           :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Publish' with the minimum fields required to make a request.
@@ -169,10 +171,12 @@ instance ToQuery Publish where
 --
 --
 -- /See:/ 'publishResponse' smart constructor.
-data PublishResponse = PublishResponse'
-  { _prsMessageId      :: !(Maybe Text)
-  , _prsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PublishResponse =
+  PublishResponse'
+    { _prsMessageId      :: !(Maybe Text)
+    , _prsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PublishResponse' with the minimum fields required to make a request.

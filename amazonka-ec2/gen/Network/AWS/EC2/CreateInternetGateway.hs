@@ -51,9 +51,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createInternetGateway' smart constructor.
-newtype CreateInternetGateway = CreateInternetGateway'
-  { _cigDryRun :: Maybe Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateInternetGateway =
+  CreateInternetGateway'
+    { _cigDryRun :: Maybe Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateInternetGateway' with the minimum fields required to make a request.
@@ -102,10 +104,12 @@ instance ToQuery CreateInternetGateway where
 --
 --
 -- /See:/ 'createInternetGatewayResponse' smart constructor.
-data CreateInternetGatewayResponse = CreateInternetGatewayResponse'
-  { _cigrsInternetGateway :: !(Maybe InternetGateway)
-  , _cigrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateInternetGatewayResponse =
+  CreateInternetGatewayResponse'
+    { _cigrsInternetGateway :: !(Maybe InternetGateway)
+    , _cigrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateInternetGatewayResponse' with the minimum fields required to make a request.

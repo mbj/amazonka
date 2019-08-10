@@ -51,13 +51,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createNamedQuery' smart constructor.
-data CreateNamedQuery = CreateNamedQuery'
-  { _cnqClientRequestToken :: !(Maybe Text)
-  , _cnqDescription        :: !(Maybe Text)
-  , _cnqName               :: !Text
-  , _cnqDatabase           :: !Text
-  , _cnqQueryString        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateNamedQuery =
+  CreateNamedQuery'
+    { _cnqClientRequestToken :: !(Maybe Text)
+    , _cnqDescription        :: !(Maybe Text)
+    , _cnqName               :: !Text
+    , _cnqDatabase           :: !Text
+    , _cnqQueryString        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateNamedQuery' with the minimum fields required to make a request.
@@ -148,10 +150,12 @@ instance ToQuery CreateNamedQuery where
         toQuery = const mempty
 
 -- | /See:/ 'createNamedQueryResponse' smart constructor.
-data CreateNamedQueryResponse = CreateNamedQueryResponse'
-  { _cnqrsNamedQueryId   :: !(Maybe Text)
-  , _cnqrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateNamedQueryResponse =
+  CreateNamedQueryResponse'
+    { _cnqrsNamedQueryId   :: !(Maybe Text)
+    , _cnqrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateNamedQueryResponse' with the minimum fields required to make a request.

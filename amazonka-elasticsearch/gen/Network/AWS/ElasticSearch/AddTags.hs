@@ -47,10 +47,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'addTags' smart constructor.
-data AddTags = AddTags'
-  { _atARN     :: !Text
-  , _atTagList :: ![Tag]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddTags =
+  AddTags'
+    { _atARN     :: !Text
+    , _atTagList :: ![Tag]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddTags' with the minimum fields required to make a request.

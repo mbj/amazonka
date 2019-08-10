@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getKeyPolicy' smart constructor.
-data GetKeyPolicy = GetKeyPolicy'
-  { _gkpKeyId      :: !Text
-  , _gkpPolicyName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetKeyPolicy =
+  GetKeyPolicy'
+    { _gkpKeyId      :: !Text
+    , _gkpPolicyName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetKeyPolicy' with the minimum fields required to make a request.
@@ -111,10 +113,12 @@ instance ToQuery GetKeyPolicy where
         toQuery = const mempty
 
 -- | /See:/ 'getKeyPolicyResponse' smart constructor.
-data GetKeyPolicyResponse = GetKeyPolicyResponse'
-  { _gkprsPolicy         :: !(Maybe Text)
-  , _gkprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetKeyPolicyResponse =
+  GetKeyPolicyResponse'
+    { _gkprsPolicy         :: !(Maybe Text)
+    , _gkprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetKeyPolicyResponse' with the minimum fields required to make a request.

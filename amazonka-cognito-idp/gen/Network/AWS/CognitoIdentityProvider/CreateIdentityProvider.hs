@@ -50,14 +50,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createIdentityProvider' smart constructor.
-data CreateIdentityProvider = CreateIdentityProvider'
-  { _cipIdpIdentifiers   :: !(Maybe [Text])
-  , _cipAttributeMapping :: !(Maybe (Map Text Text))
-  , _cipUserPoolId       :: !Text
-  , _cipProviderName     :: !Text
-  , _cipProviderType     :: !IdentityProviderTypeType
-  , _cipProviderDetails  :: !(Map Text Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateIdentityProvider =
+  CreateIdentityProvider'
+    { _cipIdpIdentifiers   :: !(Maybe [Text])
+    , _cipAttributeMapping :: !(Maybe (Map Text Text))
+    , _cipUserPoolId       :: !Text
+    , _cipProviderName     :: !Text
+    , _cipProviderType     :: !IdentityProviderTypeType
+    , _cipProviderDetails  :: !(Map Text Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateIdentityProvider' with the minimum fields required to make a request.
@@ -157,10 +159,12 @@ instance ToQuery CreateIdentityProvider where
         toQuery = const mempty
 
 -- | /See:/ 'createIdentityProviderResponse' smart constructor.
-data CreateIdentityProviderResponse = CreateIdentityProviderResponse'
-  { _ciprsResponseStatus   :: !Int
-  , _ciprsIdentityProvider :: !IdentityProviderType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateIdentityProviderResponse =
+  CreateIdentityProviderResponse'
+    { _ciprsResponseStatus   :: !Int
+    , _ciprsIdentityProvider :: !IdentityProviderType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateIdentityProviderResponse' with the minimum fields required to make a request.

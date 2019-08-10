@@ -54,11 +54,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listMFADevices' smart constructor.
-data ListMFADevices = ListMFADevices'
-  { _lmdUserName :: !(Maybe Text)
-  , _lmdMarker   :: !(Maybe Text)
-  , _lmdMaxItems :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListMFADevices =
+  ListMFADevices'
+    { _lmdUserName :: !(Maybe Text)
+    , _lmdMarker   :: !(Maybe Text)
+    , _lmdMaxItems :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListMFADevices' with the minimum fields required to make a request.
@@ -132,12 +134,14 @@ instance ToQuery ListMFADevices where
 --
 --
 -- /See:/ 'listMFADevicesResponse' smart constructor.
-data ListMFADevicesResponse = ListMFADevicesResponse'
-  { _lmdrsMarker         :: !(Maybe Text)
-  , _lmdrsIsTruncated    :: !(Maybe Bool)
-  , _lmdrsResponseStatus :: !Int
-  , _lmdrsMFADevices     :: ![MFADevice]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListMFADevicesResponse =
+  ListMFADevicesResponse'
+    { _lmdrsMarker         :: !(Maybe Text)
+    , _lmdrsIsTruncated    :: !(Maybe Bool)
+    , _lmdrsResponseStatus :: !Int
+    , _lmdrsMFADevices     :: ![MFADevice]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListMFADevicesResponse' with the minimum fields required to make a request.

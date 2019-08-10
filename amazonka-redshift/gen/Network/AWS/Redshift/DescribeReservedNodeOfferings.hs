@@ -57,11 +57,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeReservedNodeOfferings' smart constructor.
-data DescribeReservedNodeOfferings = DescribeReservedNodeOfferings'
-  { _drnoReservedNodeOfferingId :: !(Maybe Text)
-  , _drnoMarker                 :: !(Maybe Text)
-  , _drnoMaxRecords             :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeReservedNodeOfferings =
+  DescribeReservedNodeOfferings'
+    { _drnoReservedNodeOfferingId :: !(Maybe Text)
+    , _drnoMarker                 :: !(Maybe Text)
+    , _drnoMaxRecords             :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeReservedNodeOfferings' with the minimum fields required to make a request.
@@ -144,11 +146,13 @@ instance ToQuery DescribeReservedNodeOfferings where
 --
 --
 -- /See:/ 'describeReservedNodeOfferingsResponse' smart constructor.
-data DescribeReservedNodeOfferingsResponse = DescribeReservedNodeOfferingsResponse'
-  { _drnorsReservedNodeOfferings :: !(Maybe [ReservedNodeOffering])
-  , _drnorsMarker                :: !(Maybe Text)
-  , _drnorsResponseStatus        :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeReservedNodeOfferingsResponse =
+  DescribeReservedNodeOfferingsResponse'
+    { _drnorsReservedNodeOfferings :: !(Maybe [ReservedNodeOffering])
+    , _drnorsMarker                :: !(Maybe Text)
+    , _drnorsResponseStatus        :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeReservedNodeOfferingsResponse' with the minimum fields required to make a request.

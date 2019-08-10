@@ -48,11 +48,13 @@ import Network.AWS.StorageGateway.Types
 import Network.AWS.StorageGateway.Types.Product
 
 -- | /See:/ 'updateGatewayInformation' smart constructor.
-data UpdateGatewayInformation = UpdateGatewayInformation'
-  { _ugiGatewayName     :: !(Maybe Text)
-  , _ugiGatewayTimezone :: !(Maybe Text)
-  , _ugiGatewayARN      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateGatewayInformation =
+  UpdateGatewayInformation'
+    { _ugiGatewayName     :: !(Maybe Text)
+    , _ugiGatewayTimezone :: !(Maybe Text)
+    , _ugiGatewayARN      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateGatewayInformation' with the minimum fields required to make a request.
@@ -131,11 +133,13 @@ instance ToQuery UpdateGatewayInformation where
 --
 --
 -- /See:/ 'updateGatewayInformationResponse' smart constructor.
-data UpdateGatewayInformationResponse = UpdateGatewayInformationResponse'
-  { _ugirsGatewayARN     :: !(Maybe Text)
-  , _ugirsGatewayName    :: !(Maybe Text)
-  , _ugirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateGatewayInformationResponse =
+  UpdateGatewayInformationResponse'
+    { _ugirsGatewayARN     :: !(Maybe Text)
+    , _ugirsGatewayName    :: !(Maybe Text)
+    , _ugirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateGatewayInformationResponse' with the minimum fields required to make a request.

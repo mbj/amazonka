@@ -51,9 +51,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'verifyTrust' smart constructor.
-newtype VerifyTrust = VerifyTrust'
-  { _vtTrustId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype VerifyTrust =
+  VerifyTrust'
+    { _vtTrustId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VerifyTrust' with the minimum fields required to make a request.
@@ -109,10 +111,12 @@ instance ToQuery VerifyTrust where
 --
 --
 -- /See:/ 'verifyTrustResponse' smart constructor.
-data VerifyTrustResponse = VerifyTrustResponse'
-  { _vtrsTrustId        :: !(Maybe Text)
-  , _vtrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VerifyTrustResponse =
+  VerifyTrustResponse'
+    { _vtrsTrustId        :: !(Maybe Text)
+    , _vtrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VerifyTrustResponse' with the minimum fields required to make a request.

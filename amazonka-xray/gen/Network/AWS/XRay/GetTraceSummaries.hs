@@ -65,13 +65,15 @@ import Network.AWS.XRay.Types
 import Network.AWS.XRay.Types.Product
 
 -- | /See:/ 'getTraceSummaries' smart constructor.
-data GetTraceSummaries = GetTraceSummaries'
-  { _gtsFilterExpression :: !(Maybe Text)
-  , _gtsNextToken        :: !(Maybe Text)
-  , _gtsSampling         :: !(Maybe Bool)
-  , _gtsStartTime        :: !POSIX
-  , _gtsEndTime          :: !POSIX
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetTraceSummaries =
+  GetTraceSummaries'
+    { _gtsFilterExpression :: !(Maybe Text)
+    , _gtsNextToken        :: !(Maybe Text)
+    , _gtsSampling         :: !(Maybe Bool)
+    , _gtsStartTime        :: !POSIX
+    , _gtsEndTime          :: !POSIX
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetTraceSummaries' with the minimum fields required to make a request.
@@ -165,13 +167,15 @@ instance ToQuery GetTraceSummaries where
         toQuery = const mempty
 
 -- | /See:/ 'getTraceSummariesResponse' smart constructor.
-data GetTraceSummariesResponse = GetTraceSummariesResponse'
-  { _gtsrsTracesProcessedCount :: !(Maybe Integer)
-  , _gtsrsNextToken            :: !(Maybe Text)
-  , _gtsrsApproximateTime      :: !(Maybe POSIX)
-  , _gtsrsTraceSummaries       :: !(Maybe [TraceSummary])
-  , _gtsrsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetTraceSummariesResponse =
+  GetTraceSummariesResponse'
+    { _gtsrsTracesProcessedCount :: !(Maybe Integer)
+    , _gtsrsNextToken            :: !(Maybe Text)
+    , _gtsrsApproximateTime      :: !(Maybe POSIX)
+    , _gtsrsTraceSummaries       :: !(Maybe [TraceSummary])
+    , _gtsrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetTraceSummariesResponse' with the minimum fields required to make a request.

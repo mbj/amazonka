@@ -52,11 +52,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'purchaseReservedElasticsearchInstanceOffering' smart constructor.
-data PurchaseReservedElasticsearchInstanceOffering = PurchaseReservedElasticsearchInstanceOffering'
-  { _preioInstanceCount                           :: !(Maybe Nat)
-  , _preioReservedElasticsearchInstanceOfferingId :: !Text
-  , _preioReservationName                         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PurchaseReservedElasticsearchInstanceOffering =
+  PurchaseReservedElasticsearchInstanceOffering'
+    { _preioInstanceCount                           :: !(Maybe Nat)
+    , _preioReservedElasticsearchInstanceOfferingId :: !Text
+    , _preioReservationName                         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PurchaseReservedElasticsearchInstanceOffering' with the minimum fields required to make a request.
@@ -152,11 +154,13 @@ instance ToQuery
 --
 --
 -- /See:/ 'purchaseReservedElasticsearchInstanceOfferingResponse' smart constructor.
-data PurchaseReservedElasticsearchInstanceOfferingResponse = PurchaseReservedElasticsearchInstanceOfferingResponse'
-  { _preiorsReservedElasticsearchInstanceId :: !(Maybe Text)
-  , _preiorsReservationName                 :: !(Maybe Text)
-  , _preiorsResponseStatus                  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PurchaseReservedElasticsearchInstanceOfferingResponse =
+  PurchaseReservedElasticsearchInstanceOfferingResponse'
+    { _preiorsReservedElasticsearchInstanceId :: !(Maybe Text)
+    , _preiorsReservationName                 :: !(Maybe Text)
+    , _preiorsResponseStatus                  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PurchaseReservedElasticsearchInstanceOfferingResponse' with the minimum fields required to make a request.

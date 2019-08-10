@@ -46,11 +46,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateVolume' smart constructor.
-data UpdateVolume = UpdateVolume'
-  { _uName       :: !(Maybe Text)
-  , _uMountPoint :: !(Maybe Text)
-  , _uVolumeId   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateVolume =
+  UpdateVolume'
+    { _uName       :: !(Maybe Text)
+    , _uMountPoint :: !(Maybe Text)
+    , _uVolumeId   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateVolume' with the minimum fields required to make a request.

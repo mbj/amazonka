@@ -62,18 +62,20 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeReservedDBInstances' smart constructor.
-data DescribeReservedDBInstances = DescribeReservedDBInstances'
-  { _drdiProductDescription            :: !(Maybe Text)
-  , _drdiFilters                       :: !(Maybe [Filter])
-  , _drdiReservedDBInstanceId          :: !(Maybe Text)
-  , _drdiDBInstanceClass               :: !(Maybe Text)
-  , _drdiMarker                        :: !(Maybe Text)
-  , _drdiMaxRecords                    :: !(Maybe Int)
-  , _drdiMultiAZ                       :: !(Maybe Bool)
-  , _drdiReservedDBInstancesOfferingId :: !(Maybe Text)
-  , _drdiOfferingType                  :: !(Maybe Text)
-  , _drdiDuration                      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeReservedDBInstances =
+  DescribeReservedDBInstances'
+    { _drdiProductDescription            :: !(Maybe Text)
+    , _drdiFilters                       :: !(Maybe [Filter])
+    , _drdiReservedDBInstanceId          :: !(Maybe Text)
+    , _drdiDBInstanceClass               :: !(Maybe Text)
+    , _drdiMarker                        :: !(Maybe Text)
+    , _drdiMaxRecords                    :: !(Maybe Int)
+    , _drdiMultiAZ                       :: !(Maybe Bool)
+    , _drdiReservedDBInstancesOfferingId :: !(Maybe Text)
+    , _drdiOfferingType                  :: !(Maybe Text)
+    , _drdiDuration                      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeReservedDBInstances' with the minimum fields required to make a request.
@@ -211,11 +213,13 @@ instance ToQuery DescribeReservedDBInstances where
 --
 --
 -- /See:/ 'describeReservedDBInstancesResponse' smart constructor.
-data DescribeReservedDBInstancesResponse = DescribeReservedDBInstancesResponse'
-  { _drdirsReservedDBInstances :: !(Maybe [ReservedDBInstance])
-  , _drdirsMarker              :: !(Maybe Text)
-  , _drdirsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeReservedDBInstancesResponse =
+  DescribeReservedDBInstancesResponse'
+    { _drdirsReservedDBInstances :: !(Maybe [ReservedDBInstance])
+    , _drdirsMarker              :: !(Maybe Text)
+    , _drdirsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeReservedDBInstancesResponse' with the minimum fields required to make a request.

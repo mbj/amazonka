@@ -86,10 +86,12 @@ instance ToQuery DescribeAccountAttributes where
                   "Version" =: ("2010-12-01" :: ByteString)])
 
 -- | /See:/ 'describeAccountAttributesResponse' smart constructor.
-data DescribeAccountAttributesResponse = DescribeAccountAttributesResponse'
-  { _daarsResourceQuotas :: !(Maybe ResourceQuotas)
-  , _daarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAccountAttributesResponse =
+  DescribeAccountAttributesResponse'
+    { _daarsResourceQuotas :: !(Maybe ResourceQuotas)
+    , _daarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAccountAttributesResponse' with the minimum fields required to make a request.

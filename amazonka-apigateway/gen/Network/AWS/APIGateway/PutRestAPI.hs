@@ -62,13 +62,15 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'putRestAPI' smart constructor.
-data PutRestAPI = PutRestAPI'
-  { _praMode           :: !(Maybe PutMode)
-  , _praFailOnWarnings :: !(Maybe Bool)
-  , _praParameters     :: !(Maybe (Map Text Text))
-  , _praRestAPIId      :: !Text
-  , _praBody           :: !ByteString
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data PutRestAPI =
+  PutRestAPI'
+    { _praMode           :: !(Maybe PutMode)
+    , _praFailOnWarnings :: !(Maybe Bool)
+    , _praParameters     :: !(Maybe (Map Text Text))
+    , _praRestAPIId      :: !Text
+    , _praBody           :: !ByteString
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutRestAPI' with the minimum fields required to make a request.

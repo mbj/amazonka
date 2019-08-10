@@ -42,11 +42,13 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'putBucketTagging' smart constructor.
-data PutBucketTagging = PutBucketTagging'
-  { _pbtContentMD5 :: !(Maybe Text)
-  , _pbtBucket     :: !BucketName
-  , _pbtTagging    :: !Tagging
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutBucketTagging =
+  PutBucketTagging'
+    { _pbtContentMD5 :: !(Maybe Text)
+    , _pbtBucket     :: !BucketName
+    , _pbtTagging    :: !Tagging
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutBucketTagging' with the minimum fields required to make a request.

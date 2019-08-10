@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getRegions' smart constructor.
-newtype GetRegions = GetRegions'
-  { _grIncludeAvailabilityZones :: Maybe Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetRegions =
+  GetRegions'
+    { _grIncludeAvailabilityZones :: Maybe Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetRegions' with the minimum fields required to make a request.
@@ -100,10 +102,12 @@ instance ToQuery GetRegions where
         toQuery = const mempty
 
 -- | /See:/ 'getRegionsResponse' smart constructor.
-data GetRegionsResponse = GetRegionsResponse'
-  { _grrsRegions        :: !(Maybe [RegionInfo])
-  , _grrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetRegionsResponse =
+  GetRegionsResponse'
+    { _grrsRegions        :: !(Maybe [RegionInfo])
+    , _grrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetRegionsResponse' with the minimum fields required to make a request.

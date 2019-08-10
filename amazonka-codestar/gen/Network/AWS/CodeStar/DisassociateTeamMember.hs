@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'disassociateTeamMember' smart constructor.
-data DisassociateTeamMember = DisassociateTeamMember'
-  { _dtmProjectId :: !Text
-  , _dtmUserARN   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DisassociateTeamMember =
+  DisassociateTeamMember'
+    { _dtmProjectId :: !Text
+    , _dtmUserARN   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisassociateTeamMember' with the minimum fields required to make a request.
@@ -112,9 +114,11 @@ instance ToQuery DisassociateTeamMember where
         toQuery = const mempty
 
 -- | /See:/ 'disassociateTeamMemberResponse' smart constructor.
-newtype DisassociateTeamMemberResponse = DisassociateTeamMemberResponse'
-  { _dtmrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DisassociateTeamMemberResponse =
+  DisassociateTeamMemberResponse'
+    { _dtmrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisassociateTeamMemberResponse' with the minimum fields required to make a request.

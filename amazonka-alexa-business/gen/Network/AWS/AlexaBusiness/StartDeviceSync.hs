@@ -46,11 +46,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'startDeviceSync' smart constructor.
-data StartDeviceSync = StartDeviceSync'
-  { _sdsDeviceARN :: !(Maybe Text)
-  , _sdsRoomARN   :: !(Maybe Text)
-  , _sdsFeatures  :: ![Feature]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartDeviceSync =
+  StartDeviceSync'
+    { _sdsDeviceARN :: !(Maybe Text)
+    , _sdsRoomARN   :: !(Maybe Text)
+    , _sdsFeatures  :: ![Feature]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartDeviceSync' with the minimum fields required to make a request.
@@ -117,9 +119,11 @@ instance ToQuery StartDeviceSync where
         toQuery = const mempty
 
 -- | /See:/ 'startDeviceSyncResponse' smart constructor.
-newtype StartDeviceSyncResponse = StartDeviceSyncResponse'
-  { _sdsrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StartDeviceSyncResponse =
+  StartDeviceSyncResponse'
+    { _sdsrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartDeviceSyncResponse' with the minimum fields required to make a request.

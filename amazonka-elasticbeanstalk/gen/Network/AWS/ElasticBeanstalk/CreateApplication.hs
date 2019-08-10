@@ -50,11 +50,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createApplication' smart constructor.
-data CreateApplication = CreateApplication'
-  { _caResourceLifecycleConfig :: !(Maybe ApplicationResourceLifecycleConfig)
-  , _caDescription             :: !(Maybe Text)
-  , _caApplicationName         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateApplication =
+  CreateApplication'
+    { _caResourceLifecycleConfig :: !(Maybe ApplicationResourceLifecycleConfig)
+    , _caDescription             :: !(Maybe Text)
+    , _caApplicationName         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateApplication' with the minimum fields required to make a request.

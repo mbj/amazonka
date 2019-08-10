@@ -43,10 +43,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteThreatIntelSet' smart constructor.
-data DeleteThreatIntelSet = DeleteThreatIntelSet'
-  { _dtisThreatIntelSetId :: !Text
-  , _dtisDetectorId       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteThreatIntelSet =
+  DeleteThreatIntelSet'
+    { _dtisThreatIntelSetId :: !Text
+    , _dtisDetectorId       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteThreatIntelSet' with the minimum fields required to make a request.
@@ -104,9 +106,11 @@ instance ToQuery DeleteThreatIntelSet where
         toQuery = const mempty
 
 -- | /See:/ 'deleteThreatIntelSetResponse' smart constructor.
-newtype DeleteThreatIntelSetResponse = DeleteThreatIntelSetResponse'
-  { _dtisrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteThreatIntelSetResponse =
+  DeleteThreatIntelSetResponse'
+    { _dtisrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteThreatIntelSetResponse' with the minimum fields required to make a request.

@@ -54,12 +54,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeEngineDefaultClusterParameters' smart constructor.
-data DescribeEngineDefaultClusterParameters = DescribeEngineDefaultClusterParameters'
-  { _dedcpFilters                :: !(Maybe [Filter])
-  , _dedcpMarker                 :: !(Maybe Text)
-  , _dedcpMaxRecords             :: !(Maybe Int)
-  , _dedcpDBParameterGroupFamily :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeEngineDefaultClusterParameters =
+  DescribeEngineDefaultClusterParameters'
+    { _dedcpFilters                :: !(Maybe [Filter])
+    , _dedcpMarker                 :: !(Maybe Text)
+    , _dedcpMaxRecords             :: !(Maybe Int)
+    , _dedcpDBParameterGroupFamily :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEngineDefaultClusterParameters' with the minimum fields required to make a request.
@@ -149,10 +151,12 @@ instance ToQuery
                  _dedcpDBParameterGroupFamily]
 
 -- | /See:/ 'describeEngineDefaultClusterParametersResponse' smart constructor.
-data DescribeEngineDefaultClusterParametersResponse = DescribeEngineDefaultClusterParametersResponse'
-  { _dedcprsEngineDefaults :: !(Maybe EngineDefaults)
-  , _dedcprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeEngineDefaultClusterParametersResponse =
+  DescribeEngineDefaultClusterParametersResponse'
+    { _dedcprsEngineDefaults :: !(Maybe EngineDefaults)
+    , _dedcprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEngineDefaultClusterParametersResponse' with the minimum fields required to make a request.

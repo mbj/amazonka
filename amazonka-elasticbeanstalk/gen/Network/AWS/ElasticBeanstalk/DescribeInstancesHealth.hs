@@ -54,12 +54,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeInstancesHealth' smart constructor.
-data DescribeInstancesHealth = DescribeInstancesHealth'
-  { _dihNextToken       :: !(Maybe Text)
-  , _dihEnvironmentName :: !(Maybe Text)
-  , _dihAttributeNames  :: !(Maybe [InstancesHealthAttribute])
-  , _dihEnvironmentId   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeInstancesHealth =
+  DescribeInstancesHealth'
+    { _dihNextToken       :: !(Maybe Text)
+    , _dihEnvironmentName :: !(Maybe Text)
+    , _dihAttributeNames  :: !(Maybe [InstancesHealthAttribute])
+    , _dihEnvironmentId   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeInstancesHealth' with the minimum fields required to make a request.
@@ -142,12 +144,14 @@ instance ToQuery DescribeInstancesHealth where
 --
 --
 -- /See:/ 'describeInstancesHealthResponse' smart constructor.
-data DescribeInstancesHealthResponse = DescribeInstancesHealthResponse'
-  { _dihrsInstanceHealthList :: !(Maybe [SingleInstanceHealth])
-  , _dihrsNextToken          :: !(Maybe Text)
-  , _dihrsRefreshedAt        :: !(Maybe ISO8601)
-  , _dihrsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeInstancesHealthResponse =
+  DescribeInstancesHealthResponse'
+    { _dihrsInstanceHealthList :: !(Maybe [SingleInstanceHealth])
+    , _dihrsNextToken          :: !(Maybe Text)
+    , _dihrsRefreshedAt        :: !(Maybe ISO8601)
+    , _dihrsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeInstancesHealthResponse' with the minimum fields required to make a request.

@@ -47,12 +47,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deletePartition' smart constructor.
-data DeletePartition = DeletePartition'
-  { _dpCatalogId       :: !(Maybe Text)
-  , _dpDatabaseName    :: !Text
-  , _dpTableName       :: !Text
-  , _dpPartitionValues :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeletePartition =
+  DeletePartition'
+    { _dpCatalogId       :: !(Maybe Text)
+    , _dpDatabaseName    :: !Text
+    , _dpTableName       :: !Text
+    , _dpPartitionValues :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeletePartition' with the minimum fields required to make a request.
@@ -132,9 +134,11 @@ instance ToQuery DeletePartition where
         toQuery = const mempty
 
 -- | /See:/ 'deletePartitionResponse' smart constructor.
-newtype DeletePartitionResponse = DeletePartitionResponse'
-  { _dprsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeletePartitionResponse =
+  DeletePartitionResponse'
+    { _dprsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeletePartitionResponse' with the minimum fields required to make a request.

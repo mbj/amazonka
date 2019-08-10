@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteNatGateway' smart constructor.
-newtype DeleteNatGateway = DeleteNatGateway'
-  { _dngNatGatewayId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteNatGateway =
+  DeleteNatGateway'
+    { _dngNatGatewayId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteNatGateway' with the minimum fields required to make a request.
@@ -101,10 +103,12 @@ instance ToQuery DeleteNatGateway where
 --
 --
 -- /See:/ 'deleteNatGatewayResponse' smart constructor.
-data DeleteNatGatewayResponse = DeleteNatGatewayResponse'
-  { _dngnrsNatGatewayId   :: !(Maybe Text)
-  , _dngnrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteNatGatewayResponse =
+  DeleteNatGatewayResponse'
+    { _dngnrsNatGatewayId   :: !(Maybe Text)
+    , _dngnrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteNatGatewayResponse' with the minimum fields required to make a request.

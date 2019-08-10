@@ -47,10 +47,12 @@ import Network.AWS.Response
 -- | DescribeEndpointsRequest
 --
 -- /See:/ 'describeEndpoints' smart constructor.
-data DescribeEndpoints = DescribeEndpoints'
-  { _deNextToken  :: !(Maybe Text)
-  , _deMaxResults :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeEndpoints =
+  DescribeEndpoints'
+    { _deNextToken  :: !(Maybe Text)
+    , _deMaxResults :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEndpoints' with the minimum fields required to make a request.
@@ -110,11 +112,13 @@ instance ToQuery DescribeEndpoints where
         toQuery = const mempty
 
 -- | /See:/ 'describeEndpointsResponse' smart constructor.
-data DescribeEndpointsResponse = DescribeEndpointsResponse'
-  { _dersNextToken      :: !(Maybe Text)
-  , _dersEndpoints      :: !(Maybe [Endpoint])
-  , _dersResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeEndpointsResponse =
+  DescribeEndpointsResponse'
+    { _dersNextToken      :: !(Maybe Text)
+    , _dersEndpoints      :: !(Maybe [Endpoint])
+    , _dersResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEndpointsResponse' with the minimum fields required to make a request.

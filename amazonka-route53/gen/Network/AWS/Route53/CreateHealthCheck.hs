@@ -69,10 +69,12 @@ import Network.AWS.Route53.Types.Product
 --
 --
 -- /See:/ 'createHealthCheck' smart constructor.
-data CreateHealthCheck = CreateHealthCheck'
-  { _chcCallerReference   :: !Text
-  , _chcHealthCheckConfig :: !HealthCheckConfig
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateHealthCheck =
+  CreateHealthCheck'
+    { _chcCallerReference   :: !Text
+    , _chcHealthCheckConfig :: !HealthCheckConfig
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateHealthCheck' with the minimum fields required to make a request.
@@ -140,11 +142,13 @@ instance ToXML CreateHealthCheck where
 --
 --
 -- /See:/ 'createHealthCheckResponse' smart constructor.
-data CreateHealthCheckResponse = CreateHealthCheckResponse'
-  { _chcrsResponseStatus :: !Int
-  , _chcrsHealthCheck    :: !HealthCheck
-  , _chcrsLocation       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateHealthCheckResponse =
+  CreateHealthCheckResponse'
+    { _chcrsResponseStatus :: !Int
+    , _chcrsHealthCheck    :: !HealthCheck
+    , _chcrsLocation       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateHealthCheckResponse' with the minimum fields required to make a request.

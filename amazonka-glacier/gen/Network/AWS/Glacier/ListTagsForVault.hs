@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listTagsForVault' smart constructor.
-data ListTagsForVault = ListTagsForVault'
-  { _ltfvAccountId :: !Text
-  , _ltfvVaultName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTagsForVault =
+  ListTagsForVault'
+    { _ltfvAccountId :: !Text
+    , _ltfvVaultName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTagsForVault' with the minimum fields required to make a request.
@@ -109,10 +111,12 @@ instance ToQuery ListTagsForVault where
 --
 --
 -- /See:/ 'listTagsForVaultResponse' smart constructor.
-data ListTagsForVaultResponse = ListTagsForVaultResponse'
-  { _ltfvrsTags           :: !(Maybe (Map Text Text))
-  , _ltfvrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTagsForVaultResponse =
+  ListTagsForVaultResponse'
+    { _ltfvrsTags           :: !(Maybe (Map Text Text))
+    , _ltfvrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTagsForVaultResponse' with the minimum fields required to make a request.

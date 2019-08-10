@@ -50,10 +50,12 @@ import Network.AWS.Response
 -- | Placeholder documentation for ListInputsRequest
 --
 -- /See:/ 'listInputs' smart constructor.
-data ListInputs = ListInputs'
-  { _liNextToken  :: !(Maybe Text)
-  , _liMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListInputs =
+  ListInputs'
+    { _liNextToken  :: !(Maybe Text)
+    , _liMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListInputs' with the minimum fields required to make a request.
@@ -116,11 +118,13 @@ instance ToQuery ListInputs where
 -- | Placeholder documentation for ListInputsResponse
 --
 -- /See:/ 'listInputsResponse' smart constructor.
-data ListInputsResponse = ListInputsResponse'
-  { _lirsInputs         :: !(Maybe [Input])
-  , _lirsNextToken      :: !(Maybe Text)
-  , _lirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListInputsResponse =
+  ListInputsResponse'
+    { _lirsInputs         :: !(Maybe [Input])
+    , _lirsNextToken      :: !(Maybe Text)
+    , _lirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListInputsResponse' with the minimum fields required to make a request.

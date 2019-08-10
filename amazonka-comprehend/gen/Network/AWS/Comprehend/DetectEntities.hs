@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'detectEntities' smart constructor.
-data DetectEntities = DetectEntities'
-  { _deText         :: !Text
-  , _deLanguageCode :: !LanguageCode
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DetectEntities =
+  DetectEntities'
+    { _deText         :: !Text
+    , _deLanguageCode :: !LanguageCode
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DetectEntities' with the minimum fields required to make a request.
@@ -112,10 +114,12 @@ instance ToQuery DetectEntities where
         toQuery = const mempty
 
 -- | /See:/ 'detectEntitiesResponse' smart constructor.
-data DetectEntitiesResponse = DetectEntitiesResponse'
-  { _dersEntities       :: !(Maybe [Entity])
-  , _dersResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DetectEntitiesResponse =
+  DetectEntitiesResponse'
+    { _dersEntities       :: !(Maybe [Entity])
+    , _dersResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DetectEntitiesResponse' with the minimum fields required to make a request.

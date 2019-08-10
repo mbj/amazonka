@@ -77,18 +77,20 @@ import Network.AWS.SWF.Types
 import Network.AWS.SWF.Types.Product
 
 -- | /See:/ 'registerWorkflowType' smart constructor.
-data RegisterWorkflowType = RegisterWorkflowType'
-  { _rwtDefaultLambdaRole                   :: !(Maybe Text)
-  , _rwtDefaultChildPolicy                  :: !(Maybe ChildPolicy)
-  , _rwtDefaultTaskList                     :: !(Maybe TaskList)
-  , _rwtDefaultTaskPriority                 :: !(Maybe Text)
-  , _rwtDefaultExecutionStartToCloseTimeout :: !(Maybe Text)
-  , _rwtDefaultTaskStartToCloseTimeout      :: !(Maybe Text)
-  , _rwtDescription                         :: !(Maybe Text)
-  , _rwtDomain                              :: !Text
-  , _rwtName                                :: !Text
-  , _rwtVersion                             :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RegisterWorkflowType =
+  RegisterWorkflowType'
+    { _rwtDefaultLambdaRole                   :: !(Maybe Text)
+    , _rwtDefaultChildPolicy                  :: !(Maybe ChildPolicy)
+    , _rwtDefaultTaskList                     :: !(Maybe TaskList)
+    , _rwtDefaultTaskPriority                 :: !(Maybe Text)
+    , _rwtDefaultExecutionStartToCloseTimeout :: !(Maybe Text)
+    , _rwtDefaultTaskStartToCloseTimeout      :: !(Maybe Text)
+    , _rwtDescription                         :: !(Maybe Text)
+    , _rwtDomain                              :: !Text
+    , _rwtName                                :: !Text
+    , _rwtVersion                             :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegisterWorkflowType' with the minimum fields required to make a request.

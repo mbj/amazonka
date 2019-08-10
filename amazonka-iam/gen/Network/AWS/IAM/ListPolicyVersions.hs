@@ -54,11 +54,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listPolicyVersions' smart constructor.
-data ListPolicyVersions = ListPolicyVersions'
-  { _lpvMarker    :: !(Maybe Text)
-  , _lpvMaxItems  :: !(Maybe Nat)
-  , _lpvPolicyARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListPolicyVersions =
+  ListPolicyVersions'
+    { _lpvMarker    :: !(Maybe Text)
+    , _lpvMaxItems  :: !(Maybe Nat)
+    , _lpvPolicyARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListPolicyVersions' with the minimum fields required to make a request.
@@ -134,12 +136,14 @@ instance ToQuery ListPolicyVersions where
 --
 --
 -- /See:/ 'listPolicyVersionsResponse' smart constructor.
-data ListPolicyVersionsResponse = ListPolicyVersionsResponse'
-  { _lpvrsVersions       :: !(Maybe [PolicyVersion])
-  , _lpvrsMarker         :: !(Maybe Text)
-  , _lpvrsIsTruncated    :: !(Maybe Bool)
-  , _lpvrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListPolicyVersionsResponse =
+  ListPolicyVersionsResponse'
+    { _lpvrsVersions       :: !(Maybe [PolicyVersion])
+    , _lpvrsMarker         :: !(Maybe Text)
+    , _lpvrsIsTruncated    :: !(Maybe Bool)
+    , _lpvrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListPolicyVersionsResponse' with the minimum fields required to make a request.

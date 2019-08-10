@@ -43,9 +43,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteBroker' smart constructor.
-newtype DeleteBroker = DeleteBroker'
-  { _dbBrokerId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteBroker =
+  DeleteBroker'
+    { _dbBrokerId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteBroker' with the minimum fields required to make a request.
@@ -91,10 +93,12 @@ instance ToQuery DeleteBroker where
         toQuery = const mempty
 
 -- | /See:/ 'deleteBrokerResponse' smart constructor.
-data DeleteBrokerResponse = DeleteBrokerResponse'
-  { _drsBrokerId       :: !(Maybe Text)
-  , _drsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteBrokerResponse =
+  DeleteBrokerResponse'
+    { _drsBrokerId       :: !(Maybe Text)
+    , _drsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteBrokerResponse' with the minimum fields required to make a request.

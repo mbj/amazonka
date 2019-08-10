@@ -73,19 +73,21 @@ import Network.AWS.StorageGateway.Types.Product
 --
 --
 -- /See:/ 'updateNFSFileShare' smart constructor.
-data UpdateNFSFileShare = UpdateNFSFileShare'
-  { _unfsfsKMSKey               :: !(Maybe Text)
-  , _unfsfsObjectACL            :: !(Maybe ObjectACL)
-  , _unfsfsKMSEncrypted         :: !(Maybe Bool)
-  , _unfsfsDefaultStorageClass  :: !(Maybe Text)
-  , _unfsfsSquash               :: !(Maybe Text)
-  , _unfsfsRequesterPays        :: !(Maybe Bool)
-  , _unfsfsNFSFileShareDefaults :: !(Maybe NFSFileShareDefaults)
-  , _unfsfsClientList           :: !(Maybe (List1 Text))
-  , _unfsfsGuessMIMETypeEnabled :: !(Maybe Bool)
-  , _unfsfsReadOnly             :: !(Maybe Bool)
-  , _unfsfsFileShareARN         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateNFSFileShare =
+  UpdateNFSFileShare'
+    { _unfsfsKMSKey               :: !(Maybe Text)
+    , _unfsfsObjectACL            :: !(Maybe ObjectACL)
+    , _unfsfsKMSEncrypted         :: !(Maybe Bool)
+    , _unfsfsDefaultStorageClass  :: !(Maybe Text)
+    , _unfsfsSquash               :: !(Maybe Text)
+    , _unfsfsRequesterPays        :: !(Maybe Bool)
+    , _unfsfsNFSFileShareDefaults :: !(Maybe NFSFileShareDefaults)
+    , _unfsfsClientList           :: !(Maybe (List1 Text))
+    , _unfsfsGuessMIMETypeEnabled :: !(Maybe Bool)
+    , _unfsfsReadOnly             :: !(Maybe Bool)
+    , _unfsfsFileShareARN         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateNFSFileShare' with the minimum fields required to make a request.
@@ -230,10 +232,12 @@ instance ToQuery UpdateNFSFileShare where
 --
 --
 -- /See:/ 'updateNFSFileShareResponse' smart constructor.
-data UpdateNFSFileShareResponse = UpdateNFSFileShareResponse'
-  { _unfsfsrsFileShareARN   :: !(Maybe Text)
-  , _unfsfsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateNFSFileShareResponse =
+  UpdateNFSFileShareResponse'
+    { _unfsfsrsFileShareARN   :: !(Maybe Text)
+    , _unfsfsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateNFSFileShareResponse' with the minimum fields required to make a request.

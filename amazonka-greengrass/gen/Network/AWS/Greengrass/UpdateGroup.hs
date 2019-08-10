@@ -43,10 +43,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateGroup' smart constructor.
-data UpdateGroup = UpdateGroup'
-  { _ugName    :: !(Maybe Text)
-  , _ugGroupId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateGroup =
+  UpdateGroup'
+    { _ugName    :: !(Maybe Text)
+    , _ugGroupId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateGroup' with the minimum fields required to make a request.
@@ -101,9 +103,11 @@ instance ToQuery UpdateGroup where
         toQuery = const mempty
 
 -- | /See:/ 'updateGroupResponse' smart constructor.
-newtype UpdateGroupResponse = UpdateGroupResponse'
-  { _ugrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateGroupResponse =
+  UpdateGroupResponse'
+    { _ugrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateGroupResponse' with the minimum fields required to make a request.

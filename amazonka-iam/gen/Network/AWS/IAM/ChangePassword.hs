@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'changePassword' smart constructor.
-data ChangePassword = ChangePassword'
-  { _cpOldPassword :: !(Sensitive Text)
-  , _cpNewPassword :: !(Sensitive Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data ChangePassword =
+  ChangePassword'
+    { _cpOldPassword :: !(Sensitive Text)
+    , _cpNewPassword :: !(Sensitive Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ChangePassword' with the minimum fields required to make a request.

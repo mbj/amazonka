@@ -64,10 +64,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createDHCPOptions' smart constructor.
-data CreateDHCPOptions = CreateDHCPOptions'
-  { _cdoDryRun             :: !(Maybe Bool)
-  , _cdoDHCPConfigurations :: ![NewDHCPConfiguration]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDHCPOptions =
+  CreateDHCPOptions'
+    { _cdoDryRun             :: !(Maybe Bool)
+    , _cdoDHCPConfigurations :: ![NewDHCPConfiguration]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDHCPOptions' with the minimum fields required to make a request.
@@ -124,10 +126,12 @@ instance ToQuery CreateDHCPOptions where
 --
 --
 -- /See:/ 'createDHCPOptionsResponse' smart constructor.
-data CreateDHCPOptionsResponse = CreateDHCPOptionsResponse'
-  { _cdorsDHCPOptions    :: !(Maybe DHCPOptions)
-  , _cdorsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDHCPOptionsResponse =
+  CreateDHCPOptionsResponse'
+    { _cdorsDHCPOptions    :: !(Maybe DHCPOptions)
+    , _cdorsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDHCPOptionsResponse' with the minimum fields required to make a request.

@@ -51,9 +51,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'cancelReservedInstancesListing' smart constructor.
-newtype CancelReservedInstancesListing = CancelReservedInstancesListing'
-  { _crilReservedInstancesListingId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CancelReservedInstancesListing =
+  CancelReservedInstancesListing'
+    { _crilReservedInstancesListingId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CancelReservedInstancesListing' with the minimum fields required to make a request.
@@ -112,10 +114,12 @@ instance ToQuery CancelReservedInstancesListing where
 --
 --
 -- /See:/ 'cancelReservedInstancesListingResponse' smart constructor.
-data CancelReservedInstancesListingResponse = CancelReservedInstancesListingResponse'
-  { _crilrsReservedInstancesListings :: !(Maybe [ReservedInstancesListing])
-  , _crilrsResponseStatus            :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CancelReservedInstancesListingResponse =
+  CancelReservedInstancesListingResponse'
+    { _crilrsReservedInstancesListings :: !(Maybe [ReservedInstancesListing])
+    , _crilrsResponseStatus            :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CancelReservedInstancesListingResponse' with the minimum fields required to make a request.

@@ -49,9 +49,11 @@ import Network.AWS.Route53Domains.Types.Product
 --
 --
 -- /See:/ 'retrieveDomainAuthCode' smart constructor.
-newtype RetrieveDomainAuthCode = RetrieveDomainAuthCode'
-  { _rdacDomainName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RetrieveDomainAuthCode =
+  RetrieveDomainAuthCode'
+    { _rdacDomainName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RetrieveDomainAuthCode' with the minimum fields required to make a request.
@@ -110,10 +112,12 @@ instance ToQuery RetrieveDomainAuthCode where
 --
 --
 -- /See:/ 'retrieveDomainAuthCodeResponse' smart constructor.
-data RetrieveDomainAuthCodeResponse = RetrieveDomainAuthCodeResponse'
-  { _rdacrsResponseStatus :: !Int
-  , _rdacrsAuthCode       :: !(Sensitive Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data RetrieveDomainAuthCodeResponse =
+  RetrieveDomainAuthCodeResponse'
+    { _rdacrsResponseStatus :: !Int
+    , _rdacrsAuthCode       :: !(Sensitive Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RetrieveDomainAuthCodeResponse' with the minimum fields required to make a request.

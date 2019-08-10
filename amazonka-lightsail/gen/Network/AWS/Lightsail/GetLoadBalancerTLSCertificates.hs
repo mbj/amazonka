@@ -49,9 +49,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getLoadBalancerTLSCertificates' smart constructor.
-newtype GetLoadBalancerTLSCertificates = GetLoadBalancerTLSCertificates'
-  { _glbtcLoadBalancerName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetLoadBalancerTLSCertificates =
+  GetLoadBalancerTLSCertificates'
+    { _glbtcLoadBalancerName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetLoadBalancerTLSCertificates' with the minimum fields required to make a request.
@@ -112,10 +114,12 @@ instance ToQuery GetLoadBalancerTLSCertificates where
         toQuery = const mempty
 
 -- | /See:/ 'getLoadBalancerTLSCertificatesResponse' smart constructor.
-data GetLoadBalancerTLSCertificatesResponse = GetLoadBalancerTLSCertificatesResponse'
-  { _glbtcrsTlsCertificates :: !(Maybe [LoadBalancerTLSCertificate])
-  , _glbtcrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetLoadBalancerTLSCertificatesResponse =
+  GetLoadBalancerTLSCertificatesResponse'
+    { _glbtcrsTlsCertificates :: !(Maybe [LoadBalancerTLSCertificate])
+    , _glbtcrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetLoadBalancerTLSCertificatesResponse' with the minimum fields required to make a request.

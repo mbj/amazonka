@@ -75,10 +75,12 @@ import Network.AWS.Route53.Types
 import Network.AWS.Route53.Types.Product
 
 -- | /See:/ 'createReusableDelegationSet' smart constructor.
-data CreateReusableDelegationSet = CreateReusableDelegationSet'
-  { _crdsHostedZoneId    :: !(Maybe ResourceId)
-  , _crdsCallerReference :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateReusableDelegationSet =
+  CreateReusableDelegationSet'
+    { _crdsHostedZoneId    :: !(Maybe ResourceId)
+    , _crdsCallerReference :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateReusableDelegationSet' with the minimum fields required to make a request.
@@ -140,11 +142,13 @@ instance ToXML CreateReusableDelegationSet where
                "CallerReference" @= _crdsCallerReference]
 
 -- | /See:/ 'createReusableDelegationSetResponse' smart constructor.
-data CreateReusableDelegationSetResponse = CreateReusableDelegationSetResponse'
-  { _crdsrsResponseStatus :: !Int
-  , _crdsrsDelegationSet  :: !DelegationSet
-  , _crdsrsLocation       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateReusableDelegationSetResponse =
+  CreateReusableDelegationSetResponse'
+    { _crdsrsResponseStatus :: !Int
+    , _crdsrsDelegationSet  :: !DelegationSet
+    , _crdsrsLocation       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateReusableDelegationSetResponse' with the minimum fields required to make a request.

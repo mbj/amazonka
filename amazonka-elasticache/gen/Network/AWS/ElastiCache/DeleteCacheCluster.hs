@@ -54,10 +54,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteCacheCluster' smart constructor.
-data DeleteCacheCluster = DeleteCacheCluster'
-  { _dccFinalSnapshotIdentifier :: !(Maybe Text)
-  , _dccCacheClusterId          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteCacheCluster =
+  DeleteCacheCluster'
+    { _dccFinalSnapshotIdentifier :: !(Maybe Text)
+    , _dccCacheClusterId          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteCacheCluster' with the minimum fields required to make a request.
@@ -115,10 +117,12 @@ instance ToQuery DeleteCacheCluster where
                "CacheClusterId" =: _dccCacheClusterId]
 
 -- | /See:/ 'deleteCacheClusterResponse' smart constructor.
-data DeleteCacheClusterResponse = DeleteCacheClusterResponse'
-  { _dccrsCacheCluster   :: !(Maybe CacheCluster)
-  , _dccrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteCacheClusterResponse =
+  DeleteCacheClusterResponse'
+    { _dccrsCacheCluster   :: !(Maybe CacheCluster)
+    , _dccrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteCacheClusterResponse' with the minimum fields required to make a request.

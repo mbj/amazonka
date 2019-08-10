@@ -50,10 +50,12 @@ import Network.AWS.WAF.Types
 import Network.AWS.WAF.Types.Product
 
 -- | /See:/ 'listByteMatchSets' smart constructor.
-data ListByteMatchSets = ListByteMatchSets'
-  { _lbmsNextMarker :: !(Maybe Text)
-  , _lbmsLimit      :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListByteMatchSets =
+  ListByteMatchSets'
+    { _lbmsNextMarker :: !(Maybe Text)
+    , _lbmsLimit      :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListByteMatchSets' with the minimum fields required to make a request.
@@ -122,11 +124,13 @@ instance ToQuery ListByteMatchSets where
         toQuery = const mempty
 
 -- | /See:/ 'listByteMatchSetsResponse' smart constructor.
-data ListByteMatchSetsResponse = ListByteMatchSetsResponse'
-  { _lbmsrsByteMatchSets  :: !(Maybe [ByteMatchSetSummary])
-  , _lbmsrsNextMarker     :: !(Maybe Text)
-  , _lbmsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListByteMatchSetsResponse =
+  ListByteMatchSetsResponse'
+    { _lbmsrsByteMatchSets  :: !(Maybe [ByteMatchSetSummary])
+    , _lbmsrsNextMarker     :: !(Maybe Text)
+    , _lbmsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListByteMatchSetsResponse' with the minimum fields required to make a request.

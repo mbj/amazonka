@@ -26,11 +26,13 @@ import Network.AWS.WorkMail.Types.Sum
 --
 --
 -- /See:/ 'bookingOptions' smart constructor.
-data BookingOptions = BookingOptions'
-  { _boAutoDeclineConflictingRequests :: !(Maybe Bool)
-  , _boAutoDeclineRecurringRequests   :: !(Maybe Bool)
-  , _boAutoAcceptRequests             :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BookingOptions =
+  BookingOptions'
+    { _boAutoDeclineConflictingRequests :: !(Maybe Bool)
+    , _boAutoDeclineRecurringRequests   :: !(Maybe Bool)
+    , _boAutoAcceptRequests             :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BookingOptions' with the minimum fields required to make a request.
@@ -92,10 +94,12 @@ instance ToJSON BookingOptions where
 --
 --
 -- /See:/ 'delegate' smart constructor.
-data Delegate = Delegate'
-  { _dId   :: !Text
-  , _dType :: !MemberType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Delegate =
+  Delegate'
+    { _dId   :: !Text
+    , _dType :: !MemberType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Delegate' with the minimum fields required to make a request.
@@ -134,14 +138,16 @@ instance NFData Delegate where
 --
 --
 -- /See:/ 'group'' smart constructor.
-data Group = Group'
-  { _gEmail        :: !(Maybe Text)
-  , _gState        :: !(Maybe EntityState)
-  , _gDisabledDate :: !(Maybe POSIX)
-  , _gName         :: !(Maybe Text)
-  , _gId           :: !(Maybe Text)
-  , _gEnabledDate  :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Group =
+  Group'
+    { _gEmail        :: !(Maybe Text)
+    , _gState        :: !(Maybe EntityState)
+    , _gDisabledDate :: !(Maybe POSIX)
+    , _gName         :: !(Maybe Text)
+    , _gId           :: !(Maybe Text)
+    , _gEnabledDate  :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Group' with the minimum fields required to make a request.
@@ -216,14 +222,16 @@ instance NFData Group where
 --
 --
 -- /See:/ 'member' smart constructor.
-data Member = Member'
-  { _mState        :: !(Maybe EntityState)
-  , _mDisabledDate :: !(Maybe POSIX)
-  , _mName         :: !(Maybe Text)
-  , _mId           :: !(Maybe Text)
-  , _mType         :: !(Maybe MemberType)
-  , _mEnabledDate  :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Member =
+  Member'
+    { _mState        :: !(Maybe EntityState)
+    , _mDisabledDate :: !(Maybe POSIX)
+    , _mName         :: !(Maybe Text)
+    , _mId           :: !(Maybe Text)
+    , _mType         :: !(Maybe MemberType)
+    , _mEnabledDate  :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Member' with the minimum fields required to make a request.
@@ -298,12 +306,14 @@ instance NFData Member where
 --
 --
 -- /See:/ 'organizationSummary' smart constructor.
-data OrganizationSummary = OrganizationSummary'
-  { _osState          :: !(Maybe Text)
-  , _osAlias          :: !(Maybe Text)
-  , _osErrorMessage   :: !(Maybe Text)
-  , _osOrganizationId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data OrganizationSummary =
+  OrganizationSummary'
+    { _osState          :: !(Maybe Text)
+    , _osAlias          :: !(Maybe Text)
+    , _osErrorMessage   :: !(Maybe Text)
+    , _osOrganizationId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OrganizationSummary' with the minimum fields required to make a request.
@@ -362,11 +372,13 @@ instance NFData OrganizationSummary where
 --
 --
 -- /See:/ 'permission' smart constructor.
-data Permission = Permission'
-  { _pGranteeId        :: !Text
-  , _pGranteeType      :: !MemberType
-  , _pPermissionValues :: ![PermissionType]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Permission =
+  Permission'
+    { _pGranteeId        :: !Text
+    , _pGranteeType      :: !MemberType
+    , _pPermissionValues :: ![PermissionType]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Permission' with the minimum fields required to make a request.
@@ -419,15 +431,17 @@ instance NFData Permission where
 --
 --
 -- /See:/ 'resource' smart constructor.
-data Resource = Resource'
-  { _rEmail        :: !(Maybe Text)
-  , _rState        :: !(Maybe EntityState)
-  , _rDisabledDate :: !(Maybe POSIX)
-  , _rName         :: !(Maybe Text)
-  , _rId           :: !(Maybe Text)
-  , _rType         :: !(Maybe ResourceType)
-  , _rEnabledDate  :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Resource =
+  Resource'
+    { _rEmail        :: !(Maybe Text)
+    , _rState        :: !(Maybe EntityState)
+    , _rDisabledDate :: !(Maybe POSIX)
+    , _rName         :: !(Maybe Text)
+    , _rId           :: !(Maybe Text)
+    , _rType         :: !(Maybe ResourceType)
+    , _rEnabledDate  :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Resource' with the minimum fields required to make a request.
@@ -510,16 +524,18 @@ instance NFData Resource where
 --
 --
 -- /See:/ 'user' smart constructor.
-data User = User'
-  { _uEmail        :: !(Maybe Text)
-  , _uState        :: !(Maybe EntityState)
-  , _uDisabledDate :: !(Maybe POSIX)
-  , _uName         :: !(Maybe Text)
-  , _uId           :: !(Maybe Text)
-  , _uDisplayName  :: !(Maybe Text)
-  , _uUserRole     :: !(Maybe UserRole)
-  , _uEnabledDate  :: !(Maybe POSIX)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data User =
+  User'
+    { _uEmail        :: !(Maybe Text)
+    , _uState        :: !(Maybe EntityState)
+    , _uDisabledDate :: !(Maybe POSIX)
+    , _uName         :: !(Maybe Text)
+    , _uId           :: !(Maybe Text)
+    , _uDisplayName  :: !(Maybe Text)
+    , _uUserRole     :: !(Maybe UserRole)
+    , _uEnabledDate  :: !(Maybe POSIX)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'User' with the minimum fields required to make a request.

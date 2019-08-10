@@ -49,11 +49,13 @@ import Network.AWS.ServiceCatalog.Types
 import Network.AWS.ServiceCatalog.Types.Product
 
 -- | /See:/ 'updateConstraint' smart constructor.
-data UpdateConstraint = UpdateConstraint'
-  { _ucAcceptLanguage :: !(Maybe Text)
-  , _ucDescription    :: !(Maybe Text)
-  , _ucId             :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateConstraint =
+  UpdateConstraint'
+    { _ucAcceptLanguage :: !(Maybe Text)
+    , _ucDescription    :: !(Maybe Text)
+    , _ucId             :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateConstraint' with the minimum fields required to make a request.
@@ -125,12 +127,14 @@ instance ToQuery UpdateConstraint where
         toQuery = const mempty
 
 -- | /See:/ 'updateConstraintResponse' smart constructor.
-data UpdateConstraintResponse = UpdateConstraintResponse'
-  { _ucrsStatus               :: !(Maybe RequestStatus)
-  , _ucrsConstraintDetail     :: !(Maybe ConstraintDetail)
-  , _ucrsConstraintParameters :: !(Maybe Text)
-  , _ucrsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateConstraintResponse =
+  UpdateConstraintResponse'
+    { _ucrsStatus               :: !(Maybe RequestStatus)
+    , _ucrsConstraintDetail     :: !(Maybe ConstraintDetail)
+    , _ucrsConstraintParameters :: !(Maybe Text)
+    , _ucrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateConstraintResponse' with the minimum fields required to make a request.

@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getDataRetrievalPolicy' smart constructor.
-newtype GetDataRetrievalPolicy = GetDataRetrievalPolicy'
-  { _gdrpAccountId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetDataRetrievalPolicy =
+  GetDataRetrievalPolicy'
+    { _gdrpAccountId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDataRetrievalPolicy' with the minimum fields required to make a request.
@@ -101,10 +103,12 @@ instance ToQuery GetDataRetrievalPolicy where
 --
 --
 -- /See:/ 'getDataRetrievalPolicyResponse' smart constructor.
-data GetDataRetrievalPolicyResponse = GetDataRetrievalPolicyResponse'
-  { _gdrprsPolicy         :: !(Maybe DataRetrievalPolicy)
-  , _gdrprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDataRetrievalPolicyResponse =
+  GetDataRetrievalPolicyResponse'
+    { _gdrprsPolicy         :: !(Maybe DataRetrievalPolicy)
+    , _gdrprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDataRetrievalPolicyResponse' with the minimum fields required to make a request.

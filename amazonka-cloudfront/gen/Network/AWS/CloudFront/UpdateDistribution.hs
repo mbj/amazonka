@@ -78,11 +78,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateDistribution' smart constructor.
-data UpdateDistribution = UpdateDistribution'
-  { _udIfMatch            :: !(Maybe Text)
-  , _udDistributionConfig :: !DistributionConfig
-  , _udId                 :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateDistribution =
+  UpdateDistribution'
+    { _udIfMatch            :: !(Maybe Text)
+    , _udDistributionConfig :: !DistributionConfig
+    , _udId                 :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateDistribution' with the minimum fields required to make a request.
@@ -157,11 +159,13 @@ instance ToQuery UpdateDistribution where
 --
 --
 -- /See:/ 'updateDistributionResponse' smart constructor.
-data UpdateDistributionResponse = UpdateDistributionResponse'
-  { _udrsETag           :: !(Maybe Text)
-  , _udrsDistribution   :: !(Maybe Distribution)
-  , _udrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateDistributionResponse =
+  UpdateDistributionResponse'
+    { _udrsETag           :: !(Maybe Text)
+    , _udrsDistribution   :: !(Maybe Distribution)
+    , _udrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateDistributionResponse' with the minimum fields required to make a request.

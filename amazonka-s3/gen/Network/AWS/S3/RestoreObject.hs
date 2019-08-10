@@ -48,13 +48,15 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'restoreObject' smart constructor.
-data RestoreObject = RestoreObject'
-  { _roVersionId      :: !(Maybe ObjectVersionId)
-  , _roRequestPayer   :: !(Maybe RequestPayer)
-  , _roRestoreRequest :: !(Maybe RestoreRequest)
-  , _roBucket         :: !BucketName
-  , _roKey            :: !ObjectKey
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data RestoreObject =
+  RestoreObject'
+    { _roVersionId      :: !(Maybe ObjectVersionId)
+    , _roRequestPayer   :: !(Maybe RequestPayer)
+    , _roRestoreRequest :: !(Maybe RestoreRequest)
+    , _roBucket         :: !BucketName
+    , _roKey            :: !ObjectKey
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RestoreObject' with the minimum fields required to make a request.
@@ -139,11 +141,13 @@ instance ToQuery RestoreObject where
           = mconcat ["versionId" =: _roVersionId, "restore"]
 
 -- | /See:/ 'restoreObjectResponse' smart constructor.
-data RestoreObjectResponse = RestoreObjectResponse'
-  { _rorsRequestCharged    :: !(Maybe RequestCharged)
-  , _rorsRestoreOutputPath :: !(Maybe Text)
-  , _rorsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RestoreObjectResponse =
+  RestoreObjectResponse'
+    { _rorsRequestCharged    :: !(Maybe RequestCharged)
+    , _rorsRestoreOutputPath :: !(Maybe Text)
+    , _rorsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RestoreObjectResponse' with the minimum fields required to make a request.

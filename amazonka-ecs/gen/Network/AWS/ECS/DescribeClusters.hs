@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeClusters' smart constructor.
-data DescribeClusters = DescribeClusters'
-  { _dcInclude  :: !(Maybe [ClusterField])
-  , _dcClusters :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeClusters =
+  DescribeClusters'
+    { _dcInclude  :: !(Maybe [ClusterField])
+    , _dcClusters :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeClusters' with the minimum fields required to make a request.
@@ -113,11 +115,13 @@ instance ToQuery DescribeClusters where
         toQuery = const mempty
 
 -- | /See:/ 'describeClustersResponse' smart constructor.
-data DescribeClustersResponse = DescribeClustersResponse'
-  { _dcrsFailures       :: !(Maybe [Failure])
-  , _dcrsClusters       :: !(Maybe [Cluster])
-  , _dcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeClustersResponse =
+  DescribeClustersResponse'
+    { _dcrsFailures       :: !(Maybe [Failure])
+    , _dcrsClusters       :: !(Maybe [Cluster])
+    , _dcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeClustersResponse' with the minimum fields required to make a request.

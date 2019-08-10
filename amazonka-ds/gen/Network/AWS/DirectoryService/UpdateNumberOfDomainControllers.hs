@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateNumberOfDomainControllers' smart constructor.
-data UpdateNumberOfDomainControllers = UpdateNumberOfDomainControllers'
-  { _unodcDirectoryId   :: !Text
-  , _unodcDesiredNumber :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateNumberOfDomainControllers =
+  UpdateNumberOfDomainControllers'
+    { _unodcDirectoryId   :: !Text
+    , _unodcDesiredNumber :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateNumberOfDomainControllers' with the minimum fields required to make a request.
@@ -119,9 +121,11 @@ instance ToQuery UpdateNumberOfDomainControllers
         toQuery = const mempty
 
 -- | /See:/ 'updateNumberOfDomainControllersResponse' smart constructor.
-newtype UpdateNumberOfDomainControllersResponse = UpdateNumberOfDomainControllersResponse'
-  { _unodcrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateNumberOfDomainControllersResponse =
+  UpdateNumberOfDomainControllersResponse'
+    { _unodcrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateNumberOfDomainControllersResponse' with the minimum fields required to make a request.

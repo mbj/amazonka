@@ -54,10 +54,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'disableAvailabilityZonesForLoadBalancer' smart constructor.
-data DisableAvailabilityZonesForLoadBalancer = DisableAvailabilityZonesForLoadBalancer'
-  { _dazflbLoadBalancerName  :: !Text
-  , _dazflbAvailabilityZones :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DisableAvailabilityZonesForLoadBalancer =
+  DisableAvailabilityZonesForLoadBalancer'
+    { _dazflbLoadBalancerName  :: !Text
+    , _dazflbAvailabilityZones :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisableAvailabilityZonesForLoadBalancer' with the minimum fields required to make a request.
@@ -136,10 +138,12 @@ instance ToQuery
 --
 --
 -- /See:/ 'disableAvailabilityZonesForLoadBalancerResponse' smart constructor.
-data DisableAvailabilityZonesForLoadBalancerResponse = DisableAvailabilityZonesForLoadBalancerResponse'
-  { _dazflbrsAvailabilityZones :: !(Maybe [Text])
-  , _dazflbrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DisableAvailabilityZonesForLoadBalancerResponse =
+  DisableAvailabilityZonesForLoadBalancerResponse'
+    { _dazflbrsAvailabilityZones :: !(Maybe [Text])
+    , _dazflbrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisableAvailabilityZonesForLoadBalancerResponse' with the minimum fields required to make a request.

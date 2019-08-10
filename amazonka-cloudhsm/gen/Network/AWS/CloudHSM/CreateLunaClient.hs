@@ -54,10 +54,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createLunaClient' smart constructor.
-data CreateLunaClient = CreateLunaClient'
-  { _clcLabel       :: !(Maybe Text)
-  , _clcCertificate :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateLunaClient =
+  CreateLunaClient'
+    { _clcLabel       :: !(Maybe Text)
+    , _clcCertificate :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateLunaClient' with the minimum fields required to make a request.
@@ -123,10 +125,12 @@ instance ToQuery CreateLunaClient where
 --
 --
 -- /See:/ 'createLunaClientResponse' smart constructor.
-data CreateLunaClientResponse = CreateLunaClientResponse'
-  { _clcrsClientARN      :: !(Maybe Text)
-  , _clcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateLunaClientResponse =
+  CreateLunaClientResponse'
+    { _clcrsClientARN      :: !(Maybe Text)
+    , _clcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateLunaClientResponse' with the minimum fields required to make a request.

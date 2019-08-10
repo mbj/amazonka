@@ -52,9 +52,11 @@ import Network.AWS.StorageGateway.Types.Product
 --
 --
 -- /See:/ 'listLocalDisks' smart constructor.
-newtype ListLocalDisks = ListLocalDisks'
-  { _lldGatewayARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ListLocalDisks =
+  ListLocalDisks'
+    { _lldGatewayARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListLocalDisks' with the minimum fields required to make a request.
@@ -108,11 +110,13 @@ instance ToQuery ListLocalDisks where
         toQuery = const mempty
 
 -- | /See:/ 'listLocalDisksResponse' smart constructor.
-data ListLocalDisksResponse = ListLocalDisksResponse'
-  { _lldrsGatewayARN     :: !(Maybe Text)
-  , _lldrsDisks          :: !(Maybe [Disk])
-  , _lldrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListLocalDisksResponse =
+  ListLocalDisksResponse'
+    { _lldrsGatewayARN     :: !(Maybe Text)
+    , _lldrsDisks          :: !(Maybe [Disk])
+    , _lldrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListLocalDisksResponse' with the minimum fields required to make a request.

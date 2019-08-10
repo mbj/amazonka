@@ -43,9 +43,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'disassociateRoleFromGroup' smart constructor.
-newtype DisassociateRoleFromGroup = DisassociateRoleFromGroup'
-  { _drfgGroupId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DisassociateRoleFromGroup =
+  DisassociateRoleFromGroup'
+    { _drfgGroupId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisassociateRoleFromGroup' with the minimum fields required to make a request.
@@ -94,10 +96,12 @@ instance ToQuery DisassociateRoleFromGroup where
         toQuery = const mempty
 
 -- | /See:/ 'disassociateRoleFromGroupResponse' smart constructor.
-data DisassociateRoleFromGroupResponse = DisassociateRoleFromGroupResponse'
-  { _drfgrsDisassociatedAt :: !(Maybe Text)
-  , _drfgrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DisassociateRoleFromGroupResponse =
+  DisassociateRoleFromGroupResponse'
+    { _drfgrsDisassociatedAt :: !(Maybe Text)
+    , _drfgrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisassociateRoleFromGroupResponse' with the minimum fields required to make a request.

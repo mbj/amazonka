@@ -47,9 +47,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createPublicKey' smart constructor.
-newtype CreatePublicKey = CreatePublicKey'
-  { _cpkPublicKeyConfig :: PublicKeyConfig
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreatePublicKey =
+  CreatePublicKey'
+    { _cpkPublicKeyConfig :: PublicKeyConfig
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreatePublicKey' with the minimum fields required to make a request.
@@ -100,12 +102,14 @@ instance ToQuery CreatePublicKey where
         toQuery = const mempty
 
 -- | /See:/ 'createPublicKeyResponse' smart constructor.
-data CreatePublicKeyResponse = CreatePublicKeyResponse'
-  { _cpkrsETag           :: !(Maybe Text)
-  , _cpkrsLocation       :: !(Maybe Text)
-  , _cpkrsPublicKey      :: !(Maybe PublicKey)
-  , _cpkrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreatePublicKeyResponse =
+  CreatePublicKeyResponse'
+    { _cpkrsETag           :: !(Maybe Text)
+    , _cpkrsLocation       :: !(Maybe Text)
+    , _cpkrsPublicKey      :: !(Maybe PublicKey)
+    , _cpkrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreatePublicKeyResponse' with the minimum fields required to make a request.

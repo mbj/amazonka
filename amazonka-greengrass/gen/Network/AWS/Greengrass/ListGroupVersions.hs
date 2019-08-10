@@ -46,11 +46,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listGroupVersions' smart constructor.
-data ListGroupVersions = ListGroupVersions'
-  { _lgvNextToken  :: !(Maybe Text)
-  , _lgvMaxResults :: !(Maybe Text)
-  , _lgvGroupId    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListGroupVersions =
+  ListGroupVersions'
+    { _lgvNextToken  :: !(Maybe Text)
+    , _lgvMaxResults :: !(Maybe Text)
+    , _lgvGroupId    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListGroupVersions' with the minimum fields required to make a request.
@@ -116,11 +118,13 @@ instance ToQuery ListGroupVersions where
                "MaxResults" =: _lgvMaxResults]
 
 -- | /See:/ 'listGroupVersionsResponse' smart constructor.
-data ListGroupVersionsResponse = ListGroupVersionsResponse'
-  { _lgvrsVersions       :: !(Maybe [VersionInformation])
-  , _lgvrsNextToken      :: !(Maybe Text)
-  , _lgvrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListGroupVersionsResponse =
+  ListGroupVersionsResponse'
+    { _lgvrsVersions       :: !(Maybe [VersionInformation])
+    , _lgvrsNextToken      :: !(Maybe Text)
+    , _lgvrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListGroupVersionsResponse' with the minimum fields required to make a request.

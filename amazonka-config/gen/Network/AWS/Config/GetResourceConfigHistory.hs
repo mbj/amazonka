@@ -61,15 +61,17 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getResourceConfigHistory' smart constructor.
-data GetResourceConfigHistory = GetResourceConfigHistory'
-  { _grchChronologicalOrder :: !(Maybe ChronologicalOrder)
-  , _grchNextToken          :: !(Maybe Text)
-  , _grchLimit              :: !(Maybe Nat)
-  , _grchLaterTime          :: !(Maybe POSIX)
-  , _grchEarlierTime        :: !(Maybe POSIX)
-  , _grchResourceType       :: !ResourceType
-  , _grchResourceId         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetResourceConfigHistory =
+  GetResourceConfigHistory'
+    { _grchChronologicalOrder :: !(Maybe ChronologicalOrder)
+    , _grchNextToken          :: !(Maybe Text)
+    , _grchLimit              :: !(Maybe Nat)
+    , _grchLaterTime          :: !(Maybe POSIX)
+    , _grchEarlierTime        :: !(Maybe POSIX)
+    , _grchResourceType       :: !ResourceType
+    , _grchResourceId         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetResourceConfigHistory' with the minimum fields required to make a request.
@@ -190,11 +192,13 @@ instance ToQuery GetResourceConfigHistory where
 --
 --
 -- /See:/ 'getResourceConfigHistoryResponse' smart constructor.
-data GetResourceConfigHistoryResponse = GetResourceConfigHistoryResponse'
-  { _grchrsNextToken          :: !(Maybe Text)
-  , _grchrsConfigurationItems :: !(Maybe [ConfigurationItem])
-  , _grchrsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetResourceConfigHistoryResponse =
+  GetResourceConfigHistoryResponse'
+    { _grchrsNextToken          :: !(Maybe Text)
+    , _grchrsConfigurationItems :: !(Maybe [ConfigurationItem])
+    , _grchrsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetResourceConfigHistoryResponse' with the minimum fields required to make a request.

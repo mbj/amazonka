@@ -54,13 +54,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeVolumesModifications' smart constructor.
-data DescribeVolumesModifications = DescribeVolumesModifications'
-  { _dvmFilters    :: !(Maybe [Filter])
-  , _dvmVolumeIds  :: !(Maybe [Text])
-  , _dvmNextToken  :: !(Maybe Text)
-  , _dvmDryRun     :: !(Maybe Bool)
-  , _dvmMaxResults :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeVolumesModifications =
+  DescribeVolumesModifications'
+    { _dvmFilters    :: !(Maybe [Filter])
+    , _dvmVolumeIds  :: !(Maybe [Text])
+    , _dvmNextToken  :: !(Maybe Text)
+    , _dvmDryRun     :: !(Maybe Bool)
+    , _dvmMaxResults :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeVolumesModifications' with the minimum fields required to make a request.
@@ -144,11 +146,13 @@ instance ToQuery DescribeVolumesModifications where
                "MaxResults" =: _dvmMaxResults]
 
 -- | /See:/ 'describeVolumesModificationsResponse' smart constructor.
-data DescribeVolumesModificationsResponse = DescribeVolumesModificationsResponse'
-  { _dvmrsVolumesModifications :: !(Maybe [VolumeModification])
-  , _dvmrsNextToken            :: !(Maybe Text)
-  , _dvmrsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeVolumesModificationsResponse =
+  DescribeVolumesModificationsResponse'
+    { _dvmrsVolumesModifications :: !(Maybe [VolumeModification])
+    , _dvmrsNextToken            :: !(Maybe Text)
+    , _dvmrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeVolumesModificationsResponse' with the minimum fields required to make a request.

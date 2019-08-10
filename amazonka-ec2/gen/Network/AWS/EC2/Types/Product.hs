@@ -27,10 +27,12 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'accountAttribute' smart constructor.
-data AccountAttribute = AccountAttribute'
-  { _aaAttributeValues :: !(Maybe [AccountAttributeValue])
-  , _aaAttributeName   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AccountAttribute =
+  AccountAttribute'
+    { _aaAttributeValues :: !(Maybe [AccountAttributeValue])
+    , _aaAttributeName   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AccountAttribute' with the minimum fields required to make a request.
@@ -70,9 +72,11 @@ instance NFData AccountAttribute where
 --
 --
 -- /See:/ 'accountAttributeValue' smart constructor.
-newtype AccountAttributeValue = AccountAttributeValue'
-  { _aavAttributeValue :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AccountAttributeValue =
+  AccountAttributeValue'
+    { _aavAttributeValue :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AccountAttributeValue' with the minimum fields required to make a request.
@@ -102,12 +106,14 @@ instance NFData AccountAttributeValue where
 --
 --
 -- /See:/ 'activeInstance' smart constructor.
-data ActiveInstance = ActiveInstance'
-  { _aiInstanceId            :: !(Maybe Text)
-  , _aiInstanceHealth        :: !(Maybe InstanceHealthStatus)
-  , _aiInstanceType          :: !(Maybe Text)
-  , _aiSpotInstanceRequestId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ActiveInstance =
+  ActiveInstance'
+    { _aiInstanceId            :: !(Maybe Text)
+    , _aiInstanceHealth        :: !(Maybe InstanceHealthStatus)
+    , _aiInstanceType          :: !(Maybe Text)
+    , _aiSpotInstanceRequestId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ActiveInstance' with the minimum fields required to make a request.
@@ -164,17 +170,19 @@ instance NFData ActiveInstance where
 --
 --
 -- /See:/ 'address' smart constructor.
-data Address = Address'
-  { _aAssociationId           :: !(Maybe Text)
-  , _aInstanceId              :: !(Maybe Text)
-  , _aNetworkInterfaceOwnerId :: !(Maybe Text)
-  , _aAllocationId            :: !(Maybe Text)
-  , _aDomain                  :: !(Maybe DomainType)
-  , _aNetworkInterfaceId      :: !(Maybe Text)
-  , _aPrivateIPAddress        :: !(Maybe Text)
-  , _aPublicIP                :: !(Maybe Text)
-  , _aTags                    :: !(Maybe [Tag])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Address =
+  Address'
+    { _aAssociationId           :: !(Maybe Text)
+    , _aInstanceId              :: !(Maybe Text)
+    , _aNetworkInterfaceOwnerId :: !(Maybe Text)
+    , _aAllocationId            :: !(Maybe Text)
+    , _aDomain                  :: !(Maybe DomainType)
+    , _aNetworkInterfaceId      :: !(Maybe Text)
+    , _aPrivateIPAddress        :: !(Maybe Text)
+    , _aPublicIP                :: !(Maybe Text)
+    , _aTags                    :: !(Maybe [Tag])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Address' with the minimum fields required to make a request.
@@ -273,10 +281,12 @@ instance NFData Address where
 --
 --
 -- /See:/ 'allowedPrincipal' smart constructor.
-data AllowedPrincipal = AllowedPrincipal'
-  { _apPrincipalType :: !(Maybe PrincipalType)
-  , _apPrincipal     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AllowedPrincipal =
+  AllowedPrincipal'
+    { _apPrincipalType :: !(Maybe PrincipalType)
+    , _apPrincipal     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AllowedPrincipal' with the minimum fields required to make a request.
@@ -314,9 +324,11 @@ instance NFData AllowedPrincipal where
 --
 --
 -- /See:/ 'attributeBooleanValue' smart constructor.
-newtype AttributeBooleanValue = AttributeBooleanValue'
-  { _abvValue :: Maybe Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AttributeBooleanValue =
+  AttributeBooleanValue'
+    { _abvValue :: Maybe Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttributeBooleanValue' with the minimum fields required to make a request.
@@ -350,9 +362,11 @@ instance ToQuery AttributeBooleanValue where
 --
 --
 -- /See:/ 'attributeValue' smart constructor.
-newtype AttributeValue = AttributeValue'
-  { _avValue :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AttributeValue =
+  AttributeValue'
+    { _avValue :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AttributeValue' with the minimum fields required to make a request.
@@ -385,12 +399,14 @@ instance ToQuery AttributeValue where
 --
 --
 -- /See:/ 'availabilityZone' smart constructor.
-data AvailabilityZone = AvailabilityZone'
-  { _azState      :: !(Maybe AvailabilityZoneState)
-  , _azRegionName :: !(Maybe Text)
-  , _azZoneName   :: !(Maybe Text)
-  , _azMessages   :: !(Maybe [AvailabilityZoneMessage])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AvailabilityZone =
+  AvailabilityZone'
+    { _azState      :: !(Maybe AvailabilityZoneState)
+    , _azRegionName :: !(Maybe Text)
+    , _azZoneName   :: !(Maybe Text)
+    , _azMessages   :: !(Maybe [AvailabilityZoneMessage])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AvailabilityZone' with the minimum fields required to make a request.
@@ -449,9 +465,11 @@ instance NFData AvailabilityZone where
 --
 --
 -- /See:/ 'availabilityZoneMessage' smart constructor.
-newtype AvailabilityZoneMessage = AvailabilityZoneMessage'
-  { _azmMessage :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AvailabilityZoneMessage =
+  AvailabilityZoneMessage'
+    { _azmMessage :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AvailabilityZoneMessage' with the minimum fields required to make a request.
@@ -481,10 +499,12 @@ instance NFData AvailabilityZoneMessage where
 --
 --
 -- /See:/ 'availableCapacity' smart constructor.
-data AvailableCapacity = AvailableCapacity'
-  { _acAvailableInstanceCapacity :: !(Maybe [InstanceCapacity])
-  , _acAvailableVCPUs            :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AvailableCapacity =
+  AvailableCapacity'
+    { _acAvailableInstanceCapacity :: !(Maybe [InstanceCapacity])
+    , _acAvailableVCPUs            :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AvailableCapacity' with the minimum fields required to make a request.
@@ -521,9 +541,11 @@ instance Hashable AvailableCapacity where
 instance NFData AvailableCapacity where
 
 -- | /See:/ 'blobAttributeValue' smart constructor.
-newtype BlobAttributeValue = BlobAttributeValue'
-  { _bavValue :: Maybe Base64
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype BlobAttributeValue =
+  BlobAttributeValue'
+    { _bavValue :: Maybe Base64
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BlobAttributeValue' with the minimum fields required to make a request.
@@ -553,12 +575,14 @@ instance ToQuery BlobAttributeValue where
 --
 --
 -- /See:/ 'blockDeviceMapping' smart constructor.
-data BlockDeviceMapping = BlockDeviceMapping'
-  { _bdmVirtualName :: !(Maybe Text)
-  , _bdmNoDevice    :: !(Maybe Text)
-  , _bdmEBS         :: !(Maybe EBSBlockDevice)
-  , _bdmDeviceName  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BlockDeviceMapping =
+  BlockDeviceMapping'
+    { _bdmVirtualName :: !(Maybe Text)
+    , _bdmNoDevice    :: !(Maybe Text)
+    , _bdmEBS         :: !(Maybe EBSBlockDevice)
+    , _bdmDeviceName  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BlockDeviceMapping' with the minimum fields required to make a request.
@@ -623,16 +647,18 @@ instance ToQuery BlockDeviceMapping where
 --
 --
 -- /See:/ 'bundleTask' smart constructor.
-data BundleTask = BundleTask'
-  { _btBundleTaskError :: !(Maybe BundleTaskError)
-  , _btBundleId        :: !Text
-  , _btInstanceId      :: !Text
-  , _btProgress        :: !Text
-  , _btStartTime       :: !ISO8601
-  , _btState           :: !BundleTaskState
-  , _btStorage         :: !Storage
-  , _btUpdateTime      :: !ISO8601
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BundleTask =
+  BundleTask'
+    { _btBundleTaskError :: !(Maybe BundleTaskError)
+    , _btBundleId        :: !Text
+    , _btInstanceId      :: !Text
+    , _btProgress        :: !Text
+    , _btStartTime       :: !ISO8601
+    , _btState           :: !BundleTaskState
+    , _btStorage         :: !Storage
+    , _btUpdateTime      :: !ISO8601
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BundleTask' with the minimum fields required to make a request.
@@ -728,10 +754,12 @@ instance NFData BundleTask where
 --
 --
 -- /See:/ 'bundleTaskError' smart constructor.
-data BundleTaskError = BundleTaskError'
-  { _bteCode    :: !(Maybe Text)
-  , _bteMessage :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BundleTaskError =
+  BundleTaskError'
+    { _bteCode    :: !(Maybe Text)
+    , _bteMessage :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BundleTaskError' with the minimum fields required to make a request.
@@ -768,10 +796,12 @@ instance NFData BundleTaskError where
 --
 --
 -- /See:/ 'cpuOptions' smart constructor.
-data CPUOptions = CPUOptions'
-  { _coCoreCount      :: !(Maybe Int)
-  , _coThreadsPerCore :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CPUOptions =
+  CPUOptions'
+    { _coCoreCount      :: !(Maybe Int)
+    , _coThreadsPerCore :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CPUOptions' with the minimum fields required to make a request.
@@ -808,10 +838,12 @@ instance NFData CPUOptions where
 --
 --
 -- /See:/ 'cpuOptionsRequest' smart constructor.
-data CPUOptionsRequest = CPUOptionsRequest'
-  { _corCoreCount      :: !(Maybe Int)
-  , _corThreadsPerCore :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CPUOptionsRequest =
+  CPUOptionsRequest'
+    { _corCoreCount      :: !(Maybe Int)
+    , _corThreadsPerCore :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CPUOptionsRequest' with the minimum fields required to make a request.
@@ -850,10 +882,12 @@ instance ToQuery CPUOptionsRequest where
 --
 --
 -- /See:/ 'cancelSpotFleetRequestsError' smart constructor.
-data CancelSpotFleetRequestsError = CancelSpotFleetRequestsError'
-  { _csfreCode    :: !CancelBatchErrorCode
-  , _csfreMessage :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CancelSpotFleetRequestsError =
+  CancelSpotFleetRequestsError'
+    { _csfreCode    :: !CancelBatchErrorCode
+    , _csfreMessage :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CancelSpotFleetRequestsError' with the minimum fields required to make a request.
@@ -893,10 +927,12 @@ instance NFData CancelSpotFleetRequestsError where
 --
 --
 -- /See:/ 'cancelSpotFleetRequestsErrorItem' smart constructor.
-data CancelSpotFleetRequestsErrorItem = CancelSpotFleetRequestsErrorItem'
-  { _csfreiError              :: !CancelSpotFleetRequestsError
-  , _csfreiSpotFleetRequestId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CancelSpotFleetRequestsErrorItem =
+  CancelSpotFleetRequestsErrorItem'
+    { _csfreiError              :: !CancelSpotFleetRequestsError
+    , _csfreiSpotFleetRequestId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CancelSpotFleetRequestsErrorItem' with the minimum fields required to make a request.
@@ -940,11 +976,13 @@ instance NFData CancelSpotFleetRequestsErrorItem
 --
 --
 -- /See:/ 'cancelSpotFleetRequestsSuccessItem' smart constructor.
-data CancelSpotFleetRequestsSuccessItem = CancelSpotFleetRequestsSuccessItem'
-  { _csfrsiCurrentSpotFleetRequestState  :: !BatchState
-  , _csfrsiPreviousSpotFleetRequestState :: !BatchState
-  , _csfrsiSpotFleetRequestId            :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CancelSpotFleetRequestsSuccessItem =
+  CancelSpotFleetRequestsSuccessItem'
+    { _csfrsiCurrentSpotFleetRequestState  :: !BatchState
+    , _csfrsiPreviousSpotFleetRequestState :: !BatchState
+    , _csfrsiSpotFleetRequestId            :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CancelSpotFleetRequestsSuccessItem' with the minimum fields required to make a request.
@@ -1000,10 +1038,12 @@ instance NFData CancelSpotFleetRequestsSuccessItem
 --
 --
 -- /See:/ 'cancelledSpotInstanceRequest' smart constructor.
-data CancelledSpotInstanceRequest = CancelledSpotInstanceRequest'
-  { _csirState                 :: !(Maybe CancelSpotInstanceRequestState)
-  , _csirSpotInstanceRequestId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CancelledSpotInstanceRequest =
+  CancelledSpotInstanceRequest'
+    { _csirState                 :: !(Maybe CancelSpotInstanceRequestState)
+    , _csirSpotInstanceRequestId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CancelledSpotInstanceRequest' with the minimum fields required to make a request.
@@ -1042,9 +1082,11 @@ instance NFData CancelledSpotInstanceRequest where
 --
 --
 -- /See:/ 'cidrBlock' smart constructor.
-newtype CidrBlock = CidrBlock'
-  { _cbCidrBlock :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CidrBlock =
+  CidrBlock'
+    { _cbCidrBlock :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CidrBlock' with the minimum fields required to make a request.
@@ -1073,10 +1115,12 @@ instance NFData CidrBlock where
 --
 --
 -- /See:/ 'classicLinkDNSSupport' smart constructor.
-data ClassicLinkDNSSupport = ClassicLinkDNSSupport'
-  { _cldsVPCId                   :: !(Maybe Text)
-  , _cldsClassicLinkDNSSupported :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ClassicLinkDNSSupport =
+  ClassicLinkDNSSupport'
+    { _cldsVPCId                   :: !(Maybe Text)
+    , _cldsClassicLinkDNSSupported :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ClassicLinkDNSSupport' with the minimum fields required to make a request.
@@ -1115,12 +1159,14 @@ instance NFData ClassicLinkDNSSupport where
 --
 --
 -- /See:/ 'classicLinkInstance' smart constructor.
-data ClassicLinkInstance = ClassicLinkInstance'
-  { _cliInstanceId :: !(Maybe Text)
-  , _cliGroups     :: !(Maybe [GroupIdentifier])
-  , _cliVPCId      :: !(Maybe Text)
-  , _cliTags       :: !(Maybe [Tag])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ClassicLinkInstance =
+  ClassicLinkInstance'
+    { _cliInstanceId :: !(Maybe Text)
+    , _cliGroups     :: !(Maybe [GroupIdentifier])
+    , _cliVPCId      :: !(Maybe Text)
+    , _cliTags       :: !(Maybe [Tag])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ClassicLinkInstance' with the minimum fields required to make a request.
@@ -1181,9 +1227,11 @@ instance NFData ClassicLinkInstance where
 --
 --
 -- /See:/ 'classicLoadBalancer' smart constructor.
-newtype ClassicLoadBalancer = ClassicLoadBalancer'
-  { _clbName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ClassicLoadBalancer =
+  ClassicLoadBalancer'
+    { _clbName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ClassicLoadBalancer' with the minimum fields required to make a request.
@@ -1217,9 +1265,11 @@ instance ToQuery ClassicLoadBalancer where
 --
 --
 -- /See:/ 'classicLoadBalancersConfig' smart constructor.
-newtype ClassicLoadBalancersConfig = ClassicLoadBalancersConfig'
-  { _clbcClassicLoadBalancers :: List1 ClassicLoadBalancer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ClassicLoadBalancersConfig =
+  ClassicLoadBalancersConfig'
+    { _clbcClassicLoadBalancers :: List1 ClassicLoadBalancer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ClassicLoadBalancersConfig' with the minimum fields required to make a request.
@@ -1260,12 +1310,14 @@ instance ToQuery ClassicLoadBalancersConfig where
 --
 --
 -- /See:/ 'clientData' smart constructor.
-data ClientData = ClientData'
-  { _cdUploadStart :: !(Maybe ISO8601)
-  , _cdUploadSize  :: !(Maybe Double)
-  , _cdUploadEnd   :: !(Maybe ISO8601)
-  , _cdComment     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ClientData =
+  ClientData'
+    { _cdUploadStart :: !(Maybe ISO8601)
+    , _cdUploadSize  :: !(Maybe Double)
+    , _cdUploadEnd   :: !(Maybe ISO8601)
+    , _cdComment     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ClientData' with the minimum fields required to make a request.
@@ -1322,15 +1374,17 @@ instance ToQuery ClientData where
 --
 --
 -- /See:/ 'connectionNotification' smart constructor.
-data ConnectionNotification = ConnectionNotification'
-  { _cnConnectionNotificationState :: !(Maybe ConnectionNotificationState)
-  , _cnConnectionNotificationType  :: !(Maybe ConnectionNotificationType)
-  , _cnConnectionEvents            :: !(Maybe [Text])
-  , _cnServiceId                   :: !(Maybe Text)
-  , _cnVPCEndpointId               :: !(Maybe Text)
-  , _cnConnectionNotificationId    :: !(Maybe Text)
-  , _cnConnectionNotificationARN   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ConnectionNotification =
+  ConnectionNotification'
+    { _cnConnectionNotificationState :: !(Maybe ConnectionNotificationState)
+    , _cnConnectionNotificationType  :: !(Maybe ConnectionNotificationType)
+    , _cnConnectionEvents            :: !(Maybe [Text])
+    , _cnServiceId                   :: !(Maybe Text)
+    , _cnVPCEndpointId               :: !(Maybe Text)
+    , _cnConnectionNotificationId    :: !(Maybe Text)
+    , _cnConnectionNotificationARN   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ConnectionNotification' with the minimum fields required to make a request.
@@ -1414,15 +1468,17 @@ instance NFData ConnectionNotification where
 --
 --
 -- /See:/ 'conversionTask' smart constructor.
-data ConversionTask = ConversionTask'
-  { _ctImportInstance   :: !(Maybe ImportInstanceTaskDetails)
-  , _ctState            :: !(Maybe ConversionTaskState)
-  , _ctStatusMessage    :: !(Maybe Text)
-  , _ctImportVolume     :: !(Maybe ImportVolumeTaskDetails)
-  , _ctConversionTaskId :: !(Maybe Text)
-  , _ctExpirationTime   :: !(Maybe Text)
-  , _ctTags             :: !(Maybe [Tag])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ConversionTask =
+  ConversionTask'
+    { _ctImportInstance   :: !(Maybe ImportInstanceTaskDetails)
+    , _ctState            :: !(Maybe ConversionTaskState)
+    , _ctStatusMessage    :: !(Maybe Text)
+    , _ctImportVolume     :: !(Maybe ImportVolumeTaskDetails)
+    , _ctConversionTaskId :: !(Maybe Text)
+    , _ctExpirationTime   :: !(Maybe Text)
+    , _ctTags             :: !(Maybe [Tag])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ConversionTask' with the minimum fields required to make a request.
@@ -1505,10 +1561,12 @@ instance NFData ConversionTask where
 --
 --
 -- /See:/ 'createVolumePermission' smart constructor.
-data CreateVolumePermission = CreateVolumePermission'
-  { _cvpGroup  :: !(Maybe PermissionGroup)
-  , _cvpUserId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateVolumePermission =
+  CreateVolumePermission'
+    { _cvpGroup  :: !(Maybe PermissionGroup)
+    , _cvpUserId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateVolumePermission' with the minimum fields required to make a request.
@@ -1551,10 +1609,12 @@ instance ToQuery CreateVolumePermission where
 --
 --
 -- /See:/ 'createVolumePermissionModifications' smart constructor.
-data CreateVolumePermissionModifications = CreateVolumePermissionModifications'
-  { _cvpmRemove :: !(Maybe [CreateVolumePermission])
-  , _cvpmAdd    :: !(Maybe [CreateVolumePermission])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateVolumePermissionModifications =
+  CreateVolumePermissionModifications'
+    { _cvpmRemove :: !(Maybe [CreateVolumePermission])
+    , _cvpmAdd    :: !(Maybe [CreateVolumePermission])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateVolumePermissionModifications' with the minimum fields required to make a request.
@@ -1597,9 +1657,11 @@ instance ToQuery CreateVolumePermissionModifications
 --
 --
 -- /See:/ 'creditSpecification' smart constructor.
-newtype CreditSpecification = CreditSpecification'
-  { _csCPUCredits :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreditSpecification =
+  CreditSpecification'
+    { _csCPUCredits :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreditSpecification' with the minimum fields required to make a request.
@@ -1629,9 +1691,11 @@ instance NFData CreditSpecification where
 --
 --
 -- /See:/ 'creditSpecificationRequest' smart constructor.
-newtype CreditSpecificationRequest = CreditSpecificationRequest'
-  { _csrCPUCredits :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreditSpecificationRequest =
+  CreditSpecificationRequest'
+    { _csrCPUCredits :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreditSpecificationRequest' with the minimum fields required to make a request.
@@ -1663,14 +1727,16 @@ instance ToQuery CreditSpecificationRequest where
 --
 --
 -- /See:/ 'customerGateway' smart constructor.
-data CustomerGateway = CustomerGateway'
-  { _cgTags              :: !(Maybe [Tag])
-  , _cgBGPASN            :: !Text
-  , _cgCustomerGatewayId :: !Text
-  , _cgIPAddress         :: !Text
-  , _cgState             :: !Text
-  , _cgType              :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CustomerGateway =
+  CustomerGateway'
+    { _cgTags              :: !(Maybe [Tag])
+    , _cgBGPASN            :: !Text
+    , _cgCustomerGatewayId :: !Text
+    , _cgIPAddress         :: !Text
+    , _cgState             :: !Text
+    , _cgType              :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CustomerGateway' with the minimum fields required to make a request.
@@ -1750,10 +1816,12 @@ instance NFData CustomerGateway where
 --
 --
 -- /See:/ 'dhcpConfiguration' smart constructor.
-data DHCPConfiguration = DHCPConfiguration'
-  { _dcValues :: !(Maybe [AttributeValue])
-  , _dcKey    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DHCPConfiguration =
+  DHCPConfiguration'
+    { _dcValues :: !(Maybe [AttributeValue])
+    , _dcKey    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DHCPConfiguration' with the minimum fields required to make a request.
@@ -1792,11 +1860,13 @@ instance NFData DHCPConfiguration where
 --
 --
 -- /See:/ 'dhcpOptions' smart constructor.
-data DHCPOptions = DHCPOptions'
-  { _doDHCPConfigurations :: !(Maybe [DHCPConfiguration])
-  , _doDHCPOptionsId      :: !(Maybe Text)
-  , _doTags               :: !(Maybe [Tag])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DHCPOptions =
+  DHCPOptions'
+    { _doDHCPConfigurations :: !(Maybe [DHCPConfiguration])
+    , _doDHCPOptionsId      :: !(Maybe Text)
+    , _doTags               :: !(Maybe [Tag])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DHCPOptions' with the minimum fields required to make a request.
@@ -1849,10 +1919,12 @@ instance NFData DHCPOptions where
 --
 --
 -- /See:/ 'dnsEntry' smart constructor.
-data DNSEntry = DNSEntry'
-  { _deHostedZoneId :: !(Maybe Text)
-  , _deDNSName      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DNSEntry =
+  DNSEntry'
+    { _deHostedZoneId :: !(Maybe Text)
+    , _deDNSName      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DNSEntry' with the minimum fields required to make a request.
@@ -1889,10 +1961,12 @@ instance NFData DNSEntry where
 --
 --
 -- /See:/ 'deleteFleetError' smart constructor.
-data DeleteFleetError = DeleteFleetError'
-  { _dfeCode    :: !(Maybe DeleteFleetErrorCode)
-  , _dfeMessage :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteFleetError =
+  DeleteFleetError'
+    { _dfeCode    :: !(Maybe DeleteFleetErrorCode)
+    , _dfeMessage :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteFleetError' with the minimum fields required to make a request.
@@ -1929,10 +2003,12 @@ instance NFData DeleteFleetError where
 --
 --
 -- /See:/ 'deleteFleetErrorItem' smart constructor.
-data DeleteFleetErrorItem = DeleteFleetErrorItem'
-  { _dfeiError   :: !(Maybe DeleteFleetError)
-  , _dfeiFleetId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteFleetErrorItem =
+  DeleteFleetErrorItem'
+    { _dfeiError   :: !(Maybe DeleteFleetError)
+    , _dfeiFleetId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteFleetErrorItem' with the minimum fields required to make a request.
@@ -1970,11 +2046,13 @@ instance NFData DeleteFleetErrorItem where
 --
 --
 -- /See:/ 'deleteFleetSuccessItem' smart constructor.
-data DeleteFleetSuccessItem = DeleteFleetSuccessItem'
-  { _dfsiCurrentFleetState  :: !(Maybe FleetStateCode)
-  , _dfsiPreviousFleetState :: !(Maybe FleetStateCode)
-  , _dfsiFleetId            :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteFleetSuccessItem =
+  DeleteFleetSuccessItem'
+    { _dfsiCurrentFleetState  :: !(Maybe FleetStateCode)
+    , _dfsiPreviousFleetState :: !(Maybe FleetStateCode)
+    , _dfsiFleetId            :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteFleetSuccessItem' with the minimum fields required to make a request.
@@ -2024,12 +2102,14 @@ instance NFData DeleteFleetSuccessItem where
 --
 --
 -- /See:/ 'deleteLaunchTemplateVersionsResponseErrorItem' smart constructor.
-data DeleteLaunchTemplateVersionsResponseErrorItem = DeleteLaunchTemplateVersionsResponseErrorItem'
-  { _dltvreiLaunchTemplateName :: !(Maybe Text)
-  , _dltvreiLaunchTemplateId   :: !(Maybe Text)
-  , _dltvreiVersionNumber      :: !(Maybe Integer)
-  , _dltvreiResponseError      :: !(Maybe ResponseError)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteLaunchTemplateVersionsResponseErrorItem =
+  DeleteLaunchTemplateVersionsResponseErrorItem'
+    { _dltvreiLaunchTemplateName :: !(Maybe Text)
+    , _dltvreiLaunchTemplateId   :: !(Maybe Text)
+    , _dltvreiVersionNumber      :: !(Maybe Integer)
+    , _dltvreiResponseError      :: !(Maybe ResponseError)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteLaunchTemplateVersionsResponseErrorItem' with the minimum fields required to make a request.
@@ -2093,11 +2173,13 @@ instance NFData
 --
 --
 -- /See:/ 'deleteLaunchTemplateVersionsResponseSuccessItem' smart constructor.
-data DeleteLaunchTemplateVersionsResponseSuccessItem = DeleteLaunchTemplateVersionsResponseSuccessItem'
-  { _dltvrsiLaunchTemplateName :: !(Maybe Text)
-  , _dltvrsiLaunchTemplateId   :: !(Maybe Text)
-  , _dltvrsiVersionNumber      :: !(Maybe Integer)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteLaunchTemplateVersionsResponseSuccessItem =
+  DeleteLaunchTemplateVersionsResponseSuccessItem'
+    { _dltvrsiLaunchTemplateName :: !(Maybe Text)
+    , _dltvrsiLaunchTemplateId   :: !(Maybe Text)
+    , _dltvrsiVersionNumber      :: !(Maybe Integer)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteLaunchTemplateVersionsResponseSuccessItem' with the minimum fields required to make a request.
@@ -2154,11 +2236,13 @@ instance NFData
 --
 --
 -- /See:/ 'diskImage' smart constructor.
-data DiskImage = DiskImage'
-  { _diImage       :: !(Maybe DiskImageDetail)
-  , _diVolume      :: !(Maybe VolumeDetail)
-  , _diDescription :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DiskImage =
+  DiskImage'
+    { _diImage       :: !(Maybe DiskImageDetail)
+    , _diVolume      :: !(Maybe VolumeDetail)
+    , _diDescription :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DiskImage' with the minimum fields required to make a request.
@@ -2203,12 +2287,14 @@ instance ToQuery DiskImage where
 --
 --
 -- /See:/ 'diskImageDescription' smart constructor.
-data DiskImageDescription = DiskImageDescription'
-  { _dSize              :: !(Maybe Integer)
-  , _dChecksum          :: !(Maybe Text)
-  , _dFormat            :: !(Maybe DiskImageFormat)
-  , _dImportManifestURL :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DiskImageDescription =
+  DiskImageDescription'
+    { _dSize              :: !(Maybe Integer)
+    , _dChecksum          :: !(Maybe Text)
+    , _dFormat            :: !(Maybe DiskImageFormat)
+    , _dImportManifestURL :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DiskImageDescription' with the minimum fields required to make a request.
@@ -2265,11 +2351,13 @@ instance NFData DiskImageDescription where
 --
 --
 -- /See:/ 'diskImageDetail' smart constructor.
-data DiskImageDetail = DiskImageDetail'
-  { _didBytes             :: !Integer
-  , _didFormat            :: !DiskImageFormat
-  , _didImportManifestURL :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DiskImageDetail =
+  DiskImageDetail'
+    { _didBytes             :: !Integer
+    , _didFormat            :: !DiskImageFormat
+    , _didImportManifestURL :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DiskImageDetail' with the minimum fields required to make a request.
@@ -2321,10 +2409,12 @@ instance ToQuery DiskImageDetail where
 --
 --
 -- /See:/ 'diskImageVolumeDescription' smart constructor.
-data DiskImageVolumeDescription = DiskImageVolumeDescription'
-  { _divdSize :: !(Maybe Integer)
-  , _divdId   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DiskImageVolumeDescription =
+  DiskImageVolumeDescription'
+    { _divdSize :: !(Maybe Integer)
+    , _divdId   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DiskImageVolumeDescription' with the minimum fields required to make a request.
@@ -2362,15 +2452,17 @@ instance NFData DiskImageVolumeDescription where
 --
 --
 -- /See:/ 'ebsBlockDevice' smart constructor.
-data EBSBlockDevice = EBSBlockDevice'
-  { _ebdDeleteOnTermination :: !(Maybe Bool)
-  , _ebdVolumeSize          :: !(Maybe Int)
-  , _ebdIOPS                :: !(Maybe Int)
-  , _ebdEncrypted           :: !(Maybe Bool)
-  , _ebdKMSKeyId            :: !(Maybe Text)
-  , _ebdVolumeType          :: !(Maybe VolumeType)
-  , _ebdSnapshotId          :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EBSBlockDevice =
+  EBSBlockDevice'
+    { _ebdDeleteOnTermination :: !(Maybe Bool)
+    , _ebdVolumeSize          :: !(Maybe Int)
+    , _ebdIOPS                :: !(Maybe Int)
+    , _ebdEncrypted           :: !(Maybe Bool)
+    , _ebdKMSKeyId            :: !(Maybe Text)
+    , _ebdVolumeType          :: !(Maybe VolumeType)
+    , _ebdSnapshotId          :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EBSBlockDevice' with the minimum fields required to make a request.
@@ -2462,12 +2554,14 @@ instance ToQuery EBSBlockDevice where
 --
 --
 -- /See:/ 'ebsInstanceBlockDevice' smart constructor.
-data EBSInstanceBlockDevice = EBSInstanceBlockDevice'
-  { _eibdStatus              :: !(Maybe AttachmentStatus)
-  , _eibdDeleteOnTermination :: !(Maybe Bool)
-  , _eibdVolumeId            :: !(Maybe Text)
-  , _eibdAttachTime          :: !(Maybe ISO8601)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EBSInstanceBlockDevice =
+  EBSInstanceBlockDevice'
+    { _eibdStatus              :: !(Maybe AttachmentStatus)
+    , _eibdDeleteOnTermination :: !(Maybe Bool)
+    , _eibdVolumeId            :: !(Maybe Text)
+    , _eibdAttachTime          :: !(Maybe ISO8601)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EBSInstanceBlockDevice' with the minimum fields required to make a request.
@@ -2524,10 +2618,12 @@ instance NFData EBSInstanceBlockDevice where
 --
 --
 -- /See:/ 'ebsInstanceBlockDeviceSpecification' smart constructor.
-data EBSInstanceBlockDeviceSpecification = EBSInstanceBlockDeviceSpecification'
-  { _eibdsDeleteOnTermination :: !(Maybe Bool)
-  , _eibdsVolumeId            :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EBSInstanceBlockDeviceSpecification =
+  EBSInstanceBlockDeviceSpecification'
+    { _eibdsDeleteOnTermination :: !(Maybe Bool)
+    , _eibdsVolumeId            :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EBSInstanceBlockDeviceSpecification' with the minimum fields required to make a request.
@@ -2570,10 +2666,12 @@ instance ToQuery EBSInstanceBlockDeviceSpecification
 --
 --
 -- /See:/ 'egressOnlyInternetGateway' smart constructor.
-data EgressOnlyInternetGateway = EgressOnlyInternetGateway'
-  { _eoigEgressOnlyInternetGatewayId :: !(Maybe Text)
-  , _eoigAttachments                 :: !(Maybe [InternetGatewayAttachment])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EgressOnlyInternetGateway =
+  EgressOnlyInternetGateway'
+    { _eoigEgressOnlyInternetGatewayId :: !(Maybe Text)
+    , _eoigAttachments                 :: !(Maybe [InternetGatewayAttachment])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EgressOnlyInternetGateway' with the minimum fields required to make a request.
@@ -2614,12 +2712,14 @@ instance NFData EgressOnlyInternetGateway where
 --
 --
 -- /See:/ 'elasticGpuAssociation' smart constructor.
-data ElasticGpuAssociation = ElasticGpuAssociation'
-  { _egaElasticGpuId               :: !(Maybe Text)
-  , _egaElasticGpuAssociationId    :: !(Maybe Text)
-  , _egaElasticGpuAssociationTime  :: !(Maybe Text)
-  , _egaElasticGpuAssociationState :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ElasticGpuAssociation =
+  ElasticGpuAssociation'
+    { _egaElasticGpuId               :: !(Maybe Text)
+    , _egaElasticGpuAssociationId    :: !(Maybe Text)
+    , _egaElasticGpuAssociationTime  :: !(Maybe Text)
+    , _egaElasticGpuAssociationState :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ElasticGpuAssociation' with the minimum fields required to make a request.
@@ -2677,9 +2777,11 @@ instance NFData ElasticGpuAssociation where
 --
 --
 -- /See:/ 'elasticGpuHealth' smart constructor.
-newtype ElasticGpuHealth = ElasticGpuHealth'
-  { _eghStatus :: Maybe ElasticGpuStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ElasticGpuHealth =
+  ElasticGpuHealth'
+    { _eghStatus :: Maybe ElasticGpuStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ElasticGpuHealth' with the minimum fields required to make a request.
@@ -2708,9 +2810,11 @@ instance NFData ElasticGpuHealth where
 --
 --
 -- /See:/ 'elasticGpuSpecification' smart constructor.
-newtype ElasticGpuSpecification = ElasticGpuSpecification'
-  { _egsType :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ElasticGpuSpecification =
+  ElasticGpuSpecification'
+    { _egsType :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ElasticGpuSpecification' with the minimum fields required to make a request.
@@ -2741,9 +2845,11 @@ instance ToQuery ElasticGpuSpecification where
 --
 --
 -- /See:/ 'elasticGpuSpecificationResponse' smart constructor.
-newtype ElasticGpuSpecificationResponse = ElasticGpuSpecificationResponse'
-  { _eType :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ElasticGpuSpecificationResponse =
+  ElasticGpuSpecificationResponse'
+    { _eType :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ElasticGpuSpecificationResponse' with the minimum fields required to make a request.
@@ -2776,14 +2882,16 @@ instance NFData ElasticGpuSpecificationResponse where
 --
 --
 -- /See:/ 'elasticGpus' smart constructor.
-data ElasticGpus = ElasticGpus'
-  { _egInstanceId       :: !(Maybe Text)
-  , _egElasticGpuType   :: !(Maybe Text)
-  , _egElasticGpuId     :: !(Maybe Text)
-  , _egElasticGpuState  :: !(Maybe ElasticGpuState)
-  , _egElasticGpuHealth :: !(Maybe ElasticGpuHealth)
-  , _egAvailabilityZone :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ElasticGpus =
+  ElasticGpus'
+    { _egInstanceId       :: !(Maybe Text)
+    , _egElasticGpuType   :: !(Maybe Text)
+    , _egElasticGpuId     :: !(Maybe Text)
+    , _egElasticGpuState  :: !(Maybe ElasticGpuState)
+    , _egElasticGpuHealth :: !(Maybe ElasticGpuHealth)
+    , _egAvailabilityZone :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ElasticGpus' with the minimum fields required to make a request.
@@ -2856,11 +2964,13 @@ instance NFData ElasticGpus where
 --
 --
 -- /See:/ 'eventInformation' smart constructor.
-data EventInformation = EventInformation'
-  { _eiInstanceId       :: !(Maybe Text)
-  , _eiEventDescription :: !(Maybe Text)
-  , _eiEventSubType     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data EventInformation =
+  EventInformation'
+    { _eiInstanceId       :: !(Maybe Text)
+    , _eiEventDescription :: !(Maybe Text)
+    , _eiEventSubType     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'EventInformation' with the minimum fields required to make a request.
@@ -2909,14 +3019,16 @@ instance NFData EventInformation where
 --
 --
 -- /See:/ 'exportTask' smart constructor.
-data ExportTask = ExportTask'
-  { _etDescription           :: !Text
-  , _etExportTaskId          :: !Text
-  , _etExportToS3Task        :: !ExportToS3Task
-  , _etInstanceExportDetails :: !InstanceExportDetails
-  , _etState                 :: !ExportTaskState
-  , _etStatusMessage         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ExportTask =
+  ExportTask'
+    { _etDescription           :: !Text
+    , _etExportTaskId          :: !Text
+    , _etExportToS3Task        :: !ExportToS3Task
+    , _etInstanceExportDetails :: !InstanceExportDetails
+    , _etState                 :: !ExportTaskState
+    , _etStatusMessage         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ExportTask' with the minimum fields required to make a request.
@@ -2995,12 +3107,14 @@ instance NFData ExportTask where
 --
 --
 -- /See:/ 'exportToS3Task' smart constructor.
-data ExportToS3Task = ExportToS3Task'
-  { _etstS3Key           :: !(Maybe Text)
-  , _etstContainerFormat :: !(Maybe ContainerFormat)
-  , _etstS3Bucket        :: !(Maybe Text)
-  , _etstDiskImageFormat :: !(Maybe DiskImageFormat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ExportToS3Task =
+  ExportToS3Task'
+    { _etstS3Key           :: !(Maybe Text)
+    , _etstContainerFormat :: !(Maybe ContainerFormat)
+    , _etstS3Bucket        :: !(Maybe Text)
+    , _etstDiskImageFormat :: !(Maybe DiskImageFormat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ExportToS3Task' with the minimum fields required to make a request.
@@ -3057,12 +3171,14 @@ instance NFData ExportToS3Task where
 --
 --
 -- /See:/ 'exportToS3TaskSpecification' smart constructor.
-data ExportToS3TaskSpecification = ExportToS3TaskSpecification'
-  { _etstsContainerFormat :: !(Maybe ContainerFormat)
-  , _etstsS3Prefix        :: !(Maybe Text)
-  , _etstsS3Bucket        :: !(Maybe Text)
-  , _etstsDiskImageFormat :: !(Maybe DiskImageFormat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ExportToS3TaskSpecification =
+  ExportToS3TaskSpecification'
+    { _etstsContainerFormat :: !(Maybe ContainerFormat)
+    , _etstsS3Prefix        :: !(Maybe Text)
+    , _etstsS3Bucket        :: !(Maybe Text)
+    , _etstsDiskImageFormat :: !(Maybe DiskImageFormat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ExportToS3TaskSpecification' with the minimum fields required to make a request.
@@ -3142,10 +3258,12 @@ instance ToQuery ExportToS3TaskSpecification where
 --
 --
 -- /See:/ 'filter'' smart constructor.
-data Filter = Filter'
-  { _fValues :: !(Maybe [Text])
-  , _fName   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Filter =
+  Filter'
+    { _fValues :: !(Maybe [Text])
+    , _fName   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Filter' with the minimum fields required to make a request.
@@ -3184,25 +3302,27 @@ instance ToQuery Filter where
 --
 --
 -- /See:/ 'fleetData' smart constructor.
-data FleetData = FleetData'
-  { _fdClientToken :: !(Maybe Text)
-  , _fdTargetCapacitySpecification :: !(Maybe TargetCapacitySpecification)
-  , _fdSpotOptions :: !(Maybe SpotOptions)
-  , _fdExcessCapacityTerminationPolicy :: !(Maybe FleetExcessCapacityTerminationPolicy)
-  , _fdFleetState :: !(Maybe FleetStateCode)
-  , _fdLaunchTemplateConfigs :: !(Maybe [FleetLaunchTemplateConfig])
-  , _fdValidUntil :: !(Maybe ISO8601)
-  , _fdTerminateInstancesWithExpiration :: !(Maybe Bool)
-  , _fdFulfilledCapacity :: !(Maybe Double)
-  , _fdType :: !(Maybe FleetType)
-  , _fdValidFrom :: !(Maybe ISO8601)
-  , _fdReplaceUnhealthyInstances :: !(Maybe Bool)
-  , _fdFulfilledOnDemandCapacity :: !(Maybe Double)
-  , _fdFleetId :: !(Maybe Text)
-  , _fdCreateTime :: !(Maybe ISO8601)
-  , _fdTags :: !(Maybe [Tag])
-  , _fdActivityStatus :: !(Maybe FleetActivityStatus)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FleetData =
+  FleetData'
+    { _fdClientToken :: !(Maybe Text)
+    , _fdTargetCapacitySpecification :: !(Maybe TargetCapacitySpecification)
+    , _fdSpotOptions :: !(Maybe SpotOptions)
+    , _fdExcessCapacityTerminationPolicy :: !(Maybe FleetExcessCapacityTerminationPolicy)
+    , _fdFleetState :: !(Maybe FleetStateCode)
+    , _fdLaunchTemplateConfigs :: !(Maybe [FleetLaunchTemplateConfig])
+    , _fdValidUntil :: !(Maybe ISO8601)
+    , _fdTerminateInstancesWithExpiration :: !(Maybe Bool)
+    , _fdFulfilledCapacity :: !(Maybe Double)
+    , _fdType :: !(Maybe FleetType)
+    , _fdValidFrom :: !(Maybe ISO8601)
+    , _fdReplaceUnhealthyInstances :: !(Maybe Bool)
+    , _fdFulfilledOnDemandCapacity :: !(Maybe Double)
+    , _fdFleetId :: !(Maybe Text)
+    , _fdCreateTime :: !(Maybe ISO8601)
+    , _fdTags :: !(Maybe [Tag])
+    , _fdActivityStatus :: !(Maybe FleetActivityStatus)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FleetData' with the minimum fields required to make a request.
@@ -3368,10 +3488,12 @@ instance NFData FleetData where
 --
 --
 -- /See:/ 'fleetLaunchTemplateConfig' smart constructor.
-data FleetLaunchTemplateConfig = FleetLaunchTemplateConfig'
-  { _fltcOverrides :: !(Maybe [FleetLaunchTemplateOverrides])
-  , _fltcLaunchTemplateSpecification :: !(Maybe FleetLaunchTemplateSpecification)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FleetLaunchTemplateConfig =
+  FleetLaunchTemplateConfig'
+    { _fltcOverrides :: !(Maybe [FleetLaunchTemplateOverrides])
+    , _fltcLaunchTemplateSpecification :: !(Maybe FleetLaunchTemplateSpecification)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FleetLaunchTemplateConfig' with the minimum fields required to make a request.
@@ -3412,10 +3534,12 @@ instance NFData FleetLaunchTemplateConfig where
 --
 --
 -- /See:/ 'fleetLaunchTemplateConfigRequest' smart constructor.
-data FleetLaunchTemplateConfigRequest = FleetLaunchTemplateConfigRequest'
-  { _fltcrOverrides :: !(Maybe [FleetLaunchTemplateOverridesRequest])
-  , _fltcrLaunchTemplateSpecification :: !(Maybe FleetLaunchTemplateSpecificationRequest)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FleetLaunchTemplateConfigRequest =
+  FleetLaunchTemplateConfigRequest'
+    { _fltcrOverrides :: !(Maybe [FleetLaunchTemplateOverridesRequest])
+    , _fltcrLaunchTemplateSpecification :: !(Maybe FleetLaunchTemplateSpecificationRequest)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FleetLaunchTemplateConfigRequest' with the minimum fields required to make a request.
@@ -3460,13 +3584,15 @@ instance ToQuery FleetLaunchTemplateConfigRequest
 --
 --
 -- /See:/ 'fleetLaunchTemplateOverrides' smart constructor.
-data FleetLaunchTemplateOverrides = FleetLaunchTemplateOverrides'
-  { _fltoWeightedCapacity :: !(Maybe Double)
-  , _fltoSubnetId         :: !(Maybe Text)
-  , _fltoInstanceType     :: !(Maybe InstanceType)
-  , _fltoAvailabilityZone :: !(Maybe Text)
-  , _fltoMaxPrice         :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FleetLaunchTemplateOverrides =
+  FleetLaunchTemplateOverrides'
+    { _fltoWeightedCapacity :: !(Maybe Double)
+    , _fltoSubnetId         :: !(Maybe Text)
+    , _fltoInstanceType     :: !(Maybe InstanceType)
+    , _fltoAvailabilityZone :: !(Maybe Text)
+    , _fltoMaxPrice         :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FleetLaunchTemplateOverrides' with the minimum fields required to make a request.
@@ -3531,13 +3657,15 @@ instance NFData FleetLaunchTemplateOverrides where
 --
 --
 -- /See:/ 'fleetLaunchTemplateOverridesRequest' smart constructor.
-data FleetLaunchTemplateOverridesRequest = FleetLaunchTemplateOverridesRequest'
-  { _fltorWeightedCapacity :: !(Maybe Double)
-  , _fltorSubnetId         :: !(Maybe Text)
-  , _fltorInstanceType     :: !(Maybe InstanceType)
-  , _fltorAvailabilityZone :: !(Maybe Text)
-  , _fltorMaxPrice         :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FleetLaunchTemplateOverridesRequest =
+  FleetLaunchTemplateOverridesRequest'
+    { _fltorWeightedCapacity :: !(Maybe Double)
+    , _fltorSubnetId         :: !(Maybe Text)
+    , _fltorInstanceType     :: !(Maybe InstanceType)
+    , _fltorAvailabilityZone :: !(Maybe Text)
+    , _fltorMaxPrice         :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FleetLaunchTemplateOverridesRequest' with the minimum fields required to make a request.
@@ -3606,11 +3734,13 @@ instance ToQuery FleetLaunchTemplateOverridesRequest
 --
 --
 -- /See:/ 'fleetLaunchTemplateSpecification' smart constructor.
-data FleetLaunchTemplateSpecification = FleetLaunchTemplateSpecification'
-  { _fltsLaunchTemplateName :: !(Maybe Text)
-  , _fltsLaunchTemplateId   :: !(Maybe Text)
-  , _fltsVersion            :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FleetLaunchTemplateSpecification =
+  FleetLaunchTemplateSpecification'
+    { _fltsLaunchTemplateName :: !(Maybe Text)
+    , _fltsLaunchTemplateId   :: !(Maybe Text)
+    , _fltsVersion            :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FleetLaunchTemplateSpecification' with the minimum fields required to make a request.
@@ -3671,11 +3801,13 @@ instance ToQuery FleetLaunchTemplateSpecification
 --
 --
 -- /See:/ 'fleetLaunchTemplateSpecificationRequest' smart constructor.
-data FleetLaunchTemplateSpecificationRequest = FleetLaunchTemplateSpecificationRequest'
-  { _fltsrLaunchTemplateName :: !(Maybe Text)
-  , _fltsrLaunchTemplateId   :: !(Maybe Text)
-  , _fltsrVersion            :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FleetLaunchTemplateSpecificationRequest =
+  FleetLaunchTemplateSpecificationRequest'
+    { _fltsrLaunchTemplateName :: !(Maybe Text)
+    , _fltsrLaunchTemplateId   :: !(Maybe Text)
+    , _fltsrVersion            :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FleetLaunchTemplateSpecificationRequest' with the minimum fields required to make a request.
@@ -3731,17 +3863,19 @@ instance ToQuery
 --
 --
 -- /See:/ 'flowLog' smart constructor.
-data FlowLog = FlowLog'
-  { _flCreationTime             :: !(Maybe ISO8601)
-  , _flResourceId               :: !(Maybe Text)
-  , _flFlowLogStatus            :: !(Maybe Text)
-  , _flTrafficType              :: !(Maybe TrafficType)
-  , _flDeliverLogsStatus        :: !(Maybe Text)
-  , _flDeliverLogsErrorMessage  :: !(Maybe Text)
-  , _flLogGroupName             :: !(Maybe Text)
-  , _flDeliverLogsPermissionARN :: !(Maybe Text)
-  , _flFlowLogId                :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FlowLog =
+  FlowLog'
+    { _flCreationTime             :: !(Maybe ISO8601)
+    , _flResourceId               :: !(Maybe Text)
+    , _flFlowLogStatus            :: !(Maybe Text)
+    , _flTrafficType              :: !(Maybe TrafficType)
+    , _flDeliverLogsStatus        :: !(Maybe Text)
+    , _flDeliverLogsErrorMessage  :: !(Maybe Text)
+    , _flLogGroupName             :: !(Maybe Text)
+    , _flDeliverLogsPermissionARN :: !(Maybe Text)
+    , _flFlowLogId                :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FlowLog' with the minimum fields required to make a request.
@@ -3838,22 +3972,24 @@ instance NFData FlowLog where
 --
 --
 -- /See:/ 'fpgaImage' smart constructor.
-data FpgaImage = FpgaImage'
-  { _fiShellVersion      :: !(Maybe Text)
-  , _fiPciId             :: !(Maybe PciId)
-  , _fiState             :: !(Maybe FpgaImageState)
-  , _fiOwnerAlias        :: !(Maybe Text)
-  , _fiFpgaImageId       :: !(Maybe Text)
-  , _fiOwnerId           :: !(Maybe Text)
-  , _fiUpdateTime        :: !(Maybe ISO8601)
-  , _fiName              :: !(Maybe Text)
-  , _fiProductCodes      :: !(Maybe [ProductCode])
-  , _fiDescription       :: !(Maybe Text)
-  , _fiCreateTime        :: !(Maybe ISO8601)
-  , _fiTags              :: !(Maybe [Tag])
-  , _fiPublic            :: !(Maybe Bool)
-  , _fiFpgaImageGlobalId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FpgaImage =
+  FpgaImage'
+    { _fiShellVersion      :: !(Maybe Text)
+    , _fiPciId             :: !(Maybe PciId)
+    , _fiState             :: !(Maybe FpgaImageState)
+    , _fiOwnerAlias        :: !(Maybe Text)
+    , _fiFpgaImageId       :: !(Maybe Text)
+    , _fiOwnerId           :: !(Maybe Text)
+    , _fiUpdateTime        :: !(Maybe ISO8601)
+    , _fiName              :: !(Maybe Text)
+    , _fiProductCodes      :: !(Maybe [ProductCode])
+    , _fiDescription       :: !(Maybe Text)
+    , _fiCreateTime        :: !(Maybe ISO8601)
+    , _fiTags              :: !(Maybe [Tag])
+    , _fiPublic            :: !(Maybe Bool)
+    , _fiFpgaImageGlobalId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FpgaImage' with the minimum fields required to make a request.
@@ -3994,13 +4130,15 @@ instance NFData FpgaImage where
 --
 --
 -- /See:/ 'fpgaImageAttribute' smart constructor.
-data FpgaImageAttribute = FpgaImageAttribute'
-  { _fiaFpgaImageId     :: !(Maybe Text)
-  , _fiaName            :: !(Maybe Text)
-  , _fiaProductCodes    :: !(Maybe [ProductCode])
-  , _fiaDescription     :: !(Maybe Text)
-  , _fiaLoadPermissions :: !(Maybe [LoadPermission])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FpgaImageAttribute =
+  FpgaImageAttribute'
+    { _fiaFpgaImageId     :: !(Maybe Text)
+    , _fiaName            :: !(Maybe Text)
+    , _fiaProductCodes    :: !(Maybe [ProductCode])
+    , _fiaDescription     :: !(Maybe Text)
+    , _fiaLoadPermissions :: !(Maybe [LoadPermission])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FpgaImageAttribute' with the minimum fields required to make a request.
@@ -4068,10 +4206,12 @@ instance NFData FpgaImageAttribute where
 --
 --
 -- /See:/ 'fpgaImageState' smart constructor.
-data FpgaImageState = FpgaImageState'
-  { _fisCode    :: !(Maybe FpgaImageStateCode)
-  , _fisMessage :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FpgaImageState =
+  FpgaImageState'
+    { _fisCode    :: !(Maybe FpgaImageStateCode)
+    , _fisMessage :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FpgaImageState' with the minimum fields required to make a request.
@@ -4108,10 +4248,12 @@ instance NFData FpgaImageState where
 --
 --
 -- /See:/ 'groupIdentifier' smart constructor.
-data GroupIdentifier = GroupIdentifier'
-  { _giGroupId   :: !(Maybe Text)
-  , _giGroupName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GroupIdentifier =
+  GroupIdentifier'
+    { _giGroupId   :: !(Maybe Text)
+    , _giGroupName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GroupIdentifier' with the minimum fields required to make a request.
@@ -4155,11 +4297,13 @@ instance ToQuery GroupIdentifier where
 --
 --
 -- /See:/ 'historyRecord' smart constructor.
-data HistoryRecord = HistoryRecord'
-  { _hrEventInformation :: !EventInformation
-  , _hrEventType        :: !EventType
-  , _hrTimestamp        :: !ISO8601
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data HistoryRecord =
+  HistoryRecord'
+    { _hrEventInformation :: !EventInformation
+    , _hrEventType        :: !EventType
+    , _hrTimestamp        :: !ISO8601
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'HistoryRecord' with the minimum fields required to make a request.
@@ -4211,11 +4355,13 @@ instance NFData HistoryRecord where
 --
 --
 -- /See:/ 'historyRecordEntry' smart constructor.
-data HistoryRecordEntry = HistoryRecordEntry'
-  { _hreEventType        :: !(Maybe FleetEventType)
-  , _hreEventInformation :: !(Maybe EventInformation)
-  , _hreTimestamp        :: !(Maybe ISO8601)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data HistoryRecordEntry =
+  HistoryRecordEntry'
+    { _hreEventType        :: !(Maybe FleetEventType)
+    , _hreEventInformation :: !(Maybe EventInformation)
+    , _hreTimestamp        :: !(Maybe ISO8601)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'HistoryRecordEntry' with the minimum fields required to make a request.
@@ -4264,19 +4410,21 @@ instance NFData HistoryRecordEntry where
 --
 --
 -- /See:/ 'host' smart constructor.
-data Host = Host'
-  { _hReleaseTime       :: !(Maybe ISO8601)
-  , _hState             :: !(Maybe AllocationState)
-  , _hClientToken       :: !(Maybe Text)
-  , _hHostId            :: !(Maybe Text)
-  , _hAvailableCapacity :: !(Maybe AvailableCapacity)
-  , _hHostReservationId :: !(Maybe Text)
-  , _hHostProperties    :: !(Maybe HostProperties)
-  , _hAvailabilityZone  :: !(Maybe Text)
-  , _hInstances         :: !(Maybe [HostInstance])
-  , _hAllocationTime    :: !(Maybe ISO8601)
-  , _hAutoPlacement     :: !(Maybe AutoPlacement)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Host =
+  Host'
+    { _hReleaseTime       :: !(Maybe ISO8601)
+    , _hState             :: !(Maybe AllocationState)
+    , _hClientToken       :: !(Maybe Text)
+    , _hHostId            :: !(Maybe Text)
+    , _hAvailableCapacity :: !(Maybe AvailableCapacity)
+    , _hHostReservationId :: !(Maybe Text)
+    , _hHostProperties    :: !(Maybe HostProperties)
+    , _hAvailabilityZone  :: !(Maybe Text)
+    , _hInstances         :: !(Maybe [HostInstance])
+    , _hAllocationTime    :: !(Maybe ISO8601)
+    , _hAutoPlacement     :: !(Maybe AutoPlacement)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Host' with the minimum fields required to make a request.
@@ -4391,10 +4539,12 @@ instance NFData Host where
 --
 --
 -- /See:/ 'hostInstance' smart constructor.
-data HostInstance = HostInstance'
-  { _hiInstanceId   :: !(Maybe Text)
-  , _hiInstanceType :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data HostInstance =
+  HostInstance'
+    { _hiInstanceId   :: !(Maybe Text)
+    , _hiInstanceType :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'HostInstance' with the minimum fields required to make a request.
@@ -4432,15 +4582,17 @@ instance NFData HostInstance where
 --
 --
 -- /See:/ 'hostOffering' smart constructor.
-data HostOffering = HostOffering'
-  { _hoInstanceFamily :: !(Maybe Text)
-  , _hoCurrencyCode   :: !(Maybe CurrencyCodeValues)
-  , _hoHourlyPrice    :: !(Maybe Text)
-  , _hoUpfrontPrice   :: !(Maybe Text)
-  , _hoOfferingId     :: !(Maybe Text)
-  , _hoDuration       :: !(Maybe Int)
-  , _hoPaymentOption  :: !(Maybe PaymentOption)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data HostOffering =
+  HostOffering'
+    { _hoInstanceFamily :: !(Maybe Text)
+    , _hoCurrencyCode   :: !(Maybe CurrencyCodeValues)
+    , _hoHourlyPrice    :: !(Maybe Text)
+    , _hoUpfrontPrice   :: !(Maybe Text)
+    , _hoOfferingId     :: !(Maybe Text)
+    , _hoDuration       :: !(Maybe Int)
+    , _hoPaymentOption  :: !(Maybe PaymentOption)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'HostOffering' with the minimum fields required to make a request.
@@ -4521,12 +4673,14 @@ instance NFData HostOffering where
 --
 --
 -- /See:/ 'hostProperties' smart constructor.
-data HostProperties = HostProperties'
-  { _hpInstanceType :: !(Maybe Text)
-  , _hpTotalVCPUs   :: !(Maybe Int)
-  , _hpCores        :: !(Maybe Int)
-  , _hpSockets      :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data HostProperties =
+  HostProperties'
+    { _hpInstanceType :: !(Maybe Text)
+    , _hpTotalVCPUs   :: !(Maybe Int)
+    , _hpCores        :: !(Maybe Int)
+    , _hpSockets      :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'HostProperties' with the minimum fields required to make a request.
@@ -4583,21 +4737,23 @@ instance NFData HostProperties where
 --
 --
 -- /See:/ 'hostReservation' smart constructor.
-data HostReservation = HostReservation'
-  { _hrState             :: !(Maybe ReservationState)
-  , _hrInstanceFamily    :: !(Maybe Text)
-  , _hrCurrencyCode      :: !(Maybe CurrencyCodeValues)
-  , _hrHostReservationId :: !(Maybe Text)
-  , _hrStart             :: !(Maybe ISO8601)
-  , _hrHourlyPrice       :: !(Maybe Text)
-  , _hrCount             :: !(Maybe Int)
-  , _hrUpfrontPrice      :: !(Maybe Text)
-  , _hrEnd               :: !(Maybe ISO8601)
-  , _hrHostIdSet         :: !(Maybe [Text])
-  , _hrOfferingId        :: !(Maybe Text)
-  , _hrDuration          :: !(Maybe Int)
-  , _hrPaymentOption     :: !(Maybe PaymentOption)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data HostReservation =
+  HostReservation'
+    { _hrState             :: !(Maybe ReservationState)
+    , _hrInstanceFamily    :: !(Maybe Text)
+    , _hrCurrencyCode      :: !(Maybe CurrencyCodeValues)
+    , _hrHostReservationId :: !(Maybe Text)
+    , _hrStart             :: !(Maybe ISO8601)
+    , _hrHourlyPrice       :: !(Maybe Text)
+    , _hrCount             :: !(Maybe Int)
+    , _hrUpfrontPrice      :: !(Maybe Text)
+    , _hrEnd               :: !(Maybe ISO8601)
+    , _hrHostIdSet         :: !(Maybe [Text])
+    , _hrOfferingId        :: !(Maybe Text)
+    , _hrDuration          :: !(Maybe Int)
+    , _hrPaymentOption     :: !(Maybe PaymentOption)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'HostReservation' with the minimum fields required to make a request.
@@ -4728,10 +4884,12 @@ instance NFData HostReservation where
 --
 --
 -- /See:/ 'iamInstanceProfile' smart constructor.
-data IAMInstanceProfile = IAMInstanceProfile'
-  { _iapARN :: !(Maybe Text)
-  , _iapId  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data IAMInstanceProfile =
+  IAMInstanceProfile'
+    { _iapARN :: !(Maybe Text)
+    , _iapId  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'IAMInstanceProfile' with the minimum fields required to make a request.
@@ -4768,13 +4926,15 @@ instance NFData IAMInstanceProfile where
 --
 --
 -- /See:/ 'iamInstanceProfileAssociation' smart constructor.
-data IAMInstanceProfileAssociation = IAMInstanceProfileAssociation'
-  { _iapaAssociationId      :: !(Maybe Text)
-  , _iapaInstanceId         :: !(Maybe Text)
-  , _iapaState              :: !(Maybe IAMInstanceProfileAssociationState)
-  , _iapaIAMInstanceProfile :: !(Maybe IAMInstanceProfile)
-  , _iapaTimestamp          :: !(Maybe ISO8601)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data IAMInstanceProfileAssociation =
+  IAMInstanceProfileAssociation'
+    { _iapaAssociationId      :: !(Maybe Text)
+    , _iapaInstanceId         :: !(Maybe Text)
+    , _iapaState              :: !(Maybe IAMInstanceProfileAssociationState)
+    , _iapaIAMInstanceProfile :: !(Maybe IAMInstanceProfile)
+    , _iapaTimestamp          :: !(Maybe ISO8601)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'IAMInstanceProfileAssociation' with the minimum fields required to make a request.
@@ -4839,10 +4999,12 @@ instance NFData IAMInstanceProfileAssociation where
 --
 --
 -- /See:/ 'iamInstanceProfileSpecification' smart constructor.
-data IAMInstanceProfileSpecification = IAMInstanceProfileSpecification'
-  { _iapsARN  :: !(Maybe Text)
-  , _iapsName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data IAMInstanceProfileSpecification =
+  IAMInstanceProfileSpecification'
+    { _iapsARN  :: !(Maybe Text)
+    , _iapsName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'IAMInstanceProfileSpecification' with the minimum fields required to make a request.
@@ -4887,10 +5049,12 @@ instance ToQuery IAMInstanceProfileSpecification
 --
 --
 -- /See:/ 'icmpTypeCode' smart constructor.
-data ICMPTypeCode = ICMPTypeCode'
-  { _itcCode :: !(Maybe Int)
-  , _itcType :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ICMPTypeCode =
+  ICMPTypeCode'
+    { _itcCode :: !(Maybe Int)
+    , _itcType :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ICMPTypeCode' with the minimum fields required to make a request.
@@ -4930,15 +5094,17 @@ instance ToQuery ICMPTypeCode where
 --
 --
 -- /See:/ 'ipPermission' smart constructor.
-data IPPermission = IPPermission'
-  { _ipFromPort         :: !(Maybe Int)
-  , _ipUserIdGroupPairs :: !(Maybe [UserIdGroupPair])
-  , _ipPrefixListIds    :: !(Maybe [PrefixListId])
-  , _ipToPort           :: !(Maybe Int)
-  , _ipIPv6Ranges       :: !(Maybe [IPv6Range])
-  , _ipIPRanges         :: !(Maybe [IPRange])
-  , _ipIPProtocol       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data IPPermission =
+  IPPermission'
+    { _ipFromPort         :: !(Maybe Int)
+    , _ipUserIdGroupPairs :: !(Maybe [UserIdGroupPair])
+    , _ipPrefixListIds    :: !(Maybe [PrefixListId])
+    , _ipToPort           :: !(Maybe Int)
+    , _ipIPv6Ranges       :: !(Maybe [IPv6Range])
+    , _ipIPRanges         :: !(Maybe [IPRange])
+    , _ipIPProtocol       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'IPPermission' with the minimum fields required to make a request.
@@ -5041,10 +5207,12 @@ instance ToQuery IPPermission where
 --
 --
 -- /See:/ 'ipRange' smart constructor.
-data IPRange = IPRange'
-  { _iprDescription :: !(Maybe Text)
-  , _iprCidrIP      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data IPRange =
+  IPRange'
+    { _iprDescription :: !(Maybe Text)
+    , _iprCidrIP      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'IPRange' with the minimum fields required to make a request.
@@ -5088,9 +5256,11 @@ instance ToQuery IPRange where
 --
 --
 -- /See:/ 'ipv6CidrBlock' smart constructor.
-newtype IPv6CidrBlock = IPv6CidrBlock'
-  { _icbIPv6CidrBlock :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype IPv6CidrBlock =
+  IPv6CidrBlock'
+    { _icbIPv6CidrBlock :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'IPv6CidrBlock' with the minimum fields required to make a request.
@@ -5120,10 +5290,12 @@ instance NFData IPv6CidrBlock where
 --
 --
 -- /See:/ 'ipv6Range' smart constructor.
-data IPv6Range = IPv6Range'
-  { _irCidrIPv6    :: !(Maybe Text)
-  , _irDescription :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data IPv6Range =
+  IPv6Range'
+    { _irCidrIPv6    :: !(Maybe Text)
+    , _irDescription :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'IPv6Range' with the minimum fields required to make a request.
@@ -5166,11 +5338,13 @@ instance ToQuery IPv6Range where
 --
 --
 -- /See:/ 'idFormat' smart constructor.
-data IdFormat = IdFormat'
-  { _ifUseLongIds :: !(Maybe Bool)
-  , _ifDeadline   :: !(Maybe ISO8601)
-  , _ifResource   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data IdFormat =
+  IdFormat'
+    { _ifUseLongIds :: !(Maybe Bool)
+    , _ifDeadline   :: !(Maybe ISO8601)
+    , _ifResource   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'IdFormat' with the minimum fields required to make a request.
@@ -5216,32 +5390,34 @@ instance NFData IdFormat where
 --
 --
 -- /See:/ 'image' smart constructor.
-data Image = Image'
-  { _iPlatform            :: !(Maybe PlatformValues)
-  , _iEnaSupport          :: !(Maybe Bool)
-  , _iImageOwnerAlias     :: !(Maybe Text)
-  , _iRAMDiskId           :: !(Maybe Text)
-  , _iKernelId            :: !(Maybe Text)
-  , _iRootDeviceName      :: !(Maybe Text)
-  , _iSRIOVNetSupport     :: !(Maybe Text)
-  , _iName                :: !(Maybe Text)
-  , _iCreationDate        :: !(Maybe Text)
-  , _iProductCodes        :: !(Maybe [ProductCode])
-  , _iStateReason         :: !(Maybe StateReason)
-  , _iDescription         :: !(Maybe Text)
-  , _iBlockDeviceMappings :: !(Maybe [BlockDeviceMapping])
-  , _iTags                :: !(Maybe [Tag])
-  , _iImageId             :: !Text
-  , _iImageLocation       :: !Text
-  , _iState               :: !ImageState
-  , _iOwnerId             :: !Text
-  , _iPublic              :: !Bool
-  , _iArchitecture        :: !ArchitectureValues
-  , _iImageType           :: !ImageTypeValues
-  , _iRootDeviceType      :: !DeviceType
-  , _iVirtualizationType  :: !VirtualizationType
-  , _iHypervisor          :: !HypervisorType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Image =
+  Image'
+    { _iPlatform            :: !(Maybe PlatformValues)
+    , _iEnaSupport          :: !(Maybe Bool)
+    , _iImageOwnerAlias     :: !(Maybe Text)
+    , _iRAMDiskId           :: !(Maybe Text)
+    , _iKernelId            :: !(Maybe Text)
+    , _iRootDeviceName      :: !(Maybe Text)
+    , _iSRIOVNetSupport     :: !(Maybe Text)
+    , _iName                :: !(Maybe Text)
+    , _iCreationDate        :: !(Maybe Text)
+    , _iProductCodes        :: !(Maybe [ProductCode])
+    , _iStateReason         :: !(Maybe StateReason)
+    , _iDescription         :: !(Maybe Text)
+    , _iBlockDeviceMappings :: !(Maybe [BlockDeviceMapping])
+    , _iTags                :: !(Maybe [Tag])
+    , _iImageId             :: !Text
+    , _iImageLocation       :: !Text
+    , _iState               :: !ImageState
+    , _iOwnerId             :: !Text
+    , _iPublic              :: !Bool
+    , _iArchitecture        :: !ArchitectureValues
+    , _iImageType           :: !ImageTypeValues
+    , _iRootDeviceType      :: !DeviceType
+    , _iVirtualizationType  :: !VirtualizationType
+    , _iHypervisor          :: !HypervisorType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Image' with the minimum fields required to make a request.
@@ -5474,14 +5650,16 @@ instance NFData Image where
 --
 --
 -- /See:/ 'imageDiskContainer' smart constructor.
-data ImageDiskContainer = ImageDiskContainer'
-  { _idcFormat      :: !(Maybe Text)
-  , _idcURL         :: !(Maybe Text)
-  , _idcDeviceName  :: !(Maybe Text)
-  , _idcUserBucket  :: !(Maybe UserBucket)
-  , _idcDescription :: !(Maybe Text)
-  , _idcSnapshotId  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ImageDiskContainer =
+  ImageDiskContainer'
+    { _idcFormat      :: !(Maybe Text)
+    , _idcURL         :: !(Maybe Text)
+    , _idcDeviceName  :: !(Maybe Text)
+    , _idcUserBucket  :: !(Maybe UserBucket)
+    , _idcDescription :: !(Maybe Text)
+    , _idcSnapshotId  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ImageDiskContainer' with the minimum fields required to make a request.
@@ -5554,19 +5732,21 @@ instance ToQuery ImageDiskContainer where
 --
 --
 -- /See:/ 'importImageTask' smart constructor.
-data ImportImageTask = ImportImageTask'
-  { _iitStatus          :: !(Maybe Text)
-  , _iitHypervisor      :: !(Maybe Text)
-  , _iitPlatform        :: !(Maybe Text)
-  , _iitProgress        :: !(Maybe Text)
-  , _iitLicenseType     :: !(Maybe Text)
-  , _iitSnapshotDetails :: !(Maybe [SnapshotDetail])
-  , _iitStatusMessage   :: !(Maybe Text)
-  , _iitImageId         :: !(Maybe Text)
-  , _iitImportTaskId    :: !(Maybe Text)
-  , _iitArchitecture    :: !(Maybe Text)
-  , _iitDescription     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ImportImageTask =
+  ImportImageTask'
+    { _iitStatus          :: !(Maybe Text)
+    , _iitHypervisor      :: !(Maybe Text)
+    , _iitPlatform        :: !(Maybe Text)
+    , _iitProgress        :: !(Maybe Text)
+    , _iitLicenseType     :: !(Maybe Text)
+    , _iitSnapshotDetails :: !(Maybe [SnapshotDetail])
+    , _iitStatusMessage   :: !(Maybe Text)
+    , _iitImageId         :: !(Maybe Text)
+    , _iitImportTaskId    :: !(Maybe Text)
+    , _iitArchitecture    :: !(Maybe Text)
+    , _iitDescription     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ImportImageTask' with the minimum fields required to make a request.
@@ -5681,19 +5861,21 @@ instance NFData ImportImageTask where
 --
 --
 -- /See:/ 'importInstanceLaunchSpecification' smart constructor.
-data ImportInstanceLaunchSpecification = ImportInstanceLaunchSpecification'
-  { _iilsAdditionalInfo                    :: !(Maybe Text)
-  , _iilsGroupNames                        :: !(Maybe [Text])
-  , _iilsSubnetId                          :: !(Maybe Text)
-  , _iilsInstanceType                      :: !(Maybe InstanceType)
-  , _iilsGroupIds                          :: !(Maybe [Text])
-  , _iilsUserData                          :: !(Maybe UserData)
-  , _iilsMonitoring                        :: !(Maybe Bool)
-  , _iilsPrivateIPAddress                  :: !(Maybe Text)
-  , _iilsInstanceInitiatedShutdownBehavior :: !(Maybe ShutdownBehavior)
-  , _iilsArchitecture                      :: !(Maybe ArchitectureValues)
-  , _iilsPlacement                         :: !(Maybe Placement)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ImportInstanceLaunchSpecification =
+  ImportInstanceLaunchSpecification'
+    { _iilsAdditionalInfo                    :: !(Maybe Text)
+    , _iilsGroupNames                        :: !(Maybe [Text])
+    , _iilsSubnetId                          :: !(Maybe Text)
+    , _iilsInstanceType                      :: !(Maybe InstanceType)
+    , _iilsGroupIds                          :: !(Maybe [Text])
+    , _iilsUserData                          :: !(Maybe UserData)
+    , _iilsMonitoring                        :: !(Maybe Bool)
+    , _iilsPrivateIPAddress                  :: !(Maybe Text)
+    , _iilsInstanceInitiatedShutdownBehavior :: !(Maybe ShutdownBehavior)
+    , _iilsArchitecture                      :: !(Maybe ArchitectureValues)
+    , _iilsPlacement                         :: !(Maybe Placement)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ImportInstanceLaunchSpecification' with the minimum fields required to make a request.
@@ -5812,12 +5994,14 @@ instance ToQuery ImportInstanceLaunchSpecification
 --
 --
 -- /See:/ 'importInstanceTaskDetails' smart constructor.
-data ImportInstanceTaskDetails = ImportInstanceTaskDetails'
-  { _iitdInstanceId  :: !(Maybe Text)
-  , _iitdPlatform    :: !(Maybe PlatformValues)
-  , _iitdVolumes     :: !(Maybe [ImportInstanceVolumeDetailItem])
-  , _iitdDescription :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ImportInstanceTaskDetails =
+  ImportInstanceTaskDetails'
+    { _iitdInstanceId  :: !(Maybe Text)
+    , _iitdPlatform    :: !(Maybe PlatformValues)
+    , _iitdVolumes     :: !(Maybe [ImportInstanceVolumeDetailItem])
+    , _iitdDescription :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ImportInstanceTaskDetails' with the minimum fields required to make a request.
@@ -5875,15 +6059,17 @@ instance NFData ImportInstanceTaskDetails where
 --
 --
 -- /See:/ 'importInstanceVolumeDetailItem' smart constructor.
-data ImportInstanceVolumeDetailItem = ImportInstanceVolumeDetailItem'
-  { _iivdiStatusMessage    :: !(Maybe Text)
-  , _iivdiDescription      :: !(Maybe Text)
-  , _iivdiAvailabilityZone :: !Text
-  , _iivdiBytesConverted   :: !Integer
-  , _iivdiImage            :: !DiskImageDescription
-  , _iivdiStatus           :: !Text
-  , _iivdiVolume           :: !DiskImageVolumeDescription
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ImportInstanceVolumeDetailItem =
+  ImportInstanceVolumeDetailItem'
+    { _iivdiStatusMessage    :: !(Maybe Text)
+    , _iivdiDescription      :: !(Maybe Text)
+    , _iivdiAvailabilityZone :: !Text
+    , _iivdiBytesConverted   :: !Integer
+    , _iivdiImage            :: !DiskImageDescription
+    , _iivdiStatus           :: !Text
+    , _iivdiVolume           :: !DiskImageVolumeDescription
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ImportInstanceVolumeDetailItem' with the minimum fields required to make a request.
@@ -5970,11 +6156,13 @@ instance NFData ImportInstanceVolumeDetailItem where
 --
 --
 -- /See:/ 'importSnapshotTask' smart constructor.
-data ImportSnapshotTask = ImportSnapshotTask'
-  { _istSnapshotTaskDetail :: !(Maybe SnapshotTaskDetail)
-  , _istImportTaskId       :: !(Maybe Text)
-  , _istDescription        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ImportSnapshotTask =
+  ImportSnapshotTask'
+    { _istSnapshotTaskDetail :: !(Maybe SnapshotTaskDetail)
+    , _istImportTaskId       :: !(Maybe Text)
+    , _istDescription        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ImportSnapshotTask' with the minimum fields required to make a request.
@@ -6024,13 +6212,15 @@ instance NFData ImportSnapshotTask where
 --
 --
 -- /See:/ 'importVolumeTaskDetails' smart constructor.
-data ImportVolumeTaskDetails = ImportVolumeTaskDetails'
-  { _ivtdBytesConverted   :: !(Maybe Integer)
-  , _ivtdImage            :: !(Maybe DiskImageDescription)
-  , _ivtdVolume           :: !(Maybe DiskImageVolumeDescription)
-  , _ivtdAvailabilityZone :: !(Maybe Text)
-  , _ivtdDescription      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ImportVolumeTaskDetails =
+  ImportVolumeTaskDetails'
+    { _ivtdBytesConverted   :: !(Maybe Integer)
+    , _ivtdImage            :: !(Maybe DiskImageDescription)
+    , _ivtdVolume           :: !(Maybe DiskImageVolumeDescription)
+    , _ivtdAvailabilityZone :: !(Maybe Text)
+    , _ivtdDescription      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ImportVolumeTaskDetails' with the minimum fields required to make a request.
@@ -6095,48 +6285,50 @@ instance NFData ImportVolumeTaskDetails where
 --
 --
 -- /See:/ 'instance'' smart constructor.
-data Instance = Instance'
-  { _insPublicDNSName          :: !(Maybe Text)
-  , _insPlatform               :: !(Maybe PlatformValues)
-  , _insSecurityGroups         :: !(Maybe [GroupIdentifier])
-  , _insClientToken            :: !(Maybe Text)
-  , _insEnaSupport             :: !(Maybe Bool)
-  , _insSourceDestCheck        :: !(Maybe Bool)
-  , _insElasticGpuAssociations :: !(Maybe [ElasticGpuAssociation])
-  , _insVPCId                  :: !(Maybe Text)
-  , _insKeyName                :: !(Maybe Text)
-  , _insNetworkInterfaces      :: !(Maybe [InstanceNetworkInterface])
-  , _insRAMDiskId              :: !(Maybe Text)
-  , _insCPUOptions             :: !(Maybe CPUOptions)
-  , _insSubnetId               :: !(Maybe Text)
-  , _insKernelId               :: !(Maybe Text)
-  , _insRootDeviceName         :: !(Maybe Text)
-  , _insSRIOVNetSupport        :: !(Maybe Text)
-  , _insEBSOptimized           :: !(Maybe Bool)
-  , _insStateTransitionReason  :: !(Maybe Text)
-  , _insInstanceLifecycle      :: !(Maybe InstanceLifecycleType)
-  , _insIAMInstanceProfile     :: !(Maybe IAMInstanceProfile)
-  , _insPrivateIPAddress       :: !(Maybe Text)
-  , _insProductCodes           :: !(Maybe [ProductCode])
-  , _insSpotInstanceRequestId  :: !(Maybe Text)
-  , _insPrivateDNSName         :: !(Maybe Text)
-  , _insStateReason            :: !(Maybe StateReason)
-  , _insBlockDeviceMappings    :: !(Maybe [InstanceBlockDeviceMapping])
-  , _insPublicIPAddress        :: !(Maybe Text)
-  , _insTags                   :: !(Maybe [Tag])
-  , _insInstanceId             :: !Text
-  , _insImageId                :: !Text
-  , _insAMILaunchIndex         :: !Int
-  , _insInstanceType           :: !InstanceType
-  , _insLaunchTime             :: !ISO8601
-  , _insPlacement              :: !Placement
-  , _insMonitoring             :: !Monitoring
-  , _insArchitecture           :: !ArchitectureValues
-  , _insRootDeviceType         :: !DeviceType
-  , _insVirtualizationType     :: !VirtualizationType
-  , _insHypervisor             :: !HypervisorType
-  , _insState                  :: !InstanceState
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Instance =
+  Instance'
+    { _insPublicDNSName          :: !(Maybe Text)
+    , _insPlatform               :: !(Maybe PlatformValues)
+    , _insSecurityGroups         :: !(Maybe [GroupIdentifier])
+    , _insClientToken            :: !(Maybe Text)
+    , _insEnaSupport             :: !(Maybe Bool)
+    , _insSourceDestCheck        :: !(Maybe Bool)
+    , _insElasticGpuAssociations :: !(Maybe [ElasticGpuAssociation])
+    , _insVPCId                  :: !(Maybe Text)
+    , _insKeyName                :: !(Maybe Text)
+    , _insNetworkInterfaces      :: !(Maybe [InstanceNetworkInterface])
+    , _insRAMDiskId              :: !(Maybe Text)
+    , _insCPUOptions             :: !(Maybe CPUOptions)
+    , _insSubnetId               :: !(Maybe Text)
+    , _insKernelId               :: !(Maybe Text)
+    , _insRootDeviceName         :: !(Maybe Text)
+    , _insSRIOVNetSupport        :: !(Maybe Text)
+    , _insEBSOptimized           :: !(Maybe Bool)
+    , _insStateTransitionReason  :: !(Maybe Text)
+    , _insInstanceLifecycle      :: !(Maybe InstanceLifecycleType)
+    , _insIAMInstanceProfile     :: !(Maybe IAMInstanceProfile)
+    , _insPrivateIPAddress       :: !(Maybe Text)
+    , _insProductCodes           :: !(Maybe [ProductCode])
+    , _insSpotInstanceRequestId  :: !(Maybe Text)
+    , _insPrivateDNSName         :: !(Maybe Text)
+    , _insStateReason            :: !(Maybe StateReason)
+    , _insBlockDeviceMappings    :: !(Maybe [InstanceBlockDeviceMapping])
+    , _insPublicIPAddress        :: !(Maybe Text)
+    , _insTags                   :: !(Maybe [Tag])
+    , _insInstanceId             :: !Text
+    , _insImageId                :: !Text
+    , _insAMILaunchIndex         :: !Int
+    , _insInstanceType           :: !InstanceType
+    , _insLaunchTime             :: !ISO8601
+    , _insPlacement              :: !Placement
+    , _insMonitoring             :: !Monitoring
+    , _insArchitecture           :: !ArchitectureValues
+    , _insRootDeviceType         :: !DeviceType
+    , _insVirtualizationType     :: !VirtualizationType
+    , _insHypervisor             :: !HypervisorType
+    , _insState                  :: !InstanceState
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Instance' with the minimum fields required to make a request.
@@ -6504,10 +6696,12 @@ instance NFData Instance where
 --
 --
 -- /See:/ 'instanceBlockDeviceMapping' smart constructor.
-data InstanceBlockDeviceMapping = InstanceBlockDeviceMapping'
-  { _ibdmEBS        :: !(Maybe EBSInstanceBlockDevice)
-  , _ibdmDeviceName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceBlockDeviceMapping =
+  InstanceBlockDeviceMapping'
+    { _ibdmEBS        :: !(Maybe EBSInstanceBlockDevice)
+    , _ibdmDeviceName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceBlockDeviceMapping' with the minimum fields required to make a request.
@@ -6545,12 +6739,14 @@ instance NFData InstanceBlockDeviceMapping where
 --
 --
 -- /See:/ 'instanceBlockDeviceMappingSpecification' smart constructor.
-data InstanceBlockDeviceMappingSpecification = InstanceBlockDeviceMappingSpecification'
-  { _ibdmsVirtualName :: !(Maybe Text)
-  , _ibdmsNoDevice    :: !(Maybe Text)
-  , _ibdmsEBS         :: !(Maybe EBSInstanceBlockDeviceSpecification)
-  , _ibdmsDeviceName  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceBlockDeviceMappingSpecification =
+  InstanceBlockDeviceMappingSpecification'
+    { _ibdmsVirtualName :: !(Maybe Text)
+    , _ibdmsNoDevice    :: !(Maybe Text)
+    , _ibdmsEBS         :: !(Maybe EBSInstanceBlockDeviceSpecification)
+    , _ibdmsDeviceName  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceBlockDeviceMappingSpecification' with the minimum fields required to make a request.
@@ -6613,11 +6809,13 @@ instance ToQuery
 --
 --
 -- /See:/ 'instanceCapacity' smart constructor.
-data InstanceCapacity = InstanceCapacity'
-  { _icAvailableCapacity :: !(Maybe Int)
-  , _icInstanceType      :: !(Maybe Text)
-  , _icTotalCapacity     :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceCapacity =
+  InstanceCapacity'
+    { _icAvailableCapacity :: !(Maybe Int)
+    , _icInstanceType      :: !(Maybe Text)
+    , _icTotalCapacity     :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceCapacity' with the minimum fields required to make a request.
@@ -6667,10 +6865,12 @@ instance NFData InstanceCapacity where
 --
 --
 -- /See:/ 'instanceCount' smart constructor.
-data InstanceCount = InstanceCount'
-  { _icState         :: !(Maybe ListingState)
-  , _icInstanceCount :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceCount =
+  InstanceCount'
+    { _icState         :: !(Maybe ListingState)
+    , _icInstanceCount :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceCount' with the minimum fields required to make a request.
@@ -6707,10 +6907,12 @@ instance NFData InstanceCount where
 --
 --
 -- /See:/ 'instanceCreditSpecification' smart constructor.
-data InstanceCreditSpecification = InstanceCreditSpecification'
-  { _icsInstanceId :: !(Maybe Text)
-  , _icsCPUCredits :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceCreditSpecification =
+  InstanceCreditSpecification'
+    { _icsInstanceId :: !(Maybe Text)
+    , _icsCPUCredits :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceCreditSpecification' with the minimum fields required to make a request.
@@ -6749,10 +6951,12 @@ instance NFData InstanceCreditSpecification where
 --
 --
 -- /See:/ 'instanceCreditSpecificationRequest' smart constructor.
-data InstanceCreditSpecificationRequest = InstanceCreditSpecificationRequest'
-  { _icsrInstanceId :: !(Maybe Text)
-  , _icsrCPUCredits :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceCreditSpecificationRequest =
+  InstanceCreditSpecificationRequest'
+    { _icsrInstanceId :: !(Maybe Text)
+    , _icsrCPUCredits :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceCreditSpecificationRequest' with the minimum fields required to make a request.
@@ -6795,10 +6999,12 @@ instance ToQuery InstanceCreditSpecificationRequest
 --
 --
 -- /See:/ 'instanceExportDetails' smart constructor.
-data InstanceExportDetails = InstanceExportDetails'
-  { _iedTargetEnvironment :: !(Maybe ExportEnvironment)
-  , _iedInstanceId        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceExportDetails =
+  InstanceExportDetails'
+    { _iedTargetEnvironment :: !(Maybe ExportEnvironment)
+    , _iedInstanceId        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceExportDetails' with the minimum fields required to make a request.
@@ -6837,9 +7043,11 @@ instance NFData InstanceExportDetails where
 --
 --
 -- /See:/ 'instanceIPv6Address' smart constructor.
-newtype InstanceIPv6Address = InstanceIPv6Address'
-  { _iiaIPv6Address :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype InstanceIPv6Address =
+  InstanceIPv6Address'
+    { _iiaIPv6Address :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceIPv6Address' with the minimum fields required to make a request.
@@ -6873,9 +7081,11 @@ instance ToQuery InstanceIPv6Address where
 --
 --
 -- /See:/ 'instanceIPv6AddressRequest' smart constructor.
-newtype InstanceIPv6AddressRequest = InstanceIPv6AddressRequest'
-  { _iiarIPv6Address :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype InstanceIPv6AddressRequest =
+  InstanceIPv6AddressRequest'
+    { _iiarIPv6Address :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceIPv6AddressRequest' with the minimum fields required to make a request.
@@ -6906,10 +7116,12 @@ instance ToQuery InstanceIPv6AddressRequest where
 --
 --
 -- /See:/ 'instanceMarketOptionsRequest' smart constructor.
-data InstanceMarketOptionsRequest = InstanceMarketOptionsRequest'
-  { _imorMarketType  :: !(Maybe MarketType)
-  , _imorSpotOptions :: !(Maybe SpotMarketOptions)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceMarketOptionsRequest =
+  InstanceMarketOptionsRequest'
+    { _imorMarketType  :: !(Maybe MarketType)
+    , _imorSpotOptions :: !(Maybe SpotMarketOptions)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceMarketOptionsRequest' with the minimum fields required to make a request.
@@ -6949,10 +7161,12 @@ instance ToQuery InstanceMarketOptionsRequest where
 --
 --
 -- /See:/ 'instanceMonitoring' smart constructor.
-data InstanceMonitoring = InstanceMonitoring'
-  { _imInstanceId :: !(Maybe Text)
-  , _imMonitoring :: !(Maybe Monitoring)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceMonitoring =
+  InstanceMonitoring'
+    { _imInstanceId :: !(Maybe Text)
+    , _imMonitoring :: !(Maybe Monitoring)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceMonitoring' with the minimum fields required to make a request.
@@ -6990,23 +7204,25 @@ instance NFData InstanceMonitoring where
 --
 --
 -- /See:/ 'instanceNetworkInterface' smart constructor.
-data InstanceNetworkInterface = InstanceNetworkInterface'
-  { _iniGroups             :: !(Maybe [GroupIdentifier])
-  , _iniStatus             :: !(Maybe NetworkInterfaceStatus)
-  , _iniPrivateIPAddresses :: !(Maybe [InstancePrivateIPAddress])
-  , _iniSourceDestCheck    :: !(Maybe Bool)
-  , _iniVPCId              :: !(Maybe Text)
-  , _iniNetworkInterfaceId :: !(Maybe Text)
-  , _iniSubnetId           :: !(Maybe Text)
-  , _iniMACAddress         :: !(Maybe Text)
-  , _iniAttachment         :: !(Maybe InstanceNetworkInterfaceAttachment)
-  , _iniOwnerId            :: !(Maybe Text)
-  , _iniPrivateIPAddress   :: !(Maybe Text)
-  , _iniPrivateDNSName     :: !(Maybe Text)
-  , _iniDescription        :: !(Maybe Text)
-  , _iniAssociation        :: !(Maybe InstanceNetworkInterfaceAssociation)
-  , _iniIPv6Addresses      :: !(Maybe [InstanceIPv6Address])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceNetworkInterface =
+  InstanceNetworkInterface'
+    { _iniGroups             :: !(Maybe [GroupIdentifier])
+    , _iniStatus             :: !(Maybe NetworkInterfaceStatus)
+    , _iniPrivateIPAddresses :: !(Maybe [InstancePrivateIPAddress])
+    , _iniSourceDestCheck    :: !(Maybe Bool)
+    , _iniVPCId              :: !(Maybe Text)
+    , _iniNetworkInterfaceId :: !(Maybe Text)
+    , _iniSubnetId           :: !(Maybe Text)
+    , _iniMACAddress         :: !(Maybe Text)
+    , _iniAttachment         :: !(Maybe InstanceNetworkInterfaceAttachment)
+    , _iniOwnerId            :: !(Maybe Text)
+    , _iniPrivateIPAddress   :: !(Maybe Text)
+    , _iniPrivateDNSName     :: !(Maybe Text)
+    , _iniDescription        :: !(Maybe Text)
+    , _iniAssociation        :: !(Maybe InstanceNetworkInterfaceAssociation)
+    , _iniIPv6Addresses      :: !(Maybe [InstanceIPv6Address])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceNetworkInterface' with the minimum fields required to make a request.
@@ -7157,11 +7373,13 @@ instance NFData InstanceNetworkInterface where
 --
 --
 -- /See:/ 'instanceNetworkInterfaceAssociation' smart constructor.
-data InstanceNetworkInterfaceAssociation = InstanceNetworkInterfaceAssociation'
-  { _iniaPublicDNSName :: !(Maybe Text)
-  , _iniaIPOwnerId     :: !(Maybe Text)
-  , _iniaPublicIP      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceNetworkInterfaceAssociation =
+  InstanceNetworkInterfaceAssociation'
+    { _iniaPublicDNSName :: !(Maybe Text)
+    , _iniaIPOwnerId     :: !(Maybe Text)
+    , _iniaPublicIP      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceNetworkInterfaceAssociation' with the minimum fields required to make a request.
@@ -7213,13 +7431,15 @@ instance NFData InstanceNetworkInterfaceAssociation
 --
 --
 -- /See:/ 'instanceNetworkInterfaceAttachment' smart constructor.
-data InstanceNetworkInterfaceAttachment = InstanceNetworkInterfaceAttachment'
-  { _iniaStatus              :: !(Maybe AttachmentStatus)
-  , _iniaDeleteOnTermination :: !(Maybe Bool)
-  , _iniaAttachmentId        :: !(Maybe Text)
-  , _iniaAttachTime          :: !(Maybe ISO8601)
-  , _iniaDeviceIndex         :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceNetworkInterfaceAttachment =
+  InstanceNetworkInterfaceAttachment'
+    { _iniaStatus              :: !(Maybe AttachmentStatus)
+    , _iniaDeleteOnTermination :: !(Maybe Bool)
+    , _iniaAttachmentId        :: !(Maybe Text)
+    , _iniaAttachTime          :: !(Maybe ISO8601)
+    , _iniaDeviceIndex         :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceNetworkInterfaceAttachment' with the minimum fields required to make a request.
@@ -7287,20 +7507,22 @@ instance NFData InstanceNetworkInterfaceAttachment
 --
 --
 -- /See:/ 'instanceNetworkInterfaceSpecification' smart constructor.
-data InstanceNetworkInterfaceSpecification = InstanceNetworkInterfaceSpecification'
-  { _inisGroups :: !(Maybe [Text])
-  , _inisPrivateIPAddresses :: !(Maybe [PrivateIPAddressSpecification])
-  , _inisDeleteOnTermination :: !(Maybe Bool)
-  , _inisAssociatePublicIPAddress :: !(Maybe Bool)
-  , _inisNetworkInterfaceId :: !(Maybe Text)
-  , _inisSubnetId :: !(Maybe Text)
-  , _inisIPv6AddressCount :: !(Maybe Int)
-  , _inisPrivateIPAddress :: !(Maybe Text)
-  , _inisSecondaryPrivateIPAddressCount :: !(Maybe Int)
-  , _inisDescription :: !(Maybe Text)
-  , _inisDeviceIndex :: !(Maybe Int)
-  , _inisIPv6Addresses :: !(Maybe [InstanceIPv6Address])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceNetworkInterfaceSpecification =
+  InstanceNetworkInterfaceSpecification'
+    { _inisGroups :: !(Maybe [Text])
+    , _inisPrivateIPAddresses :: !(Maybe [PrivateIPAddressSpecification])
+    , _inisDeleteOnTermination :: !(Maybe Bool)
+    , _inisAssociatePublicIPAddress :: !(Maybe Bool)
+    , _inisNetworkInterfaceId :: !(Maybe Text)
+    , _inisSubnetId :: !(Maybe Text)
+    , _inisIPv6AddressCount :: !(Maybe Int)
+    , _inisPrivateIPAddress :: !(Maybe Text)
+    , _inisSecondaryPrivateIPAddressCount :: !(Maybe Int)
+    , _inisDescription :: !(Maybe Text)
+    , _inisDeviceIndex :: !(Maybe Int)
+    , _inisIPv6Addresses :: !(Maybe [InstanceIPv6Address])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceNetworkInterfaceSpecification' with the minimum fields required to make a request.
@@ -7456,12 +7678,14 @@ instance ToQuery
 --
 --
 -- /See:/ 'instancePrivateIPAddress' smart constructor.
-data InstancePrivateIPAddress = InstancePrivateIPAddress'
-  { _ipiaPrimary          :: !(Maybe Bool)
-  , _ipiaPrivateIPAddress :: !(Maybe Text)
-  , _ipiaPrivateDNSName   :: !(Maybe Text)
-  , _ipiaAssociation      :: !(Maybe InstanceNetworkInterfaceAssociation)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstancePrivateIPAddress =
+  InstancePrivateIPAddress'
+    { _ipiaPrimary          :: !(Maybe Bool)
+    , _ipiaPrivateIPAddress :: !(Maybe Text)
+    , _ipiaPrivateDNSName   :: !(Maybe Text)
+    , _ipiaAssociation      :: !(Maybe InstanceNetworkInterfaceAssociation)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstancePrivateIPAddress' with the minimum fields required to make a request.
@@ -7518,10 +7742,12 @@ instance NFData InstancePrivateIPAddress where
 --
 --
 -- /See:/ 'instanceState' smart constructor.
-data InstanceState = InstanceState'
-  { _isName :: !InstanceStateName
-  , _isCode :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceState =
+  InstanceState'
+    { _isName :: !InstanceStateName
+    , _isCode :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceState' with the minimum fields required to make a request.
@@ -7560,11 +7786,13 @@ instance NFData InstanceState where
 --
 --
 -- /See:/ 'instanceStateChange' smart constructor.
-data InstanceStateChange = InstanceStateChange'
-  { _iscInstanceId    :: !(Maybe Text)
-  , _iscCurrentState  :: !(Maybe InstanceState)
-  , _iscPreviousState :: !(Maybe InstanceState)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceStateChange =
+  InstanceStateChange'
+    { _iscInstanceId    :: !(Maybe Text)
+    , _iscCurrentState  :: !(Maybe InstanceState)
+    , _iscPreviousState :: !(Maybe InstanceState)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceStateChange' with the minimum fields required to make a request.
@@ -7613,14 +7841,16 @@ instance NFData InstanceStateChange where
 --
 --
 -- /See:/ 'instanceStatus' smart constructor.
-data InstanceStatus = InstanceStatus'
-  { _isInstanceId       :: !(Maybe Text)
-  , _isSystemStatus     :: !(Maybe InstanceStatusSummary)
-  , _isEvents           :: !(Maybe [InstanceStatusEvent])
-  , _isAvailabilityZone :: !(Maybe Text)
-  , _isInstanceStatus   :: !(Maybe InstanceStatusSummary)
-  , _isInstanceState    :: !(Maybe InstanceState)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceStatus =
+  InstanceStatus'
+    { _isInstanceId       :: !(Maybe Text)
+    , _isSystemStatus     :: !(Maybe InstanceStatusSummary)
+    , _isEvents           :: !(Maybe [InstanceStatusEvent])
+    , _isAvailabilityZone :: !(Maybe Text)
+    , _isInstanceStatus   :: !(Maybe InstanceStatusSummary)
+    , _isInstanceState    :: !(Maybe InstanceState)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceStatus' with the minimum fields required to make a request.
@@ -7694,11 +7924,13 @@ instance NFData InstanceStatus where
 --
 --
 -- /See:/ 'instanceStatusDetails' smart constructor.
-data InstanceStatusDetails = InstanceStatusDetails'
-  { _isdStatus        :: !(Maybe StatusType)
-  , _isdImpairedSince :: !(Maybe ISO8601)
-  , _isdName          :: !(Maybe StatusName)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceStatusDetails =
+  InstanceStatusDetails'
+    { _isdStatus        :: !(Maybe StatusType)
+    , _isdImpairedSince :: !(Maybe ISO8601)
+    , _isdName          :: !(Maybe StatusName)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceStatusDetails' with the minimum fields required to make a request.
@@ -7744,12 +7976,14 @@ instance NFData InstanceStatusDetails where
 --
 --
 -- /See:/ 'instanceStatusEvent' smart constructor.
-data InstanceStatusEvent = InstanceStatusEvent'
-  { _iseNotBefore   :: !(Maybe ISO8601)
-  , _iseCode        :: !(Maybe EventCode)
-  , _iseDescription :: !(Maybe Text)
-  , _iseNotAfter    :: !(Maybe ISO8601)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceStatusEvent =
+  InstanceStatusEvent'
+    { _iseNotBefore   :: !(Maybe ISO8601)
+    , _iseCode        :: !(Maybe EventCode)
+    , _iseDescription :: !(Maybe Text)
+    , _iseNotAfter    :: !(Maybe ISO8601)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceStatusEvent' with the minimum fields required to make a request.
@@ -7806,10 +8040,12 @@ instance NFData InstanceStatusEvent where
 --
 --
 -- /See:/ 'instanceStatusSummary' smart constructor.
-data InstanceStatusSummary = InstanceStatusSummary'
-  { _issDetails :: !(Maybe [InstanceStatusDetails])
-  , _issStatus  :: !SummaryStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InstanceStatusSummary =
+  InstanceStatusSummary'
+    { _issDetails :: !(Maybe [InstanceStatusDetails])
+    , _issStatus  :: !SummaryStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InstanceStatusSummary' with the minimum fields required to make a request.
@@ -7850,11 +8086,13 @@ instance NFData InstanceStatusSummary where
 --
 --
 -- /See:/ 'internetGateway' smart constructor.
-data InternetGateway = InternetGateway'
-  { _igAttachments       :: !(Maybe [InternetGatewayAttachment])
-  , _igTags              :: !(Maybe [Tag])
-  , _igInternetGatewayId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InternetGateway =
+  InternetGateway'
+    { _igAttachments       :: !(Maybe [InternetGatewayAttachment])
+    , _igTags              :: !(Maybe [Tag])
+    , _igInternetGatewayId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InternetGateway' with the minimum fields required to make a request.
@@ -7908,10 +8146,12 @@ instance NFData InternetGateway where
 --
 --
 -- /See:/ 'internetGatewayAttachment' smart constructor.
-data InternetGatewayAttachment = InternetGatewayAttachment'
-  { _igaState :: !AttachmentStatus
-  , _igaVPCId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InternetGatewayAttachment =
+  InternetGatewayAttachment'
+    { _igaState :: !AttachmentStatus
+    , _igaVPCId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InternetGatewayAttachment' with the minimum fields required to make a request.
@@ -7951,10 +8191,12 @@ instance NFData InternetGatewayAttachment where
 --
 --
 -- /See:/ 'keyPairInfo' smart constructor.
-data KeyPairInfo = KeyPairInfo'
-  { _kpiKeyFingerprint :: !(Maybe Text)
-  , _kpiKeyName        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data KeyPairInfo =
+  KeyPairInfo'
+    { _kpiKeyFingerprint :: !(Maybe Text)
+    , _kpiKeyName        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'KeyPairInfo' with the minimum fields required to make a request.
@@ -7991,10 +8233,12 @@ instance NFData KeyPairInfo where
 --
 --
 -- /See:/ 'launchPermission' smart constructor.
-data LaunchPermission = LaunchPermission'
-  { _lGroup  :: !(Maybe PermissionGroup)
-  , _lUserId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LaunchPermission =
+  LaunchPermission'
+    { _lGroup  :: !(Maybe PermissionGroup)
+    , _lUserId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LaunchPermission' with the minimum fields required to make a request.
@@ -8035,10 +8279,12 @@ instance ToQuery LaunchPermission where
 --
 --
 -- /See:/ 'launchPermissionModifications' smart constructor.
-data LaunchPermissionModifications = LaunchPermissionModifications'
-  { _lRemove :: !(Maybe [LaunchPermission])
-  , _lAdd    :: !(Maybe [LaunchPermission])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LaunchPermissionModifications =
+  LaunchPermissionModifications'
+    { _lRemove :: !(Maybe [LaunchPermission])
+    , _lAdd    :: !(Maybe [LaunchPermission])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LaunchPermissionModifications' with the minimum fields required to make a request.
@@ -8077,23 +8323,25 @@ instance ToQuery LaunchPermissionModifications where
 --
 --
 -- /See:/ 'launchSpecification' smart constructor.
-data LaunchSpecification = LaunchSpecification'
-  { _lsSecurityGroups      :: !(Maybe [GroupIdentifier])
-  , _lsKeyName             :: !(Maybe Text)
-  , _lsNetworkInterfaces   :: !(Maybe [InstanceNetworkInterfaceSpecification])
-  , _lsRAMDiskId           :: !(Maybe Text)
-  , _lsSubnetId            :: !(Maybe Text)
-  , _lsKernelId            :: !(Maybe Text)
-  , _lsInstanceType        :: !(Maybe InstanceType)
-  , _lsEBSOptimized        :: !(Maybe Bool)
-  , _lsUserData            :: !(Maybe Text)
-  , _lsMonitoring          :: !(Maybe RunInstancesMonitoringEnabled)
-  , _lsIAMInstanceProfile  :: !(Maybe IAMInstanceProfileSpecification)
-  , _lsImageId             :: !(Maybe Text)
-  , _lsAddressingType      :: !(Maybe Text)
-  , _lsBlockDeviceMappings :: !(Maybe [BlockDeviceMapping])
-  , _lsPlacement           :: !(Maybe SpotPlacement)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LaunchSpecification =
+  LaunchSpecification'
+    { _lsSecurityGroups      :: !(Maybe [GroupIdentifier])
+    , _lsKeyName             :: !(Maybe Text)
+    , _lsNetworkInterfaces   :: !(Maybe [InstanceNetworkInterfaceSpecification])
+    , _lsRAMDiskId           :: !(Maybe Text)
+    , _lsSubnetId            :: !(Maybe Text)
+    , _lsKernelId            :: !(Maybe Text)
+    , _lsInstanceType        :: !(Maybe InstanceType)
+    , _lsEBSOptimized        :: !(Maybe Bool)
+    , _lsUserData            :: !(Maybe Text)
+    , _lsMonitoring          :: !(Maybe RunInstancesMonitoringEnabled)
+    , _lsIAMInstanceProfile  :: !(Maybe IAMInstanceProfileSpecification)
+    , _lsImageId             :: !(Maybe Text)
+    , _lsAddressingType      :: !(Maybe Text)
+    , _lsBlockDeviceMappings :: !(Maybe [BlockDeviceMapping])
+    , _lsPlacement           :: !(Maybe SpotPlacement)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LaunchSpecification' with the minimum fields required to make a request.
@@ -8244,15 +8492,17 @@ instance NFData LaunchSpecification where
 --
 --
 -- /See:/ 'launchTemplate' smart constructor.
-data LaunchTemplate = LaunchTemplate'
-  { _ltLaunchTemplateName   :: !(Maybe Text)
-  , _ltLatestVersionNumber  :: !(Maybe Integer)
-  , _ltLaunchTemplateId     :: !(Maybe Text)
-  , _ltCreatedBy            :: !(Maybe Text)
-  , _ltDefaultVersionNumber :: !(Maybe Integer)
-  , _ltCreateTime           :: !(Maybe ISO8601)
-  , _ltTags                 :: !(Maybe [Tag])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LaunchTemplate =
+  LaunchTemplate'
+    { _ltLaunchTemplateName   :: !(Maybe Text)
+    , _ltLatestVersionNumber  :: !(Maybe Integer)
+    , _ltLaunchTemplateId     :: !(Maybe Text)
+    , _ltCreatedBy            :: !(Maybe Text)
+    , _ltDefaultVersionNumber :: !(Maybe Integer)
+    , _ltCreateTime           :: !(Maybe ISO8601)
+    , _ltTags                 :: !(Maybe [Tag])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LaunchTemplate' with the minimum fields required to make a request.
@@ -8336,12 +8586,14 @@ instance NFData LaunchTemplate where
 --
 --
 -- /See:/ 'launchTemplateBlockDeviceMapping' smart constructor.
-data LaunchTemplateBlockDeviceMapping = LaunchTemplateBlockDeviceMapping'
-  { _ltbdmVirtualName :: !(Maybe Text)
-  , _ltbdmNoDevice    :: !(Maybe Text)
-  , _ltbdmEBS         :: !(Maybe LaunchTemplateEBSBlockDevice)
-  , _ltbdmDeviceName  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LaunchTemplateBlockDeviceMapping =
+  LaunchTemplateBlockDeviceMapping'
+    { _ltbdmVirtualName :: !(Maybe Text)
+    , _ltbdmNoDevice    :: !(Maybe Text)
+    , _ltbdmEBS         :: !(Maybe LaunchTemplateEBSBlockDevice)
+    , _ltbdmDeviceName  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LaunchTemplateBlockDeviceMapping' with the minimum fields required to make a request.
@@ -8401,12 +8653,14 @@ instance NFData LaunchTemplateBlockDeviceMapping
 --
 --
 -- /See:/ 'launchTemplateBlockDeviceMappingRequest' smart constructor.
-data LaunchTemplateBlockDeviceMappingRequest = LaunchTemplateBlockDeviceMappingRequest'
-  { _ltbdmrVirtualName :: !(Maybe Text)
-  , _ltbdmrNoDevice    :: !(Maybe Text)
-  , _ltbdmrEBS         :: !(Maybe LaunchTemplateEBSBlockDeviceRequest)
-  , _ltbdmrDeviceName  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LaunchTemplateBlockDeviceMappingRequest =
+  LaunchTemplateBlockDeviceMappingRequest'
+    { _ltbdmrVirtualName :: !(Maybe Text)
+    , _ltbdmrNoDevice    :: !(Maybe Text)
+    , _ltbdmrEBS         :: !(Maybe LaunchTemplateEBSBlockDeviceRequest)
+    , _ltbdmrDeviceName  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LaunchTemplateBlockDeviceMappingRequest' with the minimum fields required to make a request.
@@ -8469,10 +8723,12 @@ instance ToQuery
 --
 --
 -- /See:/ 'launchTemplateConfig' smart constructor.
-data LaunchTemplateConfig = LaunchTemplateConfig'
-  { _ltcOverrides                   :: !(Maybe [LaunchTemplateOverrides])
-  , _ltcLaunchTemplateSpecification :: !(Maybe FleetLaunchTemplateSpecification)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LaunchTemplateConfig =
+  LaunchTemplateConfig'
+    { _ltcOverrides :: !(Maybe [LaunchTemplateOverrides])
+    , _ltcLaunchTemplateSpecification :: !(Maybe FleetLaunchTemplateSpecification)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LaunchTemplateConfig' with the minimum fields required to make a request.
@@ -8520,15 +8776,17 @@ instance ToQuery LaunchTemplateConfig where
 --
 --
 -- /See:/ 'launchTemplateEBSBlockDevice' smart constructor.
-data LaunchTemplateEBSBlockDevice = LaunchTemplateEBSBlockDevice'
-  { _ltebdDeleteOnTermination :: !(Maybe Bool)
-  , _ltebdVolumeSize          :: !(Maybe Int)
-  , _ltebdIOPS                :: !(Maybe Int)
-  , _ltebdEncrypted           :: !(Maybe Bool)
-  , _ltebdKMSKeyId            :: !(Maybe Text)
-  , _ltebdVolumeType          :: !(Maybe VolumeType)
-  , _ltebdSnapshotId          :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LaunchTemplateEBSBlockDevice =
+  LaunchTemplateEBSBlockDevice'
+    { _ltebdDeleteOnTermination :: !(Maybe Bool)
+    , _ltebdVolumeSize          :: !(Maybe Int)
+    , _ltebdIOPS                :: !(Maybe Int)
+    , _ltebdEncrypted           :: !(Maybe Bool)
+    , _ltebdKMSKeyId            :: !(Maybe Text)
+    , _ltebdVolumeType          :: !(Maybe VolumeType)
+    , _ltebdSnapshotId          :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LaunchTemplateEBSBlockDevice' with the minimum fields required to make a request.
@@ -8610,15 +8868,17 @@ instance NFData LaunchTemplateEBSBlockDevice where
 --
 --
 -- /See:/ 'launchTemplateEBSBlockDeviceRequest' smart constructor.
-data LaunchTemplateEBSBlockDeviceRequest = LaunchTemplateEBSBlockDeviceRequest'
-  { _ltebdrDeleteOnTermination :: !(Maybe Bool)
-  , _ltebdrVolumeSize          :: !(Maybe Int)
-  , _ltebdrIOPS                :: !(Maybe Int)
-  , _ltebdrEncrypted           :: !(Maybe Bool)
-  , _ltebdrKMSKeyId            :: !(Maybe Text)
-  , _ltebdrVolumeType          :: !(Maybe VolumeType)
-  , _ltebdrSnapshotId          :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LaunchTemplateEBSBlockDeviceRequest =
+  LaunchTemplateEBSBlockDeviceRequest'
+    { _ltebdrDeleteOnTermination :: !(Maybe Bool)
+    , _ltebdrVolumeSize          :: !(Maybe Int)
+    , _ltebdrIOPS                :: !(Maybe Int)
+    , _ltebdrEncrypted           :: !(Maybe Bool)
+    , _ltebdrKMSKeyId            :: !(Maybe Text)
+    , _ltebdrVolumeType          :: !(Maybe VolumeType)
+    , _ltebdrSnapshotId          :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LaunchTemplateEBSBlockDeviceRequest' with the minimum fields required to make a request.
@@ -8703,10 +8963,12 @@ instance ToQuery LaunchTemplateEBSBlockDeviceRequest
 --
 --
 -- /See:/ 'launchTemplateIAMInstanceProfileSpecification' smart constructor.
-data LaunchTemplateIAMInstanceProfileSpecification = LaunchTemplateIAMInstanceProfileSpecification'
-  { _ltiapsARN  :: !(Maybe Text)
-  , _ltiapsName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LaunchTemplateIAMInstanceProfileSpecification =
+  LaunchTemplateIAMInstanceProfileSpecification'
+    { _ltiapsARN  :: !(Maybe Text)
+    , _ltiapsName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LaunchTemplateIAMInstanceProfileSpecification' with the minimum fields required to make a request.
@@ -8751,10 +9013,12 @@ instance NFData
 --
 --
 -- /See:/ 'launchTemplateIAMInstanceProfileSpecificationRequest' smart constructor.
-data LaunchTemplateIAMInstanceProfileSpecificationRequest = LaunchTemplateIAMInstanceProfileSpecificationRequest'
-  { _ltiapsrARN  :: !(Maybe Text)
-  , _ltiapsrName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LaunchTemplateIAMInstanceProfileSpecificationRequest =
+  LaunchTemplateIAMInstanceProfileSpecificationRequest'
+    { _ltiapsrARN  :: !(Maybe Text)
+    , _ltiapsrName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LaunchTemplateIAMInstanceProfileSpecificationRequest' with the minimum fields required to make a request.
@@ -8800,10 +9064,12 @@ instance ToQuery
 --
 --
 -- /See:/ 'launchTemplateInstanceMarketOptions' smart constructor.
-data LaunchTemplateInstanceMarketOptions = LaunchTemplateInstanceMarketOptions'
-  { _ltimoMarketType  :: !(Maybe MarketType)
-  , _ltimoSpotOptions :: !(Maybe LaunchTemplateSpotMarketOptions)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LaunchTemplateInstanceMarketOptions =
+  LaunchTemplateInstanceMarketOptions'
+    { _ltimoMarketType  :: !(Maybe MarketType)
+    , _ltimoSpotOptions :: !(Maybe LaunchTemplateSpotMarketOptions)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LaunchTemplateInstanceMarketOptions' with the minimum fields required to make a request.
@@ -8845,10 +9111,12 @@ instance NFData LaunchTemplateInstanceMarketOptions
 --
 --
 -- /See:/ 'launchTemplateInstanceMarketOptionsRequest' smart constructor.
-data LaunchTemplateInstanceMarketOptionsRequest = LaunchTemplateInstanceMarketOptionsRequest'
-  { _ltimorMarketType  :: !(Maybe MarketType)
-  , _ltimorSpotOptions :: !(Maybe LaunchTemplateSpotMarketOptionsRequest)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LaunchTemplateInstanceMarketOptionsRequest =
+  LaunchTemplateInstanceMarketOptionsRequest'
+    { _ltimorMarketType  :: !(Maybe MarketType)
+    , _ltimorSpotOptions :: !(Maybe LaunchTemplateSpotMarketOptionsRequest)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LaunchTemplateInstanceMarketOptionsRequest' with the minimum fields required to make a request.
@@ -8895,20 +9163,22 @@ instance ToQuery
 --
 --
 -- /See:/ 'launchTemplateInstanceNetworkInterfaceSpecification' smart constructor.
-data LaunchTemplateInstanceNetworkInterfaceSpecification = LaunchTemplateInstanceNetworkInterfaceSpecification'
-  { _ltinisGroups :: !(Maybe [Text])
-  , _ltinisPrivateIPAddresses :: !(Maybe [PrivateIPAddressSpecification])
-  , _ltinisDeleteOnTermination :: !(Maybe Bool)
-  , _ltinisAssociatePublicIPAddress :: !(Maybe Bool)
-  , _ltinisNetworkInterfaceId :: !(Maybe Text)
-  , _ltinisSubnetId :: !(Maybe Text)
-  , _ltinisIPv6AddressCount :: !(Maybe Int)
-  , _ltinisPrivateIPAddress :: !(Maybe Text)
-  , _ltinisSecondaryPrivateIPAddressCount :: !(Maybe Int)
-  , _ltinisDescription :: !(Maybe Text)
-  , _ltinisDeviceIndex :: !(Maybe Int)
-  , _ltinisIPv6Addresses :: !(Maybe [InstanceIPv6Address])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LaunchTemplateInstanceNetworkInterfaceSpecification =
+  LaunchTemplateInstanceNetworkInterfaceSpecification'
+    { _ltinisGroups :: !(Maybe [Text])
+    , _ltinisPrivateIPAddresses :: !(Maybe [PrivateIPAddressSpecification])
+    , _ltinisDeleteOnTermination :: !(Maybe Bool)
+    , _ltinisAssociatePublicIPAddress :: !(Maybe Bool)
+    , _ltinisNetworkInterfaceId :: !(Maybe Text)
+    , _ltinisSubnetId :: !(Maybe Text)
+    , _ltinisIPv6AddressCount :: !(Maybe Int)
+    , _ltinisPrivateIPAddress :: !(Maybe Text)
+    , _ltinisSecondaryPrivateIPAddressCount :: !(Maybe Int)
+    , _ltinisDescription :: !(Maybe Text)
+    , _ltinisDeviceIndex :: !(Maybe Int)
+    , _ltinisIPv6Addresses :: !(Maybe [InstanceIPv6Address])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LaunchTemplateInstanceNetworkInterfaceSpecification' with the minimum fields required to make a request.
@@ -9042,20 +9312,22 @@ instance NFData
 --
 --
 -- /See:/ 'launchTemplateInstanceNetworkInterfaceSpecificationRequest' smart constructor.
-data LaunchTemplateInstanceNetworkInterfaceSpecificationRequest = LaunchTemplateInstanceNetworkInterfaceSpecificationRequest'
-  { _ltinisrGroups :: !(Maybe [Text])
-  , _ltinisrPrivateIPAddresses :: !(Maybe [PrivateIPAddressSpecification])
-  , _ltinisrDeleteOnTermination :: !(Maybe Bool)
-  , _ltinisrAssociatePublicIPAddress :: !(Maybe Bool)
-  , _ltinisrNetworkInterfaceId :: !(Maybe Text)
-  , _ltinisrSubnetId :: !(Maybe Text)
-  , _ltinisrIPv6AddressCount :: !(Maybe Int)
-  , _ltinisrPrivateIPAddress :: !(Maybe Text)
-  , _ltinisrSecondaryPrivateIPAddressCount :: !(Maybe Int)
-  , _ltinisrDescription :: !(Maybe Text)
-  , _ltinisrDeviceIndex :: !(Maybe Int)
-  , _ltinisrIPv6Addresses :: !(Maybe [InstanceIPv6AddressRequest])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LaunchTemplateInstanceNetworkInterfaceSpecificationRequest =
+  LaunchTemplateInstanceNetworkInterfaceSpecificationRequest'
+    { _ltinisrGroups :: !(Maybe [Text])
+    , _ltinisrPrivateIPAddresses :: !(Maybe [PrivateIPAddressSpecification])
+    , _ltinisrDeleteOnTermination :: !(Maybe Bool)
+    , _ltinisrAssociatePublicIPAddress :: !(Maybe Bool)
+    , _ltinisrNetworkInterfaceId :: !(Maybe Text)
+    , _ltinisrSubnetId :: !(Maybe Text)
+    , _ltinisrIPv6AddressCount :: !(Maybe Int)
+    , _ltinisrPrivateIPAddress :: !(Maybe Text)
+    , _ltinisrSecondaryPrivateIPAddressCount :: !(Maybe Int)
+    , _ltinisrDescription :: !(Maybe Text)
+    , _ltinisrDeviceIndex :: !(Maybe Int)
+    , _ltinisrIPv6Addresses :: !(Maybe [InstanceIPv6AddressRequest])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LaunchTemplateInstanceNetworkInterfaceSpecificationRequest' with the minimum fields required to make a request.
@@ -9191,13 +9463,15 @@ instance ToQuery
 --
 --
 -- /See:/ 'launchTemplateOverrides' smart constructor.
-data LaunchTemplateOverrides = LaunchTemplateOverrides'
-  { _ltoSpotPrice        :: !(Maybe Text)
-  , _ltoWeightedCapacity :: !(Maybe Double)
-  , _ltoSubnetId         :: !(Maybe Text)
-  , _ltoInstanceType     :: !(Maybe InstanceType)
-  , _ltoAvailabilityZone :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LaunchTemplateOverrides =
+  LaunchTemplateOverrides'
+    { _ltoSpotPrice        :: !(Maybe Text)
+    , _ltoWeightedCapacity :: !(Maybe Double)
+    , _ltoSubnetId         :: !(Maybe Text)
+    , _ltoInstanceType     :: !(Maybe InstanceType)
+    , _ltoAvailabilityZone :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LaunchTemplateOverrides' with the minimum fields required to make a request.
@@ -9271,14 +9545,16 @@ instance ToQuery LaunchTemplateOverrides where
 --
 --
 -- /See:/ 'launchTemplatePlacement' smart constructor.
-data LaunchTemplatePlacement = LaunchTemplatePlacement'
-  { _ltpAffinity         :: !(Maybe Text)
-  , _ltpHostId           :: !(Maybe Text)
-  , _ltpSpreadDomain     :: !(Maybe Text)
-  , _ltpAvailabilityZone :: !(Maybe Text)
-  , _ltpTenancy          :: !(Maybe Tenancy)
-  , _ltpGroupName        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LaunchTemplatePlacement =
+  LaunchTemplatePlacement'
+    { _ltpAffinity         :: !(Maybe Text)
+    , _ltpHostId           :: !(Maybe Text)
+    , _ltpSpreadDomain     :: !(Maybe Text)
+    , _ltpAvailabilityZone :: !(Maybe Text)
+    , _ltpTenancy          :: !(Maybe Tenancy)
+    , _ltpGroupName        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LaunchTemplatePlacement' with the minimum fields required to make a request.
@@ -9351,14 +9627,16 @@ instance NFData LaunchTemplatePlacement where
 --
 --
 -- /See:/ 'launchTemplatePlacementRequest' smart constructor.
-data LaunchTemplatePlacementRequest = LaunchTemplatePlacementRequest'
-  { _ltprAffinity         :: !(Maybe Text)
-  , _ltprHostId           :: !(Maybe Text)
-  , _ltprSpreadDomain     :: !(Maybe Text)
-  , _ltprAvailabilityZone :: !(Maybe Text)
-  , _ltprTenancy          :: !(Maybe Tenancy)
-  , _ltprGroupName        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LaunchTemplatePlacementRequest =
+  LaunchTemplatePlacementRequest'
+    { _ltprAffinity         :: !(Maybe Text)
+    , _ltprHostId           :: !(Maybe Text)
+    , _ltprSpreadDomain     :: !(Maybe Text)
+    , _ltprAvailabilityZone :: !(Maybe Text)
+    , _ltprTenancy          :: !(Maybe Tenancy)
+    , _ltprGroupName        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LaunchTemplatePlacementRequest' with the minimum fields required to make a request.
@@ -9433,11 +9711,13 @@ instance ToQuery LaunchTemplatePlacementRequest where
 --
 --
 -- /See:/ 'launchTemplateSpecification' smart constructor.
-data LaunchTemplateSpecification = LaunchTemplateSpecification'
-  { _ltsLaunchTemplateName :: !(Maybe Text)
-  , _ltsLaunchTemplateId   :: !(Maybe Text)
-  , _ltsVersion            :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LaunchTemplateSpecification =
+  LaunchTemplateSpecification'
+    { _ltsLaunchTemplateName :: !(Maybe Text)
+    , _ltsLaunchTemplateId   :: !(Maybe Text)
+    , _ltsVersion            :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LaunchTemplateSpecification' with the minimum fields required to make a request.
@@ -9487,13 +9767,15 @@ instance ToQuery LaunchTemplateSpecification where
 --
 --
 -- /See:/ 'launchTemplateSpotMarketOptions' smart constructor.
-data LaunchTemplateSpotMarketOptions = LaunchTemplateSpotMarketOptions'
-  { _ltsmoBlockDurationMinutes         :: !(Maybe Int)
-  , _ltsmoInstanceInterruptionBehavior :: !(Maybe InstanceInterruptionBehavior)
-  , _ltsmoValidUntil                   :: !(Maybe ISO8601)
-  , _ltsmoSpotInstanceType             :: !(Maybe SpotInstanceType)
-  , _ltsmoMaxPrice                     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LaunchTemplateSpotMarketOptions =
+  LaunchTemplateSpotMarketOptions'
+    { _ltsmoBlockDurationMinutes :: !(Maybe Int)
+    , _ltsmoInstanceInterruptionBehavior :: !(Maybe InstanceInterruptionBehavior)
+    , _ltsmoValidUntil :: !(Maybe ISO8601)
+    , _ltsmoSpotInstanceType :: !(Maybe SpotInstanceType)
+    , _ltsmoMaxPrice :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LaunchTemplateSpotMarketOptions' with the minimum fields required to make a request.
@@ -9561,13 +9843,15 @@ instance NFData LaunchTemplateSpotMarketOptions where
 --
 --
 -- /See:/ 'launchTemplateSpotMarketOptionsRequest' smart constructor.
-data LaunchTemplateSpotMarketOptionsRequest = LaunchTemplateSpotMarketOptionsRequest'
-  { _ltsmorBlockDurationMinutes         :: !(Maybe Int)
-  , _ltsmorInstanceInterruptionBehavior :: !(Maybe InstanceInterruptionBehavior)
-  , _ltsmorValidUntil                   :: !(Maybe ISO8601)
-  , _ltsmorSpotInstanceType             :: !(Maybe SpotInstanceType)
-  , _ltsmorMaxPrice                     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LaunchTemplateSpotMarketOptionsRequest =
+  LaunchTemplateSpotMarketOptionsRequest'
+    { _ltsmorBlockDurationMinutes :: !(Maybe Int)
+    , _ltsmorInstanceInterruptionBehavior :: !(Maybe InstanceInterruptionBehavior)
+    , _ltsmorValidUntil :: !(Maybe ISO8601)
+    , _ltsmorSpotInstanceType :: !(Maybe SpotInstanceType)
+    , _ltsmorMaxPrice :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LaunchTemplateSpotMarketOptionsRequest' with the minimum fields required to make a request.
@@ -9641,10 +9925,12 @@ instance ToQuery
 --
 --
 -- /See:/ 'launchTemplateTagSpecification' smart constructor.
-data LaunchTemplateTagSpecification = LaunchTemplateTagSpecification'
-  { _lttsResourceType :: !(Maybe ResourceType)
-  , _lttsTags         :: !(Maybe [Tag])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LaunchTemplateTagSpecification =
+  LaunchTemplateTagSpecification'
+    { _lttsResourceType :: !(Maybe ResourceType)
+    , _lttsTags         :: !(Maybe [Tag])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LaunchTemplateTagSpecification' with the minimum fields required to make a request.
@@ -9686,10 +9972,12 @@ instance NFData LaunchTemplateTagSpecification where
 --
 --
 -- /See:/ 'launchTemplateTagSpecificationRequest' smart constructor.
-data LaunchTemplateTagSpecificationRequest = LaunchTemplateTagSpecificationRequest'
-  { _lttsrResourceType :: !(Maybe ResourceType)
-  , _lttsrTags         :: !(Maybe [Tag])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LaunchTemplateTagSpecificationRequest =
+  LaunchTemplateTagSpecificationRequest'
+    { _lttsrResourceType :: !(Maybe ResourceType)
+    , _lttsrTags         :: !(Maybe [Tag])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LaunchTemplateTagSpecificationRequest' with the minimum fields required to make a request.
@@ -9734,16 +10022,18 @@ instance ToQuery
 --
 --
 -- /See:/ 'launchTemplateVersion' smart constructor.
-data LaunchTemplateVersion = LaunchTemplateVersion'
-  { _ltvLaunchTemplateName :: !(Maybe Text)
-  , _ltvLaunchTemplateId   :: !(Maybe Text)
-  , _ltvCreatedBy          :: !(Maybe Text)
-  , _ltvDefaultVersion     :: !(Maybe Bool)
-  , _ltvVersionNumber      :: !(Maybe Integer)
-  , _ltvVersionDescription :: !(Maybe Text)
-  , _ltvLaunchTemplateData :: !(Maybe ResponseLaunchTemplateData)
-  , _ltvCreateTime         :: !(Maybe ISO8601)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LaunchTemplateVersion =
+  LaunchTemplateVersion'
+    { _ltvLaunchTemplateName :: !(Maybe Text)
+    , _ltvLaunchTemplateId   :: !(Maybe Text)
+    , _ltvCreatedBy          :: !(Maybe Text)
+    , _ltvDefaultVersion     :: !(Maybe Bool)
+    , _ltvVersionNumber      :: !(Maybe Integer)
+    , _ltvVersionDescription :: !(Maybe Text)
+    , _ltvLaunchTemplateData :: !(Maybe ResponseLaunchTemplateData)
+    , _ltvCreateTime         :: !(Maybe ISO8601)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LaunchTemplateVersion' with the minimum fields required to make a request.
@@ -9833,9 +10123,11 @@ instance NFData LaunchTemplateVersion where
 --
 --
 -- /See:/ 'launchTemplatesMonitoring' smart constructor.
-newtype LaunchTemplatesMonitoring = LaunchTemplatesMonitoring'
-  { _ltmEnabled :: Maybe Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype LaunchTemplatesMonitoring =
+  LaunchTemplatesMonitoring'
+    { _ltmEnabled :: Maybe Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LaunchTemplatesMonitoring' with the minimum fields required to make a request.
@@ -9865,9 +10157,11 @@ instance NFData LaunchTemplatesMonitoring where
 --
 --
 -- /See:/ 'launchTemplatesMonitoringRequest' smart constructor.
-newtype LaunchTemplatesMonitoringRequest = LaunchTemplatesMonitoringRequest'
-  { _ltmrEnabled :: Maybe Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype LaunchTemplatesMonitoringRequest =
+  LaunchTemplatesMonitoringRequest'
+    { _ltmrEnabled :: Maybe Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LaunchTemplatesMonitoringRequest' with the minimum fields required to make a request.
@@ -9901,10 +10195,12 @@ instance ToQuery LaunchTemplatesMonitoringRequest
 --
 --
 -- /See:/ 'loadBalancersConfig' smart constructor.
-data LoadBalancersConfig = LoadBalancersConfig'
-  { _lbcClassicLoadBalancersConfig :: !(Maybe ClassicLoadBalancersConfig)
-  , _lbcTargetGroupsConfig         :: !(Maybe TargetGroupsConfig)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LoadBalancersConfig =
+  LoadBalancersConfig'
+    { _lbcClassicLoadBalancersConfig :: !(Maybe ClassicLoadBalancersConfig)
+    , _lbcTargetGroupsConfig         :: !(Maybe TargetGroupsConfig)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LoadBalancersConfig' with the minimum fields required to make a request.
@@ -9951,10 +10247,12 @@ instance ToQuery LoadBalancersConfig where
 --
 --
 -- /See:/ 'loadPermission' smart constructor.
-data LoadPermission = LoadPermission'
-  { _lpGroup  :: !(Maybe PermissionGroup)
-  , _lpUserId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LoadPermission =
+  LoadPermission'
+    { _lpGroup  :: !(Maybe PermissionGroup)
+    , _lpUserId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LoadPermission' with the minimum fields required to make a request.
@@ -9991,10 +10289,12 @@ instance NFData LoadPermission where
 --
 --
 -- /See:/ 'loadPermissionModifications' smart constructor.
-data LoadPermissionModifications = LoadPermissionModifications'
-  { _lpmRemove :: !(Maybe [LoadPermissionRequest])
-  , _lpmAdd    :: !(Maybe [LoadPermissionRequest])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LoadPermissionModifications =
+  LoadPermissionModifications'
+    { _lpmRemove :: !(Maybe [LoadPermissionRequest])
+    , _lpmAdd    :: !(Maybe [LoadPermissionRequest])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LoadPermissionModifications' with the minimum fields required to make a request.
@@ -10033,10 +10333,12 @@ instance ToQuery LoadPermissionModifications where
 --
 --
 -- /See:/ 'loadPermissionRequest' smart constructor.
-data LoadPermissionRequest = LoadPermissionRequest'
-  { _lprGroup  :: !(Maybe PermissionGroup)
-  , _lprUserId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LoadPermissionRequest =
+  LoadPermissionRequest'
+    { _lprGroup  :: !(Maybe PermissionGroup)
+    , _lprUserId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LoadPermissionRequest' with the minimum fields required to make a request.
@@ -10074,9 +10376,11 @@ instance ToQuery LoadPermissionRequest where
 --
 --
 -- /See:/ 'monitoring' smart constructor.
-newtype Monitoring = Monitoring'
-  { _mState :: Maybe MonitoringState
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype Monitoring =
+  Monitoring'
+    { _mState :: Maybe MonitoringState
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Monitoring' with the minimum fields required to make a request.
@@ -10105,10 +10409,12 @@ instance NFData Monitoring where
 --
 --
 -- /See:/ 'movingAddressStatus' smart constructor.
-data MovingAddressStatus = MovingAddressStatus'
-  { _masMoveStatus :: !(Maybe MoveStatus)
-  , _masPublicIP   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MovingAddressStatus =
+  MovingAddressStatus'
+    { _masMoveStatus :: !(Maybe MoveStatus)
+    , _masPublicIP   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MovingAddressStatus' with the minimum fields required to make a request.
@@ -10146,19 +10452,21 @@ instance NFData MovingAddressStatus where
 --
 --
 -- /See:/ 'natGateway' smart constructor.
-data NatGateway = NatGateway'
-  { _ngState                :: !(Maybe NatGatewayState)
-  , _ngFailureCode          :: !(Maybe Text)
-  , _ngVPCId                :: !(Maybe Text)
-  , _ngFailureMessage       :: !(Maybe Text)
-  , _ngNatGatewayId         :: !(Maybe Text)
-  , _ngSubnetId             :: !(Maybe Text)
-  , _ngDeleteTime           :: !(Maybe ISO8601)
-  , _ngProvisionedBandwidth :: !(Maybe ProvisionedBandwidth)
-  , _ngNatGatewayAddresses  :: !(Maybe [NatGatewayAddress])
-  , _ngCreateTime           :: !(Maybe ISO8601)
-  , _ngTags                 :: !(Maybe [Tag])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NatGateway =
+  NatGateway'
+    { _ngState                :: !(Maybe NatGatewayState)
+    , _ngFailureCode          :: !(Maybe Text)
+    , _ngVPCId                :: !(Maybe Text)
+    , _ngFailureMessage       :: !(Maybe Text)
+    , _ngNatGatewayId         :: !(Maybe Text)
+    , _ngSubnetId             :: !(Maybe Text)
+    , _ngDeleteTime           :: !(Maybe ISO8601)
+    , _ngProvisionedBandwidth :: !(Maybe ProvisionedBandwidth)
+    , _ngNatGatewayAddresses  :: !(Maybe [NatGatewayAddress])
+    , _ngCreateTime           :: !(Maybe ISO8601)
+    , _ngTags                 :: !(Maybe [Tag])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NatGateway' with the minimum fields required to make a request.
@@ -10275,12 +10583,14 @@ instance NFData NatGateway where
 --
 --
 -- /See:/ 'natGatewayAddress' smart constructor.
-data NatGatewayAddress = NatGatewayAddress'
-  { _ngaPrivateIP          :: !(Maybe Text)
-  , _ngaAllocationId       :: !(Maybe Text)
-  , _ngaNetworkInterfaceId :: !(Maybe Text)
-  , _ngaPublicIP           :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NatGatewayAddress =
+  NatGatewayAddress'
+    { _ngaPrivateIP          :: !(Maybe Text)
+    , _ngaAllocationId       :: !(Maybe Text)
+    , _ngaNetworkInterfaceId :: !(Maybe Text)
+    , _ngaPublicIP           :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NatGatewayAddress' with the minimum fields required to make a request.
@@ -10337,14 +10647,16 @@ instance NFData NatGatewayAddress where
 --
 --
 -- /See:/ 'networkACL' smart constructor.
-data NetworkACL = NetworkACL'
-  { _naEntries      :: !(Maybe [NetworkACLEntry])
-  , _naNetworkACLId :: !(Maybe Text)
-  , _naVPCId        :: !(Maybe Text)
-  , _naAssociations :: !(Maybe [NetworkACLAssociation])
-  , _naTags         :: !(Maybe [Tag])
-  , _naIsDefault    :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NetworkACL =
+  NetworkACL'
+    { _naEntries      :: !(Maybe [NetworkACLEntry])
+    , _naNetworkACLId :: !(Maybe Text)
+    , _naVPCId        :: !(Maybe Text)
+    , _naAssociations :: !(Maybe [NetworkACLAssociation])
+    , _naTags         :: !(Maybe [Tag])
+    , _naIsDefault    :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NetworkACL' with the minimum fields required to make a request.
@@ -10423,11 +10735,13 @@ instance NFData NetworkACL where
 --
 --
 -- /See:/ 'networkACLAssociation' smart constructor.
-data NetworkACLAssociation = NetworkACLAssociation'
-  { _naaNetworkACLId            :: !(Maybe Text)
-  , _naaSubnetId                :: !(Maybe Text)
-  , _naaNetworkACLAssociationId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NetworkACLAssociation =
+  NetworkACLAssociation'
+    { _naaNetworkACLId            :: !(Maybe Text)
+    , _naaSubnetId                :: !(Maybe Text)
+    , _naaNetworkACLAssociationId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NetworkACLAssociation' with the minimum fields required to make a request.
@@ -10476,16 +10790,18 @@ instance NFData NetworkACLAssociation where
 --
 --
 -- /See:/ 'networkACLEntry' smart constructor.
-data NetworkACLEntry = NetworkACLEntry'
-  { _naeIPv6CidrBlock :: !(Maybe Text)
-  , _naeICMPTypeCode  :: !(Maybe ICMPTypeCode)
-  , _naeRuleNumber    :: !(Maybe Int)
-  , _naeRuleAction    :: !(Maybe RuleAction)
-  , _naeProtocol      :: !(Maybe Text)
-  , _naePortRange     :: !(Maybe PortRange)
-  , _naeCidrBlock     :: !(Maybe Text)
-  , _naeEgress        :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NetworkACLEntry =
+  NetworkACLEntry'
+    { _naeIPv6CidrBlock :: !(Maybe Text)
+    , _naeICMPTypeCode  :: !(Maybe ICMPTypeCode)
+    , _naeRuleNumber    :: !(Maybe Int)
+    , _naeRuleAction    :: !(Maybe RuleAction)
+    , _naeProtocol      :: !(Maybe Text)
+    , _naePortRange     :: !(Maybe PortRange)
+    , _naeCidrBlock     :: !(Maybe Text)
+    , _naeEgress        :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NetworkACLEntry' with the minimum fields required to make a request.
@@ -10574,28 +10890,30 @@ instance NFData NetworkACLEntry where
 --
 --
 -- /See:/ 'networkInterface' smart constructor.
-data NetworkInterface = NetworkInterface'
-  { _niGroups             :: !(Maybe [GroupIdentifier])
-  , _niStatus             :: !(Maybe NetworkInterfaceStatus)
-  , _niPrivateIPAddresses :: !(Maybe [NetworkInterfacePrivateIPAddress])
-  , _niSourceDestCheck    :: !(Maybe Bool)
-  , _niInterfaceType      :: !(Maybe NetworkInterfaceType)
-  , _niVPCId              :: !(Maybe Text)
-  , _niTagSet             :: !(Maybe [Tag])
-  , _niRequesterManaged   :: !(Maybe Bool)
-  , _niNetworkInterfaceId :: !(Maybe Text)
-  , _niSubnetId           :: !(Maybe Text)
-  , _niMACAddress         :: !(Maybe Text)
-  , _niAttachment         :: !(Maybe NetworkInterfaceAttachment)
-  , _niOwnerId            :: !(Maybe Text)
-  , _niAvailabilityZone   :: !(Maybe Text)
-  , _niPrivateIPAddress   :: !(Maybe Text)
-  , _niPrivateDNSName     :: !(Maybe Text)
-  , _niRequesterId        :: !(Maybe Text)
-  , _niDescription        :: !(Maybe Text)
-  , _niAssociation        :: !(Maybe NetworkInterfaceAssociation)
-  , _niIPv6Addresses      :: !(Maybe [NetworkInterfaceIPv6Address])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NetworkInterface =
+  NetworkInterface'
+    { _niGroups             :: !(Maybe [GroupIdentifier])
+    , _niStatus             :: !(Maybe NetworkInterfaceStatus)
+    , _niPrivateIPAddresses :: !(Maybe [NetworkInterfacePrivateIPAddress])
+    , _niSourceDestCheck    :: !(Maybe Bool)
+    , _niInterfaceType      :: !(Maybe NetworkInterfaceType)
+    , _niVPCId              :: !(Maybe Text)
+    , _niTagSet             :: !(Maybe [Tag])
+    , _niRequesterManaged   :: !(Maybe Bool)
+    , _niNetworkInterfaceId :: !(Maybe Text)
+    , _niSubnetId           :: !(Maybe Text)
+    , _niMACAddress         :: !(Maybe Text)
+    , _niAttachment         :: !(Maybe NetworkInterfaceAttachment)
+    , _niOwnerId            :: !(Maybe Text)
+    , _niAvailabilityZone   :: !(Maybe Text)
+    , _niPrivateIPAddress   :: !(Maybe Text)
+    , _niPrivateDNSName     :: !(Maybe Text)
+    , _niRequesterId        :: !(Maybe Text)
+    , _niDescription        :: !(Maybe Text)
+    , _niAssociation        :: !(Maybe NetworkInterfaceAssociation)
+    , _niIPv6Addresses      :: !(Maybe [NetworkInterfaceIPv6Address])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NetworkInterface' with the minimum fields required to make a request.
@@ -10788,13 +11106,15 @@ instance NFData NetworkInterface where
 --
 --
 -- /See:/ 'networkInterfaceAssociation' smart constructor.
-data NetworkInterfaceAssociation = NetworkInterfaceAssociation'
-  { _niaAssociationId :: !(Maybe Text)
-  , _niaPublicDNSName :: !(Maybe Text)
-  , _niaAllocationId  :: !(Maybe Text)
-  , _niaIPOwnerId     :: !(Maybe Text)
-  , _niaPublicIP      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NetworkInterfaceAssociation =
+  NetworkInterfaceAssociation'
+    { _niaAssociationId :: !(Maybe Text)
+    , _niaPublicDNSName :: !(Maybe Text)
+    , _niaAllocationId  :: !(Maybe Text)
+    , _niaIPOwnerId     :: !(Maybe Text)
+    , _niaPublicIP      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NetworkInterfaceAssociation' with the minimum fields required to make a request.
@@ -10859,15 +11179,17 @@ instance NFData NetworkInterfaceAssociation where
 --
 --
 -- /See:/ 'networkInterfaceAttachment' smart constructor.
-data NetworkInterfaceAttachment = NetworkInterfaceAttachment'
-  { _niaInstanceId          :: !(Maybe Text)
-  , _niaStatus              :: !(Maybe AttachmentStatus)
-  , _niaDeleteOnTermination :: !(Maybe Bool)
-  , _niaAttachmentId        :: !(Maybe Text)
-  , _niaInstanceOwnerId     :: !(Maybe Text)
-  , _niaAttachTime          :: !(Maybe ISO8601)
-  , _niaDeviceIndex         :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NetworkInterfaceAttachment =
+  NetworkInterfaceAttachment'
+    { _niaInstanceId          :: !(Maybe Text)
+    , _niaStatus              :: !(Maybe AttachmentStatus)
+    , _niaDeleteOnTermination :: !(Maybe Bool)
+    , _niaAttachmentId        :: !(Maybe Text)
+    , _niaInstanceOwnerId     :: !(Maybe Text)
+    , _niaAttachTime          :: !(Maybe ISO8601)
+    , _niaDeviceIndex         :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NetworkInterfaceAttachment' with the minimum fields required to make a request.
@@ -10948,10 +11270,12 @@ instance NFData NetworkInterfaceAttachment where
 --
 --
 -- /See:/ 'networkInterfaceAttachmentChanges' smart constructor.
-data NetworkInterfaceAttachmentChanges = NetworkInterfaceAttachmentChanges'
-  { _niacDeleteOnTermination :: !(Maybe Bool)
-  , _niacAttachmentId        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NetworkInterfaceAttachmentChanges =
+  NetworkInterfaceAttachmentChanges'
+    { _niacDeleteOnTermination :: !(Maybe Bool)
+    , _niacAttachmentId        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NetworkInterfaceAttachmentChanges' with the minimum fields required to make a request.
@@ -10994,9 +11318,11 @@ instance ToQuery NetworkInterfaceAttachmentChanges
 --
 --
 -- /See:/ 'networkInterfaceIPv6Address' smart constructor.
-newtype NetworkInterfaceIPv6Address = NetworkInterfaceIPv6Address'
-  { _niiaIPv6Address :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype NetworkInterfaceIPv6Address =
+  NetworkInterfaceIPv6Address'
+    { _niiaIPv6Address :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NetworkInterfaceIPv6Address' with the minimum fields required to make a request.
@@ -11028,14 +11354,16 @@ instance NFData NetworkInterfaceIPv6Address where
 --
 --
 -- /See:/ 'networkInterfacePermission' smart constructor.
-data NetworkInterfacePermission = NetworkInterfacePermission'
-  { _nipPermissionState              :: !(Maybe NetworkInterfacePermissionState)
-  , _nipNetworkInterfacePermissionId :: !(Maybe Text)
-  , _nipNetworkInterfaceId           :: !(Maybe Text)
-  , _nipAWSAccountId                 :: !(Maybe Text)
-  , _nipAWSService                   :: !(Maybe Text)
-  , _nipPermission                   :: !(Maybe InterfacePermissionType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NetworkInterfacePermission =
+  NetworkInterfacePermission'
+    { _nipPermissionState :: !(Maybe NetworkInterfacePermissionState)
+    , _nipNetworkInterfacePermissionId :: !(Maybe Text)
+    , _nipNetworkInterfaceId :: !(Maybe Text)
+    , _nipAWSAccountId :: !(Maybe Text)
+    , _nipAWSService :: !(Maybe Text)
+    , _nipPermission :: !(Maybe InterfacePermissionType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NetworkInterfacePermission' with the minimum fields required to make a request.
@@ -11109,10 +11437,12 @@ instance NFData NetworkInterfacePermission where
 --
 --
 -- /See:/ 'networkInterfacePermissionState' smart constructor.
-data NetworkInterfacePermissionState = NetworkInterfacePermissionState'
-  { _nipsState         :: !(Maybe NetworkInterfacePermissionStateCode)
-  , _nipsStatusMessage :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NetworkInterfacePermissionState =
+  NetworkInterfacePermissionState'
+    { _nipsState         :: !(Maybe NetworkInterfacePermissionStateCode)
+    , _nipsStatusMessage :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NetworkInterfacePermissionState' with the minimum fields required to make a request.
@@ -11153,12 +11483,14 @@ instance NFData NetworkInterfacePermissionState where
 --
 --
 -- /See:/ 'networkInterfacePrivateIPAddress' smart constructor.
-data NetworkInterfacePrivateIPAddress = NetworkInterfacePrivateIPAddress'
-  { _nipiaPrimary          :: !(Maybe Bool)
-  , _nipiaPrivateIPAddress :: !(Maybe Text)
-  , _nipiaPrivateDNSName   :: !(Maybe Text)
-  , _nipiaAssociation      :: !(Maybe NetworkInterfaceAssociation)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NetworkInterfacePrivateIPAddress =
+  NetworkInterfacePrivateIPAddress'
+    { _nipiaPrimary          :: !(Maybe Bool)
+    , _nipiaPrivateIPAddress :: !(Maybe Text)
+    , _nipiaPrivateDNSName   :: !(Maybe Text)
+    , _nipiaAssociation      :: !(Maybe NetworkInterfaceAssociation)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NetworkInterfacePrivateIPAddress' with the minimum fields required to make a request.
@@ -11214,10 +11546,12 @@ instance NFData NetworkInterfacePrivateIPAddress
          where
 
 -- | /See:/ 'newDHCPConfiguration' smart constructor.
-data NewDHCPConfiguration = NewDHCPConfiguration'
-  { _ndcValues :: !(Maybe [Text])
-  , _ndcKey    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data NewDHCPConfiguration =
+  NewDHCPConfiguration'
+    { _ndcValues :: !(Maybe [Text])
+    , _ndcKey    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'NewDHCPConfiguration' with the minimum fields required to make a request.
@@ -11256,12 +11590,14 @@ instance ToQuery NewDHCPConfiguration where
 --
 --
 -- /See:/ 'pciId' smart constructor.
-data PciId = PciId'
-  { _piSubsystemId       :: !(Maybe Text)
-  , _piDeviceId          :: !(Maybe Text)
-  , _piSubsystemVendorId :: !(Maybe Text)
-  , _piVendorId          :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PciId =
+  PciId'
+    { _piSubsystemId       :: !(Maybe Text)
+    , _piDeviceId          :: !(Maybe Text)
+    , _piSubsystemVendorId :: !(Maybe Text)
+    , _piVendorId          :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PciId' with the minimum fields required to make a request.
@@ -11318,11 +11654,13 @@ instance NFData PciId where
 --
 --
 -- /See:/ 'peeringConnectionOptions' smart constructor.
-data PeeringConnectionOptions = PeeringConnectionOptions'
-  { _pcoAllowEgressFromLocalVPCToRemoteClassicLink :: !(Maybe Bool)
-  , _pcoAllowEgressFromLocalClassicLinkToRemoteVPC :: !(Maybe Bool)
-  , _pcoAllowDNSResolutionFromRemoteVPC            :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PeeringConnectionOptions =
+  PeeringConnectionOptions'
+    { _pcoAllowEgressFromLocalVPCToRemoteClassicLink :: !(Maybe Bool)
+    , _pcoAllowEgressFromLocalClassicLinkToRemoteVPC :: !(Maybe Bool)
+    , _pcoAllowDNSResolutionFromRemoteVPC            :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PeeringConnectionOptions' with the minimum fields required to make a request.
@@ -11373,11 +11711,13 @@ instance NFData PeeringConnectionOptions where
 --
 --
 -- /See:/ 'peeringConnectionOptionsRequest' smart constructor.
-data PeeringConnectionOptionsRequest = PeeringConnectionOptionsRequest'
-  { _pcorAllowEgressFromLocalVPCToRemoteClassicLink :: !(Maybe Bool)
-  , _pcorAllowEgressFromLocalClassicLinkToRemoteVPC :: !(Maybe Bool)
-  , _pcorAllowDNSResolutionFromRemoteVPC            :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PeeringConnectionOptionsRequest =
+  PeeringConnectionOptionsRequest'
+    { _pcorAllowEgressFromLocalVPCToRemoteClassicLink :: !(Maybe Bool)
+    , _pcorAllowEgressFromLocalClassicLinkToRemoteVPC :: !(Maybe Bool)
+    , _pcorAllowDNSResolutionFromRemoteVPC            :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PeeringConnectionOptionsRequest' with the minimum fields required to make a request.
@@ -11432,14 +11772,16 @@ instance ToQuery PeeringConnectionOptionsRequest
 --
 --
 -- /See:/ 'placement' smart constructor.
-data Placement = Placement'
-  { _pAffinity         :: !(Maybe Text)
-  , _pHostId           :: !(Maybe Text)
-  , _pSpreadDomain     :: !(Maybe Text)
-  , _pAvailabilityZone :: !(Maybe Text)
-  , _pTenancy          :: !(Maybe Tenancy)
-  , _pGroupName        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Placement =
+  Placement'
+    { _pAffinity         :: !(Maybe Text)
+    , _pHostId           :: !(Maybe Text)
+    , _pSpreadDomain     :: !(Maybe Text)
+    , _pAvailabilityZone :: !(Maybe Text)
+    , _pTenancy          :: !(Maybe Tenancy)
+    , _pGroupName        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Placement' with the minimum fields required to make a request.
@@ -11520,11 +11862,13 @@ instance ToQuery Placement where
 --
 --
 -- /See:/ 'placementGroup' smart constructor.
-data PlacementGroup = PlacementGroup'
-  { _pgState     :: !(Maybe PlacementGroupState)
-  , _pgStrategy  :: !(Maybe PlacementStrategy)
-  , _pgGroupName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PlacementGroup =
+  PlacementGroup'
+    { _pgState     :: !(Maybe PlacementGroupState)
+    , _pgStrategy  :: !(Maybe PlacementStrategy)
+    , _pgGroupName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PlacementGroup' with the minimum fields required to make a request.
@@ -11570,10 +11914,12 @@ instance NFData PlacementGroup where
 --
 --
 -- /See:/ 'portRange' smart constructor.
-data PortRange = PortRange'
-  { _prTo   :: !(Maybe Int)
-  , _prFrom :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PortRange =
+  PortRange'
+    { _prTo   :: !(Maybe Int)
+    , _prFrom :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PortRange' with the minimum fields required to make a request.
@@ -11613,11 +11959,13 @@ instance ToQuery PortRange where
 --
 --
 -- /See:/ 'prefixList' smart constructor.
-data PrefixList = PrefixList'
-  { _plCidrs          :: !(Maybe [Text])
-  , _plPrefixListId   :: !(Maybe Text)
-  , _plPrefixListName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PrefixList =
+  PrefixList'
+    { _plCidrs          :: !(Maybe [Text])
+    , _plPrefixListId   :: !(Maybe Text)
+    , _plPrefixListName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PrefixList' with the minimum fields required to make a request.
@@ -11665,10 +12013,12 @@ instance NFData PrefixList where
 --
 --
 -- /See:/ 'prefixListId' smart constructor.
-data PrefixListId = PrefixListId'
-  { _pliPrefixListId :: !(Maybe Text)
-  , _pliDescription  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PrefixListId =
+  PrefixListId'
+    { _pliPrefixListId :: !(Maybe Text)
+    , _pliDescription  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PrefixListId' with the minimum fields required to make a request.
@@ -11712,12 +12062,14 @@ instance ToQuery PrefixListId where
 --
 --
 -- /See:/ 'priceSchedule' smart constructor.
-data PriceSchedule = PriceSchedule'
-  { _psCurrencyCode :: !(Maybe CurrencyCodeValues)
-  , _psTerm         :: !(Maybe Integer)
-  , _psActive       :: !(Maybe Bool)
-  , _psPrice        :: !(Maybe Double)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PriceSchedule =
+  PriceSchedule'
+    { _psCurrencyCode :: !(Maybe CurrencyCodeValues)
+    , _psTerm         :: !(Maybe Integer)
+    , _psActive       :: !(Maybe Bool)
+    , _psPrice        :: !(Maybe Double)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PriceSchedule' with the minimum fields required to make a request.
@@ -11774,11 +12126,13 @@ instance NFData PriceSchedule where
 --
 --
 -- /See:/ 'priceScheduleSpecification' smart constructor.
-data PriceScheduleSpecification = PriceScheduleSpecification'
-  { _pssCurrencyCode :: !(Maybe CurrencyCodeValues)
-  , _pssTerm         :: !(Maybe Integer)
-  , _pssPrice        :: !(Maybe Double)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PriceScheduleSpecification =
+  PriceScheduleSpecification'
+    { _pssCurrencyCode :: !(Maybe CurrencyCodeValues)
+    , _pssTerm         :: !(Maybe Integer)
+    , _pssPrice        :: !(Maybe Double)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PriceScheduleSpecification' with the minimum fields required to make a request.
@@ -11824,10 +12178,12 @@ instance ToQuery PriceScheduleSpecification where
 --
 --
 -- /See:/ 'pricingDetail' smart constructor.
-data PricingDetail = PricingDetail'
-  { _pdCount :: !(Maybe Int)
-  , _pdPrice :: !(Maybe Double)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PricingDetail =
+  PricingDetail'
+    { _pdCount :: !(Maybe Int)
+    , _pdPrice :: !(Maybe Double)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PricingDetail' with the minimum fields required to make a request.
@@ -11864,10 +12220,12 @@ instance NFData PricingDetail where
 --
 --
 -- /See:/ 'principalIdFormat' smart constructor.
-data PrincipalIdFormat = PrincipalIdFormat'
-  { _pifARN      :: !(Maybe Text)
-  , _pifStatuses :: !(Maybe [IdFormat])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PrincipalIdFormat =
+  PrincipalIdFormat'
+    { _pifARN      :: !(Maybe Text)
+    , _pifStatuses :: !(Maybe [IdFormat])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PrincipalIdFormat' with the minimum fields required to make a request.
@@ -11907,10 +12265,12 @@ instance NFData PrincipalIdFormat where
 --
 --
 -- /See:/ 'privateIPAddressSpecification' smart constructor.
-data PrivateIPAddressSpecification = PrivateIPAddressSpecification'
-  { _piasPrimary          :: !(Maybe Bool)
-  , _piasPrivateIPAddress :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PrivateIPAddressSpecification =
+  PrivateIPAddressSpecification'
+    { _piasPrimary          :: !(Maybe Bool)
+    , _piasPrivateIPAddress :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PrivateIPAddressSpecification' with the minimum fields required to make a request.
@@ -11956,10 +12316,12 @@ instance ToQuery PrivateIPAddressSpecification where
 --
 --
 -- /See:/ 'productCode' smart constructor.
-data ProductCode = ProductCode'
-  { _pcProductCodeType :: !(Maybe ProductCodeValues)
-  , _pcProductCodeId   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ProductCode =
+  ProductCode'
+    { _pcProductCodeType :: !(Maybe ProductCodeValues)
+    , _pcProductCodeId   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ProductCode' with the minimum fields required to make a request.
@@ -11997,9 +12359,11 @@ instance NFData ProductCode where
 --
 --
 -- /See:/ 'propagatingVGW' smart constructor.
-newtype PropagatingVGW = PropagatingVGW'
-  { _pvGatewayId :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype PropagatingVGW =
+  PropagatingVGW'
+    { _pvGatewayId :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PropagatingVGW' with the minimum fields required to make a request.
@@ -12028,13 +12392,15 @@ instance NFData PropagatingVGW where
 --
 --
 -- /See:/ 'provisionedBandwidth' smart constructor.
-data ProvisionedBandwidth = ProvisionedBandwidth'
-  { _pbStatus        :: !(Maybe Text)
-  , _pbRequested     :: !(Maybe Text)
-  , _pbProvisioned   :: !(Maybe Text)
-  , _pbRequestTime   :: !(Maybe ISO8601)
-  , _pbProvisionTime :: !(Maybe ISO8601)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ProvisionedBandwidth =
+  ProvisionedBandwidth'
+    { _pbStatus        :: !(Maybe Text)
+    , _pbRequested     :: !(Maybe Text)
+    , _pbProvisioned   :: !(Maybe Text)
+    , _pbRequestTime   :: !(Maybe ISO8601)
+    , _pbProvisionTime :: !(Maybe ISO8601)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ProvisionedBandwidth' with the minimum fields required to make a request.
@@ -12099,16 +12465,18 @@ instance NFData ProvisionedBandwidth where
 --
 --
 -- /See:/ 'purchase' smart constructor.
-data Purchase = Purchase'
-  { _pInstanceFamily    :: !(Maybe Text)
-  , _pCurrencyCode      :: !(Maybe CurrencyCodeValues)
-  , _pHostReservationId :: !(Maybe Text)
-  , _pHourlyPrice       :: !(Maybe Text)
-  , _pUpfrontPrice      :: !(Maybe Text)
-  , _pHostIdSet         :: !(Maybe [Text])
-  , _pDuration          :: !(Maybe Int)
-  , _pPaymentOption     :: !(Maybe PaymentOption)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Purchase =
+  Purchase'
+    { _pInstanceFamily    :: !(Maybe Text)
+    , _pCurrencyCode      :: !(Maybe CurrencyCodeValues)
+    , _pHostReservationId :: !(Maybe Text)
+    , _pHourlyPrice       :: !(Maybe Text)
+    , _pUpfrontPrice      :: !(Maybe Text)
+    , _pHostIdSet         :: !(Maybe [Text])
+    , _pDuration          :: !(Maybe Int)
+    , _pPaymentOption     :: !(Maybe PaymentOption)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Purchase' with the minimum fields required to make a request.
@@ -12199,10 +12567,12 @@ instance NFData Purchase where
 --
 --
 -- /See:/ 'purchaseRequest' smart constructor.
-data PurchaseRequest = PurchaseRequest'
-  { _prInstanceCount :: !Int
-  , _prPurchaseToken :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PurchaseRequest =
+  PurchaseRequest'
+    { _prInstanceCount :: !Int
+    , _prPurchaseToken :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PurchaseRequest' with the minimum fields required to make a request.
@@ -12244,10 +12614,12 @@ instance ToQuery PurchaseRequest where
 --
 --
 -- /See:/ 'recurringCharge' smart constructor.
-data RecurringCharge = RecurringCharge'
-  { _rcAmount    :: !(Maybe Double)
-  , _rcFrequency :: !(Maybe RecurringChargeFrequency)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RecurringCharge =
+  RecurringCharge'
+    { _rcAmount    :: !(Maybe Double)
+    , _rcFrequency :: !(Maybe RecurringChargeFrequency)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RecurringCharge' with the minimum fields required to make a request.
@@ -12284,10 +12656,12 @@ instance NFData RecurringCharge where
 --
 --
 -- /See:/ 'regionInfo' smart constructor.
-data RegionInfo = RegionInfo'
-  { _riRegionName :: !(Maybe Text)
-  , _riEndpoint   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RegionInfo =
+  RegionInfo'
+    { _riRegionName :: !(Maybe Text)
+    , _riEndpoint   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegionInfo' with the minimum fields required to make a request.
@@ -12324,28 +12698,30 @@ instance NFData RegionInfo where
 --
 --
 -- /See:/ 'requestLaunchTemplateData' smart constructor.
-data RequestLaunchTemplateData = RequestLaunchTemplateData'
-  { _rltdSecurityGroupIds :: !(Maybe [Text])
-  , _rltdSecurityGroups :: !(Maybe [Text])
-  , _rltdInstanceMarketOptions :: !(Maybe LaunchTemplateInstanceMarketOptionsRequest)
-  , _rltdDisableAPITermination :: !(Maybe Bool)
-  , _rltdKeyName :: !(Maybe Text)
-  , _rltdNetworkInterfaces :: !(Maybe [LaunchTemplateInstanceNetworkInterfaceSpecificationRequest])
-  , _rltdRamDiskId :: !(Maybe Text)
-  , _rltdKernelId :: !(Maybe Text)
-  , _rltdElasticGpuSpecifications :: !(Maybe [ElasticGpuSpecification])
-  , _rltdInstanceType :: !(Maybe InstanceType)
-  , _rltdEBSOptimized :: !(Maybe Bool)
-  , _rltdUserData :: !(Maybe Text)
-  , _rltdMonitoring :: !(Maybe LaunchTemplatesMonitoringRequest)
-  , _rltdTagSpecifications :: !(Maybe [LaunchTemplateTagSpecificationRequest])
-  , _rltdIAMInstanceProfile :: !(Maybe LaunchTemplateIAMInstanceProfileSpecificationRequest)
-  , _rltdImageId :: !(Maybe Text)
-  , _rltdInstanceInitiatedShutdownBehavior :: !(Maybe ShutdownBehavior)
-  , _rltdCreditSpecification :: !(Maybe CreditSpecificationRequest)
-  , _rltdBlockDeviceMappings :: !(Maybe [LaunchTemplateBlockDeviceMappingRequest])
-  , _rltdPlacement :: !(Maybe LaunchTemplatePlacementRequest)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RequestLaunchTemplateData =
+  RequestLaunchTemplateData'
+    { _rltdSecurityGroupIds :: !(Maybe [Text])
+    , _rltdSecurityGroups :: !(Maybe [Text])
+    , _rltdInstanceMarketOptions :: !(Maybe LaunchTemplateInstanceMarketOptionsRequest)
+    , _rltdDisableAPITermination :: !(Maybe Bool)
+    , _rltdKeyName :: !(Maybe Text)
+    , _rltdNetworkInterfaces :: !(Maybe [LaunchTemplateInstanceNetworkInterfaceSpecificationRequest])
+    , _rltdRamDiskId :: !(Maybe Text)
+    , _rltdKernelId :: !(Maybe Text)
+    , _rltdElasticGpuSpecifications :: !(Maybe [ElasticGpuSpecification])
+    , _rltdInstanceType :: !(Maybe InstanceType)
+    , _rltdEBSOptimized :: !(Maybe Bool)
+    , _rltdUserData :: !(Maybe Text)
+    , _rltdMonitoring :: !(Maybe LaunchTemplatesMonitoringRequest)
+    , _rltdTagSpecifications :: !(Maybe [LaunchTemplateTagSpecificationRequest])
+    , _rltdIAMInstanceProfile :: !(Maybe LaunchTemplateIAMInstanceProfileSpecificationRequest)
+    , _rltdImageId :: !(Maybe Text)
+    , _rltdInstanceInitiatedShutdownBehavior :: !(Maybe ShutdownBehavior)
+    , _rltdCreditSpecification :: !(Maybe CreditSpecificationRequest)
+    , _rltdBlockDeviceMappings :: !(Maybe [LaunchTemplateBlockDeviceMappingRequest])
+    , _rltdPlacement :: !(Maybe LaunchTemplatePlacementRequest)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RequestLaunchTemplateData' with the minimum fields required to make a request.
@@ -12546,24 +12922,26 @@ instance ToQuery RequestLaunchTemplateData where
 --
 --
 -- /See:/ 'requestSpotLaunchSpecification' smart constructor.
-data RequestSpotLaunchSpecification = RequestSpotLaunchSpecification'
-  { _rslsSecurityGroupIds    :: !(Maybe [Text])
-  , _rslsSecurityGroups      :: !(Maybe [Text])
-  , _rslsKeyName             :: !(Maybe Text)
-  , _rslsNetworkInterfaces   :: !(Maybe [InstanceNetworkInterfaceSpecification])
-  , _rslsRAMDiskId           :: !(Maybe Text)
-  , _rslsSubnetId            :: !(Maybe Text)
-  , _rslsKernelId            :: !(Maybe Text)
-  , _rslsInstanceType        :: !(Maybe InstanceType)
-  , _rslsEBSOptimized        :: !(Maybe Bool)
-  , _rslsUserData            :: !(Maybe Text)
-  , _rslsMonitoring          :: !(Maybe RunInstancesMonitoringEnabled)
-  , _rslsIAMInstanceProfile  :: !(Maybe IAMInstanceProfileSpecification)
-  , _rslsImageId             :: !(Maybe Text)
-  , _rslsAddressingType      :: !(Maybe Text)
-  , _rslsBlockDeviceMappings :: !(Maybe [BlockDeviceMapping])
-  , _rslsPlacement           :: !(Maybe SpotPlacement)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RequestSpotLaunchSpecification =
+  RequestSpotLaunchSpecification'
+    { _rslsSecurityGroupIds :: !(Maybe [Text])
+    , _rslsSecurityGroups :: !(Maybe [Text])
+    , _rslsKeyName :: !(Maybe Text)
+    , _rslsNetworkInterfaces :: !(Maybe [InstanceNetworkInterfaceSpecification])
+    , _rslsRAMDiskId :: !(Maybe Text)
+    , _rslsSubnetId :: !(Maybe Text)
+    , _rslsKernelId :: !(Maybe Text)
+    , _rslsInstanceType :: !(Maybe InstanceType)
+    , _rslsEBSOptimized :: !(Maybe Bool)
+    , _rslsUserData :: !(Maybe Text)
+    , _rslsMonitoring :: !(Maybe RunInstancesMonitoringEnabled)
+    , _rslsIAMInstanceProfile :: !(Maybe IAMInstanceProfileSpecification)
+    , _rslsImageId :: !(Maybe Text)
+    , _rslsAddressingType :: !(Maybe Text)
+    , _rslsBlockDeviceMappings :: !(Maybe [BlockDeviceMapping])
+    , _rslsPlacement :: !(Maybe SpotPlacement)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RequestSpotLaunchSpecification' with the minimum fields required to make a request.
@@ -12726,13 +13104,15 @@ instance ToQuery RequestSpotLaunchSpecification where
 --
 --
 -- /See:/ 'reservation' smart constructor.
-data Reservation = Reservation'
-  { _rGroups        :: !(Maybe [GroupIdentifier])
-  , _rInstances     :: !(Maybe [Instance])
-  , _rRequesterId   :: !(Maybe Text)
-  , _rReservationId :: !Text
-  , _rOwnerId       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Reservation =
+  Reservation'
+    { _rGroups        :: !(Maybe [GroupIdentifier])
+    , _rInstances     :: !(Maybe [Instance])
+    , _rRequesterId   :: !(Maybe Text)
+    , _rReservationId :: !Text
+    , _rOwnerId       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Reservation' with the minimum fields required to make a request.
@@ -12803,11 +13183,13 @@ instance NFData Reservation where
 --
 --
 -- /See:/ 'reservationValue' smart constructor.
-data ReservationValue = ReservationValue'
-  { _rvHourlyPrice           :: !(Maybe Text)
-  , _rvRemainingTotalValue   :: !(Maybe Text)
-  , _rvRemainingUpfrontValue :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReservationValue =
+  ReservationValue'
+    { _rvHourlyPrice           :: !(Maybe Text)
+    , _rvRemainingTotalValue   :: !(Maybe Text)
+    , _rvRemainingUpfrontValue :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReservationValue' with the minimum fields required to make a request.
@@ -12857,10 +13239,12 @@ instance NFData ReservationValue where
 --
 --
 -- /See:/ 'reservedInstanceLimitPrice' smart constructor.
-data ReservedInstanceLimitPrice = ReservedInstanceLimitPrice'
-  { _rilpAmount       :: !(Maybe Double)
-  , _rilpCurrencyCode :: !(Maybe CurrencyCodeValues)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReservedInstanceLimitPrice =
+  ReservedInstanceLimitPrice'
+    { _rilpAmount       :: !(Maybe Double)
+    , _rilpCurrencyCode :: !(Maybe CurrencyCodeValues)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReservedInstanceLimitPrice' with the minimum fields required to make a request.
@@ -12900,10 +13284,12 @@ instance ToQuery ReservedInstanceLimitPrice where
 --
 --
 -- /See:/ 'reservedInstanceReservationValue' smart constructor.
-data ReservedInstanceReservationValue = ReservedInstanceReservationValue'
-  { _rirvReservationValue   :: !(Maybe ReservationValue)
-  , _rirvReservedInstanceId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReservedInstanceReservationValue =
+  ReservedInstanceReservationValue'
+    { _rirvReservationValue   :: !(Maybe ReservationValue)
+    , _rirvReservedInstanceId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReservedInstanceReservationValue' with the minimum fields required to make a request.
@@ -12946,26 +13332,28 @@ instance NFData ReservedInstanceReservationValue
 --
 --
 -- /See:/ 'reservedInstances' smart constructor.
-data ReservedInstances = ReservedInstances'
-  { _riState               :: !(Maybe ReservedInstanceState)
-  , _riCurrencyCode        :: !(Maybe CurrencyCodeValues)
-  , _riInstanceCount       :: !(Maybe Int)
-  , _riProductDescription  :: !(Maybe RIProductDescription)
-  , _riStart               :: !(Maybe ISO8601)
-  , _riInstanceType        :: !(Maybe InstanceType)
-  , _riEnd                 :: !(Maybe ISO8601)
-  , _riAvailabilityZone    :: !(Maybe Text)
-  , _riScope               :: !(Maybe Scope)
-  , _riRecurringCharges    :: !(Maybe [RecurringCharge])
-  , _riOfferingType        :: !(Maybe OfferingTypeValues)
-  , _riUsagePrice          :: !(Maybe Double)
-  , _riFixedPrice          :: !(Maybe Double)
-  , _riReservedInstancesId :: !(Maybe Text)
-  , _riInstanceTenancy     :: !(Maybe Tenancy)
-  , _riOfferingClass       :: !(Maybe OfferingClassType)
-  , _riDuration            :: !(Maybe Integer)
-  , _riTags                :: !(Maybe [Tag])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReservedInstances =
+  ReservedInstances'
+    { _riState               :: !(Maybe ReservedInstanceState)
+    , _riCurrencyCode        :: !(Maybe CurrencyCodeValues)
+    , _riInstanceCount       :: !(Maybe Int)
+    , _riProductDescription  :: !(Maybe RIProductDescription)
+    , _riStart               :: !(Maybe ISO8601)
+    , _riInstanceType        :: !(Maybe InstanceType)
+    , _riEnd                 :: !(Maybe ISO8601)
+    , _riAvailabilityZone    :: !(Maybe Text)
+    , _riScope               :: !(Maybe Scope)
+    , _riRecurringCharges    :: !(Maybe [RecurringCharge])
+    , _riOfferingType        :: !(Maybe OfferingTypeValues)
+    , _riUsagePrice          :: !(Maybe Double)
+    , _riFixedPrice          :: !(Maybe Double)
+    , _riReservedInstancesId :: !(Maybe Text)
+    , _riInstanceTenancy     :: !(Maybe Tenancy)
+    , _riOfferingClass       :: !(Maybe OfferingClassType)
+    , _riDuration            :: !(Maybe Integer)
+    , _riTags                :: !(Maybe [Tag])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReservedInstances' with the minimum fields required to make a request.
@@ -13138,13 +13526,15 @@ instance NFData ReservedInstances where
 --
 --
 -- /See:/ 'reservedInstancesConfiguration' smart constructor.
-data ReservedInstancesConfiguration = ReservedInstancesConfiguration'
-  { _ricPlatform         :: !(Maybe Text)
-  , _ricInstanceCount    :: !(Maybe Int)
-  , _ricInstanceType     :: !(Maybe InstanceType)
-  , _ricAvailabilityZone :: !(Maybe Text)
-  , _ricScope            :: !(Maybe Scope)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReservedInstancesConfiguration =
+  ReservedInstancesConfiguration'
+    { _ricPlatform         :: !(Maybe Text)
+    , _ricInstanceCount    :: !(Maybe Int)
+    , _ricInstanceType     :: !(Maybe InstanceType)
+    , _ricAvailabilityZone :: !(Maybe Text)
+    , _ricScope            :: !(Maybe Scope)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReservedInstancesConfiguration' with the minimum fields required to make a request.
@@ -13219,9 +13609,11 @@ instance ToQuery ReservedInstancesConfiguration where
 --
 --
 -- /See:/ 'reservedInstancesId' smart constructor.
-newtype ReservedInstancesId = ReservedInstancesId'
-  { _riiReservedInstancesId :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ReservedInstancesId =
+  ReservedInstancesId'
+    { _riiReservedInstancesId :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReservedInstancesId' with the minimum fields required to make a request.
@@ -13252,18 +13644,20 @@ instance NFData ReservedInstancesId where
 --
 --
 -- /See:/ 'reservedInstancesListing' smart constructor.
-data ReservedInstancesListing = ReservedInstancesListing'
-  { _rilStatus                     :: !(Maybe ListingStatus)
-  , _rilClientToken                :: !(Maybe Text)
-  , _rilUpdateDate                 :: !(Maybe ISO8601)
-  , _rilCreateDate                 :: !(Maybe ISO8601)
-  , _rilPriceSchedules             :: !(Maybe [PriceSchedule])
-  , _rilStatusMessage              :: !(Maybe Text)
-  , _rilReservedInstancesId        :: !(Maybe Text)
-  , _rilTags                       :: !(Maybe [Tag])
-  , _rilInstanceCounts             :: !(Maybe [InstanceCount])
-  , _rilReservedInstancesListingId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReservedInstancesListing =
+  ReservedInstancesListing'
+    { _rilStatus                     :: !(Maybe ListingStatus)
+    , _rilClientToken                :: !(Maybe Text)
+    , _rilUpdateDate                 :: !(Maybe ISO8601)
+    , _rilCreateDate                 :: !(Maybe ISO8601)
+    , _rilPriceSchedules             :: !(Maybe [PriceSchedule])
+    , _rilStatusMessage              :: !(Maybe Text)
+    , _rilReservedInstancesId        :: !(Maybe Text)
+    , _rilTags                       :: !(Maybe [Tag])
+    , _rilInstanceCounts             :: !(Maybe [InstanceCount])
+    , _rilReservedInstancesListingId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReservedInstancesListing' with the minimum fields required to make a request.
@@ -13374,17 +13768,19 @@ instance NFData ReservedInstancesListing where
 --
 --
 -- /See:/ 'reservedInstancesModification' smart constructor.
-data ReservedInstancesModification = ReservedInstancesModification'
-  { _rimModificationResults :: !(Maybe [ReservedInstancesModificationResult])
-  , _rimStatus :: !(Maybe Text)
-  , _rimClientToken :: !(Maybe Text)
-  , _rimUpdateDate :: !(Maybe ISO8601)
-  , _rimCreateDate :: !(Maybe ISO8601)
-  , _rimEffectiveDate :: !(Maybe ISO8601)
-  , _rimStatusMessage :: !(Maybe Text)
-  , _rimReservedInstancesModificationId :: !(Maybe Text)
-  , _rimReservedInstancesIds :: !(Maybe [ReservedInstancesId])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReservedInstancesModification =
+  ReservedInstancesModification'
+    { _rimModificationResults :: !(Maybe [ReservedInstancesModificationResult])
+    , _rimStatus :: !(Maybe Text)
+    , _rimClientToken :: !(Maybe Text)
+    , _rimUpdateDate :: !(Maybe ISO8601)
+    , _rimCreateDate :: !(Maybe ISO8601)
+    , _rimEffectiveDate :: !(Maybe ISO8601)
+    , _rimStatusMessage :: !(Maybe Text)
+    , _rimReservedInstancesModificationId :: !(Maybe Text)
+    , _rimReservedInstancesIds :: !(Maybe [ReservedInstancesId])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReservedInstancesModification' with the minimum fields required to make a request.
@@ -13485,10 +13881,12 @@ instance NFData ReservedInstancesModification where
 --
 --
 -- /See:/ 'reservedInstancesModificationResult' smart constructor.
-data ReservedInstancesModificationResult = ReservedInstancesModificationResult'
-  { _rimrReservedInstancesId :: !(Maybe Text)
-  , _rimrTargetConfiguration :: !(Maybe ReservedInstancesConfiguration)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReservedInstancesModificationResult =
+  ReservedInstancesModificationResult'
+    { _rimrReservedInstancesId :: !(Maybe Text)
+    , _rimrTargetConfiguration :: !(Maybe ReservedInstancesConfiguration)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReservedInstancesModificationResult' with the minimum fields required to make a request.
@@ -13531,23 +13929,25 @@ instance NFData ReservedInstancesModificationResult
 --
 --
 -- /See:/ 'reservedInstancesOffering' smart constructor.
-data ReservedInstancesOffering = ReservedInstancesOffering'
-  { _rioMarketplace                 :: !(Maybe Bool)
-  , _rioCurrencyCode                :: !(Maybe CurrencyCodeValues)
-  , _rioProductDescription          :: !(Maybe RIProductDescription)
-  , _rioInstanceType                :: !(Maybe InstanceType)
-  , _rioAvailabilityZone            :: !(Maybe Text)
-  , _rioPricingDetails              :: !(Maybe [PricingDetail])
-  , _rioScope                       :: !(Maybe Scope)
-  , _rioRecurringCharges            :: !(Maybe [RecurringCharge])
-  , _rioOfferingType                :: !(Maybe OfferingTypeValues)
-  , _rioUsagePrice                  :: !(Maybe Double)
-  , _rioFixedPrice                  :: !(Maybe Double)
-  , _rioInstanceTenancy             :: !(Maybe Tenancy)
-  , _rioReservedInstancesOfferingId :: !(Maybe Text)
-  , _rioOfferingClass               :: !(Maybe OfferingClassType)
-  , _rioDuration                    :: !(Maybe Integer)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReservedInstancesOffering =
+  ReservedInstancesOffering'
+    { _rioMarketplace                 :: !(Maybe Bool)
+    , _rioCurrencyCode                :: !(Maybe CurrencyCodeValues)
+    , _rioProductDescription          :: !(Maybe RIProductDescription)
+    , _rioInstanceType                :: !(Maybe InstanceType)
+    , _rioAvailabilityZone            :: !(Maybe Text)
+    , _rioPricingDetails              :: !(Maybe [PricingDetail])
+    , _rioScope                       :: !(Maybe Scope)
+    , _rioRecurringCharges            :: !(Maybe [RecurringCharge])
+    , _rioOfferingType                :: !(Maybe OfferingTypeValues)
+    , _rioUsagePrice                  :: !(Maybe Double)
+    , _rioFixedPrice                  :: !(Maybe Double)
+    , _rioInstanceTenancy             :: !(Maybe Tenancy)
+    , _rioReservedInstancesOfferingId :: !(Maybe Text)
+    , _rioOfferingClass               :: !(Maybe OfferingClassType)
+    , _rioDuration                    :: !(Maybe Integer)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReservedInstancesOffering' with the minimum fields required to make a request.
@@ -13696,10 +14096,12 @@ instance NFData ReservedInstancesOffering where
 --
 --
 -- /See:/ 'responseError' smart constructor.
-data ResponseError = ResponseError'
-  { _reCode    :: !(Maybe LaunchTemplateErrorCode)
-  , _reMessage :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResponseError =
+  ResponseError'
+    { _reCode    :: !(Maybe LaunchTemplateErrorCode)
+    , _reMessage :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResponseError' with the minimum fields required to make a request.
@@ -13736,28 +14138,30 @@ instance NFData ResponseError where
 --
 --
 -- /See:/ 'responseLaunchTemplateData' smart constructor.
-data ResponseLaunchTemplateData = ResponseLaunchTemplateData'
-  { _rSecurityGroupIds :: !(Maybe [Text])
-  , _rSecurityGroups :: !(Maybe [Text])
-  , _rInstanceMarketOptions :: !(Maybe LaunchTemplateInstanceMarketOptions)
-  , _rDisableAPITermination :: !(Maybe Bool)
-  , _rKeyName :: !(Maybe Text)
-  , _rNetworkInterfaces :: !(Maybe [LaunchTemplateInstanceNetworkInterfaceSpecification])
-  , _rRamDiskId :: !(Maybe Text)
-  , _rKernelId :: !(Maybe Text)
-  , _rElasticGpuSpecifications :: !(Maybe [ElasticGpuSpecificationResponse])
-  , _rInstanceType :: !(Maybe InstanceType)
-  , _rEBSOptimized :: !(Maybe Bool)
-  , _rUserData :: !(Maybe Text)
-  , _rMonitoring :: !(Maybe LaunchTemplatesMonitoring)
-  , _rTagSpecifications :: !(Maybe [LaunchTemplateTagSpecification])
-  , _rIAMInstanceProfile :: !(Maybe LaunchTemplateIAMInstanceProfileSpecification)
-  , _rImageId :: !(Maybe Text)
-  , _rInstanceInitiatedShutdownBehavior :: !(Maybe ShutdownBehavior)
-  , _rCreditSpecification :: !(Maybe CreditSpecification)
-  , _rBlockDeviceMappings :: !(Maybe [LaunchTemplateBlockDeviceMapping])
-  , _rPlacement :: !(Maybe LaunchTemplatePlacement)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResponseLaunchTemplateData =
+  ResponseLaunchTemplateData'
+    { _rSecurityGroupIds :: !(Maybe [Text])
+    , _rSecurityGroups :: !(Maybe [Text])
+    , _rInstanceMarketOptions :: !(Maybe LaunchTemplateInstanceMarketOptions)
+    , _rDisableAPITermination :: !(Maybe Bool)
+    , _rKeyName :: !(Maybe Text)
+    , _rNetworkInterfaces :: !(Maybe [LaunchTemplateInstanceNetworkInterfaceSpecification])
+    , _rRamDiskId :: !(Maybe Text)
+    , _rKernelId :: !(Maybe Text)
+    , _rElasticGpuSpecifications :: !(Maybe [ElasticGpuSpecificationResponse])
+    , _rInstanceType :: !(Maybe InstanceType)
+    , _rEBSOptimized :: !(Maybe Bool)
+    , _rUserData :: !(Maybe Text)
+    , _rMonitoring :: !(Maybe LaunchTemplatesMonitoring)
+    , _rTagSpecifications :: !(Maybe [LaunchTemplateTagSpecification])
+    , _rIAMInstanceProfile :: !(Maybe LaunchTemplateIAMInstanceProfileSpecification)
+    , _rImageId :: !(Maybe Text)
+    , _rInstanceInitiatedShutdownBehavior :: !(Maybe ShutdownBehavior)
+    , _rCreditSpecification :: !(Maybe CreditSpecification)
+    , _rBlockDeviceMappings :: !(Maybe [LaunchTemplateBlockDeviceMapping])
+    , _rPlacement :: !(Maybe LaunchTemplatePlacement)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResponseLaunchTemplateData' with the minimum fields required to make a request.
@@ -13954,20 +14358,22 @@ instance NFData ResponseLaunchTemplateData where
 --
 --
 -- /See:/ 'route' smart constructor.
-data Route = Route'
-  { _rVPCPeeringConnectionId      :: !(Maybe Text)
-  , _rInstanceId                  :: !(Maybe Text)
-  , _rOrigin                      :: !(Maybe RouteOrigin)
-  , _rState                       :: !(Maybe RouteState)
-  , _rEgressOnlyInternetGatewayId :: !(Maybe Text)
-  , _rDestinationIPv6CidrBlock    :: !(Maybe Text)
-  , _rNatGatewayId                :: !(Maybe Text)
-  , _rNetworkInterfaceId          :: !(Maybe Text)
-  , _rGatewayId                   :: !(Maybe Text)
-  , _rInstanceOwnerId             :: !(Maybe Text)
-  , _rDestinationPrefixListId     :: !(Maybe Text)
-  , _rDestinationCidrBlock        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Route =
+  Route'
+    { _rVPCPeeringConnectionId      :: !(Maybe Text)
+    , _rInstanceId                  :: !(Maybe Text)
+    , _rOrigin                      :: !(Maybe RouteOrigin)
+    , _rState                       :: !(Maybe RouteState)
+    , _rEgressOnlyInternetGatewayId :: !(Maybe Text)
+    , _rDestinationIPv6CidrBlock    :: !(Maybe Text)
+    , _rNatGatewayId                :: !(Maybe Text)
+    , _rNetworkInterfaceId          :: !(Maybe Text)
+    , _rGatewayId                   :: !(Maybe Text)
+    , _rInstanceOwnerId             :: !(Maybe Text)
+    , _rDestinationPrefixListId     :: !(Maybe Text)
+    , _rDestinationCidrBlock        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Route' with the minimum fields required to make a request.
@@ -14089,14 +14495,16 @@ instance NFData Route where
 --
 --
 -- /See:/ 'routeTable' smart constructor.
-data RouteTable = RouteTable'
-  { _rtRouteTableId    :: !(Maybe Text)
-  , _rtRoutes          :: !(Maybe [Route])
-  , _rtVPCId           :: !(Maybe Text)
-  , _rtPropagatingVGWs :: !(Maybe [PropagatingVGW])
-  , _rtAssociations    :: !(Maybe [RouteTableAssociation])
-  , _rtTags            :: !(Maybe [Tag])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RouteTable =
+  RouteTable'
+    { _rtRouteTableId    :: !(Maybe Text)
+    , _rtRoutes          :: !(Maybe [Route])
+    , _rtVPCId           :: !(Maybe Text)
+    , _rtPropagatingVGWs :: !(Maybe [PropagatingVGW])
+    , _rtAssociations    :: !(Maybe [RouteTableAssociation])
+    , _rtTags            :: !(Maybe [Tag])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RouteTable' with the minimum fields required to make a request.
@@ -14177,12 +14585,14 @@ instance NFData RouteTable where
 --
 --
 -- /See:/ 'routeTableAssociation' smart constructor.
-data RouteTableAssociation = RouteTableAssociation'
-  { _rtaRouteTableId            :: !(Maybe Text)
-  , _rtaRouteTableAssociationId :: !(Maybe Text)
-  , _rtaMain                    :: !(Maybe Bool)
-  , _rtaSubnetId                :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RouteTableAssociation =
+  RouteTableAssociation'
+    { _rtaRouteTableId            :: !(Maybe Text)
+    , _rtaRouteTableAssociationId :: !(Maybe Text)
+    , _rtaMain                    :: !(Maybe Bool)
+    , _rtaSubnetId                :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RouteTableAssociation' with the minimum fields required to make a request.
@@ -14240,9 +14650,11 @@ instance NFData RouteTableAssociation where
 --
 --
 -- /See:/ 'runInstancesMonitoringEnabled' smart constructor.
-newtype RunInstancesMonitoringEnabled = RunInstancesMonitoringEnabled'
-  { _rimeEnabled :: Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RunInstancesMonitoringEnabled =
+  RunInstancesMonitoringEnabled'
+    { _rimeEnabled :: Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RunInstancesMonitoringEnabled' with the minimum fields required to make a request.
@@ -14278,13 +14690,15 @@ instance ToQuery RunInstancesMonitoringEnabled where
 --
 --
 -- /See:/ 's3Storage' smart constructor.
-data S3Storage = S3Storage'
-  { _ssPrefix                :: !(Maybe Text)
-  , _ssUploadPolicy          :: !(Maybe Base64)
-  , _ssBucket                :: !(Maybe Text)
-  , _ssUploadPolicySignature :: !(Maybe Text)
-  , _ssAWSAccessKeyId        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data S3Storage =
+  S3Storage'
+    { _ssPrefix                :: !(Maybe Text)
+    , _ssUploadPolicy          :: !(Maybe Base64)
+    , _ssBucket                :: !(Maybe Text)
+    , _ssUploadPolicySignature :: !(Maybe Text)
+    , _ssAWSAccessKeyId        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'S3Storage' with the minimum fields required to make a request.
@@ -14358,23 +14772,25 @@ instance ToQuery S3Storage where
 --
 --
 -- /See:/ 'scheduledInstance' smart constructor.
-data ScheduledInstance = ScheduledInstance'
-  { _siPreviousSlotEndTime         :: !(Maybe ISO8601)
-  , _siPlatform                    :: !(Maybe Text)
-  , _siTermStartDate               :: !(Maybe ISO8601)
-  , _siInstanceCount               :: !(Maybe Int)
-  , _siScheduledInstanceId         :: !(Maybe Text)
-  , _siHourlyPrice                 :: !(Maybe Text)
-  , _siCreateDate                  :: !(Maybe ISO8601)
-  , _siSlotDurationInHours         :: !(Maybe Int)
-  , _siTotalScheduledInstanceHours :: !(Maybe Int)
-  , _siInstanceType                :: !(Maybe Text)
-  , _siRecurrence                  :: !(Maybe ScheduledInstanceRecurrence)
-  , _siAvailabilityZone            :: !(Maybe Text)
-  , _siTermEndDate                 :: !(Maybe ISO8601)
-  , _siNextSlotStartTime           :: !(Maybe ISO8601)
-  , _siNetworkPlatform             :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ScheduledInstance =
+  ScheduledInstance'
+    { _siPreviousSlotEndTime         :: !(Maybe ISO8601)
+    , _siPlatform                    :: !(Maybe Text)
+    , _siTermStartDate               :: !(Maybe ISO8601)
+    , _siInstanceCount               :: !(Maybe Int)
+    , _siScheduledInstanceId         :: !(Maybe Text)
+    , _siHourlyPrice                 :: !(Maybe Text)
+    , _siCreateDate                  :: !(Maybe ISO8601)
+    , _siSlotDurationInHours         :: !(Maybe Int)
+    , _siTotalScheduledInstanceHours :: !(Maybe Int)
+    , _siInstanceType                :: !(Maybe Text)
+    , _siRecurrence                  :: !(Maybe ScheduledInstanceRecurrence)
+    , _siAvailabilityZone            :: !(Maybe Text)
+    , _siTermEndDate                 :: !(Maybe ISO8601)
+    , _siNextSlotStartTime           :: !(Maybe ISO8601)
+    , _siNetworkPlatform             :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ScheduledInstance' with the minimum fields required to make a request.
@@ -14519,21 +14935,23 @@ instance NFData ScheduledInstance where
 --
 --
 -- /See:/ 'scheduledInstanceAvailability' smart constructor.
-data ScheduledInstanceAvailability = ScheduledInstanceAvailability'
-  { _siaMaxTermDurationInDays       :: !(Maybe Int)
-  , _siaPlatform                    :: !(Maybe Text)
-  , _siaPurchaseToken               :: !(Maybe Text)
-  , _siaHourlyPrice                 :: !(Maybe Text)
-  , _siaAvailableInstanceCount      :: !(Maybe Int)
-  , _siaSlotDurationInHours         :: !(Maybe Int)
-  , _siaTotalScheduledInstanceHours :: !(Maybe Int)
-  , _siaInstanceType                :: !(Maybe Text)
-  , _siaRecurrence                  :: !(Maybe ScheduledInstanceRecurrence)
-  , _siaAvailabilityZone            :: !(Maybe Text)
-  , _siaMinTermDurationInDays       :: !(Maybe Int)
-  , _siaFirstSlotStartTime          :: !(Maybe ISO8601)
-  , _siaNetworkPlatform             :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ScheduledInstanceAvailability =
+  ScheduledInstanceAvailability'
+    { _siaMaxTermDurationInDays       :: !(Maybe Int)
+    , _siaPlatform                    :: !(Maybe Text)
+    , _siaPurchaseToken               :: !(Maybe Text)
+    , _siaHourlyPrice                 :: !(Maybe Text)
+    , _siaAvailableInstanceCount      :: !(Maybe Int)
+    , _siaSlotDurationInHours         :: !(Maybe Int)
+    , _siaTotalScheduledInstanceHours :: !(Maybe Int)
+    , _siaInstanceType                :: !(Maybe Text)
+    , _siaRecurrence                  :: !(Maybe ScheduledInstanceRecurrence)
+    , _siaAvailabilityZone            :: !(Maybe Text)
+    , _siaMinTermDurationInDays       :: !(Maybe Int)
+    , _siaFirstSlotStartTime          :: !(Maybe ISO8601)
+    , _siaNetworkPlatform             :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ScheduledInstanceAvailability' with the minimum fields required to make a request.
@@ -14663,13 +15081,15 @@ instance NFData ScheduledInstanceAvailability where
 --
 --
 -- /See:/ 'scheduledInstanceRecurrence' smart constructor.
-data ScheduledInstanceRecurrence = ScheduledInstanceRecurrence'
-  { _sirFrequency               :: !(Maybe Text)
-  , _sirOccurrenceRelativeToEnd :: !(Maybe Bool)
-  , _sirOccurrenceUnit          :: !(Maybe Text)
-  , _sirInterval                :: !(Maybe Int)
-  , _sirOccurrenceDaySet        :: !(Maybe [Int])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ScheduledInstanceRecurrence =
+  ScheduledInstanceRecurrence'
+    { _sirFrequency               :: !(Maybe Text)
+    , _sirOccurrenceRelativeToEnd :: !(Maybe Bool)
+    , _sirOccurrenceUnit          :: !(Maybe Text)
+    , _sirInterval                :: !(Maybe Int)
+    , _sirOccurrenceDaySet        :: !(Maybe [Int])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ScheduledInstanceRecurrence' with the minimum fields required to make a request.
@@ -14737,13 +15157,15 @@ instance NFData ScheduledInstanceRecurrence where
 --
 --
 -- /See:/ 'scheduledInstanceRecurrenceRequest' smart constructor.
-data ScheduledInstanceRecurrenceRequest = ScheduledInstanceRecurrenceRequest'
-  { _sirrFrequency               :: !(Maybe Text)
-  , _sirrOccurrenceRelativeToEnd :: !(Maybe Bool)
-  , _sirrOccurrenceDays          :: !(Maybe [Int])
-  , _sirrOccurrenceUnit          :: !(Maybe Text)
-  , _sirrInterval                :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ScheduledInstanceRecurrenceRequest =
+  ScheduledInstanceRecurrenceRequest'
+    { _sirrFrequency               :: !(Maybe Text)
+    , _sirrOccurrenceRelativeToEnd :: !(Maybe Bool)
+    , _sirrOccurrenceDays          :: !(Maybe [Int])
+    , _sirrOccurrenceUnit          :: !(Maybe Text)
+    , _sirrInterval                :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ScheduledInstanceRecurrenceRequest' with the minimum fields required to make a request.
@@ -14815,12 +15237,14 @@ instance ToQuery ScheduledInstanceRecurrenceRequest
 --
 --
 -- /See:/ 'scheduledInstancesBlockDeviceMapping' smart constructor.
-data ScheduledInstancesBlockDeviceMapping = ScheduledInstancesBlockDeviceMapping'
-  { _sibdmVirtualName :: !(Maybe Text)
-  , _sibdmNoDevice    :: !(Maybe Text)
-  , _sibdmEBS         :: !(Maybe ScheduledInstancesEBS)
-  , _sibdmDeviceName  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ScheduledInstancesBlockDeviceMapping =
+  ScheduledInstancesBlockDeviceMapping'
+    { _sibdmVirtualName :: !(Maybe Text)
+    , _sibdmNoDevice    :: !(Maybe Text)
+    , _sibdmEBS         :: !(Maybe ScheduledInstancesEBS)
+    , _sibdmDeviceName  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ScheduledInstancesBlockDeviceMapping' with the minimum fields required to make a request.
@@ -14881,14 +15305,16 @@ instance ToQuery ScheduledInstancesBlockDeviceMapping
 --
 --
 -- /See:/ 'scheduledInstancesEBS' smart constructor.
-data ScheduledInstancesEBS = ScheduledInstancesEBS'
-  { _sieDeleteOnTermination :: !(Maybe Bool)
-  , _sieVolumeSize          :: !(Maybe Int)
-  , _sieIOPS                :: !(Maybe Int)
-  , _sieEncrypted           :: !(Maybe Bool)
-  , _sieVolumeType          :: !(Maybe Text)
-  , _sieSnapshotId          :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ScheduledInstancesEBS =
+  ScheduledInstancesEBS'
+    { _sieDeleteOnTermination :: !(Maybe Bool)
+    , _sieVolumeSize          :: !(Maybe Int)
+    , _sieIOPS                :: !(Maybe Int)
+    , _sieEncrypted           :: !(Maybe Bool)
+    , _sieVolumeType          :: !(Maybe Text)
+    , _sieSnapshotId          :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ScheduledInstancesEBS' with the minimum fields required to make a request.
@@ -14961,10 +15387,12 @@ instance ToQuery ScheduledInstancesEBS where
 --
 --
 -- /See:/ 'scheduledInstancesIAMInstanceProfile' smart constructor.
-data ScheduledInstancesIAMInstanceProfile = ScheduledInstancesIAMInstanceProfile'
-  { _siiapARN  :: !(Maybe Text)
-  , _siiapName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ScheduledInstancesIAMInstanceProfile =
+  ScheduledInstancesIAMInstanceProfile'
+    { _siiapARN  :: !(Maybe Text)
+    , _siiapName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ScheduledInstancesIAMInstanceProfile' with the minimum fields required to make a request.
@@ -15006,9 +15434,11 @@ instance ToQuery ScheduledInstancesIAMInstanceProfile
 --
 --
 -- /See:/ 'scheduledInstancesIPv6Address' smart constructor.
-newtype ScheduledInstancesIPv6Address = ScheduledInstancesIPv6Address'
-  { _siiaIPv6Address :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ScheduledInstancesIPv6Address =
+  ScheduledInstancesIPv6Address'
+    { _siiaIPv6Address :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ScheduledInstancesIPv6Address' with the minimum fields required to make a request.
@@ -15041,22 +15471,24 @@ instance ToQuery ScheduledInstancesIPv6Address where
 --
 --
 -- /See:/ 'scheduledInstancesLaunchSpecification' smart constructor.
-data ScheduledInstancesLaunchSpecification = ScheduledInstancesLaunchSpecification'
-  { _silsSecurityGroupIds    :: !(Maybe [Text])
-  , _silsKeyName             :: !(Maybe Text)
-  , _silsNetworkInterfaces   :: !(Maybe [ScheduledInstancesNetworkInterface])
-  , _silsRAMDiskId           :: !(Maybe Text)
-  , _silsSubnetId            :: !(Maybe Text)
-  , _silsKernelId            :: !(Maybe Text)
-  , _silsInstanceType        :: !(Maybe Text)
-  , _silsEBSOptimized        :: !(Maybe Bool)
-  , _silsUserData            :: !(Maybe Text)
-  , _silsMonitoring          :: !(Maybe ScheduledInstancesMonitoring)
-  , _silsIAMInstanceProfile  :: !(Maybe ScheduledInstancesIAMInstanceProfile)
-  , _silsBlockDeviceMappings :: !(Maybe [ScheduledInstancesBlockDeviceMapping])
-  , _silsPlacement           :: !(Maybe ScheduledInstancesPlacement)
-  , _silsImageId             :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ScheduledInstancesLaunchSpecification =
+  ScheduledInstancesLaunchSpecification'
+    { _silsSecurityGroupIds :: !(Maybe [Text])
+    , _silsKeyName :: !(Maybe Text)
+    , _silsNetworkInterfaces :: !(Maybe [ScheduledInstancesNetworkInterface])
+    , _silsRAMDiskId :: !(Maybe Text)
+    , _silsSubnetId :: !(Maybe Text)
+    , _silsKernelId :: !(Maybe Text)
+    , _silsInstanceType :: !(Maybe Text)
+    , _silsEBSOptimized :: !(Maybe Bool)
+    , _silsUserData :: !(Maybe Text)
+    , _silsMonitoring :: !(Maybe ScheduledInstancesMonitoring)
+    , _silsIAMInstanceProfile :: !(Maybe ScheduledInstancesIAMInstanceProfile)
+    , _silsBlockDeviceMappings :: !(Maybe [ScheduledInstancesBlockDeviceMapping])
+    , _silsPlacement :: !(Maybe ScheduledInstancesPlacement)
+    , _silsImageId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ScheduledInstancesLaunchSpecification' with the minimum fields required to make a request.
@@ -15206,9 +15638,11 @@ instance ToQuery
 --
 --
 -- /See:/ 'scheduledInstancesMonitoring' smart constructor.
-newtype ScheduledInstancesMonitoring = ScheduledInstancesMonitoring'
-  { _simEnabled :: Maybe Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ScheduledInstancesMonitoring =
+  ScheduledInstancesMonitoring'
+    { _simEnabled :: Maybe Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ScheduledInstancesMonitoring' with the minimum fields required to make a request.
@@ -15239,20 +15673,22 @@ instance ToQuery ScheduledInstancesMonitoring where
 --
 --
 -- /See:/ 'scheduledInstancesNetworkInterface' smart constructor.
-data ScheduledInstancesNetworkInterface = ScheduledInstancesNetworkInterface'
-  { _siniGroups :: !(Maybe [Text])
-  , _siniDeleteOnTermination :: !(Maybe Bool)
-  , _siniAssociatePublicIPAddress :: !(Maybe Bool)
-  , _siniPrivateIPAddressConfigs :: !(Maybe [ScheduledInstancesPrivateIPAddressConfig])
-  , _siniNetworkInterfaceId :: !(Maybe Text)
-  , _siniSubnetId :: !(Maybe Text)
-  , _siniIPv6AddressCount :: !(Maybe Int)
-  , _siniPrivateIPAddress :: !(Maybe Text)
-  , _siniSecondaryPrivateIPAddressCount :: !(Maybe Int)
-  , _siniDescription :: !(Maybe Text)
-  , _siniDeviceIndex :: !(Maybe Int)
-  , _siniIPv6Addresses :: !(Maybe [ScheduledInstancesIPv6Address])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ScheduledInstancesNetworkInterface =
+  ScheduledInstancesNetworkInterface'
+    { _siniGroups :: !(Maybe [Text])
+    , _siniDeleteOnTermination :: !(Maybe Bool)
+    , _siniAssociatePublicIPAddress :: !(Maybe Bool)
+    , _siniPrivateIPAddressConfigs :: !(Maybe [ScheduledInstancesPrivateIPAddressConfig])
+    , _siniNetworkInterfaceId :: !(Maybe Text)
+    , _siniSubnetId :: !(Maybe Text)
+    , _siniIPv6AddressCount :: !(Maybe Int)
+    , _siniPrivateIPAddress :: !(Maybe Text)
+    , _siniSecondaryPrivateIPAddressCount :: !(Maybe Int)
+    , _siniDescription :: !(Maybe Text)
+    , _siniDeviceIndex :: !(Maybe Int)
+    , _siniIPv6Addresses :: !(Maybe [ScheduledInstancesIPv6Address])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ScheduledInstancesNetworkInterface' with the minimum fields required to make a request.
@@ -15382,10 +15818,12 @@ instance ToQuery ScheduledInstancesNetworkInterface
 --
 --
 -- /See:/ 'scheduledInstancesPlacement' smart constructor.
-data ScheduledInstancesPlacement = ScheduledInstancesPlacement'
-  { _sipAvailabilityZone :: !(Maybe Text)
-  , _sipGroupName        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ScheduledInstancesPlacement =
+  ScheduledInstancesPlacement'
+    { _sipAvailabilityZone :: !(Maybe Text)
+    , _sipGroupName        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ScheduledInstancesPlacement' with the minimum fields required to make a request.
@@ -15425,10 +15863,12 @@ instance ToQuery ScheduledInstancesPlacement where
 --
 --
 -- /See:/ 'scheduledInstancesPrivateIPAddressConfig' smart constructor.
-data ScheduledInstancesPrivateIPAddressConfig = ScheduledInstancesPrivateIPAddressConfig'
-  { _sipiacPrimary          :: !(Maybe Bool)
-  , _sipiacPrivateIPAddress :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ScheduledInstancesPrivateIPAddressConfig =
+  ScheduledInstancesPrivateIPAddressConfig'
+    { _sipiacPrimary          :: !(Maybe Bool)
+    , _sipiacPrivateIPAddress :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ScheduledInstancesPrivateIPAddressConfig' with the minimum fields required to make a request.
@@ -15474,16 +15914,18 @@ instance ToQuery
 --
 --
 -- /See:/ 'securityGroup' smart constructor.
-data SecurityGroup = SecurityGroup'
-  { _sgVPCId               :: !(Maybe Text)
-  , _sgIPPermissions       :: !(Maybe [IPPermission])
-  , _sgIPPermissionsEgress :: !(Maybe [IPPermission])
-  , _sgTags                :: !(Maybe [Tag])
-  , _sgOwnerId             :: !Text
-  , _sgGroupId             :: !Text
-  , _sgGroupName           :: !Text
-  , _sgDescription         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SecurityGroup =
+  SecurityGroup'
+    { _sgVPCId               :: !(Maybe Text)
+    , _sgIPPermissions       :: !(Maybe [IPPermission])
+    , _sgIPPermissionsEgress :: !(Maybe [IPPermission])
+    , _sgTags                :: !(Maybe [Tag])
+    , _sgOwnerId             :: !Text
+    , _sgGroupId             :: !Text
+    , _sgGroupName           :: !Text
+    , _sgDescription         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SecurityGroup' with the minimum fields required to make a request.
@@ -15582,10 +16024,12 @@ instance NFData SecurityGroup where
 --
 --
 -- /See:/ 'securityGroupIdentifier' smart constructor.
-data SecurityGroupIdentifier = SecurityGroupIdentifier'
-  { _sgiGroupId   :: !(Maybe Text)
-  , _sgiGroupName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SecurityGroupIdentifier =
+  SecurityGroupIdentifier'
+    { _sgiGroupId   :: !(Maybe Text)
+    , _sgiGroupName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SecurityGroupIdentifier' with the minimum fields required to make a request.
@@ -15623,11 +16067,13 @@ instance NFData SecurityGroupIdentifier where
 --
 --
 -- /See:/ 'securityGroupReference' smart constructor.
-data SecurityGroupReference = SecurityGroupReference'
-  { _sgrVPCPeeringConnectionId :: !(Maybe Text)
-  , _sgrGroupId                :: !Text
-  , _sgrReferencingVPCId       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SecurityGroupReference =
+  SecurityGroupReference'
+    { _sgrVPCPeeringConnectionId :: !(Maybe Text)
+    , _sgrGroupId                :: !Text
+    , _sgrReferencingVPCId       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SecurityGroupReference' with the minimum fields required to make a request.
@@ -15678,17 +16124,19 @@ instance NFData SecurityGroupReference where
 --
 --
 -- /See:/ 'serviceConfiguration' smart constructor.
-data ServiceConfiguration = ServiceConfiguration'
-  { _scNetworkLoadBalancerARNs :: !(Maybe [Text])
-  , _scBaseEndpointDNSNames    :: !(Maybe [Text])
-  , _scAvailabilityZones       :: !(Maybe [Text])
-  , _scServiceName             :: !(Maybe Text)
-  , _scServiceState            :: !(Maybe ServiceState)
-  , _scServiceType             :: !(Maybe [ServiceTypeDetail])
-  , _scAcceptanceRequired      :: !(Maybe Bool)
-  , _scServiceId               :: !(Maybe Text)
-  , _scPrivateDNSName          :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ServiceConfiguration =
+  ServiceConfiguration'
+    { _scNetworkLoadBalancerARNs :: !(Maybe [Text])
+    , _scBaseEndpointDNSNames    :: !(Maybe [Text])
+    , _scAvailabilityZones       :: !(Maybe [Text])
+    , _scServiceName             :: !(Maybe Text)
+    , _scServiceState            :: !(Maybe ServiceState)
+    , _scServiceType             :: !(Maybe [ServiceTypeDetail])
+    , _scAcceptanceRequired      :: !(Maybe Bool)
+    , _scServiceId               :: !(Maybe Text)
+    , _scPrivateDNSName          :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ServiceConfiguration' with the minimum fields required to make a request.
@@ -15793,16 +16241,18 @@ instance NFData ServiceConfiguration where
 --
 --
 -- /See:/ 'serviceDetail' smart constructor.
-data ServiceDetail = ServiceDetail'
-  { _sdVPCEndpointPolicySupported :: !(Maybe Bool)
-  , _sdBaseEndpointDNSNames       :: !(Maybe [Text])
-  , _sdOwner                      :: !(Maybe Text)
-  , _sdAvailabilityZones          :: !(Maybe [Text])
-  , _sdServiceName                :: !(Maybe Text)
-  , _sdServiceType                :: !(Maybe [ServiceTypeDetail])
-  , _sdAcceptanceRequired         :: !(Maybe Bool)
-  , _sdPrivateDNSName             :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ServiceDetail =
+  ServiceDetail'
+    { _sdVPCEndpointPolicySupported :: !(Maybe Bool)
+    , _sdBaseEndpointDNSNames       :: !(Maybe [Text])
+    , _sdOwner                      :: !(Maybe Text)
+    , _sdAvailabilityZones          :: !(Maybe [Text])
+    , _sdServiceName                :: !(Maybe Text)
+    , _sdServiceType                :: !(Maybe [ServiceTypeDetail])
+    , _sdAcceptanceRequired         :: !(Maybe Bool)
+    , _sdPrivateDNSName             :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ServiceDetail' with the minimum fields required to make a request.
@@ -15897,9 +16347,11 @@ instance NFData ServiceDetail where
 --
 --
 -- /See:/ 'serviceTypeDetail' smart constructor.
-newtype ServiceTypeDetail = ServiceTypeDetail'
-  { _stdServiceType :: Maybe ServiceType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ServiceTypeDetail =
+  ServiceTypeDetail'
+    { _stdServiceType :: Maybe ServiceType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ServiceTypeDetail' with the minimum fields required to make a request.
@@ -15929,10 +16381,12 @@ instance NFData ServiceTypeDetail where
 --
 --
 -- /See:/ 'slotDateTimeRangeRequest' smart constructor.
-data SlotDateTimeRangeRequest = SlotDateTimeRangeRequest'
-  { _sdtrrEarliestTime :: !ISO8601
-  , _sdtrrLatestTime   :: !ISO8601
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SlotDateTimeRangeRequest =
+  SlotDateTimeRangeRequest'
+    { _sdtrrEarliestTime :: !ISO8601
+    , _sdtrrLatestTime   :: !ISO8601
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SlotDateTimeRangeRequest' with the minimum fields required to make a request.
@@ -15976,10 +16430,12 @@ instance ToQuery SlotDateTimeRangeRequest where
 --
 --
 -- /See:/ 'slotStartTimeRangeRequest' smart constructor.
-data SlotStartTimeRangeRequest = SlotStartTimeRangeRequest'
-  { _sstrrLatestTime   :: !(Maybe ISO8601)
-  , _sstrrEarliestTime :: !(Maybe ISO8601)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SlotStartTimeRangeRequest =
+  SlotStartTimeRangeRequest'
+    { _sstrrLatestTime   :: !(Maybe ISO8601)
+    , _sstrrEarliestTime :: !(Maybe ISO8601)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SlotStartTimeRangeRequest' with the minimum fields required to make a request.
@@ -16019,22 +16475,24 @@ instance ToQuery SlotStartTimeRangeRequest where
 --
 --
 -- /See:/ 'snapshot' smart constructor.
-data Snapshot = Snapshot'
-  { _sStateMessage        :: !(Maybe Text)
-  , _sOwnerAlias          :: !(Maybe Text)
-  , _sDataEncryptionKeyId :: !(Maybe Text)
-  , _sKMSKeyId            :: !(Maybe Text)
-  , _sTags                :: !(Maybe [Tag])
-  , _sSnapshotId          :: !Text
-  , _sOwnerId             :: !Text
-  , _sVolumeId            :: !Text
-  , _sVolumeSize          :: !Int
-  , _sDescription         :: !Text
-  , _sStartTime           :: !ISO8601
-  , _sProgress            :: !Text
-  , _sState               :: !SnapshotState
-  , _sEncrypted           :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Snapshot =
+  Snapshot'
+    { _sStateMessage        :: !(Maybe Text)
+    , _sOwnerAlias          :: !(Maybe Text)
+    , _sDataEncryptionKeyId :: !(Maybe Text)
+    , _sKMSKeyId            :: !(Maybe Text)
+    , _sTags                :: !(Maybe [Tag])
+    , _sSnapshotId          :: !Text
+    , _sOwnerId             :: !Text
+    , _sVolumeId            :: !Text
+    , _sVolumeSize          :: !Int
+    , _sDescription         :: !Text
+    , _sStartTime           :: !ISO8601
+    , _sProgress            :: !Text
+    , _sState               :: !SnapshotState
+    , _sEncrypted           :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Snapshot' with the minimum fields required to make a request.
@@ -16182,18 +16640,20 @@ instance NFData Snapshot where
 --
 --
 -- /See:/ 'snapshotDetail' smart constructor.
-data SnapshotDetail = SnapshotDetail'
-  { _sdStatus        :: !(Maybe Text)
-  , _sdProgress      :: !(Maybe Text)
-  , _sdFormat        :: !(Maybe Text)
-  , _sdURL           :: !(Maybe Text)
-  , _sdDeviceName    :: !(Maybe Text)
-  , _sdStatusMessage :: !(Maybe Text)
-  , _sdUserBucket    :: !(Maybe UserBucketDetails)
-  , _sdDiskImageSize :: !(Maybe Double)
-  , _sdDescription   :: !(Maybe Text)
-  , _sdSnapshotId    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SnapshotDetail =
+  SnapshotDetail'
+    { _sdStatus        :: !(Maybe Text)
+    , _sdProgress      :: !(Maybe Text)
+    , _sdFormat        :: !(Maybe Text)
+    , _sdURL           :: !(Maybe Text)
+    , _sdDeviceName    :: !(Maybe Text)
+    , _sdStatusMessage :: !(Maybe Text)
+    , _sdUserBucket    :: !(Maybe UserBucketDetails)
+    , _sdDiskImageSize :: !(Maybe Double)
+    , _sdDescription   :: !(Maybe Text)
+    , _sdSnapshotId    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SnapshotDetail' with the minimum fields required to make a request.
@@ -16298,12 +16758,14 @@ instance NFData SnapshotDetail where
 --
 --
 -- /See:/ 'snapshotDiskContainer' smart constructor.
-data SnapshotDiskContainer = SnapshotDiskContainer'
-  { _sdcFormat      :: !(Maybe Text)
-  , _sdcURL         :: !(Maybe Text)
-  , _sdcUserBucket  :: !(Maybe UserBucket)
-  , _sdcDescription :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SnapshotDiskContainer =
+  SnapshotDiskContainer'
+    { _sdcFormat      :: !(Maybe Text)
+    , _sdcURL         :: !(Maybe Text)
+    , _sdcUserBucket  :: !(Maybe UserBucket)
+    , _sdcDescription :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SnapshotDiskContainer' with the minimum fields required to make a request.
@@ -16360,17 +16822,19 @@ instance ToQuery SnapshotDiskContainer where
 --
 --
 -- /See:/ 'snapshotTaskDetail' smart constructor.
-data SnapshotTaskDetail = SnapshotTaskDetail'
-  { _stdStatus        :: !(Maybe Text)
-  , _stdProgress      :: !(Maybe Text)
-  , _stdFormat        :: !(Maybe Text)
-  , _stdURL           :: !(Maybe Text)
-  , _stdStatusMessage :: !(Maybe Text)
-  , _stdUserBucket    :: !(Maybe UserBucketDetails)
-  , _stdDiskImageSize :: !(Maybe Double)
-  , _stdDescription   :: !(Maybe Text)
-  , _stdSnapshotId    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SnapshotTaskDetail =
+  SnapshotTaskDetail'
+    { _stdStatus        :: !(Maybe Text)
+    , _stdProgress      :: !(Maybe Text)
+    , _stdFormat        :: !(Maybe Text)
+    , _stdURL           :: !(Maybe Text)
+    , _stdStatusMessage :: !(Maybe Text)
+    , _stdUserBucket    :: !(Maybe UserBucketDetails)
+    , _stdDiskImageSize :: !(Maybe Double)
+    , _stdDescription   :: !(Maybe Text)
+    , _stdSnapshotId    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SnapshotTaskDetail' with the minimum fields required to make a request.
@@ -16467,13 +16931,15 @@ instance NFData SnapshotTaskDetail where
 --
 --
 -- /See:/ 'spotDatafeedSubscription' smart constructor.
-data SpotDatafeedSubscription = SpotDatafeedSubscription'
-  { _sdsState   :: !(Maybe DatafeedSubscriptionState)
-  , _sdsPrefix  :: !(Maybe Text)
-  , _sdsBucket  :: !(Maybe Text)
-  , _sdsOwnerId :: !(Maybe Text)
-  , _sdsFault   :: !(Maybe SpotInstanceStateFault)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SpotDatafeedSubscription =
+  SpotDatafeedSubscription'
+    { _sdsState   :: !(Maybe DatafeedSubscriptionState)
+    , _sdsPrefix  :: !(Maybe Text)
+    , _sdsBucket  :: !(Maybe Text)
+    , _sdsOwnerId :: !(Maybe Text)
+    , _sdsFault   :: !(Maybe SpotInstanceStateFault)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SpotDatafeedSubscription' with the minimum fields required to make a request.
@@ -16538,26 +17004,28 @@ instance NFData SpotDatafeedSubscription where
 --
 --
 -- /See:/ 'spotFleetLaunchSpecification' smart constructor.
-data SpotFleetLaunchSpecification = SpotFleetLaunchSpecification'
-  { _sflsSecurityGroups      :: !(Maybe [GroupIdentifier])
-  , _sflsSpotPrice           :: !(Maybe Text)
-  , _sflsWeightedCapacity    :: !(Maybe Double)
-  , _sflsKeyName             :: !(Maybe Text)
-  , _sflsNetworkInterfaces   :: !(Maybe [InstanceNetworkInterfaceSpecification])
-  , _sflsRAMDiskId           :: !(Maybe Text)
-  , _sflsSubnetId            :: !(Maybe Text)
-  , _sflsKernelId            :: !(Maybe Text)
-  , _sflsInstanceType        :: !(Maybe InstanceType)
-  , _sflsEBSOptimized        :: !(Maybe Bool)
-  , _sflsUserData            :: !(Maybe Text)
-  , _sflsMonitoring          :: !(Maybe SpotFleetMonitoring)
-  , _sflsTagSpecifications   :: !(Maybe [SpotFleetTagSpecification])
-  , _sflsIAMInstanceProfile  :: !(Maybe IAMInstanceProfileSpecification)
-  , _sflsImageId             :: !(Maybe Text)
-  , _sflsAddressingType      :: !(Maybe Text)
-  , _sflsBlockDeviceMappings :: !(Maybe [BlockDeviceMapping])
-  , _sflsPlacement           :: !(Maybe SpotPlacement)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SpotFleetLaunchSpecification =
+  SpotFleetLaunchSpecification'
+    { _sflsSecurityGroups :: !(Maybe [GroupIdentifier])
+    , _sflsSpotPrice :: !(Maybe Text)
+    , _sflsWeightedCapacity :: !(Maybe Double)
+    , _sflsKeyName :: !(Maybe Text)
+    , _sflsNetworkInterfaces :: !(Maybe [InstanceNetworkInterfaceSpecification])
+    , _sflsRAMDiskId :: !(Maybe Text)
+    , _sflsSubnetId :: !(Maybe Text)
+    , _sflsKernelId :: !(Maybe Text)
+    , _sflsInstanceType :: !(Maybe InstanceType)
+    , _sflsEBSOptimized :: !(Maybe Bool)
+    , _sflsUserData :: !(Maybe Text)
+    , _sflsMonitoring :: !(Maybe SpotFleetMonitoring)
+    , _sflsTagSpecifications :: !(Maybe [SpotFleetTagSpecification])
+    , _sflsIAMInstanceProfile :: !(Maybe IAMInstanceProfileSpecification)
+    , _sflsImageId :: !(Maybe Text)
+    , _sflsAddressingType :: !(Maybe Text)
+    , _sflsBlockDeviceMappings :: !(Maybe [BlockDeviceMapping])
+    , _sflsPlacement :: !(Maybe SpotPlacement)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SpotFleetLaunchSpecification' with the minimum fields required to make a request.
@@ -16763,9 +17231,11 @@ instance ToQuery SpotFleetLaunchSpecification where
 --
 --
 -- /See:/ 'spotFleetMonitoring' smart constructor.
-newtype SpotFleetMonitoring = SpotFleetMonitoring'
-  { _sfmEnabled :: Maybe Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype SpotFleetMonitoring =
+  SpotFleetMonitoring'
+    { _sfmEnabled :: Maybe Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SpotFleetMonitoring' with the minimum fields required to make a request.
@@ -16799,13 +17269,15 @@ instance ToQuery SpotFleetMonitoring where
 --
 --
 -- /See:/ 'spotFleetRequestConfig' smart constructor.
-data SpotFleetRequestConfig = SpotFleetRequestConfig'
-  { _sfrcActivityStatus         :: !(Maybe ActivityStatus)
-  , _sfrcCreateTime             :: !ISO8601
-  , _sfrcSpotFleetRequestConfig :: !SpotFleetRequestConfigData
-  , _sfrcSpotFleetRequestId     :: !Text
-  , _sfrcSpotFleetRequestState  :: !BatchState
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SpotFleetRequestConfig =
+  SpotFleetRequestConfig'
+    { _sfrcActivityStatus         :: !(Maybe ActivityStatus)
+    , _sfrcCreateTime             :: !ISO8601
+    , _sfrcSpotFleetRequestConfig :: !SpotFleetRequestConfigData
+    , _sfrcSpotFleetRequestId     :: !Text
+    , _sfrcSpotFleetRequestState  :: !BatchState
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SpotFleetRequestConfig' with the minimum fields required to make a request.
@@ -16874,26 +17346,28 @@ instance NFData SpotFleetRequestConfig where
 --
 --
 -- /See:/ 'spotFleetRequestConfigData' smart constructor.
-data SpotFleetRequestConfigData = SpotFleetRequestConfigData'
-  { _sfrcdClientToken :: !(Maybe Text)
-  , _sfrcdInstanceInterruptionBehavior :: !(Maybe InstanceInterruptionBehavior)
-  , _sfrcdSpotPrice :: !(Maybe Text)
-  , _sfrcdLoadBalancersConfig :: !(Maybe LoadBalancersConfig)
-  , _sfrcdExcessCapacityTerminationPolicy :: !(Maybe ExcessCapacityTerminationPolicy)
-  , _sfrcdOnDemandTargetCapacity :: !(Maybe Int)
-  , _sfrcdLaunchTemplateConfigs :: !(Maybe [LaunchTemplateConfig])
-  , _sfrcdValidUntil :: !(Maybe ISO8601)
-  , _sfrcdTerminateInstancesWithExpiration :: !(Maybe Bool)
-  , _sfrcdFulfilledCapacity :: !(Maybe Double)
-  , _sfrcdType :: !(Maybe FleetType)
-  , _sfrcdValidFrom :: !(Maybe ISO8601)
-  , _sfrcdReplaceUnhealthyInstances :: !(Maybe Bool)
-  , _sfrcdLaunchSpecifications :: !(Maybe [SpotFleetLaunchSpecification])
-  , _sfrcdOnDemandFulfilledCapacity :: !(Maybe Double)
-  , _sfrcdAllocationStrategy :: !(Maybe AllocationStrategy)
-  , _sfrcdIAMFleetRole :: !Text
-  , _sfrcdTargetCapacity :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SpotFleetRequestConfigData =
+  SpotFleetRequestConfigData'
+    { _sfrcdClientToken :: !(Maybe Text)
+    , _sfrcdInstanceInterruptionBehavior :: !(Maybe InstanceInterruptionBehavior)
+    , _sfrcdSpotPrice :: !(Maybe Text)
+    , _sfrcdLoadBalancersConfig :: !(Maybe LoadBalancersConfig)
+    , _sfrcdExcessCapacityTerminationPolicy :: !(Maybe ExcessCapacityTerminationPolicy)
+    , _sfrcdOnDemandTargetCapacity :: !(Maybe Int)
+    , _sfrcdLaunchTemplateConfigs :: !(Maybe [LaunchTemplateConfig])
+    , _sfrcdValidUntil :: !(Maybe ISO8601)
+    , _sfrcdTerminateInstancesWithExpiration :: !(Maybe Bool)
+    , _sfrcdFulfilledCapacity :: !(Maybe Double)
+    , _sfrcdType :: !(Maybe FleetType)
+    , _sfrcdValidFrom :: !(Maybe ISO8601)
+    , _sfrcdReplaceUnhealthyInstances :: !(Maybe Bool)
+    , _sfrcdLaunchSpecifications :: !(Maybe [SpotFleetLaunchSpecification])
+    , _sfrcdOnDemandFulfilledCapacity :: !(Maybe Double)
+    , _sfrcdAllocationStrategy :: !(Maybe AllocationStrategy)
+    , _sfrcdIAMFleetRole :: !Text
+    , _sfrcdTargetCapacity :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SpotFleetRequestConfigData' with the minimum fields required to make a request.
@@ -17100,10 +17574,12 @@ instance ToQuery SpotFleetRequestConfigData where
 --
 --
 -- /See:/ 'spotFleetTagSpecification' smart constructor.
-data SpotFleetTagSpecification = SpotFleetTagSpecification'
-  { _sftsResourceType :: !(Maybe ResourceType)
-  , _sftsTags         :: !(Maybe [Tag])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SpotFleetTagSpecification =
+  SpotFleetTagSpecification'
+    { _sftsResourceType :: !(Maybe ResourceType)
+    , _sftsTags         :: !(Maybe [Tag])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SpotFleetTagSpecification' with the minimum fields required to make a request.
@@ -17149,27 +17625,29 @@ instance ToQuery SpotFleetTagSpecification where
 --
 --
 -- /See:/ 'spotInstanceRequest' smart constructor.
-data SpotInstanceRequest = SpotInstanceRequest'
-  { _sirInstanceId                   :: !(Maybe Text)
-  , _sirStatus                       :: !(Maybe SpotInstanceStatus)
-  , _sirState                        :: !(Maybe SpotInstanceState)
-  , _sirActualBlockHourlyPrice       :: !(Maybe Text)
-  , _sirBlockDurationMinutes         :: !(Maybe Int)
-  , _sirInstanceInterruptionBehavior :: !(Maybe InstanceInterruptionBehavior)
-  , _sirProductDescription           :: !(Maybe RIProductDescription)
-  , _sirSpotPrice                    :: !(Maybe Text)
-  , _sirLaunchSpecification          :: !(Maybe LaunchSpecification)
-  , _sirAvailabilityZoneGroup        :: !(Maybe Text)
-  , _sirLaunchedAvailabilityZone     :: !(Maybe Text)
-  , _sirValidUntil                   :: !(Maybe ISO8601)
-  , _sirLaunchGroup                  :: !(Maybe Text)
-  , _sirFault                        :: !(Maybe SpotInstanceStateFault)
-  , _sirSpotInstanceRequestId        :: !(Maybe Text)
-  , _sirType                         :: !(Maybe SpotInstanceType)
-  , _sirValidFrom                    :: !(Maybe ISO8601)
-  , _sirCreateTime                   :: !(Maybe ISO8601)
-  , _sirTags                         :: !(Maybe [Tag])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SpotInstanceRequest =
+  SpotInstanceRequest'
+    { _sirInstanceId                   :: !(Maybe Text)
+    , _sirStatus                       :: !(Maybe SpotInstanceStatus)
+    , _sirState                        :: !(Maybe SpotInstanceState)
+    , _sirActualBlockHourlyPrice       :: !(Maybe Text)
+    , _sirBlockDurationMinutes         :: !(Maybe Int)
+    , _sirInstanceInterruptionBehavior :: !(Maybe InstanceInterruptionBehavior)
+    , _sirProductDescription           :: !(Maybe RIProductDescription)
+    , _sirSpotPrice                    :: !(Maybe Text)
+    , _sirLaunchSpecification          :: !(Maybe LaunchSpecification)
+    , _sirAvailabilityZoneGroup        :: !(Maybe Text)
+    , _sirLaunchedAvailabilityZone     :: !(Maybe Text)
+    , _sirValidUntil                   :: !(Maybe ISO8601)
+    , _sirLaunchGroup                  :: !(Maybe Text)
+    , _sirFault                        :: !(Maybe SpotInstanceStateFault)
+    , _sirSpotInstanceRequestId        :: !(Maybe Text)
+    , _sirType                         :: !(Maybe SpotInstanceType)
+    , _sirValidFrom                    :: !(Maybe ISO8601)
+    , _sirCreateTime                   :: !(Maybe ISO8601)
+    , _sirTags                         :: !(Maybe [Tag])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SpotInstanceRequest' with the minimum fields required to make a request.
@@ -17348,10 +17826,12 @@ instance NFData SpotInstanceRequest where
 --
 --
 -- /See:/ 'spotInstanceStateFault' smart constructor.
-data SpotInstanceStateFault = SpotInstanceStateFault'
-  { _sisfCode    :: !(Maybe Text)
-  , _sisfMessage :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SpotInstanceStateFault =
+  SpotInstanceStateFault'
+    { _sisfCode    :: !(Maybe Text)
+    , _sisfMessage :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SpotInstanceStateFault' with the minimum fields required to make a request.
@@ -17389,11 +17869,13 @@ instance NFData SpotInstanceStateFault where
 --
 --
 -- /See:/ 'spotInstanceStatus' smart constructor.
-data SpotInstanceStatus = SpotInstanceStatus'
-  { _sisUpdateTime :: !(Maybe ISO8601)
-  , _sisCode       :: !(Maybe Text)
-  , _sisMessage    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SpotInstanceStatus =
+  SpotInstanceStatus'
+    { _sisUpdateTime :: !(Maybe ISO8601)
+    , _sisCode       :: !(Maybe Text)
+    , _sisMessage    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SpotInstanceStatus' with the minimum fields required to make a request.
@@ -17439,13 +17921,15 @@ instance NFData SpotInstanceStatus where
 --
 --
 -- /See:/ 'spotMarketOptions' smart constructor.
-data SpotMarketOptions = SpotMarketOptions'
-  { _smoBlockDurationMinutes         :: !(Maybe Int)
-  , _smoInstanceInterruptionBehavior :: !(Maybe InstanceInterruptionBehavior)
-  , _smoValidUntil                   :: !(Maybe ISO8601)
-  , _smoSpotInstanceType             :: !(Maybe SpotInstanceType)
-  , _smoMaxPrice                     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SpotMarketOptions =
+  SpotMarketOptions'
+    { _smoBlockDurationMinutes         :: !(Maybe Int)
+    , _smoInstanceInterruptionBehavior :: !(Maybe InstanceInterruptionBehavior)
+    , _smoValidUntil                   :: !(Maybe ISO8601)
+    , _smoSpotInstanceType             :: !(Maybe SpotInstanceType)
+    , _smoMaxPrice                     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SpotMarketOptions' with the minimum fields required to make a request.
@@ -17512,10 +17996,12 @@ instance ToQuery SpotMarketOptions where
 --
 --
 -- /See:/ 'spotOptions' smart constructor.
-data SpotOptions = SpotOptions'
-  { _soInstanceInterruptionBehavior :: !(Maybe SpotInstanceInterruptionBehavior)
-  , _soAllocationStrategy           :: !(Maybe SpotAllocationStrategy)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SpotOptions =
+  SpotOptions'
+    { _soInstanceInterruptionBehavior :: !(Maybe SpotInstanceInterruptionBehavior)
+    , _soAllocationStrategy :: !(Maybe SpotAllocationStrategy)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SpotOptions' with the minimum fields required to make a request.
@@ -17555,10 +18041,12 @@ instance NFData SpotOptions where
 --
 --
 -- /See:/ 'spotOptionsRequest' smart constructor.
-data SpotOptionsRequest = SpotOptionsRequest'
-  { _sorInstanceInterruptionBehavior :: !(Maybe SpotInstanceInterruptionBehavior)
-  , _sorAllocationStrategy :: !(Maybe SpotAllocationStrategy)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SpotOptionsRequest =
+  SpotOptionsRequest'
+    { _sorInstanceInterruptionBehavior :: !(Maybe SpotInstanceInterruptionBehavior)
+    , _sorAllocationStrategy :: !(Maybe SpotAllocationStrategy)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SpotOptionsRequest' with the minimum fields required to make a request.
@@ -17601,11 +18089,13 @@ instance ToQuery SpotOptionsRequest where
 --
 --
 -- /See:/ 'spotPlacement' smart constructor.
-data SpotPlacement = SpotPlacement'
-  { _spAvailabilityZone :: !(Maybe Text)
-  , _spTenancy          :: !(Maybe Tenancy)
-  , _spGroupName        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SpotPlacement =
+  SpotPlacement'
+    { _spAvailabilityZone :: !(Maybe Text)
+    , _spTenancy          :: !(Maybe Tenancy)
+    , _spGroupName        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SpotPlacement' with the minimum fields required to make a request.
@@ -17660,13 +18150,15 @@ instance ToQuery SpotPlacement where
 --
 --
 -- /See:/ 'spotPrice' smart constructor.
-data SpotPrice = SpotPrice'
-  { _sProductDescription :: !(Maybe RIProductDescription)
-  , _sSpotPrice          :: !(Maybe Text)
-  , _sInstanceType       :: !(Maybe InstanceType)
-  , _sAvailabilityZone   :: !(Maybe Text)
-  , _sTimestamp          :: !(Maybe ISO8601)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SpotPrice =
+  SpotPrice'
+    { _sProductDescription :: !(Maybe RIProductDescription)
+    , _sSpotPrice          :: !(Maybe Text)
+    , _sInstanceType       :: !(Maybe InstanceType)
+    , _sAvailabilityZone   :: !(Maybe Text)
+    , _sTimestamp          :: !(Maybe ISO8601)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SpotPrice' with the minimum fields required to make a request.
@@ -17731,14 +18223,16 @@ instance NFData SpotPrice where
 --
 --
 -- /See:/ 'staleIPPermission' smart constructor.
-data StaleIPPermission = StaleIPPermission'
-  { _sipFromPort         :: !(Maybe Int)
-  , _sipUserIdGroupPairs :: !(Maybe [UserIdGroupPair])
-  , _sipPrefixListIds    :: !(Maybe [Text])
-  , _sipIPProtocol       :: !(Maybe Text)
-  , _sipToPort           :: !(Maybe Int)
-  , _sipIPRanges         :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StaleIPPermission =
+  StaleIPPermission'
+    { _sipFromPort         :: !(Maybe Int)
+    , _sipUserIdGroupPairs :: !(Maybe [UserIdGroupPair])
+    , _sipPrefixListIds    :: !(Maybe [Text])
+    , _sipIPProtocol       :: !(Maybe Text)
+    , _sipToPort           :: !(Maybe Int)
+    , _sipIPRanges         :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StaleIPPermission' with the minimum fields required to make a request.
@@ -17817,14 +18311,16 @@ instance NFData StaleIPPermission where
 --
 --
 -- /See:/ 'staleSecurityGroup' smart constructor.
-data StaleSecurityGroup = StaleSecurityGroup'
-  { _ssgVPCId                    :: !(Maybe Text)
-  , _ssgGroupName                :: !(Maybe Text)
-  , _ssgStaleIPPermissionsEgress :: !(Maybe [StaleIPPermission])
-  , _ssgStaleIPPermissions       :: !(Maybe [StaleIPPermission])
-  , _ssgDescription              :: !(Maybe Text)
-  , _ssgGroupId                  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StaleSecurityGroup =
+  StaleSecurityGroup'
+    { _ssgVPCId                    :: !(Maybe Text)
+    , _ssgGroupName                :: !(Maybe Text)
+    , _ssgStaleIPPermissionsEgress :: !(Maybe [StaleIPPermission])
+    , _ssgStaleIPPermissions       :: !(Maybe [StaleIPPermission])
+    , _ssgDescription              :: !(Maybe Text)
+    , _ssgGroupId                  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StaleSecurityGroup' with the minimum fields required to make a request.
@@ -17901,10 +18397,12 @@ instance NFData StaleSecurityGroup where
 --
 --
 -- /See:/ 'stateReason' smart constructor.
-data StateReason = StateReason'
-  { _srCode    :: !(Maybe Text)
-  , _srMessage :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StateReason =
+  StateReason'
+    { _srCode    :: !(Maybe Text)
+    , _srMessage :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StateReason' with the minimum fields required to make a request.
@@ -17941,9 +18439,11 @@ instance NFData StateReason where
 --
 --
 -- /See:/ 'storage' smart constructor.
-newtype Storage = Storage'
-  { _sS3 :: Maybe S3Storage
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype Storage =
+  Storage'
+    { _sS3 :: Maybe S3Storage
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Storage' with the minimum fields required to make a request.
@@ -17975,10 +18475,12 @@ instance ToQuery Storage where
 --
 --
 -- /See:/ 'storageLocation' smart constructor.
-data StorageLocation = StorageLocation'
-  { _slBucket :: !(Maybe Text)
-  , _slKey    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StorageLocation =
+  StorageLocation'
+    { _slBucket :: !(Maybe Text)
+    , _slKey    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StorageLocation' with the minimum fields required to make a request.
@@ -18014,19 +18516,21 @@ instance ToQuery StorageLocation where
 --
 --
 -- /See:/ 'subnet' smart constructor.
-data Subnet = Subnet'
-  { _subIPv6CidrBlockAssociationSet :: !(Maybe [SubnetIPv6CidrBlockAssociation])
-  , _subAssignIPv6AddressOnCreation :: !(Maybe Bool)
-  , _subMapPublicIPOnLaunch         :: !(Maybe Bool)
-  , _subDefaultForAz                :: !(Maybe Bool)
-  , _subTags                        :: !(Maybe [Tag])
-  , _subAvailabilityZone            :: !Text
-  , _subAvailableIPAddressCount     :: !Int
-  , _subCidrBlock                   :: !Text
-  , _subState                       :: !SubnetState
-  , _subSubnetId                    :: !Text
-  , _subVPCId                       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Subnet =
+  Subnet'
+    { _subIPv6CidrBlockAssociationSet :: !(Maybe [SubnetIPv6CidrBlockAssociation])
+    , _subAssignIPv6AddressOnCreation :: !(Maybe Bool)
+    , _subMapPublicIPOnLaunch :: !(Maybe Bool)
+    , _subDefaultForAz :: !(Maybe Bool)
+    , _subTags :: !(Maybe [Tag])
+    , _subAvailabilityZone :: !Text
+    , _subAvailableIPAddressCount :: !Int
+    , _subCidrBlock :: !Text
+    , _subState :: !SubnetState
+    , _subSubnetId :: !Text
+    , _subVPCId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Subnet' with the minimum fields required to make a request.
@@ -18149,10 +18653,12 @@ instance NFData Subnet where
 --
 --
 -- /See:/ 'subnetCidrBlockState' smart constructor.
-data SubnetCidrBlockState = SubnetCidrBlockState'
-  { _scbsState         :: !(Maybe SubnetCidrBlockStateCode)
-  , _scbsStatusMessage :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SubnetCidrBlockState =
+  SubnetCidrBlockState'
+    { _scbsState         :: !(Maybe SubnetCidrBlockStateCode)
+    , _scbsStatusMessage :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SubnetCidrBlockState' with the minimum fields required to make a request.
@@ -18190,11 +18696,13 @@ instance NFData SubnetCidrBlockState where
 --
 --
 -- /See:/ 'subnetIPv6CidrBlockAssociation' smart constructor.
-data SubnetIPv6CidrBlockAssociation = SubnetIPv6CidrBlockAssociation'
-  { _sicbaAssociationId      :: !(Maybe Text)
-  , _sicbaIPv6CidrBlock      :: !(Maybe Text)
-  , _sicbaIPv6CidrBlockState :: !(Maybe SubnetCidrBlockState)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SubnetIPv6CidrBlockAssociation =
+  SubnetIPv6CidrBlockAssociation'
+    { _sicbaAssociationId      :: !(Maybe Text)
+    , _sicbaIPv6CidrBlock      :: !(Maybe Text)
+    , _sicbaIPv6CidrBlockState :: !(Maybe SubnetCidrBlockState)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SubnetIPv6CidrBlockAssociation' with the minimum fields required to make a request.
@@ -18244,9 +18752,11 @@ instance NFData SubnetIPv6CidrBlockAssociation where
 --
 --
 -- /See:/ 'successfulInstanceCreditSpecificationItem' smart constructor.
-newtype SuccessfulInstanceCreditSpecificationItem = SuccessfulInstanceCreditSpecificationItem'
-  { _sicsiInstanceId :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype SuccessfulInstanceCreditSpecificationItem =
+  SuccessfulInstanceCreditSpecificationItem'
+    { _sicsiInstanceId :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SuccessfulInstanceCreditSpecificationItem' with the minimum fields required to make a request.
@@ -18284,10 +18794,12 @@ instance NFData
 --
 --
 -- /See:/ 'tag' smart constructor.
-data Tag = Tag'
-  { _tagKey   :: !Text
-  , _tagValue :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Tag =
+  Tag'
+    { _tagKey   :: !Text
+    , _tagValue :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Tag' with the minimum fields required to make a request.
@@ -18328,12 +18840,14 @@ instance ToQuery Tag where
 --
 --
 -- /See:/ 'tagDescription' smart constructor.
-data TagDescription = TagDescription'
-  { _tdResourceId   :: !Text
-  , _tdResourceType :: !ResourceType
-  , _tdKey          :: !Text
-  , _tdValue        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TagDescription =
+  TagDescription'
+    { _tdResourceId   :: !Text
+    , _tdResourceType :: !ResourceType
+    , _tdKey          :: !Text
+    , _tdValue        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TagDescription' with the minimum fields required to make a request.
@@ -18394,10 +18908,12 @@ instance NFData TagDescription where
 --
 --
 -- /See:/ 'tagSpecification' smart constructor.
-data TagSpecification = TagSpecification'
-  { _tsResourceType :: !(Maybe ResourceType)
-  , _tsTags         :: !(Maybe [Tag])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TagSpecification =
+  TagSpecification'
+    { _tsResourceType :: !(Maybe ResourceType)
+    , _tsTags         :: !(Maybe [Tag])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TagSpecification' with the minimum fields required to make a request.
@@ -18436,12 +18952,14 @@ instance ToQuery TagSpecification where
 --
 --
 -- /See:/ 'targetCapacitySpecification' smart constructor.
-data TargetCapacitySpecification = TargetCapacitySpecification'
-  { _tcsOnDemandTargetCapacity    :: !(Maybe Int)
-  , _tcsDefaultTargetCapacityType :: !(Maybe DefaultTargetCapacityType)
-  , _tcsTotalTargetCapacity       :: !(Maybe Int)
-  , _tcsSpotTargetCapacity        :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TargetCapacitySpecification =
+  TargetCapacitySpecification'
+    { _tcsOnDemandTargetCapacity    :: !(Maybe Int)
+    , _tcsDefaultTargetCapacityType :: !(Maybe DefaultTargetCapacityType)
+    , _tcsTotalTargetCapacity       :: !(Maybe Int)
+    , _tcsSpotTargetCapacity        :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TargetCapacitySpecification' with the minimum fields required to make a request.
@@ -18499,12 +19017,14 @@ instance NFData TargetCapacitySpecification where
 --
 --
 -- /See:/ 'targetCapacitySpecificationRequest' smart constructor.
-data TargetCapacitySpecificationRequest = TargetCapacitySpecificationRequest'
-  { _tcsrOnDemandTargetCapacity    :: !(Maybe Int)
-  , _tcsrDefaultTargetCapacityType :: !(Maybe DefaultTargetCapacityType)
-  , _tcsrSpotTargetCapacity        :: !(Maybe Int)
-  , _tcsrTotalTargetCapacity       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TargetCapacitySpecificationRequest =
+  TargetCapacitySpecificationRequest'
+    { _tcsrOnDemandTargetCapacity    :: !(Maybe Int)
+    , _tcsrDefaultTargetCapacityType :: !(Maybe DefaultTargetCapacityType)
+    , _tcsrSpotTargetCapacity        :: !(Maybe Int)
+    , _tcsrTotalTargetCapacity       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TargetCapacitySpecificationRequest' with the minimum fields required to make a request.
@@ -18568,10 +19088,12 @@ instance ToQuery TargetCapacitySpecificationRequest
 --
 --
 -- /See:/ 'targetConfiguration' smart constructor.
-data TargetConfiguration = TargetConfiguration'
-  { _tcInstanceCount :: !(Maybe Int)
-  , _tcOfferingId    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TargetConfiguration =
+  TargetConfiguration'
+    { _tcInstanceCount :: !(Maybe Int)
+    , _tcOfferingId    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TargetConfiguration' with the minimum fields required to make a request.
@@ -18609,10 +19131,12 @@ instance NFData TargetConfiguration where
 --
 --
 -- /See:/ 'targetConfigurationRequest' smart constructor.
-data TargetConfigurationRequest = TargetConfigurationRequest'
-  { _tcrInstanceCount :: !(Maybe Int)
-  , _tcrOfferingId    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TargetConfigurationRequest =
+  TargetConfigurationRequest'
+    { _tcrInstanceCount :: !(Maybe Int)
+    , _tcrOfferingId    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TargetConfigurationRequest' with the minimum fields required to make a request.
@@ -18653,9 +19177,11 @@ instance ToQuery TargetConfigurationRequest where
 --
 --
 -- /See:/ 'targetGroup' smart constructor.
-newtype TargetGroup = TargetGroup'
-  { _tgARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype TargetGroup =
+  TargetGroup'
+    { _tgARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TargetGroup' with the minimum fields required to make a request.
@@ -18688,9 +19214,11 @@ instance ToQuery TargetGroup where
 --
 --
 -- /See:/ 'targetGroupsConfig' smart constructor.
-newtype TargetGroupsConfig = TargetGroupsConfig'
-  { _tgcTargetGroups :: List1 TargetGroup
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype TargetGroupsConfig =
+  TargetGroupsConfig'
+    { _tgcTargetGroups :: List1 TargetGroup
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TargetGroupsConfig' with the minimum fields required to make a request.
@@ -18729,10 +19257,12 @@ instance ToQuery TargetGroupsConfig where
 --
 --
 -- /See:/ 'targetReservationValue' smart constructor.
-data TargetReservationValue = TargetReservationValue'
-  { _trvReservationValue    :: !(Maybe ReservationValue)
-  , _trvTargetConfiguration :: !(Maybe TargetConfiguration)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TargetReservationValue =
+  TargetReservationValue'
+    { _trvReservationValue    :: !(Maybe ReservationValue)
+    , _trvTargetConfiguration :: !(Maybe TargetConfiguration)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TargetReservationValue' with the minimum fields required to make a request.
@@ -18772,10 +19302,12 @@ instance NFData TargetReservationValue where
 --
 --
 -- /See:/ 'unsuccessfulInstanceCreditSpecificationItem' smart constructor.
-data UnsuccessfulInstanceCreditSpecificationItem = UnsuccessfulInstanceCreditSpecificationItem'
-  { _uicsiInstanceId :: !(Maybe Text)
-  , _uicsiError :: !(Maybe UnsuccessfulInstanceCreditSpecificationItemError)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UnsuccessfulInstanceCreditSpecificationItem =
+  UnsuccessfulInstanceCreditSpecificationItem'
+    { _uicsiInstanceId :: !(Maybe Text)
+    , _uicsiError :: !(Maybe UnsuccessfulInstanceCreditSpecificationItemError)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UnsuccessfulInstanceCreditSpecificationItem' with the minimum fields required to make a request.
@@ -18820,10 +19352,12 @@ instance NFData
 --
 --
 -- /See:/ 'unsuccessfulInstanceCreditSpecificationItemError' smart constructor.
-data UnsuccessfulInstanceCreditSpecificationItemError = UnsuccessfulInstanceCreditSpecificationItemError'
-  { _uicsieCode    :: !(Maybe UnsuccessfulInstanceCreditSpecificationErrorCode)
-  , _uicsieMessage :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UnsuccessfulInstanceCreditSpecificationItemError =
+  UnsuccessfulInstanceCreditSpecificationItemError'
+    { _uicsieCode :: !(Maybe UnsuccessfulInstanceCreditSpecificationErrorCode)
+    , _uicsieMessage :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UnsuccessfulInstanceCreditSpecificationItemError' with the minimum fields required to make a request.
@@ -18868,10 +19402,12 @@ instance NFData
 --
 --
 -- /See:/ 'unsuccessfulItem' smart constructor.
-data UnsuccessfulItem = UnsuccessfulItem'
-  { _uiResourceId :: !(Maybe Text)
-  , _uiError      :: !UnsuccessfulItemError
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UnsuccessfulItem =
+  UnsuccessfulItem'
+    { _uiResourceId :: !(Maybe Text)
+    , _uiError      :: !UnsuccessfulItemError
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UnsuccessfulItem' with the minimum fields required to make a request.
@@ -18910,10 +19446,12 @@ instance NFData UnsuccessfulItem where
 --
 --
 -- /See:/ 'unsuccessfulItemError' smart constructor.
-data UnsuccessfulItemError = UnsuccessfulItemError'
-  { _uieCode    :: !Text
-  , _uieMessage :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UnsuccessfulItemError =
+  UnsuccessfulItemError'
+    { _uieCode    :: !Text
+    , _uieMessage :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UnsuccessfulItemError' with the minimum fields required to make a request.
@@ -18953,10 +19491,12 @@ instance NFData UnsuccessfulItemError where
 --
 --
 -- /See:/ 'userBucket' smart constructor.
-data UserBucket = UserBucket'
-  { _ubS3Key    :: !(Maybe Text)
-  , _ubS3Bucket :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UserBucket =
+  UserBucket'
+    { _ubS3Key    :: !(Maybe Text)
+    , _ubS3Bucket :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UserBucket' with the minimum fields required to make a request.
@@ -18993,10 +19533,12 @@ instance ToQuery UserBucket where
 --
 --
 -- /See:/ 'userBucketDetails' smart constructor.
-data UserBucketDetails = UserBucketDetails'
-  { _ubdS3Key    :: !(Maybe Text)
-  , _ubdS3Bucket :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UserBucketDetails =
+  UserBucketDetails'
+    { _ubdS3Key    :: !(Maybe Text)
+    , _ubdS3Bucket :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UserBucketDetails' with the minimum fields required to make a request.
@@ -19034,9 +19576,11 @@ instance NFData UserBucketDetails where
 --
 --
 -- /See:/ 'userData' smart constructor.
-newtype UserData = UserData'
-  { _udData :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UserData =
+  UserData'
+    { _udData :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UserData' with the minimum fields required to make a request.
@@ -19065,15 +19609,17 @@ instance ToQuery UserData where
 --
 --
 -- /See:/ 'userIdGroupPair' smart constructor.
-data UserIdGroupPair = UserIdGroupPair'
-  { _uigpVPCPeeringConnectionId :: !(Maybe Text)
-  , _uigpVPCId                  :: !(Maybe Text)
-  , _uigpUserId                 :: !(Maybe Text)
-  , _uigpGroupId                :: !(Maybe Text)
-  , _uigpGroupName              :: !(Maybe Text)
-  , _uigpDescription            :: !(Maybe Text)
-  , _uigpPeeringStatus          :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UserIdGroupPair =
+  UserIdGroupPair'
+    { _uigpVPCPeeringConnectionId :: !(Maybe Text)
+    , _uigpVPCId                  :: !(Maybe Text)
+    , _uigpUserId                 :: !(Maybe Text)
+    , _uigpGroupId                :: !(Maybe Text)
+    , _uigpGroupName              :: !(Maybe Text)
+    , _uigpDescription            :: !(Maybe Text)
+    , _uigpPeeringStatus          :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UserIdGroupPair' with the minimum fields required to make a request.
@@ -19165,13 +19711,15 @@ instance ToQuery UserIdGroupPair where
 --
 --
 -- /See:/ 'vgwTelemetry' smart constructor.
-data VGWTelemetry = VGWTelemetry'
-  { _vtStatus             :: !(Maybe TelemetryStatus)
-  , _vtOutsideIPAddress   :: !(Maybe Text)
-  , _vtLastStatusChange   :: !(Maybe ISO8601)
-  , _vtAcceptedRouteCount :: !(Maybe Int)
-  , _vtStatusMessage      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VGWTelemetry =
+  VGWTelemetry'
+    { _vtStatus             :: !(Maybe TelemetryStatus)
+    , _vtOutsideIPAddress   :: !(Maybe Text)
+    , _vtLastStatusChange   :: !(Maybe ISO8601)
+    , _vtAcceptedRouteCount :: !(Maybe Int)
+    , _vtStatusMessage      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VGWTelemetry' with the minimum fields required to make a request.
@@ -19236,17 +19784,19 @@ instance NFData VGWTelemetry where
 --
 --
 -- /See:/ 'vpc' smart constructor.
-data VPC = VPC'
-  { _vpcIPv6CidrBlockAssociationSet :: !(Maybe [VPCIPv6CidrBlockAssociation])
-  , _vpcCidrBlockAssociationSet     :: !(Maybe [VPCCidrBlockAssociation])
-  , _vpcTags                        :: !(Maybe [Tag])
-  , _vpcIsDefault                   :: !(Maybe Bool)
-  , _vpcCidrBlock                   :: !Text
-  , _vpcDHCPOptionsId               :: !Text
-  , _vpcInstanceTenancy             :: !Tenancy
-  , _vpcState                       :: !VPCState
-  , _vpcVPCId                       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VPC =
+  VPC'
+    { _vpcIPv6CidrBlockAssociationSet :: !(Maybe [VPCIPv6CidrBlockAssociation])
+    , _vpcCidrBlockAssociationSet     :: !(Maybe [VPCCidrBlockAssociation])
+    , _vpcTags                        :: !(Maybe [Tag])
+    , _vpcIsDefault                   :: !(Maybe Bool)
+    , _vpcCidrBlock                   :: !Text
+    , _vpcDHCPOptionsId               :: !Text
+    , _vpcInstanceTenancy             :: !Tenancy
+    , _vpcState                       :: !VPCState
+    , _vpcVPCId                       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VPC' with the minimum fields required to make a request.
@@ -19354,10 +19904,12 @@ instance NFData VPC where
 --
 --
 -- /See:/ 'vpcAttachment' smart constructor.
-data VPCAttachment = VPCAttachment'
-  { _vaState :: !(Maybe AttachmentStatus)
-  , _vaVPCId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VPCAttachment =
+  VPCAttachment'
+    { _vaState :: !(Maybe AttachmentStatus)
+    , _vaVPCId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VPCAttachment' with the minimum fields required to make a request.
@@ -19394,11 +19946,13 @@ instance NFData VPCAttachment where
 --
 --
 -- /See:/ 'vpcCidrBlockAssociation' smart constructor.
-data VPCCidrBlockAssociation = VPCCidrBlockAssociation'
-  { _vcbaAssociationId  :: !(Maybe Text)
-  , _vcbaCidrBlockState :: !(Maybe VPCCidrBlockState)
-  , _vcbaCidrBlock      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VPCCidrBlockAssociation =
+  VPCCidrBlockAssociation'
+    { _vcbaAssociationId  :: !(Maybe Text)
+    , _vcbaCidrBlockState :: !(Maybe VPCCidrBlockState)
+    , _vcbaCidrBlock      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VPCCidrBlockAssociation' with the minimum fields required to make a request.
@@ -19447,10 +20001,12 @@ instance NFData VPCCidrBlockAssociation where
 --
 --
 -- /See:/ 'vpcCidrBlockState' smart constructor.
-data VPCCidrBlockState = VPCCidrBlockState'
-  { _vcbsState         :: !(Maybe VPCCidrBlockStateCode)
-  , _vcbsStatusMessage :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VPCCidrBlockState =
+  VPCCidrBlockState'
+    { _vcbsState         :: !(Maybe VPCCidrBlockStateCode)
+    , _vcbsStatusMessage :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VPCCidrBlockState' with the minimum fields required to make a request.
@@ -19488,11 +20044,13 @@ instance NFData VPCCidrBlockState where
 --
 --
 -- /See:/ 'vpcClassicLink' smart constructor.
-data VPCClassicLink = VPCClassicLink'
-  { _vclVPCId              :: !(Maybe Text)
-  , _vclTags               :: !(Maybe [Tag])
-  , _vclClassicLinkEnabled :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VPCClassicLink =
+  VPCClassicLink'
+    { _vclVPCId              :: !(Maybe Text)
+    , _vclTags               :: !(Maybe [Tag])
+    , _vclClassicLinkEnabled :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VPCClassicLink' with the minimum fields required to make a request.
@@ -19540,21 +20098,23 @@ instance NFData VPCClassicLink where
 --
 --
 -- /See:/ 'vpcEndpoint' smart constructor.
-data VPCEndpoint = VPCEndpoint'
-  { _veGroups              :: !(Maybe [SecurityGroupIdentifier])
-  , _veState               :: !(Maybe State)
-  , _vePolicyDocument      :: !(Maybe Text)
-  , _veSubnetIds           :: !(Maybe [Text])
-  , _veNetworkInterfaceIds :: !(Maybe [Text])
-  , _veVPCId               :: !(Maybe Text)
-  , _veDNSEntries          :: !(Maybe [DNSEntry])
-  , _veVPCEndpointType     :: !(Maybe VPCEndpointType)
-  , _vePrivateDNSEnabled   :: !(Maybe Bool)
-  , _veCreationTimestamp   :: !(Maybe ISO8601)
-  , _veServiceName         :: !(Maybe Text)
-  , _veVPCEndpointId       :: !(Maybe Text)
-  , _veRouteTableIds       :: !(Maybe [Text])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VPCEndpoint =
+  VPCEndpoint'
+    { _veGroups              :: !(Maybe [SecurityGroupIdentifier])
+    , _veState               :: !(Maybe State)
+    , _vePolicyDocument      :: !(Maybe Text)
+    , _veSubnetIds           :: !(Maybe [Text])
+    , _veNetworkInterfaceIds :: !(Maybe [Text])
+    , _veVPCId               :: !(Maybe Text)
+    , _veDNSEntries          :: !(Maybe [DNSEntry])
+    , _veVPCEndpointType     :: !(Maybe VPCEndpointType)
+    , _vePrivateDNSEnabled   :: !(Maybe Bool)
+    , _veCreationTimestamp   :: !(Maybe ISO8601)
+    , _veServiceName         :: !(Maybe Text)
+    , _veVPCEndpointId       :: !(Maybe Text)
+    , _veRouteTableIds       :: !(Maybe [Text])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VPCEndpoint' with the minimum fields required to make a request.
@@ -19693,13 +20253,15 @@ instance NFData VPCEndpoint where
 --
 --
 -- /See:/ 'vpcEndpointConnection' smart constructor.
-data VPCEndpointConnection = VPCEndpointConnection'
-  { _vecVPCEndpointOwner  :: !(Maybe Text)
-  , _vecVPCEndpointState  :: !(Maybe State)
-  , _vecCreationTimestamp :: !(Maybe ISO8601)
-  , _vecServiceId         :: !(Maybe Text)
-  , _vecVPCEndpointId     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VPCEndpointConnection =
+  VPCEndpointConnection'
+    { _vecVPCEndpointOwner  :: !(Maybe Text)
+    , _vecVPCEndpointState  :: !(Maybe State)
+    , _vecCreationTimestamp :: !(Maybe ISO8601)
+    , _vecServiceId         :: !(Maybe Text)
+    , _vecVPCEndpointId     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VPCEndpointConnection' with the minimum fields required to make a request.
@@ -19765,11 +20327,13 @@ instance NFData VPCEndpointConnection where
 --
 --
 -- /See:/ 'vpcIPv6CidrBlockAssociation' smart constructor.
-data VPCIPv6CidrBlockAssociation = VPCIPv6CidrBlockAssociation'
-  { _vicbaAssociationId      :: !(Maybe Text)
-  , _vicbaIPv6CidrBlock      :: !(Maybe Text)
-  , _vicbaIPv6CidrBlockState :: !(Maybe VPCCidrBlockState)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VPCIPv6CidrBlockAssociation =
+  VPCIPv6CidrBlockAssociation'
+    { _vicbaAssociationId      :: !(Maybe Text)
+    , _vicbaIPv6CidrBlock      :: !(Maybe Text)
+    , _vicbaIPv6CidrBlockState :: !(Maybe VPCCidrBlockState)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VPCIPv6CidrBlockAssociation' with the minimum fields required to make a request.
@@ -19818,14 +20382,16 @@ instance NFData VPCIPv6CidrBlockAssociation where
 --
 --
 -- /See:/ 'vpcPeeringConnection' smart constructor.
-data VPCPeeringConnection = VPCPeeringConnection'
-  { _vpcpcVPCPeeringConnectionId :: !(Maybe Text)
-  , _vpcpcStatus                 :: !(Maybe VPCPeeringConnectionStateReason)
-  , _vpcpcAccepterVPCInfo        :: !(Maybe VPCPeeringConnectionVPCInfo)
-  , _vpcpcRequesterVPCInfo       :: !(Maybe VPCPeeringConnectionVPCInfo)
-  , _vpcpcExpirationTime         :: !(Maybe ISO8601)
-  , _vpcpcTags                   :: !(Maybe [Tag])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VPCPeeringConnection =
+  VPCPeeringConnection'
+    { _vpcpcVPCPeeringConnectionId :: !(Maybe Text)
+    , _vpcpcStatus                 :: !(Maybe VPCPeeringConnectionStateReason)
+    , _vpcpcAccepterVPCInfo        :: !(Maybe VPCPeeringConnectionVPCInfo)
+    , _vpcpcRequesterVPCInfo       :: !(Maybe VPCPeeringConnectionVPCInfo)
+    , _vpcpcExpirationTime         :: !(Maybe ISO8601)
+    , _vpcpcTags                   :: !(Maybe [Tag])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VPCPeeringConnection' with the minimum fields required to make a request.
@@ -19900,11 +20466,13 @@ instance NFData VPCPeeringConnection where
 --
 --
 -- /See:/ 'vpcPeeringConnectionOptionsDescription' smart constructor.
-data VPCPeeringConnectionOptionsDescription = VPCPeeringConnectionOptionsDescription'
-  { _vpcodAllowEgressFromLocalVPCToRemoteClassicLink :: !(Maybe Bool)
-  , _vpcodAllowEgressFromLocalClassicLinkToRemoteVPC :: !(Maybe Bool)
-  , _vpcodAllowDNSResolutionFromRemoteVPC            :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VPCPeeringConnectionOptionsDescription =
+  VPCPeeringConnectionOptionsDescription'
+    { _vpcodAllowEgressFromLocalVPCToRemoteClassicLink :: !(Maybe Bool)
+    , _vpcodAllowEgressFromLocalClassicLinkToRemoteVPC :: !(Maybe Bool)
+    , _vpcodAllowDNSResolutionFromRemoteVPC            :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VPCPeeringConnectionOptionsDescription' with the minimum fields required to make a request.
@@ -19961,10 +20529,12 @@ instance NFData
 --
 --
 -- /See:/ 'vpcPeeringConnectionStateReason' smart constructor.
-data VPCPeeringConnectionStateReason = VPCPeeringConnectionStateReason'
-  { _vpcsrCode    :: !(Maybe VPCPeeringConnectionStateReasonCode)
-  , _vpcsrMessage :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VPCPeeringConnectionStateReason =
+  VPCPeeringConnectionStateReason'
+    { _vpcsrCode    :: !(Maybe VPCPeeringConnectionStateReasonCode)
+    , _vpcsrMessage :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VPCPeeringConnectionStateReason' with the minimum fields required to make a request.
@@ -20005,15 +20575,17 @@ instance NFData VPCPeeringConnectionStateReason where
 --
 --
 -- /See:/ 'vpcPeeringConnectionVPCInfo' smart constructor.
-data VPCPeeringConnectionVPCInfo = VPCPeeringConnectionVPCInfo'
-  { _vpcviCidrBlockSet     :: !(Maybe [CidrBlock])
-  , _vpcviVPCId            :: !(Maybe Text)
-  , _vpcviOwnerId          :: !(Maybe Text)
-  , _vpcviPeeringOptions   :: !(Maybe VPCPeeringConnectionOptionsDescription)
-  , _vpcviCidrBlock        :: !(Maybe Text)
-  , _vpcviRegion           :: !(Maybe Text)
-  , _vpcviIPv6CidrBlockSet :: !(Maybe [IPv6CidrBlock])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VPCPeeringConnectionVPCInfo =
+  VPCPeeringConnectionVPCInfo'
+    { _vpcviCidrBlockSet     :: !(Maybe [CidrBlock])
+    , _vpcviVPCId            :: !(Maybe Text)
+    , _vpcviOwnerId          :: !(Maybe Text)
+    , _vpcviPeeringOptions   :: !(Maybe VPCPeeringConnectionOptionsDescription)
+    , _vpcviCidrBlock        :: !(Maybe Text)
+    , _vpcviRegion           :: !(Maybe Text)
+    , _vpcviIPv6CidrBlockSet :: !(Maybe [IPv6CidrBlock])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VPCPeeringConnectionVPCInfo' with the minimum fields required to make a request.
@@ -20098,19 +20670,21 @@ instance NFData VPCPeeringConnectionVPCInfo where
 --
 --
 -- /See:/ 'vpnConnection' smart constructor.
-data VPNConnection = VPNConnection'
-  { _vcCustomerGatewayConfiguration :: !(Maybe Text)
-  , _vcRoutes                       :: !(Maybe [VPNStaticRoute])
-  , _vcVPNGatewayId                 :: !(Maybe Text)
-  , _vcCategory                     :: !(Maybe Text)
-  , _vcOptions                      :: !(Maybe VPNConnectionOptions)
-  , _vcTags                         :: !(Maybe [Tag])
-  , _vcVGWTelemetry                 :: !(Maybe [VGWTelemetry])
-  , _vcVPNConnectionId              :: !Text
-  , _vcCustomerGatewayId            :: !Text
-  , _vcState                        :: !VPNState
-  , _vcType                         :: !GatewayType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VPNConnection =
+  VPNConnection'
+    { _vcCustomerGatewayConfiguration :: !(Maybe Text)
+    , _vcRoutes                       :: !(Maybe [VPNStaticRoute])
+    , _vcVPNGatewayId                 :: !(Maybe Text)
+    , _vcCategory                     :: !(Maybe Text)
+    , _vcOptions                      :: !(Maybe VPNConnectionOptions)
+    , _vcTags                         :: !(Maybe [Tag])
+    , _vcVGWTelemetry                 :: !(Maybe [VGWTelemetry])
+    , _vcVPNConnectionId              :: !Text
+    , _vcCustomerGatewayId            :: !Text
+    , _vcState                        :: !VPNState
+    , _vcType                         :: !GatewayType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VPNConnection' with the minimum fields required to make a request.
@@ -20233,9 +20807,11 @@ instance NFData VPNConnection where
 --
 --
 -- /See:/ 'vpnConnectionOptions' smart constructor.
-newtype VPNConnectionOptions = VPNConnectionOptions'
-  { _vcoStaticRoutesOnly :: Maybe Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype VPNConnectionOptions =
+  VPNConnectionOptions'
+    { _vcoStaticRoutesOnly :: Maybe Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VPNConnectionOptions' with the minimum fields required to make a request.
@@ -20266,10 +20842,12 @@ instance NFData VPNConnectionOptions where
 --
 --
 -- /See:/ 'vpnConnectionOptionsSpecification' smart constructor.
-data VPNConnectionOptionsSpecification = VPNConnectionOptionsSpecification'
-  { _vcosTunnelOptions    :: !(Maybe [VPNTunnelOptionsSpecification])
-  , _vcosStaticRoutesOnly :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VPNConnectionOptionsSpecification =
+  VPNConnectionOptionsSpecification'
+    { _vcosTunnelOptions    :: !(Maybe [VPNTunnelOptionsSpecification])
+    , _vcosStaticRoutesOnly :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VPNConnectionOptionsSpecification' with the minimum fields required to make a request.
@@ -20313,15 +20891,17 @@ instance ToQuery VPNConnectionOptionsSpecification
 --
 --
 -- /See:/ 'vpnGateway' smart constructor.
-data VPNGateway = VPNGateway'
-  { _vgState            :: !(Maybe VPNState)
-  , _vgVPCAttachments   :: !(Maybe [VPCAttachment])
-  , _vgVPNGatewayId     :: !(Maybe Text)
-  , _vgAmazonSideASN    :: !(Maybe Integer)
-  , _vgAvailabilityZone :: !(Maybe Text)
-  , _vgType             :: !(Maybe GatewayType)
-  , _vgTags             :: !(Maybe [Tag])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VPNGateway =
+  VPNGateway'
+    { _vgState            :: !(Maybe VPNState)
+    , _vgVPCAttachments   :: !(Maybe [VPCAttachment])
+    , _vgVPNGatewayId     :: !(Maybe Text)
+    , _vgAmazonSideASN    :: !(Maybe Integer)
+    , _vgAvailabilityZone :: !(Maybe Text)
+    , _vgType             :: !(Maybe GatewayType)
+    , _vgTags             :: !(Maybe [Tag])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VPNGateway' with the minimum fields required to make a request.
@@ -20406,11 +20986,13 @@ instance NFData VPNGateway where
 --
 --
 -- /See:/ 'vpnStaticRoute' smart constructor.
-data VPNStaticRoute = VPNStaticRoute'
-  { _vsrState                :: !(Maybe VPNState)
-  , _vsrSource               :: !(Maybe VPNStaticRouteSource)
-  , _vsrDestinationCidrBlock :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VPNStaticRoute =
+  VPNStaticRoute'
+    { _vsrState                :: !(Maybe VPNState)
+    , _vsrSource               :: !(Maybe VPNStaticRouteSource)
+    , _vsrDestinationCidrBlock :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VPNStaticRoute' with the minimum fields required to make a request.
@@ -20459,10 +21041,12 @@ instance NFData VPNStaticRoute where
 --
 --
 -- /See:/ 'vpnTunnelOptionsSpecification' smart constructor.
-data VPNTunnelOptionsSpecification = VPNTunnelOptionsSpecification'
-  { _vtosTunnelInsideCidr :: !(Maybe Text)
-  , _vtosPreSharedKey     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VPNTunnelOptionsSpecification =
+  VPNTunnelOptionsSpecification'
+    { _vtosTunnelInsideCidr :: !(Maybe Text)
+    , _vtosPreSharedKey     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VPNTunnelOptionsSpecification' with the minimum fields required to make a request.
@@ -20502,20 +21086,22 @@ instance ToQuery VPNTunnelOptionsSpecification where
 --
 --
 -- /See:/ 'volume' smart constructor.
-data Volume = Volume'
-  { _vAttachments      :: !(Maybe [VolumeAttachment])
-  , _vIOPS             :: !(Maybe Int)
-  , _vKMSKeyId         :: !(Maybe Text)
-  , _vTags             :: !(Maybe [Tag])
-  , _vAvailabilityZone :: !Text
-  , _vCreateTime       :: !ISO8601
-  , _vEncrypted        :: !Bool
-  , _vSize             :: !Int
-  , _vSnapshotId       :: !Text
-  , _vState            :: !VolumeState
-  , _vVolumeId         :: !Text
-  , _vVolumeType       :: !VolumeType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Volume =
+  Volume'
+    { _vAttachments      :: !(Maybe [VolumeAttachment])
+    , _vIOPS             :: !(Maybe Int)
+    , _vKMSKeyId         :: !(Maybe Text)
+    , _vTags             :: !(Maybe [Tag])
+    , _vAvailabilityZone :: !Text
+    , _vCreateTime       :: !ISO8601
+    , _vEncrypted        :: !Bool
+    , _vSize             :: !Int
+    , _vSnapshotId       :: !Text
+    , _vState            :: !VolumeState
+    , _vVolumeId         :: !Text
+    , _vVolumeType       :: !VolumeType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Volume' with the minimum fields required to make a request.
@@ -20648,14 +21234,16 @@ instance NFData Volume where
 --
 --
 -- /See:/ 'volumeAttachment' smart constructor.
-data VolumeAttachment = VolumeAttachment'
-  { _volInstanceId          :: !(Maybe Text)
-  , _volDeleteOnTermination :: !(Maybe Bool)
-  , _volState               :: !(Maybe VolumeAttachmentState)
-  , _volDevice              :: !(Maybe Text)
-  , _volVolumeId            :: !(Maybe Text)
-  , _volAttachTime          :: !(Maybe ISO8601)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VolumeAttachment =
+  VolumeAttachment'
+    { _volInstanceId          :: !(Maybe Text)
+    , _volDeleteOnTermination :: !(Maybe Bool)
+    , _volState               :: !(Maybe VolumeAttachmentState)
+    , _volDevice              :: !(Maybe Text)
+    , _volVolumeId            :: !(Maybe Text)
+    , _volAttachTime          :: !(Maybe ISO8601)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VolumeAttachment' with the minimum fields required to make a request.
@@ -20729,9 +21317,11 @@ instance NFData VolumeAttachment where
 --
 --
 -- /See:/ 'volumeDetail' smart constructor.
-newtype VolumeDetail = VolumeDetail'
-  { _vdSize :: Integer
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype VolumeDetail =
+  VolumeDetail'
+    { _vdSize :: Integer
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VolumeDetail' with the minimum fields required to make a request.
@@ -20764,20 +21354,22 @@ instance ToQuery VolumeDetail where
 --
 --
 -- /See:/ 'volumeModification' smart constructor.
-data VolumeModification = VolumeModification'
-  { _vmProgress           :: !(Maybe Integer)
-  , _vmStartTime          :: !(Maybe ISO8601)
-  , _vmModificationState  :: !(Maybe VolumeModificationState)
-  , _vmTargetVolumeType   :: !(Maybe VolumeType)
-  , _vmOriginalVolumeType :: !(Maybe VolumeType)
-  , _vmTargetSize         :: !(Maybe Int)
-  , _vmTargetIOPS         :: !(Maybe Int)
-  , _vmOriginalSize       :: !(Maybe Int)
-  , _vmOriginalIOPS       :: !(Maybe Int)
-  , _vmStatusMessage      :: !(Maybe Text)
-  , _vmEndTime            :: !(Maybe ISO8601)
-  , _vmVolumeId           :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VolumeModification =
+  VolumeModification'
+    { _vmProgress           :: !(Maybe Integer)
+    , _vmStartTime          :: !(Maybe ISO8601)
+    , _vmModificationState  :: !(Maybe VolumeModificationState)
+    , _vmTargetVolumeType   :: !(Maybe VolumeType)
+    , _vmOriginalVolumeType :: !(Maybe VolumeType)
+    , _vmTargetSize         :: !(Maybe Int)
+    , _vmTargetIOPS         :: !(Maybe Int)
+    , _vmOriginalSize       :: !(Maybe Int)
+    , _vmOriginalIOPS       :: !(Maybe Int)
+    , _vmStatusMessage      :: !(Maybe Text)
+    , _vmEndTime            :: !(Maybe ISO8601)
+    , _vmVolumeId           :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VolumeModification' with the minimum fields required to make a request.
@@ -20898,12 +21490,14 @@ instance NFData VolumeModification where
 --
 --
 -- /See:/ 'volumeStatusAction' smart constructor.
-data VolumeStatusAction = VolumeStatusAction'
-  { _vsaEventType   :: !(Maybe Text)
-  , _vsaCode        :: !(Maybe Text)
-  , _vsaDescription :: !(Maybe Text)
-  , _vsaEventId     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VolumeStatusAction =
+  VolumeStatusAction'
+    { _vsaEventType   :: !(Maybe Text)
+    , _vsaCode        :: !(Maybe Text)
+    , _vsaDescription :: !(Maybe Text)
+    , _vsaEventId     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VolumeStatusAction' with the minimum fields required to make a request.
@@ -20960,10 +21554,12 @@ instance NFData VolumeStatusAction where
 --
 --
 -- /See:/ 'volumeStatusDetails' smart constructor.
-data VolumeStatusDetails = VolumeStatusDetails'
-  { _vsdStatus :: !(Maybe Text)
-  , _vsdName   :: !(Maybe VolumeStatusName)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VolumeStatusDetails =
+  VolumeStatusDetails'
+    { _vsdStatus :: !(Maybe Text)
+    , _vsdName   :: !(Maybe VolumeStatusName)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VolumeStatusDetails' with the minimum fields required to make a request.
@@ -21001,13 +21597,15 @@ instance NFData VolumeStatusDetails where
 --
 --
 -- /See:/ 'volumeStatusEvent' smart constructor.
-data VolumeStatusEvent = VolumeStatusEvent'
-  { _vseNotBefore   :: !(Maybe ISO8601)
-  , _vseEventType   :: !(Maybe Text)
-  , _vseDescription :: !(Maybe Text)
-  , _vseNotAfter    :: !(Maybe ISO8601)
-  , _vseEventId     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VolumeStatusEvent =
+  VolumeStatusEvent'
+    { _vseNotBefore   :: !(Maybe ISO8601)
+    , _vseEventType   :: !(Maybe Text)
+    , _vseDescription :: !(Maybe Text)
+    , _vseNotAfter    :: !(Maybe ISO8601)
+    , _vseEventId     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VolumeStatusEvent' with the minimum fields required to make a request.
@@ -21072,10 +21670,12 @@ instance NFData VolumeStatusEvent where
 --
 --
 -- /See:/ 'volumeStatusInfo' smart constructor.
-data VolumeStatusInfo = VolumeStatusInfo'
-  { _vsiStatus  :: !(Maybe VolumeStatusInfoStatus)
-  , _vsiDetails :: !(Maybe [VolumeStatusDetails])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VolumeStatusInfo =
+  VolumeStatusInfo'
+    { _vsiStatus  :: !(Maybe VolumeStatusInfoStatus)
+    , _vsiDetails :: !(Maybe [VolumeStatusDetails])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VolumeStatusInfo' with the minimum fields required to make a request.
@@ -21115,13 +21715,15 @@ instance NFData VolumeStatusInfo where
 --
 --
 -- /See:/ 'volumeStatusItem' smart constructor.
-data VolumeStatusItem = VolumeStatusItem'
-  { _vsiVolumeStatus     :: !(Maybe VolumeStatusInfo)
-  , _vsiActions          :: !(Maybe [VolumeStatusAction])
-  , _vsiEvents           :: !(Maybe [VolumeStatusEvent])
-  , _vsiAvailabilityZone :: !(Maybe Text)
-  , _vsiVolumeId         :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VolumeStatusItem =
+  VolumeStatusItem'
+    { _vsiVolumeStatus     :: !(Maybe VolumeStatusInfo)
+    , _vsiActions          :: !(Maybe [VolumeStatusAction])
+    , _vsiEvents           :: !(Maybe [VolumeStatusEvent])
+    , _vsiAvailabilityZone :: !(Maybe Text)
+    , _vsiVolumeId         :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VolumeStatusItem' with the minimum fields required to make a request.

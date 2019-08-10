@@ -87,10 +87,12 @@ instance ToQuery GetAdminAccount where
         toQuery = const mempty
 
 -- | /See:/ 'getAdminAccountResponse' smart constructor.
-data GetAdminAccountResponse = GetAdminAccountResponse'
-  { _gaarsAdminAccount   :: !(Maybe Text)
-  , _gaarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetAdminAccountResponse =
+  GetAdminAccountResponse'
+    { _gaarsAdminAccount   :: !(Maybe Text)
+    , _gaarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetAdminAccountResponse' with the minimum fields required to make a request.

@@ -53,13 +53,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listTaskDefinitions' smart constructor.
-data ListTaskDefinitions = ListTaskDefinitions'
-  { _ltdStatus       :: !(Maybe TaskDefinitionStatus)
-  , _ltdFamilyPrefix :: !(Maybe Text)
-  , _ltdNextToken    :: !(Maybe Text)
-  , _ltdSort         :: !(Maybe SortOrder)
-  , _ltdMaxResults   :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTaskDefinitions =
+  ListTaskDefinitions'
+    { _ltdStatus       :: !(Maybe TaskDefinitionStatus)
+    , _ltdFamilyPrefix :: !(Maybe Text)
+    , _ltdNextToken    :: !(Maybe Text)
+    , _ltdSort         :: !(Maybe SortOrder)
+    , _ltdMaxResults   :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTaskDefinitions' with the minimum fields required to make a request.
@@ -157,11 +159,13 @@ instance ToQuery ListTaskDefinitions where
         toQuery = const mempty
 
 -- | /See:/ 'listTaskDefinitionsResponse' smart constructor.
-data ListTaskDefinitionsResponse = ListTaskDefinitionsResponse'
-  { _ltdrsTaskDefinitionARNs :: !(Maybe [Text])
-  , _ltdrsNextToken          :: !(Maybe Text)
-  , _ltdrsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTaskDefinitionsResponse =
+  ListTaskDefinitionsResponse'
+    { _ltdrsTaskDefinitionARNs :: !(Maybe [Text])
+    , _ltdrsNextToken          :: !(Maybe Text)
+    , _ltdrsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTaskDefinitionsResponse' with the minimum fields required to make a request.

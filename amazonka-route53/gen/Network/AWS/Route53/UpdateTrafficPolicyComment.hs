@@ -51,11 +51,13 @@ import Network.AWS.Route53.Types.Product
 --
 --
 -- /See:/ 'updateTrafficPolicyComment' smart constructor.
-data UpdateTrafficPolicyComment = UpdateTrafficPolicyComment'
-  { _utpcId      :: !Text
-  , _utpcVersion :: !Nat
-  , _utpcComment :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateTrafficPolicyComment =
+  UpdateTrafficPolicyComment'
+    { _utpcId      :: !Text
+    , _utpcVersion :: !Nat
+    , _utpcComment :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateTrafficPolicyComment' with the minimum fields required to make a request.
@@ -129,10 +131,12 @@ instance ToXML UpdateTrafficPolicyComment where
 --
 --
 -- /See:/ 'updateTrafficPolicyCommentResponse' smart constructor.
-data UpdateTrafficPolicyCommentResponse = UpdateTrafficPolicyCommentResponse'
-  { _utpcrsResponseStatus :: !Int
-  , _utpcrsTrafficPolicy  :: !TrafficPolicy
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateTrafficPolicyCommentResponse =
+  UpdateTrafficPolicyCommentResponse'
+    { _utpcrsResponseStatus :: !Int
+    , _utpcrsTrafficPolicy  :: !TrafficPolicy
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateTrafficPolicyCommentResponse' with the minimum fields required to make a request.

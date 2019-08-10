@@ -54,17 +54,19 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeLaunchTemplateVersions' smart constructor.
-data DescribeLaunchTemplateVersions = DescribeLaunchTemplateVersions'
-  { _dltvsLaunchTemplateName :: !(Maybe Text)
-  , _dltvsLaunchTemplateId   :: !(Maybe Text)
-  , _dltvsMinVersion         :: !(Maybe Text)
-  , _dltvsFilters            :: !(Maybe [Filter])
-  , _dltvsMaxVersion         :: !(Maybe Text)
-  , _dltvsVersions           :: !(Maybe [Text])
-  , _dltvsNextToken          :: !(Maybe Text)
-  , _dltvsDryRun             :: !(Maybe Bool)
-  , _dltvsMaxResults         :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeLaunchTemplateVersions =
+  DescribeLaunchTemplateVersions'
+    { _dltvsLaunchTemplateName :: !(Maybe Text)
+    , _dltvsLaunchTemplateId   :: !(Maybe Text)
+    , _dltvsMinVersion         :: !(Maybe Text)
+    , _dltvsFilters            :: !(Maybe [Filter])
+    , _dltvsMaxVersion         :: !(Maybe Text)
+    , _dltvsVersions           :: !(Maybe [Text])
+    , _dltvsNextToken          :: !(Maybe Text)
+    , _dltvsDryRun             :: !(Maybe Bool)
+    , _dltvsMaxResults         :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeLaunchTemplateVersions' with the minimum fields required to make a request.
@@ -185,11 +187,13 @@ instance ToQuery DescribeLaunchTemplateVersions where
                "MaxResults" =: _dltvsMaxResults]
 
 -- | /See:/ 'describeLaunchTemplateVersionsResponse' smart constructor.
-data DescribeLaunchTemplateVersionsResponse = DescribeLaunchTemplateVersionsResponse'
-  { _dltvrsNextToken              :: !(Maybe Text)
-  , _dltvrsLaunchTemplateVersions :: !(Maybe [LaunchTemplateVersion])
-  , _dltvrsResponseStatus         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeLaunchTemplateVersionsResponse =
+  DescribeLaunchTemplateVersionsResponse'
+    { _dltvrsNextToken              :: !(Maybe Text)
+    , _dltvrsLaunchTemplateVersions :: !(Maybe [LaunchTemplateVersion])
+    , _dltvrsResponseStatus         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeLaunchTemplateVersionsResponse' with the minimum fields required to make a request.

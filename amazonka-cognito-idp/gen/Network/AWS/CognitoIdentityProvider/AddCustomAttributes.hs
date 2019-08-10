@@ -49,10 +49,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'addCustomAttributes' smart constructor.
-data AddCustomAttributes = AddCustomAttributes'
-  { _acaUserPoolId       :: !Text
-  , _acaCustomAttributes :: !(List1 SchemaAttributeType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddCustomAttributes =
+  AddCustomAttributes'
+    { _acaUserPoolId       :: !Text
+    , _acaCustomAttributes :: !(List1 SchemaAttributeType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddCustomAttributes' with the minimum fields required to make a request.
@@ -122,9 +124,11 @@ instance ToQuery AddCustomAttributes where
 --
 --
 -- /See:/ 'addCustomAttributesResponse' smart constructor.
-newtype AddCustomAttributesResponse = AddCustomAttributesResponse'
-  { _acarsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AddCustomAttributesResponse =
+  AddCustomAttributesResponse'
+    { _acarsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddCustomAttributesResponse' with the minimum fields required to make a request.

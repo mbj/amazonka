@@ -49,12 +49,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeHostReservations' smart constructor.
-data DescribeHostReservations = DescribeHostReservations'
-  { _dhrNextToken            :: !(Maybe Text)
-  , _dhrHostReservationIdSet :: !(Maybe [Text])
-  , _dhrFilter               :: !(Maybe [Filter])
-  , _dhrMaxResults           :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeHostReservations =
+  DescribeHostReservations'
+    { _dhrNextToken            :: !(Maybe Text)
+    , _dhrHostReservationIdSet :: !(Maybe [Text])
+    , _dhrFilter               :: !(Maybe [Filter])
+    , _dhrMaxResults           :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeHostReservations' with the minimum fields required to make a request.
@@ -132,11 +134,13 @@ instance ToQuery DescribeHostReservations where
                "MaxResults" =: _dhrMaxResults]
 
 -- | /See:/ 'describeHostReservationsResponse' smart constructor.
-data DescribeHostReservationsResponse = DescribeHostReservationsResponse'
-  { _dhrrsNextToken          :: !(Maybe Text)
-  , _dhrrsHostReservationSet :: !(Maybe [HostReservation])
-  , _dhrrsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeHostReservationsResponse =
+  DescribeHostReservationsResponse'
+    { _dhrrsNextToken          :: !(Maybe Text)
+    , _dhrrsHostReservationSet :: !(Maybe [HostReservation])
+    , _dhrrsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeHostReservationsResponse' with the minimum fields required to make a request.

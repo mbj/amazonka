@@ -50,9 +50,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteConfigurationRecorder' smart constructor.
-newtype DeleteConfigurationRecorder = DeleteConfigurationRecorder'
-  { _dcrConfigurationRecorderName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteConfigurationRecorder =
+  DeleteConfigurationRecorder'
+    { _dcrConfigurationRecorderName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteConfigurationRecorder' with the minimum fields required to make a request.

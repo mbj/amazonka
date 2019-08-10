@@ -54,10 +54,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeStackEvents' smart constructor.
-data DescribeStackEvents = DescribeStackEvents'
-  { _dseNextToken :: !(Maybe Text)
-  , _dseStackName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeStackEvents =
+  DescribeStackEvents'
+    { _dseNextToken :: !(Maybe Text)
+    , _dseStackName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeStackEvents' with the minimum fields required to make a request.
@@ -124,11 +126,13 @@ instance ToQuery DescribeStackEvents where
 --
 --
 -- /See:/ 'describeStackEventsResponse' smart constructor.
-data DescribeStackEventsResponse = DescribeStackEventsResponse'
-  { _dsersNextToken      :: !(Maybe Text)
-  , _dsersStackEvents    :: !(Maybe [StackEvent])
-  , _dsersResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeStackEventsResponse =
+  DescribeStackEventsResponse'
+    { _dsersNextToken      :: !(Maybe Text)
+    , _dsersStackEvents    :: !(Maybe [StackEvent])
+    , _dsersResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeStackEventsResponse' with the minimum fields required to make a request.

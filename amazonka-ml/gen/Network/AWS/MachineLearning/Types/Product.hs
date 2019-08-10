@@ -28,24 +28,26 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'batchPrediction' smart constructor.
-data BatchPrediction = BatchPrediction'
-  { _bpStatus                      :: !(Maybe EntityStatus)
-  , _bpLastUpdatedAt               :: !(Maybe POSIX)
-  , _bpCreatedAt                   :: !(Maybe POSIX)
-  , _bpComputeTime                 :: !(Maybe Integer)
-  , _bpInputDataLocationS3         :: !(Maybe Text)
-  , _bpMLModelId                   :: !(Maybe Text)
-  , _bpBatchPredictionDataSourceId :: !(Maybe Text)
-  , _bpTotalRecordCount            :: !(Maybe Integer)
-  , _bpStartedAt                   :: !(Maybe POSIX)
-  , _bpBatchPredictionId           :: !(Maybe Text)
-  , _bpFinishedAt                  :: !(Maybe POSIX)
-  , _bpInvalidRecordCount          :: !(Maybe Integer)
-  , _bpCreatedByIAMUser            :: !(Maybe Text)
-  , _bpName                        :: !(Maybe Text)
-  , _bpMessage                     :: !(Maybe Text)
-  , _bpOutputURI                   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchPrediction =
+  BatchPrediction'
+    { _bpStatus                      :: !(Maybe EntityStatus)
+    , _bpLastUpdatedAt               :: !(Maybe POSIX)
+    , _bpCreatedAt                   :: !(Maybe POSIX)
+    , _bpComputeTime                 :: !(Maybe Integer)
+    , _bpInputDataLocationS3         :: !(Maybe Text)
+    , _bpMLModelId                   :: !(Maybe Text)
+    , _bpBatchPredictionDataSourceId :: !(Maybe Text)
+    , _bpTotalRecordCount            :: !(Maybe Integer)
+    , _bpStartedAt                   :: !(Maybe POSIX)
+    , _bpBatchPredictionId           :: !(Maybe Text)
+    , _bpFinishedAt                  :: !(Maybe POSIX)
+    , _bpInvalidRecordCount          :: !(Maybe Integer)
+    , _bpCreatedByIAMUser            :: !(Maybe Text)
+    , _bpName                        :: !(Maybe Text)
+    , _bpMessage                     :: !(Maybe Text)
+    , _bpOutputURI                   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchPrediction' with the minimum fields required to make a request.
@@ -202,26 +204,28 @@ instance NFData BatchPrediction where
 --
 --
 -- /See:/ 'dataSource' smart constructor.
-data DataSource = DataSource'
-  { _dsStatus            :: !(Maybe EntityStatus)
-  , _dsNumberOfFiles     :: !(Maybe Integer)
-  , _dsLastUpdatedAt     :: !(Maybe POSIX)
-  , _dsCreatedAt         :: !(Maybe POSIX)
-  , _dsComputeTime       :: !(Maybe Integer)
-  , _dsDataSourceId      :: !(Maybe Text)
-  , _dsRDSMetadata       :: !(Maybe RDSMetadata)
-  , _dsDataSizeInBytes   :: !(Maybe Integer)
-  , _dsStartedAt         :: !(Maybe POSIX)
-  , _dsFinishedAt        :: !(Maybe POSIX)
-  , _dsCreatedByIAMUser  :: !(Maybe Text)
-  , _dsName              :: !(Maybe Text)
-  , _dsDataLocationS3    :: !(Maybe Text)
-  , _dsComputeStatistics :: !(Maybe Bool)
-  , _dsMessage           :: !(Maybe Text)
-  , _dsRedshiftMetadata  :: !(Maybe RedshiftMetadata)
-  , _dsDataRearrangement :: !(Maybe Text)
-  , _dsRoleARN           :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DataSource =
+  DataSource'
+    { _dsStatus            :: !(Maybe EntityStatus)
+    , _dsNumberOfFiles     :: !(Maybe Integer)
+    , _dsLastUpdatedAt     :: !(Maybe POSIX)
+    , _dsCreatedAt         :: !(Maybe POSIX)
+    , _dsComputeTime       :: !(Maybe Integer)
+    , _dsDataSourceId      :: !(Maybe Text)
+    , _dsRDSMetadata       :: !(Maybe RDSMetadata)
+    , _dsDataSizeInBytes   :: !(Maybe Integer)
+    , _dsStartedAt         :: !(Maybe POSIX)
+    , _dsFinishedAt        :: !(Maybe POSIX)
+    , _dsCreatedByIAMUser  :: !(Maybe Text)
+    , _dsName              :: !(Maybe Text)
+    , _dsDataLocationS3    :: !(Maybe Text)
+    , _dsComputeStatistics :: !(Maybe Bool)
+    , _dsMessage           :: !(Maybe Text)
+    , _dsRedshiftMetadata  :: !(Maybe RedshiftMetadata)
+    , _dsDataRearrangement :: !(Maybe Text)
+    , _dsRoleARN           :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DataSource' with the minimum fields required to make a request.
@@ -394,22 +398,24 @@ instance NFData DataSource where
 --
 --
 -- /See:/ 'evaluation' smart constructor.
-data Evaluation = Evaluation'
-  { _eStatus                 :: !(Maybe EntityStatus)
-  , _ePerformanceMetrics     :: !(Maybe PerformanceMetrics)
-  , _eLastUpdatedAt          :: !(Maybe POSIX)
-  , _eCreatedAt              :: !(Maybe POSIX)
-  , _eComputeTime            :: !(Maybe Integer)
-  , _eInputDataLocationS3    :: !(Maybe Text)
-  , _eMLModelId              :: !(Maybe Text)
-  , _eStartedAt              :: !(Maybe POSIX)
-  , _eFinishedAt             :: !(Maybe POSIX)
-  , _eCreatedByIAMUser       :: !(Maybe Text)
-  , _eName                   :: !(Maybe Text)
-  , _eEvaluationId           :: !(Maybe Text)
-  , _eMessage                :: !(Maybe Text)
-  , _eEvaluationDataSourceId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Evaluation =
+  Evaluation'
+    { _eStatus                 :: !(Maybe EntityStatus)
+    , _ePerformanceMetrics     :: !(Maybe PerformanceMetrics)
+    , _eLastUpdatedAt          :: !(Maybe POSIX)
+    , _eCreatedAt              :: !(Maybe POSIX)
+    , _eComputeTime            :: !(Maybe Integer)
+    , _eInputDataLocationS3    :: !(Maybe Text)
+    , _eMLModelId              :: !(Maybe Text)
+    , _eStartedAt              :: !(Maybe POSIX)
+    , _eFinishedAt             :: !(Maybe POSIX)
+    , _eCreatedByIAMUser       :: !(Maybe Text)
+    , _eName                   :: !(Maybe Text)
+    , _eEvaluationId           :: !(Maybe Text)
+    , _eMessage                :: !(Maybe Text)
+    , _eEvaluationDataSourceId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Evaluation' with the minimum fields required to make a request.
@@ -550,27 +556,29 @@ instance NFData Evaluation where
 --
 --
 -- /See:/ 'mLModel' smart constructor.
-data MLModel = MLModel'
-  { _mlmStatus                      :: !(Maybe EntityStatus)
-  , _mlmLastUpdatedAt               :: !(Maybe POSIX)
-  , _mlmTrainingParameters          :: !(Maybe (Map Text Text))
-  , _mlmScoreThresholdLastUpdatedAt :: !(Maybe POSIX)
-  , _mlmCreatedAt                   :: !(Maybe POSIX)
-  , _mlmComputeTime                 :: !(Maybe Integer)
-  , _mlmInputDataLocationS3         :: !(Maybe Text)
-  , _mlmMLModelId                   :: !(Maybe Text)
-  , _mlmSizeInBytes                 :: !(Maybe Integer)
-  , _mlmStartedAt                   :: !(Maybe POSIX)
-  , _mlmScoreThreshold              :: !(Maybe Double)
-  , _mlmFinishedAt                  :: !(Maybe POSIX)
-  , _mlmAlgorithm                   :: !(Maybe Algorithm)
-  , _mlmCreatedByIAMUser            :: !(Maybe Text)
-  , _mlmName                        :: !(Maybe Text)
-  , _mlmEndpointInfo                :: !(Maybe RealtimeEndpointInfo)
-  , _mlmTrainingDataSourceId        :: !(Maybe Text)
-  , _mlmMessage                     :: !(Maybe Text)
-  , _mlmMLModelType                 :: !(Maybe MLModelType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MLModel =
+  MLModel'
+    { _mlmStatus                      :: !(Maybe EntityStatus)
+    , _mlmLastUpdatedAt               :: !(Maybe POSIX)
+    , _mlmTrainingParameters          :: !(Maybe (Map Text Text))
+    , _mlmScoreThresholdLastUpdatedAt :: !(Maybe POSIX)
+    , _mlmCreatedAt                   :: !(Maybe POSIX)
+    , _mlmComputeTime                 :: !(Maybe Integer)
+    , _mlmInputDataLocationS3         :: !(Maybe Text)
+    , _mlmMLModelId                   :: !(Maybe Text)
+    , _mlmSizeInBytes                 :: !(Maybe Integer)
+    , _mlmStartedAt                   :: !(Maybe POSIX)
+    , _mlmScoreThreshold              :: !(Maybe Double)
+    , _mlmFinishedAt                  :: !(Maybe POSIX)
+    , _mlmAlgorithm                   :: !(Maybe Algorithm)
+    , _mlmCreatedByIAMUser            :: !(Maybe Text)
+    , _mlmName                        :: !(Maybe Text)
+    , _mlmEndpointInfo                :: !(Maybe RealtimeEndpointInfo)
+    , _mlmTrainingDataSourceId        :: !(Maybe Text)
+    , _mlmMessage                     :: !(Maybe Text)
+    , _mlmMLModelType                 :: !(Maybe MLModelType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MLModel' with the minimum fields required to make a request.
@@ -759,9 +767,11 @@ instance NFData MLModel where
 --
 --
 -- /See:/ 'performanceMetrics' smart constructor.
-newtype PerformanceMetrics = PerformanceMetrics'
-  { _pmProperties :: Maybe (Map Text Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype PerformanceMetrics =
+  PerformanceMetrics'
+    { _pmProperties :: Maybe (Map Text Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PerformanceMetrics' with the minimum fields required to make a request.
@@ -804,12 +814,14 @@ instance NFData PerformanceMetrics where
 --
 --
 -- /See:/ 'prediction' smart constructor.
-data Prediction = Prediction'
-  { _pPredictedValue  :: !(Maybe Double)
-  , _pPredictedLabel  :: !(Maybe Text)
-  , _pPredictedScores :: !(Maybe (Map Text Double))
-  , _pDetails         :: !(Maybe (Map DetailsAttributes Text))
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Prediction =
+  Prediction'
+    { _pPredictedValue  :: !(Maybe Double)
+    , _pPredictedLabel  :: !(Maybe Text)
+    , _pPredictedScores :: !(Maybe (Map Text Double))
+    , _pDetails         :: !(Maybe (Map DetailsAttributes Text))
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Prediction' with the minimum fields required to make a request.
@@ -868,19 +880,21 @@ instance NFData Prediction where
 --
 --
 -- /See:/ 'rdsDataSpec' smart constructor.
-data RDSDataSpec = RDSDataSpec'
-  { _rdsdsDataSchemaURI       :: !(Maybe Text)
-  , _rdsdsDataSchema          :: !(Maybe Text)
-  , _rdsdsDataRearrangement   :: !(Maybe Text)
-  , _rdsdsDatabaseInformation :: !RDSDatabase
-  , _rdsdsSelectSqlQuery      :: !Text
-  , _rdsdsDatabaseCredentials :: !RDSDatabaseCredentials
-  , _rdsdsS3StagingLocation   :: !Text
-  , _rdsdsResourceRole        :: !Text
-  , _rdsdsServiceRole         :: !Text
-  , _rdsdsSubnetId            :: !Text
-  , _rdsdsSecurityGroupIds    :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RDSDataSpec =
+  RDSDataSpec'
+    { _rdsdsDataSchemaURI       :: !(Maybe Text)
+    , _rdsdsDataSchema          :: !(Maybe Text)
+    , _rdsdsDataRearrangement   :: !(Maybe Text)
+    , _rdsdsDatabaseInformation :: !RDSDatabase
+    , _rdsdsSelectSqlQuery      :: !Text
+    , _rdsdsDatabaseCredentials :: !RDSDatabaseCredentials
+    , _rdsdsS3StagingLocation   :: !Text
+    , _rdsdsResourceRole        :: !Text
+    , _rdsdsServiceRole         :: !Text
+    , _rdsdsSubnetId            :: !Text
+    , _rdsdsSecurityGroupIds    :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RDSDataSpec' with the minimum fields required to make a request.
@@ -1005,10 +1019,12 @@ instance ToJSON RDSDataSpec where
 --
 --
 -- /See:/ 'rdsDatabase' smart constructor.
-data RDSDatabase = RDSDatabase'
-  { _rdsdInstanceIdentifier :: !Text
-  , _rdsdDatabaseName       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RDSDatabase =
+  RDSDatabase'
+    { _rdsdInstanceIdentifier :: !Text
+    , _rdsdDatabaseName       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RDSDatabase' with the minimum fields required to make a request.
@@ -1062,10 +1078,12 @@ instance ToJSON RDSDatabase where
 --
 --
 -- /See:/ 'rdsDatabaseCredentials' smart constructor.
-data RDSDatabaseCredentials = RDSDatabaseCredentials'
-  { _rdsdcUsername :: !Text
-  , _rdsdcPassword :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RDSDatabaseCredentials =
+  RDSDatabaseCredentials'
+    { _rdsdcUsername :: !Text
+    , _rdsdcPassword :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RDSDatabaseCredentials' with the minimum fields required to make a request.
@@ -1108,14 +1126,16 @@ instance ToJSON RDSDatabaseCredentials where
 --
 --
 -- /See:/ 'rdsMetadata' smart constructor.
-data RDSMetadata = RDSMetadata'
-  { _rmSelectSqlQuery   :: !(Maybe Text)
-  , _rmDataPipelineId   :: !(Maybe Text)
-  , _rmDatabase         :: !(Maybe RDSDatabase)
-  , _rmDatabaseUserName :: !(Maybe Text)
-  , _rmResourceRole     :: !(Maybe Text)
-  , _rmServiceRole      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RDSMetadata =
+  RDSMetadata'
+    { _rmSelectSqlQuery   :: !(Maybe Text)
+    , _rmDataPipelineId   :: !(Maybe Text)
+    , _rmDatabase         :: !(Maybe RDSDatabase)
+    , _rmDatabaseUserName :: !(Maybe Text)
+    , _rmResourceRole     :: !(Maybe Text)
+    , _rmServiceRole      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RDSMetadata' with the minimum fields required to make a request.
@@ -1190,12 +1210,14 @@ instance NFData RDSMetadata where
 --
 --
 -- /See:/ 'realtimeEndpointInfo' smart constructor.
-data RealtimeEndpointInfo = RealtimeEndpointInfo'
-  { _reiCreatedAt             :: !(Maybe POSIX)
-  , _reiEndpointURL           :: !(Maybe Text)
-  , _reiEndpointStatus        :: !(Maybe RealtimeEndpointStatus)
-  , _reiPeakRequestsPerSecond :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RealtimeEndpointInfo =
+  RealtimeEndpointInfo'
+    { _reiCreatedAt             :: !(Maybe POSIX)
+    , _reiEndpointURL           :: !(Maybe Text)
+    , _reiEndpointStatus        :: !(Maybe RealtimeEndpointStatus)
+    , _reiPeakRequestsPerSecond :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RealtimeEndpointInfo' with the minimum fields required to make a request.
@@ -1254,15 +1276,17 @@ instance NFData RealtimeEndpointInfo where
 --
 --
 -- /See:/ 'redshiftDataSpec' smart constructor.
-data RedshiftDataSpec = RedshiftDataSpec'
-  { _rDataSchemaURI       :: !(Maybe Text)
-  , _rDataSchema          :: !(Maybe Text)
-  , _rDataRearrangement   :: !(Maybe Text)
-  , _rDatabaseInformation :: !RedshiftDatabase
-  , _rSelectSqlQuery      :: !Text
-  , _rDatabaseCredentials :: !RedshiftDatabaseCredentials
-  , _rS3StagingLocation   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RedshiftDataSpec =
+  RedshiftDataSpec'
+    { _rDataSchemaURI       :: !(Maybe Text)
+    , _rDataSchema          :: !(Maybe Text)
+    , _rDataRearrangement   :: !(Maybe Text)
+    , _rDatabaseInformation :: !RedshiftDatabase
+    , _rSelectSqlQuery      :: !Text
+    , _rDatabaseCredentials :: !RedshiftDatabaseCredentials
+    , _rS3StagingLocation   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RedshiftDataSpec' with the minimum fields required to make a request.
@@ -1351,10 +1375,12 @@ instance ToJSON RedshiftDataSpec where
 --
 --
 -- /See:/ 'redshiftDatabase' smart constructor.
-data RedshiftDatabase = RedshiftDatabase'
-  { _rdDatabaseName      :: !Text
-  , _rdClusterIdentifier :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RedshiftDatabase =
+  RedshiftDatabase'
+    { _rdDatabaseName      :: !Text
+    , _rdClusterIdentifier :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RedshiftDatabase' with the minimum fields required to make a request.
@@ -1406,10 +1432,12 @@ instance ToJSON RedshiftDatabase where
 --
 --
 -- /See:/ 'redshiftDatabaseCredentials' smart constructor.
-data RedshiftDatabaseCredentials = RedshiftDatabaseCredentials'
-  { _rdcUsername :: !Text
-  , _rdcPassword :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RedshiftDatabaseCredentials =
+  RedshiftDatabaseCredentials'
+    { _rdcUsername :: !Text
+    , _rdcPassword :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RedshiftDatabaseCredentials' with the minimum fields required to make a request.
@@ -1452,11 +1480,13 @@ instance ToJSON RedshiftDatabaseCredentials where
 --
 --
 -- /See:/ 'redshiftMetadata' smart constructor.
-data RedshiftMetadata = RedshiftMetadata'
-  { _redSelectSqlQuery   :: !(Maybe Text)
-  , _redRedshiftDatabase :: !(Maybe RedshiftDatabase)
-  , _redDatabaseUserName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RedshiftMetadata =
+  RedshiftMetadata'
+    { _redSelectSqlQuery   :: !(Maybe Text)
+    , _redRedshiftDatabase :: !(Maybe RedshiftDatabase)
+    , _redDatabaseUserName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RedshiftMetadata' with the minimum fields required to make a request.
@@ -1508,12 +1538,14 @@ instance NFData RedshiftMetadata where
 --
 --
 -- /See:/ 's3DataSpec' smart constructor.
-data S3DataSpec = S3DataSpec'
-  { _sdsDataSchema           :: !(Maybe Text)
-  , _sdsDataSchemaLocationS3 :: !(Maybe Text)
-  , _sdsDataRearrangement    :: !(Maybe Text)
-  , _sdsDataLocationS3       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data S3DataSpec =
+  S3DataSpec'
+    { _sdsDataSchema           :: !(Maybe Text)
+    , _sdsDataSchemaLocationS3 :: !(Maybe Text)
+    , _sdsDataRearrangement    :: !(Maybe Text)
+    , _sdsDataLocationS3       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'S3DataSpec' with the minimum fields required to make a request.
@@ -1574,10 +1606,12 @@ instance ToJSON S3DataSpec where
 --
 --
 -- /See:/ 'tag' smart constructor.
-data Tag = Tag'
-  { _tagValue :: !(Maybe Text)
-  , _tagKey   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Tag =
+  Tag'
+    { _tagValue :: !(Maybe Text)
+    , _tagKey   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Tag' with the minimum fields required to make a request.

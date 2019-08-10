@@ -50,12 +50,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeVolumes' smart constructor.
-data DescribeVolumes = DescribeVolumes'
-  { _dvInstanceId  :: !(Maybe Text)
-  , _dvVolumeIds   :: !(Maybe [Text])
-  , _dvRAIdArrayId :: !(Maybe Text)
-  , _dvStackId     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeVolumes =
+  DescribeVolumes'
+    { _dvInstanceId  :: !(Maybe Text)
+    , _dvVolumeIds   :: !(Maybe [Text])
+    , _dvRAIdArrayId :: !(Maybe Text)
+    , _dvStackId     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeVolumes' with the minimum fields required to make a request.
@@ -138,10 +140,12 @@ instance ToQuery DescribeVolumes where
 --
 --
 -- /See:/ 'describeVolumesResponse' smart constructor.
-data DescribeVolumesResponse = DescribeVolumesResponse'
-  { _dvrsVolumes        :: !(Maybe [Volume])
-  , _dvrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeVolumesResponse =
+  DescribeVolumesResponse'
+    { _dvrsVolumes        :: !(Maybe [Volume])
+    , _dvrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeVolumesResponse' with the minimum fields required to make a request.

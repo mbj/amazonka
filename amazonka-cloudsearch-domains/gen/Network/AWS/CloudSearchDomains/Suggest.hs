@@ -56,11 +56,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'suggest' smart constructor.
-data Suggest = Suggest'
-  { _sSize      :: !(Maybe Integer)
-  , _sQuery     :: !Text
-  , _sSuggester :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Suggest =
+  Suggest'
+    { _sSize      :: !(Maybe Integer)
+    , _sQuery     :: !Text
+    , _sSuggester :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Suggest' with the minimum fields required to make a request.
@@ -127,11 +129,13 @@ instance ToQuery Suggest where
 --
 --
 -- /See:/ 'suggestResponse' smart constructor.
-data SuggestResponse = SuggestResponse'
-  { _srsSuggest        :: !(Maybe SuggestModel)
-  , _srsStatus         :: !(Maybe SuggestStatus)
-  , _srsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SuggestResponse =
+  SuggestResponse'
+    { _srsSuggest        :: !(Maybe SuggestModel)
+    , _srsStatus         :: !(Maybe SuggestStatus)
+    , _srsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SuggestResponse' with the minimum fields required to make a request.

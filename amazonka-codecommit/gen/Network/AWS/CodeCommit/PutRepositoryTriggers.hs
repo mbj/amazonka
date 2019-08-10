@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'putRepositoryTriggers' smart constructor.
-data PutRepositoryTriggers = PutRepositoryTriggers'
-  { _pRepositoryName :: !Text
-  , _pTriggers       :: ![RepositoryTrigger]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutRepositoryTriggers =
+  PutRepositoryTriggers'
+    { _pRepositoryName :: !Text
+    , _pTriggers       :: ![RepositoryTrigger]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutRepositoryTriggers' with the minimum fields required to make a request.
@@ -121,10 +123,12 @@ instance ToQuery PutRepositoryTriggers where
 --
 --
 -- /See:/ 'putRepositoryTriggersResponse' smart constructor.
-data PutRepositoryTriggersResponse = PutRepositoryTriggersResponse'
-  { _prtrsConfigurationId :: !(Maybe Text)
-  , _prtrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutRepositoryTriggersResponse =
+  PutRepositoryTriggersResponse'
+    { _prtrsConfigurationId :: !(Maybe Text)
+    , _prtrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutRepositoryTriggersResponse' with the minimum fields required to make a request.

@@ -59,15 +59,17 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeDBLogFiles' smart constructor.
-data DescribeDBLogFiles = DescribeDBLogFiles'
-  { _ddlfFilenameContains     :: !(Maybe Text)
-  , _ddlfFilters              :: !(Maybe [Filter])
-  , _ddlfFileSize             :: !(Maybe Integer)
-  , _ddlfFileLastWritten      :: !(Maybe Integer)
-  , _ddlfMarker               :: !(Maybe Text)
-  , _ddlfMaxRecords           :: !(Maybe Int)
-  , _ddlfDBInstanceIdentifier :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDBLogFiles =
+  DescribeDBLogFiles'
+    { _ddlfFilenameContains     :: !(Maybe Text)
+    , _ddlfFilters              :: !(Maybe [Filter])
+    , _ddlfFileSize             :: !(Maybe Integer)
+    , _ddlfFileLastWritten      :: !(Maybe Integer)
+    , _ddlfMarker               :: !(Maybe Text)
+    , _ddlfMaxRecords           :: !(Maybe Int)
+    , _ddlfDBInstanceIdentifier :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDBLogFiles' with the minimum fields required to make a request.
@@ -179,11 +181,13 @@ instance ToQuery DescribeDBLogFiles where
 --
 --
 -- /See:/ 'describeDBLogFilesResponse' smart constructor.
-data DescribeDBLogFilesResponse = DescribeDBLogFilesResponse'
-  { _ddlfrsDescribeDBLogFiles :: !(Maybe [DescribeDBLogFilesDetails])
-  , _ddlfrsMarker             :: !(Maybe Text)
-  , _ddlfrsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDBLogFilesResponse =
+  DescribeDBLogFilesResponse'
+    { _ddlfrsDescribeDBLogFiles :: !(Maybe [DescribeDBLogFilesDetails])
+    , _ddlfrsMarker             :: !(Maybe Text)
+    , _ddlfrsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDBLogFilesResponse' with the minimum fields required to make a request.

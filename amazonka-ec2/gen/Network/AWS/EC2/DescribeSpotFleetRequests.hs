@@ -58,12 +58,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeSpotFleetRequests' smart constructor.
-data DescribeSpotFleetRequests = DescribeSpotFleetRequests'
-  { _dsfrSpotFleetRequestIds :: !(Maybe [Text])
-  , _dsfrNextToken           :: !(Maybe Text)
-  , _dsfrDryRun              :: !(Maybe Bool)
-  , _dsfrMaxResults          :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeSpotFleetRequests =
+  DescribeSpotFleetRequests'
+    { _dsfrSpotFleetRequestIds :: !(Maybe [Text])
+    , _dsfrNextToken           :: !(Maybe Text)
+    , _dsfrDryRun              :: !(Maybe Bool)
+    , _dsfrMaxResults          :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeSpotFleetRequests' with the minimum fields required to make a request.
@@ -152,11 +154,13 @@ instance ToQuery DescribeSpotFleetRequests where
 --
 --
 -- /See:/ 'describeSpotFleetRequestsResponse' smart constructor.
-data DescribeSpotFleetRequestsResponse = DescribeSpotFleetRequestsResponse'
-  { _dsfrrsNextToken               :: !(Maybe Text)
-  , _dsfrrsResponseStatus          :: !Int
-  , _dsfrrsSpotFleetRequestConfigs :: ![SpotFleetRequestConfig]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeSpotFleetRequestsResponse =
+  DescribeSpotFleetRequestsResponse'
+    { _dsfrrsNextToken               :: !(Maybe Text)
+    , _dsfrrsResponseStatus          :: !Int
+    , _dsfrrsSpotFleetRequestConfigs :: ![SpotFleetRequestConfig]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeSpotFleetRequestsResponse' with the minimum fields required to make a request.

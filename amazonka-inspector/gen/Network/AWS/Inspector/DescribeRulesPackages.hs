@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeRulesPackages' smart constructor.
-data DescribeRulesPackages = DescribeRulesPackages'
-  { _drpLocale           :: !(Maybe Locale)
-  , _drpRulesPackageARNs :: !(List1 Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeRulesPackages =
+  DescribeRulesPackages'
+    { _drpLocale           :: !(Maybe Locale)
+    , _drpRulesPackageARNs :: !(List1 Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeRulesPackages' with the minimum fields required to make a request.
@@ -116,11 +118,13 @@ instance ToQuery DescribeRulesPackages where
         toQuery = const mempty
 
 -- | /See:/ 'describeRulesPackagesResponse' smart constructor.
-data DescribeRulesPackagesResponse = DescribeRulesPackagesResponse'
-  { _drprsResponseStatus :: !Int
-  , _drprsRulesPackages  :: ![RulesPackage]
-  , _drprsFailedItems    :: !(Map Text FailedItemDetails)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeRulesPackagesResponse =
+  DescribeRulesPackagesResponse'
+    { _drprsResponseStatus :: !Int
+    , _drprsRulesPackages  :: ![RulesPackage]
+    , _drprsFailedItems    :: !(Map Text FailedItemDetails)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeRulesPackagesResponse' with the minimum fields required to make a request.

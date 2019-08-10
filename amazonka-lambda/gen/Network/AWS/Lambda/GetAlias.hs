@@ -52,10 +52,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getAlias' smart constructor.
-data GetAlias = GetAlias'
-  { _gaFunctionName :: !Text
-  , _gaName         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetAlias =
+  GetAlias'
+    { _gaFunctionName :: !Text
+    , _gaName         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetAlias' with the minimum fields required to make a request.

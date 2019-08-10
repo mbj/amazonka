@@ -49,11 +49,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listOriginEndpoints' smart constructor.
-data ListOriginEndpoints = ListOriginEndpoints'
-  { _loeChannelId  :: !(Maybe Text)
-  , _loeNextToken  :: !(Maybe Text)
-  , _loeMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListOriginEndpoints =
+  ListOriginEndpoints'
+    { _loeChannelId  :: !(Maybe Text)
+    , _loeNextToken  :: !(Maybe Text)
+    , _loeMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListOriginEndpoints' with the minimum fields required to make a request.
@@ -125,11 +127,13 @@ instance ToQuery ListOriginEndpoints where
                "maxResults" =: _loeMaxResults]
 
 -- | /See:/ 'listOriginEndpointsResponse' smart constructor.
-data ListOriginEndpointsResponse = ListOriginEndpointsResponse'
-  { _loersOriginEndpoints :: !(Maybe [OriginEndpoint])
-  , _loersNextToken       :: !(Maybe Text)
-  , _loersResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListOriginEndpointsResponse =
+  ListOriginEndpointsResponse'
+    { _loersOriginEndpoints :: !(Maybe [OriginEndpoint])
+    , _loersNextToken       :: !(Maybe Text)
+    , _loersResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListOriginEndpointsResponse' with the minimum fields required to make a request.

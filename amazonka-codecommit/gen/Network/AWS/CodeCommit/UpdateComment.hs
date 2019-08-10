@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateComment' smart constructor.
-data UpdateComment = UpdateComment'
-  { _ucCommentId :: !Text
-  , _ucContent   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateComment =
+  UpdateComment'
+    { _ucCommentId :: !Text
+    , _ucContent   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateComment' with the minimum fields required to make a request.
@@ -111,10 +113,12 @@ instance ToQuery UpdateComment where
         toQuery = const mempty
 
 -- | /See:/ 'updateCommentResponse' smart constructor.
-data UpdateCommentResponse = UpdateCommentResponse'
-  { _ucrsComment        :: !(Maybe Comment)
-  , _ucrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateCommentResponse =
+  UpdateCommentResponse'
+    { _ucrsComment        :: !(Maybe Comment)
+    , _ucrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateCommentResponse' with the minimum fields required to make a request.

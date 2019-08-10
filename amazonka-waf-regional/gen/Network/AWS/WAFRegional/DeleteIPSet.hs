@@ -58,10 +58,12 @@ import Network.AWS.WAFRegional.Types
 import Network.AWS.WAFRegional.Types.Product
 
 -- | /See:/ 'deleteIPSet' smart constructor.
-data DeleteIPSet = DeleteIPSet'
-  { _disIPSetId     :: !Text
-  , _disChangeToken :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteIPSet =
+  DeleteIPSet'
+    { _disIPSetId     :: !Text
+    , _disChangeToken :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteIPSet' with the minimum fields required to make a request.
@@ -124,10 +126,12 @@ instance ToQuery DeleteIPSet where
         toQuery = const mempty
 
 -- | /See:/ 'deleteIPSetResponse' smart constructor.
-data DeleteIPSetResponse = DeleteIPSetResponse'
-  { _disrsChangeToken    :: !(Maybe Text)
-  , _disrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteIPSetResponse =
+  DeleteIPSetResponse'
+    { _disrsChangeToken    :: !(Maybe Text)
+    , _disrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteIPSetResponse' with the minimum fields required to make a request.

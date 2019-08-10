@@ -53,11 +53,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeRegions' smart constructor.
-data DescribeRegions = DescribeRegions'
-  { _drsRegionNames :: !(Maybe [Text])
-  , _drsFilters     :: !(Maybe [Filter])
-  , _drsDryRun      :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeRegions =
+  DescribeRegions'
+    { _drsRegionNames :: !(Maybe [Text])
+    , _drsFilters     :: !(Maybe [Filter])
+    , _drsDryRun      :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeRegions' with the minimum fields required to make a request.
@@ -124,10 +126,12 @@ instance ToQuery DescribeRegions where
 --
 --
 -- /See:/ 'describeRegionsResponse' smart constructor.
-data DescribeRegionsResponse = DescribeRegionsResponse'
-  { _drrsRegions        :: !(Maybe [RegionInfo])
-  , _drrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeRegionsResponse =
+  DescribeRegionsResponse'
+    { _drrsRegions        :: !(Maybe [RegionInfo])
+    , _drrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeRegionsResponse' with the minimum fields required to make a request.

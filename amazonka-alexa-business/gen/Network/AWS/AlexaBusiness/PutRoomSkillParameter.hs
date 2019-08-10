@@ -46,11 +46,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putRoomSkillParameter' smart constructor.
-data PutRoomSkillParameter = PutRoomSkillParameter'
-  { _prspRoomARN            :: !(Maybe Text)
-  , _prspSkillId            :: !Text
-  , _prspRoomSkillParameter :: !RoomSkillParameter
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutRoomSkillParameter =
+  PutRoomSkillParameter'
+    { _prspRoomARN            :: !(Maybe Text)
+    , _prspSkillId            :: !Text
+    , _prspRoomSkillParameter :: !RoomSkillParameter
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutRoomSkillParameter' with the minimum fields required to make a request.
@@ -126,9 +128,11 @@ instance ToQuery PutRoomSkillParameter where
         toQuery = const mempty
 
 -- | /See:/ 'putRoomSkillParameterResponse' smart constructor.
-newtype PutRoomSkillParameterResponse = PutRoomSkillParameterResponse'
-  { _prsprsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype PutRoomSkillParameterResponse =
+  PutRoomSkillParameterResponse'
+    { _prsprsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutRoomSkillParameterResponse' with the minimum fields required to make a request.

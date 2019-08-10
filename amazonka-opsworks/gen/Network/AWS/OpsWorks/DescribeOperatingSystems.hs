@@ -94,10 +94,12 @@ instance ToQuery DescribeOperatingSystems where
 --
 --
 -- /See:/ 'describeOperatingSystemsResponse' smart constructor.
-data DescribeOperatingSystemsResponse = DescribeOperatingSystemsResponse'
-  { _dosrsOperatingSystems :: !(Maybe [OperatingSystem])
-  , _dosrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeOperatingSystemsResponse =
+  DescribeOperatingSystemsResponse'
+    { _dosrsOperatingSystems :: !(Maybe [OperatingSystem])
+    , _dosrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeOperatingSystemsResponse' with the minimum fields required to make a request.

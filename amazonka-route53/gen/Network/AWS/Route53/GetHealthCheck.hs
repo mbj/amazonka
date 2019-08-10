@@ -49,9 +49,11 @@ import Network.AWS.Route53.Types.Product
 --
 --
 -- /See:/ 'getHealthCheck' smart constructor.
-newtype GetHealthCheck = GetHealthCheck'
-  { _ghcHealthCheckId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetHealthCheck =
+  GetHealthCheck'
+    { _ghcHealthCheckId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetHealthCheck' with the minimum fields required to make a request.
@@ -99,10 +101,12 @@ instance ToQuery GetHealthCheck where
 --
 --
 -- /See:/ 'getHealthCheckResponse' smart constructor.
-data GetHealthCheckResponse = GetHealthCheckResponse'
-  { _ghcrsResponseStatus :: !Int
-  , _ghcrsHealthCheck    :: !HealthCheck
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetHealthCheckResponse =
+  GetHealthCheckResponse'
+    { _ghcrsResponseStatus :: !Int
+    , _ghcrsHealthCheck    :: !HealthCheck
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetHealthCheckResponse' with the minimum fields required to make a request.

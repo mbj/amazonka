@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'defineIndexField' smart constructor.
-data DefineIndexField = DefineIndexField'
-  { _defeDomainName :: !Text
-  , _defeIndexField :: !IndexField
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DefineIndexField =
+  DefineIndexField'
+    { _defeDomainName :: !Text
+    , _defeIndexField :: !IndexField
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DefineIndexField' with the minimum fields required to make a request.
@@ -112,10 +114,12 @@ instance ToQuery DefineIndexField where
 --
 --
 -- /See:/ 'defineIndexFieldResponse' smart constructor.
-data DefineIndexFieldResponse = DefineIndexFieldResponse'
-  { _defrsResponseStatus :: !Int
-  , _defrsIndexField     :: !IndexFieldStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DefineIndexFieldResponse =
+  DefineIndexFieldResponse'
+    { _defrsResponseStatus :: !Int
+    , _defrsIndexField     :: !IndexFieldStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DefineIndexFieldResponse' with the minimum fields required to make a request.

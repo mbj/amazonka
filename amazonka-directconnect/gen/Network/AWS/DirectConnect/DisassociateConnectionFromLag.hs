@@ -62,10 +62,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'disassociateConnectionFromLag' smart constructor.
-data DisassociateConnectionFromLag = DisassociateConnectionFromLag'
-  { _dcflConnectionId :: !Text
-  , _dcflLagId        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DisassociateConnectionFromLag =
+  DisassociateConnectionFromLag'
+    { _dcflConnectionId :: !Text
+    , _dcflLagId        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisassociateConnectionFromLag' with the minimum fields required to make a request.

@@ -51,10 +51,12 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'updateConfigurationSetTrackingOptions' smart constructor.
-data UpdateConfigurationSetTrackingOptions = UpdateConfigurationSetTrackingOptions'
-  { _ucstoConfigurationSetName :: !Text
-  , _ucstoTrackingOptions      :: !TrackingOptions
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateConfigurationSetTrackingOptions =
+  UpdateConfigurationSetTrackingOptions'
+    { _ucstoConfigurationSetName :: !Text
+    , _ucstoTrackingOptions      :: !TrackingOptions
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateConfigurationSetTrackingOptions' with the minimum fields required to make a request.
@@ -129,9 +131,11 @@ instance ToQuery
 --
 --
 -- /See:/ 'updateConfigurationSetTrackingOptionsResponse' smart constructor.
-newtype UpdateConfigurationSetTrackingOptionsResponse = UpdateConfigurationSetTrackingOptionsResponse'
-  { _ucstorsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateConfigurationSetTrackingOptionsResponse =
+  UpdateConfigurationSetTrackingOptionsResponse'
+    { _ucstorsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateConfigurationSetTrackingOptionsResponse' with the minimum fields required to make a request.

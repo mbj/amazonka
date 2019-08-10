@@ -47,12 +47,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listQueues' smart constructor.
-data ListQueues = ListQueues'
-  { _lqListBy     :: !(Maybe QueueListBy)
-  , _lqNextToken  :: !(Maybe Text)
-  , _lqOrder      :: !(Maybe Order)
-  , _lqMaxResults :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListQueues =
+  ListQueues'
+    { _lqListBy     :: !(Maybe QueueListBy)
+    , _lqNextToken  :: !(Maybe Text)
+    , _lqOrder      :: !(Maybe Order)
+    , _lqMaxResults :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListQueues' with the minimum fields required to make a request.
@@ -124,11 +126,13 @@ instance ToQuery ListQueues where
                "order" =: _lqOrder, "maxResults" =: _lqMaxResults]
 
 -- | /See:/ 'listQueuesResponse' smart constructor.
-data ListQueuesResponse = ListQueuesResponse'
-  { _lqrsQueues         :: !(Maybe [Queue])
-  , _lqrsNextToken      :: !(Maybe Text)
-  , _lqrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListQueuesResponse =
+  ListQueuesResponse'
+    { _lqrsQueues         :: !(Maybe [Queue])
+    , _lqrsNextToken      :: !(Maybe Text)
+    , _lqrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListQueuesResponse' with the minimum fields required to make a request.

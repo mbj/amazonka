@@ -51,11 +51,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeDestinations' smart constructor.
-data DescribeDestinations = DescribeDestinations'
-  { _ddNextToken             :: !(Maybe Text)
-  , _ddLimit                 :: !(Maybe Nat)
-  , _ddDestinationNamePrefix :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDestinations =
+  DescribeDestinations'
+    { _ddNextToken             :: !(Maybe Text)
+    , _ddLimit                 :: !(Maybe Nat)
+    , _ddDestinationNamePrefix :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDestinations' with the minimum fields required to make a request.
@@ -137,11 +139,13 @@ instance ToQuery DescribeDestinations where
         toQuery = const mempty
 
 -- | /See:/ 'describeDestinationsResponse' smart constructor.
-data DescribeDestinationsResponse = DescribeDestinationsResponse'
-  { _ddrsNextToken      :: !(Maybe Text)
-  , _ddrsDestinations   :: !(Maybe [Destination])
-  , _ddrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDestinationsResponse =
+  DescribeDestinationsResponse'
+    { _ddrsNextToken      :: !(Maybe Text)
+    , _ddrsDestinations   :: !(Maybe [Destination])
+    , _ddrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDestinationsResponse' with the minimum fields required to make a request.

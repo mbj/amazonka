@@ -58,10 +58,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeVoices' smart constructor.
-data DescribeVoices = DescribeVoices'
-  { _dvLanguageCode :: !(Maybe LanguageCode)
-  , _dvNextToken    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeVoices =
+  DescribeVoices'
+    { _dvLanguageCode :: !(Maybe LanguageCode)
+    , _dvNextToken    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeVoices' with the minimum fields required to make a request.
@@ -119,11 +121,13 @@ instance ToQuery DescribeVoices where
                "NextToken" =: _dvNextToken]
 
 -- | /See:/ 'describeVoicesResponse' smart constructor.
-data DescribeVoicesResponse = DescribeVoicesResponse'
-  { _dvrsNextToken      :: !(Maybe Text)
-  , _dvrsVoices         :: !(Maybe [Voice])
-  , _dvrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeVoicesResponse =
+  DescribeVoicesResponse'
+    { _dvrsNextToken      :: !(Maybe Text)
+    , _dvrsVoices         :: !(Maybe [Voice])
+    , _dvrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeVoicesResponse' with the minimum fields required to make a request.

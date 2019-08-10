@@ -56,10 +56,12 @@ import Network.AWS.ResourceGroupsTagging.Types.Product
 import Network.AWS.Response
 
 -- | /See:/ 'tagResources' smart constructor.
-data TagResources = TagResources'
-  { _trResourceARNList :: !(List1 Text)
-  , _trTags            :: !(Map Text Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TagResources =
+  TagResources'
+    { _trResourceARNList :: !(List1 Text)
+    , _trTags            :: !(Map Text Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TagResources' with the minimum fields required to make a request.
@@ -123,10 +125,12 @@ instance ToQuery TagResources where
         toQuery = const mempty
 
 -- | /See:/ 'tagResourcesResponse' smart constructor.
-data TagResourcesResponse = TagResourcesResponse'
-  { _trrsFailedResourcesMap :: !(Maybe (Map Text FailureInfo))
-  , _trrsResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TagResourcesResponse =
+  TagResourcesResponse'
+    { _trrsFailedResourcesMap :: !(Maybe (Map Text FailureInfo))
+    , _trrsResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TagResourcesResponse' with the minimum fields required to make a request.

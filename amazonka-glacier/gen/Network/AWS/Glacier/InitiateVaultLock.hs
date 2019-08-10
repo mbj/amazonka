@@ -69,11 +69,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'initiateVaultLock' smart constructor.
-data InitiateVaultLock = InitiateVaultLock'
-  { _ivlPolicy    :: !(Maybe VaultLockPolicy)
-  , _ivlAccountId :: !Text
-  , _ivlVaultName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InitiateVaultLock =
+  InitiateVaultLock'
+    { _ivlPolicy    :: !(Maybe VaultLockPolicy)
+    , _ivlAccountId :: !Text
+    , _ivlVaultName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InitiateVaultLock' with the minimum fields required to make a request.
@@ -143,10 +145,12 @@ instance ToQuery InitiateVaultLock where
 --
 --
 -- /See:/ 'initiateVaultLockResponse' smart constructor.
-data InitiateVaultLockResponse = InitiateVaultLockResponse'
-  { _ivlrsLockId         :: !(Maybe Text)
-  , _ivlrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InitiateVaultLockResponse =
+  InitiateVaultLockResponse'
+    { _ivlrsLockId         :: !(Maybe Text)
+    , _ivlrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InitiateVaultLockResponse' with the minimum fields required to make a request.

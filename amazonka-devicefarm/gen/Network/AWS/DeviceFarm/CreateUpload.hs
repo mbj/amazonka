@@ -52,12 +52,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createUpload' smart constructor.
-data CreateUpload = CreateUpload'
-  { _cuContentType :: !(Maybe Text)
-  , _cuProjectARN  :: !Text
-  , _cuName        :: !Text
-  , _cuType        :: !UploadType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateUpload =
+  CreateUpload'
+    { _cuContentType :: !(Maybe Text)
+    , _cuProjectARN  :: !Text
+    , _cuName        :: !Text
+    , _cuType        :: !UploadType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateUpload' with the minimum fields required to make a request.
@@ -142,10 +144,12 @@ instance ToQuery CreateUpload where
 --
 --
 -- /See:/ 'createUploadResponse' smart constructor.
-data CreateUploadResponse = CreateUploadResponse'
-  { _cursUpload         :: !(Maybe Upload)
-  , _cursResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateUploadResponse =
+  CreateUploadResponse'
+    { _cursUpload         :: !(Maybe Upload)
+    , _cursResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateUploadResponse' with the minimum fields required to make a request.

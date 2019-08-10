@@ -47,10 +47,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listChannels' smart constructor.
-data ListChannels = ListChannels'
-  { _lcNextToken  :: !(Maybe Text)
-  , _lcMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListChannels =
+  ListChannels'
+    { _lcNextToken  :: !(Maybe Text)
+    , _lcMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListChannels' with the minimum fields required to make a request.
@@ -101,11 +103,13 @@ instance ToQuery ListChannels where
                "maxResults" =: _lcMaxResults]
 
 -- | /See:/ 'listChannelsResponse' smart constructor.
-data ListChannelsResponse = ListChannelsResponse'
-  { _lcrsChannelSummaries :: !(Maybe [ChannelSummary])
-  , _lcrsNextToken        :: !(Maybe Text)
-  , _lcrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListChannelsResponse =
+  ListChannelsResponse'
+    { _lcrsChannelSummaries :: !(Maybe [ChannelSummary])
+    , _lcrsNextToken        :: !(Maybe Text)
+    , _lcrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListChannelsResponse' with the minimum fields required to make a request.

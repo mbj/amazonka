@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'removeAttributesFromFindings' smart constructor.
-data RemoveAttributesFromFindings = RemoveAttributesFromFindings'
-  { _raffFindingARNs   :: !(List1 Text)
-  , _raffAttributeKeys :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RemoveAttributesFromFindings =
+  RemoveAttributesFromFindings'
+    { _raffFindingARNs   :: !(List1 Text)
+    , _raffAttributeKeys :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RemoveAttributesFromFindings' with the minimum fields required to make a request.
@@ -115,10 +117,12 @@ instance ToQuery RemoveAttributesFromFindings where
         toQuery = const mempty
 
 -- | /See:/ 'removeAttributesFromFindingsResponse' smart constructor.
-data RemoveAttributesFromFindingsResponse = RemoveAttributesFromFindingsResponse'
-  { _raffrsResponseStatus :: !Int
-  , _raffrsFailedItems    :: !(Map Text FailedItemDetails)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RemoveAttributesFromFindingsResponse =
+  RemoveAttributesFromFindingsResponse'
+    { _raffrsResponseStatus :: !Int
+    , _raffrsFailedItems    :: !(Map Text FailedItemDetails)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RemoveAttributesFromFindingsResponse' with the minimum fields required to make a request.

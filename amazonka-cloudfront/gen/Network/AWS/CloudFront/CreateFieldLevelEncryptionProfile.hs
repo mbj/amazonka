@@ -47,9 +47,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createFieldLevelEncryptionProfile' smart constructor.
-newtype CreateFieldLevelEncryptionProfile = CreateFieldLevelEncryptionProfile'
-  { _cflepFieldLevelEncryptionProfileConfig :: FieldLevelEncryptionProfileConfig
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateFieldLevelEncryptionProfile =
+  CreateFieldLevelEncryptionProfile'
+    { _cflepFieldLevelEncryptionProfileConfig :: FieldLevelEncryptionProfileConfig
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateFieldLevelEncryptionProfile' with the minimum fields required to make a request.
@@ -112,12 +114,14 @@ instance ToQuery CreateFieldLevelEncryptionProfile
         toQuery = const mempty
 
 -- | /See:/ 'createFieldLevelEncryptionProfileResponse' smart constructor.
-data CreateFieldLevelEncryptionProfileResponse = CreateFieldLevelEncryptionProfileResponse'
-  { _cfleprsETag                        :: !(Maybe Text)
-  , _cfleprsLocation                    :: !(Maybe Text)
-  , _cfleprsFieldLevelEncryptionProfile :: !(Maybe FieldLevelEncryptionProfile)
-  , _cfleprsResponseStatus              :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateFieldLevelEncryptionProfileResponse =
+  CreateFieldLevelEncryptionProfileResponse'
+    { _cfleprsETag :: !(Maybe Text)
+    , _cfleprsLocation :: !(Maybe Text)
+    , _cfleprsFieldLevelEncryptionProfile :: !(Maybe FieldLevelEncryptionProfile)
+    , _cfleprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateFieldLevelEncryptionProfileResponse' with the minimum fields required to make a request.

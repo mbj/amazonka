@@ -51,10 +51,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'removeTargets' smart constructor.
-data RemoveTargets = RemoveTargets'
-  { _rtRule :: !Text
-  , _rtIds  :: !(List1 Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RemoveTargets =
+  RemoveTargets'
+    { _rtRule :: !Text
+    , _rtIds  :: !(List1 Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RemoveTargets' with the minimum fields required to make a request.
@@ -117,11 +119,13 @@ instance ToQuery RemoveTargets where
         toQuery = const mempty
 
 -- | /See:/ 'removeTargetsResponse' smart constructor.
-data RemoveTargetsResponse = RemoveTargetsResponse'
-  { _rtrsFailedEntryCount :: !(Maybe Int)
-  , _rtrsFailedEntries    :: !(Maybe [RemoveTargetsResultEntry])
-  , _rtrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RemoveTargetsResponse =
+  RemoveTargetsResponse'
+    { _rtrsFailedEntryCount :: !(Maybe Int)
+    , _rtrsFailedEntries    :: !(Maybe [RemoveTargetsResultEntry])
+    , _rtrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RemoveTargetsResponse' with the minimum fields required to make a request.

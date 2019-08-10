@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getTrigger' smart constructor.
-newtype GetTrigger = GetTrigger'
-  { _gtName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetTrigger =
+  GetTrigger'
+    { _gtName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetTrigger' with the minimum fields required to make a request.
@@ -98,10 +100,12 @@ instance ToQuery GetTrigger where
         toQuery = const mempty
 
 -- | /See:/ 'getTriggerResponse' smart constructor.
-data GetTriggerResponse = GetTriggerResponse'
-  { _gtrsTrigger        :: !(Maybe Trigger)
-  , _gtrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetTriggerResponse =
+  GetTriggerResponse'
+    { _gtrsTrigger        :: !(Maybe Trigger)
+    , _gtrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetTriggerResponse' with the minimum fields required to make a request.

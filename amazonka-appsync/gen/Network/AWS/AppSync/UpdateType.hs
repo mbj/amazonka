@@ -48,12 +48,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateType' smart constructor.
-data UpdateType = UpdateType'
-  { _utDefinition :: !(Maybe Text)
-  , _utApiId      :: !Text
-  , _utTypeName   :: !Text
-  , _utFormat     :: !TypeDefinitionFormat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateType =
+  UpdateType'
+    { _utDefinition :: !(Maybe Text)
+    , _utApiId      :: !Text
+    , _utTypeName   :: !Text
+    , _utFormat     :: !TypeDefinitionFormat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateType' with the minimum fields required to make a request.
@@ -134,10 +136,12 @@ instance ToQuery UpdateType where
         toQuery = const mempty
 
 -- | /See:/ 'updateTypeResponse' smart constructor.
-data UpdateTypeResponse = UpdateTypeResponse'
-  { _utrsType           :: !(Maybe Type)
-  , _utrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateTypeResponse =
+  UpdateTypeResponse'
+    { _utrsType           :: !(Maybe Type)
+    , _utrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateTypeResponse' with the minimum fields required to make a request.

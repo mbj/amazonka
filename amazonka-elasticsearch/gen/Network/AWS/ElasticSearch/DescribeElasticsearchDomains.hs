@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeElasticsearchDomains' smart constructor.
-newtype DescribeElasticsearchDomains = DescribeElasticsearchDomains'
-  { _dedDomainNames :: [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeElasticsearchDomains =
+  DescribeElasticsearchDomains'
+    { _dedDomainNames :: [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeElasticsearchDomains' with the minimum fields required to make a request.
@@ -104,10 +106,12 @@ instance ToQuery DescribeElasticsearchDomains where
 --
 --
 -- /See:/ 'describeElasticsearchDomainsResponse' smart constructor.
-data DescribeElasticsearchDomainsResponse = DescribeElasticsearchDomainsResponse'
-  { _drsResponseStatus   :: !Int
-  , _drsDomainStatusList :: ![ElasticsearchDomainStatus]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeElasticsearchDomainsResponse =
+  DescribeElasticsearchDomainsResponse'
+    { _drsResponseStatus   :: !Int
+    , _drsDomainStatusList :: ![ElasticsearchDomainStatus]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeElasticsearchDomainsResponse' with the minimum fields required to make a request.

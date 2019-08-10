@@ -28,13 +28,15 @@ import Network.AWS.WAFRegional.Types.Sum
 --
 --
 -- /See:/ 'activatedRule' smart constructor.
-data ActivatedRule = ActivatedRule'
-  { _arOverrideAction :: !(Maybe WafOverrideAction)
-  , _arAction         :: !(Maybe WafAction)
-  , _arType           :: !(Maybe WafRuleType)
-  , _arPriority       :: !Int
-  , _arRuleId         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ActivatedRule =
+  ActivatedRule'
+    { _arOverrideAction :: !(Maybe WafOverrideAction)
+    , _arAction         :: !(Maybe WafAction)
+    , _arType           :: !(Maybe WafRuleType)
+    , _arPriority       :: !Int
+    , _arRuleId         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ActivatedRule' with the minimum fields required to make a request.
@@ -114,11 +116,13 @@ instance ToJSON ActivatedRule where
 --
 --
 -- /See:/ 'byteMatchSet' smart constructor.
-data ByteMatchSet = ByteMatchSet'
-  { _bmsName            :: !(Maybe Text)
-  , _bmsByteMatchSetId  :: !Text
-  , _bmsByteMatchTuples :: ![ByteMatchTuple]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ByteMatchSet =
+  ByteMatchSet'
+    { _bmsName            :: !(Maybe Text)
+    , _bmsByteMatchSetId  :: !Text
+    , _bmsByteMatchTuples :: ![ByteMatchTuple]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ByteMatchSet' with the minimum fields required to make a request.
@@ -170,10 +174,12 @@ instance NFData ByteMatchSet where
 --
 --
 -- /See:/ 'byteMatchSetSummary' smart constructor.
-data ByteMatchSetSummary = ByteMatchSetSummary'
-  { _bmssByteMatchSetId :: !Text
-  , _bmssName           :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ByteMatchSetSummary =
+  ByteMatchSetSummary'
+    { _bmssByteMatchSetId :: !Text
+    , _bmssName           :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ByteMatchSetSummary' with the minimum fields required to make a request.
@@ -216,10 +222,12 @@ instance NFData ByteMatchSetSummary where
 --
 --
 -- /See:/ 'byteMatchSetUpdate' smart constructor.
-data ByteMatchSetUpdate = ByteMatchSetUpdate'
-  { _bmsuAction         :: !ChangeAction
-  , _bmsuByteMatchTuple :: !ByteMatchTuple
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ByteMatchSetUpdate =
+  ByteMatchSetUpdate'
+    { _bmsuAction         :: !ChangeAction
+    , _bmsuByteMatchTuple :: !ByteMatchTuple
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ByteMatchSetUpdate' with the minimum fields required to make a request.
@@ -262,12 +270,14 @@ instance ToJSON ByteMatchSetUpdate where
 --
 --
 -- /See:/ 'byteMatchTuple' smart constructor.
-data ByteMatchTuple = ByteMatchTuple'
-  { _bmtFieldToMatch         :: !FieldToMatch
-  , _bmtTargetString         :: !Base64
-  , _bmtTextTransformation   :: !TextTransformation
-  , _bmtPositionalConstraint :: !PositionalConstraint
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ByteMatchTuple =
+  ByteMatchTuple'
+    { _bmtFieldToMatch         :: !FieldToMatch
+    , _bmtTargetString         :: !Base64
+    , _bmtTextTransformation   :: !TextTransformation
+    , _bmtPositionalConstraint :: !PositionalConstraint
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ByteMatchTuple' with the minimum fields required to make a request.
@@ -342,10 +352,12 @@ instance ToJSON ByteMatchTuple where
 --
 --
 -- /See:/ 'fieldToMatch' smart constructor.
-data FieldToMatch = FieldToMatch'
-  { _ftmData :: !(Maybe Text)
-  , _ftmType :: !MatchFieldType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FieldToMatch =
+  FieldToMatch'
+    { _ftmData :: !(Maybe Text)
+    , _ftmType :: !MatchFieldType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FieldToMatch' with the minimum fields required to make a request.
@@ -391,10 +403,12 @@ instance ToJSON FieldToMatch where
 --
 --
 -- /See:/ 'geoMatchConstraint' smart constructor.
-data GeoMatchConstraint = GeoMatchConstraint'
-  { _gmcType  :: !GeoMatchConstraintType
-  , _gmcValue :: !GeoMatchConstraintValue
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GeoMatchConstraint =
+  GeoMatchConstraint'
+    { _gmcType  :: !GeoMatchConstraintType
+    , _gmcValue :: !GeoMatchConstraintValue
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GeoMatchConstraint' with the minimum fields required to make a request.
@@ -443,11 +457,13 @@ instance ToJSON GeoMatchConstraint where
 --
 --
 -- /See:/ 'geoMatchSet' smart constructor.
-data GeoMatchSet = GeoMatchSet'
-  { _gmsName                :: !(Maybe Text)
-  , _gmsGeoMatchSetId       :: !Text
-  , _gmsGeoMatchConstraints :: ![GeoMatchConstraint]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GeoMatchSet =
+  GeoMatchSet'
+    { _gmsName                :: !(Maybe Text)
+    , _gmsGeoMatchSetId       :: !Text
+    , _gmsGeoMatchConstraints :: ![GeoMatchConstraint]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GeoMatchSet' with the minimum fields required to make a request.
@@ -499,10 +515,12 @@ instance NFData GeoMatchSet where
 --
 --
 -- /See:/ 'geoMatchSetSummary' smart constructor.
-data GeoMatchSetSummary = GeoMatchSetSummary'
-  { _gmssGeoMatchSetId :: !Text
-  , _gmssName          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GeoMatchSetSummary =
+  GeoMatchSetSummary'
+    { _gmssGeoMatchSetId :: !Text
+    , _gmssName          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GeoMatchSetSummary' with the minimum fields required to make a request.
@@ -544,10 +562,12 @@ instance NFData GeoMatchSetSummary where
 --
 --
 -- /See:/ 'geoMatchSetUpdate' smart constructor.
-data GeoMatchSetUpdate = GeoMatchSetUpdate'
-  { _gmsuAction             :: !ChangeAction
-  , _gmsuGeoMatchConstraint :: !GeoMatchConstraint
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GeoMatchSetUpdate =
+  GeoMatchSetUpdate'
+    { _gmsuAction             :: !ChangeAction
+    , _gmsuGeoMatchConstraint :: !GeoMatchConstraint
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GeoMatchSetUpdate' with the minimum fields required to make a request.
@@ -591,10 +611,12 @@ instance ToJSON GeoMatchSetUpdate where
 --
 --
 -- /See:/ 'hTTPHeader' smart constructor.
-data HTTPHeader = HTTPHeader'
-  { _httphValue :: !(Maybe Text)
-  , _httphName  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data HTTPHeader =
+  HTTPHeader'
+    { _httphValue :: !(Maybe Text)
+    , _httphName  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'HTTPHeader' with the minimum fields required to make a request.
@@ -632,14 +654,16 @@ instance NFData HTTPHeader where
 --
 --
 -- /See:/ 'hTTPRequest' smart constructor.
-data HTTPRequest = HTTPRequest'
-  { _httprHTTPVersion :: !(Maybe Text)
-  , _httprCountry     :: !(Maybe Text)
-  , _httprURI         :: !(Maybe Text)
-  , _httprHeaders     :: !(Maybe [HTTPHeader])
-  , _httprMethod      :: !(Maybe Text)
-  , _httprClientIP    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data HTTPRequest =
+  HTTPRequest'
+    { _httprHTTPVersion :: !(Maybe Text)
+    , _httprCountry     :: !(Maybe Text)
+    , _httprURI         :: !(Maybe Text)
+    , _httprHeaders     :: !(Maybe [HTTPHeader])
+    , _httprMethod      :: !(Maybe Text)
+    , _httprClientIP    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'HTTPRequest' with the minimum fields required to make a request.
@@ -716,11 +740,13 @@ instance NFData HTTPRequest where
 --
 --
 -- /See:/ 'ipSet' smart constructor.
-data IPSet = IPSet'
-  { _isName             :: !(Maybe Text)
-  , _isIPSetId          :: !Text
-  , _isIPSetDescriptors :: ![IPSetDescriptor]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data IPSet =
+  IPSet'
+    { _isName             :: !(Maybe Text)
+    , _isIPSetId          :: !Text
+    , _isIPSetDescriptors :: ![IPSetDescriptor]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'IPSet' with the minimum fields required to make a request.
@@ -769,10 +795,12 @@ instance NFData IPSet where
 --
 --
 -- /See:/ 'ipSetDescriptor' smart constructor.
-data IPSetDescriptor = IPSetDescriptor'
-  { _isdType  :: !IPSetDescriptorType
-  , _isdValue :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data IPSetDescriptor =
+  IPSetDescriptor'
+    { _isdType  :: !IPSetDescriptorType
+    , _isdValue :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'IPSetDescriptor' with the minimum fields required to make a request.
@@ -821,10 +849,12 @@ instance ToJSON IPSetDescriptor where
 --
 --
 -- /See:/ 'ipSetSummary' smart constructor.
-data IPSetSummary = IPSetSummary'
-  { _issIPSetId :: !Text
-  , _issName    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data IPSetSummary =
+  IPSetSummary'
+    { _issIPSetId :: !Text
+    , _issName    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'IPSetSummary' with the minimum fields required to make a request.
@@ -865,10 +895,12 @@ instance NFData IPSetSummary where
 --
 --
 -- /See:/ 'ipSetUpdate' smart constructor.
-data IPSetUpdate = IPSetUpdate'
-  { _isuAction          :: !ChangeAction
-  , _isuIPSetDescriptor :: !IPSetDescriptor
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data IPSetUpdate =
+  IPSetUpdate'
+    { _isuAction          :: !ChangeAction
+    , _isuIPSetDescriptor :: !IPSetDescriptor
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'IPSetUpdate' with the minimum fields required to make a request.
@@ -910,11 +942,13 @@ instance ToJSON IPSetUpdate where
 --
 --
 -- /See:/ 'predicate' smart constructor.
-data Predicate = Predicate'
-  { _pNegated :: !Bool
-  , _pType    :: !PredicateType
-  , _pDataId  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Predicate =
+  Predicate'
+    { _pNegated :: !Bool
+    , _pType    :: !PredicateType
+    , _pDataId  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Predicate' with the minimum fields required to make a request.
@@ -982,14 +1016,16 @@ instance ToJSON Predicate where
 --
 --
 -- /See:/ 'rateBasedRule' smart constructor.
-data RateBasedRule = RateBasedRule'
-  { _rbrMetricName      :: !(Maybe Text)
-  , _rbrName            :: !(Maybe Text)
-  , _rbrRuleId          :: !Text
-  , _rbrMatchPredicates :: ![Predicate]
-  , _rbrRateKey         :: !RateKey
-  , _rbrRateLimit       :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RateBasedRule =
+  RateBasedRule'
+    { _rbrMetricName      :: !(Maybe Text)
+    , _rbrName            :: !(Maybe Text)
+    , _rbrRuleId          :: !Text
+    , _rbrMatchPredicates :: ![Predicate]
+    , _rbrRateKey         :: !RateKey
+    , _rbrRateLimit       :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RateBasedRule' with the minimum fields required to make a request.
@@ -1069,11 +1105,13 @@ instance NFData RateBasedRule where
 --
 --
 -- /See:/ 'regexMatchSet' smart constructor.
-data RegexMatchSet = RegexMatchSet'
-  { _rmsName             :: !(Maybe Text)
-  , _rmsRegexMatchTuples :: !(Maybe [RegexMatchTuple])
-  , _rmsRegexMatchSetId  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RegexMatchSet =
+  RegexMatchSet'
+    { _rmsName             :: !(Maybe Text)
+    , _rmsRegexMatchTuples :: !(Maybe [RegexMatchTuple])
+    , _rmsRegexMatchSetId  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegexMatchSet' with the minimum fields required to make a request.
@@ -1125,10 +1163,12 @@ instance NFData RegexMatchSet where
 --
 --
 -- /See:/ 'regexMatchSetSummary' smart constructor.
-data RegexMatchSetSummary = RegexMatchSetSummary'
-  { _rmssRegexMatchSetId :: !Text
-  , _rmssName            :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RegexMatchSetSummary =
+  RegexMatchSetSummary'
+    { _rmssRegexMatchSetId :: !Text
+    , _rmssName            :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegexMatchSetSummary' with the minimum fields required to make a request.
@@ -1171,10 +1211,12 @@ instance NFData RegexMatchSetSummary where
 --
 --
 -- /See:/ 'regexMatchSetUpdate' smart constructor.
-data RegexMatchSetUpdate = RegexMatchSetUpdate'
-  { _rmsuAction          :: !ChangeAction
-  , _rmsuRegexMatchTuple :: !RegexMatchTuple
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RegexMatchSetUpdate =
+  RegexMatchSetUpdate'
+    { _rmsuAction          :: !ChangeAction
+    , _rmsuRegexMatchTuple :: !RegexMatchTuple
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegexMatchSetUpdate' with the minimum fields required to make a request.
@@ -1225,11 +1267,13 @@ instance ToJSON RegexMatchSetUpdate where
 --
 --
 -- /See:/ 'regexMatchTuple' smart constructor.
-data RegexMatchTuple = RegexMatchTuple'
-  { _rmtFieldToMatch       :: !FieldToMatch
-  , _rmtTextTransformation :: !TextTransformation
-  , _rmtRegexPatternSetId  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RegexMatchTuple =
+  RegexMatchTuple'
+    { _rmtFieldToMatch       :: !FieldToMatch
+    , _rmtTextTransformation :: !TextTransformation
+    , _rmtRegexPatternSetId  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegexMatchTuple' with the minimum fields required to make a request.
@@ -1292,11 +1336,13 @@ instance ToJSON RegexMatchTuple where
 --
 --
 -- /See:/ 'regexPatternSet' smart constructor.
-data RegexPatternSet = RegexPatternSet'
-  { _rpsName                :: !(Maybe Text)
-  , _rpsRegexPatternSetId   :: !Text
-  , _rpsRegexPatternStrings :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RegexPatternSet =
+  RegexPatternSet'
+    { _rpsName                :: !(Maybe Text)
+    , _rpsRegexPatternSetId   :: !Text
+    , _rpsRegexPatternStrings :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegexPatternSet' with the minimum fields required to make a request.
@@ -1348,10 +1394,12 @@ instance NFData RegexPatternSet where
 --
 --
 -- /See:/ 'regexPatternSetSummary' smart constructor.
-data RegexPatternSetSummary = RegexPatternSetSummary'
-  { _rpssRegexPatternSetId :: !Text
-  , _rpssName              :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RegexPatternSetSummary =
+  RegexPatternSetSummary'
+    { _rpssRegexPatternSetId :: !Text
+    , _rpssName              :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegexPatternSetSummary' with the minimum fields required to make a request.
@@ -1394,10 +1442,12 @@ instance NFData RegexPatternSetSummary where
 --
 --
 -- /See:/ 'regexPatternSetUpdate' smart constructor.
-data RegexPatternSetUpdate = RegexPatternSetUpdate'
-  { _rpsuAction             :: !ChangeAction
-  , _rpsuRegexPatternString :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RegexPatternSetUpdate =
+  RegexPatternSetUpdate'
+    { _rpsuAction             :: !ChangeAction
+    , _rpsuRegexPatternString :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RegexPatternSetUpdate' with the minimum fields required to make a request.
@@ -1449,12 +1499,14 @@ instance ToJSON RegexPatternSetUpdate where
 --
 --
 -- /See:/ 'rule' smart constructor.
-data Rule = Rule'
-  { _rMetricName :: !(Maybe Text)
-  , _rName       :: !(Maybe Text)
-  , _rRuleId     :: !Text
-  , _rPredicates :: ![Predicate]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Rule =
+  Rule'
+    { _rMetricName :: !(Maybe Text)
+    , _rName       :: !(Maybe Text)
+    , _rRuleId     :: !Text
+    , _rPredicates :: ![Predicate]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Rule' with the minimum fields required to make a request.
@@ -1524,11 +1576,13 @@ instance NFData Rule where
 --
 --
 -- /See:/ 'ruleGroup' smart constructor.
-data RuleGroup = RuleGroup'
-  { _rgMetricName  :: !(Maybe Text)
-  , _rgName        :: !(Maybe Text)
-  , _rgRuleGroupId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RuleGroup =
+  RuleGroup'
+    { _rgMetricName  :: !(Maybe Text)
+    , _rgName        :: !(Maybe Text)
+    , _rgRuleGroupId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RuleGroup' with the minimum fields required to make a request.
@@ -1577,10 +1631,12 @@ instance NFData RuleGroup where
 --
 --
 -- /See:/ 'ruleGroupSummary' smart constructor.
-data RuleGroupSummary = RuleGroupSummary'
-  { _rgsRuleGroupId :: !Text
-  , _rgsName        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RuleGroupSummary =
+  RuleGroupSummary'
+    { _rgsRuleGroupId :: !Text
+    , _rgsName        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RuleGroupSummary' with the minimum fields required to make a request.
@@ -1622,10 +1678,12 @@ instance NFData RuleGroupSummary where
 --
 --
 -- /See:/ 'ruleGroupUpdate' smart constructor.
-data RuleGroupUpdate = RuleGroupUpdate'
-  { _rguAction        :: !ChangeAction
-  , _rguActivatedRule :: !ActivatedRule
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RuleGroupUpdate =
+  RuleGroupUpdate'
+    { _rguAction        :: !ChangeAction
+    , _rguActivatedRule :: !ActivatedRule
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RuleGroupUpdate' with the minimum fields required to make a request.
@@ -1667,10 +1725,12 @@ instance ToJSON RuleGroupUpdate where
 --
 --
 -- /See:/ 'ruleSummary' smart constructor.
-data RuleSummary = RuleSummary'
-  { _rsRuleId :: !Text
-  , _rsName   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RuleSummary =
+  RuleSummary'
+    { _rsRuleId :: !Text
+    , _rsName   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RuleSummary' with the minimum fields required to make a request.
@@ -1711,10 +1771,12 @@ instance NFData RuleSummary where
 --
 --
 -- /See:/ 'ruleUpdate' smart constructor.
-data RuleUpdate = RuleUpdate'
-  { _ruAction    :: !ChangeAction
-  , _ruPredicate :: !Predicate
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RuleUpdate =
+  RuleUpdate'
+    { _ruAction    :: !ChangeAction
+    , _ruPredicate :: !Predicate
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RuleUpdate' with the minimum fields required to make a request.
@@ -1756,13 +1818,15 @@ instance ToJSON RuleUpdate where
 --
 --
 -- /See:/ 'sampledHTTPRequest' smart constructor.
-data SampledHTTPRequest = SampledHTTPRequest'
-  { _shttprRuleWithinRuleGroup :: !(Maybe Text)
-  , _shttprAction              :: !(Maybe Text)
-  , _shttprTimestamp           :: !(Maybe POSIX)
-  , _shttprRequest             :: !HTTPRequest
-  , _shttprWeight              :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SampledHTTPRequest =
+  SampledHTTPRequest'
+    { _shttprRuleWithinRuleGroup :: !(Maybe Text)
+    , _shttprAction              :: !(Maybe Text)
+    , _shttprTimestamp           :: !(Maybe POSIX)
+    , _shttprRequest             :: !HTTPRequest
+    , _shttprWeight              :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SampledHTTPRequest' with the minimum fields required to make a request.
@@ -1831,12 +1895,14 @@ instance NFData SampledHTTPRequest where
 --
 --
 -- /See:/ 'sizeConstraint' smart constructor.
-data SizeConstraint = SizeConstraint'
-  { _scFieldToMatch       :: !FieldToMatch
-  , _scTextTransformation :: !TextTransformation
-  , _scComparisonOperator :: !ComparisonOperator
-  , _scSize               :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SizeConstraint =
+  SizeConstraint'
+    { _scFieldToMatch       :: !FieldToMatch
+    , _scTextTransformation :: !TextTransformation
+    , _scComparisonOperator :: !ComparisonOperator
+    , _scSize               :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SizeConstraint' with the minimum fields required to make a request.
@@ -1908,11 +1974,13 @@ instance ToJSON SizeConstraint where
 --
 --
 -- /See:/ 'sizeConstraintSet' smart constructor.
-data SizeConstraintSet = SizeConstraintSet'
-  { _scsName                :: !(Maybe Text)
-  , _scsSizeConstraintSetId :: !Text
-  , _scsSizeConstraints     :: ![SizeConstraint]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SizeConstraintSet =
+  SizeConstraintSet'
+    { _scsName                :: !(Maybe Text)
+    , _scsSizeConstraintSetId :: !Text
+    , _scsSizeConstraints     :: ![SizeConstraint]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SizeConstraintSet' with the minimum fields required to make a request.
@@ -1964,10 +2032,12 @@ instance NFData SizeConstraintSet where
 --
 --
 -- /See:/ 'sizeConstraintSetSummary' smart constructor.
-data SizeConstraintSetSummary = SizeConstraintSetSummary'
-  { _scssSizeConstraintSetId :: !Text
-  , _scssName                :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SizeConstraintSetSummary =
+  SizeConstraintSetSummary'
+    { _scssSizeConstraintSetId :: !Text
+    , _scssName                :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SizeConstraintSetSummary' with the minimum fields required to make a request.
@@ -2010,10 +2080,12 @@ instance NFData SizeConstraintSetSummary where
 --
 --
 -- /See:/ 'sizeConstraintSetUpdate' smart constructor.
-data SizeConstraintSetUpdate = SizeConstraintSetUpdate'
-  { _scsuAction         :: !ChangeAction
-  , _scsuSizeConstraint :: !SizeConstraint
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SizeConstraintSetUpdate =
+  SizeConstraintSetUpdate'
+    { _scsuAction         :: !ChangeAction
+    , _scsuSizeConstraint :: !SizeConstraint
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SizeConstraintSetUpdate' with the minimum fields required to make a request.
@@ -2056,11 +2128,13 @@ instance ToJSON SizeConstraintSetUpdate where
 --
 --
 -- /See:/ 'sqlInjectionMatchSet' smart constructor.
-data SqlInjectionMatchSet = SqlInjectionMatchSet'
-  { _simsName                    :: !(Maybe Text)
-  , _simsSqlInjectionMatchSetId  :: !Text
-  , _simsSqlInjectionMatchTuples :: ![SqlInjectionMatchTuple]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SqlInjectionMatchSet =
+  SqlInjectionMatchSet'
+    { _simsName                    :: !(Maybe Text)
+    , _simsSqlInjectionMatchSetId  :: !Text
+    , _simsSqlInjectionMatchTuples :: ![SqlInjectionMatchTuple]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SqlInjectionMatchSet' with the minimum fields required to make a request.
@@ -2112,10 +2186,12 @@ instance NFData SqlInjectionMatchSet where
 --
 --
 -- /See:/ 'sqlInjectionMatchSetSummary' smart constructor.
-data SqlInjectionMatchSetSummary = SqlInjectionMatchSetSummary'
-  { _simssSqlInjectionMatchSetId :: !Text
-  , _simssName                   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SqlInjectionMatchSetSummary =
+  SqlInjectionMatchSetSummary'
+    { _simssSqlInjectionMatchSetId :: !Text
+    , _simssName                   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SqlInjectionMatchSetSummary' with the minimum fields required to make a request.
@@ -2160,10 +2236,12 @@ instance NFData SqlInjectionMatchSetSummary where
 --
 --
 -- /See:/ 'sqlInjectionMatchSetUpdate' smart constructor.
-data SqlInjectionMatchSetUpdate = SqlInjectionMatchSetUpdate'
-  { _simsuAction                 :: !ChangeAction
-  , _simsuSqlInjectionMatchTuple :: !SqlInjectionMatchTuple
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SqlInjectionMatchSetUpdate =
+  SqlInjectionMatchSetUpdate'
+    { _simsuAction                 :: !ChangeAction
+    , _simsuSqlInjectionMatchTuple :: !SqlInjectionMatchTuple
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SqlInjectionMatchSetUpdate' with the minimum fields required to make a request.
@@ -2210,10 +2288,12 @@ instance ToJSON SqlInjectionMatchSetUpdate where
 --
 --
 -- /See:/ 'sqlInjectionMatchTuple' smart constructor.
-data SqlInjectionMatchTuple = SqlInjectionMatchTuple'
-  { _simtFieldToMatch       :: !FieldToMatch
-  , _simtTextTransformation :: !TextTransformation
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SqlInjectionMatchTuple =
+  SqlInjectionMatchTuple'
+    { _simtFieldToMatch       :: !FieldToMatch
+    , _simtTextTransformation :: !TextTransformation
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SqlInjectionMatchTuple' with the minimum fields required to make a request.
@@ -2267,11 +2347,13 @@ instance ToJSON SqlInjectionMatchTuple where
 --
 --
 -- /See:/ 'subscribedRuleGroupSummary' smart constructor.
-data SubscribedRuleGroupSummary = SubscribedRuleGroupSummary'
-  { _srgsRuleGroupId :: !Text
-  , _srgsName        :: !Text
-  , _srgsMetricName  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SubscribedRuleGroupSummary =
+  SubscribedRuleGroupSummary'
+    { _srgsRuleGroupId :: !Text
+    , _srgsName        :: !Text
+    , _srgsMetricName  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SubscribedRuleGroupSummary' with the minimum fields required to make a request.
@@ -2327,10 +2409,12 @@ instance NFData SubscribedRuleGroupSummary where
 --
 --
 -- /See:/ 'timeWindow' smart constructor.
-data TimeWindow = TimeWindow'
-  { _twStartTime :: !POSIX
-  , _twEndTime   :: !POSIX
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TimeWindow =
+  TimeWindow'
+    { _twStartTime :: !POSIX
+    , _twEndTime   :: !POSIX
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TimeWindow' with the minimum fields required to make a request.
@@ -2380,9 +2464,11 @@ instance ToJSON TimeWindow where
 --
 --
 -- /See:/ 'wafAction' smart constructor.
-newtype WafAction = WafAction'
-  { _waType :: WafActionType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype WafAction =
+  WafAction'
+    { _waType :: WafActionType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'WafAction' with the minimum fields required to make a request.
@@ -2418,9 +2504,11 @@ instance ToJSON WafAction where
 --
 --
 -- /See:/ 'wafOverrideAction' smart constructor.
-newtype WafOverrideAction = WafOverrideAction'
-  { _woaType :: WafOverrideActionType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype WafOverrideAction =
+  WafOverrideAction'
+    { _woaType :: WafOverrideActionType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'WafOverrideAction' with the minimum fields required to make a request.
@@ -2456,13 +2544,15 @@ instance ToJSON WafOverrideAction where
 --
 --
 -- /See:/ 'webACL' smart constructor.
-data WebACL = WebACL'
-  { _waMetricName    :: !(Maybe Text)
-  , _waName          :: !(Maybe Text)
-  , _waWebACLId      :: !Text
-  , _waDefaultAction :: !WafAction
-  , _waRules         :: ![ActivatedRule]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data WebACL =
+  WebACL'
+    { _waMetricName    :: !(Maybe Text)
+    , _waName          :: !(Maybe Text)
+    , _waWebACLId      :: !Text
+    , _waDefaultAction :: !WafAction
+    , _waRules         :: ![ActivatedRule]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'WebACL' with the minimum fields required to make a request.
@@ -2531,10 +2621,12 @@ instance NFData WebACL where
 --
 --
 -- /See:/ 'webACLSummary' smart constructor.
-data WebACLSummary = WebACLSummary'
-  { _wasWebACLId :: !Text
-  , _wasName     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data WebACLSummary =
+  WebACLSummary'
+    { _wasWebACLId :: !Text
+    , _wasName     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'WebACLSummary' with the minimum fields required to make a request.
@@ -2576,10 +2668,12 @@ instance NFData WebACLSummary where
 --
 --
 -- /See:/ 'webACLUpdate' smart constructor.
-data WebACLUpdate = WebACLUpdate'
-  { _wauAction        :: !ChangeAction
-  , _wauActivatedRule :: !ActivatedRule
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data WebACLUpdate =
+  WebACLUpdate'
+    { _wauAction        :: !ChangeAction
+    , _wauActivatedRule :: !ActivatedRule
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'WebACLUpdate' with the minimum fields required to make a request.
@@ -2621,11 +2715,13 @@ instance ToJSON WebACLUpdate where
 --
 --
 -- /See:/ 'xssMatchSet' smart constructor.
-data XSSMatchSet = XSSMatchSet'
-  { _xmsName           :: !(Maybe Text)
-  , _xmsXSSMatchSetId  :: !Text
-  , _xmsXSSMatchTuples :: ![XSSMatchTuple]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data XSSMatchSet =
+  XSSMatchSet'
+    { _xmsName           :: !(Maybe Text)
+    , _xmsXSSMatchSetId  :: !Text
+    , _xmsXSSMatchTuples :: ![XSSMatchTuple]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'XSSMatchSet' with the minimum fields required to make a request.
@@ -2677,10 +2773,12 @@ instance NFData XSSMatchSet where
 --
 --
 -- /See:/ 'xssMatchSetSummary' smart constructor.
-data XSSMatchSetSummary = XSSMatchSetSummary'
-  { _xmssXSSMatchSetId :: !Text
-  , _xmssName          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data XSSMatchSetSummary =
+  XSSMatchSetSummary'
+    { _xmssXSSMatchSetId :: !Text
+    , _xmssName          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'XSSMatchSetSummary' with the minimum fields required to make a request.
@@ -2722,10 +2820,12 @@ instance NFData XSSMatchSetSummary where
 --
 --
 -- /See:/ 'xssMatchSetUpdate' smart constructor.
-data XSSMatchSetUpdate = XSSMatchSetUpdate'
-  { _xmsuAction        :: !ChangeAction
-  , _xmsuXSSMatchTuple :: !XSSMatchTuple
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data XSSMatchSetUpdate =
+  XSSMatchSetUpdate'
+    { _xmsuAction        :: !ChangeAction
+    , _xmsuXSSMatchTuple :: !XSSMatchTuple
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'XSSMatchSetUpdate' with the minimum fields required to make a request.
@@ -2768,10 +2868,12 @@ instance ToJSON XSSMatchSetUpdate where
 --
 --
 -- /See:/ 'xssMatchTuple' smart constructor.
-data XSSMatchTuple = XSSMatchTuple'
-  { _xmtFieldToMatch       :: !FieldToMatch
-  , _xmtTextTransformation :: !TextTransformation
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data XSSMatchTuple =
+  XSSMatchTuple'
+    { _xmtFieldToMatch       :: !FieldToMatch
+    , _xmtTextTransformation :: !TextTransformation
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'XSSMatchTuple' with the minimum fields required to make a request.

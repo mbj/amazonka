@@ -56,14 +56,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateAlias' smart constructor.
-data UpdateAlias = UpdateAlias'
-  { _uaRoutingConfig   :: !(Maybe AliasRoutingConfiguration)
-  , _uaFunctionVersion :: !(Maybe Text)
-  , _uaDescription     :: !(Maybe Text)
-  , _uaRevisionId      :: !(Maybe Text)
-  , _uaFunctionName    :: !Text
-  , _uaName            :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateAlias =
+  UpdateAlias'
+    { _uaRoutingConfig   :: !(Maybe AliasRoutingConfiguration)
+    , _uaFunctionVersion :: !(Maybe Text)
+    , _uaDescription     :: !(Maybe Text)
+    , _uaRevisionId      :: !(Maybe Text)
+    , _uaFunctionName    :: !Text
+    , _uaName            :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateAlias' with the minimum fields required to make a request.

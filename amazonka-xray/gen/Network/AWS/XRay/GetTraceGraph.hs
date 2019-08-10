@@ -50,10 +50,12 @@ import Network.AWS.XRay.Types
 import Network.AWS.XRay.Types.Product
 
 -- | /See:/ 'getTraceGraph' smart constructor.
-data GetTraceGraph = GetTraceGraph'
-  { _gtgNextToken :: !(Maybe Text)
-  , _gtgTraceIds  :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetTraceGraph =
+  GetTraceGraph'
+    { _gtgNextToken :: !(Maybe Text)
+    , _gtgTraceIds  :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetTraceGraph' with the minimum fields required to make a request.
@@ -114,11 +116,13 @@ instance ToQuery GetTraceGraph where
         toQuery = const mempty
 
 -- | /See:/ 'getTraceGraphResponse' smart constructor.
-data GetTraceGraphResponse = GetTraceGraphResponse'
-  { _gtgrsNextToken      :: !(Maybe Text)
-  , _gtgrsServices       :: !(Maybe [ServiceInfo])
-  , _gtgrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetTraceGraphResponse =
+  GetTraceGraphResponse'
+    { _gtgrsNextToken      :: !(Maybe Text)
+    , _gtgrsServices       :: !(Maybe [ServiceInfo])
+    , _gtgrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetTraceGraphResponse' with the minimum fields required to make a request.

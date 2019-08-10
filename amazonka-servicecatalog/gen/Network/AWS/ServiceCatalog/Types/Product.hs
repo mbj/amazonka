@@ -26,10 +26,12 @@ import Network.AWS.ServiceCatalog.Types.Sum
 --
 --
 -- /See:/ 'accessLevelFilter' smart constructor.
-data AccessLevelFilter = AccessLevelFilter'
-  { _alfValue :: !(Maybe Text)
-  , _alfKey   :: !(Maybe AccessLevelFilterKey)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AccessLevelFilter =
+  AccessLevelFilter'
+    { _alfValue :: !(Maybe Text)
+    , _alfKey   :: !(Maybe AccessLevelFilterKey)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AccessLevelFilter' with the minimum fields required to make a request.
@@ -67,9 +69,11 @@ instance ToJSON AccessLevelFilter where
 --
 --
 -- /See:/ 'cloudWatchDashboard' smart constructor.
-newtype CloudWatchDashboard = CloudWatchDashboard'
-  { _cwdName :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CloudWatchDashboard =
+  CloudWatchDashboard'
+    { _cwdName :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CloudWatchDashboard' with the minimum fields required to make a request.
@@ -100,12 +104,14 @@ instance NFData CloudWatchDashboard where
 --
 --
 -- /See:/ 'constraintDetail' smart constructor.
-data ConstraintDetail = ConstraintDetail'
-  { _cdConstraintId :: !(Maybe Text)
-  , _cdOwner        :: !(Maybe Text)
-  , _cdType         :: !(Maybe Text)
-  , _cdDescription  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ConstraintDetail =
+  ConstraintDetail'
+    { _cdConstraintId :: !(Maybe Text)
+    , _cdOwner        :: !(Maybe Text)
+    , _cdType         :: !(Maybe Text)
+    , _cdDescription  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ConstraintDetail' with the minimum fields required to make a request.
@@ -164,10 +170,12 @@ instance NFData ConstraintDetail where
 --
 --
 -- /See:/ 'constraintSummary' smart constructor.
-data ConstraintSummary = ConstraintSummary'
-  { _csType        :: !(Maybe Text)
-  , _csDescription :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ConstraintSummary =
+  ConstraintSummary'
+    { _csType        :: !(Maybe Text)
+    , _csDescription :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ConstraintSummary' with the minimum fields required to make a request.
@@ -207,12 +215,14 @@ instance NFData ConstraintSummary where
 --
 --
 -- /See:/ 'launchPathSummary' smart constructor.
-data LaunchPathSummary = LaunchPathSummary'
-  { _lpsConstraintSummaries :: !(Maybe [ConstraintSummary])
-  , _lpsName                :: !(Maybe Text)
-  , _lpsId                  :: !(Maybe Text)
-  , _lpsTags                :: !(Maybe [Tag])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LaunchPathSummary =
+  LaunchPathSummary'
+    { _lpsConstraintSummaries :: !(Maybe [ConstraintSummary])
+    , _lpsName                :: !(Maybe Text)
+    , _lpsId                  :: !(Maybe Text)
+    , _lpsTags                :: !(Maybe [Tag])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LaunchPathSummary' with the minimum fields required to make a request.
@@ -272,10 +282,12 @@ instance NFData LaunchPathSummary where
 --
 --
 -- /See:/ 'listRecordHistorySearchFilter' smart constructor.
-data ListRecordHistorySearchFilter = ListRecordHistorySearchFilter'
-  { _lrhsfValue :: !(Maybe Text)
-  , _lrhsfKey   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListRecordHistorySearchFilter =
+  ListRecordHistorySearchFilter'
+    { _lrhsfValue :: !(Maybe Text)
+    , _lrhsfKey   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListRecordHistorySearchFilter' with the minimum fields required to make a request.
@@ -315,11 +327,13 @@ instance ToJSON ListRecordHistorySearchFilter where
 --
 --
 -- /See:/ 'listTagOptionsFilters' smart constructor.
-data ListTagOptionsFilters = ListTagOptionsFilters'
-  { _ltofValue  :: !(Maybe Text)
-  , _ltofActive :: !(Maybe Bool)
-  , _ltofKey    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTagOptionsFilters =
+  ListTagOptionsFilters'
+    { _ltofValue  :: !(Maybe Text)
+    , _ltofActive :: !(Maybe Bool)
+    , _ltofKey    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTagOptionsFilters' with the minimum fields required to make a request.
@@ -367,9 +381,11 @@ instance ToJSON ListTagOptionsFilters where
 --
 --
 -- /See:/ 'parameterConstraints' smart constructor.
-newtype ParameterConstraints = ParameterConstraints'
-  { _pcAllowedValues :: Maybe [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ParameterConstraints =
+  ParameterConstraints'
+    { _pcAllowedValues :: Maybe [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ParameterConstraints' with the minimum fields required to make a request.
@@ -402,14 +418,16 @@ instance NFData ParameterConstraints where
 --
 --
 -- /See:/ 'portfolioDetail' smart constructor.
-data PortfolioDetail = PortfolioDetail'
-  { _pdARN          :: !(Maybe Text)
-  , _pdCreatedTime  :: !(Maybe POSIX)
-  , _pdId           :: !(Maybe Text)
-  , _pdDisplayName  :: !(Maybe Text)
-  , _pdDescription  :: !(Maybe Text)
-  , _pdProviderName :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PortfolioDetail =
+  PortfolioDetail'
+    { _pdARN          :: !(Maybe Text)
+    , _pdCreatedTime  :: !(Maybe POSIX)
+    , _pdId           :: !(Maybe Text)
+    , _pdDisplayName  :: !(Maybe Text)
+    , _pdDescription  :: !(Maybe Text)
+    , _pdProviderName :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PortfolioDetail' with the minimum fields required to make a request.
@@ -484,10 +502,12 @@ instance NFData PortfolioDetail where
 --
 --
 -- /See:/ 'principal' smart constructor.
-data Principal = Principal'
-  { _pPrincipalType :: !(Maybe PrincipalType)
-  , _pPrincipalARN  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Principal =
+  Principal'
+    { _pPrincipalType :: !(Maybe PrincipalType)
+    , _pPrincipalARN  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Principal' with the minimum fields required to make a request.
@@ -526,10 +546,12 @@ instance NFData Principal where
 --
 --
 -- /See:/ 'productViewAggregationValue' smart constructor.
-data ProductViewAggregationValue = ProductViewAggregationValue'
-  { _pvavValue            :: !(Maybe Text)
-  , _pvavApproximateCount :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ProductViewAggregationValue =
+  ProductViewAggregationValue'
+    { _pvavValue            :: !(Maybe Text)
+    , _pvavApproximateCount :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ProductViewAggregationValue' with the minimum fields required to make a request.
@@ -570,12 +592,14 @@ instance NFData ProductViewAggregationValue where
 --
 --
 -- /See:/ 'productViewDetail' smart constructor.
-data ProductViewDetail = ProductViewDetail'
-  { _pvdStatus             :: !(Maybe RequestStatus)
-  , _pvdProductViewSummary :: !(Maybe ProductViewSummary)
-  , _pvdCreatedTime        :: !(Maybe POSIX)
-  , _pvdProductARN         :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ProductViewDetail =
+  ProductViewDetail'
+    { _pvdStatus             :: !(Maybe RequestStatus)
+    , _pvdProductViewSummary :: !(Maybe ProductViewSummary)
+    , _pvdCreatedTime        :: !(Maybe POSIX)
+    , _pvdProductARN         :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ProductViewDetail' with the minimum fields required to make a request.
@@ -634,19 +658,21 @@ instance NFData ProductViewDetail where
 --
 --
 -- /See:/ 'productViewSummary' smart constructor.
-data ProductViewSummary = ProductViewSummary'
-  { _pvsOwner              :: !(Maybe Text)
-  , _pvsSupportURL         :: !(Maybe Text)
-  , _pvsShortDescription   :: !(Maybe Text)
-  , _pvsHasDefaultPath     :: !(Maybe Bool)
-  , _pvsDistributor        :: !(Maybe Text)
-  , _pvsName               :: !(Maybe Text)
-  , _pvsId                 :: !(Maybe Text)
-  , _pvsType               :: !(Maybe ProductType)
-  , _pvsSupportEmail       :: !(Maybe Text)
-  , _pvsProductId          :: !(Maybe Text)
-  , _pvsSupportDescription :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ProductViewSummary =
+  ProductViewSummary'
+    { _pvsOwner              :: !(Maybe Text)
+    , _pvsSupportURL         :: !(Maybe Text)
+    , _pvsShortDescription   :: !(Maybe Text)
+    , _pvsHasDefaultPath     :: !(Maybe Bool)
+    , _pvsDistributor        :: !(Maybe Text)
+    , _pvsName               :: !(Maybe Text)
+    , _pvsId                 :: !(Maybe Text)
+    , _pvsType               :: !(Maybe ProductType)
+    , _pvsSupportEmail       :: !(Maybe Text)
+    , _pvsProductId          :: !(Maybe Text)
+    , _pvsSupportDescription :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ProductViewSummary' with the minimum fields required to make a request.
@@ -761,23 +787,25 @@ instance NFData ProductViewSummary where
 --
 --
 -- /See:/ 'provisionedProductAttribute' smart constructor.
-data ProvisionedProductAttribute = ProvisionedProductAttribute'
-  { _ppaIdempotencyToken       :: !(Maybe Text)
-  , _ppaStatus                 :: !(Maybe ProvisionedProductStatus)
-  , _ppaProvisioningArtifactId :: !(Maybe Text)
-  , _ppaARN                    :: !(Maybe Text)
-  , _ppaCreatedTime            :: !(Maybe POSIX)
-  , _ppaUserARN                :: !(Maybe Text)
-  , _ppaStatusMessage          :: !(Maybe Text)
-  , _ppaName                   :: !(Maybe Text)
-  , _ppaLastRecordId           :: !(Maybe Text)
-  , _ppaUserARNSession         :: !(Maybe Text)
-  , _ppaId                     :: !(Maybe Text)
-  , _ppaType                   :: !(Maybe Text)
-  , _ppaPhysicalId             :: !(Maybe Text)
-  , _ppaProductId              :: !(Maybe Text)
-  , _ppaTags                   :: !(Maybe [Tag])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ProvisionedProductAttribute =
+  ProvisionedProductAttribute'
+    { _ppaIdempotencyToken       :: !(Maybe Text)
+    , _ppaStatus                 :: !(Maybe ProvisionedProductStatus)
+    , _ppaProvisioningArtifactId :: !(Maybe Text)
+    , _ppaARN                    :: !(Maybe Text)
+    , _ppaCreatedTime            :: !(Maybe POSIX)
+    , _ppaUserARN                :: !(Maybe Text)
+    , _ppaStatusMessage          :: !(Maybe Text)
+    , _ppaName                   :: !(Maybe Text)
+    , _ppaLastRecordId           :: !(Maybe Text)
+    , _ppaUserARNSession         :: !(Maybe Text)
+    , _ppaId                     :: !(Maybe Text)
+    , _ppaType                   :: !(Maybe Text)
+    , _ppaPhysicalId             :: !(Maybe Text)
+    , _ppaProductId              :: !(Maybe Text)
+    , _ppaTags                   :: !(Maybe [Tag])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ProvisionedProductAttribute' with the minimum fields required to make a request.
@@ -924,17 +952,19 @@ instance NFData ProvisionedProductAttribute where
 --
 --
 -- /See:/ 'provisionedProductDetail' smart constructor.
-data ProvisionedProductDetail = ProvisionedProductDetail'
-  { _ppdIdempotencyToken :: !(Maybe Text)
-  , _ppdStatus           :: !(Maybe ProvisionedProductStatus)
-  , _ppdARN              :: !(Maybe Text)
-  , _ppdCreatedTime      :: !(Maybe POSIX)
-  , _ppdStatusMessage    :: !(Maybe Text)
-  , _ppdName             :: !(Maybe Text)
-  , _ppdLastRecordId     :: !(Maybe Text)
-  , _ppdId               :: !(Maybe Text)
-  , _ppdType             :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ProvisionedProductDetail =
+  ProvisionedProductDetail'
+    { _ppdIdempotencyToken :: !(Maybe Text)
+    , _ppdStatus           :: !(Maybe ProvisionedProductStatus)
+    , _ppdARN              :: !(Maybe Text)
+    , _ppdCreatedTime      :: !(Maybe POSIX)
+    , _ppdStatusMessage    :: !(Maybe Text)
+    , _ppdName             :: !(Maybe Text)
+    , _ppdLastRecordId     :: !(Maybe Text)
+    , _ppdId               :: !(Maybe Text)
+    , _ppdType             :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ProvisionedProductDetail' with the minimum fields required to make a request.
@@ -1033,23 +1063,25 @@ instance NFData ProvisionedProductDetail where
 --
 --
 -- /See:/ 'provisionedProductPlanDetails' smart constructor.
-data ProvisionedProductPlanDetails = ProvisionedProductPlanDetails'
-  { _pppdStatus                 :: !(Maybe ProvisionedProductPlanStatus)
-  , _pppdProvisionProductId     :: !(Maybe Text)
-  , _pppdProvisioningArtifactId :: !(Maybe Text)
-  , _pppdProvisionProductName   :: !(Maybe Text)
-  , _pppdCreatedTime            :: !(Maybe POSIX)
-  , _pppdNotificationARNs       :: !(Maybe [Text])
-  , _pppdPlanId                 :: !(Maybe Text)
-  , _pppdPlanName               :: !(Maybe Text)
-  , _pppdStatusMessage          :: !(Maybe Text)
-  , _pppdUpdatedTime            :: !(Maybe POSIX)
-  , _pppdPathId                 :: !(Maybe Text)
-  , _pppdProvisioningParameters :: !(Maybe [UpdateProvisioningParameter])
-  , _pppdPlanType               :: !(Maybe ProvisionedProductPlanType)
-  , _pppdProductId              :: !(Maybe Text)
-  , _pppdTags                   :: !(Maybe [Tag])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ProvisionedProductPlanDetails =
+  ProvisionedProductPlanDetails'
+    { _pppdStatus                 :: !(Maybe ProvisionedProductPlanStatus)
+    , _pppdProvisionProductId     :: !(Maybe Text)
+    , _pppdProvisioningArtifactId :: !(Maybe Text)
+    , _pppdProvisionProductName   :: !(Maybe Text)
+    , _pppdCreatedTime            :: !(Maybe POSIX)
+    , _pppdNotificationARNs       :: !(Maybe [Text])
+    , _pppdPlanId                 :: !(Maybe Text)
+    , _pppdPlanName               :: !(Maybe Text)
+    , _pppdStatusMessage          :: !(Maybe Text)
+    , _pppdUpdatedTime            :: !(Maybe POSIX)
+    , _pppdPathId                 :: !(Maybe Text)
+    , _pppdProvisioningParameters :: !(Maybe [UpdateProvisioningParameter])
+    , _pppdPlanType               :: !(Maybe ProvisionedProductPlanType)
+    , _pppdProductId              :: !(Maybe Text)
+    , _pppdTags                   :: !(Maybe [Tag])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ProvisionedProductPlanDetails' with the minimum fields required to make a request.
@@ -1196,14 +1228,16 @@ instance NFData ProvisionedProductPlanDetails where
 --
 --
 -- /See:/ 'provisionedProductPlanSummary' smart constructor.
-data ProvisionedProductPlanSummary = ProvisionedProductPlanSummary'
-  { _pppsProvisionProductId     :: !(Maybe Text)
-  , _pppsProvisioningArtifactId :: !(Maybe Text)
-  , _pppsProvisionProductName   :: !(Maybe Text)
-  , _pppsPlanId                 :: !(Maybe Text)
-  , _pppsPlanName               :: !(Maybe Text)
-  , _pppsPlanType               :: !(Maybe ProvisionedProductPlanType)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ProvisionedProductPlanSummary =
+  ProvisionedProductPlanSummary'
+    { _pppsProvisionProductId     :: !(Maybe Text)
+    , _pppsProvisioningArtifactId :: !(Maybe Text)
+    , _pppsProvisionProductName   :: !(Maybe Text)
+    , _pppsPlanId                 :: !(Maybe Text)
+    , _pppsPlanName               :: !(Maybe Text)
+    , _pppsPlanType               :: !(Maybe ProvisionedProductPlanType)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ProvisionedProductPlanSummary' with the minimum fields required to make a request.
@@ -1279,12 +1313,14 @@ instance NFData ProvisionedProductPlanSummary where
 --
 --
 -- /See:/ 'provisioningArtifact' smart constructor.
-data ProvisioningArtifact = ProvisioningArtifact'
-  { _paCreatedTime :: !(Maybe POSIX)
-  , _paName        :: !(Maybe Text)
-  , _paId          :: !(Maybe Text)
-  , _paDescription :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ProvisioningArtifact =
+  ProvisioningArtifact'
+    { _paCreatedTime :: !(Maybe POSIX)
+    , _paName        :: !(Maybe Text)
+    , _paId          :: !(Maybe Text)
+    , _paDescription :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ProvisioningArtifact' with the minimum fields required to make a request.
@@ -1343,14 +1379,16 @@ instance NFData ProvisioningArtifact where
 --
 --
 -- /See:/ 'provisioningArtifactDetail' smart constructor.
-data ProvisioningArtifactDetail = ProvisioningArtifactDetail'
-  { _padCreatedTime :: !(Maybe POSIX)
-  , _padActive      :: !(Maybe Bool)
-  , _padName        :: !(Maybe Text)
-  , _padId          :: !(Maybe Text)
-  , _padType        :: !(Maybe ProvisioningArtifactType)
-  , _padDescription :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ProvisioningArtifactDetail =
+  ProvisioningArtifactDetail'
+    { _padCreatedTime :: !(Maybe POSIX)
+    , _padActive      :: !(Maybe Bool)
+    , _padName        :: !(Maybe Text)
+    , _padId          :: !(Maybe Text)
+    , _padType        :: !(Maybe ProvisioningArtifactType)
+    , _padDescription :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ProvisioningArtifactDetail' with the minimum fields required to make a request.
@@ -1425,14 +1463,16 @@ instance NFData ProvisioningArtifactDetail where
 --
 --
 -- /See:/ 'provisioningArtifactParameter' smart constructor.
-data ProvisioningArtifactParameter = ProvisioningArtifactParameter'
-  { _pIsNoEcho             :: !(Maybe Bool)
-  , _pParameterKey         :: !(Maybe Text)
-  , _pParameterType        :: !(Maybe Text)
-  , _pParameterConstraints :: !(Maybe ParameterConstraints)
-  , _pDefaultValue         :: !(Maybe Text)
-  , _pDescription          :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ProvisioningArtifactParameter =
+  ProvisioningArtifactParameter'
+    { _pIsNoEcho             :: !(Maybe Bool)
+    , _pParameterKey         :: !(Maybe Text)
+    , _pParameterType        :: !(Maybe Text)
+    , _pParameterConstraints :: !(Maybe ParameterConstraints)
+    , _pDefaultValue         :: !(Maybe Text)
+    , _pDescription          :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ProvisioningArtifactParameter' with the minimum fields required to make a request.
@@ -1507,12 +1547,14 @@ instance NFData ProvisioningArtifactParameter where
 --
 --
 -- /See:/ 'provisioningArtifactProperties' smart constructor.
-data ProvisioningArtifactProperties = ProvisioningArtifactProperties'
-  { _papName        :: !(Maybe Text)
-  , _papType        :: !(Maybe ProvisioningArtifactType)
-  , _papDescription :: !(Maybe Text)
-  , _papInfo        :: !(Map Text Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ProvisioningArtifactProperties =
+  ProvisioningArtifactProperties'
+    { _papName        :: !(Maybe Text)
+    , _papType        :: !(Maybe ProvisioningArtifactType)
+    , _papDescription :: !(Maybe Text)
+    , _papInfo        :: !(Map Text Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ProvisioningArtifactProperties' with the minimum fields required to make a request.
@@ -1571,13 +1613,15 @@ instance ToJSON ProvisioningArtifactProperties where
 --
 --
 -- /See:/ 'provisioningArtifactSummary' smart constructor.
-data ProvisioningArtifactSummary = ProvisioningArtifactSummary'
-  { _pasProvisioningArtifactMetadata :: !(Maybe (Map Text Text))
-  , _pasCreatedTime                  :: !(Maybe POSIX)
-  , _pasName                         :: !(Maybe Text)
-  , _pasId                           :: !(Maybe Text)
-  , _pasDescription                  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ProvisioningArtifactSummary =
+  ProvisioningArtifactSummary'
+    { _pasProvisioningArtifactMetadata :: !(Maybe (Map Text Text))
+    , _pasCreatedTime                  :: !(Maybe POSIX)
+    , _pasName                         :: !(Maybe Text)
+    , _pasId                           :: !(Maybe Text)
+    , _pasDescription                  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ProvisioningArtifactSummary' with the minimum fields required to make a request.
@@ -1645,10 +1689,12 @@ instance NFData ProvisioningArtifactSummary where
 --
 --
 -- /See:/ 'provisioningParameter' smart constructor.
-data ProvisioningParameter = ProvisioningParameter'
-  { _ppValue :: !(Maybe Text)
-  , _ppKey   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ProvisioningParameter =
+  ProvisioningParameter'
+    { _ppValue :: !(Maybe Text)
+    , _ppKey   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ProvisioningParameter' with the minimum fields required to make a request.
@@ -1687,21 +1733,23 @@ instance ToJSON ProvisioningParameter where
 --
 --
 -- /See:/ 'recordDetail' smart constructor.
-data RecordDetail = RecordDetail'
-  { _rdStatus                 :: !(Maybe RecordStatus)
-  , _rdRecordTags             :: !(Maybe [RecordTag])
-  , _rdProvisionedProductName :: !(Maybe Text)
-  , _rdProvisioningArtifactId :: !(Maybe Text)
-  , _rdCreatedTime            :: !(Maybe POSIX)
-  , _rdRecordType             :: !(Maybe Text)
-  , _rdRecordId               :: !(Maybe Text)
-  , _rdProvisionedProductType :: !(Maybe Text)
-  , _rdUpdatedTime            :: !(Maybe POSIX)
-  , _rdPathId                 :: !(Maybe Text)
-  , _rdProvisionedProductId   :: !(Maybe Text)
-  , _rdRecordErrors           :: !(Maybe [RecordError])
-  , _rdProductId              :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RecordDetail =
+  RecordDetail'
+    { _rdStatus                 :: !(Maybe RecordStatus)
+    , _rdRecordTags             :: !(Maybe [RecordTag])
+    , _rdProvisionedProductName :: !(Maybe Text)
+    , _rdProvisioningArtifactId :: !(Maybe Text)
+    , _rdCreatedTime            :: !(Maybe POSIX)
+    , _rdRecordType             :: !(Maybe Text)
+    , _rdRecordId               :: !(Maybe Text)
+    , _rdProvisionedProductType :: !(Maybe Text)
+    , _rdUpdatedTime            :: !(Maybe POSIX)
+    , _rdPathId                 :: !(Maybe Text)
+    , _rdProvisionedProductId   :: !(Maybe Text)
+    , _rdRecordErrors           :: !(Maybe [RecordError])
+    , _rdProductId              :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RecordDetail' with the minimum fields required to make a request.
@@ -1832,10 +1880,12 @@ instance NFData RecordDetail where
 --
 --
 -- /See:/ 'recordError' smart constructor.
-data RecordError = RecordError'
-  { _reCode        :: !(Maybe Text)
-  , _reDescription :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RecordError =
+  RecordError'
+    { _reCode        :: !(Maybe Text)
+    , _reDescription :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RecordError' with the minimum fields required to make a request.
@@ -1874,11 +1924,13 @@ instance NFData RecordError where
 --
 --
 -- /See:/ 'recordOutput' smart constructor.
-data RecordOutput = RecordOutput'
-  { _roOutputValue :: !(Maybe Text)
-  , _roOutputKey   :: !(Maybe Text)
-  , _roDescription :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RecordOutput =
+  RecordOutput'
+    { _roOutputValue :: !(Maybe Text)
+    , _roOutputKey   :: !(Maybe Text)
+    , _roDescription :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RecordOutput' with the minimum fields required to make a request.
@@ -1926,10 +1978,12 @@ instance NFData RecordOutput where
 --
 --
 -- /See:/ 'recordTag' smart constructor.
-data RecordTag = RecordTag'
-  { _rtValue :: !(Maybe Text)
-  , _rtKey   :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RecordTag =
+  RecordTag'
+    { _rtValue :: !(Maybe Text)
+    , _rtKey   :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RecordTag' with the minimum fields required to make a request.
@@ -1967,15 +2021,17 @@ instance NFData RecordTag where
 --
 --
 -- /See:/ 'resourceChange' smart constructor.
-data ResourceChange = ResourceChange'
-  { _rcLogicalResourceId  :: !(Maybe Text)
-  , _rcPhysicalResourceId :: !(Maybe Text)
-  , _rcResourceType       :: !(Maybe Text)
-  , _rcAction             :: !(Maybe ChangeAction)
-  , _rcScope              :: !(Maybe [ResourceAttribute])
-  , _rcDetails            :: !(Maybe [ResourceChangeDetail])
-  , _rcReplacement        :: !(Maybe Replacement)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResourceChange =
+  ResourceChange'
+    { _rcLogicalResourceId  :: !(Maybe Text)
+    , _rcPhysicalResourceId :: !(Maybe Text)
+    , _rcResourceType       :: !(Maybe Text)
+    , _rcAction             :: !(Maybe ChangeAction)
+    , _rcScope              :: !(Maybe [ResourceAttribute])
+    , _rcDetails            :: !(Maybe [ResourceChangeDetail])
+    , _rcReplacement        :: !(Maybe Replacement)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResourceChange' with the minimum fields required to make a request.
@@ -2059,11 +2115,13 @@ instance NFData ResourceChange where
 --
 --
 -- /See:/ 'resourceChangeDetail' smart constructor.
-data ResourceChangeDetail = ResourceChangeDetail'
-  { _rcdCausingEntity :: !(Maybe Text)
-  , _rcdEvaluation    :: !(Maybe EvaluationType)
-  , _rcdTarget        :: !(Maybe ResourceTargetDefinition)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResourceChangeDetail =
+  ResourceChangeDetail'
+    { _rcdCausingEntity :: !(Maybe Text)
+    , _rcdEvaluation    :: !(Maybe EvaluationType)
+    , _rcdTarget        :: !(Maybe ResourceTargetDefinition)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResourceChangeDetail' with the minimum fields required to make a request.
@@ -2114,13 +2172,15 @@ instance NFData ResourceChangeDetail where
 --
 --
 -- /See:/ 'resourceDetail' smart constructor.
-data ResourceDetail = ResourceDetail'
-  { _rARN         :: !(Maybe Text)
-  , _rCreatedTime :: !(Maybe POSIX)
-  , _rName        :: !(Maybe Text)
-  , _rId          :: !(Maybe Text)
-  , _rDescription :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResourceDetail =
+  ResourceDetail'
+    { _rARN         :: !(Maybe Text)
+    , _rCreatedTime :: !(Maybe POSIX)
+    , _rName        :: !(Maybe Text)
+    , _rId          :: !(Maybe Text)
+    , _rDescription :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResourceDetail' with the minimum fields required to make a request.
@@ -2187,11 +2247,13 @@ instance NFData ResourceDetail where
 --
 --
 -- /See:/ 'resourceTargetDefinition' smart constructor.
-data ResourceTargetDefinition = ResourceTargetDefinition'
-  { _rtdAttribute          :: !(Maybe ResourceAttribute)
-  , _rtdRequiresRecreation :: !(Maybe RequiresRecreation)
-  , _rtdName               :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResourceTargetDefinition =
+  ResourceTargetDefinition'
+    { _rtdAttribute          :: !(Maybe ResourceAttribute)
+    , _rtdRequiresRecreation :: !(Maybe RequiresRecreation)
+    , _rtdName               :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResourceTargetDefinition' with the minimum fields required to make a request.
@@ -2242,10 +2304,12 @@ instance NFData ResourceTargetDefinition where
 --
 --
 -- /See:/ 'tag' smart constructor.
-data Tag = Tag'
-  { _tagKey   :: !Text
-  , _tagValue :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Tag =
+  Tag'
+    { _tagKey   :: !Text
+    , _tagValue :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Tag' with the minimum fields required to make a request.
@@ -2291,12 +2355,14 @@ instance ToJSON Tag where
 --
 --
 -- /See:/ 'tagOptionDetail' smart constructor.
-data TagOptionDetail = TagOptionDetail'
-  { _todValue  :: !(Maybe Text)
-  , _todActive :: !(Maybe Bool)
-  , _todKey    :: !(Maybe Text)
-  , _todId     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TagOptionDetail =
+  TagOptionDetail'
+    { _todValue  :: !(Maybe Text)
+    , _todActive :: !(Maybe Bool)
+    , _todKey    :: !(Maybe Text)
+    , _todId     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TagOptionDetail' with the minimum fields required to make a request.
@@ -2355,10 +2421,12 @@ instance NFData TagOptionDetail where
 --
 --
 -- /See:/ 'tagOptionSummary' smart constructor.
-data TagOptionSummary = TagOptionSummary'
-  { _tosValues :: !(Maybe [Text])
-  , _tosKey    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TagOptionSummary =
+  TagOptionSummary'
+    { _tosValues :: !(Maybe [Text])
+    , _tosKey    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TagOptionSummary' with the minimum fields required to make a request.
@@ -2397,11 +2465,13 @@ instance NFData TagOptionSummary where
 --
 --
 -- /See:/ 'updateProvisioningParameter' smart constructor.
-data UpdateProvisioningParameter = UpdateProvisioningParameter'
-  { _uppValue            :: !(Maybe Text)
-  , _uppKey              :: !(Maybe Text)
-  , _uppUsePreviousValue :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateProvisioningParameter =
+  UpdateProvisioningParameter'
+    { _uppValue            :: !(Maybe Text)
+    , _uppKey              :: !(Maybe Text)
+    , _uppUsePreviousValue :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateProvisioningParameter' with the minimum fields required to make a request.
@@ -2456,10 +2526,12 @@ instance ToJSON UpdateProvisioningParameter where
 --
 --
 -- /See:/ 'usageInstruction' smart constructor.
-data UsageInstruction = UsageInstruction'
-  { _uiValue :: !(Maybe Text)
-  , _uiType  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UsageInstruction =
+  UsageInstruction'
+    { _uiValue :: !(Maybe Text)
+    , _uiType  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UsageInstruction' with the minimum fields required to make a request.

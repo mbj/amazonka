@@ -56,11 +56,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'modifyIdentityIdFormat' smart constructor.
-data ModifyIdentityIdFormat = ModifyIdentityIdFormat'
-  { _miifPrincipalARN :: !Text
-  , _miifResource     :: !Text
-  , _miifUseLongIds   :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyIdentityIdFormat =
+  ModifyIdentityIdFormat'
+    { _miifPrincipalARN :: !Text
+    , _miifResource     :: !Text
+    , _miifUseLongIds   :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyIdentityIdFormat' with the minimum fields required to make a request.

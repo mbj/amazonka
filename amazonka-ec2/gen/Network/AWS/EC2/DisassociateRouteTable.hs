@@ -49,10 +49,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'disassociateRouteTable' smart constructor.
-data DisassociateRouteTable = DisassociateRouteTable'
-  { _drtDryRun        :: !(Maybe Bool)
-  , _drtAssociationId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DisassociateRouteTable =
+  DisassociateRouteTable'
+    { _drtDryRun        :: !(Maybe Bool)
+    , _drtAssociationId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisassociateRouteTable' with the minimum fields required to make a request.

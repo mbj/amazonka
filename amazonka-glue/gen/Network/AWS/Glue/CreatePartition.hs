@@ -47,12 +47,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createPartition' smart constructor.
-data CreatePartition = CreatePartition'
-  { _cpCatalogId      :: !(Maybe Text)
-  , _cpDatabaseName   :: !Text
-  , _cpTableName      :: !Text
-  , _cpPartitionInput :: !PartitionInput
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreatePartition =
+  CreatePartition'
+    { _cpCatalogId      :: !(Maybe Text)
+    , _cpDatabaseName   :: !Text
+    , _cpTableName      :: !Text
+    , _cpPartitionInput :: !PartitionInput
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreatePartition' with the minimum fields required to make a request.
@@ -133,9 +135,11 @@ instance ToQuery CreatePartition where
         toQuery = const mempty
 
 -- | /See:/ 'createPartitionResponse' smart constructor.
-newtype CreatePartitionResponse = CreatePartitionResponse'
-  { _cprsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreatePartitionResponse =
+  CreatePartitionResponse'
+    { _cprsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreatePartitionResponse' with the minimum fields required to make a request.

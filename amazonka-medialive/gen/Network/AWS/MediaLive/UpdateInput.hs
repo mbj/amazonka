@@ -49,13 +49,15 @@ import Network.AWS.Response
 -- | A request to update an input.
 --
 -- /See:/ 'updateInput' smart constructor.
-data UpdateInput = UpdateInput'
-  { _uiSources             :: !(Maybe [InputSourceRequest])
-  , _uiInputSecurityGroups :: !(Maybe [Text])
-  , _uiDestinations        :: !(Maybe [InputDestinationRequest])
-  , _uiName                :: !(Maybe Text)
-  , _uiInputId             :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateInput =
+  UpdateInput'
+    { _uiSources             :: !(Maybe [InputSourceRequest])
+    , _uiInputSecurityGroups :: !(Maybe [Text])
+    , _uiDestinations        :: !(Maybe [InputDestinationRequest])
+    , _uiName                :: !(Maybe Text)
+    , _uiInputId             :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateInput' with the minimum fields required to make a request.
@@ -144,10 +146,12 @@ instance ToQuery UpdateInput where
 -- | Placeholder documentation for UpdateInputResponse
 --
 -- /See:/ 'updateInputResponse' smart constructor.
-data UpdateInputResponse = UpdateInputResponse'
-  { _uirsInput          :: !(Maybe Input)
-  , _uirsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateInputResponse =
+  UpdateInputResponse'
+    { _uirsInput          :: !(Maybe Input)
+    , _uirsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateInputResponse' with the minimum fields required to make a request.

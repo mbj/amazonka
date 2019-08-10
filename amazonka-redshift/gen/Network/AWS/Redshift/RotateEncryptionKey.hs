@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'rotateEncryptionKey' smart constructor.
-newtype RotateEncryptionKey = RotateEncryptionKey'
-  { _rekClusterIdentifier :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RotateEncryptionKey =
+  RotateEncryptionKey'
+    { _rekClusterIdentifier :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RotateEncryptionKey' with the minimum fields required to make a request.
@@ -98,10 +100,12 @@ instance ToQuery RotateEncryptionKey where
                "ClusterIdentifier" =: _rekClusterIdentifier]
 
 -- | /See:/ 'rotateEncryptionKeyResponse' smart constructor.
-data RotateEncryptionKeyResponse = RotateEncryptionKeyResponse'
-  { _rekrsCluster        :: !(Maybe Cluster)
-  , _rekrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RotateEncryptionKeyResponse =
+  RotateEncryptionKeyResponse'
+    { _rekrsCluster        :: !(Maybe Cluster)
+    , _rekrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RotateEncryptionKeyResponse' with the minimum fields required to make a request.

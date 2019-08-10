@@ -45,10 +45,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createUserPoolDomain' smart constructor.
-data CreateUserPoolDomain = CreateUserPoolDomain'
-  { _cupdDomain     :: !Text
-  , _cupdUserPoolId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateUserPoolDomain =
+  CreateUserPoolDomain'
+    { _cupdDomain     :: !Text
+    , _cupdUserPoolId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateUserPoolDomain' with the minimum fields required to make a request.
@@ -112,9 +114,11 @@ instance ToQuery CreateUserPoolDomain where
         toQuery = const mempty
 
 -- | /See:/ 'createUserPoolDomainResponse' smart constructor.
-newtype CreateUserPoolDomainResponse = CreateUserPoolDomainResponse'
-  { _cupdrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateUserPoolDomainResponse =
+  CreateUserPoolDomainResponse'
+    { _cupdrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateUserPoolDomainResponse' with the minimum fields required to make a request.

@@ -49,13 +49,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createRole' smart constructor.
-data CreateRole = CreateRole'
-  { _crMaxSessionDuration       :: !(Maybe Nat)
-  , _crPath                     :: !(Maybe Text)
-  , _crDescription              :: !(Maybe Text)
-  , _crRoleName                 :: !Text
-  , _crAssumeRolePolicyDocument :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateRole =
+  CreateRole'
+    { _crMaxSessionDuration       :: !(Maybe Nat)
+    , _crPath                     :: !(Maybe Text)
+    , _crDescription              :: !(Maybe Text)
+    , _crRoleName                 :: !Text
+    , _crAssumeRolePolicyDocument :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateRole' with the minimum fields required to make a request.
@@ -140,10 +142,12 @@ instance ToQuery CreateRole where
 --
 --
 -- /See:/ 'createRoleResponse' smart constructor.
-data CreateRoleResponse = CreateRoleResponse'
-  { _crrsResponseStatus :: !Int
-  , _crrsRole           :: !Role
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateRoleResponse =
+  CreateRoleResponse'
+    { _crrsResponseStatus :: !Int
+    , _crrsRole           :: !Role
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateRoleResponse' with the minimum fields required to make a request.

@@ -51,10 +51,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'removeTagsFromStream' smart constructor.
-data RemoveTagsFromStream = RemoveTagsFromStream'
-  { _rtfsStreamName :: !Text
-  , _rtfsTagKeys    :: !(List1 Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RemoveTagsFromStream =
+  RemoveTagsFromStream'
+    { _rtfsStreamName :: !Text
+    , _rtfsTagKeys    :: !(List1 Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RemoveTagsFromStream' with the minimum fields required to make a request.

@@ -50,11 +50,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'detachVPNGateway' smart constructor.
-data DetachVPNGateway = DetachVPNGateway'
-  { _dvpngDryRun       :: !(Maybe Bool)
-  , _dvpngVPCId        :: !Text
-  , _dvpngVPNGatewayId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DetachVPNGateway =
+  DetachVPNGateway'
+    { _dvpngDryRun       :: !(Maybe Bool)
+    , _dvpngVPCId        :: !Text
+    , _dvpngVPNGatewayId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DetachVPNGateway' with the minimum fields required to make a request.

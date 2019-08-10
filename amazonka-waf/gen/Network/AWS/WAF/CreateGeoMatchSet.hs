@@ -61,10 +61,12 @@ import Network.AWS.WAF.Types
 import Network.AWS.WAF.Types.Product
 
 -- | /See:/ 'createGeoMatchSet' smart constructor.
-data CreateGeoMatchSet = CreateGeoMatchSet'
-  { _cgmsName        :: !Text
-  , _cgmsChangeToken :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateGeoMatchSet =
+  CreateGeoMatchSet'
+    { _cgmsName        :: !Text
+    , _cgmsChangeToken :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateGeoMatchSet' with the minimum fields required to make a request.
@@ -127,11 +129,13 @@ instance ToQuery CreateGeoMatchSet where
         toQuery = const mempty
 
 -- | /See:/ 'createGeoMatchSetResponse' smart constructor.
-data CreateGeoMatchSetResponse = CreateGeoMatchSetResponse'
-  { _cgmsrsGeoMatchSet    :: !(Maybe GeoMatchSet)
-  , _cgmsrsChangeToken    :: !(Maybe Text)
-  , _cgmsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateGeoMatchSetResponse =
+  CreateGeoMatchSetResponse'
+    { _cgmsrsGeoMatchSet    :: !(Maybe GeoMatchSet)
+    , _cgmsrsChangeToken    :: !(Maybe Text)
+    , _cgmsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateGeoMatchSetResponse' with the minimum fields required to make a request.

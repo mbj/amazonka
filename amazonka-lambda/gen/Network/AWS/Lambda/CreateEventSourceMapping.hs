@@ -70,14 +70,16 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createEventSourceMapping' smart constructor.
-data CreateEventSourceMapping = CreateEventSourceMapping'
-  { _cesmStartingPositionTimestamp :: !(Maybe POSIX)
-  , _cesmEnabled                   :: !(Maybe Bool)
-  , _cesmBatchSize                 :: !(Maybe Nat)
-  , _cesmEventSourceARN            :: !Text
-  , _cesmFunctionName              :: !Text
-  , _cesmStartingPosition          :: !EventSourcePosition
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateEventSourceMapping =
+  CreateEventSourceMapping'
+    { _cesmStartingPositionTimestamp :: !(Maybe POSIX)
+    , _cesmEnabled                   :: !(Maybe Bool)
+    , _cesmBatchSize                 :: !(Maybe Nat)
+    , _cesmEventSourceARN            :: !Text
+    , _cesmFunctionName              :: !Text
+    , _cesmStartingPosition          :: !EventSourcePosition
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateEventSourceMapping' with the minimum fields required to make a request.

@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'defineSuggester' smart constructor.
-data DefineSuggester = DefineSuggester'
-  { _defDomainName :: !Text
-  , _defSuggester  :: !Suggester
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DefineSuggester =
+  DefineSuggester'
+    { _defDomainName :: !Text
+    , _defSuggester  :: !Suggester
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DefineSuggester' with the minimum fields required to make a request.
@@ -111,10 +113,12 @@ instance ToQuery DefineSuggester where
 --
 --
 -- /See:/ 'defineSuggesterResponse' smart constructor.
-data DefineSuggesterResponse = DefineSuggesterResponse'
-  { _dsrsResponseStatus :: !Int
-  , _dsrsSuggester      :: !SuggesterStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DefineSuggesterResponse =
+  DefineSuggesterResponse'
+    { _dsrsResponseStatus :: !Int
+    , _dsrsSuggester      :: !SuggesterStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DefineSuggesterResponse' with the minimum fields required to make a request.

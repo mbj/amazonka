@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'cancelBundleTask' smart constructor.
-data CancelBundleTask = CancelBundleTask'
-  { _cbtDryRun   :: !(Maybe Bool)
-  , _cbtBundleId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CancelBundleTask =
+  CancelBundleTask'
+    { _cbtDryRun   :: !(Maybe Bool)
+    , _cbtBundleId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CancelBundleTask' with the minimum fields required to make a request.
@@ -109,10 +111,12 @@ instance ToQuery CancelBundleTask where
 --
 --
 -- /See:/ 'cancelBundleTaskResponse' smart constructor.
-data CancelBundleTaskResponse = CancelBundleTaskResponse'
-  { _cbtrsBundleTask     :: !(Maybe BundleTask)
-  , _cbtrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CancelBundleTaskResponse =
+  CancelBundleTaskResponse'
+    { _cbtrsBundleTask     :: !(Maybe BundleTask)
+    , _cbtrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CancelBundleTaskResponse' with the minimum fields required to make a request.

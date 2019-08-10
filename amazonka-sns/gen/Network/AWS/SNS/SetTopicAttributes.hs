@@ -48,11 +48,13 @@ import Network.AWS.SNS.Types.Product
 --
 --
 -- /See:/ 'setTopicAttributes' smart constructor.
-data SetTopicAttributes = SetTopicAttributes'
-  { _staAttributeValue :: !(Maybe Text)
-  , _staTopicARN       :: !Text
-  , _staAttributeName  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SetTopicAttributes =
+  SetTopicAttributes'
+    { _staAttributeValue :: !(Maybe Text)
+    , _staTopicARN       :: !Text
+    , _staAttributeName  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetTopicAttributes' with the minimum fields required to make a request.

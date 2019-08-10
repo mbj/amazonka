@@ -51,12 +51,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateStream' smart constructor.
-data UpdateStream = UpdateStream'
-  { _usFiles       :: !(Maybe (List1 StreamFile))
-  , _usDescription :: !(Maybe Text)
-  , _usRoleARN     :: !(Maybe Text)
-  , _usStreamId    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateStream =
+  UpdateStream'
+    { _usFiles       :: !(Maybe (List1 StreamFile))
+    , _usDescription :: !(Maybe Text)
+    , _usRoleARN     :: !(Maybe Text)
+    , _usStreamId    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateStream' with the minimum fields required to make a request.
@@ -133,13 +135,15 @@ instance ToQuery UpdateStream where
         toQuery = const mempty
 
 -- | /See:/ 'updateStreamResponse' smart constructor.
-data UpdateStreamResponse = UpdateStreamResponse'
-  { _usrsStreamVersion  :: !(Maybe Nat)
-  , _usrsStreamARN      :: !(Maybe Text)
-  , _usrsDescription    :: !(Maybe Text)
-  , _usrsStreamId       :: !(Maybe Text)
-  , _usrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateStreamResponse =
+  UpdateStreamResponse'
+    { _usrsStreamVersion  :: !(Maybe Nat)
+    , _usrsStreamARN      :: !(Maybe Text)
+    , _usrsDescription    :: !(Maybe Text)
+    , _usrsStreamId       :: !(Maybe Text)
+    , _usrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateStreamResponse' with the minimum fields required to make a request.

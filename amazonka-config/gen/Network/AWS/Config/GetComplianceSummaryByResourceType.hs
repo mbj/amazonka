@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getComplianceSummaryByResourceType' smart constructor.
-newtype GetComplianceSummaryByResourceType = GetComplianceSummaryByResourceType'
-  { _gcsbrtResourceTypes :: Maybe [Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetComplianceSummaryByResourceType =
+  GetComplianceSummaryByResourceType'
+    { _gcsbrtResourceTypes :: Maybe [Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetComplianceSummaryByResourceType' with the minimum fields required to make a request.
@@ -120,10 +122,12 @@ instance ToQuery GetComplianceSummaryByResourceType
 --
 --
 -- /See:/ 'getComplianceSummaryByResourceTypeResponse' smart constructor.
-data GetComplianceSummaryByResourceTypeResponse = GetComplianceSummaryByResourceTypeResponse'
-  { _gcsbrtrsComplianceSummariesByResourceType :: !(Maybe [ComplianceSummaryByResourceType])
-  , _gcsbrtrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetComplianceSummaryByResourceTypeResponse =
+  GetComplianceSummaryByResourceTypeResponse'
+    { _gcsbrtrsComplianceSummariesByResourceType :: !(Maybe [ComplianceSummaryByResourceType])
+    , _gcsbrtrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetComplianceSummaryByResourceTypeResponse' with the minimum fields required to make a request.

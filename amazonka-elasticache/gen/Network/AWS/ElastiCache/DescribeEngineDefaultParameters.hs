@@ -54,11 +54,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeEngineDefaultParameters' smart constructor.
-data DescribeEngineDefaultParameters = DescribeEngineDefaultParameters'
-  { _dedpMarker                    :: !(Maybe Text)
-  , _dedpMaxRecords                :: !(Maybe Int)
-  , _dedpCacheParameterGroupFamily :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeEngineDefaultParameters =
+  DescribeEngineDefaultParameters'
+    { _dedpMarker                    :: !(Maybe Text)
+    , _dedpMaxRecords                :: !(Maybe Int)
+    , _dedpCacheParameterGroupFamily :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEngineDefaultParameters' with the minimum fields required to make a request.
@@ -143,10 +145,12 @@ instance ToQuery DescribeEngineDefaultParameters
                  _dedpCacheParameterGroupFamily]
 
 -- | /See:/ 'describeEngineDefaultParametersResponse' smart constructor.
-data DescribeEngineDefaultParametersResponse = DescribeEngineDefaultParametersResponse'
-  { _dedprsResponseStatus :: !Int
-  , _dedprsEngineDefaults :: !EngineDefaults
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeEngineDefaultParametersResponse =
+  DescribeEngineDefaultParametersResponse'
+    { _dedprsResponseStatus :: !Int
+    , _dedprsEngineDefaults :: !EngineDefaults
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEngineDefaultParametersResponse' with the minimum fields required to make a request.

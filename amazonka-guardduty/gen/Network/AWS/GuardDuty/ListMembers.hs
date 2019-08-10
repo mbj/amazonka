@@ -50,12 +50,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listMembers' smart constructor.
-data ListMembers = ListMembers'
-  { _lmOnlyAssociated :: !(Maybe Text)
-  , _lmNextToken      :: !(Maybe Text)
-  , _lmMaxResults     :: !(Maybe Nat)
-  , _lmDetectorId     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListMembers =
+  ListMembers'
+    { _lmOnlyAssociated :: !(Maybe Text)
+    , _lmNextToken      :: !(Maybe Text)
+    , _lmMaxResults     :: !(Maybe Nat)
+    , _lmDetectorId     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListMembers' with the minimum fields required to make a request.
@@ -138,11 +140,13 @@ instance ToQuery ListMembers where
                "maxResults" =: _lmMaxResults]
 
 -- | /See:/ 'listMembersResponse' smart constructor.
-data ListMembersResponse = ListMembersResponse'
-  { _lmrsMembers        :: !(Maybe [Member])
-  , _lmrsNextToken      :: !(Maybe Text)
-  , _lmrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListMembersResponse =
+  ListMembersResponse'
+    { _lmrsMembers        :: !(Maybe [Member])
+    , _lmrsNextToken      :: !(Maybe Text)
+    , _lmrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListMembersResponse' with the minimum fields required to make a request.

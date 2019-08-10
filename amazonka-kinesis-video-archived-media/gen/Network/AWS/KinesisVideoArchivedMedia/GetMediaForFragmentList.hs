@@ -55,10 +55,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getMediaForFragmentList' smart constructor.
-data GetMediaForFragmentList = GetMediaForFragmentList'
-  { _gmfflStreamName :: !Text
-  , _gmfflFragments  :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetMediaForFragmentList =
+  GetMediaForFragmentList'
+    { _gmfflStreamName :: !Text
+    , _gmfflFragments  :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetMediaForFragmentList' with the minimum fields required to make a request.
@@ -116,11 +118,13 @@ instance ToQuery GetMediaForFragmentList where
         toQuery = const mempty
 
 -- | /See:/ 'getMediaForFragmentListResponse' smart constructor.
-data GetMediaForFragmentListResponse = GetMediaForFragmentListResponse'
-  { _gmfflrsContentType    :: !(Maybe Text)
-  , _gmfflrsResponseStatus :: !Int
-  , _gmfflrsPayload        :: !RsBody
-  } deriving (Show, Generic)
+data GetMediaForFragmentListResponse =
+  GetMediaForFragmentListResponse'
+    { _gmfflrsContentType    :: !(Maybe Text)
+    , _gmfflrsResponseStatus :: !Int
+    , _gmfflrsPayload        :: !RsBody
+    }
+  deriving (Show, Generic)
 
 
 -- | Creates a value of 'GetMediaForFragmentListResponse' with the minimum fields required to make a request.

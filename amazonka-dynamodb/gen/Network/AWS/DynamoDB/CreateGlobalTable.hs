@@ -70,10 +70,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createGlobalTable' smart constructor.
-data CreateGlobalTable = CreateGlobalTable'
-  { _cgtGlobalTableName  :: !Text
-  , _cgtReplicationGroup :: ![Replica]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateGlobalTable =
+  CreateGlobalTable'
+    { _cgtGlobalTableName  :: !Text
+    , _cgtReplicationGroup :: ![Replica]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateGlobalTable' with the minimum fields required to make a request.
@@ -137,10 +139,12 @@ instance ToQuery CreateGlobalTable where
         toQuery = const mempty
 
 -- | /See:/ 'createGlobalTableResponse' smart constructor.
-data CreateGlobalTableResponse = CreateGlobalTableResponse'
-  { _cgtrsGlobalTableDescription :: !(Maybe GlobalTableDescription)
-  , _cgtrsResponseStatus         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateGlobalTableResponse =
+  CreateGlobalTableResponse'
+    { _cgtrsGlobalTableDescription :: !(Maybe GlobalTableDescription)
+    , _cgtrsResponseStatus         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateGlobalTableResponse' with the minimum fields required to make a request.

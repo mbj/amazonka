@@ -69,10 +69,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteStreamingDistribution' smart constructor.
-data DeleteStreamingDistribution = DeleteStreamingDistribution'
-  { _dsdIfMatch :: !(Maybe Text)
-  , _dsdId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteStreamingDistribution =
+  DeleteStreamingDistribution'
+    { _dsdIfMatch :: !(Maybe Text)
+    , _dsdId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteStreamingDistribution' with the minimum fields required to make a request.

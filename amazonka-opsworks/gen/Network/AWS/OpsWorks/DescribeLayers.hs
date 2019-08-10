@@ -48,10 +48,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeLayers' smart constructor.
-data DescribeLayers = DescribeLayers'
-  { _dlLayerIds :: !(Maybe [Text])
-  , _dlStackId  :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeLayers =
+  DescribeLayers'
+    { _dlLayerIds :: !(Maybe [Text])
+    , _dlStackId  :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeLayers' with the minimum fields required to make a request.
@@ -114,10 +116,12 @@ instance ToQuery DescribeLayers where
 --
 --
 -- /See:/ 'describeLayersResponse' smart constructor.
-data DescribeLayersResponse = DescribeLayersResponse'
-  { _dlrsLayers         :: !(Maybe [Layer])
-  , _dlrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeLayersResponse =
+  DescribeLayersResponse'
+    { _dlrsLayers         :: !(Maybe [Layer])
+    , _dlrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeLayersResponse' with the minimum fields required to make a request.

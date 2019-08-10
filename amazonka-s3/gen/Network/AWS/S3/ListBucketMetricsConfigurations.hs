@@ -47,10 +47,12 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'listBucketMetricsConfigurations' smart constructor.
-data ListBucketMetricsConfigurations = ListBucketMetricsConfigurations'
-  { _lbmcContinuationToken :: !(Maybe Text)
-  , _lbmcBucket            :: !BucketName
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListBucketMetricsConfigurations =
+  ListBucketMetricsConfigurations'
+    { _lbmcContinuationToken :: !(Maybe Text)
+    , _lbmcBucket            :: !BucketName
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListBucketMetricsConfigurations' with the minimum fields required to make a request.
@@ -112,13 +114,15 @@ instance ToQuery ListBucketMetricsConfigurations
                "metrics"]
 
 -- | /See:/ 'listBucketMetricsConfigurationsResponse' smart constructor.
-data ListBucketMetricsConfigurationsResponse = ListBucketMetricsConfigurationsResponse'
-  { _lbmcrsContinuationToken        :: !(Maybe Text)
-  , _lbmcrsMetricsConfigurationList :: !(Maybe [MetricsConfiguration])
-  , _lbmcrsNextContinuationToken    :: !(Maybe Text)
-  , _lbmcrsIsTruncated              :: !(Maybe Bool)
-  , _lbmcrsResponseStatus           :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListBucketMetricsConfigurationsResponse =
+  ListBucketMetricsConfigurationsResponse'
+    { _lbmcrsContinuationToken        :: !(Maybe Text)
+    , _lbmcrsMetricsConfigurationList :: !(Maybe [MetricsConfiguration])
+    , _lbmcrsNextContinuationToken    :: !(Maybe Text)
+    , _lbmcrsIsTruncated              :: !(Maybe Bool)
+    , _lbmcrsResponseStatus           :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListBucketMetricsConfigurationsResponse' with the minimum fields required to make a request.

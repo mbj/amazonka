@@ -68,14 +68,16 @@ import Network.AWS.SWF.Types
 import Network.AWS.SWF.Types.Product
 
 -- | /See:/ 'listWorkflowTypes' smart constructor.
-data ListWorkflowTypes = ListWorkflowTypes'
-  { _lwtNextPageToken      :: !(Maybe Text)
-  , _lwtReverseOrder       :: !(Maybe Bool)
-  , _lwtName               :: !(Maybe Text)
-  , _lwtMaximumPageSize    :: !(Maybe Nat)
-  , _lwtDomain             :: !Text
-  , _lwtRegistrationStatus :: !RegistrationStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListWorkflowTypes =
+  ListWorkflowTypes'
+    { _lwtNextPageToken      :: !(Maybe Text)
+    , _lwtReverseOrder       :: !(Maybe Bool)
+    , _lwtName               :: !(Maybe Text)
+    , _lwtMaximumPageSize    :: !(Maybe Nat)
+    , _lwtDomain             :: !Text
+    , _lwtRegistrationStatus :: !RegistrationStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListWorkflowTypes' with the minimum fields required to make a request.
@@ -187,11 +189,13 @@ instance ToQuery ListWorkflowTypes where
 --
 --
 -- /See:/ 'listWorkflowTypesResponse' smart constructor.
-data ListWorkflowTypesResponse = ListWorkflowTypesResponse'
-  { _lwtrsNextPageToken  :: !(Maybe Text)
-  , _lwtrsResponseStatus :: !Int
-  , _lwtrsTypeInfos      :: ![WorkflowTypeInfo]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListWorkflowTypesResponse =
+  ListWorkflowTypesResponse'
+    { _lwtrsNextPageToken  :: !(Maybe Text)
+    , _lwtrsResponseStatus :: !Int
+    , _lwtrsTypeInfos      :: ![WorkflowTypeInfo]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListWorkflowTypesResponse' with the minimum fields required to make a request.

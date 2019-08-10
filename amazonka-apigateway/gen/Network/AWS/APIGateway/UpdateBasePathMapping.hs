@@ -52,11 +52,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateBasePathMapping' smart constructor.
-data UpdateBasePathMapping = UpdateBasePathMapping'
-  { _ubpmPatchOperations :: !(Maybe [PatchOperation])
-  , _ubpmDomainName      :: !Text
-  , _ubpmBasePath        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateBasePathMapping =
+  UpdateBasePathMapping'
+    { _ubpmPatchOperations :: !(Maybe [PatchOperation])
+    , _ubpmDomainName      :: !Text
+    , _ubpmBasePath        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateBasePathMapping' with the minimum fields required to make a request.

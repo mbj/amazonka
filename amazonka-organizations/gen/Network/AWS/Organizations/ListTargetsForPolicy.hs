@@ -53,11 +53,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listTargetsForPolicy' smart constructor.
-data ListTargetsForPolicy = ListTargetsForPolicy'
-  { _ltfpNextToken  :: !(Maybe Text)
-  , _ltfpMaxResults :: !(Maybe Nat)
-  , _ltfpPolicyId   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTargetsForPolicy =
+  ListTargetsForPolicy'
+    { _ltfpNextToken  :: !(Maybe Text)
+    , _ltfpMaxResults :: !(Maybe Nat)
+    , _ltfpPolicyId   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTargetsForPolicy' with the minimum fields required to make a request.
@@ -139,11 +141,13 @@ instance ToQuery ListTargetsForPolicy where
         toQuery = const mempty
 
 -- | /See:/ 'listTargetsForPolicyResponse' smart constructor.
-data ListTargetsForPolicyResponse = ListTargetsForPolicyResponse'
-  { _ltfprsNextToken      :: !(Maybe Text)
-  , _ltfprsTargets        :: !(Maybe [PolicyTargetSummary])
-  , _ltfprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTargetsForPolicyResponse =
+  ListTargetsForPolicyResponse'
+    { _ltfprsNextToken      :: !(Maybe Text)
+    , _ltfprsTargets        :: !(Maybe [PolicyTargetSummary])
+    , _ltfprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTargetsForPolicyResponse' with the minimum fields required to make a request.

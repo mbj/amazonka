@@ -52,10 +52,12 @@ import Network.AWS.SQS.Types.Product
 --
 --
 -- /See:/ 'getQueueURL' smart constructor.
-data GetQueueURL = GetQueueURL'
-  { _gquQueueOwnerAWSAccountId :: !(Maybe Text)
-  , _gquQueueName              :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetQueueURL =
+  GetQueueURL'
+    { _gquQueueOwnerAWSAccountId :: !(Maybe Text)
+    , _gquQueueName              :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetQueueURL' with the minimum fields required to make a request.
@@ -114,10 +116,12 @@ instance ToQuery GetQueueURL where
 --
 --
 -- /See:/ 'getQueueURLResponse' smart constructor.
-data GetQueueURLResponse = GetQueueURLResponse'
-  { _gqursResponseStatus :: !Int
-  , _gqursQueueURL       :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetQueueURLResponse =
+  GetQueueURLResponse'
+    { _gqursResponseStatus :: !Int
+    , _gqursQueueURL       :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetQueueURLResponse' with the minimum fields required to make a request.

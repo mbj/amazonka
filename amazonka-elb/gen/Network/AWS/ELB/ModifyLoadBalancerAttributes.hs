@@ -65,10 +65,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'modifyLoadBalancerAttributes' smart constructor.
-data ModifyLoadBalancerAttributes = ModifyLoadBalancerAttributes'
-  { _mlbaLoadBalancerName       :: !Text
-  , _mlbaLoadBalancerAttributes :: !LoadBalancerAttributes
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyLoadBalancerAttributes =
+  ModifyLoadBalancerAttributes'
+    { _mlbaLoadBalancerName       :: !Text
+    , _mlbaLoadBalancerAttributes :: !LoadBalancerAttributes
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyLoadBalancerAttributes' with the minimum fields required to make a request.
@@ -136,11 +138,13 @@ instance ToQuery ModifyLoadBalancerAttributes where
 --
 --
 -- /See:/ 'modifyLoadBalancerAttributesResponse' smart constructor.
-data ModifyLoadBalancerAttributesResponse = ModifyLoadBalancerAttributesResponse'
-  { _mlbarsLoadBalancerName       :: !(Maybe Text)
-  , _mlbarsLoadBalancerAttributes :: !(Maybe LoadBalancerAttributes)
-  , _mlbarsResponseStatus         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyLoadBalancerAttributesResponse =
+  ModifyLoadBalancerAttributesResponse'
+    { _mlbarsLoadBalancerName       :: !(Maybe Text)
+    , _mlbarsLoadBalancerAttributes :: !(Maybe LoadBalancerAttributes)
+    , _mlbarsResponseStatus         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyLoadBalancerAttributesResponse' with the minimum fields required to make a request.

@@ -26,14 +26,16 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'destination' smart constructor.
-data Destination = Destination'
-  { _dTargetARN       :: !(Maybe Text)
-  , _dCreationTime    :: !(Maybe Nat)
-  , _dArn             :: !(Maybe Text)
-  , _dAccessPolicy    :: !(Maybe Text)
-  , _dDestinationName :: !(Maybe Text)
-  , _dRoleARN         :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Destination =
+  Destination'
+    { _dTargetARN       :: !(Maybe Text)
+    , _dCreationTime    :: !(Maybe Nat)
+    , _dArn             :: !(Maybe Text)
+    , _dAccessPolicy    :: !(Maybe Text)
+    , _dDestinationName :: !(Maybe Text)
+    , _dRoleARN         :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Destination' with the minimum fields required to make a request.
@@ -108,17 +110,19 @@ instance NFData Destination where
 --
 --
 -- /See:/ 'exportTask' smart constructor.
-data ExportTask = ExportTask'
-  { _etDestinationPrefix :: !(Maybe Text)
-  , _etDestination       :: !(Maybe Text)
-  , _etStatus            :: !(Maybe ExportTaskStatus)
-  , _etTaskName          :: !(Maybe Text)
-  , _etTaskId            :: !(Maybe Text)
-  , _etTo                :: !(Maybe Nat)
-  , _etFrom              :: !(Maybe Nat)
-  , _etLogGroupName      :: !(Maybe Text)
-  , _etExecutionInfo     :: !(Maybe ExportTaskExecutionInfo)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ExportTask =
+  ExportTask'
+    { _etDestinationPrefix :: !(Maybe Text)
+    , _etDestination       :: !(Maybe Text)
+    , _etStatus            :: !(Maybe ExportTaskStatus)
+    , _etTaskName          :: !(Maybe Text)
+    , _etTaskId            :: !(Maybe Text)
+    , _etTo                :: !(Maybe Nat)
+    , _etFrom              :: !(Maybe Nat)
+    , _etLogGroupName      :: !(Maybe Text)
+    , _etExecutionInfo     :: !(Maybe ExportTaskExecutionInfo)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ExportTask' with the minimum fields required to make a request.
@@ -217,10 +221,12 @@ instance NFData ExportTask where
 --
 --
 -- /See:/ 'exportTaskExecutionInfo' smart constructor.
-data ExportTaskExecutionInfo = ExportTaskExecutionInfo'
-  { _eteiCreationTime   :: !(Maybe Nat)
-  , _eteiCompletionTime :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ExportTaskExecutionInfo =
+  ExportTaskExecutionInfo'
+    { _eteiCreationTime   :: !(Maybe Nat)
+    , _eteiCompletionTime :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ExportTaskExecutionInfo' with the minimum fields required to make a request.
@@ -261,10 +267,12 @@ instance NFData ExportTaskExecutionInfo where
 --
 --
 -- /See:/ 'exportTaskStatus' smart constructor.
-data ExportTaskStatus = ExportTaskStatus'
-  { _etsCode    :: !(Maybe ExportTaskStatusCode)
-  , _etsMessage :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ExportTaskStatus =
+  ExportTaskStatus'
+    { _etsCode    :: !(Maybe ExportTaskStatusCode)
+    , _etsMessage :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ExportTaskStatus' with the minimum fields required to make a request.
@@ -303,13 +311,15 @@ instance NFData ExportTaskStatus where
 --
 --
 -- /See:/ 'filteredLogEvent' smart constructor.
-data FilteredLogEvent = FilteredLogEvent'
-  { _fleIngestionTime :: !(Maybe Nat)
-  , _fleLogStreamName :: !(Maybe Text)
-  , _fleMessage       :: !(Maybe Text)
-  , _fleTimestamp     :: !(Maybe Nat)
-  , _fleEventId       :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data FilteredLogEvent =
+  FilteredLogEvent'
+    { _fleIngestionTime :: !(Maybe Nat)
+    , _fleLogStreamName :: !(Maybe Text)
+    , _fleMessage       :: !(Maybe Text)
+    , _fleTimestamp     :: !(Maybe Nat)
+    , _fleEventId       :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'FilteredLogEvent' with the minimum fields required to make a request.
@@ -376,10 +386,12 @@ instance NFData FilteredLogEvent where
 --
 --
 -- /See:/ 'inputLogEvent' smart constructor.
-data InputLogEvent = InputLogEvent'
-  { _ileTimestamp :: !Nat
-  , _ileMessage   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InputLogEvent =
+  InputLogEvent'
+    { _ileTimestamp :: !Nat
+    , _ileMessage   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InputLogEvent' with the minimum fields required to make a request.
@@ -421,15 +433,17 @@ instance ToJSON InputLogEvent where
 --
 --
 -- /See:/ 'logGroup' smart constructor.
-data LogGroup = LogGroup'
-  { _lgCreationTime      :: !(Maybe Nat)
-  , _lgMetricFilterCount :: !(Maybe Int)
-  , _lgArn               :: !(Maybe Text)
-  , _lgLogGroupName      :: !(Maybe Text)
-  , _lgRetentionInDays   :: !(Maybe Int)
-  , _lgKmsKeyId          :: !(Maybe Text)
-  , _lgStoredBytes       :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LogGroup =
+  LogGroup'
+    { _lgCreationTime      :: !(Maybe Nat)
+    , _lgMetricFilterCount :: !(Maybe Int)
+    , _lgArn               :: !(Maybe Text)
+    , _lgLogGroupName      :: !(Maybe Text)
+    , _lgRetentionInDays   :: !(Maybe Int)
+    , _lgKmsKeyId          :: !(Maybe Text)
+    , _lgStoredBytes       :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LogGroup' with the minimum fields required to make a request.
@@ -513,16 +527,18 @@ instance NFData LogGroup where
 --
 --
 -- /See:/ 'logStream' smart constructor.
-data LogStream = LogStream'
-  { _lsCreationTime        :: !(Maybe Nat)
-  , _lsUploadSequenceToken :: !(Maybe Text)
-  , _lsArn                 :: !(Maybe Text)
-  , _lsFirstEventTimestamp :: !(Maybe Nat)
-  , _lsLogStreamName       :: !(Maybe Text)
-  , _lsStoredBytes         :: !(Maybe Nat)
-  , _lsLastIngestionTime   :: !(Maybe Nat)
-  , _lsLastEventTimestamp  :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LogStream =
+  LogStream'
+    { _lsCreationTime        :: !(Maybe Nat)
+    , _lsUploadSequenceToken :: !(Maybe Text)
+    , _lsArn                 :: !(Maybe Text)
+    , _lsFirstEventTimestamp :: !(Maybe Nat)
+    , _lsLogStreamName       :: !(Maybe Text)
+    , _lsStoredBytes         :: !(Maybe Nat)
+    , _lsLastIngestionTime   :: !(Maybe Nat)
+    , _lsLastEventTimestamp  :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LogStream' with the minimum fields required to make a request.
@@ -614,13 +630,15 @@ instance NFData LogStream where
 --
 --
 -- /See:/ 'metricFilter' smart constructor.
-data MetricFilter = MetricFilter'
-  { _mfCreationTime          :: !(Maybe Nat)
-  , _mfFilterName            :: !(Maybe Text)
-  , _mfLogGroupName          :: !(Maybe Text)
-  , _mfFilterPattern         :: !(Maybe Text)
-  , _mfMetricTransformations :: !(Maybe (List1 MetricTransformation))
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MetricFilter =
+  MetricFilter'
+    { _mfCreationTime          :: !(Maybe Nat)
+    , _mfFilterName            :: !(Maybe Text)
+    , _mfLogGroupName          :: !(Maybe Text)
+    , _mfFilterPattern         :: !(Maybe Text)
+    , _mfMetricTransformations :: !(Maybe (List1 MetricTransformation))
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MetricFilter' with the minimum fields required to make a request.
@@ -687,11 +705,13 @@ instance NFData MetricFilter where
 --
 --
 -- /See:/ 'metricFilterMatchRecord' smart constructor.
-data MetricFilterMatchRecord = MetricFilterMatchRecord'
-  { _mfmrExtractedValues :: !(Maybe (Map Text Text))
-  , _mfmrEventNumber     :: !(Maybe Integer)
-  , _mfmrEventMessage    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MetricFilterMatchRecord =
+  MetricFilterMatchRecord'
+    { _mfmrExtractedValues :: !(Maybe (Map Text Text))
+    , _mfmrEventNumber     :: !(Maybe Integer)
+    , _mfmrEventMessage    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MetricFilterMatchRecord' with the minimum fields required to make a request.
@@ -743,12 +763,14 @@ instance NFData MetricFilterMatchRecord where
 --
 --
 -- /See:/ 'metricTransformation' smart constructor.
-data MetricTransformation = MetricTransformation'
-  { _mtDefaultValue    :: !(Maybe Double)
-  , _mtMetricName      :: !Text
-  , _mtMetricNamespace :: !Text
-  , _mtMetricValue     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MetricTransformation =
+  MetricTransformation'
+    { _mtDefaultValue    :: !(Maybe Double)
+    , _mtMetricName      :: !Text
+    , _mtMetricNamespace :: !Text
+    , _mtMetricValue     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MetricTransformation' with the minimum fields required to make a request.
@@ -819,11 +841,13 @@ instance ToJSON MetricTransformation where
 --
 --
 -- /See:/ 'outputLogEvent' smart constructor.
-data OutputLogEvent = OutputLogEvent'
-  { _oleIngestionTime :: !(Maybe Nat)
-  , _oleMessage       :: !(Maybe Text)
-  , _oleTimestamp     :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data OutputLogEvent =
+  OutputLogEvent'
+    { _oleIngestionTime :: !(Maybe Nat)
+    , _oleMessage       :: !(Maybe Text)
+    , _oleTimestamp     :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OutputLogEvent' with the minimum fields required to make a request.
@@ -874,11 +898,13 @@ instance NFData OutputLogEvent where
 --
 --
 -- /See:/ 'rejectedLogEventsInfo' smart constructor.
-data RejectedLogEventsInfo = RejectedLogEventsInfo'
-  { _rleiTooOldLogEventEndIndex   :: !(Maybe Int)
-  , _rleiTooNewLogEventStartIndex :: !(Maybe Int)
-  , _rleiExpiredLogEventEndIndex  :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RejectedLogEventsInfo =
+  RejectedLogEventsInfo'
+    { _rleiTooOldLogEventEndIndex   :: !(Maybe Int)
+    , _rleiTooNewLogEventStartIndex :: !(Maybe Int)
+    , _rleiExpiredLogEventEndIndex  :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RejectedLogEventsInfo' with the minimum fields required to make a request.
@@ -930,11 +956,13 @@ instance NFData RejectedLogEventsInfo where
 --
 --
 -- /See:/ 'resourcePolicy' smart constructor.
-data ResourcePolicy = ResourcePolicy'
-  { _rpPolicyName      :: !(Maybe Text)
-  , _rpPolicyDocument  :: !(Maybe Text)
-  , _rpLastUpdatedTime :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ResourcePolicy =
+  ResourcePolicy'
+    { _rpPolicyName      :: !(Maybe Text)
+    , _rpPolicyDocument  :: !(Maybe Text)
+    , _rpLastUpdatedTime :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ResourcePolicy' with the minimum fields required to make a request.
@@ -985,10 +1013,12 @@ instance NFData ResourcePolicy where
 --
 --
 -- /See:/ 'searchedLogStream' smart constructor.
-data SearchedLogStream = SearchedLogStream'
-  { _slsLogStreamName      :: !(Maybe Text)
-  , _slsSearchedCompletely :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SearchedLogStream =
+  SearchedLogStream'
+    { _slsLogStreamName      :: !(Maybe Text)
+    , _slsSearchedCompletely :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SearchedLogStream' with the minimum fields required to make a request.
@@ -1030,15 +1060,17 @@ instance NFData SearchedLogStream where
 --
 --
 -- /See:/ 'subscriptionFilter' smart constructor.
-data SubscriptionFilter = SubscriptionFilter'
-  { _sfCreationTime   :: !(Maybe Nat)
-  , _sfFilterName     :: !(Maybe Text)
-  , _sfDistribution   :: !(Maybe Distribution)
-  , _sfDestinationARN :: !(Maybe Text)
-  , _sfLogGroupName   :: !(Maybe Text)
-  , _sfFilterPattern  :: !(Maybe Text)
-  , _sfRoleARN        :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SubscriptionFilter =
+  SubscriptionFilter'
+    { _sfCreationTime   :: !(Maybe Nat)
+    , _sfFilterName     :: !(Maybe Text)
+    , _sfDistribution   :: !(Maybe Distribution)
+    , _sfDestinationARN :: !(Maybe Text)
+    , _sfLogGroupName   :: !(Maybe Text)
+    , _sfFilterPattern  :: !(Maybe Text)
+    , _sfRoleARN        :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SubscriptionFilter' with the minimum fields required to make a request.

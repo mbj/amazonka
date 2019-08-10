@@ -59,9 +59,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getEvaluation' smart constructor.
-newtype GetEvaluation = GetEvaluation'
-  { _geEvaluationId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetEvaluation =
+  GetEvaluation'
+    { _geEvaluationId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetEvaluation' with the minimum fields required to make a request.
@@ -132,24 +134,26 @@ instance ToQuery GetEvaluation where
 --
 --
 -- /See:/ 'getEvaluationResponse' smart constructor.
-data GetEvaluationResponse = GetEvaluationResponse'
-  { _gersStatus                 :: !(Maybe EntityStatus)
-  , _gersPerformanceMetrics     :: !(Maybe PerformanceMetrics)
-  , _gersLastUpdatedAt          :: !(Maybe POSIX)
-  , _gersCreatedAt              :: !(Maybe POSIX)
-  , _gersComputeTime            :: !(Maybe Integer)
-  , _gersInputDataLocationS3    :: !(Maybe Text)
-  , _gersMLModelId              :: !(Maybe Text)
-  , _gersStartedAt              :: !(Maybe POSIX)
-  , _gersFinishedAt             :: !(Maybe POSIX)
-  , _gersCreatedByIAMUser       :: !(Maybe Text)
-  , _gersName                   :: !(Maybe Text)
-  , _gersLogURI                 :: !(Maybe Text)
-  , _gersEvaluationId           :: !(Maybe Text)
-  , _gersMessage                :: !(Maybe Text)
-  , _gersEvaluationDataSourceId :: !(Maybe Text)
-  , _gersResponseStatus         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetEvaluationResponse =
+  GetEvaluationResponse'
+    { _gersStatus                 :: !(Maybe EntityStatus)
+    , _gersPerformanceMetrics     :: !(Maybe PerformanceMetrics)
+    , _gersLastUpdatedAt          :: !(Maybe POSIX)
+    , _gersCreatedAt              :: !(Maybe POSIX)
+    , _gersComputeTime            :: !(Maybe Integer)
+    , _gersInputDataLocationS3    :: !(Maybe Text)
+    , _gersMLModelId              :: !(Maybe Text)
+    , _gersStartedAt              :: !(Maybe POSIX)
+    , _gersFinishedAt             :: !(Maybe POSIX)
+    , _gersCreatedByIAMUser       :: !(Maybe Text)
+    , _gersName                   :: !(Maybe Text)
+    , _gersLogURI                 :: !(Maybe Text)
+    , _gersEvaluationId           :: !(Maybe Text)
+    , _gersMessage                :: !(Maybe Text)
+    , _gersEvaluationDataSourceId :: !(Maybe Text)
+    , _gersResponseStatus         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetEvaluationResponse' with the minimum fields required to make a request.

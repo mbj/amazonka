@@ -50,10 +50,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'addListenerCertificates' smart constructor.
-data AddListenerCertificates = AddListenerCertificates'
-  { _alcListenerARN  :: !Text
-  , _alcCertificates :: ![Certificate]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddListenerCertificates =
+  AddListenerCertificates'
+    { _alcListenerARN  :: !Text
+    , _alcCertificates :: ![Certificate]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddListenerCertificates' with the minimum fields required to make a request.
@@ -112,10 +114,12 @@ instance ToQuery AddListenerCertificates where
                  toQueryList "member" _alcCertificates]
 
 -- | /See:/ 'addListenerCertificatesResponse' smart constructor.
-data AddListenerCertificatesResponse = AddListenerCertificatesResponse'
-  { _alcrsCertificates   :: !(Maybe [Certificate])
-  , _alcrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data AddListenerCertificatesResponse =
+  AddListenerCertificatesResponse'
+    { _alcrsCertificates   :: !(Maybe [Certificate])
+    , _alcrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AddListenerCertificatesResponse' with the minimum fields required to make a request.

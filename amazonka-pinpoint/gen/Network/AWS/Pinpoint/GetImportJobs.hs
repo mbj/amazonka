@@ -45,11 +45,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getImportJobs' smart constructor.
-data GetImportJobs = GetImportJobs'
-  { _gijsToken         :: !(Maybe Text)
-  , _gijsPageSize      :: !(Maybe Text)
-  , _gijsApplicationId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetImportJobs =
+  GetImportJobs'
+    { _gijsToken         :: !(Maybe Text)
+    , _gijsPageSize      :: !(Maybe Text)
+    , _gijsApplicationId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetImportJobs' with the minimum fields required to make a request.
@@ -116,10 +118,12 @@ instance ToQuery GetImportJobs where
               ["token" =: _gijsToken, "page-size" =: _gijsPageSize]
 
 -- | /See:/ 'getImportJobsResponse' smart constructor.
-data GetImportJobsResponse = GetImportJobsResponse'
-  { _gijsrsResponseStatus     :: !Int
-  , _gijsrsImportJobsResponse :: !ImportJobsResponse
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetImportJobsResponse =
+  GetImportJobsResponse'
+    { _gijsrsResponseStatus     :: !Int
+    , _gijsrsImportJobsResponse :: !ImportJobsResponse
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetImportJobsResponse' with the minimum fields required to make a request.

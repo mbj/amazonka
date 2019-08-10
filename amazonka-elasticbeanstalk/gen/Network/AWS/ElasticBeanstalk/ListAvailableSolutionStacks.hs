@@ -95,11 +95,13 @@ instance ToQuery ListAvailableSolutionStacks where
 --
 --
 -- /See:/ 'listAvailableSolutionStacksResponse' smart constructor.
-data ListAvailableSolutionStacksResponse = ListAvailableSolutionStacksResponse'
-  { _lassrsSolutionStacks       :: !(Maybe [Text])
-  , _lassrsSolutionStackDetails :: !(Maybe [SolutionStackDescription])
-  , _lassrsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAvailableSolutionStacksResponse =
+  ListAvailableSolutionStacksResponse'
+    { _lassrsSolutionStacks       :: !(Maybe [Text])
+    , _lassrsSolutionStackDetails :: !(Maybe [SolutionStackDescription])
+    , _lassrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAvailableSolutionStacksResponse' with the minimum fields required to make a request.

@@ -69,12 +69,14 @@ import Network.AWS.WAF.Types
 import Network.AWS.WAF.Types.Product
 
 -- | /See:/ 'createWebACL' smart constructor.
-data CreateWebACL = CreateWebACL'
-  { _cwaName          :: !Text
-  , _cwaMetricName    :: !Text
-  , _cwaDefaultAction :: !WafAction
-  , _cwaChangeToken   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateWebACL =
+  CreateWebACL'
+    { _cwaName          :: !Text
+    , _cwaMetricName    :: !Text
+    , _cwaDefaultAction :: !WafAction
+    , _cwaChangeToken   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateWebACL' with the minimum fields required to make a request.
@@ -158,11 +160,13 @@ instance ToQuery CreateWebACL where
         toQuery = const mempty
 
 -- | /See:/ 'createWebACLResponse' smart constructor.
-data CreateWebACLResponse = CreateWebACLResponse'
-  { _cwarsWebACL         :: !(Maybe WebACL)
-  , _cwarsChangeToken    :: !(Maybe Text)
-  , _cwarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateWebACLResponse =
+  CreateWebACLResponse'
+    { _cwarsWebACL         :: !(Maybe WebACL)
+    , _cwarsChangeToken    :: !(Maybe Text)
+    , _cwarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateWebACLResponse' with the minimum fields required to make a request.

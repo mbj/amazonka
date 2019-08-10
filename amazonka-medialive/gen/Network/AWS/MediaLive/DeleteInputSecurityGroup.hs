@@ -44,9 +44,11 @@ import Network.AWS.Response
 -- | Placeholder documentation for DeleteInputSecurityGroupRequest
 --
 -- /See:/ 'deleteInputSecurityGroup' smart constructor.
-newtype DeleteInputSecurityGroup = DeleteInputSecurityGroup'
-  { _dInputSecurityGroupId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteInputSecurityGroup =
+  DeleteInputSecurityGroup'
+    { _dInputSecurityGroupId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteInputSecurityGroup' with the minimum fields required to make a request.
@@ -98,9 +100,11 @@ instance ToQuery DeleteInputSecurityGroup where
 -- | Placeholder documentation for DeleteInputSecurityGroupResponse
 --
 -- /See:/ 'deleteInputSecurityGroupResponse' smart constructor.
-newtype DeleteInputSecurityGroupResponse = DeleteInputSecurityGroupResponse'
-  { _disgrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteInputSecurityGroupResponse =
+  DeleteInputSecurityGroupResponse'
+    { _disgrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteInputSecurityGroupResponse' with the minimum fields required to make a request.

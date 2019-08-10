@@ -51,11 +51,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'putEvaluations' smart constructor.
-data PutEvaluations = PutEvaluations'
-  { _peEvaluations :: !(Maybe [Evaluation])
-  , _peTestMode    :: !(Maybe Bool)
-  , _peResultToken :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutEvaluations =
+  PutEvaluations'
+    { _peEvaluations :: !(Maybe [Evaluation])
+    , _peTestMode    :: !(Maybe Bool)
+    , _peResultToken :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutEvaluations' with the minimum fields required to make a request.
@@ -132,10 +134,12 @@ instance ToQuery PutEvaluations where
 --
 --
 -- /See:/ 'putEvaluationsResponse' smart constructor.
-data PutEvaluationsResponse = PutEvaluationsResponse'
-  { _persFailedEvaluations :: !(Maybe [Evaluation])
-  , _persResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutEvaluationsResponse =
+  PutEvaluationsResponse'
+    { _persFailedEvaluations :: !(Maybe [Evaluation])
+    , _persResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutEvaluationsResponse' with the minimum fields required to make a request.

@@ -48,10 +48,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getLoggerDefinitionVersion' smart constructor.
-data GetLoggerDefinitionVersion = GetLoggerDefinitionVersion'
-  { _gldvLoggerDefinitionVersionId :: !Text
-  , _gldvLoggerDefinitionId        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetLoggerDefinitionVersion =
+  GetLoggerDefinitionVersion'
+    { _gldvLoggerDefinitionVersionId :: !Text
+    , _gldvLoggerDefinitionId        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetLoggerDefinitionVersion' with the minimum fields required to make a request.
@@ -116,14 +118,16 @@ instance ToQuery GetLoggerDefinitionVersion where
         toQuery = const mempty
 
 -- | /See:/ 'getLoggerDefinitionVersionResponse' smart constructor.
-data GetLoggerDefinitionVersionResponse = GetLoggerDefinitionVersionResponse'
-  { _gldvrsDefinition        :: !(Maybe LoggerDefinitionVersion)
-  , _gldvrsARN               :: !(Maybe Text)
-  , _gldvrsCreationTimestamp :: !(Maybe Text)
-  , _gldvrsVersion           :: !(Maybe Text)
-  , _gldvrsId                :: !(Maybe Text)
-  , _gldvrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetLoggerDefinitionVersionResponse =
+  GetLoggerDefinitionVersionResponse'
+    { _gldvrsDefinition        :: !(Maybe LoggerDefinitionVersion)
+    , _gldvrsARN               :: !(Maybe Text)
+    , _gldvrsCreationTimestamp :: !(Maybe Text)
+    , _gldvrsVersion           :: !(Maybe Text)
+    , _gldvrsId                :: !(Maybe Text)
+    , _gldvrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetLoggerDefinitionVersionResponse' with the minimum fields required to make a request.

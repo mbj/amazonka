@@ -51,11 +51,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'promoteReadReplica' smart constructor.
-data PromoteReadReplica = PromoteReadReplica'
-  { _prrPreferredBackupWindow :: !(Maybe Text)
-  , _prrBackupRetentionPeriod :: !(Maybe Int)
-  , _prrDBInstanceIdentifier  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PromoteReadReplica =
+  PromoteReadReplica'
+    { _prrPreferredBackupWindow :: !(Maybe Text)
+    , _prrBackupRetentionPeriod :: !(Maybe Int)
+    , _prrDBInstanceIdentifier  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PromoteReadReplica' with the minimum fields required to make a request.
@@ -120,10 +122,12 @@ instance ToQuery PromoteReadReplica where
                "DBInstanceIdentifier" =: _prrDBInstanceIdentifier]
 
 -- | /See:/ 'promoteReadReplicaResponse' smart constructor.
-data PromoteReadReplicaResponse = PromoteReadReplicaResponse'
-  { _prrrsDBInstance     :: !(Maybe DBInstance)
-  , _prrrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PromoteReadReplicaResponse =
+  PromoteReadReplicaResponse'
+    { _prrrsDBInstance     :: !(Maybe DBInstance)
+    , _prrrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PromoteReadReplicaResponse' with the minimum fields required to make a request.

@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'startFleet' smart constructor.
-newtype StartFleet = StartFleet'
-  { _staName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StartFleet =
+  StartFleet'
+    { _staName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartFleet' with the minimum fields required to make a request.
@@ -96,9 +98,11 @@ instance ToQuery StartFleet where
         toQuery = const mempty
 
 -- | /See:/ 'startFleetResponse' smart constructor.
-newtype StartFleetResponse = StartFleetResponse'
-  { _sfrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StartFleetResponse =
+  StartFleetResponse'
+    { _sfrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartFleetResponse' with the minimum fields required to make a request.

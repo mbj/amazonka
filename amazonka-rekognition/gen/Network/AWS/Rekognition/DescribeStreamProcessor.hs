@@ -54,9 +54,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeStreamProcessor' smart constructor.
-newtype DescribeStreamProcessor = DescribeStreamProcessor'
-  { _dspName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeStreamProcessor =
+  DescribeStreamProcessor'
+    { _dspName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeStreamProcessor' with the minimum fields required to make a request.
@@ -118,19 +120,21 @@ instance ToQuery DescribeStreamProcessor where
         toQuery = const mempty
 
 -- | /See:/ 'describeStreamProcessorResponse' smart constructor.
-data DescribeStreamProcessorResponse = DescribeStreamProcessorResponse'
-  { _dsprsStatus              :: !(Maybe StreamProcessorStatus)
-  , _dsprsSettings            :: !(Maybe StreamProcessorSettings)
-  , _dsprsInput               :: !(Maybe StreamProcessorInput)
-  , _dsprsOutput              :: !(Maybe StreamProcessorOutput)
-  , _dsprsStreamProcessorARN  :: !(Maybe Text)
-  , _dsprsStatusMessage       :: !(Maybe Text)
-  , _dsprsName                :: !(Maybe Text)
-  , _dsprsCreationTimestamp   :: !(Maybe POSIX)
-  , _dsprsLastUpdateTimestamp :: !(Maybe POSIX)
-  , _dsprsRoleARN             :: !(Maybe Text)
-  , _dsprsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeStreamProcessorResponse =
+  DescribeStreamProcessorResponse'
+    { _dsprsStatus              :: !(Maybe StreamProcessorStatus)
+    , _dsprsSettings            :: !(Maybe StreamProcessorSettings)
+    , _dsprsInput               :: !(Maybe StreamProcessorInput)
+    , _dsprsOutput              :: !(Maybe StreamProcessorOutput)
+    , _dsprsStreamProcessorARN  :: !(Maybe Text)
+    , _dsprsStatusMessage       :: !(Maybe Text)
+    , _dsprsName                :: !(Maybe Text)
+    , _dsprsCreationTimestamp   :: !(Maybe POSIX)
+    , _dsprsLastUpdateTimestamp :: !(Maybe POSIX)
+    , _dsprsRoleARN             :: !(Maybe Text)
+    , _dsprsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeStreamProcessorResponse' with the minimum fields required to make a request.

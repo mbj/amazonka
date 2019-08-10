@@ -50,11 +50,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'cancelConversionTask' smart constructor.
-data CancelConversionTask = CancelConversionTask'
-  { _cctReasonMessage    :: !(Maybe Text)
-  , _cctDryRun           :: !(Maybe Bool)
-  , _cctConversionTaskId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CancelConversionTask =
+  CancelConversionTask'
+    { _cctReasonMessage    :: !(Maybe Text)
+    , _cctDryRun           :: !(Maybe Bool)
+    , _cctConversionTaskId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CancelConversionTask' with the minimum fields required to make a request.

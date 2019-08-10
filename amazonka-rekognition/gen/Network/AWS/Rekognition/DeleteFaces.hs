@@ -48,10 +48,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteFaces' smart constructor.
-data DeleteFaces = DeleteFaces'
-  { _dfCollectionId :: !Text
-  , _dfFaceIds      :: !(List1 Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteFaces =
+  DeleteFaces'
+    { _dfCollectionId :: !Text
+    , _dfFaceIds      :: !(List1 Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteFaces' with the minimum fields required to make a request.
@@ -114,10 +116,12 @@ instance ToQuery DeleteFaces where
         toQuery = const mempty
 
 -- | /See:/ 'deleteFacesResponse' smart constructor.
-data DeleteFacesResponse = DeleteFacesResponse'
-  { _dfsrsDeletedFaces   :: !(Maybe (List1 Text))
-  , _dfsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteFacesResponse =
+  DeleteFacesResponse'
+    { _dfsrsDeletedFaces   :: !(Maybe (List1 Text))
+    , _dfsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteFacesResponse' with the minimum fields required to make a request.

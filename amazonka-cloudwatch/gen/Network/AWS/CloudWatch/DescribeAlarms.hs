@@ -54,14 +54,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'describeAlarms' smart constructor.
-data DescribeAlarms = DescribeAlarms'
-  { _daAlarmNamePrefix :: !(Maybe Text)
-  , _daActionPrefix    :: !(Maybe Text)
-  , _daNextToken       :: !(Maybe Text)
-  , _daStateValue      :: !(Maybe StateValue)
-  , _daAlarmNames      :: !(Maybe [Text])
-  , _daMaxRecords      :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAlarms =
+  DescribeAlarms'
+    { _daAlarmNamePrefix :: !(Maybe Text)
+    , _daActionPrefix    :: !(Maybe Text)
+    , _daNextToken       :: !(Maybe Text)
+    , _daStateValue      :: !(Maybe StateValue)
+    , _daAlarmNames      :: !(Maybe [Text])
+    , _daMaxRecords      :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAlarms' with the minimum fields required to make a request.
@@ -159,11 +161,13 @@ instance ToQuery DescribeAlarms where
                "MaxRecords" =: _daMaxRecords]
 
 -- | /See:/ 'describeAlarmsResponse' smart constructor.
-data DescribeAlarmsResponse = DescribeAlarmsResponse'
-  { _darsMetricAlarms   :: !(Maybe [MetricAlarm])
-  , _darsNextToken      :: !(Maybe Text)
-  , _darsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeAlarmsResponse =
+  DescribeAlarmsResponse'
+    { _darsMetricAlarms   :: !(Maybe [MetricAlarm])
+    , _darsNextToken      :: !(Maybe Text)
+    , _darsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeAlarmsResponse' with the minimum fields required to make a request.

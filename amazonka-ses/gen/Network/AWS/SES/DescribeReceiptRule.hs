@@ -54,10 +54,12 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'describeReceiptRule' smart constructor.
-data DescribeReceiptRule = DescribeReceiptRule'
-  { _drrRuleSetName :: !Text
-  , _drrRuleName    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeReceiptRule =
+  DescribeReceiptRule'
+    { _drrRuleSetName :: !Text
+    , _drrRuleName    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeReceiptRule' with the minimum fields required to make a request.
@@ -117,10 +119,12 @@ instance ToQuery DescribeReceiptRule where
 --
 --
 -- /See:/ 'describeReceiptRuleResponse' smart constructor.
-data DescribeReceiptRuleResponse = DescribeReceiptRuleResponse'
-  { _drrrsRule           :: !(Maybe ReceiptRule)
-  , _drrrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeReceiptRuleResponse =
+  DescribeReceiptRuleResponse'
+    { _drrrsRule           :: !(Maybe ReceiptRule)
+    , _drrrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeReceiptRuleResponse' with the minimum fields required to make a request.

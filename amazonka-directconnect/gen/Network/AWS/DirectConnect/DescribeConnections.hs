@@ -50,9 +50,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeConnections' smart constructor.
-newtype DescribeConnections = DescribeConnections'
-  { _dConnectionId :: Maybe Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeConnections =
+  DescribeConnections'
+    { _dConnectionId :: Maybe Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeConnections' with the minimum fields required to make a request.

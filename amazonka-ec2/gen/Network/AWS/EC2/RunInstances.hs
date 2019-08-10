@@ -110,39 +110,41 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'runInstances' smart constructor.
-data RunInstances = RunInstances'
-  { _risAdditionalInfo :: !(Maybe Text)
-  , _risSecurityGroupIds :: !(Maybe [Text])
-  , _risSecurityGroups :: !(Maybe [Text])
-  , _risClientToken :: !(Maybe Text)
-  , _risInstanceMarketOptions :: !(Maybe InstanceMarketOptionsRequest)
-  , _risDisableAPITermination :: !(Maybe Bool)
-  , _risKeyName :: !(Maybe Text)
-  , _risNetworkInterfaces :: !(Maybe [InstanceNetworkInterfaceSpecification])
-  , _risRAMDiskId :: !(Maybe Text)
-  , _risCPUOptions :: !(Maybe CPUOptionsRequest)
-  , _risSubnetId :: !(Maybe Text)
-  , _risKernelId :: !(Maybe Text)
-  , _risInstanceType :: !(Maybe InstanceType)
-  , _risEBSOptimized :: !(Maybe Bool)
-  , _risUserData :: !(Maybe Text)
-  , _risMonitoring :: !(Maybe RunInstancesMonitoringEnabled)
-  , _risTagSpecifications :: !(Maybe [TagSpecification])
-  , _risIPv6AddressCount :: !(Maybe Int)
-  , _risIAMInstanceProfile :: !(Maybe IAMInstanceProfileSpecification)
-  , _risElasticGpuSpecification :: !(Maybe [ElasticGpuSpecification])
-  , _risImageId :: !(Maybe Text)
-  , _risPrivateIPAddress :: !(Maybe Text)
-  , _risInstanceInitiatedShutdownBehavior :: !(Maybe ShutdownBehavior)
-  , _risLaunchTemplate :: !(Maybe LaunchTemplateSpecification)
-  , _risCreditSpecification :: !(Maybe CreditSpecificationRequest)
-  , _risBlockDeviceMappings :: !(Maybe [BlockDeviceMapping])
-  , _risDryRun :: !(Maybe Bool)
-  , _risPlacement :: !(Maybe Placement)
-  , _risIPv6Addresses :: !(Maybe [InstanceIPv6Address])
-  , _risMaxCount :: !Int
-  , _risMinCount :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RunInstances =
+  RunInstances'
+    { _risAdditionalInfo :: !(Maybe Text)
+    , _risSecurityGroupIds :: !(Maybe [Text])
+    , _risSecurityGroups :: !(Maybe [Text])
+    , _risClientToken :: !(Maybe Text)
+    , _risInstanceMarketOptions :: !(Maybe InstanceMarketOptionsRequest)
+    , _risDisableAPITermination :: !(Maybe Bool)
+    , _risKeyName :: !(Maybe Text)
+    , _risNetworkInterfaces :: !(Maybe [InstanceNetworkInterfaceSpecification])
+    , _risRAMDiskId :: !(Maybe Text)
+    , _risCPUOptions :: !(Maybe CPUOptionsRequest)
+    , _risSubnetId :: !(Maybe Text)
+    , _risKernelId :: !(Maybe Text)
+    , _risInstanceType :: !(Maybe InstanceType)
+    , _risEBSOptimized :: !(Maybe Bool)
+    , _risUserData :: !(Maybe Text)
+    , _risMonitoring :: !(Maybe RunInstancesMonitoringEnabled)
+    , _risTagSpecifications :: !(Maybe [TagSpecification])
+    , _risIPv6AddressCount :: !(Maybe Int)
+    , _risIAMInstanceProfile :: !(Maybe IAMInstanceProfileSpecification)
+    , _risElasticGpuSpecification :: !(Maybe [ElasticGpuSpecification])
+    , _risImageId :: !(Maybe Text)
+    , _risPrivateIPAddress :: !(Maybe Text)
+    , _risInstanceInitiatedShutdownBehavior :: !(Maybe ShutdownBehavior)
+    , _risLaunchTemplate :: !(Maybe LaunchTemplateSpecification)
+    , _risCreditSpecification :: !(Maybe CreditSpecificationRequest)
+    , _risBlockDeviceMappings :: !(Maybe [BlockDeviceMapping])
+    , _risDryRun :: !(Maybe Bool)
+    , _risPlacement :: !(Maybe Placement)
+    , _risIPv6Addresses :: !(Maybe [InstanceIPv6Address])
+    , _risMaxCount :: !Int
+    , _risMinCount :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RunInstances' with the minimum fields required to make a request.

@@ -53,11 +53,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createClusterSecurityGroup' smart constructor.
-data CreateClusterSecurityGroup = CreateClusterSecurityGroup'
-  { _creTags                     :: !(Maybe [Tag])
-  , _creClusterSecurityGroupName :: !Text
-  , _creDescription              :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateClusterSecurityGroup =
+  CreateClusterSecurityGroup'
+    { _creTags                     :: !(Maybe [Tag])
+    , _creClusterSecurityGroupName :: !Text
+    , _creDescription              :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateClusterSecurityGroup' with the minimum fields required to make a request.
@@ -127,10 +129,12 @@ instance ToQuery CreateClusterSecurityGroup where
                "Description" =: _creDescription]
 
 -- | /See:/ 'createClusterSecurityGroupResponse' smart constructor.
-data CreateClusterSecurityGroupResponse = CreateClusterSecurityGroupResponse'
-  { _crsClusterSecurityGroup :: !(Maybe ClusterSecurityGroup)
-  , _crsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateClusterSecurityGroupResponse =
+  CreateClusterSecurityGroupResponse'
+    { _crsClusterSecurityGroup :: !(Maybe ClusterSecurityGroup)
+    , _crsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateClusterSecurityGroupResponse' with the minimum fields required to make a request.

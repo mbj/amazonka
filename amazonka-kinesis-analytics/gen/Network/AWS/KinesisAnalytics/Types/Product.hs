@@ -26,20 +26,22 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'applicationDetail' smart constructor.
-data ApplicationDetail = ApplicationDetail'
-  { _adApplicationDescription :: !(Maybe Text)
-  , _adOutputDescriptions :: !(Maybe [OutputDescription])
-  , _adCloudWatchLoggingOptionDescriptions :: !(Maybe [CloudWatchLoggingOptionDescription])
-  , _adReferenceDataSourceDescriptions :: !(Maybe [ReferenceDataSourceDescription])
-  , _adInputDescriptions :: !(Maybe [InputDescription])
-  , _adApplicationCode :: !(Maybe Text)
-  , _adCreateTimestamp :: !(Maybe POSIX)
-  , _adLastUpdateTimestamp :: !(Maybe POSIX)
-  , _adApplicationName :: !Text
-  , _adApplicationARN :: !Text
-  , _adApplicationStatus :: !ApplicationStatus
-  , _adApplicationVersionId :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ApplicationDetail =
+  ApplicationDetail'
+    { _adApplicationDescription :: !(Maybe Text)
+    , _adOutputDescriptions :: !(Maybe [OutputDescription])
+    , _adCloudWatchLoggingOptionDescriptions :: !(Maybe [CloudWatchLoggingOptionDescription])
+    , _adReferenceDataSourceDescriptions :: !(Maybe [ReferenceDataSourceDescription])
+    , _adInputDescriptions :: !(Maybe [InputDescription])
+    , _adApplicationCode :: !(Maybe Text)
+    , _adCreateTimestamp :: !(Maybe POSIX)
+    , _adLastUpdateTimestamp :: !(Maybe POSIX)
+    , _adApplicationName :: !Text
+    , _adApplicationARN :: !Text
+    , _adApplicationStatus :: !ApplicationStatus
+    , _adApplicationVersionId :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ApplicationDetail' with the minimum fields required to make a request.
@@ -170,11 +172,13 @@ instance NFData ApplicationDetail where
 --
 --
 -- /See:/ 'applicationSummary' smart constructor.
-data ApplicationSummary = ApplicationSummary'
-  { _asApplicationName   :: !Text
-  , _asApplicationARN    :: !Text
-  , _asApplicationStatus :: !ApplicationStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ApplicationSummary =
+  ApplicationSummary'
+    { _asApplicationName   :: !Text
+    , _asApplicationARN    :: !Text
+    , _asApplicationStatus :: !ApplicationStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ApplicationSummary' with the minimum fields required to make a request.
@@ -228,13 +232,15 @@ instance NFData ApplicationSummary where
 --
 --
 -- /See:/ 'applicationUpdate' smart constructor.
-data ApplicationUpdate = ApplicationUpdate'
-  { _auReferenceDataSourceUpdates :: !(Maybe [ReferenceDataSourceUpdate])
-  , _auInputUpdates :: !(Maybe [InputUpdate])
-  , _auCloudWatchLoggingOptionUpdates :: !(Maybe [CloudWatchLoggingOptionUpdate])
-  , _auOutputUpdates :: !(Maybe [OutputUpdate])
-  , _auApplicationCodeUpdate :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ApplicationUpdate =
+  ApplicationUpdate'
+    { _auReferenceDataSourceUpdates :: !(Maybe [ReferenceDataSourceUpdate])
+    , _auInputUpdates :: !(Maybe [InputUpdate])
+    , _auCloudWatchLoggingOptionUpdates :: !(Maybe [CloudWatchLoggingOptionUpdate])
+    , _auOutputUpdates :: !(Maybe [OutputUpdate])
+    , _auApplicationCodeUpdate :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ApplicationUpdate' with the minimum fields required to make a request.
@@ -308,10 +314,12 @@ instance ToJSON ApplicationUpdate where
 --
 --
 -- /See:/ 'csvMappingParameters' smart constructor.
-data CSVMappingParameters = CSVMappingParameters'
-  { _cmpRecordRowDelimiter    :: !Text
-  , _cmpRecordColumnDelimiter :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CSVMappingParameters =
+  CSVMappingParameters'
+    { _cmpRecordRowDelimiter    :: !Text
+    , _cmpRecordColumnDelimiter :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CSVMappingParameters' with the minimum fields required to make a request.
@@ -367,10 +375,12 @@ instance ToJSON CSVMappingParameters where
 --
 --
 -- /See:/ 'cloudWatchLoggingOption' smart constructor.
-data CloudWatchLoggingOption = CloudWatchLoggingOption'
-  { _cwloLogStreamARN :: !Text
-  , _cwloRoleARN      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CloudWatchLoggingOption =
+  CloudWatchLoggingOption'
+    { _cwloLogStreamARN :: !Text
+    , _cwloRoleARN      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CloudWatchLoggingOption' with the minimum fields required to make a request.
@@ -413,11 +423,13 @@ instance ToJSON CloudWatchLoggingOption where
 --
 --
 -- /See:/ 'cloudWatchLoggingOptionDescription' smart constructor.
-data CloudWatchLoggingOptionDescription = CloudWatchLoggingOptionDescription'
-  { _cwlodCloudWatchLoggingOptionId :: !(Maybe Text)
-  , _cwlodLogStreamARN              :: !Text
-  , _cwlodRoleARN                   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CloudWatchLoggingOptionDescription =
+  CloudWatchLoggingOptionDescription'
+    { _cwlodCloudWatchLoggingOptionId :: !(Maybe Text)
+    , _cwlodLogStreamARN              :: !Text
+    , _cwlodRoleARN                   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CloudWatchLoggingOptionDescription' with the minimum fields required to make a request.
@@ -474,11 +486,13 @@ instance NFData CloudWatchLoggingOptionDescription
 --
 --
 -- /See:/ 'cloudWatchLoggingOptionUpdate' smart constructor.
-data CloudWatchLoggingOptionUpdate = CloudWatchLoggingOptionUpdate'
-  { _cwlouRoleARNUpdate             :: !(Maybe Text)
-  , _cwlouLogStreamARNUpdate        :: !(Maybe Text)
-  , _cwlouCloudWatchLoggingOptionId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CloudWatchLoggingOptionUpdate =
+  CloudWatchLoggingOptionUpdate'
+    { _cwlouRoleARNUpdate             :: !(Maybe Text)
+    , _cwlouLogStreamARNUpdate        :: !(Maybe Text)
+    , _cwlouCloudWatchLoggingOptionId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CloudWatchLoggingOptionUpdate' with the minimum fields required to make a request.
@@ -533,9 +547,11 @@ instance ToJSON CloudWatchLoggingOptionUpdate where
 --
 --
 -- /See:/ 'destinationSchema' smart constructor.
-newtype DestinationSchema = DestinationSchema'
-  { _dsRecordFormatType :: Maybe RecordFormatType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DestinationSchema =
+  DestinationSchema'
+    { _dsRecordFormatType :: Maybe RecordFormatType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DestinationSchema' with the minimum fields required to make a request.
@@ -573,14 +589,16 @@ instance ToJSON DestinationSchema where
 --
 --
 -- /See:/ 'input' smart constructor.
-data Input = Input'
-  { _iInputParallelism             :: !(Maybe InputParallelism)
-  , _iInputProcessingConfiguration :: !(Maybe InputProcessingConfiguration)
-  , _iKinesisStreamsInput          :: !(Maybe KinesisStreamsInput)
-  , _iKinesisFirehoseInput         :: !(Maybe KinesisFirehoseInput)
-  , _iNamePrefix                   :: !Text
-  , _iInputSchema                  :: !SourceSchema
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Input =
+  Input'
+    { _iInputParallelism             :: !(Maybe InputParallelism)
+    , _iInputProcessingConfiguration :: !(Maybe InputProcessingConfiguration)
+    , _iKinesisStreamsInput          :: !(Maybe KinesisStreamsInput)
+    , _iKinesisFirehoseInput         :: !(Maybe KinesisFirehoseInput)
+    , _iNamePrefix                   :: !Text
+    , _iInputSchema                  :: !SourceSchema
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Input' with the minimum fields required to make a request.
@@ -659,10 +677,12 @@ instance ToJSON Input where
 --
 --
 -- /See:/ 'inputConfiguration' smart constructor.
-data InputConfiguration = InputConfiguration'
-  { _icId                                 :: !Text
-  , _icInputStartingPositionConfiguration :: !InputStartingPositionConfiguration
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InputConfiguration =
+  InputConfiguration'
+    { _icId :: !Text
+    , _icInputStartingPositionConfiguration :: !InputStartingPositionConfiguration
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InputConfiguration' with the minimum fields required to make a request.
@@ -710,17 +730,19 @@ instance ToJSON InputConfiguration where
 --
 --
 -- /See:/ 'inputDescription' smart constructor.
-data InputDescription = InputDescription'
-  { _idInputStartingPositionConfiguration :: !(Maybe InputStartingPositionConfiguration)
-  , _idInputParallelism :: !(Maybe InputParallelism)
-  , _idInputId :: !(Maybe Text)
-  , _idInAppStreamNames :: !(Maybe [Text])
-  , _idKinesisFirehoseInputDescription :: !(Maybe KinesisFirehoseInputDescription)
-  , _idInputSchema :: !(Maybe SourceSchema)
-  , _idKinesisStreamsInputDescription :: !(Maybe KinesisStreamsInputDescription)
-  , _idNamePrefix :: !(Maybe Text)
-  , _idInputProcessingConfigurationDescription :: !(Maybe InputProcessingConfigurationDescription)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InputDescription =
+  InputDescription'
+    { _idInputStartingPositionConfiguration :: !(Maybe InputStartingPositionConfiguration)
+    , _idInputParallelism :: !(Maybe InputParallelism)
+    , _idInputId :: !(Maybe Text)
+    , _idInAppStreamNames :: !(Maybe [Text])
+    , _idKinesisFirehoseInputDescription :: !(Maybe KinesisFirehoseInputDescription)
+    , _idInputSchema :: !(Maybe SourceSchema)
+    , _idKinesisStreamsInputDescription :: !(Maybe KinesisStreamsInputDescription)
+    , _idNamePrefix :: !(Maybe Text)
+    , _idInputProcessingConfigurationDescription :: !(Maybe InputProcessingConfigurationDescription)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InputDescription' with the minimum fields required to make a request.
@@ -821,10 +843,12 @@ instance NFData InputDescription where
 --
 --
 -- /See:/ 'inputLambdaProcessor' smart constructor.
-data InputLambdaProcessor = InputLambdaProcessor'
-  { _ilpResourceARN :: !Text
-  , _ilpRoleARN     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InputLambdaProcessor =
+  InputLambdaProcessor'
+    { _ilpResourceARN :: !Text
+    , _ilpRoleARN     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InputLambdaProcessor' with the minimum fields required to make a request.
@@ -867,10 +891,12 @@ instance ToJSON InputLambdaProcessor where
 --
 --
 -- /See:/ 'inputLambdaProcessorDescription' smart constructor.
-data InputLambdaProcessorDescription = InputLambdaProcessorDescription'
-  { _ilpdResourceARN :: !(Maybe Text)
-  , _ilpdRoleARN     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InputLambdaProcessorDescription =
+  InputLambdaProcessorDescription'
+    { _ilpdResourceARN :: !(Maybe Text)
+    , _ilpdRoleARN     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InputLambdaProcessorDescription' with the minimum fields required to make a request.
@@ -913,10 +939,12 @@ instance NFData InputLambdaProcessorDescription where
 --
 --
 -- /See:/ 'inputLambdaProcessorUpdate' smart constructor.
-data InputLambdaProcessorUpdate = InputLambdaProcessorUpdate'
-  { _ilpuRoleARNUpdate     :: !(Maybe Text)
-  , _ilpuResourceARNUpdate :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InputLambdaProcessorUpdate =
+  InputLambdaProcessorUpdate'
+    { _ilpuRoleARNUpdate     :: !(Maybe Text)
+    , _ilpuResourceARNUpdate :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InputLambdaProcessorUpdate' with the minimum fields required to make a request.
@@ -957,9 +985,11 @@ instance ToJSON InputLambdaProcessorUpdate where
 --
 --
 -- /See:/ 'inputParallelism' smart constructor.
-newtype InputParallelism = InputParallelism'
-  { _ipCount :: Maybe Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype InputParallelism =
+  InputParallelism'
+    { _ipCount :: Maybe Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InputParallelism' with the minimum fields required to make a request.
@@ -994,9 +1024,11 @@ instance ToJSON InputParallelism where
 --
 --
 -- /See:/ 'inputParallelismUpdate' smart constructor.
-newtype InputParallelismUpdate = InputParallelismUpdate'
-  { _ipuCountUpdate :: Maybe Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype InputParallelismUpdate =
+  InputParallelismUpdate'
+    { _ipuCountUpdate :: Maybe Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InputParallelismUpdate' with the minimum fields required to make a request.
@@ -1027,9 +1059,11 @@ instance ToJSON InputParallelismUpdate where
 --
 --
 -- /See:/ 'inputProcessingConfiguration' smart constructor.
-newtype InputProcessingConfiguration = InputProcessingConfiguration'
-  { _ipcInputLambdaProcessor :: InputLambdaProcessor
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype InputProcessingConfiguration =
+  InputProcessingConfiguration'
+    { _ipcInputLambdaProcessor :: InputLambdaProcessor
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InputProcessingConfiguration' with the minimum fields required to make a request.
@@ -1066,9 +1100,11 @@ instance ToJSON InputProcessingConfiguration where
 --
 --
 -- /See:/ 'inputProcessingConfigurationDescription' smart constructor.
-newtype InputProcessingConfigurationDescription = InputProcessingConfigurationDescription'
-  { _ipcdInputLambdaProcessorDescription :: Maybe InputLambdaProcessorDescription
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype InputProcessingConfigurationDescription =
+  InputProcessingConfigurationDescription'
+    { _ipcdInputLambdaProcessorDescription :: Maybe InputLambdaProcessorDescription
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InputProcessingConfigurationDescription' with the minimum fields required to make a request.
@@ -1110,9 +1146,11 @@ instance NFData
 --
 --
 -- /See:/ 'inputProcessingConfigurationUpdate' smart constructor.
-newtype InputProcessingConfigurationUpdate = InputProcessingConfigurationUpdate'
-  { _ipcuInputLambdaProcessorUpdate :: InputLambdaProcessorUpdate
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype InputProcessingConfigurationUpdate =
+  InputProcessingConfigurationUpdate'
+    { _ipcuInputLambdaProcessorUpdate :: InputLambdaProcessorUpdate
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InputProcessingConfigurationUpdate' with the minimum fields required to make a request.
@@ -1152,11 +1190,13 @@ instance ToJSON InputProcessingConfigurationUpdate
 --
 --
 -- /See:/ 'inputSchemaUpdate' smart constructor.
-data InputSchemaUpdate = InputSchemaUpdate'
-  { _isuRecordFormatUpdate   :: !(Maybe RecordFormat)
-  , _isuRecordEncodingUpdate :: !(Maybe Text)
-  , _isuRecordColumnUpdates  :: !(Maybe (List1 RecordColumn))
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InputSchemaUpdate =
+  InputSchemaUpdate'
+    { _isuRecordFormatUpdate   :: !(Maybe RecordFormat)
+    , _isuRecordEncodingUpdate :: !(Maybe Text)
+    , _isuRecordColumnUpdates  :: !(Maybe (List1 RecordColumn))
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InputSchemaUpdate' with the minimum fields required to make a request.
@@ -1210,9 +1250,11 @@ instance ToJSON InputSchemaUpdate where
 --
 --
 -- /See:/ 'inputStartingPositionConfiguration' smart constructor.
-newtype InputStartingPositionConfiguration = InputStartingPositionConfiguration'
-  { _ispcInputStartingPosition :: Maybe InputStartingPosition
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype InputStartingPositionConfiguration =
+  InputStartingPositionConfiguration'
+    { _ispcInputStartingPosition :: Maybe InputStartingPosition
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InputStartingPositionConfiguration' with the minimum fields required to make a request.
@@ -1257,15 +1299,17 @@ instance ToJSON InputStartingPositionConfiguration
 --
 --
 -- /See:/ 'inputUpdate' smart constructor.
-data InputUpdate = InputUpdate'
-  { _iuInputProcessingConfigurationUpdate :: !(Maybe InputProcessingConfigurationUpdate)
-  , _iuKinesisStreamsInputUpdate :: !(Maybe KinesisStreamsInputUpdate)
-  , _iuInputParallelismUpdate :: !(Maybe InputParallelismUpdate)
-  , _iuNamePrefixUpdate :: !(Maybe Text)
-  , _iuInputSchemaUpdate :: !(Maybe InputSchemaUpdate)
-  , _iuKinesisFirehoseInputUpdate :: !(Maybe KinesisFirehoseInputUpdate)
-  , _iuInputId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data InputUpdate =
+  InputUpdate'
+    { _iuInputProcessingConfigurationUpdate :: !(Maybe InputProcessingConfigurationUpdate)
+    , _iuKinesisStreamsInputUpdate :: !(Maybe KinesisStreamsInputUpdate)
+    , _iuInputParallelismUpdate :: !(Maybe InputParallelismUpdate)
+    , _iuNamePrefixUpdate :: !(Maybe Text)
+    , _iuInputSchemaUpdate :: !(Maybe InputSchemaUpdate)
+    , _iuKinesisFirehoseInputUpdate :: !(Maybe KinesisFirehoseInputUpdate)
+    , _iuInputId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'InputUpdate' with the minimum fields required to make a request.
@@ -1353,9 +1397,11 @@ instance ToJSON InputUpdate where
 --
 --
 -- /See:/ 'jsonMappingParameters' smart constructor.
-newtype JSONMappingParameters = JSONMappingParameters'
-  { _jmpRecordRowPath :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype JSONMappingParameters =
+  JSONMappingParameters'
+    { _jmpRecordRowPath :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'JSONMappingParameters' with the minimum fields required to make a request.
@@ -1395,10 +1441,12 @@ instance ToJSON JSONMappingParameters where
 --
 --
 -- /See:/ 'kinesisFirehoseInput' smart constructor.
-data KinesisFirehoseInput = KinesisFirehoseInput'
-  { _kfiResourceARN :: !Text
-  , _kfiRoleARN     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data KinesisFirehoseInput =
+  KinesisFirehoseInput'
+    { _kfiResourceARN :: !Text
+    , _kfiRoleARN     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'KinesisFirehoseInput' with the minimum fields required to make a request.
@@ -1441,10 +1489,12 @@ instance ToJSON KinesisFirehoseInput where
 --
 --
 -- /See:/ 'kinesisFirehoseInputDescription' smart constructor.
-data KinesisFirehoseInputDescription = KinesisFirehoseInputDescription'
-  { _kfidResourceARN :: !(Maybe Text)
-  , _kfidRoleARN     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data KinesisFirehoseInputDescription =
+  KinesisFirehoseInputDescription'
+    { _kfidResourceARN :: !(Maybe Text)
+    , _kfidRoleARN     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'KinesisFirehoseInputDescription' with the minimum fields required to make a request.
@@ -1487,10 +1537,12 @@ instance NFData KinesisFirehoseInputDescription where
 --
 --
 -- /See:/ 'kinesisFirehoseInputUpdate' smart constructor.
-data KinesisFirehoseInputUpdate = KinesisFirehoseInputUpdate'
-  { _kfiuRoleARNUpdate     :: !(Maybe Text)
-  , _kfiuResourceARNUpdate :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data KinesisFirehoseInputUpdate =
+  KinesisFirehoseInputUpdate'
+    { _kfiuRoleARNUpdate     :: !(Maybe Text)
+    , _kfiuResourceARNUpdate :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'KinesisFirehoseInputUpdate' with the minimum fields required to make a request.
@@ -1531,10 +1583,12 @@ instance ToJSON KinesisFirehoseInputUpdate where
 --
 --
 -- /See:/ 'kinesisFirehoseOutput' smart constructor.
-data KinesisFirehoseOutput = KinesisFirehoseOutput'
-  { _kfoResourceARN :: !Text
-  , _kfoRoleARN     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data KinesisFirehoseOutput =
+  KinesisFirehoseOutput'
+    { _kfoResourceARN :: !Text
+    , _kfoRoleARN     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'KinesisFirehoseOutput' with the minimum fields required to make a request.
@@ -1577,10 +1631,12 @@ instance ToJSON KinesisFirehoseOutput where
 --
 --
 -- /See:/ 'kinesisFirehoseOutputDescription' smart constructor.
-data KinesisFirehoseOutputDescription = KinesisFirehoseOutputDescription'
-  { _kfodResourceARN :: !(Maybe Text)
-  , _kfodRoleARN     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data KinesisFirehoseOutputDescription =
+  KinesisFirehoseOutputDescription'
+    { _kfodResourceARN :: !(Maybe Text)
+    , _kfodRoleARN     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'KinesisFirehoseOutputDescription' with the minimum fields required to make a request.
@@ -1624,10 +1680,12 @@ instance NFData KinesisFirehoseOutputDescription
 --
 --
 -- /See:/ 'kinesisFirehoseOutputUpdate' smart constructor.
-data KinesisFirehoseOutputUpdate = KinesisFirehoseOutputUpdate'
-  { _kfouRoleARNUpdate     :: !(Maybe Text)
-  , _kfouResourceARNUpdate :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data KinesisFirehoseOutputUpdate =
+  KinesisFirehoseOutputUpdate'
+    { _kfouRoleARNUpdate     :: !(Maybe Text)
+    , _kfouResourceARNUpdate :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'KinesisFirehoseOutputUpdate' with the minimum fields required to make a request.
@@ -1668,10 +1726,12 @@ instance ToJSON KinesisFirehoseOutputUpdate where
 --
 --
 -- /See:/ 'kinesisStreamsInput' smart constructor.
-data KinesisStreamsInput = KinesisStreamsInput'
-  { _ksiResourceARN :: !Text
-  , _ksiRoleARN     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data KinesisStreamsInput =
+  KinesisStreamsInput'
+    { _ksiResourceARN :: !Text
+    , _ksiRoleARN     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'KinesisStreamsInput' with the minimum fields required to make a request.
@@ -1714,10 +1774,12 @@ instance ToJSON KinesisStreamsInput where
 --
 --
 -- /See:/ 'kinesisStreamsInputDescription' smart constructor.
-data KinesisStreamsInputDescription = KinesisStreamsInputDescription'
-  { _ksidResourceARN :: !(Maybe Text)
-  , _ksidRoleARN     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data KinesisStreamsInputDescription =
+  KinesisStreamsInputDescription'
+    { _ksidResourceARN :: !(Maybe Text)
+    , _ksidRoleARN     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'KinesisStreamsInputDescription' with the minimum fields required to make a request.
@@ -1760,10 +1822,12 @@ instance NFData KinesisStreamsInputDescription where
 --
 --
 -- /See:/ 'kinesisStreamsInputUpdate' smart constructor.
-data KinesisStreamsInputUpdate = KinesisStreamsInputUpdate'
-  { _ksiuRoleARNUpdate     :: !(Maybe Text)
-  , _ksiuResourceARNUpdate :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data KinesisStreamsInputUpdate =
+  KinesisStreamsInputUpdate'
+    { _ksiuRoleARNUpdate     :: !(Maybe Text)
+    , _ksiuResourceARNUpdate :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'KinesisStreamsInputUpdate' with the minimum fields required to make a request.
@@ -1804,10 +1868,12 @@ instance ToJSON KinesisStreamsInputUpdate where
 --
 --
 -- /See:/ 'kinesisStreamsOutput' smart constructor.
-data KinesisStreamsOutput = KinesisStreamsOutput'
-  { _ksoResourceARN :: !Text
-  , _ksoRoleARN     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data KinesisStreamsOutput =
+  KinesisStreamsOutput'
+    { _ksoResourceARN :: !Text
+    , _ksoRoleARN     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'KinesisStreamsOutput' with the minimum fields required to make a request.
@@ -1850,10 +1916,12 @@ instance ToJSON KinesisStreamsOutput where
 --
 --
 -- /See:/ 'kinesisStreamsOutputDescription' smart constructor.
-data KinesisStreamsOutputDescription = KinesisStreamsOutputDescription'
-  { _ksodResourceARN :: !(Maybe Text)
-  , _ksodRoleARN     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data KinesisStreamsOutputDescription =
+  KinesisStreamsOutputDescription'
+    { _ksodResourceARN :: !(Maybe Text)
+    , _ksodRoleARN     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'KinesisStreamsOutputDescription' with the minimum fields required to make a request.
@@ -1896,10 +1964,12 @@ instance NFData KinesisStreamsOutputDescription where
 --
 --
 -- /See:/ 'kinesisStreamsOutputUpdate' smart constructor.
-data KinesisStreamsOutputUpdate = KinesisStreamsOutputUpdate'
-  { _ksouRoleARNUpdate     :: !(Maybe Text)
-  , _ksouResourceARNUpdate :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data KinesisStreamsOutputUpdate =
+  KinesisStreamsOutputUpdate'
+    { _ksouRoleARNUpdate     :: !(Maybe Text)
+    , _ksouResourceARNUpdate :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'KinesisStreamsOutputUpdate' with the minimum fields required to make a request.
@@ -1940,10 +2010,12 @@ instance ToJSON KinesisStreamsOutputUpdate where
 --
 --
 -- /See:/ 'lambdaOutput' smart constructor.
-data LambdaOutput = LambdaOutput'
-  { _loResourceARN :: !Text
-  , _loRoleARN     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LambdaOutput =
+  LambdaOutput'
+    { _loResourceARN :: !Text
+    , _loRoleARN     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LambdaOutput' with the minimum fields required to make a request.
@@ -1985,10 +2057,12 @@ instance ToJSON LambdaOutput where
 --
 --
 -- /See:/ 'lambdaOutputDescription' smart constructor.
-data LambdaOutputDescription = LambdaOutputDescription'
-  { _lodResourceARN :: !(Maybe Text)
-  , _lodRoleARN     :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LambdaOutputDescription =
+  LambdaOutputDescription'
+    { _lodResourceARN :: !(Maybe Text)
+    , _lodRoleARN     :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LambdaOutputDescription' with the minimum fields required to make a request.
@@ -2028,10 +2102,12 @@ instance NFData LambdaOutputDescription where
 --
 --
 -- /See:/ 'lambdaOutputUpdate' smart constructor.
-data LambdaOutputUpdate = LambdaOutputUpdate'
-  { _louRoleARNUpdate     :: !(Maybe Text)
-  , _louResourceARNUpdate :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data LambdaOutputUpdate =
+  LambdaOutputUpdate'
+    { _louRoleARNUpdate     :: !(Maybe Text)
+    , _louResourceARNUpdate :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'LambdaOutputUpdate' with the minimum fields required to make a request.
@@ -2072,10 +2148,12 @@ instance ToJSON LambdaOutputUpdate where
 --
 --
 -- /See:/ 'mappingParameters' smart constructor.
-data MappingParameters = MappingParameters'
-  { _mpCSVMappingParameters  :: !(Maybe CSVMappingParameters)
-  , _mpJSONMappingParameters :: !(Maybe JSONMappingParameters)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data MappingParameters =
+  MappingParameters'
+    { _mpCSVMappingParameters  :: !(Maybe CSVMappingParameters)
+    , _mpJSONMappingParameters :: !(Maybe JSONMappingParameters)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'MappingParameters' with the minimum fields required to make a request.
@@ -2130,13 +2208,15 @@ instance ToJSON MappingParameters where
 --
 --
 -- /See:/ 'output' smart constructor.
-data Output = Output'
-  { _oLambdaOutput          :: !(Maybe LambdaOutput)
-  , _oKinesisStreamsOutput  :: !(Maybe KinesisStreamsOutput)
-  , _oKinesisFirehoseOutput :: !(Maybe KinesisFirehoseOutput)
-  , _oName                  :: !Text
-  , _oDestinationSchema     :: !DestinationSchema
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data Output =
+  Output'
+    { _oLambdaOutput          :: !(Maybe LambdaOutput)
+    , _oKinesisStreamsOutput  :: !(Maybe KinesisStreamsOutput)
+    , _oKinesisFirehoseOutput :: !(Maybe KinesisFirehoseOutput)
+    , _oName                  :: !Text
+    , _oDestinationSchema     :: !DestinationSchema
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Output' with the minimum fields required to make a request.
@@ -2207,14 +2287,16 @@ instance ToJSON Output where
 --
 --
 -- /See:/ 'outputDescription' smart constructor.
-data OutputDescription = OutputDescription'
-  { _odOutputId :: !(Maybe Text)
-  , _odDestinationSchema :: !(Maybe DestinationSchema)
-  , _odKinesisFirehoseOutputDescription :: !(Maybe KinesisFirehoseOutputDescription)
-  , _odKinesisStreamsOutputDescription :: !(Maybe KinesisStreamsOutputDescription)
-  , _odName :: !(Maybe Text)
-  , _odLambdaOutputDescription :: !(Maybe LambdaOutputDescription)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data OutputDescription =
+  OutputDescription'
+    { _odOutputId :: !(Maybe Text)
+    , _odDestinationSchema :: !(Maybe DestinationSchema)
+    , _odKinesisFirehoseOutputDescription :: !(Maybe KinesisFirehoseOutputDescription)
+    , _odKinesisStreamsOutputDescription :: !(Maybe KinesisStreamsOutputDescription)
+    , _odName :: !(Maybe Text)
+    , _odLambdaOutputDescription :: !(Maybe LambdaOutputDescription)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OutputDescription' with the minimum fields required to make a request.
@@ -2289,14 +2371,16 @@ instance NFData OutputDescription where
 --
 --
 -- /See:/ 'outputUpdate' smart constructor.
-data OutputUpdate = OutputUpdate'
-  { _ouKinesisStreamsOutputUpdate  :: !(Maybe KinesisStreamsOutputUpdate)
-  , _ouDestinationSchemaUpdate     :: !(Maybe DestinationSchema)
-  , _ouKinesisFirehoseOutputUpdate :: !(Maybe KinesisFirehoseOutputUpdate)
-  , _ouNameUpdate                  :: !(Maybe Text)
-  , _ouLambdaOutputUpdate          :: !(Maybe LambdaOutputUpdate)
-  , _ouOutputId                    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data OutputUpdate =
+  OutputUpdate'
+    { _ouKinesisStreamsOutputUpdate  :: !(Maybe KinesisStreamsOutputUpdate)
+    , _ouDestinationSchemaUpdate     :: !(Maybe DestinationSchema)
+    , _ouKinesisFirehoseOutputUpdate :: !(Maybe KinesisFirehoseOutputUpdate)
+    , _ouNameUpdate                  :: !(Maybe Text)
+    , _ouLambdaOutputUpdate          :: !(Maybe LambdaOutputUpdate)
+    , _ouOutputId                    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'OutputUpdate' with the minimum fields required to make a request.
@@ -2377,11 +2461,13 @@ instance ToJSON OutputUpdate where
 --
 --
 -- /See:/ 'recordColumn' smart constructor.
-data RecordColumn = RecordColumn'
-  { _rcMapping :: !(Maybe Text)
-  , _rcName    :: !Text
-  , _rcSqlType :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RecordColumn =
+  RecordColumn'
+    { _rcMapping :: !(Maybe Text)
+    , _rcName    :: !Text
+    , _rcSqlType :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RecordColumn' with the minimum fields required to make a request.
@@ -2438,10 +2524,12 @@ instance ToJSON RecordColumn where
 --
 --
 -- /See:/ 'recordFormat' smart constructor.
-data RecordFormat = RecordFormat'
-  { _rfMappingParameters :: !(Maybe MappingParameters)
-  , _rfRecordFormatType  :: !RecordFormatType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RecordFormat =
+  RecordFormat'
+    { _rfMappingParameters :: !(Maybe MappingParameters)
+    , _rfRecordFormatType  :: !RecordFormatType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RecordFormat' with the minimum fields required to make a request.
@@ -2491,11 +2579,13 @@ instance ToJSON RecordFormat where
 --
 --
 -- /See:/ 'referenceDataSource' smart constructor.
-data ReferenceDataSource = ReferenceDataSource'
-  { _rdsS3ReferenceDataSource :: !(Maybe S3ReferenceDataSource)
-  , _rdsTableName             :: !Text
-  , _rdsReferenceSchema       :: !SourceSchema
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReferenceDataSource =
+  ReferenceDataSource'
+    { _rdsS3ReferenceDataSource :: !(Maybe S3ReferenceDataSource)
+    , _rdsTableName             :: !Text
+    , _rdsReferenceSchema       :: !SourceSchema
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReferenceDataSource' with the minimum fields required to make a request.
@@ -2549,12 +2639,14 @@ instance ToJSON ReferenceDataSource where
 --
 --
 -- /See:/ 'referenceDataSourceDescription' smart constructor.
-data ReferenceDataSourceDescription = ReferenceDataSourceDescription'
-  { _rdsdReferenceSchema                  :: !(Maybe SourceSchema)
-  , _rdsdReferenceId                      :: !Text
-  , _rdsdTableName                        :: !Text
-  , _rdsdS3ReferenceDataSourceDescription :: !S3ReferenceDataSourceDescription
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReferenceDataSourceDescription =
+  ReferenceDataSourceDescription'
+    { _rdsdReferenceSchema                  :: !(Maybe SourceSchema)
+    , _rdsdReferenceId                      :: !Text
+    , _rdsdTableName                        :: !Text
+    , _rdsdS3ReferenceDataSourceDescription :: !S3ReferenceDataSourceDescription
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReferenceDataSourceDescription' with the minimum fields required to make a request.
@@ -2618,12 +2710,14 @@ instance NFData ReferenceDataSourceDescription where
 --
 --
 -- /See:/ 'referenceDataSourceUpdate' smart constructor.
-data ReferenceDataSourceUpdate = ReferenceDataSourceUpdate'
-  { _rdsuTableNameUpdate             :: !(Maybe Text)
-  , _rdsuS3ReferenceDataSourceUpdate :: !(Maybe S3ReferenceDataSourceUpdate)
-  , _rdsuReferenceSchemaUpdate       :: !(Maybe SourceSchema)
-  , _rdsuReferenceId                 :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ReferenceDataSourceUpdate =
+  ReferenceDataSourceUpdate'
+    { _rdsuTableNameUpdate             :: !(Maybe Text)
+    , _rdsuS3ReferenceDataSourceUpdate :: !(Maybe S3ReferenceDataSourceUpdate)
+    , _rdsuReferenceSchemaUpdate       :: !(Maybe SourceSchema)
+    , _rdsuReferenceId                 :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ReferenceDataSourceUpdate' with the minimum fields required to make a request.
@@ -2685,11 +2779,13 @@ instance ToJSON ReferenceDataSourceUpdate where
 --
 --
 -- /See:/ 's3Configuration' smart constructor.
-data S3Configuration = S3Configuration'
-  { _scRoleARN   :: !Text
-  , _scBucketARN :: !Text
-  , _scFileKey   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data S3Configuration =
+  S3Configuration'
+    { _scRoleARN   :: !Text
+    , _scBucketARN :: !Text
+    , _scFileKey   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'S3Configuration' with the minimum fields required to make a request.
@@ -2742,11 +2838,13 @@ instance ToJSON S3Configuration where
 --
 --
 -- /See:/ 's3ReferenceDataSource' smart constructor.
-data S3ReferenceDataSource = S3ReferenceDataSource'
-  { _srdsBucketARN        :: !Text
-  , _srdsFileKey          :: !Text
-  , _srdsReferenceRoleARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data S3ReferenceDataSource =
+  S3ReferenceDataSource'
+    { _srdsBucketARN        :: !Text
+    , _srdsFileKey          :: !Text
+    , _srdsReferenceRoleARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'S3ReferenceDataSource' with the minimum fields required to make a request.
@@ -2800,11 +2898,13 @@ instance ToJSON S3ReferenceDataSource where
 --
 --
 -- /See:/ 's3ReferenceDataSourceDescription' smart constructor.
-data S3ReferenceDataSourceDescription = S3ReferenceDataSourceDescription'
-  { _srdsdBucketARN        :: !Text
-  , _srdsdFileKey          :: !Text
-  , _srdsdReferenceRoleARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data S3ReferenceDataSourceDescription =
+  S3ReferenceDataSourceDescription'
+    { _srdsdBucketARN        :: !Text
+    , _srdsdFileKey          :: !Text
+    , _srdsdReferenceRoleARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'S3ReferenceDataSourceDescription' with the minimum fields required to make a request.
@@ -2861,11 +2961,13 @@ instance NFData S3ReferenceDataSourceDescription
 --
 --
 -- /See:/ 's3ReferenceDataSourceUpdate' smart constructor.
-data S3ReferenceDataSourceUpdate = S3ReferenceDataSourceUpdate'
-  { _srdsuBucketARNUpdate        :: !(Maybe Text)
-  , _srdsuFileKeyUpdate          :: !(Maybe Text)
-  , _srdsuReferenceRoleARNUpdate :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data S3ReferenceDataSourceUpdate =
+  S3ReferenceDataSourceUpdate'
+    { _srdsuBucketARNUpdate        :: !(Maybe Text)
+    , _srdsuFileKeyUpdate          :: !(Maybe Text)
+    , _srdsuReferenceRoleARNUpdate :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'S3ReferenceDataSourceUpdate' with the minimum fields required to make a request.
@@ -2917,11 +3019,13 @@ instance ToJSON S3ReferenceDataSourceUpdate where
 --
 --
 -- /See:/ 'sourceSchema' smart constructor.
-data SourceSchema = SourceSchema'
-  { _ssRecordEncoding :: !(Maybe Text)
-  , _ssRecordFormat   :: !RecordFormat
-  , _ssRecordColumns  :: !(List1 RecordColumn)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SourceSchema =
+  SourceSchema'
+    { _ssRecordEncoding :: !(Maybe Text)
+    , _ssRecordFormat   :: !RecordFormat
+    , _ssRecordColumns  :: !(List1 RecordColumn)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SourceSchema' with the minimum fields required to make a request.

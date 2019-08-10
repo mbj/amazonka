@@ -49,11 +49,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'modifyDBSnapshot' smart constructor.
-data ModifyDBSnapshot = ModifyDBSnapshot'
-  { _mdsEngineVersion        :: !(Maybe Text)
-  , _mdsOptionGroupName      :: !(Maybe Text)
-  , _mdsDBSnapshotIdentifier :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyDBSnapshot =
+  ModifyDBSnapshot'
+    { _mdsEngineVersion        :: !(Maybe Text)
+    , _mdsOptionGroupName      :: !(Maybe Text)
+    , _mdsDBSnapshotIdentifier :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyDBSnapshot' with the minimum fields required to make a request.
@@ -117,10 +119,12 @@ instance ToQuery ModifyDBSnapshot where
                "DBSnapshotIdentifier" =: _mdsDBSnapshotIdentifier]
 
 -- | /See:/ 'modifyDBSnapshotResponse' smart constructor.
-data ModifyDBSnapshotResponse = ModifyDBSnapshotResponse'
-  { _mdsrsDBSnapshot     :: !(Maybe DBSnapshot)
-  , _mdsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ModifyDBSnapshotResponse =
+  ModifyDBSnapshotResponse'
+    { _mdsrsDBSnapshot     :: !(Maybe DBSnapshot)
+    , _mdsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ModifyDBSnapshotResponse' with the minimum fields required to make a request.

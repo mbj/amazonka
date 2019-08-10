@@ -53,11 +53,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeVPNGateways' smart constructor.
-data DescribeVPNGateways = DescribeVPNGateways'
-  { _dvgsFilters       :: !(Maybe [Filter])
-  , _dvgsVPNGatewayIds :: !(Maybe [Text])
-  , _dvgsDryRun        :: !(Maybe Bool)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeVPNGateways =
+  DescribeVPNGateways'
+    { _dvgsFilters       :: !(Maybe [Filter])
+    , _dvgsVPNGatewayIds :: !(Maybe [Text])
+    , _dvgsDryRun        :: !(Maybe Bool)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeVPNGateways' with the minimum fields required to make a request.
@@ -128,10 +130,12 @@ instance ToQuery DescribeVPNGateways where
 --
 --
 -- /See:/ 'describeVPNGatewaysResponse' smart constructor.
-data DescribeVPNGatewaysResponse = DescribeVPNGatewaysResponse'
-  { _dvgrsVPNGateways    :: !(Maybe [VPNGateway])
-  , _dvgrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeVPNGatewaysResponse =
+  DescribeVPNGatewaysResponse'
+    { _dvgrsVPNGateways    :: !(Maybe [VPNGateway])
+    , _dvgrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeVPNGatewaysResponse' with the minimum fields required to make a request.

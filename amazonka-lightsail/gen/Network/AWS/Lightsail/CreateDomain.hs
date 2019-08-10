@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createDomain' smart constructor.
-newtype CreateDomain = CreateDomain'
-  { _cdDomainName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateDomain =
+  CreateDomain'
+    { _cdDomainName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDomain' with the minimum fields required to make a request.
@@ -99,10 +101,12 @@ instance ToQuery CreateDomain where
         toQuery = const mempty
 
 -- | /See:/ 'createDomainResponse' smart constructor.
-data CreateDomainResponse = CreateDomainResponse'
-  { _cdrsOperation      :: !(Maybe Operation)
-  , _cdrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDomainResponse =
+  CreateDomainResponse'
+    { _cdrsOperation      :: !(Maybe Operation)
+    , _cdrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDomainResponse' with the minimum fields required to make a request.

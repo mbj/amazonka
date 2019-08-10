@@ -53,10 +53,12 @@ import Network.AWS.Response
 -- | A request for usage information on an identity pool.
 --
 -- /See:/ 'listIdentityPoolUsage' smart constructor.
-data ListIdentityPoolUsage = ListIdentityPoolUsage'
-  { _lipuNextToken  :: !(Maybe Text)
-  , _lipuMaxResults :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListIdentityPoolUsage =
+  ListIdentityPoolUsage'
+    { _lipuNextToken  :: !(Maybe Text)
+    , _lipuMaxResults :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListIdentityPoolUsage' with the minimum fields required to make a request.
@@ -117,13 +119,15 @@ instance ToQuery ListIdentityPoolUsage where
 -- | Returned for a successful ListIdentityPoolUsage request.
 --
 -- /See:/ 'listIdentityPoolUsageResponse' smart constructor.
-data ListIdentityPoolUsageResponse = ListIdentityPoolUsageResponse'
-  { _lipursIdentityPoolUsages :: !(Maybe [IdentityPoolUsage])
-  , _lipursCount              :: !(Maybe Int)
-  , _lipursNextToken          :: !(Maybe Text)
-  , _lipursMaxResults         :: !(Maybe Int)
-  , _lipursResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListIdentityPoolUsageResponse =
+  ListIdentityPoolUsageResponse'
+    { _lipursIdentityPoolUsages :: !(Maybe [IdentityPoolUsage])
+    , _lipursCount              :: !(Maybe Int)
+    , _lipursNextToken          :: !(Maybe Text)
+    , _lipursMaxResults         :: !(Maybe Int)
+    , _lipursResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListIdentityPoolUsageResponse' with the minimum fields required to make a request.

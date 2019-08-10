@@ -54,10 +54,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'listBootstrapActions' smart constructor.
-data ListBootstrapActions = ListBootstrapActions'
-  { _lbaMarker    :: !(Maybe Text)
-  , _lbaClusterId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListBootstrapActions =
+  ListBootstrapActions'
+    { _lbaMarker    :: !(Maybe Text)
+    , _lbaClusterId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListBootstrapActions' with the minimum fields required to make a request.
@@ -133,11 +135,13 @@ instance ToQuery ListBootstrapActions where
 --
 --
 -- /See:/ 'listBootstrapActionsResponse' smart constructor.
-data ListBootstrapActionsResponse = ListBootstrapActionsResponse'
-  { _lbarsBootstrapActions :: !(Maybe [Command])
-  , _lbarsMarker           :: !(Maybe Text)
-  , _lbarsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListBootstrapActionsResponse =
+  ListBootstrapActionsResponse'
+    { _lbarsBootstrapActions :: !(Maybe [Command])
+    , _lbarsMarker           :: !(Maybe Text)
+    , _lbarsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListBootstrapActionsResponse' with the minimum fields required to make a request.

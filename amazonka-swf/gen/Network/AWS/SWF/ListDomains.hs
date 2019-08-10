@@ -66,12 +66,14 @@ import Network.AWS.SWF.Types
 import Network.AWS.SWF.Types.Product
 
 -- | /See:/ 'listDomains' smart constructor.
-data ListDomains = ListDomains'
-  { _ldNextPageToken      :: !(Maybe Text)
-  , _ldReverseOrder       :: !(Maybe Bool)
-  , _ldMaximumPageSize    :: !(Maybe Nat)
-  , _ldRegistrationStatus :: !RegistrationStatus
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListDomains =
+  ListDomains'
+    { _ldNextPageToken      :: !(Maybe Text)
+    , _ldReverseOrder       :: !(Maybe Bool)
+    , _ldMaximumPageSize    :: !(Maybe Nat)
+    , _ldRegistrationStatus :: !RegistrationStatus
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDomains' with the minimum fields required to make a request.
@@ -165,11 +167,13 @@ instance ToQuery ListDomains where
 --
 --
 -- /See:/ 'listDomainsResponse' smart constructor.
-data ListDomainsResponse = ListDomainsResponse'
-  { _ldrsNextPageToken  :: !(Maybe Text)
-  , _ldrsResponseStatus :: !Int
-  , _ldrsDomainInfos    :: ![DomainInfo]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListDomainsResponse =
+  ListDomainsResponse'
+    { _ldrsNextPageToken  :: !(Maybe Text)
+    , _ldrsResponseStatus :: !Int
+    , _ldrsDomainInfos    :: ![DomainInfo]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListDomainsResponse' with the minimum fields required to make a request.

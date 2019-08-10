@@ -50,12 +50,14 @@ import Network.AWS.ServiceCatalog.Types
 import Network.AWS.ServiceCatalog.Types.Product
 
 -- | /See:/ 'describeProvisionedProductPlan' smart constructor.
-data DescribeProvisionedProductPlan = DescribeProvisionedProductPlan'
-  { _dpppAcceptLanguage :: !(Maybe Text)
-  , _dpppPageToken      :: !(Maybe Text)
-  , _dpppPageSize       :: !(Maybe Nat)
-  , _dpppPlanId         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeProvisionedProductPlan =
+  DescribeProvisionedProductPlan'
+    { _dpppAcceptLanguage :: !(Maybe Text)
+    , _dpppPageToken      :: !(Maybe Text)
+    , _dpppPageSize       :: !(Maybe Nat)
+    , _dpppPlanId         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeProvisionedProductPlan' with the minimum fields required to make a request.
@@ -143,12 +145,14 @@ instance ToQuery DescribeProvisionedProductPlan where
         toQuery = const mempty
 
 -- | /See:/ 'describeProvisionedProductPlanResponse' smart constructor.
-data DescribeProvisionedProductPlanResponse = DescribeProvisionedProductPlanResponse'
-  { _dpppprsNextPageToken :: !(Maybe Text)
-  , _dpppprsProvisionedProductPlanDetails :: !(Maybe ProvisionedProductPlanDetails)
-  , _dpppprsResourceChanges :: !(Maybe [ResourceChange])
-  , _dpppprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeProvisionedProductPlanResponse =
+  DescribeProvisionedProductPlanResponse'
+    { _dpppprsNextPageToken :: !(Maybe Text)
+    , _dpppprsProvisionedProductPlanDetails :: !(Maybe ProvisionedProductPlanDetails)
+    , _dpppprsResourceChanges :: !(Maybe [ResourceChange])
+    , _dpppprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeProvisionedProductPlanResponse' with the minimum fields required to make a request.

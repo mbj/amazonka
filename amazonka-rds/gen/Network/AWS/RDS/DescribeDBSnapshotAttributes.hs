@@ -53,9 +53,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeDBSnapshotAttributes' smart constructor.
-newtype DescribeDBSnapshotAttributes = DescribeDBSnapshotAttributes'
-  { _ddsaDBSnapshotIdentifier :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeDBSnapshotAttributes =
+  DescribeDBSnapshotAttributes'
+    { _ddsaDBSnapshotIdentifier :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDBSnapshotAttributes' with the minimum fields required to make a request.
@@ -107,10 +109,12 @@ instance ToQuery DescribeDBSnapshotAttributes where
                "DBSnapshotIdentifier" =: _ddsaDBSnapshotIdentifier]
 
 -- | /See:/ 'describeDBSnapshotAttributesResponse' smart constructor.
-data DescribeDBSnapshotAttributesResponse = DescribeDBSnapshotAttributesResponse'
-  { _ddsarsDBSnapshotAttributesResult :: !(Maybe DBSnapshotAttributesResult)
-  , _ddsarsResponseStatus             :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeDBSnapshotAttributesResponse =
+  DescribeDBSnapshotAttributesResponse'
+    { _ddsarsDBSnapshotAttributesResult :: !(Maybe DBSnapshotAttributesResult)
+    , _ddsarsResponseStatus             :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeDBSnapshotAttributesResponse' with the minimum fields required to make a request.

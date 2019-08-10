@@ -47,12 +47,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'adminSetUserMFAPreference' smart constructor.
-data AdminSetUserMFAPreference = AdminSetUserMFAPreference'
-  { _asumpSMSMFASettings           :: !(Maybe SMSMFASettingsType)
-  , _asumpSoftwareTokenMFASettings :: !(Maybe SoftwareTokenMFASettingsType)
-  , _asumpUsername                 :: !(Sensitive Text)
-  , _asumpUserPoolId               :: !Text
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data AdminSetUserMFAPreference =
+  AdminSetUserMFAPreference'
+    { _asumpSMSMFASettings           :: !(Maybe SMSMFASettingsType)
+    , _asumpSoftwareTokenMFASettings :: !(Maybe SoftwareTokenMFASettingsType)
+    , _asumpUsername                 :: !(Sensitive Text)
+    , _asumpUserPoolId               :: !Text
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AdminSetUserMFAPreference' with the minimum fields required to make a request.
@@ -136,9 +138,11 @@ instance ToQuery AdminSetUserMFAPreference where
         toQuery = const mempty
 
 -- | /See:/ 'adminSetUserMFAPreferenceResponse' smart constructor.
-newtype AdminSetUserMFAPreferenceResponse = AdminSetUserMFAPreferenceResponse'
-  { _asumprsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype AdminSetUserMFAPreferenceResponse =
+  AdminSetUserMFAPreferenceResponse'
+    { _asumprsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'AdminSetUserMFAPreferenceResponse' with the minimum fields required to make a request.

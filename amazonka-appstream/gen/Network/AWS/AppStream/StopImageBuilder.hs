@@ -45,9 +45,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'stopImageBuilder' smart constructor.
-newtype StopImageBuilder = StopImageBuilder'
-  { _stoName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StopImageBuilder =
+  StopImageBuilder'
+    { _stoName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopImageBuilder' with the minimum fields required to make a request.
@@ -99,10 +101,12 @@ instance ToQuery StopImageBuilder where
         toQuery = const mempty
 
 -- | /See:/ 'stopImageBuilderResponse' smart constructor.
-data StopImageBuilderResponse = StopImageBuilderResponse'
-  { _sibrsImageBuilder   :: !(Maybe ImageBuilder)
-  , _sibrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StopImageBuilderResponse =
+  StopImageBuilderResponse'
+    { _sibrsImageBuilder   :: !(Maybe ImageBuilder)
+    , _sibrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopImageBuilderResponse' with the minimum fields required to make a request.

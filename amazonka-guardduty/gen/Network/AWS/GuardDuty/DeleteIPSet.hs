@@ -43,10 +43,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteIPSet' smart constructor.
-data DeleteIPSet = DeleteIPSet'
-  { _disDetectorId :: !Text
-  , _disIPSetId    :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteIPSet =
+  DeleteIPSet'
+    { _disDetectorId :: !Text
+    , _disIPSetId    :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteIPSet' with the minimum fields required to make a request.
@@ -101,9 +103,11 @@ instance ToQuery DeleteIPSet where
         toQuery = const mempty
 
 -- | /See:/ 'deleteIPSetResponse' smart constructor.
-newtype DeleteIPSetResponse = DeleteIPSetResponse'
-  { _dipsrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteIPSetResponse =
+  DeleteIPSetResponse'
+    { _dipsrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteIPSetResponse' with the minimum fields required to make a request.

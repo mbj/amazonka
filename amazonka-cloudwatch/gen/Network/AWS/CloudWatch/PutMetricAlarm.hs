@@ -86,27 +86,29 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putMetricAlarm' smart constructor.
-data PutMetricAlarm = PutMetricAlarm'
-  { _pmaTreatMissingData                 :: !(Maybe Text)
-  , _pmaAlarmDescription                 :: !(Maybe Text)
-  , _pmaOKActions                        :: !(Maybe [Text])
-  , _pmaEvaluateLowSampleCountPercentile :: !(Maybe Text)
-  , _pmaDatapointsToAlarm                :: !(Maybe Nat)
-  , _pmaActionsEnabled                   :: !(Maybe Bool)
-  , _pmaInsufficientDataActions          :: !(Maybe [Text])
-  , _pmaDimensions                       :: !(Maybe [Dimension])
-  , _pmaAlarmActions                     :: !(Maybe [Text])
-  , _pmaUnit                             :: !(Maybe StandardUnit)
-  , _pmaStatistic                        :: !(Maybe Statistic)
-  , _pmaExtendedStatistic                :: !(Maybe Text)
-  , _pmaAlarmName                        :: !Text
-  , _pmaMetricName                       :: !Text
-  , _pmaNamespace                        :: !Text
-  , _pmaPeriod                           :: !Nat
-  , _pmaEvaluationPeriods                :: !Nat
-  , _pmaThreshold                        :: !Double
-  , _pmaComparisonOperator               :: !ComparisonOperator
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutMetricAlarm =
+  PutMetricAlarm'
+    { _pmaTreatMissingData                 :: !(Maybe Text)
+    , _pmaAlarmDescription                 :: !(Maybe Text)
+    , _pmaOKActions                        :: !(Maybe [Text])
+    , _pmaEvaluateLowSampleCountPercentile :: !(Maybe Text)
+    , _pmaDatapointsToAlarm                :: !(Maybe Nat)
+    , _pmaActionsEnabled                   :: !(Maybe Bool)
+    , _pmaInsufficientDataActions          :: !(Maybe [Text])
+    , _pmaDimensions                       :: !(Maybe [Dimension])
+    , _pmaAlarmActions                     :: !(Maybe [Text])
+    , _pmaUnit                             :: !(Maybe StandardUnit)
+    , _pmaStatistic                        :: !(Maybe Statistic)
+    , _pmaExtendedStatistic                :: !(Maybe Text)
+    , _pmaAlarmName                        :: !Text
+    , _pmaMetricName                       :: !Text
+    , _pmaNamespace                        :: !Text
+    , _pmaPeriod                           :: !Nat
+    , _pmaEvaluationPeriods                :: !Nat
+    , _pmaThreshold                        :: !Double
+    , _pmaComparisonOperator               :: !ComparisonOperator
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutMetricAlarm' with the minimum fields required to make a request.

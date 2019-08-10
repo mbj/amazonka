@@ -90,11 +90,13 @@ instance ToQuery GenerateCredentialReport where
 --
 --
 -- /See:/ 'generateCredentialReportResponse' smart constructor.
-data GenerateCredentialReportResponse = GenerateCredentialReportResponse'
-  { _gcrrsState          :: !(Maybe ReportStateType)
-  , _gcrrsDescription    :: !(Maybe Text)
-  , _gcrrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GenerateCredentialReportResponse =
+  GenerateCredentialReportResponse'
+    { _gcrrsState          :: !(Maybe ReportStateType)
+    , _gcrrsDescription    :: !(Maybe Text)
+    , _gcrrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GenerateCredentialReportResponse' with the minimum fields required to make a request.

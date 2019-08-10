@@ -56,14 +56,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createListener' smart constructor.
-data CreateListener = CreateListener'
-  { _clSSLPolicy       :: !(Maybe Text)
-  , _clCertificates    :: !(Maybe [Certificate])
-  , _clLoadBalancerARN :: !Text
-  , _clProtocol        :: !ProtocolEnum
-  , _clPort            :: !Nat
-  , _clDefaultActions  :: ![Action]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateListener =
+  CreateListener'
+    { _clSSLPolicy       :: !(Maybe Text)
+    , _clCertificates    :: !(Maybe [Certificate])
+    , _clLoadBalancerARN :: !Text
+    , _clProtocol        :: !ProtocolEnum
+    , _clPort            :: !Nat
+    , _clDefaultActions  :: ![Action]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateListener' with the minimum fields required to make a request.
@@ -156,10 +158,12 @@ instance ToQuery CreateListener where
                  toQueryList "member" _clDefaultActions]
 
 -- | /See:/ 'createListenerResponse' smart constructor.
-data CreateListenerResponse = CreateListenerResponse'
-  { _clrsListeners      :: !(Maybe [Listener])
-  , _clrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateListenerResponse =
+  CreateListenerResponse'
+    { _clrsListeners      :: !(Maybe [Listener])
+    , _clrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateListenerResponse' with the minimum fields required to make a request.

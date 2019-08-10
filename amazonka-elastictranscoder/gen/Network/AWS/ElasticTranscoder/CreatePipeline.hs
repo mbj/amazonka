@@ -57,16 +57,18 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createPipeline' smart constructor.
-data CreatePipeline = CreatePipeline'
-  { _cContentConfig   :: !(Maybe PipelineOutputConfig)
-  , _cOutputBucket    :: !(Maybe Text)
-  , _cAWSKMSKeyARN    :: !(Maybe Text)
-  , _cNotifications   :: !(Maybe Notifications)
-  , _cThumbnailConfig :: !(Maybe PipelineOutputConfig)
-  , _cName            :: !Text
-  , _cInputBucket     :: !Text
-  , _cRole            :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreatePipeline =
+  CreatePipeline'
+    { _cContentConfig   :: !(Maybe PipelineOutputConfig)
+    , _cOutputBucket    :: !(Maybe Text)
+    , _cAWSKMSKeyARN    :: !(Maybe Text)
+    , _cNotifications   :: !(Maybe Notifications)
+    , _cThumbnailConfig :: !(Maybe PipelineOutputConfig)
+    , _cName            :: !Text
+    , _cInputBucket     :: !Text
+    , _cRole            :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreatePipeline' with the minimum fields required to make a request.
@@ -179,11 +181,13 @@ instance ToQuery CreatePipeline where
 --
 --
 -- /See:/ 'createPipelineResponse' smart constructor.
-data CreatePipelineResponse = CreatePipelineResponse'
-  { _crsWarnings       :: !(Maybe [Warning])
-  , _crsPipeline       :: !(Maybe Pipeline)
-  , _crsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreatePipelineResponse =
+  CreatePipelineResponse'
+    { _crsWarnings       :: !(Maybe [Warning])
+    , _crsPipeline       :: !(Maybe Pipeline)
+    , _crsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreatePipelineResponse' with the minimum fields required to make a request.

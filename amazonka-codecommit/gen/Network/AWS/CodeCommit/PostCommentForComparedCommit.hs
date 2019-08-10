@@ -56,14 +56,16 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'postCommentForComparedCommit' smart constructor.
-data PostCommentForComparedCommit = PostCommentForComparedCommit'
-  { _pcfccLocation           :: !(Maybe Location)
-  , _pcfccBeforeCommitId     :: !(Maybe Text)
-  , _pcfccClientRequestToken :: !(Maybe Text)
-  , _pcfccRepositoryName     :: !Text
-  , _pcfccAfterCommitId      :: !Text
-  , _pcfccContent            :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PostCommentForComparedCommit =
+  PostCommentForComparedCommit'
+    { _pcfccLocation           :: !(Maybe Location)
+    , _pcfccBeforeCommitId     :: !(Maybe Text)
+    , _pcfccClientRequestToken :: !(Maybe Text)
+    , _pcfccRepositoryName     :: !Text
+    , _pcfccAfterCommitId      :: !Text
+    , _pcfccContent            :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PostCommentForComparedCommit' with the minimum fields required to make a request.
@@ -171,16 +173,18 @@ instance ToQuery PostCommentForComparedCommit where
         toQuery = const mempty
 
 -- | /See:/ 'postCommentForComparedCommitResponse' smart constructor.
-data PostCommentForComparedCommitResponse = PostCommentForComparedCommitResponse'
-  { _pcfccrsBeforeBlobId   :: !(Maybe Text)
-  , _pcfccrsLocation       :: !(Maybe Location)
-  , _pcfccrsAfterCommitId  :: !(Maybe Text)
-  , _pcfccrsAfterBlobId    :: !(Maybe Text)
-  , _pcfccrsBeforeCommitId :: !(Maybe Text)
-  , _pcfccrsRepositoryName :: !(Maybe Text)
-  , _pcfccrsComment        :: !(Maybe Comment)
-  , _pcfccrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PostCommentForComparedCommitResponse =
+  PostCommentForComparedCommitResponse'
+    { _pcfccrsBeforeBlobId   :: !(Maybe Text)
+    , _pcfccrsLocation       :: !(Maybe Location)
+    , _pcfccrsAfterCommitId  :: !(Maybe Text)
+    , _pcfccrsAfterBlobId    :: !(Maybe Text)
+    , _pcfccrsBeforeCommitId :: !(Maybe Text)
+    , _pcfccrsRepositoryName :: !(Maybe Text)
+    , _pcfccrsComment        :: !(Maybe Comment)
+    , _pcfccrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PostCommentForComparedCommitResponse' with the minimum fields required to make a request.

@@ -147,23 +147,25 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createFleet' smart constructor.
-data CreateFleet = CreateFleet'
-  { _cfServerLaunchParameters         :: !(Maybe Text)
-  , _cfLogPaths                       :: !(Maybe [Text])
-  , _cfPeerVPCId                      :: !(Maybe Text)
-  , _cfFleetType                      :: !(Maybe FleetType)
-  , _cfPeerVPCAWSAccountId            :: !(Maybe Text)
-  , _cfEC2InboundPermissions          :: !(Maybe [IPPermission])
-  , _cfRuntimeConfiguration           :: !(Maybe RuntimeConfiguration)
-  , _cfNewGameSessionProtectionPolicy :: !(Maybe ProtectionPolicy)
-  , _cfServerLaunchPath               :: !(Maybe Text)
-  , _cfMetricGroups                   :: !(Maybe [Text])
-  , _cfDescription                    :: !(Maybe Text)
-  , _cfResourceCreationLimitPolicy    :: !(Maybe ResourceCreationLimitPolicy)
-  , _cfName                           :: !Text
-  , _cfBuildId                        :: !Text
-  , _cfEC2InstanceType                :: !EC2InstanceType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateFleet =
+  CreateFleet'
+    { _cfServerLaunchParameters         :: !(Maybe Text)
+    , _cfLogPaths                       :: !(Maybe [Text])
+    , _cfPeerVPCId                      :: !(Maybe Text)
+    , _cfFleetType                      :: !(Maybe FleetType)
+    , _cfPeerVPCAWSAccountId            :: !(Maybe Text)
+    , _cfEC2InboundPermissions          :: !(Maybe [IPPermission])
+    , _cfRuntimeConfiguration           :: !(Maybe RuntimeConfiguration)
+    , _cfNewGameSessionProtectionPolicy :: !(Maybe ProtectionPolicy)
+    , _cfServerLaunchPath               :: !(Maybe Text)
+    , _cfMetricGroups                   :: !(Maybe [Text])
+    , _cfDescription                    :: !(Maybe Text)
+    , _cfResourceCreationLimitPolicy    :: !(Maybe ResourceCreationLimitPolicy)
+    , _cfName                           :: !Text
+    , _cfBuildId                        :: !Text
+    , _cfEC2InstanceType                :: !EC2InstanceType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateFleet' with the minimum fields required to make a request.
@@ -343,10 +345,12 @@ instance ToQuery CreateFleet where
 --
 --
 -- /See:/ 'createFleetResponse' smart constructor.
-data CreateFleetResponse = CreateFleetResponse'
-  { _cfrsFleetAttributes :: !(Maybe FleetAttributes)
-  , _cfrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateFleetResponse =
+  CreateFleetResponse'
+    { _cfrsFleetAttributes :: !(Maybe FleetAttributes)
+    , _cfrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateFleetResponse' with the minimum fields required to make a request.

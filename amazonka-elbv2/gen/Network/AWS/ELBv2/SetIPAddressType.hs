@@ -48,10 +48,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'setIPAddressType' smart constructor.
-data SetIPAddressType = SetIPAddressType'
-  { _siatLoadBalancerARN :: !Text
-  , _siatIPAddressType   :: !IPAddressType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SetIPAddressType =
+  SetIPAddressType'
+    { _siatLoadBalancerARN :: !Text
+    , _siatIPAddressType   :: !IPAddressType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetIPAddressType' with the minimum fields required to make a request.
@@ -108,10 +110,12 @@ instance ToQuery SetIPAddressType where
                "IpAddressType" =: _siatIPAddressType]
 
 -- | /See:/ 'setIPAddressTypeResponse' smart constructor.
-data SetIPAddressTypeResponse = SetIPAddressTypeResponse'
-  { _siatrsIPAddressType  :: !(Maybe IPAddressType)
-  , _siatrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SetIPAddressTypeResponse =
+  SetIPAddressTypeResponse'
+    { _siatrsIPAddressType  :: !(Maybe IPAddressType)
+    , _siatrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SetIPAddressTypeResponse' with the minimum fields required to make a request.

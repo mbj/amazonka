@@ -45,10 +45,12 @@ import Network.AWS.WorkSpaces.Types
 import Network.AWS.WorkSpaces.Types.Product
 
 -- | /See:/ 'disassociateIPGroups' smart constructor.
-data DisassociateIPGroups = DisassociateIPGroups'
-  { _digDirectoryId :: !Text
-  , _digGroupIds    :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DisassociateIPGroups =
+  DisassociateIPGroups'
+    { _digDirectoryId :: !Text
+    , _digGroupIds    :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisassociateIPGroups' with the minimum fields required to make a request.
@@ -111,9 +113,11 @@ instance ToQuery DisassociateIPGroups where
         toQuery = const mempty
 
 -- | /See:/ 'disassociateIPGroupsResponse' smart constructor.
-newtype DisassociateIPGroupsResponse = DisassociateIPGroupsResponse'
-  { _digrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DisassociateIPGroupsResponse =
+  DisassociateIPGroupsResponse'
+    { _digrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisassociateIPGroupsResponse' with the minimum fields required to make a request.

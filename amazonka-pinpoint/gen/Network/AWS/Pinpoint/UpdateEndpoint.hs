@@ -45,11 +45,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateEndpoint' smart constructor.
-data UpdateEndpoint = UpdateEndpoint'
-  { _ueApplicationId   :: !Text
-  , _ueEndpointId      :: !Text
-  , _ueEndpointRequest :: !EndpointRequest
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateEndpoint =
+  UpdateEndpoint'
+    { _ueApplicationId   :: !Text
+    , _ueEndpointId      :: !Text
+    , _ueEndpointRequest :: !EndpointRequest
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateEndpoint' with the minimum fields required to make a request.
@@ -122,10 +124,12 @@ instance ToQuery UpdateEndpoint where
         toQuery = const mempty
 
 -- | /See:/ 'updateEndpointResponse' smart constructor.
-data UpdateEndpointResponse = UpdateEndpointResponse'
-  { _uersResponseStatus :: !Int
-  , _uersMessageBody    :: !MessageBody
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateEndpointResponse =
+  UpdateEndpointResponse'
+    { _uersResponseStatus :: !Int
+    , _uersMessageBody    :: !MessageBody
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateEndpointResponse' with the minimum fields required to make a request.

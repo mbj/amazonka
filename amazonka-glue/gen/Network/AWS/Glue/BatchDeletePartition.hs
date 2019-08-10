@@ -48,12 +48,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'batchDeletePartition' smart constructor.
-data BatchDeletePartition = BatchDeletePartition'
-  { _bdpCatalogId          :: !(Maybe Text)
-  , _bdpDatabaseName       :: !Text
-  , _bdpTableName          :: !Text
-  , _bdpPartitionsToDelete :: ![PartitionValueList]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchDeletePartition =
+  BatchDeletePartition'
+    { _bdpCatalogId          :: !(Maybe Text)
+    , _bdpDatabaseName       :: !Text
+    , _bdpTableName          :: !Text
+    , _bdpPartitionsToDelete :: ![PartitionValueList]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchDeletePartition' with the minimum fields required to make a request.
@@ -136,10 +138,12 @@ instance ToQuery BatchDeletePartition where
         toQuery = const mempty
 
 -- | /See:/ 'batchDeletePartitionResponse' smart constructor.
-data BatchDeletePartitionResponse = BatchDeletePartitionResponse'
-  { _bdprsErrors         :: !(Maybe [PartitionError])
-  , _bdprsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchDeletePartitionResponse =
+  BatchDeletePartitionResponse'
+    { _bdprsErrors         :: !(Maybe [PartitionError])
+    , _bdprsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchDeletePartitionResponse' with the minimum fields required to make a request.

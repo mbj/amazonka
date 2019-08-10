@@ -63,16 +63,18 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createApplicationVersion' smart constructor.
-data CreateApplicationVersion = CreateApplicationVersion'
-  { _cavProcess                :: !(Maybe Bool)
-  , _cavSourceBundle           :: !(Maybe S3Location)
-  , _cavAutoCreateApplication  :: !(Maybe Bool)
-  , _cavSourceBuildInformation :: !(Maybe SourceBuildInformation)
-  , _cavDescription            :: !(Maybe Text)
-  , _cavBuildConfiguration     :: !(Maybe BuildConfiguration)
-  , _cavApplicationName        :: !Text
-  , _cavVersionLabel           :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateApplicationVersion =
+  CreateApplicationVersion'
+    { _cavProcess                :: !(Maybe Bool)
+    , _cavSourceBundle           :: !(Maybe S3Location)
+    , _cavAutoCreateApplication  :: !(Maybe Bool)
+    , _cavSourceBuildInformation :: !(Maybe SourceBuildInformation)
+    , _cavDescription            :: !(Maybe Text)
+    , _cavBuildConfiguration     :: !(Maybe BuildConfiguration)
+    , _cavApplicationName        :: !Text
+    , _cavVersionLabel           :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateApplicationVersion' with the minimum fields required to make a request.

@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeTable' smart constructor.
-newtype DescribeTable = DescribeTable'
-  { _dTableName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DescribeTable =
+  DescribeTable'
+    { _dTableName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeTable' with the minimum fields required to make a request.
@@ -107,10 +109,12 @@ instance ToQuery DescribeTable where
 --
 --
 -- /See:/ 'describeTableResponse' smart constructor.
-data DescribeTableResponse = DescribeTableResponse'
-  { _drsTable          :: !(Maybe TableDescription)
-  , _drsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeTableResponse =
+  DescribeTableResponse'
+    { _drsTable          :: !(Maybe TableDescription)
+    , _drsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeTableResponse' with the minimum fields required to make a request.

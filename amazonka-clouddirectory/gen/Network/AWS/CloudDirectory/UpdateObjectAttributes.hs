@@ -47,11 +47,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'updateObjectAttributes' smart constructor.
-data UpdateObjectAttributes = UpdateObjectAttributes'
-  { _uoaDirectoryARN     :: !Text
-  , _uoaObjectReference  :: !ObjectReference
-  , _uoaAttributeUpdates :: ![ObjectAttributeUpdate]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateObjectAttributes =
+  UpdateObjectAttributes'
+    { _uoaDirectoryARN     :: !Text
+    , _uoaObjectReference  :: !ObjectReference
+    , _uoaAttributeUpdates :: ![ObjectAttributeUpdate]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateObjectAttributes' with the minimum fields required to make a request.
@@ -122,10 +124,12 @@ instance ToQuery UpdateObjectAttributes where
         toQuery = const mempty
 
 -- | /See:/ 'updateObjectAttributesResponse' smart constructor.
-data UpdateObjectAttributesResponse = UpdateObjectAttributesResponse'
-  { _uoarsObjectIdentifier :: !(Maybe Text)
-  , _uoarsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateObjectAttributesResponse =
+  UpdateObjectAttributesResponse'
+    { _uoarsObjectIdentifier :: !(Maybe Text)
+    , _uoarsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateObjectAttributesResponse' with the minimum fields required to make a request.

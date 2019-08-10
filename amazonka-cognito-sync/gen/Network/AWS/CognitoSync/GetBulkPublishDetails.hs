@@ -53,9 +53,11 @@ import Network.AWS.Response
 -- | The input for the GetBulkPublishDetails operation.
 --
 -- /See:/ 'getBulkPublishDetails' smart constructor.
-newtype GetBulkPublishDetails = GetBulkPublishDetails'
-  { _gbpdIdentityPoolId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetBulkPublishDetails =
+  GetBulkPublishDetails'
+    { _gbpdIdentityPoolId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBulkPublishDetails' with the minimum fields required to make a request.
@@ -115,14 +117,16 @@ instance ToQuery GetBulkPublishDetails where
 -- | The output for the GetBulkPublishDetails operation.
 --
 -- /See:/ 'getBulkPublishDetailsResponse' smart constructor.
-data GetBulkPublishDetailsResponse = GetBulkPublishDetailsResponse'
-  { _gbpdrsBulkPublishStartTime    :: !(Maybe POSIX)
-  , _gbpdrsIdentityPoolId          :: !(Maybe Text)
-  , _gbpdrsBulkPublishCompleteTime :: !(Maybe POSIX)
-  , _gbpdrsFailureMessage          :: !(Maybe Text)
-  , _gbpdrsBulkPublishStatus       :: !(Maybe BulkPublishStatus)
-  , _gbpdrsResponseStatus          :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetBulkPublishDetailsResponse =
+  GetBulkPublishDetailsResponse'
+    { _gbpdrsBulkPublishStartTime    :: !(Maybe POSIX)
+    , _gbpdrsIdentityPoolId          :: !(Maybe Text)
+    , _gbpdrsBulkPublishCompleteTime :: !(Maybe POSIX)
+    , _gbpdrsFailureMessage          :: !(Maybe Text)
+    , _gbpdrsBulkPublishStatus       :: !(Maybe BulkPublishStatus)
+    , _gbpdrsResponseStatus          :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBulkPublishDetailsResponse' with the minimum fields required to make a request.

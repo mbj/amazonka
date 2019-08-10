@@ -50,11 +50,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deregisterScalableTarget' smart constructor.
-data DeregisterScalableTarget = DeregisterScalableTarget'
-  { _derServiceNamespace  :: !ServiceNamespace
-  , _derResourceId        :: !Text
-  , _derScalableDimension :: !ScalableDimension
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeregisterScalableTarget =
+  DeregisterScalableTarget'
+    { _derServiceNamespace  :: !ServiceNamespace
+    , _derResourceId        :: !Text
+    , _derScalableDimension :: !ScalableDimension
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeregisterScalableTarget' with the minimum fields required to make a request.
@@ -130,9 +132,11 @@ instance ToQuery DeregisterScalableTarget where
         toQuery = const mempty
 
 -- | /See:/ 'deregisterScalableTargetResponse' smart constructor.
-newtype DeregisterScalableTargetResponse = DeregisterScalableTargetResponse'
-  { _dstrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeregisterScalableTargetResponse =
+  DeregisterScalableTargetResponse'
+    { _dstrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeregisterScalableTargetResponse' with the minimum fields required to make a request.

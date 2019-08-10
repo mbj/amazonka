@@ -52,11 +52,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getGatewayResponses' smart constructor.
-data GetGatewayResponses = GetGatewayResponses'
-  { _ggrLimit     :: !(Maybe Int)
-  , _ggrPosition  :: !(Maybe Text)
-  , _ggrRestAPIId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetGatewayResponses =
+  GetGatewayResponses'
+    { _ggrLimit     :: !(Maybe Int)
+    , _ggrPosition  :: !(Maybe Text)
+    , _ggrRestAPIId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetGatewayResponses' with the minimum fields required to make a request.
@@ -137,11 +139,13 @@ instance ToQuery GetGatewayResponses where
 -- <http://docs.aws.amazon.com/apigateway/latest/developerguide/customize-gateway-responses.html Customize Gateway Responses>
 --
 -- /See:/ 'getGatewayResponsesResponse' smart constructor.
-data GetGatewayResponsesResponse = GetGatewayResponsesResponse'
-  { _ggrrsItems          :: !(Maybe [GatewayResponse])
-  , _ggrrsPosition       :: !(Maybe Text)
-  , _ggrrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetGatewayResponsesResponse =
+  GetGatewayResponsesResponse'
+    { _ggrrsItems          :: !(Maybe [GatewayResponse])
+    , _ggrrsPosition       :: !(Maybe Text)
+    , _ggrrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetGatewayResponsesResponse' with the minimum fields required to make a request.

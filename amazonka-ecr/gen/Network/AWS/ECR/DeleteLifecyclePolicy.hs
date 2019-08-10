@@ -49,10 +49,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteLifecyclePolicy' smart constructor.
-data DeleteLifecyclePolicy = DeleteLifecyclePolicy'
-  { _dlpRegistryId     :: !(Maybe Text)
-  , _dlpRepositoryName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteLifecyclePolicy =
+  DeleteLifecyclePolicy'
+    { _dlpRegistryId     :: !(Maybe Text)
+    , _dlpRepositoryName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteLifecyclePolicy' with the minimum fields required to make a request.
@@ -119,13 +121,15 @@ instance ToQuery DeleteLifecyclePolicy where
         toQuery = const mempty
 
 -- | /See:/ 'deleteLifecyclePolicyResponse' smart constructor.
-data DeleteLifecyclePolicyResponse = DeleteLifecyclePolicyResponse'
-  { _dlprsRegistryId          :: !(Maybe Text)
-  , _dlprsLastEvaluatedAt     :: !(Maybe POSIX)
-  , _dlprsLifecyclePolicyText :: !(Maybe Text)
-  , _dlprsRepositoryName      :: !(Maybe Text)
-  , _dlprsResponseStatus      :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteLifecyclePolicyResponse =
+  DeleteLifecyclePolicyResponse'
+    { _dlprsRegistryId          :: !(Maybe Text)
+    , _dlprsLastEvaluatedAt     :: !(Maybe POSIX)
+    , _dlprsLifecyclePolicyText :: !(Maybe Text)
+    , _dlprsRepositoryName      :: !(Maybe Text)
+    , _dlprsResponseStatus      :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteLifecyclePolicyResponse' with the minimum fields required to make a request.

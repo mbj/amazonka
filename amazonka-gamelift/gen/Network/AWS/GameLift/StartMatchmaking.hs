@@ -89,11 +89,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'startMatchmaking' smart constructor.
-data StartMatchmaking = StartMatchmaking'
-  { _sTicketId          :: !(Maybe Text)
-  , _sConfigurationName :: !Text
-  , _sPlayers           :: ![Player]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartMatchmaking =
+  StartMatchmaking'
+    { _sTicketId          :: !(Maybe Text)
+    , _sConfigurationName :: !Text
+    , _sPlayers           :: ![Player]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartMatchmaking' with the minimum fields required to make a request.
@@ -169,10 +171,12 @@ instance ToQuery StartMatchmaking where
 --
 --
 -- /See:/ 'startMatchmakingResponse' smart constructor.
-data StartMatchmakingResponse = StartMatchmakingResponse'
-  { _srsMatchmakingTicket :: !(Maybe MatchmakingTicket)
-  , _srsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StartMatchmakingResponse =
+  StartMatchmakingResponse'
+    { _srsMatchmakingTicket :: !(Maybe MatchmakingTicket)
+    , _srsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StartMatchmakingResponse' with the minimum fields required to make a request.

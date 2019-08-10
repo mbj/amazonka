@@ -55,11 +55,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeCacheSubnetGroups' smart constructor.
-data DescribeCacheSubnetGroups = DescribeCacheSubnetGroups'
-  { _dcsgCacheSubnetGroupName :: !(Maybe Text)
-  , _dcsgMarker               :: !(Maybe Text)
-  , _dcsgMaxRecords           :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeCacheSubnetGroups =
+  DescribeCacheSubnetGroups'
+    { _dcsgCacheSubnetGroupName :: !(Maybe Text)
+    , _dcsgMarker               :: !(Maybe Text)
+    , _dcsgMaxRecords           :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeCacheSubnetGroups' with the minimum fields required to make a request.
@@ -138,11 +140,13 @@ instance ToQuery DescribeCacheSubnetGroups where
 --
 --
 -- /See:/ 'describeCacheSubnetGroupsResponse' smart constructor.
-data DescribeCacheSubnetGroupsResponse = DescribeCacheSubnetGroupsResponse'
-  { _dcsgrsMarker            :: !(Maybe Text)
-  , _dcsgrsCacheSubnetGroups :: !(Maybe [CacheSubnetGroup])
-  , _dcsgrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeCacheSubnetGroupsResponse =
+  DescribeCacheSubnetGroupsResponse'
+    { _dcsgrsMarker            :: !(Maybe Text)
+    , _dcsgrsCacheSubnetGroups :: !(Maybe [CacheSubnetGroup])
+    , _dcsgrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeCacheSubnetGroupsResponse' with the minimum fields required to make a request.

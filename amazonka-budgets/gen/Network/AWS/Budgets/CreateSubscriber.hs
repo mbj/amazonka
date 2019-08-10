@@ -51,12 +51,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createSubscriber' smart constructor.
-data CreateSubscriber = CreateSubscriber'
-  { _csAccountId    :: !Text
-  , _csBudgetName   :: !Text
-  , _csNotification :: !Notification
-  , _csSubscriber   :: !Subscriber
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateSubscriber =
+  CreateSubscriber'
+    { _csAccountId    :: !Text
+    , _csBudgetName   :: !Text
+    , _csNotification :: !Notification
+    , _csSubscriber   :: !Subscriber
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateSubscriber' with the minimum fields required to make a request.
@@ -143,9 +145,11 @@ instance ToQuery CreateSubscriber where
 --
 --
 -- /See:/ 'createSubscriberResponse' smart constructor.
-newtype CreateSubscriberResponse = CreateSubscriberResponse'
-  { _csrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype CreateSubscriberResponse =
+  CreateSubscriberResponse'
+    { _csrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateSubscriberResponse' with the minimum fields required to make a request.

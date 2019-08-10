@@ -46,10 +46,12 @@ import Network.AWS.Response
 -- | The request to update some combination of the Input Security Group name and the IPv4 CIDRs the Input Security Group should allow.
 --
 -- /See:/ 'updateInputSecurityGroup' smart constructor.
-data UpdateInputSecurityGroup = UpdateInputSecurityGroup'
-  { _uisgWhitelistRules       :: !(Maybe [InputWhitelistRuleCidr])
-  , _uisgInputSecurityGroupId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateInputSecurityGroup =
+  UpdateInputSecurityGroup'
+    { _uisgWhitelistRules       :: !(Maybe [InputWhitelistRuleCidr])
+    , _uisgInputSecurityGroupId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateInputSecurityGroup' with the minimum fields required to make a request.
@@ -116,10 +118,12 @@ instance ToQuery UpdateInputSecurityGroup where
 -- | Placeholder documentation for UpdateInputSecurityGroupResponse
 --
 -- /See:/ 'updateInputSecurityGroupResponse' smart constructor.
-data UpdateInputSecurityGroupResponse = UpdateInputSecurityGroupResponse'
-  { _uisgrsSecurityGroup  :: !(Maybe InputSecurityGroup)
-  , _uisgrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateInputSecurityGroupResponse =
+  UpdateInputSecurityGroupResponse'
+    { _uisgrsSecurityGroup  :: !(Maybe InputSecurityGroup)
+    , _uisgrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateInputSecurityGroupResponse' with the minimum fields required to make a request.

@@ -49,10 +49,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'removeTags' smart constructor.
-data RemoveTags = RemoveTags'
-  { _rtLoadBalancerNames :: ![Text]
-  , _rtTags              :: !(List1 TagKeyOnly)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RemoveTags =
+  RemoveTags'
+    { _rtLoadBalancerNames :: ![Text]
+    , _rtTags              :: !(List1 TagKeyOnly)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RemoveTags' with the minimum fields required to make a request.
@@ -109,9 +111,11 @@ instance ToQuery RemoveTags where
 --
 --
 -- /See:/ 'removeTagsResponse' smart constructor.
-newtype RemoveTagsResponse = RemoveTagsResponse'
-  { _rtrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype RemoveTagsResponse =
+  RemoveTagsResponse'
+    { _rtrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RemoveTagsResponse' with the minimum fields required to make a request.

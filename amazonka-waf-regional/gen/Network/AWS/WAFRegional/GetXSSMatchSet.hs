@@ -49,9 +49,11 @@ import Network.AWS.WAFRegional.Types.Product
 --
 --
 -- /See:/ 'getXSSMatchSet' smart constructor.
-newtype GetXSSMatchSet = GetXSSMatchSet'
-  { _gxmsXSSMatchSetId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetXSSMatchSet =
+  GetXSSMatchSet'
+    { _gxmsXSSMatchSetId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetXSSMatchSet' with the minimum fields required to make a request.
@@ -110,10 +112,12 @@ instance ToQuery GetXSSMatchSet where
 --
 --
 -- /See:/ 'getXSSMatchSetResponse' smart constructor.
-data GetXSSMatchSetResponse = GetXSSMatchSetResponse'
-  { _gxmsrsXSSMatchSet    :: !(Maybe XSSMatchSet)
-  , _gxmsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetXSSMatchSetResponse =
+  GetXSSMatchSetResponse'
+    { _gxmsrsXSSMatchSet    :: !(Maybe XSSMatchSet)
+    , _gxmsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetXSSMatchSetResponse' with the minimum fields required to make a request.

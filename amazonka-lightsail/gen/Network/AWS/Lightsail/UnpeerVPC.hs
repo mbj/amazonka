@@ -87,10 +87,12 @@ instance ToQuery UnpeerVPC where
         toQuery = const mempty
 
 -- | /See:/ 'unpeerVPCResponse' smart constructor.
-data UnpeerVPCResponse = UnpeerVPCResponse'
-  { _uvrsOperation      :: !(Maybe Operation)
-  , _uvrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UnpeerVPCResponse =
+  UnpeerVPCResponse'
+    { _uvrsOperation      :: !(Maybe Operation)
+    , _uvrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UnpeerVPCResponse' with the minimum fields required to make a request.

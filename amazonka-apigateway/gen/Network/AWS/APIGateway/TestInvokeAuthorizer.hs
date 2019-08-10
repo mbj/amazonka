@@ -62,15 +62,17 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'testInvokeAuthorizer' smart constructor.
-data TestInvokeAuthorizer = TestInvokeAuthorizer'
-  { _tiaPathWithQueryString :: !(Maybe Text)
-  , _tiaBody                :: !(Maybe Text)
-  , _tiaAdditionalContext   :: !(Maybe (Map Text Text))
-  , _tiaStageVariables      :: !(Maybe (Map Text Text))
-  , _tiaHeaders             :: !(Maybe (Map Text Text))
-  , _tiaRestAPIId           :: !Text
-  , _tiaAuthorizerId        :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TestInvokeAuthorizer =
+  TestInvokeAuthorizer'
+    { _tiaPathWithQueryString :: !(Maybe Text)
+    , _tiaBody                :: !(Maybe Text)
+    , _tiaAdditionalContext   :: !(Maybe (Map Text Text))
+    , _tiaStageVariables      :: !(Maybe (Map Text Text))
+    , _tiaHeaders             :: !(Maybe (Map Text Text))
+    , _tiaRestAPIId           :: !Text
+    , _tiaAuthorizerId        :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TestInvokeAuthorizer' with the minimum fields required to make a request.
@@ -185,16 +187,18 @@ instance ToQuery TestInvokeAuthorizer where
 --
 --
 -- /See:/ 'testInvokeAuthorizerResponse' smart constructor.
-data TestInvokeAuthorizerResponse = TestInvokeAuthorizerResponse'
-  { _tiarsLog            :: !(Maybe Text)
-  , _tiarsPrincipalId    :: !(Maybe Text)
-  , _tiarsLatency        :: !(Maybe Integer)
-  , _tiarsAuthorization  :: !(Maybe (Map Text [Text]))
-  , _tiarsClaims         :: !(Maybe (Map Text Text))
-  , _tiarsClientStatus   :: !(Maybe Int)
-  , _tiarsPolicy         :: !(Maybe Text)
-  , _tiarsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TestInvokeAuthorizerResponse =
+  TestInvokeAuthorizerResponse'
+    { _tiarsLog            :: !(Maybe Text)
+    , _tiarsPrincipalId    :: !(Maybe Text)
+    , _tiarsLatency        :: !(Maybe Integer)
+    , _tiarsAuthorization  :: !(Maybe (Map Text [Text]))
+    , _tiarsClaims         :: !(Maybe (Map Text Text))
+    , _tiarsClientStatus   :: !(Maybe Int)
+    , _tiarsPolicy         :: !(Maybe Text)
+    , _tiarsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TestInvokeAuthorizerResponse' with the minimum fields required to make a request.

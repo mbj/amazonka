@@ -53,15 +53,17 @@ import Network.AWS.ServiceCatalog.Types
 import Network.AWS.ServiceCatalog.Types.Product
 
 -- | /See:/ 'createConstraint' smart constructor.
-data CreateConstraint = CreateConstraint'
-  { _ccAcceptLanguage   :: !(Maybe Text)
-  , _ccDescription      :: !(Maybe Text)
-  , _ccPortfolioId      :: !Text
-  , _ccProductId        :: !Text
-  , _ccParameters       :: !Text
-  , _ccType             :: !Text
-  , _ccIdempotencyToken :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateConstraint =
+  CreateConstraint'
+    { _ccAcceptLanguage   :: !(Maybe Text)
+    , _ccDescription      :: !(Maybe Text)
+    , _ccPortfolioId      :: !Text
+    , _ccProductId        :: !Text
+    , _ccParameters       :: !Text
+    , _ccType             :: !Text
+    , _ccIdempotencyToken :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateConstraint' with the minimum fields required to make a request.
@@ -172,12 +174,14 @@ instance ToQuery CreateConstraint where
         toQuery = const mempty
 
 -- | /See:/ 'createConstraintResponse' smart constructor.
-data CreateConstraintResponse = CreateConstraintResponse'
-  { _ccrsStatus               :: !(Maybe RequestStatus)
-  , _ccrsConstraintDetail     :: !(Maybe ConstraintDetail)
-  , _ccrsConstraintParameters :: !(Maybe Text)
-  , _ccrsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateConstraintResponse =
+  CreateConstraintResponse'
+    { _ccrsStatus               :: !(Maybe RequestStatus)
+    , _ccrsConstraintDetail     :: !(Maybe ConstraintDetail)
+    , _ccrsConstraintParameters :: !(Maybe Text)
+    , _ccrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateConstraintResponse' with the minimum fields required to make a request.

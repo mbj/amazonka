@@ -64,10 +64,12 @@ import Network.AWS.StorageGateway.Types.Product
 --
 --
 -- /See:/ 'listGateways' smart constructor.
-data ListGateways = ListGateways'
-  { _lgMarker :: !(Maybe Text)
-  , _lgLimit  :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListGateways =
+  ListGateways'
+    { _lgMarker :: !(Maybe Text)
+    , _lgLimit  :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListGateways' with the minimum fields required to make a request.
@@ -135,11 +137,13 @@ instance ToQuery ListGateways where
         toQuery = const mempty
 
 -- | /See:/ 'listGatewaysResponse' smart constructor.
-data ListGatewaysResponse = ListGatewaysResponse'
-  { _lgrsMarker         :: !(Maybe Text)
-  , _lgrsGateways       :: !(Maybe [GatewayInfo])
-  , _lgrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListGatewaysResponse =
+  ListGatewaysResponse'
+    { _lgrsMarker         :: !(Maybe Text)
+    , _lgrsGateways       :: !(Maybe [GatewayInfo])
+    , _lgrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListGatewaysResponse' with the minimum fields required to make a request.

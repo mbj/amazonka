@@ -54,11 +54,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getModel' smart constructor.
-data GetModel = GetModel'
-  { _ggFlatten   :: !(Maybe Bool)
-  , _ggRestAPIId :: !Text
-  , _ggModelName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetModel =
+  GetModel'
+    { _ggFlatten   :: !(Maybe Bool)
+    , _ggRestAPIId :: !Text
+    , _ggModelName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetModel' with the minimum fields required to make a request.

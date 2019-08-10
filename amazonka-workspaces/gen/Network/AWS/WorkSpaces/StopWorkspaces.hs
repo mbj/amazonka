@@ -47,9 +47,11 @@ import Network.AWS.WorkSpaces.Types
 import Network.AWS.WorkSpaces.Types.Product
 
 -- | /See:/ 'stopWorkspaces' smart constructor.
-newtype StopWorkspaces = StopWorkspaces'
-  { _swStopWorkspaceRequests :: List1 StopRequest
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype StopWorkspaces =
+  StopWorkspaces'
+    { _swStopWorkspaceRequests :: List1 StopRequest
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopWorkspaces' with the minimum fields required to make a request.
@@ -106,10 +108,12 @@ instance ToQuery StopWorkspaces where
         toQuery = const mempty
 
 -- | /See:/ 'stopWorkspacesResponse' smart constructor.
-data StopWorkspacesResponse = StopWorkspacesResponse'
-  { _srsFailedRequests :: !(Maybe [FailedWorkspaceChangeRequest])
-  , _srsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data StopWorkspacesResponse =
+  StopWorkspacesResponse'
+    { _srsFailedRequests :: !(Maybe [FailedWorkspaceChangeRequest])
+    , _srsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'StopWorkspacesResponse' with the minimum fields required to make a request.

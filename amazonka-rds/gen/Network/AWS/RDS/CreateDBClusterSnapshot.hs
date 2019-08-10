@@ -51,11 +51,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createDBClusterSnapshot' smart constructor.
-data CreateDBClusterSnapshot = CreateDBClusterSnapshot'
-  { _cdcsTags                        :: !(Maybe [Tag])
-  , _cdcsDBClusterSnapshotIdentifier :: !Text
-  , _cdcsDBClusterIdentifier         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDBClusterSnapshot =
+  CreateDBClusterSnapshot'
+    { _cdcsTags                        :: !(Maybe [Tag])
+    , _cdcsDBClusterSnapshotIdentifier :: !Text
+    , _cdcsDBClusterIdentifier         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDBClusterSnapshot' with the minimum fields required to make a request.
@@ -123,10 +125,12 @@ instance ToQuery CreateDBClusterSnapshot where
                "DBClusterIdentifier" =: _cdcsDBClusterIdentifier]
 
 -- | /See:/ 'createDBClusterSnapshotResponse' smart constructor.
-data CreateDBClusterSnapshotResponse = CreateDBClusterSnapshotResponse'
-  { _cdbcsrsDBClusterSnapshot :: !(Maybe DBClusterSnapshot)
-  , _cdbcsrsResponseStatus    :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDBClusterSnapshotResponse =
+  CreateDBClusterSnapshotResponse'
+    { _cdbcsrsDBClusterSnapshot :: !(Maybe DBClusterSnapshot)
+    , _cdbcsrsResponseStatus    :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDBClusterSnapshotResponse' with the minimum fields required to make a request.

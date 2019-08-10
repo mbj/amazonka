@@ -63,15 +63,17 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'listMultipartUploads' smart constructor.
-data ListMultipartUploads = ListMultipartUploads'
-  { _lmuKeyMarker      :: !(Maybe Text)
-  , _lmuPrefix         :: !(Maybe Text)
-  , _lmuEncodingType   :: !(Maybe EncodingType)
-  , _lmuUploadIdMarker :: !(Maybe Text)
-  , _lmuMaxUploads     :: !(Maybe Int)
-  , _lmuDelimiter      :: !(Maybe Delimiter)
-  , _lmuBucket         :: !BucketName
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListMultipartUploads =
+  ListMultipartUploads'
+    { _lmuKeyMarker      :: !(Maybe Text)
+    , _lmuPrefix         :: !(Maybe Text)
+    , _lmuEncodingType   :: !(Maybe EncodingType)
+    , _lmuUploadIdMarker :: !(Maybe Text)
+    , _lmuMaxUploads     :: !(Maybe Int)
+    , _lmuDelimiter      :: !(Maybe Delimiter)
+    , _lmuBucket         :: !BucketName
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListMultipartUploads' with the minimum fields required to make a request.
@@ -187,21 +189,23 @@ instance ToQuery ListMultipartUploads where
                "delimiter" =: _lmuDelimiter, "uploads"]
 
 -- | /See:/ 'listMultipartUploadsResponse' smart constructor.
-data ListMultipartUploadsResponse = ListMultipartUploadsResponse'
-  { _lmursKeyMarker          :: !(Maybe Text)
-  , _lmursPrefix             :: !(Maybe Text)
-  , _lmursCommonPrefixes     :: !(Maybe [CommonPrefix])
-  , _lmursEncodingType       :: !(Maybe EncodingType)
-  , _lmursBucket             :: !(Maybe BucketName)
-  , _lmursUploadIdMarker     :: !(Maybe Text)
-  , _lmursMaxUploads         :: !(Maybe Int)
-  , _lmursNextKeyMarker      :: !(Maybe Text)
-  , _lmursUploads            :: !(Maybe [MultipartUpload])
-  , _lmursIsTruncated        :: !(Maybe Bool)
-  , _lmursNextUploadIdMarker :: !(Maybe Text)
-  , _lmursDelimiter          :: !(Maybe Delimiter)
-  , _lmursResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListMultipartUploadsResponse =
+  ListMultipartUploadsResponse'
+    { _lmursKeyMarker          :: !(Maybe Text)
+    , _lmursPrefix             :: !(Maybe Text)
+    , _lmursCommonPrefixes     :: !(Maybe [CommonPrefix])
+    , _lmursEncodingType       :: !(Maybe EncodingType)
+    , _lmursBucket             :: !(Maybe BucketName)
+    , _lmursUploadIdMarker     :: !(Maybe Text)
+    , _lmursMaxUploads         :: !(Maybe Int)
+    , _lmursNextKeyMarker      :: !(Maybe Text)
+    , _lmursUploads            :: !(Maybe [MultipartUpload])
+    , _lmursIsTruncated        :: !(Maybe Bool)
+    , _lmursNextUploadIdMarker :: !(Maybe Text)
+    , _lmursDelimiter          :: !(Maybe Delimiter)
+    , _lmursResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListMultipartUploadsResponse' with the minimum fields required to make a request.

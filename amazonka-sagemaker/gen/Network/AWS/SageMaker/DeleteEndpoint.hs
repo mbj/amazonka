@@ -42,9 +42,11 @@ import Network.AWS.SageMaker.Types
 import Network.AWS.SageMaker.Types.Product
 
 -- | /See:/ 'deleteEndpoint' smart constructor.
-newtype DeleteEndpoint = DeleteEndpoint'
-  { _deEndpointName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteEndpoint =
+  DeleteEndpoint'
+    { _deEndpointName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteEndpoint' with the minimum fields required to make a request.

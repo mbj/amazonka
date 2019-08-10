@@ -57,12 +57,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listAttachedGroupPolicies' smart constructor.
-data ListAttachedGroupPolicies = ListAttachedGroupPolicies'
-  { _lagpPathPrefix :: !(Maybe Text)
-  , _lagpMarker     :: !(Maybe Text)
-  , _lagpMaxItems   :: !(Maybe Nat)
-  , _lagpGroupName  :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAttachedGroupPolicies =
+  ListAttachedGroupPolicies'
+    { _lagpPathPrefix :: !(Maybe Text)
+    , _lagpMarker     :: !(Maybe Text)
+    , _lagpMaxItems   :: !(Maybe Nat)
+    , _lagpGroupName  :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAttachedGroupPolicies' with the minimum fields required to make a request.
@@ -150,12 +152,14 @@ instance ToQuery ListAttachedGroupPolicies where
 --
 --
 -- /See:/ 'listAttachedGroupPoliciesResponse' smart constructor.
-data ListAttachedGroupPoliciesResponse = ListAttachedGroupPoliciesResponse'
-  { _lagprsAttachedPolicies :: !(Maybe [AttachedPolicy])
-  , _lagprsMarker           :: !(Maybe Text)
-  , _lagprsIsTruncated      :: !(Maybe Bool)
-  , _lagprsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAttachedGroupPoliciesResponse =
+  ListAttachedGroupPoliciesResponse'
+    { _lagprsAttachedPolicies :: !(Maybe [AttachedPolicy])
+    , _lagprsMarker           :: !(Maybe Text)
+    , _lagprsIsTruncated      :: !(Maybe Bool)
+    , _lagprsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAttachedGroupPoliciesResponse' with the minimum fields required to make a request.

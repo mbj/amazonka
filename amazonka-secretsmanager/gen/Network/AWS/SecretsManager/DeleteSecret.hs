@@ -68,10 +68,12 @@ import Network.AWS.SecretsManager.Types
 import Network.AWS.SecretsManager.Types.Product
 
 -- | /See:/ 'deleteSecret' smart constructor.
-data DeleteSecret = DeleteSecret'
-  { _dsRecoveryWindowInDays :: !(Maybe Integer)
-  , _dsSecretId             :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteSecret =
+  DeleteSecret'
+    { _dsRecoveryWindowInDays :: !(Maybe Integer)
+    , _dsSecretId             :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteSecret' with the minimum fields required to make a request.
@@ -135,12 +137,14 @@ instance ToQuery DeleteSecret where
         toQuery = const mempty
 
 -- | /See:/ 'deleteSecretResponse' smart constructor.
-data DeleteSecretResponse = DeleteSecretResponse'
-  { _dsrsARN            :: !(Maybe Text)
-  , _dsrsName           :: !(Maybe Text)
-  , _dsrsDeletionDate   :: !(Maybe POSIX)
-  , _dsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteSecretResponse =
+  DeleteSecretResponse'
+    { _dsrsARN            :: !(Maybe Text)
+    , _dsrsName           :: !(Maybe Text)
+    , _dsrsDeletionDate   :: !(Maybe POSIX)
+    , _dsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteSecretResponse' with the minimum fields required to make a request.

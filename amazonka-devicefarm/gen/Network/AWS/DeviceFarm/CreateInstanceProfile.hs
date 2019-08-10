@@ -49,13 +49,15 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createInstanceProfile' smart constructor.
-data CreateInstanceProfile = CreateInstanceProfile'
-  { _cipRebootAfterUse                :: !(Maybe Bool)
-  , _cipPackageCleanup                :: !(Maybe Bool)
-  , _cipExcludeAppPackagesFromCleanup :: !(Maybe [Text])
-  , _cipDescription                   :: !(Maybe Text)
-  , _cipName                          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateInstanceProfile =
+  CreateInstanceProfile'
+    { _cipRebootAfterUse                :: !(Maybe Bool)
+    , _cipPackageCleanup                :: !(Maybe Bool)
+    , _cipExcludeAppPackagesFromCleanup :: !(Maybe [Text])
+    , _cipDescription                   :: !(Maybe Text)
+    , _cipName                          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateInstanceProfile' with the minimum fields required to make a request.
@@ -146,10 +148,12 @@ instance ToQuery CreateInstanceProfile where
         toQuery = const mempty
 
 -- | /See:/ 'createInstanceProfileResponse' smart constructor.
-data CreateInstanceProfileResponse = CreateInstanceProfileResponse'
-  { _ciprsInstanceProfile :: !(Maybe InstanceProfile)
-  , _ciprsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateInstanceProfileResponse =
+  CreateInstanceProfileResponse'
+    { _ciprsInstanceProfile :: !(Maybe InstanceProfile)
+    , _ciprsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateInstanceProfileResponse' with the minimum fields required to make a request.

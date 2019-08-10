@@ -46,10 +46,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'batchPutMessage' smart constructor.
-data BatchPutMessage = BatchPutMessage'
-  { _bpmChannelName :: !Text
-  , _bpmMessages    :: ![Message]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchPutMessage =
+  BatchPutMessage'
+    { _bpmChannelName :: !Text
+    , _bpmMessages    :: ![Message]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchPutMessage' with the minimum fields required to make a request.
@@ -105,10 +107,12 @@ instance ToQuery BatchPutMessage where
         toQuery = const mempty
 
 -- | /See:/ 'batchPutMessageResponse' smart constructor.
-data BatchPutMessageResponse = BatchPutMessageResponse'
-  { _bpmrsBatchPutMessageErrorEntries :: !(Maybe [BatchPutMessageErrorEntry])
-  , _bpmrsResponseStatus              :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data BatchPutMessageResponse =
+  BatchPutMessageResponse'
+    { _bpmrsBatchPutMessageErrorEntries :: !(Maybe [BatchPutMessageErrorEntry])
+    , _bpmrsResponseStatus              :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'BatchPutMessageResponse' with the minimum fields required to make a request.

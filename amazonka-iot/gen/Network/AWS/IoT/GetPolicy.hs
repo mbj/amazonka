@@ -55,9 +55,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getPolicy' smart constructor.
-newtype GetPolicy = GetPolicy'
-  { _gpPolicyName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetPolicy =
+  GetPolicy'
+    { _gpPolicyName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetPolicy' with the minimum fields required to make a request.
@@ -109,16 +111,18 @@ instance ToQuery GetPolicy where
 --
 --
 -- /See:/ 'getPolicyResponse' smart constructor.
-data GetPolicyResponse = GetPolicyResponse'
-  { _gprsLastModifiedDate :: !(Maybe POSIX)
-  , _gprsPolicyName       :: !(Maybe Text)
-  , _gprsPolicyDocument   :: !(Maybe Text)
-  , _gprsDefaultVersionId :: !(Maybe Text)
-  , _gprsPolicyARN        :: !(Maybe Text)
-  , _gprsCreationDate     :: !(Maybe POSIX)
-  , _gprsGenerationId     :: !(Maybe Text)
-  , _gprsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetPolicyResponse =
+  GetPolicyResponse'
+    { _gprsLastModifiedDate :: !(Maybe POSIX)
+    , _gprsPolicyName       :: !(Maybe Text)
+    , _gprsPolicyDocument   :: !(Maybe Text)
+    , _gprsDefaultVersionId :: !(Maybe Text)
+    , _gprsPolicyARN        :: !(Maybe Text)
+    , _gprsCreationDate     :: !(Maybe POSIX)
+    , _gprsGenerationId     :: !(Maybe Text)
+    , _gprsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetPolicyResponse' with the minimum fields required to make a request.

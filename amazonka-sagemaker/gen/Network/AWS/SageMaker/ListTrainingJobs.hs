@@ -58,18 +58,20 @@ import Network.AWS.SageMaker.Types
 import Network.AWS.SageMaker.Types.Product
 
 -- | /See:/ 'listTrainingJobs' smart constructor.
-data ListTrainingJobs = ListTrainingJobs'
-  { _ltjNameContains           :: !(Maybe Text)
-  , _ltjLastModifiedTimeBefore :: !(Maybe POSIX)
-  , _ltjCreationTimeAfter      :: !(Maybe POSIX)
-  , _ltjNextToken              :: !(Maybe Text)
-  , _ltjSortOrder              :: !(Maybe SortOrder)
-  , _ltjLastModifiedTimeAfter  :: !(Maybe POSIX)
-  , _ltjCreationTimeBefore     :: !(Maybe POSIX)
-  , _ltjStatusEquals           :: !(Maybe TrainingJobStatus)
-  , _ltjMaxResults             :: !(Maybe Nat)
-  , _ltjSortBy                 :: !(Maybe SortBy)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTrainingJobs =
+  ListTrainingJobs'
+    { _ltjNameContains           :: !(Maybe Text)
+    , _ltjLastModifiedTimeBefore :: !(Maybe POSIX)
+    , _ltjCreationTimeAfter      :: !(Maybe POSIX)
+    , _ltjNextToken              :: !(Maybe Text)
+    , _ltjSortOrder              :: !(Maybe SortOrder)
+    , _ltjLastModifiedTimeAfter  :: !(Maybe POSIX)
+    , _ltjCreationTimeBefore     :: !(Maybe POSIX)
+    , _ltjStatusEquals           :: !(Maybe TrainingJobStatus)
+    , _ltjMaxResults             :: !(Maybe Nat)
+    , _ltjSortBy                 :: !(Maybe SortBy)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTrainingJobs' with the minimum fields required to make a request.
@@ -206,11 +208,13 @@ instance ToQuery ListTrainingJobs where
         toQuery = const mempty
 
 -- | /See:/ 'listTrainingJobsResponse' smart constructor.
-data ListTrainingJobsResponse = ListTrainingJobsResponse'
-  { _ltjrsNextToken            :: !(Maybe Text)
-  , _ltjrsResponseStatus       :: !Int
-  , _ltjrsTrainingJobSummaries :: ![TrainingJobSummary]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListTrainingJobsResponse =
+  ListTrainingJobsResponse'
+    { _ltjrsNextToken            :: !(Maybe Text)
+    , _ltjrsResponseStatus       :: !Int
+    , _ltjrsTrainingJobSummaries :: ![TrainingJobSummary]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListTrainingJobsResponse' with the minimum fields required to make a request.

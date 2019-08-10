@@ -59,11 +59,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getConsoleOutput' smart constructor.
-data GetConsoleOutput = GetConsoleOutput'
-  { _gcoLatest     :: !(Maybe Bool)
-  , _gcoDryRun     :: !(Maybe Bool)
-  , _gcoInstanceId :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetConsoleOutput =
+  GetConsoleOutput'
+    { _gcoLatest     :: !(Maybe Bool)
+    , _gcoDryRun     :: !(Maybe Bool)
+    , _gcoInstanceId :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetConsoleOutput' with the minimum fields required to make a request.
@@ -129,12 +131,14 @@ instance ToQuery GetConsoleOutput where
 --
 --
 -- /See:/ 'getConsoleOutputResponse' smart constructor.
-data GetConsoleOutputResponse = GetConsoleOutputResponse'
-  { _gcorsInstanceId     :: !(Maybe Text)
-  , _gcorsOutput         :: !(Maybe Text)
-  , _gcorsTimestamp      :: !(Maybe ISO8601)
-  , _gcorsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetConsoleOutputResponse =
+  GetConsoleOutputResponse'
+    { _gcorsInstanceId     :: !(Maybe Text)
+    , _gcorsOutput         :: !(Maybe Text)
+    , _gcorsTimestamp      :: !(Maybe ISO8601)
+    , _gcorsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetConsoleOutputResponse' with the minimum fields required to make a request.

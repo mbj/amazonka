@@ -51,15 +51,17 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createTrigger' smart constructor.
-data CreateTrigger = CreateTrigger'
-  { _ctSchedule        :: !(Maybe Text)
-  , _ctPredicate       :: !(Maybe Predicate)
-  , _ctStartOnCreation :: !(Maybe Bool)
-  , _ctDescription     :: !(Maybe Text)
-  , _ctName            :: !Text
-  , _ctType            :: !TriggerType
-  , _ctActions         :: ![Action]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateTrigger =
+  CreateTrigger'
+    { _ctSchedule        :: !(Maybe Text)
+    , _ctPredicate       :: !(Maybe Predicate)
+    , _ctStartOnCreation :: !(Maybe Bool)
+    , _ctDescription     :: !(Maybe Text)
+    , _ctName            :: !Text
+    , _ctType            :: !TriggerType
+    , _ctActions         :: ![Action]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateTrigger' with the minimum fields required to make a request.
@@ -163,10 +165,12 @@ instance ToQuery CreateTrigger where
         toQuery = const mempty
 
 -- | /See:/ 'createTriggerResponse' smart constructor.
-data CreateTriggerResponse = CreateTriggerResponse'
-  { _ctrsName           :: !(Maybe Text)
-  , _ctrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateTriggerResponse =
+  CreateTriggerResponse'
+    { _ctrsName           :: !(Maybe Text)
+    , _ctrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateTriggerResponse' with the minimum fields required to make a request.

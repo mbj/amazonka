@@ -51,15 +51,17 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'submitContainerStateChange' smart constructor.
-data SubmitContainerStateChange = SubmitContainerStateChange'
-  { _scscNetworkBindings :: !(Maybe [NetworkBinding])
-  , _scscStatus          :: !(Maybe Text)
-  , _scscCluster         :: !(Maybe Text)
-  , _scscContainerName   :: !(Maybe Text)
-  , _scscReason          :: !(Maybe Text)
-  , _scscExitCode        :: !(Maybe Int)
-  , _scscTask            :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SubmitContainerStateChange =
+  SubmitContainerStateChange'
+    { _scscNetworkBindings :: !(Maybe [NetworkBinding])
+    , _scscStatus          :: !(Maybe Text)
+    , _scscCluster         :: !(Maybe Text)
+    , _scscContainerName   :: !(Maybe Text)
+    , _scscReason          :: !(Maybe Text)
+    , _scscExitCode        :: !(Maybe Int)
+    , _scscTask            :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SubmitContainerStateChange' with the minimum fields required to make a request.
@@ -164,10 +166,12 @@ instance ToQuery SubmitContainerStateChange where
         toQuery = const mempty
 
 -- | /See:/ 'submitContainerStateChangeResponse' smart constructor.
-data SubmitContainerStateChangeResponse = SubmitContainerStateChangeResponse'
-  { _scscrsAcknowledgment :: !(Maybe Text)
-  , _scscrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data SubmitContainerStateChangeResponse =
+  SubmitContainerStateChangeResponse'
+    { _scscrsAcknowledgment :: !(Maybe Text)
+    , _scscrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'SubmitContainerStateChangeResponse' with the minimum fields required to make a request.

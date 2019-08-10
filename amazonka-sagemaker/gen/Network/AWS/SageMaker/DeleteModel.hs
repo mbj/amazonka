@@ -42,9 +42,11 @@ import Network.AWS.SageMaker.Types
 import Network.AWS.SageMaker.Types.Product
 
 -- | /See:/ 'deleteModel' smart constructor.
-newtype DeleteModel = DeleteModel'
-  { _dmModelName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteModel =
+  DeleteModel'
+    { _dmModelName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteModel' with the minimum fields required to make a request.

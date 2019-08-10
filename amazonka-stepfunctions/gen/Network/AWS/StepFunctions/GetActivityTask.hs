@@ -49,10 +49,12 @@ import Network.AWS.StepFunctions.Types
 import Network.AWS.StepFunctions.Types.Product
 
 -- | /See:/ 'getActivityTask' smart constructor.
-data GetActivityTask = GetActivityTask'
-  { _gatWorkerName  :: !(Maybe Text)
-  , _gatActivityARN :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetActivityTask =
+  GetActivityTask'
+    { _gatWorkerName  :: !(Maybe Text)
+    , _gatActivityARN :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetActivityTask' with the minimum fields required to make a request.
@@ -114,11 +116,13 @@ instance ToQuery GetActivityTask where
         toQuery = const mempty
 
 -- | /See:/ 'getActivityTaskResponse' smart constructor.
-data GetActivityTaskResponse = GetActivityTaskResponse'
-  { _gatrsInput          :: !(Maybe Text)
-  , _gatrsTaskToken      :: !(Maybe Text)
-  , _gatrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetActivityTaskResponse =
+  GetActivityTaskResponse'
+    { _gatrsInput          :: !(Maybe Text)
+    , _gatrsTaskToken      :: !(Maybe Text)
+    , _gatrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetActivityTaskResponse' with the minimum fields required to make a request.

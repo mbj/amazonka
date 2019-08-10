@@ -51,12 +51,14 @@ import Network.AWS.ServerlessApplicationRepository.Types
 import Network.AWS.ServerlessApplicationRepository.Types.Product
 
 -- | /See:/ 'createCloudFormationChangeSet' smart constructor.
-data CreateCloudFormationChangeSet = CreateCloudFormationChangeSet'
-  { _ccfcsSemanticVersion    :: !(Maybe Text)
-  , _ccfcsParameterOverrides :: !(Maybe [ParameterValue])
-  , _ccfcsStackName          :: !(Maybe Text)
-  , _ccfcsApplicationId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateCloudFormationChangeSet =
+  CreateCloudFormationChangeSet'
+    { _ccfcsSemanticVersion    :: !(Maybe Text)
+    , _ccfcsParameterOverrides :: !(Maybe [ParameterValue])
+    , _ccfcsStackName          :: !(Maybe Text)
+    , _ccfcsApplicationId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateCloudFormationChangeSet' with the minimum fields required to make a request.
@@ -143,13 +145,15 @@ instance ToQuery CreateCloudFormationChangeSet where
         toQuery = const mempty
 
 -- | /See:/ 'createCloudFormationChangeSetResponse' smart constructor.
-data CreateCloudFormationChangeSetResponse = CreateCloudFormationChangeSetResponse'
-  { _ccfcsrsSemanticVersion :: !(Maybe Text)
-  , _ccfcsrsChangeSetId     :: !(Maybe Text)
-  , _ccfcsrsApplicationId   :: !(Maybe Text)
-  , _ccfcsrsStackId         :: !(Maybe Text)
-  , _ccfcsrsResponseStatus  :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateCloudFormationChangeSetResponse =
+  CreateCloudFormationChangeSetResponse'
+    { _ccfcsrsSemanticVersion :: !(Maybe Text)
+    , _ccfcsrsChangeSetId     :: !(Maybe Text)
+    , _ccfcsrsApplicationId   :: !(Maybe Text)
+    , _ccfcsrsStackId         :: !(Maybe Text)
+    , _ccfcsrsResponseStatus  :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateCloudFormationChangeSetResponse' with the minimum fields required to make a request.

@@ -53,11 +53,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'listAccountsForParent' smart constructor.
-data ListAccountsForParent = ListAccountsForParent'
-  { _lafpNextToken  :: !(Maybe Text)
-  , _lafpMaxResults :: !(Maybe Nat)
-  , _lafpParentId   :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListAccountsForParent =
+  ListAccountsForParent'
+    { _lafpNextToken  :: !(Maybe Text)
+    , _lafpMaxResults :: !(Maybe Nat)
+    , _lafpParentId   :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAccountsForParent' with the minimum fields required to make a request.
@@ -139,11 +141,13 @@ instance ToQuery ListAccountsForParent where
         toQuery = const mempty
 
 -- | /See:/ 'listAccountsForParentResponse' smart constructor.
-data ListAccountsForParentResponse = ListAccountsForParentResponse'
-  { _lafprsAccounts       :: !(Maybe [Account])
-  , _lafprsNextToken      :: !(Maybe Text)
-  , _lafprsResponseStatus :: !Int
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data ListAccountsForParentResponse =
+  ListAccountsForParentResponse'
+    { _lafprsAccounts       :: !(Maybe [Account])
+    , _lafprsNextToken      :: !(Maybe Text)
+    , _lafprsResponseStatus :: !Int
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListAccountsForParentResponse' with the minimum fields required to make a request.

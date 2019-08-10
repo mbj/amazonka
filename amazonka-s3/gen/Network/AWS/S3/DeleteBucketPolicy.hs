@@ -40,9 +40,11 @@ import Network.AWS.S3.Types
 import Network.AWS.S3.Types.Product
 
 -- | /See:/ 'deleteBucketPolicy' smart constructor.
-newtype DeleteBucketPolicy = DeleteBucketPolicy'
-  { _dbpBucket :: BucketName
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteBucketPolicy =
+  DeleteBucketPolicy'
+    { _dbpBucket :: BucketName
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteBucketPolicy' with the minimum fields required to make a request.

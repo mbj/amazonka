@@ -48,11 +48,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteInstance' smart constructor.
-data DeleteInstance = DeleteInstance'
-  { _diDeleteVolumes   :: !(Maybe Bool)
-  , _diDeleteElasticIP :: !(Maybe Bool)
-  , _diInstanceId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteInstance =
+  DeleteInstance'
+    { _diDeleteVolumes   :: !(Maybe Bool)
+    , _diDeleteElasticIP :: !(Maybe Bool)
+    , _diInstanceId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteInstance' with the minimum fields required to make a request.

@@ -55,9 +55,11 @@ import Network.AWS.SES.Types.Product
 --
 --
 -- /See:/ 'verifyDomainDkim' smart constructor.
-newtype VerifyDomainDkim = VerifyDomainDkim'
-  { _vddDomain :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype VerifyDomainDkim =
+  VerifyDomainDkim'
+    { _vddDomain :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VerifyDomainDkim' with the minimum fields required to make a request.
@@ -108,10 +110,12 @@ instance ToQuery VerifyDomainDkim where
 --
 --
 -- /See:/ 'verifyDomainDkimResponse' smart constructor.
-data VerifyDomainDkimResponse = VerifyDomainDkimResponse'
-  { _vddrsResponseStatus :: !Int
-  , _vddrsDkimTokens     :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data VerifyDomainDkimResponse =
+  VerifyDomainDkimResponse'
+    { _vddrsResponseStatus :: !Int
+    , _vddrsDkimTokens     :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'VerifyDomainDkimResponse' with the minimum fields required to make a request.

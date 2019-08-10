@@ -50,11 +50,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'putRolePolicy' smart constructor.
-data PutRolePolicy = PutRolePolicy'
-  { _prpRoleName       :: !Text
-  , _prpPolicyName     :: !Text
-  , _prpPolicyDocument :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data PutRolePolicy =
+  PutRolePolicy'
+    { _prpRoleName       :: !Text
+    , _prpPolicyName     :: !Text
+    , _prpPolicyDocument :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'PutRolePolicy' with the minimum fields required to make a request.

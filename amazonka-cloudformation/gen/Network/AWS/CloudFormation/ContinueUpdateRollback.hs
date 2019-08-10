@@ -53,12 +53,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'continueUpdateRollback' smart constructor.
-data ContinueUpdateRollback = ContinueUpdateRollback'
-  { _curResourcesToSkip    :: !(Maybe [Text])
-  , _curClientRequestToken :: !(Maybe Text)
-  , _curRoleARN            :: !(Maybe Text)
-  , _curStackName          :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ContinueUpdateRollback =
+  ContinueUpdateRollback'
+    { _curResourcesToSkip    :: !(Maybe [Text])
+    , _curClientRequestToken :: !(Maybe Text)
+    , _curRoleARN            :: !(Maybe Text)
+    , _curStackName          :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ContinueUpdateRollback' with the minimum fields required to make a request.
@@ -138,9 +140,11 @@ instance ToQuery ContinueUpdateRollback where
 --
 --
 -- /See:/ 'continueUpdateRollbackResponse' smart constructor.
-newtype ContinueUpdateRollbackResponse = ContinueUpdateRollbackResponse'
-  { _currsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype ContinueUpdateRollbackResponse =
+  ContinueUpdateRollbackResponse'
+    { _currsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ContinueUpdateRollbackResponse' with the minimum fields required to make a request.

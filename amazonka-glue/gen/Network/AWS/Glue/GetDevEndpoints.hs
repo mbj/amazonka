@@ -50,10 +50,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getDevEndpoints' smart constructor.
-data GetDevEndpoints = GetDevEndpoints'
-  { _gdeNextToken  :: !(Maybe Text)
-  , _gdeMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDevEndpoints =
+  GetDevEndpoints'
+    { _gdeNextToken  :: !(Maybe Text)
+    , _gdeMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDevEndpoints' with the minimum fields required to make a request.
@@ -122,11 +124,13 @@ instance ToQuery GetDevEndpoints where
         toQuery = const mempty
 
 -- | /See:/ 'getDevEndpointsResponse' smart constructor.
-data GetDevEndpointsResponse = GetDevEndpointsResponse'
-  { _gdersNextToken      :: !(Maybe Text)
-  , _gdersDevEndpoints   :: !(Maybe [DevEndpoint])
-  , _gdersResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetDevEndpointsResponse =
+  GetDevEndpointsResponse'
+    { _gdersNextToken      :: !(Maybe Text)
+    , _gdersDevEndpoints   :: !(Maybe [DevEndpoint])
+    , _gdersResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetDevEndpointsResponse' with the minimum fields required to make a request.

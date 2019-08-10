@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeEventCategories' smart constructor.
-data DescribeEventCategories = DescribeEventCategories'
-  { _decSourceType :: !(Maybe Text)
-  , _decFilters    :: !(Maybe [Filter])
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeEventCategories =
+  DescribeEventCategories'
+    { _decSourceType :: !(Maybe Text)
+    , _decFilters    :: !(Maybe [Filter])
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEventCategories' with the minimum fields required to make a request.
@@ -114,10 +116,12 @@ instance ToQuery DescribeEventCategories where
 --
 --
 -- /See:/ 'describeEventCategoriesResponse' smart constructor.
-data DescribeEventCategoriesResponse = DescribeEventCategoriesResponse'
-  { _decrsEventCategoriesMapList :: !(Maybe [EventCategoriesMap])
-  , _decrsResponseStatus         :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeEventCategoriesResponse =
+  DescribeEventCategoriesResponse'
+    { _decrsEventCategoriesMapList :: !(Maybe [EventCategoriesMap])
+    , _decrsResponseStatus         :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeEventCategoriesResponse' with the minimum fields required to make a request.

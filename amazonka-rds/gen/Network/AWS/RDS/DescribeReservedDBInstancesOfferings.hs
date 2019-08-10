@@ -61,17 +61,19 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeReservedDBInstancesOfferings' smart constructor.
-data DescribeReservedDBInstancesOfferings = DescribeReservedDBInstancesOfferings'
-  { _drdioProductDescription            :: !(Maybe Text)
-  , _drdioFilters                       :: !(Maybe [Filter])
-  , _drdioDBInstanceClass               :: !(Maybe Text)
-  , _drdioMarker                        :: !(Maybe Text)
-  , _drdioMaxRecords                    :: !(Maybe Int)
-  , _drdioMultiAZ                       :: !(Maybe Bool)
-  , _drdioReservedDBInstancesOfferingId :: !(Maybe Text)
-  , _drdioOfferingType                  :: !(Maybe Text)
-  , _drdioDuration                      :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeReservedDBInstancesOfferings =
+  DescribeReservedDBInstancesOfferings'
+    { _drdioProductDescription            :: !(Maybe Text)
+    , _drdioFilters                       :: !(Maybe [Filter])
+    , _drdioDBInstanceClass               :: !(Maybe Text)
+    , _drdioMarker                        :: !(Maybe Text)
+    , _drdioMaxRecords                    :: !(Maybe Int)
+    , _drdioMultiAZ                       :: !(Maybe Bool)
+    , _drdioReservedDBInstancesOfferingId :: !(Maybe Text)
+    , _drdioOfferingType                  :: !(Maybe Text)
+    , _drdioDuration                      :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeReservedDBInstancesOfferings' with the minimum fields required to make a request.
@@ -214,11 +216,13 @@ instance ToQuery DescribeReservedDBInstancesOfferings
 --
 --
 -- /See:/ 'describeReservedDBInstancesOfferingsResponse' smart constructor.
-data DescribeReservedDBInstancesOfferingsResponse = DescribeReservedDBInstancesOfferingsResponse'
-  { _drdiorsMarker :: !(Maybe Text)
-  , _drdiorsReservedDBInstancesOfferings :: !(Maybe [ReservedDBInstancesOffering])
-  , _drdiorsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeReservedDBInstancesOfferingsResponse =
+  DescribeReservedDBInstancesOfferingsResponse'
+    { _drdiorsMarker :: !(Maybe Text)
+    , _drdiorsReservedDBInstancesOfferings :: !(Maybe [ReservedDBInstancesOffering])
+    , _drdiorsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeReservedDBInstancesOfferingsResponse' with the minimum fields required to make a request.

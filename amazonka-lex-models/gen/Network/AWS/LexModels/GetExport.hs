@@ -54,12 +54,14 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getExport' smart constructor.
-data GetExport = GetExport'
-  { _geName         :: !Text
-  , _geVersion      :: !Text
-  , _geResourceType :: !ResourceType
-  , _geExportType   :: !ExportType
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetExport =
+  GetExport'
+    { _geName         :: !Text
+    , _geVersion      :: !Text
+    , _geResourceType :: !ResourceType
+    , _geExportType   :: !ExportType
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetExport' with the minimum fields required to make a request.
@@ -141,16 +143,18 @@ instance ToQuery GetExport where
                "exportType" =: _geExportType]
 
 -- | /See:/ 'getExportResponse' smart constructor.
-data GetExportResponse = GetExportResponse'
-  { _gersFailureReason  :: !(Maybe Text)
-  , _gersResourceType   :: !(Maybe ResourceType)
-  , _gersExportStatus   :: !(Maybe ExportStatus)
-  , _gersUrl            :: !(Maybe Text)
-  , _gersExportType     :: !(Maybe ExportType)
-  , _gersName           :: !(Maybe Text)
-  , _gersVersion        :: !(Maybe Text)
-  , _gersResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetExportResponse =
+  GetExportResponse'
+    { _gersFailureReason  :: !(Maybe Text)
+    , _gersResourceType   :: !(Maybe ResourceType)
+    , _gersExportStatus   :: !(Maybe ExportStatus)
+    , _gersUrl            :: !(Maybe Text)
+    , _gersExportType     :: !(Maybe ExportType)
+    , _gersName           :: !(Maybe Text)
+    , _gersVersion        :: !(Maybe Text)
+    , _gersResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetExportResponse' with the minimum fields required to make a request.

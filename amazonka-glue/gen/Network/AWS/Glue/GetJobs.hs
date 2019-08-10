@@ -50,10 +50,12 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'getJobs' smart constructor.
-data GetJobs = GetJobs'
-  { _gjNextToken  :: !(Maybe Text)
-  , _gjMaxResults :: !(Maybe Nat)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetJobs =
+  GetJobs'
+    { _gjNextToken  :: !(Maybe Text)
+    , _gjMaxResults :: !(Maybe Nat)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetJobs' with the minimum fields required to make a request.
@@ -119,11 +121,13 @@ instance ToQuery GetJobs where
         toQuery = const mempty
 
 -- | /See:/ 'getJobsResponse' smart constructor.
-data GetJobsResponse = GetJobsResponse'
-  { _gjsrsNextToken      :: !(Maybe Text)
-  , _gjsrsJobs           :: !(Maybe [Job])
-  , _gjsrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetJobsResponse =
+  GetJobsResponse'
+    { _gjsrsNextToken      :: !(Maybe Text)
+    , _gjsrsJobs           :: !(Maybe [Job])
+    , _gjsrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetJobsResponse' with the minimum fields required to make a request.

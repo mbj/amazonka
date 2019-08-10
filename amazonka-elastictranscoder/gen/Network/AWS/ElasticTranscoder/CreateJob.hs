@@ -58,16 +58,18 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'createJob' smart constructor.
-data CreateJob = CreateJob'
-  { _cjInputs          :: !(Maybe [JobInput])
-  , _cjInput           :: !(Maybe JobInput)
-  , _cjUserMetadata    :: !(Maybe (Map Text Text))
-  , _cjOutputs         :: !(Maybe [CreateJobOutput])
-  , _cjOutput          :: !(Maybe CreateJobOutput)
-  , _cjPlaylists       :: !(Maybe [CreateJobPlaylist])
-  , _cjOutputKeyPrefix :: !(Maybe Text)
-  , _cjPipelineId      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateJob =
+  CreateJob'
+    { _cjInputs          :: !(Maybe [JobInput])
+    , _cjInput           :: !(Maybe JobInput)
+    , _cjUserMetadata    :: !(Maybe (Map Text Text))
+    , _cjOutputs         :: !(Maybe [CreateJobOutput])
+    , _cjOutput          :: !(Maybe CreateJobOutput)
+    , _cjPlaylists       :: !(Maybe [CreateJobPlaylist])
+    , _cjOutputKeyPrefix :: !(Maybe Text)
+    , _cjPipelineId      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateJob' with the minimum fields required to make a request.
@@ -177,10 +179,12 @@ instance ToQuery CreateJob where
 --
 --
 -- /See:/ 'createJobResponse' smart constructor.
-data CreateJobResponse = CreateJobResponse'
-  { _cjrsJob            :: !(Maybe Job')
-  , _cjrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateJobResponse =
+  CreateJobResponse'
+    { _cjrsJob            :: !(Maybe Job')
+    , _cjrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateJobResponse' with the minimum fields required to make a request.

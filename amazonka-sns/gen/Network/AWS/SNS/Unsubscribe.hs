@@ -46,9 +46,11 @@ import Network.AWS.SNS.Types.Product
 --
 --
 -- /See:/ 'unsubscribe' smart constructor.
-newtype Unsubscribe = Unsubscribe'
-  { _uSubscriptionARN :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype Unsubscribe =
+  Unsubscribe'
+    { _uSubscriptionARN :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'Unsubscribe' with the minimum fields required to make a request.

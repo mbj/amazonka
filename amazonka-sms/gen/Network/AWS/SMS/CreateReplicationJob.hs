@@ -48,14 +48,16 @@ import Network.AWS.SMS.Types
 import Network.AWS.SMS.Types.Product
 
 -- | /See:/ 'createReplicationJob' smart constructor.
-data CreateReplicationJob = CreateReplicationJob'
-  { _crjLicenseType         :: !(Maybe LicenseType)
-  , _crjRoleName            :: !(Maybe Text)
-  , _crjDescription         :: !(Maybe Text)
-  , _crjServerId            :: !Text
-  , _crjSeedReplicationTime :: !POSIX
-  , _crjFrequency           :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateReplicationJob =
+  CreateReplicationJob'
+    { _crjLicenseType         :: !(Maybe LicenseType)
+    , _crjRoleName            :: !(Maybe Text)
+    , _crjDescription         :: !(Maybe Text)
+    , _crjServerId            :: !Text
+    , _crjSeedReplicationTime :: !POSIX
+    , _crjFrequency           :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateReplicationJob' with the minimum fields required to make a request.
@@ -156,10 +158,12 @@ instance ToQuery CreateReplicationJob where
         toQuery = const mempty
 
 -- | /See:/ 'createReplicationJobResponse' smart constructor.
-data CreateReplicationJobResponse = CreateReplicationJobResponse'
-  { _crjrsReplicationJobId :: !(Maybe Text)
-  , _crjrsResponseStatus   :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateReplicationJobResponse =
+  CreateReplicationJobResponse'
+    { _crjrsReplicationJobId :: !(Maybe Text)
+    , _crjrsResponseStatus   :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateReplicationJobResponse' with the minimum fields required to make a request.

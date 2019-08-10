@@ -57,12 +57,14 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeObjects' smart constructor.
-data DescribeObjects = DescribeObjects'
-  { _doEvaluateExpressions :: !(Maybe Bool)
-  , _doMarker              :: !(Maybe Text)
-  , _doPipelineId          :: !Text
-  , _doObjectIds           :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeObjects =
+  DescribeObjects'
+    { _doEvaluateExpressions :: !(Maybe Bool)
+    , _doMarker              :: !(Maybe Text)
+    , _doPipelineId          :: !Text
+    , _doObjectIds           :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeObjects' with the minimum fields required to make a request.
@@ -156,12 +158,14 @@ instance ToQuery DescribeObjects where
 --
 --
 -- /See:/ 'describeObjectsResponse' smart constructor.
-data DescribeObjectsResponse = DescribeObjectsResponse'
-  { _dorsHasMoreResults  :: !(Maybe Bool)
-  , _dorsMarker          :: !(Maybe Text)
-  , _dorsResponseStatus  :: !Int
-  , _dorsPipelineObjects :: ![PipelineObject]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeObjectsResponse =
+  DescribeObjectsResponse'
+    { _dorsHasMoreResults  :: !(Maybe Bool)
+    , _dorsMarker          :: !(Maybe Text)
+    , _dorsResponseStatus  :: !Int
+    , _dorsPipelineObjects :: ![PipelineObject]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeObjectsResponse' with the minimum fields required to make a request.

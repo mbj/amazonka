@@ -50,11 +50,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteFleets' smart constructor.
-data DeleteFleets = DeleteFleets'
-  { _dfDryRun             :: !(Maybe Bool)
-  , _dfFleetIds           :: ![Text]
-  , _dfTerminateInstances :: !Bool
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteFleets =
+  DeleteFleets'
+    { _dfDryRun             :: !(Maybe Bool)
+    , _dfFleetIds           :: ![Text]
+    , _dfTerminateInstances :: !Bool
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteFleets' with the minimum fields required to make a request.
@@ -123,11 +125,13 @@ instance ToQuery DeleteFleets where
                "TerminateInstances" =: _dfTerminateInstances]
 
 -- | /See:/ 'deleteFleetsResponse' smart constructor.
-data DeleteFleetsResponse = DeleteFleetsResponse'
-  { _dfrsSuccessfulFleetDeletions   :: !(Maybe [DeleteFleetSuccessItem])
-  , _dfrsUnsuccessfulFleetDeletions :: !(Maybe [DeleteFleetErrorItem])
-  , _dfrsResponseStatus             :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteFleetsResponse =
+  DeleteFleetsResponse'
+    { _dfrsSuccessfulFleetDeletions   :: !(Maybe [DeleteFleetSuccessItem])
+    , _dfrsUnsuccessfulFleetDeletions :: !(Maybe [DeleteFleetErrorItem])
+    , _dfrsResponseStatus             :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteFleetsResponse' with the minimum fields required to make a request.

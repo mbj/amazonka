@@ -47,10 +47,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'updateApplication' smart constructor.
-data UpdateApplication = UpdateApplication'
-  { _uaNewApplicationName :: !(Maybe Text)
-  , _uaApplicationName    :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateApplication =
+  UpdateApplication'
+    { _uaNewApplicationName :: !(Maybe Text)
+    , _uaApplicationName    :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateApplication' with the minimum fields required to make a request.

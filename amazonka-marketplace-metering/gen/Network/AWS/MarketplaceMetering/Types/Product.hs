@@ -28,12 +28,14 @@ import Network.AWS.Prelude
 --
 --
 -- /See:/ 'usageRecord' smart constructor.
-data UsageRecord = UsageRecord'
-  { _urTimestamp          :: !POSIX
-  , _urCustomerIdentifier :: !Text
-  , _urDimension          :: !Text
-  , _urQuantity           :: !Nat
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UsageRecord =
+  UsageRecord'
+    { _urTimestamp          :: !POSIX
+    , _urCustomerIdentifier :: !Text
+    , _urDimension          :: !Text
+    , _urQuantity           :: !Nat
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UsageRecord' with the minimum fields required to make a request.
@@ -105,11 +107,13 @@ instance ToJSON UsageRecord where
 --
 --
 -- /See:/ 'usageRecordResult' smart constructor.
-data UsageRecordResult = UsageRecordResult'
-  { _urrStatus           :: !(Maybe UsageRecordResultStatus)
-  , _urrUsageRecord      :: !(Maybe UsageRecord)
-  , _urrMeteringRecordId :: !(Maybe Text)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UsageRecordResult =
+  UsageRecordResult'
+    { _urrStatus           :: !(Maybe UsageRecordResultStatus)
+    , _urrUsageRecord      :: !(Maybe UsageRecord)
+    , _urrMeteringRecordId :: !(Maybe Text)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UsageRecordResult' with the minimum fields required to make a request.

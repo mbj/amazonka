@@ -46,9 +46,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'deleteIntent' smart constructor.
-newtype DeleteIntent = DeleteIntent'
-  { _diName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteIntent =
+  DeleteIntent'
+    { _diName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteIntent' with the minimum fields required to make a request.

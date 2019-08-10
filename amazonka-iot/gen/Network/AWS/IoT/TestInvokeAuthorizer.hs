@@ -51,11 +51,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'testInvokeAuthorizer' smart constructor.
-data TestInvokeAuthorizer = TestInvokeAuthorizer'
-  { _tiaAuthorizerName :: !Text
-  , _tiaToken          :: !Text
-  , _tiaTokenSignature :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TestInvokeAuthorizer =
+  TestInvokeAuthorizer'
+    { _tiaAuthorizerName :: !Text
+    , _tiaToken          :: !Text
+    , _tiaTokenSignature :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TestInvokeAuthorizer' with the minimum fields required to make a request.
@@ -130,14 +132,16 @@ instance ToQuery TestInvokeAuthorizer where
         toQuery = const mempty
 
 -- | /See:/ 'testInvokeAuthorizerResponse' smart constructor.
-data TestInvokeAuthorizerResponse = TestInvokeAuthorizerResponse'
-  { _tiarsPolicyDocuments          :: !(Maybe [Text])
-  , _tiarsPrincipalId              :: !(Maybe Text)
-  , _tiarsDisconnectAfterInSeconds :: !(Maybe Int)
-  , _tiarsIsAuthenticated          :: !(Maybe Bool)
-  , _tiarsRefreshAfterInSeconds    :: !(Maybe Int)
-  , _tiarsResponseStatus           :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data TestInvokeAuthorizerResponse =
+  TestInvokeAuthorizerResponse'
+    { _tiarsPolicyDocuments          :: !(Maybe [Text])
+    , _tiarsPrincipalId              :: !(Maybe Text)
+    , _tiarsDisconnectAfterInSeconds :: !(Maybe Int)
+    , _tiarsIsAuthenticated          :: !(Maybe Bool)
+    , _tiarsRefreshAfterInSeconds    :: !(Maybe Int)
+    , _tiarsResponseStatus           :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'TestInvokeAuthorizerResponse' with the minimum fields required to make a request.

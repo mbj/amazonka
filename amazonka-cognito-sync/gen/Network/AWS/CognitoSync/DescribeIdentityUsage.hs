@@ -50,10 +50,12 @@ import Network.AWS.Response
 -- | A request for information about the usage of an identity pool.
 --
 -- /See:/ 'describeIdentityUsage' smart constructor.
-data DescribeIdentityUsage = DescribeIdentityUsage'
-  { _diuIdentityPoolId :: !Text
-  , _diuIdentityId     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeIdentityUsage =
+  DescribeIdentityUsage'
+    { _diuIdentityPoolId :: !Text
+    , _diuIdentityId     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeIdentityUsage' with the minimum fields required to make a request.
@@ -113,10 +115,12 @@ instance ToQuery DescribeIdentityUsage where
 -- | The response to a successful DescribeIdentityUsage request.
 --
 -- /See:/ 'describeIdentityUsageResponse' smart constructor.
-data DescribeIdentityUsageResponse = DescribeIdentityUsageResponse'
-  { _diursIdentityUsage  :: !(Maybe IdentityUsage)
-  , _diursResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeIdentityUsageResponse =
+  DescribeIdentityUsageResponse'
+    { _diursIdentityUsage  :: !(Maybe IdentityUsage)
+    , _diursResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeIdentityUsageResponse' with the minimum fields required to make a request.

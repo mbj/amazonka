@@ -60,14 +60,16 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getUsage' smart constructor.
-data GetUsage = GetUsage'
-  { _guKeyId       :: !(Maybe Text)
-  , _guLimit       :: !(Maybe Int)
-  , _guPosition    :: !(Maybe Text)
-  , _guUsagePlanId :: !Text
-  , _guStartDate   :: !Text
-  , _guEndDate     :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetUsage =
+  GetUsage'
+    { _guKeyId       :: !(Maybe Text)
+    , _guLimit       :: !(Maybe Int)
+    , _guPosition    :: !(Maybe Text)
+    , _guUsagePlanId :: !Text
+    , _guStartDate   :: !Text
+    , _guEndDate     :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetUsage' with the minimum fields required to make a request.

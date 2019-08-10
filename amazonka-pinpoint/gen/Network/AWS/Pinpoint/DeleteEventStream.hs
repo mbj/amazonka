@@ -45,9 +45,11 @@ import Network.AWS.Response
 -- | DeleteEventStream Request
 --
 -- /See:/ 'deleteEventStream' smart constructor.
-newtype DeleteEventStream = DeleteEventStream'
-  { _desApplicationId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteEventStream =
+  DeleteEventStream'
+    { _desApplicationId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteEventStream' with the minimum fields required to make a request.
@@ -95,10 +97,12 @@ instance ToQuery DeleteEventStream where
         toQuery = const mempty
 
 -- | /See:/ 'deleteEventStreamResponse' smart constructor.
-data DeleteEventStreamResponse = DeleteEventStreamResponse'
-  { _desrsResponseStatus :: !Int
-  , _desrsEventStream    :: !EventStream
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DeleteEventStreamResponse =
+  DeleteEventStreamResponse'
+    { _desrsResponseStatus :: !Int
+    , _desrsEventStream    :: !EventStream
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteEventStreamResponse' with the minimum fields required to make a request.

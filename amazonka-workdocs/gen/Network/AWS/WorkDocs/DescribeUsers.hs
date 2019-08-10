@@ -61,18 +61,20 @@ import Network.AWS.WorkDocs.Types
 import Network.AWS.WorkDocs.Types.Product
 
 -- | /See:/ 'describeUsers' smart constructor.
-data DescribeUsers = DescribeUsers'
-  { _duInclude             :: !(Maybe UserFilterType)
-  , _duUserIds             :: !(Maybe Text)
-  , _duAuthenticationToken :: !(Maybe (Sensitive Text))
-  , _duSort                :: !(Maybe UserSortType)
-  , _duMarker              :: !(Maybe Text)
-  , _duQuery               :: !(Maybe (Sensitive Text))
-  , _duLimit               :: !(Maybe Nat)
-  , _duOrder               :: !(Maybe OrderType)
-  , _duOrganizationId      :: !(Maybe Text)
-  , _duFields              :: !(Maybe Text)
-  } deriving (Eq, Show, Data, Typeable, Generic)
+data DescribeUsers =
+  DescribeUsers'
+    { _duInclude             :: !(Maybe UserFilterType)
+    , _duUserIds             :: !(Maybe Text)
+    , _duAuthenticationToken :: !(Maybe (Sensitive Text))
+    , _duSort                :: !(Maybe UserSortType)
+    , _duMarker              :: !(Maybe Text)
+    , _duQuery               :: !(Maybe (Sensitive Text))
+    , _duLimit               :: !(Maybe Nat)
+    , _duOrder               :: !(Maybe OrderType)
+    , _duOrganizationId      :: !(Maybe Text)
+    , _duFields              :: !(Maybe Text)
+    }
+  deriving (Eq, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeUsers' with the minimum fields required to make a request.
@@ -199,12 +201,14 @@ instance ToQuery DescribeUsers where
                "fields" =: _duFields]
 
 -- | /See:/ 'describeUsersResponse' smart constructor.
-data DescribeUsersResponse = DescribeUsersResponse'
-  { _dursUsers              :: !(Maybe [User])
-  , _dursTotalNumberOfUsers :: !(Maybe Integer)
-  , _dursMarker             :: !(Maybe Text)
-  , _dursResponseStatus     :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeUsersResponse =
+  DescribeUsersResponse'
+    { _dursUsers              :: !(Maybe [User])
+    , _dursTotalNumberOfUsers :: !(Maybe Integer)
+    , _dursMarker             :: !(Maybe Text)
+    , _dursResponseStatus     :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeUsersResponse' with the minimum fields required to make a request.

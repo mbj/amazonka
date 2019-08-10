@@ -46,9 +46,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteDomainName' smart constructor.
-newtype DeleteDomainName = DeleteDomainName'
-  { _ddnDomainName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteDomainName =
+  DeleteDomainName'
+    { _ddnDomainName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteDomainName' with the minimum fields required to make a request.

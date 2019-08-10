@@ -58,18 +58,20 @@ import Network.AWS.SageMaker.Types
 import Network.AWS.SageMaker.Types.Product
 
 -- | /See:/ 'listEndpoints' smart constructor.
-data ListEndpoints = ListEndpoints'
-  { _leNameContains           :: !(Maybe Text)
-  , _leLastModifiedTimeBefore :: !(Maybe POSIX)
-  , _leCreationTimeAfter      :: !(Maybe POSIX)
-  , _leNextToken              :: !(Maybe Text)
-  , _leSortOrder              :: !(Maybe OrderKey)
-  , _leLastModifiedTimeAfter  :: !(Maybe POSIX)
-  , _leCreationTimeBefore     :: !(Maybe POSIX)
-  , _leStatusEquals           :: !(Maybe EndpointStatus)
-  , _leMaxResults             :: !(Maybe Nat)
-  , _leSortBy                 :: !(Maybe EndpointSortKey)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListEndpoints =
+  ListEndpoints'
+    { _leNameContains           :: !(Maybe Text)
+    , _leLastModifiedTimeBefore :: !(Maybe POSIX)
+    , _leCreationTimeAfter      :: !(Maybe POSIX)
+    , _leNextToken              :: !(Maybe Text)
+    , _leSortOrder              :: !(Maybe OrderKey)
+    , _leLastModifiedTimeAfter  :: !(Maybe POSIX)
+    , _leCreationTimeBefore     :: !(Maybe POSIX)
+    , _leStatusEquals           :: !(Maybe EndpointStatus)
+    , _leMaxResults             :: !(Maybe Nat)
+    , _leSortBy                 :: !(Maybe EndpointSortKey)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListEndpoints' with the minimum fields required to make a request.
@@ -206,11 +208,13 @@ instance ToQuery ListEndpoints where
         toQuery = const mempty
 
 -- | /See:/ 'listEndpointsResponse' smart constructor.
-data ListEndpointsResponse = ListEndpointsResponse'
-  { _lersNextToken      :: !(Maybe Text)
-  , _lersResponseStatus :: !Int
-  , _lersEndpoints      :: ![EndpointSummary]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data ListEndpointsResponse =
+  ListEndpointsResponse'
+    { _lersNextToken      :: !(Maybe Text)
+    , _lersResponseStatus :: !Int
+    , _lersEndpoints      :: ![EndpointSummary]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'ListEndpointsResponse' with the minimum fields required to make a request.

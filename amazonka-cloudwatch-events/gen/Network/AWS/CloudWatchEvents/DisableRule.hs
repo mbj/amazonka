@@ -44,9 +44,11 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'disableRule' smart constructor.
-newtype DisableRule = DisableRule'
-  { _dName :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DisableRule =
+  DisableRule'
+    { _dName :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DisableRule' with the minimum fields required to make a request.

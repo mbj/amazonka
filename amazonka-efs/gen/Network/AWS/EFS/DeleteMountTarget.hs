@@ -60,9 +60,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'deleteMountTarget' smart constructor.
-newtype DeleteMountTarget = DeleteMountTarget'
-  { _dMountTargetId :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype DeleteMountTarget =
+  DeleteMountTarget'
+    { _dMountTargetId :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DeleteMountTarget' with the minimum fields required to make a request.

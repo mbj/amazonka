@@ -55,11 +55,13 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'describeReplicationInstances' smart constructor.
-data DescribeReplicationInstances = DescribeReplicationInstances'
-  { _driFilters    :: !(Maybe [Filter])
-  , _driMarker     :: !(Maybe Text)
-  , _driMaxRecords :: !(Maybe Int)
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeReplicationInstances =
+  DescribeReplicationInstances'
+    { _driFilters    :: !(Maybe [Filter])
+    , _driMarker     :: !(Maybe Text)
+    , _driMaxRecords :: !(Maybe Int)
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeReplicationInstances' with the minimum fields required to make a request.
@@ -143,11 +145,13 @@ instance ToQuery DescribeReplicationInstances where
 --
 --
 -- /See:/ 'describeReplicationInstancesResponse' smart constructor.
-data DescribeReplicationInstancesResponse = DescribeReplicationInstancesResponse'
-  { _drisrsMarker               :: !(Maybe Text)
-  , _drisrsReplicationInstances :: !(Maybe [ReplicationInstance])
-  , _drisrsResponseStatus       :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data DescribeReplicationInstancesResponse =
+  DescribeReplicationInstancesResponse'
+    { _drisrsMarker               :: !(Maybe Text)
+    , _drisrsReplicationInstances :: !(Maybe [ReplicationInstance])
+    , _drisrsResponseStatus       :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'DescribeReplicationInstancesResponse' with the minimum fields required to make a request.

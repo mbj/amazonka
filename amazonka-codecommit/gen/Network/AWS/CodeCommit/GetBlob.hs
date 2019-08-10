@@ -50,10 +50,12 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getBlob' smart constructor.
-data GetBlob = GetBlob'
-  { _gRepositoryName :: !Text
-  , _gBlobId         :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetBlob =
+  GetBlob'
+    { _gRepositoryName :: !Text
+    , _gBlobId         :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBlob' with the minimum fields required to make a request.
@@ -119,10 +121,12 @@ instance ToQuery GetBlob where
 --
 --
 -- /See:/ 'getBlobResponse' smart constructor.
-data GetBlobResponse = GetBlobResponse'
-  { _gbrsResponseStatus :: !Int
-  , _gbrsContent        :: !Base64
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetBlobResponse =
+  GetBlobResponse'
+    { _gbrsResponseStatus :: !Int
+    , _gbrsContent        :: !Base64
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetBlobResponse' with the minimum fields required to make a request.

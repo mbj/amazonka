@@ -46,11 +46,13 @@ import Network.AWS.SageMaker.Types
 import Network.AWS.SageMaker.Types.Product
 
 -- | /See:/ 'updateNotebookInstanceLifecycleConfig' smart constructor.
-data UpdateNotebookInstanceLifecycleConfig = UpdateNotebookInstanceLifecycleConfig'
-  { _unilcOnCreate :: !(Maybe [NotebookInstanceLifecycleHook])
-  , _unilcOnStart :: !(Maybe [NotebookInstanceLifecycleHook])
-  , _unilcNotebookInstanceLifecycleConfigName :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data UpdateNotebookInstanceLifecycleConfig =
+  UpdateNotebookInstanceLifecycleConfig'
+    { _unilcOnCreate :: !(Maybe [NotebookInstanceLifecycleHook])
+    , _unilcOnStart :: !(Maybe [NotebookInstanceLifecycleHook])
+    , _unilcNotebookInstanceLifecycleConfigName :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateNotebookInstanceLifecycleConfig' with the minimum fields required to make a request.
@@ -138,9 +140,11 @@ instance ToQuery
         toQuery = const mempty
 
 -- | /See:/ 'updateNotebookInstanceLifecycleConfigResponse' smart constructor.
-newtype UpdateNotebookInstanceLifecycleConfigResponse = UpdateNotebookInstanceLifecycleConfigResponse'
-  { _unilcrsResponseStatus :: Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype UpdateNotebookInstanceLifecycleConfigResponse =
+  UpdateNotebookInstanceLifecycleConfigResponse'
+    { _unilcrsResponseStatus :: Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'UpdateNotebookInstanceLifecycleConfigResponse' with the minimum fields required to make a request.

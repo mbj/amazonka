@@ -49,9 +49,11 @@ import Network.AWS.Response
 --
 --
 -- /See:/ 'getRun' smart constructor.
-newtype GetRun = GetRun'
-  { _grArn :: Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+newtype GetRun =
+  GetRun'
+    { _grArn :: Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetRun' with the minimum fields required to make a request.
@@ -106,10 +108,12 @@ instance ToQuery GetRun where
 --
 --
 -- /See:/ 'getRunResponse' smart constructor.
-data GetRunResponse = GetRunResponse'
-  { _grrsRun            :: !(Maybe Run)
-  , _grrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data GetRunResponse =
+  GetRunResponse'
+    { _grrsRun            :: !(Maybe Run)
+    , _grrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'GetRunResponse' with the minimum fields required to make a request.

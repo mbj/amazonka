@@ -72,30 +72,32 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'createDBInstanceReadReplica' smart constructor.
-data CreateDBInstanceReadReplica = CreateDBInstanceReadReplica'
-  { _cdirrPubliclyAccessible              :: !(Maybe Bool)
-  , _cdirrAutoMinorVersionUpgrade         :: !(Maybe Bool)
-  , _cdirrDBSubnetGroupName               :: !(Maybe Text)
-  , _cdirrMonitoringRoleARN               :: !(Maybe Text)
-  , _cdirrIOPS                            :: !(Maybe Int)
-  , _cdirrMonitoringInterval              :: !(Maybe Int)
-  , _cdirrPreSignedURL                    :: !(Maybe Text)
-  , _cdirrDBInstanceClass                 :: !(Maybe Text)
-  , _cdirrEnablePerformanceInsights       :: !(Maybe Bool)
-  , _cdirrKMSKeyId                        :: !(Maybe Text)
-  , _cdirrAvailabilityZone                :: !(Maybe Text)
-  , _cdirrPerformanceInsightsKMSKeyId     :: !(Maybe Text)
-  , _cdirrMultiAZ                         :: !(Maybe Bool)
-  , _cdirrOptionGroupName                 :: !(Maybe Text)
-  , _cdirrCopyTagsToSnapshot              :: !(Maybe Bool)
-  , _cdirrTags                            :: !(Maybe [Tag])
-  , _cdirrPort                            :: !(Maybe Int)
-  , _cdirrEnableIAMDatabaseAuthentication :: !(Maybe Bool)
-  , _cdirrStorageType                     :: !(Maybe Text)
-  , _cdirrEnableCloudwatchLogsExports     :: !(Maybe [Text])
-  , _cdirrDBInstanceIdentifier            :: !Text
-  , _cdirrSourceDBInstanceIdentifier      :: !Text
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDBInstanceReadReplica =
+  CreateDBInstanceReadReplica'
+    { _cdirrPubliclyAccessible              :: !(Maybe Bool)
+    , _cdirrAutoMinorVersionUpgrade         :: !(Maybe Bool)
+    , _cdirrDBSubnetGroupName               :: !(Maybe Text)
+    , _cdirrMonitoringRoleARN               :: !(Maybe Text)
+    , _cdirrIOPS                            :: !(Maybe Int)
+    , _cdirrMonitoringInterval              :: !(Maybe Int)
+    , _cdirrPreSignedURL                    :: !(Maybe Text)
+    , _cdirrDBInstanceClass                 :: !(Maybe Text)
+    , _cdirrEnablePerformanceInsights       :: !(Maybe Bool)
+    , _cdirrKMSKeyId                        :: !(Maybe Text)
+    , _cdirrAvailabilityZone                :: !(Maybe Text)
+    , _cdirrPerformanceInsightsKMSKeyId     :: !(Maybe Text)
+    , _cdirrMultiAZ                         :: !(Maybe Bool)
+    , _cdirrOptionGroupName                 :: !(Maybe Text)
+    , _cdirrCopyTagsToSnapshot              :: !(Maybe Bool)
+    , _cdirrTags                            :: !(Maybe [Tag])
+    , _cdirrPort                            :: !(Maybe Int)
+    , _cdirrEnableIAMDatabaseAuthentication :: !(Maybe Bool)
+    , _cdirrStorageType                     :: !(Maybe Text)
+    , _cdirrEnableCloudwatchLogsExports     :: !(Maybe [Text])
+    , _cdirrDBInstanceIdentifier            :: !Text
+    , _cdirrSourceDBInstanceIdentifier      :: !Text
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDBInstanceReadReplica' with the minimum fields required to make a request.
@@ -323,10 +325,12 @@ instance ToQuery CreateDBInstanceReadReplica where
                  _cdirrSourceDBInstanceIdentifier]
 
 -- | /See:/ 'createDBInstanceReadReplicaResponse' smart constructor.
-data CreateDBInstanceReadReplicaResponse = CreateDBInstanceReadReplicaResponse'
-  { _cdirrrsDBInstance     :: !(Maybe DBInstance)
-  , _cdirrrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data CreateDBInstanceReadReplicaResponse =
+  CreateDBInstanceReadReplicaResponse'
+    { _cdirrrsDBInstance     :: !(Maybe DBInstance)
+    , _cdirrrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'CreateDBInstanceReadReplicaResponse' with the minimum fields required to make a request.

@@ -47,11 +47,13 @@ import Network.AWS.Request
 import Network.AWS.Response
 
 -- | /See:/ 'rejectVPCEndpointConnections' smart constructor.
-data RejectVPCEndpointConnections = RejectVPCEndpointConnections'
-  { _rvecDryRun         :: !(Maybe Bool)
-  , _rvecServiceId      :: !Text
-  , _rvecVPCEndpointIds :: ![Text]
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RejectVPCEndpointConnections =
+  RejectVPCEndpointConnections'
+    { _rvecDryRun         :: !(Maybe Bool)
+    , _rvecServiceId      :: !Text
+    , _rvecVPCEndpointIds :: ![Text]
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RejectVPCEndpointConnections' with the minimum fields required to make a request.
@@ -120,10 +122,12 @@ instance ToQuery RejectVPCEndpointConnections where
                toQueryList "VpcEndpointId" _rvecVPCEndpointIds]
 
 -- | /See:/ 'rejectVPCEndpointConnectionsResponse' smart constructor.
-data RejectVPCEndpointConnectionsResponse = RejectVPCEndpointConnectionsResponse'
-  { _rvecrsUnsuccessful   :: !(Maybe [UnsuccessfulItem])
-  , _rvecrsResponseStatus :: !Int
-  } deriving (Eq, Read, Show, Data, Typeable, Generic)
+data RejectVPCEndpointConnectionsResponse =
+  RejectVPCEndpointConnectionsResponse'
+    { _rvecrsUnsuccessful   :: !(Maybe [UnsuccessfulItem])
+    , _rvecrsResponseStatus :: !Int
+    }
+  deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
 -- | Creates a value of 'RejectVPCEndpointConnectionsResponse' with the minimum fields required to make a request.
