@@ -18,18 +18,18 @@
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
--- Returns the current provisioned-capacity limits for your AWS account in a region, both for the region as a whole and for any one DynamoDB table that you create there.
+-- Returns the current provisioned-capacity quotas for your AWS account in a Region, both for the Region as a whole and for any one DynamoDB table that you create there.
 --
 --
--- When you establish an AWS account, the account has initial limits on the maximum read capacity units and write capacity units that you can provision across all of your DynamoDB tables in a given region. Also, there are per-table limits that apply when you create a table there. For more information, see <http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html Limits> page in the /Amazon DynamoDB Developer Guide/ .
+-- When you establish an AWS account, the account has initial quotas on the maximum read capacity units and write capacity units that you can provision across all of your DynamoDB tables in a given Region. Also, there are per-table quotas that apply when you create a table there. For more information, see <https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html Service, Account, and Table Quotas> page in the /Amazon DynamoDB Developer Guide/ .
 --
--- Although you can increase these limits by filing a case at <https://console.aws.amazon.com/support/home#/ AWS Support Center> , obtaining the increase is not instantaneous. The @DescribeLimits@ action lets you write code to compare the capacity you are currently using to those limits imposed by your account so that you have enough time to apply for an increase before you hit a limit.
+-- Although you can increase these quotas by filing a case at <https://console.aws.amazon.com/support/home#/ AWS Support Center> , obtaining the increase is not instantaneous. The @DescribeLimits@ action lets you write code to compare the capacity you are currently using to those quotas imposed by your account so that you have enough time to apply for an increase before you hit a quota.
 --
 -- For example, you could use one of the AWS SDKs to do the following:
 --
---     * Call @DescribeLimits@ for a particular region to obtain your current account limits on provisioned capacity there.
+--     * Call @DescribeLimits@ for a particular Region to obtain your current account quotas on provisioned capacity there.
 --
---     * Create a variable to hold the aggregate read capacity units provisioned for all your tables in that region, and one to hold the aggregate write capacity units. Zero them both.
+--     * Create a variable to hold the aggregate read capacity units provisioned for all your tables in that Region, and one to hold the aggregate write capacity units. Zero them both.
 --
 --     * Call @ListTables@ to obtain a list of all your DynamoDB tables.
 --
@@ -43,15 +43,15 @@
 --
 --
 --
---     * Report the account limits for that region returned by @DescribeLimits@ , along with the total current provisioned capacity levels you have calculated.
+--     * Report the account quotas for that Region returned by @DescribeLimits@ , along with the total current provisioned capacity levels you have calculated.
 --
 --
 --
--- This will let you see whether you are getting close to your account-level limits.
+-- This will let you see whether you are getting close to your account-level quotas.
 --
--- The per-table limits apply only when you are creating a new table. They restrict the sum of the provisioned capacity of the new table itself and all its global secondary indexes.
+-- The per-table quotas apply only when you are creating a new table. They restrict the sum of the provisioned capacity of the new table itself and all its global secondary indexes.
 --
--- For existing tables and their GSIs, DynamoDB will not let you increase provisioned capacity extremely rapidly, but the only upper limit that applies is that the aggregate provisioned capacity over all your tables and GSIs cannot exceed either of the per-account limits.
+-- For existing tables and their GSIs, DynamoDB doesn't let you increase provisioned capacity extremely rapidly, but the only quota that applies is that the aggregate provisioned capacity over all your tables and GSIs cannot exceed either of the per-account quotas.
 --
 -- The @DescribeLimits@ Request element has no content.
 --
@@ -137,11 +137,11 @@ instance ToQuery DescribeLimits where
 --
 -- /See:/ 'describeLimitsResponse' smart constructor.
 data DescribeLimitsResponse = DescribeLimitsResponse'
-  { _dlrsTableMaxWriteCapacityUnits   :: !(Maybe Nat)
-  , _dlrsTableMaxReadCapacityUnits    :: !(Maybe Nat)
+  { _dlrsTableMaxWriteCapacityUnits :: !(Maybe Nat)
+  , _dlrsTableMaxReadCapacityUnits :: !(Maybe Nat)
   , _dlrsAccountMaxWriteCapacityUnits :: !(Maybe Nat)
-  , _dlrsAccountMaxReadCapacityUnits  :: !(Maybe Nat)
-  , _dlrsResponseStatus               :: !Int
+  , _dlrsAccountMaxReadCapacityUnits :: !(Maybe Nat)
+  , _dlrsResponseStatus :: !Int
   } deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
@@ -149,13 +149,13 @@ data DescribeLimitsResponse = DescribeLimitsResponse'
 --
 -- Use one of the following lenses to modify other fields as desired:
 --
--- * 'dlrsTableMaxWriteCapacityUnits' - The maximum write capacity units that your account allows you to provision for a new table that you are creating in this region, including the write capacity units provisioned for its global secondary indexes (GSIs).
+-- * 'dlrsTableMaxWriteCapacityUnits' - The maximum write capacity units that your account allows you to provision for a new table that you are creating in this Region, including the write capacity units provisioned for its global secondary indexes (GSIs).
 --
--- * 'dlrsTableMaxReadCapacityUnits' - The maximum read capacity units that your account allows you to provision for a new table that you are creating in this region, including the read capacity units provisioned for its global secondary indexes (GSIs).
+-- * 'dlrsTableMaxReadCapacityUnits' - The maximum read capacity units that your account allows you to provision for a new table that you are creating in this Region, including the read capacity units provisioned for its global secondary indexes (GSIs).
 --
--- * 'dlrsAccountMaxWriteCapacityUnits' - The maximum total write capacity units that your account allows you to provision across all of your tables in this region.
+-- * 'dlrsAccountMaxWriteCapacityUnits' - The maximum total write capacity units that your account allows you to provision across all of your tables in this Region.
 --
--- * 'dlrsAccountMaxReadCapacityUnits' - The maximum total read capacity units that your account allows you to provision across all of your tables in this region.
+-- * 'dlrsAccountMaxReadCapacityUnits' - The maximum total read capacity units that your account allows you to provision across all of your tables in this Region.
 --
 -- * 'dlrsResponseStatus' - -- | The response status code.
 describeLimitsResponse
@@ -171,19 +171,19 @@ describeLimitsResponse pResponseStatus_ =
     }
 
 
--- | The maximum write capacity units that your account allows you to provision for a new table that you are creating in this region, including the write capacity units provisioned for its global secondary indexes (GSIs).
+-- | The maximum write capacity units that your account allows you to provision for a new table that you are creating in this Region, including the write capacity units provisioned for its global secondary indexes (GSIs).
 dlrsTableMaxWriteCapacityUnits :: Lens' DescribeLimitsResponse (Maybe Natural)
 dlrsTableMaxWriteCapacityUnits = lens _dlrsTableMaxWriteCapacityUnits (\ s a -> s{_dlrsTableMaxWriteCapacityUnits = a}) . mapping _Nat
 
--- | The maximum read capacity units that your account allows you to provision for a new table that you are creating in this region, including the read capacity units provisioned for its global secondary indexes (GSIs).
+-- | The maximum read capacity units that your account allows you to provision for a new table that you are creating in this Region, including the read capacity units provisioned for its global secondary indexes (GSIs).
 dlrsTableMaxReadCapacityUnits :: Lens' DescribeLimitsResponse (Maybe Natural)
 dlrsTableMaxReadCapacityUnits = lens _dlrsTableMaxReadCapacityUnits (\ s a -> s{_dlrsTableMaxReadCapacityUnits = a}) . mapping _Nat
 
--- | The maximum total write capacity units that your account allows you to provision across all of your tables in this region.
+-- | The maximum total write capacity units that your account allows you to provision across all of your tables in this Region.
 dlrsAccountMaxWriteCapacityUnits :: Lens' DescribeLimitsResponse (Maybe Natural)
 dlrsAccountMaxWriteCapacityUnits = lens _dlrsAccountMaxWriteCapacityUnits (\ s a -> s{_dlrsAccountMaxWriteCapacityUnits = a}) . mapping _Nat
 
--- | The maximum total read capacity units that your account allows you to provision across all of your tables in this region.
+-- | The maximum total read capacity units that your account allows you to provision across all of your tables in this Region.
 dlrsAccountMaxReadCapacityUnits :: Lens' DescribeLimitsResponse (Maybe Natural)
 dlrsAccountMaxReadCapacityUnits = lens _dlrsAccountMaxReadCapacityUnits (\ s a -> s{_dlrsAccountMaxReadCapacityUnits = a}) . mapping _Nat
 

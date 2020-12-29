@@ -27,6 +27,8 @@ module Network.AWS.DynamoDB.UpdateGlobalTableSettings
       updateGlobalTableSettings
     , UpdateGlobalTableSettings
     -- * Request Lenses
+    , ugtsGlobalTableProvisionedWriteCapacityAutoScalingSettingsUpdate
+    , ugtsGlobalTableBillingMode
     , ugtsGlobalTableProvisionedWriteCapacityUnits
     , ugtsReplicaSettingsUpdate
     , ugtsGlobalTableGlobalSecondaryIndexSettingsUpdate
@@ -50,7 +52,9 @@ import Network.AWS.Response
 
 -- | /See:/ 'updateGlobalTableSettings' smart constructor.
 data UpdateGlobalTableSettings = UpdateGlobalTableSettings'
-  { _ugtsGlobalTableProvisionedWriteCapacityUnits :: !(Maybe Nat)
+  { _ugtsGlobalTableProvisionedWriteCapacityAutoScalingSettingsUpdate :: !(Maybe AutoScalingSettingsUpdate)
+  , _ugtsGlobalTableBillingMode :: !(Maybe BillingMode)
+  , _ugtsGlobalTableProvisionedWriteCapacityUnits :: !(Maybe Nat)
   , _ugtsReplicaSettingsUpdate :: !(Maybe (List1 ReplicaSettingsUpdate))
   , _ugtsGlobalTableGlobalSecondaryIndexSettingsUpdate :: !(Maybe (List1 GlobalTableGlobalSecondaryIndexSettingsUpdate))
   , _ugtsGlobalTableName :: !Text
@@ -61,9 +65,13 @@ data UpdateGlobalTableSettings = UpdateGlobalTableSettings'
 --
 -- Use one of the following lenses to modify other fields as desired:
 --
--- * 'ugtsGlobalTableProvisionedWriteCapacityUnits' - The maximum number of writes consumed per second before DynamoDB returns a @ThrottlingException.@
+-- * 'ugtsGlobalTableProvisionedWriteCapacityAutoScalingSettingsUpdate' - Auto scaling settings for managing provisioned write capacity for the global table.
 --
--- * 'ugtsReplicaSettingsUpdate' - Represents the settings for a global table in a region that will be modified.
+-- * 'ugtsGlobalTableBillingMode' - The billing mode of the global table. If @GlobalTableBillingMode@ is not specified, the global table defaults to @PROVISIONED@ capacity billing mode.     * @PROVISIONED@ - We recommend using @PROVISIONED@ for predictable workloads. @PROVISIONED@ sets the billing mode to <https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadWriteCapacityMode.html#HowItWorks.ProvisionedThroughput.Manual Provisioned Mode> .     * @PAY_PER_REQUEST@ - We recommend using @PAY_PER_REQUEST@ for unpredictable workloads. @PAY_PER_REQUEST@ sets the billing mode to <https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadWriteCapacityMode.html#HowItWorks.OnDemand On-Demand Mode> . 
+--
+-- * 'ugtsGlobalTableProvisionedWriteCapacityUnits' - The maximum number of writes consumed per second before DynamoDB returns a @ThrottlingException.@ 
+--
+-- * 'ugtsReplicaSettingsUpdate' - Represents the settings for a global table in a Region that will be modified.
 --
 -- * 'ugtsGlobalTableGlobalSecondaryIndexSettingsUpdate' - Represents the settings of a global secondary index for a global table that will be modified.
 --
@@ -73,18 +81,29 @@ updateGlobalTableSettings
     -> UpdateGlobalTableSettings
 updateGlobalTableSettings pGlobalTableName_ =
   UpdateGlobalTableSettings'
-    { _ugtsGlobalTableProvisionedWriteCapacityUnits = Nothing
+    { _ugtsGlobalTableProvisionedWriteCapacityAutoScalingSettingsUpdate =
+        Nothing
+    , _ugtsGlobalTableBillingMode = Nothing
+    , _ugtsGlobalTableProvisionedWriteCapacityUnits = Nothing
     , _ugtsReplicaSettingsUpdate = Nothing
     , _ugtsGlobalTableGlobalSecondaryIndexSettingsUpdate = Nothing
     , _ugtsGlobalTableName = pGlobalTableName_
     }
 
 
--- | The maximum number of writes consumed per second before DynamoDB returns a @ThrottlingException.@
+-- | Auto scaling settings for managing provisioned write capacity for the global table.
+ugtsGlobalTableProvisionedWriteCapacityAutoScalingSettingsUpdate :: Lens' UpdateGlobalTableSettings (Maybe AutoScalingSettingsUpdate)
+ugtsGlobalTableProvisionedWriteCapacityAutoScalingSettingsUpdate = lens _ugtsGlobalTableProvisionedWriteCapacityAutoScalingSettingsUpdate (\ s a -> s{_ugtsGlobalTableProvisionedWriteCapacityAutoScalingSettingsUpdate = a})
+
+-- | The billing mode of the global table. If @GlobalTableBillingMode@ is not specified, the global table defaults to @PROVISIONED@ capacity billing mode.     * @PROVISIONED@ - We recommend using @PROVISIONED@ for predictable workloads. @PROVISIONED@ sets the billing mode to <https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadWriteCapacityMode.html#HowItWorks.ProvisionedThroughput.Manual Provisioned Mode> .     * @PAY_PER_REQUEST@ - We recommend using @PAY_PER_REQUEST@ for unpredictable workloads. @PAY_PER_REQUEST@ sets the billing mode to <https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadWriteCapacityMode.html#HowItWorks.OnDemand On-Demand Mode> . 
+ugtsGlobalTableBillingMode :: Lens' UpdateGlobalTableSettings (Maybe BillingMode)
+ugtsGlobalTableBillingMode = lens _ugtsGlobalTableBillingMode (\ s a -> s{_ugtsGlobalTableBillingMode = a})
+
+-- | The maximum number of writes consumed per second before DynamoDB returns a @ThrottlingException.@ 
 ugtsGlobalTableProvisionedWriteCapacityUnits :: Lens' UpdateGlobalTableSettings (Maybe Natural)
 ugtsGlobalTableProvisionedWriteCapacityUnits = lens _ugtsGlobalTableProvisionedWriteCapacityUnits (\ s a -> s{_ugtsGlobalTableProvisionedWriteCapacityUnits = a}) . mapping _Nat
 
--- | Represents the settings for a global table in a region that will be modified.
+-- | Represents the settings for a global table in a Region that will be modified.
 ugtsReplicaSettingsUpdate :: Lens' UpdateGlobalTableSettings (Maybe (NonEmpty ReplicaSettingsUpdate))
 ugtsReplicaSettingsUpdate = lens _ugtsReplicaSettingsUpdate (\ s a -> s{_ugtsReplicaSettingsUpdate = a}) . mapping _List1
 
@@ -126,7 +145,13 @@ instance ToJSON UpdateGlobalTableSettings where
         toJSON UpdateGlobalTableSettings'{..}
           = object
               (catMaybes
-                 [("GlobalTableProvisionedWriteCapacityUnits" .=) <$>
+                 [("GlobalTableProvisionedWriteCapacityAutoScalingSettingsUpdate"
+                     .=)
+                    <$>
+                    _ugtsGlobalTableProvisionedWriteCapacityAutoScalingSettingsUpdate,
+                  ("GlobalTableBillingMode" .=) <$>
+                    _ugtsGlobalTableBillingMode,
+                  ("GlobalTableProvisionedWriteCapacityUnits" .=) <$>
                     _ugtsGlobalTableProvisionedWriteCapacityUnits,
                   ("ReplicaSettingsUpdate" .=) <$>
                     _ugtsReplicaSettingsUpdate,
@@ -145,7 +170,7 @@ instance ToQuery UpdateGlobalTableSettings where
 data UpdateGlobalTableSettingsResponse = UpdateGlobalTableSettingsResponse'
   { _ugtsrsReplicaSettings :: !(Maybe [ReplicaSettingsDescription])
   , _ugtsrsGlobalTableName :: !(Maybe Text)
-  , _ugtsrsResponseStatus  :: !Int
+  , _ugtsrsResponseStatus :: !Int
   } deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
@@ -153,7 +178,7 @@ data UpdateGlobalTableSettingsResponse = UpdateGlobalTableSettingsResponse'
 --
 -- Use one of the following lenses to modify other fields as desired:
 --
--- * 'ugtsrsReplicaSettings' - The region specific settings for the global table.
+-- * 'ugtsrsReplicaSettings' - The Region-specific settings for the global table.
 --
 -- * 'ugtsrsGlobalTableName' - The name of the global table.
 --
@@ -169,7 +194,7 @@ updateGlobalTableSettingsResponse pResponseStatus_ =
     }
 
 
--- | The region specific settings for the global table.
+-- | The Region-specific settings for the global table.
 ugtsrsReplicaSettings :: Lens' UpdateGlobalTableSettingsResponse [ReplicaSettingsDescription]
 ugtsrsReplicaSettings = lens _ugtsrsReplicaSettings (\ s a -> s{_ugtsrsReplicaSettings = a}) . _Default . _Coerce
 

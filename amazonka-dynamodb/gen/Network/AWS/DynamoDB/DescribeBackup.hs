@@ -56,14 +56,14 @@ newtype DescribeBackup = DescribeBackup'
 --
 -- Use one of the following lenses to modify other fields as desired:
 --
--- * 'dBackupARN' - The ARN associated with the backup.
+-- * 'dBackupARN' - The Amazon Resource Name (ARN) associated with the backup.
 describeBackup
     :: Text -- ^ 'dBackupARN'
     -> DescribeBackup
 describeBackup pBackupARN_ = DescribeBackup' {_dBackupARN = pBackupARN_}
 
 
--- | The ARN associated with the backup.
+-- | The Amazon Resource Name (ARN) associated with the backup.
 dBackupARN :: Lens' DescribeBackup Text
 dBackupARN = lens _dBackupARN (\ s a -> s{_dBackupARN = a})
 
@@ -103,7 +103,7 @@ instance ToQuery DescribeBackup where
 -- | /See:/ 'describeBackupResponse' smart constructor.
 data DescribeBackupResponse = DescribeBackupResponse'
   { _desrsBackupDescription :: !(Maybe BackupDescription)
-  , _desrsResponseStatus    :: !Int
+  , _desrsResponseStatus :: !Int
   } deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 

@@ -17,6 +17,7 @@ packages:
   - test
   - examples
   - amazonka
+  - ../text-icu
 # GENERATED
   - amazonka-alexa-business
   - amazonka-apigateway

@@ -18,7 +18,7 @@
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
--- Describes region specific settings for a global table.
+-- Describes Region-specific settings for a global table.
 --
 --
 module Network.AWS.DynamoDB.DescribeGlobalTableSettings
@@ -109,7 +109,7 @@ instance ToQuery DescribeGlobalTableSettings where
 data DescribeGlobalTableSettingsResponse = DescribeGlobalTableSettingsResponse'
   { _dgtsrsReplicaSettings :: !(Maybe [ReplicaSettingsDescription])
   , _dgtsrsGlobalTableName :: !(Maybe Text)
-  , _dgtsrsResponseStatus  :: !Int
+  , _dgtsrsResponseStatus :: !Int
   } deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
@@ -117,7 +117,7 @@ data DescribeGlobalTableSettingsResponse = DescribeGlobalTableSettingsResponse'
 --
 -- Use one of the following lenses to modify other fields as desired:
 --
--- * 'dgtsrsReplicaSettings' - The region specific settings for the global table.
+-- * 'dgtsrsReplicaSettings' - The Region-specific settings for the global table.
 --
 -- * 'dgtsrsGlobalTableName' - The name of the global table.
 --
@@ -133,7 +133,7 @@ describeGlobalTableSettingsResponse pResponseStatus_ =
     }
 
 
--- | The region specific settings for the global table.
+-- | The Region-specific settings for the global table.
 dgtsrsReplicaSettings :: Lens' DescribeGlobalTableSettingsResponse [ReplicaSettingsDescription]
 dgtsrsReplicaSettings = lens _dgtsrsReplicaSettings (\ s a -> s{_dgtsrsReplicaSettings = a}) . _Default . _Coerce
 

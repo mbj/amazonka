@@ -18,16 +18,16 @@
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
--- Adds or removes replicas in the specified global table. The global table must already exist to be able to use this operation. Any replica to be added must be empty, must have the same name as the global table, must have the same key schema, and must have DynamoDB Streams enabled and must have same provisioned and maximum write capacity units.
+-- Adds or removes replicas in the specified global table. The global table must already exist to be able to use this operation. Any replica to be added must be empty, have the same name as the global table, have the same key schema, have DynamoDB Streams enabled, and have the same provisioned and maximum write capacity units.
 --
 --
--- If global secondary indexes are specified, then the following conditions must also be met:
+-- If global secondary indexes are specified, then the following conditions must also be met: 
 --
---     * The global secondary indexes must have the same name.
+--     * The global secondary indexes must have the same name. 
 --
---     * The global secondary indexes must have the same hash key and sort key (if present).
+--     * The global secondary indexes must have the same hash key and sort key (if present). 
 --
---     * The global secondary indexes must have the same provisioned and maximum write capacity units.
+--     * The global secondary indexes must have the same provisioned and maximum write capacity units. 
 --
 --
 --
@@ -58,7 +58,7 @@ import Network.AWS.Response
 -- | /See:/ 'updateGlobalTable' smart constructor.
 data UpdateGlobalTable = UpdateGlobalTable'
   { _ugtGlobalTableName :: !Text
-  , _ugtReplicaUpdates  :: ![ReplicaUpdate]
+  , _ugtReplicaUpdates :: ![ReplicaUpdate]
   } deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
@@ -68,7 +68,7 @@ data UpdateGlobalTable = UpdateGlobalTable'
 --
 -- * 'ugtGlobalTableName' - The global table name.
 --
--- * 'ugtReplicaUpdates' - A list of regions that should be added or removed from the global table.
+-- * 'ugtReplicaUpdates' - A list of Regions that should be added or removed from the global table.
 updateGlobalTable
     :: Text -- ^ 'ugtGlobalTableName'
     -> UpdateGlobalTable
@@ -81,7 +81,7 @@ updateGlobalTable pGlobalTableName_ =
 ugtGlobalTableName :: Lens' UpdateGlobalTable Text
 ugtGlobalTableName = lens _ugtGlobalTableName (\ s a -> s{_ugtGlobalTableName = a})
 
--- | A list of regions that should be added or removed from the global table.
+-- | A list of Regions that should be added or removed from the global table.
 ugtReplicaUpdates :: Lens' UpdateGlobalTable [ReplicaUpdate]
 ugtReplicaUpdates = lens _ugtReplicaUpdates (\ s a -> s{_ugtReplicaUpdates = a}) . _Coerce
 
@@ -125,7 +125,7 @@ instance ToQuery UpdateGlobalTable where
 -- | /See:/ 'updateGlobalTableResponse' smart constructor.
 data UpdateGlobalTableResponse = UpdateGlobalTableResponse'
   { _ugtrsGlobalTableDescription :: !(Maybe GlobalTableDescription)
-  , _ugtrsResponseStatus         :: !Int
+  , _ugtrsResponseStatus :: !Int
   } deriving (Eq, Read, Show, Data, Typeable, Generic)
 
 
